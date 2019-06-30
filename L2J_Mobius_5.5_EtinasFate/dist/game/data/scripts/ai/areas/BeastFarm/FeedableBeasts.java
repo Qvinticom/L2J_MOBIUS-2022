@@ -413,12 +413,9 @@ public final class FeedableBeasts extends AbstractNpcAI
 		// player might have and initialize the Tamed Beast.
 		if (CommonUtil.contains(TAMED_BEASTS, nextNpcId))
 		{
-			if ((player.getTrainedBeasts() != null) && !player.getTrainedBeasts().isEmpty())
+			for (TamedBeastInstance oldTrained : player.getTrainedBeasts())
 			{
-				for (TamedBeastInstance oldTrained : player.getTrainedBeasts())
-				{
-					oldTrained.deleteMe();
-				}
+				oldTrained.deleteMe();
 			}
 			
 			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());

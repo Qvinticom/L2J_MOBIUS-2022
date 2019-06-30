@@ -712,7 +712,7 @@ public final class EffectList
 	 * @param info
 	 * @param removed
 	 */
-	private synchronized void removeActive(BuffInfo info, boolean removed)
+	private void removeActive(BuffInfo info, boolean removed)
 	{
 		if (!_actives.isEmpty())
 		{
@@ -790,7 +790,7 @@ public final class EffectList
 		updateEffectList(true);
 	}
 	
-	private synchronized void addActive(BuffInfo info)
+	private void addActive(BuffInfo info)
 	{
 		final Skill skill = info.getSkill();
 		

@@ -178,7 +178,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 		
 		// clean up variables
-		if ((_owner != null) && (_owner.getTrainedBeasts() != null))
+		if (_owner != null)
 		{
 			_owner.getTrainedBeasts().remove(this);
 		}
@@ -311,7 +311,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		stopHpMpRegeneration();
 		
 		// clean up variables
-		if ((_owner != null) && (_owner.getTrainedBeasts() != null))
+		if (_owner != null)
 		{
 			_owner.getTrainedBeasts().remove(this);
 		}

@@ -31,7 +31,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
@@ -462,7 +461,7 @@ public final class PlayerInstance extends Playable
 	private int _masteryPenalty = 0;
 	private ItemInstance _activeEnchantItem = null;
 	protected boolean _inventoryDisable = false;
-	protected Map<Integer, CubicInstance> _cubics = new HashMap<>();
+	protected Map<Integer, CubicInstance> _cubics = new ConcurrentHashMap<>();
 	protected Map<Integer, Integer> _activeSoulShots = new ConcurrentHashMap<>();
 	public final ReentrantLock soulShotLock = new ReentrantLock();
 	public Quest dialog = null;
@@ -710,14 +709,11 @@ public final class PlayerInstance extends Playable
 			// cancel the recent fake-death protection instantly if the player attacks or casts spells
 			getPlayer().setRecentFakeDeath(false);
 			
-			synchronized (_cubics)
+			for (CubicInstance cubic : _cubics.values())
 			{
-				for (CubicInstance cubic : _cubics.values())
+				if (cubic.getId() != CubicInstance.LIFE_CUBIC)
 				{
-					if (cubic.getId() != CubicInstance.LIFE_CUBIC)
-					{
-						cubic.doAction();
-					}
+					cubic.doAction();
 				}
 			}
 		}
@@ -769,14 +765,11 @@ public final class PlayerInstance extends Playable
 						return;
 					}
 					
-					synchronized (_cubics)
+					for (CubicInstance cubic : _cubics.values())
 					{
-						for (CubicInstance cubic : _cubics.values())
+						if ((cubic != null) && (cubic.getId() != CubicInstance.LIFE_CUBIC))
 						{
-							if ((cubic != null) && (cubic.getId() != CubicInstance.LIFE_CUBIC))
-							{
-								cubic.doAction();
-							}
+							cubic.doAction();
 						}
 					}
 					break;
@@ -1328,7 +1321,6 @@ public final class PlayerInstance extends Playable
 				}
 			}
 		}
-		
 		return _ai;
 	}
 	
@@ -3571,7 +3563,6 @@ public final class PlayerInstance extends Playable
 	{
 		synchronized (_movingTaskDefined)
 		{
-			
 			if (!_movingTaskDefined)
 			{
 				return;
@@ -11911,28 +11902,23 @@ public final class PlayerInstance extends Playable
 	 */
 	public Map<Integer, CubicInstance> getCubics()
 	{
-		synchronized (_cubics)
+		// clean cubics instances
+		for (Integer id : _cubics.keySet())
 		{
-			// clean cubics instances
-			final Set<Integer> cubicsIds = _cubics.keySet();
-			
-			for (Integer id : cubicsIds)
+			if ((id == null) || (_cubics.get(id) == null))
 			{
-				if ((id == null) || (_cubics.get(id) == null))
+				try
 				{
-					try
-					{
-						_cubics.remove(id);
-					}
-					catch (NullPointerException e)
-					{
-						// FIXME: tried to remove a null key, to be found where this action has been performed (DEGUB)
-					}
+					_cubics.remove(id);
+				}
+				catch (NullPointerException e)
+				{
+					// FIXME: tried to remove a null key, to be found where this action has been performed (DEGUB)
 				}
 			}
-			
-			return _cubics;
 		}
+		
+		return _cubics;
 	}
 	
 	/**
@@ -11949,11 +11935,7 @@ public final class PlayerInstance extends Playable
 	public void addCubic(int id, int level, double matk, int activationtime, int activationchance, int totalLifetime, boolean givenByOther)
 	{
 		final CubicInstance cubic = new CubicInstance(this, id, level, (int) matk, activationtime, activationchance, totalLifetime, givenByOther);
-		
-		synchronized (_cubics)
-		{
-			_cubics.put(id, cubic);
-		}
+		_cubics.put(id, cubic);
 	}
 	
 	/**
@@ -11963,10 +11945,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public void delCubic(int id)
 	{
-		synchronized (_cubics)
-		{
-			_cubics.remove(id);
-		}
+		_cubics.remove(id);
 	}
 	
 	/**
@@ -11977,27 +11956,21 @@ public final class PlayerInstance extends Playable
 	 */
 	public CubicInstance getCubic(int id)
 	{
-		synchronized (_cubics)
-		{
-			return _cubics.get(id);
-		}
+		return _cubics.get(id);
 	}
 	
 	public void unsummonAllCubics()
 	{
 		// Unsummon Cubics
-		synchronized (_cubics)
+		if (_cubics.size() > 0)
 		{
-			if (_cubics.size() > 0)
+			for (CubicInstance cubic : _cubics.values())
 			{
-				for (CubicInstance cubic : _cubics.values())
-				{
-					cubic.stopAction();
-					cubic.cancelDisappear();
-				}
-				
-				_cubics.clear();
+				cubic.stopAction();
+				cubic.cancelDisappear();
 			}
+			
+			_cubics.clear();
 		}
 	}
 	
@@ -13700,12 +13673,10 @@ public final class PlayerInstance extends Playable
 		
 		synchronized (getAllSkills())
 		{
-			
 			for (Skill oldSkill : getAllSkills())
 			{
 				super.removeSkill(oldSkill);
 			}
-			
 		}
 		
 		// Rebind CursedWeapon passive.

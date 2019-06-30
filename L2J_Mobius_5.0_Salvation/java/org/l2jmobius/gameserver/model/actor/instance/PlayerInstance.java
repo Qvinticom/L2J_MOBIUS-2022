@@ -603,12 +603,12 @@ public final class PlayerInstance extends Playable
 	/** The Pet of the PlayerInstance */
 	private PetInstance _pet = null;
 	/** Servitors of the PlayerInstance */
-	private volatile Map<Integer, Summon> _servitors = null;
+	private volatile Map<Integer, Summon> _servitors = new ConcurrentHashMap<>(1);
 	/** The Agathion of the PlayerInstance */
 	private int _agathionId = 0;
 	// apparently, a PlayerInstance CAN have both a summon AND a tamed beast at the same time!!
 	// after Freya players can control more than one tamed beast
-	private volatile Set<TamedBeastInstance> _tamedBeast = null;
+	private volatile Set<TamedBeastInstance> _tamedBeast = ConcurrentHashMap.newKeySet();
 	
 	// client radar
 	// TODO: This needs to be better integrated and saved/loaded
@@ -675,10 +675,10 @@ public final class PlayerInstance extends Playable
 	private long _spawnProtectEndTime = 0;
 	private long _teleportProtectEndTime = 0;
 	
-	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
+	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos = new ConcurrentHashMap<>();
 	
 	@SuppressWarnings("rawtypes")
-	private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events;
+	private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events = new ConcurrentHashMap<>();
 	private boolean _isOnCustomEvent = false;
 	
 	// protects a char from aggro mobs when getting up from fake death
@@ -699,7 +699,7 @@ public final class PlayerInstance extends Playable
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
 	
-	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests;
+	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
@@ -722,7 +722,7 @@ public final class PlayerInstance extends Playable
 	
 	private final BlockList _blockList = new BlockList(this);
 	
-	private volatile Map<Integer, Skill> _transformSkills;
+	private Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	
@@ -5013,13 +5013,13 @@ public final class PlayerInstance extends Playable
 		{
 			stopFeed();
 		}
-		synchronized (this)
+		// synchronized (this)
+		// {
+		if (isFakeDeath())
 		{
-			if (isFakeDeath())
-			{
-				stopFakeDeath(true);
-			}
+			stopFakeDeath(true);
 		}
+		// }
 		
 		// Unsummon Cubics
 		if (!_cubics.isEmpty())
@@ -5441,7 +5441,7 @@ public final class PlayerInstance extends Playable
 	@Override
 	public Map<Integer, Summon> getServitors()
 	{
-		return _servitors == null ? Collections.emptyMap() : _servitors;
+		return _servitors;
 	}
 	
 	public Summon getAnyServitor()
@@ -5492,16 +5492,6 @@ public final class PlayerInstance extends Playable
 	
 	public void addServitor(Summon servitor)
 	{
-		if (_servitors == null)
-		{
-			synchronized (this)
-			{
-				if (_servitors == null)
-				{
-					_servitors = new ConcurrentHashMap<>(1);
-				}
-			}
-		}
 		_servitors.put(servitor.getObjectId(), servitor);
 	}
 	
@@ -5519,16 +5509,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public void addTrainedBeast(TamedBeastInstance tamedBeast)
 	{
-		if (_tamedBeast == null)
-		{
-			synchronized (this)
-			{
-				if (_tamedBeast == null)
-				{
-					_tamedBeast = ConcurrentHashMap.newKeySet();
-				}
-			}
-		}
 		_tamedBeast.add(tamedBeast);
 	}
 	
@@ -10425,14 +10405,11 @@ public final class PlayerInstance extends Playable
 		}
 		
 		// Trained beast is lost after teleport
-		if (_tamedBeast != null)
+		for (TamedBeastInstance tamedBeast : _tamedBeast)
 		{
-			for (TamedBeastInstance tamedBeast : _tamedBeast)
-			{
-				tamedBeast.deleteMe();
-			}
-			_tamedBeast.clear();
+			tamedBeast.deleteMe();
 		}
+		_tamedBeast.clear();
 		
 		// Modify the position of the pet if necessary
 		if (_pet != null)
@@ -10532,12 +10509,9 @@ public final class PlayerInstance extends Playable
 		super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
 		
 		// notify the tamed beast of attacks
-		if (_tamedBeast != null)
+		for (TamedBeastInstance tamedBeast : _tamedBeast)
 		{
-			for (TamedBeastInstance tamedBeast : _tamedBeast)
-			{
-				tamedBeast.onOwnerGotAttacked(attacker);
-			}
+			tamedBeast.onOwnerGotAttacked(attacker);
 		}
 	}
 	
@@ -11733,38 +11707,27 @@ public final class PlayerInstance extends Playable
 	
 	public void addTransformSkill(Skill skill)
 	{
-		if (_transformSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_transformSkills == null)
-				{
-					_transformSkills = new HashMap<>();
-				}
-			}
-		}
 		_transformSkills.put(skill.getId(), skill);
 	}
 	
 	public boolean hasTransformSkill(Skill skill)
 	{
-		return (_transformSkills != null) && (_transformSkills.get(skill.getId()) == skill);
+		return !_transformSkills.isEmpty() && (_transformSkills.get(skill.getId()) == skill);
 	}
 	
 	public boolean hasTransformSkills()
 	{
-		return (_transformSkills != null);
+		return !_transformSkills.isEmpty();
 	}
 	
 	public Collection<Skill> getAllTransformSkills()
 	{
-		final Map<Integer, Skill> transformSkills = _transformSkills;
-		return transformSkills != null ? transformSkills.values() : Collections.emptyList();
+		return _transformSkills.values();
 	}
 	
-	public synchronized void removeAllTransformSkills()
+	public void removeAllTransformSkills()
 	{
-		_transformSkills = null;
+		_transformSkills.clear();
 	}
 	
 	/**
@@ -11774,8 +11737,7 @@ public final class PlayerInstance extends Playable
 	@Override
 	public final Skill getKnownSkill(int skillId)
 	{
-		final Map<Integer, Skill> transformSkills = _transformSkills;
-		return transformSkills != null ? transformSkills.getOrDefault(skillId, super.getKnownSkill(skillId)) : super.getKnownSkill(skillId);
+		return !_transformSkills.isEmpty() ? _transformSkills.getOrDefault(skillId, super.getKnownSkill(skillId)) : super.getKnownSkill(skillId);
 	}
 	
 	/**
@@ -11787,8 +11749,7 @@ public final class PlayerInstance extends Playable
 		
 		if (isTransformed())
 		{
-			final Map<Integer, Skill> transformSkills = _transformSkills;
-			if (transformSkills != null)
+			if (!_transformSkills.isEmpty())
 			{
 				// Include transformation skills and those skills that are allowed during transformation.
 				currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
@@ -11821,7 +11782,7 @@ public final class PlayerInstance extends Playable
 					}
 				}
 				// Include transformation skills.
-				currentSkills.addAll(transformSkills.values());
+				currentSkills.addAll(_transformSkills.values());
 			}
 		}
 		
@@ -13233,7 +13194,7 @@ public final class PlayerInstance extends Playable
 	@Override
 	public boolean canRevive()
 	{
-		if (_events != null)
+		if (!_events.isEmpty())
 		{
 			for (AbstractEvent<?> listener : _events.values())
 			{
@@ -13276,7 +13237,7 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (_events != null)
+		if (!_events.isEmpty())
 		{
 			for (AbstractEvent<?> listener : _events.values())
 			{
@@ -13295,7 +13256,7 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (_events != null)
+		if (!_events.isEmpty())
 		{
 			for (AbstractEvent<?> listener : _events.values())
 			{
@@ -13314,7 +13275,7 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (_events != null)
+		if (!_events.isEmpty())
 		{
 			for (AbstractEvent<?> listener : _events.values())
 			{
@@ -13674,22 +13635,12 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean addRequest(AbstractRequest request)
 	{
-		if (_requests == null)
-		{
-			synchronized (this)
-			{
-				if (_requests == null)
-				{
-					_requests = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return canRequest(request) && (_requests.putIfAbsent(request.getClass(), request) == null);
 	}
 	
 	public boolean canRequest(AbstractRequest request)
 	{
-		return (_requests != null) && _requests.values().stream().allMatch(request::canWorkWith);
+		return !_requests.isEmpty() && _requests.values().stream().allMatch(request::canWorkWith);
 	}
 	
 	/**
@@ -13698,7 +13649,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean removeRequest(Class<? extends AbstractRequest> clazz)
 	{
-		return (_requests != null) && (_requests.remove(clazz) != null);
+		return !_requests.isEmpty() && (_requests.remove(clazz) != null);
 	}
 	
 	/**
@@ -13708,7 +13659,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public <T extends AbstractRequest> T getRequest(Class<T> requestClass)
 	{
-		return _requests != null ? requestClass.cast(_requests.get(requestClass)) : null;
+		return !_requests.isEmpty() ? requestClass.cast(_requests.get(requestClass)) : null;
 	}
 	
 	/**
@@ -13716,12 +13667,12 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean hasRequests()
 	{
-		return (_requests != null) && !_requests.isEmpty();
+		return !_requests.isEmpty();
 	}
 	
 	public boolean hasItemRequest()
 	{
-		return (_requests != null) && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+		return !_requests.isEmpty() && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
 	}
 	
 	/**
@@ -13732,7 +13683,7 @@ public final class PlayerInstance extends Playable
 	@SafeVarargs
 	public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes)
 	{
-		if (_requests != null)
+		if (!_requests.isEmpty())
 		{
 			for (Class<? extends AbstractRequest> clazz : classes)
 			{
@@ -13752,7 +13703,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean isProcessingItem(int objectId)
 	{
-		return (_requests != null) && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+		return !_requests.isEmpty() && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
 	}
 	
 	/**
@@ -13761,7 +13712,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public void removeRequestsThatProcessesItem(int objectId)
 	{
-		if (_requests != null)
+		if (!_requests.isEmpty())
 		{
 			_requests.values().removeIf(req -> req.isUsing(objectId));
 		}
@@ -13793,16 +13744,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public Map<Integer, ExResponseCommissionInfo> getLastCommissionInfos()
 	{
-		if (_lastCommissionInfos == null)
-		{
-			synchronized (this)
-			{
-				if (_lastCommissionInfos == null)
-				{
-					_lastCommissionInfos = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _lastCommissionInfos;
 	}
 	
@@ -13892,16 +13833,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean registerOnEvent(AbstractEvent<?> event)
 	{
-		if (_events == null)
-		{
-			synchronized (this)
-			{
-				if (_events == null)
-				{
-					_events = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _events.putIfAbsent(event.getClass(), event) == null;
 	}
 	
@@ -13911,7 +13842,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean removeFromEvent(AbstractEvent<?> event)
 	{
-		if (_events == null)
+		if (_events.isEmpty())
 		{
 			return false;
 		}
@@ -13925,11 +13856,10 @@ public final class PlayerInstance extends Playable
 	 */
 	public <T extends AbstractEvent<?>> T getEvent(Class<T> clazz)
 	{
-		if (_events == null)
+		if (_events.isEmpty())
 		{
 			return null;
 		}
-		
 		return _events.values().stream().filter(event -> clazz.isAssignableFrom(event.getClass())).map(clazz::cast).findFirst().orElse(null);
 	}
 	
@@ -13938,11 +13868,10 @@ public final class PlayerInstance extends Playable
 	 */
 	public AbstractEvent<?> getEvent()
 	{
-		if (_events == null)
+		if (_events.isEmpty())
 		{
 			return null;
 		}
-		
 		return _events.values().stream().findFirst().orElse(null);
 	}
 	
@@ -13952,11 +13881,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean isOnEvent(Class<? extends AbstractEvent<?>> clazz)
 	{
-		if (_events == null)
-		{
-			return false;
-		}
-		
 		return _events.containsKey(clazz);
 	}
 	

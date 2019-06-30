@@ -5008,13 +5008,13 @@ public final class PlayerInstance extends Playable
 			stopFeed();
 		}
 		
-		synchronized (this)
+		// synchronized (this)
+		// {
+		if (_isFakeDeath)
 		{
-			if (_isFakeDeath)
-			{
-				stopFakeDeath(true);
-			}
+			stopFakeDeath(true);
 		}
+		// }
 		
 		if (killer != null)
 		{
