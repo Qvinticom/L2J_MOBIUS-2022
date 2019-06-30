@@ -562,7 +562,80 @@
 		</effects>
 	</skill>
 	<skill id="27725" toLevel="1" name="Ultimate Jewelry Box">
+		<icon>icon.etc_bm_jewelbox_main_i00</icon>
+		<itemConsumeId>28365</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="28364" count="1" /> <!-- Jewel Grinder -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.31">
+						<item id="26475" count="1" /> <!-- Radiant Gemstone Fragment -->
+					</item>
+					<item chance="0.04">
+						<item id="28489" count="1" /> <!-- La Vie En Rose's Magnificent Brooch Jewel -->
+					</item>
+					<item chance="7.75">
+						<item id="38939" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+					</item>
+					<item chance="2.3">
+						<item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+					</item>
+					<item chance="7.5">
+						<item id="38937" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+					</item>
+					<item chance="7.72">
+						<item id="26492" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+					</item>
+					<item chance="8.02">
+						<item id="38940" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+					</item>
+					<item chance="7.39">
+						<item id="38938" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+					</item>
+					<item chance="7.64">
+						<item id="27483" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+					</item>
+					<item chance="7.69">
+						<item id="26507" count="1" /> <!-- La Vie En Rose's Cat's Eye Box -->
+					</item>
+					<item chance="2.29">
+						<item id="47701" count="1" /> <!-- La Vie En Rose's Red Cat's Eye Box -->
+					</item>
+					<item chance="7.66">
+						<item id="38936" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+					</item>
+					<item chance="7.78">
+						<item id="38935" count="1" /> <!-- La Vie En Rose's Opal Box -->
+					</item>
+					<item chance="7.88">
+						<item id="38932" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+					</item>
+					<item chance="7.73">
+						<item id="38933" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+					</item>
+					<item chance="3.14">
+						<item id="47702" count="1" /> <!-- La Vie En Rose's Blue Cat's Eye Box -->
+					</item>
+					<item chance="7.16">
+						<item id="27479" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27726" toLevel="1" name="Abundance Box - Infinite">
 		<operateType>A1</operateType>
@@ -1267,7 +1340,80 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27797" toLevel="1" name="Ultimate Jewelry Box">
+		<icon>icon.bm_sayha_blessed_box</icon>
+		<itemConsumeId>28470</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="28364" count="1" /> <!-- Jewel Grinder -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.31">
+						<item id="26475" count="1" /> <!-- Radiant Gemstone Fragment -->
+					</item>
+					<item chance="0.04">
+						<item id="28489" count="1" /> <!-- La Vie En Rose's Magnificent Brooch Jewel -->
+					</item>
+					<item chance="7.75">
+						<item id="38939" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+					</item>
+					<item chance="2.3">
+						<item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+					</item>
+					<item chance="7.5">
+						<item id="38937" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+					</item>
+					<item chance="7.72">
+						<item id="26492" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+					</item>
+					<item chance="8.02">
+						<item id="38940" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+					</item>
+					<item chance="7.39">
+						<item id="38938" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+					</item>
+					<item chance="7.64">
+						<item id="27483" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+					</item>
+					<item chance="7.69">
+						<item id="26507" count="1" /> <!-- La Vie En Rose's Cat's Eye Box -->
+					</item>
+					<item chance="2.29">
+						<item id="47701" count="1" /> <!-- La Vie En Rose's Red Cat's Eye Box -->
+					</item>
+					<item chance="7.66">
+						<item id="38936" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+					</item>
+					<item chance="7.78">
+						<item id="38935" count="1" /> <!-- La Vie En Rose's Opal Box -->
+					</item>
+					<item chance="7.88">
+						<item id="38932" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+					</item>
+					<item chance="7.73">
+						<item id="38933" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+					</item>
+					<item chance="3.14">
+						<item id="47702" count="1" /> <!-- La Vie En Rose's Blue Cat's Eye Box -->
+					</item>
+					<item chance="7.16">
+						<item id="27479" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27798" toLevel="1" name="Elk's Blessing">
 		<!-- Maintains Vitality for 1 h. through the Elk's Blessing. -->

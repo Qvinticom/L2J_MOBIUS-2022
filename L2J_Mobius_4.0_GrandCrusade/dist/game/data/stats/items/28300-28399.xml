@@ -633,8 +633,17 @@
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="27725" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="28366" name="Vital Stone Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 3. -->
