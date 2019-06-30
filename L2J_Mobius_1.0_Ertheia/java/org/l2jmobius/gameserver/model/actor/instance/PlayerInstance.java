@@ -51,6 +51,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
+import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
@@ -10907,6 +10908,16 @@ public final class PlayerInstance extends Playable
 		try
 		{
 			setIsTeleporting(false);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "deleteMe()", e);
+		}
+		
+		// Stop crafting, if in progress
+		try
+		{
+			RecipeController.getInstance().requestMakeItemAbort(this);
 		}
 		catch (Exception e)
 		{
