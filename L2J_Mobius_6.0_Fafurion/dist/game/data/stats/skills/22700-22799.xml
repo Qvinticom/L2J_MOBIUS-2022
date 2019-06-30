@@ -231,6 +231,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22709" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Obtained XP +50%. -->
@@ -255,6 +260,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22710" toLevel="3" name="Scroll: Increase Vitality">
 		<operateType>A1</operateType>

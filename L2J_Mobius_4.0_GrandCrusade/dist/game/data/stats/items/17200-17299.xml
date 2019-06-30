@@ -138,6 +138,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -147,6 +148,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9167" level="1" /> <!-- XP Buff 50% (1-hour) -->
@@ -158,6 +160,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -167,6 +170,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9168" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
@@ -178,6 +182,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -187,6 +192,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9169" level="1" /> <!-- XP Buff 50% (2-hour) -->
@@ -198,6 +204,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -207,6 +214,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9170" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
@@ -218,6 +226,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -227,6 +236,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9171" level="1" /> <!-- XP Buff 50% (3-hour) -->
@@ -238,6 +248,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -247,6 +258,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9172" level="1" /> <!-- XP Buff 50% (4-hour) -->
@@ -1424,6 +1436,7 @@
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1437,6 +1450,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="9181" level="1" /> <!-- XP Buff 50% (4-hour) -->
 		</skills>
@@ -1446,6 +1460,7 @@
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1459,6 +1474,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="9182" level="1" /> <!-- XP Buff 50% (4-hour) -->
 		</skills>

@@ -1866,7 +1866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9150" toLevel="1" name="Freesia Bouquet (Event)]">
+	<skill id="9150" toLevel="1" name="Freesia Bouquet (Event)">
 		<!-- Bouquet of freesia flowers, which stand for "Innocence." -->
 		<icon>icon.etc_flower_bouquet_i02</icon>
 		<castRange>500</castRange>
@@ -1884,7 +1884,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9151" toLevel="1" name="Baby's Breath Bouquet (Event)]">
+	<skill id="9151" toLevel="1" name="Baby's Breath Bouquet (Event)">
 		<!-- Bouquet of baby's breath flowers, which stand for "Sorrow." -->
 		<icon>icon.etc_flower_bouquet_i03</icon>
 		<castRange>500</castRange>
@@ -1902,7 +1902,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9152" toLevel="1" name="Pink Lady (Event)]">
+	<skill id="9152" toLevel="1" name="Pink Lady (Event)">
 		<!-- This cocktail drink was first made in London, England in 1912, as a tribute to the leading heroine in the play "Pink Lady," which was a great hit at the time. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<castRange>500</castRange>
@@ -2379,6 +2379,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9168" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -2403,6 +2408,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9169" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -2427,6 +2437,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9170" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -2451,6 +2466,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9171" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -2475,6 +2495,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9172" toLevel="1" name="XP Buff 50% (4-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -2499,6 +2524,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9173" toLevel="1" name="Nevit's Voice">
 		<itemConsumeId>17212</itemConsumeId>
@@ -3273,6 +3303,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9182" toLevel="1" name="XP Buff 50% (4-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
@@ -3298,6 +3333,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9183" toLevel="1" name="Freya's Refreshing Breeze (4-h.)">
 		<!-- For 4 h., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
