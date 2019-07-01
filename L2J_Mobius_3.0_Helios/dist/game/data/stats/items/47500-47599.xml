@@ -596,6 +596,18 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39720" min="1" max="1" chance="27" /> <!-- Maphr's Luck Potion -->
+			<item id="45494" min="1" max="1" chance="3" /> <!-- Sturdy Fishing Rod -->
+			<item id="38154" min="50" max="50" chance="65" /> <!-- Fishing Shot -->
+			<item id="8034" min="1" max="1" chance="5" /> <!-- Rainbow Springs Clan Hall War Decree -->
+		</capsuled_items>	
 	</item>
 	<item id="47555" name="Purplish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
