@@ -350,6 +350,15 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="37023" min="1" max="1" chance="15" /> <!-- Eternal Ingredient Pouch -->
+			<item id="37024" min="1" max="1" chance="15" /> <!-- Eternal Recipe Pouch -->
+			<item id="36554" min="1" max="1" chance="35" /> <!-- Armor Fragment (High-grade) -->
+			<item id="36549" min="1" max="1" chance="35" /> <!-- Weapon Fragment (High-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="37023" name="Eternal Ingredient Pouch" type="EtcItem">
 		<!-- Eternal Ingredient Pouch. Double-click to receive an Eternal ingredient at a certain probability. -->
@@ -365,6 +374,26 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="35342" min="1" max="1" chance="6" /> <!-- Eternal Boot Ingredient -->
+			<item id="35339" min="1" max="1" chance="6" /> <!-- Eternal Breastplate Ingredient -->
+			<item id="35349" min="1" max="1" chance="6" /> <!-- Eternal Circlet Ingredient -->
+			<item id="35340" min="1" max="1" chance="6" /> <!-- Eternal Gaiter Ingredient -->
+			<item id="35341" min="1" max="1" chance="6" /> <!-- Eternal Gauntlet Ingredient -->
+			<item id="35352" min="1" max="1" chance="6" /> <!-- Eternal Glove Ingredient -->
+			<item id="35338" min="1" max="1" chance="6" /> <!-- Eternal Helmet Ingredient -->
+			<item id="35345" min="1" max="1" chance="6" /> <!-- Eternal Leather Armor Ingredient -->
+			<item id="35348" min="1" max="1" chance="6" /> <!-- Eternal Leather Boot Ingredient -->
+			<item id="35347" min="1" max="1" chance="6" /> <!-- Eternal Leather Glove Ingredient -->
+			<item id="35344" min="1" max="1" chance="6" /> <!-- Eternal Leather Helmet Ingredient -->
+			<item id="35346" min="1" max="1" chance="6" /> <!-- Eternal Leather Legging Ingredient -->
+			<item id="35353" min="1" max="1" chance="6" /> <!-- Eternal Shoe Ingredient -->
+			<item id="35351" min="1" max="1" chance="6" /> <!-- Eternal Stocking Ingredient -->
+			<item id="35350" min="1" max="1" chance="6" /> <!-- Eternal Tunic Ingredient -->
+		</capsuled_items>
 	</item>
 	<item id="37024" name="Eternal Recipe Pouch" type="EtcItem">
 		<!-- Eternal Recipe Pouch. Double-click to receive an Eternal recipe at a certain probability. -->
@@ -380,6 +409,26 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="35466" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Boots (60%) -->
+			<item id="35463" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			<item id="35473" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Circlet (60%) -->
+			<item id="35464" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gaiters (60%) -->
+			<item id="35465" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+			<item id="35476" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gloves (60%) -->
+			<item id="35462" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Helmet (60%) -->
+			<item id="35469" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			<item id="35472" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			<item id="35471" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			<item id="35468" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			<item id="35470" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			<item id="35477" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Shoes (60%) -->
+			<item id="35475" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Stockings (60%) -->
+			<item id="35474" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Tunic (60%) -->
+		</capsuled_items>
 	</item>
 	<item id="37025" name="Scroll of Escape - Alligator Island" type="EtcItem">
 		<!-- Teleports you to Alligator Island. -->
