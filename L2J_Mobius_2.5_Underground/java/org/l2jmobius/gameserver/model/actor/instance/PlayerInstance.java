@@ -599,12 +599,12 @@ public final class PlayerInstance extends Playable
 	/** The Pet of the PlayerInstance */
 	private PetInstance _pet = null;
 	/** Servitors of the PlayerInstance */
-	private volatile Map<Integer, Summon> _servitors = new ConcurrentHashMap<>(1);
+	private final Map<Integer, Summon> _servitors = new ConcurrentHashMap<>(1);
 	/** The Agathion of the PlayerInstance */
 	private int _agathionId = 0;
 	// apparently, a PlayerInstance CAN have both a summon AND a tamed beast at the same time!!
 	// after Freya players can control more than one tamed beast
-	private volatile Set<TamedBeastInstance> _tamedBeast = ConcurrentHashMap.newKeySet();
+	private final Set<TamedBeastInstance> _tamedBeast = ConcurrentHashMap.newKeySet();
 	
 	private boolean _minimapAllowed = false;
 	
@@ -673,10 +673,10 @@ public final class PlayerInstance extends Playable
 	private long _spawnProtectEndTime = 0;
 	private long _teleportProtectEndTime = 0;
 	
-	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
+	private final Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos = new ConcurrentHashMap<>();
 	
 	@SuppressWarnings("rawtypes")
-	private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events = new ConcurrentHashMap<>();
+	private final Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events = new ConcurrentHashMap<>();
 	private boolean _isOnCustomEvent = false;
 	
 	// protects a char from aggro mobs when getting up from fake death
@@ -693,7 +693,7 @@ public final class PlayerInstance extends Playable
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
 	
-	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
+	private final Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
@@ -11740,7 +11740,7 @@ public final class PlayerInstance extends Playable
 	
 	public boolean hasTransformSkill(Skill skill)
 	{
-		return !_transformSkills.isEmpty() && (_transformSkills.get(skill.getId()) == skill);
+		return _transformSkills.get(skill.getId()) == skill;
 	}
 	
 	public boolean hasTransformSkills()
@@ -13222,14 +13222,11 @@ public final class PlayerInstance extends Playable
 	@Override
 	public boolean canRevive()
 	{
-		if (!_events.isEmpty())
+		for (AbstractEvent<?> listener : _events.values())
 		{
-			for (AbstractEvent<?> listener : _events.values())
+			if (listener.isOnEvent(this) && !listener.canRevive(this))
 			{
-				if (listener.isOnEvent(this) && !listener.canRevive(this))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 		return _canRevive;
@@ -13265,14 +13262,11 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (!_events.isEmpty())
+		for (AbstractEvent<?> listener : _events.values())
 		{
-			for (AbstractEvent<?> listener : _events.values())
+			if (listener.isOnEvent(this))
 			{
-				if (listener.isOnEvent(this))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return super.isOnEvent();
@@ -13284,14 +13278,11 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (!_events.isEmpty())
+		for (AbstractEvent<?> listener : _events.values())
 		{
-			for (AbstractEvent<?> listener : _events.values())
+			if (listener.isOnEvent(this) && listener.isBlockingExit(this))
 			{
-				if (listener.isOnEvent(this) && listener.isBlockingExit(this))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
@@ -13303,14 +13294,11 @@ public final class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if (!_events.isEmpty())
+		for (AbstractEvent<?> listener : _events.values())
 		{
-			for (AbstractEvent<?> listener : _events.values())
+			if (listener.isOnEvent(this) && listener.isBlockingDeathPenalty(this))
 			{
-				if (listener.isOnEvent(this) && listener.isBlockingDeathPenalty(this))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return isAffected(EffectFlag.PROTECT_DEATH_PENALTY);
@@ -13676,7 +13664,7 @@ public final class PlayerInstance extends Playable
 	
 	public boolean canRequest(AbstractRequest request)
 	{
-		return !_requests.isEmpty() && _requests.values().stream().allMatch(request::canWorkWith);
+		return _requests.values().stream().allMatch(request::canWorkWith);
 	}
 	
 	/**
@@ -13685,7 +13673,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean removeRequest(Class<? extends AbstractRequest> clazz)
 	{
-		return !_requests.isEmpty() && (_requests.remove(clazz) != null);
+		return _requests.remove(clazz) != null;
 	}
 	
 	/**
@@ -13695,7 +13683,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public <T extends AbstractRequest> T getRequest(Class<T> requestClass)
 	{
-		return !_requests.isEmpty() ? requestClass.cast(_requests.get(requestClass)) : null;
+		return requestClass.cast(_requests.get(requestClass));
 	}
 	
 	/**
@@ -13708,7 +13696,7 @@ public final class PlayerInstance extends Playable
 	
 	public boolean hasItemRequest()
 	{
-		return !_requests.isEmpty() && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+		return _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
 	}
 	
 	/**
@@ -13719,18 +13707,14 @@ public final class PlayerInstance extends Playable
 	@SafeVarargs
 	public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes)
 	{
-		if (!_requests.isEmpty())
+		for (Class<? extends AbstractRequest> clazz : classes)
 		{
-			for (Class<? extends AbstractRequest> clazz : classes)
+			if (_requests.containsKey(clazz))
 			{
-				if (_requests.containsKey(clazz))
-				{
-					return true;
-				}
+				return true;
 			}
-			return _requests.containsKey(requestClass);
 		}
-		return false;
+		return _requests.containsKey(requestClass);
 	}
 	
 	/**
@@ -13739,7 +13723,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean isProcessingItem(int objectId)
 	{
-		return !_requests.isEmpty() && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+		return _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
 	}
 	
 	/**
@@ -13748,10 +13732,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public void removeRequestsThatProcessesItem(int objectId)
 	{
-		if (!_requests.isEmpty())
-		{
-			_requests.values().removeIf(req -> req.isUsing(objectId));
-		}
+		_requests.values().removeIf(req -> req.isUsing(objectId));
 	}
 	
 	/**
@@ -13879,10 +13860,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public boolean removeFromEvent(AbstractEvent<?> event)
 	{
-		if (_events.isEmpty())
-		{
-			return false;
-		}
 		return _events.remove(event.getClass()) != null;
 	}
 	
@@ -13893,10 +13870,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public <T extends AbstractEvent<?>> T getEvent(Class<T> clazz)
 	{
-		if (_events.isEmpty())
-		{
-			return null;
-		}
 		return _events.values().stream().filter(event -> clazz.isAssignableFrom(event.getClass())).map(clazz::cast).findFirst().orElse(null);
 	}
 	
@@ -13905,10 +13878,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public AbstractEvent<?> getEvent()
 	{
-		if (_events.isEmpty())
-		{
-			return null;
-		}
 		return _events.values().stream().findFirst().orElse(null);
 	}
 	

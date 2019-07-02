@@ -518,7 +518,7 @@ public final class PlayerInstance extends Playable
 	private long _offlineShopStart = 0;
 	
 	private Transform _transformation;
-	private volatile Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
+	private final Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
 	
 	/** The table containing all RecipeList of the PlayerInstance */
 	private final Map<Integer, RecipeList> _dwarvenRecipeBook = new ConcurrentHashMap<>();
