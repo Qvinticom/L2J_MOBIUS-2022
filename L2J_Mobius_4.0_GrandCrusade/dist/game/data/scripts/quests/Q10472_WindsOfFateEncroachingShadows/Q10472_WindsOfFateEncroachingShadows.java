@@ -16,14 +16,30 @@
  */
 package quests.Q10472_WindsOfFateEncroachingShadows;
 
+import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
+
+import quests.Q10753_WindsOfFateChoices.Q10753_WindsOfFateChoices;
 
 /**
  * Winds of Fate: Encroaching Shadows (10472)<br>
@@ -74,9 +90,13 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 	// Skill
 	private static final SkillHolder ABSORB_WIND = new SkillHolder(16389, 1);
 	private static final SkillHolder ATELIA_ENERGY = new SkillHolder(16398, 1);
+	private static final SkillHolder FERINS_CURE = new SkillHolder(16399, 1);
 	// Misc
 	private static final double DROP_CHANCE = 0.6d; // Guessed
 	private static final int DARK_FRAGMENT_COUNT = 50;
+	private static final int MIN_LEVEL = 85;
+	// Teleport
+	private static final Location TELEPORT_LOC = new Location(-80565, 251763, -3080);
 	
 	public Q10472_WindsOfFateEncroachingShadows()
 	{
@@ -84,10 +104,8 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 		addStartNpc(NAVARI);
 		addTalkId(NAVARI, ZEPHYRA, MOMET, BLACK_MARKETEER_MAMMON, BLACKSMITH_OF_MAMMON, HARDIN, KARLA, RAINA);
 		addKillId(MOBS);
-		
-		addCondRace(Race.ERTHEIA, "");
-		addCondCompletedQuest("Q10753_WindsOfFateChoices", "33931-00.htm"); // TODO: Replace quest name
-		
+		addCondRace(Race.ERTHEIA, "33931-00.htm");
+		addCondCompletedQuest(Q10753_WindsOfFateChoices.class.getSimpleName(), "33931-00.htm");
 		registerQuestItems(DARK_FRAGMENT, COUNTERFEIT_ATELIA);
 	}
 	
@@ -145,7 +163,7 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			{
 				if (qs.isCond(17))
 				{
-					// TODO: Here Zephyra should cast some skill to player which recovers CP/HP/MP
+					npc.doCast(FERINS_CURE.getSkill());
 					qs.setCond(18, true);
 				}
 				break;
@@ -297,12 +315,24 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 							break;
 						}
 					}
-					giveItems(player, CRYSTAL_R);
-					giveItems(player, RECIPE_TWILIGHT_NECKLACE);
-					addExpAndSp(player, 175739575, 42177);
-					qs.exitQuest(false, true);
-					htmltext = "33491-06.html";
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						addExpAndSp(player, 175739575, 42177);
+						giveItems(player, CRYSTAL_R);
+						giveItems(player, RECIPE_TWILIGHT_NECKLACE);
+						qs.exitQuest(QuestType.ONE_TIME, true);
+						htmltext = "33491-06.html";
+					}
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
 				}
+				break;
+			}
+			case "teleport":
+			{
+				player.teleToLocation(TELEPORT_LOC);
 				break;
 			}
 			default:
@@ -431,7 +461,17 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 					htmltext = "33870-06.html";
 					break;
 				}
-				// TODO: Unknown html for cond 9 - 15
+				case 9:
+				case 10:
+				case 11:
+				case 12:
+				case 13:
+				case 14:
+				case 15:
+				{
+					htmltext = "33870-11.html";
+					break;
+				}
 				case 16:
 				{
 					htmltext = "33870-07.html";
@@ -480,5 +520,45 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			qs.setCond(5);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player) && (player.getLevel() >= MIN_LEVEL))
+		{
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
+			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 5000);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) && canStartQuest(player) && (player.getLevel() >= MIN_LEVEL))
+		{
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
+			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 5000);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_PRESS_TUTORIAL_MARK)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if ((event.getMarkId() == getId()) && canStartQuest(player) && (player.getLevel() >= MIN_LEVEL))
+		{
+			final String html = getHtm(player, "popup.html");
+			player.sendPacket(new TutorialShowHtml(html));
+		}
 	}
 }
