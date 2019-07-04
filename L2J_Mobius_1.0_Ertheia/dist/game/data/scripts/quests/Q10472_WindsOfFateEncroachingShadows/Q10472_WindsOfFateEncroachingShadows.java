@@ -16,6 +16,7 @@
  */
 package quests.Q10472_WindsOfFateEncroachingShadows;
 
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -84,10 +85,8 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 		addStartNpc(NAVARI);
 		addTalkId(NAVARI, ZEPHYRA, MOMET, BLACK_MARKETEER_MAMMON, BLACKSMITH_OF_MAMMON, HARDIN, KARLA, RAINA);
 		addKillId(MOBS);
-		
-		addCondRace(Race.ERTHEIA, "");
-		addCondCompletedQuest("Q10753_WindsOfFateChoices", "33931-00.htm"); // TODO: Replace quest name
-		
+		addCondRace(Race.ERTHEIA, "33931-00.htm");
+		addCondInCategory(CategoryType.ERTHEIA_FOURTH_CLASS_GROUP, "33931-00.htm");
 		registerQuestItems(DARK_FRAGMENT, COUNTERFEIT_ATELIA);
 	}
 	

@@ -16,6 +16,7 @@
  */
 package quests.Q10472_WindsOfFateEncroachingShadows;
 
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.enums.Race;
@@ -38,8 +39,6 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
-
-import quests.Q10753_WindsOfFateChoices.Q10753_WindsOfFateChoices;
 
 /**
  * Winds of Fate: Encroaching Shadows (10472)<br>
@@ -105,7 +104,7 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 		addTalkId(NAVARI, ZEPHYRA, MOMET, BLACK_MARKETEER_MAMMON, BLACKSMITH_OF_MAMMON, HARDIN, KARLA, RAINA);
 		addKillId(MOBS);
 		addCondRace(Race.ERTHEIA, "33931-00.htm");
-		addCondCompletedQuest(Q10753_WindsOfFateChoices.class.getSimpleName(), "33931-00.htm");
+		addCondInCategory(CategoryType.ERTHEIA_FOURTH_CLASS_GROUP, "33931-00.htm");
 		registerQuestItems(DARK_FRAGMENT, COUNTERFEIT_ATELIA);
 	}
 	
