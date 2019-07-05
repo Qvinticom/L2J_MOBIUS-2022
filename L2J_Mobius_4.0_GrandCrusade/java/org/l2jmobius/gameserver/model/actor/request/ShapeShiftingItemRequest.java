@@ -68,6 +68,10 @@ public class ShapeShiftingItemRequest extends AbstractRequest
 	@Override
 	public boolean isUsing(int objectId)
 	{
+		if ((_appearanceStone == null) || (_appearanceExtractItem == null))
+		{
+			return false;
+		}
 		return (objectId > 0) && ((objectId == _appearanceStone.getObjectId()) || (objectId == _appearanceExtractItem.getObjectId()));
 	}
 }
