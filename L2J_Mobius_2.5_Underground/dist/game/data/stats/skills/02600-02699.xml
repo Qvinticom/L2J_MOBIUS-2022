@@ -9,7 +9,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2601" toLevel="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
+	<skill id="2601" toLevel="1" name="Gran Kain's Echo Crystal - Theme of Festival">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2604" toLevel="1" name="Gran Kain's Firework">
+	<skill id="2604" toLevel="1" name="Gran Kain's Firecracker">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13268</itemConsumeId> <!-- Gran Kain's Firework -->
@@ -48,7 +48,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2605" toLevel="1" name="Gran Kain's Large Firework">
+	<skill id="2605" toLevel="1" name="Gran Kain's Large Firecracker">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13269</itemConsumeId> <!-- Gran Kain's Large Firework -->
@@ -127,10 +127,10 @@
 		<itemConsumeId>13150</itemConsumeId> <!-- Pailaka All-Purpose Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -694,15 +694,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2633" toLevel="1" name="Elmore-Aden's Holy Water">
-		<castRange>400</castRange>
+	<skill id="2633" toLevel="1" name="Elmoreden's Holy Water">
+		<castRange>40</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -723,15 +723,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2634" toLevel="1" name="Court Magician's Blessing">
-		<castRange>400</castRange>
+	<skill id="2634" toLevel="1" name="Court Wizard's Blessing">
+		<castRange>40</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2073,6 +2073,7 @@
 		<itemConsumeId>13569</itemConsumeId> <!-- Transformation Scroll: Gludio Human Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2112,6 +2113,7 @@
 		<itemConsumeId>13570</itemConsumeId> <!-- Transformation Scroll: Gludio Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2151,6 +2153,7 @@
 		<itemConsumeId>13571</itemConsumeId> <!-- Transformation Scroll: Gludio Dark Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2190,6 +2193,7 @@
 		<itemConsumeId>13572</itemConsumeId> <!-- Transformation Scroll: Gludio Orc Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2229,6 +2233,7 @@
 		<itemConsumeId>13573</itemConsumeId> <!-- Transformation Scroll: Gludio Dwarf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2268,6 +2273,7 @@
 		<itemConsumeId>13574</itemConsumeId> <!-- Transformation Scroll: Gludio Kamael Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2307,6 +2313,7 @@
 		<itemConsumeId>13575</itemConsumeId> <!-- Transformation Scroll: Gludio Knight Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2346,6 +2353,7 @@
 		<itemConsumeId>13576</itemConsumeId> <!-- Transformation Scroll: Gludio Archer Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2385,6 +2393,7 @@
 		<itemConsumeId>13577</itemConsumeId> <!-- Transformation Scroll: Gludio Wizard Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2424,6 +2433,7 @@
 		<itemConsumeId>13578</itemConsumeId> <!-- Transformation Scroll: Gludio Kamael Captain Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2463,6 +2473,7 @@
 		<itemConsumeId>13579</itemConsumeId> <!-- Transformation Scroll: Gludio Knight Captain Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2502,6 +2513,7 @@
 		<itemConsumeId>13580</itemConsumeId> <!-- Transformation Scroll: Gludio Commander Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2541,6 +2553,7 @@
 		<itemConsumeId>13581</itemConsumeId> <!-- Transformation Scroll: Dion Human Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2580,6 +2593,7 @@
 		<itemConsumeId>13582</itemConsumeId> <!-- Transformation Scroll: Dion Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2619,6 +2633,7 @@
 		<itemConsumeId>13583</itemConsumeId> <!-- Transformation Scroll: Dion Dark Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2658,6 +2673,7 @@
 		<itemConsumeId>13584</itemConsumeId> <!-- Transformation Scroll: Dion Orc Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2697,6 +2713,7 @@
 		<itemConsumeId>13585</itemConsumeId> <!-- Transformation Scroll: Dion Dwarf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2736,6 +2753,7 @@
 		<itemConsumeId>13586</itemConsumeId> <!-- Transformation Scroll: Dion Kamael Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2775,6 +2793,7 @@
 		<itemConsumeId>13587</itemConsumeId> <!-- Transformation Scroll: Dion Knight Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2814,6 +2833,7 @@
 		<itemConsumeId>13588</itemConsumeId> <!-- Transformation Scroll: Dion Archer Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2853,6 +2873,7 @@
 		<itemConsumeId>13589</itemConsumeId> <!-- Transformation Scroll: Dion Wizard Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2892,6 +2913,7 @@
 		<itemConsumeId>13590</itemConsumeId> <!-- Transformation Scroll: Dion Kamael Captain Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2931,6 +2953,7 @@
 		<itemConsumeId>13591</itemConsumeId> <!-- Transformation Scroll: Dion Knight Captain Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2970,6 +2993,7 @@
 		<itemConsumeId>13592</itemConsumeId> <!-- Transformation Scroll: Dion Commander Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -3009,6 +3033,7 @@
 		<itemConsumeId>13593</itemConsumeId> <!-- Transformation Scroll: Giran Human Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -3048,6 +3073,7 @@
 		<itemConsumeId>13594</itemConsumeId> <!-- Transformation Scroll: Giran Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -3087,6 +3113,7 @@
 		<itemConsumeId>13595</itemConsumeId> <!-- Transformation Scroll: Giran Dark Elf Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -3126,6 +3153,7 @@
 		<itemConsumeId>13596</itemConsumeId> <!-- Transformation Scroll: Giran Orc Mercenary -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>

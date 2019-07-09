@@ -221,7 +221,7 @@
 		</effects>
 	</skill>
 	<skill id="11504" toLevel="10" name="Superior Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2 -->
+		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2; P. Critical Damage Received -$s3. -->
 		<icon>icon.skill10002</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -389,7 +389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11508" toLevel="9" name="Assault Rush">
+	<skill id="11508" toLevel="9" name="Trace of Twin Edges">
 		<!-- Rushes toward the enemy to inflict Stun for $s1. Requires sword/ blunt weapon/ dual sword/ dual blunt weapon. -->
 		<icon>icon.skill11513</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -472,7 +472,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11509" toLevel="11" name="Crippling Attack">
+	<skill id="11509" toLevel="11" name="Radiant Crash">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P. Def/ M. Def by $s3 for $s2. Requires a sword, blunt, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>
@@ -494,7 +494,7 @@
 			<value fromLevel="1" toLevel="11">99</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<castRange>40</castRange>
+		<castRange>100</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>910</hitTime>
@@ -595,7 +595,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11510" toLevel="11" name="Shadow Blade">
+	<skill id="11510" toLevel="11" name="Resolving Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk. for $s2, P. Atk. and M. Atk.-$s3. Requires a sword, blunt, dual sword, or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>
@@ -617,7 +617,7 @@
 			<value fromLevel="1" toLevel="11">99</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<castRange>40</castRange>
+		<castRange>100</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1010</hitTime>
@@ -718,19 +718,19 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11511" toLevel="11" name="Death Strike">
+	<skill id="11511" toLevel="11" name="Phantom Slasher">
 		<!-- Attacks the target with $s1 Power added to P. Atk. to reduce its P. Atk./ M. Atk./ P. Def./ M. Def. by $s3 for $s2. The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword, blunt, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
-		<icon>icon.skill11511</icon>
+		<icon>icon.skill11511_2</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">99</value>
-			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
-		<hitTime>5500</hitTime>
+		<hitTime>3000</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -759,7 +759,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>7000</reuseDelay>
 		<effectPoint>
 			<value level="1">-692</value>
 			<value level="2">-696</value>
@@ -847,7 +847,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11513" toLevel="11" name="Mass Crippling Attack">
+	<skill id="11513" toLevel="11" name="Radiant Crash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, target's P. Def. and M. Def. -$s3. Requires a sword, blunt, dual sword, or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -859,7 +859,7 @@
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
-		<castRange>40</castRange>
+		<castRange>100</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1210</hitTime>
 		<magicLvl>
@@ -965,7 +965,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11514" toLevel="11" name="Mass Shadow Blade">
+	<skill id="11514" toLevel="11" name="Resolving Bash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, P. Atk. and M. Atk. -$s3. Requires a sword, blunt, dual sword, or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -977,7 +977,7 @@
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
-		<castRange>40</castRange>
+		<castRange>100</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1410</hitTime>
 		<magicLvl>
@@ -1260,7 +1260,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
-			<value level="5">718</value>
+			<value level="5">715</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1359,7 +1359,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
-			<value level="5">717</value>
+			<value level="5">715</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1469,7 +1469,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
-			<value level="5">717</value>
+			<value level="5">715</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1569,7 +1569,13 @@
 			<value level="5">105</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
-		<effectPoint>687</effectPoint>
+		<effectPoint>
+			<value level="1">687</value>
+			<value level="2">698</value>
+			<value level="3">707</value>
+			<value level="4">712</value>
+			<value level="5">715</value>
+		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<affectLimit>
@@ -1826,7 +1832,10 @@
 	</skill>
 	<skill id="11523" toLevel="2" name="Knight's Harmony">
 		<!-- For $s1, selected party member's P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
-		<icon>icon.skill11523</icon>
+		<icon>
+			<value level="1">icon.skill11523</value>
+			<value level="2">icon.skill19500</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1919,7 +1928,10 @@
 	</skill>
 	<skill id="11524" toLevel="2" name="Warrior's Harmony">
 		<!-- For $s1, selected party member's P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
-		<icon>icon.skill11524</icon>
+		<icon>
+			<value level="1">icon.skill11524</value>
+			<value level="2">icon.skill19501</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1987,7 +1999,10 @@
 	</skill>
 	<skill id="11525" toLevel="2" name="Wizard's Harmony">
 		<!-- For $s1, selected party member's M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
-		<icon>icon.skill11525</icon>
+		<icon>
+			<value level="1">icon.skill11525</value>
+			<value level="2">icon.skill19502</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2184,7 +2199,7 @@
 		</effects>
 	</skill>
 	<skill id="11529" toLevel="1" name="Prevailing Sonata">
-		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2239,7 +2254,7 @@
 		</effects>
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 5 minutes, party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2304,7 +2319,7 @@
 		</effects>
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
-		<!-- For $s1, party members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 5 minutes, party members' HP Recovery Bonus +75%, MP Recovery Bonus +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2365,7 +2380,7 @@
 		</effects>
 	</skill>
 	<skill id="11533" toLevel="1" name="Blood Requiem">
-		<!-- Party members receives $s2 Vampiric Rage effect for $s1. -->
+		<!-- Party members receives 80% Vampiric Rage effect for 15 seconds. -->
 		<icon>icon.skill11546</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2491,7 +2506,17 @@
 	<skill id="11536" toLevel="9" name="Dissonance Wave">
 		<!-- A chance to remove up to $s1 buffs from the target and nearby enemies in PvE. In PvP, removes Combat/ Marching/ Refreshing buffs from the target and nearby enemies. -->
 		<icon>icon.skill11536</icon>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-704</value>
+			<value level="2">-707</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">70</value>
@@ -2516,7 +2541,7 @@
 			<value level="9">105</value>
 		</magicLvl>
 		<castRange>900</castRange>
-		<hitTime>700</hitTime>
+		<hitTime>2000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -2661,7 +2686,15 @@
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-700</value>
+			<value level="2">-705</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+		</effectPoint>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2725,7 +2758,19 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<effectPoint>-687</effectPoint>
+		<effectPoint>
+			<value level="1">-692</value>
+			<value level="2">-698</value>
+			<value level="3">-704</value>
+			<value level="4">-708</value>
+			<value level="5">-687</value>
+			<value level="6">-687</value>
+			<value level="7">-687</value>
+			<value level="8">-687</value>
+			<value level="9">-687</value>
+			<value level="10">-687</value>
+			<value level="11">-687</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -2883,7 +2928,7 @@
 		</effects>
 	</skill>
 	<skill id="11541" toLevel="1" name="Polymorph">
-		<!-- Transforms yourself into a stone for $s1 to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. -->
+		<!-- Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. -->
 		<icon>icon.skill11541</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3077,7 +3122,7 @@
 		</effects>
 	</skill>
 	<skill id="11544" toLevel="1" name="Battle Rhapsody">
-		<!-- For $s1, increases all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
+		<!-- For 30 seconds, increases all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. 2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11544</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -3134,7 +3179,7 @@
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">
-		<!-- For $s1, decreases standard attack and M. Skill's Critical Rate targeting party members by $s2. -->
+		<!-- For 15 seconds, decreases standard attack and M. Skill's Critical Rate targeting party members by 50%. -->
 		<icon>icon.skill11545</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -3197,7 +3242,7 @@
 		<operateType>A2</operateType>
 		<mpConsume>1767</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>2000</hitTime>
+		<hitTime>4000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -3257,7 +3302,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11547" toLevel="10" name="Superior HP Recovery">
+	<skill id="11547" toLevel="10" name="Superior HP Recovery Bonus">
 		<!-- HP Recovery Bonus +$s1. STR +$s2. -->
 		<icon>icon.skill0212</icon>
 		<operateType>P</operateType>
@@ -3475,7 +3520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11557" toLevel="1" name="Ultimate Scourge">
+	<skill id="11557" toLevel="7" name="Seal of Extortion">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
 		<icon>icon.skill11559</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -3486,10 +3531,11 @@
 		<affectLimit>10-10</affectLimit>
 		<effectPoint>-379</effectPoint>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<mpConsume>423</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -3506,16 +3552,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11558" toLevel="1" name="Ultimate Oblivion">
+	<skill id="11558" toLevel="7" name="Seal of Confusion">
 		<!-- Cancels nearby enemies' targets. -->
 		<icon>icon.skill11557</icon>
 		<affectRange>200</affectRange>
 		<effectPoint>-457</effectPoint>
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
 		<mpConsume>423</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3529,17 +3576,18 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="11559" toLevel="1" name="Ultimate Suspension">
+	<skill id="11559" toLevel="7" name="Seal of Suspension">
 		<!-- For $s1, physical/ magic skill cooldown of the target and nearby enemies +$s2. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11558</icon>
 		<abnormalTime>120</abnormalTime>
 		<affectRange>200</affectRange>
 		<effectPoint>-457</effectPoint>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<mpConsume>423</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<isMagic>1</isMagic>
@@ -3757,7 +3805,7 @@
 		</effects>
 	</skill>
 	<skill id="11562" toLevel="1" name="Devil's Movement">
-		<!-- Prevents all party members from being attacked preemptively by monsters for $s1. But if any party member initiates an attack, the effect will be canceled. -->
+		<!-- Prevents all party members from being attacked preemptively by monsters for 2 minutes. But if any party member initiates an attack, the effect will be canceled. -->
 		<icon>icon.skill11562</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
@@ -3822,7 +3870,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11564" toLevel="4" name="Angel's Resurrection">
+	<skill id="11564" toLevel="5" name="Angel's Resurrection">
 		<!-- Resurrects a dead target and restores $s1 of the XP lost. -->
 		<icon>icon.skill1016</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3840,6 +3888,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<isMagic>4</isMagic>
 		<staticReuse>true</staticReuse>
@@ -3855,12 +3904,13 @@
 					<value level="2">50</value>
 					<value level="3">60</value>
 					<value level="4">70</value>
+					<value level="5">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11565" toLevel="1" name="Elemental Resistance">
-		<!-- For $s1, all Defense attributes of party members +$s2. -->
+		<!-- For 30 minutes, all Defense attributes of party members +30. -->
 		<icon>icon.skill11565</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3914,8 +3964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11566" toLevel="1" name="Holy Attack Resistance">
-		<!-- For $s1, party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +$s2. -->
+	<skill id="11566" toLevel="1" name="Resistance Debuff">
+		<!-- For 30 minutes, party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +50%. -->
 		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3966,7 +4016,7 @@
 		</effects>
 	</skill>
 	<skill id="11567" toLevel="1" name="Mental Attack Resistance">
-		<!-- For $s1, a party member's Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
+		<!-- For 30 minutes, a party member's Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill11824</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -4016,7 +4066,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11569" toLevel="1" name="Critical Damage Increase">
+	<skill id="11569" toLevel="1" name="Critical Strike">
 		<!-- Critical Damage is increased by 100% through Drum Melody. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -4054,7 +4104,7 @@
 		</effects>
 	</skill>
 	<skill id="11570" toLevel="1" name="Healing Melody">
-		<!-- Heals target and the $s1 most injured allies around target by up to $s2 of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<!-- Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<icon>icon.skill11570</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
@@ -4078,7 +4128,7 @@
 		</effects>
 	</skill>
 	<skill id="11571" toLevel="1" name="Recovery Melody">
-		<!-- Restores target's CP by $s1. -->
+		<!-- Restores target's CP by 1000. -->
 		<icon>icon.skill11571</icon>
 		<effectPoint>780</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4180,7 +4230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11581" toLevel="4" name="Superior Advantage">
+	<skill id="11581" toLevel="4" name="Grand Incarnation of Light">
 		<!-- Increases M. Atk. by $s1 and Skill Power by $s2 and decreases the cooldown of all skills by $s3. -->
 		<icon>icon.skill11581</icon>
 		<operateType>P</operateType>
@@ -4295,7 +4345,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="11583" toLevel="4" name="Superior Song of Mastery">
+	<skill id="11583" toLevel="4" name="Grand Melody of Spirit">
 		<!-- Increases Atk. Spd./ Casting Spd. by $s1 and Attack Attribute by $s2. Activates the Single Note effect on you if Sforzando Sting, Radiant Crash or Resolving Bash is cast. -->
 		<icon>icon.skill11583</icon>
 		<magicLvl>
@@ -4341,7 +4391,7 @@
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
 		<affectRange>150</affectRange> <!-- Custom -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<effectPoint>-666</effectPoint> <!-- Custom -->
+		<effectPoint>-666</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -4369,7 +4419,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="11585" toLevel="4" name="Superior Dance of Mastery">
+	<skill id="11585" toLevel="4" name="Grand Dancing Spectral Sword">
 		<!-- Increases P. Atk./ M. Atk. by $s1 and P. Skill Power by $s2. Activates the Spectral Slash effect on the target if Trace of Twin Edges, Shadow Blade or Resolving Bash is cast. -->
 		<icon>icon.skill11585</icon>
 		<operateType>P</operateType>
@@ -4439,9 +4489,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11587" toLevel="4" name="Mass Blockade">
+	<skill id="11587" toLevel="7" name="Seal of Confusion">
 		<!-- Cancels nearby enemies' targets. -->
-		<icon>icon.skill11587</icon>
+		<icon>
+			<value level="1">icon.skill11557</value>
+			<value level="2">icon.skill11557</value>
+			<value level="3">icon.skill11557</value>
+			<value level="4">icon.skill11587</value>
+			<value level="5">icon.skill11587</value>
+			<value level="6">icon.skill11587</value>
+			<value level="7">icon.skill11587</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
@@ -4450,6 +4508,7 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<mpConsume>
 			<value level="1">252</value>
@@ -4458,10 +4517,18 @@
 			<value level="4">332</value>
 		</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>2110</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>120000</reuseDelay>
-		<effectPoint>-673</effectPoint>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>
+			<value level="1">-457</value>
+			<value level="2">-457</value>
+			<value level="3">-457</value>
+			<value level="4">-673</value>
+			<value level="5">-673</value>
+			<value level="6">-673</value>
+			<value level="7">-673</value>
+		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PHYSICAL_BLOCKADE</trait>
@@ -4472,7 +4539,7 @@
 			<effect name="PhysicalAttackMute" />
 		</effects>
 	</skill>
-	<skill id="11588" toLevel="4" name="Superior Wizard Mastery">
+	<skill id="11588" toLevel="4" name="Grand Vanguard of Baylor">
 		<!-- PvP damage +$s1 and Max MP/ CP +$s2. -->
 		<icon>icon.skill11588</icon>
 		<operateType>P</operateType>
@@ -4488,7 +4555,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11589" toLevel="4" name="Horn Frenzy">
+	<skill id="11589" toLevel="5" name="Horn Frenzy">
 		<!-- For $s1, clan members' P. Atk. +$s2, P. Def. +$s3, M. Atk. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11589</icon>
 		<abnormalLvl>
@@ -4496,6 +4563,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -4521,6 +4589,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
+			<value level="5">712</value>
 		</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 		<mpInitialConsume>
@@ -4528,12 +4597,14 @@
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
+			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -4573,7 +4644,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11590" toLevel="4" name="Drum Frenzy">
+	<skill id="11590" toLevel="5" name="Drum Frenzy">
 		<!-- For $s1, clan members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received -$s5. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11590</icon>
 		<abnormalLvl>
@@ -4581,6 +4652,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
@@ -4604,6 +4676,7 @@
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
+			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4612,6 +4685,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>
@@ -4619,6 +4693,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
+			<value level="5">712</value>
 		</effectPoint>
 		<effects>
 			<effect name="TriggerSkillByDamage">
@@ -4646,6 +4721,7 @@
 					<value level="2">31</value>
 					<value level="3">32</value>
 					<value level="4">33</value>
+					<value level="5">33</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4655,6 +4731,7 @@
 					<value level="2">32</value>
 					<value level="3">34</value>
 					<value level="4">36</value>
+					<value level="5">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4668,7 +4745,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11591" toLevel="4" name="Pipe Organ Frenzy">
+	<skill id="11591" toLevel="5" name="Pipe Organ Frenzy">
 		<!-- For $s1, Clan members' Max HP +$s2, Max MP +$s3, and Max CP +$s4. Bestows a $s5 Vampiric Rage. -->
 		<icon>icon.skill11591</icon>
 		<abnormalLvl>
@@ -4676,6 +4753,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>
@@ -4699,6 +4777,7 @@
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
+			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4707,6 +4786,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>
@@ -4714,6 +4794,7 @@
 			<value level="2">698</value>
 			<value level="3">707</value>
 			<value level="4">712</value>
+			<value level="5">712</value>
 		</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -4729,6 +4810,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
+					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4738,6 +4820,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
+					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4751,6 +4834,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
+					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4760,7 +4844,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11592" toLevel="4" name="Guitar Frenzy">
+	<skill id="11592" toLevel="5" name="Guitar Frenzy">
 		<!-- For $s1, party members' Casting Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11592</icon>
 		<abnormalLvl>
@@ -4768,6 +4852,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>
@@ -4791,6 +4876,7 @@
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
+			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4799,6 +4885,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
@@ -4816,6 +4903,7 @@
 					<value level="2">61</value>
 					<value level="3">62</value>
 					<value level="4">63</value>
+					<value level="5">63</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4825,6 +4913,7 @@
 					<value level="2">60</value>
 					<value level="3">61</value>
 					<value level="4">61</value>
+					<value level="5">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4834,6 +4923,7 @@
 					<value level="2">15</value>
 					<value level="3">20</value>
 					<value level="4">25</value>
+					<value level="5">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -5027,7 +5117,7 @@
 		</effects>
 	</skill>
 	<skill id="11595" toLevel="1" name="Knight's Frenzied Harmony">
-		<!-- For $s1, selected clan member's P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
+		<!-- For 30 minutes, selected clan member's P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
 		<icon>icon.skill11596</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5084,7 +5174,7 @@
 		</effects>
 	</skill>
 	<skill id="11596" toLevel="1" name="Warrior's Frenzied Harmony">
-		<!-- For $s1, selected clan member's P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
+		<!-- For 30 minutes, selected clan member's P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
 		<icon>icon.skill11595</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5145,7 +5235,7 @@
 		</effects>
 	</skill>
 	<skill id="11597" toLevel="1" name="Wizard's Frenzied Harmony">
-		<!-- For $s1, selected clan member's M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 30 minutes, selected clan member's M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11597</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5234,8 +5324,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11598" toLevel="4" name="Greater Freezing Flame">
-		<!-- A powerful cold flame. For $s1., decreases enemy's HP by $s2. -->
+	<skill id="11598" toLevel="1" name="Greater Freezing Flame">
+		<!-- A powerful cold flame. For 10 seconds., decreases enemy's HP by 326. -->
 		<icon>icon.skill11598</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -5247,9 +5337,6 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">73</value>
-			<value level="2">79</value>
-			<value level="3">86</value>
-			<value level="4">91</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
@@ -5265,9 +5352,6 @@
 			<effect name="DamOverTime">
 				<power>
 					<value level="1">326</value>
-					<value level="2">343</value>
-					<value level="3">359</value>
-					<value level="4">375</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>

@@ -2074,7 +2074,7 @@
 		</effects>
 	</skill>
 	<skill id="1043" toLevel="1" name="Holy Weapon">
-		<!-- Increases a party member's holy P. Atk. by $s2 for $s1. -->
+		<!-- Increases a party member's holy P. Atk. by 20 for 20 min. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2543,6 +2543,7 @@
 		</effects>
 	</skill>
 	<skill id="1059" toLevel="3" name="Empower">
+		<!-- Increases M. Atk. by $s2 for $s1. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

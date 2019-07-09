@@ -179,7 +179,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2907" toLevel="5" name="Battlefield Use Secret Medicine of Life">
+	<skill id="2907" toLevel="5" name="Elixir of Life (Battleground)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -201,7 +201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2908" toLevel="5" name="Battlefield Use Secret Medicine of Mind">
+	<skill id="2908" toLevel="5" name="Elixir of Mind (Battleground)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -223,7 +223,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2909" toLevel="5" name="Battlefield Use Secret Medicine of Will">
+	<skill id="2909" toLevel="5" name="Elixir of CP (Battleground)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -583,7 +583,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2920" toLevel="1" name="Titan's Ancient Book">
+	<skill id="2920" toLevel="1" name="Lesser Giant's Ancient Book">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14847</itemConsumeId> <!-- Titan Ancient Book -->

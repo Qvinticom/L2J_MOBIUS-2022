@@ -415,7 +415,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21224" toLevel="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21224" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_stagbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -434,7 +434,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21225" toLevel="1" name="Soul of a Strong Warrior's Ability">
+	<skill id="21225" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_hornbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -453,7 +453,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21226" toLevel="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21226" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_ladybug_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -472,7 +472,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21227" toLevel="1" name="Ability of Prominent Adventure's Soul">
+	<skill id="21227" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_mantis_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -491,7 +491,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21228" toLevel="1" name="Soul of a Brave Warrior's Ability">
+	<skill id="21228" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical Damage by 20% and Critical Rate by 20%. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_locust_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -634,7 +634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21235" toLevel="1" name="7th Anniversary T-shirt: Speed">
+	<skill id="21235" toLevel="1" name="Power Shirt: Speed">
 		<!-- Increases Speed by 7. -->
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<operateType>P</operateType>
@@ -647,7 +647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21236" toLevel="1" name="7th Anniversary T-shirt: Blessed Escape Ability">
+	<skill id="21236" toLevel="1" name="Power Shirt: Blessed Escape">
 		<!-- Allows the use of Blessed Escape every 20 hours. -->
 		<icon>Icon.skill1050</icon>
 		<hitTime>200</hitTime>
@@ -669,7 +669,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21237" toLevel="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
+	<skill id="21237" toLevel="1" name="Power Shirt: Invincibility">
 		<!-- Momentarily becomes invincible for 7 seconds. Can be used every 20 hours. -->
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -861,7 +861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21246" toLevel="1" name="Rudolph's Energy">
+	<skill id="21246" toLevel="1" name="Rudolph's Vitality">
 		<!-- For 10 minutes, Vitality is replenished when XP is acquired through hunting. Reuse time is 30 minutes. -->
 		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<operateType>A2</operateType>
@@ -890,7 +890,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="21247" toLevel="1" name="Santa's Gift"> <!-- TODO: Not Using ? -->
+	<skill id="21247" toLevel="1" name="Santa's Gift">
 		<!-- Receives a gift from Santa. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
@@ -1423,6 +1423,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

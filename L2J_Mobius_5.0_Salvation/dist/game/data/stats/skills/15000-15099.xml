@@ -2772,7 +2772,7 @@
 		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.skill15094</icon>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2798,6 +2798,7 @@
 		<!-- Through the clan flag, increases clan members' PvP damage by 5% and decreases received PvP damage by 5%. -->
 		<icon>BranchSys2.icon.skill20006</icon>
 		<operateType>A5</operateType> <!-- Hide system messages -->
+		<hitTime>1500</hitTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<abnormalType>FLAG_BUF</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>

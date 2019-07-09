@@ -11,7 +11,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
-		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
@@ -242,7 +241,7 @@
 		<magicLvl>1</magicLvl>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -272,7 +271,7 @@
 	</skill>
 	<skill id="21414" toLevel="1" name="Halloween: Outfit">
 		<!-- Decreases all Received Damage by 3%, LUC +1, and all Attribute Resistance +10. -->
-		<icon>[icon.ev_wp_halloween</icon>
+		<icon>icon.ev_wp_halloween</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DamageByAttack">
@@ -311,7 +310,7 @@
 	</skill>
 	<skill id="21415" toLevel="1" name="Halloween: Weapon">
 		<!-- Increases all Damage by 3%, LUC +1, and Attack Attribute +30. -->
-		<icon>[icon.ev_wp_halloween</icon>
+		<icon>icon.ev_wp_halloween</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -1137,13 +1136,12 @@
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<coolTime>1000</coolTime>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="21483" toLevel="1" name="Blessed Griffin Egg">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21484" toLevel="1" name="Fancy Fishing Rod">
-		<!-- Increases XP/ SP from fishing by $s1. -->
+		<!-- Increases XP/ SP from fishing by 50%. -->
 		<icon>BranchIcon.icon.weapon_g_fishing_rod</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>

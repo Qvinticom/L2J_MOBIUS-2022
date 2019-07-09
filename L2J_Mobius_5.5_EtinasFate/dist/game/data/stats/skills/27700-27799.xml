@@ -232,12 +232,16 @@
 	<skill id="27706" toLevel="1" name="Shilen's Strength">
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27707" toLevel="1" name="Shilen's Dignity">
 		<!-- Stuns target for 60 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>200</hitTime>
+		<reuseDelay>7200000</reuseDelay>
+		<effectPoint>-999</effectPoint>
 	</skill>
 	<skill id="27708" toLevel="6" name="Shilen's Earring">
 		<!-- M. Def. +$s1, Dark Attribute Resistance +$s2, STR/ INT +$s3, Physical/ Mental Resistance +$s4, Speed +$s5. Effects do not stack with additional rings. -->
@@ -346,6 +350,10 @@
 		<!-- Creates a space that cancels all ranged attacks and debuffs for 60 sec. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7200000</reuseDelay>
+		<effectPoint>379</effectPoint>
 	</skill>
 	<skill id="27711" toLevel="1" name="Scroll: Shilen's Ring">
 		<operateType>A1</operateType>
@@ -360,6 +368,8 @@
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>400</castRange>
 	</skill>
 	<skill id="27715" toLevel="1" name="Prestige Cube">
 		<operateType>A1</operateType>
@@ -367,6 +377,8 @@
 	<skill id="27716" toLevel="1" name="Zodiac Agathion Pack">
 		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27717" toLevel="6" name="Greater Jewel's Blessing">
 		<!-- You can feel a new energy thanks to your possession of a Greater Jewel. Max CP +5%. -->
@@ -421,12 +433,13 @@
 		</effects>
 	</skill>
 	<skill id="27720" toLevel="1" name="Ultimate Jewelry Box">
-		<icon>icon.etc_bm_jewelbox_main_i00</icon>
 		<itemConsumeId>38941</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -562,10 +575,11 @@
 		</effects>
 	</skill>
 	<skill id="27725" toLevel="1" name="Ultimate Jewelry Box">
-		<icon>icon.etc_bm_jewelbox_main_i00</icon>
 		<itemConsumeId>28365</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -644,91 +658,109 @@
 		<!-- The necklace imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27728" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Necklace">
 		<!-- The light of the necklace imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27729" toLevel="1" name="Equip Goddess' Accessory - Lv. 1 Earring">
 		<!-- The earring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27730" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Earring">
 		<!-- The light of the earring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27731" toLevel="1" name="Equip Goddess' Accessory - Lv. 1 Ring">
 		<!-- The ring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27732" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Ring">
 		<!-- The light of the ring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27733" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Necklace">
 		<!-- The necklace imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27734" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Necklace">
 		<!-- The light of the necklace imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27735" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Earring">
 		<!-- The earring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27736" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Earring">
 		<!-- The light of the earring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27737" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Ring">
 		<!-- The ring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27738" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Ring">
 		<!-- The light of the ring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27739" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Necklace">
 		<!-- The necklace imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27740" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Necklace">
 		<!-- The light of the necklace imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27741" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Earring">
 		<!-- The earring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27742" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Earring">
 		<!-- The light of the earring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27743" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Ring">
 		<!-- The ring imbued with the goddess' power is shining. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
 	<skill id="27744" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Ring">
 		<!-- The light of the ring imbued with the goddess' power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27745" toLevel="1" name="Chef Monkey's Belt">
 		<!-- Max HP/ MP/ CP +300, Weight +12800, Damage +7%, Received Damage -5%, Inventory Slots +18, Attribute Resistance +5. -->
@@ -767,9 +799,9 @@
 		</effects>
 	</skill>
 	<skill id="27746" toLevel="1" name="Item Skill: Unlimited Vitality Agathion">
-		<!-- When equipped, XP +$s1. -->
+		<!-- When equipped, XP +3%. -->
 		<icon>BranchSys.icon.br_aga_bonus_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27747" toLevel="1" name="2016 World Olympiad Hero">
 		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5 -->
@@ -805,51 +837,64 @@
 	</skill>
 	<skill id="27748" toLevel="1" name="Special Treasure Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27749" toLevel="6" name="Gran Kain's Necklace">
 		<!-- When used, ignores target's invincibility for $s1 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="27750" toLevel="6" name="Einhasad's Necklace">
-		<!-- Damage Reflection Resistance becomes $s1 for 30 sec. -->
+		<!-- Damage Reflect Resistance becomes $s1 for 30 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27751" toLevel="6" name="Pa'agrio's Earring">
 		<!-- $s1 chance with standard attacks and $s2 chance when casting a skill to inflict $s3 fixed damage. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27752" toLevel="6" name="Eva's Earring">
-		<!-- P. Def. and M. Def. become $s1 for 40 sec. -->
+		<!-- P. Def. and M. Def become $s1 for 40 sec. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>-379</effectPoint>
 	</skill>
 	<skill id="27753" toLevel="6" name="Sayha's Ring">
 		<!-- $s1 chance with standard attacks and $s2 chance when casting a skill to Restrain Physical and Magic skills. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27754" toLevel="6" name="Maphr's Ring">
 		<!-- $s1 chance with standard attacks and $s2 chance when casting a skill to bind target. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27755" toLevel="1" name="Shilen's Necklace">
 		<!-- Go into Hide state when used. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>120000</reuseDelay>
+		<effectPoint>679</effectPoint>
 	</skill>
 	<skill id="27756" toLevel="1" name="Shilen's Earring">
 		<!-- 90% chance of PK count not increasing after killing another character. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27757" toLevel="1" name="Shilen's Ring">
 		<!-- Resets all cooldowns. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="27758" toLevel="1" name="Entrance Pass: Embryo Command Post">
 		<operateType>A1</operateType>
@@ -936,42 +981,57 @@
 	<skill id="27777" toLevel="1" name="Abundant Seven Signs Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27778" toLevel="1" name="Release Agathion's Seal - Babayaga">
-		<!-- The Agathion - Babayaga seal is released. -->
+	<skill id="27778" toLevel="1" name="Release Agathion's Seal - Hut on Chicken Legs">
+		<!-- The Agathion - Hut on Chicken Legs seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="27779" toLevel="1" name="Babayaga Teleport: Town of Aden">
+	<skill id="27779" toLevel="1" name="Hut on Chicken Legs Teleport: Town of Aden">
 		<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="27780" toLevel="1" name="Babayaga Teleport - Town of Rune">
+	<skill id="27780" toLevel="1" name="Hut on Chicken Legs Teleport - Town of Rune">
 		<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="27781" toLevel="1" name="Babayaga Teleport - Town of Giran">
+	<skill id="27781" toLevel="1" name="Hut on Chicken Legs Teleport - Town of Giran">
 		<!-- Teleport to the Town of Giran. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
-		<!-- For 10sec., a Babayaga's power boosts Speed by 100%. Cooldown is 10min. -->
+		<!-- For 10 sec., a Hut on Chicken Legs's power boosts Speed by 100%. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>689</effectPoint>
 	</skill>
 	<skill id="27783" toLevel="1" name="Agathion's Blessing: Meditation">
-		<!-- For 30sec., P. Def. -90% and restores MP by 134 per second. Effect removed when hit. Cooldown is 30 min. -->
+		<!-- For 30 sec., P. Def. -90% and restores MP by 134 per sec. Effect removed when hit. Cooldown is 30 min. -->
 		<icon>icon.skill1430</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27784" toLevel="1" name="Agathion's Blessing: Featherweight">
 		<!-- Weight Limit +9000, and Inventory Slots +9. -->
 		<icon>icon.skill0332</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Babayaga">
+	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Hut on Chicken Legs">
 		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="27786" toLevel="1" name="Ride Elk">
 		<!-- Mounts the Elk. -->
@@ -1292,7 +1352,7 @@
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
+		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
 			<value level="1">1800000</value>
@@ -1328,22 +1388,31 @@
 	<skill id="27793" toLevel="1" name="Fortune Talisman Pack">
 		<!-- Double-click to obtain either Sayha's Talisman or Venir's Talisman. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27794" toLevel="1" name="Seed Talisman Enhancement Pack">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27795" toLevel="1" name="Fortune Hair Accessory Box">
 		<!-- Double-click to get 1 random Hair Accessory Box. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27796" toLevel="1" name="Exclusive Reward Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27797" toLevel="1" name="Ultimate Jewelry Box">
-		<icon>icon.bm_sayha_blessed_box</icon>
 		<itemConsumeId>28470</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1416,7 +1485,7 @@
 		</effects>
 	</skill>
 	<skill id="27798" toLevel="1" name="Elk's Blessing">
-		<!-- Maintains Vitality for 1 h. through the Elk's Blessing. -->
+		<!-- Maintains Vitality for 1 hr. through the Elk's Blessing. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1426,7 +1495,7 @@
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>86400000</reuseDelay>
+		<reuseDelay>43200000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1444,8 +1513,7 @@
 	<skill id="27799" toLevel="1" name="Elk's Summon">
 		<!-- Summon a party member. -->
 		<icon>icon.skill1403</icon>
-		<castRange>-2</castRange>
-		<effectPoint>467</effectPoint>
+		<effectPoint>1</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

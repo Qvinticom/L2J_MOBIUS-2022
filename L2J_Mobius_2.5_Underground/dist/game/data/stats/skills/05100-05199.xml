@@ -33,11 +33,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5103" toLevel="1" name="Production - Clan / Transfer">
+	<skill id="5103" toLevel="1" name="">
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -174,7 +173,6 @@
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2857,7 +2855,7 @@
 			<effect name="ProtectionBlessing" />
 		</effects>
 	</skill>
-	<skill id="5183" toLevel="1" name="Production: Dimensional Stun">
+	<skill id="5183" toLevel="1" name="Dimensional Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
 		<affectRange>300</affectRange>
@@ -2876,7 +2874,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5184" toLevel="1" name="Production: Valakas Dragon Breath">
+	<skill id="5184" toLevel="1" name="Dragon Breath">
 		<affectRange>1200</affectRange>
 		<castRange>600</castRange>
 		<coolTime>2000</coolTime>
@@ -2892,7 +2890,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5185" toLevel="1" name="Production: Magic-type Guard">
+	<skill id="5185" toLevel="1" name="Presentation - Magic-type Guard">
 		<castRange>900</castRange>
 		<effectPoint>-655</effectPoint>
 		<effectRange>1400</effectRange>

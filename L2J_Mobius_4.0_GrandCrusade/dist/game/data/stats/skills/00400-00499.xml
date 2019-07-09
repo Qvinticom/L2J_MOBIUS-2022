@@ -2306,7 +2306,7 @@
 		</conditions>
 	</skill>
 	<skill id="428" toLevel="1" name="Inner Rhythm">
-		<!-- Decreases MP Consumption for song and dance by $s1. -->
+		<!-- Decreases MP Consumption for song and dance by 10%. -->
 		<icon>icon.skill0428</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2325,7 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="429" toLevel="1" name="Knighthood">
-		<!-- Increases P. Def. by $s1 and Shield Defense by $s2 when equipped with heavy armor. -->
+		<!-- Increases P. Def. by 87.1 and Shield Defense by 10% when equipped with heavy armor. -->
 		<icon>icon.skill0429</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2430,7 +2430,7 @@
 		</effects>
 	</skill>
 	<skill id="431" toLevel="1" name="Archery">
-		<!-- When using a bow, increases P. Atk. by $s1 and maximum range by $s2. -->
+		<!-- When using a bow, increases P. Atk. by 200 and maximum range by 50. -->
 		<icon>icon.skill0431</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2453,7 +2453,7 @@
 		</effects>
 	</skill>
 	<skill id="432" toLevel="1" name="Assassination">
-		<!-- When using a dagger, increases P. Atk. by $s1 and Critical Rate by $s2. -->
+		<!-- When using a dagger, increases P. Atk. by 70 and Critical Rate by 3%. -->
 		<icon>icon.skill0432</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2474,7 +2474,7 @@
 		</effects>
 	</skill>
 	<skill id="433" toLevel="1" name="Arcane Roar">
-		<!-- Increases Fire/Water/Wind/Earth Resistance by $s1 and M. Atk. by $s2. -->
+		<!-- Increases Fire/Water/Wind/Earth Resistance by 5 and M. Atk. by 3%. -->
 		<icon>icon.skill0433</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2503,7 +2503,7 @@
 		</effects>
 	</skill>
 	<skill id="434" toLevel="1" name="Necromancy">
-		<!-- Increases Dark Attack Resistance by $s1 and M. Atk. by $s2. -->
+		<!-- Increases Dark Attack Resistance by 10 and M. Atk. by 3%. -->
 		<icon>icon.skill0434</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2520,7 +2520,7 @@
 		</effects>
 	</skill>
 	<skill id="435" toLevel="1" name="Summon Lore">
-		<!-- When equipped with light armor, increases P. Def. by $s1 and Casting Spd. by $s2. When equipped with a robe, increases P. Def. by $s3 and Casting Spd. by $s4, and decreases MP Consumption for magic skills by $s5. -->
+		<!-- When equipped with light armor, increases P. Def. by 80 and Casting Spd. by 5%. When equipped with a robe, increases P. Def. by 60 and Casting Spd. by 7%, and decreases MP Consumption for magic skills by 3%. -->
 		<icon>icon.skill0435</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2565,7 +2565,7 @@
 		</effects>
 	</skill>
 	<skill id="436" toLevel="1" name="Divine Lore">
-		<!-- Decreases MP Consumption for magic skills by $s1. -->
+		<!-- Decreases MP Consumption for magic skills by 5%. -->
 		<icon>icon.skill0436</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2605,7 +2605,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-507</effectPoint>
-		<hitTime>1900</hitTime>
+		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -2651,7 +2651,7 @@
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3600000</reuseDelay>
+		<reuseDelay>4500000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2686,7 +2686,7 @@
 		</effects>
 	</skill>
 	<skill id="440" toLevel="1" name="Braveheart">
-		<!-- Increases combat spirit to recover CP by $s1. -->
+		<!-- Increases combat spirit to recover CP by 1000. -->
 		<icon>icon.skill0440</icon>
 		<effectPoint>669</effectPoint>
 		<hitTime>1500</hitTime>
@@ -2924,7 +2924,7 @@
 		</effects>
 	</skill>
 	<skill id="448" toLevel="1" name="Summon Swoop Cannon">
-		<!-- Summons a Swoop Cannon. Requires $s1 A-grade Crystals. -->
+		<!-- Summons a Swoop Cannon. Requires 27 A-grade Crystals. -->
 		<icon>icon.skill0448</icon>
 		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3767,7 +3767,6 @@
 					<value level="48">6</value>
 					<value level="49">6</value>
 					<value level="50">6</value>
-					<value level="51">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>

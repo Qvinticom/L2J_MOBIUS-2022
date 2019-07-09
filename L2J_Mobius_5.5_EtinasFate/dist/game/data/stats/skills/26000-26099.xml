@@ -778,7 +778,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay> <!-- Retail value is 600000 -->
+		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1855,13 +1855,13 @@
 	<skill id="26088" toLevel="1" name="Gambler's Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26089" toLevel="1" name="Tears One-handed Sword Appearance Stone">
+	<skill id="26089" toLevel="1" name="Tears Appearance Stone: One-handed Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26090" toLevel="1" name="Tears Dagger Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26091" toLevel="1" name="Tears Two-handed Sword Appearance Sword">
+	<skill id="26091" toLevel="1" name="Tears Appearance Stone: Two-handed Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26092" toLevel="1" name="Tears Fist Weapon Appearance Stone">
@@ -1882,10 +1882,10 @@
 	<skill id="26097" toLevel="1" name="Tears Magic Sword Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26098" toLevel="1" name="Tears One-handed Magic Blunt Weapon Appearance Stone">
+	<skill id="26098" toLevel="1" name="Tears Appearance Stone: One-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26099" toLevel="1" name="Tears Two-handed Magic Blunt Weapon Appearance Stone">
+	<skill id="26099" toLevel="1" name="Tears Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
 </list>

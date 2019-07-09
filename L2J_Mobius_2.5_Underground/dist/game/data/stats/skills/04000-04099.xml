@@ -250,22 +250,22 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4013" toLevel="1" name="Resistance To Fire, Vulnerable To Water">
+	<skill id="4013" toLevel="1" name="Fire Resistance, Water Vulnerability">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4014" toLevel="1" name="Resistance To Water, Vulnerable To Fire">
+	<skill id="4014" toLevel="1" name="Water Resistance, Fire Vulnerability">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4015" toLevel="1" name="Resistance To Wind, Vulnerable To Earth">
+	<skill id="4015" toLevel="1" name="Wind Resistance, Earth Vulnerability">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4016" toLevel="1" name="Resistance To Earth, Vulnerable To Wind">
+	<skill id="4016" toLevel="1" name="Earth Resistance, Wind Vulnerability">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1050,7 +1050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4037" toLevel="3" name="Decrease P.Atk">
+	<skill id="4037" toLevel="3" name="Weakness">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -1095,7 +1095,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4038" toLevel="5" name="Decrease Atk.Spd.">
+	<skill id="4038" toLevel="5" name="Shackle">
 		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>
@@ -1844,7 +1844,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4053" toLevel="16" name="Decrease P.Atk">
+	<skill id="4053" toLevel="16" name="Cubic Weakness">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -1903,7 +1903,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4054" toLevel="16" name="Decrease P. Def">
+	<skill id="4054" toLevel="16" name="Cubic Hex">
 		<!-- P. Def. decreases temporarily. Effect $s1. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -1962,7 +1962,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4055" toLevel="16" name="Decrease Atk.Speed">
+	<skill id="4055" toLevel="16" name="Cubic Shackle">
 		<!-- Atk. Spd. decreases temporarily. Effect $s1. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -2636,6 +2636,20 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
@@ -3008,7 +3022,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>50</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3024,12 +3037,10 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4083" toLevel="1" name="Die! You fool!">
+	<skill id="4083" toLevel="1" name="Kalis' Poison">
 		<castRange>600</castRange>
-		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>

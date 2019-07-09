@@ -41,7 +41,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 24 (Normal)">
+	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 1 (Normal)">
 		<!-- Can acquire a Territory Card in $s1 hr. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. <Note> Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
@@ -107,7 +107,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17313" toLevel="24" name="Real Tor's Blessing Stage 24 (Premium)">
+	<skill id="17313" toLevel="24" name="Real Tor's Blessing Stage 1 (Premium)">
 		<!-- Can acquire a Territory Card in $s1 hr. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. Has a chance of acquiring a different gift.<Note> Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
@@ -154,7 +154,6 @@
 	</skill>
 	<skill id="17318" toLevel="1" name="Leona's Cube">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17319" toLevel="1" name="Leona's Will">
 		<operateType>A1</operateType>
@@ -170,7 +169,6 @@
 		<itemConsumeId>38099</itemConsumeId> <!-- Leona's Scroll: Buffs -->
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -225,7 +223,6 @@
 		<!-- Gives 1,000,000 SP. -->
 		<icon>icon.etc_sp_scroll1_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38101</itemConsumeId> <!-- Leona's Scroll: 1,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -245,7 +242,6 @@
 		<!-- Gives 5,000,000 SP. -->
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38102</itemConsumeId> <!-- Leona's Scroll: 5,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -265,7 +261,6 @@
 		<!-- Gives 10,000,000 SP. -->
 		<icon>icon.etc_sp_scroll3_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38103</itemConsumeId> <!-- Leona's Scroll: 10,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -284,12 +279,10 @@
 	<skill id="17324" toLevel="1" name="Superior CP Potion">
 		<!-- Restores 1000 CP. -->
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -300,7 +293,6 @@
 	</skill>
 	<skill id="17325" toLevel="1" name="Leona's Cube (1-time)">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17326" toLevel="1" name="Small Green Mackerel">
 		<operateType>A1</operateType>

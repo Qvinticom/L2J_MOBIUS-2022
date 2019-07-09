@@ -7,6 +7,8 @@
 		<itemConsumeId>70007</itemConsumeId> <!-- Sealed Rune - Lv. 8 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -55,6 +57,8 @@
 		<itemConsumeId>70008</itemConsumeId> <!-- Sealed Rune - Lv. 9 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -103,6 +107,8 @@
 		<itemConsumeId>70009</itemConsumeId> <!-- Sealed Rune - Lv. 10 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -151,6 +157,8 @@
 		<itemConsumeId>70010</itemConsumeId> <!-- Sealed Rune - Lv. 11 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -199,6 +207,8 @@
 		<itemConsumeId>70011</itemConsumeId> <!-- Sealed Rune - Lv. 12 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -247,6 +257,8 @@
 		<itemConsumeId>70012</itemConsumeId> <!-- Sealed Rune - Lv. 13 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -291,30 +303,44 @@
 	<skill id="55206" toLevel="1" name="Sealed Rune Lv. 14">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55207" toLevel="1" name="Sealed Rune Lv. 15">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55208" toLevel="1" name="Sealed Rune Lv. 16">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55209" toLevel="1" name="Sealed Rune Lv. 17">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55210" toLevel="1" name="Sealed Rune Lv. 18">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55211" toLevel="1" name="Sealed Rune Lv. 19">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55212" toLevel="1" name="Sealed Rune Lv. 20">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55213" toLevel="1" name="Instant Acceleration Potion">
 		<!-- Greatly increases Speed for a short period of time. -->
@@ -323,48 +349,62 @@
 	</skill>
 	<skill id="55214" toLevel="1" name="Teleport: Entrance to Mithril Mines">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55215" toLevel="1" name="Teleport: Entrance to the School of Dark Arts">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55216" toLevel="1" name="Teleport: Entrance to Orc Barracks">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55217" toLevel="1" name="Teleport: Entrance to Ruins of Agony">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55218" toLevel="1" name="Teleport: Entrance to Ruins of Despair">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55219" toLevel="1" name="Teleport: Abandoned Camp">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55220" toLevel="1" name="Teleport: Entrance to Ant Nest">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55221" toLevel="1" name="Teleport: Entrance to Cruma Tower">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55222" toLevel="1" name="Teleport: Death Pass">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55223" toLevel="1" name="Teleport: Three-way crossroads at Dragon Valley">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55224" toLevel="1" name="Teleport: Entrance to Antharas' Lair">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55225" toLevel="1" name="Teleport: Outlaw Forest">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55226" toLevel="1" name="Teleport: Alligator Island">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55227" toLevel="1" name="Teleport: Entrance to Forgotten Temple">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55228" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<hitTime>1500</hitTime>
+		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37115</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -390,20 +430,25 @@
 	</skill>
 	<skill id="55229" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55230" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55231" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55232" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55233" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55234" toLevel="2" name="XP Rune 100%">
+	<skill id="55234" toLevel="1" name="XP Rune 100%">
 		<!-- XP/ SP gain +100%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -421,18 +466,16 @@
 			<effect name="ExpModify">
 				<amount>
  				    <value level="1">100</value>
- 				    <value level="2">100</value>
 				</amount>
 			</effect>
 			<effect name="SpModify">
 				<amount>
  				    <value level="1">100</value>
- 				    <value level="2">100</value>
 				</amount>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55235" toLevel="1" name="Adventurer�s Potion - Atk. Spd.">
+	<skill id="55235" toLevel="1" name="Adventurer's Potion - Atk. Spd.">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.etc_reagent_green_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -444,6 +487,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -456,7 +500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55236" toLevel="1" name="Adventurer�s Potion - Casting Spd.">
+	<skill id="55236" toLevel="1" name="Adventurer's Potion - Casting Spd.">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
  	<!-- 	Increase Cast speed by 15%	-->
@@ -489,11 +533,12 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
-		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
+		<hitTime>4000</hitTime>
+		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -510,16 +555,25 @@
 		<!-- Enlarges the user's head for 10 minutes. Cooldown - 30 minutes. -->
 		<icon>icon.skill2513</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="55239" toLevel="1" name="Holiday Hat">
 		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55240" toLevel="1" name="Overwhelming Power of a Holiday Hat">
 		<!-- For 20 minutes, XP/ SP gain +5%. Will not be deleted upon death. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55241" toLevel="1" name="Scroll: Mana Regeneration">
 		<!-- Increases MP Regeneration. Effect 4 -->
@@ -604,14 +658,23 @@
 		<!-- For 10 minutes, P. Atk +12%. -->
 		<icon>icon.skill0271</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>523</effectPoint>
 	</skill>
 	<skill id="55244" toLevel="2" name="Scroll: Dance of the Mystic">
 		<!-- For 10 minutes, M. Atk +20%. -->
 		<icon>icon.skill0273</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>467</effectPoint>
 	</skill>
 	<skill id="55245" toLevel="8" name="Teleport: Town of Aden">
 		<operateType>A1</operateType>
+		<hitTime>20000</hitTime>
 	</skill>
 	<skill id="55246" toLevel="1" name="Rune of Boost">
 		<!-- When in inventory STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
@@ -1657,23 +1720,35 @@
 	<skill id="55269" toLevel="1" name="Valakas Treasure Chest">
 		<icon>icon.bm_sheep_agathion_30d_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55270" toLevel="1" name="Agathion - Dance of Fury">
 		<!-- For 20 minutes, Atk. Spd. +5%. -->
 		<icon>icon.bm_agathion_fury</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>2000</hitTime>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="55271" toLevel="1" name="Agathion - Dance of Concentration">
 		<!-- For 20 minutes, Casting Spd. +5%. -->
 		<icon>icon.bm_agathion_concentration</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>2000</hitTime>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="55272" toLevel="1" name="Agathion - Song of Wind">
 		<!-- For 5 min., Speed +20. -->
 		<icon>icon.bm_agathion_wind</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>2000</hitTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="55273" toLevel="3" name="Great Energy of Development">
+	<skill id="55273" toLevel="3" name="Energy of Development">
 		<!-- For 10 min. XP gained through hunting +5%. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
@@ -1760,32 +1835,48 @@
 		<!-- A Buff for a warrior fighting in the Ruins of Agony. P. Atk. and M. Atk. +10%. You can receive a Box of Tears when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55283" toLevel="1" name="Box of Tears Acquisition Effect">
 		<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55284" toLevel="1" name="Box of Tears Acquisition Effect">
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55285" toLevel="1" name="Box of Tears">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55286" toLevel="1" name="Decayed Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55287" toLevel="1" name="Shabby Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55288" toLevel="1" name="Crude Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55289" toLevel="1" name="Old Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55290" toLevel="1" name="Devil's Ring">
+	<skill id="55290" toLevel="1" name="Devi's Ring">
 		<!-- Increases Max. HP and P./ M. Atk. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<magicLvl>55</magicLvl>
@@ -1811,12 +1902,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55291" toLevel="1" name="Devil's Ring">
+	<skill id="55291" toLevel="1" name="Devi's Ring">
 		<!-- Increases Max. HP and P./ M. Atk. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="55292" toLevel="1" name="Devil's Earring">
+	<skill id="55292" toLevel="1" name="Devi's Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<magicLvl>55</magicLvl>
@@ -1838,12 +1929,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55293" toLevel="1" name="Devil's Earring">
+	<skill id="55293" toLevel="1" name="Devi's Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="55294" toLevel="1" name="Devil's Necklace">
+	<skill id="55294" toLevel="1" name="Devi's Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
@@ -1871,28 +1962,37 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55295" toLevel="1" name="Devil's Necklace">
+	<skill id="55295" toLevel="1" name="Devi's Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55296" toLevel="1" name="Scroll of Invisibility">
 		<!-- Makes the player invisible and invincible to enemy's attacks. Speed -40%. The effect fades upon attack. -->
 		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>4000</hitTime>
+		<reuseDelay>240000</reuseDelay>
+		<effectPoint>532</effectPoint>
 	</skill>
 	<skill id="55297" toLevel="1" name="Buff for the Hero of Ruins of Despair">
 		<!-- A Buff for a warrior fighting in the Ruins of Despair. P. Atk. and M. Atk. +10%. You can receive a Decayed Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55298" toLevel="1" name="Decayed Box Acquisition Effect">
 		<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55299" toLevel="1" name="Decayed Box Acquisition Effect">
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 </list>

@@ -223,6 +223,10 @@
 			<removeSkill id="1509" /> <!-- Seal of Limit -->
 			<removeSkill id="1248" /> <!-- Seal of Suspension -->
 		</skill>
+		<skill skillName="Seal of Extortion" skillId="11557" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="1358" /> <!-- Block Shield -->
+			<removeSkill id="1247" /> <!-- Seal of Scourge -->
+		</skill>
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1085" /> <!-- Acumen -->
 			<removeSkill id="1519" /> <!-- Chant of Blood Awakening -->
@@ -240,7 +244,6 @@
 			<removeSkill id="1414" /> <!-- Victories of Pa'agrio -->
 		</skill>
 		<skill skillName="Recovery Melody" skillId="11571" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="1416" /> <!-- Pa'agrio's Fist -->
 			<removeSkill id="1305" /> <!-- Pa'agrio's Honor -->
 			<removeSkill id="1306" /> <!-- Ritual of Life -->
 		</skill>
@@ -294,8 +297,9 @@
 		</skill>
 		<skill skillName="Petrify" skillId="11539" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1097" /> <!-- Dreaming Spirit -->
+			<removeSkill id="437" /> <!-- Song of Silence -->
 		</skill>
-		<skill skillName="Dissonance Wave" skillId="11604" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Curse of Mortalize" skillId="11604" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1102" /> <!-- Aura Sink -->
 			<removeSkill id="927" /> <!-- Burning Chop -->
@@ -308,7 +312,6 @@
 			<removeSkill id="1485" /> <!-- Spite -->
 			<removeSkill id="504" /> <!-- Triple Thrust -->
 		</skill>
-		
 		<skill skillName="Trace of Twin Edges" skillId="11508" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Resistance Debuff" skillId="11566" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="530" /> <!-- Dance of Alignment -->
@@ -607,7 +610,7 @@
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Seal of Confusion" skillId="11587" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Seal of Suspension" skillId="11559" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Seal of Extortion" skillId="11603" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Seal of Extortion" skillId="11557" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Curse of Mortalize" skillId="11604" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="7" getLevel="107" levelUpSp="2525422932" />
@@ -622,7 +625,7 @@
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Seal of Confusion" skillId="11587" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Seal of Suspension" skillId="11559" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Seal of Extortion" skillId="11603" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Seal of Extortion" skillId="11557" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Curse of Mortalize" skillId="11604" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="8" getLevel="109" levelUpSp="7273218046" />

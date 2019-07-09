@@ -2132,7 +2132,7 @@
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
-		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ores. -->
+		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11134</icon>
 		<affectRange>250</affectRange>
 		<channelingSkillId>11134</channelingSkillId> <!-- Meteor -->
@@ -2190,7 +2190,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11135" toLevel="1" name="Black Pool">
-		<!-- Creates a black swamp in the selected location, dealing great damage, and receiving $s1 of the target's damage as HP. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes $s2 Spirit Ores. -->
+		<!-- Creates a black swamp in the selected location, dealing great damage, and receiving 50% of the target's damage as HP. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11135</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2230,7 +2230,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11136" toLevel="1" name="Snow Storm">
-		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ores. -->
+		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2291,7 +2291,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11137" toLevel="1" name="Tornado">
-		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ores. -->
+		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11137</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2350,7 +2350,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11138" toLevel="1" name="Soul Barrage">
-		<!-- Detonates the soul in the selected location to attack surrounding enemies. Increases target's PvP Damage. The effect increases as the level of the abnormal state increases. Consumes $s1 Spirit Ores. -->
+		<!-- Detonates the soul in the selected location to attack surrounding enemies. Increases target's PvP Damage. The effect increases as the level of the abnormal state increases. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2750,7 +2750,7 @@
 		</effects>
 	</skill>
 	<skill id="11152" toLevel="1" name="Sacrificial Soul">
-		<!-- Sacrifice your servitor to become immune to debuffs for $s1. -->
+		<!-- Sacrifice your servitor to become immune to debuffs for 3 seconds. -->
 		<icon>icon.skill1395</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2876,7 +2876,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11174" toLevel="5" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 5 -->
+	<skill id="11174" toLevel="5" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -2910,7 +2910,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="11175" toLevel="6" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 6 -->
+	<skill id="11175" toLevel="6" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -3022,7 +3022,6 @@
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
-		<castRange>0</castRange>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<!-- Aqua Crash -->
@@ -3495,7 +3494,6 @@
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
-		<castRange>0</castRange>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<attackSkillId>11177</attackSkillId> <!-- Aqua Crash -->

@@ -24,8 +24,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9210" toLevel="1" name="Dismounts from a kukuru.">
-		<!-- Dismounts from a kukuru. -->
+	<skill id="9210" toLevel="1" name="Dismount">
+		<!-- Dismounts from a ridable mount. -->
 		<icon>icon.skill9210</icon>
 		<operateType>A1</operateType>
 		<hitTime>2500</hitTime>
@@ -181,7 +181,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9296" toLevel="1" name="Mysterious Soulshot (B-grade)">
-		<icon>icon.etc_spirit_bullet_blue_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

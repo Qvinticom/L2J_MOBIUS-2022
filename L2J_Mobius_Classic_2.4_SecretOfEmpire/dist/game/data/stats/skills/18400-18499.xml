@@ -34,7 +34,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18451" toLevel="2" name="11th Anniversary Buff">
-		<!-- Acquired XP/ SP +$s1. Receive a $s2th Anniversary Coins once the buff ends. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
+		<!-- Acquired XP/ SP +$s1. Receive a $s2th Anniversary Coins once the buff ends.\n\n<Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>icon.ev_buff_11th</icon>
 		<abnormalTime>
 			<value level="1">3600</value>
@@ -59,10 +59,9 @@
 	<skill id="18472" toLevel="6" name="Lucky number 1">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18475" toLevel="2" name="11th Anniversary Coin">
+	<skill id="18475" toLevel="1" name="11th Anniversary Coin">
 		<icon>icon.ev_buff_11th</icon>
 		<operateType>A2</operateType>
-		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>

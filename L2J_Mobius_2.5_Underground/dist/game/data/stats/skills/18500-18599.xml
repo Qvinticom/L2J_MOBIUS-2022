@@ -186,7 +186,6 @@
 		<!-- Can summon a friend -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>5000</hitTime>
 		<effectPoint>1000</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
@@ -432,12 +431,12 @@
 	<skill id="18562" toLevel="1" name="Entrance Pass: Crystal Caverns">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18563" toLevel="4" name="Red Libra Supplies Lv. 2">
+	<skill id="18563" toLevel="4" name="Red Libra Supplies Lv. 1">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18564" toLevel="1" name="Shadai's Jewelry Box">
+	<skill id="18564" toLevel="2" name="Shadai's Jewelry Box">
 		<icon>
 			<value level="1">icon.etc_bm_jewelbox_main_i00</value>
 			<value level="2">icon.etc_bm_jewelbox_shhadai</value>
@@ -447,6 +446,8 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -461,6 +462,23 @@
 			<effect name="RestorationRandom">
 				<items>
 					<value level="1">
+						<item chance="20.0">
+							<item id="26491" count="1" /> <!-- La Vie En Rose's Vital Stone Chest -->
+						</item>
+						<item chance="20.0">
+							<item id="26492" count="1" /> <!-- La Vie En Rose's Garnet Chest -->
+						</item>
+						<item chance="20.0">
+							<item id="26493" count="1" /> <!-- La Vie En Rose's Tanzanite Chest -->
+						</item>
+						<item chance="20.0">
+							<item id="26507" count="1" /> <!-- La Vie En Rose's Cat's Eye Chest -->
+						</item>
+						<item chance="20.0">
+							<item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Chest -->
+						</item>
+					</value>
+					<value level="2"> <!-- Copy from level 1 -->
 						<item chance="20.0">
 							<item id="26491" count="1" /> <!-- La Vie En Rose's Vital Stone Chest -->
 						</item>

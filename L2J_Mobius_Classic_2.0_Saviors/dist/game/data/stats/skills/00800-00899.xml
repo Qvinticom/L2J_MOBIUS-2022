@@ -1079,7 +1079,7 @@
 		<magicLvl>40</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>75000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1708,12 +1708,12 @@
 	<skill id="845" toLevel="1" name="Outpost Demolition">
 		<!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
 		<icon>icon.skill0247</icon>
-		<castRange>100</castRange>
 		<effectRange>600</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>30</mpConsume>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>

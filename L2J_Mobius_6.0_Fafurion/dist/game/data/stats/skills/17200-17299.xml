@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17200" toLevel="1" name="Potion of Protection: Sleep (Low-grade)">
-		<!-- Use this to increase the defense rate against Sleep by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Sleep by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37797</itemConsumeId>
@@ -23,7 +23,7 @@
 		</effects>
 	</skill>
 	<skill id="17201" toLevel="1" name="Potion of Protection: Poison (Low-grade)">
-		<!-- Use this to increase the defense rate against Poison by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Poison by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37798</itemConsumeId>
@@ -45,7 +45,7 @@
 		</effects>
 	</skill>
 	<skill id="17202" toLevel="1" name="Potion of Protection: Knock Back/ Knock Down (Low-grade)">
-		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37799</itemConsumeId>
@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="17203" toLevel="1" name="Potion of Protection: Aerial Yoke (Low-grade)">
-		<!-- Use this to increase the defense rate against Aerial Yoke by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Aerial Yoke by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37800</itemConsumeId>
@@ -203,7 +203,7 @@
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<canBeDispelled>false</canBeDispelled>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<abnormalTime>1800</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
@@ -543,8 +543,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -580,7 +579,7 @@
 		</effects>
 	</skill>
 	<skill id="17291" toLevel="1" name="PA - Prevailing Sonata">
-		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. PA exclusive. -->
+		<!-- For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -638,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="17292" toLevel="1" name="PA - Daring Sonata">
-		<!-- For $s1, increases Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. PA exclusive. -->
+		<!-- For 1 h., increases Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. PA exclusive. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -698,7 +697,7 @@
 		</effects>
 	</skill>
 	<skill id="17293" toLevel="1" name="PA - Refreshing Sonata">
-		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. PA exclusive. -->
+		<!-- For 1 h., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. PA exclusive. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -763,7 +762,7 @@
 		</effects>
 	</skill>
 	<skill id="17294" toLevel="1" name="PA - Knight's Harmony">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. PA exclusive. -->
+		<!-- For 1 h., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. PA exclusive. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -811,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="17295" toLevel="1" name="PA - Warrior's Harmony">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. PA exclusive. -->
+		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. PA exclusive. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -867,7 +866,7 @@
 		</effects>
 	</skill>
 	<skill id="17296" toLevel="1" name="PA - Wizard's Harmony">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. PA exclusive. -->
+		<!-- For 1 h., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. PA exclusive. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -948,7 +947,7 @@
 		</effects>
 	</skill>
 	<skill id="17297" toLevel="1" name="Emperor's Cookie: Prevailing Sonata">
-		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. Cooldown is 1h. Effect remains after death. -->
+		<!-- For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. Cooldown is 1h. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -956,8 +955,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1007,7 +1004,7 @@
 		</effects>
 	</skill>
 	<skill id="17298" toLevel="1" name="Daring Sonata - Emperor's Cookie">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. Cooldown is 1h. Effect remains after death. -->
+		<!-- For 1 h., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. Cooldown is 1h. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1015,8 +1012,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1058,7 +1053,7 @@
 		</effects>
 	</skill>
 	<skill id="17299" toLevel="1" name="Refreshing Sonata - Emperor's Cookie">
-		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. Cooldown is 1h. Effect remains after death. -->
+		<!-- For 1 h., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. Cooldown is 1h. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1066,8 +1061,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>

@@ -6,7 +6,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1287,7 +1287,7 @@
 		</effects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
-		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of $s1 and making you invisible for $s2. Additionally, decreases Speed by $s3. -->
+		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of 250 and making you invisible for 20 seconds. Additionally, decreases Speed by 50. -->
 		<icon>icon.skill10517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1301,11 +1301,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>38</mpConsume>
-		<castRange>250</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
@@ -1458,10 +1457,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10522" toLevel="9" name="Poison Sworm">
+	<skill id="10522" toLevel="9" name="Poison Swarm">
 		<!-- Throws a poison bottle at the target point to create a poisonous area for $s1. Enemies within the area suffer P. Atk. -$s2, P. Def/ M. Def -$s3, Speed -$s4, and Shield Def. -$s5 and cannot use magic skills. -->
 		<icon>icon.skill10522</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">76</value>
@@ -1476,19 +1476,9 @@
 		</mpConsume>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>800</hitTime>
+		<hitTime>2000</hitTime>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>
-			<value level="1">-707</value>
-			<value level="2">-709</value>
-			<value level="3">-711</value>
-			<value level="4">-711</value>
-			<value level="5">-711</value>
-			<value level="6">-711</value>
-			<value level="7">-711</value>
-			<value level="8">-711</value>
-			<value level="9">-711</value>
-		</effectPoint>
+		<effectPoint>-711</effectPoint>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1879,7 +1869,7 @@
 			<value level="4">105</value>
 		</magicLvl>
 		<mpConsume>92</mpConsume>
-		<castRange>400</castRange>
+		<castRange>300</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -1952,7 +1942,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -2467,6 +2457,7 @@
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>
+		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3187,7 +3178,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10553" toLevel="8" name="Chance of Wind">
+	<skill id="10553" toLevel="1" name="Chance of Wind">
 		<!-- Resets cooldown of certain skills. -->
 		<icon>icon.skill10878</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3196,28 +3187,13 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
-			<value level="2">86</value>
-			<value level="3">88</value>
-			<value level="4">90</value>
-			<value level="5">92</value>
-			<value level="6">94</value>
-			<value level="7">96</value>
-			<value level="8">98</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">133</value>
-			<value level="2">135</value>
-			<value level="3">140</value>
-			<value level="4">145</value>
-			<value level="5">149</value>
-			<value level="6">154</value>
-			<value level="7">159</value>
-			<value level="8">164</value>
 		</mpConsume>
-		<hitTime>1530</hitTime>
-		<coolTime>200</coolTime>
-		<effectPoint>-704</effectPoint>
-		<reuseDelay>10000</reuseDelay>
+		<hitTime>2000</hitTime>
+		<effectPoint>669</effectPoint>
+		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3233,13 +3209,6 @@
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">6871</value>
-					<value level="2">7012</value>
-					<value level="3">7300</value>
-					<value level="4">7599</value>
-					<value level="5">7909</value>
-					<value level="6">8232</value>
-					<value level="7">8568</value>
-					<value level="8">8917</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -3391,6 +3360,7 @@
 				<amount>
 					<value level="1">30</value>
 					<value level="1">40</value>
+					<value level="2">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3399,6 +3369,7 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="1">70</value>
+					<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -3418,7 +3389,7 @@
 		</effects>
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
-		<!-- For $s1, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<!-- For 30 seconds, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3489,7 +3460,7 @@
 		</effects>
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
-		<!-- For $s1, increases the Deadly Attack rate by $s2 and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
+		<!-- For 120 seconds, increases the Deadly Attack rate by 10% and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11877</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3581,7 +3552,7 @@
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Tactics">
-		<!-- For $s1, Critical Damage +$s2, Deadly Attack Rate +$s3, Critical Rate/ Damage from the front and the back +$s4, Critical Rate/ Damage from the flank +$s5. Requires dagger/ dual dagger. -->
+		<!-- For 5 minutes, Critical Damage +304, Deadly Attack Rate +10%, Critical Rate/ Damage from the front and the back +50%, Critical Rate/ Damage from the flank +30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10562</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

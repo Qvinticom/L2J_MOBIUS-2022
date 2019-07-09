@@ -132,7 +132,7 @@
 		</effects>
 	</skill>
 	<skill id="11303" toLevel="1" name="Mass Servitor Magic Barrier">
-		<!-- Increases all servitors' M. Def. by $s2 for $s1. -->
+		<!-- Increases all servitors' M. Def. by 30% for 30 minutes. -->
 		<icon>icon.skill1139</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -161,7 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="11304" toLevel="1" name="Mass Servitor Haste">
-		<!-- Increases all servitors' Atk. Spd. by $s2 for $s1. -->
+		<!-- Increases all servitors' Atk. Spd. by 34% for 30 minutes. -->
 		<icon>icon.skill1141</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -190,7 +190,7 @@
 		</effects>
 	</skill>
 	<skill id="11305" toLevel="1" name="Mass Servitor Shield">
-		<!-- Increases all servitors' P. Def. by $s2 for $s1. -->
+		<!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
 		<icon>icon.skill1140</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -219,7 +219,7 @@
 		</effects>
 	</skill>
 	<skill id="11306" toLevel="1" name="Mass Servitor Empower">
-		<!-- Increases all servitors' M. Atk. by $s2 for $s1. -->
+		<!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -248,7 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="11307" toLevel="1" name="Mass Servitor Might">
-		<!-- Increases all servitors' P. Atk. by $s2 for $s1. -->
+		<!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
 		<icon>icon.skill1146</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -277,7 +277,7 @@
 		</effects>
 	</skill>
 	<skill id="11308" toLevel="1" name="Mass Servitor Wind Walk">
-		<!-- Increases all servitors' Speed by $s2 for $s1. -->
+		<!-- Increases all servitors' Speed by 34 for 30 minutes. -->
 		<icon>icon.skill1144</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -306,7 +306,7 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
-		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for $s1. -->
+		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for 5 seconds. -->
 		<icon>icon.skill1301</icon>
 		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
@@ -396,7 +396,7 @@
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3700,7 +3700,7 @@
 		</effects>
 	</skill>
 	<skill id="11387" toLevel="1" name="Arcana's Call">
-		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3, P. Accuracy +$s4, Knock Back/Knock Down Success Rate +$s5 for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
+		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, P. Accuracy +23, Knock Back/Knock Down Success Rate +60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3743,7 +3743,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11388" toLevel="1" name="Lord of Arcana">
-		<!-- For $s1, P. Atk./P. Def./M. Atk./M. Def. +$s2. -->
+		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3780,7 +3780,7 @@
 		</effects>
 	</skill>
 	<skill id="11389" toLevel="1" name="Elemental's Call">
-		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3, Atk. Spd. +$s4, and Skill Cooldown -$s5 for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
+		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, Atk. Spd. +10%, and Skill Cooldown -60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3828,7 +3828,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11390" toLevel="1" name="Lord of Elemental">
-		<!-- For $s1, P. Atk./P. Def./M. Atk./M. Def. +$s2. -->
+		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3865,7 +3865,7 @@
 		</effects>
 	</skill>
 	<skill id="11391" toLevel="1" name="Spectral's Call">
-		<!-- The power of demons is used to increase P. Atk./P. Def./M. Atk./M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3 and P. Critical Damage +$s4 for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
+		<!-- The power of demons is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20% and P. Critical Damage +20% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3903,7 +3903,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11392" toLevel="1" name="Lord of Spectral">
-		<!-- For $s1, P. Atk./P. Def./M. Atk./M. Def. +$s2. -->
+		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

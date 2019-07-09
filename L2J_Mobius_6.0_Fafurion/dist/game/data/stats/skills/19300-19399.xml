@@ -5,7 +5,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effectPoint>676</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="ManaHealPercent">
@@ -18,6 +18,7 @@
 		<icon>icon.skill19301</icon>
 		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>107</mpConsume>
 		<castRange>900</castRange>
 		<abnormalLvl>
@@ -41,6 +42,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -57,23 +59,11 @@
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<mpConsume>1</mpConsume>
-		<effectPoint>
-			<value level="1">-707</value>
-			<value level="2">-709</value>
-			<value level="3">-709</value>
-			<value level="4">-709</value>
-			<value level="5">-709</value>
-			<value level="6">-709</value>
-			<value level="7">-709</value>
-			<value level="8">-709</value>
-			<value level="9">-709</value>
-			<value level="10">-709</value>
-			<value level="11">-709</value>
-		</effectPoint>
+		<effectPoint>-711</effectPoint>
 		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
-		<hitTime>2500</hitTime>
+		<hitTime>2000</hitTime>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>ZONE</trait>
 		<targetType>GROUND</targetType>
@@ -120,7 +110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19302" toLevel="9" name="Thrown Acid Swarm">
+	<skill id="19302" toLevel="11" name="Thrown Acid Swarm">
 		<!-- Damaged by acid. P./ M. Def. -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, cannot use magic skills, and HP -$s3 per second. -->
 		<icon>icon.skill19301</icon>
 		<abnormalLvl>
@@ -133,6 +123,8 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
+			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -152,6 +144,8 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
+			<value level="10">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<effectPoint>-709</effectPoint>
@@ -174,6 +168,8 @@
 					<value level="7">-1780</value>
 					<value level="8">-1930</value>
 					<value level="9">-2080</value>
+					<value level="10">-2080</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">-2080</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -365,7 +361,17 @@
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>8000</reuseDelay>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-709</value>
+			<value level="2">-711</value>
+			<value level="3">-713</value>
+			<value level="4">-715</value>
+			<value level="5">-715</value>
+			<value level="6">-715</value>
+			<value level="7">-715</value>
+			<value level="8">-715</value>
+			<value level="9">-715</value>
+		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
@@ -413,10 +419,9 @@
 		<itemConsumeCount>7777</itemConsumeCount>
 		<itemConsumeId>57</itemConsumeId> <!-- Adena -->
 		<mpConsume>36</mpConsume>
-		<hitTime>200</hitTime>
+		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
-		<castRange>-1</castRange>
 		<affectRange>600</affectRange>
 		<effectRange>600</effectRange>
 		<effectPoint>669</effectPoint>
@@ -463,7 +468,7 @@
 		</effects>
 	</skill>
 	<skill id="19308" toLevel="1" name="Lucky Coin: Defense">
-		<!-- Maphr's Blessing increases allly's P. Defense/ M. Def. by $s2 and enlarges their head size for $s1. -->
+		<!-- Maphr's Blessing increases allly's P. Defense/ M. Def. by 10% and enlarges their head size for 1 min. -->
 		<icon>icon.skill19308</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -598,7 +603,7 @@
 		</effects>
 	</skill>
 	<skill id="19312" toLevel="1" name="Holy Stance">
-		<!-- Damage received -$s1, Damage dealt +$s2, and Holy Attribute Resistance +$s3, and applies Holy to attribute magic. -->
+		<!-- Damage received -5%, Damage dealt +5%, and Holy Attribute Resistance +100, and applies Holy to attribute magic. -->
 		<icon>icon.skill19312</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -654,7 +659,7 @@
 		</effects>
 	</skill>
 	<skill id="19313" toLevel="1" name="Dark Stance">
-		<!-- Increases M. Skill Power by $s1 and Dark defense by $s2, and applies Dark to attribute magic. -->
+		<!-- Increases M. Skill Power by 5% and Dark defense by 100, and applies Dark to attribute magic. -->
 		<icon>icon.skill19313</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -794,7 +799,7 @@
 		<abnormalType>MANA_BURST</abnormalType>
 		<operateType>A2</operateType>
 		<isMagic>7</isMagic>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<mpConsume>70</mpConsume>
 		<effectPoint>696</effectPoint>
 		<targetType>SELF</targetType>

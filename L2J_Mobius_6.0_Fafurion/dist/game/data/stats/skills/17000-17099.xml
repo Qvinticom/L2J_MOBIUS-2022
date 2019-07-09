@@ -143,9 +143,15 @@
 	</skill>
 	<skill id="17045" toLevel="1" name="Black Anvil Guild's Dimensional Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="17046" toLevel="1" name="Dimensional Castle Lord's Support Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="17047" toLevel="1" name="Remove Trick">
 		<!-- Exposes hiding monsters. -->
@@ -174,7 +180,6 @@
 		<!-- Return to Gainak. -->
 		<itemConsumeId>37019</itemConsumeId> <!-- Scroll of Escape: Gainak -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -228,7 +233,6 @@
 		<!-- Return to Land of Chaos -->
 		<itemConsumeId>37018</itemConsumeId> <!-- Scroll of Escape: Land of Chaos -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -251,7 +255,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17052" toLevel="1" name="Elmore's Support Box">
+	<skill id="17052" toLevel="2" name="Elmore's Support Box">
 		<!-- Double-click to obtain either: 1 of the 4 Giant's Codices (Oblivion, Discipline, Mastery, Standard), or an Enchant Scroll (R-grade) for a weapon or armor. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -447,7 +451,7 @@
 		</effects>
 	</skill>
 	<skill id="17082" toLevel="1" name="Mentor's Prevailing Sonata">
-		<!-- With your Mentor's help, your Max HP +$s1, P. Atk. +$s2, M. Atk. +$s3, and magic cancel rate -$s4. A chance to add $s5 Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
+		<!-- With your Mentor's help, your Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -461,7 +465,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>
@@ -504,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="17083" toLevel="1" name="Daring Sonata - Mentor">
-		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, Speed +$s3, Damage Reflectionion +$s4, and Skill Cooldown -$s5. The buff disappears when the Mentee contract ends. -->
+		<!-- With your Mentor's help, your Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -518,7 +522,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>
@@ -563,7 +567,7 @@
 		</effects>
 	</skill>
 	<skill id="17084" toLevel="1" name="Refreshing Sonata - Mentor">
-		<!-- With your Mentor's help, your HP Recovery +$s1, MP Recovery +$s2, P. Evasion/ M. Evasion +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
+		<!-- With your Mentor's help, your HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -577,7 +581,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>

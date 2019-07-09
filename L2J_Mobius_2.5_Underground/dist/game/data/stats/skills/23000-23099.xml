@@ -329,7 +329,6 @@
 		<abnormalType>VP_UP</abnormalType>
 		<activateRate>0</activateRate>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>1000</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -421,7 +420,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23018" toLevel="1" name="Thomas D. Turkey's Mistake">
+	<skill id="23018" toLevel="1" name="Stupid Turkey's Mistake">
 		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical/Magic P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 2. -->
 		<icon>BranchSys.icon.br_turkey_buff_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -1492,7 +1491,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23066" toLevel="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
+	<skill id="23066" toLevel="1" name="Daewoonso Agathion Special Skill: New Year's Gift Ability">
 		<!-- Can receive a New Year's Gift. Cooldown is 1 hours. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1671,7 +1670,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23072" toLevel="1" name="Eva's Wrath">
+	<skill id="23072" toLevel="1" name="Eva's Authority">
 		<!-- For 70 seconds, attacks the spirit using Eva's Authority. -->
 		<icon>BranchSys.icon.br_power_of_eva_i00</icon>
 		<abnormalLvl>1</abnormalLvl>

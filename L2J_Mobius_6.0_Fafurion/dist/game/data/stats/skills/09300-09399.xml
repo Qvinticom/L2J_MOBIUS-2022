@@ -201,7 +201,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -224,7 +223,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -247,7 +245,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -466,7 +463,7 @@
 		</conditions>
 	</skill>
 	<skill id="9331" toLevel="1" name="Horn Melody - Enhanced Cocktail">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. PA exclusive. -->
+		<!-- For 1 h., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -511,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="9332" toLevel="1" name="Drum Melody - Enhanced Cocktail">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. PA exclusive. -->
+		<!-- For 1 h., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -608,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="9334" toLevel="1" name="Pipe Organ Melody - Enhanced Cocktail">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. PA exclusive. -->
+		<!-- For 1 h., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -656,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="9335" toLevel="1" name="Guitar Melody - Enhanced Cocktail">
-		<!-- For $s1, increases Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. PA exclusive. -->
+		<!-- For 1 h., increases Atk. Spd. +60%, Casting Spd. +60%, Speed +10, and Skill MP Consumption -10%. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1720,7 +1717,6 @@
 		<icon>icon.skill1403</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>15000</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>467</effectPoint>

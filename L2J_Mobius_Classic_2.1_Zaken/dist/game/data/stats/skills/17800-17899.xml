@@ -60,5 +60,7 @@
 	<skill id="17896" toLevel="1" name="Orc Recovery Ban">
 		<!-- No HP recovery. -->
 		<operateType>P</operateType>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
 	</skill>
 </list>

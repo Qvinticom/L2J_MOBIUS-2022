@@ -71,7 +71,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<nextAction>ATTACK</nextAction>
-		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -107,7 +106,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<affectRange>300</affectRange>
-		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -133,7 +131,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<affectRange>800</affectRange>
-		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -469,132 +466,262 @@
 		<!-- Max HP + 20%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15667" toLevel="5" name="P. Atk. Increase 1">
 		<!-- P. Atk. + 10%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15668" toLevel="5" name="M. Atk Increase 1">
 		<!-- M. Atk. + 10%. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15669" toLevel="5" name="P. Def. Increase 1">
 		<!-- P. Def. + 20%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15670" toLevel="5" name="P. Def. Increase 1">
 		<!-- M. Def. +20%. -->
 		<icon>icon.skill1010</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15671" toLevel="5" name="Atk. Spd. Increase 1">
 		<!-- Atk. Spd. is increased by 10%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15672" toLevel="5" name="Physical Attack Resistance 1">
 		<!-- P. Atk. Resistance +10 -->
 		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15673" toLevel="5" name="Terminal State">
-		<!-- For 5 seconds HP doesn t drop below 1. Stuns the target. -->
+		<!-- For 5 seconds HP doesn't drop below 1. Stuns the target. -->
 		<icon>icon.skill1608</icon>
 		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>2</effectPoint>
+		<mpConsume>38</mpConsume>
 	</skill>
 	<skill id="15674" toLevel="1" name="Mass Shackling">
-		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
+		<!-- Provokes nearby enemies and inflicts Hold for 10 seconds. -->
 		<icon>icon.skill0404</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>470</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1098</effectPoint>
+		<mpConsume>40</mpConsume>
 	</skill>
 	<skill id="15675" toLevel="1" name="Tribunal">
-		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and decreases the enemy's Critical Rate by $s3 for $s2 seconds when a sword or blunt weapon is used. Over-hit. -->
+		<!-- Inflicts physical damage on the enemy with 1010 Power added to P. Atk. and decreases the enemy's Critical Rate by 20% for 30 seconds seconds when a sword or blunt weapon is used. Over-hit. -->
 		<icon>icon.skill0400</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1300</hitTime>
+		<coolTime>700</coolTime>
+		<reuseDelay>4000</reuseDelay>
+		<effectPoint>-911</effectPoint>
+		<mpConsume>52</mpConsume>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1010</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15676" toLevel="1" name="Shield Stun">
-		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
+		<!-- Makes an attack with a shield, stunning the target for 9 seconds. Requires a shield. -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-377</effectPoint>
+		<mpConsume>10</mpConsume>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 	</skill>
 	<skill id="15677" toLevel="1" name="Bloody Attack">
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="15678" toLevel="1" name="Sayha's Blessing">
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
 	</skill>
 	<skill id="15679" toLevel="1" name="Dandy's Precise Swing">
 		<!-- Throws back the target and inflicts heavy physical damage. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
+		<castRange>200</castRange>
+		<hitTime>3000</hitTime>
+		<effectPoint>-250</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="15680" toLevel="1" name="Roa's Hi-tech Attack">
 		<!-- Inflicts great damage by magic, for 5 sec. Speed, Atk. Spd., Casting Spd. -50%. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-200</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="15681" toLevel="2" name="Arena Administrator's Location">
 		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15682" toLevel="3" name="Orc Thunder">
 		<!-- Pulls the target into your reach. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-150</effectPoint>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">65</value>
+			<value level="3">80</value>
+		</mpConsume>
 	</skill>
 	<skill id="15683" toLevel="3" name="Front Drain">
 		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>
+			<value level="1">-273</value>
+			<value level="2">-405</value>
+			<value level="3">-568</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">25</value>
+			<value level="2">40</value>
+			<value level="3">56</value>
+		</mpConsume>
 	</skill>
 	<skill id="15684" toLevel="3" name="Arena Administrator's Recovery">
 		<!-- Restores 30% of HP / MP. -->
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="15685" toLevel="3" name="Heal">
 		<!-- Restores 10% of target's HP. -->
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="15686" toLevel="3" name="Multi-healing">
 		<!-- Restores 10% of allies' HP. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>2500</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="15687" toLevel="1" name="Promise of Vengeance">
 		<!-- Wrath caused by the death of an ally. Restores 50% of HP / MP. P. Atk. and M. Atk., Speed, Casting Spd. +30% for 5 min. -->
 		<icon>icon.skill1346</icon>
 		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15688" toLevel="1" name="Chain Snake">
 		<!-- Pulls the targets to your character. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-200</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15689" toLevel="1" name="Mass Chain Snake">
 		<!-- Pulls nearby enemies to your character. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-200</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15690" toLevel="2" name="Fearsome Defensive Strike">
 		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15691" toLevel="1" name="Defense Break">
 		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>40000</reuseDelay>
+		<effectPoint>-273</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15692" toLevel="1" name="Smashing Attack">
 		<!-- Inflicts heavy physical damage on enemies surrounding your character. -->
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>40000</reuseDelay>
+		<effectPoint>-273</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15693" toLevel="1" name="Giant Bombardier">
 		<!-- Knocks Down enemies in the working range. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>1500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-200</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15694" toLevel="1" name="Mighty Giant Bombardier">
 		<!-- Stuns enemies in the working range. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>1500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-200</effectPoint>
+		<mpConsume>10</mpConsume>
 	</skill>
 </list>

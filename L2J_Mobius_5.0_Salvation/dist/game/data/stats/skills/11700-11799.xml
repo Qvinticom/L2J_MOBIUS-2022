@@ -107,7 +107,7 @@
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -233,16 +233,16 @@
 		<hitTime>500</hitTime>
 		<effectPoint>
 			<value level="1">867</value>
-			<value level="2">874</value>
-			<value level="3">886</value>
-			<value level="4">895</value>
-			<value level="5">902</value>
-			<value level="6">909</value>
-			<value level="7">918</value>
-			<value level="8">927</value>
-			<value level="9">935</value>
-			<value level="10">944</value>
-			<value level="11">952</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+			<value level="4">1</value>
+			<value level="5">1</value>
+			<value level="6">1</value>
+			<value level="7">1</value>
+			<value level="8">1</value>
+			<value level="9">1</value>
+			<value level="10">1</value>
+			<value level="11">1</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -691,7 +691,7 @@
 		</effects>
 	</skill>
 	<skill id="11758" toLevel="1" name="Celestial Protection">
-		<!-- Renders the selected party member invincible for $s1. This effect cannot be stacked, and a limit applies after its duration is over. -->
+		<!-- Renders the selected party member invincible for 10 seconds. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11758</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -761,7 +761,7 @@
 		</effects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
-		<!-- Renders all party members invincible for $s1. This effect cannot be stacked, and a limit applies after its duration is over. -->
+		<!-- Renders all party members invincible for 10 seconds. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11759</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -770,7 +770,7 @@
 		<operateType>A2</operateType>
 		<mpConsume>36</mpConsume>
 		<hitTime>500</hitTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>240000</reuseDelay>
 		<effectPoint>1760</effectPoint>
 		<isMagic>1</isMagic>
 		<basicProperty>NONE</basicProperty>
@@ -1058,7 +1058,7 @@
 		</effects>
 	</skill>
 	<skill id="11762" toLevel="1" name="Balance Heal">
-		<!-- Equalizes the entire party's HP and restores $s2 HP/ second for $s1. -->
+		<!-- Equalizes the entire party's HP and restores 333 HP/ second for 15 seconds. -->
 		<icon>icon.skill11762</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1145,7 +1145,7 @@
 		</effects>
 	</skill>
 	<skill id="11764" toLevel="1" name="Brilliant Purge">
-		<!-- Cancels all party members' debuffs and makes them immune to debuffs for $s1. -->
+		<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. -->
 		<icon>icon.skill11764</icon>
 		<abnormalTime>7</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -1667,7 +1667,7 @@
 		</effects>
 	</skill>
 	<skill id="11770" toLevel="1" name="Dissolve">
-		<!-- Removes the aggression of nearby monsters toward you and increases Speed by $s1. -->
+		<!-- Removes the aggression of nearby monsters toward you and increases Speed by 100. -->
 		<icon>icon.skill11770</icon>
 		<affectRange>500</affectRange>
 		<operateType>A1</operateType>
@@ -1905,7 +1905,7 @@
 		</effects>
 	</skill>
 	<skill id="11775" toLevel="1" name="Return">
-		<!-- Moves to the summoned entity. Cannot be used beyond $s1 range. -->
+		<!-- Moves to the summoned entity. Cannot be used beyond 1000 range. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
 		<mpConsume>60</mpConsume>
@@ -2320,7 +2320,6 @@
 	<skill id="11781" toLevel="6" name="Dark Devour">
 		<icon>icon.skill1367</icon>
 		<operateType>A1</operateType>
-		<castRange>0</castRange>
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

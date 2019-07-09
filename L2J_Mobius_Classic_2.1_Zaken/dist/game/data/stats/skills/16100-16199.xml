@@ -48,7 +48,14 @@
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>1000</coolTime>
-		<effectPoint>-150</effectPoint>
+		<effectPoint>
+			<value level="1">-150</value>
+			<value level="2">-200</value>
+			<value level="3">-150</value>
+			<value level="4">-150</value>
+			<value level="5">-150</value>
+			<value level="6">-150</value>
+		</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16104" toLevel="7" name="Fatal Strike">
@@ -68,22 +75,22 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16106" toLevel="5" name="Orc Thunder">
+	<skill id="16106" toLevel="2" name="Orc Thunder">
 		<!-- Pulls the target into your reach. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">65</value>
-			<value level="3">80</value>
-			<value level="4">95</value>
-			<value level="5">110</value>
 		</mpConsume>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-150</effectPoint>
+		<effectPoint>
+			<value level="1">-150</value>
+			<value level="2">-200</value>
+		</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16107" toLevel="3" name="Fatal Blow">
@@ -110,7 +117,15 @@
 		</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-700</effectPoint>
+		<effectPoint>
+			<value level="1">-300</value>
+			<value level="2">-400</value>
+			<value level="3">-700</value>
+			<value level="4">-700</value>
+			<value level="5">-700</value>
+			<value level="6">-700</value>
+			<value level="7">-700</value>
+		</effectPoint>
 		<isMagic>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -178,12 +193,12 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16114" toLevel="1" name="Curse of the Dead">
+	<skill id="16114" toLevel="5" name="Curse of the Dead">
 		<!-- Cuts target and party members' HP by 50%. -->
 		<operateType>A1</operateType>
 		<mpConsume>59</mpConsume>
 		<castRange>1300</castRange>
-		<hitTime>300</hitTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>-10000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
@@ -413,7 +428,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16136" toLevel="1" name="Reward x 2">
-		<!-- Hero's powers give you x 2 the rewards. Disappears upon death or expiration. -->
+		<!-- Hero's powers give you x  2 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -422,7 +437,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16137" toLevel="1" name="Reward x 4">
-		<!-- Hero's powers give you x 4 the rewards. Disappears upon death or expiration. -->
+		<!-- Hero's powers give you x  4 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -431,7 +446,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16138" toLevel="1" name="Reward x 8">
-		<!-- Hero's powers give you x 8 the rewards. Disappears upon death or expiration. -->
+		<!-- Hero's powers give you x  8 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -440,7 +455,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16139" toLevel="1" name="Reward x 16">
-		<!-- Hero's powers give you x 16 the rewards. Disappears upon death or expiration. -->
+		<!-- Hero's powers give you x  16 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -449,7 +464,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16140" toLevel="1" name="Reward x 32">
-		<!-- Hero's powers give you x 32 the rewards. Disappears upon death or expiration. -->
+		<!-- Hero's powers give you x  32 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -645,7 +660,7 @@
 		<effectPoint>-1000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16156" toLevel="8" name="Mass Slow">
+	<skill id="16156" toLevel="7" name="Mass Slow">
 		<!-- Decreases Atk. Spd. and Speed. -->
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>

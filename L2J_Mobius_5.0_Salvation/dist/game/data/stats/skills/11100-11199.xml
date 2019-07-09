@@ -124,7 +124,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
@@ -228,7 +228,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
@@ -315,7 +315,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
@@ -425,7 +425,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
@@ -534,7 +534,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
@@ -628,6 +628,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
+		<reuseDelay>6700</reuseDelay>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -653,7 +654,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
@@ -737,7 +738,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -828,7 +829,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -937,7 +938,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1045,7 +1046,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1136,7 +1137,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1222,7 +1223,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1281,6 +1282,7 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<operateType>A1</operateType>
+		<reuseDelay>6700</reuseDelay>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1306,7 +1308,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
@@ -1396,7 +1398,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1480,6 +1482,7 @@
 		<attributeType>DARK</attributeType> <!-- Dark -->
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1505,7 +1508,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1589,7 +1592,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1680,7 +1683,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -1789,7 +1792,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>2700</hitTime>
+		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
@@ -2212,7 +2215,7 @@
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
-		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ore. -->
+		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11134</icon>
 		<affectRange>250</affectRange>
 		<channelingSkillId>11134</channelingSkillId> <!-- Meteor -->
@@ -2260,7 +2263,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11135" toLevel="1" name="Black Pool">
-		<!-- Forms Black Swampland in a specified location to constantly inflict powerful damage on the enemies and absorbs $s1 of the damage inflicted on the target as your HP. Triggers additional abnormal state to decelerate. Its power increases as per the level of abnormal state. Once it reaches the final level, the Stun is inflicted. Consumes $s2 Spirit Ore. -->
+		<!-- Forms Black Swampland in a specified location to constantly inflict powerful damage on the enemies and absorbs 50% of the damage inflicted on the target as your HP. Triggers additional abnormal state to decelerate. Its power increases as per the level of abnormal state. Once it reaches the final level, the Stun is inflicted. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11135</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2300,7 +2303,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11136" toLevel="1" name="Snow Storm">
-		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ore. -->
+		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2351,7 +2354,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11137" toLevel="1" name="Tornado">
-		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ore. -->
+		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11137</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2399,8 +2402,8 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="11138" toLevel="1" name="Soul Barrage">
-		<!-- Detonates the soul in the selected location to deal great damage to surrounding enemies. Increases PvP Damage Received. The effect becomes greater as the level of the debuff increases. Consumes $s1 Spirit Ore. -->
+	<skill id="11138" toLevel="1" name="Soul Bomber">
+		<!-- Detonates the soul in the selected location to deal great damage to surrounding enemies. Increases PvP Damage Received. The effect becomes greater as the level of the debuff increases. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2716,219 +2719,7 @@
 	</skill>
 	<skill id="11150" toLevel="11" name="Elemental Crash (Dark)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases M. Defense by $s2. -->
-		<icon>
-			<value level="1">icon.skill11018</value>
-			<value level="2">icon.skill11018</value>
-			<value level="3">icon.skill11018</value>
-			<value level="4">icon.skill11018</value>
-			<value level="5">icon.skill11018</value>
-			<value level="6">icon.skill11018</value>
-			<value level="7">icon.skill11018</value>
-			<value level="8">icon.skill11867</value>
-			<value level="9">icon.skill11867</value>
-			<value level="10">icon.skill11867</value>
-			<value level="11">icon.skill11867</value>
-			<value level="12">icon.skill11867</value>
-			<value level="13">icon.skill11867</value>
-			<value level="14">icon.skill11867</value>
-			<value level="15">icon.skill11867</value>
-			<value level="16">icon.skill11867</value>
-			<value level="17">icon.skill11867</value>
-			<value level="18">icon.skill11867</value>
-			<value level="19">icon.skill11867</value>
-			<value level="20">icon.skill11867</value>
-			<value level="21">icon.skill11867</value>
-			<value level="22">icon.skill11867</value>
-			<value level="23">icon.skill11867</value>
-			<value level="24">icon.skill11867</value>
-			<value level="25">icon.skill11867</value>
-			<value level="26">icon.skill11867</value>
-			<value level="27">icon.skill11867</value>
-			<value level="28">icon.skill11867</value>
-			<value level="29">icon.skill11867</value>
-			<value level="30">icon.skill11867</value>
-			<value level="31">icon.skill11867</value>
-			<value level="32">icon.skill11867</value>
-			<value level="33">icon.skill11867</value>
-			<value level="34">icon.skill11867</value>
-			<value level="35">icon.skill11867</value>
-			<value level="36">icon.skill11867</value>
-			<value level="37">icon.skill11867</value>
-			<value level="38">icon.skill11867</value>
-			<value level="39">icon.skill11867</value>
-			<value level="40">icon.skill11867</value>
-			<value level="41">icon.skill11867</value>
-			<value level="42">icon.skill11867</value>
-			<value level="43">icon.skill11867</value>
-			<value level="44">icon.skill11867</value>
-			<value level="45">icon.skill11867</value>
-			<value level="46">icon.skill11867</value>
-			<value level="47">icon.skill11867</value>
-			<value level="48">icon.skill11018</value>
-			<value level="49">icon.skill11867</value>
-			<value level="50">icon.skill11867</value>
-			<value level="51">icon.skill11867</value>
-			<value level="52">icon.skill11867</value>
-			<value level="53">icon.skill11867</value>
-			<value level="54">icon.skill11867</value>
-			<value level="55">icon.skill11867</value>
-			<value level="56">icon.skill11867</value>
-			<value level="57">icon.skill11867</value>
-			<value level="58">icon.skill11867</value>
-			<value level="59">icon.skill11867</value>
-			<value level="60">icon.skill11867</value>
-			<value level="61">icon.skill11867</value>
-			<value level="62">icon.skill11867</value>
-			<value level="63">icon.skill11867</value>
-			<value level="64">icon.skill11867</value>
-			<value level="65">icon.skill11867</value>
-			<value level="66">icon.skill11867</value>
-			<value level="67">icon.skill11867</value>
-			<value level="68">icon.skill11867</value>
-			<value level="69">icon.skill11867</value>
-			<value level="70">icon.skill11867</value>
-			<value level="71">icon.skill11867</value>
-			<value level="72">icon.skill11867</value>
-			<value level="73">icon.skill11867</value>
-			<value level="74">icon.skill11867</value>
-			<value level="75">icon.skill11867</value>
-			<value level="76">icon.skill11867</value>
-			<value level="77">icon.skill11867</value>
-			<value level="78">icon.skill11867</value>
-			<value level="79">icon.skill11867</value>
-			<value level="80">icon.skill11867</value>
-			<value level="81">icon.skill11867</value>
-			<value level="82">icon.skill11867</value>
-			<value level="83">icon.skill11867</value>
-			<value level="84">icon.skill11867</value>
-			<value level="85">icon.skill11867</value>
-			<value level="86">icon.skill11867</value>
-			<value level="87">icon.skill11867</value>
-			<value level="88">icon.skill11867</value>
-			<value level="89">icon.skill11018</value>
-			<value level="90">icon.skill11867</value>
-			<value level="91">icon.skill11867</value>
-			<value level="92">icon.skill11867</value>
-			<value level="93">icon.skill11867</value>
-			<value level="94">icon.skill11867</value>
-			<value level="95">icon.skill11867</value>
-			<value level="96">icon.skill11867</value>
-			<value level="97">icon.skill11867</value>
-			<value level="98">icon.skill11867</value>
-			<value level="99">icon.skill11867</value>
-			<value level="100">icon.skill11867</value>
-			<value level="101">icon.skill11867</value>
-			<value level="102">icon.skill11867</value>
-			<value level="103">icon.skill11867</value>
-			<value level="104">icon.skill11867</value>
-			<value level="105">icon.skill11867</value>
-			<value level="106">icon.skill11867</value>
-			<value level="107">icon.skill11867</value>
-			<value level="108">icon.skill11867</value>
-			<value level="109">icon.skill11867</value>
-			<value level="110">icon.skill11867</value>
-			<value level="111">icon.skill11867</value>
-			<value level="112">icon.skill11867</value>
-			<value level="113">icon.skill11867</value>
-			<value level="114">icon.skill11867</value>
-			<value level="115">icon.skill11867</value>
-			<value level="116">icon.skill11867</value>
-			<value level="117">icon.skill11867</value>
-			<value level="118">icon.skill11867</value>
-			<value level="119">icon.skill11867</value>
-			<value level="120">icon.skill11867</value>
-			<value level="121">icon.skill11867</value>
-			<value level="122">icon.skill11867</value>
-			<value level="123">icon.skill11867</value>
-			<value level="124">icon.skill11867</value>
-			<value level="125">icon.skill11867</value>
-			<value level="126">icon.skill11867</value>
-			<value level="127">icon.skill11867</value>
-			<value level="128">icon.skill11867</value>
-			<value level="129">icon.skill11867</value>
-			<value level="130">icon.skill11018</value>
-			<value level="131">icon.skill11867</value>
-			<value level="132">icon.skill11867</value>
-			<value level="133">icon.skill11867</value>
-			<value level="134">icon.skill11867</value>
-			<value level="135">icon.skill11867</value>
-			<value level="136">icon.skill11867</value>
-			<value level="137">icon.skill11867</value>
-			<value level="138">icon.skill11867</value>
-			<value level="139">icon.skill11867</value>
-			<value level="140">icon.skill11867</value>
-			<value level="141">icon.skill11867</value>
-			<value level="142">icon.skill11867</value>
-			<value level="143">icon.skill11867</value>
-			<value level="144">icon.skill11867</value>
-			<value level="145">icon.skill11867</value>
-			<value level="146">icon.skill11867</value>
-			<value level="147">icon.skill11867</value>
-			<value level="148">icon.skill11867</value>
-			<value level="149">icon.skill11867</value>
-			<value level="150">icon.skill11867</value>
-			<value level="151">icon.skill11867</value>
-			<value level="152">icon.skill11867</value>
-			<value level="153">icon.skill11867</value>
-			<value level="154">icon.skill11867</value>
-			<value level="155">icon.skill11867</value>
-			<value level="156">icon.skill11867</value>
-			<value level="157">icon.skill11867</value>
-			<value level="158">icon.skill11867</value>
-			<value level="159">icon.skill11867</value>
-			<value level="160">icon.skill11867</value>
-			<value level="161">icon.skill11867</value>
-			<value level="162">icon.skill11867</value>
-			<value level="163">icon.skill11867</value>
-			<value level="164">icon.skill11867</value>
-			<value level="165">icon.skill11867</value>
-			<value level="166">icon.skill11867</value>
-			<value level="167">icon.skill11867</value>
-			<value level="168">icon.skill11867</value>
-			<value level="169">icon.skill11867</value>
-			<value level="170">icon.skill11867</value>
-			<value level="171">icon.skill11018</value>
-			<value level="172">icon.skill11867</value>
-			<value level="173">icon.skill11867</value>
-			<value level="174">icon.skill11867</value>
-			<value level="175">icon.skill11867</value>
-			<value level="176">icon.skill11867</value>
-			<value level="177">icon.skill11867</value>
-			<value level="178">icon.skill11867</value>
-			<value level="179">icon.skill11867</value>
-			<value level="180">icon.skill11867</value>
-			<value level="181">icon.skill11867</value>
-			<value level="182">icon.skill11867</value>
-			<value level="183">icon.skill11867</value>
-			<value level="184">icon.skill11867</value>
-			<value level="185">icon.skill11867</value>
-			<value level="186">icon.skill11867</value>
-			<value level="187">icon.skill11867</value>
-			<value level="188">icon.skill11867</value>
-			<value level="189">icon.skill11867</value>
-			<value level="190">icon.skill11867</value>
-			<value level="191">icon.skill11867</value>
-			<value level="192">icon.skill11867</value>
-			<value level="193">icon.skill11867</value>
-			<value level="194">icon.skill11867</value>
-			<value level="195">icon.skill11867</value>
-			<value level="196">icon.skill11867</value>
-			<value level="197">icon.skill11867</value>
-			<value level="198">icon.skill11867</value>
-			<value level="199">icon.skill11867</value>
-			<value level="200">icon.skill11867</value>
-			<value level="201">icon.skill11867</value>
-			<value level="202">icon.skill11867</value>
-			<value level="203">icon.skill11867</value>
-			<value level="204">icon.skill11867</value>
-			<value level="205">icon.skill11867</value>
-			<value level="206">icon.skill11867</value>
-			<value level="207">icon.skill11867</value>
-			<value level="208">icon.skill11867</value>
-			<value level="209">icon.skill11867</value>
-			<value level="210">icon.skill11867</value>
-			<value level="211">icon.skill11867</value>
-		</icon>
+		<icon>icon.skill11018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -3032,6 +2823,9 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -3065,7 +2859,7 @@
 		</effects>
 	</skill>
 	<skill id="11152" toLevel="1" name="Sacrificial Soul">
-		<!-- Sacrifices your Servitor to become immune against debuff for $s1. -->
+		<!-- Sacrifices your Servitor to become immune against debuff for 3 seconds. -->
 		<icon>icon.skill1395</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3207,10 +3001,14 @@
 		<!-- M. Atk. is temporarily increased. -->
 		<icon>icon.skill11154</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="11155" toLevel="1" name="Water Potential">
 		<!-- Skill Cooldown -10%. -->
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="11174" toLevel="1" name="Shadow Snare Zone">
 		<operateType>A2</operateType>
@@ -3372,7 +3170,6 @@
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
-		<castRange>0</castRange>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<!-- Aqua Crash -->
@@ -3642,7 +3439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11186" toLevel="10" name="Superior Fast MP Recovery">
+	<skill id="11186" toLevel="10" name="Superior Fast MP Recovery Bonus">
 		<!-- MP Recovery Bonus +$s1. INT +$s2. -->
 		<icon>icon.skill0229</icon>
 		<magicLvl>
@@ -3865,7 +3662,6 @@
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
-		<castRange>0</castRange>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<attackSkillId>11177</attackSkillId> <!-- Aqua Crash -->

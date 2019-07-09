@@ -206,7 +206,7 @@
 		</effects>
 	</skill>
 	<skill id="11504" toLevel="10" name="Superior Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2 -->
+		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2; P. Critical Damage Received -$s3. -->
 		<icon>icon.skill10002</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -1711,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="11523" toLevel="1" name="Knight's Harmony">
-		<!-- For $s1, the selected party member's P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, P. Def. + $s5, Shield Defense Rate + $s6 and Shield Defense + $s7. -->
+		<!-- For 30 minutes, the selected party member's P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30% and Shield Defense + 50%. -->
 		<icon>icon.skill11523</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1774,7 +1774,7 @@
 		</effects>
 	</skill>
 	<skill id="11524" toLevel="1" name="Warrior's Harmony">
-		<!-- For $s1, the selected party member's P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, Atk. Spd. + $s5, M. Atk. + $s6, Casting Spd. + $s7 and Speed + $s8. -->
+		<!-- For 30 minutes, the selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8% and Speed + 8. -->
 		<icon>icon.skill11524</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1841,7 +1841,7 @@
 		</effects>
 	</skill>
 	<skill id="11525" toLevel="1" name="Wizard's Harmony">
-		<!-- For $s1, the selected party member's M. Atk. + $s2, M. Critical Rate + $s3, Casting Spd. + $s4, P. Atk. + $s5, Atk. Spd. + $s6, Speed + $s7, M. Def. + $s8, MP Recovery Bonus + $s9, MP Consumption for magic skills - $s10 and physical skills - $s11, and Cooldown - $s12. -->
+		<!-- For 30 minutes, the selected party member's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP Recovery Bonus + 20%, MP Consumption for magic skills - 30 minutes0 and physical skills - 30 minutes1, and Cooldown - 30 minutes2. -->
 		<icon>icon.skill11525</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1996,7 +1996,7 @@
 		</effects>
 	</skill>
 	<skill id="11529" toLevel="1" name="Prevailing Sonata">
-		<!-- Increases party members' Atk. Spd. by $s2, Casting Spd. by $s3, Max HP by $s4, MP recovery bonus by $s5 and decreases MP Consumption for magic skill by $s6 and the magic cancel rate for $s1 minutes. -->
+		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes minutes. -->
 		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2056,7 +2056,7 @@
 		</effects>
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
-		<!-- Increases party members' P. Atk. by $s2, M. Atk. by $s3, Atk. Spd. and Casting Spd. by $s4 and decreases P. Def. by $s5, M. Def. by $s6 and P. Evasion by $s7 for $s1 minutes. Also bestows an $s8 Vampiric Rage effect and a chance of reflecting $s9 of the damage received. -->
+		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2127,7 +2127,7 @@
 		</effects>
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
-		<!-- Increases party members' HP Recovery Bonus by $s2, P.?Accuracy by $s3, P.?Evasion by $s4, Speed by $s5, and decreases MP Consumption for skills by $s6 and skill Cooldown by $s7 for $s1. -->
+		<!-- Increases party members' HP Recovery Bonus by 20%, P.?Accuracy by 4, P.?Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2198,7 +2198,7 @@
 		</effects>
 	</skill>
 	<skill id="11533" toLevel="1" name="Blood Requiem">
-		<!-- Party members receives $s2 Vampiric Rage effect for $s1. -->
+		<!-- Party members receives 80% Vampiric Rage effect for 15 seconds. -->
 		<icon>icon.skill11546</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2324,7 +2324,17 @@
 	<skill id="11536" toLevel="9" name="Divine Cancel">
 		<!-- Has a chance of canceling up to $s1 of the buff effects on target. -->
 		<icon>icon.skill11536</icon>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-704</value>
+			<value level="2">-707</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">70</value>
@@ -2494,7 +2504,15 @@
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-700</value>
+			<value level="2">-705</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+		</effectPoint>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2558,7 +2576,19 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<effectPoint>-687</effectPoint>
+		<effectPoint>
+			<value level="1">-692</value>
+			<value level="2">-698</value>
+			<value level="3">-704</value>
+			<value level="4">-708</value>
+			<value level="5">-687</value>
+			<value level="6">-687</value>
+			<value level="7">-687</value>
+			<value level="8">-687</value>
+			<value level="9">-687</value>
+			<value level="10">-687</value>
+			<value level="11">-687</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -2716,7 +2746,7 @@
 		</effects>
 	</skill>
 	<skill id="11541" toLevel="1" name="Polymorph">
-		<!-- Transforms yourself into a stone for $s1 to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. -->
+		<!-- Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. -->
 		<icon>icon.skill11541</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2910,7 +2940,7 @@
 		</effects>
 	</skill>
 	<skill id="11544" toLevel="1" name="Battle Rhapsody">
-		<!-- For $s1, doubles all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. -->
+		<!-- For 30 seconds, doubles all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. -->
 		<icon>icon.skill11544</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -2967,7 +2997,7 @@
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">
-		<!-- For $s1, decreases standard attack and M. Skill's Critical Rate targeting party members by $s2. -->
+		<!-- For 15 seconds, decreases standard attack and M. Skill's Critical Rate targeting party members by 50%. -->
 		<icon>icon.skill11545</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -3309,7 +3339,7 @@
 		</effects>
 	</skill>
 	<skill id="11557" toLevel="1" name="Ultimate Scourge">
-		<!-- Disables nearby enemies' natural HP Recovery for $s1. -->
+		<!-- Disables nearby enemies' natural HP Recovery for 2 minutes. -->
 		<icon>icon.skill11557</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3363,7 +3393,7 @@
 		</effects>
 	</skill>
 	<skill id="11559" toLevel="1" name="Ultimate Suspension">
-		<!-- Increases nearby enemies' physical/magic skill Cooldown by $s2 for $s1. -->
+		<!-- Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. -->
 		<icon>icon.skill11559</icon>
 		<abnormalTime>120</abnormalTime>
 		<affectRange>200</affectRange>
@@ -3588,7 +3618,7 @@
 		</effects>
 	</skill>
 	<skill id="11562" toLevel="1" name="Devil's Movement">
-		<!-- Prevents all party members from being attacked preemptively by monsters for $s1. But if any party member initiates an attack, the effect will be canceled. -->
+		<!-- Prevents all party members from being attacked preemptively by monsters for 2 minutes. But if any party member initiates an attack, the effect will be canceled. -->
 		<icon>icon.skill11562</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
@@ -3691,7 +3721,7 @@
 		</effects>
 	</skill>
 	<skill id="11565" toLevel="1" name="Elemental Resistance">
-		<!-- Increases party members' Fire/Water/Wind/Earth Resistance by $s3 for $s1. -->
+		<!-- Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 30 minutes. -->
 		<icon>icon.skill11565</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3746,7 +3776,7 @@
 		</effects>
 	</skill>
 	<skill id="11566" toLevel="1" name="Holy Attack Resistance">
-		<!-- Increases party members' Holy/Dark Attack Resistance by $s2, and Poison/Bleed Resistance by $s3 for $s1. -->
+		<!-- Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 30 minutes. -->
 		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3797,7 +3827,7 @@
 		</effects>
 	</skill>
 	<skill id="11567" toLevel="1" name="Mental Attack Resistance">
-		<!-- Increases party members' Hold/Sleep/Mental Attack Resistance by $s2, Buff-canceling Attack Resistance by $s3 and Debuff Resistance by $s4 for $s1. -->
+		<!-- Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 30 minutes. -->
 		<icon>icon.skill11824</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3885,7 +3915,7 @@
 		</effects>
 	</skill>
 	<skill id="11570" toLevel="1" name="Healing Melody">
-		<!-- Heals target and the $s1 most injured allies around target by up to $s2 of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<!-- Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<icon>icon.skill11570</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
@@ -3909,7 +3939,7 @@
 		</effects>
 	</skill>
 	<skill id="11571" toLevel="1" name="Recovery Melody">
-		<!-- Restores target's CP by $s1. -->
+		<!-- Restores target's CP by 1000. -->
 		<icon>icon.skill11571</icon>
 		<effectPoint>780</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4172,7 +4202,7 @@
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
 		<affectRange>150</affectRange> <!-- Custom -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<effectPoint>-666</effectPoint> <!-- Custom -->
+		<effectPoint>-666</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -4873,7 +4903,7 @@
 		</effects>
 	</skill>
 	<skill id="11595" toLevel="1" name="Knight's Frenzied Harmony">
-		<!-- For $s1, increases clan members' P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, P. Def. + $s5, Shield Defense Rate + $s6, and Shield Defense + $s7. -->
+		<!-- For 30 minutes, increases clan members' P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<icon>icon.skill11596</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4930,7 +4960,7 @@
 		</effects>
 	</skill>
 	<skill id="11596" toLevel="1" name="Warrior's Frenzied Harmony">
-		<!-- For $s1, increases clan members' P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, Atk. Spd. + $s5, M. Atk. + $s6, Casting Spd. + $s7, and Spd. + $s8. -->
+		<!-- For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. -->
 		<icon>icon.skill11595</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4991,7 +5021,7 @@
 		</effects>
 	</skill>
 	<skill id="11597" toLevel="1" name="Wizard's Frenzied Harmony">
-		<!-- For $s1, increases clan members' M. Atk. + $s2, M. Critical Rate + $s3, Casting Spd. + $s4, P. Atk. + $s5, Atk. Spd. + $s6, Speed + $s7, M. Def. + $s8, MP Recovery Bonus + $s9, MP Consumption for magic skills - $s10 and physical skills -$s11, and Cooldown - $s12. -->
+		<!-- For 30 minutes, increases clan members' M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP Recovery Bonus + 20%, MP Consumption for magic skills - 30 minutes0 and physical skills -30 minutes1, and Cooldown - 30 minutes2. -->
 		<icon>icon.skill11597</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

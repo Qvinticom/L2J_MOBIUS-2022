@@ -902,7 +902,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2168" toLevel="6" name="Lucky Charm">
+	<skill id="2168" toLevel="4" name="Lucky Charm">
 		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. -->
 		<icon>icon.etc_orcish_talisman_i00</icon>
 		<abnormalLvl>
@@ -910,8 +910,6 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
 		</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>REDUCE_DROP_PENALTY</abnormalType>
@@ -923,8 +921,6 @@
 			<value level="2">5803</value>
 			<value level="3">5804</value>
 			<value level="4">5805</value>
-			<value level="5">5806</value>
-			<value level="6">5807</value>
 		</itemConsumeId>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -942,16 +938,12 @@
 					<value level="2">20</value>
 					<value level="3">40</value>
 					<value level="4">52</value>
-					<value level="5">61</value>
-					<value level="6">76</value>
 				</minLevel>
 				<maxLevel>
 					<value level="1">19</value>
 					<value level="2">39</value>
 					<value level="3">51</value>
 					<value level="4">60</value>
-					<value level="5">75</value>
-					<value level="6">85</value>
 				</maxLevel>
 				<affectType>CASTER</affectType>
 			</condition>
@@ -999,7 +991,6 @@
 	</skill>
 	<skill id="2170" toLevel="1" name="Scroll: Cancel Sleep">
 		<castRange>400</castRange>
-		<coolTime>1000</coolTime>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->

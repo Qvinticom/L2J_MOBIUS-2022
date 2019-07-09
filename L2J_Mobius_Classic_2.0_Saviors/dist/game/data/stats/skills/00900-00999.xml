@@ -965,7 +965,7 @@
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<effectPoint>204</effectPoint>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">64</value>
@@ -1269,7 +1269,7 @@
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>720</hitTime>
+		<hitTime>1080</hitTime>
 		<magicLvl>76</magicLvl>
 		<mpConsume>77</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -1294,7 +1294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="922" toLevel="3" name="Hide">
+	<skill id="922" toLevel="4" name="Hide">
 		<!-- Renders invisible for $s1. Speed is decreased by $s2. Effect cancels upon any action except for moving. -->
 		<icon>icon.skill0922</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1304,18 +1304,17 @@
 			<value level="1">15</value>
 			<value level="2">20</value>
 			<value level="3">25</value>
+			<value level="4">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
-		<effectPoint>
-			<value level="1">619</value>
-			<value level="2">679</value>
-			<value level="3">713</value>
-		</effectPoint>
+		<effectPoint>679</effectPoint>
 		<magicLvl>
 			<value level="1">51</value>
 			<value level="2">61</value>
 			<value level="3">71</value>
+			<value level="4">71</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>38</mpConsume>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>180000</reuseDelay>
@@ -2773,7 +2772,6 @@
 	<skill id="950" toLevel="7" name="Nail Attack">
 		<!-- A demonic clawed combo attack. Power $s1. -->
 		<icon>icon.skill0539</icon>
-		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -3437,7 +3435,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -3461,7 +3458,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -3485,7 +3481,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -4519,8 +4514,8 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="986" toLevel="18" name="Deadly Strike">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2 decreases enemy s P. Def. by $s3. Requires dual swords. Over-hit. -->
+	<skill id="986" toLevel="15" name="Deadly Strike">
+		<!-- Quickly strikes the target three times with $s1 Power. For $s2 decreases enemy's P. Def. by $s3. Requires dual swords. Over-hit. -->
 		<icon>icon.skill0986</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4528,7 +4523,23 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<effectPoint>-2320</effectPoint>
+		<effectPoint>
+			<value level="1">-417</value>
+			<value level="2">-496</value>
+			<value level="3">-586</value>
+			<value level="4">-686</value>
+			<value level="5">-796</value>
+			<value level="6">-916</value>
+			<value level="7">-1046</value>
+			<value level="8">-1136</value>
+			<value level="9">-1230</value>
+			<value level="10">-1327</value>
+			<value level="11">-1425</value>
+			<value level="12">-1525</value>
+			<value level="13">-1626</value>
+			<value level="14">-1727</value>
+			<value level="15">-1827</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<magicLvl>
@@ -4547,9 +4558,6 @@
 			<value level="13">70</value>
 			<value level="14">72</value>
 			<value level="15">74</value>
-			<value level="16">76</value>
-			<value level="17">77</value>
-			<value level="18">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -4567,9 +4575,6 @@
 			<value level="13">71</value>
 			<value level="14">73</value>
 			<value level="15">75</value>
-			<value level="16">77</value>
-			<value level="17">78</value>
-			<value level="18">78</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -4608,9 +4613,6 @@
 					<value level="13">3252</value>
 					<value level="14">3453</value>
 					<value level="15">3653</value>
-					<value level="16">3849</value>
-					<value level="17">3945</value>
-					<value level="18">4040</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -4993,7 +4995,7 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>200</hitTime>
+		<hitTime>800</hitTime>
 		<magicLvl>78</magicLvl>
 		<mpConsume>38</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -5122,7 +5124,33 @@
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
-		<effectPoint>-3422</effectPoint>
+		<effectPoint>
+			<value level="1">-625</value>
+			<value level="2">-744</value>
+			<value level="3">-879</value>
+			<value level="4">-1029</value>
+			<value level="5">-1194</value>
+			<value level="6">-1374</value>
+			<value level="7">-1568</value>
+			<value level="8">-1704</value>
+			<value level="9">-1845</value>
+			<value level="10">-1990</value>
+			<value level="11">-2138</value>
+			<value level="12">-2288</value>
+			<value level="13">-2439</value>
+			<value level="14">-2590</value>
+			<value level="15">-2740</value>
+			<value level="16">-2814</value>
+			<value level="17">-2887</value>
+			<value level="18">-2959</value>
+			<value level="19">-3030</value>
+			<value level="20">-3100</value>
+			<value level="21">-3168</value>
+			<value level="22">-3234</value>
+			<value level="23">-3299</value>
+			<value level="24">-3362</value>
+			<value level="25">-3422</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>800</hitTime>
 		<magicLvl>

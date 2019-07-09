@@ -3025,7 +3025,7 @@
 		</effects>
 	</skill>
 	<skill id="12870" toLevel="1" name="Hero's Treasure Chest">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+		<!-- For 1 hour, P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3043,7 +3043,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12871" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="12871" toLevel="1" name="Destruction Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3248,8 +3248,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12882" toLevel="1" name="Talking Island Homemade Cookie">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+	<skill id="12882" toLevel="1" name="Hero's Treasure Chest">
+		<!-- For 1 hour, P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3365,7 +3365,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12897" toLevel="1" name="Player Commendation - Blessing">
+	<skill id="12897" toLevel="1" name="PA - Blessing">
 		<!-- For 1 hour, recovers Vitality when XP is acquired through hunting. -->
 		<icon>BranchSys.icon.br_flag_of_bookmark_i00</icon>
 		<operateType>A2</operateType>

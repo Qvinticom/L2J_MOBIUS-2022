@@ -15,18 +15,16 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23088" toLevel="1" name="Synge the Cat�s affection">
+	<skill id="23088" toLevel="1" name="Synge the Cat's affection">
 		<!-- For 2 hr., acquired XP/ SP +40%. -->
 		<icon>icon.skill_sing</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -59,10 +57,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23089" toLevel="1" name="Synge the Cat�s Blessing">
+	<skill id="23089" toLevel="1" name="Synge the Cat's Blessing">
 		<!-- For 2 hr., acquired XP/ SP +20%. -->
 		<icon>icon.skill_sing</icon>
-		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>

@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="10701" toLevel="4" name="Great Luck">
-		<!-- Increases PVE Damage by 30%, Skill Critical Rate by 10%, and LUC by 3. Decreases P./ M. Critical Rate Received by 15%. -->
+		<!-- Increases PVE Damage by $s1, Skill Critical Rate by $s2, and LUC by $s3. Decreases P./ M. Critical Rate Received by $s4. -->
 		<icon>icon.skill10701</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -181,7 +181,7 @@
 		</effects>
 	</skill>
 	<skill id="10703" toLevel="5" name="Armor Breaker">
-		<!-- In PvP, removes the target's armor for 3 sec.. In PvE, decreases the target's P. Def. by 50% for 3 sec.. Requires a dagger or dual dagger to be equipped. Consumes 2 Soulstones. -->
+		<!-- In PvP, removes the target's armor for $s1. In PvE, decreases the target's P. Def. by $s2 for $s1. Requires a dagger or dual dagger to be equipped. Consumes $s3 Soulstones. -->
 		<icon>icon.skill10703</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -205,7 +205,7 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>90000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-655</effectPoint>
 		<isDebuff>true</isDebuff>
 		<itemConsumeCount>3</itemConsumeCount>
@@ -229,7 +229,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="10704" toLevel="5" name="Grim Reaper Possession">
-		<!-- Raids the target in the distance of 1300 to inflict short Stun and increase your critical damage by 100% for 5 sec.. Requires dagger/ dual dagger. Consumes 2 Soulstones. -->
+		<!-- Raids the target in the distance of $s1 to inflict short Stun and increase your critical damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->
 		<icon>icon.skill10704</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -250,6 +250,7 @@
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>DA2</operateType>
+		<coolTime>500</coolTime>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -262,8 +263,8 @@
 			<value level="5">165</value>
 		</mpConsume>
 		<castRange>1300</castRange>
-		<hitTime>1000</hitTime>
-		<reuseDelay>30000</reuseDelay>
+		<hitTime>500</hitTime>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 		<conditions>
@@ -293,7 +294,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
- 	<skill id="10705" toLevel="5" name="Easterly Wind Strike">
+	<skill id="10705" toLevel="5" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Atk. Causes Bleed on the target for $s2 Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/ dual dagger to be equipped. -->
 		<icon>icon.skill10705</icon>
  		<!-- Updated to GRAND CRUSADE -->
@@ -311,6 +312,8 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>DA4</operateType>
+		<isDebuff>true</isDebuff>
+		<effectPoint>-1</effectPoint>
 		<targetType>ENEMY</targetType>
  		<affectScope>SINGLE</affectScope>
 		<mpConsume>
@@ -456,7 +459,7 @@
 		<magicLevel>85</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -479,8 +482,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10751" toLevel="7" name="Superior Bow/ Crossbow Mastery">
-		<!-- P. Atk. +10%, additional P. Atk. +3208, Atk. Spd. +15%, P. Accuracy +8 when using a bow or crossbow. STR +2. Depending on your STR, the Cooldown resets or the abnormal status duration increases 2 times. -->
+	<skill id="10751" toLevel="10" name="Superior Bow/ Crossbow Mastery">
+		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd. +$s3, P. Accuracy +$s4 when using a bow or crossbow. STR +$s5. Depending on your STR, the Cooldown resets or the abnormal status duration increases $s6 times. -->
 		<icon>icon.skill10751</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -491,6 +494,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -515,6 +521,9 @@
 					<value level="5">2850</value>
 					<value level="6">3023</value>
 					<value level="7">3208</value>
+					<value level="8">3208</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3208</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3208</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -1284,7 +1293,7 @@
 			<value level="10">-719</value>
 			<value level="11">-722</value>
 			<value level="12">-725</value>
-			<value level="13">-729</value>
+			<value level="13">-728</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -1490,7 +1499,7 @@
 			<value level="13">-728</value>
 		</effectPoint>
 		<effectRange>1500</effectRange>
-		<reuseDelay>7000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1829,8 +1838,8 @@
 			<value level="9">-717</value>
 			<value level="10">-720</value>
 			<value level="11">-723</value>
-			<value level="12">-727</value>
-			<value level="13">-731</value>
+			<value level="12">-726</value>
+			<value level="13">-729</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>KNOCKDOWN</trait>
@@ -2034,8 +2043,8 @@
 			<value level="9">-716</value>
 			<value level="10">-719</value>
 			<value level="11">-722</value>
-			<value level="12">-726</value>
-			<value level="13">-730</value>
+			<value level="12">-725</value>
+			<value level="13">-728</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -2362,7 +2371,7 @@
 		<magicLvl>91</magicLvl>
 		<mpConsume>85</mpConsume>
 		<castRange>1100</castRange>
-		<castRange>1400</castRange>
+		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>1400</effectRange>
@@ -2556,7 +2565,7 @@
 		<mpConsume>1067</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
-		<hitTime>1500</hitTime>
+		<hitTime>7500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-706</effectPoint>
 		<reuseDelay>30000</reuseDelay>
@@ -2657,7 +2666,7 @@
 			<value level="4">64</value>
 			<value level="5">64</value>
 		</mpConsume>
-		<hitTime>1500</hitTime>
+		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
@@ -2704,13 +2713,11 @@
 		</effects>
 	</skill>
 	<skill id="10784" toLevel="1" name="Camouflage">
-		<!-- For $s1, blends into the environment and hides. Decreases Speed by $s2. -->
+		<!-- For 30 sec., blends into the environment and hides. Decreases Speed by 100. -->
 		<icon>icon.skill10784</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
+			<value fromLevel="1" toLevel="1">30</value>
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -3067,14 +3074,15 @@
 		</effects>
 	</skill>
 	<skill id="10793" toLevel="1" name="Flash">
-		<!-- Cancels the targeting of nearby enemies. Increases Speed by $s2 for $s1 and prevents you from being targeted. -->
+		<!-- Cancels the targeting of nearby enemies. Increases Speed by 50 for 5 sec. and prevents you from being targeted. -->
 		<icon>icon.skill10793</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>77</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>689</effectPoint>
+		<effectPoint>-689</effectPoint>
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicLvl>85</magicLvl>

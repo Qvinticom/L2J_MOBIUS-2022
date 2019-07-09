@@ -706,7 +706,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -759,7 +759,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -803,7 +803,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -847,7 +847,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -891,7 +891,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -935,7 +935,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -985,7 +985,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -1251,7 +1251,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A5</operateType>
 		<!-- Target ONE on retail, will be PARTY here. -->
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -1324,7 +1324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1956" toLevel="4" name="Sub - P. Atk./M. Atk. Increase">
+	<skill id="1956" toLevel="4" name="Sub - P. Atk./ M. Atk. Increase">
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
@@ -1352,7 +1352,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1957" toLevel="4" name="Sub - P. Def./M. Def. Increase">
+	<skill id="1957" toLevel="4" name="Sub - P. Def./ M. Def. Increase">
 		<!-- P. Def. +$s1, M. Def. +$s2. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
@@ -1380,7 +1380,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1958" toLevel="4" name="Sub - Atk. Spd./Casting Spd. Increase">
+	<skill id="1958" toLevel="4" name="Sub - Atk. Spd./ Casting Spd. Increase">
 		<!-- Atk. Spd. +$s1, Casting Spd. +$s2. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
@@ -1666,7 +1666,7 @@
 		</effects>
 	</skill>
 	<skill id="1968" toLevel="1" name="Dual Certification - Vampiric">
-		<!-- Has a chance of absorbing $s1 of damage inflicted upon the enemy as HP during an attack. -->
+		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP during an attack. -->
 		<icon>icon.dual_hpsteal</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1721,7 +1721,7 @@
 		</effects>
 	</skill>
 	<skill id="1970" toLevel="1" name="Dual Certification - Physical">
-		<!-- Increases P. Atk. by $s1, and decreases P. Def./ M. Def. by $s2. -->
+		<!-- Increases P. Atk. by 9%, and decreases P. Def./ M. Def. by 6%. -->
 		<icon>icon.dual_atkup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1743,7 +1743,7 @@
 		</effects>
 	</skill>
 	<skill id="1971" toLevel="1" name="Dual Certification - Magical">
-		<!-- Increases M. Atk. by $s1, and decreases P. Def./ M. Def. by $s2. -->
+		<!-- Increases M. Atk. by 13%, and decreases P. Def./ M. Def. by 6%. -->
 		<icon>icon.dual_defup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1819,7 +1819,7 @@
 		</effects>
 	</skill>
 	<skill id="1974" toLevel="1" name="Dual Certification - Berserker's Rage">
-		<!-- Has a chance of increasing P. Atk. by $s1 during an attack. -->
+		<!-- Has a chance of increasing P. Atk. by 27% during an attack. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1865,7 +1865,7 @@
 		</effects>
 	</skill>
 	<skill id="1976" toLevel="1" name="Dual Certification - Master's Rage">
-		<!-- Has a chance of increasing Skill Power by $s1 during skill use. -->
+		<!-- Has a chance of increasing Skill Power by 27% during skill use. -->
 		<icon>icon.dual_t_skup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1911,7 +1911,7 @@
 		</effects>
 	</skill>
 	<skill id="1978" toLevel="1" name="Dual Certification - Light of Protection">
-		<!-- Has a chance of increasing P. Def./ M. Def. by $s1 when attacked. -->
+		<!-- Has a chance of increasing P. Def./ M. Def. by 40% when attacked. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>

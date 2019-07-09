@@ -35,6 +35,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_DINOS</abnormalVisualEffect>
 		<operateType>A2</operateType>
+		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -42,7 +43,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
-		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayType>S</reuseDelayType>
@@ -56,8 +56,6 @@
 			<effect name="DispelBySlot">
 				<dispel>
 					<value level="1">CHANGEBODY,-1</value>
-					<value level="2">TURN_STONE,-1</value>
-					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -86,6 +84,7 @@
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -93,7 +92,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
-		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayType>S</reuseDelayType>
@@ -106,8 +104,6 @@
 			<effect name="DispelBySlot">
 				<dispel>
 					<value level="1">CHANGEBODY,-1</value>
-					<value level="2">TURN_STONE,-1</value>
-					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
 				</dispel>
 			</effect>
 			<effect name="Transformation">
@@ -165,7 +161,6 @@
 	<skill id="18220" toLevel="1" name="Scroll of Escape: Blazing Swamp">
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47063</itemConsumeId> <!-- Scroll of Escape: Blazing Swamp -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -299,7 +294,7 @@
 	<skill id="18249" toLevel="1" name="Fresh Marlin">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18250" toLevel="1" name="Fresh Catfish">
+	<skill id="18250" toLevel="1" name="Fresh Cat'sh">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18251" toLevel="1" name="Fresh Tuna">
@@ -389,10 +384,12 @@
 	<skill id="18257" toLevel="1" name="Zodiac Agathion Pack (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18258" toLevel="1" name="Radiant Zodiac Agathion Pack (30-day">
+	<skill id="18258" toLevel="1" name="Zodiac Agathion Pack (30-day">
 		<itemConsumeId>45573</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -442,10 +439,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18259" toLevel="1" name="Twinkling Zodiac Agathion Pack (30-day)">
+	<skill id="18259" toLevel="1" name="Zodiac Agathion Pack (30-day)">
 		<itemConsumeId>45574</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -708,7 +707,7 @@
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="18281" toLevel="1" name="Apocalypse Dualsword Damage Up">
+	<skill id="18281" toLevel="1" name="Apocalypse Dual Sword Damage Up">
 		<!-- Creates a +4/ 6/ 9/ 11 enchanted Apocalypse Dual Sword Damage Up. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>

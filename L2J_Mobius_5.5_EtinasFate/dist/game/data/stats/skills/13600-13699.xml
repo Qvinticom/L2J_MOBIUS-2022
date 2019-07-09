@@ -1080,7 +1080,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13689" toLevel="1" name="Special Resistance Earring - Knock Back/Knock Down">
+	<skill id="13689" toLevel="1" name="Special Resistance Earring - Knock Back/ Knock Down">
 		<!-- Increases Max CP by 10%, Knock Back/ Knock Down Bonus by 40%, Knock Back/ Knock Down Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
@@ -1137,7 +1137,7 @@
 		</effects>
 	</skill>
 	<skill id="13691" toLevel="1" name="Talisman - Battle: Attack">
-		<!-- For $s1, increases P. Atk. by $s2, M. Atk. by $s2, Skill Critical Rate by $s2, and Skill Critical Damage by $s2. Cooldown is $s3. Can only be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- For 10 sec., increases P. Atk. by 20%, M. Atk. by 20%, Skill Critical Rate by 20%, and Skill Critical Damage by 20%. Cooldown is 120 sec. Can only be used in the Olympiad/ Ceremony of Chaos. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1145,7 +1145,7 @@
 		<reuseDelay>120000</reuseDelay>
 	</skill>
 	<skill id="13692" toLevel="1" name="Talisman - Battle: Speed">
-		<!-- For $s1, increases Atk. Spd. by $s2, Casting Spd. by $s2, Speed by $s3, and decreases Skill Cooldown by $s2. Cooldown is $s4. Can only be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- For 10 sec., increases Atk. Spd. by 20%, Casting Spd. by 20%, Speed by 60, and decreases Skill Cooldown by 20%. Cooldown is 120 sec. Can only be used in the Olympiad/ Ceremony of Chaos. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1153,7 +1153,7 @@
 		<reuseDelay>120000</reuseDelay>
 	</skill>
 	<skill id="13693" toLevel="1" name="Talisman - Battle: Support">
-		<!-- Cancels hiding, invincibility, talisman buffs of enemies within range, and prevents them from obtaining those effects for $s1. Cooldown is $s2. Can only be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- Cancels hiding, invincibility, talisman buffs of enemies within range, and prevents them from obtaining those effects for 9 sec. Cooldown is 90 sec. Can only be used in the Olympiad/ Ceremony of Chaos. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>

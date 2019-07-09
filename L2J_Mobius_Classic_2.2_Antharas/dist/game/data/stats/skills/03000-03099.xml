@@ -138,7 +138,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3010" toLevel="6" name="Special Ability: Focus">
+	<skill id="3010" toLevel="9" name="Special Ability: Focus">
 		<!-- Increases P. Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -150,6 +150,9 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="CriticalRate">
@@ -160,12 +163,15 @@
 					<value level="4">73.3</value>
 					<value level="5">68.9</value>
 					<value level="6">64.5</value>
+					<value level="7">64.5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">64.5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">64.5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3011" toLevel="6" name="Special Ability: Focus">
+	<skill id="3011" toLevel="7" name="Special Ability: Focus">
 		<!-- Increases P. Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -177,6 +183,7 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="CriticalRate">
@@ -187,6 +194,7 @@
 					<value level="4">76.6</value>
 					<value level="5">71.9</value>
 					<value level="6">67.3</value>
+					<value level="7">67.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -223,7 +231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3013" toLevel="5" name="Special Ability: Health">
+	<skill id="3013" toLevel="2" name="Special Ability: Health">
 		<!-- Increases Max HP. -->
 		<icon>icon.skill0211</icon>
 		<operateType>P</operateType>
@@ -231,9 +239,6 @@
 		<magicLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
-			<value level="3">64</value>
-			<value level="4">64</value>
-			<value level="5">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="MaxHp">
@@ -244,9 +249,6 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">4</value>
-					<value level="3">0</value>
-					<value level="4">4</value>
-					<value level="5">0</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -257,9 +259,6 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">5</value>
-					<value level="4">5</value>
-					<value level="5">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -267,9 +266,6 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">5</value>
-					<value level="4">5</value>
-					<value level="5">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -277,23 +273,18 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">5</value>
-					<value level="4">5</value>
-					<value level="5">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3014" toLevel="3" name="Special Ability: Mana Up">
+	<skill id="3014" toLevel="1" name="Special Ability: Mana Up">
 		<!-- Increases Max MP. -->
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">1</value>
-			<value level="2">64</value>
-			<value level="3">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="MaxMp">
@@ -303,30 +294,24 @@
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3016" toLevel="6" name="Special Ability: Critical Stun">
+	<skill id="3016" toLevel="7" name="Special Ability: Critical Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -340,6 +325,7 @@
 			<value level="4">29</value>
 			<value level="5">27</value>
 			<value level="6">25</value>
+			<value level="7">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-92</effectPoint>
@@ -352,6 +338,7 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -367,6 +354,14 @@
 		<!-- MP Recovery Bonus +$s2 for $s1. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">379</value>
+			<value level="3">457</value>
+			<value level="4">566</value>
+		</effectPoint>
 	</skill>
 	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
 		<!-- Increases Critical Rate when attacking a target from behind. -->
@@ -573,7 +568,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3023" toLevel="6" name="Special Ability: Critical Damage">
+	<skill id="3023" toLevel="9" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. -->
 		<icon>icon.skill1242</icon>
 		<operateType>P</operateType>
@@ -585,6 +580,9 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="CriticalDamage">
@@ -595,6 +593,9 @@
 					<value level="4">231.29</value>
 					<value level="5">247.98</value>
 					<value level="6">262.57</value>
+					<value level="7">262.57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">262.57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">262.57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -948,7 +949,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3034" toLevel="7" name="Special Ability: Rsk. Haste">
+	<skill id="3034" toLevel="6" name="Special Ability: Rsk. Haste">
 		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
@@ -960,7 +961,6 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-			<value level="7">80</value>
 		</magicLvl>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -971,7 +971,6 @@
 					<value level="4">11</value>
 					<value level="5">10</value>
 					<value level="6">9</value>
-					<value level="7">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -983,7 +982,6 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">0</value>
-					<value level="7">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -995,7 +993,6 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">0</value>
-					<value level="7">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1007,7 +1004,6 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">0</value>
-					<value level="7">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1144,6 +1140,15 @@
 	</skill>
 	<skill id="3039" toLevel="7" name="Special Ability: Critical Drain">
 		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">12</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+			<value level="7">0</value>
+		</mpConsume>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-239</value>
@@ -1322,7 +1327,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3042" toLevel="20" name="Special Ability: Critical Damage">
+	<skill id="3042" toLevel="16" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. -->
 		<icon>
 			<value level="1">icon.skill0193</value>
@@ -1361,10 +1366,6 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-			<value level="17">64</value>
-			<value level="18">65</value>
-			<value level="19">66</value>
-			<value level="20">67</value>
 		</magicLvl>
 		<effects>
 			<effect name="CriticalDamage">
@@ -1385,10 +1386,6 @@
 					<value level="14">124.79</value>
 					<value level="15">275.26</value>
 					<value level="16">267.13</value>
-					<value level="17">257.98</value>
-					<value level="18">297.21</value>
-					<value level="19">331.38</value>
-					<value level="20">361.06</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1410,10 +1407,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1435,10 +1428,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1460,16 +1449,12 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3043" toLevel="6" name="Special Ability: Critical Damage">
+	<skill id="3043" toLevel="8" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
@@ -1481,6 +1466,8 @@
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="CriticalDamage">
@@ -1491,12 +1478,14 @@
 					<value level="4">140.87</value>
 					<value level="5">151.04</value>
 					<value level="6">159.93</value>
+					<value level="7">159.93</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">159.93</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3044" toLevel="20" name="Special Ability: Focus">
+	<skill id="3044" toLevel="16" name="Special Ability: Focus">
 		<!-- Increases Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -1518,10 +1507,6 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-			<value level="17">64</value>
-			<value level="18">65</value>
-			<value level="19">66</value>
-			<value level="20">67</value>
 		</magicLvl>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
@@ -1542,10 +1527,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1567,10 +1548,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1592,10 +1569,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1617,16 +1590,12 @@
 					<value level="14">47.2</value>
 					<value level="15">98.7</value>
 					<value level="16">92.4</value>
-					<value level="17">86.2</value>
-					<value level="18">96</value>
-					<value level="19">103.5</value>
-					<value level="20">109.2</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3045" toLevel="20" name="Special Ability: Haste">
+	<skill id="3045" toLevel="16" name="Special Ability: Haste">
 		<!-- Increases Atk. Spd. -->
 		<icon>
 			<value level="1">icon.skill1086</value>
@@ -1665,10 +1634,6 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-			<value level="17">64</value>
-			<value level="18">65</value>
-			<value level="19">66</value>
-			<value level="20">67</value>
 		</magicLvl>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -1689,10 +1654,6 @@
 					<value level="14">4</value>
 					<value level="15">9</value>
 					<value level="16">8</value>
-					<value level="17">8</value>
-					<value level="18">9</value>
-					<value level="19">9</value>
-					<value level="20">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1710,7 +1671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3046" toLevel="20" name="Special Ability: Guidance">
+	<skill id="3046" toLevel="16" name="Special Ability: Guidance">
 		<!-- Increases Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
@@ -1732,10 +1693,6 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-			<value level="17">64</value>
-			<value level="18">65</value>
-			<value level="19">66</value>
-			<value level="20">67</value>
 		</magicLvl>
 		<effects>
 			<effect name="Accuracy">
@@ -1756,10 +1713,6 @@
 					<value level="14">3.4</value>
 					<value level="15">6.5</value>
 					<value level="16">6.5</value>
-					<value level="17">6.5</value>
-					<value level="18">6.5</value>
-					<value level="19">6.5</value>
-					<value level="20">6.5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1781,10 +1734,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1806,10 +1755,6 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1831,16 +1776,12 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
-					<value level="17">5</value>
-					<value level="18">5</value>
-					<value level="19">5</value>
-					<value level="20">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3047" toLevel="3" name="Special Ability: Acumen">
+	<skill id="3047" toLevel="2" name="Special Ability: Acumen">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.skill1085</icon>
 		<operateType>P</operateType>
@@ -1848,7 +1789,6 @@
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">64</value>
-			<value level="3">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1859,7 +1799,6 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1867,7 +1806,6 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1875,21 +1813,18 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3048" toLevel="3" name="Special Ability: Conversion">
+	<skill id="3048" toLevel="1" name="Special Ability: Conversion">
 		<!-- Decreases Max HP and increases Max MP. -->
 		<icon>icon.skill1048</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">64</value>
-			<value level="2">64</value>
-			<value level="3">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="MaxHp">
@@ -1903,24 +1838,18 @@
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2074,15 +2003,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3056" toLevel="3" name="Special Ability: Rsk. Haste">
+	<skill id="3056" toLevel="1" name="Special Ability: Rsk. Haste">
 		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">64</value>
-			<value level="2">64</value>
-			<value level="3">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -2092,24 +2019,18 @@
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2230,46 +2151,36 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3068" toLevel="3" name="Special Ability: Haste">
+	<skill id="3068" toLevel="1" name="Special Ability: Haste">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">64</value>
-			<value level="2">64</value>
-			<value level="3">70</value>
 		</magicLvl>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value level="1">6</value>
-					<value level="2">6</value>
-					<value level="3">6</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2323,7 +2234,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="3071" toLevel="2" name="Special Ability: Rsk. Focus">
+	<skill id="3071" toLevel="1" name="Special Ability: Rsk. Focus">
 		<!-- Increases Critical Rate when in danger. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -2338,21 +2249,18 @@
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2432,7 +2340,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="3076" toLevel="6" name="Special Ability: Empower">
+	<skill id="3076" toLevel="9" name="Special Ability: Empower">
 		<!-- Increases M. Atk. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
@@ -2444,6 +2352,9 @@
 			<value level="4">55</value>
 			<value level="5">28</value>
 			<value level="6">61</value>
+			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="MAtk">
@@ -2454,6 +2365,9 @@
 					<value level="4">26.53</value>
 					<value level="5">28.27</value>
 					<value level="6">29.7</value>
+					<value level="7">29.7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">29.7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">29.7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2613,11 +2527,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2653,11 +2562,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2760,11 +2664,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2884,11 +2783,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3072,7 +2966,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3091" toLevel="20" name="Item Skill: Poison (Attack Active)">
+	<skill id="3091" toLevel="15" name="Item Skill: Poison (Attack Active)">
 		<!-- Chance: Momentarily inflicts Poison on the target during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3092,11 +2986,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3125,11 +3014,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3155,11 +3039,6 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -3185,11 +3064,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -3218,11 +3092,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
@@ -3249,11 +3118,6 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -3409,11 +3273,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3536,11 +3395,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>

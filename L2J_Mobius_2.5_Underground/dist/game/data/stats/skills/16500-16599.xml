@@ -409,12 +409,11 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<hitTime>2500</hitTime>
-		<coolTime>3000</coolTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<affectLimit>10-10</affectLimit>
-		<castRange>300</castRange>
 		<affectRange>300</affectRange>
 		<trait>KNOCKDOWN</trait>
 		<targetType>SELF</targetType>
@@ -444,7 +443,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<magicCriticalRate>5</magicCriticalRate>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -460,7 +459,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<mpConsume>19</mpConsume>
-		<castRange>100</castRange>
+		<castRange>40</castRange>
 		<effectRange>900</effectRange>
 		<affectRange>200</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->

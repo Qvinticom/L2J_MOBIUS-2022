@@ -1126,6 +1126,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>39</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1160,6 +1161,12 @@
 			<value level="4">70</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">52</value>
+			<value level="2">58</value>
+			<value level="3">62</value>
+			<value level="4">65</value>
+		</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1206,6 +1213,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>27</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1237,6 +1245,11 @@
 			<value level="3">56</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">35</value>
+			<value level="2">44</value>
+			<value level="3">52</value>
+		</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1464,6 +1477,10 @@
 			<value level="2">52</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">39</value>
+			<value level="2">48</value>
+		</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
@@ -1494,6 +1511,11 @@
 			<value level="3">68</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">48</value>
+			<value level="2">55</value>
+			<value level="3">64</value>
+		</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
@@ -1512,6 +1534,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>35</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
@@ -2595,7 +2618,6 @@
 		</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
-		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">331</value>
 			<value level="2">486</value>
@@ -3173,7 +3195,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<hitTime>500</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -3206,7 +3227,6 @@
 		</effects>
 	</skill>
 	<skill id="5680" toLevel="1" name="Oblivion Trap">
-		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -3407,7 +3427,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
-		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>100</hitTime>

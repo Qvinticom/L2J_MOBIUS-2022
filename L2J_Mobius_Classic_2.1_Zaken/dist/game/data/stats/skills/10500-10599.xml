@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10539" toLevel="1" name="Throw Dagger">
-		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. Speed -$s3 for $s2. Requires a dagger. Over-hit. -->
+		<!-- Throws a dagger at an enemy with 396 Power added to P. Atk. Speed -60 for 10 seconds. Requires a dagger. Over-hit. -->
 		<icon>icon.skill10539</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -16,10 +16,10 @@
 		<mpConsume>60</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>800</castRange>
-		<hitTime>500</hitTime>
-		<coolTime>100</coolTime>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>-707</effectPoint>
 		<isDebuff>true</isDebuff>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>

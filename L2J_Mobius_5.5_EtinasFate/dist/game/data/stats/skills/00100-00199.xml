@@ -107,6 +107,7 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="40" name="Stun Shot">
+		<!-- Fires arrows with $s1 power added to P. Atk. Inflicts Stun on the enemy for $s2. Requires a bow weapon. Over-hit. Cancels target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1798,7 +1799,7 @@
 		</effects>
 	</skill>
 	<skill id="134" toLevel="1" name="Toughness">
-		<!-- Increases Sleep/ Hold/ Poison Resistance by $s1. -->
+		<!-- Increases Sleep/ Hold/ Poison Resistance by 20. -->
 		<icon>icon.skill0134</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1835,6 +1836,7 @@
 		</effects>
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
+		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
 		<icon>icon.skill0139</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2290,7 +2292,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="147" toLevel="51" name="M. Def.">
+	<skill id="147" toLevel="51" name="Magic Resistance">
 		<!-- Increases M. Def. by $s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
@@ -2787,6 +2789,7 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Spd. +$s6. Additionally Accuracy +$s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt, or spear. Available when HP is $s9 or below. -->
 		<icon>icon.skill0176</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

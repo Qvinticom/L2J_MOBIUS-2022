@@ -806,7 +806,7 @@
 		</effects>
 	</skill>
 	<skill id="2322" toLevel="1" name="Chest Key (Event)">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -815,7 +815,7 @@
 		<itemConsumeId>9205</itemConsumeId> <!-- Alchemist's Chest Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1451,7 +1451,7 @@
 	</skill>
 	<skill id="2343" toLevel="1" name="Gate Key: Kamael">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1459,7 +1459,7 @@
 		<itemConsumeId>9703</itemConsumeId> <!-- Gate Key: Kamael -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1481,7 +1481,7 @@
 	</skill>
 	<skill id="2344" toLevel="1" name="Gate Key: Archives">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1489,7 +1489,7 @@
 		<itemConsumeId>9704</itemConsumeId> <!-- Gate Key: Archives -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1511,7 +1511,7 @@
 	</skill>
 	<skill id="2345" toLevel="1" name="Gate Key: Observation">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1519,7 +1519,7 @@
 		<itemConsumeId>9705</itemConsumeId> <!-- Gate Key: Observation -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1541,7 +1541,7 @@
 	</skill>
 	<skill id="2346" toLevel="1" name="Gate Key: Spicula">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1549,7 +1549,7 @@
 		<itemConsumeId>9706</itemConsumeId> <!-- Gate Key: Spicula -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1571,7 +1571,7 @@
 	</skill>
 	<skill id="2347" toLevel="1" name="Enuma Elish Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1579,7 +1579,7 @@
 		<itemConsumeId>9707</itemConsumeId> <!-- Gate Key: Harkilgamed -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1601,7 +1601,7 @@
 	</skill>
 	<skill id="2348" toLevel="1" name="Prahnah Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1609,7 +1609,7 @@
 		<itemConsumeId>9708</itemConsumeId> <!-- Gate Key: Rodenpicula -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1631,7 +1631,7 @@
 	</skill>
 	<skill id="2349" toLevel="1" name="Gate Key: Arviterre">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1639,7 +1639,7 @@
 		<itemConsumeId>9709</itemConsumeId> <!-- Gate Key: Arviterre -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1661,7 +1661,7 @@
 	</skill>
 	<skill id="2350" toLevel="1" name="Leopold Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1669,7 +1669,7 @@
 		<itemConsumeId>9710</itemConsumeId> <!-- Gate Key: Katenar -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1691,7 +1691,7 @@
 	</skill>
 	<skill id="2351" toLevel="1" name="Gate Key: Prediction">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1699,7 +1699,7 @@
 		<itemConsumeId>9711</itemConsumeId> <!-- Gate Key: Prediction -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1721,7 +1721,7 @@
 	</skill>
 	<skill id="2352" toLevel="1" name="Gate Key: Nornil">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1729,7 +1729,7 @@
 		<itemConsumeId>9712</itemConsumeId> <!-- Gate Key: Massive Cavern -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1771,7 +1771,7 @@
 		</effects>
 	</skill>
 	<skill id="2354" toLevel="1" name="Gate Key: Darkness">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1780,7 +1780,7 @@
 		<itemConsumeId>9685</itemConsumeId> <!-- Gate Key: Darkness -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1800,7 +1800,7 @@
 		</effects>
 	</skill>
 	<skill id="2355" toLevel="1" name="Gate Key: Destruction">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1809,7 +1809,7 @@
 		<itemConsumeId>9686</itemConsumeId> <!-- Gate Key: Destruction -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1829,7 +1829,7 @@
 		</effects>
 	</skill>
 	<skill id="2356" toLevel="1" name="Gate Key: Blood">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1838,7 +1838,7 @@
 		<itemConsumeId>9687</itemConsumeId> <!-- Gate Key: Blood -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1875,7 +1875,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2358" toLevel="1" name="Holy Water">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1888,7 +1888,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2359" toLevel="1" name="Magic Bottle">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1938,7 +1938,7 @@
 		</effects>
 	</skill>
 	<skill id="2362" toLevel="1" name="Prison Gate Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1947,7 +1947,7 @@
 		<itemConsumeId>10015</itemConsumeId> <!-- Prison Gate Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1977,7 +1977,7 @@
 		</effects>
 	</skill>
 	<skill id="2363" toLevel="1" name="Underground Warehouse Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1986,7 +1986,7 @@
 		<itemConsumeId>10016</itemConsumeId> <!-- Underground Warehouse Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2048,7 +2048,7 @@
 		</effects>
 	</skill>
 	<skill id="2366" toLevel="1" name="Blue Coral Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2057,7 +2057,7 @@
 		<itemConsumeId>9698</itemConsumeId> <!-- Blue Coral Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2077,7 +2077,7 @@
 		</effects>
 	</skill>
 	<skill id="2367" toLevel="1" name="Red Coral Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2086,7 +2086,7 @@
 		<itemConsumeId>9699</itemConsumeId> <!-- Red Coral Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2906,6 +2906,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>75</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>25</mpConsume>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>HOLD</trait>

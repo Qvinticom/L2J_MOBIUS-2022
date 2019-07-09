@@ -499,7 +499,7 @@
 			<value level="2">0</value>
 		</isMagic>
 	</skill>
-	<skill id="13827" toLevel="2" name="Christmas Talisman - ALL STAT (Low)">
+	<skill id="13827" toLevel="2" name="Christmas Talisman - ALL STAT (High)">
 		<!-- All Stats + $s1 with the power of Talisman. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -1038,7 +1038,6 @@
 		<!-- Can obtain 2 Sheep Bait Coupons when using the skill.(Only once a day) -->
 		<icon>branchsys2.action5016</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="13850" toLevel="1" name="Sheep Hat - Physical">
 		<!-- STR + 3, P. Atk. + 3% -->
@@ -2498,7 +2497,7 @@
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="13897" toLevel="2" name="Mental Shield">
+	<skill id="13897" toLevel="2" name="Magic Mental Shield">
 		<!-- Chance to activate Mental Shield when using a magic skill. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>

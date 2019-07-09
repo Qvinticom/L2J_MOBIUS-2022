@@ -225,7 +225,6 @@
 	<skill id="1403" toLevel="1" name="Summon Friend">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
-		<castRange>-2</castRange>
 		<effectPoint>467</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
@@ -254,7 +253,6 @@
 	<skill id="1404" toLevel="1" name="Word of Invitation">
 		<!-- Teleports a party member to one's current location. Consumes 3 Spirit Ore. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1404</icon>
-		<castRange>-2</castRange>
 		<effectPoint>677</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
@@ -309,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="1406" toLevel="1" name="Summon Feline King">
-		<!-- Summons Feline King. Requires $s1 Spirit Ores. -->
+		<!-- Summons Feline King. Requires 4 Spirit Ores. -->
 		<icon>icon.skill1406</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -336,7 +334,7 @@
 		</effects>
 	</skill>
 	<skill id="1407" toLevel="1" name="Summon Magnus the Unicorn">
-		<!-- Summons Magnus the Unicorn. Requires $s1 Spirit Ores. -->
+		<!-- Summons Magnus the Unicorn. Requires 4 Spirit Ores. -->
 		<icon>icon.skill1407</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -363,7 +361,7 @@
 		</effects>
 	</skill>
 	<skill id="1408" toLevel="1" name="Summon Spectral Lord">
-		<!-- Summons a Spectral Lord. Requires $s1 Spirit Ores. -->
+		<!-- Summons a Spectral Lord. Requires 4 Spirit Ores. -->
 		<icon>icon.skill1408</icon>
 		<hitTime>6000</hitTime>
 		<inheritElementals>true</inheritElementals>
@@ -496,8 +494,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1413" toLevel="1" name="Magnus' Chant">
-		<!-- For $s1, a powerful spirit acts to increase all party members' Max MP by $s2, MP Recovery Bonus by $s3 when equipped with light or heavy armor, MP Recovery Bonus by $s4 when equipped with a robe, M. Def. by $s5, M. Atk. by $s6, Casting Spd. by $s7, Fire/Water/Wind/Earth Resistance by $s8, Debuff Resistance by $s9, and Buff-canceling Attack Resistance by $s10. Consumes $s11 Spirit Ore(s). -->
+	<skill id="1413" toLevel="1" name="Chant of Magnus">
+		<!-- For 5 minutes, a powerful spirit acts to increase all party members' Max MP by 15%, MP Recovery Bonus by 1.5 when equipped with light or heavy armor, MP Recovery Bonus by 4 when equipped with a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Fire/Water/Wind/Earth Resistance by 10, Debuff Resistance by 25, and Buff-canceling Attack Resistance by 5 minutes0. Consumes 5 minutes1 Spirit Ore(s). -->
 		<icon>icon.skill1413</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -576,8 +574,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1414" toLevel="1" name="Victory of Pa'agrio">
-		<!-- For $s1, a powerful spirit acts to increase nearby clan members' Max CP by $s2, CP recovery bonus by $s3, Max MP by $s4, Critical Rate by $s5, the power of Prominent Damage through magic damage by $s6, P. Atk. by $s7, P. Def. by $s8, Atk. Spd. by $s9, M. Atk. by $s10, M. Def. by $s11, Casting Spd. by $s12, and Debuff Resistance by $s13. Decreases Speed by $s14. Consumes $s15 Spirit Ore(s). -->
+	<skill id="1414" toLevel="1" name="Victories of Pa'agrio">
+		<!-- For 5 minutes, a powerful spirit acts to increase nearby clan members' Max CP by 20%, CP recovery bonus by 20%, Max MP by 20%, Critical Rate by 20%, the power of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 5 minutes0, M. Def. by 5 minutes1, Casting Spd. by 5 minutes2, and Debuff Resistance by 5 minutes3. Decreases Speed by 5 minutes4. Consumes 5 minutes5 Spirit Ore(s). -->
 		<icon>icon.skill1414</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -658,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="1415" toLevel="1" name="Pa'agrio's Emblem">
-		<!-- For $s1, increases nearby clan members' Buff-canceling Attack Resistance by $s2 and Debuff Resistance by $s3. -->
+		<!-- For 5 minutes, increases nearby clan members' Buff-canceling Attack Resistance by 30% and Debuff Resistance by 20%. -->
 		<icon>icon.skill1415</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -702,7 +700,7 @@
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
-		<hitTime>1300</hitTime>
+		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>228</mpConsume>
@@ -1084,7 +1082,6 @@
 		<icon>icon.skill1425</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
@@ -2300,7 +2297,7 @@
 		</effects>
 	</skill>
 	<skill id="1443" toLevel="1" name="Dark Weapon">
-		<!-- Increases the target's Dark attack level by $s2 for $s1. Can be used on party members. -->
+		<!-- Increases the target's Dark attack level by 20 for 20 minutes. Can be used on party members. -->
 		<icon>icon.skill1443</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2332,12 +2329,11 @@
 		</effects>
 	</skill>
 	<skill id="1444" toLevel="1" name="Pride of Kamael">
-		<!-- For $s1, increases P. Atk., M. Atk. and lethal attack rate by $s2 when using a Kamael-exclusive weapon. -->
+		<!-- For 5 minutes, increases P. Atk., M. Atk. and lethal attack rate by 10% when using a Kamael-exclusive weapon. -->
 		<icon>icon.skill1444</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>KAMAEL_SPECIAL</abnormalType>
-		<castRange>400</castRange>
 		<effectPoint>669</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
@@ -2684,7 +2680,7 @@
 		</effects>
 	</skill>
 	<skill id="1448" toLevel="1" name="Blink">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk., stunning them for $s2 and teleporting them to the rear. Increases Power upon the consumption of up to $s3 souls. -->
+		<!-- Attacks nearby enemies with 1 Power added to P. Atk., stunning them for 2 seconds and teleporting them to the rear. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1448</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -2765,7 +2761,7 @@
 		</effects>
 	</skill>
 	<skill id="1450" toLevel="1" name="Chain Lightning">
-		<!-- Hurls thunderbolts and inflicts non-attribute damage on the enemy's surroundings with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Hurls thunderbolts and inflicts non-attribute damage on the enemy's surroundings with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1450</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2793,7 +2789,7 @@
 		</effects>
 	</skill>
 	<skill id="1451" toLevel="1" name="Fire Vortex Buster">
-		<!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with 195 Power added to M. Atk. -->
 		<icon>icon.skill1451</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -2827,7 +2823,7 @@
 		</effects>
 	</skill>
 	<skill id="1452" toLevel="1" name="Count of Fire">
-		<!-- Uses the power of Fire to burn the enemy for $s1, inflicting damage of $s2 HP per second. -->
+		<!-- Uses the power of Fire to burn the enemy for 10 seconds, inflicting damage of 173 HP per second. -->
 		<icon>icon.skill1452</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2861,7 +2857,7 @@
 		</effects>
 	</skill>
 	<skill id="1453" toLevel="1" name="Ice Vortex Crusher">
-		<!-- Creates an Ice Vortex that inflicts Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Creates an Ice Vortex that inflicts Water damage on the enemy with 195 Power added to M. Atk. -->
 		<icon>icon.skill1453</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -2895,7 +2891,7 @@
 		</effects>
 	</skill>
 	<skill id="1454" toLevel="1" name="Diamond Dust">
-		<!-- Summons a bitter ice storm that inflicts Water damage on the enemy with $s1 Power added to M. Atk. Decreases nearby enemies' Speed by $s3 for $s2. -->
+		<!-- Summons a bitter ice storm that inflicts Water damage on the enemy with 70 Power added to M. Atk. Decreases nearby enemies' Speed by 40% for 15 seconds. -->
 		<icon>icon.skill1454</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2930,7 +2926,7 @@
 		</effects>
 	</skill>
 	<skill id="1455" toLevel="1" name="Throne of Ice">
-		<!-- Summons a blast of icy air that freezes the enemy for $s1, causing loss of $s2 HP per second. -->
+		<!-- Summons a blast of icy air that freezes the enemy for 10 seconds, causing loss of 173 HP per second. -->
 		<icon>icon.skill1455</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2962,7 +2958,7 @@
 		</effects>
 	</skill>
 	<skill id="1456" toLevel="1" name="Wind Vortex Slug">
-		<!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with 195 Power added to M. Atk. -->
 		<icon>icon.skill1456</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -3042,7 +3038,7 @@
 		</effects>
 	</skill>
 	<skill id="1458" toLevel="1" name="Throne of Wind">
-		<!-- Uses the power of a storm to weaken the enemy for $s1, causing loss of $s2 HP per second. -->
+		<!-- Uses the power of a storm to weaken the enemy for 10 seconds, causing loss of 173 HP per second. -->
 		<icon>icon.skill1458</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3075,7 +3071,7 @@
 		</effects>
 	</skill>
 	<skill id="1459" toLevel="1" name="Divine Power">
-		<!-- Increases the power of recovery magic with $s2 Power for $s1. -->
+		<!-- Increases the power of recovery magic with 1000 Power for 15 seconds. -->
 		<icon>icon.skill1459</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3099,7 +3095,7 @@
 		</effects>
 	</skill>
 	<skill id="1460" toLevel="1" name="Mana Gain">
-		<!-- For $s1, increases the recharge power received by the target by $s2. -->
+		<!-- For 20 minutes, increases the recharge power received by the target by 85. -->
 		<icon>icon.skill1460</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3138,7 +3134,7 @@
 		</effects>
 	</skill>
 	<skill id="1461" toLevel="1" name="Chant of Protection">
-		<!-- For $s1, decreases Critical Damage received by a party member by $s2. -->
+		<!-- For 20 minutes, decreases Critical Damage received by a party member by 30%. -->
 		<icon>icon.skill1461</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3180,7 +3176,7 @@
 		<coolTime>500</coolTime>
 		<castRange>900</castRange>
 		<effectPoint>-673</effectPoint>
-		<hitTime>2200</hitTime>
+		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3402,7 +3398,7 @@
 		</effects>
 	</skill>
 	<skill id="1469" toLevel="1" name="Leopold">
-		<!-- Summons the devastating cannon Leopold to inflict Fire damage with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Summons the devastating cannon Leopold to inflict Fire damage with 224 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1469</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -3430,7 +3426,7 @@
 		</effects>
 	</skill>
 	<skill id="1470" toLevel="1" name="Prahnah">
-		<!-- Increases all party members' M. Def. by $s2 for $s1. -->
+		<!-- Increases all party members' M. Def. by 3000 for 30 seconds. -->
 		<icon>icon.skill1470</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3478,7 +3474,6 @@
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>1400</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3541,7 +3536,7 @@
 		</effects>
 	</skill>
 	<skill id="1474" toLevel="1" name="Abyssal Power">
-		<!-- Increases M. Atk. by $s1. -->
+		<!-- Increases M. Atk. by 10%. -->
 		<icon>icon.skill1474</icon>
 		<magicLvl>43</magicLvl>
 		<operateType>P</operateType>
@@ -3818,7 +3813,7 @@
 		</effects>
 	</skill>
 	<skill id="1480" toLevel="1" name="Soul Harmony">
-		<!-- Empathizes with the souls of party members for $s1 to recover $s2 MP per second, decrease P. Def. by $s3, and become unable to act. -->
+		<!-- Empathizes with the souls of party members for 15 seconds to recover 200 MP per second, decrease P. Def. by 90%, and become unable to act. -->
 		<icon>icon.skill1480</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

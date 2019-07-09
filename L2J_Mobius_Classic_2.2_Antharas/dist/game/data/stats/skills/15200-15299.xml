@@ -497,14 +497,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15235" toLevel="1" name="Wind of Darkness">
+	<skill id="15235" toLevel="2" name="Wind of Darkness">
 		<!-- Creates a powerful wind around a character, throwing back enemies. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>3000</coolTime>
-		<effectPoint>-1</effectPoint>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-250</value>
+		</effectPoint>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -533,13 +536,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15236" toLevel="1" name="Dark Thrust">
+	<skill id="15236" toLevel="2" name="Dark Thrust">
 		<!-- Launches a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<effectPoint>-2</effectPoint>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-250</value>
+		</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -553,17 +559,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15237" toLevel="1" name="Dark Buster">
+	<skill id="15237" toLevel="2" name="Dark Buster">
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<coolTime>800</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<mpConsume>10</mpConsume>
-		<castRange>100</castRange>
-		<effectPoint>-2</effectPoint>
+		<effectPoint>
+			<value level="1">-300</value>
+			<value level="2">-400</value>
+		</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<magicLvl>96</magicLvl>
 		<affectRange>200</affectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

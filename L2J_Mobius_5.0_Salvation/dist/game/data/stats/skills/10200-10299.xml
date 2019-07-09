@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10244" toLevel="3" name="True Vanguard">
+	<skill id="10244" toLevel="3" name="Two-Hand Stance">
 		<!-- Holds a weapon with both hands. If the weapon is a sword or blunt, this stance increases P. Critical Rate/ P. Critical Damage by $s1 and P. Atk. by $s2 of Shield Def. but disables you to cast shield skills or defend with the shield. Use the stance again to cancel it. Requires a shield to be equipped. -->
 		<icon>icon.skill10244</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -10,6 +10,12 @@
 			<value level="3">95</value>
 		</magicLvl>
 		<operateType>T</operateType>
+		<isMagic>6</isMagic>
+		<hitTime>1500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<mpConsume>20</mpConsume>
 		<targetType>NONE</targetType>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
@@ -147,7 +153,7 @@
 		<magicLvl>85</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -321,7 +327,7 @@
 		</effects>
 	</skill>
 	<skill id="10253" toLevel="10" name="Superior Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2 -->
+		<!-- When heavy armor is equipped, Max HP +$s1, P. Def. +$s2; P. Critical Damage Received -$s3. Additionally, STR +$s4. -->
 		<icon>icon.skill10253</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1493,7 +1499,7 @@
 		</effects>
 	</skill>
 	<skill id="10270" toLevel="1" name="Second Wind">
-		<!-- Instantly $s1 HP and $s2 CP. For $s3, Max HP +$s4 and Max CP +$s5. -->
+		<!-- Instantly 35% HP and 15% CP. For 2 minutes, Max HP +35% and Max CP +15%. -->
 		<icon>icon.skill10270</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2055,7 +2061,7 @@
 		</effects>
 	</skill>
 	<skill id="10279" toLevel="1" name="Giant Barrier">
-		<!-- Removes all debuffs and for $s1, becomes invincible against standard attacks, skills, and debuffs. Speed +$s2. Available when HP is $s3 or lower. -->
+		<!-- Removes all debuffs and for 10 seconds, becomes invincible against standard attacks, skills, and debuffs. Speed +30%. Available when HP is 70% or lower. -->
 		<icon>icon.skill10279</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>
@@ -2140,7 +2146,7 @@
 		</effects>
 	</skill>
 	<skill id="10281" toLevel="5" name="Sonic Star">
-		<!-- Attacks and knocking them down nearby enemies at the speed of light with $s1 Power added to P. Atk. Ignoring the P. Def. by $s2. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon. Critical. -->
+		<!-- Attacks and knocking them down nearby enemies at the speed of light with $s1 Power added to P. Atk.  Ignoring the P. Def. by $s2. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon. Critical. -->
 		<icon>icon.skill10281</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2164,9 +2170,9 @@
 			<value level="4">634</value>
 			<value level="5">662</value>
 		</mpConsume>
-		<hitTime>3000</hitTime>
+		<hitTime>7500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<effectPoint>
 			<value level="1">-700</value>
 			<value level="2">-704</value>
@@ -2586,7 +2592,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10289" toLevel="4" name="Boost">
+	<skill id="10289" toLevel="4" name="Brave Spear">
 		<!-- Increases skills' effect by $s2 for $s1 and normal/ skill attack damage by $s3 during PvP. -->
 		<icon>icon.skill10289</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2701,7 +2707,7 @@
 		</conditions>
 	</skill>
 	<skill id="10291" toLevel="1" name="Feral Bear Cry">
-		<!-- Shouts loudly to invoke the power of the Bear. Increases P. Atk. And Critical Damage by $s2 for $s1. -->
+		<!-- Shouts loudly to invoke the power of the Bear. Increases P. Atk. And Critical Damage by 30% for 5 minutes. -->
 		<icon>icon.skill10291</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2737,7 +2743,7 @@
 		</effects>
 	</skill>
 	<skill id="10292" toLevel="1" name="Feral Ogre Cry">
-		<!-- Shouts loudly to invoke the power of the Ogre. For $s1, increases your P. Atk., P. Def. And M. Def. by $s2 and P. Critical Damage and Max HP by $s3. -->
+		<!-- Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%. -->
 		<icon>icon.skill10292</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2786,7 +2792,7 @@
 		</effects>
 	</skill>
 	<skill id="10293" toLevel="1" name="Feral Puma Cry">
-		<!-- Shouts loudly to invoke the power of the Puma. For $s1, increases your P. Accuracy by $s2 and Atk. Spd. by $s3, and decreases Critical Damage received by $s4. -->
+		<!-- Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%. -->
 		<icon>icon.skill10293</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2823,7 +2829,7 @@
 		</effects>
 	</skill>
 	<skill id="10294" toLevel="1" name="Feral Rabbit Cry">
-		<!-- Shouts loudly to invoke the power of the Rabbit. For $s1, increases your Atk. Spd. by $s2, Speed by $s3 and P. Evasion by $s4. -->
+		<!-- Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15. -->
 		<icon>icon.skill10294</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2863,7 +2869,7 @@
 		</effects>
 	</skill>
 	<skill id="10295" toLevel="1" name="Hawk Cry">
-		<!-- Shouts loudly to invoke the power of the Hawk. For $s1, increases your P. Accuracy by $s2, Critical Rate by $s3 and Critical Damage by $s4. -->
+		<!-- Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%. -->
 		<icon>icon.skill10295</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2903,7 +2909,7 @@
 		</effects>
 	</skill>
 	<skill id="10296" toLevel="1" name="Spirit of the Hunter">
-		<!-- For $s1, increases damage against insects/ plants/ animals +$s2. -->
+		<!-- For 30 minutes, increases damage against insects/ plants/ animals +10%. -->
 		<icon>icon.skill0359</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>

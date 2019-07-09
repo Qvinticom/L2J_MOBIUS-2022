@@ -167,9 +167,9 @@
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-1630</value>
-			<value level="2">-2089</value>
-			<value level="3">-2384</value>
+			<value level="1">-1632</value>
+			<value level="2">-2091</value>
+			<value level="3">-2386</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;300</fanRange>
@@ -2004,7 +2004,7 @@
 		</effects>
 	</skill>
 	<skill id="526" toLevel="1" name="Enuma Elish">
-		<!-- Attacks enemies in front using the Sword of Creation that divides heaven and Earth with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit. -->
+		<!-- Attacks enemies in front using the Sword of Creation that divides heaven and Earth with 6060 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Over-hit. -->
 		<icon>icon.skill0526</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -2065,7 +2065,7 @@
 		</effects>
 	</skill>
 	<skill id="528" toLevel="1" name="Shield of Faith">
-		<!-- For $s1, party members' P. Def. +$s2 and M. Def. +$s3. For the duration, absorbs $s4 of any damage received by a party member. -->
+		<!-- For 15 seconds, party members' P. Def. +3600 and M. Def. +2700. For the duration, absorbs 90% of any damage received by a party member. -->
 		<icon>icon.skill0528</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2097,7 +2097,7 @@
 		</effects>
 	</skill>
 	<skill id="529" toLevel="1" name="Elemental Song">
-		<!-- Increases all party members' Fire/ Water/ Wind/ Earth Resistance by $s2 for $s1. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
+		<!-- Increases all party members' Fire/ Water/ Wind/ Earth Resistance by 30 for 2 minutes. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0529</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2135,7 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="530" toLevel="1" name="Dance of Alignment">
-		<!-- Increases all party members' Holy/ Dark Attack Resistance by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' Holy/ Dark Attack Resistance by 30 for 2 minutes. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0530</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2467,7 +2467,6 @@
 	<skill id="539" toLevel="2" name="Nail Attack">
 		<!-- A demonic clawed combo attack. Power $s1. -->
 		<icon>icon.skill0539</icon>
-		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -2516,7 +2515,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

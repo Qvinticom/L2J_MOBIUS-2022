@@ -1381,6 +1381,7 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
+		<mpConsume>50</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<castRange>400</castRange>
@@ -1406,6 +1407,7 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
+		<mpConsume>50</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1439,6 +1441,7 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
+		<mpConsume>50</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1460,6 +1463,7 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<mpConsume>100</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<castRange>600</castRange>
@@ -1479,6 +1483,7 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<mpConsume>100</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<castRange>600</castRange>
@@ -1501,6 +1506,7 @@
 		<hitTime>900</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>5</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hpConsume>20</hpConsume>
@@ -1534,6 +1540,7 @@
 		<hitTime>1000</hitTime>
 		<magicLvl>20</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>400</affectRange>
@@ -1545,6 +1552,7 @@
 		<hitTime>4000</hitTime>
 		<magicLvl>20</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
@@ -1559,6 +1567,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>17</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -1584,6 +1593,7 @@
 		<magicLvl>70</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
+		<mpConsume>30</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1655,6 +1665,7 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>100</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1673,6 +1684,7 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>30</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1688,6 +1700,7 @@
 		<hitTime>3200</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>30</mpConsume>
 		<reuseDelay>25000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
@@ -1705,6 +1718,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>100</mpConsume>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
@@ -1754,6 +1768,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>50</attributeValue>
@@ -1777,6 +1792,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<attributeType>DARK</attributeType>
@@ -1898,7 +1914,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical">
+	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
 		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
 		<icon>icon.skill1502</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -2016,7 +2032,6 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>900</castRange>
-		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
@@ -2060,14 +2075,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7095" toLevel="1" name="Master's Blessing - Face Harden">
+	<skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
 		<!-- The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10% for 1 hour. -->
 		<icon>icon.skill0828</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>900</castRange>
-		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
@@ -2090,7 +2104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7096" toLevel="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
 		<!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
 		<icon>icon.skill1323</icon>
 		<abnormalLvl>2</abnormalLvl>

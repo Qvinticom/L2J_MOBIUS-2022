@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="3411" toLevel="1" name="Special Ability: Focus">
-		<!-- Increases Max HP by $s1, and Critical Rate. Inflicts additional damage during PvP. -->
+		<!-- Increases Max HP by 10%, and Critical Rate. Inflicts additional damage during PvP. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -1661,7 +1661,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3496" toLevel="1" name="Red Talisman - HP/CP Recovery">
+	<skill id="3496" toLevel="1" name="Red Talisman - HP/ CP Recovery">
 		<!-- Recover HP/ CP with the power of Talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<effectPoint>532</effectPoint>
@@ -1699,7 +1699,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3498" toLevel="1" name="Special Ability: Light">
+	<skill id="3498" toLevel="2" name="Special Ability: Light">
 		<!-- Increases Weight Gauge by 20%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>46</magicLvl>

@@ -3,160 +3,168 @@
 	<skill id="27800" toLevel="1" name="Freya's Luxury Shopping Bag">
 		<!-- Double-click the Luxury Shopping Bag to obtain 1 Freya's Wind Scroll and 1 Freya's Art of Seduction. There is also a chance to additionally obtain Freya's/ Sirra's/ Snowman's Gift Box, Freya's Vital Rune (30 minutes) Box, or Freya's Recovery Potion. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27801" toLevel="2" name="Freya's Gift Box">
 		<!-- Double click to obtain rare items such as rare accessories. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27802" toLevel="3" name="Sirra's Gift Box">
 		<!-- Double click to receive a random enhancement item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27803" toLevel="4" name="Snow Man's Gift Box">
 		<!-- Double click to receive a random character growth item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27804" toLevel="3" name="Topaz Augment">
 		<!-- When Topaz Lv. 4 or higher is equipped, PVP Damage +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27805" toLevel="3" name="Ruby Augment">
 		<!-- When Ruby Lv. 4 or higher is equipped, P. Atk. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27806" toLevel="3" name="Sapphire Augment">
 		<!-- When Sapphire Lv. 4 or higher is equipped, M. Atk. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27807" toLevel="3" name="Obsidian Augment">
 		<!-- When Obsidian Lv. 4 or higher is equipped, received PvP Damage -$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27808" toLevel="3" name="Opal Augment">
 		<!-- When Opal Lv. 4 or higher is equipped, Attack Attribute Bonus +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27809" toLevel="3" name="Emerald Augment">
 		<!-- When Emerald Lv. 4 or higher is equipped, MEN +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27810" toLevel="3" name="Aquamarine Augment">
 		<!-- When Aquamarine Lv. 4 or higher is equipped, Max MP +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27811" toLevel="3" name="Diamond Augment">
 		<!-- When Diamond Lv. 4 or higher is equipped, P. Def +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27812" toLevel="3" name="Pearl Augment">
 		<!-- When Pearl Lv. 4 or higher is equipped, M. Def. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27813" toLevel="3" name="Tanzanite Augment">
 		<!-- When Tanzanite Lv. 4 or higher is equipped, received Damage -$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27814" toLevel="3" name="Garnet Augment">
 		<!-- When Garnet Lv. 4 or higher is equipped, Max HP +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27815" toLevel="3" name="Vital Stone Augment">
 		<!-- When Vital Stone Lv. 4 or higher is equipped, Vitality XP Bonus +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27816" toLevel="3" name="Red Cat's Eye Augment">
 		<!-- When Red Cat's Eye Lv. 4 or higher is equipped, P. Skill Power +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27817" toLevel="3" name="Blue Cat's Eye Augment">
 		<!-- When Blue Cat's Eye Lv. 4 or higher is equipped, M. Skill Power +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27818" toLevel="3" name="Topaz Augment">
 		<!-- PvP Damage +$s1. -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27819" toLevel="3" name="Ruby Augment">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27820" toLevel="3" name="Sapphire Augment">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27821" toLevel="3" name="Obsidian Augment">
 		<!-- Received PvP Damage -$s1. -->
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27822" toLevel="3" name="Opal Augment">
 		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27823" toLevel="3" name="Emerald Augment">
 		<!-- MEN +$s1. -->
 		<icon>icon.etc_bm_jewel_emerald_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27824" toLevel="3" name="Aquamarine Augment">
 		<!-- Max MP +$s1. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27825" toLevel="3" name="Diamond Augment">
 		<!-- P. Def. +$s1. -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27826" toLevel="3" name="Pearl Augment">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27827" toLevel="3" name="Tanzanite Augment">
 		<!-- Received Damage -$s1. -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27828" toLevel="3" name="Garnet Augment">
 		<!-- Max HP +$s1. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27829" toLevel="3" name="Vital Stone Augment">
 		<!-- Vitality XP Bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27830" toLevel="3" name="Red Cat's Eye Augment">
 		<!-- P. Skill Power +$s1. -->
 		<icon>icon.bm_jewel_red_catseye</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27831" toLevel="3" name="Blue Cat's Eye Augment">
 		<!-- M. Skill Power +$s1. -->
 		<icon>Icon.bm_jewel_blue_catseye</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-<skill id="27832" toLevel="3" name="La Vie En Rose's Radiant Brooch">
+	<skill id="27832" toLevel="3" name="La Vie En Rose's Magnificent Brooch">
 		<!-- 6 Jewels can be equipped. Inventory Slots +12. -->
 		<icon>
 			<value level="1">icon.etc_bm_brooch_lavianrose_i04</value>
@@ -257,18 +265,26 @@
 	<skill id="27833" toLevel="1" name="Freya's Luxury Shopping Bag">
 		<!-- Double-click the Luxury Shopping Bag to obtain 1 Freya's Wind Scroll and 1 Freya's Art of Seduction. There is also a chance to additionally obtain Freya's/ Sirra's/ Snowman's Gift Box, Freya's Vital Rune (30 minutes) Box, or Freya's Recovery Potion. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27834" toLevel="2" name="Freya's Gift Box">
 		<!-- Double click to obtain rare items such as rare accessories. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27835" toLevel="3" name="Sirra's Gift Box">
 		<!-- Double click to receive a random enhancement item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27836" toLevel="4" name="Snow Man's Gift Box">
 		<!-- Double click to receive a random character growth item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27837" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
 		<icon>icon.giant_ench_wp_stone_r_i02</icon>
@@ -280,76 +296,111 @@
 	<skill id="27839" toLevel="3" name="Amethyst Augment">
 		<!-- PvP Damage +$s1. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_amethyst_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27840" toLevel="3" name="Cat's Eye Augment">
 		<!-- Damage Reflect +$s1. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_catseye_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27841" toLevel="3" name="Amethyst Augment">
 		<!-- When Amethyst Lv. 4 or higher is equipped, PVP Damage +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27842" toLevel="3" name="Cat's Eye Augment">
 		<!-- When Cat's Eye Lv. 4 or higher is equipped, Damage Reflect +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="27843" toLevel="1" name="God's Soul Treasure Chest">
 		<!-- Double-click to obtain various random items. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27844" toLevel="1" name="Noble Tears">
+	<skill id="27844" toLevel="1" name="Royal Tears">
 		<!-- It contain's Frintezza's feelings. Doubles P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. and it changes the appearance of your weapon. Will not be deleted upon death. -->
 		<icon>BranchSys2.icon.g_illumination_skyblue</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="27845" toLevel="1" name="Frintezza's Magic">
 		<!-- Your weapon changes apperance temporarily thanks to Frintezza's magic. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="27846" toLevel="1" name="Compassion">
 		<!-- You feel like helping those around you. For 2 hours, XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>700</hitTime>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="27847" toLevel="1" name="Devotion">
 		<!-- You realize that the people around you're the most precious people. For 2 hours, XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>700</hitTime>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="27848" toLevel="1" name="Longing">
+	<skill id="27848" toLevel="1" name="Desire">
 		<!-- You want the people around you to acknowledge your worth. For 2 hours, XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>700</hitTime>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="27849" toLevel="1" name="Transformation Skill">
 		<!-- For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27850" toLevel="1" name="Summon Friend">
 		<!-- Summon a friend every 30 minutes. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1000</effectPoint>
 	</skill>
-	<skill id="27851" toLevel="1" name="Noble Chocolate">
+	<skill id="27851" toLevel="1" name="Royal Truffle">
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27852" toLevel="1" name="Noble Candy">
+	<skill id="27852" toLevel="1" name="Royal Candy">
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_candy_long</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27853" toLevel="1" name="Noble Cookie">
+	<skill id="27853" toLevel="1" name="Royal Cookie">
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_cookie_long</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27854" toLevel="1" name="Red Noblesse Appearance Stone">
 		<operateType>A1</operateType>
@@ -366,50 +417,75 @@
 	<skill id="27858" toLevel="1" name="Messiah's Castle's Lost Treasure Chest">
 		<!-- Double-click to obtain random lost treasures of Messiah's Castle. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27859" toLevel="1" name="High-grade Balthus Knight Mark">
 		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 2 hours. You'll have a chance to receive special supplies. XP/ SP Acquired +50%. -->
 		<icon>icon.ev_balthus_token</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="27860" toLevel="1" name="Royal White Save Ticket (R99)-Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27861" toLevel="1" name="Embryo Reward Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27862" toLevel="1" name="Embryo Reward Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27863" toLevel="1" name="Galup's Special Gift">
 		<icon>icon.card_event_luck_pocket</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27864" toLevel="1" name="13th Anniversary Blessing">
+	<skill id="27864" toLevel="1" name="6th Anniversary Blessing">
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27865" toLevel="24" name="13th Anniversary Blessing - Stage 1">
+	<skill id="27865" toLevel="24" name="6th Anniversary Blessing">
 		<!-- You can obtain the item after $s1 hour(s). There are $s2 stages. <Notice> If you die when you receive the item, you cannot obtain the $s3th anniversary blessing buff and items. You also cannot obtain the item if you do not have space in your inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27866" toLevel="1" name="Old Orc Treasure Box">
 		<!-- Double-click for a chance to get a reward. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="27867" toLevel="1" name="Old Orc Box Effect">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27868" toLevel="6" name="Ultimate Fortune Jewelry Box">
 		<!-- Double-click to obtain 1 of the Fortune Jewelry Boxes. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27869" toLevel="1" name="Embryo Reward Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27870" toLevel="1" name="Embryo Reward Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27871" toLevel="1" name="Elmoreden Cloak Basic Effect">
 		<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
@@ -1404,23 +1480,25 @@
 		</effects>
 	</skill>
 	<skill id="27879" toLevel="1" name="Ignore Damage">
-		<!-- Makes you invincible to fixed damage for $s1. -->
+		<!-- Makes you invincible to fixed damage for 10 sec. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>867</effectPoint>
 	</skill>
 	<skill id="27880" toLevel="1" name="Blessing of Elmoreden">
-		<!-- Makes you invincible for $s1 and increases Speed by 100. -->
+		<!-- Makes you invincible for 10 sec and increases Speed by 100. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<coolTime>300</coolTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -1448,12 +1526,12 @@
 		<!-- Recovers all of your HP/ MP. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>A1</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>1811</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<coolTime>300</coolTime>
+		<coolTime>200</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1473,12 +1551,12 @@
 		<!-- Recovers all of your HP/ MP. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>A1</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>1811</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<coolTime>300</coolTime>
+		<coolTime>200</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1495,11 +1573,11 @@
 		</effects>
 	</skill>
 	<skill id="27883" toLevel="1" name="Spirit of Aden">
-		<!-- Increases PvE Damage by $s1 when dealing magic attack. -->
+		<!-- Increases PvE Damage by 100% when dealing magic attack. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>800</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -1518,11 +1596,11 @@
 		</pveEffects>
 	</skill>
 	<skill id="27884" toLevel="1" name="Spirit of Elmore">
-		<!-- Increases PvE Damage by $s1 when dealing physical attack. -->
+		<!-- Increases PvE Damage by 100% when dealing physical attack. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>800</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -1545,18 +1623,17 @@
 		</pveEffects>
 	</skill>
 	<skill id="27885" toLevel="1" name="Blessing of Ferios">
-		<!-- Makes you invincible for $s1. -->
+		<!-- Makes you invincible for 20 sec. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
-		<coolTime>300</coolTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -1588,7 +1665,7 @@
 		</abnormalLvl>
 		<magicLvl>1</magicLvl>
 		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 		<reuseDelay>180000</reuseDelay>
@@ -1612,7 +1689,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<magicLvl>1</magicLvl>
 		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 		<reuseDelay>60000</reuseDelay>
@@ -1647,11 +1724,11 @@
 		<activateRate>200</activateRate>
 		<affectLimit>20-25</affectLimit>
 		<mpConsume>1</mpConsume>
-		<castRange>400</castRange>
-		<hitTime>5000</hitTime>
+		<castRange>40</castRange>
+		<hitTime>500</hitTime>
 		<reuseDelay>120000</reuseDelay>
 		<coolTime>500</coolTime>
-		<effectPoint>-700</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1671,14 +1748,14 @@
 		<!-- For $s1, PvE Damage +$s2 when dealing magic attacks. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
-		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1709,14 +1786,14 @@
 		<!-- For $s1, PvE Damage +$s2 when dealing physical attacks. -->
 		<icon>icon.skill0917</icon>
 		<operateType>A2</operateType>
-		<hitTime>1200</hitTime>
-		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
-		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1766,14 +1843,14 @@
 		<!-- Creates a shield for $s1 and absorbes $s2 damage. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>800</hitTime>
-		<effectPoint>1</effectPoint>
+		<hitTime>300</hitTime>
+		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
-		<coolTime>300</coolTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>120000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1804,14 +1881,15 @@
 		<!-- For $s1, P./ M. Def. +$s2. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>800</hitTime>
-		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<hitTime>300</hitTime>
+		<effectPoint>689</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
-		<coolTime>300</coolTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1839,8 +1917,9 @@
 		<!-- For $s1, P./ M. Atk. +$s2. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
-		<hitTime>600</hitTime>
-		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<hitTime>300</hitTime>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -1850,7 +1929,6 @@
 		<reuseDelay>1200000</reuseDelay>
 		<affectRange>1000</affectRange>
 		<staticReuse>true</staticReuse>
-		<castRange>-1</castRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -1879,10 +1957,9 @@
 		<operateType>A1</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<magicLvl>1</magicLvl>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
+		<hitTime>300</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-1000</effectPoint>
+		<effectPoint>689</effectPoint>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

@@ -342,7 +342,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -428,7 +428,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -512,10 +512,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>41</mpConsume>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>200</hitTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>2</amount>
@@ -540,7 +539,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

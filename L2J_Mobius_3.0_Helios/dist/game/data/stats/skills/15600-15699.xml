@@ -48,10 +48,9 @@
 		<icon>icon.skill0005</icon>
 		<abnormalTime>20</abnormalTime>
 		<operateType>A2</operateType>
-		<castRange>1000</castRange>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
-		<hitTime>10000</hitTime> <!-- retail 25000 -->
+		<hitTime>25000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -95,7 +94,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<nextAction>ATTACK</nextAction>
-		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -131,7 +129,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<affectRange>300</affectRange>
-		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -157,7 +154,6 @@
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
 		<affectRange>800</affectRange>
-		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -416,7 +412,7 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15642" toLevel="1" name="Horn Melody (Adventurer)">
+	<skill id="15642" toLevel="4" name="Horn Melody (Adventurer)">
 		<!-- Party members' P. Atk. +$s2, P. Def. +$s3, M. Atk. +$s4, and M. Def. +$s5 up for $s1. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -456,8 +452,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15643" toLevel="1" name="Drum Melody (Adventurer)">
-		<!-- For $s1, Party Members' Max MP +$s2, HP Recovery Bonus +$s3, M. Critical Rate +$s4, P. Critical Damage +$s5, P. Atk. +$s6, P. Def. +$s7, Atk. Spd. +$s8, M. Atk. +$s9, M. Def. +$s10, Casting Spd. +$s11, Debuff Resistance +$s12, Critical Damage Received -$s13 -->
+	<skill id="15643" toLevel="4" name="Drum Melody (Adventurer)">
+		<!-- For $s1, Party Members' Max MP +$s2, HP Recovery Bonus +$s3, M. Critical Rate +$s4, P. Critical Damage +$s5, P. Atk. +$s6, P. Def. +$s7, Atk. Spd. +$s8, M. Atk. +$s9, M. Def. +$s10, Casting Spd. +$s11, Debuff Resistance +$s12, Critical Damage Received -$s13; Movement Speed -$s14 down. Additionally, for party members equipped with melee weapons, bows, or crossbows who have received attacks and suffered more than a certain amount of damage, Critical Damage is increased during normal attack. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -545,7 +541,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15644" toLevel="1" name="Pipe Organ Melody (Adventurer)">
+	<skill id="15644" toLevel="4" name="Pipe Organ Melody (Adventurer)">
 		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, HP Recovery Bonus +$s5. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -585,8 +581,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15645" toLevel="1" name="Guitar Melody (Adventurer)">
-		<!-- Party members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4 -->
+	<skill id="15645" toLevel="4" name="Guitar Melody (Adventurer)">
+		<!-- Party members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4; P. Skill MP Consumption -$s5, M. Skill MP Consumption -$s6, Iss Enchanter Enhance Skill MP Consumption -$s7 for $s1. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -641,7 +637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15646" toLevel="1" name="Harp Melody (Adventurer)">
+	<skill id="15646" toLevel="4" name="Harp Melody (Adventurer)">
 		<!-- For $s1, party members' P. Accuracy +$s2, P./M. Evasion +$s3, Movement Speed +$s4, and Critical Damage Received -$s5. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -685,7 +681,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15647" toLevel="1" name="Lute Melody (Adventurer)">
+	<skill id="15647" toLevel="4" name="Lute Melody (Adventurer)">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, with a chance of $s4 Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>

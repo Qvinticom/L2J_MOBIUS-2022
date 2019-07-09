@@ -1162,7 +1162,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15145" toLevel="1" name="Ruler's Authority">
+	<skill id="15145" toLevel="2" name="Ruler's Authority">
 		<!-- When equipped, Max CP/ HP/ MP +$s1, weight +$s2, damage dealt +$s3, damage received -$s4, Damage Reflect Resistance +$s5, inventory slot +$s6, and all attribute resistance +$s7. -->
 		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
@@ -1923,7 +1923,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15174" toLevel="1" name="Petra Injection - Enhance HP Recovery">
+	<skill id="15174" toLevel="1" name="Petra Injection - Enhance HP Recovery Bonus">
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -1943,7 +1943,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15175" toLevel="1" name="Petra Injection - Enhance HP Recovery">
+	<skill id="15175" toLevel="1" name="Petra Injection - Enhance HP Recovery Bonus">
 		<!-- Zahak has used its Petra to increase Tauti's HP Recovery Bonus. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>

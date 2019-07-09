@@ -104,7 +104,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>80</activateRate>
 		<trait>HOLD</trait>
@@ -172,7 +171,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>100</activateRate>
 		<trait>SHOCK</trait>
@@ -220,7 +218,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>100</activateRate>
 		<trait>POISON</trait>
@@ -280,6 +277,7 @@
 					<value level="2">-6</value>
 					<value level="3">-8</value>
 					<value level="3">-10</value>
+					<value level="4">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -289,6 +287,7 @@
 					<value level="2">-6</value>
 					<value level="3">-8</value>
 					<value level="3">-10</value>
+					<value level="4">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -298,6 +297,7 @@
 					<value level="2">-10</value>
 					<value level="3">-20</value>
 					<value level="3">-30</value>
+					<value level="4">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -307,6 +307,7 @@
 					<value level="2">-10</value>
 					<value level="3">-20</value>
 					<value level="3">-30</value>
+					<value level="4">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -837,7 +838,6 @@
 		<staticReuse>true</staticReuse>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

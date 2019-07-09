@@ -195,7 +195,6 @@
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -218,7 +217,6 @@
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -241,7 +239,6 @@
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -264,7 +261,6 @@
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -403,7 +399,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15221" toLevel="3" name="Blood Spear">
+	<skill id="15221" toLevel="4" name="Blood Spear">
 		<!-- Attacks the target with an arrow of darkness. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A1</operateType>
@@ -419,6 +415,7 @@
 			<value level="1">93</value>
 			<value level="2">94</value>
 			<value level="3">95</value>
+			<value level="4">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
@@ -429,11 +426,12 @@
 					<value level="1">1000</value>
 					<value level="2">1500</value>
 					<value level="3">2000</value>
+					<value level="4">2000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15222" toLevel="3" name="Home Thrust">
+	<skill id="15222" toLevel="4" name="Home Thrust">
 		<!-- Launches a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -447,6 +445,7 @@
 			<value level="1">93</value>
 			<value level="2">94</value>
 			<value level="3">95</value>
+			<value level="4">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<hitTime>2000</hitTime>
 		<targetType>TARGET</targetType>
@@ -457,6 +456,7 @@
 					<value level="1">30000</value>
 					<value level="2">40000</value>
 					<value level="3">50000</value>
+					<value level="4">50000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -518,7 +518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15225" toLevel="1" name="Sword Wave">
+	<skill id="15225" toLevel="2" name="Sword Wave">
 		<!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -648,7 +648,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15231" toLevel="1" name="Quick Thrust">
+	<skill id="15231" toLevel="2" name="Quick Thrust">
 		<!-- Inflicts a powerful attack on the target. -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
@@ -692,7 +692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15233" toLevel="1" name="Full Swing">
+	<skill id="15233" toLevel="2" name="Full Swing">
 		<!-- Swing your sword to launch a powerful attack on nearby enemies. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
@@ -713,7 +713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15234" toLevel="1" name="Dark Spheres">
+	<skill id="15234" toLevel="2" name="Dark Spheres">
 		<!-- Shoot dark red spheres toward enemies within 120 degrees of you. Additional damage on PCs debuffed with Soul Drain. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -740,7 +740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15235" toLevel="1" name="Dark Wind">
+	<skill id="15235" toLevel="2" name="Dark Wind">
 		<!-- Create a strong wind around you to push back enemies. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
@@ -776,7 +776,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15236" toLevel="1" name="Dark Thrust">
+	<skill id="15236" toLevel="2" name="Dark Thrust">
 		<!-- Powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -796,7 +796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15237" toLevel="1" name="Dark Buster">
+	<skill id="15237" toLevel="2" name="Dark Buster">
 		<!-- Inflicts strong damage upon the enemies near the target. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
@@ -1330,6 +1330,7 @@
 		<!-- Lindvior's stun -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
+		<castRange>400</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1337,7 +1338,7 @@
 		<affectRange>600</affectRange>
 		<hitTime>2500</hitTime>
 		<coolTime>1000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-574</effectPoint>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>
 		<magicLvl>99</magicLvl>
@@ -1357,11 +1358,12 @@
 		<!-- Lindvior's Landing Breath Skill -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
+		<castRange>400</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<hitTime>2500</hitTime>
 		<coolTime>3000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-574</effectPoint>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>
 		<magicLvl>99</magicLvl>
@@ -1390,12 +1392,12 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>1000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<coolTime>1500</coolTime>
+		<effectPoint>-574</effectPoint>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
@@ -1412,10 +1414,11 @@
 	<skill id="15274" toLevel="1" name="Mighty Wind Strike">
 		<!-- Long-range projectile -->
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<affectRange>300</affectRange>
-		<castRange>2500</castRange>
+		<castRange>1800</castRange>
 		<hitTime>2500</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-707</effectPoint>
 		<effectRange>2500</effectRange>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>

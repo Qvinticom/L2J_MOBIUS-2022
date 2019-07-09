@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="6" name="Greater Topaz - Spiritshot">
+	<skill id="17701" toLevel="6" name="Topaz: Spiritshot">
 		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
@@ -92,7 +92,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17704" toLevel="6" name="Greater Obsidian">
+	<skill id="17704" toLevel="6" name="Obsidian">
 		<!-- Received Damage in PvP - $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_obsidian_i00</value>
@@ -132,7 +132,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17705" toLevel="6" name="Greater Opal">
+	<skill id="17705" toLevel="6" name="Opal">
 		<!-- Attack Attribute + $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_opal_i00</value>
@@ -258,7 +258,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17708" toLevel="6" name="Greater Diamond">
+	<skill id="17708" toLevel="6" name="Diamond">
 		<!-- P. Def. + $s1, and Received P. Critical Damage - $s2. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_diamond_i00</value>
@@ -306,7 +306,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17709" toLevel="6" name="Greater Pearl">
+	<skill id="17709" toLevel="6" name="Pearl">
 		<!-- M. Def. + $s1, and Received M. Critical Damage - $s2. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
@@ -359,7 +359,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17711" toLevel="24" name="10th Anniversary Blessing - Stage 24">
+	<skill id="17711" toLevel="24" name="10th Anniversary Blessing - Stage 1">
 		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you are dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
@@ -397,7 +397,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17713" toLevel="24" name="10th Anniversary Special Blessing - Stage 24">
+	<skill id="17713" toLevel="24" name="10th Anniversary Special Blessing - Stage 1">
 		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you are dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>

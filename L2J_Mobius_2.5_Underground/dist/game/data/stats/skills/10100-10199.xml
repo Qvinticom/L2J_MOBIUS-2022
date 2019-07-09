@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="10104" toLevel="1" name="Paladin's Aura">
-		<!-- Increases P. Def. by $s1, Received Heal by $s2, and decreases Received P. Critical Damage by $s3. Increases party members' P. Def. by $s4, Received Heal by $s5, and decreases Received Critical Damage by $s6. Only one Knight's Aura can be active at any time. -->
+		<!-- Increases P. Def. by 25%, Received Heal by 25%, and decreases Received P. Critical Damage by 25%. Increases party members' P. Def. by 20%, Received Heal by 20%, and decreases Received Critical Damage by 20%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10104</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -467,7 +467,7 @@
 		</effects>
 	</skill>
 	<skill id="10105" toLevel="1" name="Avenger's Aura">
-		<!-- Increases P. Atk./Atk. Spd by $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, and Speed by $s4. Decreases P./M. Atk. by $s5, Atk. Spd./Casting Spd. by $s6, Speed by $s7 and Received Critical Damage by $s8 of nearby enemies. Only one Knight's Aura can be active at any time. -->
+		<!-- Increases P. Atk./Atk. Spd by 25%, P. Critical Rate by 80, P. Critical Damage by 25%, and Speed by 20. Decreases P./M. Atk. by 30%, Atk. Spd./Casting Spd. by 30%, Speed by 20 and Received Critical Damage by 15% of nearby enemies. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10105</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -511,7 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="10106" toLevel="1" name="Sentinel's Aura">
-		<!-- Increases M. Def. by $s1, $s2 Attribute Resistance by $s3, and Debuff Resistance by $s4. Increases party members' M. Def. by $s5, $s6 Attribute Resistance by $s7, and Debuff Resistance by $s8. Only one Knight's Aura can be active at any time. -->
+		<!-- Increases M. Def. by 25%, 6 Attribute Resistance by 50, and Debuff Resistance by 25%. Increases party members' M. Def. by 20%, 6 Attribute Resistance by 40, and Debuff Resistance by 20%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10106</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -586,7 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="10107" toLevel="1" name="Templar's Aura">
-		<!-- Increases P. Atk. by $s1, Atk. Spd. by $s2, and Speed by $s3. Increases party members' P. Atk. By $s4, Atk. Spd. by $s5, M. Atk. by $s6, Casting Spd. by $s7 and Speed by $s8. Only one Knight's Aura can be active at any time. -->
+		<!-- Increases P. Atk. by 15%, Atk. Spd. by 15%, and Speed by 10. Increases party members' P. Atk. By 10%, Atk. Spd. by 10%, M. Atk. by 10%, Casting Spd. by 10% and Speed by 10. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10107</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -629,7 +629,7 @@
 		</effects>
 	</skill>
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
-		<!-- P. Def. + $s1, heal amount + $s2, and Received P. Critical Damage - $s3. -->
+		<!-- P. Def. + 20%, heal amount + 20%, and Received P. Critical Damage - 20%. -->
 		<icon>icon.skill10104</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -668,7 +668,7 @@
 		</effects>
 	</skill>
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
-		<!-- P./M. Atk. - $s1, Atk. Spd./Casting Spd. - $s2, Speed - $s3, and Received Critical Damage + $s4. -->
+		<!-- P./M. Atk. - 30%, Atk. Spd./Casting Spd. - 30%, Speed - 20, and Received Critical Damage + 15%. -->
 		<icon>icon.skill10105</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -720,7 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="10110" toLevel="1" name="Sentinel's Aura">
-		<!-- M. Def. + $s1, $s2 Attribute Resistance + $s3, Debuff Resistance + $s4. -->
+		<!-- M. Def. + 20%, 6 Attribute Resistance + 40, Debuff Resistance + 20%. -->
 		<icon>icon.skill10106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -793,7 +793,7 @@
 		</effects>
 	</skill>
 	<skill id="10111" toLevel="1" name="Templar's Aura">
-		<!-- P. Atk. + $s1, Atk. Spd. + $s2, M. Atk. + $s3, Casting Spd. + $s4, Speed + $s5. -->
+		<!-- P. Atk. + 10%, Atk. Spd. + 10%, M. Atk. + 10%, Casting Spd. + 10%, Speed + 10. -->
 		<icon>icon.skill10107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>

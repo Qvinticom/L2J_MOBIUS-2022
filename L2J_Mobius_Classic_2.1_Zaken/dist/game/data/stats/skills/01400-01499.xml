@@ -225,7 +225,6 @@
 	<skill id="1403" toLevel="1" name="Summon Friend">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
-		<castRange>-2</castRange>
 		<effectPoint>467</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
@@ -254,7 +253,6 @@
 	<skill id="1404" toLevel="1" name="Word of Invitation">
 		<!-- Teleports a party member to one's current location. Consumes 3 Spirit Ore. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1404</icon>
-		<castRange>-2</castRange>
 		<effectPoint>677</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
@@ -579,8 +577,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1414" toLevel="1" name="Victories of Pa'agrio">
-		<!-- For 5 minutes, a powerful spirit acts to increase nearby clan members' Max CP by 10%, CP Recovery bonus by 20%, P. / M. Accuracy by 4, P. / M. Evasion by 4, P. / M. Atk. by 15%, Atk. Spd. / Casting Spd. by 10%, P. / M. Critical Rate by 15%, P. / M. Critical Damage by 15%. Consumes 60 Spirit Ore. -->
+	<skill id="1414" toLevel="2" name="Victories of Pa'agrio">
+		<!-- For 5 minutes, a powerful spirit acts to increase nearby clan members'  Max CP by 10%, CP Recovery bonus by 20%, P. / M. Accuracy by 4, P. / M. Evasion by 4, P. / M. Atk. by 15%, Atk. Spd. / Casting Spd. by 10%, P. / M. Critical Rate by 15%, P. / M. Critical Damage by 15%. Consumes 60 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -662,7 +660,7 @@
 		</effects>
 	</skill>
 	<skill id="1415" toLevel="1" name="Pa'agrio's Emblem">
-		<!-- For 5 minutes, increases nearby clan members Buff-canceling Attack Resistance by 30% and Debuff Resistance by 20%. -->
+		<!-- For 5 minutes, increases nearby clan members' Buff-canceling Attack Resistance by 30% and Debuff Resistance by 20%. -->
 		<icon>icon.skill1415</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -693,7 +691,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1416" toLevel="1" name="Pa'agrio's Fist">
+	<skill id="1416" toLevel="7" name="Pa'agrio's Fist">
 		<!-- For $s1, restores and increases clan members' Max CP by $s2. -->
 		<icon>icon.skill1416</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -702,7 +700,7 @@
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>228</mpConsume>
@@ -1054,7 +1052,6 @@
 		<icon>icon.skill1425</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
@@ -2307,7 +2304,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>KAMAEL_SPECIAL</abnormalType>
-		<castRange>400</castRange>
 		<effectPoint>669</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
@@ -3102,15 +3098,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1462" toLevel="10" name="Seal of Blockade">
+	<skill id="1462" toLevel="7" name="Seal of Blockade">
 		<!-- During PvP, restrains the standard attacks of the enemy and nearby targets for $s1. -->
 		<icon>icon.skill1462</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">80</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="7">80</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -3118,7 +3114,7 @@
 		<coolTime>500</coolTime>
 		<castRange>900</castRange>
 		<effectPoint>-673</effectPoint>
-		<hitTime>2200</hitTime>
+		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3139,13 +3135,13 @@
 			<effect name="PhysicalAttackMute" />
 			<effect name="PhysicalDefence" fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">
  				<amount>
- 					<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
 			<effect name="MagicalDefence" fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3030">
  				<amount>
- 					<value fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="6" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -3416,7 +3412,6 @@
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>1400</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

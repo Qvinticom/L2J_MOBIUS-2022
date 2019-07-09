@@ -138,7 +138,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17215" toLevel="11" name="Master Yogi's Force">
+	<skill id="17215" toLevel="11" name="Master Yogi's Force - Stage 1">
 		<!-- You can obtain an item in $s1 hr. There are $s2 stages, so you can acquire up to $s3 items. Return to Master Yogi for another buff when the buff wears out. <Note:> If you are dead while the item is given, you cannot acquire the Master Yogi's Force buff or the items. You also cannot acquire the items if your inventory is full. -->
 		<icon>icon.yogi_stick_i00</icon>
 		<operateType>A2</operateType>
@@ -163,7 +163,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17217" toLevel="11" name="Master Yogi's Force">
+	<skill id="17217" toLevel="11" name="Master Yogi's Force - Stage 1">
 		<!-- You can obtain an item in $s1 hr. There are $s2 stages, so you can acquire up to $s3 items. Return to Master Yogi for another buff when the buff wears out. <Note:> If you are dead while the item is given, you cannot acquire the Master Yogi's Force buff or the items. You also cannot acquire the items if your inventory is full. -->
 		<icon>icon.yogi_stick_i00</icon>
 		<operateType>A2</operateType>
@@ -202,7 +202,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<abnormalTime>1800</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
@@ -429,7 +429,7 @@
 	<skill id="17265" toLevel="1" name="Leona's Reward Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17266" toLevel="3" name="SP Rune 30%">
+	<skill id="17266" toLevel="3" name="SP Rune 10%">
 		<!-- SP Acquisition + $s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_1</value>
@@ -438,7 +438,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17267" toLevel="3" name="SP Rune 30%">
+	<skill id="17267" toLevel="3" name="SP Rune 10%">
 		<!-- SP Acquisition + $s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_1</value>
@@ -543,7 +543,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -955,8 +954,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1010,8 +1007,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1065,8 +1060,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>

@@ -240,7 +240,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>0</magicLvl>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>15000</reuseDelay> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PATIENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -280,6 +279,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-100</effectPoint>
 		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -472,57 +472,63 @@
 	<skill id="6936" toLevel="2" name="Set Effect - Salamander Skin Light Armor, 2-piece">
 		<!-- Max MP +50. -->
 		<icon>icon.armor_t45_ul_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6937" toLevel="2" name="Set Effect - Mithril Robe Armor, 2-piece">
 		<!-- Speed +7. -->
 		<icon>icon.armor_t51_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6938" toLevel="2" name="Set Effect - Half Plate Heavy Armor, 2-piece">
 		<!-- HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t46_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6939" toLevel="1" name="Equip Shield">
 		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6940" toLevel="1" name="Set Effect - Medium's Robe Armor, 2-piece">
 		<!-- Casting Spd. +5%. -->
 		<icon>icon.armor_t58_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6941" toLevel="1" name="Set Effect - Warrior's Heavy Armor,2-piece">
 		<!-- P. Def. +3%. -->
 		<icon>icon.armor_t33_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6942" toLevel="1" name="Set Effect - Hero's Heavy Armor, 2-piece">
 		<!-- Max HP +270, M. Def. +5%, Stun Resistance +10%. -->
 		<icon>icon.armor_t62_ul_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6943" toLevel="1" name="Set Effect - Hero's Light Armor, 4-piece">
 		<!-- M. Def. +5%, Stun Resistance +10%. -->
 		<icon>icon.armor_t45_ul_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6944" toLevel="1" name="Set Effect - Hero's Robe Armor, 5-piece">
 		<!-- WIT +1, Max MP +171, P. Def. +5.26%, Paralysis Resistance +10%. -->
 		<icon>icon.armor_t57_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="6945" toLevel="1" name="Master's Blessing - GM's Protection">
 		<!-- The GM is always by your side. Makes you invulnerable to Raid Debuffs for 5 min. -->
 		<icon>icon.skill5662</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="6946" toLevel="1" name="Raid Shield">
 		<!-- Defensive Shield cast by the Raid boss unto itself. Blocks additional damage for 1 h. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="6950" toLevel="1" name="Lucky Enchant Stone: Save Armor (D-grade)">
 		<operateType>A1</operateType>

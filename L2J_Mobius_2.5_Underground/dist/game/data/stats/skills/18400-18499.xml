@@ -215,7 +215,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<hitTime>20000</hitTime>
+		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>46158</itemConsumeId> <!-- Scroll of Escape: Blackbird Campsite -->
@@ -852,7 +852,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -1038,8 +1037,6 @@
 	</skill>
 	<skill id="18496" toLevel="1" name="Gludin Hero's Reward Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>

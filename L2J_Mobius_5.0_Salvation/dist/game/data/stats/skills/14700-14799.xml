@@ -388,7 +388,6 @@
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<effectPoint>867</effectPoint>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>0</mpConsume>
@@ -422,7 +421,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14738" toLevel="1" name="Olympiad - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- For 30 minutes, P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -466,7 +465,7 @@
 		</effects>
 	</skill>
 	<skill id="14739" toLevel="1" name="Olympiad - Drum Melody">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+		<!-- For 30 minutes, P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -522,7 +521,7 @@
 		</effects>
 	</skill>
 	<skill id="14740" toLevel="1" name="Olympiad - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For 30 minutes, Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -570,7 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="14741" toLevel="1" name="Olympiad - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For 30 minutes, Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -717,8 +716,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14744" toLevel="1" name="Olympiad - Knight's Harmony">
-		<!-- For $s1, P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
+	<skill id="14744" toLevel="1" name="Knight's Harmony - Olympiad">
+		<!-- For 30 minutes, P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -769,8 +768,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14745" toLevel="1" name="Olympiad - Warrior's Harmony">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
+	<skill id="14745" toLevel="1" name="Warrior's Harmony - Olympiad">
+		<!-- For 30 minutes, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -825,8 +824,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14746" toLevel="1" name="Olympiad - Wizard's Harmony">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+	<skill id="14746" toLevel="1" name="Wizard's Harmony - Olympiad">
+		<!-- For 30 minutes, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1081,7 +1080,6 @@
 		<magicLvl>55</magicLvl>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<coolTime>733</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1169,8 +1167,8 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="14779" toLevel="1" name="Master's Blessing - Horn Melody">
-		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+	<skill id="14779" toLevel="1" name="Horn Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, P. Atk. +30%, M. Atk. +100%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1214,8 +1212,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14780" toLevel="1" name="Master's Blessing - Drum Melody">
-		<!-- The GM is always by your side. For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+	<skill id="14780" toLevel="1" name="Drum Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, P. Critical Rate +38%, P. Critical Damage +34%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1302,8 +1300,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14781" toLevel="1" name="Master's Blessing - Pipe Organ Melody">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+	<skill id="14781" toLevel="1" name="Pipe Organ Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, Max HP +45%, Max MP +70%, and Max CP +45%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1351,8 +1349,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14782" toLevel="1" name="Master's Blessing - Guitar Melody">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and decreases Skill MP Consumption by $s5. -->
+	<skill id="14782" toLevel="1" name="Guitar Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, Atk. Spd. +64%, Casting Spd. +62%, and Speed +30, and decreases Skill MP Consumption by 10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1412,7 +1410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14783" toLevel="1" name="Master's Blessing - Harp Melody">
+	<skill id="14783" toLevel="1" name="Harp Melody - GM's Blessing">
 		<!-- The GM is always with you. For 1 hour, P. Accuracy +8, physical and magic evasion +8, and speed +37. Received critical damage -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1461,7 +1459,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14784" toLevel="1" name="Master's Blessing - Lute Melody">
+	<skill id="14784" toLevel="1" name="Lute Melody - GM's Blessing">
 		<!-- The GM is always with you. For 1 hour, Atk. Spd. +37% and Casting Spd. +34%. Applies Vampiric Rage effect +9% with a certain probability. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1502,8 +1500,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14785" toLevel="1" name="Master's Blessing - Knight's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, and Shield Defense Rate/ P. Def +$s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
+	<skill id="14785" toLevel="1" name="Knight's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases P. Def +45%, M. Def +35%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, and Shield Defense Rate/ P. Def +50%, and decreases the chance of receiving Physical/ Magic Critical Hit by 25%. -->
 		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1555,8 +1553,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14786" toLevel="1" name="Master's Blessing - Warrior's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Atk +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. There is also a chance to add the Spectral Slash effect to the target. -->
+	<skill id="14786" toLevel="1" name="Warrior's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases P. Atk +25%, P. Critical Rate +100%, P. Critical Damage +85%, Atk. Spd. +10%, and Speed +10. There is also a chance to add the Spectral Slash effect to the target. -->
 		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1612,8 +1610,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14787" toLevel="1" name="Master's Blessing - Wizard's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. +$s2, M. Critical Rate +$s3, M. Critical Damage +$s4, Casting Spd. +$s5, and Attack Attribute +and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+	<skill id="14787" toLevel="1" name="Wizard's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases M. Atk. +45%, M. Critical Rate +100%, M. Critical Damage +10%, Casting Spd. +15%, and Attack Attribute +and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
 		<icon>icon.skill19502</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1698,8 +1696,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14788" toLevel="1" name="Master's Blessing - Elemental Resistance">
-		<!-- The GM is always by your side. For $s1, this blessing increases all Defense Attributes +$s2. -->
+	<skill id="14788" toLevel="1" name="Elemental Resistance - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases all Defense Attributes +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1743,8 +1741,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14789" toLevel="1" name="Master's Blessing - Holy Attack Resistance">
-		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +$s2. -->
+	<skill id="14789" toLevel="1" name="Resistance Debuff - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1784,8 +1782,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14790" toLevel="1" name="Master's Blessing - Mental Attack Resistance">
-		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to buff-canceling/ debuff attacks +$s2. -->
+	<skill id="14790" toLevel="1" name="Mental Attack Resistance - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases Resistance to buff-canceling/ debuff attacks +30. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1826,8 +1824,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14791" toLevel="1" name="Master's Blessing - Horn Melody">
-		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+	<skill id="14791" toLevel="1" name="Horn Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, P. Atk. +30%, M. Atk. +100%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1871,8 +1869,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14792" toLevel="1" name="Master's Blessing - Drum Melody">
-		<!-- The GM is always by your side. For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+	<skill id="14792" toLevel="1" name="Drum Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, P. Critical Rate +38%, P. Critical Damage +34%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1928,8 +1926,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14793" toLevel="1" name="Master's Blessing - Pipe Organ Melody">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+	<skill id="14793" toLevel="1" name="Pipe Organ Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, Max HP +45%, Max MP +70%, and Max CP +45%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1977,8 +1975,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14794" toLevel="1" name="Master's Blessing - Guitar Melody">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and decreases Skill MP Consumption by $s5. -->
+	<skill id="14794" toLevel="1" name="Guitar Melody - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, Atk. Spd. +64%, Casting Spd. +62%, and Speed +30, and decreases Skill MP Consumption by 10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -2038,7 +2036,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14795" toLevel="1" name="Master's Blessing - Harp Melody">
+	<skill id="14795" toLevel="1" name="Harp Melody - GM's Blessing">
 		<!-- The GM is always with you. For 1 hour, P. Accuracy +8, physical and magic evasion +8, and speed +37. Received critical damage -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -2087,7 +2085,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14796" toLevel="1" name="Master's Blessing - Lute Melody">
+	<skill id="14796" toLevel="1" name="Lute Melody - GM's Blessing">
 		<!-- The GM is always with you. For 1 hour, Atk. Spd. +37% and Casting Spd. +34%. Applies Vampiric Rage effect +9% with a certain probability. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -2128,8 +2126,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14797" toLevel="1" name="Master's Blessing - Knight's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, and Shield Defense Rate/ P. Def +$s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
+	<skill id="14797" toLevel="1" name="Knight's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases P. Def +45%, M. Def +35%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, and Shield Defense Rate/ P. Def +50%, and decreases the chance of receiving Physical/ Magic Critical Hit by 25%. -->
 		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -2181,8 +2179,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14798" toLevel="1" name="Master's Blessing - Warrior's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Atk +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. There is also a chance to add the Spectral Slash effect to the target. -->
+	<skill id="14798" toLevel="1" name="Warrior's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases P. Atk +25%, P. Critical Rate +100%, P. Critical Damage +85%, Atk. Spd. +10%, and Speed +10. There is also a chance to add the Spectral Slash effect to the target. -->
 		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -2238,8 +2236,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14799" toLevel="1" name="Master's Blessing - Wizard's Harmony">
-		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. +$s2, M. Critical Rate +$s3, M. Critical Damage +$s4, Casting Spd. +$s5, and Attack Attribute +and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+	<skill id="14799" toLevel="1" name="Wizard's Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hour, this blessing increases M. Atk. +45%, M. Critical Rate +100%, M. Critical Damage +10%, Casting Spd. +15%, and Attack Attribute +and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
 		<icon>icon.skill19502</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

@@ -4,37 +4,45 @@
 		<!-- Brooch shines and radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i06</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="13649" toLevel="1" name="Remove Lv. 5 Brooch">
 		<!-- Bright light fades. -->
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13650" toLevel="1" name="Put on Lv. 4 Brooch">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="13651" toLevel="1" name="Remove Lv. 4 Brooch">
 		<!-- Bright light fades. -->
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13652" toLevel="1" name="Put on Lv. 3 Brooch">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="13653" toLevel="1" name="Remove Lv. 3 Brooch">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13654" toLevel="1" name="Put on Lv. 2 Brooch">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="13655" toLevel="1" name="Remove Lv. 2 Brooch">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13656" toLevel="1" name="Lv. 1 Brooch">
 		<!-- Activates 2 jewel slots. -->

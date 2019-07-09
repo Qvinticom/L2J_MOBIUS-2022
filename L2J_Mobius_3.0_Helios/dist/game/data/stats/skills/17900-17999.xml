@@ -133,6 +133,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -150,6 +151,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -167,6 +169,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -184,6 +187,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -201,6 +205,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -226,7 +231,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -273,7 +278,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -318,7 +323,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -363,7 +368,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -405,7 +410,7 @@
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<reuseDelay>120</reuseDelay>
+		<reuseDelay>1200000</reuseDelay>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -426,17 +431,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17920" toLevel="4" name="Superior Windy Healing Potion">
+	<skill id="17920" toLevel="4" name="Windy Healing Potion">
 		<!-- Converts Windy Healing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17921" toLevel="4" name="Superior Windy Quick Healing Potion">
+	<skill id="17921" toLevel="4" name="Windy Quick Healing Potion">
 		<!-- Converts Windy Quick Healing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17922" toLevel="4" name="Top-grade Love Potion - Party">
+	<skill id="17922" toLevel="5" name="Low-grade Love Potion">
 		<!-- Converts Low-grade Love Potion. Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.love_potion</value>
@@ -452,7 +457,7 @@
 		<icon>icon.super_elixir_potion</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17924" toLevel="3" name="Cruel Love Potion">
+	<skill id="17924" toLevel="3" name="Supreme Windy Healing Potion">
 		<!-- Converts Supreme Windy Healing Potion. Master Alchemy. -->
 		<icon>
 			<value level="1">icon.etc_potion_scarlet_i00</value>
@@ -462,7 +467,7 @@
 		<operateType>P</operateType>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="17925" toLevel="2" name="Giant's Scroll: Enchant Weapon (R-grade)">
+	<skill id="17925" toLevel="2" name="Giant's Scroll: Enchant Armor (R-grade)">
 		<!-- Converts Giant's Scroll: Enchant Weapon (R-grade). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_scrl_of_ench_am_r</value>
@@ -470,7 +475,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17926" toLevel="2" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
+	<skill id="17926" toLevel="2" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
 		<!-- Converts Giant's Lucky Enchant Stone: Armor (R-grade). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i01</value>
@@ -478,7 +483,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17927" toLevel="2" name="Windy Lucky Enchant Stone: Weapon (R-grade)">
+	<skill id="17927" toLevel="2" name="Windy Lucky Enchant Stone: Armor (R-grade)">
 		<!-- Converts Windy Lucky Enchant Stone: Armor (R-grade). Master Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i02</value>
@@ -487,7 +492,7 @@
 		<operateType>P</operateType>
 		<reuseDelay>86400000</reuseDelay>
 	</skill>
-	<skill id="17928" toLevel="6" name="Lv. 1 Legendary STR Dye (Luck)">
+	<skill id="17928" toLevel="6" name="Lv. 1 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_luc</value>
@@ -499,7 +504,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17929" toLevel="6" name="Lv. 2 Legendary STR Dye (Luck)">
+	<skill id="17929" toLevel="6" name="Lv. 2 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_luc</value>
@@ -511,7 +516,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17930" toLevel="6" name="Lv. 3 Legendary STR Dye (Luck)">
+	<skill id="17930" toLevel="6" name="Lv. 3 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_luc</value>
@@ -523,7 +528,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17931" toLevel="6" name="Lv. 4 Legendary STR Dye (Luck)">
+	<skill id="17931" toLevel="6" name="Lv. 4 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_luc</value>
@@ -535,7 +540,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17932" toLevel="6" name="Lv. 1 Legendary STR Dye (Charisma)">
+	<skill id="17932" toLevel="6" name="Lv. 1 Legendary MEN Dye (Charisma)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_cha</value>
@@ -547,7 +552,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17933" toLevel="6" name="Lv. 2 Legendary STR Dye (Charisma)">
+	<skill id="17933" toLevel="6" name="Lv. 2 Legendary MEN Dye (Charisma)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_cha</value>
@@ -559,7 +564,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17934" toLevel="6" name="Lv. 3 Legendary STR Dye (Charisma)">
+	<skill id="17934" toLevel="6" name="Lv. 3 Legendary MEN Dye (Charisma)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_cha</value>
@@ -571,7 +576,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17935" toLevel="6" name="Lv. 4 Legendary STR Dye (Charisma)">
+	<skill id="17935" toLevel="6" name="Lv. 4 Legendary MEN Dye (Charisma)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_cha</value>
@@ -583,7 +588,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17936" toLevel="14" name="Lv. 5 Windy LUC Dye (Charisma)">
+	<skill id="17936" toLevel="14" name="Lv. 5 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Master Alchemy. -->
 		<icon>
 			<value level="1">icon.lv5_unique_dye_men_luc</value>
@@ -604,7 +609,7 @@
 		<operateType>P</operateType>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="17937" toLevel="3" name="Top-grade Life Stone (R-grade)">
+	<skill id="17937" toLevel="3" name="Mid-grade Life Stone (R-grade)">
 		<!-- Can convert to Mid-grade Life Stone (R-grade). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.r_mineral_special_i00</value>
@@ -613,7 +618,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17938" toLevel="3" name="Top-grade Life Stone (R95-grade)">
+	<skill id="17938" toLevel="3" name="Mid-grade Life Stone (R95-grade)">
 		<!-- Can convert to Mid-grade Life Stone (R$s1-grade). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.r95_mineral_special_i00</value>
@@ -622,7 +627,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17939" toLevel="3" name="Top-grade Life Stone (R99-grade)">
+	<skill id="17939" toLevel="3" name="Mid-grade Life Stone (R99-grade)">
 		<!-- Can convert to Mid-grade Life Stone (R$s1-grade). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.r99_mineral_special_i00</value>
@@ -637,7 +642,7 @@
 		<operateType>P</operateType>
 		<reuseDelay>604800000</reuseDelay>
 	</skill>
-	<skill id="17941" toLevel="4" name="Lv. 4 Windy CHA Dye (Luck)">
+	<skill id="17941" toLevel="4" name="Lv. 1 Windy CHA Dye (Luck)">
 		<!-- Can convert to Lv. $s1 Windy CHA Dye (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_cha_luc</value>
@@ -647,7 +652,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17942" toLevel="4" name="Lv. 4 Windy LUC Dye (Charisma)">
+	<skill id="17942" toLevel="4" name="Lv. 1 Windy LUC Dye (Charisma)">
 		<!-- Can convert to Lv. $s1 Windy LUC Dye (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_luc_cha</value>
@@ -670,7 +675,6 @@
 		<!-- Teleports you to Talking Island Village. -->
 		<itemConsumeId>39553</itemConsumeId> <!-- Minstrel's Scroll of Escape: Talking Island -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -700,7 +704,6 @@
 			<value level="2">47054</value> <!-- Scroll of Escape: Arms of Timiniel -->
 		</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -735,7 +738,6 @@
 			<value level="2">47055</value> <!-- Scroll of Escape: Arms of Timiniel -->
 		</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

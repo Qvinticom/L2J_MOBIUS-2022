@@ -3025,7 +3025,7 @@
 		</effects>
 	</skill>
 	<skill id="12870" toLevel="1" name="Hero's Treasure Chest">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 1 hr., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3043,7 +3043,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12871" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="12871" toLevel="1" name="Destruction Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3248,8 +3248,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12882" toLevel="1" name="Talking Island Homemade Cookie">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+	<skill id="12882" toLevel="1" name="Hero's Treasure Chest">
+		<!-- For 1 hr., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3365,7 +3365,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12897" toLevel="1" name="Player Commendation - Blessing">
+	<skill id="12897" toLevel="1" name="PA - Blessing">
 		<!-- For 1 hr., recovers Vitality when XP is acquired through hunting. -->
 		<icon>BranchSys.icon.br_flag_of_bookmark_i00</icon>
 		<operateType>A2</operateType>

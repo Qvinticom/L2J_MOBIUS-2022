@@ -72,9 +72,10 @@
 		</effects>
 	</skill>
 	<skill id="13904" toLevel="1" name="Roa's Assistance">
-		<!-- A special buff prepared by Roa for the returning war veterans. Find Roa during a guerilla event to obtain. $s1 h.: Acquired XP/ SP +$s2. -->
+		<!-- A special buff prepared by Roa for the returning war veterans. Find Roa during a guerilla event to obtain. 1 h.: Acquired XP/ SP +10%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
 		<castRange>400</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -118,7 +119,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
-		<effectPoint>1811</effectPoint>
+		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -151,11 +152,10 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>100000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
-		<castRange>600</castRange>
-		<effectPoint>1734</effectPoint>
+		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -179,7 +179,7 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>100000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2253,7 +2253,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13959" toLevel="1" name="Mammon's Talisman - Skill Power">
+	<skill id="13959" toLevel="2" name="Mammon's Talisman - Skill Power">
 		<!-- Skill power +$s1. -->
 		<icon>icon.bm_magic_square_talisman</icon>
 		<operateType>P</operateType>
@@ -2269,7 +2269,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13960" toLevel="1" name="Mammon's Talisman Box - Attack Attribute">
+	<skill id="13960" toLevel="2" name="Mammon's Talisman Box - Attack Attribute">
 		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.bm_magic_square_talisman</icon>
 		<operateType>P</operateType>
@@ -2280,7 +2280,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13961" toLevel="1" name="Mammon's Talisman - Skill Cooldown">
+	<skill id="13961" toLevel="2" name="Mammon's Talisman - Skill Cooldown">
 		<!-- Skill Cooldown -$s1 -->
 		<icon>icon.bm_magic_square_talisman</icon>
 		<operateType>P</operateType>

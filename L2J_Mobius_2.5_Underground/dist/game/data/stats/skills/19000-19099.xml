@@ -177,7 +177,6 @@
 		<!-- Summons a clan member. Consumes 5 Spirit Ores. Consumes 900 Individual Fame. Applies after the viscount stage. -->
 		<icon>icon.skill19007</icon>
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>15000</hitTime>
 		<effectPoint>467</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -940,6 +939,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
@@ -965,6 +965,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
@@ -1182,7 +1183,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19041" toLevel="1" name="Escape: Castle">
+	<skill id="19041" toLevel="1" name="King's Call">
 		<!-- Teleports to your castle. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<hitTime>20000</hitTime>
@@ -1202,7 +1203,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19042" toLevel="1" name="Blessed Scroll of Escape: Castle">
+	<skill id="19042" toLevel="1" name="King's Summon">
 		<!-- Teleports to your castle immediately. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
@@ -1261,7 +1262,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="19076" toLevel="1" name="Clan Academy Reward"> <!-- TODO: Not Using ? -->
+	<skill id="19076" toLevel="1" name="Clan Academy Reward">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

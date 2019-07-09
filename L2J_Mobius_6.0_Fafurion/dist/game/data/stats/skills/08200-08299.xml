@@ -2559,6 +2559,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>83</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
@@ -3063,7 +3064,7 @@
 		</effects>
 	</skill>
 	<skill id="8295" toLevel="1" name="Special Ability: Focus">
-		<!-- Increases Critical Rate by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Increases Critical Rate by 109.2. Inflicts additional damage by 5% during PvP. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>

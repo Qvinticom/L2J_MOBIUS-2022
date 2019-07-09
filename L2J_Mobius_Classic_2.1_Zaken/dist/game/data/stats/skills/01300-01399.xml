@@ -126,8 +126,8 @@
 			<value level="1">549</value>
 			<value level="2">611</value>
 			<value level="3">646</value>
-			<value level="4">675</value>
-			<value level="5">698</value>
+			<value level="4">682</value>
+			<value level="5">714</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
@@ -178,18 +178,18 @@
 		<affectLimit>50-50</affectLimit>
 		<affectRange>1000</affectRange>
 		<effectPoint>
-			<value level="1">569</value>
-			<value level="2">589</value>
-			<value level="3">611</value>
-			<value level="4">632</value>
-			<value level="5">664</value>
+			<value level="1">439</value>
+			<value level="2">499</value>
+			<value level="3">554</value>
+			<value level="4">604</value>
+			<value level="5">649</value>
 			<value level="6">689</value>
 			<value level="7">722</value>
 			<value level="8">743</value>
 			<value level="9">763</value>
 			<value level="10">780</value>
-			<value level="11">797</value>
-			<value level="12">814</value>
+			<value level="11">788</value>
+			<value level="12">796</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -266,18 +266,18 @@
 		<icon>icon.skill1306</icon>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">561</value>
-			<value level="2">582</value>
-			<value level="3">600</value>
-			<value level="4">624</value>
-			<value level="5">641</value>
-			<value level="6">667</value>
-			<value level="7">687</value>
-			<value level="8">700</value>
-			<value level="9">721</value>
-			<value level="10">742</value>
-			<value level="11">760</value>
-			<value level="12">780</value>
+			<value level="1">575</value>
+			<value level="2">602</value>
+			<value level="3">628</value>
+			<value level="4">653</value>
+			<value level="5">677</value>
+			<value level="6">700</value>
+			<value level="7">722</value>
+			<value level="8">743</value>
+			<value level="9">763</value>
+			<value level="10">780</value>
+			<value level="11">788</value>
+			<value level="12">796</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>5000</hitTime>
@@ -1013,7 +1013,6 @@
 			<value level="6">16</value>
 			<value level="7">20</value>
 			<value level="8">20</value>
-			<value level="9">23</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -1147,10 +1146,6 @@
 					<value level="8">14258</value>
 					<value level="9">14259</value>
 					<value level="10">14260</value>
-					<value level="11">14261</value>
-					<value level="12">14262</value>
-					<value level="13">14263</value>
-					<value level="14">14264</value>
 				</npcId>
 				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
@@ -1244,10 +1239,6 @@
 					<value level="8">14442</value>
 					<value level="9">14443</value>
 					<value level="10">14444</value>
-					<value level="11">14445</value>
-					<value level="12">14446</value>
-					<value level="13">14447</value>
-					<value level="14">14448</value>
 				</npcId>
 				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
@@ -1341,10 +1332,6 @@
 					<value level="8">14626</value>
 					<value level="9">14627</value>
 					<value level="10">14628</value>
-					<value level="11">14629</value>
-					<value level="12">14630</value>
-					<value level="13">14631</value>
-					<value level="14">14632</value>
 				</npcId>
 				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
@@ -1363,14 +1350,14 @@
 		</effects>
 	</skill>
 	<skill id="1334" toLevel="1" name="Summon Cursed Man">
-		<!-- Summons a Cursed Man. Requires $s1 Spirit Ore. -->
+		<!-- Summons a Cursed Man. Requires 12 Spirit Ore. -->
 		<icon>icon.skill1334</icon>
 		<coolTime>500</coolTime>
 		<itemConsumeCount>12</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>79</magicLvl>
 		<mpConsume>151</mpConsume>
-		<hitTime>4000</hitTime>
+		<hitTime>3500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2188,7 +2175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1355" toLevel="1" name="Prophecy of Water">
+	<skill id="1355" toLevel="2" name="Prophecy of Water">
 		<!-- For 5 minutes, a powerful spirit acts to increase a party member's MP Recovery bonus by 10%, M. Atk. by 10%, M. Def by 10%, Casting Spd. by 5%, Debuff Resistance by 10%. Decreases Skill MP Consumption by 3%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1355</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2253,7 +2240,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1356" toLevel="1" name="Prophecy of Fire">
+	<skill id="1356" toLevel="2" name="Prophecy of Fire">
 		<!-- For 5 minutes, a powerful spirit acts to increase a party member's Max HP by 10%, HP Recovery bonus by 10%, P. Atk. by 10%, P. Def. by 10%, Atk. Spd. by 5%, and Debuff Resistance by 10%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1356</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2307,7 +2294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1357" toLevel="1" name="Prophecy of Wind">
+	<skill id="1357" toLevel="2" name="Prophecy of Wind">
 		<!-- For 5 minutes, a powerful spirit acts to increase a party member's P. Evasion by 3, P. Accuracy by 3, P. Critical Rate by 10%, P. Critical Damage by 15%, Speed by 10%, Debuff Resistance by 10%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1357</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2542,7 +2529,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1363" toLevel="1" name="Chant of Victory">
+	<skill id="1363" toLevel="2" name="Chant of Victory">
 		<!-- For 5 minutes, a powerful spirit acts to increase a party members HP / MP Recovery bonus by 20%, P. / M. Accuracy by 4, P. / M. Evasion by 4, P. / M. Atk. by 15%, Atk. / Casting Spd. by 10%, P. / M. Critical Rate by 15%, P. / M. Critical Damage by 15%. Consumes 60 Spirit Ore. -->
 		<icon>icon.skill1363</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3117,17 +3104,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1377" toLevel="1" name="none">
+	<skill id="1377" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="1378" toLevel="1" name="none">
+	<skill id="1378" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="1379" toLevel="1" name="none">
+	<skill id="1379" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3205,7 +3192,7 @@
 			<effect name="Betray" />
 		</effects>
 	</skill>
-	<skill id="1381" toLevel="5" name="Mass Curse Fear">
+	<skill id="1381" toLevel="6" name="Mass Curse Fear">
 		<!-- Frightens nearby enemies into fleeing for $s1. -->
 		<icon>icon.skill1381</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3223,6 +3210,7 @@
 			<value level="3">-611</value>
 			<value level="4">-635</value>
 			<value level="5">-655</value>
+			<value level="6">-659</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1500</hitTime>
@@ -3235,6 +3223,7 @@
 			<value level="3">66</value>
 			<value level="4">70</value>
 			<value level="5">74</value>
+			<value level="6">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">64</value>
@@ -3249,6 +3238,7 @@
 			<value level="3">19</value>
 			<value level="4">20</value>
 			<value level="5">21</value>
+			<value level="6">21</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -3279,12 +3269,12 @@
 			<value level="3">-611</value>
 			<value level="4">-635</value>
 			<value level="5">-655</value>
-			<value level="6">-675</value>
+			<value level="6">-659</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>2000</hitTime>
+		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3305,7 +3295,7 @@
 			<value level="6">187</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>12000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>2508</itemConsumeId>
@@ -3521,7 +3511,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1386" toLevel="10" name="Arcane Disruption">
+	<skill id="1386" toLevel="12" name="Arcane Disruption">
 		<!-- Decreases the enemy's Casting Spd. by $s2 for $s1. -->
 		<icon>icon.skill1386</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -3541,6 +3531,8 @@
 			<value level="8">-635</value>
 			<value level="9">-646</value>
 			<value level="10">-655</value>
+			<value level="11">-659</value>
+			<value level="12">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3558,6 +3550,8 @@
 			<value level="8">70</value>
 			<value level="9">72</value>
 			<value level="10">74</value>
+			<value level="11">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4132,8 +4126,8 @@
 			<value level="8">-635</value>
 			<value level="9">-646</value>
 			<value level="10">-655</value>
-			<value level="11">-664</value>
-			<value level="12">-673</value>
+			<value level="11">-659</value>
+			<value level="12">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>

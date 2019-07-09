@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10300" toLevel="6" name="Last Attack">
+		<!-- Attacks target with $s1 Power added to P. Atk. Cuts regular monsters' HP down to $s2. Usable when target's HP is $s3 or below. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. -->
 		<icon>icon.skill10300</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -294,6 +295,7 @@
 		<operateType>T</operateType>
 	</skill>
 	<skill id="10308" toLevel="1" name="Wild Roar">
+		<!-- Shouts loudly to invoke the power of the Bison. For 5 min., increases P. Atk. and Critical Damage by 45%, Critical Rate by 45, and decreases Atk. Spd. by 15%. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill11834</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -745,6 +747,7 @@
 		</effects>
 	</skill>
 	<skill id="10318" toLevel="7" name="Sonic Flash">
+		<!-- Launches a wave of sword energy to inflict $s1 damage added to P. Atk., increasing the damage as Momentum is consumed. Can consume up to $s2. Requires a dual sword, sword, or blunt. Over-hit. Critical. -->
 		<icon>icon.skill10318new</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -902,6 +905,7 @@
 		</effects>
 	</skill>
 	<skill id="10321" toLevel="7" name="Thunder Spear">
+		<!-- Throws a spear to inflict damage on the target and nearby enemies with $s1 Power added to P. Atk. Stun is inflicted for $s2. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
 		<icon>icon.skll10321</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -979,6 +983,7 @@
 		</effects>
 	</skill>
 	<skill id="10322" toLevel="1" name="Wolf's Cry">
+		<!-- Shouts loudly to invoke the power of the Wolf. For 5 min., P. Def. and M. Def. +50%, Max HP +25%, and Spd. +20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<icon>icon.skll10320</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1072,6 +1077,7 @@
 		</effects>
 	</skill>
 	<skill id="10325" toLevel="6" name="Dreadful Roar">
+		<!-- Cancels at least one buff of nearby enemies. Consumes 10 Soulstones. -->
 		<icon>icon.skill10325</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>180</affectRange>
@@ -1146,6 +1152,7 @@
 		</effects>
 	</skill>
 	<skill id="10327" toLevel="7" name="Momentum Flash">
+		<!-- Attacks target with $s1 Power added to P. Atk. Requires a dual sword/ sword/ blunt weapon/ fist weapon. Damage increases when using Momentum, which you can use up to $s2. Over-hit. Critical. -->
 		<icon>icon.skill10327</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>
@@ -1169,7 +1176,7 @@
 		<castRange>600</castRange>
 		<effectRange>600</effectRange>
 		<hitTime>1500</hitTime>
-		<coolTime>350</coolTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1310,6 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="10330" toLevel="7" name="Power Hammer Crush">
+		<!-- Attacks target with $s1 Power added to P. Atk. while ignoring $s2 of their P. Def. Stuns for $s3. Requires a blunt weapon. Over-hit. Critical. -->
 		<icon>icon.skill10330</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1390,6 +1398,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="10332" toLevel="1" name="Duelist Wrath">
+		<!-- Increases P. Atk. by 20% for 60 sec. when a dual sword/ dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by 20%. Consumes 5 Soulstones. -->
 		<icon>icon.skill10332</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1435,6 +1444,7 @@
 		</effects>
 	</skill>
 	<skill id="10333" toLevel="1" name="Winged Spear">
+		<!-- Equipping a spear increases attack by 30% for 60 sec. Additionally, stabndard attack range +80 and the Stun state is inflicted at a 10% chance if hit. Consumes 5 Soulstones. -->
 		<icon>icon.skill10333</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1509,6 +1519,7 @@
 		</effects>
 	</skill>
 	<skill id="10334" toLevel="1" name="Furious Slasher">
+		<!-- For 60 sec., P. Atk. +30% when a two-handed sword or two-handed blunt is equipped. Additionally attacks 6 enemies at once with a standard attack. Consumes 5 Soulstones. -->
 		<icon>icon.skill10334</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1556,6 +1567,7 @@
 		</effects>
 	</skill>
 	<skill id="10335" toLevel="1" name="Furious Fist">
+		<!-- Increases P. Atk. by 30% and P. Critical Damage by 10% for 60 sec. when a fist weapon is equipped. Has 10% chance to decrease Fist Weapon Resistance by 30% when striking. Consumes 5 Soulstones. -->
 		<icon>icon.skill10335</icon>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1727,7 +1739,7 @@
 		<fanRange>0;0;200;900</fanRange>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>s
+		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
 		<staticReuse>true</staticReuse>
@@ -1759,7 +1771,8 @@
 		<!-- A Burning Mechanic Golem is summoned to fight with you. $s1 Crystal (R-grade) consumed. -->
 		<icon>icon.skill10341</icon>
 		<operateType>A1</operateType>
-		<hitTime>15000</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>3500</hitTime>
 		<itemConsumeCount>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1785,7 +1798,8 @@
 			<value level="4">191</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1806,11 +1820,19 @@
 	<skill id="10342" toLevel="1" name="Angry Golem">
 		<!-- A buff that increases P. Atk. and Atk. Spd. is cast on yourself when standard attacks and skill attacks are made. -->
 		<icon>icon.skill10341</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="10343" toLevel="1" name="Angry Golem">
-		<!-- The Burning Mechanic Golem is enraged. P. Atk. +$s1, Atk. Spd. +$s2. -->
+		<!-- The Burning Mechanic Golem is enraged. P. Atk. +30%, Atk. Spd. +30%. -->
 		<icon>icon.skill10341</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>100</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-671</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
 </list>

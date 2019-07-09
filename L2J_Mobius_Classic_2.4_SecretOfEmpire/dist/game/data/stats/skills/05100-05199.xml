@@ -37,7 +37,6 @@
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -174,7 +173,6 @@
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -483,22 +481,19 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="5115" toLevel="12" name="Cubic Hate">
+	<skill id="5115" toLevel="9" name="Cubic Hate">
 		<!-- Draw enemy's attention. -->
 		<icon>icon.skill0100</icon>
 		<effectPoint>
-			<value level="1">-2908</value>
-			<value level="2">-3052</value>
-			<value level="3">-3175</value>
-			<value level="4">-3271</value>
-			<value level="5">-3310</value>
-			<value level="6">-3345</value>
-			<value level="7">-3376</value>
-			<value level="8">-3391</value>
-			<value level="9">-3405</value>
-			<value level="10">-3418</value>
-			<value level="11">-3431</value>
-			<value level="12">-3444</value>
+			<value level="1">-9585</value>
+			<value level="2">-10060</value>
+			<value level="3">-10465</value>
+			<value level="4">-10785</value>
+			<value level="5">-10855</value>
+			<value level="6">-11000</value>
+			<value level="7">-11145</value>
+			<value level="8">-11285</value>
+			<value level="9">-11430</value>
 		</effectPoint>
 		<magicLvl>
 			<value level="1">62</value>
@@ -510,9 +505,6 @@
 			<value level="7">80</value>
 			<value level="8">81</value>
 			<value level="9">82</value>
-			<value level="10">83</value>
-			<value level="11">84</value>
-			<value level="12">85</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -525,7 +517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5116" toLevel="12" name="Cubic Hold">
+	<skill id="5116" toLevel="9" name="Cubic Hold">
 		<!-- Temporarily inflicted with Hold and unable to move. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -547,9 +539,6 @@
 			<value level="7">80</value>
 			<value level="8">81</value>
 			<value level="9">82</value>
-			<value level="10">83</value>
-			<value level="11">84</value>
-			<value level="12">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1014,7 +1003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5135" toLevel="1" name="Slash">
+	<skill id="5135" toLevel="6" name="Slash">
 		<!-- Inflicts damage on the enemy with $s1 Power. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1036,7 +1025,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5136" toLevel="1" name="Spin Slash">
+	<skill id="5136" toLevel="6" name="Spin Slash">
 		<!-- Inflicts damage on the enemy with $s1 Power. -->
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
@@ -1057,7 +1046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5137" toLevel="1" name="Grip of the Cat">
+	<skill id="5137" toLevel="5" name="Grip of the Cat">
 		<!-- Attack of Feline King holds target for 15 sec. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1089,7 +1078,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5138" toLevel="1" name="Whiplash">
+	<skill id="5138" toLevel="6" name="Whiplash">
 		<!-- Attack of Magnus the Unicorn stuns target for 15 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1122,7 +1111,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5139" toLevel="1" name="Tidal Wave">
+	<skill id="5139" toLevel="6" name="Tidal Wave">
 		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -1149,7 +1138,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5140" toLevel="1" name="Dark Curse">
+	<skill id="5140" toLevel="6" name="Dark Curse">
 		<!-- Curse decreases Atk. Spd./ Casting Spd. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -1183,7 +1172,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5141" toLevel="1" name="Dicing Death">
+	<skill id="5141" toLevel="6" name="Dicing Death">
 		<!-- Inflicts damage on the enemy with $s1 Power. Has a chance to cancel target. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1204,7 +1193,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5142" toLevel="1" name="Corpse Burst">
+	<skill id="5142" toLevel="6" name="Corpse Burst">
 		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. -->
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>

@@ -201,7 +201,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -224,7 +223,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -247,7 +245,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -393,7 +390,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9325" toLevel="2" name="Fire Crystal">
+	<skill id="9325" toLevel="2" name="Fire Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -405,7 +402,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="9326" toLevel="2" name="Water Crystal">
+	<skill id="9326" toLevel="2" name="Water Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -417,7 +414,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="9327" toLevel="2" name="Wind Crystal">
+	<skill id="9327" toLevel="2" name="Wind Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -429,7 +426,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="9328" toLevel="2" name="Earth Crystal">
+	<skill id="9328" toLevel="2" name="Earth Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -441,7 +438,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="9329" toLevel="2" name="Holy Crystal">
+	<skill id="9329" toLevel="2" name="Holy Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -453,7 +450,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="9330" toLevel="2" name="Dark Crystal">
+	<skill id="9330" toLevel="2" name="Dark Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1550,7 +1547,6 @@
 		<icon>icon.skill1403</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>15000</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>467</effectPoint>

@@ -1251,6 +1251,7 @@
 		<effectPoint>-100</effectPoint>
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>78</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>150</affectRange>
@@ -1273,6 +1274,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>77</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>78</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>100</affectRange>
@@ -1323,6 +1325,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>82</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2500</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1352,10 +1355,11 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6268" toLevel="1" name="Jump Attack">
+	<skill id="6268" toLevel="1" name="NPC Jump Attack">
 		<effectPoint>-273</effectPoint>
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>164</mpConsume>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
@@ -1388,6 +1392,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>117</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>1.5</hitCancelTime>
@@ -1776,7 +1781,6 @@
 	<skill id="6287" toLevel="1" name="Divine Protection of Sword">
 		<icon>icon.skill6286</icon>
 		<affectRange>1100</affectRange>
-		<castRange>650</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

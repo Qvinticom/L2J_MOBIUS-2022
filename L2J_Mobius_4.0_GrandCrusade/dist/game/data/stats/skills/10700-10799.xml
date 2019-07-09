@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10700" toLevel="9" name="Wild Plunder">
+	<skill id="10700" toLevel="7" name="Wild Plunder">
 		<!-- Inflicts damage on the enemies in the front with $s1 power added to P. Attack and attempts to loot an item. Requires dagger/dual dagger. -->
 		<icon>icon.skill10700</icon>
 		<affectLimit>9-10</affectLimit>
@@ -17,8 +17,6 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-			<value level="8">107</value>
-			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
@@ -28,8 +26,6 @@
 			<value level="5">30</value>
 			<value level="6">33</value>
 			<value level="7">36</value>
-			<value level="8">39</value>
-			<value level="9">42</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
@@ -56,12 +52,10 @@
 					<value level="5">21855</value>
 					<value level="6">22921</value>
 					<value level="7">23987</value>
-					<value level="8">25319</value>
-					<value level="9">26651</value>
 				</power>
 				<pDefMod>
-					<value fromLevel="1" toLevel="9">1</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="7">1</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
@@ -203,7 +197,7 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>90000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-655</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -226,14 +220,15 @@
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>DERANGEMENT</trait>
 		<mpConsume>155</mpConsume>
 		<castRange>1300</castRange>
-		<hitTime>1000</hitTime>
-		<reuseDelay>30000</reuseDelay>
+		<hitTime>500</hitTime>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 		<conditions>
@@ -257,7 +252,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
- 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
+	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Attack and decrease Speed by $s2. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for $s3. Half-kill is possible. Requires dagger/dual dagger. -->
 		<icon>icon.skill10705</icon>
  		<!-- Updated to GRAND CRUSADE -->
@@ -270,6 +265,8 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<operateType>DA4</operateType>
+		<isDebuff>true</isDebuff>
+		<effectPoint>-1</effectPoint>
 		<targetType>ENEMY</targetType>
  		<affectScope>SINGLE</affectScope>
 		<mpConsume>
@@ -280,7 +277,7 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>50000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">101</value>
@@ -408,7 +405,7 @@
 		<magicLevel>85</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -2230,7 +2227,7 @@
 		<magicLvl>91</magicLvl>
 		<mpConsume>85</mpConsume>
 		<castRange>1100</castRange>
-		<castRange>1400</castRange>
+		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>1400</effectRange>
@@ -2388,8 +2385,8 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="7" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
 			<effect name="Speed">
@@ -2559,13 +2556,11 @@
 		</effects>
 	</skill>
 	<skill id="10784" toLevel="1" name="Camouflage">
-		<!-- For $s1, blends into the environment and hides. Decreases Speed by $s2. -->
+		<!-- For 30 seconds, blends into the environment and hides. Decreases Speed by 100. -->
 		<icon>icon.skill10784</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1">30</value>
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2908,14 +2903,15 @@
 		</effects>
 	</skill>
 	<skill id="10793" toLevel="1" name="Flash">
-		<!-- Cancels targets of nearby enemies. Increases Speed + $s2 for $s1 and prevents enemies from targeting you. -->
+		<!-- Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. -->
 		<icon>icon.skill10793</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>77</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>689</effectPoint>
+		<effectPoint>-689</effectPoint>
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicLvl>85</magicLvl>

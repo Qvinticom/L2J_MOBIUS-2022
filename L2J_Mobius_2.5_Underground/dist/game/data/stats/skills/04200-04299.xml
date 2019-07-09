@@ -1030,7 +1030,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4217" toLevel="1" name="none">
+	<skill id="4217" toLevel="1" name="">
 		<affectRange>300</affectRange>
 		<castRange>800</castRange>
 		<coolTime>100</coolTime>
@@ -1112,7 +1112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4221" toLevel="1" name="Deadly Dual-Sword Weapon: Range Attack">
+	<skill id="4221" toLevel="1" name="Range Dual Attack">
 		<affectRange>100</affectRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1137,7 +1137,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4223" toLevel="1" name="Face Chance: Night to Day">
+	<skill id="4223" toLevel="1" name="Daytime Zaken">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>14400</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1152,7 +1152,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4224" toLevel="1" name="Face Chance: Day to Night">
+	<skill id="4224" toLevel="1" name="Nighttime Zaken">
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1824,7 +1824,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4246" toLevel="1" name="Strong in 'nan' activity magic DOT">
+	<skill id="4246" toLevel="1" name="Bow Magic Resistance">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2392,7 +2392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4256" toLevel="1" name="100% Stun Resistance.">
+	<skill id="4256" toLevel="1" name="Stun Resistance">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2762,7 +2762,6 @@
 		<castRange>400</castRange>
 		<effectPoint>285</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<operateType>A2</operateType>
@@ -2786,7 +2785,6 @@
 		<castRange>400</castRange>
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2811,7 +2809,6 @@
 		<castRange>400</castRange>
 		<effectPoint>243</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>25</magicLvl>
 		<operateType>A2</operateType>
@@ -2840,7 +2837,6 @@
 		<castRange>400</castRange>
 		<effectPoint>379</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
@@ -2869,7 +2865,6 @@
 		<castRange>400</castRange>
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>

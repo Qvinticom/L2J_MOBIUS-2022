@@ -461,7 +461,7 @@
 		</effects>
 	</skill>
 	<skill id="10809" toLevel="1" name="Survival Movement">
-		<!-- P. Evasion + $s1. Disappears after $s2 strikes. -->
+		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
 		<icon>icon.skill1087</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -622,6 +622,17 @@
 			<value level="3">-714</value>
 		</effectPoint>
 		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">29176</value>
+					<value level="2">30726</value>
+					<value level="3">32277</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
 		<!-- Stuns the enemy for $s1. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->

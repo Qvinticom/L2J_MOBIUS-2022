@@ -1961,7 +1961,7 @@
 		</effects>
 	</skill>
 	<skill id="2235" toLevel="1" name="Anteroom Door Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1970,7 +1970,7 @@
 		<itemConsumeId>8273</itemConsumeId> <!-- Anteroom Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1991,7 +1991,7 @@
 		</conditions>
 	</skill>
 	<skill id="2236" toLevel="1" name="Chapel Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2000,7 +2000,7 @@
 		<itemConsumeId>8274</itemConsumeId> <!-- Chapel Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2029,7 +2029,7 @@
 		</effects>
 	</skill>
 	<skill id="2237" toLevel="1" name="Key of Darkness">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2038,7 +2038,7 @@
 		<itemConsumeId>8275</itemConsumeId> <!-- Key of Darkness -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2063,7 +2063,7 @@
 		</effects>
 	</skill>
 	<skill id="2238" toLevel="1" name="Room of Splendor Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2072,7 +2072,7 @@
 		<itemConsumeId>8056</itemConsumeId> <!-- Key of Splendor Room -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4028,7 +4028,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2274" toLevel="8" name="Fisherman's Potion">
+	<skill id="2274" toLevel="8" name="Fisherman's Potion - Green">
 		<!-- Fisherman's Potion - Green. Decreases Fishing Mastery Lv., enabling you to catch green fish. -->
 		<icon>
 			<value level="1">icon.etc_oblivion_green_i00</value>
@@ -4055,7 +4055,6 @@
 			<value level="6">17</value>
 			<value level="7">20</value>
 			<value level="8">23</value>
-			<value level="9">26</value>
 		</power>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4343,7 +4342,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2282" toLevel="1" name="Herb of Atk. Spd.">
+	<skill id="2282" toLevel="1" name="Haste Herb">
 		<!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<icon>BranchSys2.icon.etc_attack_sp_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
@@ -4439,7 +4438,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2286" toLevel="6" name="Scroll: Recovery">
+	<skill id="2286" toLevel="6" name="Scroll: Recovery (No-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -4489,7 +4488,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

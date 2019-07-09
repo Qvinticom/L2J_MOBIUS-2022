@@ -660,7 +660,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17551" toLevel="1" name="Balanced Power">
+	<skill id="17551" toLevel="2" name="Balanced Power">
 		<!-- Increases STR/ INT/ CON/ DEX/ WIT/ MEN by $s1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -700,7 +700,7 @@
 		</effects>
 	</skill>
 	<skill id="17552" toLevel="1" name="Attribute Enchant">
-		<!-- Increases attack speed by $s1 and all defense attributes by $s2. -->
+		<!-- Increases attack speed by 30 and all defense attributes by 30. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>

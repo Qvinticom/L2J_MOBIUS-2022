@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9000" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+	<skill id="9000" toLevel="1" name="PA - Scroll: Enchant Weapon (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -9,7 +9,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9001" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+	<skill id="9001" toLevel="1" name="PA - Scroll: Enchant Weapon (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -18,7 +18,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9002" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+	<skill id="9002" toLevel="1" name="PA - Scroll: Enchant Weapon (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -27,7 +27,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9003" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+	<skill id="9003" toLevel="1" name="PA - Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9004" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+	<skill id="9004" toLevel="1" name="PA - Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -45,7 +45,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9005" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
+	<skill id="9005" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -54,7 +54,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9006" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
+	<skill id="9006" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -63,7 +63,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9007" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
+	<skill id="9007" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -72,7 +72,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9008" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
+	<skill id="9008" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -81,7 +81,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9009" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
+	<skill id="9009" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -495,7 +495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9027" toLevel="1" name="Player Commendation Instant Lottery Ticket">
+	<skill id="9027" toLevel="1" name="PA Instant Lottery Ticket">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15358</itemConsumeId> <!-- Player Commendation Instant Lottery Ticket -->
@@ -815,7 +815,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9040" toLevel="1" name="PC Points">
+	<skill id="9040" toLevel="1" name="PA Points">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15426</itemConsumeId> <!-- Hero's Summon Point -->
@@ -3817,7 +3817,6 @@
 		</conditions>
 	</skill>
 	<skill id="9055" toLevel="1" name="Golden Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15482</itemConsumeId> <!-- Golden Spice Crate -->
@@ -3847,7 +3846,6 @@
 		</effects>
 	</skill>
 	<skill id="9056" toLevel="1" name="Crystal Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15483</itemConsumeId> <!-- Crystal Spice Compressed Pack -->
@@ -4386,16 +4384,15 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9076" toLevel="1" name="Secret Gate Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15690</itemConsumeId> <!-- Secret Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5099,6 +5096,7 @@
 		<itemConsumeId>17067</itemConsumeId> <!-- Event - Cupid's Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -5130,6 +5128,7 @@
 		<itemConsumeId>17068</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>

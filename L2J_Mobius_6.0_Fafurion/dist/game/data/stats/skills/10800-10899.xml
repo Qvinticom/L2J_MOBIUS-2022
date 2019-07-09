@@ -296,6 +296,14 @@
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">39</value>
+			<value level="6">39</value>
+		</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -316,7 +324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10804" toLevel="6" name="Bullseye">
+	<skill id="10804" toLevel="4" name="Bullseye">
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
@@ -333,8 +341,6 @@
 					<value level="2">33546</value>
 					<value level="3">35088</value>
 					<value level="4">36630</value>
-					<value level="5">39174</value>
-					<value level="6">41317</value>
 				</power>
 				<saveHp>10</saveHp>
 			</effect>
@@ -390,7 +396,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="10806" toLevel="4" name="Frost Trap">
+	<skill id="10806" toLevel="6" name="Frost Trap">
 		<!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
 		<icon>icon.skill0516</icon>
 		<operateType>A2</operateType>
@@ -406,6 +412,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -424,6 +432,8 @@
 					<value level="2">-35</value>
 					<value level="3">-40</value>
 					<value level="4">-50</value>
+					<value level="5">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -433,6 +443,8 @@
 					<value level="2">-35</value>
 					<value level="3">-40</value>
 					<value level="4">-50</value>
+					<value level="5">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -442,12 +454,14 @@
 					<value level="2">-35</value>
 					<value level="3">-40</value>
 					<value level="4">-50</value>
+					<value level="5">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-50</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10807" toLevel="4" name="Gravity Trap">
+	<skill id="10807" toLevel="6" name="Gravity Trap">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
@@ -464,6 +478,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -511,7 +527,7 @@
 		</effects>
 	</skill>
 	<skill id="10809" toLevel="1" name="Survival Movement">
-		<!-- P. Evasion +$s1. Disappears after $s2 strikes. -->
+		<!-- P. Evasion +15. Disappears after 4 strikes. -->
 		<icon>icon.skill1087</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -672,6 +688,17 @@
 			<value level="3">-714</value>
 		</effectPoint>
 		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">29176</value>
+					<value level="2">30726</value>
+					<value level="3">32277</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
 		<!-- Stuns the enemy for $s1. Has a chance of canceling enemy's targeting. Requires a bow/ crossbow. Over-hit. -->

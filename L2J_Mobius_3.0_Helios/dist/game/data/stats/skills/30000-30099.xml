@@ -500,7 +500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30005" fromLevel="4" toLevel="4" name="Hydro Strike">
+	<skill id="30005" fromLevel="4" toLevel="4" name="Storm Sign">
 		<!-- M. Def. - 50%, Speed - 100. -->
 		<icon>icon.skill30027</icon>
 		<abnormalLvl>4</abnormalLvl>
@@ -567,7 +567,6 @@
 			<value level="10">145</value>
 			<value level="11">147</value>
 		</mpConsume>
-		<castRange>60</castRange>
 		<effectPoint>-687</effectPoint>
 		<hitTime>1800</hitTime>
 		<coolTime>500</coolTime>
@@ -1026,7 +1025,7 @@
 			<value level="14">37</value>
 			<value level="15">38</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
@@ -1442,7 +1441,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>41</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1582,7 +1580,7 @@
 		</effects>
 	</skill>
 	<skill id="30020" toLevel="1" name="Sayha's Fury">
-		<!-- For $s1, Received P./M. Critical Damage - $s2, and Speed + $s3. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage $s4. Requires a sword or blunt weapon. -->
+		<!-- For 30 seconds, Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

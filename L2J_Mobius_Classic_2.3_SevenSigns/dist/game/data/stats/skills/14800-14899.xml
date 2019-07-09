@@ -3,7 +3,7 @@
 	<skill id="14804" toLevel="10" name="Damage Reflect Attack Resistance">
 		<!-- Slightly increases Resistance to damage reflect attack. -->
 		<icon>icon.skill0350</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="14826" toLevel="9" name="Intense Slash">
 		<!-- Deals physical damage to the target using intense spirit. Power $s1. -->
@@ -98,7 +98,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14832" toLevel="9" name="Platonic Blizzard">
+	<skill id="14832" toLevel="9" name="Platonic Tempest">
 		<!-- Inflicts magical damage on nearby enemies with $s1 Power added to M. Atk. by fully concentrating on holy magic. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>

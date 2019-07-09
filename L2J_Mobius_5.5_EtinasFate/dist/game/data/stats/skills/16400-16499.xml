@@ -11,61 +11,67 @@
 		<effectPoint>867</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16401" toLevel="1" name="Dimensional Death Skin">
+	<skill id="16401" toLevel="2" name="Dimensional Death Skin">
 		<!-- For 10 sec., received damage -50%. -->
 		<icon>icon.skill0340</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2400</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16402" toLevel="1" name="Dimensional Horror">
+	<skill id="16402" toLevel="2" name="Dimensional Horror">
 		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2400</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16403" toLevel="1" name="Dimensional Judgment">
+	<skill id="16403" toLevel="2" name="Dimensional Judgment">
 		<!-- Sentence target to death. 150,000 damage. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="16404" toLevel="1" name="Dimensional Wide Judgment">
+	<skill id="16404" toLevel="2" name="Dimensional Wide Judgment">
 		<!-- Sentence enemies to the front to death. 150,000 damage. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="16405" toLevel="1" name="Dimensional Mass Judgment">
+	<skill id="16405" toLevel="2" name="Dimensional Mass Judgment">
 		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="16406" toLevel="1" name="Dimensional Fear">
+	<skill id="16406" toLevel="2" name="Dimensional Fear">
 		<!-- Inflicts Fear on target for 5 sec. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>2400</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16407" toLevel="1" name="Dimensional Resurrection Block">
+	<skill id="16407" toLevel="2" name="Dimensional Resurrection Block">
 		<!-- Stops target from resurrecting for 60 sec. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
@@ -77,7 +83,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16408" toLevel="3" name="Trap Fear">
+	<skill id="16408" toLevel="4" name="Trap Fear">
 		<!-- Moving against your will due to Fear. -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
@@ -85,7 +91,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16409" toLevel="3" name="Trap Hold">
+	<skill id="16409" toLevel="4" name="Trap Hold">
 		<!-- Immobilized. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -93,6 +99,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 			<value level="3">10</value>
+			<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -104,7 +111,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>80</activateRate>
 		<trait>HOLD</trait>
@@ -118,7 +124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16410" toLevel="3" name="Trap Aerial Yoke">
+	<skill id="16410" toLevel="4" name="Trap Aerial Yoke">
 		<!-- Immobilized. -->
 		<icon>icon.skill11050</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -126,6 +132,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 			<value level="3">10</value>
+			<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -155,7 +162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16411" toLevel="3" name="Trap Stun">
+	<skill id="16411" toLevel="4" name="Trap Stun">
 		<!-- Immobilized. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -163,6 +170,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 			<value level="3">10</value>
+			<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -172,7 +180,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>100</activateRate>
 		<trait>SHOCK</trait>
@@ -185,7 +192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16412" toLevel="3" name="Trap Petrify">
+	<skill id="16412" toLevel="4" name="Trap Petrify">
 		<!-- Immobilized. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -202,7 +209,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="16413" toLevel="3" name="Trap Poison">
+	<skill id="16413" toLevel="4" name="Trap Poison">
 		<!-- Poisons the target, causing them to lose $s2 HP every $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -210,6 +217,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 			<value level="3">10</value>
+			<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -220,7 +228,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<affectRange>150</affectRange>
-		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<activateRate>100</activateRate>
 		<trait>POISON</trait>
@@ -234,7 +241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16414" toLevel="1" name="Peace Zone Cure">
+	<skill id="16414" toLevel="2" name="Peace Zone Cure">
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -252,7 +259,7 @@
 				<power>30</power>
 			</effect>
 	</skill>
-	<skill id="16415" toLevel="4" name="Dimensional Dark Forces">
+	<skill id="16415" toLevel="6" name="Dimensional Dark Forces">
 		<!-- P. Atk -$s1, M. Atk. -$s2, and P. Critical Rate -$s3, M. Critical Rate -$s4. -->
 		<icon>icon.skill1298</icon>
 		<abnormalLvl>
@@ -260,12 +267,16 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">10</value>
 			<value level="4">10</value>
+			<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -280,6 +291,9 @@
 					<value level="2">-6</value>
 					<value level="3">-8</value>
 					<value level="3">-10</value>
+					<value level="4">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -289,6 +303,9 @@
 					<value level="2">-6</value>
 					<value level="3">-8</value>
 					<value level="3">-10</value>
+					<value level="4">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -298,6 +315,9 @@
 					<value level="2">-10</value>
 					<value level="3">-20</value>
 					<value level="3">-30</value>
+					<value level="4">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -307,6 +327,9 @@
 					<value level="2">-10</value>
 					<value level="3">-20</value>
 					<value level="3">-30</value>
+					<value level="4">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -706,42 +729,42 @@
 		<castRange>1200</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="16438" toLevel="1" name="Horn Melody Lv. 2 (Adventurer)">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+	<skill id="16438" toLevel="1" name="Horn Melody Lv. 2 - Adventurer">
+		<!-- For 1 hr., P. Atk. +24%, M. Atk. +91%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16439" toLevel="1" name="Drum Melody Lv. 2 (Adventurer)">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+	<skill id="16439" toLevel="1" name="Drum Melody Lv. 2 - Adventurer">
+		<!-- For 1 hr., increases P. Critical Rate by 32%, P. Critical Damage by 31%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 (Adventurer)">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 - Adventurer">
+		<!-- For 1 hr., Max HP +39%, Max MP +64%, and Max CP +39%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 (Adventurer)">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 - Adventurer">
+		<!-- For 1 hr., Atk. Spd. +61%, Casting Spd. +60%, and Speed +15 and Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16442" toLevel="1" name="Harp Melody Lv. 2 (Adventurer)">
+	<skill id="16442" toLevel="1" name="Harp Melody Lv. 2 - Adventurer">
 		<!-- For 60 min., P. Accuracy +6, P. Evasion/ M. Evasion +6, and Speed +35. Critical Damage Received -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16443" toLevel="1" name="Lute Melody Lv. 2 (Adventurer)">
+	<skill id="16443" toLevel="1" name="Lute Melody Lv. 2 - Adventurer">
 		<!-- For 60 min., party members' Atk Spd. +35%, Casting Spd. +32%, with a chance of 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -837,7 +860,6 @@
 		<staticReuse>true</staticReuse>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1189,52 +1211,52 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16490" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16490" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Shilen's blood seeped into a criminal's corpse and came back to life against as one of the Undead. Currently aiming for Giran from another dimension in order to complete the darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16491" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16491" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood, and is aiming for the Giran from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16492" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16492" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen, and is aiming for the Giran from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16493" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16493" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Lindvior to help with Shilen's resurrection. Has the power of wind as strong as Lindvior, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16494" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16494" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Valakas to help with Shilen's resurrection. Has the power of fire as strong as Valakas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16495" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16495" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Antharas to help with Shilen's resurrection. Has the power of earth as strong as Antharas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16496" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16496" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Agarez. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16497" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16497" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Krakia was affected by the darkness of Nemis and was reborn as Vengeful Oretross. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16498" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16498" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Eligos. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16499" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16499" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Weiss was affected by the darkness of Nemis and was reborn as Vengeful Lerazia. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

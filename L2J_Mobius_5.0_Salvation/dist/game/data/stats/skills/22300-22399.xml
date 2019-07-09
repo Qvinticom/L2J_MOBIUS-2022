@@ -187,6 +187,7 @@
 		<!-- Sends mutated animals a heart filled with love. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<effectPoint>-1000</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -216,6 +217,7 @@
 		<!-- Sends mutated animals a powerful Heart filled with love. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<effectPoint>-1000</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -1998,7 +2000,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22386" toLevel="1" name="Player Commendation - Transformation Scroll Pack">
+	<skill id="22386" toLevel="1" name="PA - Transformation Scroll Pack">
 		<itemConsumeId>22274</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2045,7 +2047,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22387" toLevel="1" name="Player Commendation - Gift Box">
+	<skill id="22387" toLevel="1" name="PA - Gift Box">
 		<itemConsumeId>22275</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2068,7 +2070,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22388" toLevel="1" name="Player Commendation - Transformation Stick Pack">
+	<skill id="22388" toLevel="1" name="PA - Transformation Stick Pack">
 		<itemConsumeId>22276</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2091,7 +2093,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22389" toLevel="1" name="Player Commendation - Hair Accessory Pack">
+	<skill id="22389" toLevel="1" name="PA - Hair Accessory Pack">
 		<itemConsumeId>22277</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2111,7 +2113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22390" toLevel="1" name="Player Commendation - Luxury Gift Box">
+	<skill id="22390" toLevel="1" name="PA - Luxury Gift Box">
 		<itemConsumeId>22278</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>

@@ -2955,7 +2955,6 @@
 	<skill id="950" toLevel="7" name="Nail Attack">
 		<!-- A demonic clawed combo attack. Power $s1. -->
 		<icon>icon.skill0539</icon>
-		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -3619,7 +3618,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -3643,7 +3641,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -3667,7 +3664,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
@@ -4713,7 +4709,33 @@
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Cannot be used when a bow/crossbow/fist weapon is equipped. Over-hit is possible. -->
 		<icon>icon.skill0986</icon>
 		<castRange>40</castRange>
-		<effectPoint>-2320</effectPoint>
+		<effectPoint>
+			<value level="1">-417</value>
+			<value level="2">-496</value>
+			<value level="3">-586</value>
+			<value level="4">-686</value>
+			<value level="5">-796</value>
+			<value level="6">-916</value>
+			<value level="7">-1046</value>
+			<value level="8">-1136</value>
+			<value level="9">-1230</value>
+			<value level="10">-1327</value>
+			<value level="11">-1425</value>
+			<value level="12">-1525</value>
+			<value level="13">-1626</value>
+			<value level="14">-1727</value>
+			<value level="15">-1827</value>
+			<value level="16">-1925</value>
+			<value level="17">-1973</value>
+			<value level="18">-2020</value>
+			<value level="19">-2067</value>
+			<value level="20">-2112</value>
+			<value level="21">-2156</value>
+			<value level="22">-2200</value>
+			<value level="23">-2241</value>
+			<value level="24">-2282</value>
+			<value level="25">-2320</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<magicLvl>
@@ -5316,7 +5338,33 @@
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
-		<effectPoint>-3422</effectPoint>
+		<effectPoint>
+			<value level="1">-625</value>
+			<value level="2">-744</value>
+			<value level="3">-879</value>
+			<value level="4">-1029</value>
+			<value level="5">-1194</value>
+			<value level="6">-1374</value>
+			<value level="7">-1568</value>
+			<value level="8">-1704</value>
+			<value level="9">-1845</value>
+			<value level="10">-1990</value>
+			<value level="11">-2138</value>
+			<value level="12">-2288</value>
+			<value level="13">-2439</value>
+			<value level="14">-2590</value>
+			<value level="15">-2740</value>
+			<value level="16">-2814</value>
+			<value level="17">-2887</value>
+			<value level="18">-2959</value>
+			<value level="19">-3030</value>
+			<value level="20">-3100</value>
+			<value level="21">-3168</value>
+			<value level="22">-3234</value>
+			<value level="23">-3299</value>
+			<value level="24">-3362</value>
+			<value level="25">-3422</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>800</hitTime>
 		<magicLvl>

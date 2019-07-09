@@ -968,7 +968,6 @@
 		<effectPoint>-2</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<castRange>-1</castRange>
 		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<targetType>SELF</targetType>
@@ -1022,7 +1021,7 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>-2</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1801,7 +1800,7 @@
 		</effects>
 	</skill>
 	<skill id="14975" toLevel="1" name="Mysterious Combat Buff">
-		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
+		<!-- For 5 min., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1848,7 +1847,7 @@
 		</effects>
 	</skill>
 	<skill id="14976" toLevel="1" name="Mysterious Speed Buff">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 5 min., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1913,7 +1912,7 @@
 		</effects>
 	</skill>
 	<skill id="14977" toLevel="1" name="Mysterious Focus Buff">
-		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 5 min., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2360,8 +2359,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14993" toLevel="1" name="Master's Blessing - Prevailing Sonata">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+	<skill id="14993" toLevel="1" name="War Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2413,8 +2412,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14994" toLevel="1" name="Master's Blessing - Daring Sonata">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="14994" toLevel="1" name="Marching Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2476,8 +2475,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14995" toLevel="1" name="Master's Blessing - Refreshing Sonata">
-		<!-- The GM is always by your side. For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+	<skill id="14995" toLevel="1" name="Soothing Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., HP Recovery +75%, MP Recovery +100%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2540,8 +2539,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14996" toLevel="1" name="Master's Blessing - Prevailing Sonata">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+	<skill id="14996" toLevel="1" name="War Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2593,8 +2592,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14997" toLevel="1" name="Master's Blessing - Daring Sonata">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="14997" toLevel="1" name="Marching Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2656,8 +2655,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14998" toLevel="1" name="Master's Blessing - Refreshing Sonata">
-		<!-- The GM is always by your side. For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+	<skill id="14998" toLevel="1" name="Soothing Drum - GM's Blessing">
+		<!-- The GM is always by your side. For 1 hr., HP Recovery +75%, MP Recovery +100%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>

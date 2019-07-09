@@ -132,7 +132,7 @@
 		</effects>
 	</skill>
 	<skill id="11303" toLevel="1" name="Mass Servitor Magic Barrier">
-		<!-- Increases all servitors' M. Def. by $s2 for $s1. -->
+		<!-- Increases all servitors' M. Def. by 30% for 30 minutes. -->
 		<icon>icon.skill1139</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -161,7 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="11304" toLevel="1" name="Mass Servitor Haste">
-		<!-- Increases all servitors' Atk. Spd. by $s2 for $s1. -->
+		<!-- Increases all servitors' Atk. Spd. by 34% for 30 minutes. -->
 		<icon>icon.skill1141</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -190,7 +190,7 @@
 		</effects>
 	</skill>
 	<skill id="11305" toLevel="1" name="Mass Servitor Shield">
-		<!-- Increases all servitors' P. Def. by $s2 for $s1. -->
+		<!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
 		<icon>icon.skill1140</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -219,7 +219,7 @@
 		</effects>
 	</skill>
 	<skill id="11306" toLevel="1" name="Mass Servitor Empower">
-		<!-- Increases all servitors' M. Atk. by $s2 for $s1. -->
+		<!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -248,7 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="11307" toLevel="1" name="Mass Servitor Might">
-		<!-- Increases all servitors' P. Atk. by $s2 for $s1. -->
+		<!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
 		<icon>icon.skill1146</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -277,7 +277,7 @@
 		</effects>
 	</skill>
 	<skill id="11308" toLevel="1" name="Mass Servitor Wind Walk">
-		<!-- Increases all servitors' Speed by $s2 for $s1. -->
+		<!-- Increases all servitors' Speed by 34 for 30 minutes. -->
 		<icon>icon.skill1144</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -306,7 +306,7 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
-		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for $s1. -->
+		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for 3 seconds. -->
 		<icon>icon.skill1301</icon>
 		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>

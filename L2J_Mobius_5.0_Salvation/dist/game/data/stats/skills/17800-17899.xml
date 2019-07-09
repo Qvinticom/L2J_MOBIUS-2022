@@ -608,17 +608,17 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17815" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 7.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17816" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 12.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17817" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 20%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -642,12 +642,11 @@
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17822" toLevel="1" name="Aquamarine - MP Recovery">
+	<skill id="17822" toLevel="1" name="Aquamarine - MP Recovery Bonus">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -959,7 +958,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>39336</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1036,7 +1034,6 @@
 		</effects>
 	</skill>
 	<skill id="17851" toLevel="1" name="Twilight Completion Pack">
-		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<itemConsumeId>39337</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2206,8 +2203,7 @@
 	<skill id="17880" toLevel="1" name="Scroll: 1,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39373</itemConsumeId> <!-- Scroll: 1,000,000 SP -->
@@ -2225,8 +2221,7 @@
 	<skill id="17881" toLevel="1" name="Scroll: 5,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39374</itemConsumeId> <!-- Scroll: 5,000,000 SP -->
@@ -2244,8 +2239,7 @@
 	<skill id="17882" toLevel="1" name="Scroll: 10,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39375</itemConsumeId> <!-- Scroll: 10,000,000 SP -->
@@ -2281,17 +2275,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17889" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 7.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17890" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 12.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17891" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 20%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2322,15 +2316,16 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17898" toLevel="1" name="Wondrous Wind Scroll">
+	<skill id="17898" toLevel="1" name="Mysterious Wind Scroll">
 		<!-- For 60 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%, and Wind Attack/ Resistance +20. Skill Cooldown -10%. Cannot be stacked with Art of Seduction. -->
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1</effectPoint>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40056</itemConsumeId> <!-- Mysterious Wind Scroll -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>4</isMagic>

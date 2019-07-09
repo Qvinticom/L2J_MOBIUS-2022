@@ -644,8 +644,6 @@
 			<effect name="DispelBySlot">
 				<dispel>
 					<value level="1">CHANGEBODY,-1</value>
-					<value level="2">TURN_STONE,-1</value>
-					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
 				</dispel>
 			</effect>
 			<effect name="Transformation">
@@ -1236,7 +1234,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="23536" toLevel="1" name="Elixir of Blessing - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
+		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<effectPoint>698</effectPoint>
@@ -1278,7 +1276,7 @@
 		</effects>
 	</skill>
 	<skill id="23537" toLevel="1" name="Elixir of Blessing - Drum Melody">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<effectPoint>698</effectPoint>
@@ -1367,7 +1365,7 @@
 		</effects>
 	</skill>
 	<skill id="23538" toLevel="1" name="Elixir of Blessing - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, and Vampiric Rage +$s5 is applied at a certain chance. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%, and Vampiric Rage +9% is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>698</effectPoint>
@@ -1413,7 +1411,7 @@
 		</effects>
 	</skill>
 	<skill id="23539" toLevel="1" name="Elixir of Blessing - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and All Skill MP Consumption -$s5. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, Speed +10, and All Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
@@ -2059,7 +2057,6 @@
 		<magicLvl>55</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2095,7 +2092,6 @@
 		<!-- Monster Duel in progress. Note: Logging out will abort the duel and render you ineligible for rewards. -->
 		<icon>BranchSys3.icon1.g_ev_sponsor_token</icon>
 		<operateType>A2</operateType>
-		<castRange>-2</castRange>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF3</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -2347,7 +2343,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23599" toLevel="1" name="P. Atk./ Atk. Spd. Boost">
-		<!-- For 10 sec., Atk.Spd. +50%, P. Atk. +50%. -->
+		<!-- For 10 sec., Atk .Spd. +50%, P. Atk. +50%. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>

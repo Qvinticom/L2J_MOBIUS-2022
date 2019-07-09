@@ -1216,6 +1216,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1310,7 +1311,6 @@
 			<value level="12">118</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1441,7 +1441,6 @@
 	</skill>
 	<skill id="5248" toLevel="12" name="Seed Explosion">
 		<affectRange>300</affectRange>
-		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -1463,7 +1462,6 @@
 			<value level="12">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1579,7 +1577,6 @@
 		<magicLvl>87</magicLvl>
 		<mpConsume>76</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1701,10 +1698,8 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1723,7 +1718,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
@@ -1895,7 +1889,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1940,7 +1933,6 @@
 	</skill>
 	<skill id="5255" toLevel="12" name="Mana Burn">
 		<effectPoint>-100</effectPoint>
-		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
@@ -2163,7 +2155,6 @@
 			<value level="12">16</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY</targetType>

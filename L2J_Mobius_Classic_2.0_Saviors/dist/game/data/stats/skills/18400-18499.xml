@@ -35,7 +35,7 @@
 	</skill>
 	<skill id="18451" toLevel="2" name="11th Anniversary Effect">
 		<!-- XP/SP gain +$s1. You can receive $s2 Anniversary Coin when the buff effect is over. <Warning> You will not get coins if your character dies when getting them and there are no free slots in your Inventory. -->
-		<icon>icon.ev_buff_11th</icon>
+		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
 		<abnormalTime>
 			<value level="1">3600</value>
 			<value level="2">7200</value>
@@ -59,10 +59,9 @@
 	<skill id="18472" toLevel="6" name="Lucky number 1">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18475" toLevel="2" name="11th Anniversary Coin">
-		<icon>icon.ev_buff_11th</icon>
+	<skill id="18475" toLevel="1" name="11th Anniversary Coin">
+		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
 		<operateType>A2</operateType>
-		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>

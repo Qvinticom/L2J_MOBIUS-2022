@@ -36,6 +36,7 @@
 		<!-- Large firecracker that explodes in colorful light and fills the sky. -->
 		<icon>BranchSys.icon.br_firecracker_gold_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="39171" toLevel="1" name="Member of the Balthus Knight">
 		<!-- You have dressed up as a member of the Balthus Knights for 1 hour. Gain opportunities to receive special supplies. -->
@@ -54,7 +55,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
-		<hitTime>3000</hitTime>
+		<hitTime>500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

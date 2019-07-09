@@ -187,7 +187,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="8512" toLevel="1" name="National Representative Warrior's Tenacity">
+	<skill id="8512" toLevel="1" name="Olympic Athlete's Tenacity">
 		<!-- When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited Olympic Athlete's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
 		<icon>BranchSys2.icon.br_spirit_of_brave_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
@@ -445,7 +445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8522" toLevel="1" name="Release Seal on Agathion - Nevit's Messenger Kanna">
+	<skill id="8522" toLevel="1" name="Release Agathion's Seal - Nevit's Messenger Kanna">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -523,6 +523,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1604,7 +1605,7 @@
 		</effects>
 	</skill>
 	<skill id="8558" toLevel="1" name="Ghost Walking">
-		<!-- Infiltrates the battleground like a ghost.For 30 seconds, increases Speed by 33, Evasion by 15, vital point attack rate by 40%, physical skill Evasion Rate by 60%, and Buff-canceling Attack Resistance by 90. -->
+		<!-- Infiltrates the battleground like a ghost.'For 30 seconds, increases Speed by 33, Evasion by 15, vital point attack rate by 40%, physical skill Evasion Rate by 60%, and Buff-canceling Attack Resistance by 90. -->
 		<icon>icon.skill0770</icon>
 		<operateType>A2</operateType>
 		<mpConsume>36</mpConsume>

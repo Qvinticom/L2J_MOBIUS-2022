@@ -9,7 +9,7 @@
 		<itemConsumeId>40051</itemConsumeId> <!-- Scroll: 100,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -29,7 +29,7 @@
 		<itemConsumeId>40052</itemConsumeId> <!-- Scroll: 1,000,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -49,7 +49,7 @@
 		<itemConsumeId>40053</itemConsumeId> <!-- Scroll: 10,000,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -227,7 +227,7 @@
 			<value level="2">47428</value>
 		</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>540000</reuseDelay>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -275,7 +275,7 @@
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>40231</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>540000</reuseDelay>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -467,9 +467,6 @@
 		<operateType>A1</operateType>
 		<itemConsumeId>40300</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>867</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
@@ -484,7 +481,7 @@
 		</effects>
 	</skill>
 	<skill id="18156" toLevel="1" name="Potion of Protection: Stun">
-		<!-- Use this to increase the defense rate against Stun by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Stun by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40253</itemConsumeId>
@@ -518,7 +515,7 @@
 		</effects>
 	</skill>
 	<skill id="18157" toLevel="1" name="Potion of Protection: Hold">
-		<!-- Use this to increase the defense rate against Hold by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Hold by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40254</itemConsumeId>
@@ -552,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="18158" toLevel="1" name="Potion of Protection: Bleed">
-		<!-- Use this to increase the defense rate against Bleed by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Bleed by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40255</itemConsumeId>
@@ -586,7 +583,7 @@
 		</effects>
 	</skill>
 	<skill id="18159" toLevel="1" name="Potion of Protection: Paralyze">
-		<!-- Use this to increase the defense rate against Paralyze by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Paralyze by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40256</itemConsumeId>
@@ -620,7 +617,7 @@
 		</effects>
 	</skill>
 	<skill id="18160" toLevel="1" name="Potion of Protection: Mental">
-		<!-- Use this to increase the defense rate against Mental by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Mental by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40257</itemConsumeId>
@@ -654,7 +651,7 @@
 		</effects>
 	</skill>
 	<skill id="18161" toLevel="1" name="Potion of Protection: Sleep">
-		<!-- Use this to increase the defense rate against Sleep by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Sleep by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40258</itemConsumeId>
@@ -688,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="18162" toLevel="1" name="Potion of Protection: Poison">
-		<!-- Use this to increase the defense rate against Poison by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Poison by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40259</itemConsumeId>
@@ -722,7 +719,7 @@
 		</effects>
 	</skill>
 	<skill id="18163" toLevel="1" name="Potion of Protection: Knock Back/ Knock Down">
-		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40260</itemConsumeId>
@@ -757,7 +754,7 @@
 		</effects>
 	</skill>
 	<skill id="18164" toLevel="1" name="Potion of Protection: Aerial Yoke">
-		<!-- Use this to increase the defense rate against Aerial Yoke by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Aerial Yoke by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40261</itemConsumeId>
@@ -802,7 +799,7 @@
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<hitTime>1000</hitTime>
+		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>40309</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -854,9 +851,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -951,13 +946,12 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>500</coolTime>
-		<reuseDelay>10800</reuseDelay>
+		<reuseDelay>10800000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -975,6 +969,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

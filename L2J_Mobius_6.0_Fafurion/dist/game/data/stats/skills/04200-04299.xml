@@ -2762,7 +2762,6 @@
 		<castRange>400</castRange>
 		<effectPoint>285</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<operateType>A2</operateType>
@@ -2786,7 +2785,6 @@
 		<castRange>400</castRange>
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2811,7 +2809,6 @@
 		<castRange>400</castRange>
 		<effectPoint>243</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>25</magicLvl>
 		<operateType>A2</operateType>
@@ -2840,7 +2837,6 @@
 		<castRange>400</castRange>
 		<effectPoint>379</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
@@ -2869,7 +2865,6 @@
 		<castRange>400</castRange>
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -3007,7 +3002,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
+	<skill id="4272" toLevel="1" name="Greater Bow/ Crossbow Resistance">
 		<!-- Highly resistant to Bow/ Crossbow attacks. -->
 		<icon>icon.skill4272</icon>
 		<magicLvl>1</magicLvl>
@@ -3020,7 +3015,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4273" toLevel="5" name="Dagger/Rapier Resistance">
+	<skill id="4273" toLevel="5" name="Dagger/ Rapier Resistance">
 		<!-- Resistant to Dagger/ Rapier attacks. -->
 		<icon>icon.skill4273_new</icon>
 		<magicLvl>1</magicLvl>
@@ -3077,7 +3072,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4276" toLevel="5" name="Bow/Crossbow Vulnerability">
+	<skill id="4276" toLevel="5" name="Bow/ Crossbow Vulnerability">
 		<!-- Weak against Bow/ Crossbow attacks. -->
 		<icon>icon.skill4276_new</icon>
 		<magicLvl>1</magicLvl>

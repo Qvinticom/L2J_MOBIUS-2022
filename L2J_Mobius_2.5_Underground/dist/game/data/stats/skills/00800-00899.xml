@@ -2095,12 +2095,12 @@
 	<skill id="845" toLevel="1" name="Outpost Demolition">
 		<!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
 		<icon>icon.skill0247</icon>
-		<castRange>100</castRange>
 		<effectRange>600</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>30</mpConsume>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2318,6 +2318,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2349,6 +2350,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2380,6 +2382,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2411,6 +2414,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2442,6 +2446,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2473,6 +2478,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2504,6 +2510,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2535,6 +2542,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2566,6 +2574,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2597,6 +2606,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2628,6 +2638,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
@@ -2659,6 +2670,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>

@@ -45,6 +45,7 @@
 			<value level="3">10</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -118,7 +119,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19405" toLevel="4" name="Discarded Wizard's Soul">
+	<skill id="19405" toLevel="4" name="Summon Discarded Wizard's Soul">
 		<!-- Summons Discarded Wizard's Soul. -->
 		<icon>icon.skill19405</icon>
 		<magicLvl>
@@ -258,7 +259,7 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- M. Defense and Attribute Resistance -$s2 and -$s3, respectively, for $s1. -->
+		<!-- M. Defense and Attribute Resistance -50% and -50, respectively, for 10 sec. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -327,7 +328,7 @@
 		</effects>
 	</skill>
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
-		<!-- Elemental Crash inflicts Hold for $s1. -->
+		<!-- Elemental Crash inflicts Hold for 3 sec. -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -350,7 +351,7 @@
 		</effects>
 	</skill>
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
-		<!-- Elemental Crash inflicts Stun for $s1. -->
+		<!-- Elemental Crash inflicts Stun for 2 sec. -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -608,7 +609,6 @@
 		<!-- Casts owned Horn, Drum, Organ, and Guitar Melodies, all at once. -->
 		<icon>icon.skill19421</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -640,7 +640,6 @@
 		<!-- Casts owned Combat, Marching, and Refreshing Sonatas, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -669,7 +668,6 @@
 		<!-- Casts owned Prevailing Song, Marching Song, and Relax Song, all at once. -->
 		<icon>icon.skill19423</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -698,7 +696,6 @@
 		<!-- Casts owned Prevailing Dance, Marching Dance, and Relax Dance, all at once. -->
 		<icon>icon.skill19424</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -727,7 +724,6 @@
 		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
 		<icon>icon.skill19425</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -751,20 +747,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19426" toLevel="13" name="Shadow Blade">
-		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P./ M. Def. by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
+	<skill id="19426" toLevel="11" name="Shadow Blade">
+		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P. Def/ M. Def by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11510</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">99</value>
-			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>1010</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -777,8 +773,6 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-			<value level="12">107</value>
-			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -792,8 +786,6 @@
 			<value level="9">64</value>
 			<value level="10">66</value>
 			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
@@ -810,8 +802,6 @@
 			<value level="9">-712</value>
 			<value level="10">-712</value>
 			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -842,15 +832,13 @@
 					<value level="9">28162</value>
 					<value level="10">29386</value>
 					<value level="11">30610</value>
-					<value level="12">31907</value>
-					<value level="13">33204</value>
-					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="13">1</value>
-					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="MagicalDefence">
@@ -863,26 +851,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19427" toLevel="9" name="Hands of Einhasad">
-		<!-- For $s1, P. Atk./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
+	<skill id="19427" toLevel="7" name="Hands of Einhasad">
+		<!-- For $s1, P./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
 		<icon>icon.skill19427</icon>
 		<abnormalTime>300</abnormalTime>
-		<castRange>400</castRange>
-		<effectPoint>
-			<value level="1">-418</value>
-			<value level="2">-438</value>
-			<value level="3">-448</value>
-			<value level="4">-467</value>
-			<value level="5">-477</value>
-			<value level="6">-495</value>
-			<value level="7">-505</value>
-			<value level="8">-523</value>
-			<value level="9">-532</value>
-		</effectPoint>
+		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>2000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -892,8 +869,6 @@
 			<value level="5">50</value>
 			<value level="6">52</value>
 			<value level="7">53</value>
-			<value level="8">55</value>
-			<value level="9">56</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -903,10 +878,9 @@
 			<value level="5">45</value>
 			<value level="6">47</value>
 			<value level="7">49</value>
-			<value level="8">51</value>
-			<value level="9">53</value>
 		</mpConsume>
 		<operateType>A2</operateType>
+		<coolTime>1000</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -921,8 +895,6 @@
 					<value level="5">10</value>
 					<value level="6">11</value>
 					<value level="7">13</value>
-					<value level="8">15</value>
-					<value level="9">17</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -935,8 +907,6 @@
 					<value level="5">10</value>
 					<value level="6">11</value>
 					<value level="7">13</value>
-					<value level="8">15</value>
-					<value level="9">17</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -954,8 +924,10 @@
 		<!-- Focuses your mind for $s1 to recover total $s2 MP and resets the duration of Prophecy of Might applied to allies. -->
 		<icon>icon.skill19428</icon>
 		<operateType>A2</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>100</effectPoint>
+		<coolTime>500</coolTime>
+		<mpConsume>252</mpConsume>
+		<hitTime>7000</hitTime>
+		<effectPoint>700</effectPoint>
 		<abnormalLvl>	
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -974,7 +946,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<effects>
 			<effect name="ManaHealPercent">
 				<power>10</power>
@@ -988,8 +960,11 @@
 		<!-- Recovers MP by 5% during meditation. -->
 		<icon>icon.skill19428</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>696</effectPoint>
+		<mpConsume>252</mpConsume>
 	</skill>
-	<skill id="19430" toLevel="13" name="Resonant Halo">
+	<skill id="19430" toLevel="11" name="Resonant Halo">
 		<!-- Increases P. Atk. by $s1 and Atk. Spd. by $s2 and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by $s3. Using the skill again cancels the effect. -->
 		<icon>icon.skill19430</icon>
 		<abnormalLvl>
@@ -1004,14 +979,11 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-			<value level="12">12</value>
-			<value level="13">13</value>
 		</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>600</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<effectPoint>200</effectPoint>
-		<hitTime>1000</hitTime>
+		<effectPoint>566</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>
@@ -1026,8 +998,6 @@
 			<value level="9">53</value>
 			<value level="10">55</value>
 			<value level="11">57</value>
-			<value level="12">59</value>
-			<value level="13">61</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
@@ -1059,8 +1029,6 @@
 					<value level="9">500</value>
 					<value level="10">525</value>
 					<value level="11">550</value>
-					<value level="12">575</value>
-					<value level="13">600</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1080,16 +1048,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19431" toLevel="11" name="Sforzando Sting">
-		<!-- Rushes at the target to reduce Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+	<skill id="19431" toLevel="9" name="Sforzando Sting">
+		<!-- Rushes at the target to reduce Movement Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19431</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
-		<effectPoint>-379</effectPoint>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-698</value>
+			<value level="3">-707</value>
+			<value level="4">-712</value>
+			<value level="5">-712</value>
+			<value level="6">-712</value>
+			<value level="7">-712</value>
+			<value level="8">-712</value>
+			<value level="9">-712</value>
+		</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1109,8 +1088,6 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
-			<value level="10">107</value>
-			<value level="11">109</value>
 		</magicLvl>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1122,8 +1099,6 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-			<value level="10">10</value>
-			<value level="11">11</value>
 		</abnormalLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -1135,8 +1110,6 @@
 			<value level="7">49</value>
 			<value level="8">51</value>
 			<value level="9">53</value>
-			<value level="10">55</value>
-			<value level="11">57</value>
 		</mpConsume>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1163,8 +1136,6 @@
 					<value level="7">-120</value>
 					<value level="8">-120</value>
 					<value level="9">-120</value>
-					<value level="10">-120</value>
-					<value level="11">-120</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1182,13 +1153,12 @@
 		</selfEffects>
 	</skill>
 	<skill id="19432" toLevel="1" name="Swift Praise">
-		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. $s2 times for $s1. Cooldown $s3. -->
+		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. 1.5 times for 4 sec. Cooldown 8 sec. -->
 		<icon>icon.skill19432</icon>
 		<operateType>A2</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>100</effectPoint>
+		<effectPoint>687</effectPoint>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1219,8 +1189,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19433" toLevel="13" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P./ M. Def. by $s3 for $s2 Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+	<skill id="19433" toLevel="11" name="Alluring Conduct">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19433</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1238,8 +1208,6 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-			<value level="12">107</value>
-			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">146</value>
@@ -1253,15 +1221,13 @@
 			<value level="9">188</value>
 			<value level="10">194</value>
 			<value level="11">200</value>
-			<value level="12">206</value>
-			<value level="13">212</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>80</castRange>
 		<effectRange>1000</effectRange>
-		<hitTime>1790</hitTime>
-		<coolTime>300</coolTime>
-		<effectPoint>-709</effectPoint>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-707</effectPoint>
 		<reuseDelay>15000</reuseDelay>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -1300,8 +1266,6 @@
 					<value level="9">38010</value>
 					<value level="10">39864</value>
 					<value level="11">41718</value>
-					<value level="12">43683</value>
-					<value level="13">45648</value>
 				</power>
 				<overHit>true</overHit>
 				<BLUNT>0.9</BLUNT>
@@ -1338,8 +1302,8 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="19434" toLevel="13" name="Repeat Mark Somersault">
-		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+	<skill id="19434" toLevel="11" name="Repeat Mark Somersault">
+		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def/ M. Def by $s3 and Movement Speed by $s4 for $s2, and moves $s5 back. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19434</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1353,16 +1317,14 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-			<value level="12">12</value>
-			<value level="13">13</value>
 		</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
 		<castRange>200</castRange>
-		<coolTime>300</coolTime>
+		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>700</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1375,8 +1337,6 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-			<value level="12">107</value>
-			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">130</value>
@@ -1390,26 +1350,10 @@
 			<value level="9">164</value>
 			<value level="10">168</value>
 			<value level="11">172</value>
-			<value level="12">176</value>
-			<value level="13">180</value>
 		</mpConsume>
 		<operateType>DA3</operateType>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-			<value level="3">-700</value>
-			<value level="4">-705</value>
-			<value level="5">-709</value>
-			<value level="6">-712</value>
-			<value level="7">-712</value>
-			<value level="8">-712</value>
-			<value level="9">-712</value>
-			<value level="10">-712</value>
-			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
-		</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -1446,8 +1390,6 @@
 					<value level="9">33884</value>
 					<value level="10">35536</value>
 					<value level="11">37188</value>
-					<value level="12">38939</value>
-					<value level="13">40690</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1471,7 +1413,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19435" toLevel="5" name="Spectral Slash">
-		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2. -->
+		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P. Def/ M. Def by $s3 for $s2. -->
 		<icon>icon.skill19435</icon>
 		<operateType>A1</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1491,13 +1433,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-			<value level="3">-700</value>
-			<value level="4">-705</value>
-			<value level="5">-709</value>
-		</effectPoint>
+		<effectPoint>-5</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<abnormalTime>10</abnormalTime>
@@ -1536,21 +1472,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19436" toLevel="13" name="Dancing Phantom Blade">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./ M. Atk./ P. Def./ M. Def./ Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 3 or higher can remove these debuffs. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. Over-hit. Critical. -->
+	<skill id="19436" toLevel="11" name="Dancing Phantom Blade">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./ M. Atk./ P./ M. Def./ Movement Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 3 or higher can remove these debuffs. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19436</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">99</value>
-			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
-		<hitTime>5500</hitTime>
+		<hitTime>5000</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1563,8 +1499,6 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-			<value level="12">107</value>
-			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">550</value>
@@ -1578,26 +1512,22 @@
 			<value level="9">924</value>
 			<value level="10">972</value>
 			<value level="11">1020</value>
-			<value level="12">1068</value>
-			<value level="13">1116</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
-			<value level="1">-692</value>
-			<value level="2">-696</value>
-			<value level="3">-700</value>
-			<value level="4">-704</value>
-			<value level="5">-707</value>
+			<value level="1">-100</value>
+			<value level="2">-705</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
 			<value level="6">-709</value>
-			<value level="7">-712</value>
-			<value level="8">-712</value>
-			<value level="9">-712</value>
-			<value level="10">-712</value>
-			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1630,15 +1560,13 @@
 					<value level="9">44708</value>
 					<value level="10">46888</value>
 					<value level="11">49068</value>
-					<value level="12">51379</value>
-					<value level="13">53690</value>
-					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="13">1</value>
-					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="PAtk">
@@ -1667,12 +1595,13 @@
 		<!-- Summons the Dominant Flag. If used near the Dominant Flag, it applies the effects of Melody, Harmony, Drum, Ditty and Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4 or higher). Also makes the caster immune to Pull. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19437</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1733</effectPoint>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<hitTime>4500</hitTime>
+		<hitTime>4000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<coolTime>300</coolTime>
+		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectRange>1000</affectRange>
@@ -1695,7 +1624,6 @@
 		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
 		<icon>icon.skill19438</icon>
 		<operateType>A1</operateType>
-		<castRange>1000</castRange>
 		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
 		<effectRange>1500</effectRange>
@@ -1721,7 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="19439" toLevel="1" name="Overlord's Dignity">
-		<!-- For $s1, increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
+		<!-- For 30 sec., increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. 2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1778,14 +1706,22 @@
 		</effects>
 	</skill>
 	<skill id="19440" toLevel="1" name="Divine Strike">
-		<!-- Deals divine damage with $s1 Power added to M. Atk. -->
+		<!-- Deals divine damage with 50 Power added to M. Atk. -->
 		<icon>icon.skill0049</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-418</effectPoint>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19441" toLevel="4" name="Grand Soul Cry">
-		<!-- P. Atk., P. Def, M. Atk. and M. Def. +$s1 and P. Skill Power +$s2. Increases the chance to activate additional effect when the Rampageous Beat is cast. -->
+		<!-- P. Atk., P. Def, M. Atk. and M. Def +$s1 and P. Skill Power +$s2. Increases the chance to activate additional effect when the Rampageous Beat is cast. -->
 		<icon>icon.skill19441</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="19442" toLevel="3" name="Single Note">
 		<!-- For $s1, P. Atk. and Atk. Spd. +$s2. -->
@@ -1815,7 +1751,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
-		<effectPoint>100</effectPoint>
+		<effectPoint>707</effectPoint>
 		<effects>
 			<effect name="PAtk">
 				<value level="1">3</value>
@@ -1831,20 +1767,38 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19443" toLevel="9" name="Melody of Refection">
+	<skill id="19443" toLevel="7" name="Melody of Refection">
 		<!-- Instantly recovers your MP and nearby allies' MP up to $s1 according to their levels and decreases remaining cooldown of Alluring Conduct by $s2. Can be cast in the Triad state. -->
 		<icon>icon.skill11761</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>
+			<value level="1">38</value>
+			<value level="2">39</value>
+			<value level="3">41</value>
+			<value level="4">43</value>
+			<value level="5">45</value>
+			<value level="6">47</value>
+			<value level="7">49</value>
+		</mpConsume>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<hitTime>1500</hitTime>
+		<hitTime>2000</hitTime>
 		<hitCancelTime>0</hitCancelTime>
-		<coolTime>200</coolTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>100</effectPoint>
+		<effectPoint>
+			<value level="1">1798</value>
+			<value level="2">1811</value>
+			<value level="3">1826</value>
+			<value level="4">1844</value>
+			<value level="5">1865</value>
+			<value level="6">1878</value>
+			<value level="7">1895</value>
+		</effectPoint>
 		<conditions>
 			<condition name="OpCheckAbnormal">
 				<type>TRIAD</type>
@@ -1863,8 +1817,6 @@
 					<value level="5">755</value>
 					<value level="6">768</value>
 					<value level="7">786</value>
-					<value level="8">806</value>
-					<value level="9">826</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotMyself">
@@ -1873,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
-		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<!-- For 150 sec., party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1884,7 +1836,7 @@
 		<affectRange>1000</affectRange>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
-		<coolTime>150</coolTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
@@ -1920,7 +1872,7 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 150 sec., party members' Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1931,10 +1883,10 @@
 		<affectRange>1000</affectRange>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
-		<coolTime>150</coolTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
-		<effectPoint>687</effectPoint>
+		<effectPoint>696</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -1971,7 +1923,7 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
-		<!-- For $s1, party members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 150 sec., party members' HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1982,10 +1934,10 @@
 		<affectRange>1000</affectRange>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
-		<coolTime>150</coolTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
-		<effectPoint>687</effectPoint>
+		<effectPoint>696</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -2026,6 +1978,7 @@
 		<!-- For $s1, P. Atk. and M. Atk. +$s2. Canceled if Prophecy of Might is cast. -->
 		<icon>icon.skill11866</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2033,7 +1986,7 @@
 		<abnormalType>SONG_WEAPON</abnormalType>
 		<abnormalTime>300</abnormalTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<effectPoint>709</effectPoint>
+		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2053,12 +2006,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19448" toLevel="13" name="Rampageous Beat">
-		<!-- Attacks the target with 21642 Power added to P. Atk. and resets the durations of nearby allies' War/ Marching/ Relax buffs with a certain probability. Requires a sword, blunt weapon, dual sword, or dual blunt weapon to be equipped. Over-hit. Critical. -->
+	<skill id="19448" toLevel="11" name="Rampageous Beat">
+		<!-- Attacks the target with $s1 Power added to P. Atk. and resets the durations of nearby allies' War/ Marching/ Relax buffs with a certain probability. Requires a sword, blunt weapon, dual sword, or dual blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11511</icon>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<hitTime>1910</hitTime>
+		<hitTime>1410</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -2071,8 +2024,6 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-			<value level="12">107</value>
-			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">130</value>
@@ -2086,32 +2037,30 @@
 			<value level="9">164</value>
 			<value level="10">168</value>
 			<value level="11">172</value>
-			<value level="12">176</value>
-			<value level="13">180</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>
-			<value level="1">-425</value>
-			<value level="2">-431</value>
-			<value level="3">-438</value>
-			<value level="4">-444</value>
-			<value level="5">-449</value>
-			<value level="6">-455</value>
-			<value level="7">-460</value>
-			<value level="8">-466</value>
-			<value level="9">-471</value>
-			<value level="10">-475</value>
-			<value level="11">-480</value>
-			<value level="12">-484</value>
-			<value level="13">-488</value>
+			<value level="1">-692</value>
+			<value level="2">-696</value>
+			<value level="3">-700</value>
+			<value level="4">-704</value>
+			<value level="5">-707</value>
+			<value level="6">-709</value>
+			<value level="7">-712</value>
+			<value level="8">-712</value>
+			<value level="9">-712</value>
+			<value level="10">-712</value>
+			<value level="11">-712</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -2144,8 +2093,6 @@
 					<value level="9">40673</value>
 					<value level="10">42657</value>
 					<value level="11">44641</value>
-					<value level="12">46744</value>
-					<value level="13">48847</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -2153,9 +2100,14 @@
 		</effects>
 	</skill>
 	<skill id="19449" toLevel="1" name="Vanguard of Baylor">
-		<!-- Recovers $s1 CP and enhanced Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills and Seal Mesmerizing skills (Lv. 4 or higher). Immune to Pull. -->
+		<!-- Recovers 5% CP and enhanced Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills and Seal Mesmerizing skills (Lv. 4 or higher). Immune to Pull. -->
 		<icon>icon.skill19437</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>687</effectPoint>
+		<mpConsume>140</mpConsume>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>

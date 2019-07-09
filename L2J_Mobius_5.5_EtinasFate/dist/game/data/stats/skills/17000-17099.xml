@@ -45,7 +45,7 @@
 	<skill id="17012" toLevel="1" name="Blessed Armor Appearance Stone (D-grade) (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17013" toLevel="1" name="Emerald Weapon Appearance Stone: Sword (15-day)">
+	<skill id="17013" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Sword (15-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17014" toLevel="1" name="Emerald Weapon Appearance Stone: Dagger (15-day)">
@@ -72,13 +72,13 @@
 	<skill id="17021" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17022" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt (15-day)">
+	<skill id="17022" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Staff (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17023" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt (15-day)">
+	<skill id="17023" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Staff (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17024" toLevel="1" name="Emerald Weapon Appearance Stone: Dualsword (15-day)">
+	<skill id="17024" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Sword (15-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17025" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Dagger (15-day)">
@@ -93,7 +93,7 @@
 	<skill id="17028" toLevel="1" name="Emerald Weapon Appearance Stone: Sigil (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17029" toLevel="1" name="Emerald Weapon Appearance Stone: Sword">
+	<skill id="17029" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17030" toLevel="1" name="Emerald Weapon Appearance Stone: Dagger">
@@ -120,13 +120,13 @@
 	<skill id="17037" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17038" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt">
+	<skill id="17038" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17039" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt">
+	<skill id="17039" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17040" toLevel="1" name="Emerald Weapon Appearance Stone: Dualsword">
+	<skill id="17040" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17041" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Dagger">
@@ -174,7 +174,6 @@
 		<!-- Return to Gainak. -->
 		<itemConsumeId>37019</itemConsumeId> <!-- Scroll of Escape: Gainak -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -228,7 +227,6 @@
 		<!-- Return to Land of Chaos -->
 		<itemConsumeId>37018</itemConsumeId> <!-- Scroll of Escape: Land of Chaos -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -447,7 +445,7 @@
 		</effects>
 	</skill>
 	<skill id="17082" toLevel="1" name="Mentor's Prevailing Sonata">
-		<!-- With your Mentor's help, your Max HP +$s1, P. Atk. +$s2, M. Atk. +$s3, and magic cancel rate -$s4. A chance to add $s5 Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
+		<!-- With your Mentor's help, your Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -461,7 +459,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>
@@ -503,8 +501,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17083" toLevel="1" name="Mentor's Daring Sonata">
-		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, Movement Speed +$s3, Damage Reflection +$s4, and Skill Cooldown -$s5. The buff disappears when the Mentee contract ends. -->
+	<skill id="17083" toLevel="1" name="Daring Sonata - Mentor">
+		<!-- With your Mentor's help, your Atk. Spd. +25%, Casting Spd. +25%, Movement Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -518,7 +516,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>
@@ -562,8 +560,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17084" toLevel="1" name="Mentor's Refreshing Sonata">
-		<!-- With your Mentor's help, your HP Recovery +$s1, MP Recovery +$s2, P. Evasion/M. Evasion +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
+	<skill id="17084" toLevel="1" name="Refreshing Sonata - Mentor">
+		<!-- With your Mentor's help, your HP Recovery +75%, MP Recovery +50%, P. Evasion/M. Evasion +5, and Skill MP Consumption -20%. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -577,7 +575,7 @@
 		<abnormalLvl>0</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
 		<effects>
@@ -637,7 +635,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17086" toLevel="1" name="Release Agathion's Seal - Bae Kisung">
+	<skill id="17086" toLevel="1" name="Agathion Summon - Bae Kisung">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>

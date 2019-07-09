@@ -2068,7 +2068,6 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<hitTime>2500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17139</itemConsumeId> <!-- Transformation Scroll: Anakim -->
@@ -2100,7 +2099,6 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<hitTime>2500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17140</itemConsumeId> <!-- Transformation Scroll: Zaken -->
@@ -3554,7 +3552,7 @@
 		</effects>
 	</skill>
 	<skill id="9198" toLevel="1" name="Elixir: Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -3594,7 +3592,7 @@
 		</effects>
 	</skill>
 	<skill id="9199" toLevel="1" name="Elixir: Drum Melody">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>

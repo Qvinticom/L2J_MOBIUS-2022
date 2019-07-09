@@ -177,8 +177,8 @@
 		<!-- Summons a clan member. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill19007</icon>
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
-		<hitTime>15000</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>10000</hitTime>
 		<effectPoint>467</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>-2</effectRange>
@@ -202,13 +202,13 @@
 			<effect name="CallPc" />
 		</effects>
 	</skill>
-	<skill id="19008" toLevel="1" name="Clan Guardian">
+	<skill id="19008" toLevel="1" name="Clan Rebirth">
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/ MP/ CP. Consumes 1000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<hitCancelTime>0</hitCancelTime>
-		<coolTime>200</coolTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<reuseDelay>1800000</reuseDelay>
@@ -239,7 +239,7 @@
 		</effects>
 	</skill>
 	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def/ M. Def +$s3, and HP/ MP Recovery bonus +$s4. This effect is activated only when the clan leader and/ or an elite clan member's online. -->
+		<!-- Clan members' P. Atk. +5%, M. Atk. +6%, P. Def/ M. Def +5%, and HP/ MP Recovery bonus +5. This effect is activated only when the clan leader and/ or an elite clan member's online. -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -368,11 +368,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19013" toLevel="1" name="Clan Un-debuff">
+	<skill id="19013" toLevel="1" name="Clan Purge">
 		<!-- Removes all debuffs from nearby clan members. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
 		<icon>icon.skill19013</icon>
 		<operateType>A1</operateType>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -381,7 +381,7 @@
 		<affectRange>1000</affectRange>
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
@@ -955,6 +955,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
@@ -980,6 +981,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
@@ -1022,7 +1024,7 @@
 		</effects>
 	</skill>
 	<skill id="19037" toLevel="1" name="Cloak of Radiant Light">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +4 and damage received -15%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1073,7 +1075,7 @@
 		</effects>
 	</skill>
 	<skill id="19038" toLevel="1" name="Cold Cloak of Darkness">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +4 and damage received -15%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1118,7 +1120,7 @@
 		</effects>
 	</skill>
 	<skill id="19039" toLevel="1" name="Cloak of Light">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +2 and damage received -5%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1161,7 +1163,7 @@
 		</effects>
 	</skill>
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +2 and damage received -5%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1276,7 +1278,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="19076" toLevel="1" name="Clan Academy Reward"> <!-- TODO: Not Using ? -->
+	<skill id="19076" toLevel="1" name="Clan Academy Reward">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

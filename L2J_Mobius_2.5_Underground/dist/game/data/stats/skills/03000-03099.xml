@@ -121,7 +121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3009" toLevel="8" name="Special Ability: Evasion">
+	<skill id="3009" toLevel="9" name="Special Ability: Evasion">
 		<!-- Increases Evasion by $s1. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
@@ -145,6 +145,7 @@
 			<value level="6">61</value>
 			<value level="7">80</value>
 			<value level="8">80</value>
+			<value level="9">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<effects>
 			<effect name="PhysicalEvasion">
@@ -157,6 +158,7 @@
 					<value level="6">2.28</value>
 					<value level="7">7.5</value>
 					<value level="8">5.31</value>
+					<value level="9">5.31</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1227,6 +1229,15 @@
 	</skill>
 	<skill id="3039" toLevel="7" name="Special Ability: Critical Drain">
 		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">12</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+			<value level="7">0</value>
+		</mpConsume>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-239</value>
@@ -2513,7 +2524,7 @@
 		</effects>
 	</skill>
 	<skill id="3064" toLevel="1" name="Special Ability: Guidance">
-		<!-- Increases Accuracy by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Increases Accuracy by 3.95. Inflicts additional damage by 5% during PvP. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2538,7 +2549,7 @@
 		</effects>
 	</skill>
 	<skill id="3065" toLevel="1" name="Special Ability: Guidance">
-		<!-- Increases Accuracy by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Increases Accuracy by 5.41. Inflicts additional damage by 5% during PvP. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2673,7 +2684,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3069" toLevel="1" name="Special Ability: Rsk. Evasion">
+	<skill id="3069" toLevel="2" name="Special Ability: Rsk. Evasion">
 		<!-- Increases Evasion when in danger. -->
 		<icon>
 			<value level="1">icon.skill0198</value>
@@ -3086,11 +3097,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3126,11 +3132,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3233,11 +3234,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3359,11 +3355,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3549,7 +3540,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3091" toLevel="20" name="Item Skill: Poison (Attack Active)">
+	<skill id="3091" toLevel="15" name="Item Skill: Poison (Attack Active)">
 		<!-- Chance: Momentarily inflicts Poison on the target during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3569,11 +3560,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3602,11 +3588,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3632,11 +3613,6 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -3662,11 +3638,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -3695,11 +3666,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
@@ -3726,11 +3692,6 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -3886,11 +3847,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4015,11 +3971,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>

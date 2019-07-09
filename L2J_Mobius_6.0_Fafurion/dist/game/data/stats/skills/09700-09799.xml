@@ -80,7 +80,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -467,7 +466,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -676,14 +674,14 @@
 	<skill id="9736" toLevel="1" name="Key of Pagans">
 		<!-- Key to opening the doors inside the Pagan Temple. -->
 		<operateType>A1</operateType>
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1867,7 +1865,7 @@
 		</effects>
 	</skill>
 	<skill id="9757" toLevel="1" name="Horn Melody (Battleground)">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1909,7 +1907,7 @@
 		</effects>
 	</skill>
 	<skill id="9758" toLevel="1" name="Drum Melody (Battleground)">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2000,7 +1998,7 @@
 		</effects>
 	</skill>
 	<skill id="9760" toLevel="1" name="Pipe Organ Melody (Battleground)">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2046,7 +2044,7 @@
 		</effects>
 	</skill>
 	<skill id="9761" toLevel="1" name="Guitar Melody (Battleground)">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, Speed +15, and Skill MP Consumption -10%. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2655,10 +2653,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9781" toLevel="1" name="Mysterious Box">
+	<skill id="9781" toLevel="2" name="Mysterious Box">
 		<!-- Mysterious box. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9782" toLevel="1" name="Release Agathion's Seal - Jr. Cocoring">
 		<!-- Releases Agathion's seal. -->
@@ -2670,7 +2667,6 @@
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9784" toLevel="1" name="Jr. Cocoring's Gift">
 		<!-- Vitality is replenished in peace zones. -->
@@ -2789,54 +2785,45 @@
 	<skill id="9791" toLevel="1" name="Golden Chest">
 		<!-- Golden Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9792" toLevel="1" name="Luminous Golden Chest">
 		<!-- Luminous Golden Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9793" toLevel="2" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9794" toLevel="3" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9795" toLevel="4" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9796" toLevel="5" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9797" toLevel="1" name="Hero's Treasure Chest">
 		<!-- Hero's Treasure Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9798" toLevel="1" name="Hair Accessory Pack">
 		<!-- Hair Accessory Pack. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9799" toLevel="1" name="Pendant Pack">
 		<!-- Pendant Pack. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 </list>

@@ -4290,7 +4290,6 @@
 		</effects>
 	</skill>
 	<skill id="4671" toLevel="1" name="Teleport">
-		<castRange>1500</castRange>
 		<effectRange>2000</effectRange>
 		<magicLvl>40</magicLvl>
 		<operateType>A1</operateType>
@@ -5266,7 +5265,7 @@
 			<value level="12">689</value>
 			<value level="13">692</value>
 		</effectPoint>
-		<hitTime>4000</hitTime>
+		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">57</value>

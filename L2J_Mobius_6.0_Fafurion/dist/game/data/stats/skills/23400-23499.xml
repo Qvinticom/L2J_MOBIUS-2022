@@ -1248,7 +1248,6 @@
 		<magicLvl>55</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1980,10 +1979,7 @@
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-		</effectPoint>
+		<effectPoint>-687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -2043,10 +2039,7 @@
 			<value level="2">90</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
-		<effectPoint>
-			<value level="1">687</value>
-			<value level="2">698</value>
-		</effectPoint>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2215,13 +2208,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23485" toLevel="1" name="Unknown Sculptor - Horn Melody">
-		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, P. Def. +$s5. -->
+		<!-- For 20 min., party members' P. Atk. +23%, M. Atk. +88%, P. Def. +35%, P. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2257,13 +2253,16 @@
 		</effects>
 	</skill>
 	<skill id="23486" toLevel="1" name="Unknown Sculptor - Drum Melody">
-		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 20 min., increases party members' P. Critical Rate by 30%, P. Critical Power by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2340,13 +2339,16 @@
 		</effects>
 	</skill>
 	<skill id="23487" toLevel="1" name="Unknown Sculptor - Pipe Organ Melody">
-		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage +$s5 is applied at a certain chance. -->
+		<!-- For 20 min., party members' Max HP +37%, Max MP +62%, Max CP +37%, Vampiric Rage +9% is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2384,13 +2386,16 @@
 		</effects>
 	</skill>
 	<skill id="23488" toLevel="1" name="Unknown Sculptor - Guitar Melody">
-		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4 and All Skill MP Consumption -$s5. -->
+		<!-- For 20 min., party members' Atk. Spd +60%, Casting Spd. +60%, Speed +10 and All Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2446,7 +2451,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2490,7 +2498,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2551,13 +2562,16 @@
 		</conditions>
 	</skill>
 	<skill id="23492" toLevel="1" name="(Horn Melody)">
-		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
+		<!-- For 30 min., party members' P. Atk. +24%, M. Atk. +91%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2593,13 +2607,16 @@
 		</effects>
 	</skill>
 	<skill id="23493" toLevel="1" name="(Horn Melody)">
-		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
+		<!-- For 30 min., party members' P. Atk. +26%, M. Atk. +94%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2635,13 +2652,16 @@
 		</effects>
 	</skill>
 	<skill id="23494" toLevel="1" name="(Drum Melody)">
-		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 30 min., increases party members' P. Critical Rate by 32%, P. Critical Power by 31%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2686,13 +2706,16 @@
 		</effects>
 	</skill>
 	<skill id="23495" toLevel="1" name="(Drum Melody)">
-		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 30 min., increases party members' P. Critical Rate by 34%, P. Critical Power by 32%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2737,13 +2760,16 @@
 		</effects>
 	</skill>
 	<skill id="23496" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, and Vampiric Rage +$s5 is applied at a certain chance. -->
+		<!-- For 30 min., party members' Max HP +39%, Max MP +64%, Max CP +39%, and Vampiric Rage +9% is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2781,13 +2807,16 @@
 		</effects>
 	</skill>
 	<skill id="23497" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, and Vampiric Rage +$s5 is applied at a certain chance. -->
+		<!-- For 30 min., party members' Max HP +41%, Max MP +66%, Max CP +41%, and Vampiric Rage +9% is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2825,13 +2854,16 @@
 		</effects>
 	</skill>
 	<skill id="23498" toLevel="1" name="(Guitar Melody)">
-		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4, and All Skill MP Consumption -$s5. -->
+		<!-- For 30 min., party members' Atk. Spd +61%, Casting Spd. +60%, Speed +15, and All Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2881,13 +2913,16 @@
 		</effects>
 	</skill>
 	<skill id="23499" toLevel="1" name="(Guitar Melody)">
-		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4, and All Skill MP Consumption -$s5. -->
+		<!-- For 30 min., party members' Atk. Spd +62%, Casting Spd. +61%, Speed +20, and All Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>

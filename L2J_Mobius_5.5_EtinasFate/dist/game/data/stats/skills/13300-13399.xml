@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13300" fromLevel="3" toLevel="3" name="Magic One-handed Blunt Special Ability">
+	<skill id="13300" fromLevel="3" toLevel="3" name="One-handed Staff Special Ability">
 		<!-- M. Critical Damage +381 and M. Accuracy +1. -->
 		<icon>icon.weapon_vesper_caster_i00</icon>
 		<operateType>P</operateType>
@@ -18,7 +18,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13301" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13301" fromLevel="3" toLevel="3" name="Two-handed Staff Special Ability">
 		<!-- M. Atk. +44, M. Critical Damage +381, and Casting Spd. +1%. -->
 		<icon>icon.weapon_grangkaz_i00</icon>
 		<operateType>P</operateType>
@@ -40,7 +40,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13302" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13302" fromLevel="3" toLevel="3" name="Two-handed Staff Special Ability">
 		<!-- M. Atk. +44, M. Critical Damage +381, and Casting Spd. +1%. -->
 		<icon>icon.weapon_herencia_i00</icon>
 		<operateType>P</operateType>
@@ -62,7 +62,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13303" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13303" fromLevel="3" toLevel="3" name="Two-handed Staff Special Ability">
 		<!-- M. Atk. +44, M. Critical Damage +381, and Casting Spd. +1%. -->
 		<icon>icon.weapon_rupe_i00</icon>
 		<operateType>P</operateType>
@@ -84,7 +84,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13304" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13304" fromLevel="3" toLevel="3" name="Two-handed Staff Special Ability">
 		<!-- M. Atk. +44, M. Critical Damage +381, and Casting Spd. +1%. -->
 		<icon>icon.weapon_shaelon_i00</icon>
 		<operateType>P</operateType>
@@ -106,7 +106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13305" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13305" fromLevel="3" toLevel="3" name="Two-handed Staff Special Ability">
 		<!-- M. Atk. +44, M. Critical Damage +381, and Casting Spd. +1%. -->
 		<icon>icon.weapon_vesper_singer_i00</icon>
 		<operateType>P</operateType>
@@ -342,7 +342,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -418,7 +418,7 @@
 		</effects>
 	</skill>
 	<skill id="13316" toLevel="1" name="Blessed Valakas' Necklace">
-		<!-- Immediately cancels out Hold effect when used -->
+		<!-- Immediately cancels out Hold effect when used; gives 5-sec. Hold Resistance. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
@@ -428,7 +428,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -512,10 +512,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>41</mpConsume>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>200</hitTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>2</amount>
@@ -540,7 +539,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -860,7 +859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13335" toLevel="1" name="Bestow Fire/Wind/Darkness Armor">
+	<skill id="13335" toLevel="1" name="Bestow Fire/ Wind/ Darkness Armor">
 		<!-- Bestow Fire/ Wind/ Dark Resistance by 120. -->
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
@@ -881,7 +880,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13336" toLevel="1" name="Bestow Water/Earth/Holy Armor">
+	<skill id="13336" toLevel="1" name="Bestow Water/ Earth/ Holy Armor">
 		<!-- Bestow Water/ Earth/ Holy Resistance by 120. -->
 		<icon>icon.skill4333</icon>
 		<operateType>P</operateType>
@@ -952,7 +951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13339" toLevel="5" name="Enchant Heavy Armor Set + 6 (R-grade)">
+	<skill id="13339" toLevel="5" name="Enchant Heavy Armor Set +6 (R-grade)">
 		<!-- Set item is enchanted. P. Def. +$s1, and MP Recovery Bonus +$s2 when standing/ sitting. -->
 		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
@@ -1068,7 +1067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13340" toLevel="5" name="Enchant Light Armor Set + 6 (R-grade)">
+	<skill id="13340" toLevel="5" name="Enchant Light Armor Set +6 (R-grade)">
 		<!-- Set item is enchanted. M. Def. +$s1, P. Evasion +$s2, and Debuff Resistance +$s3. MP Recovery Bonus +$s4 when standing/ sitting. -->
 		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
@@ -1206,7 +1205,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13341" toLevel="5" name="Enchant Robe Set + 6 (R-grade)">
+	<skill id="13341" toLevel="5" name="Enchant Robe Set +6 (R-grade)">
 		<!-- Set item is enchanted. P. Def. +$s1, Weight Limit +$s3, and Skill Cooldown -$s4. MP Recovery Bonus +$s2 when standing/ sitting. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
@@ -1457,7 +1456,7 @@
 			<condition name="OpPeacezone" />
 		</conditions>
 	</skill>
-	<skill id="13349" toLevel="1" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
+	<skill id="13349" toLevel="1" name="Talisman (R-grade) - Damage Reflection Resistance (Active)">
 		<!-- For 30 sec., increases Damage Reflection Resistance by 10 through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>A2</operateType>
@@ -1558,7 +1557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13354" toLevel="1" name="Player Commendation - Talisman - M. Def.">
+	<skill id="13354" toLevel="1" name="PA - Talisman - M. Def.">
 		<!-- Increases M. Def. by 21 when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
@@ -1571,7 +1570,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13355" toLevel="1" name="Player Commendation - Talisman - M. Atk. (Active)">
+	<skill id="13355" toLevel="1" name="PA - Talisman - M. Atk. (Active)">
 		<!-- Increases M. Atk. by 111 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1597,7 +1596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13356" toLevel="1" name="Player Commendation - Talisman - M. Atk.">
+	<skill id="13356" toLevel="1" name="PA - Talisman - M. Atk.">
 		<!-- Increases M. Atk. by 37 when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
@@ -1610,7 +1609,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13357" toLevel="1" name="Player Commendation - Talisman - P. Atk. (Active)">
+	<skill id="13357" toLevel="1" name="PA - Talisman - P. Atk. (Active)">
 		<!-- Increases P. Atk. by 111 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -1635,7 +1634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13358" toLevel="1" name="Player Commendation - Talisman - P. Atk.">
+	<skill id="13358" toLevel="1" name="PA - Talisman - P. Atk.">
 		<!-- Increases P. Atk by 37 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
@@ -1648,7 +1647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13359" toLevel="1" name="Player Commendation - Talisman - P. Def. (Active)">
+	<skill id="13359" toLevel="1" name="PA - Talisman - P. Def. (Active)">
 		<!-- Increases P. Def. by 114 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -1673,7 +1672,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13360" toLevel="1" name="Player Commendation - Talisman - P. Def.">
+	<skill id="13360" toLevel="1" name="PA - Talisman - P. Def.">
 		<!-- Increases P. Def. by 38 when equipped. -->
 		<icon>icon.r85_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
@@ -1686,7 +1685,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13361" toLevel="1" name="Player Commendation - Talisman - Max CP (Active)">
+	<skill id="13361" toLevel="1" name="PA - Talisman - Max CP (Active)">
 		<!-- Increases Max CP by 297 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_cp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1711,7 +1710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13362" toLevel="1" name="Player Commendation - Talisman - Max CP">
+	<skill id="13362" toLevel="1" name="PA - Talisman - Max CP">
 		<!-- Increases Max CP by 99 when equipped. -->
 		<icon>icon.r85_talisman_cp_up_passive</icon>
 		<operateType>P</operateType>
@@ -1724,7 +1723,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13363" toLevel="1" name="Player Commendation - Talisman - Max HP (Active)">
+	<skill id="13363" toLevel="1" name="PA - Talisman - Max HP (Active)">
 		<!-- Increases Max HP by 657 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1749,7 +1748,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13364" toLevel="1" name="Player Commendation - Talisman - Max HP">
+	<skill id="13364" toLevel="1" name="PA - Talisman - Max HP">
 		<!-- Increases Max HP by 219 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
@@ -1762,7 +1761,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13365" toLevel="1" name="Player Commendation - Talisman - Max MP (Active)">
+	<skill id="13365" toLevel="1" name="PA - Talisman - Max MP (Active)">
 		<!-- Increases Max MP by 327 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_mp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1787,7 +1786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13366" toLevel="1" name="Player Commendation - Talisman - Max MP">
+	<skill id="13366" toLevel="1" name="PA - Talisman - Max MP">
 		<!-- Increases Max MP by 119 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
@@ -1800,7 +1799,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13367" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)">
+	<skill id="13367" toLevel="1" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance (Active)">
 		<!-- Momentarily increases Half-kill/ Lethal Strike Resistance by 30 through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>A2</operateType>
@@ -1824,7 +1823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13368" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance">
+	<skill id="13368" toLevel="1" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance">
 		<!-- Increases Half-kill/ Lethal Strike Resistance by 10 when a talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>

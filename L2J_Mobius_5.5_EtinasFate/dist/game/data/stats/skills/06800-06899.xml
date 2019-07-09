@@ -327,7 +327,7 @@
 			<value level="8">79</value>
 		</magicLvl>
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>10000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -381,7 +381,7 @@
 			<value level="8">79</value>
 		</magicLvl>
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>10000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -553,6 +553,7 @@
 		<!-- For 15 sec., Atk. Spd. is decreased by 20%. -->
 		<icon>icon.skill4038</icon>
 		<operateType>A2</operateType>
+		<mpConsume>75</mpConsume>
 		<effectPoint>-507</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -961,7 +962,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>75</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1011,7 +1011,6 @@
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<fanRange>0;0;300;60</fanRange>
 		<targetType>ENEMY</targetType>
@@ -1034,7 +1033,6 @@
 		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1055,7 +1053,6 @@
 		<magicLvl>81</magicLvl>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1069,6 +1066,7 @@
 	</skill>
 	<skill id="6847" toLevel="1" name="Self Heal">
 		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
 		<effectPoint>546</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>81</magicLvl>
@@ -1097,7 +1095,6 @@
 		<magicLvl>82</magicLvl>
 		<mpConsume>100</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1137,7 +1134,6 @@
 		<magicLvl>81</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1159,7 +1155,6 @@
 		<magicLvl>81</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1189,7 +1184,6 @@
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
-		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SLEEP</trait>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1220,7 +1214,6 @@
 		<magicLvl>82</magicLvl>
 		<mpConsume>73</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1240,7 +1233,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>82</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1273,7 +1265,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1303,7 +1294,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1324,7 +1314,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1349,7 +1338,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>75</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1388,7 +1376,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY</targetType>
@@ -1419,7 +1406,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>600</affectRange>
 		<trait>POISON</trait>
@@ -1458,7 +1444,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-10000</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1482,7 +1467,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1503,7 +1487,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>1000</affectRange>
 		<targetType>ENEMY</targetType>
@@ -1558,7 +1541,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1581,7 +1563,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>122</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1634,7 +1615,6 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1657,7 +1637,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<castRange>300</castRange>
@@ -1688,7 +1667,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>2</lvlBonusRate>
 		<affectRange>200</affectRange>
@@ -1715,7 +1693,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1736,7 +1713,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1765,7 +1741,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>78</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>800</affectRange>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1789,7 +1764,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1817,7 +1791,6 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<trait>DERANGEMENT</trait>
@@ -1861,6 +1834,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>80</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -2014,10 +1988,8 @@
 		</effects>
 	</skill>
 	<skill id="6886" toLevel="1" name="Full Recovery">
-		<hitTime>2500</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>900000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>2</isMagic>
@@ -2037,7 +2009,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2056,7 +2027,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>300</affectRange>
 		<targetType>ENEMY</targetType>
@@ -2076,7 +2046,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<fanRange>0;0;300;60</fanRange>
@@ -2094,6 +2063,7 @@
 		<!-- For 10 sec., inflicts bleed and decreases 100 HP every sec. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
+		<mpConsume>123</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2120,7 +2090,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2141,7 +2110,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2164,7 +2132,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2185,7 +2152,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2208,7 +2174,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2229,7 +2194,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -2248,6 +2212,20 @@
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
 		<effectPoint>-100</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>

@@ -249,13 +249,13 @@
 		</effects>
 	</skill>
 	<skill id="11007" toLevel="1" name="Fire Stance">
-		<!-- Increases M. Atk. by $s1 and Fire defense by $s2, and applies Fire to attribute magic. -->
+		<!-- Increases M. Atk. by 20% and Fire defense by 100, and applies Fire to attribute magic. -->
 		<icon>icon.skill10305</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<magicLvl>85</magicLvl>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
@@ -274,12 +274,12 @@
 		</effects>
 	</skill>
 	<skill id="11008" toLevel="1" name="Water Stance">
-		<!-- Decreases Magical Skill Cooldown by $s1 and increases Water defense by $s2, and applies Water to attribute magic. -->
+		<!-- Decreases Magical Skill Cooldown by 5% and increases Water defense by 100, and applies Water to attribute magic. -->
 		<icon>icon.skill10306</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -300,12 +300,12 @@
 		</effects>
 	</skill>
 	<skill id="11009" toLevel="1" name="Wind Stance">
-		<!-- Increases Magical Critical Damage by $s1 and Wind defense by $s2, and applies Wind to attribute magic. -->
+		<!-- Increases Magical Critical Damage by 10% and Wind defense by 100, and applies Wind to attribute magic. -->
 		<icon>icon.skill10307</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -325,12 +325,12 @@
 		</effects>
 	</skill>
 	<skill id="11010" toLevel="1" name="Earth Stance">
-		<!-- Increases Defense by $s1 and Earth defense by $s2, and applies Earth to attribute magic. -->
+		<!-- Increases Defense by 796 and Earth defense by 100, and applies Earth to attribute magic. -->
 		<icon>icon.skill10304</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -1868,8 +1868,8 @@
 			<value level="9">-715</value>
 			<value level="10">-718</value>
 			<value level="11">-721</value>
-			<value level="12">-724</value>
-			<value level="13">-727</value>
+			<value level="12">-721</value>
+			<value level="13">-721</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -1986,8 +1986,8 @@
 			<value level="9">-715</value>
 			<value level="10">-718</value>
 			<value level="11">-721</value>
-			<value level="12">-724</value>
-			<value level="13">-728</value>
+			<value level="12">-721</value>
+			<value level="13">-721</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -2082,7 +2082,7 @@
 		<hitCancelTime>1</hitCancelTime>
 		<isMagic>1</isMagic>
 		<effectPoint>
-			<value level="1">-687</value>
+			<value level="1">-328</value>
 			<value level="2">-692</value>
 			<value level="3">-696</value>
 			<value level="4">-700</value>
@@ -2093,8 +2093,8 @@
 			<value level="9">-715</value>
 			<value level="10">-718</value>
 			<value level="11">-721</value>
-			<value level="12">-724</value>
-			<value level="13">-728</value>
+			<value level="12">-721</value>
+			<value level="13">-721</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -2219,8 +2219,8 @@
 			<value level="9">-715</value>
 			<value level="10">-718</value>
 			<value level="11">-721</value>
-			<value level="12">-724</value>
-			<value level="13">-728</value>
+			<value level="12">-721</value>
+			<value level="13">-721</value>
 		</effectPoint>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="13">11</value>
@@ -2354,14 +2354,14 @@
 		<affectRange>200</affectRange>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>15000</hitTime>
+		<hitTime>10000</hitTime>
 		<reuseDelay>20000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>
 			<value level="1">-696</value>
 			<value level="2">-704</value>
 			<value level="3">-709</value>
-			<value level="4">-709</value>
+			<value level="4">-714</value>
 		</effectPoint>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="4">5</value>
@@ -2423,8 +2423,8 @@
 			<value level="5">-715</value>
 			<value level="6">-719</value>
 			<value level="7">-723</value>
-			<value level="8">-723</value>
-			<value level="9">-723</value>
+			<value level="8">-727</value>
+			<value level="9">-731</value>
 		</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -3572,7 +3572,7 @@
 		<effectPoint>
 			<value level="1">696</value>
 			<value level="2">705</value>
-			<value level="3">714</value>
+			<value level="3">705</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4119,7 +4119,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
@@ -4200,7 +4200,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
@@ -4286,13 +4286,11 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4669,14 +4667,14 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>
-			<value level="1">-700</value>
-			<value level="2">-705</value>
+			<value level="1">-709</value>
+			<value level="2">-709</value>
 			<value level="3">-709</value>
-			<value level="4">-700</value>
-			<value level="5">-705</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
 			<value level="6">-709</value>
-			<value level="7">-709</value>
-			<value level="8">-709</value>
+			<value level="7">0</value>
+			<value level="8">0</value>
 		</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -4691,7 +4689,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11059" toLevel="4" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 4 -->
+	<skill id="11059" toLevel="8" name="Shadow Snare Zone">
 		<!-- Pulls the enemies near you to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
@@ -4702,12 +4700,7 @@
 		<affectRange>200</affectRange>
 		<operateType>A2</operateType>
 		<trait>PULL</trait>
-		<effectPoint>
-			<value level="1">-709</value>
-			<value level="2">0</value>
-			<value level="3">0</value>
-			<value level="4">-709</value>
-		</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -4728,6 +4721,10 @@
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">693700</value>
+					<value level="5">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -4759,7 +4756,7 @@
 			<value level="1">692</value>
 			<value level="2">700</value>
 			<value level="3">707</value>
-			<value level="4">707</value>
+			<value level="4">714</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4895,7 +4892,7 @@
 		</effects>
 	</skill>
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
-		<!-- For $s1, materializes a Mana Armor that reflects $s2 of the damage received, reduces damage received by $s3, and blocks the rest by consuming MP. The skill effect is removed when MP reaches $s4. -->
+		<!-- For 20 sec., materializes a Mana Armor that reflects 10% of the damage received, reduces damage received by 90%, and blocks the rest by consuming MP. The skill effect is removed when MP reaches 0. -->
 		<icon>icon.skill11065</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5814,7 +5811,7 @@
 		</effects>
 	</skill>
 	<skill id="11093" toLevel="1" name="Crystal Form">
-		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for $s1 and rapidly recovers HP and MP. -->
+		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for 10 sec. and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

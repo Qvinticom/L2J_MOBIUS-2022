@@ -1292,7 +1292,6 @@
 		<operateType>A1</operateType>
 		<magicLvl>85</magicLvl>
 		<mpConsume>71</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>1390</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -1355,7 +1354,7 @@
 		</effects>
 	</skill>
 	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
-		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. + $s2 -->
+		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. + $s2; and Bow/Crossbow Resistance + $s3 using his powerful skills. -->
 		<icon>icon.skill11267</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

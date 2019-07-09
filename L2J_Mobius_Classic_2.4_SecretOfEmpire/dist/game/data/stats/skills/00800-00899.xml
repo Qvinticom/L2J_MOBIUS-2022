@@ -183,56 +183,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="814" toLevel="43" name="Full Swing">
+	<skill id="814" toLevel="9" name="Full Swing">
 		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<coolTime>733</coolTime>
 		<effectPoint>
-			<value level="1">-208</value>
-			<value level="2">-213</value>
-			<value level="3">-218</value>
-			<value level="4">-223</value>
-			<value level="5">-228</value>
-			<value level="6">-233</value>
-			<value level="7">-237</value>
-			<value level="8">-242</value>
-			<value level="9">-247</value>
-			<value level="10">-252</value>
-			<value level="11">-257</value>
-			<value level="12">-261</value>
-			<value level="13">-266</value>
-			<value level="14">-271</value>
-			<value level="15">-275</value>
-			<value level="16">-279</value>
-			<value level="17">-284</value>
-			<value level="18">-288</value>
-			<value level="19">-292</value>
-			<value level="20">-296</value>
-			<value level="21">-300</value>
-			<value level="22">-304</value>
-			<value level="23">-307</value>
-			<value level="24">-311</value>
-			<value level="25">-314</value>
-			<value level="26">-317</value>
-			<value level="27">-320</value>
-			<value level="28">-323</value>
-			<value level="29">-326</value>
-			<value level="30">-328</value>
-			<value level="31">-331</value>
-			<value level="32">-333</value>
-			<value level="33">-335</value>
-			<value level="34">-337</value>
-			<value level="35">-338</value>
-			<value level="36">-340</value>
-			<value level="37">-341</value>
-			<value level="38">-342</value>
-			<value level="39">-343</value>
-			<value level="40">-344</value>
-			<value level="41">-345</value>
-			<value level="42">-346</value>
-			<value level="43">-347</value>
+			<value level="1">-169</value>
+			<value level="2">-172</value>
+			<value level="3">-175</value>
+			<value level="4">-178</value>
+			<value level="5">-181</value>
+			<value level="6">-184</value>
+			<value level="7">-187</value>
+			<value level="8">-190</value>
+			<value level="9">-193</value>
 		</effectPoint>
 		<hitTime>1067</hitTime>
 		<magicLvl>
@@ -245,40 +211,6 @@
 			<value level="7">82</value>
 			<value level="8">83</value>
 			<value level="9">84</value>
-			<value level="10">52</value>
-			<value level="11">53</value>
-			<value level="12">54</value>
-			<value level="13">55</value>
-			<value level="14">56</value>
-			<value level="15">57</value>
-			<value level="16">58</value>
-			<value level="17">59</value>
-			<value level="18">60</value>
-			<value level="19">61</value>
-			<value level="20">62</value>
-			<value level="21">63</value>
-			<value level="22">64</value>
-			<value level="23">65</value>
-			<value level="24">66</value>
-			<value level="25">67</value>
-			<value level="26">68</value>
-			<value level="27">69</value>
-			<value level="28">70</value>
-			<value level="29">71</value>
-			<value level="30">72</value>
-			<value level="31">73</value>
-			<value level="32">74</value>
-			<value level="33">75</value>
-			<value level="34">76</value>
-			<value level="35">77</value>
-			<value level="36">78</value>
-			<value level="37">79</value>
-			<value level="38">80</value>
-			<value level="39">81</value>
-			<value level="40">82</value>
-			<value level="41">83</value>
-			<value level="42">84</value>
-			<value level="43">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">70</value>
@@ -290,43 +222,9 @@
 			<value level="7">113</value>
 			<value level="8">120</value>
 			<value level="9">127</value>
-			<value level="10">51</value>
-			<value level="11">52</value>
-			<value level="12">53</value>
-			<value level="13">55</value>
-			<value level="14">56</value>
-			<value level="15">57</value>
-			<value level="16">58</value>
-			<value level="17">60</value>
-			<value level="18">61</value>
-			<value level="19">61</value>
-			<value level="20">62</value>
-			<value level="21">63</value>
-			<value level="22">65</value>
-			<value level="23">66</value>
-			<value level="24">67</value>
-			<value level="25">68</value>
-			<value level="26">69</value>
-			<value level="27">70</value>
-			<value level="28">71</value>
-			<value level="29">72</value>
-			<value level="30">73</value>
-			<value level="31">74</value>
-			<value level="32">75</value>
-			<value level="33">76</value>
-			<value level="34">77</value>
-			<value level="35">78</value>
-			<value level="36">78</value>
-			<value level="37">79</value>
-			<value level="38">80</value>
-			<value level="39">80</value>
-			<value level="40">81</value>
-			<value level="41">82</value>
-			<value level="42">82</value>
-			<value level="43">83</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>11000</reuseDelay>
+		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -352,40 +250,6 @@
 					<value level="7">2771</value>
 					<value level="8">2823</value>
 					<value level="9">2874</value>
-					<value level="10">1433</value>
-					<value level="11">1503</value>
-					<value level="12">1575</value>
-					<value level="13">1649</value>
-					<value level="14">1725</value>
-					<value level="15">1803</value>
-					<value level="16">1882</value>
-					<value level="17">1963</value>
-					<value level="18">2045</value>
-					<value level="19">2129</value>
-					<value level="20">2214</value>
-					<value level="21">2301</value>
-					<value level="22">2388</value>
-					<value level="23">2476</value>
-					<value level="24">2565</value>
-					<value level="25">2655</value>
-					<value level="26">2745</value>
-					<value level="27">2836</value>
-					<value level="28">2927</value>
-					<value level="29">3018</value>
-					<value level="30">3108</value>
-					<value level="31">3198</value>
-					<value level="32">3288</value>
-					<value level="33">3376</value>
-					<value level="34">3464</value>
-					<value level="35">3551</value>
-					<value level="36">3636</value>
-					<value level="37">3720</value>
-					<value level="38">3801</value>
-					<value level="39">3881</value>
-					<value level="40">3959</value>
-					<value level="41">4034</value>
-					<value level="42">4107</value>
-					<value level="43">4176</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -1103,6 +967,7 @@
 			<value level="8">85</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
@@ -1734,12 +1599,12 @@
 	<skill id="845" toLevel="1" name="Outpost Demolition">
 		<!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
 		<icon>icon.skill0247</icon>
-		<castRange>100</castRange>
 		<effectRange>600</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>30</mpConsume>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>

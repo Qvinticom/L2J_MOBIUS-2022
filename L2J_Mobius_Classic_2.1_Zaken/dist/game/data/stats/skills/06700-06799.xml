@@ -41,6 +41,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1033</effectPoint>
 		<operateType>A2</operateType>
+		<mpConsume>83</mpConsume>
 		<abnormalType>STUN</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
@@ -115,6 +116,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
+		<mpConsume>83</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>500</effectRange>
 		<magicLvl>85</magicLvl>
@@ -643,6 +645,7 @@
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>43</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>2000</reuseDelay>
@@ -760,6 +763,7 @@
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
+		<mpConsume>80</mpConsume>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -824,7 +828,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- Dark attribute is weakened -->
+		<!-- Dark attribute is weakened; inflicted with bleed and 200 HP is decreased every second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -866,6 +870,7 @@
 		<!-- Casting Spd. decreases by 90% and Atk. Spd. decreases by 30%. -->
 		<icon>icon.skill1386</icon>
 		<operateType>A2</operateType>
+		<mpConsume>25</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -890,6 +895,7 @@
 	<skill id="6745" toLevel="1" name="Dark Space">
 		<icon>icon.skill1445</icon>
 		<operateType>A2</operateType>
+		<mpConsume>25</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -914,6 +920,7 @@
 		<!-- Dark attribute is weakened. -->
 		<icon>icon.skill1445</icon>
 		<operateType>A2</operateType>
+		<mpConsume>25</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -938,6 +945,7 @@
 	<skill id="6747" toLevel="1" name="Dark Blade">
 		<icon>icon.skill1445</icon>
 		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>150</effectRange>
@@ -968,7 +976,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>33</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -993,7 +1000,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1028,6 +1034,7 @@
 	</skill>
 	<skill id="6751" toLevel="1" name="Blow Attack">
 		<operateType>A1</operateType>
+		<mpConsume>33</mpConsume>
 		<effectPoint>-1000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
@@ -1077,7 +1084,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>77</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DEATH</trait>
@@ -1134,7 +1140,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1154,7 +1159,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>155</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1237,6 +1241,7 @@
 	<skill id="6759" toLevel="1" name="Death Shot">
 		<effectPoint>-897</effectPoint>
 		<operateType>A1</operateType>
+		<mpConsume>79</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1256,7 +1261,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1338,7 +1342,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1376,7 +1379,6 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>900000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<castRange>900</castRange>
@@ -1399,7 +1401,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1411,6 +1412,7 @@
 	</skill>
 	<skill id="6767" toLevel="1" name="Earthquake">
 		<operateType>A1</operateType>
+		<mpConsume>155</mpConsume>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1517,7 +1519,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1604,7 +1605,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<attributeType>DARK</attributeType>
@@ -1661,7 +1661,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>5000</reuseDelay>
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalLvl>1</abnormalLvl>
@@ -1740,7 +1739,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>89</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

@@ -660,7 +660,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17551" toLevel="1" name="Balanced Power">
+	<skill id="17551" toLevel="2" name="Balanced Power">
 		<!-- Increases STR/ INT/ CON/ DEX/ WIT/ MEN by $s1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -700,7 +700,7 @@
 		</effects>
 	</skill>
 	<skill id="17552" toLevel="1" name="Attribute Enchant">
-		<!-- Increases Atk. Spd. by $s1 and Attribute Resistance by $s2. -->
+		<!-- Increases Atk. Spd. by 30 and Attribute Resistance by 30. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1870,7 +1870,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17568" toLevel="1" name="Enchant Attribute Defense">
+	<skill id="17568" toLevel="1" name="Enchant Attribute Resistance">
 		<!-- All attribute resistance +30. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -2048,7 +2048,7 @@
 	<skill id="17581" toLevel="1" name="Squid Appearance Stone: Spear (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17582" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon (30-day)">
+	<skill id="17582" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Staff (30-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17583" toLevel="1" name="Lobster Appearance Stone: Fist Weapon (30-day)">
@@ -2066,7 +2066,7 @@
 	<skill id="17587" toLevel="1" name="Turtle Appearance Stone: Shield (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17588" toLevel="1" name="Blue Mackerel Appearance Stone: Dualsword (30-day)">
+	<skill id="17588" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Sword (30-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17589" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon (30-day)">
@@ -2090,7 +2090,7 @@
 	<skill id="17595" toLevel="1" name="Squid Appearance Stone: Spear">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17596" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon">
+	<skill id="17596" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17597" toLevel="1" name="Lobster Appearance Stone: Fist Weapon">

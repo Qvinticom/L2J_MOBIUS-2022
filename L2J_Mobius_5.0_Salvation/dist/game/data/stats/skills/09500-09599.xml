@@ -205,7 +205,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9509" toLevel="1" name="Scroll: Reputation (Mid-grade)">Â¨
+	<skill id="9509" toLevel="1" name="Scroll: Reputation (Mid-grade)">
 		<itemConsumeId>35755</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -345,7 +345,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9515" toLevel="1" name="Draco's Warrior Hat">
+	<skill id="9515" toLevel="1" name="Draco's Hat: Warrior">
 		<!-- STR +2, DEX +2, CON +2. -->
 		<icon>icon.etc_ev_draco_hair_acc</icon>
 		<operateType>P</operateType>
@@ -511,7 +511,6 @@
 	<skill id="9522" toLevel="1" name="Summon Clan Member">
 		<!-- Summon selected clan member to current location. -->
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>1</effectPoint>
@@ -584,7 +583,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -607,7 +606,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -840,7 +839,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9543" toLevel="1" name="HP Recovery Herb">
+	<skill id="9543" toLevel="1" name="HP Recovery Bonus Herb">
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
@@ -870,7 +869,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9545" toLevel="1" name="Ceremony of Chaos - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- For 7 minutes, P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -912,7 +911,7 @@
 		</effects>
 	</skill>
 	<skill id="9546" toLevel="1" name="Ceremony of Chaos - Drum Melody">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
+		<!-- For 7 minutes, P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1003,7 +1002,7 @@
 		</effects>
 	</skill>
 	<skill id="9547" toLevel="1" name="Ceremony of Chaos - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For 7 minutes, Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1049,7 +1048,7 @@
 		</effects>
 	</skill>
 	<skill id="9548" toLevel="1" name="Ceremony of Chaos - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For 7 minutes, Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1190,8 +1189,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9551" toLevel="1" name="Ceremony of Chaos - Knight's Harmony">
-		<!-- For $s1, P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
+	<skill id="9551" toLevel="1" name="Knight's Harmony - Ceremony of Chaos">
+		<!-- For 7 minutes, P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1240,8 +1239,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9552" toLevel="1" name="Ceremony of Chaos - Warrior's Harmony">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
+	<skill id="9552" toLevel="1" name="Warrior's Harmony - Ceremony of Chaos">
+		<!-- For 7 minutes, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1294,8 +1293,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9553" toLevel="1" name="Ceremony of Chaos - Wizard's Harmony">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+	<skill id="9553" toLevel="1" name="Wizard's Harmony - Ceremony of Chaos">
+		<!-- For 7 minutes, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1602,9 +1601,10 @@
 		</effects>
 	</skill>
 	<skill id="9569" toLevel="1" name="Heavenly P. Atk. Cookie">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
+		<!-- For 1 hour, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1653,9 +1653,10 @@
 		</effects>
 	</skill>
 	<skill id="9570" toLevel="1" name="Heavenly P. Def. Cookie">
-		<!-- For $s1, P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
+		<!-- For 1 hour, P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1700,9 +1701,10 @@
 		</effects>
 	</skill>
 	<skill id="9571" toLevel="1" name="Heavenly Magic Cookie">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1832,7 +1834,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

@@ -4,11 +4,12 @@
 		<!-- Powerful P. Atk. on enemy. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<affectRange>300</affectRange>
 		<castRange>300</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-867</effectPoint>
 		<effectRange>300</effectRange>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>
@@ -59,10 +60,9 @@
 		<icon>icon.skill0005</icon>
 		<abnormalTime>20</abnormalTime>
 		<operateType>A2</operateType>
-		<castRange>1000</castRange>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
-		<hitTime>10000</hitTime> <!-- retail 25000 -->
+		<hitTime>25000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -101,7 +101,7 @@
 		<!-- Powerful P. Atk. on enemy. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
-		<castRange>600</castRange>
+		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
@@ -643,6 +643,8 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="2">61</value>
+					<value level="3">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -650,6 +652,8 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="2">60</value>
+					<value level="3">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -657,6 +661,8 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">15</value>
+					<value level="3">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -803,7 +809,7 @@
 		</effects>
 	</skill>
 	<skill id="15648" toLevel="1" name="Knight's Harmony - Adventurer">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For 60 min., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -851,7 +857,7 @@
 		</effects>
 	</skill>
 	<skill id="15649" toLevel="1" name="Warrior's Harmony - Adventurer">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For 60 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -903,7 +909,7 @@
 		</effects>
 	</skill>
 	<skill id="15650" toLevel="1" name="Wizard's Harmony - Adventurer">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 60 min., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -984,7 +990,7 @@
 		</effects>
 	</skill>
 	<skill id="15651" toLevel="1" name="Prevailing Sonata - Adventurer">
-		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
+		<!-- For 60 min., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1037,7 +1043,7 @@
 		</effects>
 	</skill>
 	<skill id="15652" toLevel="1" name="Daring Sonata - Adventurer">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 60 min., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1092,7 +1098,7 @@
 		</effects>
 	</skill>
 	<skill id="15653" toLevel="1" name="Refreshing Sonata - Adventurer">
-		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 60 min., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1225,11 +1231,11 @@
 		<!-- M. Def. -20%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
-		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
-		<castRange>300</castRange>
 		<affectRange>300</affectRange>
 		<effectRange>300</effectRange>
 		<affectLimit>40-80</affectLimit>

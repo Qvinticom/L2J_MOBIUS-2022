@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="46800" toLevel="6" name="Sayha's Ring">
+		<!-- Speed + $s1, Atk./Casting Spd. + $s2. -->
+		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="46801" toLevel="6" name="Maphr's Ring">
+		<!-- PvP Def. + $s1, P./M. Critical Damage + $s2, Fixed Damage Resistance + $s3, Shield Def. + $s4, Shield Def. Success Rate + $s5, Speed + $s6. -->
+		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
+		<operateType>T</operateType>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="46802" toLevel="6" name="Maphr's Ring">
+		<!-- PvP Def. + $s1, Fixed Damage Resistance + $s2, Received Heal Amount + $s3. -->
+		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
+	</skill>
+</list>

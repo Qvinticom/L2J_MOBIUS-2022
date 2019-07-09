@@ -607,6 +607,13 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>ANCIENTSWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>1</power>
@@ -913,9 +920,10 @@
 		<!-- Creates a poison cloud. Inflicts poison near the enemy, causing loss of 2000 HP per second for 30 sec. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
+		<castRange>500</castRange>
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<magicLvl>99</magicLvl>
@@ -962,7 +970,8 @@
 	<skill id="14337" toLevel="1" name="Earth Wyrm Body Strike">
 		<icon>icon.skill0773</icon>
 		<operateType>A1</operateType>
-		<effectPoint>-100</effectPoint>
+		<castRange>2000</castRange>
+		<effectPoint>-686</effectPoint>
 		<magicLvl>99</magicLvl>
 		<hitTime>10000</hitTime>
 		<fanRange>0;0;2500;600</fanRange>
@@ -978,7 +987,7 @@
 	<skill id="14338" toLevel="1" name="Earth Wyrm Body Strike">
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<magicLvl>99</magicLvl>
 		<affectRange>600</affectRange>
 		<hitTime>10000</hitTime>
@@ -994,7 +1003,7 @@
 	<skill id="14339" toLevel="1" name="Earth Wyrm Body Strike">
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<magicLvl>99</magicLvl>
 		<affectRange>600</affectRange>
 		<hitTime>10000</hitTime>
@@ -1011,6 +1020,9 @@
 		<!-- Creates a poison cloud. Inflicts poison near the enemy, causing loss of 1 HP per second for 30 sec. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>500</castRange>
+		<effectPoint>-1</effectPoint>
 		<hitTime>10000</hitTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1286,6 +1298,13 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Bluff">
 				<chance>80</chance>
@@ -1650,9 +1669,11 @@
 		<!-- Falls into the swamp of darkness. Incurs damage. Moving is impossible and HP is decreased. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>2000</reuseDelay>
 		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<effectRange>600</effectRange>
 		<magicLvl>97</magicLvl>

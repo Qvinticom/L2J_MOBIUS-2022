@@ -226,7 +226,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>DERANGEMENT</trait>
 		<mpConsume>155</mpConsume>
-		<castRange>1300</castRange>
+		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1</effectPoint>
@@ -380,7 +380,7 @@
 		<magicLevel>85</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -2221,7 +2221,7 @@
 		<magicLvl>91</magicLvl>
 		<mpConsume>85</mpConsume>
 		<castRange>1100</castRange>
-		<castRange>1400</castRange>
+		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>1400</effectRange>
@@ -2379,8 +2379,8 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="7" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
 			<effect name="Speed">
@@ -2550,13 +2550,11 @@
 		</effects>
 	</skill>
 	<skill id="10784" toLevel="1" name="Camouflage">
-		<!-- For $s1, blends into the environment and hides. Decreases Speed by $s2. -->
+		<!-- For 30 seconds, blends into the environment and hides. Decreases Speed by 100. -->
 		<icon>icon.skill10784</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1">30</value>
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2884,14 +2882,15 @@
 		</effects>
 	</skill>
 	<skill id="10793" toLevel="1" name="Flash">
-		<!-- Cancels targets of nearby enemies. Increases Speed + $s2 for $s1 and prevents enemies from targeting you. -->
+		<!-- Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. -->
 		<icon>icon.skill10793</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>77</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>689</effectPoint>
+		<effectPoint>-689</effectPoint>
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicLvl>85</magicLvl>

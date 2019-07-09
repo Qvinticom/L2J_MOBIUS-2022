@@ -203,7 +203,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6916" toLevel="1" name="Antharas's Cute Tricks">
+	<skill id="6916" toLevel="1" name="Antharas' Cute Tricks">
 		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -270,7 +270,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>0</magicLvl>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>15000</reuseDelay> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PATIENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -310,6 +309,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-100</effectPoint>
 		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

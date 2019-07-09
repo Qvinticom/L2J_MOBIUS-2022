@@ -43,10 +43,11 @@
 	<skill id="17823" toLevel="5" name="Aquamarine">
 		<!-- $s1 chance of recovering $s2 MP. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="17824" toLevel="5" name="Aquamarine - Mana Drain">
 		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="17888" toLevel="2" name="Ruby">
 		<!-- Damage from Beast Soulshot +$s1. -->
@@ -68,5 +69,7 @@
 	<skill id="17896" toLevel="1" name="Orc Recovery Ban">
 		<!-- No HP recovery. -->
 		<operateType>P</operateType>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
 	</skill>
 </list>

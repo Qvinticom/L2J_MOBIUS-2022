@@ -3817,7 +3817,6 @@
 		</conditions>
 	</skill>
 	<skill id="9055" toLevel="1" name="Golden Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15482</itemConsumeId> <!-- Golden Spice Crate -->
@@ -3847,7 +3846,6 @@
 		</effects>
 	</skill>
 	<skill id="9056" toLevel="1" name="Crystal Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15483</itemConsumeId> <!-- Crystal Spice Compressed Pack -->
@@ -4386,16 +4384,15 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9076" toLevel="1" name="Secret Gate Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15690</itemConsumeId> <!-- Secret Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5099,6 +5096,7 @@
 		<itemConsumeId>17067</itemConsumeId> <!-- Event - Cupid's Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -5130,6 +5128,7 @@
 		<itemConsumeId>17068</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>

@@ -566,7 +566,7 @@
 		</effects>
 	</skill>
 	<skill id="11254" toLevel="4" name="Superior Summon Mastery">
-		<!-- A Servitor can be summoned when summon points are $s1 or lower. INT +$s2 -->
+		<!-- A Servitor can be summoned when summon points are $s1 or lower. INT +$s2; When the 4 Mark Skills are used, the Servitor is linked with the ability of wrath. -->
 		<icon>icon.skill11254</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1312,7 +1312,6 @@
 		<operateType>A1</operateType>
 		<magicLvl>85</magicLvl>
 		<mpConsume>71</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>1390</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -1336,6 +1335,7 @@
 		<!-- Creates a Danger Zone for $s1. The summoned Danger Zone continuously inflicts damage and Hold on nearby enemies. -->
 		<icon>icon.skill11266</icon>
 		<operateType>A1</operateType>
+		<effectPoint>-676</effectPoint>
 		<magicLvl>
 			<value level="1">99</value>
 			<value level="2">101</value>
@@ -1375,7 +1375,7 @@
 		</effects>
 	</skill>
 	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
-		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. +$s2 -->
+		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. +$s2; and Bow/ Crossbow Resistance +$s3 using his powerful skills. -->
 		<icon>icon.skill11267</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2033,10 +2033,11 @@
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>90</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>10000</hitTime>
-		<reuseDelay>300000</reuseDelay>
+		<hitTime>1500</hitTime>
+		<reuseDelay>120000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<magicCriticalRate>5</magicCriticalRate>

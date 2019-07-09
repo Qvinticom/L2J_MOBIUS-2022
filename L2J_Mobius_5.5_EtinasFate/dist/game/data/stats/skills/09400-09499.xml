@@ -1747,7 +1747,7 @@
 			<effect name="DisableTargeting" />
 		</effects>
 	</skill>
-	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflect Resistance">
+	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflection Resistance">
 		<!-- For $s1, Damage Reflection Resistance +$s2. -->
 		<icon>icon.active_damage_shield1</icon>
 		<abnormalLvl>
@@ -1832,8 +1832,8 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
-		<!-- Relies on Tauti's Authority to attack nearby enemies with $s1 power added to P. Atk., inflicting Knock Down. Consumes 4 Spirit Ore. -->
+	<skill id="9460" toLevel="1" name="Frenzied Tauti's Rage">
+		<!-- Relies on Tauti's Authority to attack nearby enemies with 42645 power added to P. Atk., inflicting Knock Down. Consumes 4 Spirit Ore. -->
 		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

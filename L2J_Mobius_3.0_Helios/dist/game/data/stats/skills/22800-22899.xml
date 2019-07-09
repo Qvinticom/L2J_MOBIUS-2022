@@ -874,7 +874,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22859" toLevel="2" name="Roaring Campfire's Warmth">
+	<skill id="22859" toLevel="2" name="Roaring Campfire's Heat">
 		<!-- You can feel the heat of the campfire more closely when seated. HP Recovery Rate + $s1, CP Recovery Rate + $s2, and MP Recovery Rate + $s3. -->
 		<icon>icon.etc_torch_on_i00</icon>
 		<operateType>A2</operateType>
@@ -888,7 +888,6 @@
 		<abnormalTime>25</abnormalTime>
 		<affectRange>200</affectRange>
 		<isMagic>2</isMagic>
-		<castRange>-2</castRange>
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>

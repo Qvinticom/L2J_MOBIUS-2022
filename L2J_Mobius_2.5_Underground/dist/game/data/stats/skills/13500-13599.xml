@@ -1961,8 +1961,10 @@
 		<!-- Increases resistance for all weapons by 3. When equipped with a weapon that has an attribute, the attack attribute increases + 50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 		<effect name="AttackAttribute">
@@ -2011,8 +2013,10 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">

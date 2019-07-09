@@ -4,5 +4,9 @@
 		<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>43200000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 </list>

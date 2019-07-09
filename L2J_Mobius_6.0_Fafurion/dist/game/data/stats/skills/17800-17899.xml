@@ -608,17 +608,17 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17815" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 7.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17816" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 12.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17817" toLevel="1" name="Ruby">
-		<!-- Increases Soulshot damage by $s1. -->
+		<!-- Increases Soulshot damage by 20%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -647,7 +647,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -657,7 +656,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17823" toLevel="6" name="Aquamarine">
+	<skill id="17823" toLevel="10" name="Aquamarine">
 		<!-- Has a $s1 chance to recover $s2 MP when a skill is used. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_aquamarine_i00</value>
@@ -675,7 +674,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="6">
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="10">
 				<!-- Aquamarine -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -688,6 +687,10 @@
 					<value level="4">9</value>
 					<value level="5">15</value>
 					<value level="6">15</value>
+					<value level="7">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
@@ -705,6 +708,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
+					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -717,6 +724,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
+					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -729,6 +740,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
+					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
@@ -788,7 +803,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17825" toLevel="6" name="Emerald">
+	<skill id="17825" toLevel="10" name="Emerald">
 		<!-- Increases CON/ MEN by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_emerald_i00</value>
@@ -812,6 +827,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -823,6 +842,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -834,6 +857,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -845,6 +872,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -856,6 +887,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -867,6 +902,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -878,6 +917,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>LUC</stat>
 			</effect>
@@ -889,6 +932,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
+					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<stat>CHA</stat>
 			</effect>
@@ -967,7 +1014,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>39336</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1044,7 +1090,6 @@
 		</effects>
 	</skill>
 	<skill id="17851" toLevel="1" name="Twilight Completion Pack">
-		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<itemConsumeId>39337</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1789,7 +1834,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17872" toLevel="1" name="Helios Pack">
+	<skill id="17872" toLevel="1" name="Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39345</itemConsumeId>
@@ -1833,7 +1878,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17873" toLevel="1" name="Helios Crafting Pack">
+	<skill id="17873" toLevel="1" name="Amaranthine Crafting Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1887,7 +1932,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17874" toLevel="1" name="Helios Completion Pack">
+	<skill id="17874" toLevel="1" name="Amaranthine Completion Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1941,7 +1986,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17875" toLevel="1" name="+4 Helios Pack">
+	<skill id="17875" toLevel="1" name="+4 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1995,7 +2040,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17876" toLevel="1" name="+5 Helios Pack">
+	<skill id="17876" toLevel="1" name="+5 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2049,7 +2094,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17877" toLevel="1" name="+6 Helios Pack">
+	<skill id="17877" toLevel="1" name="+6 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2103,7 +2148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17878" toLevel="1" name="+7 Helios Pack">
+	<skill id="17878" toLevel="1" name="+7 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2157,7 +2202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17879" toLevel="1" name="+8 Helios Pack">
+	<skill id="17879" toLevel="1" name="+8 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2214,8 +2259,7 @@
 	<skill id="17880" toLevel="1" name="Scroll: 1,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39373</itemConsumeId> <!-- Scroll: 1,000,000 SP -->
@@ -2233,8 +2277,7 @@
 	<skill id="17881" toLevel="1" name="Scroll: 5,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39374</itemConsumeId> <!-- Scroll: 5,000,000 SP -->
@@ -2252,8 +2295,7 @@
 	<skill id="17882" toLevel="1" name="Scroll: 10,000,000 SP">
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39375</itemConsumeId> <!-- Scroll: 10,000,000 SP -->
@@ -2289,17 +2331,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17889" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 7.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17890" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 12.5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17891" toLevel="1" name="Ruby">
-		<!-- Increases Beast Soulshot damage by $s1. -->
+		<!-- Increases Beast Soulshot damage by 20%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2334,11 +2376,12 @@
 		<!-- For 60 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%, and Wind Attack/ Resistance +20. Skill Cooldown -10%. Cannot be stacked with Art of Seduction. Effect remains after death. -->
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1</effectPoint>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40056</itemConsumeId> <!-- Mysterious Wind Scroll -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>4</isMagic>

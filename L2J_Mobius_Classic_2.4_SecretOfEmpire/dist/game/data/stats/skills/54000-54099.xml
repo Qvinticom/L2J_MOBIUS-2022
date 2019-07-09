@@ -3,97 +3,107 @@
 	<skill id="54000" toLevel="11" name="Agathion Taurus">
 		<!-- P. Def. +$s1. P. Def. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_tau_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54001" toLevel="11" name="Agathion Leo">
 		<!-- P. Atk. +$s1. P. Atk. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_leo_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54002" toLevel="11" name="Agathion Scorpio">
 		<!-- P. Critical Rate +$s1. P. Critical Rate increases when Agathion is upgraded. -->
 		<icon>icon.agathion_sco_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54003" toLevel="11" name="Agathion Sagittarius">
 		<!-- Atk. Spd. +$s1. Atk. Spd. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_sag_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54004" toLevel="11" name="Agathion Virgo">
 		<!-- M. Def. +$s1. M. Def. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_virgo_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54005" toLevel="11" name="Agathion Aquarius">
 		<!-- M. Atk. +$s1. M. Atk. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_aqu_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54006" toLevel="11" name="Agathion Capricorn">
 		<!-- M. Critical Rate +$s1. M. Critical Rate increases when Agathion is upgraded. -->
 		<icon>icon.agathion_capr_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54007" toLevel="11" name="Agathion Libra">
 		<!-- Casting Spd. +$s1. M. Casting Spd. increases when Agathion is upgraded. -->
 		<icon>icon.agathion_lib_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54008" toLevel="11" name="Agathion Gemini">
 		<!-- XP/ SP acqusition from Sayha Grace +$s1. Effect of Sayha Grace increases when Agathion is upgraded. -->
 		<icon>icon.agathion_gem_star_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54009" toLevel="1" name="Agathion - Taurus">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54010" toLevel="1" name="Agathion - Leo">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54011" toLevel="1" name="Agathion - Scorpio">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54012" toLevel="1" name="Agathion - Sagittarius">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54013" toLevel="1" name="Agathion - Virgo">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54014" toLevel="1" name="Agathion - Aquarius">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54015" toLevel="1" name="Agathion - Capricorn">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54016" toLevel="1" name="Agathion - Libra">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54017" toLevel="1" name="Agathion - Gemini">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54018" toLevel="1" name="Seal Agathion">
 		<!-- Dismiss a summoned Agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54019" toLevel="2" name="Savior's Earring">
 		<!-- Acquired XP/ SP +2%, Max MP +20. -->
@@ -101,12 +111,12 @@
 			<value level="1">icon.r2_earring_i00</value>
 			<value level="2">icon.r2_earring_i01</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54020" toLevel="1" name="Bracelet of Power">
 		<!-- HP/ MP Recovery +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
 		<icon>icon.ertheia_bracelet_i01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54021" toLevel="15" name="Talisman of Authority Lv. 1">
 		<!-- By the energy of Power P./ M. Def. +13, Max HP +6%, Max MP +2%, P./ M. Atk. +2%. -->
@@ -127,7 +137,7 @@
 			<value level="14">icon.sayhas_talisman_pvp_Lv4</value>
 			<value level="15">icon.sayhas_talisman_pvp_lv5</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54022" toLevel="2" name="Power of Shunaiman">
 		<!-- By the power of Shunaiman Stun/ Mental attack +5%, Damage Reflection Resistance +10%. -->
@@ -136,36 +146,40 @@
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
 		</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="54023" toLevel="5" name="Water Attack Defense">
 		<!-- Water Attack Defense +20. -->
 		<icon>icon.elemental_necklace_water_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54024" toLevel="5" name="Fire Attack Defense">
 		<!-- Fire Attack Defense +20. -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54025" toLevel="5" name="Wind Attack Defense">
 		<!-- Wind Attack Defense +20. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54026" toLevel="5" name="Earth Attack Defense">
 		<!-- Earth Attack Defense +20. -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54027" toLevel="5" name="Attribute XP Increase">
 		<!-- Acquired attribute XP +3%. -->
 		<icon>icon.skill_transform_s_attack</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54028" toLevel="1" name="Spirit's Blessing">
 		<!-- For 20 min., Acquired attribute XP +20%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54029" toLevel="4" name="Venir's Blessing Lv. 1">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +$s1. -->
@@ -175,60 +189,69 @@
 			<value level="3">icon.etc_all_stat_talisman_i02</value>
 			<value level="4">icon.etc_all_stat_talisman_i02</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54030" toLevel="11" name="Ignis' Necklace">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54031" toLevel="11" name="Nebula's Necklace">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_water_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54032" toLevel="11" name="Procella's Necklace">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54033" toLevel="11" name="Petram's Necklace">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54034" toLevel="10" name="Anakim's Power">
 		<!-- When using the Recharge skill, MP Recovery Bonus +5, M. Atk. +1%. -->
 		<icon>icon.etc_water_rune_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54035" toLevel="10" name="Lilith's Power">
 		<!-- Received Healing +1%, P. Atk. +1%. -->
 		<icon>icon.etc_fire_rune_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54036" toLevel="5" name="Anakim Recovery">
 		<!-- Recovers 75 MP when skills are used. -->
 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54037" toLevel="5" name="Lilith Recovery">
 		<!-- Restores 100 HP when striking. -->
 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54038" toLevel="1" name="Sayha's Cloak">
-		<!-- Max HP/ MP +$s1. -->
+		<!-- Max HP/ MP +3%. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54039" toLevel="10" name="Sayha's Cloak +1">
 		<!-- Max HP/ MP +$s1. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="54040" toLevel="1" name="Sayha�s Blink">
+	<skill id="54040" toLevel="1" name="Sayha's Blink">
 		<!-- Cancels target and teleports to the back. -->
 		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>100</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>120000</reuseDelay>
+		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="54041" toLevel="4" name="Frintezza's Necklace">
 		<!-- Sleep Resistance/ Atk. Rate +10%, Paralysis Resistance/ Atk. Rate +5%, Damage Reflection Resistance +2%, Skill Cooldown -2%. -->
@@ -238,11 +261,15 @@
 			<value level="3">icon.accessory_necklace_of_frintessa_i04</value>
 			<value level="4">icon.accessory_necklace_of_frintessa_i05</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="54042" toLevel="1" name="Immortal Frintezza's Necklace - Special Ability">
-		<!-- Nearby enemies' P./ M. Skill Cooldown -$s2 for $s1 -->
+		<!-- Nearby enemies' P./ M. Skill Cooldown -100% for 2 min. -->
 		<icon>icon.accessory_necklace_of_frintessa_i05</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>4000</hitTime>
+		<reuseDelay>120000</reuseDelay>
+		<effectPoint>-666</effectPoint>
 	</skill>
 </list>

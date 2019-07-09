@@ -326,7 +326,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13817" toLevel="1" name="Kelbim's Dual Dagger">
+	<skill id="13817" toLevel="2" name="Kelbim's Dual Dagger">
 		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_dual_dagger_i01</value>
@@ -376,7 +376,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13818" toLevel="1" name="Kelbim's Bow">
+	<skill id="13818" toLevel="2" name="Kelbim's Bow">
 		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_bow_i01</value>
@@ -426,7 +426,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13819" toLevel="1" name="Kelbim's Crossbow">
+	<skill id="13819" toLevel="2" name="Kelbim's Crossbow">
 		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_crossbow_i01</value>
@@ -477,7 +477,7 @@
 		</effects>
 	</skill>
 	<skill id="13820" toLevel="1" name="Spirit of Kelbim">
-		<!-- Ignores the target's CP and inflicts $s1 power at a fixed rate. Consumes 4 Spirit Ore. -->
+		<!-- Ignores the target's CP and inflicts 6903 power at a fixed rate. Consumes 4 Spirit Ore. -->
 		<icon>icon.kelbim_weapon_cutter_high</icon>
 		<operateType>A1</operateType>
 		<mpConsume>279</mpConsume>
@@ -1531,7 +1531,6 @@
 		<!-- Can obtain 2 Sheep Bait Coupons when using the skill.(Only once a day) -->
 		<icon>branchsys2.action5016</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="13850" toLevel="1" name="Sheep Hat - Physical">
 		<!-- STR +3, P. Atk. +3% -->

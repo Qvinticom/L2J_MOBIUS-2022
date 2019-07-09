@@ -187,7 +187,7 @@
 		</effects>
 	</skill>
 	<skill id="8403" toLevel="1" name="Elegia Heavy Armor Set">
-		<!-- STR+3, CON-2.P. Atk. increases by 6.59% when equipped -->
+		<!-- STR+3, CON-2.P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/ Hold/ Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/ Water/ Wind/ Earth Resistance increases by 5; Restores HP by using some of the damage inflicted upon the enemy with a certain probability. Can equip a cloak. -->
 		<icon>icon.armor_t97_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -834,7 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="8412" toLevel="1" name="Elegia Heavy Armor Set - PvP">
-		<!-- STR+3, CON-2. P. Atk. increases by 6.59% when equipped -->
+		<!-- STR+3, CON-2. P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/ Hold/ Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/ Water/ Wind/ Earth Resistance increases by 5; Restores HP by using some of the damage inflicted upon the enemy with a certain probability. During PvP, incurred damage decreases and all of the attacker's speeds decrease at a fixed rate. Can equip a cloak. -->
 		<icon>icon.armor_t97_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -2107,7 +2107,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8461" toLevel="3" name="Enchant Heavy Armor (S-grade)">
+	<skill id="8461" toLevel="5" name="Enchant Heavy Armor (S-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLvl>1</magicLvl>
@@ -2121,6 +2121,8 @@
 					<value level="1">32</value>
 					<value level="2">35</value>
 					<value level="3">37</value>
+					<value level="4">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</value>
 			</effect>
 			<effect name="StatByMoveType">
@@ -2130,6 +2132,8 @@
 					<value level="1">32</value>
 					<value level="2">35</value>
 					<value level="3">37</value>
+					<value level="4">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</value>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -2137,6 +2141,8 @@
 					<value level="1">70</value>
 					<value level="2">80</value>
 					<value level="3">90</value>
+					<value level="4">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2145,7 +2151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8462" toLevel="3" name="Enchant Light Armor (S-grade)">
+	<skill id="8462" toLevel="5" name="Enchant Light Armor (S-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLvl>1</magicLvl>
@@ -2157,6 +2163,8 @@
 					<value level="1">39</value>
 					<value level="2">49</value>
 					<value level="3">59</value>
+					<value level="4">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2168,6 +2176,8 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
+					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2176,7 +2186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8463" toLevel="3" name="Enchant Robe (S-grade)">
+	<skill id="8463" toLevel="5" name="Enchant Robe (S-grade)">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLvl>1</magicLvl>
@@ -2195,6 +2205,8 @@
 					<value level="1">10</value>
 					<value level="2">20</value>
 					<value level="3">30</value>
+					<value level="4">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>

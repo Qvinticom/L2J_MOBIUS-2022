@@ -80,7 +80,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -467,7 +466,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -676,14 +674,14 @@
 	<skill id="9736" toLevel="1" name="Key of Pagans">
 		<!-- Key to opening the doors inside the Pagan Temple. -->
 		<operateType>A1</operateType>
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2690,7 +2688,6 @@
 	<skill id="9781" toLevel="1" name="Mysterious Box">
 		<!-- Mysterious box. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9782" toLevel="1" name="Release Agathion's Seal - Jr. Cocoring">
 		<!-- Releases Agathion's seal. -->
@@ -2702,7 +2699,6 @@
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9784" toLevel="1" name="Jr. Cocoring's Gift">
 		<!-- Vitality is replenished in peace zones. -->
@@ -2821,54 +2817,45 @@
 	<skill id="9791" toLevel="1" name="Golden Chest">
 		<!-- Golden Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9792" toLevel="1" name="Luminous Golden Chest">
 		<!-- Luminous Golden Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9793" toLevel="2" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9794" toLevel="3" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9795" toLevel="4" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9796" toLevel="5" name="Agathion's Gift: Jr. Cocoring">
 		<!-- Receive Jr. Cocoring Agathion's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
-		<reuseDelay>-1000</reuseDelay>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9797" toLevel="1" name="Hero's Treasure Chest">
 		<!-- Hero's Treasure Chest. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9798" toLevel="1" name="Hair Accessory Pack">
 		<!-- Hair Accessory Pack. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9799" toLevel="1" name="Pendant Pack">
 		<!-- Pendant Pack. -->
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 </list>

@@ -196,7 +196,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9609" toLevel="1" name="Clan Association - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death. -->
+		<!-- For 30 minutes, P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. Buff remains even after death. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -214,7 +214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9610" toLevel="1" name="Clan Association - Drum Melody">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. Buff remains even after death. -->
+		<!-- For 30 minutes, P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received +50%. A chance to increase Critical Damage when hit. Buff remains even after death. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -232,7 +232,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9611" toLevel="1" name="Clan Association - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff effects persist even after death. -->
+		<!-- For 30 minutes, Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. Buff effects persist even after death. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -250,7 +250,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9612" toLevel="1" name="Clan Association - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. Buff remains even after death. -->
+		<!-- For 30 minutes, Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. Buff remains even after death. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -354,6 +354,7 @@
 		<!-- Obtained XP/ SP +25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
@@ -365,6 +366,7 @@
 		<!-- Obtained XP/ SP +25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
@@ -558,7 +560,7 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1158,7 +1160,7 @@
 		</conditions>
 	</skill>
 	<skill id="9660" toLevel="1" name="Heavenly P. Atk. Cookie (Event)">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. -->
+		<!-- For 1 hour, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1177,7 +1179,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9661" toLevel="1" name="Heavenly P. Def. Cookie (Event)">
-		<!-- For $s1, P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
+		<!-- For 1 hour, P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1196,7 +1198,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9662" toLevel="1" name="Heavenly Magic Cookie (Event)">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>

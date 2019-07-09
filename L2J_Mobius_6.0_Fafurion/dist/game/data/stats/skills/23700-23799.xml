@@ -374,6 +374,16 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-710</effectPoint>
 		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="23742" toLevel="1" name="Mass Trick">
 		<!-- Cancels target of frontal enemies. Eliminates their aggression and prevent them from targeting anything for 3 sec. -->
@@ -443,6 +453,15 @@
 		<coolTime>350</coolTime>
 		<effectPoint>-710</effectPoint>
 		<reuseDelay>7000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="23748" toLevel="1" name="Elemental Destruction">
 		<!-- Inflicts a magic attack imbued with elemental properties. Over-hit. -->

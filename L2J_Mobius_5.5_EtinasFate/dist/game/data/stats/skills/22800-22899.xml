@@ -730,7 +730,7 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 	</skill>
-	<skill id="22853" toLevel="1" name="Torun Gingerbread (1-hour)">
+	<skill id="22853" toLevel="1" name="Torun Gingerbread (1-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -754,7 +754,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22854" toLevel="1" name="Torun Gingerbread (1.5-hour)">
+	<skill id="22854" toLevel="1" name="Torun Gingerbread (1.5-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -778,7 +778,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22855" toLevel="1" name="Torun Gingerbread (2-hour)">
+	<skill id="22855" toLevel="1" name="Torun Gingerbread (2-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -802,7 +802,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22856" toLevel="1" name="Torun Gingerbread (2.5-hour)">
+	<skill id="22856" toLevel="1" name="Torun Gingerbread (2.5-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -826,7 +826,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22857" toLevel="1" name="Torun Gingerbread (3-hour)">
+	<skill id="22857" toLevel="1" name="Torun Gingerbread (3-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -850,7 +850,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22858" toLevel="1" name="Torun Gingerbread (4-hour)">
+	<skill id="22858" toLevel="1" name="Torun Gingerbread (4-hr.)">
 		<!-- Acquired XP +50%. -->
 		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
 		<operateType>A2</operateType>
@@ -888,7 +888,6 @@
 		<abnormalTime>25</abnormalTime>
 		<affectRange>200</affectRange>
 		<isMagic>2</isMagic>
-		<castRange>-2</castRange>
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>

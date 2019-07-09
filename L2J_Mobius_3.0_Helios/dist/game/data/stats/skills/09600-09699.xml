@@ -354,6 +354,7 @@
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
@@ -365,6 +366,7 @@
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9600" toLevel="1" name="Stronghold Siege (50-second)">
+	<skill id="9600" toLevel="1" name="Stronghold Siege (50-sec.)">
 		<!-- Used for Stronghold Siege. -->
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
@@ -196,7 +196,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9609" toLevel="1" name="Clan Association - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death. -->
+		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. Buff remains even after death. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -214,7 +214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9610" toLevel="1" name="Clan Association - Drum Melody">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death. -->
+		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. Buff remains even after death. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -232,7 +232,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9611" toLevel="1" name="Clan Association - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff effects persist even after death. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. Buff effects persist even after death. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -250,7 +250,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9612" toLevel="1" name="Clan Association - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. Buff remains even after death. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. Buff remains even after death. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -354,6 +354,7 @@
 		<!-- Acquired XP/ SP +25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
@@ -365,6 +366,7 @@
 		<!-- Acquired XP/ SP +25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
@@ -558,7 +560,7 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1158,7 +1160,7 @@
 		</conditions>
 	</skill>
 	<skill id="9660" toLevel="1" name="Heavenly P. Atk. Cookie (Event)">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For 1 hr., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1177,7 +1179,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9661" toLevel="1" name="Heavenly P. Def. Cookie (Event)">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For 1 hr., increases P. Def by 45%, M. Def by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1196,7 +1198,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9662" toLevel="1" name="Heavenly Magic Cookie (Event)">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 1 hr., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1404,7 +1406,7 @@
 			<condition name="OpCallPc" />
 		</conditions>
 	</skill>
-	<skill id="9669" toLevel="1" name="CON/MEN Pendant Pack">
+	<skill id="9669" toLevel="1" name="CON/ MEN Pendant Pack">
 		<itemConsumeId>36131</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1427,7 +1429,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9670" toLevel="1" name="INT/WIT Pendant Pack">
+	<skill id="9670" toLevel="1" name="INT/ WIT Pendant Pack">
 		<itemConsumeId>36132</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1450,7 +1452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9671" toLevel="1" name="STR/DEX Pendant Pack">
+	<skill id="9671" toLevel="1" name="STR/ DEX Pendant Pack">
 		<itemConsumeId>36133</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1473,7 +1475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9672" toLevel="1" name="P. Def./P. Evasion Pendant Pack">
+	<skill id="9672" toLevel="1" name="P. Def./ P. Evasion Pendant Pack">
 		<itemConsumeId>36134</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1499,7 +1501,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9673" toLevel="1" name="P. Atk./P. Accuracy Pendant Pack">
+	<skill id="9673" toLevel="1" name="P. Atk./ P. Accuracy Pendant Pack">
 		<itemConsumeId>36135</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>

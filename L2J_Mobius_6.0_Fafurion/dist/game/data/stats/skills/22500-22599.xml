@@ -1030,7 +1030,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22588" toLevel="3" name="High-grade Maphr's Rune">
+	<skill id="22588" toLevel="4" name="High-grade Maphr's Rune">
 		<!-- Drop and Spoil rate, amount of dropped Adena +$s1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
@@ -1042,6 +1042,7 @@
 					<value level="1">30</value>
 					<value level="2">50</value>
 					<value level="3">100</value>
+					<value level="4">100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1050,6 +1051,7 @@
 					<value level="1">30</value>
 					<value level="2">50</value>
 					<value level="3">100</value>
+					<value level="4">100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1058,6 +1060,7 @@
 					<value level="1">30</value>
 					<value level="2">50</value>
 					<value level="3">100</value>
+					<value level="4">100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1065,6 +1068,9 @@
 	</skill>
 	<skill id="22591" toLevel="1" name="Check Item">
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1157,6 +1163,9 @@
 	</skill>
 	<skill id="22592" toLevel="1" name="Check Item">
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1249,6 +1258,9 @@
 	</skill>
 	<skill id="22593" toLevel="1" name="Check Item">
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1341,6 +1353,9 @@
 	</skill>
 	<skill id="22594" toLevel="1" name="Check Item">
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>

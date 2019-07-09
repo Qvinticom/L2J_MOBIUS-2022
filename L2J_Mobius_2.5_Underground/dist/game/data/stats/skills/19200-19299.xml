@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="19203" toLevel="1" name="Ultimate Bullseye">
-		<!-- Decreases target's Bow/Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. -->
+		<!-- Decreases target's Bow/Crossbow Resistance by 60% for 7 seconds. Does not cancel when striking. Consumes 1 Soulstone. -->
 		<icon>icon.skill19203</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -122,7 +122,7 @@
 		</effects>
 	</skill>
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
-		<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by $s1 for $s2. Consumes $s3 Spirit Ores. -->
+		<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by 5 minutes for 25%. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19204</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -171,7 +171,7 @@
 		</effects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
-		<!-- Increases Bow/Crossbow Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. -->
+		<!-- Increases Bow/Crossbow Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
 		<icon>icon.skillsongofarchery</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -200,7 +200,7 @@
 		</effects>
 	</skill>
 	<skill id="19206" toLevel="1" name="Sage's Dance">
-		<!-- Increases M. Def. of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. -->
+		<!-- Increases M. Def. of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
 		<icon>icon.skilldanceofwisdom</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -229,7 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
-		<!-- Increases P. Atk./M. Atk. by $s2 and P. Accuracy/M. Accuracy by $s3 for all party members for $s1. Consumes $s4 Spirit Ores. -->
+		<!-- Increases P. Atk./M. Atk. by 10% and P. Accuracy/M. Accuracy by 4 for all party members for 5 minutes. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill19207</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -270,7 +270,7 @@
 		</effects>
 	</skill>
 	<skill id="19208" toLevel="1" name="Seal of Restriction">
-		<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for $s1 during PvP. Consumes $s2 Spirit Ores. -->
+		<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for 30 seconds during PvP. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19208</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="19209" toLevel="1" name="Divinity of Einhasad">
-		<!-- Decreases Magic Skill MP Consumption by $s2 and has a $s3 to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for $s1. Consumes $s4 Spirit Ores. -->
+		<!-- Decreases Magic Skill MP Consumption by 30% and has a 100% to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for 30 seconds. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19209</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -342,7 +342,7 @@
 		</effects>
 	</skill>
 	<skill id="19210" toLevel="1" name="Summon Tree of Sephiroth">
-		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for $s1 and casts a debuff canceling blessing. Consumes $s2 Spirit Ores. -->
+		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for 30 seconds and casts a debuff canceling blessing. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19210</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -406,7 +406,6 @@
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
@@ -414,7 +413,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19212" toLevel="1" name="Shillien Protection">
-		<!-- Puts a barrier around a party member for $s1. Recovers $s2 CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes $s3 Spirit Ores. -->
+		<!-- Puts a barrier around a party member for 30 seconds. Recovers 100% CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -638,8 +637,8 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SPIRIT_SHARING</abnormalType>
 		<mpConsume>77</mpConsume>
-		<hitTime>1200</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
 		<magicLvl>99</magicLvl>
@@ -648,7 +647,6 @@
 		<effectPoint>418</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<castRange>900</castRange>
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -782,9 +780,9 @@
 		<!-- Teleports to selected party member. Consumes 100 Spirit Ores. -->
 		<icon>icon.skill19223</icon>
 		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
 		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>142</mpConsume>
-		<castRange>-1</castRange>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
@@ -816,7 +814,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
-		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<affectRange>1000</affectRange>
 		<affectLimit>0-0</affectLimit>
@@ -931,7 +928,7 @@
 		</effects>
 	</skill>
 	<skill id="19228" toLevel="1" name="Song of Thief">
-		<!-- Increases Dagger/Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. -->
+		<!-- Increases Dagger/Dual Dagger Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill19228</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

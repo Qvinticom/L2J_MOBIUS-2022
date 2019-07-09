@@ -205,7 +205,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9509" toLevel="1" name="Scroll: Reputation (Mid-grade)">Γ‚Β¨
+	<skill id="9509" toLevel="1" name="Scroll: Reputation (Mid-grade)">
 		<itemConsumeId>35755</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -511,7 +511,6 @@
 	<skill id="9522" toLevel="1" name="Summon Clan Member">
 		<!-- Summon selected clan member to current location. -->
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>1</effectPoint>
@@ -584,7 +583,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -607,7 +606,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1601,6 +1600,7 @@
 		<!-- For 1 hr., P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Speed + 8. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1650,6 +1650,7 @@
 		<!-- For 1 hr., P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1695,6 +1696,7 @@
 		<!-- For 1 hr., M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP and Recovery Bonus + 20%. Magic Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1822,7 +1824,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

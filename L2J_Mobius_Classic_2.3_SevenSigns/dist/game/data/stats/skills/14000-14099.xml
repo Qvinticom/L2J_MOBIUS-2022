@@ -4,6 +4,8 @@
 		<!-- P. Atk. is greatly increased because of rage. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="14001" toLevel="3" name="Cross Slash">
 		<icon>icon.skill0003</icon>
@@ -67,22 +69,18 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14055" toLevel="4" name="Power Shot">
+	<skill id="14055" toLevel="2" name="Power Shot">
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">83</value>
 			<value level="2">84</value>
-			<value level="3">84</value>
-			<value level="4">84</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>700</castRange>
 		<hitTime>3000</hitTime>
 		<effectPoint>
-			<value level="1">-347</value>
-			<value level="2">-349</value>
-			<value level="3">-350</value>
-			<value level="4">-350</value>
+			<value level="1">-150</value>
+			<value level="2">-200</value>
 		</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -90,8 +88,6 @@
 		<magicLvl>
 			<value level="1">92</value>
 			<value level="2">93</value>
-			<value level="3">94</value>
-			<value level="4">95</value>
 		</magicLvl>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -101,8 +97,6 @@
 				<power>
 					<value level="1">12411</value>
 					<value level="2">12977</value>
-					<value level="3">13569</value>
-					<value level="4">7373</value>
 				</power>
 			</effect>
 		</effects>

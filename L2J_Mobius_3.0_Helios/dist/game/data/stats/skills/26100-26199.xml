@@ -53,7 +53,6 @@
 	</skill>
 	<skill id="26108" toLevel="1" name="Returning Hero's Wondrous Cubic">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="26109" toLevel="1" name="Extra Pass: Epic Kamaloka">
 		<operateType>A1</operateType>
@@ -437,7 +436,7 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
-		<effectPoint>-687</effectPoint>
+		<effectPoint>100</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
@@ -571,9 +570,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
-		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>4000</hitTime>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

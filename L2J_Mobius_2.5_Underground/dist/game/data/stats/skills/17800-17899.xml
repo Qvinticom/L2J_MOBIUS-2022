@@ -647,7 +647,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -812,7 +811,6 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
-					<value level="6">3</value>
 				</amount>
 				<stat>LUC</stat>
 			</effect>
@@ -823,7 +821,6 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
-					<value level="6">3</value>
 				</amount>
 				<stat>CHA</stat>
 			</effect>
@@ -877,13 +874,13 @@
 	<skill id="17841" toLevel="1" name="Eternal Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17842" toLevel="1" name="+5 Eternal Pack">
+	<skill id="17842" toLevel="1" name="+ 5 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17843" toLevel="1" name="+6 Eternal Pack">
+	<skill id="17843" toLevel="1" name="+ 6 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17844" toLevel="1" name="+8 Eternal Pack">
+	<skill id="17844" toLevel="1" name="+ 8 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17845" toLevel="1" name="Seraph Crafting Pack">
@@ -892,17 +889,16 @@
 	<skill id="17846" toLevel="1" name="Seraph Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17847" toLevel="1" name="+5 Seraph Pack">
+	<skill id="17847" toLevel="1" name="+ 5 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17848" toLevel="1" name="+6 Seraph Pack">
+	<skill id="17848" toLevel="1" name="+ 6 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17849" toLevel="1" name="+8 Seraph Pack">
+	<skill id="17849" toLevel="1" name="+ 8 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>39336</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -979,7 +975,6 @@
 		</effects>
 	</skill>
 	<skill id="17851" toLevel="1" name="Twilight Completion Pack">
-		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<itemConsumeId>39337</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1055,7 +1050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17852" toLevel="1" name="+5 Twilight Pack">
+	<skill id="17852" toLevel="1" name="+ 5 Twilight Pack">
 		<itemConsumeId>39338</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1129,7 +1124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17853" toLevel="1" name="+6 Twilight Pack">
+	<skill id="17853" toLevel="1" name="+ 6 Twilight Pack">
 		<itemConsumeId>39339</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1203,7 +1198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17854" toLevel="1" name="+8 Twilight Pack">
+	<skill id="17854" toLevel="1" name="+ 8 Twilight Pack">
 		<itemConsumeId>39340</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1289,19 +1284,19 @@
 	<skill id="17858" toLevel="1" name="Apocalypse Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17859" toLevel="1" name="+4 Apocalypse Pack">
+	<skill id="17859" toLevel="1" name="+ 4 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17860" toLevel="1" name="+5 Apocalypse Pack">
+	<skill id="17860" toLevel="1" name="+ 5 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17861" toLevel="1" name="+6 Apocalypse Pack">
+	<skill id="17861" toLevel="1" name="+ 6 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17862" toLevel="1" name="+7 Apocalypse Pack">
+	<skill id="17862" toLevel="1" name="+ 7 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17863" toLevel="1" name="+8 Apocalypse Pack">
+	<skill id="17863" toLevel="1" name="+ 8 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17864" toLevel="1" name="Specter Pack">
@@ -1454,7 +1449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17867" toLevel="1" name="+4 Specter Pack">
+	<skill id="17867" toLevel="1" name="+ 4 Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1508,7 +1503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17868" toLevel="1" name="+5 Specter Pack">
+	<skill id="17868" toLevel="1" name="+ 5 Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1562,7 +1557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17869" toLevel="1" name="+6 Specter Pack">
+	<skill id="17869" toLevel="1" name="+ 6 Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1616,7 +1611,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17870" toLevel="1" name="+7 Specter Pack">
+	<skill id="17870" toLevel="1" name="+ 7 Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1670,7 +1665,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17871" toLevel="1" name="+8 Specter Pack">
+	<skill id="17871" toLevel="1" name="+ 8 Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1724,7 +1719,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17872" toLevel="1" name="Helios Pack">
+	<skill id="17872" toLevel="1" name="Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39345</itemConsumeId>
@@ -1768,7 +1763,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17873" toLevel="1" name="Helios Crafting Pack">
+	<skill id="17873" toLevel="1" name="Amaranthine Crafting Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1822,7 +1817,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17874" toLevel="1" name="Helios Completion Pack">
+	<skill id="17874" toLevel="1" name="Amaranthine Completion Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1876,7 +1871,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17875" toLevel="1" name="+4 Helios Pack">
+	<skill id="17875" toLevel="1" name="+ 4 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1930,7 +1925,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17876" toLevel="1" name="+5 Helios Pack">
+	<skill id="17876" toLevel="1" name="+ 5 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1984,7 +1979,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17877" toLevel="1" name="+6 Helios Pack">
+	<skill id="17877" toLevel="1" name="+ 6 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2038,7 +2033,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17878" toLevel="1" name="+7 Helios Pack">
+	<skill id="17878" toLevel="1" name="+ 7 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2092,7 +2087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17879" toLevel="1" name="+8 Helios Pack">
+	<skill id="17879" toLevel="1" name="+ 8 Amaranthine Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2224,11 +2219,12 @@
 		<!-- For 60 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, P. Atk. + 10%, M. Atk. + 20%, and Wind Attack/Resistance + 20. Skill Cooldown - 10%. Cannot be stacked with Art of Seduction. -->
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1</effectPoint>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40056</itemConsumeId> <!-- Mysterious Wind Scroll -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>4</isMagic>

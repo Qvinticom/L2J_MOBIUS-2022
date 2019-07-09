@@ -968,7 +968,6 @@
 		<effectPoint>-2</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<castRange>-1</castRange>
 		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<targetType>SELF</targetType>
@@ -1022,7 +1021,7 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>-2</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1913,7 +1912,7 @@
 		</effects>
 	</skill>
 	<skill id="14977" toLevel="1" name="Mysterious Focus Buff">
-		<!-- For 5 minutes, increases HP Recovery Bonus by 20%, P.Accuracy by 4, P.Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
+		<!-- For 5 minutes, increases HP Recovery Bonus by 20%, P.'Accuracy by 4, P.'Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2477,7 +2476,7 @@
 		</effects>
 	</skill>
 	<skill id="14995" toLevel="1" name="Master's Blessing - Refreshing Sonata">
-		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.Accuracy by 4, P.Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
+		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.'Accuracy by 4, P.'Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2657,7 +2656,7 @@
 		</effects>
 	</skill>
 	<skill id="14998" toLevel="1" name="Master's Blessing - Refreshing Sonata">
-		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.Accuracy by 4, P.Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
+		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.'Accuracy by 4, P.'Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>

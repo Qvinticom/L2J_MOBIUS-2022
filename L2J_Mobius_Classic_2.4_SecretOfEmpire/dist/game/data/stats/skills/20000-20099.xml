@@ -27,7 +27,8 @@
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>7000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<mpConsume>55</mpConsume>
+		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-347</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>167</coolTime>
@@ -50,7 +51,8 @@
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType>
-		<reuseDelay>7000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<mpConsume>55</mpConsume>
+		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-348</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>167</coolTime>
@@ -70,7 +72,7 @@
 		<abnormalTime>5</abnormalTime>
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>25000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>25000</reuseDelay>
 		<effectPoint>689</effectPoint>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -94,7 +96,7 @@
 		<hitTime>4000</hitTime>
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>1800000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>635</effectPoint>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10606" toLevel="1" name="Gust Movement">
-		<!-- Evades all physical attack skills for $s1 Requires a dagger or dual dagger to be equipped. -->
+		<!-- Evades all physical attack skills for 5 sec. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11862</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -14,7 +14,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>337</effectPoint>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -109,7 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
-		<!-- For $s1, increases Critical Damage by $s2, Deadly Atk. Rate by $s3, Critical Rate/ Damage from the flank and back by $s4 and $s5, respectively. Decreases Critical Damage from the front by $s6. Requires dagger/ dual dagger. -->
+		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 15%, Critical Rate/ Damage from the flank and back by 65% and 50%, respectively. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10878</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -180,7 +180,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10653" toLevel="1" name="Shadow Evasion">
-		<!-- For $s1, becomes immune from all disruption effects and evades Physical and Magic skills at a $s2 probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
+		<!-- For 10 sec., becomes immune from all disruption effects and evades Physical and Magic skills at a 50% probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
 		<icon>icon.skill5242</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -193,7 +193,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>337</effectPoint>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -286,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
-		<!-- For $s1, increases Critical Damage by $s2, Deadly Atk. Rate by $s3, Critical Rate/ Damage from the flank by $s4, Critical Rate from the back by $s5 and Critical Damage by $s6. Decreases Critical Damage from the front by $s7. Requires dagger/ dual dagger. -->
+		<!-- For 5 min., increases Critical Damage by 608, Deadly Atk. Rate by 5%, Critical Rate/ Damage from the flank by 30%, Critical Rate from the back by 50% and Critical Damage by 65%. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10656</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

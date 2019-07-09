@@ -9,7 +9,7 @@
 		<itemConsumeId>40051</itemConsumeId> <!-- Scroll: 100,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -29,7 +29,7 @@
 		<itemConsumeId>40052</itemConsumeId> <!-- Scroll: 1,000,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -49,7 +49,7 @@
 		<itemConsumeId>40053</itemConsumeId> <!-- Scroll: 10,000,000 SP -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -217,7 +217,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18126" toLevel="2" name="Freya's Frozen Scroll">
-		<!-- Vitality +$s1, and XP/SP acquisition +$s2 while hunting monsters. Remains after death. Duration is 10 min. Cooldown is 10 min. Cannot be used together with ?reya's Scroll of Storm? -->
+		<!-- Vitality +$s1, and XP/SP acquisition +$s2 while hunting monsters. Remains after death. Duration is 10 min. Cooldown is 10 min. Cannot be used together with 'Freya's Scroll of Storm'. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -268,7 +268,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18130" toLevel="1" name="Freya's Frozen Scroll">
-		<!-- Vitality +100%, and XP/SP acquisition +100% while hunting monsters. Remains after death. Duration is 10 min. Cooldown is 10 min. Cannot be used together with ?reya's Scroll of Storm? -->
+		<!-- Vitality +100%, and XP/SP acquisition +100% while hunting monsters. Remains after death. Duration is 10 min. Cooldown is 10 min. Cannot be used together with 'Freya's Scroll of Storm'. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -467,9 +467,6 @@
 		<operateType>A1</operateType>
 		<itemConsumeId>40300</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
 		<effectPoint>867</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
@@ -802,7 +799,7 @@
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<hitTime>1000</hitTime>
+		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>40309</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -854,9 +851,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -951,13 +946,12 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>500</coolTime>
-		<reuseDelay>10800</reuseDelay>
+		<reuseDelay>10800000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -975,6 +969,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

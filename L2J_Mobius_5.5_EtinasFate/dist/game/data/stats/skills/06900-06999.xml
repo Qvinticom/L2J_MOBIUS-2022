@@ -90,6 +90,7 @@
 		<!-- Shows the game master's charming actions. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>6</isMagic>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -101,6 +102,7 @@
 		<!-- Shows the game master's dancing skills. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A1</operateType>
+		<isMagic>6</isMagic>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -112,6 +114,7 @@
 		<!-- Shows the game master's greeting. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A1</operateType>
+		<isMagic>6</isMagic>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -270,7 +273,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>0</magicLvl>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>15000</reuseDelay> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PATIENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -310,6 +312,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-100</effectPoint>
 		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

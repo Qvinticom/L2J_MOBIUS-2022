@@ -4,7 +4,7 @@
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill0001</icon>
 		<castRange>40</castRange>
-		<coolTime>167</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-213</value>
 			<value level="2">-219</value>
@@ -1387,7 +1387,7 @@
 		</effects>
 	</skill>
 	<skill id="13" toLevel="1" name="Summon Siege Golem">
-		<!-- Summons a siege weapon. Requires $s1 C-grade Crystals. -->
+		<!-- Summons a siege weapon. Requires 180 C-grade Crystals. -->
 		<icon>icon.skill0013</icon>
 		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3433,7 +3433,6 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
-		<coolTime>300</coolTime>
 		<effectPoint>
 			<value level="1">-114</value>
 			<value level="2">-117</value>
@@ -3481,7 +3480,7 @@
 			<value level="44">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
-		<hitTime>1790</hitTime>
+		<hitTime>1900</hitTime>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -3527,7 +3526,6 @@
 			<value level="42">98</value>
 			<value level="43">101</value>
 			<value level="44">103</value>
-			<value level="45">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -3576,7 +3574,7 @@
 			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>

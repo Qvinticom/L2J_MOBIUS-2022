@@ -175,7 +175,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3104" toLevel="15" name="Item Skill: Poison">
+	<skill id="3104" toLevel="15" name="Item Skill: Poison (Magic Active)">
 		<!-- Chance: Momentarily inflicts Poison on the target during magic use. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
@@ -194,11 +194,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -228,11 +223,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -259,17 +249,12 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3105" toLevel="15" name="Item Skill: Bleed">
+	<skill id="3105" toLevel="15" name="Item Skill: Bleed (Magic Active)">
 		<!-- Chance: Momentarily inflicts Bleed on the target during magic use. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
@@ -288,11 +273,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -322,11 +302,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -354,11 +329,6 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -464,11 +434,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -504,11 +469,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -582,7 +542,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3111" toLevel="15" name="Item Skill: Slow">
+	<skill id="3111" toLevel="15" name="Item Skill: Slow (Critical)">
 		<!-- Chance: Momentarily decreases the target's Speed during a critical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -611,11 +571,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -630,7 +585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3112" toLevel="15" name="Item Skill: Winter">
+	<skill id="3112" toLevel="15" name="Item Skill: Winter (Critical)">
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. during a critical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -659,11 +614,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -747,11 +697,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -938,7 +883,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3119" toLevel="15" name="Item Skill: Poison">
+	<skill id="3119" toLevel="15" name="Item Skill: Poison (Critical)">
 		<!-- Chance: Momentarily inflicts Poison on the target during a critical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
@@ -957,11 +902,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -990,11 +930,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1021,17 +956,12 @@
 					<value level="13">87</value>
 					<value level="14">87</value>
 					<value level="15">98</value>
-					<value level="16">98</value>
-					<value level="17">98</value>
-					<value level="18">109</value>
-					<value level="19">109</value>
-					<value level="20">109</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3120" toLevel="15" name="Item Skill: Bleed">
+	<skill id="3120" toLevel="15" name="Item Skill: Bleed (Critical)">
 		<!-- Chance: Momentarily inflicts Bleed on the target during a critical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
@@ -1050,11 +980,6 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-			<value level="20">8</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1083,11 +1008,6 @@
 			<value level="13">87</value>
 			<value level="14">87</value>
 			<value level="15">98</value>
-			<value level="16">98</value>
-			<value level="17">98</value>
-			<value level="18">109</value>
-			<value level="19">109</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1115,11 +1035,6 @@
 					<value level="13">67</value>
 					<value level="14">67</value>
 					<value level="15">67</value>
-					<value level="16">67</value>
-					<value level="17">67</value>
-					<value level="18">67</value>
-					<value level="19">67</value>
-					<value level="20">67</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -1704,11 +1619,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -1970,11 +1880,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -2080,11 +1985,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -2263,11 +2163,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -2373,11 +2268,6 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-			<value level="16">101</value>
-			<value level="17">103</value>
-			<value level="18">105</value>
-			<value level="19">107</value>
-			<value level="20">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -2970,7 +2860,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3143" toLevel="10" name="Item Skill: Kiss of Eva">
+	<skill id="3143" toLevel="10" name="Item Skill: Eva's Kiss">
 		<!-- Active: Increases Lung Capacity temporarily. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3212,7 +3102,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3146" toLevel="1" name="Item Skill: Recall">
+	<skill id="3146" toLevel="1" name="Item Skill: Return">
 		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon>icon.skill3123</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3235,7 +3125,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3147" toLevel="1" name="Item Skill: Recall">
+	<skill id="3147" toLevel="1" name="Item Skill: Quick Return">
 		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon>icon.skill3123</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3408,7 +3298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3150" toLevel="15" name="Item Skill: Charm">
+	<skill id="3150" toLevel="15" name="Item Skill: Charm (Active)">
 		<!-- Active: Decreases the target's urge to attack. Power $s1. -->
 		<icon>icon.skill3123</icon>
 		<castRange>600</castRange>
@@ -3839,7 +3729,7 @@
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
-	<skill id="3156" toLevel="1" name="Item Skill: Firework">
+	<skill id="3156" toLevel="1" name="Item Skill: Firecracker">
 		<!-- Active: Ignites a Firecracker. -->
 		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3852,7 +3742,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3157" toLevel="1" name="Item Skill: Large Firework">
+	<skill id="3157" toLevel="1" name="Item Skill: Large Firecracker">
 		<!-- Active: Ignites a Large Firecracker. -->
 		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3865,7 +3755,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3158" toLevel="1" name="Item Skill: Lesser Celestial Shield">
+	<skill id="3158" toLevel="1" name="Item Skill: Celestial Shield">
 		<!-- Active: Instantly becomes invincible. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -5990,7 +5880,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3187" toLevel="15" name="Item Skill: Slow">
+	<skill id="3187" toLevel="15" name="Item Skill: Slow (Active)">
 		<!-- Active: Momentarily decreases the target's Speed. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -6085,7 +5975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3188" toLevel="15" name="Item Skill: Winter">
+	<skill id="3188" toLevel="15" name="Item Skill: Winter (Active)">
 		<!-- Active: Momentarily decreases the target's Atk. Spd. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -6203,7 +6093,7 @@
 			<value level="10">-657</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1500</hitTime>
+		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -6652,7 +6542,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3195" toLevel="15" name="Item Skill: Poison">
+	<skill id="3195" toLevel="15" name="Item Skill: Poison (Active)">
 		<!-- Active: Momentarily poisons a target. Effect $s1. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>
@@ -6782,7 +6672,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3196" toLevel="15" name="Item Skill: Bleed">
+	<skill id="3196" toLevel="15" name="Item Skill: Bleed (Active)">
 		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>

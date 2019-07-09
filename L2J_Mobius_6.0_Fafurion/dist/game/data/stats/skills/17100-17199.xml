@@ -80,11 +80,9 @@
 	</skill>
 	<skill id="17114" toLevel="1" name="Promise Cube">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17115" toLevel="1" name="Promise Cube Skill">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17116" toLevel="1" name="Promise Cube Pack">
 		<operateType>A1</operateType>
@@ -104,13 +102,12 @@
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
- 	<skill id="17119" toLevel="1" name="Emperor's Vitality Tonic">
+	<skill id="17119" toLevel="1" name="Emperor's Vitality Tonic">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37560</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
  		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -126,12 +123,11 @@
 			</effect>
 		</effects>
  	</skill>
- 	<skill id="17120" toLevel="1" name="Emperor's Vitality Tonic (Medium)">
+	<skill id="17120" toLevel="1" name="Emperor's Vitality Tonic (Medium)">
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37561</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
  		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -147,12 +143,11 @@
 			</effect>
 		</effects>
  	</skill>
- 	<skill id="17121" toLevel="1" name="Emperor's Special Vitality Tonic (3 bars)">
+	<skill id="17121" toLevel="1" name="Emperor's Special Vitality Tonic (3 bars)">
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37562</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
  		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -216,6 +211,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17126" toLevel="24" name="Lucky Box 2">
+		<!-- Happy $s1! You can obtain a card in $s2 h. There are $s3 stages, so you can acquire up to $s4 cards. <Note:> If you're dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -345,6 +341,7 @@
 		<itemConsumeId>37659</itemConsumeId> <!-- Mysterious Healthy Juice (HP/CP) -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -364,11 +361,13 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing... For 2 min., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. x 2. Effect disappears upon logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 min., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. x 2. Effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -404,6 +403,8 @@
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
@@ -431,16 +432,16 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- A deliciously dark flavor surrounds you. For 2 h., STR +2, INT +2, and Attribute Resistance +20. -->
+		<!-- A deliciously dark flavor surrounds you.\nFor 2 h., STR +2, INT +2, and Attribute Resistance +20. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -485,16 +486,16 @@
 		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- An exhilarating thrill of sweet energy. For 2 h., STR +2, INT +2, DEX +2, and WIT +2. -->
+		<!-- An exhilarating thrill of sweet energy.\nFor 2 h., STR +2, INT +2, DEX +2, and WIT +2. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -523,16 +524,16 @@
 		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- Activating shield of self-built perfection. For 2 h., STR +2, INT +2, CON +2, and MEN +2. -->
+		<!-- Activating shield of self-built perfection.\nFor 2 h., STR +2, INT +2, CON +2, and MEN +2. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -570,6 +571,9 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -589,13 +593,12 @@
 		</effects>
 	</skill>
 	<skill id="17160" toLevel="1" name="Summon Friend">
-		<!-- You can summon a selected target. Only possible while in a party. Cooldown is $s1. -->
+		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 min. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>-2</castRange>
 		<effectPoint>1000</effectPoint>
 		<effectRange>-2</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -620,11 +623,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -639,11 +643,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_candy_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -658,11 +663,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_cookie_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -692,49 +698,49 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17166" toLevel="1" name="Knight's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def. by $s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, and Shield Defense Rate/ P. Def. by 30%, and decreases the chance of receiving Physical/ Magic Critical Hit by 50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17167" toLevel="1" name="Warrior's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. There is also a chance to add the Spectral Slash effect to the target. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. There is also a chance to add the Spectral Slash effect to the target. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17168" toLevel="1" name="Wizard's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, and Attack Attribute by $s6. Decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases M. Atk. by 45%, M. Critical Rate by 100%, M. Critical Damage by 10%, Casting Spd. by 15%, and Attack Attribute by 100. Decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17169" toLevel="1" name="Horn Melody- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- The GM is always by your side. For 1 h., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17170" toLevel="1" name="Drum Melody- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- The GM is always by your side. For 1 h., P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17171" toLevel="1" name="Pipe Organ Melody- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For 1 h., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17172" toLevel="1" name="Guitar Melody- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and decreases Skill MP Consumption by $s5. -->
+		<!-- The GM is always by your side. For 1 h., Atk. Spd. +63%, Casting Spd. +61%, and Speed +25, and decreases Skill MP Consumption by 10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -755,21 +761,21 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17175" toLevel="1" name="GM's Blessing - Prevailing Sonata">
-		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17176" toLevel="1" name="Daring Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- The GM is always by your side. For 1 h., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17177" toLevel="1" name="Refreshing Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- The GM is always by your side. For 1 h., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -824,7 +830,6 @@
 		<abnormalTime>3600</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -899,7 +904,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37731</itemConsumeId> <!-- Dandy's Scroll: Challenge -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -926,7 +930,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37729</itemConsumeId> <!-- Dandy's Scroll: Faith -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1001,7 +1004,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37730</itemConsumeId> <!-- Dandy's Scroll: Passion -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1044,7 +1046,7 @@
 		<icon>icon.skill0810</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
-		<reuseDelay>180000</reuseDelay> <!-- 3 minutes -->
+		<reuseDelay>180000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1062,7 +1064,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="17195" toLevel="1" name="Potion of Protection: Stun (Low-grade)">
-		<!-- Use this to increase the defense rate against Stun by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Stun by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37792</itemConsumeId>
@@ -1084,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="17196" toLevel="1" name="Potion of Protection: Hold (Low-grade)">
-		<!-- Use this to increase the defense rate against Hold by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Hold by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37793</itemConsumeId>
@@ -1106,7 +1108,7 @@
 		</effects>
 	</skill>
 	<skill id="17197" toLevel="1" name="Potion of Protection: Bleed (Low-grade)">
-		<!-- Use this to increase the defense rate against Bleed by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Bleed by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37794</itemConsumeId>
@@ -1128,7 +1130,7 @@
 		</effects>
 	</skill>
 	<skill id="17198" toLevel="1" name="Potion of Protection: Paralyze (Low-grade)">
-		<!-- Use this to increase the defense rate against Paralyze by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Paralyze by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37795</itemConsumeId>
@@ -1150,7 +1152,7 @@
 		</effects>
 	</skill>
 	<skill id="17199" toLevel="1" name="Potion of Protection: Mental (Low-grade)">
-		<!-- Use this to increase the defense rate against Mental by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Mental by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37796</itemConsumeId>

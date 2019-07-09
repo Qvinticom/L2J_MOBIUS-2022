@@ -523,6 +523,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1604,7 +1605,7 @@
 		</effects>
 	</skill>
 	<skill id="8558" toLevel="1" name="Ghost Walking">
-		<!-- Infiltrates the battleground like a ghost.For 30 seconds, increases Speed by 33, Evasion by 15, vital point attack rate by 40%, physical skill Evasion Rate by 60%, and Buff-canceling Attack Resistance by 90. -->
+		<!-- Infiltrates the battleground like a ghost.'For 30 seconds, increases Speed by 33, Evasion by 15, vital point attack rate by 40%, physical skill Evasion Rate by 60%, and Buff-canceling Attack Resistance by 90. -->
 		<icon>icon.skill0770</icon>
 		<operateType>A2</operateType>
 		<mpConsume>36</mpConsume>

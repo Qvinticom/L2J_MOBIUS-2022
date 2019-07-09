@@ -185,7 +185,7 @@
 			<value level="3">7</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>6000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2397,7 +2397,6 @@
 	</skill>
 	<skill id="3266" toLevel="1" name="Large Firecracker's Ability">
 		<!-- Can set off large firecrackers. -->
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>19</mpConsume>
@@ -2519,7 +2518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3273" toLevel="3" name="Talisman of Darkness - M. Def.">
+	<skill id="3273" toLevel="3" name="Blue Talisman - P. Def.">
 		<!-- P. Def. +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2616,7 +2615,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3277" toLevel="3" name="White Talisman - M. Def.">
+	<skill id="3277" toLevel="3" name="Blue Talisman - M. Def.">
 		<!-- M. Def. +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2666,7 +2665,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3279" toLevel="3" name="Talisman of Darkness - Max HP">
+	<skill id="3279" toLevel="3" name="Blue Talisman - Max. HP">
 		<!-- Max. HP +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2691,7 +2690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3280" toLevel="3" name="Talisman of Darkness - Max MP">
+	<skill id="3280" toLevel="3" name="Blue Talisman - Max. MP">
 		<!-- Max. MP +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2768,7 +2767,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2800,7 +2799,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-679</effectPoint>
 		<hitTime>3000</hitTime>
 		<castRange>900</castRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2820,13 +2819,13 @@
 		</effects>
 	</skill>
 	<skill id="3285" toLevel="1" name="Grey Talisman - Gravity">
-		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack.  Cooldown - 4 min. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<castRange>600</castRange>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-679</effectPoint>
 		<activateRate>70</activateRate>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2856,7 +2855,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-655</effectPoint>
 		<hitTime>3000</hitTime>
 		<castRange>600</castRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2952,7 +2951,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-679</effectPoint>
 		<hitTime>3000</hitTime>
 		<castRange>900</castRange>
 		<activateRate>70</activateRate>
@@ -2979,7 +2978,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<castRange>600</castRange>
 		<activateRate>70</activateRate>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-679</effectPoint>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3007,12 +3006,13 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>
-		<effectPoint>532</effectPoint>
+		<effectPoint>-655</effectPoint>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>

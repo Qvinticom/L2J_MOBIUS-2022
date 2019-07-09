@@ -19,7 +19,7 @@
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16202" toLevel="5" name="Fatal Strike">
+	<skill id="16202" toLevel="4" name="Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
@@ -45,12 +45,17 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16205" toLevel="5" name="Burst Shot">
+	<skill id="16205" toLevel="4" name="Burst Shot">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
-		<castRange>900</castRange>
+		<castRange>500</castRange>
 		<hitTime>2000</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-150</value>
+			<value level="2">-200</value>
+			<value level="3">-100</value>
+			<value level="4">-100</value>
+		</effectPoint>
 		<coolTime>1000</coolTime>
 	</skill>
 	<skill id="16206" toLevel="4" name="Divine Spike">
@@ -70,12 +75,12 @@
 	<skill id="16207" toLevel="4" name="Dark Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-100</value>
-			<value level="2">-105</value>
+			<value level="1">-150</value>
+			<value level="2">-200</value>
 			<value level="3">-110</value>
 			<value level="4">-115</value>
 		</effectPoint>
@@ -109,7 +114,7 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16210" toLevel="5" name="Wind Spike">
+	<skill id="16210" toLevel="4" name="Wind Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -120,7 +125,6 @@
 			<value level="2">-105</value>
 			<value level="3">-110</value>
 			<value level="4">-115</value>
-			<value level="5">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
@@ -153,7 +157,12 @@
 		<hitTime>2000</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-700</effectPoint>
+		<effectPoint>
+			<value level="1">-300</value>
+			<value level="2">-400</value>
+			<value level="3">-700</value>
+			<value level="4">-700</value>
+		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16214" toLevel="4" name="Fire Buster">
@@ -174,7 +183,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16216" toLevel="5" name="Wind Buster">
+	<skill id="16216" toLevel="4" name="Wind Buster">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -232,7 +241,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16222" toLevel="5" name="Wind Blast">
+	<skill id="16222" toLevel="4" name="Wind Blast">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -242,7 +251,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16223" toLevel="5" name="Earth Blast">
+	<skill id="16223" toLevel="4" name="Earth Blast">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -295,7 +304,7 @@
 		<effectPoint>83</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16228" toLevel="5" name="Wide Stun">
+	<skill id="16228" toLevel="4" name="Wide Stun">
 		<!-- Attacks nearby enemies and stuns them for $s1. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
@@ -335,7 +344,7 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16231" toLevel="5" name="Mass Airbind">
+	<skill id="16231" toLevel="4" name="Mass Airbind">
 		<!-- Throws nearby enemies into the air and binds them for $s1. -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
@@ -349,7 +358,7 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16233" toLevel="5" name="Mass Fear">
+	<skill id="16233" toLevel="4" name="Mass Fear">
 		<!-- Enemy is afflicted with Fear and moving against own will. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>

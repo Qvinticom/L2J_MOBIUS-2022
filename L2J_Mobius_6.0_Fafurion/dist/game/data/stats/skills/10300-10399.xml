@@ -1206,7 +1206,7 @@
 		<castRange>600</castRange>
 		<effectRange>600</effectRange>
 		<hitTime>1500</hitTime>
-		<coolTime>350</coolTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1227,8 +1227,8 @@
 			<value level="5">-193</value>
 			<value level="6">-193</value>
 			<value level="7">-198</value>
-			<value level="8">-113</value>
-			<value level="9">-118</value>
+			<value level="8">-198</value>
+			<value level="9">-198</value>
 		</effectPoint>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1442,7 +1442,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="10332" toLevel="1" name="Duelist Wrath">
-		<!-- Increases P. Atk. by $s2 for $s1 when a dual sword/ dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by $s3. Consumes $s4 Soulstones. -->
+		<!-- Increases P. Atk. by 20% for 60 sec. when a dual sword/ dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by 20%. Consumes 5 Soulstones. -->
 		<icon>icon.skill10332</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1785,6 +1785,8 @@
 			<value level="3">105</value>
 			<value level="3">107</value>
 			<value level="3">109</value>
+			<value level="4">109</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">109</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1793,7 +1795,7 @@
 		<fanRange>0;0;200;900</fanRange>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>s
+		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
 		<staticReuse>true</staticReuse>
@@ -1827,7 +1829,8 @@
 		<!-- A Burning Mechanic Golem is summoned to fight with you. $s1 Crystal (R-grade) consumed. -->
 		<icon>icon.skill10341</icon>
 		<operateType>A1</operateType>
-		<hitTime>15000</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>3500</hitTime>
 		<itemConsumeCount>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1853,7 +1856,8 @@
 			<value level="4">191</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1874,11 +1878,19 @@
 	<skill id="10342" toLevel="1" name="Angry Golem">
 		<!-- A buff that increases P. Atk. and Atk. Spd. is cast on yourself when standard attacks and skill attacks are made. -->
 		<icon>icon.skill10341</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="10343" toLevel="1" name="Angry Golem">
-		<!-- The Burning Mechanic Golem is enraged. P. Atk. +$s1, Atk. Spd. +$s2. -->
+		<!-- The Burning Mechanic Golem is enraged. P. Atk. +30%, Atk. Spd. +30%. -->
 		<icon>icon.skill10341</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>100</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-671</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
 </list>

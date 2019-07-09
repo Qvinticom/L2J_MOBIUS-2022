@@ -21,30 +21,37 @@
 	<skill id="39004" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39005" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39006" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39007" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39008" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39009" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39010" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39011" toLevel="1" name="Facelifting Potion Pack">
 		<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
@@ -130,13 +137,12 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>549</effectPoint>
-		<hitTime>2500</hitTime>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>58</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -159,13 +165,12 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>495</effectPoint>
-		<hitTime>2500</hitTime>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -188,8 +193,8 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>438</effectPoint>
-		<hitTime>2500</hitTime>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -238,13 +243,11 @@
 	<skill id="39020" toLevel="1" name="Scroll: PK (No-grade)">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
-		<coolTime>200</coolTime>
 		<itemConsumeId>49026</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -262,13 +265,11 @@
 	<skill id="39021" toLevel="1" name="Scroll: PK (D-grade)">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
-		<coolTime>200</coolTime>
 		<itemConsumeId>49027</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -286,13 +287,11 @@
 	<skill id="39022" toLevel="1" name="Scroll: PK (C-grade)">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
-		<coolTime>200</coolTime>
 		<itemConsumeId>49028</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -310,13 +309,11 @@
 	<skill id="39023" toLevel="1" name="Scroll: PK (B-grade)">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
-		<coolTime>200</coolTime>
 		<itemConsumeId>49029</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -334,13 +331,11 @@
 	<skill id="39024" toLevel="1" name="Scroll: PK (A-grade)">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
-		<coolTime>200</coolTime>
 		<itemConsumeId>49030</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -362,6 +357,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -482,9 +478,13 @@
 		<!-- For 20 min., acquired XP/ SP +10%, Speed +20. Cooldown - 10 min. Has no effect when Quick Step skill or Speed-increasing potion are used. -->
 		<icon>icon.stone_8_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39042" toLevel="1" name="Spirit Revival">
 		<operateType>A1</operateType>
+		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="39043" toLevel="1" name="Side Effect">
 		<!-- Enlarges the user's head for 10 min. Cooldown - 30 min. -->
@@ -521,10 +521,11 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>PC_BODY</targetType>
@@ -541,7 +542,7 @@
             </effect>
 		</effects>
 	</skill>
-	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat"> <!-- increases XP and SP gain by 5% for 20 minutes -->
+	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat">
 		<!-- For 20 min., acquired XP/ SP +5%. Buff remains after death. -->
 		<icon>icon.skill19226</icon>
  		<!-- increases XP and SP gain by 5% for 20 minutes -->
@@ -563,20 +564,24 @@
 		<!-- Gives Santa appearance. For 1 hr., acquired XP/ SP +10%, Max HP/ MP +10%. Speed +5. Cooldown: 30 min. Buff remains after death. -->
 		<icon>icon.shield_bread_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39047" toLevel="1" name="Fish Stew - Might">
+	<skill id="39047" toLevel="3" name="Fish Stew - Might">
 		<!-- For 20 min. P. Atk. +8%. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49460</itemConsumeId> <!-- Fish Stew: Might -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -590,19 +595,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39048" toLevel="1" name="Fish Stew - Shield">
+	<skill id="39048" toLevel="3" name="Fish Stew - Shield">
 		<!-- For 20 min. P. Def. +8%. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49461</itemConsumeId> <!-- Fish Stew: Shield -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -616,19 +622,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39049" toLevel="1" name="Fish Stew - Magic Barrier">
+	<skill id="39049" toLevel="2" name="Fish Stew - Magic Barrier">
 		<!-- For 20 min. M. Def. +23%. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49462</itemConsumeId> <!-- Fish Stew: Magic Barrier -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -642,19 +649,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39050" toLevel="1" name="Fish Stew - Vampiric Rage">
+	<skill id="39050" toLevel="3" name="Fish Stew - Vampiric Rage">
 		<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49463</itemConsumeId> <!-- Fish Stew: Vampiric Rage -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -668,19 +676,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39051" toLevel="1" name="Fish Stew - Empower">
+	<skill id="39051" toLevel="3" name="Fish Stew - Empower">
 		<!-- For 20 min. M. Atk. +55%. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49464</itemConsumeId> <!-- Fish Stew: Empower -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -697,6 +706,8 @@
 	<skill id="39052" toLevel="1" name="Golden Treasure Chest">
 		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39053" toLevel="1" name="Agathion Teleport: Gludio">
 		<!-- Teleport to Gludio -->
@@ -786,7 +797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39057" toLevel="1" name="Hero Experience Rune">
+	<skill id="39057" toLevel="1" name="Warrior Experience Amulet">
 		<!-- Acquired XP/ SP +20%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -990,6 +1001,8 @@
 	<skill id="39062" toLevel="1" name="Black Mask Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hr. -->
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="39063" toLevel="1" name="Solid Scroll: Enchant Armor (D-grade)">
 		<icon>icon.giant_scrl_of_ench_am_d</icon>
@@ -1024,7 +1037,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1175,7 +1187,6 @@
 		<!-- For 30 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Buff remains after death. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1214,12 +1225,13 @@
 	</skill>
 	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
 		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39076" toLevel="1" name="Fish Stew - Guild's Gratitude">
 		<!-- For 20 min. XP/ SP +10% while hunting. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>1800</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<effects>
@@ -1233,7 +1245,7 @@
 	</skill>
 	<skill id="39077" toLevel="1" name="Teleport: Gludin Harbor">
 		<!-- Teleports to Gludin Harbor. -->
-		<hitTime>1800</hitTime>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>49503</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1259,7 +1271,7 @@
 	</skill>
 	<skill id="39078" toLevel="1" name="Teleport: Giran Harbor">
 		<!-- Teleports to Giran Harbor. -->
-		<hitTime>1800</hitTime>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>49502</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1284,17 +1296,26 @@
 		</effects>
 	</skill>
 	<skill id="39079" toLevel="1" name="Sheep Resurrection">
-		<!-- Ian s Blessing resurrects the dead. Besides, restores 70% of lost experience. -->
+		<!-- Ian's Blessing resurrects the dead. Besides, restores 70% of lost experience. -->
 		<icon>icon.skill11784</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7200000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39080" toLevel="2" name="Sheep�s Benediction">
-		<!-- For 3 hr., M. and P. Atk. +7%, M. and P. Def +10%, HP/ MP/ CP +15%, HP/ MP Recovery Bonus +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Persists through death. When the buff ends, character gets a sheep s present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
+	<skill id="39080" toLevel="2" name="Sheep's Benediction">
+		<!-- For 3 hr., M. and P. Atk. +7%, M. and P. Def +10%, HP/ MP/ CP +15%, HP/ MP Recovery Bonus +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Persists through death. When the buff ends, character gets a sheep's present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
 		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39081" toLevel="1" name="Sheep Gift">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39082" toLevel="1" name="Amulet: Prosperity">
 		<!-- All stats +1. -->
@@ -1329,9 +1350,10 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39083" toLevel="1" name="Receive Ian�s Gift">
+	<skill id="39083" toLevel="1" name="Receive Ian's Gift">
 		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39084" toLevel="1" name="Pirate Trophy Chest">
 		<!-- Double-click to get 2 Special Pirate Fruit. With a bit of luck you may receive Pirate King's Treasure Chest. -->
@@ -1349,6 +1371,8 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1410,14 +1434,22 @@
 	<skill id="39086" toLevel="1" name="King Pirate's Treasure Chest">
 		<icon>icon.card_event_blue_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39087" toLevel="1" name="Captain Pirate Hat Box">
 		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39088" toLevel="1" name="Improved Scroll of Resurrection">
 		<icon>icon.etc_scroll_of_resurrection_i01</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39089" toLevel="1" name="Pirate Healing Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
@@ -1426,43 +1458,59 @@
 	<skill id="39090" toLevel="1" name="Agathion Teleport - Giran Castle">
 		<!-- Teleport to the Town of Giran. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="39091" toLevel="1" name="Agathion Teleport - Dion Castle">
 		<!-- Teleport to Dion -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="39092" toLevel="1" name="Agathion Teleport - Oren Castle">
 		<!-- Teleport to Oren -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="39093" toLevel="1" name="Agathion Teleport - Gludio Castle">
 		<!-- Teleport to Gludio -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="39094" toLevel="1" name="Strength of Aries">
+	<skill id="39094" toLevel="2" name="Strength of Aries">
 		<!-- STR/ INT/ CON/ MEN +1. -->
 		<icon>icon.skill6343_2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="39095" toLevel="1" name="Blessing of Aries">
+	<skill id="39095" toLevel="2" name="Blessing of Aries">
 		<!-- Resistance to mental attacks/ stun/ sleep/ paralysis +5%. -->
 		<icon>icon.skill6366_2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="39096" toLevel="1" name="Agathion Teleport: Giran">
 		<!-- Teleport to the Town of Giran. -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39097" toLevel="1" name="Agathion Teleport: Gludio">
 		<!-- Teleport to Gludio -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39098" toLevel="1" name="Agathion Teleport: Dion">
 		<!-- Teleport to Dion -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39099" toLevel="1" name="Agathion Teleport: Oren">
 		<!-- Teleport to Oren -->
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 </list>

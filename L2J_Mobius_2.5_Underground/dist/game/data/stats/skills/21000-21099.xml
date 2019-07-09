@@ -854,7 +854,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21042" toLevel="1" name="Baguette's Blessing">
+	<skill id="21042" toLevel="1" name="Blessing of Baguette">
 		<!-- Blessing of Baguette. It fills 100% of HP and recovers 50% of MP. -->
 		<icon>icon.skill3123</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2059,7 +2059,6 @@
 		<!-- Summons your friend. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>-2</castRange>
 		<effectPoint>1000</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>10000</hitTime>
@@ -2188,7 +2187,6 @@
 		<icon>BranchSys.icon.br_comfortspirit_hat_a_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
-		<coolTime>600</coolTime>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2242,7 +2240,6 @@
 		<!-- Summons your friend. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>-2</castRange>
 		<effectPoint>1000</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>10000</hitTime>
@@ -2270,7 +2267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21098" toLevel="1" name="Great Adventurer's Soul Power : Endless">
+	<skill id="21098" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
@@ -2308,7 +2305,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21099" toLevel="1" name="Great Warrior's Soul Power: Strength">
+	<skill id="21099" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>BranchSys.icon.br_tiger_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>

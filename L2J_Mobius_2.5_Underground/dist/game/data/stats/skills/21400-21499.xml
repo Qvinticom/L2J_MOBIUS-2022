@@ -11,7 +11,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
-		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
@@ -242,7 +241,6 @@
 		<magicLvl>1</magicLvl>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1138,13 +1136,12 @@
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<coolTime>1000</coolTime>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="21483" toLevel="1" name="Blessed Griffin Egg">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21484" toLevel="1" name="Fancy Fishing Rod">
-		<!-- Increases XP/SP from fishing by $s1. -->
+		<!-- Increases XP/SP from fishing by 50%. -->
 		<icon>icon.weapon_fishing_rod_i04</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>

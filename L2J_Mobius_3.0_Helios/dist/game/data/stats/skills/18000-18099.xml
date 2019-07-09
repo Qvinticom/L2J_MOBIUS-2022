@@ -253,7 +253,7 @@
 		<itemConsumeId>39631</itemConsumeId> <!-- Fortune Pocket - Stage 3 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -264,7 +264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18020" toLevel="2" name="Fortune Pocket - Stage 3">
+	<skill id="18020" toLevel="2" name="Maphr's Pouch">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -313,6 +313,7 @@
 		<itemConsumeId>39632</itemConsumeId> <!-- Fortune Pocket - Stage 4 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -331,7 +332,8 @@
 		<itemConsumeId>39633</itemConsumeId> <!-- Fortune Pocket - Stage 5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<hitTime>200</hitTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -342,7 +344,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18023" toLevel="2" name="Fortune Pocket - Stage 5">
+	<skill id="18023" toLevel="2" name="Maphr's Pouch">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -678,9 +680,6 @@
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>3600</abnormalTime>
 		<operateType>A2</operateType>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
-		<reuseDelay>3600000</reuseDelay>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>

@@ -663,7 +663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26027" fromLevel="2" toLevel="6" name="Elixir of CP (S-grade)">
+	<skill id="26027" fromLevel="2" toLevel="6" name="Elixir of CP (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -710,7 +710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26028" fromLevel="2" toLevel="6" name="Elixir of Life (S-grade)">
+	<skill id="26028" fromLevel="2" toLevel="6" name="Elixir of Life (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -778,7 +778,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay> <!-- Retail value is 600000 -->
+		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1219,7 +1219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26046" toLevel="7" name="XP Rune III (Lv. 1-100+) 200%">
+	<skill id="26046" toLevel="7" name="XP Rune III (Lv. 1-100+) 10%">
 		<!-- Obtained XP + $s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
@@ -1247,7 +1247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26047" toLevel="7" name="SP Rune 200%">
+	<skill id="26047" toLevel="7" name="SP Rune 10%">
 		<!-- SP Acquisition + $s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_1</value>
@@ -1275,7 +1275,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26048" toLevel="5" name="Rune of Crystal (Lv. 5)">
+	<skill id="26048" toLevel="5" name="Rune of Crystal (Lv. 1)">
 		<!-- Decreases your grade penalty by $s1 levels. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_rp_buff_1</value>
@@ -1515,7 +1515,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26067" toLevel="5" name="Quiver of Light">
+	<skill id="26067" toLevel="5" name="Bone Quiver">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1542,7 +1542,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26068" toLevel="10" name="Blessed Spiritshot Large Pack (S-grade)">
+	<skill id="26068" toLevel="10" name="Blessed Spiritshot Pack (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1585,7 +1585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26069" toLevel="10" name="Spiritshot Large Pack (S-grade)">
+	<skill id="26069" toLevel="10" name="Spiritshot Pack (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1628,7 +1628,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26070" toLevel="10" name="Soulshot Large Pack (S-grade)">
+	<skill id="26070" toLevel="10" name="Soulshot Pack (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1671,7 +1671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26071" toLevel="17" name="Wrapped Artisan's Goggles">
+	<skill id="26071" toLevel="17" name="Wrapped Daisy Hairpin">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1710,7 +1710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26072" toLevel="3" name="Wrapped Pet Coupon - Kookaburra">
+	<skill id="26072" toLevel="3" name="Wrapped Pet Coupon - Buffalo">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1735,7 +1735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26073" toLevel="5" name="Bolt of Light Container">
+	<skill id="26073" toLevel="5" name="Bone Bolt Container">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

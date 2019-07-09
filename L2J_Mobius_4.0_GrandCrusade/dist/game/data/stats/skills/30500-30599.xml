@@ -905,6 +905,8 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
+			<value level="6">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>NONE</abnormalType>
@@ -1127,7 +1129,7 @@
 		</effects>
 	</skill>
 	<skill id="30515" toLevel="1" name="Spallation">
-		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for $s1. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 seconds. Damaged if attacked within the sphere. Requires a fist weapon. -->
 		<icon>icon.skill30515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1286,7 +1288,7 @@
 			<value level="10">1568</value>
 			<value level="11">1580</value>
 		</mpConsume>
-		<hitTime>3000</hitTime> <!-- Helios -->
+		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>6</isMagic>
@@ -1467,6 +1469,7 @@
 	<skill id="30521" toLevel="1" name="Damage Up">
 		<!-- Inflicts normal damage x 5. -->
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
@@ -1627,6 +1630,13 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-379</effectPoint>
 		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>-100</amount>

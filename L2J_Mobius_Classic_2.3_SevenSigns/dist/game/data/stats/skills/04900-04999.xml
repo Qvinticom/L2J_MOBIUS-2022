@@ -372,7 +372,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4953" toLevel="1" name="Raid Boss (Lv. 61)">
-		<!-- Queen of all the Fairies who rules the Enchanted Valley for thousands of years. She s capricious and stubborn just like any Queen of Elves would be. She fears the gradual weakening of the Seal of Shilen. -->
+		<!-- Queen of all the Fairies who rules the Enchanted Valley for thousands of years. She's capricious and stubborn just like any Queen of Elves would be. She fears the gradual weakening of the Seal of Shilen. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -413,21 +413,21 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4959" toLevel="1" name="Raid Boss (Lv. 65)">
+	<skill id="4959" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- Once the General Construction Manager in charge of building the Tower of Insolence at command of Emperor Baium, he was executed by the enraged Emperor after numerous construction delays. His lingering spirit became a powerful ghost when the Energy of Life poured out of the Tower when it collapsed. He still wanders near the Tower of Insolence, waiting to take his revenge on the imprisoned Emperor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4960" toLevel="1" name="Raid Boss (Lv. 71)">
+	<skill id="4960" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- This mystic assisted Emperor Baium construct the Tower of Insolence to obtain the secret of eternal life. Evoking the wrath of Einhasad, he was slain by Angels but returned to life thanks to the secret knowledge he already possessed. Now he is working to free Baium. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4961" toLevel="1" name="Raid Boss (Lv. 79)">
+	<skill id="4961" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- The leader of the Angels who guard the Tower of Insolence and Baium, including Fire of Wrath Shuriel. He is directly descended from Einhasad. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -462,14 +462,14 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4966" toLevel="1" name="Raid Boss (Lv. 64)">
+	<skill id="4966" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- Created by Giants who fled Einhasad's rage, this living organism was evolved from the Monster Eye. After the punishment of the Gods ended, Gorgolos turned its vicious teeth on its creators. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4967" toLevel="1" name="Raid Boss (Lv. 66)">
+	<skill id="4967" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- The last Giant hiding deep inside the Giants Cave. Although his body no better than other Lesser Giants, he possesses the secrets of the Ancient Giants' civilization. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -769,6 +769,7 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>77</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>116</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1250</effectRange>
 		<castRange>750</castRange>
@@ -780,6 +781,7 @@
 		<hitTime>2000</hitTime>
 		<magicLvl>77</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>126</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39200" toLevel="1" name="Merlot's Gift">
+		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39201" toLevel="4" name="Dragon's Relic">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39202" toLevel="3" name="+10 Bloody Armor - Heavy Armor Capsule">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39203" toLevel="1" name="Blessed Dragon Shirt Enchant Scroll">
+		<!-- A Dragon Shirt Enchant Scroll. If enchantment to the Blessed Enchant Scroll fails, its enchant level will be reset. -->
+		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39204" toLevel="2" name="Mysterious Weapon Enchant Scroll">
+		<!-- A Mysterious Weapon Enchant Scroll. If enchantment fails, the weapon will be destroyed. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39205" toLevel="1" name="Glowing Dragon's Attribute Potion">
+		<!-- For 30 minutes, Attack Attribute +70, all Defense Attributes +70, and XP/ SP gain +30%. Buff effects persist even after death. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39206" toLevel="1" name="Royal Red Save Ticket Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39231" toLevel="4" name="Master Fisherman's Blessing - 1-hr">
+		<!-- Increases Fishing Success Rate by $s2 for $s1 hour. Buff effect persists through death and cannot be deleted. -->
+		<icon>icon.fishing_zone_ticket</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+</list>

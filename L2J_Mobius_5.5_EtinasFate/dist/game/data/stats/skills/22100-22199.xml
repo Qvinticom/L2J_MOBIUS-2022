@@ -105,8 +105,6 @@
 	</skill>
 	<skill id="22102" toLevel="1" name="Soul Magic Box">
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<coolTime>1000</coolTime>
-		<hitTime>2700</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -2164,7 +2162,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="22175" toLevel="1" name="Good/Bad of Life">
+	<skill id="22175" toLevel="1" name="Good/ Bad of Life">
 		<!-- Restores 500 HP when HP falls to 30% or below. -->
 		<icon>icon.skill0001</icon>
 		<magicLvl>1</magicLvl>

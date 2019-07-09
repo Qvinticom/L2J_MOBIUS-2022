@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14800" toLevel="1" name="Elemental Resistance - GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases all Attribute Resistance +$s2. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases all Attribute Resistance +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -46,7 +46,7 @@
 		</effects>
 	</skill>
 	<skill id="14801" toLevel="1" name="Resistance Debuff - GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +$s2. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -87,7 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="14802" toLevel="1" name="Mental Attack Resistance - GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to buff-canceling/ debuff attacks +$s2. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Resistance to buff-canceling/ debuff attacks +30. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -961,7 +961,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12439</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -984,7 +984,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12660</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1007,7 +1007,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12772</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>

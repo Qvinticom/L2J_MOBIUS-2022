@@ -435,7 +435,7 @@
 		</effects>
 	</skill>
 	<skill id="13526" toLevel="1" name="Blessed Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-second Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -881,7 +881,7 @@
 		</effects>
 	</skill>
 	<skill id="13542" toLevel="1" name="Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-second Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1372,7 +1372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13558" toLevel="1" name="Mysterious Dualsword">
+	<skill id="13558" toLevel="1" name="Mysterious Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>
@@ -1961,8 +1961,10 @@
 		<!-- Increases resistance for all weapons by 3%. When equipped with a weapon that has an attribute, the attack attribute increases +50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackAttribute">
@@ -2011,8 +2013,10 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -2540,7 +2544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13581" toLevel="1" name="Hero's Weapon: Dualsword">
+	<skill id="13581" toLevel="1" name="Hero's Weapon: Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>

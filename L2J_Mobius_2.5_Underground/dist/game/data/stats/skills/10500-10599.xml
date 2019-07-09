@@ -6,7 +6,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1884,7 +1884,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -3348,6 +3348,7 @@
 				<amount>
 					<value level="1">30</value>
 					<value level="1">40</value>
+					<value level="2">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3356,6 +3357,7 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="1">70</value>
+					<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -3375,7 +3377,7 @@
 		</effects>
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
-		<!-- For $s1, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<!-- For 30 seconds, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3446,7 +3448,7 @@
 		</effects>
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
-		<!-- For $s1, Vital Spot Attack Rate + $s2. Requires a dagger or dual dagger. -->
+		<!-- For 20 seconds, Vital Spot Attack Rate + 10%. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11877</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3538,7 +3540,7 @@
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Adventures">
-		<!-- For $s1, Critical Damage + $s2 and vital spot attack success rate + $s3. Front Critical Damage - $s4, Side Critical Rate + $s5 and Critical Damage + $s6. Rear Critical Rate + $s7 and Critical Damage + $s8. Requires a dagger or dual dagger. -->
+		<!-- For 5 minutes, Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10562</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

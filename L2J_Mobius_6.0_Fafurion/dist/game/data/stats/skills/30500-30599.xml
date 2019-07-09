@@ -220,6 +220,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -559,7 +560,7 @@
 		<affectLimit>10-10</affectLimit>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<hitTime>2500</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLvl>
 			<value level="1">87</value>
 			<value level="2">89</value>
@@ -956,6 +957,8 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
+			<value level="6">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>NONE</abnormalType>
@@ -1182,7 +1185,7 @@
 		</effects>
 	</skill>
 	<skill id="30515" toLevel="1" name="Spallation">
-		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs from a distance of $s1 and increases P. Def. by $s2. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs from a distance of 30 sec. and increases P. Def. by 50%. Damaged if attacked within the sphere. Requires a fist weapon. -->
 		<icon>icon.skill30515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1349,7 +1352,7 @@
 			<value level="12">1592</value>
 			<value level="13">1604</value>
 		</mpConsume>
-		<hitTime>3000</hitTime> <!-- Helios -->
+		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>6</isMagic>
@@ -1539,6 +1542,7 @@
 	<skill id="30521" toLevel="1" name="Damage Up">
 		<!-- Inflicts normal damage x 5. -->
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
@@ -1701,6 +1705,13 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-379</effectPoint>
 		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>-100</amount>
@@ -1724,9 +1735,16 @@
 		</effects>
 	</skill>
 	<skill id="30531" toLevel="1" name="Servitor's Rage">
-		<!-- Critical Damage Received increases by $s2 for $s1 due to the rage of Servitor. -->
+		<!-- Critical Damage Received increases by 30% for 5 sec. due to the rage of Servitor. -->
 		<icon>icon.skill11351</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-671</effectPoint>
 	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2, P. Atk. +$s3. -->
@@ -1794,21 +1812,37 @@
 	<skill id="30533" toLevel="1" name="Backside Purge">
 		<icon>icon.skill30509</icon>
 		<operateType>A1</operateType>
+		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="30534" toLevel="1" name="Transform Puppy 1">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30535" toLevel="1" name="Transform Puppy 2">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30536" toLevel="1" name="Transform Puppy 3">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
 		<!-- When equipped with a fist weapon, P. Atk. +$s1 and +$s2. -->

@@ -240,7 +240,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>0</magicLvl>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
-		<reuseDelay>15000</reuseDelay> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PATIENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -280,6 +279,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-100</effectPoint>
 		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

@@ -62,6 +62,7 @@
 		</effects>
 	</skill>
 	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
+		<!-- For $s1, own P. Def. +$s2, Bow/ Crossbow Resistance +$s3, and Critical Damage Received -$s4. -->
 		<icon>icon.skill11869</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -565,7 +566,7 @@
 		</effects>
 	</skill>
 	<skill id="11254" toLevel="4" name="Superior Summon Mastery">
-		<!-- A Servitor can be summoned when summon points are $s1 or lower. INT +$s2 -->
+		<!-- A Servitor can be summoned when summon points are $s1 or lower. INT +$s2; When the 4 Mark Skills are used, the Servitor's linked with the ability of wrath. -->
 		<icon>icon.skill11254</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -790,6 +791,7 @@
 		</effects>
 	</skill>
 	<skill id="11259" toLevel="11" name="Mark of Weakness">
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, decrease target's P./ M. Def. -->
 		<icon>icon.skill11259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -893,6 +895,7 @@
 		</effects>
 	</skill>
 	<skill id="11260" toLevel="8" name="Mark of Void">
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, recover HP/ MP. -->
 		<icon>icon.skill11260</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -981,6 +984,7 @@
 		</effects>
 	</skill>
 	<skill id="11261" toLevel="9" name="Mark of Plague">
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, decrease heal amount of target. -->
 		<icon>icon.skill11261</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1070,6 +1074,7 @@
 		</effects>
 	</skill>
 	<skill id="11262" toLevel="9" name="Mark of Trick">
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, interrupt target's skill casting. -->
 		<icon>icon.skill11262</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1159,6 +1164,7 @@
 		</effects>
 	</skill>
 	<skill id="11263" toLevel="10" name="Invoke">
+		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with $s1 power. -->
 		<icon>icon.skill11263</icon>
 		<operateType>A1</operateType>
 		<affectRange>200</affectRange>
@@ -1249,6 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="11264" toLevel="4" name="Strong Will">
+		<!-- Consume HP to recover $s1 MP. Dispels debuffs and escapes immobility. -->
 		<icon>icon.skill11264</icon>
 		<canCastWhleDisabled>true</canCastWhleDisabled>
 		<operateType>A1</operateType>
@@ -1305,7 +1312,6 @@
 		<operateType>A1</operateType>
 		<magicLvl>85</magicLvl>
 		<mpConsume>71</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>1390</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -1368,6 +1374,7 @@
 		</effects>
 	</skill>
 	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
+		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. +$s2 and Bow/ Crossbow Resistance +$s3 using his powerful skills. -->
 		<icon>icon.skill11267</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1503,6 +1510,7 @@
 		</effects>
 	</skill>
 	<skill id="11269" toLevel="7" name="Mass Servitor Heal">
+		<!-- Consumes your MP to restore servitor's HP by $s1. -->
 		<icon>icon.skill11269</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1579,6 +1587,7 @@
 		</effects>
 	</skill>
 	<skill id="11271" toLevel="11" name="Mark Retriever">
+		<!-- Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
 		<icon>icon.skill11271</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1723,6 +1732,7 @@
 		</effects>
 	</skill>
 	<skill id="11272" toLevel="1" name="Replace">
+		<!-- Switches locations with target servitor. -->
 		<icon>icon.skill11272</icon>
 		<operateType>A1</operateType>
 		<mpConsume>97</mpConsume>
@@ -1774,6 +1784,7 @@
 		</effects>
 	</skill>
 	<skill id="11273" toLevel="8" name="Exile">
+		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible against attacks, skills, and debuffs. Decreases HP by $s1 per sec. -->
 		<icon>icon.skill11273</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1863,6 +1874,7 @@
 		</effects>
 	</skill>
 	<skill id="11274" toLevel="4" name="Summon Barrier">
+		<!-- Cancels your debuffs and becomes invincible. Increases HP Recovery Bonus while skill is in effect. -->
 		<icon>icon.skill11274</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2008,6 +2020,7 @@
 		</effects>
 	</skill>
 	<skill id="11276" toLevel="6" name="Dimensional Binding">
+		<!-- Binds target midair in another dimension. P./ M. Def. -$s1. -->
 		<icon>icon.skill11276</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="6">100</value>
@@ -2019,10 +2032,11 @@
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>90</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>10000</hitTime>
-		<reuseDelay>300000</reuseDelay>
+		<hitTime>1500</hitTime>
+		<reuseDelay>120000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2146,6 +2160,7 @@
 		</effects>
 	</skill>
 	<skill id="11278" toLevel="9" name="Bear Claw">
+		<!-- Provokes the enemy and inflicts damage. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2227,6 +2242,7 @@
 		</effects>
 	</skill>
 	<skill id="11279" toLevel="9" name="Bear Tumbling">
+		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2309,6 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="11280" toLevel="9" name="Cougar Bite">
+		<!-- Bites target to inflict damage. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2370,6 +2387,7 @@
 		</effects>
 	</skill>
 	<skill id="11281" toLevel="9" name="Cougar Pounce">
+		<!-- Jumps to inflict damage on targets within a certain range. Speed -$s1. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2435,6 +2453,7 @@
 		</effects>
 	</skill>
 	<skill id="11282" toLevel="9" name="Reaper Touch">
+		<!-- Inflicts damage on the enemy and absorbs $s1 of damage as HP. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2497,6 +2516,7 @@
 		</effects>
 	</skill>
 	<skill id="11283" toLevel="9" name="Reaper Power">
+		<!-- Creates a death space near the enemy to inflict damage. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange>
 		<operateType>A1</operateType>
@@ -3053,6 +3073,7 @@
 		</effects>
 	</skill>
 	<skill id="11296" toLevel="9" name="Mass Exile">
+		<!-- Banishes enemies near target into another dimension. The exiled enemies become incapacitated and invincible against attacks, skills, and debuffs. Decreases HP by $s1 per sec. -->
 		<icon>icon.skill11296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3237,6 +3258,7 @@
 		</effects>
 	</skill>
 	<skill id="11298" toLevel="11" name="Mark of Fire">
+		<!-- Instills enemies with fear, carves a burning mark on target to inflict damage with $s1 Power added to M. Atk. and Speed -$s2. -->
 		<icon>icon.skill11298</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -3313,6 +3335,7 @@
 		</effects>
 	</skill>
 	<skill id="11299" toLevel="2" name="Servitor Balance Life">
+		<!-- Balances your and your servitor's HP. -->
 		<icon>icon.skill11299</icon>
 		<affectRange>1000</affectRange>
 		<operateType>

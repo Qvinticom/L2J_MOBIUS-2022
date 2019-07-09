@@ -99,7 +99,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- Your body is filled with mysterious sweet energy. Your soul stands still, but your heart is beating like a hammer. For 2 min., P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Equipped weapon changes shape. The effect disappears upon logout. -->
+		<!-- Your body is filled with mysterious sweet energy. Your soul stands still, but your heart is beating like a hammer.  For 2 min., P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Equipped weapon changes shape. The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalLvl>5</abnormalLvl>
@@ -137,7 +137,7 @@
 		<icon>icon.skill0810</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
-		<reuseDelay>180000</reuseDelay> <!-- 3 minutes -->
+		<reuseDelay>180000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

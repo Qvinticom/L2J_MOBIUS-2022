@@ -300,11 +300,17 @@
 		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="6119" toLevel="1" name="Blessing of Plenty">
 		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.skill5662</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>200</hitTime>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
 		<!-- Santa's reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
@@ -455,6 +461,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>85</mpConsume>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>200</effectRange>
@@ -480,6 +487,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>43</mpConsume>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -505,6 +513,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>12</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
@@ -528,6 +537,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>13</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -572,6 +582,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>15</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -692,6 +703,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>75</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -775,6 +787,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>82</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>74</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -788,6 +801,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>82</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>74</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -803,6 +817,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>74</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1114,6 +1129,9 @@
 		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<hitTime>200</hitTime>
+		<reuseDelay>1000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>G_EV_BUFF1</abnormalType>
@@ -1180,6 +1198,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>73</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -1219,6 +1238,20 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>150</affectRange>
 		<hitTime>1000</hitTime>
@@ -1255,6 +1288,20 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>

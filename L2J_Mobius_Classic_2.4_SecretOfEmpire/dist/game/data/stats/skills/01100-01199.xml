@@ -14,8 +14,8 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-121</value>
-			<value level="2">-162</value>
+			<value level="1">-61</value>
+			<value level="2">-81</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -66,8 +66,8 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>
-			<value level="1">-243</value>
-			<value level="2">-331</value>
+			<value level="1">-122</value>
+			<value level="2">-166</value>
 		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -121,12 +121,12 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-243</value>
-			<value level="2">-331</value>
-			<value level="3">-418</value>
-			<value level="4">-495</value>
-			<value level="5">-597</value>
-			<value level="6">-635</value>
+			<value level="1">-122</value>
+			<value level="2">-166</value>
+			<value level="3">-209</value>
+			<value level="4">-248</value>
+			<value level="5">-299</value>
+			<value level="6">-318</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -424,8 +424,8 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>750</castRange>
 		<effectPoint>
-			<value level="1">-204</value>
-			<value level="2">-285</value>
+			<value level="1">-102</value>
+			<value level="2">-143</value>
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -478,10 +478,10 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>
-			<value level="1">-286</value>
-			<value level="2">-333</value>
-			<value level="3">-390</value>
-			<value level="4">-409</value>
+			<value level="1">-143</value>
+			<value level="2">-167</value>
+			<value level="3">-195</value>
+			<value level="4">-205</value>
 		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -681,43 +681,48 @@
 		<icon>icon.skill1126</icon>
 		<castRange>400</castRange>
 		<effectPoint>
-			<value level="1">227</value>
-			<value level="2">243</value>
-			<value level="3">268</value>
-			<value level="4">285</value>
-			<value level="5">313</value>
-			<value level="6">331</value>
-			<value level="7">360</value>
-			<value level="8">379</value>
-			<value level="9">399</value>
-			<value level="10">418</value>
-			<value level="11">438</value>
-			<value level="12">457</value>
-			<value level="13">477</value>
-			<value level="14">495</value>
-			<value level="15">514</value>
-			<value level="16">532</value>
-			<value level="17">541</value>
-			<value level="18">549</value>
-			<value level="19">558</value>
-			<value level="20">566</value>
-			<value level="21">574</value>
-			<value level="22">582</value>
-			<value level="23">590</value>
-			<value level="24">597</value>
-			<value level="25">604</value>
-			<value level="26">611</value>
-			<value level="27">617</value>
-			<value level="28">624</value>
-			<value level="29">630</value>
-			<value level="30">635</value>
-			<value level="31">641</value>
-			<value level="32">646</value>
-			<value level="33">650</value>
-			<value level="34">655</value>
-			<value level="35">660</value>
-			<value level="36">666</value>
-			<value level="37">671</value>
+			<value level="1">113</value>
+			<value level="2">121</value>
+			<value level="3">134</value>
+			<value level="4">142</value>
+			<value level="5">156</value>
+			<value level="6">165</value>
+			<value level="7">180</value>
+			<value level="8">189</value>
+			<value level="9">199</value>
+			<value level="10">209</value>
+			<value level="11">219</value>
+			<value level="12">228</value>
+			<value level="13">238</value>
+			<value level="14">247</value>
+			<value level="15">257</value>
+			<value level="16">266</value>
+			<value level="17">270</value>
+			<value level="18">274</value>
+			<value level="19">279</value>
+			<value level="20">283</value>
+			<value level="21">287</value>
+			<value level="22">291</value>
+			<value level="23">295</value>
+			<value level="24">298</value>
+			<value level="25">302</value>
+			<value level="26">305</value>
+			<value level="27">308</value>
+			<value level="28">312</value>
+			<value level="29">315</value>
+			<value level="30">317</value>
+			<value level="31">320</value>
+			<value level="32">323</value>
+			<value level="33">325</value>
+			<value level="34">327</value>
+			<value level="35">332</value>
+			<value level="36">336</value>
+			<value level="37">341</value>
+			<value level="38">345</value>
+			<value level="39">350</value>
+			<value level="40">354</value>
+			<value level="41">359</value>
+			<value level="42">363</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
@@ -913,54 +918,59 @@
 		<icon>icon.skill1127</icon>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">121</value>
-			<value level="2">135</value>
-			<value level="3">151</value>
-			<value level="4">176</value>
-			<value level="5">185</value>
-			<value level="6">195</value>
-			<value level="7">224</value>
-			<value level="8">234</value>
-			<value level="9">245</value>
-			<value level="10">278</value>
-			<value level="11">289</value>
-			<value level="12">301</value>
-			<value level="13">337</value>
-			<value level="14">349</value>
-			<value level="15">362</value>
-			<value level="16">388</value>
-			<value level="17">401</value>
-			<value level="18">414</value>
-			<value level="19">440</value>
-			<value level="20">454</value>
-			<value level="21">467</value>
-			<value level="22">494</value>
-			<value level="23">508</value>
-			<value level="24">521</value>
-			<value level="25">549</value>
-			<value level="26">562</value>
-			<value level="27">575</value>
-			<value level="28">589</value>
-			<value level="29">602</value>
-			<value level="30">615</value>
-			<value level="31">628</value>
-			<value level="32">640</value>
-			<value level="33">653</value>
-			<value level="34">665</value>
-			<value level="35">677</value>
-			<value level="36">689</value>
-			<value level="37">700</value>
-			<value level="38">711</value>
-			<value level="39">722</value>
-			<value level="40">733</value>
-			<value level="41">743</value>
-			<value level="42">753</value>
-			<value level="43">763</value>
-			<value level="44">772</value>
-			<value level="45">780</value>
-			<value level="46">789</value>
-			<value level="47">797</value>
-			<value level="48">807</value>
+			<value level="1">60</value>
+			<value level="2">67</value>
+			<value level="3">75</value>
+			<value level="4">88</value>
+			<value level="5">92</value>
+			<value level="6">97</value>
+			<value level="7">112</value>
+			<value level="8">117</value>
+			<value level="9">122</value>
+			<value level="10">139</value>
+			<value level="11">144</value>
+			<value level="12">150</value>
+			<value level="13">168</value>
+			<value level="14">174</value>
+			<value level="15">181</value>
+			<value level="16">194</value>
+			<value level="17">200</value>
+			<value level="18">207</value>
+			<value level="19">220</value>
+			<value level="20">227</value>
+			<value level="21">233</value>
+			<value level="22">247</value>
+			<value level="23">254</value>
+			<value level="24">260</value>
+			<value level="25">274</value>
+			<value level="26">281</value>
+			<value level="27">287</value>
+			<value level="28">294</value>
+			<value level="29">301</value>
+			<value level="30">307</value>
+			<value level="31">314</value>
+			<value level="32">320</value>
+			<value level="33">326</value>
+			<value level="34">332</value>
+			<value level="35">338</value>
+			<value level="36">344</value>
+			<value level="37">350</value>
+			<value level="38">355</value>
+			<value level="39">361</value>
+			<value level="40">366</value>
+			<value level="41">371</value>
+			<value level="42">376</value>
+			<value level="43">381</value>
+			<value level="44">386</value>
+			<value level="45">390</value>
+			<value level="46">394</value>
+			<value level="47">398</value>
+			<value level="48">402</value>
+			<value level="49">406</value>
+			<value level="50">410</value>
+			<value level="51">414</value>
+			<value level="52">418</value>
+			<value level="53">422</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -1352,7 +1362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1129" toLevel="16" name="Summon Reanimated Man">
+	<skill id="1129" toLevel="8" name="Summon Reanimated Man">
 		<!-- Summons a Reanimated man. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1129</icon>
 		<hitTime>3500</hitTime>
@@ -1366,14 +1376,6 @@
 			<value level="6">6</value>
 			<value level="7">9</value>
 			<value level="8">0</value>
-			<value level="9">0</value>
-			<value level="10">0</value>
-			<value level="11">0</value>
-			<value level="12">0</value>
-			<value level="13">0</value>
-			<value level="14">0</value>
-			<value level="15">0</value>
-			<value level="16">0</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<mpConsume>
@@ -1385,14 +1387,6 @@
 			<value level="6">106</value>
 			<value level="7">110</value>
 			<value level="8">338</value>
-			<value level="9">348</value>
-			<value level="10">358</value>
-			<value level="11">367</value>
-			<value level="12">377</value>
-			<value level="13">386</value>
-			<value level="14">396</value>
-			<value level="15">406</value>
-			<value level="16">415</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">16</value>
@@ -1403,14 +1397,6 @@
 			<value level="6">27</value>
 			<value level="7">27</value>
 			<value level="8">85</value>
-			<value level="9">87</value>
-			<value level="10">89</value>
-			<value level="11">92</value>
-			<value level="12">94</value>
-			<value level="13">97</value>
-			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">104</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -1425,14 +1411,6 @@
 			<value level="6">72</value>
 			<value level="7">74</value>
 			<value level="8">77</value>
-			<value level="9">80</value>
-			<value level="10">85</value>
-			<value level="11">90</value>
-			<value level="12">05</value>
-			<value level="13">99</value>
-			<value level="14">101</value>
-			<value level="15">103</value>
-			<value level="16">105</value>
 		</magicLvl>
 		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
@@ -1451,14 +1429,6 @@
 					<value level="6">14006</value>
 					<value level="7">14007</value>
 					<value level="8">15148</value>
-					<value level="9">15149</value>
-					<value level="10">15150</value>
-					<value level="11">15151</value>
-					<value level="12">15152</value>
-					<value level="13">15153</value>
-					<value level="14">15197</value>
-					<value level="15">15198</value>
-					<value level="16">15199</value>
 				</npcId>
 			</effect>
 		</effects>
@@ -1756,12 +1726,12 @@
 		<icon>icon.skill1147</icon>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-143</value>
-			<value level="2">-162</value>
-			<value level="3">-182</value>
-			<value level="4">-204</value>
-			<value level="5">-227</value>
-			<value level="6">-243</value>
+			<value level="1">-72</value>
+			<value level="2">-81</value>
+			<value level="3">-91</value>
+			<value level="4">-102</value>
+			<value level="5">-114</value>
+			<value level="6">-122</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>DARK</attributeType>
@@ -1816,21 +1786,26 @@
 		<icon>icon.skill1148</icon>
 		<castRange>900</castRange>
 		<effectPoint>
-			<value level="1">-418</value>
-			<value level="2">-457</value>
-			<value level="3">-495</value>
-			<value level="4">-532</value>
-			<value level="5">-549</value>
-			<value level="6">-566</value>
-			<value level="7">-582</value>
-			<value level="8">-597</value>
-			<value level="9">-611</value>
-			<value level="10">-624</value>
-			<value level="11">-635</value>
-			<value level="12">-646</value>
-			<value level="13">-655</value>
-			<value level="14">-664</value>
-			<value level="15">-673</value>
+			<value level="1">-209</value>
+			<value level="2">-229</value>
+			<value level="3">-248</value>
+			<value level="4">-266</value>
+			<value level="5">-275</value>
+			<value level="6">-283</value>
+			<value level="7">-291</value>
+			<value level="8">-299</value>
+			<value level="9">-306</value>
+			<value level="10">-312</value>
+			<value level="11">-318</value>
+			<value level="12">-323</value>
+			<value level="13">-328</value>
+			<value level="14">-330</value>
+			<value level="15">-332</value>
+			<value level="16">-336</value>
+			<value level="17">-338</value>
+			<value level="18">-340</value>
+			<value level="19">-342</value>
+			<value level="20">-344</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -2326,11 +2301,11 @@
 			<value level="3">495</value>
 			<value level="4">549</value>
 			<value level="5">611</value>
-			<value level="6">611</value>
-			<value level="7">611</value>
-			<value level="8">611</value>
-			<value level="9">611</value>
-			<value level="10">611</value>
+			<value level="6">673</value>
+			<value level="7">680</value>
+			<value level="8">687</value>
+			<value level="9">694</value>
+			<value level="10">701</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<hpConsume>
@@ -2386,37 +2361,36 @@
 		<icon>icon.skill1159</icon>
 		<castRange>900</castRange>
 		<effectPoint>
-			<value level="1">-477</value>
-			<value level="2">-495</value>
-			<value level="3">-514</value>
-			<value level="4">-532</value>
-			<value level="5">-541</value>
-			<value level="6">-549</value>
-			<value level="7">-558</value>
-			<value level="8">-566</value>
-			<value level="9">-574</value>
-			<value level="10">-582</value>
-			<value level="11">-590</value>
-			<value level="12">-597</value>
-			<value level="13">-604</value>
-			<value level="14">-611</value>
-			<value level="15">-617</value>
-			<value level="16">-624</value>
-			<value level="17">-630</value>
-			<value level="18">-635</value>
-			<value level="19">-641</value>
-			<value level="20">-646</value>
-			<value level="21">-650</value>
-			<value level="22">-655</value>
-			<value level="23">-660</value>
-			<value level="24">-667</value>
-			<value level="25">-672</value>
-			<!-- TODO ADD FROM CLIENT -->
-			<value level="26">-672</value>
-			<value level="27">-672</value>
-			<value level="28">-672</value>
-			<value level="29">-672</value>
-			<value level="30">-672</value>
+			<value level="1">-239</value>
+			<value level="2">-248</value>
+			<value level="3">-257</value>
+			<value level="4">-266</value>
+			<value level="5">-271</value>
+			<value level="6">-275</value>
+			<value level="7">-279</value>
+			<value level="8">-283</value>
+			<value level="9">-287</value>
+			<value level="10">-291</value>
+			<value level="11">-295</value>
+			<value level="12">-299</value>
+			<value level="13">-302</value>
+			<value level="14">-306</value>
+			<value level="15">-309</value>
+			<value level="16">-312</value>
+			<value level="17">-315</value>
+			<value level="18">-318</value>
+			<value level="19">-321</value>
+			<value level="20">-323</value>
+			<value level="21">-325</value>
+			<value level="22">-328</value>
+			<value level="23">-330</value>
+			<value level="24">-332</value>
+			<value level="25">-334</value>
+			<value level="26">-338</value>
+			<value level="27">-340</value>
+			<value level="28">-342</value>
+			<value level="29">-344</value>
+			<value level="30">-346</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -2604,8 +2578,8 @@
 			<value level="13">-635</value>
 			<value level="14">-646</value>
 			<value level="15">-655</value>
-			<value level="16">-664</value>
-			<value level="17">-673</value>
+			<value level="16">-659</value>
+			<value level="17">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -2839,14 +2813,13 @@
 			<value level="17">-635</value>
 			<value level="18">-646</value>
 			<value level="19">-655</value>
-			<value level="20">-664</value>
-			<value level="21">-673</value>
-			<!-- TODO ADD FROM CLIENT -->
-			<value level="22">-673</value>
-			<value level="23">-673</value>
-			<value level="24">-673</value>
+			<value level="20">-659</value>
+			<value level="21">-663</value>
+			<value level="22">-667</value>
+			<value level="23">-669</value>
+			<value level="24">-671</value>
 			<value level="25">-673</value>
-			<value level="26">-673</value>
+			<value level="26">-675</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -2998,13 +2971,13 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>500</castRange>
 		<effectPoint>
-			<value level="1">-243</value>
-			<value level="2">-331</value>
-			<value level="3">-457</value>
-			<value level="4">-532</value>
-			<value level="5">-597</value>
-			<value level="6">-655</value>
-			<value level="7">-716</value>
+			<value level="1">-122</value>
+			<value level="2">-166</value>
+			<value level="3">-229</value>
+			<value level="4">-266</value>
+			<value level="5">-299</value>
+			<value level="6">-328</value>
+			<value level="7">-330</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>4000</hitTime>
@@ -3080,13 +3053,13 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-121</value>
-			<value level="2">-204</value>
-			<value level="3">-285</value>
-			<value level="4">-418</value>
-			<value level="5">-495</value>
-			<value level="6">-582</value>
-			<value level="7">-646</value>
+			<value level="1">-61</value>
+			<value level="2">-102</value>
+			<value level="3">-143</value>
+			<value level="4">-209</value>
+			<value level="5">-248</value>
+			<value level="6">-291</value>
+			<value level="7">-323</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3166,8 +3139,8 @@
 			<value level="12">-635</value>
 			<value level="13">-646</value>
 			<value level="14">-655</value>
-			<value level="15">-664</value>
-			<value level="16">-673</value>
+			<value level="15">-659</value>
+			<value level="16">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3374,33 +3347,33 @@
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
-			<value level="1">-180</value>
-			<value level="2">-190</value>
-			<value level="3">-200</value>
-			<value level="4">-209</value>
-			<value level="5">-219</value>
-			<value level="6">-229</value>
-			<value level="7">-239</value>
-			<value level="8">-248</value>
-			<value level="9">-257</value>
-			<value level="10">-266</value>
-			<value level="11">-275</value>
-			<value level="12">-283</value>
-			<value level="13">-291</value>
-			<value level="14">-299</value>
-			<value level="15">-306</value>
-			<value level="16">-312</value>
-			<value level="17">-318</value>
-			<value level="18">-323</value>
-			<value level="19">-328</value>
-			<value level="20">-333</value>
-			<value level="21">-338</value>
-			<value level="22">-338</value>
-			<value level="23">-338</value>
-			<value level="24">-338</value>
-			<value level="25">-338</value>
-			<value level="26">-338</value>
-			<value level="27">-338</value>
+			<value level="1">-90</value>
+			<value level="2">-95</value>
+			<value level="3">-100</value>
+			<value level="4">-105</value>
+			<value level="5">-110</value>
+			<value level="6">-115</value>
+			<value level="7">-120</value>
+			<value level="8">-124</value>
+			<value level="9">-129</value>
+			<value level="10">-133</value>
+			<value level="11">-138</value>
+			<value level="12">-142</value>
+			<value level="13">-146</value>
+			<value level="14">-150</value>
+			<value level="15">-153</value>
+			<value level="16">-156</value>
+			<value level="17">-159</value>
+			<value level="18">-162</value>
+			<value level="19">-164</value>
+			<value level="20">-169</value>
+			<value level="21">-172</value>
+			<value level="22">-177</value>
+			<value level="23">-182</value>
+			<value level="24">-187</value>
+			<value level="25">-192</value>
+			<value level="26">-197</value>
+			<value level="27">-202</value>
 		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -3538,14 +3511,14 @@
 		<icon>icon.skill1172</icon>
 		<castRange>150</castRange>
 		<effectPoint>
-			<value level="1">-146</value>
-			<value level="2">-163</value>
-			<value level="3">-181</value>
-			<value level="4">-194</value>
-			<value level="5">-214</value>
-			<value level="6">-228</value>
-			<value level="7">-250</value>
-			<value level="8">-265</value>
+			<value level="1">-73</value>
+			<value level="2">-82</value>
+			<value level="3">-91</value>
+			<value level="4">-97</value>
+			<value level="5">-107</value>
+			<value level="6">-114</value>
+			<value level="7">-125</value>
+			<value level="8">-133</value>
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>1500</hitTime>
@@ -3607,38 +3580,37 @@
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>
-			<value level="1">-286</value>
-			<value level="2">-297</value>
-			<value level="3">-309</value>
-			<value level="4">-319</value>
-			<value level="5">-325</value>
-			<value level="6">-330</value>
-			<value level="7">-335</value>
-			<value level="8">-340</value>
-			<value level="9">-345</value>
-			<value level="10">-349</value>
-			<value level="11">-354</value>
-			<value level="12">-358</value>
-			<value level="13">-363</value>
-			<value level="14">-367</value>
-			<value level="15">-371</value>
-			<value level="16">-374</value>
-			<value level="17">-378</value>
-			<value level="18">-381</value>
-			<value level="19">-385</value>
-			<value level="20">-388</value>
-			<value level="21">-390</value>
-			<value level="22">-393</value>
-			<value level="23">-396</value>
-			<value level="24">-399</value>
-			<value level="25">-402</value>
-			<!-- TODO ADD FROM CLIENT -->
-			<value level="26">-402</value>
-			<value level="27">-402</value>
-			<value level="28">-402</value>
-			<value level="29">-402</value>
-			<value level="30">-402</value>
-			<value level="31">-402</value>
+			<value level="1">-143</value>
+			<value level="2">-149</value>
+			<value level="3">-155</value>
+			<value level="4">-160</value>
+			<value level="5">-163</value>
+			<value level="6">-165</value>
+			<value level="7">-168</value>
+			<value level="8">-170</value>
+			<value level="9">-173</value>
+			<value level="10">-175</value>
+			<value level="11">-177</value>
+			<value level="12">-179</value>
+			<value level="13">-182</value>
+			<value level="14">-184</value>
+			<value level="15">-186</value>
+			<value level="16">-187</value>
+			<value level="17">-189</value>
+			<value level="18">-191</value>
+			<value level="19">-193</value>
+			<value level="20">-194</value>
+			<value level="21">-195</value>
+			<value level="22">-197</value>
+			<value level="23">-199</value>
+			<value level="24">-201</value>
+			<value level="25">-203</value>
+			<value level="26">-205</value>
+			<value level="27">-207</value>
+			<value level="28">-209</value>
+			<value level="29">-211</value>
+			<value level="30">-213</value>
+			<value level="31">-215</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>WATER</attributeType>
@@ -3991,29 +3963,29 @@
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>
-			<value level="1">-219</value>
-			<value level="2">-229</value>
-			<value level="3">-239</value>
-			<value level="4">-248</value>
-			<value level="5">-257</value>
-			<value level="6">-266</value>
-			<value level="7">-275</value>
-			<value level="8">-283</value>
-			<value level="9">-291</value>
-			<value level="10">-299</value>
-			<value level="11">-306</value>
-			<value level="12">-312</value>
-			<value level="13">-318</value>
-			<value level="14">-323</value>
-			<value level="15">-328</value>
-			<value level="16">-333</value>
-			<value level="17">-338</value>
-			<value level="18">-343</value>
-			<value level="19">-348</value>
-			<value level="20">-353</value>
-			<value level="21">-358</value>
-			<value level="22">-363</value>
-			<value level="23">-368</value>
+			<value level="1">-110</value>
+			<value level="2">-115</value>
+			<value level="3">-120</value>
+			<value level="4">-124</value>
+			<value level="5">-129</value>
+			<value level="6">-133</value>
+			<value level="7">-138</value>
+			<value level="8">-142</value>
+			<value level="9">-146</value>
+			<value level="10">-150</value>
+			<value level="11">-153</value>
+			<value level="12">-156</value>
+			<value level="13">-159</value>
+			<value level="14">-162</value>
+			<value level="15">-164</value>
+			<value level="16">-166</value>
+			<value level="17">-167</value>
+			<value level="18">-171</value>
+			<value level="19">-175</value>
+			<value level="20">-178</value>
+			<value level="21">-182</value>
+			<value level="22">-185</value>
+			<value level="23">-189</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<attributeType>WIND</attributeType>
@@ -4136,11 +4108,11 @@
 		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-92</value>
-			<value level="2">-106</value>
-			<value level="3">-121</value>
-			<value level="4">-143</value>
-			<value level="5">-162</value>
+			<value level="1">-46</value>
+			<value level="2">-53</value>
+			<value level="3">-61</value>
+			<value level="4">-72</value>
+			<value level="5">-81</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>WIND</attributeType>
@@ -4196,14 +4168,39 @@
 		<icon>icon.skill1178</icon>
 		<castRange>750</castRange>
 		<effectPoint>
-			<value level="1">-182</value>
-			<value level="2">-204</value>
-			<value level="3">-227</value>
-			<value level="4">-243</value>
-			<value level="5">-268</value>
-			<value level="6">-285</value>
-			<value level="7">-313</value>
-			<value level="8">-331</value>
+			<value level="1">-46</value>
+			<value level="2">-102</value>
+			<value level="3">-114</value>
+			<value level="4">-122</value>
+			<value level="5">-134</value>
+			<value level="6">-143</value>
+			<value level="7">-157</value>
+			<value level="8">-166</value>
+			<value level="9">-190</value>
+			<value level="10">-200</value>
+			<value level="11">-209</value>
+			<value level="12">-219</value>
+			<value level="13">-229</value>
+			<value level="14">-239</value>
+			<value level="15">-248</value>
+			<value level="16">-257</value>
+			<value level="17">-266</value>
+			<value level="18">-271</value>
+			<value level="19">-275</value>
+			<value level="20">-279</value>
+			<value level="21">-283</value>
+			<value level="22">-287</value>
+			<value level="23">-291</value>
+			<value level="24">-295</value>
+			<value level="25">-299</value>
+			<value level="26">-302</value>
+			<value level="27">-306</value>
+			<value level="28">-309</value>
+			<value level="29">-312</value>
+			<value level="30">-315</value>
+			<value level="31">-318</value>
+			<value level="32">-321</value>
+			<value level="33">-323</value>
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<attributeType>WIND</attributeType>
@@ -4367,9 +4364,9 @@
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>
-			<value level="1">-204</value>
-			<value level="2">-243</value>
-			<value level="3">-285</value>
+			<value level="1">-102</value>
+			<value level="2">-122</value>
+			<value level="3">-143</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -4474,10 +4471,10 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
 		<effectPoint>
-			<value level="1">-523</value>
-			<value level="2">-619</value>
-			<value level="3">-746</value>
-			<value level="4">-818</value>
+			<value level="1">-262</value>
+			<value level="2">-310</value>
+			<value level="3">-373</value>
+			<value level="4">-409</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>
@@ -4532,12 +4529,12 @@
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
-			<value level="1">-106</value>
-			<value level="2">-121</value>
-			<value level="3">-143</value>
-			<value level="4">-162</value>
-			<value level="5">-182</value>
-			<value level="6">-204</value>
+			<value level="1">-53</value>
+			<value level="2">-61</value>
+			<value level="3">-72</value>
+			<value level="4">-81</value>
+			<value level="5">-91</value>
+			<value level="6">-102</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>

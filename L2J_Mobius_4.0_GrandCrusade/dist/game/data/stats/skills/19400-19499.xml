@@ -258,7 +258,7 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- Decreases M. Defense and all attribute defenses by $s2 and $s3, respectively, for $s1. -->
+		<!-- Decreases M. Defense and all attribute defenses by 50% and 50, respectively, for 10 seconds. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -327,7 +327,7 @@
 		</effects>
 	</skill>
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
-		<!-- Elemental Crash inflicts Hold for $s1. -->
+		<!-- Elemental Crash inflicts Hold for 3 seconds. -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -350,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
-		<!-- Elemental Crash inflicts Stun for $s1. -->
+		<!-- Elemental Crash inflicts Stun for 2 seconds. -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>2</abnormalTime>

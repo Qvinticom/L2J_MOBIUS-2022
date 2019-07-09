@@ -3782,7 +3782,7 @@
 		</effects>
 	</skill>
 	<skill id="11048" toLevel="9" name="Mass Devil's Curse">
-		<!-- Attacks target and surrounding enemies with $s1 power and absorbs $s2 of the damage inflicted as HP. Additionally, for $s3, target's M. Atk. and M. Def. - $s4 -->
+		<!-- Attacks target and surrounding enemies with $s1 power and absorbs $s2 of the damage inflicted as HP. Additionally, for $s3, target's M. Atk. and M. Def. - $s4; P. Def., M. Atk., Casting Spd., M. Def., P. Critical Rate, M. Critical Rate, and Speed - $s5; and Accuracy - $s6. -->
 		<icon>icon.skill11048</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -4299,13 +4299,11 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4691,7 +4689,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11059" toLevel="4" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 4 -->
+	<skill id="11059" toLevel="4" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
@@ -4881,7 +4879,7 @@
 		</effects>
 	</skill>
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
-		<!-- For $s1, decreases incoming damage - $s2 and defends against the rest by consuming MP. When attacked, reflects $s3 of incoming damage. Ineffective when MP drops to $s4. -->
+		<!-- For 20 seconds, decreases incoming damage - 90% and defends against the rest by consuming MP. When attacked, reflects 10% of incoming damage. Ineffective when MP drops to 0. -->
 		<icon>icon.skill11065</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5104,7 +5102,7 @@
 		</effects>
 	</skill>
 	<skill id="11068" toLevel="4" name="Double Casting">
-		<!-- For $s1, you can cast elemental spells with both hands.Decreases MP Consumption by $s2 and magic skill Cooldown by $s3.Eliminates magic cancel during magic use. -->
+		<!-- For $s1, you can cast elemental spells with both hands.'Decreases MP Consumption by $s2 and magic skill Cooldown by $s3.'Eliminates magic cancel during magic use. -->
 		<icon>icon.skill11068</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
@@ -5759,7 +5757,7 @@
 		</effects>
 	</skill>
 	<skill id="11093" toLevel="1" name="Crystal Form">
-		<!-- Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for $s1 and rapidly recovers HP and MP. -->
+		<!-- Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

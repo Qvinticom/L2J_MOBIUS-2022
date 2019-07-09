@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4600" toLevel="12" name="Reducing P. Def Stun">
+	<skill id="4600" toLevel="12" name="P. Def.-decreasing Stun">
 		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
@@ -1250,7 +1250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4621" toLevel="12" name="NPC AE - 80% HP Drain">
+	<skill id="4621" toLevel="12" name="Drain Energy">
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1313,7 +1313,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4622" toLevel="12" name="NPC AE - 80% HP Drain - Magic">
+	<skill id="4622" toLevel="12" name="Drain Energy">
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1376,7 +1376,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4623" toLevel="12" name="NPC AE - 80% HP Drain - Slow">
+	<skill id="4623" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -3801,7 +3801,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4664" toLevel="12" name="NPC 100% HP Drain">
+	<skill id="4664" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3876,7 +3876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4665" toLevel="12" name="NPC 100% HP Drain - Magic">
+	<skill id="4665" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3951,7 +3951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4666" toLevel="12" name="NPC 100% HP Drain - Slow">
+	<skill id="4666" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -4026,7 +4026,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4667" toLevel="12" name="NPC Strong 100% HP Drain">
+	<skill id="4667" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4101,7 +4101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4668" toLevel="12" name="NPC Strong 100% HP Drain - Magic">
+	<skill id="4668" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4176,7 +4176,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4669" toLevel="12" name="NPC Strong 100% HP Drain - Slow">
+	<skill id="4669" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -4307,7 +4307,6 @@
 		</effects>
 	</skill>
 	<skill id="4671" toLevel="1" name="Teleport">
-		<castRange>1500</castRange>
 		<effectRange>2000</effectRange>
 		<magicLvl>40</magicLvl>
 		<operateType>A1</operateType>

@@ -33,7 +33,9 @@
 		<!-- Invincible status. -->
 		<icon>icon.skill0442</icon>
 		<operateType>A2</operateType>
-		<effectPoint>100</effectPoint>
+		<hitTime>500</hitTime>
+		<mpConsume>1</mpConsume>
+		<effectPoint>673</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -616,7 +618,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="14225" toLevel="8" name="Control Stage 8">
+	<skill id="14225" toLevel="8" name="Control Stage 1">
 		<!-- Control Stage $s1 -->
 		<icon>
 			<value level="1">icon.skill14225_1</value>
@@ -1225,9 +1227,11 @@
 	<skill id="14247" toLevel="1" name="Black Vortex">
 		<icon>icon.skill0054</icon>
 		<operateType>A2</operateType>
-		<castRange>600</castRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>1</mpConsume>
+		<castRange>1000</castRange>
 		<hitTime>1500</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<abnormalType>FLY_AWAY</abnormalType>
 		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
@@ -1631,6 +1635,7 @@
 		</effects>
 	</skill>
 	<skill id="14263" toLevel="2" name="Electric Attack">
+		<!-- Stun status. -->
 		<icon>icon.skill1275</icon>
 		<operateType>
 			<value level="1">A1</value>
@@ -2243,7 +2248,7 @@
 		</conditions>
 	</skill>
 	<skill id="14289" toLevel="2" name="Manifestation of Authority">
-		<!-- Atk Spd, Speed, Casting Spd, Max HP, Max MP decreased -->
+		<!-- Atk Spd, Speed, Casting Spd, Max HP, Max MP decreased; HP consumed every second. -->
 		<icon>icon.skill14289</icon>
 		<operateType>A2</operateType>
 		<hitTime>7000</hitTime>

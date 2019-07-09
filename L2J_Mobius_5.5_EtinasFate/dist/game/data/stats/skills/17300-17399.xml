@@ -19,10 +19,10 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17303" toLevel="1" name="Prevailing Sonata - Enhanced Cocktail">
-		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. PA exclusive. -->
+		<!-- For 1 hr., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -73,10 +73,10 @@
 		</effects>
 	</skill>
 	<skill id="17304" toLevel="1" name="Daring Sonata - Enhanced Cocktail">
-		<!-- For $s1, increases Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. PA exclusive. -->
+		<!-- For 1 hr., increases Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -129,10 +129,10 @@
 		</effects>
 	</skill>
 	<skill id="17305" toLevel="1" name="Refreshing Sonata - Enhanced Cocktail">
-		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. PA exclusive. -->
+		<!-- For 1 hr., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<effectPoint>696</effectPoint>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -194,7 +194,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 1 (Normal)">
+	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 1">
 		<!-- Can acquire a Territory Card in $s1 hr. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. <Note> Cannot acquire buff or card if you're dead at the time of distribution, or if your inventory is full. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
@@ -307,7 +307,6 @@
 	</skill>
 	<skill id="17318" toLevel="1" name="Leona's Cube">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17319" toLevel="1" name="Leona's Will">
 		<operateType>A1</operateType>
@@ -324,7 +323,6 @@
 		<itemConsumeId>38099</itemConsumeId> <!-- Leona's Scroll: Buffs -->
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -379,7 +377,6 @@
 		<!-- Gives 1,000,000 SP. -->
 		<icon>icon.etc_sp_scroll1_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38101</itemConsumeId> <!-- Leona's Scroll: 1,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -399,7 +396,6 @@
 		<!-- Gives 5,000,000 SP. -->
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38102</itemConsumeId> <!-- Leona's Scroll: 5,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -419,7 +415,6 @@
 		<!-- Gives 10,000,000 SP. -->
 		<icon>icon.etc_sp_scroll3_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38103</itemConsumeId> <!-- Leona's Scroll: 10,000,000 SP -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -438,12 +433,10 @@
 	<skill id="17324" toLevel="1" name="Superior CP Potion">
 		<!-- Restores 1000 CP. -->
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -454,7 +447,6 @@
 	</skill>
 	<skill id="17325" toLevel="1" name="Leona's Cube (1-time)">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17326" toLevel="1" name="Small Green Mackerel">
 		<operateType>A1</operateType>
@@ -534,7 +526,7 @@
 	<skill id="17351" toLevel="1" name="Small Eel">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17352" toLevel="1" name="Small Catfish">
+	<skill id="17352" toLevel="1" name="Small Cat'sh">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17353" toLevel="1" name="Small Carp">
@@ -555,7 +547,7 @@
 	<skill id="17358" toLevel="1" name="Eel">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17359" toLevel="1" name="Catfish">
+	<skill id="17359" toLevel="1" name="Cat'sh">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17360" toLevel="1" name="Carp">
@@ -576,7 +568,7 @@
 	<skill id="17365" toLevel="1" name="Large Eel">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17366" toLevel="1" name="Large Catfish">
+	<skill id="17366" toLevel="1" name="Large Cat'sh">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17367" toLevel="1" name="Large Carp">

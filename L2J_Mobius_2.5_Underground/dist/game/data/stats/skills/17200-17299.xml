@@ -202,7 +202,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<abnormalTime>1800</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
@@ -543,7 +543,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -955,9 +954,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
-		<reuseDelay>3600000</reuseDelay>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1011,9 +1007,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
-		<reuseDelay>3600000</reuseDelay>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1067,9 +1060,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
-		<reuseDelay>3600000</reuseDelay>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>

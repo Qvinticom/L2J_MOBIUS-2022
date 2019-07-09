@@ -511,7 +511,6 @@
 	<skill id="9522" toLevel="1" name="Summon Clan Member">
 		<!-- Summon selected clan member to current location. -->
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>1</effectPoint>
@@ -584,7 +583,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -607,7 +606,7 @@
 		<effectRange>600</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>7200000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -870,7 +869,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9545" toLevel="1" name="Ceremony of Chaos - Horn Melody">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- For 7 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -912,7 +911,7 @@
 		</effects>
 	</skill>
 	<skill id="9546" toLevel="1" name="Ceremony of Chaos - Drum Melody">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For 7 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1003,7 +1002,7 @@
 		</effects>
 	</skill>
 	<skill id="9547" toLevel="1" name="Ceremony of Chaos - Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For 7 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1049,7 +1048,7 @@
 		</effects>
 	</skill>
 	<skill id="9548" toLevel="1" name="Ceremony of Chaos - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For 7 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1191,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="9551" toLevel="1" name="Knight's Harmony - Ceremony of Chaos">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For 7 min., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1241,7 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="9552" toLevel="1" name="Warrior's Harmony - Ceremony of Chaos">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For 7 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1295,7 +1294,7 @@
 		</effects>
 	</skill>
 	<skill id="9553" toLevel="1" name="Wizard's Harmony - Ceremony of Chaos">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 7 min., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1602,9 +1601,10 @@
 		</effects>
 	</skill>
 	<skill id="9569" toLevel="1" name="Heavenly P. Atk. Cookie">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1653,9 +1653,10 @@
 		</effects>
 	</skill>
 	<skill id="9570" toLevel="1" name="Heavenly P. Def. Cookie">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For 1 h., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1700,9 +1701,10 @@
 		</effects>
 	</skill>
 	<skill id="9571" toLevel="1" name="Heavenly Magic Cookie">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 1 h., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1832,7 +1834,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

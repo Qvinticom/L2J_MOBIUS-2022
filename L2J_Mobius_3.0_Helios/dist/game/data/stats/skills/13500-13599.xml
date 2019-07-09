@@ -435,7 +435,7 @@
 		</effects>
 	</skill>
 	<skill id="13526" toLevel="1" name="Blessed Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/Knock Back effect when used; gives 5-second Knock Down/Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -881,7 +881,7 @@
 		</effects>
 	</skill>
 	<skill id="13542" toLevel="1" name="Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/Knock Back effect when used; gives 5-second Knock Down/Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1961,8 +1961,10 @@
 		<!-- Increases resistance for all weapons by 3. When equipped with a weapon that has an attribute, the attack attribute increases + 50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 		<effect name="AttackAttribute">
@@ -2003,7 +2005,7 @@
 			</effect>
 			</effects>
 	</skill>
-	<skill id="13569" toLevel="3" name="Talisman - Seven Signs">
+	<skill id="13569" toLevel="3" name="Talisman - Lilith">
 		<!-- Increase M. Def. + $s1, MP recovery + $s2, dark resistance + $s3, and damage reflect resistance + $s4. -->
 		<icon>
 			<value level="1">icon.lilith_talisman_i00</value>
@@ -2011,8 +2013,10 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10100" toLevel="4" name="Guardian's Frenzy">
-		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, all Attribute Resistance +$s6, and Reflect Magic rate +$s7. -->
+		<!-- For $s1, Shield Def. +$s2, M. Def +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, Attribute Resistance +$s6, and Reflect Magic rate +$s7. -->
 		<icon>icon.skill10100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -28,7 +28,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="ShieldDefenceRate">
 				<amount>
@@ -121,7 +121,7 @@
 		</effects>
 	</skill>
 	<skill id="10101" toLevel="4" name="Templar's Frenzy">
-		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, and P. Skill Power +$s6. A chance to activate the Lightning Strike if the Vanishing Stun is additionally cast. -->
+		<!-- For $s1, Shield Def. +$s2, M. Def +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, and P. Skill Power +$s6. A chance to activate the Lightning Strike if the Vanishing Stun is additionally cast. -->
 		<icon>icon.skill10101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -148,7 +148,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="ShieldDefenceRate">
 				<amount>
@@ -217,8 +217,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10102" toLevel="6" name="Shadow Slash">
-		<!-- Summons the Blood Panther to attack the target and enemies on the path with $s1 power and decrease their Speed by $s3 and Pull Resistance by $s4 for $s2. Uses $s5 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+	<skill id="10102" toLevel="6" name="Shadow Hunt">
+		<!-- Summons the Blood Panther to attack the target and enemies on the path with $s1 power and decrease their Movement Speed by $s3 and Pull Resistance by $s4 for $s2. Uses $s5 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10102</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -245,18 +245,11 @@
 			<value level="5">209</value>
 			<value level="6">215</value>
 		</mpConsume>
-		<castRange>40</castRange>
+		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>
-			<value level="1">-3541</value>
-			<value level="2">-3561</value>
-			<value level="3">-3561</value>
-			<value level="4">-3541</value>
-			<value level="5">-3561</value>
-			<value level="6">-3561</value>
-		</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -285,8 +278,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10103" toLevel="6" name="Mass Freezing Strike">
-		<!-- Creates a torrent to attack the target and enemies on the path with $s1 Power added to P and pull them up a short distance. Also reduces their Speed by $s3 for $s2. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+	<skill id="10103" toLevel="6" name="Reversal Stream">
+		<!-- Creates a torrent to attack the target and enemies on the path with $s1 Power added to P and pull them up a short distance. Also reduces their Movement Speed by $s3 for $s2. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10103_2</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -324,11 +317,11 @@
 			<value level="5">201</value>
 			<value level="6">203</value>
 		</mpConsume>
-		<castRange>400</castRange>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>-828</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -360,7 +353,7 @@
 		</effects>
 	</skill>
 	<skill id="10104" toLevel="1" name="Paladin's Aura">
-		<!-- For you and your allies, P./ M. Def. +30%, Debuff Resistances +15%, P. Critical Damage/ M. Critical Damage Received -15%, and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
+		<!-- For you and your allies, P. Def/ M. Def +30%, Debuff Resistances +15%, P. Critical Damage/ M. Critical Damage Received -15%, and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10104</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -424,7 +417,7 @@
 		</effects>
 	</skill>
 	<skill id="10105" toLevel="1" name="Avenger's Aura">
-		<!-- For you and your allies, P. Atk./ M. Atk. +10%, P./ M. Def. +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
+		<!-- For you and your allies, P. Atk./ M. Atk. +10%, P. Def/ M. Def +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10105</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -491,8 +484,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10106" toLevel="1" name="Sentinel's Aura">
-		<!-- For you and your allies, P./ M. Def. +$s1, Speed +$s2, all Attribute Resistance +$s3, P. Critical Damage/ M. Critical Damage Received -$s4, all Skill Cooldown -$s5, and MP Consumption -$s6. Only one Knight's Aura can be active at any time. -->
+	<skill id="10106" toLevel="1" name="Guardian Aura">
+		<!-- For you and your allies, P. Def/ M. Def +20%, Speed +10, Attribute Resistance +100, P. Critical Damage/ M. Critical Damage Received -15%, all Skill Cooldown -7%, and MP Consumption -15%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10106</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -585,7 +578,7 @@
 		</effects>
 	</skill>
 	<skill id="10107" toLevel="1" name="Templar's Aura">
-		<!-- For you and your allies, P. Atk./ M. Atk. +$s2, P./ M. Def. +$s1, Speed +$s3, P. Critical Damage/ M. Critical Damage Received -$s4 and all Skill Cooldown -$s5. Only one Knight's Aura can be active at any time. -->
+		<!-- For you and your allies, P. Atk./ M. Atk. +20%, P. Def./ M. Def. +10%, Speed +10, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10107</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
@@ -663,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
-		<!-- P./ M. Def. +$s1, Debuff Resistances +$s2, P. Critical Damage/ M. Critical Damage Received -$s3, and all Skill Cooldown -$s4. Only one Knight's Aura can be active at any time. -->
+		<!-- P. Def/ M. Def +30%, Debuff Resistances +15%, P. Critical Damage/ M. Critical Damage Received -15%, and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10104</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -725,7 +718,7 @@
 		</effects>
 	</skill>
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
-		<!-- For you and your allies, P. Atk./ M. Atk. +10%, P./ M. Def. +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
+		<!-- P. Atk/ M. Atk +10%, P. Def/ M. Def +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10105</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -790,8 +783,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10110" toLevel="1" name="Sentinel's Aura">
-		<!-- P./ M. Def. +$s1, Speed +$s2, all Attribute Resistance +$s3, P. Critical Damage/ M. Critical Damage Received -$s4, all Skill Cooldown -$s5, and MP Consumption -$s6. Only one Knight's Aura can be active at any time. -->
+	<skill id="10110" toLevel="1" name="Guardian Aura">
+		<!-- P. Def/ M. Def +20%, Speed +10, Attribute Resistance +100, P. Critical Damage/ M. Critical Damage Received -15%, all Skill Cooldown -7%, and MP Consumption -15%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -882,7 +875,7 @@
 		</effects>
 	</skill>
 	<skill id="10111" toLevel="1" name="Templar's Aura">
-		<!-- P./ M. Atk. +$s1, P./ M. Def. +$s2, Speed +$s3, P. Critical Damage/ M. Critical Damage Received -$s4 and all Skill Cooldown -$s5. Only one Knight's Aura can be active at any time. -->
+		<!-- P. Atk/ M. Atk +10%, P. Def/ M. Def +20%, Speed +10, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>

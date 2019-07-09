@@ -215,7 +215,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<hitTime>20000</hitTime>
+		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>46158</itemConsumeId> <!-- Scroll of Escape: Blackbird Campsite -->
@@ -689,7 +689,7 @@
 		<effectPoint>204</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="18451" toLevel="2" name="11th Anniversary Buff">
+	<skill id="18451" toLevel="2" name="L2 Anniversary Buff">
 		<!-- Receive an additional $s1 XP/SP when hunting. Receive an L2 Anniversary Coin once the buff ends. <Note:> Cannot receive item if you are dead or don't have space in your inventory. -->
 		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
 		<abnormalTime>
@@ -818,7 +818,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18472" toLevel="6" name="Giveaway Number 6">
+	<skill id="18472" toLevel="6" name="Giveaway Number 1">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18473" toLevel="1" name="Venezia Rune">
@@ -831,7 +831,7 @@
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18475" toLevel="2" name="11th Anniversary Buff">
+	<skill id="18475" toLevel="2" name="L2 Anniversary Buff">
 		<icon>icon.ev_buff_11th</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -852,7 +852,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -920,7 +919,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18481" toLevel="1" name="Freya's Fated Support Box">
+	<skill id="18481" toLevel="5" name="Snowman's Wish-filled Gift">
 		<!-- Double-click to get one of the following: Wind Vitality Tonic, or items that will help with enchanting skills. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -1038,8 +1037,6 @@
 	</skill>
 	<skill id="18496" toLevel="1" name="Gludin Hero's Reward Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>

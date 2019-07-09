@@ -97,7 +97,6 @@
 		<magicLvl>102</magicLvl>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<isDebuff>true</isDebuff>
@@ -166,7 +165,7 @@
 		<coolTime>500</coolTime>
 		<effectRange>100</effectRange>
 		<affectRange>200</affectRange>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effectPoint>-709</effectPoint>
 		<targetType>ENEMY</targetType>
@@ -201,15 +200,17 @@
 		<!-- Electric particles are shot toward the target, causing magic damage and paralyzing the target. -->
 		<icon>icon.skill1265</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<castRange>2500</castRange>
 		<effectRange>2500</effectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -226,12 +227,14 @@
 	<skill id="16610" toLevel="1" name="Helios' Grand Plasma">
 		<!-- Range attack skill -->
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>2500</castRange>
 		<staticReuse>true</staticReuse>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -246,15 +249,17 @@
 		<!-- Arrows of Light are shot at nearby enemies, dealing magic damage and causing knock down. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>20000</reuseDelay>
+		<mpConsume>10</mpConsume>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<hitTime>3000</hitTime>
+		<effectPoint>-52</effectPoint>
 		<trait>KNOCKDOWN</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -273,16 +278,19 @@
 		</effects>
 	</skill>
 	<skill id="16612" toLevel="1" name="Emperor Helios' Authority">
-		<!-- Throws a bomb of light to the target and nearby enemies, dealing magic damage -->
+		<!-- Throws a bomb of light to the target and nearby enemies, dealing magic damage; P. Atk. and M. Atk. +30%, P. Def. and M. Def. -50%. -->
 		<icon>icon.skill16612</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>2500</castRange>
+		<reuseDelay>20000</reuseDelay>
+		<mpConsume>10</mpConsume>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
-		<hitTime>2000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<hitTime>2500</hitTime>
+		<effectPoint>-52</effectPoint>
 		<trait>GIANT_WEAKNESS</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -314,6 +322,7 @@
 		<!-- Reduced Movement Speed. -->
 		<icon>icon.skill16612</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>		<!-- TODO -->
 		<activateRate>200</activateRate>
@@ -342,9 +351,10 @@
 		<!-- Deals physical damage to, and paralyzes the target and nearby enemies. -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
-		<castRange>2500</castRange>
+		<mpConsume>10</mpConsume>
+		<castRange>1200</castRange>
 		<hitTime>2000</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>		<!-- TODO -->
 		<affectLimit>40-80</affectLimit>
@@ -367,12 +377,15 @@
 	<skill id="16615" toLevel="1" name="Helios Plasma Wall">
 		<!-- A rectangular barrier or electricity is formed around a range target, dealing powerful magic damage and 25% Mana Burn. -->
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>10</mpConsume>
 		<affectLimit>45-45</affectLimit>
 		<castRange>2500</castRange>
 		<affectRange>300</affectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<effectRange>2500</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -393,9 +406,12 @@
 		<!-- Helios' overawing gaze has petrified you and made you unable to move. Additional damage is received at regular intervals. -->
 		<icon>icon.skill16614</icon>
 		<operateType>A2</operateType>
-		<castRange>2500</castRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>10</mpConsume>
+		<castRange>1200</castRange>
 		<hitTime>3000</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<effectRange>2500</effectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -424,15 +440,13 @@
 		<castRange>3500</castRange>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>900</affectRange>
-		<reuseDelay>20000</reuseDelay>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>1</isMagic>
 		<mpConsume>10</mpConsume>
 		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>0</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<effectRange>3500</effectRange>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
@@ -462,15 +476,13 @@
 		<castRange>3500</castRange>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>900</affectRange>
-		<reuseDelay>20000</reuseDelay>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>1</isMagic>
 		<mpConsume>10</mpConsume>
 		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>0</effectPoint>
+		<effectPoint>-52</effectPoint>
 		<effectRange>3500</effectRange>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
@@ -493,6 +505,7 @@
 		<!-- Unable to receive Resurrection effects after death. Additional damage is received at regular intervals. -->
 		<icon>icon.skill1181</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<castRange>3500</castRange>
 		<effectPoint>0</effectPoint>
@@ -502,6 +515,7 @@
 		<!-- Unable to receive Resurrection effects after death. P. Def. and M. Def. dropped. -->
 		<icon>icon.skill0048</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<castRange>3500</castRange>
 		<effectPoint>0</effectPoint>
@@ -510,12 +524,12 @@
 	<skill id="16621" toLevel="1" name="Helios' Holy Spike">
 		<!-- Powerful magic damage and Mana Burn effect dealt to the target. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>2500</castRange>
-		<hitTime>5000</hitTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
 		<mpConsume>12</mpConsume>
-		<reuseDelay>10000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<affectRange>400</affectRange>
 		<mpConsume>10</mpConsume>
@@ -539,9 +553,12 @@
 		<!-- A range target is targeted using a bionic bomb. For 5 sec., an explosion of light is caused around the target at each tick, dealing great magic damage. -->
 		<icon>icon.skill11030</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>12</mpConsume>
 		<castRange>2500</castRange>
 		<hitTime>5000</hitTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-696</effectPoint>
 		<affectRange>300</affectRange>
 		<effectRange>2500</effectRange>
 		<targetType>ENEMY</targetType>
@@ -562,12 +579,13 @@
 		<!-- Lightning strikes the target and nearby enemies, dealing magic damage and paralyzing them. Also decreases P. Def. and Magic Resistance. -->
 		<icon>icon.skll10094</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>2500</castRange>
 		<effectRange>2500</effectRange>
 		<affectRange>300</affectRange>
 		<hitTime>2500</hitTime>
 		<affectLimit>40-80</affectLimit>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-438</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -593,14 +611,13 @@
 		</effects>
 	</skill>
 	<skill id="16624" toLevel="1" name="Shield of Light - Pranarach (100%)">
-		<!-- Pranarach Shield of Light is summoned -->
+		<!-- Pranarach Shield of Light is summoned; no damage above 100 is received. -->
 		<icon>icon.skill16624</icon>
 		<operateType>A2</operateType>
-		<castRange>-1</castRange>
 		<hitTime>5000</hitTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
-		<effectPoint>-438</effectPoint>
+		<effectPoint>438</effectPoint>
 		<isMagic>1</isMagic>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -627,7 +644,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>		<!-- TODO -->
 		<targetType>SELF</targetType>
-		<castRange>-1</castRange>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
@@ -687,7 +703,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -703,10 +719,9 @@
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<castRange>-1</castRange>
 		<effectPoint>438</effectPoint>
 		<isMagic>1</isMagic>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47127</itemConsumeId> <!-- Giants Deterioration Protection Potion -->
 		<targetType>SELF</targetType>
@@ -724,10 +739,9 @@
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<castRange>-1</castRange>
 		<effectPoint>438</effectPoint>
 		<isMagic>1</isMagic>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47128</itemConsumeId> <!-- Giants Lightning Protection Potion -->
 		<targetType>SELF</targetType>
@@ -837,6 +851,7 @@
 		<!-- Magic damage is dealt to the target and nearby enemies, and movement speed is reduced. -->
 		<icon>icon.skill0507</icon>
 		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>		<!-- TODO -->
 		<affectLimit>40-80</affectLimit>
@@ -948,7 +963,7 @@
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
 		<hitTime>3000</hitTime>
-		<effectPoint>-438</effectPoint>
+		<effectPoint>438</effectPoint>
 		<isMagic>1</isMagic>
 		<mpConsume>10</mpConsume>
 		<reuseDelay>5000</reuseDelay>
@@ -977,6 +992,7 @@
 	<skill id="16638" toLevel="1" name="Delta Plasma Lightning">
 		<!-- When a skill hits one enemy, the skill seeks out the next target and continues attacking. Finds and attacks up to 10 targets. -->
 		<operateType>A1</operateType>
+		<castRange>1200</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SYNERGY_LENKER</abnormalType>		<!-- TODO -->
@@ -1099,7 +1115,6 @@
 		<!-- An electric field is generated around oneself, dealing damage to the enemy. -->
 		<operateType>A1</operateType>
 		<affectLimit>40-40</affectLimit>
-		<castRange>-1</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-52</effectPoint>
@@ -1123,7 +1138,6 @@
 		<activateRate>150</activateRate>
 		<affectLimit>40-40</affectLimit>
 		<hitTime>3000</hitTime>
-		<castRange>-1</castRange>
 		<affectRange>200</affectRange>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1150,7 +1164,6 @@
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
 		<affectLimit>40-40</affectLimit>
-		<castRange>-1</castRange>
 		<affectRange>200</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
@@ -1169,7 +1182,6 @@
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
 		<affectLimit>40-40</affectLimit>
-		<castRange>-1</castRange>
 		<affectRange>200</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
@@ -1188,7 +1200,6 @@
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
 		<affectLimit>40-40</affectLimit>
-		<castRange>-1</castRange>
 		<affectRange>100</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
@@ -1207,7 +1218,6 @@
 		<effectPoint>-52</effectPoint>
 		<isMagic>1</isMagic>
 		<affectLimit>40-40</affectLimit>
-		<castRange>-1</castRange>
 		<affectRange>2500</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
@@ -1731,7 +1741,6 @@
 		<!-- Momentarily immobile due to the Stun effect caused by a powerfully spirited yell. -->
 		<icon>icon.skill1376</icon>
 		<operateType>A2</operateType>
-		<castRange>-1</castRange>
 		<abnormalType>STUN</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1832,7 +1841,6 @@
 		<isMagic>1</isMagic>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<reuseDelay>60000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1982,7 +1990,6 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>200</activateRate>
 		<castRange>2000</castRange>
-		<hitTime>1500</hitTime>
 		<effectRange>1100</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effectPoint>-100</effectPoint>
@@ -2154,7 +2161,7 @@
 		<reuseDelay>15000</reuseDelay>
 	</skill>
 	<skill id="16697" toLevel="1" name="Thirst Quench">
-		<!-- Desert Thirst status is lifted -->
+		<!-- Desert Thirst status is lifted; P./ M. Atk., Atk. Spd./ Casting Spd. +55%. -->
 		<icon>icon.release_thirst</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2188,7 +2195,7 @@
 		</effects>
 	</skill>
 	<skill id="16698" toLevel="1" name="Thirst Quench">
-		<!-- Desert Thirst status is lifted -->
+		<!-- Desert Thirst status is lifted; P./ M. Atk., Atk. Spd./ Casting Spd. +60%. -->
 		<icon>icon.release_thirst</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2222,7 +2229,7 @@
 		</effects>
 	</skill>
 	<skill id="16699" toLevel="1" name="Critical Rise">
-		<!-- Help has been received from the Commandos -->
+		<!-- Help has been received from the Commandos; critical damage has increased. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>

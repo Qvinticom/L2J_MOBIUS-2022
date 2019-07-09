@@ -29,23 +29,23 @@
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
-			<value level="1">-1255</value>
-			<value level="2">-1318</value>
-			<value level="3">-1358</value>
-			<value level="4">-1396</value>
-			<value level="5">-1432</value>
-			<value level="6">-1465</value>
-			<value level="7">-1496</value>
-			<value level="8">-1524</value>
-			<value level="9">-1549</value>
-			<value level="10">-1570</value>
-			<value level="11">-1617</value>
-			<value level="12">-1634</value>
-			<value level="13">-1655</value>
-			<value level="14">-1667</value>
-			<value level="15">-1688</value>
-			<value level="16">-1703</value>
-			<value level="17">-1748</value>
+			<value level="1">-911</value>
+			<value level="2">-979</value>
+			<value level="3">-1053</value>
+			<value level="4">-1132</value>
+			<value level="5">-1192</value>
+			<value level="6">-1255</value>
+			<value level="7">-1318</value>
+			<value level="8">-1358</value>
+			<value level="9">-1396</value>
+			<value level="10">-1432</value>
+			<value level="11">-1465</value>
+			<value level="12">-1496</value>
+			<value level="13">-1524</value>
+			<value level="14">-1549</value>
+			<value level="15">-1570</value>
+			<value level="16">-1570</value>
+			<value level="17">-1591</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -356,23 +356,23 @@
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
-			<value level="1">-1255</value>
-			<value level="2">-1318</value>
-			<value level="3">-1358</value>
-			<value level="4">-1396</value>
-			<value level="5">-1432</value>
-			<value level="6">-1465</value>
-			<value level="7">-1496</value>
-			<value level="8">-1524</value>
-			<value level="9">-1549</value>
-			<value level="10">-1570</value>
-			<value level="11">-1617</value>
-			<value level="12">-1634</value>
-			<value level="13">-1655</value>
-			<value level="14">-1667</value>
-			<value level="15">-1688</value>
-			<value level="16">-1703</value>
-			<value level="17">-1748</value>
+			<value level="1">-911</value>
+			<value level="2">-979</value>
+			<value level="3">-1053</value>
+			<value level="4">-1132</value>
+			<value level="5">-1192</value>
+			<value level="6">-1255</value>
+			<value level="7">-1318</value>
+			<value level="8">-1358</value>
+			<value level="9">-1396</value>
+			<value level="10">-1432</value>
+			<value level="11">-1465</value>
+			<value level="12">-1496</value>
+			<value level="13">-1524</value>
+			<value level="14">-1549</value>
+			<value level="15">-1570</value>
+			<value level="16">-1570</value>
+			<value level="17">-1591</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -677,8 +677,8 @@
 			<value level="8">-1270</value>
 			<value level="9">-1291</value>
 			<value level="10">-1309</value>
-			<value level="11">-1325</value>
-			<value level="12">-1346</value>
+			<value level="11">-1338</value>
+			<value level="12">-1367</value>
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
@@ -788,7 +788,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="404" toLevel="17" name="Mass Shackling">
+	<skill id="404" toLevel="14" name="Mass Shackling">
 		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
 		<icon>icon.skill0404</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -796,8 +796,8 @@
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="17">40</value>
-			<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="14">40</value>
+			<value fromLevel="13" toLevel="14" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -818,9 +818,6 @@
 			<value level="12">-1403</value>
 			<value level="13">-1417</value>
 			<value level="14">-1432</value>
-			<value level="15">-1447</value>
-			<value level="16">-1462</value>
-			<value level="17">-1477</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -840,9 +837,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">40</value>
@@ -859,9 +853,6 @@
 			<value level="12">61</value>
 			<value level="13">63</value>
 			<value level="14">65</value>
-			<value level="15">67</value>
-			<value level="16">69</value>
-			<value level="17">71</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -877,13 +868,13 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
-					<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="13" toLevel="14" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
-					<value fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="13" toLevel="14" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -967,7 +958,7 @@
 		</effects>
 	</skill>
 	<skill id="406" toLevel="3" name="Angelic Archon">
-		<!-- Channels the gods' strength to greatly increase your combat effectiveness. For $s1, increases Debuff Resistance by $s2, P. Def. by $s3, M. Def. by $s4, P. Accuracy by $s5 when a sword/blunt weapon is equipped, Speed by $s6, Atk. Spd. by $s7 when a sword/blunt weapon is equipped, P. Critical Rate by $s8 when a sword is equipped, P. Critical Damage by $s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance by $s10. Decreases the effect of recovery magic by -$s11. Available when HP is $s12 or lower. -->
+		<!-- Channels the gods' strength to greatly increase your combat effectiveness.  For $s1, increases Debuff Resistance by $s2, P. Def. by $s3, M. Def. by $s4, P. Accuracy by $s5 when a sword/blunt weapon is equipped, Speed by $s6, Atk. Spd. by $s7 when a sword/blunt weapon is equipped, P. Critical Rate by $s8 when a sword is equipped, P. Critical Damage by $s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance by $s10. Decreases the effect of recovery magic by -$s11. Available when HP is $s12 or lower. -->
 		<icon>icon.skill0406</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1483,54 +1474,33 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="410" toLevel="8" name="Mortal Strike">
+	<skill id="410" toLevel="3" name="Mortal Strike">
 		<!-- Increases your vital points attacks success rate by $s2 for $s1. Requires a dagger or dual dagger. -->
 		<icon>icon.skill0410</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-			<value level="8">8</value>
 		</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="8">120</value>
-			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="3">120</value>
 		</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<effectPoint>
 			<value level="1">549</value>
 			<value level="2">611</value>
 			<value level="3">655</value>
-			<value level="4">655</value>
-			<value level="5">655</value>
-			<value level="6">655</value>
-			<value level="7">655</value>
-			<value level="8">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
 			<value level="3">74</value>
-			<value level="4">80</value>
-			<value level="5">85</value>
-			<value level="6">90</value>
-			<value level="7">95</value>
-			<value level="8">99</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">27</value>
 			<value level="2">31</value>
 			<value level="3">34</value>
-			<value level="4">37</value>
-			<value level="5">40</value>
-			<value level="6">43</value>
-			<value level="7">46</value>
-			<value level="8">49</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
@@ -1552,46 +1522,11 @@
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">22</value>
-					<value level="5">24</value>
-					<value level="6">26</value>
-					<value level="7">28</value>
-					<value level="8">30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ManaHeal" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
 				<power>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2001">532</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2002" toSubLevel="2002">570</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2003" toSubLevel="2003">607</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2004" toSubLevel="2004">644</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2005" toSubLevel="2005">681</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2006" toSubLevel="2006">718</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2007" toSubLevel="2007">756</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2008" toSubLevel="2008">793</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2009" toSubLevel="2009">830</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2010" toSubLevel="2010">867</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2011" toSubLevel="2011">904</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2012" toSubLevel="2012">942</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2013" toSubLevel="2013">979</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2014" toSubLevel="2014">1016</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2015" toSubLevel="2015">1053</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2016" toSubLevel="2016">1090</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2017" toSubLevel="2017">1128</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2018" toSubLevel="2018">1165</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2019" toSubLevel="2019">1202</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2020" toSubLevel="2020">1240</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2021" toSubLevel="2021">1264</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2022" toSubLevel="2022">1289</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2023" toSubLevel="2023">1314</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2024" toSubLevel="2024">1339</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2025" toSubLevel="2025">1363</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2026" toSubLevel="2026">1389</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2027" toSubLevel="2027">1413</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2028" toSubLevel="2028">1438</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2029" toSubLevel="2029">1463</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2030" toSubLevel="2030">1488</value>
 				</power>
 			</effect>
 		</effects>
@@ -1668,7 +1603,7 @@
 		</effects>
 	</skill>
 	<skill id="412" toLevel="11" name="Sand Bomb">
-		<!-- Hurls a sand cloud onto the enemy.For $s1, decreases target s P. Accuracy by $s2 and M. Accuracy by $s3. -->
+		<!-- Hurls a sand cloud onto the enemy.For $s1, decreases target's P. Accuracy  by $s2 and M. Accuracy by $s3. -->
 		<icon>icon.skill0412</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1699,7 +1634,7 @@
 			<value level="8">-635</value>
 			<value level="9">-646</value>
 			<value level="10">-655</value>
-			<value level="11">-664</value>
+			<value level="11">-662</value>
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
@@ -1955,13 +1890,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="415" toLevel="1" name="Spirit of Sagittarius">
+	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
 		<!-- Decreases physical skill MP Consumption by $s2 for $s1. -->
 		<icon>icon.skill0415</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_COST_DOWN</abnormalType>
-		<effectPoint>549</effectPoint>
+		<effectPoint>
+			<value level="1">549</value>
+			<value level="2">611</value>
+			<value level="3">655</value>
+		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>76</magicLvl>
 		<mpConsume>27</mpConsume>
@@ -2527,7 +2466,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="430" toLevel="1" name="Master of Combat">
+	<skill id="430" toLevel="8" name="Master of Combat">
 		<!-- Max CP + $s1 and Max HP + $s2. -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
@@ -2693,7 +2632,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="437" toLevel="1" name="Song of Silence">
+	<skill id="437" toLevel="7" name="Song of Silence">
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2706,7 +2645,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-507</effectPoint>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>79</magicLvl>
@@ -3143,9 +3082,9 @@
 			<value level="3">2</value>
 		</chargeConsume>
 		<effectPoint>
-			<value level="1">472</value>
-			<value level="2">542</value>
-			<value level="3">611</value>
+			<value level="1">540</value>
+			<value level="2">582</value>
+			<value level="3">624</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLvl>
@@ -3280,7 +3219,7 @@
 			<value level="3">37</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>4000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3552,7 +3491,6 @@
 					<value level="48">6</value>
 					<value level="49">6</value>
 					<value level="50">6</value>
-					<value level="51">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -4974,7 +4912,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="485" toLevel="19" name="Disarm">
+	<skill id="485" toLevel="16" name="Disarm">
 		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -4982,8 +4920,8 @@
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="19">70</value>
-			<value fromLevel="15" toLevel="19" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="16">70</value>
+			<value fromLevel="15" toLevel="16" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
@@ -5005,9 +4943,6 @@
 			<value level="14">-655</value>
 			<value level="15">-655</value>
 			<value level="16">-655</value>
-			<value level="17">-655</value>
-			<value level="18">-655</value>
-			<value level="19">-655</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
@@ -5030,9 +4965,6 @@
 			<value level="14">90</value>
 			<value level="15">95</value>
 			<value level="16">99</value>
-			<value level="17">101</value>
-			<value level="18">103</value>
-			<value level="19">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -5051,9 +4983,6 @@
 			<value level="14">55</value>
 			<value level="15">55</value>
 			<value level="16">55</value>
-			<value level="17">55</value>
-			<value level="18">55</value>
-			<value level="19">55</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -5070,13 +4999,13 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="15" toLevel="16" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="15" toLevel="16" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="6" name="Topaz - Spiritshot">
+	<skill id="17701" toLevel="10" name="Topaz - Spiritshot">
 		<!-- Disrupts the target's skill casting. When used during PvP, inflicts fixed damage of $s1 and ignores CP. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
@@ -22,6 +22,10 @@
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
+			<value level="7">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<magicLvl>
 			<value level="1">1</value>
@@ -30,6 +34,10 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
+			<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
@@ -55,9 +63,13 @@
 					<value level="4">10089</value>
 					<value level="5">13275</value>
 					<value level="6">13275</value>
+					<value level="7">13275</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">13275</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">13275</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">13275</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
-			<effect name="Lethal" fromLevel="6" toLevel="6">
+			<effect name="Lethal" fromLevel="6" toLevel="10">
 				<fullLethal>30</fullLethal>
 			</effect>
 		</pvpEffects>
@@ -97,7 +109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17704" toLevel="6" name="Obsidian">
+	<skill id="17704" toLevel="10" name="Obsidian">
 		<!-- Decreases damage received during PvP by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_obsidian_i00</value>
@@ -114,7 +126,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
+			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="10">
 				<!-- Greater Garnet - Cancel Stun -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -136,12 +148,16 @@
 					<value level="4">-11</value>
 					<value level="5">-15</value>
 					<value level="6">-15</value>
+					<value level="7">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<type>PK</type>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17705" toLevel="6" name="Opal">
+	<skill id="17705" toLevel="10" name="Opal">
 		<!-- Increases Attack Attribute by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_opal_i00</value>
@@ -165,6 +181,10 @@
 					<value level="4">70</value>
 					<value level="5">120</value>
 					<value level="6">120</value>
+					<value level="7">120</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">120</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">120</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">120</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 			</effect>
 			<effect name="DefenceAttribute">
@@ -175,6 +195,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -186,6 +210,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
@@ -197,6 +225,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
@@ -208,6 +240,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
@@ -219,6 +255,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>DARK</attribute>
 			</effect>
@@ -230,6 +270,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">70</value>
+					<value level="7">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
@@ -271,7 +315,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17708" toLevel="6" name="Diamond">
+	<skill id="17708" toLevel="10" name="Diamond">
 		<!-- Increases P. Def. by $s1, and decreases Received P. Critical Damage by $s2. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_diamond_i00</value>
@@ -296,6 +340,10 @@
 					<value level="4">1418</value>
 					<value level="5">1986</value>
 					<value level="6">1986</value>
+					<value level="7">1986</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">1986</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">1986</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">1986</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -307,6 +355,10 @@
 					<value level="4">-4</value>
 					<value level="5">-5</value>
 					<value level="6">-5</value>
+					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -318,12 +370,16 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">10</value>
+					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17709" toLevel="6" name="Pearl">
+	<skill id="17709" toLevel="10" name="Pearl">
 		<!-- M. Def. +$s1, Received M. Critical Damage -$s2. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
@@ -348,6 +404,10 @@
 					<value level="4">821</value>
 					<value level="5">1150</value>
 					<value level="6">1150</value>
+					<value level="7">1150</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">1150</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">1150</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">1150</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -359,6 +419,10 @@
 					<value level="4">-4</value>
 					<value level="5">-5</value>
 					<value level="6">-5</value>
+					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -370,6 +434,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">10</value>
+					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -455,21 +523,36 @@
 		<!-- For 1 h., Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill Cooldown -10%, and Skill MP Consumption -15%. (Same slot as Art of Seduction buff) -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="17715" toLevel="1" name="Spirit Hit Lv. 1">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="17716" toLevel="1" name="Spirit Hit Lv. 2">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="17717" toLevel="1" name="Spirit Hit Lv. 3">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="17718" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Shaper (1-h.). (Need Dandy's Scroll: Release Seal) -->

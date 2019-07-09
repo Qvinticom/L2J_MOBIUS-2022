@@ -2015,7 +2015,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8245" toLevel="1" name="Release Agathion's Seal - Love">
+	<skill id="8245" toLevel="1" name="Agathion Summon- Love">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2211,7 +2211,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8254" toLevel="1" name="Release Agathion's Seal - Monkey">
+	<skill id="8254" toLevel="1" name="Agathion Summon - Monkey">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2228,7 +2228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8255" toLevel="1" name="Release Agathion's Seal - Griffin">
+	<skill id="8255" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2245,7 +2245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8256" toLevel="1" name="Release Agathion's Seal - Joy">
+	<skill id="8256" toLevel="1" name="Agathion Summon - Joy">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2262,7 +2262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8257" toLevel="1" name="Release Agathion's Seal - Angry Devil">
+	<skill id="8257" toLevel="1" name="Agathion Summon - Angry Devil">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2279,7 +2279,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8258" toLevel="1" name="Release Agathion's Seal - Sorrow">
+	<skill id="8258" toLevel="1" name="Agathion Summon - Sorrow">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2296,7 +2296,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8259" toLevel="1" name="Release Agathion's Seal - Teddy Boy">
+	<skill id="8259" toLevel="1" name="Agathion Summon - Teddy Boy">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2313,7 +2313,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8260" toLevel="1" name="Release Agathion's Seal - Teddy Girl">
+	<skill id="8260" toLevel="1" name="Agathion Summon - Teddy Girl">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2526,7 +2526,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8275" toLevel="1" name="Release Agathion's Seal - Knight">
+	<skill id="8275" toLevel="1" name="Agathion Summon - Knight">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2559,6 +2559,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>83</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
@@ -3063,7 +3064,7 @@
 		</effects>
 	</skill>
 	<skill id="8295" toLevel="1" name="Special Ability: Focus">
-		<!-- Increases Critical Rate by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Increases Critical Rate by 109.2. Inflicts additional damage by 5% during PvP. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>

@@ -6,7 +6,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -398,6 +398,7 @@
 		</effects>
 	</skill>
 	<skill id="10508" toLevel="11" name="Blood Stab">
+		<!-- Targets the enemy's back to attack its vital spot with $s1 Power added to P. Atk. Additionally inflicts Bleed on the enemy, dealing $s2 damage per sec. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10508</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -532,6 +533,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10509" toLevel="11" name="Heart Breaker">
+		<!-- Stabs the target's heart with $s1 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Speed by $s2, Evasion by $s3, Critical Damage from the flanks and rear by $s4. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10509</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -662,6 +664,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10510" toLevel="11" name="Chain Blow">
+		<!-- Inflicts damage with $s1 Power added to P. Atk. Increases Skill Power by $s2 if used during Bleed. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10510</icon>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -787,6 +790,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10511" toLevel="7" name="Reverse">
+		<!-- Attempts a Deadly Attack with $s1 power added to P. Atk. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10511</icon>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -877,6 +881,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10512" toLevel="11" name="Dagger Explosion">
+		<!-- Detonates a blade to attack nearby enemies with $s1 Power added to P. Atk. Requires a dagger/ dual dagger. Over-hit. Critical. -->
 		<icon>icon.skill10512</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -967,6 +972,7 @@
 		</effects>
 	</skill>
 	<skill id="10513" toLevel="10" name="Barrage of Nails">
+		<!-- Attacks the enemies near you with $s1 power added to P. Atk. Additionally, decreases their Speed by $s3 and makes them unable to hide for $s2. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1070,6 +1076,7 @@
 		</effects>
 	</skill>
 	<skill id="10514" toLevel="8" name="Paralyzing Shadow">
+		<!-- Seals the target's shadow and makes its body gradually hardened for $s1. Becomes paralyzed for $s2 when completely hardened. -->
 		<icon>icon.skill10514</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1203,6 +1210,7 @@
 		</effects>
 	</skill>
 	<skill id="10516" toLevel="9" name="Shadow Chase">
+		<!-- Teleports to the back of the target and cancels the target and inflicts Stun for $s1. -->
 		<icon>icon.skill10516</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1279,6 +1287,7 @@
 		</effects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
+		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of 250 and making you invisible for 20 sec. Additionally, Speed -50. -->
 		<icon>icon.skill10517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1292,11 +1301,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>38</mpConsume>
-		<castRange>250</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
@@ -1352,6 +1360,7 @@
 		</effects>
 	</skill>
 	<skill id="10520" toLevel="4" name="Final Ultimate Evasion">
+		<!-- For $s1, own P. Evasion +$s2, M. Def. +$s3, P. Skill Evasion Rate +$s4, Debuff Resistance +$s5. Has a chance of canceling the enemy's targeting when attacked. -->
 		<icon>icon.skill10520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1448,10 +1457,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10522" toLevel="9" name="Poison Sworm">
+	<skill id="10522" toLevel="9" name="Poison Swarm">
 		<!-- Throws a poison bottle at the target point to create a poisonous area for $s1. Enemies within the area suffer P. Atk. -$s2, P. Def/ M. Def -$s3, Movement Speed -$s4, and Shield Def. -$s5 and cannot use magic skills. -->
 		<icon>icon.skill10522</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">76</value>
@@ -1466,19 +1476,9 @@
 		</mpConsume>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>800</hitTime>
+		<hitTime>2000</hitTime>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>
-			<value level="1">-707</value>
-			<value level="2">-709</value>
-			<value level="3">-711</value>
-			<value level="4">-711</value>
-			<value level="5">-711</value>
-			<value level="6">-711</value>
-			<value level="7">-711</value>
-			<value level="8">-711</value>
-			<value level="9">-711</value>
-		</effectPoint>
+		<effectPoint>-711</effectPoint>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1602,6 +1602,7 @@
 		</effects>
 	</skill>
 	<skill id="10524" toLevel="3" name="Counter Stance">
+		<!-- Takes a countering stance for $s1 to evade P. Atk. skills and deflects damage at a $s2 probability. -->
 		<icon>icon.skill10524</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1670,6 +1671,7 @@
 		</effects>
 	</skill>
 	<skill id="10525" toLevel="7" name="Shadow Dash">
+		<!-- For $s1, increases Speed by $s2, P. Evasion by $s3, and HP Recovery Bonus by $s4. -->
 		<icon>icon.skill10525</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1774,6 +1776,7 @@
 		</effects>
 	</skill>
 	<skill id="10526" toLevel="9" name="Mischief">
+		<!-- Inflicts confusion on target to stop him from attacking target with the highest hostility. Speed -$s1. -->
 		<icon>icon.skill10526</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1844,6 +1847,7 @@
 		</effects>
 	</skill>
 	<skill id="10527" toLevel="4" name="Mass Trick">
+		<!-- Inflicts confusion, for $s1 M. Evasion -$s2, and chance of inflicting M. Critical Damage +$s3 on the target and nearby enemies. -->
 		<icon>icon.skill10527</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1865,7 +1869,7 @@
 			<value level="4">105</value>
 		</magicLvl>
 		<mpConsume>92</mpConsume>
-		<castRange>400</castRange>
+		<castRange>300</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -1915,6 +1919,7 @@
 		</effects>
 	</skill>
 	<skill id="10529" toLevel="4" name="Shadow Flash">
+		<!-- Teleports to the back of the target to increase the damage from P. Critical Attack by $s2 for $s1 and prevents it from recovering HP by over $s3. Additionally, the target is unable to hide and this state cannot be canceled. -->
 		<icon>icon.skill10529</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1937,7 +1942,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -2003,6 +2008,7 @@
 		</effects>
 	</skill>
 	<skill id="10531" toLevel="2" name="Angel of Death">
+		<!-- For $s1, Vital Spot Attack Rate +$s2, P. Skill Power +$s3, P. Accuracy +$s4, P. Evasion +$s5, and defends against debuff attacks $s6. Can be used when Dagger/ Dual Dagger is equipped. -->
 		<icon>icon.skill10531</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2320,6 +2326,7 @@
 		</effects>
 	</skill>
 	<skill id="10539" toLevel="11" name="Throw Dagger">
+		<!-- Throws a dagger at the enemy with $s1 Power added to P. Atk. for $s2, Speed -$s3. Requires a dagger/ dual dagger to be equipped. Over-hit. -->
 		<icon>icon.skill10539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2431,6 +2438,7 @@
 		</effects>
 	</skill>
 	<skill id="10540" toLevel="8" name="Throw Sand">
+		<!-- Hurls poisonous sand at the enemy. For $s1, greatly decreases P. Accuracy and lures the enemy to you. Requires a dagger/ dual dagger to be equipped. -->
 		<icon>icon.skill10540</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2449,6 +2457,7 @@
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>
+		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2720,6 +2729,7 @@
 		</endEffects>
 	</skill>
 	<skill id="10546" toLevel="7" name="Jawbone Blow">
+		<!-- Delivers a powerful blow to Knock Down target for $s1. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2875,6 +2885,7 @@
 		</effects>
 	</skill>
 	<skill id="10549" toLevel="8" name="Kick">
+		<!-- Powerfully Knock Back target with a kick. -->
 		<icon>icon.skill10549</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3167,7 +3178,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10553" toLevel="8" name="Chance of Wind">
+	<skill id="10553" toLevel="1" name="Chance of Wind">
 		<!-- Resets cooldown of certain skills. -->
 		<icon>icon.skill10878</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3176,28 +3187,13 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
-			<value level="2">86</value>
-			<value level="3">88</value>
-			<value level="4">90</value>
-			<value level="5">92</value>
-			<value level="6">94</value>
-			<value level="7">96</value>
-			<value level="8">98</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">133</value>
-			<value level="2">135</value>
-			<value level="3">140</value>
-			<value level="4">145</value>
-			<value level="5">149</value>
-			<value level="6">154</value>
-			<value level="7">159</value>
-			<value level="8">164</value>
 		</mpConsume>
-		<hitTime>1530</hitTime>
-		<coolTime>200</coolTime>
-		<effectPoint>-704</effectPoint>
-		<reuseDelay>10000</reuseDelay>
+		<hitTime>2000</hitTime>
+		<effectPoint>669</effectPoint>
+		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3213,19 +3209,13 @@
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">6871</value>
-					<value level="2">7012</value>
-					<value level="3">7300</value>
-					<value level="4">7599</value>
-					<value level="5">7909</value>
-					<value level="6">8232</value>
-					<value level="7">8568</value>
-					<value level="8">8917</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10554" toLevel="7" name="Flash Bluff">
+		<!-- Startles a target to cause Bluff which makes it turn backward for $s1. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10554</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3370,6 +3360,7 @@
 				<amount>
 					<value level="1">30</value>
 					<value level="1">40</value>
+					<value level="2">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3378,6 +3369,7 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="1">70</value>
+					<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -3397,6 +3389,7 @@
 		</effects>
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
+		<!-- For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3467,6 +3460,7 @@
 		</effects>
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
+		<!-- For 120 sec., Deadly Atk. Rate +10% and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11877</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3558,6 +3552,7 @@
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Tactics">
+		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 10%, Critical Rate/ Damage from the front and the back by 50%, Critical Rate/ Damage from the flank by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10562</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

@@ -1976,7 +1976,6 @@
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14614</itemConsumeId> <!-- Lineage II Devotee Scroll -->
@@ -2065,7 +2064,6 @@
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14615</itemConsumeId> <!-- Scroll of Christmas Festival - Mage Type -->
@@ -2199,7 +2197,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2860" toLevel="7" name="Superior Elixir of Life (R-grade)">
+	<skill id="2860" toLevel="7" name="Superior Elixir of Life (No-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2264,7 +2262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2861" toLevel="7" name="Superior Elixir of Mind (R-grade)">
+	<skill id="2861" toLevel="7" name="Superior Elixir of Mind (No-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2329,7 +2327,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2862" toLevel="7" name="Superior Elixir of CP (R-grade)">
+	<skill id="2862" toLevel="7" name="Superior Elixir of CP (No-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2591,6 +2589,7 @@
 		<itemConsumeId>14722</itemConsumeId> <!-- Event - Cupid's Fatigue Recovery Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -2622,6 +2621,7 @@
 		<itemConsumeId>14723</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Recovery Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>

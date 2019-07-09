@@ -4,7 +4,7 @@
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill0001</icon>
 		<castRange>40</castRange>
-		<coolTime>167</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-213</value>
 			<value level="2">-219</value>
@@ -661,6 +661,7 @@
 			<value level="37">53</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -723,6 +724,7 @@
 		</effects>
 	</skill>
 	<skill id="7" toLevel="44" name="Sonic Storm">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1386,7 +1388,7 @@
 		</effects>
 	</skill>
 	<skill id="13" toLevel="1" name="Summon Siege Golem">
-		<!-- Summons a siege weapon. Requires $s1 C-grade Crystals. -->
+		<!-- Summons a siege weapon. Requires 180 C-grade Crystals. -->
 		<icon>icon.skill0013</icon>
 		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3427,11 +3429,11 @@
 		</effects>
 	</skill>
 	<skill id="35" toLevel="44" name="Force Storm">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
-		<coolTime>300</coolTime>
 		<effectPoint>
 			<value level="1">-114</value>
 			<value level="2">-117</value>
@@ -3479,7 +3481,7 @@
 			<value level="44">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
-		<hitTime>1790</hitTime>
+		<hitTime>1900</hitTime>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -3525,7 +3527,6 @@
 			<value level="42">98</value>
 			<value level="43">101</value>
 			<value level="44">103</value>
-			<value level="45">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -3574,7 +3575,7 @@
 			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -4054,6 +4055,7 @@
 		</effects>
 	</skill>
 	<skill id="48" toLevel="49" name="Thunder Storm">
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5412,6 +5414,7 @@
 		</effects>
 	</skill>
 	<skill id="69" toLevel="37" name="Sacrifice">
+		<!-- Consumes your HP to recover the target's HP +$s1. -->
 		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -6151,6 +6154,7 @@
 		</effects>
 	</skill>
 	<skill id="82" toLevel="3" name="Majesty">
+		<!-- Increases P. Def. by $s2 and decreases Evasion by $s3 for $s1. -->
 		<icon>icon.skill0082</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -6630,6 +6634,7 @@
 		</effects>
 	</skill>
 	<skill id="94" toLevel="7" name="Rage">
+		<!-- P. Atk. +$s2 for $s1. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0094</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -7078,6 +7083,7 @@
 		</effects>
 	</skill>
 	<skill id="99" toLevel="2" name="Rapid Shot">
+		<!-- Increases bow Atk. Spd. by $s2 for $s1. -->
 		<icon>icon.skill0099</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

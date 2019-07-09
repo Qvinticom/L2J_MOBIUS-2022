@@ -548,7 +548,7 @@
 		<effectPoint>1</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="23657" toLevel="1" name="Wind Aura Spike">
+	<skill id="23657" toLevel="2" name="Wind Aura Spike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -558,7 +558,7 @@
 		<effectPoint>-115</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23658" toLevel="1" name="Earth Aura Spike">
+	<skill id="23658" toLevel="2" name="Earth Aura Spike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -568,7 +568,7 @@
 		<effectPoint>-115</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23659" toLevel="1" name="Wind Fatal Strike">
+	<skill id="23659" toLevel="2" name="Wind Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -576,7 +576,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23660" toLevel="1" name="Holy  Fatal Strike">
+	<skill id="23660" toLevel="2" name="Holy Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -584,7 +584,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23661" toLevel="1" name="Earth  Fatal Strike">
+	<skill id="23661" toLevel="2" name="Earth Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -592,7 +592,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23662" toLevel="1" name="Dark  Fatal Strike">
+	<skill id="23662" toLevel="2" name="Dark Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -600,7 +600,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23663" toLevel="1" name="Wind Blast">
+	<skill id="23663" toLevel="2" name="Wind Blast">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -610,7 +610,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23664" toLevel="1" name="Holy Blast">
+	<skill id="23664" toLevel="2" name="Holy Blast">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -620,7 +620,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23665" toLevel="1" name="Earth Blast">
+	<skill id="23665" toLevel="2" name="Earth Blast">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -630,7 +630,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23666" toLevel="1" name="Darkness Blast">
+	<skill id="23666" toLevel="2" name="Darkness Outburst">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -653,7 +653,7 @@
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23668" toLevel="1" name="Mass Power Slam">
+	<skill id="23668" toLevel="2" name="Mass Power Slam">
 		<!-- Deals a powerful blow and knocks back the enemy. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
@@ -785,10 +785,13 @@
 	<skill id="23682" toLevel="1" name="Fatal Strike">
 		<!-- Inflicts a powerful blow on a single target. -->
 		<operateType>A1</operateType>
-		<castRange>100</castRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>1</mpConsume>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>800</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-700</effectPoint>
 		<effectRange>100</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -802,6 +805,9 @@
 		<!-- Inflicts great magic damage to enemies within range. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>1</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>40-80</affectLimit>
@@ -827,13 +833,16 @@
 		<!-- Inflicts great damage to enemies within range and makes them bleed for 10 sec. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<mpConsume>1</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
 		<hitTime>6000</hitTime>
 		<coolTime>800</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>

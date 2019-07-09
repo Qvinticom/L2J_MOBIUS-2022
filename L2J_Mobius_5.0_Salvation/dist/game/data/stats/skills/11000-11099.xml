@@ -249,13 +249,13 @@
 		</effects>
 	</skill>
 	<skill id="11007" toLevel="1" name="Fire Stance">
-		<!-- Increases M. Atk. by $s1 and Fire defense by $s2, and applies Fire to attribute magic. -->
+		<!-- Increases M. Atk. by 20% and Fire defense by 100, and applies Fire to attribute magic. -->
 		<icon>icon.skill10305</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<magicLvl>85</magicLvl>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
@@ -274,12 +274,12 @@
 		</effects>
 	</skill>
 	<skill id="11008" toLevel="1" name="Water Stance">
-		<!-- Decreases Magical Skill Cooldown by $s1 and increases Water defense by $s2, and applies Water to attribute magic. -->
+		<!-- Decreases Magical Skill Cooldown by 5% and increases Water defense by 100, and applies Water to attribute magic. -->
 		<icon>icon.skill10306</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -300,12 +300,12 @@
 		</effects>
 	</skill>
 	<skill id="11009" toLevel="1" name="Wind Stance">
-		<!-- Increases M. Critical Damage by $s1 and Wind defense by $s2, and applies Wind to attribute magic. -->
+		<!-- Increases M. Critical Damage by 10% and Wind defense by 100, and applies Wind to attribute magic. -->
 		<icon>icon.skill10307</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -325,12 +325,12 @@
 		</effects>
 	</skill>
 	<skill id="11010" toLevel="1" name="Earth Stance">
-		<!-- Increases P. Def. by $s1 and Earth defense by $s2, and applies Earth to attribute magic. -->
+		<!-- Increases P. Def. by 796 and Earth defense by 100, and applies Earth to attribute magic. -->
 		<icon>icon.skill10304</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -1908,7 +1908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11027" toLevel="11" name="Lockshard Destruction">
+	<skill id="11027" toLevel="11" name="Bedrock Destruction">
 		<!-- Inflicts earth damage on the target with $s1 power added to M. Atk. Decreases M. Def. by $s3 and all attribute defenses by $s4 for $s2. -->
 		<icon>icon.skill11027</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1958,7 +1958,7 @@
 		<hitCancelTime>1</hitCancelTime>
 		<isMagic>1</isMagic>
 		<effectPoint>
-			<value level="1">-687</value>
+			<value level="1">-328</value>
 			<value level="2">-692</value>
 			<value level="3">-696</value>
 			<value level="4">-700</value>
@@ -2218,7 +2218,7 @@
 		<affectRange>200</affectRange>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>15000</hitTime>
+		<hitTime>10000</hitTime>
 		<reuseDelay>20000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>
@@ -2888,7 +2888,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11040" toLevel="8" name="Elemental Storm">
+	<skill id="11040" toLevel="8" name="Elemental Final Storm">
 		<!-- Inflicts attribute damage with $s1 power added to M. Atk. on the target and nearby enemies. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -2988,7 +2988,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11041" toLevel="8" name="Elemental Storm (Fire)">
+	<skill id="11041" toLevel="8" name="Elemental Final Storm (Fire)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3071,7 +3071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11042" toLevel="8" name="Elemental Storm (Water)">
+	<skill id="11042" toLevel="8" name="Elemental Final Storm (Water)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3154,7 +3154,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11043" toLevel="8" name="Elemental Storm (Wind)">
+	<skill id="11043" toLevel="8" name="Elemental Final Storm (Wind)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3320,7 +3320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
+	<skill id="11045" toLevel="8" name="Elemental Final Storm (4 Elements)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3428,7 +3428,7 @@
 		<effectPoint>
 			<value level="1">696</value>
 			<value level="2">705</value>
-			<value level="3">714</value>
+			<value level="3">705</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3942,7 +3942,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
@@ -4021,7 +4021,7 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
@@ -4107,13 +4107,11 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4461,14 +4459,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>
-			<value level="1">-700</value>
-			<value level="2">-705</value>
-			<value level="3">-709</value>
-			<value level="4">-700</value>
-			<value level="5">-705</value>
-			<value level="6">-709</value>
-		</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PULL</trait>
@@ -4482,7 +4473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11059" toLevel="4" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 4 -->
+	<skill id="11059" toLevel="6" name="Shadow Snare Zone">
 		<!-- Pulls the enemies near you to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
@@ -4493,12 +4484,7 @@
 		<affectRange>200</affectRange>
 		<operateType>A2</operateType>
 		<trait>PULL</trait>
-		<effectPoint>
-			<value level="1">-709</value>
-			<value level="2">0</value>
-			<value level="3">0</value>
-			<value level="4">-709</value>
-		</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -4519,6 +4505,8 @@
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">693700</value>
+					<value level="5">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -4678,7 +4666,7 @@
 		</effects>
 	</skill>
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
-		<!-- Reflects $s2 of damage received to decrease $s3 and defend the rest by consuming MP for $s4. This skill effect is removed if MP reaches $s1. -->
+		<!-- Reflects 10% of damage received to decrease 90% and defend the rest by consuming MP for 0. This skill effect is removed if MP reaches 20 seconds. -->
 		<icon>icon.skill11065</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5585,7 +5573,7 @@
 		</effects>
 	</skill>
 	<skill id="11093" toLevel="1" name="Crystal Form">
-		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for $s1 and rapidly recovers HP and MP. -->
+		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -5752,7 +5740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11096" toLevel="1" name="Elemental Destruction: Fire">
+	<skill id="11096" toLevel="1" name="Elemental Destruction - Additional Effect">
 		<!-- Additional Destruction Effect -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>

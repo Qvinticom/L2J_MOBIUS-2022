@@ -99,13 +99,12 @@
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
-		<castRange>40</castRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16520" toLevel="4" name="Shild of Atelia">
+	<skill id="16520" toLevel="4" name="Shield of Atelia">
 		<!-- Increases P./M. Def. by $s1. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -134,7 +133,7 @@
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>500</castRange>
-		<hitTime>2000</hitTime>
+		<hitTime>3000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -144,8 +143,7 @@
 		<icon>icon.skill11066</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
-		<castRange>350</castRange>
-		<hitTime>2500</hitTime>
+		<hitTime>3700</hitTime>
 		<coolTime>800</coolTime>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>15000</reuseDelay>
@@ -408,12 +406,11 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<hitTime>2500</hitTime>
-		<coolTime>3000</coolTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<affectLimit>10-10</affectLimit>
-		<castRange>300</castRange>
 		<affectRange>300</affectRange>
 		<trait>KNOCKDOWN</trait>
 		<targetType>SELF</targetType>
@@ -443,7 +440,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<magicCriticalRate>5</magicCriticalRate>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -459,7 +456,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<mpConsume>19</mpConsume>
-		<castRange>100</castRange>
+		<castRange>40</castRange>
 		<effectRange>900</effectRange>
 		<affectRange>200</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -906,7 +903,7 @@
 		<affectRange>200</affectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effectPoint>-828</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
@@ -926,6 +923,7 @@
 	<skill id="16591" toLevel="1" name="Ancient Plasma Wave">
 		<!-- A powerful ancient wave of plasma is shot toward the target and nearby enemies, causing magic damage. -->
 		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -947,6 +945,7 @@
 		<!-- A powerful earthquake wave is shot toward the target and nearby enemies, causing stun for 3 seconds. -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>15000</reuseDelay>
 		<castRange>600</castRange>
 		<abnormalType>STUN</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
@@ -979,7 +978,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<targetType>SELF</targetType>
-		<castRange>-1</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
@@ -1010,6 +1008,7 @@
 	<skill id="16594" toLevel="1" name="Plasma Strike">
 		<!-- An attack laden with a powerful current is dealt to the enemy, causing physical damage. -->
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<castRange>100</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -1027,6 +1026,7 @@
 	<skill id="16595" toLevel="1" name="Plasma Shooter">
 		<!-- An arrow laden with a powerful current is launched toward the enemy, causing physical damage. -->
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -1090,7 +1090,7 @@
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1110,11 +1110,12 @@
 	<skill id="16599" toLevel="1" name="Piercing Bolt">
 		<!-- A powerful, penetrating range attack arrow is shot toward the target and nearby enemies, dealing physical damage. -->
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<castRange>900</castRange>
 		<affectLimit>10-25</affectLimit>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-52</effectPoint>
+		<effectPoint>-709</effectPoint>
 		<isMagic>1</isMagic>
 		<fanRange>0;0;1100;120</fanRange>
 		<mpConsume>10</mpConsume>

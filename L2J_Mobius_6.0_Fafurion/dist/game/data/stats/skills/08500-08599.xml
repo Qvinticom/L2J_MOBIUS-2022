@@ -523,6 +523,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1834,7 +1835,7 @@
 		<mpConsume>83</mpConsume>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
-		<effectPoint>-681</effectPoint>
+		<effectPoint>-679</effectPoint>
 		<effectRange>800</effectRange>
 		<hitTime>800</hitTime>
 		<isDebuff>true</isDebuff>

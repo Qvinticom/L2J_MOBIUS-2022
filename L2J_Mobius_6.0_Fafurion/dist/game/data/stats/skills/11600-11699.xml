@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Combat Frenzy">
-		<!-- For $s1, clan members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and Magic Cancel Rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
+		<!-- For 5 min., clan members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and Magic Cancel Rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11600_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -60,7 +60,7 @@
 		</effects>
 	</skill>
 	<skill id="11601" toLevel="1" name="Marching Frenzy">
-		<!-- For $s1, clan members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 5 min., clan members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -117,7 +117,7 @@
 		</effects>
 	</skill>
 	<skill id="11602" toLevel="1" name="Relax Frenzy">
-		<!-- For $s1, clan members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 5 min., clan members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -187,7 +187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11603" toLevel="9" name="Seal of Extortion">
+	<skill id="11603" toLevel="7" name="Seal of Extortion">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
 		<icon>
 			<value level="1">icon.skill11559</value>
@@ -217,15 +217,21 @@
 			<value level="5">358</value>
 			<value level="6">384</value>
 			<value level="7">410</value>
-			<value level="8">436</value>
-			<value level="9">462</value>
 		</mpConsume>
 		<castRange>900</castRange>
-		<hitTime>2110</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
-		<effectPoint>-679</effectPoint>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-379</value>
+			<value level="3">-379</value>
+			<value level="4">-679</value>
+			<value level="5">-679</value>
+			<value level="6">-679</value>
+			<value level="7">-679</value>
+		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="LimitHp">
@@ -237,8 +243,6 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
-					<value level="8">-110</value>
-					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -251,8 +255,6 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
-					<value level="8">-110</value>
-					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -265,8 +267,6 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
-					<value level="8">-110</value>
-					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -320,7 +320,7 @@
 		</effects>
 	</skill>
 	<skill id="11605" toLevel="1" name="Shield Song">
-		<!-- For $s1, P. Def. +$s2, $s3 Attribute Def. +$s4, Bow/ Crossbow Resistance +$s5, and Debuff Resistance +$s6. -->
+		<!-- For 30 min., P. Def. +5%, 6 Attribute Def. +20, Bow/ Crossbow Resistance +10%, and Debuff Resistance +10%. -->
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -358,7 +358,7 @@
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Sword Waltz">
-		<!-- For $s1, your P. Atk. and Atk. Spd. +$s2 and P. Critical Rate/ Speed +$s3. A chance to apply the Spectral Slash effect on the target when a basic attack is made. -->
+		<!-- For 30 min., your P. Atk. and Atk. Spd. +15% and P. Critical Rate/ Speed +10. A chance to apply the Spectral Slash effect on the target when a basic attack is made. -->
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -396,7 +396,7 @@
 		</effects>
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
-		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -455,7 +455,7 @@
 		</effects>
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -516,7 +516,7 @@
 		</effects>
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
-		<!-- For $s1, party members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -582,7 +582,7 @@
 		</effects>
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
-		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -641,7 +641,7 @@
 		</effects>
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
+		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -702,7 +702,7 @@
 		</effects>
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
-		<!-- For $s1, party members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -820,6 +820,7 @@
 		</abnormalTime>
 		<abnormalType>RHAPSODY</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>
@@ -872,7 +873,7 @@
 		</effects>
 	</skill>
 	<skill id="11615" toLevel="1" name="Battle Ditty">
-		<!-- For $s1, selected party member's PvP Damage +$s2, Attribute Attack +$s3, MP Recovery Bonus +$s4. Consumes $s5 Spirit Ore. -->
+		<!-- For 30 min., selected party member's PvP Damage +10%, Attribute Attack +10, MP Recovery Bonus +10%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11615</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -919,7 +920,7 @@
 		</effects>
 	</skill>
 	<skill id="11616" toLevel="1" name="Protective Ditty">
-		<!-- For $s1, selected party member's Received PvP Damage -$s2, Speed +$s3, HP Recovery Bonus +$s4. Consumes $s5 Spirit Ore. -->
+		<!-- For 30 min., selected party member's Received PvP Damage -10%, Speed +10, HP Recovery Bonus +10%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11616</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -967,7 +968,7 @@
 		</effects>
 	</skill>
 	<skill id="11617" toLevel="1" name="Command for Battle">
-		<!-- For $s1, selected clan member's PvP Damage +$s2, Attribute Attack +$s3, MP Recovery Bonus +$s4. Consumes $s5 Spirit Ore. -->
+		<!-- For 30 min., selected clan member's PvP Damage +10%, Attribute Attack +10, MP Recovery Bonus +10%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11617</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -1017,7 +1018,7 @@
 		</effects>
 	</skill>
 	<skill id="11618" toLevel="1" name="Command for Defense">
-		<!-- For $s1, selected clan member's Received PvP Damage -$s2, Speed +$s3, HP Recovery Bonus +$s4. Consumes $s5 Spirit Ore. -->
+		<!-- For 30 min., selected clan member's Received PvP Damage -10%, Speed +10, HP Recovery Bonus +10%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11618</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -1062,8 +1063,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11619" toLevel="3" name="Soul Ditty">
-		<!-- Increases entire party's P. Atk. by $s1, P. Critical Damage by $s2, Atk. Spd. by $s3, M. Atk. by $s4, Casting Spd. by $s5, P. Def. by $s6, M. Def. by $s7, and Skill Power by $s8. -->
+	<skill id="11619" toLevel="1" name="Soul Ditty">
+		<!-- Increases entire party's P. Atk. by 3%, P. Critical Damage by 3%, Atk. Spd. by 2%, M. Atk. by 2%, Casting Spd. by 2%, P. Def. by 2%, M. Def. by 2%, and Skill Power by 2%. -->
 		<icon>icon.skill11529</icon>
 		<abnormalTime>1800</abnormalTime> <!-- Custom -->
 		<affectRange>1000</affectRange>
@@ -1082,64 +1083,48 @@
 			<effect name="PAtk">
 				<amount>
 					<value level="1">3</value>
-					<value level="2">5</value>
-					<value level="3">7</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
 					<value level="1">3</value>
-					<value level="2">5</value>
-					<value level="3">7</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1185,17 +1170,18 @@
 		</effects>
 	</skill>
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
-		<!-- Creates a defense barrier that absorbs damage as much as 200% of your P. Def. for 10 sec.. -->
+		<!-- Creates a defense barrier that absorbs damage as much as 200% of your P. Def. for 10 sec. -->
 		<icon>icon.skill11621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
 		<operateType>A2</operateType>
+		<mpConsume>114</mpConsume>
 		<magicLvl>99</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<isMagic>4</isMagic>
 		<effects>
 			<effect name="AbsorbDamage">
@@ -1208,7 +1194,7 @@
 		</effects>
 	</skill>
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
-		<!-- OLD: The barrier absorbs 20000 damage for 10 sec. -->
+		<!-- The barrier absorbs 20000 damage for 10 sec. -->
 		<icon>icon.skill11621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

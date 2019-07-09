@@ -663,7 +663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26027" fromLevel="2" toLevel="6" name="Secret medicine of Will">
+	<skill id="26027" fromLevel="2" toLevel="6" name="Elixir of CP (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -710,7 +710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26028" fromLevel="2" toLevel="6" name="Secret medicine of Life">
+	<skill id="26028" fromLevel="2" toLevel="6" name="Elixir of Life (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -778,7 +778,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>2000</reuseDelay> <!-- Retail value is 600000 -->
+		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1219,7 +1219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26046" toLevel="7" name="XP Rune III (Lv. 1-99) 10%">
+	<skill id="26046" toLevel="7" name="XP Rune III (Lv. 1-100+) 10%">
 		<!-- Obtained XP + $s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>

@@ -989,7 +989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55120" toLevel="1" name="none">
+	<skill id="55120" toLevel="1" name="">
 		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1463,11 +1463,15 @@
 		<!-- Creates a barrier that absorbs up to 202 damage within 5 sec. Cooldown is 90 sec. -->
 		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>90000</reuseDelay>
 	</skill>
 	<skill id="55132" toLevel="10" name="Earth Dragon Pendant Defensive Effect Lv. 5">
 		<!-- Creates a barrier that absorbs up to 302 damage within 6 sec. Cooldown is 90 sec. -->
 		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>90000</reuseDelay>
 	</skill>
 	<skill id="55133" toLevel="6" name="Pendant Enchant Effect">
 		<!-- Acquired XP/ SP +5%. -->
@@ -1513,6 +1517,8 @@
 	<skill id="55138" toLevel="1" name="Shaft with Antharas treasures">
 		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55141" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
@@ -1525,87 +1531,87 @@
 	<skill id="55143" toLevel="1" name="Elite Fishing Rod of Golden Mermaid">
 		<!-- Acquired XP/ SP through fishing +50%. -->
 		<icon>icon.bm_gold_fishing_pole</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55144" toLevel="20" name="P. Atk.">
 		<!-- P. Atk. +$s1 -->
 		<icon>icon.ensoul_big_p</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55145" toLevel="20" name="M. Atk.">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55146" toLevel="20" name="P. Def.">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55147" toLevel="20" name="M. Def.">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55148" toLevel="20" name="Accuracy">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55149" toLevel="20" name="Evasion">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55150" toLevel="20" name="HP">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55151" toLevel="20" name="MP">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55152" toLevel="20" name="Recover HP">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55153" toLevel="20" name="Recover MP">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55154" toLevel="20" name="Atk. Spd.">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55155" toLevel="20" name="Casting Spd.">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55156" toLevel="20" name="P. Critical Rate">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55157" toLevel="20" name="P. Critical Damage">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55158" toLevel="20" name="M. Critical Rate">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55159" toLevel="20" name="M. Critical Damage">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55160" toLevel="1" name="Special Pirate Fruit">
 		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Acquired XP/ SP +5%. Cooldown is 1 min. Buff remains after death. -->
@@ -1618,6 +1624,8 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1679,42 +1687,44 @@
 	<skill id="55161" toLevel="1" name="VIP Level 1">
 		<!-- The right to VIP 1st level chest. Acquired XP/ SP +3%, item drop rate +50%. -->
 		<icon>BranchIcon.Icon.g_skill_vip1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55162" toLevel="1" name="VIP Level 2">
 		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +150%. World chat on any level, number of usage attempts +10. -->
 		<icon>BranchIcon.Icon.g_skill_vip2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55163" toLevel="1" name="VIP Level 3">
 		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +200%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +10. -->
 		<icon>BranchIcon.Icon.g_skill_vip3</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55164" toLevel="1" name="VIP Level 4">
 		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +250%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip4</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55165" toLevel="1" name="VIP Level 5">
 		<!-- The right to VIP 5th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip5</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55166" toLevel="1" name="VIP Level 6">
 		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip6</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55167" toLevel="1" name="VIP Level 7">
 		<!-- The right to VIP 7th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE/ PvP damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +20. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip7</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55168" toLevel="1" name="Clan Unity - Lv. 1">
 		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +3%. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1732,6 +1742,8 @@
 		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +5%, damage received in PvE -2%. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1761,6 +1773,8 @@
 		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +7%, damage received in PvE -5%. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1790,6 +1804,8 @@
 		<!-- Clan Alliance Buff. For 3 hr., Acquired XP/ SP +10%, PvE damage +7%, damage received in PvE -8%. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -2421,6 +2437,7 @@
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLvl>40</magicLvl>
 		<operateType>T</operateType>
+		<effectPoint>532</effectPoint>
 		<effects>
 			<effect name="ManaDamOverTime">
 				<power>9</power>
@@ -2440,6 +2457,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2458,6 +2476,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2476,6 +2495,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2494,6 +2514,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2512,6 +2533,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2530,6 +2552,7 @@
 		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2550,6 +2573,8 @@
 		<itemConsumeId>70000</itemConsumeId> <!-- Sealed Rune - Lv. 1 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2598,6 +2623,8 @@
 		<itemConsumeId>70001</itemConsumeId> <!-- Sealed Rune - Lv. 2 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2646,6 +2673,8 @@
 		<itemConsumeId>70002</itemConsumeId> <!-- Sealed Rune - Lv. 3 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2694,6 +2723,8 @@
 		<itemConsumeId>70003</itemConsumeId> <!-- Sealed Rune - Lv. 4 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2742,6 +2773,8 @@
 		<itemConsumeId>70004</itemConsumeId> <!-- Sealed Rune - Lv. 5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2790,6 +2823,8 @@
 		<itemConsumeId>70005</itemConsumeId> <!-- Sealed Rune - Lv. 6 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2838,6 +2873,8 @@
 		<itemConsumeId>70006</itemConsumeId> <!-- Sealed Rune - Lv. 7 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

@@ -131,9 +131,10 @@
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>120000</hitTime>
+		<hitTime>60000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18515" toLevel="3" name="Weakened Defense">
@@ -148,9 +149,10 @@
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>120000</hitTime>
+		<hitTime>60000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18517" toLevel="1" name="Top-grade Love Potion - Party">
@@ -224,7 +226,6 @@
 		<!-- Use to summon a friend. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
-		<castRange>-2</castRange>
 		<hitTime>5000</hitTime>
 		<effectPoint>1000</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
@@ -379,7 +380,7 @@
 	<skill id="18554" toLevel="1" name="Leona's Reward Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18555" toLevel="1" name="Curtiz's Reward Box">
+	<skill id="18555" toLevel="1" name="Kurtiz's Reward Box">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>46560</itemConsumeId>
@@ -470,12 +471,12 @@
 	<skill id="18562" toLevel="1" name="Entrance Pass: Crystal Caverns">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18563" toLevel="4" name="Red Libra Supplies Lv. 1">
+	<skill id="18563" toLevel="5" name="Red Libra Supplies Lv. 1">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18564" toLevel="1" name="Shadai's Jewelry Box">
+	<skill id="18564" toLevel="2" name="Shadai's Jewelry Box">
 		<icon>
 			<value level="1">icon.etc_bm_jewelbox_main_i00</value>
 			<value level="2">icon.etc_bm_jewelbox_shhadai</value>
@@ -485,6 +486,8 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -499,6 +502,23 @@
 			<effect name="RestorationRandom">
 				<items>
 					<value level="1">
+						<item chance="20.0">
+							<item id="26491" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+						</item>
+						<item chance="20.0">
+							<item id="26492" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+						</item>
+						<item chance="20.0">
+							<item id="26493" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+						</item>
+						<item chance="20.0">
+							<item id="26507" count="1" /> <!-- La Vie En Rose's Cat's Eye Box -->
+						</item>
+						<item chance="20.0">
+							<item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+						</item>
+					</value>
+					<value level="2"> <!-- Copy from level 1 -->
 						<item chance="20.0">
 							<item id="26491" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
 						</item>
@@ -538,6 +558,7 @@
 			<value level="6">15</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
+		<effectPoint>1000</effectPoint>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -686,13 +707,15 @@
 	</skill>
 	<skill id="18569" toLevel="1" name="Reward Fishing Rod Pack">
 		<operateType>A1</operateType>
-	</skill>
-	<skill id="18570" toLevel="1" name="Function Test Item">
-		<!-- Increases XP and SP acquisition by $s2 for $s1 minute(s). -->
-		<icon>icon.etc_london_olympic_scroll_i01</icon>
-		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+	</skill>
+	<skill id="18570" toLevel="1" name="Scroll: Energy of Harmony">
+		<!-- Increases XP and SP acquisition by 50% for 30 minute(s). -->
+		<icon>icon.etc_london_olympic_scroll_i01</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18571" toLevel="1" name="Warrior Basics I">
 		<!-- XP/ SP +3%. -->
@@ -850,8 +873,12 @@
 		<!-- Receives the following effects for 30 minutes: increased Maximum HP/ MP/ CP by 10%, Attack by 20%, M. Atk. by 30%, P. Defense/ M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/ Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. This buff remains effective even when you??re dead. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18582" toLevel="7" name="Teleport to Different Towns">
+	<skill id="18582" toLevel="7" name="Teleport to the Town of Goddard">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>
@@ -918,36 +945,56 @@
 		<!-- The energy of the Shine Stone is injected into the Root of the Lesser Giant to trigger evolution. -->
 		<icon>icon.etc_energy_stone_i00</icon>
 		<operateType>A1</operateType>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>20000</reuseDelay>
 	</skill>
 	<skill id="18584" toLevel="1" name="Steel Armor Pack">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18585" toLevel="1" name="Schumadriba's Reward Treasure Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18586" toLevel="1" name="Schumadriba's Advanced Reward Treasure Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18587" toLevel="1" name="Giant Evolution Control">
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<reuseDelay>40000</reuseDelay>
 	</skill>
 	<skill id="18588" toLevel="13" name="Shadai's Good Fortune Jewelry Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18589" toLevel="1" name="Vitality Replenishing Potion of Quest Pride">
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18590" toLevel="1" name="Equipment Enchantment Chest of Quest Pride">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18591" toLevel="1" name="Skill Enchantment Chest of Quest Pride">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18592" toLevel="1" name="Good Fortune Chest of Quest Pride">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18593" toLevel="1" name="Mentor's Harmony">
-		<!-- With your Mentor's help, your P. Atk. +$s1, M. Atk. +$s2, P. Critical Rate/ M. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd./ Casting Spd. +$s5, Skill Cooldown -$s6, and all Skill MP Consumption -$s7. Buff is triggered only when your Mentor is online. Buff persists for 5 min afer your Mentor goes offline. -->
+		<!-- With your Mentor's help, your P. Atk. +22%, M. Atk. +45%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Atk. Spd./ Casting Spd. +15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Buff is triggered only when your Mentor is online. Buff persists for 5 min afer your Mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>-1</abnormalTime>
@@ -1090,17 +1137,24 @@
 		<!-- Armor is transformed into the Blue Dynasty for 1 hour. -->
 		<icon>icon.general_stone_i01</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="18596" toLevel="1" name="Red Zubei Transformation">
 		<!-- Armor is transformed into the Red Zubei for 1 hour. -->
 		<icon>icon.general_stone_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="18597" toLevel="5" name="Paulina's Equipment Set (D-grade)">
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18598" toLevel="5" name="Tulesir's Gift Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18599" toLevel="3" name="Basic Supply Box">
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1110,9 +1164,10 @@
 			<value level="3">47174</value> <!-- Advanced Supply Box -->
 		</itemConsumeId>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>400</hitTime>
+		<hitTime>500</hitTime>
 		<hitCancelTime>0</hitCancelTime>
 		<conditions>
 			<condition name="OpEncumbered">

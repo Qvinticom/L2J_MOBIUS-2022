@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9000" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
+	<skill id="9000" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -9,7 +9,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9001" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (C-grade)">
+	<skill id="9001" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -18,7 +18,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9002" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (B-grade)">
+	<skill id="9002" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -27,7 +27,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9003" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (A-grade)">
+	<skill id="9003" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9004" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (S-grade)">
+	<skill id="9004" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -3817,7 +3817,6 @@
 		</conditions>
 	</skill>
 	<skill id="9055" toLevel="1" name="Golden Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15482</itemConsumeId> <!-- Golden Spice Crate -->
@@ -3847,7 +3846,6 @@
 		</effects>
 	</skill>
 	<skill id="9056" toLevel="1" name="Crystal Spice Capsule">
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15483</itemConsumeId> <!-- Crystal Spice Compressed Pack -->
@@ -4166,7 +4164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9068" toLevel="2" name="Potion of Vitality Maintenance">
+	<skill id="9068" toLevel="2" name="Vitality Maintaining Potion">
 		<!-- Maintains Vitality for 30 minutes. -->
 		<icon>icon.etc_lesser_potion_scarlet_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -4192,7 +4190,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9069" toLevel="1" name="10,000 SP scroll">
+	<skill id="9069" toLevel="1" name="Scroll: 1,000 SP">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15439</itemConsumeId> <!-- 10,000 SP scroll -->
@@ -4386,16 +4384,15 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9076" toLevel="1" name="Secret Gate Key">
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15690</itemConsumeId> <!-- Secret Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4472,7 +4469,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9079" toLevel="1" name="Santa's Buff Scroll">
+	<skill id="9079" toLevel="1" name="Scroll: Santa's Buff">
 		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<icon>icon.mysterious_wedding_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
@@ -4560,7 +4557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9080" toLevel="1" name="Santa's Sock">
+	<skill id="9080" toLevel="1" name="Santa's Stockings">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>16407</itemConsumeId> <!-- Santa's Stocking -->
@@ -4702,7 +4699,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9085" toLevel="1" name="Santa Claus's Gift">
+	<skill id="9085" toLevel="1" name="Santa' Gift">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17003</itemConsumeId> <!-- Santa Claus's Gift -->
@@ -5042,7 +5039,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9086" toLevel="2" name="Santa - Potion of Will">
+	<skill id="9086" toLevel="2" name="Santa - CP Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -5090,7 +5087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9088" toLevel="1" name="Cupid's Arrow">
+	<skill id="9088" toLevel="1" name="Cupid's Cure">
 		<!-- Shoots a heart-arrow. -->
 		<icon>icon.skill3260</icon>
 		<effectPoint>-1000</effectPoint>
@@ -5099,6 +5096,7 @@
 		<itemConsumeId>17067</itemConsumeId> <!-- Event - Cupid's Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>
@@ -5121,7 +5119,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9089" toLevel="1" name="Cupid's Major Cure">
+	<skill id="9089" toLevel="1" name="Cupid's Enhanced Cure">
 		<!-- Shoots a big heart-arrow. -->
 		<icon>icon.skill3260</icon>
 		<effectPoint>-1000</effectPoint>
@@ -5130,6 +5128,7 @@
 		<itemConsumeId>17068</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Relief Potion -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>700</effectRange>

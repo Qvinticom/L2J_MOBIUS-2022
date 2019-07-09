@@ -1,19 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="28200" toLevel="1" name="Adventurer's Circlet">
-		<!-- Increases P. Atk. by $s1, M. Atk. by $s2 -->
+		<!-- P. Atk. +3%, M.Atk. +5% -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="28201" toLevel="1" name="Adventurer's Bracelet">
-		<!-- Increases STR/ DEX/ CON/ INT/ WIT/ MEN by +$s1 when equipped. Activates 3 Talisman slots. -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1. Activates 3 Talisman slots. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="28202" toLevel="1" name="T-shirt Box">
+		<icon>icon.bm_strongbox</icon>
 		<itemConsumeId>29214</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -45,12 +48,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28204" toLevel="1" name="Box Containing War God's Soul">
+	<skill id="28204" toLevel="1" name="Box of War Hero's Soul">
 		<icon>icon.bm_strongbox</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28205" toLevel="1" name="14th Anniversary Rune 100%">
+	<skill id="28205" toLevel="5" name="14th Anniversary Rune 100%">
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 </list>

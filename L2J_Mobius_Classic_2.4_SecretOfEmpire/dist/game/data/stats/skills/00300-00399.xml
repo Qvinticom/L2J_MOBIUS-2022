@@ -65,8 +65,11 @@
 			<value level="7">-611</value>
 			<value level="8">-635</value>
 			<value level="9">-655</value>
-			<value level="10">-673</value>
-			<value level="11">-692</value>
+			<value level="10">-659</value>
+			<value level="11">-663</value>
+			<value level="12">-667</value>
+			<value level="13">-671</value>
+			<value level="14">-675</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
@@ -172,7 +175,10 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_VITALITY</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>611</effectPoint>
+		<effectPoint>
+			<value level="1">611</value>
+			<value level="2">615</value>
+		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
@@ -532,6 +538,7 @@
 			<value level="6">635</value>
 			<value level="7">646</value>
 			<value level="8">655</value>
+			<value level="9">664</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>
@@ -654,25 +661,25 @@
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
-			<value level="1">-567</value>
-			<value level="2">-575</value>
-			<value level="3">-583</value>
-			<value level="4">-591</value>
-			<value level="5">-599</value>
-			<value level="6">-607</value>
-			<value level="7">-614</value>
-			<value level="8">-621</value>
-			<value level="9">-627</value>
-			<value level="10">-634</value>
-			<value level="11">-640</value>
-			<value level="12">-646</value>
-			<value level="13">-651</value>
-			<value level="14">-656</value>
-			<value level="15">-661</value>
-			<value level="16">-665</value>
-			<value level="17">-669</value>
-			<value level="18">-675</value>
-			<value level="19">-682</value>
+			<value level="1">-284</value>
+			<value level="2">-288</value>
+			<value level="3">-292</value>
+			<value level="4">-296</value>
+			<value level="5">-300</value>
+			<value level="6">-304</value>
+			<value level="7">-307</value>
+			<value level="8">-311</value>
+			<value level="9">-314</value>
+			<value level="10">-317</value>
+			<value level="11">-320</value>
+			<value level="12">-323</value>
+			<value level="13">-326</value>
+			<value level="14">-328</value>
+			<value level="15">-331</value>
+			<value level="16">-333</value>
+			<value level="17">-334</value>
+			<value level="18">-336</value>
+			<value level="19">-337</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -763,22 +770,22 @@
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
-			<value level="1">-425</value>
-			<value level="2">-431</value>
-			<value level="3">-438</value>
-			<value level="4">-444</value>
-			<value level="5">-449</value>
-			<value level="6">-455</value>
-			<value level="7">-460</value>
-			<value level="8">-466</value>
-			<value level="9">-471</value>
-			<value level="10">-475</value>
-			<value level="11">-480</value>
-			<value level="12">-484</value>
-			<value level="13">-488</value>
-			<value level="14">-492</value>
-			<value level="15">-496</value>
-			<value level="16">-499</value>
+			<value level="1">-213</value>
+			<value level="2">-216</value>
+			<value level="3">-219</value>
+			<value level="4">-222</value>
+			<value level="5">-225</value>
+			<value level="6">-228</value>
+			<value level="7">-230</value>
+			<value level="8">-233</value>
+			<value level="9">-236</value>
+			<value level="10">-238</value>
+			<value level="11">-240</value>
+			<value level="12">-242</value>
+			<value level="13">-244</value>
+			<value level="14">-246</value>
+			<value level="15">-248</value>
+			<value level="16">-250</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1620</hitTime>
@@ -914,6 +921,7 @@
 					<value level="3">5</value>
 					<value level="4">7</value>
 					<value level="5">8</value>
+					<value level="6">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -970,7 +978,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="320" toLevel="17" name="Wrath">
+	<skill id="320" toLevel="14" name="Wrath">
 		<!-- Swings a spear to decrease nearby enemies' CP -$s1. Requires a polearm to be equipped. -->
 		<icon>icon.skill0320</icon>
 		<affectLimit>5-12</affectLimit>
@@ -992,9 +1000,6 @@
 			<value level="12">-333</value>
 			<value level="13">-333</value>
 			<value level="14">-333</value>
-			<value level="15">-333</value>
-			<value level="16">-333</value>
-			<value level="17">-333</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;150</fanRange>
@@ -1014,9 +1019,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">66</value>
@@ -1033,9 +1035,6 @@
 			<value level="12">85</value>
 			<value level="13">90</value>
 			<value level="14">100</value>
-			<value level="15">110</value>
-			<value level="16">120</value>
-			<value level="17">130</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1067,9 +1066,6 @@
 					<value level="12">-36</value>
 					<value level="13">-40</value>
 					<value level="14">-45</value>
-					<value level="15">-50</value>
-					<value level="16">-55</value>
-					<value level="17">-60</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1419,6 +1415,7 @@
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>T</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -1452,6 +1449,7 @@
 		</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>T</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -1485,6 +1483,7 @@
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>T</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -1625,7 +1624,7 @@
 		</effects>
 	</skill>
 	<skill id="342" toLevel="1" name="Touch of Death">
-		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 min., Max CP -50% and the Healing power received -10%. Susceptibility to de-buff +10%. -->
+		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 min., Max CP -50% and the Healing power received -10%.  Susceptibility to de-buff +10%. -->
 		<icon>icon.skill0342</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1675,9 +1674,19 @@
 		<!-- Shoots an arrow at a vital spot. Attacks the enemy with $s1 Power added to P. Atk. Ignores $s2 enemy's defense. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0343</icon>
 		<castRange>900</castRange>
-		<effectPoint>-897</effectPoint>
+		<effectPoint>
+			<value level="1">-449</value>
+			<value level="2">-458</value>
+			<value level="3">-467</value>
+			<value level="4">-477</value>
+			<value level="5">-487</value>
+			<value level="6">-497</value>
+			<value level="7">-507</value>
+			<value level="8">-517</value>
+			<value level="9">-528</value>
+		</effectPoint>
 		<effectRange>1400</effectRange>
-		<hitTime>4000</hitTime>
+		<hitTime>3000</hitTime>
 		<magicLvl>
 			<value level="1">76</value>
 			<value level="2">77</value>
@@ -1701,7 +1710,7 @@
 			<value level="9">218</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3500</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
@@ -1738,7 +1747,10 @@
 		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Critical. Over-hit. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
-		<effectPoint>-337</effectPoint>
+		<effectPoint>
+			<value level="1">-169</value>
+			<value level="2">-175</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
 		<magicLvl>
@@ -1753,7 +1765,6 @@
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>720</coolTime>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1789,7 +1800,13 @@
 		<activateRate>80</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-170</value>
+			<value level="2">-180</value>
+			<value level="3">-190</value>
+			<value level="4">-200</value>
+			<value level="5">-210</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<magicLvl>
@@ -1852,9 +1869,15 @@
 		<!-- Attacks the target with a devastating burst of wind with $s1 Power, P. Def -30%, absorbs Momentum. Requires a sword, spear, blunt weapon, fist weapon, or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<castRange>600</castRange>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-170</value>
+			<value level="2">-180</value>
+			<value level="3">-190</value>
+			<value level="4">-200</value>
+			<value level="5">-210</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>300</hitTime>
+		<hitTime>1200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">76</value>
@@ -1872,6 +1895,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1914,7 +1938,17 @@
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
-		<effectPoint>-679</effectPoint>
+		<effectPoint>
+			<value level="1">-340</value>
+			<value level="2">-347</value>
+			<value level="3">-354</value>
+			<value level="4">-361</value>
+			<value level="5">-369</value>
+			<value level="6">-376</value>
+			<value level="7">-384</value>
+			<value level="8">-392</value>
+			<value level="9">-400</value>
+		</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1800</hitTime>
@@ -1991,10 +2025,19 @@
 		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
-		<coolTime>100</coolTime>
-		<effectPoint>-337</effectPoint>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-337</value>
+			<value level="2">-340</value>
+			<value level="3">-343</value>
+			<value level="4">-346</value>
+			<value level="5">-349</value>
+			<value level="6">-352</value>
+			<value level="7">-355</value>
+			<value level="8">-358</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>1700</hitTime>
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">78</value>
@@ -2048,7 +2091,10 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_RENEWAL</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>666</effectPoint>
+		<effectPoint>
+			<value level="1">666</value>
+			<value level="2">670</value>
+		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
@@ -2185,7 +2231,18 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<effectPoint>-666</effectPoint>
+		<effectPoint>
+			<value level="1">-1938</value>
+			<value level="2">-1950</value>
+			<value level="3">-1962</value>
+			<value level="4">-1974</value>
+			<value level="5">-1986</value>
+			<value level="6">-2010</value>
+			<value level="7">-2022</value>
+			<value level="8">-2034</value>
+			<value level="9">-2046</value>
+			<value level="10">-2058</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2216,7 +2273,8 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2320,13 +2378,13 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
-		<!-- For $s1 P. Critical Rate -$s2, frontal P. Critical Damage -$s3. Vital points attacks success rate +$s4, rear P. Critical Damage +$s5. Requires a dagger. -->
+		<!-- For 2 min. P. Critical Rate -20%, frontal P. Critical Damage -30%. Vital points attacks success rate +40%, rear P. Critical Damage +90%. Requires a dagger. -->
 		<icon>icon.skill0355</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<effectPoint>669</effectPoint>
-		<hitTime>1500</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
@@ -2364,7 +2422,7 @@
 		</effects>
 	</skill>
 	<skill id="356" toLevel="1" name="Focus Chance">
-		<!-- For $s1, frontal P. Critical Rate -$s2. Vital points attacks success rate +$s3, side P. Critical Rate +$s4, and rear P. Critical Rate +$s5. Requires a dagger. -->
+		<!-- For 2 min., frontal P. Critical Rate -30%. Vital points attacks success rate +20%, side P. Critical Rate +30%, and rear P. Critical Rate +60%. Requires a dagger. -->
 		<icon>icon.skill0356</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2405,7 +2463,7 @@
 		</effects>
 	</skill>
 	<skill id="357" toLevel="1" name="Focus Power">
-		<!-- For $s1, frontal P. Critical Damage -$s2. Side P. Critical Damage +$s3 and rear P. Critical Damage +$s4. Requires a dagger. -->
+		<!-- For 2 min., frontal P. Critical Damage -30%. Side P. Critical Damage +30% and rear P. Critical Damage +60%. Requires a dagger. -->
 		<icon>icon.skill0357</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2573,8 +2631,9 @@
 		<effectRange>1000</effectRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>
-			<value level="1">-507</value>
-			<value level="2">-531</value>
+			<value level="1">-254</value>
+			<value level="2">-264</value>
+			<value level="3">-274</value>
 		</effectPoint>
 		<hpConsume>
 			<value level="1">-507</value>
@@ -2642,8 +2701,17 @@
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>100</coolTime>
-		<effectPoint>-507</effectPoint>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-254</value>
+			<value level="2">-259</value>
+			<value level="3">-264</value>
+			<value level="4">-269</value>
+			<value level="5">-275</value>
+			<value level="6">-280</value>
+			<value level="7">-286</value>
+			<value level="8">-291</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
 		<hpConsume>
@@ -2752,7 +2820,7 @@
 		</effects>
 	</skill>
 	<skill id="364" toLevel="1" name="Champion Song">
-		<!-- For $s1, all party members' physical/ sing/ dance skill use MP Consumption -$s2 and physical/ sing/ dance skill Cooldown -$s3. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
+		<!-- For 5 min., all party members' physical/ sing/ dance skill use MP Consumption -20% and physical/ sing/ dance skill Cooldown -10%. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0364</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2803,7 +2871,10 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>669</effectPoint>
+		<effectPoint>
+			<value level="1">669</value>
+			<value level="2">675</value>
+		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
@@ -2850,7 +2921,11 @@
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
-		<effectPoint>666</effectPoint>
+		<effectPoint>
+			<value level="1">666</value>
+			<value level="2">674</value>
+			<value level="3">680</value>
+		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
@@ -2942,7 +3017,11 @@
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
-		<effectPoint>-666</effectPoint>
+		<effectPoint>
+			<value level="1">-666</value>
+			<value level="2">-674</value>
+			<value level="3">-680</value>
+		</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
@@ -3001,7 +3080,7 @@
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
-		<effectPoint>-7985</effectPoint>
+		<effectPoint>-8784</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -3559,12 +3638,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="393" toLevel="1" name="none">
+	<skill id="393" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="394" toLevel="1" name="none">
+	<skill id="394" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3583,7 +3662,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3623,7 +3702,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3678,17 +3757,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="397" toLevel="1" name="none">
+	<skill id="397" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="398" toLevel="1" name="none">
+	<skill id="398" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="399" toLevel="1" name="none">
+	<skill id="399" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

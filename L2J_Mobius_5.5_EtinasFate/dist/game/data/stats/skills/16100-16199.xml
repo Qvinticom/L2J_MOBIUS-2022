@@ -28,13 +28,14 @@
 		<!-- Powerful magical attack on target and nearby enemies. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalLvl>1</abnormalLvl>
-		<castRange>300</castRange>
+		<castRange>900</castRange>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>300</affectRange>
-		<hitTime>2500</hitTime>
+		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-264</effectPoint>
 		<effectRange>300</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -464,7 +465,8 @@
 		<abnormalVisualEffect>STARS_0</abnormalVisualEffect>
 		<effectRange>900</effectRange>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>TARGET</targetType>
@@ -478,7 +480,7 @@
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_1</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -493,7 +495,7 @@
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_2</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -508,7 +510,7 @@
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_3</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -523,7 +525,7 @@
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_4</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -538,7 +540,7 @@
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_5</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -556,7 +558,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>4000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<endEffects>
@@ -577,7 +578,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>4000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<endEffects>
@@ -598,7 +598,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>4000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<endEffects>
@@ -619,7 +618,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>4000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<endEffects>
@@ -640,7 +638,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>4000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<endEffects>
@@ -658,7 +655,6 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-		<hitTime>500</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -793,7 +789,7 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16153" toLevel="6" name="Power Slam">
+	<skill id="16153" toLevel="7" name="Power Slam">
 		<!-- Deals a powerful blow and knocks back the enemy. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
@@ -974,7 +970,7 @@
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>95</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>7000</reuseDelay>

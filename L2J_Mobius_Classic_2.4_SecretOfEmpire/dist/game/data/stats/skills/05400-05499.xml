@@ -1526,7 +1526,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5467" toLevel="5" name="Darkness Protection">
+	<skill id="5467" toLevel="1" name="Darkness Protection">
 		<!-- Strong against the dark elemental. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
@@ -1622,7 +1622,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5473" toLevel="1" name="81 Lv. Raid Boss">
-		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine -->
+		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1666,7 +1666,6 @@
 	<skill id="5479" toLevel="1" name="Boss Petrification Resistance">
 		<!-- Resist against Petrification. -->
 		<icon>icon.skill5479</icon>
-		<hitTime>4000</hitTime>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>

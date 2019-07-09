@@ -51,6 +51,7 @@
 	</skill>
 	<skill id="23303" toLevel="1" name="Teleport">
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
@@ -64,6 +65,7 @@
 	</skill>
 	<skill id="23304" toLevel="1" name="Teleport">
 		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
@@ -403,7 +405,6 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -442,7 +443,6 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -479,7 +479,6 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -509,7 +508,6 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -540,7 +538,6 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
@@ -568,7 +565,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>71</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -924,7 +920,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="23342" toLevel="2" name="Norhand's High Trace">
+	<skill id="23342" toLevel="2" name="Norhand's Trace">
 		<!-- Norhand is searching for Skooldie. A trace of its voice remains. -->
 		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
 		<operateType>A2</operateType>
@@ -1005,6 +1001,7 @@
 		</conditions>
 	</skill>
 	<skill id="23347" toLevel="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
+		<!-- When Valakas' Blessing is received, for $s1 hour(s), increases Fire P. Atk. by $s2 and Fire Resistance by $s3. Re-use delay is $s4 hour(s). -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>

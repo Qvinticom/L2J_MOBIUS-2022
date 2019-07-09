@@ -570,6 +570,9 @@
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -587,6 +590,9 @@
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -604,6 +610,9 @@
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1991,7 +2000,7 @@
 		</effects>
 	</skill>
 	<skill id="15380" toLevel="1" name="Knight's Harmony - Clan Hall">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For 30 min., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2049,7 +2058,7 @@
 		</effects>
 	</skill>
 	<skill id="15381" toLevel="1" name="Warrior's Harmony - Clan Hall">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For 30 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2111,7 +2120,7 @@
 		</effects>
 	</skill>
 	<skill id="15382" toLevel="1" name="Wizard's Harmony - Clan Hall">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
+		<!-- For 30 min., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

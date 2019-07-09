@@ -559,7 +559,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="625" toLevel="1" name="Soul Gathering">
-		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes $s1 Spirit Ores. -->
+		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill0467</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1303,7 +1303,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="643" toLevel="1" name="Summoner Ability - Boost HP/MP">
+	<skill id="643" toLevel="1" name="Summoner Ability: Boost HP/MP">
 		<!-- Increases Max HP and Max MP. -->
 		<icon>icon.skill0211</icon>
 		<excludedFromCheck>true</excludedFromCheck>

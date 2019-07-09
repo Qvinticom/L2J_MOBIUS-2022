@@ -167,9 +167,9 @@
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-1630</value>
-			<value level="2">-2089</value>
-			<value level="3">-2384</value>
+			<value level="1">-1632</value>
+			<value level="2">-2091</value>
+			<value level="3">-2386</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;300</fanRange>
@@ -1377,24 +1377,33 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="522" toLevel="2" name="Real Target">
+	<skill id="522" toLevel="4" name="Real Target">
 		<!-- Decreases Bow Resistance by $s2 for $s1. -->
 		<icon>icon.skill0522</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<castRange>600</castRange>
-		<effectPoint>-252</effectPoint>
+		<effectPoint>
+			<value level="1">-193</value>
+			<value level="2">-252</value>
+			<value level="3">-296</value>
+			<value level="4">-323</value>
+		</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">78</value>
 			<value level="2">80</value>
+			<value level="3">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -1411,6 +1420,8 @@
 				<BOW>
 					<value level="1">-12</value>
 					<value level="2">-16</value>
+					<value level="3">-16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">-16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</BOW>
 			</effect>
 		</effects>
@@ -1622,7 +1633,7 @@
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>673</effectPoint>
-		<hitTime>1000</hitTime>
+		<hitTime>2500</hitTime>
 		<magicLvl>79</magicLvl>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
@@ -1783,7 +1794,7 @@
 		</effects>
 	</skill>
 	<skill id="533" toLevel="1" name="Counter Rapid Shot">
-		<!-- When attacked, character s bow Atk. Spd.+ 15% for 1 minute. -->
+		<!-- When attacked, character's bow Atk. Spd.+ 15% for 1 minute. -->
 		<icon>icon.skill0533</icon>
 		<magicLvl>79</magicLvl>
 		<operateType>P</operateType>
@@ -1852,6 +1863,7 @@
 		<magicLvl>78</magicLvl>
 		<mpConsume>157</mpConsume>
 		<operateType>A2</operateType>
+		<hitTime>2000</hitTime>
 		<reuseDelay>900000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1929,7 +1941,6 @@
 	<skill id="539" toLevel="2" name="Nail Attack">
 		<!-- A demonic clawed combo attack. Power $s1. -->
 		<icon>icon.skill0539</icon>
-		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -1978,7 +1989,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

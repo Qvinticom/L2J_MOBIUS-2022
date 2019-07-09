@@ -884,7 +884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4708" toLevel="17" name="Cursed Strike">
+	<skill id="4708" toLevel="14" name="Cursed Strike">
 		<!-- Cursed Man inflicts the curse to inflict damage and stun target simultaneously. Power $s1. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -909,9 +909,6 @@
 			<value level="12">-342</value>
 			<value level="13">-342</value>
 			<value level="14">-342</value>
-			<value level="15">-342</value>
-			<value level="16">-342</value>
-			<value level="17">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -932,9 +929,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -951,9 +945,6 @@
 			<value level="12">80</value>
 			<value level="13">80</value>
 			<value level="14">80</value>
-			<value level="15">80</value>
-			<value level="16">80</value>
-			<value level="17">80</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -978,15 +969,12 @@
 					<value level="12">6593</value>
 					<value level="13">7004</value>
 					<value level="14">7443</value>
-					<value level="15">7863</value>
-					<value level="16">8288</value>
-					<value level="17">8713</value>
 				</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4709" toLevel="17" name="Cursed Blow">
+	<skill id="4709" toLevel="14" name="Cursed Blow">
 		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
@@ -1004,9 +992,6 @@
 			<value level="12">-342</value>
 			<value level="13">-342</value>
 			<value level="14">-342</value>
-			<value level="15">-342</value>
-			<value level="16">-342</value>
-			<value level="17">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -1025,9 +1010,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -1044,9 +1026,6 @@
 			<value level="12">80</value>
 			<value level="13">80</value>
 			<value level="14">80</value>
-			<value level="15">80</value>
-			<value level="16">80</value>
-			<value level="17">80</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1070,9 +1049,6 @@
 					<value level="12">8918</value>
 					<value level="13">9101</value>
 					<value level="14">9283</value>
-					<value level="15">9465</value>
-					<value level="16">9648</value>
-					<value level="17">9830</value>
 				</power>
 				<criticalChance>10</criticalChance>
 				<chanceBoost>200</chanceBoost>

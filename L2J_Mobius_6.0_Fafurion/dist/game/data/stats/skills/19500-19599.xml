@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
-		<!-- For 30 min., increases selected party member's P. Atk. by 22%, M. Atk. by 40%, P./ M. Critical Rate by 100%, P. Critical Damage by 70%, and Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%.. -->
+		<!-- For 30 min., increases selected party member's P. Atk. by 22%, M. Atk. by 40%, P./ M. Critical Rate by 100%, P. Critical Damage by 70%, and Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
 		<icon>icon.skill19503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -81,21 +81,32 @@
 		</effects>
 	</skill>
 	<skill id="19504" toLevel="1" name="Tempted">
-		<!-- Seduction by the Chaos Symphony for $s1 -->
+		<!-- Seduction by the Chaos Symphony for 3 sec. -->
 		<icon>icon.skill11533</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<effectPoint>-1371</effectPoint>
 	</skill>
 	<skill id="19506" toLevel="1" name="Spectral Wound">
-		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. -->
+		<!-- The Spectral Sword attacks the target with 100 Power added to P. Atk. -->
 		<icon>icon.skill19435</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<effectPoint>-5</effectPoint>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19507" toLevel="1" name="Beat Extension">
 		<!-- Resets the duration of allies' Drum buffs. -->
 		<icon>icon.skill19432</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A1</operateType>
-		<hitTime>1</hitTime>
+		<effectPoint>687</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<basicProperty>NONE</basicProperty>
@@ -114,19 +125,34 @@
 		</effects>
 	</skill>
 	<skill id="19509" toLevel="1" name="Elemental Endurance">
-		<!-- For $s1, all defense attributes of nearby clan members +$s2. -->
+		<!-- For 30 min., all defense attributes of nearby clan members +30. -->
 		<icon>icon.skill19509</icon>
 		<operateType>A1</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>140</mpConsume>
 	</skill>
 	<skill id="19510" toLevel="1" name="Debuff Endurance">
-		<!-- For $s1, nearby clan members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +$s2. -->
+		<!-- For 30 min., nearby clan members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
 		<icon>icon.skill19510</icon>
 		<operateType>A1</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>140</mpConsume>
 	</skill>
 	<skill id="19511" toLevel="1" name="Mental Endurance">
-		<!-- For $s1, nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
+		<!-- For 30 min., nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill19511</icon>
 		<operateType>A1</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>140</mpConsume>
 	</skill>
 	<skill id="19522" toLevel="13" name="Repeat Mark Somersault">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
@@ -149,10 +175,7 @@
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
-		<castRange>200</castRange>
-		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -184,22 +207,7 @@
 			<value level="13">180</value>
 		</mpConsume>
 		<operateType>DA3</operateType>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-			<value level="3">-700</value>
-			<value level="4">-705</value>
-			<value level="5">-709</value>
-			<value level="6">-712</value>
-			<value level="7">-712</value>
-			<value level="8">-712</value>
-			<value level="9">-712</value>
-			<value level="10">-712</value>
-			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
-		</effectPoint>
+		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -264,16 +272,24 @@
 		<!-- Resets the cooldown of Heart Breaker/ Chain Blow. -->
 		<icon>icon.skill11877</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>696</effectPoint>
+		<mpConsume>252</mpConsume>
 	</skill>
 	<skill id="19524" toLevel="1" name="Immortal Soul">
 		<!-- Immune to damage caused by Soul Bomber. Cannot receive other Invincibility effects. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A1</operateType>
+		<isMagic>7</isMagic>
+		<effectPoint>867</effectPoint>
 	</skill>
 	<skill id="19525" toLevel="1" name="Resonant Halo">
 		<!-- Resonant Halo Ending Skill -->
 		<icon>icon.skill11046</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>8000</reuseDelay>
+		<effectPoint>696</effectPoint>
 	</skill>
 	<skill id="19526" toLevel="3" name="Limit of Sigel">
 		<!-- Decreases the duration of Protection of Faith/ Nine Aegis by $s2 that is applied within $s1. -->
@@ -283,12 +299,13 @@
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<reuseDelay>1</reuseDelay>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 		<effects>
 			<effect name="LimitSkill" />
 		</effects>
 	</skill>
-	<skill id="19527" toLevel="4" name="Limit of Iss">
+	<skill id="19527" toLevel="3" name="Limit of Iss">
 		<!-- Decreases the duration of Battle Rhapsody/ Overlord's Dignity by $s2 if it is shorter than $s1. -->
 		<icon>icon.skill11544</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -296,7 +313,8 @@
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<reuseDelay>1</reuseDelay>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 		<effects>
 			<effect name="LimitSkill" />
 		</effects>
@@ -305,14 +323,18 @@
 		<!-- Stunned by the Right Angle Reverse for $s1. -->
 		<icon>icon.skill19303</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="19529" toLevel="1" name="Elemental Burst: Dark">
 		<!-- Resets the cooldown of Magical Evasion/ Warp. -->
 		<icon>icon.skill11865</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>696</effectPoint>
 	</skill>
 	<skill id="19530" toLevel="1" name="Battle Prelude">
-		<!-- For $s1, all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +$s2. -->
+		<!-- For 15 sec., all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +150%. -->
 		<icon>icon.skill11544</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -468,7 +490,7 @@
 		</effects>
 	</skill>
 	<skill id="19533" toLevel="1" name="Clan Rating">
-		<!-- Points obtained at the end of the Throne of Heroes Boss Battle +$s1. -->
+		<!-- Points obtained at the end of the Throne of Heroes Boss Battle +25%. -->
 		<icon>icon.skill19533</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -536,7 +558,7 @@
 		</effects>
 	</skill>
 	<skill id="19536" toLevel="1" name="Clan Battlefield">
-		<!-- For 5min, Max HP/ MP/ CP +5, P. Atk. +5%, M. Atk. +10%, and Speed +7. Consumes 5 Spirit Ore. Only available in the battlefield. -->
+		<!-- For 5 min., Max HP/ MP/ CP +5%, P. Atk. +5%, M. Atk. +10%, and Speed +7. Consumes 5 Spirit Ore. Only available in the battlefield. -->
 		<icon>icon.skill19536</icon>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>5</itemConsumeCount>
@@ -610,7 +632,7 @@
 		</effects>
 	</skill>
 	<skill id="19538" toLevel="1" name="Clan Vitality">
-		<!-- Clan members' XP and SP +$s1. -->
+		<!-- Clan members' XP and SP +10%. -->
 		<icon>icon.skill19538</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -624,7 +646,7 @@
 		</effects>
 	</skill>
 	<skill id="19539" toLevel="1" name="Clan Battle">
-		<!-- Clan members' P. Atk. +$s1 and M. Atk. +$s2. -->
+		<!-- Clan members' P. Atk. +5% and M. Atk. +10%. -->
 		<icon>icon.skill19539</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -640,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="19540" toLevel="1" name="Clan Blood">
-		<!-- Clan members' PvE Damage +$s1. -->
+		<!-- Clan members' PvE Damage +5%. -->
 		<icon>icon.skill19540</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -663,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="19541" toLevel="1" name="Clan Cry">
-		<!-- Clan members' Skill Power +$s1. -->
+		<!-- Clan members' Skill Power +5%. -->
 		<icon>icon.skill19541</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -679,7 +701,7 @@
 		</effects>
 	</skill>
 	<skill id="19542" toLevel="1" name="Clan Darkness">
-		<!-- Clan members' PvP Damage +$s1. -->
+		<!-- Clan members' PvP Damage +5%. -->
 		<icon>icon.skill19542</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -876,12 +898,15 @@
 		<!-- Presentation Skill for creating a clan. -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="19547" toLevel="1" name="Clan Flag">
 		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -908,7 +933,7 @@
 		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -935,7 +960,7 @@
 		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -962,7 +987,7 @@
 		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -986,13 +1011,10 @@
 		</effects>
 	</skill>
 	<skill id="19551" toLevel="1" name="Superior Summon Mastery">
-		<!-- Allows summoning a Servitor when summon points are below $s1. -->
+		<!-- Allows summoning a Servitor when summon points are below 2. -->
 		<icon>icon.skill11254</icon>
 		<magicLvl>
 			<value level="1">85</value>
-			<value level="2">90</value>
-			<value level="3">95</value>
-			<value level="4">99</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1035,6 +1057,7 @@
 			<value level="11">105</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<castRange>600</castRange>
 		<mpConsume>
 			<value level="1">159</value>
 			<value level="2">162</value>
@@ -1048,22 +1071,10 @@
 			<value level="10">206</value>
 			<value level="11">210</value>
 		</mpConsume>
-		<hitTime>2500</hitTime>
-		<coolTime>370</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>
-			<value level="1">-1378</value>
-			<value level="2">-1383</value>
-			<value level="3">-1392</value>
-			<value level="4">-1400</value>
-			<value level="5">-1407</value>
-			<value level="6">-1414</value>
-			<value level="7">-1420</value>
-			<value level="8">-1425</value>
-			<value level="9">-1430</value>
-			<value level="10">-1435</value>
-			<value level="11">-1440</value>
-		</effectPoint>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>45000</reuseDelay>
+		<effectPoint>-20000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<affectHeight>-100;200</affectHeight>
 		<isDebuff>true</isDebuff>
@@ -1111,15 +1122,7 @@
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>NONE</basicProperty>
-		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -1141,13 +1144,14 @@
 			<value level="7">57</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1191,15 +1195,7 @@
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>NONE</basicProperty>
-		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -1221,13 +1217,14 @@
 			<value level="7">57</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<hitTime>3500</hitTime>
+		<hitTime>500</hitTime>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1271,15 +1268,7 @@
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>NONE</basicProperty>
-		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -1301,13 +1290,14 @@
 			<value level="7">57</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<hitTime>3500</hitTime>
+		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1365,18 +1355,10 @@
 			<value level="6">55</value>
 			<value level="7">57</value>
 		</mpConsume>
-		<hitTime>3500</hitTime>
-		<coolTime>370</coolTime>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>
-			<value level="1">-1378</value>
-			<value level="2">-1383</value>
-			<value level="3">-1392</value>
-			<value level="4">-1400</value>
-			<value level="5">-1407</value>
-			<value level="6">-1414</value>
-			<value level="7">-1420</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<affectHeight>-100;200</affectHeight>
 		<isDebuff>true</isDebuff>
@@ -1426,8 +1408,6 @@
 			<value level="3">101</value>
 			<value level="4">103</value>
 			<value level="5">105</value>
-			<value level="6">107</value>
-			<value level="7">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1436,21 +1416,8 @@
 			<value level="3">48</value>
 			<value level="4">51</value>
 			<value level="5">53</value>
-			<value level="6">55</value>
-			<value level="7">57</value>
 		</mpConsume>
-		<hitTime>3500</hitTime>
-		<coolTime>370</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>
-			<value level="1">-1378</value>
-			<value level="2">-1383</value>
-			<value level="3">-1392</value>
-			<value level="4">-1400</value>
-			<value level="5">-1407</value>
-			<value level="6">-1414</value>
-			<value level="7">-1420</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<affectHeight>-100;200</affectHeight>
 		<isDebuff>true</isDebuff>
@@ -1476,8 +1443,6 @@
 					<value level="3">43471</value>
 					<value level="4">45591</value>
 					<value level="5">47711</value>
-					<value level="6">49958</value>
-					<value level="7">52205</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
@@ -1511,18 +1476,10 @@
 			<value level="6">55</value>
 			<value level="7">57</value>
 		</mpConsume>
-		<hitTime>3500</hitTime>
-		<coolTime>370</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>
-			<value level="1">-1378</value>
-			<value level="2">-1383</value>
-			<value level="3">-1392</value>
-			<value level="4">-1400</value>
-			<value level="5">-1407</value>
-			<value level="6">-1414</value>
-			<value level="7">-1420</value>
-		</effectPoint>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-20000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<affectHeight>-100;200</affectHeight>
 		<isDebuff>true</isDebuff>
@@ -1578,19 +1535,7 @@
 		<affectRange>600</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>NONE</basicProperty>
-		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-			<value level="8">-5013</value>
-			<value level="9">-5013</value>
-			<value level="10">-5013</value>
-			<value level="11">-5013</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -1627,10 +1572,10 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<fanRange>0;0;600;180</fanRange>
-		<castRange>600</castRange>
+		<castRange>800</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>45000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>DARK</attributeType>
@@ -1692,18 +1637,7 @@
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
-		<effectPoint>
-			<value level="1">-523</value>
-			<value level="2">-549</value>
-			<value level="3">-566</value>
-			<value level="4">-582</value>
-			<value level="5">-597</value>
-			<value level="6">-611</value>
-			<value level="7">-624</value>
-			<value level="8">-635</value>
-			<value level="9">-646</value>
-		</effectPoint>
-		<hitTime>1500</hitTime>
+		<effectPoint>-5000</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -1729,7 +1663,6 @@
 			<value level="9">105</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1778,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="19561" toLevel="11" name="Chained Death Scythe">
-		<!-- Summons a scythe to attack the target and nearby enemies with 17889 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Summons a scythe to attack the target and nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19559</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1801,6 +1734,7 @@
 			<value level="11">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<castRange>600</castRange>
 		<mpConsume>
 			<value level="1">166</value>
 			<value level="2">173</value>
@@ -1814,22 +1748,10 @@
 			<value level="10">205</value>
 			<value level="11">207</value>
 		</mpConsume>
-		<hitTime>3500</hitTime>
-		<coolTime>370</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>
-			<value level="1">-1378</value>
-			<value level="2">-1383</value>
-			<value level="3">-1392</value>
-			<value level="4">-1400</value>
-			<value level="5">-1407</value>
-			<value level="6">-1414</value>
-			<value level="7">-1420</value>
-			<value level="8">-1425</value>
-			<value level="9">-1430</value>
-			<value level="10">-1435</value>
-			<value level="11">-1440</value>
-		</effectPoint>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>45000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<affectHeight>-100;200</affectHeight>
 		<isDebuff>true</isDebuff>
@@ -1875,13 +1797,14 @@
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<effectPoint>673</effectPoint>
 		<magicLvl>97</magicLvl>
 		<mpConsume>73</mpConsume>
-		<hitTime>500</hitTime>
-		<coolTime>200</coolTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1906,6 +1829,8 @@
 		<!-- Damage Reflection Trigger -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
+		<castRange>1500</castRange>
+		<reuseDelay>1000</reuseDelay>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1918,10 +1843,9 @@
 		</effects>
 	</skill>
 	<skill id="19564" toLevel="1" name="Wave Barrier">
-		<!-- For $s1, P. Def. +$s2 and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
+		<!-- For 10 sec., P. Def. +50% and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
 		<effectPoint>379</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1955,6 +1879,8 @@
 		<!-- Disables standard attack skills for $s1 after hit by the shield. -->
 		<icon>icon.skill1462</icon>
 		<operateType>A1</operateType>
+		<castRange>80</castRange>
+		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1978,6 +1904,7 @@
 		<!-- P. Atk. +$s1, Shield Def. +$s2, and Attack Attribute +$s3, and activates Shillien Shadow on the caster. $s4 chance to activate Shilen's Presence on allies. -->
 		<icon>icon.skill19560</icon>
 		<operateType>P</operateType>
+		<mpConsume>8</mpConsume>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2097,19 +2024,7 @@
 		<affectRange>600</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>NONE</basicProperty>
-		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-			<value level="8">-5013</value>
-			<value level="9">-5013</value>
-			<value level="10">-5013</value>
-			<value level="11">-5013</value>
-		</effectPoint>
+		<effectPoint>-5000</effectPoint>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -2149,7 +2064,7 @@
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>45000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
@@ -2187,7 +2102,7 @@
 		</effects>
 	</skill>
 	<skill id="19568" toLevel="1" name="Nine Aegis">
-		<!-- P. Def/ M. Def/ Bow Resistance +$s1 and Reflect Magic +$s2 under the Protection of Barrier, and becomes immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. -->
+		<!-- P. Def/ M. Def/ Bow Resistance +50% and Reflect Magic +25% under the Protection of Barrier, and becomes immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. -->
 		<icon>icon.skill10107</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2197,10 +2112,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>96</mpConsume>
-		<hitTime>3000</hitTime>
-		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
-		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2258,19 +2170,9 @@
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>
-			<value level="1">-10330</value>
-			<value level="2">-10433</value>
-			<value level="3">-10523</value>
-			<value level="4">-10600</value>
-			<value level="5">-10663</value>
-			<value level="6">-10726</value>
-			<value level="7">-10789</value>
-			<value level="8">-10852</value>
-		</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-20000</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -2322,6 +2224,7 @@
 		<!-- Deactivates the Raise Shield/ Focus Shield if a shield skill is cast. -->
 		<icon>icon.skill10073</icon>
 		<operateType>A1</operateType>
+		<effectPoint>2</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2332,9 +2235,11 @@
 		</effects>
 	</skill>
 	<skill id="19571" toLevel="1" name="Lightning Strike">
-		<!-- Paralyzed by Vanishing Shock for $s1. -->
+		<!-- Paralyzed by Vanishing Shock for 3 sec. -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2352,9 +2257,11 @@
 		</effects>
 	</skill>
 	<skill id="19572" toLevel="1" name="Shillien Shadow">
-		<!-- Removes debuffs and limits the maximum damage received for $s1 to 6666. -->
+		<!-- Removes debuffs and limits the maximum damage received for 6 sec. to 6666. -->
 		<icon>icon.skill5242</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>66000</reuseDelay>
+		<effectPoint>337</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalTime>6</abnormalTime>
 		<targetType>SELF</targetType>
@@ -2374,12 +2281,14 @@
 		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2. Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<effectPoint>673</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<abnormalTime>20</abnormalTime>
 		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<magicLvl>97</magicLvl>
-		<reuseDelay>5000</reuseDelay>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
@@ -2417,15 +2326,19 @@
 		<!-- If this stance is reused in the two-hand stance or if the shield is equipped or unequipped, the two-hand stance effect will disappear. It is set as unequip_skill for all shield items. -->
 		<icon>icon.skill10073</icon>
 		<operateType>A1</operateType>
+		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="19575" toLevel="13" name="Vanishing Stun">
 		<!-- Silenced by Vanishing shock for $s1. -->
 		<icon>icon.skill10010</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="19576" toLevel="1" name="Two-Hand Smash">
-		<!-- Strikes hard to decrease P. Def. by $s2 for $s1. -->
+		<!-- Strikes hard to decrease P. Def. by 30% for 7 sec. -->
 		<icon>icon.skill10009</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 </list>

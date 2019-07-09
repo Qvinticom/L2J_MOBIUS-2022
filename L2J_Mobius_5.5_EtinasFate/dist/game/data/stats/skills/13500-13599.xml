@@ -15,7 +15,7 @@
 	<skill id="13504" toLevel="1" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="13505" toLevel="1" name="Monster Weapon Appearance Stone: Thesakar's Axe">
+	<skill id="13505" toLevel="1" name="Monster Weapon Appearance Stone: Thesakar's Spear">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13506" toLevel="1" name="Monster Weapon Appearance Stone: Mimilead's Staff">
@@ -435,7 +435,7 @@
 		</effects>
 	</skill>
 	<skill id="13526" toLevel="1" name="Blessed Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-sec. Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -881,7 +881,7 @@
 		</effects>
 	</skill>
 	<skill id="13542" toLevel="1" name="Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-sec. Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1372,7 +1372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13558" toLevel="1" name="Mysterious Dualsword">
+	<skill id="13558" toLevel="1" name="Mysterious Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>
@@ -1961,8 +1961,10 @@
 		<!-- Resistance for all weapons +3%. When equipped with a weapon that has an attribute, the Atk. Attribute +50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackAttribute">
@@ -2011,8 +2013,10 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -2423,7 +2427,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13578" toLevel="1" name="Hero's Weapon: One-handed Magic Sword">
+	<skill id="13578" toLevel="1" name="Hero's Weapon: Magic Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +598, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
@@ -2462,7 +2466,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13579" toLevel="1" name="Hero's Weapon: One-handed Magic Blunt Weapon">
+	<skill id="13579" toLevel="1" name="Hero's Weapon: One-handed Staff">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +598, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_the_mace_of_hero</icon>
 		<operateType>P</operateType>
@@ -2501,7 +2505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13580" toLevel="1" name="Hero's Weapon: Two-handed Magic Blunt Weapon">
+	<skill id="13580" toLevel="1" name="Hero's Weapon: Two-handed Staff">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +657, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_the_staff_of_hero</icon>
 		<operateType>P</operateType>
@@ -2540,7 +2544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13581" toLevel="1" name="Hero's Weapon: Dualsword">
+	<skill id="13581" toLevel="1" name="Hero's Weapon: Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>

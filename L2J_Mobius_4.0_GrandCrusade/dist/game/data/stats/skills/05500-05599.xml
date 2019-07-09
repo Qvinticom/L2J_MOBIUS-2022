@@ -357,6 +357,7 @@
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>CA1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
@@ -378,6 +379,7 @@
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>CA1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
@@ -399,6 +401,7 @@
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>CA1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WIND</attributeType>
 		<attributeValue>180</attributeValue>
@@ -420,6 +423,7 @@
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>CA1</operateType>
+		<mpConsume>85</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>180</attributeValue>
@@ -888,6 +892,20 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">29</value>
+			<value level="4">39</value>
+			<value level="5">50</value>
+			<value level="6">62</value>
+			<value level="7">72</value>
+			<value level="8">77</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">85</value>
+			<value level="12">85</value>
+		</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>

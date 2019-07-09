@@ -1068,7 +1068,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3623" toLevel="3" name="Enchant Heavy Armor (S-grade)">
+	<skill id="3623" toLevel="5" name="Enchant Heavy Armor (S-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLvl>1</magicLvl>
@@ -1094,7 +1094,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3624" toLevel="3" name="Enchant Light Armor (S-grade)">
+	<skill id="3624" toLevel="5" name="Enchant Light Armor (S-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLvl>1</magicLvl>
@@ -1117,7 +1117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3625" toLevel="3" name="Enchant Robe (S-grade)">
+	<skill id="3625" toLevel="5" name="Enchant Robe (S-grade)">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLvl>1</magicLvl>
@@ -2010,7 +2010,7 @@
 		</effects>
 	</skill>
 	<skill id="3649" toLevel="1" name="Beleth' Ring">
-		<!-- M. Def. +$s1, Max HP +$s2, Max MP +$s3, MP Recovery +$s4, Mental Attack +$s5, Mental Attack Resistance +$s6, Dark Attack Def. +$s7. -->
+		<!-- M. Def. +12%, Max HP +105, Max MP +21, MP Recovery +0.23, Mental Attack +10, Mental Attack Resistance +10, Dark Attack Def. +30. -->
 		<icon>icon.accessary_dynasty_ring_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -2606,7 +2606,7 @@
 		</effects>
 	</skill>
 	<skill id="3681" toLevel="1" name="Zubei's Shield">
-		<!-- Increases Magic Damage Resistance by $s1. -->
+		<!-- Increases Magic Damage Resistance by 2%. -->
 		<icon>icon.shield_shrnoens_shield_i00</icon>
 		<magicLvl>58</magicLvl>
 		<operateType>P</operateType>
@@ -2684,7 +2684,7 @@
 		</effects>
 	</skill>
 	<skill id="3687" toLevel="1" name="Avadon Shield">
-		<!-- Increases Magic Damage Resistance by $s1. -->
+		<!-- Increases Magic Damage Resistance by 1%. -->
 		<icon>icon.shield_avadon_shield_i00</icon>
 		<magicLvl>58</magicLvl>
 		<operateType>P</operateType>

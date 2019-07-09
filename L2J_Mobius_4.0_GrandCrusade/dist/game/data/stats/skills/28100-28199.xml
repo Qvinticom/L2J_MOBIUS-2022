@@ -293,7 +293,7 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
+		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
 			<value level="1">1800000</value>
@@ -329,24 +329,35 @@
 	<skill id="28148" toLevel="1" name="Fortune Talisman Pack">
 		<!-- Double-click to obtain either Sayha's Talisman or Venir's Talisman. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28151" toLevel="4" name="Halloween Blessing">
 		<!-- Rico's Halloween buff. XP/SP gain + $s1 when hunting, P./M. Atk. + $s2, Received Damage - $s3. You can receive a Halloween gift once the buff expires. -->
 		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28152" toLevel="1" name="Halloween Blessing">
 		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28153" toLevel="1" name="Halloween Gift">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28154" toLevel="1" name="Talisman - Abundance Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>29077</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -410,5 +421,7 @@
 	</skill>
 	<skill id="28155" toLevel="1" name="Wondrous Jewelry Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 </list>

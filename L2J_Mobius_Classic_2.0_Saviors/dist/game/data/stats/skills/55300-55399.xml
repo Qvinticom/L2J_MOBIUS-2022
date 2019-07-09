@@ -4,69 +4,98 @@
 		<!-- A Buff for a warrior fighting in the Abandoned Camp. P. Atk. and M. Atk. +10%. You can receive a Shabby Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i02</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55301" toLevel="1" name="Buff for the Hero of Abandoned Camp">
 		<!-- You can receive a Shabby Box when the Buff is no longer in effect. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i02</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55302" toLevel="1" name="Buff for the Hero of Abandoned Camp">
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i02</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55303" toLevel="1" name="Crude Box Acquisition Effect">
 		<!-- A Buff for a warrior fighting in Orc Barracks. P. Atk. and M. Atk. +10%. You can receive a Crude Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55304" toLevel="1" name="Crude Box Acquisition Effect">
 		<!-- You can receive a Crude Box when the Buff is no longer in effect. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55305" toLevel="1" name="Crude Box Acquisition Effect">
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i03</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55306" toLevel="1" name="Buff for the Hero of 2nd Floor of Cruma Tower">
 		<!-- A Buff for a warrior fighting on the 2nd floor of Cruma Tower. P. Atk. and M. Atk. +10%. You can receive an Old Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i04</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55307" toLevel="1" name="Old Box Acquisition Effect">
 		<!-- You can receive an Old Box when the Buff is no longer in effect. -->
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i04</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55308" toLevel="1" name="Old Box Acquisition Effect">
 		<icon>BranchIcon.Icon.skill_g_field_special_buff_i04</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55309" toLevel="10" name="Earring of Chronicle Heir">
 		<!-- MP Recovery +1%, Max MP +1%. -->
 		<icon>icon.event_classic_ring</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55310" toLevel="1" name="Holiday Hat">
 		<!-- Resurrects a dead target and restores 100% XP. Consumes 1 Spirit Ore. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>21600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55311" toLevel="1" name="Overwhelming Power of a Holiday Hat">
 		<!-- For 60 minutes, XP/SP gain + 5%. Will not be deleted upon death. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55312" toLevel="1" name="Wondrous Cubic">
 		<operateType>A1</operateType>
+		<reuseDelay>82800000</reuseDelay>
 	</skill>
 	<skill id="55313" toLevel="1" name="Wondrous Cubic">
 		<operateType>A1</operateType>
+		<reuseDelay>82800000</reuseDelay>
 	</skill>
 	<skill id="55314" toLevel="1" name="Effect of a Kiss">
 		<!-- For 1 hour activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.skill0763</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>G_EV_BUFF1</abnormalType>
@@ -112,9 +141,12 @@
 	<skill id="55315" toLevel="1" name="Lindvior's Treasure Chest">
 		<icon>icon.bm_pirate_king_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55316" toLevel="1" name="Chronicle Cube">
 		<operateType>A1</operateType>
+		<reuseDelay>82800000</reuseDelay>
 	</skill>
 	<skill id="55317" toLevel="1" name="Chronicle Chest">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -708,18 +740,22 @@
 	<skill id="55322" toLevel="1" name="Normal VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="55323" toLevel="1" name="Medium VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="55324" toLevel="1" name="Good VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="55325" toLevel="1" name="Perfect VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="55326" toLevel="1" name="Gold Fishing Shot">
 		<operateType>A1</operateType>
@@ -728,10 +764,11 @@
 		<!-- Eat some chocolate from Coco Brownie to feel life-giving energy. For 2 hours XP and SP gain +5%, Atk. Spd. / Casting Spd. +10%, Speed +10. Cannot be stacked with Blessing of Light. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MULTI</abnormalType>
-		<effectPoint>1</effectPoint>
+		<effectPoint>100</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
@@ -771,6 +808,7 @@
 		<!-- Event buff for PA only. XP/SP bonus + 20%. item drop rate +100%. Cannot be used on servitors. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55329" toLevel="1" name="Strawberry Juice">
 		<!-- For 5 min. Max HP+10%, HP Recovery +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. -->
@@ -897,137 +935,168 @@
 	</skill>
 	<skill id="55332" toLevel="1" name="Scroll: 50 SP">
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="55333" toLevel="2" name="Scroll: 100 SP">
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="55334" toLevel="3" name="Scroll: 1000 SP">
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="55335" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55336" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55337" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55338" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55339" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55340" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55341" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55342" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55343" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55344" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55345" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55346" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55347" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55348" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55349" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55350" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55351" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55352" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55353" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55354" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55355" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55356" toLevel="1" name="Irene' Hourglass - 1 Hour">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55357" toLevel="1" name="Irene' Hourglass - 2 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55358" toLevel="1" name="Irene' Hourglass - 3 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55359" toLevel="1" name="Irene' Hourglass - 4 Hours">
 		<!-- XP/SP gain + 50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 	</skill>
 	<skill id="55360" toLevel="8" name="Irene's Song">
 		<!-- XP/SP gain +$s1. -->
@@ -1041,7 +1110,7 @@
 			<value level="7">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
 			<value level="8">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55361" toLevel="1" name="Superspeed Potion">
 		<!-- Increases Speed to its maximum. -->
@@ -1076,7 +1145,7 @@
 		<itemConsumeId>70280</itemConsumeId> <!-- Clan Reputation Score - 10 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1094,7 +1163,7 @@
 		<itemConsumeId>70281</itemConsumeId> <!-- Clan Reputation Score - 50 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1112,7 +1181,7 @@
 		<itemConsumeId>70282</itemConsumeId> <!-- Clan Reputation Score - 150 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1126,45 +1195,77 @@
 	<skill id="55365" toLevel="1" name="King Pirate's Treasure Chest">
 		<icon>icon.card_event_blue_box</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55366" toLevel="1" name="Weapon Supply Box (B-grade)">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55367" toLevel="1" name="Weapon Supply Box (C-grade)">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55368" toLevel="1" name="B-grade Armor Supply Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55369" toLevel="1" name="C-grade Armor Supply Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55370" toLevel="1" name="B-grade Weapons Ingredient Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55371" toLevel="1" name="C-grade Weapons Ingredient Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55372" toLevel="1" name="B-grade Armor Ingredient Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55373" toLevel="1" name="C-grade Armor Ingredient Box">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55374" toLevel="1" name="Baium Treasure Chest">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55375" toLevel="1" name="Kusto's Support Box: Enhance Weapon">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55376" toLevel="1" name="Enchant Scroll of Border">
 		<operateType>A1</operateType>
@@ -1175,27 +1276,39 @@
 	<skill id="55378" toLevel="5" name="Effect of the Talisman of Border Lv. 1">
 		<!-- Talisman's magical power gives P. Def. +12, M. Def. +4, HP / MP / CP +3. Casting / Atk. Spd. +2. -->
 		<icon>icon.bm_magic_square_talisman</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55379" toLevel="1" name="Border Purification">
 		<!-- Cancels paralysis and petrification and cures severe poison/bleed condition. Restores 15% HP. -->
 		<icon>icon.skill10036</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="55380" toLevel="10" name="Talisman of Border Enchant Effect">
 		<!-- XP/SP gain + 3%. -->
 		<icon>icon.bm_magic_square_talisman</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55381" toLevel="7" name="Border Power">
 		<!-- P. / M. Atk. +1%, P. / M. Critical Damage +3%. -->
 		<icon>icon.skill10030</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="55382" toLevel="1" name="Blessing of Border">
 		<!-- Restores 100% HP / CP and 50% MP when used. -->
 		<icon>icon.skill10034</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>1200000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="55383" toLevel="1" name="Blessed Enchant Scroll of Border">
 		<operateType>A1</operateType>
@@ -1252,6 +1365,8 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i10</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55390" toLevel="3" name="Olympiad Warrior's Potion - INT">
 		<!-- For 20 minutes, INT + 4. -->
@@ -1260,6 +1375,8 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i11</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55391" toLevel="3" name="Olympiad Warrior's Potion - CON">
 		<!-- For 20 minutes, CON + 4. -->
@@ -1268,6 +1385,8 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i07</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55392" toLevel="3" name="Olympiad Warrior's Potion - DEX">
 		<!-- For 20 minutes, DEX + 4. -->
@@ -1276,6 +1395,8 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i03</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55393" toLevel="3" name="Olympiad Warrior's Potion - MEN">
 		<!-- For 20 minutes, MEN + 4. -->
@@ -1284,6 +1405,8 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i05</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55394" toLevel="3" name="Olympiad Warrior's Potion - WIT">
 		<!-- For 20 minutes, WIT + 4. -->
@@ -1292,28 +1415,38 @@
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i04</value>
 		</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55395" toLevel="3" name="Commemorative Olympiad XP/SP Scroll">
 		<!-- For 20 minutes., obtained XP/SP + 50%. -->
 		<icon>icon.exp_bottle</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55396" toLevel="2" name="Olympiad Warrior's Special Fruit">
 		<!-- For 20 minutes., obtained XP/SP + 10%, P. / M. Atk. +10%, P. / M. Def. +5%, Max. HP/MP/CP + 15%, HP / MP Recovery +20%, PvE damage + 10%. With a certain chance, converts 3% of damage dealt into HP. -->
 		<icon>icon.etc_cobol_i04</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55397" toLevel="1" name="Olympiad Commemorative Amulet - 100%">
 		<!-- When in inventory XP/SP gain +100%. -->
 		<icon>icon.skill19226</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55398" toLevel="4" name="Olympiad Warrior's SP Scroll">
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55399" toLevel="1" name="Tryout Glorious Cloak">
 		<!-- P. / M. Def. +3%, Speed + 10. -->
 		<icon>BranchSys2.Icon.7anni_cloack_i02</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 </list>

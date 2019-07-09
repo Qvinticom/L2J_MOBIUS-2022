@@ -562,7 +562,6 @@
 			<value level="12">149</value>
 			<value level="13">151</value>
 		</mpConsume>
-		<castRange>60</castRange>
 		<effectPoint>-687</effectPoint>
 		<hitTime>1800</hitTime>
 		<coolTime>500</coolTime>
@@ -1424,7 +1423,6 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>WIND_ILLUSION</abnormalVisualEffect>
 		<mpConsume>41</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1564,7 +1562,7 @@
 		</effects>
 	</skill>
 	<skill id="30020" toLevel="1" name="Sayha's Fury">
-		<!-- For $s1, Received P./ M. Critical Damage -$s2, and Speed +$s3. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage $s4. Requires a sword or blunt weapon. -->
+		<!-- For 30 sec., Received P./ M. Critical Damage -50%, and Speed +70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>

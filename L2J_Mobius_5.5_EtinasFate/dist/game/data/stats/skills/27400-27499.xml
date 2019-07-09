@@ -339,7 +339,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27435" toLevel="1" name="Shadow Dualsword Box">
+	<skill id="27435" toLevel="1" name="Shadow Dual Sword Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>26446</itemConsumeId>
@@ -382,7 +382,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>EXP_SPECIAL</abnormalType>
-		<hitTime>750</hitTime>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -509,7 +508,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27443" toLevel="1" name="Amethyst - Remove Invincibility">
+	<skill id="27443" toLevel="1" name="Amethyst - Remove Invincibility/ Immunity">
 		<!-- Removes the target's invincibility and debuff invincibility effects. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_amethyst_i00</icon>
 		<operateType>A1</operateType>
@@ -556,7 +555,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27445" toLevel="1" name="Attendance Vitality Tonic">
-		<icon>icon.etc_recall_potion3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>26510</itemConsumeId> <!-- Attendance Vitality Tonic -->

@@ -332,7 +332,7 @@
 		</effects>
 	</skill>
 	<skill id="13314" toLevel="1" name="Blessed Antharas' Earring">
-		<!-- Immediately cancels out Stun effect when used -->
+		<!-- Immediately cancels out Stun effect when used; gives 5-second Stun Resistance. -->
 		<icon>icon.accessory_earring_of_antaras_i00</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -342,7 +342,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -418,7 +418,7 @@
 		</effects>
 	</skill>
 	<skill id="13316" toLevel="1" name="Blessed Valakas' Necklace">
-		<!-- Immediately cancels out Hold effect when used -->
+		<!-- Immediately cancels out Hold effect when used; gives 5-second Hold Resistance. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
@@ -428,7 +428,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7200</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -512,10 +512,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>41</mpConsume>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>200</hitTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>2</amount>
@@ -540,7 +539,7 @@
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>72000</reuseDelay>
+		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -952,7 +951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13339" toLevel="5" name="Enchant Heavy Armor Set + 6 +7 +8 +9 +10 (R,R95,R99 Grade)">
+	<skill id="13339" toLevel="5" name="Enchant Heavy Armor Set + 6 (R-grade)">
 		<!-- Set item is enchanted. P. Def. + $s1, and MP Recovery Bonus + $s2 when standing/ sitting. -->
 		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
@@ -1082,7 +1081,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13340" toLevel="5" name="Enchant Light Armor Set + 6 +7 +8 +9 +10 (R,R95,R99 Grade)">
+	<skill id="13340" toLevel="5" name="Enchant Light Armor Set + 6 (R-grade)">
 		<!-- Set item is enchanted. M. Def. + $s1, P. Evasion + $s2, and Debuff Resistance + $s3. MP Recovery Bonus + $s4 when standing/ sitting. -->
 		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
@@ -1253,7 +1252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13341" toLevel="5" name="Enchant Robe Set + 6 +7 +8 +9 +10 (R,R95,R99 Grade)">
+	<skill id="13341" toLevel="5" name="Enchant Robe Set + 6 (R-grade)">
 		<!-- Set item is enchanted. P. Def. + $s1, Weight Limit + $s2, and Skill Cooldown - $s3. MP Recovery Bonus + $s4 when standing/ sitting. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>

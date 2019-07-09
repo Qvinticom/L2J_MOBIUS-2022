@@ -349,7 +349,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4106" toLevel="1" name="Antharas Jumping Slam">
+	<skill id="4106" toLevel="2" name="Antharas Jumping Slam">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4106</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -358,7 +358,10 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectRange>600</affectRange>
 		<coolTime>2000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">0</value>
+		</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>6000</hitTime>
@@ -376,7 +379,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4107" toLevel="1" name="Antharas Tail Swing">
+	<skill id="4107" toLevel="2" name="Antharas Tail Swing">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4107</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -384,7 +387,10 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<coolTime>3000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">0</value>
+		</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>450</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
@@ -403,7 +409,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4108" toLevel="1" name="Antharas Fear">
+	<skill id="4108" toLevel="2" name="Antharas Fear">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill4108</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -412,11 +418,15 @@
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<affectRange>600</affectRange>
 		<coolTime>2700</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">0</value>
+		</effectPoint>
 		<hitTime>2300</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
+		<castRange>600</castRange>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -495,6 +505,7 @@
 		<hitTime>2300</hitTime>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
+		<castRange>500</castRange>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -507,7 +518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4111" toLevel="1" name="Antharas Dragon Breath">
+	<skill id="4111" toLevel="2" name="Antharas Dragon Breath">
 		<!-- Petrified and unable to move temporarily. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -515,9 +526,12 @@
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<affectRange>300</affectRange>
-		<castRange>2500</castRange>
+		<castRange>1000</castRange>
 		<coolTime>1800</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">0</value>
+		</effectPoint>
 		<effectRange>2500</effectRange>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>450</attributeValue>
@@ -542,7 +556,7 @@
 	</skill>
 	<skill id="4112" toLevel="1" name="Antharas Smash">
 		<affectRange>300</affectRange>
-		<castRange>300</castRange>
+		<castRange>50</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
@@ -2030,7 +2044,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4150" toLevel="12" name="Flame">
+	<skill id="4150" toLevel="13" name="Flame">
 		<!-- HP decreases momentarily from burning flame. Effect $s1. -->
 		<icon>icon.skill1100</icon>
 		<abnormalLvl>
@@ -2046,6 +2060,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
+			<value level="13">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2070,6 +2085,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
+			<value level="13">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2091,6 +2107,7 @@
 					<value level="10">72</value>
 					<value level="11">74</value>
 					<value level="12">74</value>
+					<value level="13">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ticks>5</ticks>
 			</effect>

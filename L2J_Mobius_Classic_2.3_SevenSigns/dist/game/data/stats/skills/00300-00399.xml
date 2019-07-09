@@ -65,8 +65,11 @@
 			<value level="7">-611</value>
 			<value level="8">-635</value>
 			<value level="9">-655</value>
-			<value level="10">-673</value>
-			<value level="11">-692</value>
+			<value level="10">-659</value>
+			<value level="11">-663</value>
+			<value level="12">-667</value>
+			<value level="13">-671</value>
+			<value level="14">-675</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
@@ -367,7 +370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="311" toLevel="1" name="Dance of Protection">
+	<skill id="311" toLevel="2" name="Dance of Protection">
 		<!-- For 5 min., grants all party members +10% Damage Reflect Resistance. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires dual swords. -->
 		<icon>icon.skill0311</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -508,6 +511,7 @@
 			<value level="6">635</value>
 			<value level="7">646</value>
 			<value level="8">655</value>
+			<value level="9">664</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>
@@ -646,9 +650,9 @@
 			<value level="14">-656</value>
 			<value level="15">-661</value>
 			<value level="16">-665</value>
-			<value level="17">-669</value>
-			<value level="18">-675</value>
-			<value level="19">-682</value>
+			<value level="17">-668</value>
+			<value level="18">-671</value>
+			<value level="19">-674</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -890,6 +894,7 @@
 					<value level="3">5</value>
 					<value level="4">7</value>
 					<value level="5">8</value>
+					<value level="6">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -946,7 +951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="320" toLevel="17" name="Wrath">
+	<skill id="320" toLevel="14" name="Wrath">
 		<!-- Swings a spear to decrease nearby enemies' CP -$s1. Requires a polearm to be equipped. -->
 		<icon>icon.skill0320</icon>
 		<affectLimit>5-12</affectLimit>
@@ -968,9 +973,6 @@
 			<value level="12">-333</value>
 			<value level="13">-333</value>
 			<value level="14">-333</value>
-			<value level="15">-333</value>
-			<value level="16">-333</value>
-			<value level="17">-333</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;150</fanRange>
@@ -990,9 +992,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">66</value>
@@ -1009,9 +1008,6 @@
 			<value level="12">85</value>
 			<value level="13">90</value>
 			<value level="14">100</value>
-			<value level="15">110</value>
-			<value level="16">120</value>
-			<value level="17">130</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1043,9 +1039,6 @@
 					<value level="12">-36</value>
 					<value level="13">-40</value>
 					<value level="14">-45</value>
-					<value level="15">-50</value>
-					<value level="16">-55</value>
-					<value level="17">-60</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1583,7 +1576,7 @@
 		</effects>
 	</skill>
 	<skill id="342" toLevel="1" name="Touch of Death">
-		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 min., Max CP -50% and the Healing power received -10%. Susceptibility to de-buff +10%. -->
+		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 min., Max CP -50% and the Healing power received -10%.  Susceptibility to de-buff +10%. -->
 		<icon>icon.skill0342</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1633,9 +1626,19 @@
 		<!-- Shoots an arrow at a vital spot. Attacks the enemy with $s1 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
 		<icon>icon.skill0343</icon>
 		<castRange>900</castRange>
-		<effectPoint>-897</effectPoint>
+		<effectPoint>
+			<value level="1">-897</value>
+			<value level="2">-915</value>
+			<value level="3">-934</value>
+			<value level="4">-953</value>
+			<value level="5">-973</value>
+			<value level="6">-993</value>
+			<value level="7">-1013</value>
+			<value level="8">-1034</value>
+			<value level="9">-1055</value>
+		</effectPoint>
 		<effectRange>1400</effectRange>
-		<hitTime>4000</hitTime>
+		<hitTime>3000</hitTime>
 		<magicLvl>
 			<value level="1">76</value>
 			<value level="2">77</value>
@@ -1659,7 +1662,8 @@
 			<value level="9">218</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>3500</reuseDelay>
+		<coolTime>500</coolTime>
+		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
@@ -1696,7 +1700,10 @@
 		<!-- Attacks the target's vital points with 7148 Power added to P. Atk. Over-hit. Requires a dagger. Critical. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
-		<effectPoint>-337</effectPoint>
+		<effectPoint>
+			<value level="1">-337</value>
+			<value level="2">-349</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
 		<magicLvl>
@@ -1711,7 +1718,6 @@
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>720</coolTime>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1738,7 +1744,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="345" toLevel="5" name="Sonic Rage">
+	<skill id="345" toLevel="12" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, spear, blunt weapon, fist weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
 		<abnormalLvl>5</abnormalLvl>
@@ -1747,7 +1753,20 @@
 		<activateRate>80</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-340</value>
+			<value level="2">-360</value>
+			<value level="3">-380</value>
+			<value level="4">-400</value>
+			<value level="5">-420</value>
+			<value level="6">-696</value>
+			<value level="7">-700</value>
+			<value level="8">-704</value>
+			<value level="9">-707</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+			<value level="12">-709</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<magicLvl>
@@ -1756,6 +1775,13 @@
 			<value level="3">80</value>
 			<value level="4">82</value>
 			<value level="5">84</value>
+			<value level="6">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1789,11 +1815,18 @@
 					<value level="3">215</value>
 					<value level="4">225</value>
 					<value level="5">235</value>
+					<value level="6">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="5">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="12">
 				<amount>
 					<value fromLevel="1" toLevel="5">-23</value>
 				</amount>
@@ -1806,13 +1839,26 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="346" toLevel="5" name="Raging Force">
+	<skill id="346" toLevel="12" name="Raging Force">
 		<!-- Attacks the target with a devastating burst of wind with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, spear, fist weapon, spear or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<castRange>600</castRange>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-340</value>
+			<value level="2">-360</value>
+			<value level="3">-380</value>
+			<value level="4">-400</value>
+			<value level="5">-420</value>
+			<value level="6">-696</value>
+			<value level="7">-700</value>
+			<value level="8">-704</value>
+			<value level="9">-707</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+			<value level="12">-709</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>300</hitTime>
+		<hitTime>1200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">76</value>
@@ -1820,6 +1866,13 @@
 			<value level="3">80</value>
 			<value level="4">82</value>
 			<value level="5">84</value>
+			<value level="6">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1830,6 +1883,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1852,9 +1906,16 @@
 					<value level="3">215</value>
 					<value level="4">225</value>
 					<value level="5">235</value>
+					<value level="6">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="5">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="12">
 				<amount>
 					<value fromLevel="1" toLevel="5">-23</value>
 				</amount>
@@ -1872,7 +1933,17 @@
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
-		<effectPoint>-679</effectPoint>
+		<effectPoint>
+			<value level="1">-679</value>
+			<value level="2">-693</value>
+			<value level="3">-707</value>
+			<value level="4">-722</value>
+			<value level="5">-737</value>
+			<value level="6">-752</value>
+			<value level="7">-768</value>
+			<value level="8">-784</value>
+			<value level="9">-800</value>
+		</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1800</hitTime>
@@ -1949,10 +2020,19 @@
 		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
-		<coolTime>100</coolTime>
-		<effectPoint>-337</effectPoint>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-337</value>
+			<value level="2">-340</value>
+			<value level="3">-343</value>
+			<value level="4">-346</value>
+			<value level="5">-349</value>
+			<value level="6">-352</value>
+			<value level="7">-355</value>
+			<value level="8">-358</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>1700</hitTime>
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">78</value>
@@ -2122,7 +2202,18 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<effectPoint>-666</effectPoint>
+		<effectPoint>
+			<value level="1">-646</value>
+			<value level="2">-650</value>
+			<value level="3">-654</value>
+			<value level="4">-658</value>
+			<value level="5">-662</value>
+			<value level="6">-670</value>
+			<value level="7">-674</value>
+			<value level="8">-678</value>
+			<value level="9">-682</value>
+			<value level="10">-686</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2153,7 +2244,8 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2257,13 +2349,13 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
-		<!-- For $s1 Critical rate -$s2, frontal Critical Damage -$s3. Vital points attacks success rate +$s4, rear Critical Damage +$s5. Requires a dagger. -->
+		<!-- For 2 min. Critical rate -20%, frontal Critical Damage -30%. Vital points attacks success rate +40%, rear Critical Damage +90%. Requires a dagger. -->
 		<icon>icon.skill0355</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<effectPoint>669</effectPoint>
-		<hitTime>1500</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
@@ -2301,7 +2393,7 @@
 		</effects>
 	</skill>
 	<skill id="356" toLevel="1" name="Focus Chance">
-		<!-- For $s1, frontal Critical Rate -$s2. Vital points attacks success rate +$s3, side Critical Rate +$s4, and rear Critical Rate +$s5. Requires a dagger. -->
+		<!-- For 2 min., frontal Critical Rate -30%. Vital points attacks success rate +20%, side Critical Rate +30%, and rear Critical Rate +60%. Requires a dagger. -->
 		<icon>icon.skill0356</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2342,7 +2434,7 @@
 		</effects>
 	</skill>
 	<skill id="357" toLevel="1" name="Focus Power">
-		<!-- For $s1, frontal Critical Damage -$s2. Side Critical Damage +$s3 and rear Critical Damage +$s4. Requires a dagger. -->
+		<!-- For 2 min., frontal Critical Damage -30%. Side Critical Damage +30% and rear Critical Damage +60%. Requires a dagger. -->
 		<icon>icon.skill0357</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2491,7 +2583,8 @@
 		<hitTime>2500</hitTime>
 		<effectPoint>
 			<value level="1">-507</value>
-			<value level="2">-531</value>
+			<value level="2">-527</value>
+			<value level="3">-547</value>
 		</effectPoint>
 		<hpConsume>
 			<value level="1">-507</value>
@@ -2502,6 +2595,7 @@
 			<value level="1">77</value>
 			<value level="2">80</value>
 			<value level="2">83</value>
+			<value level="3">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">53</value>
@@ -2559,8 +2653,17 @@
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>100</coolTime>
-		<effectPoint>-507</effectPoint>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-507</value>
+			<value level="2">-517</value>
+			<value level="3">-527</value>
+			<value level="4">-538</value>
+			<value level="5">-549</value>
+			<value level="6">-560</value>
+			<value level="7">-571</value>
+			<value level="8">-582</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
 		<hpConsume>
@@ -2815,7 +2918,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="367" toLevel="1" name="Dance of Medusa">
+	<skill id="367" toLevel="8" name="Dance of Medusa">
 		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dual sword. -->
 		<icon>icon.skill0367</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2830,7 +2933,7 @@
 		<effectPoint>-666</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>1500</hitTime>
+		<hitTime>2200</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>79</magicLvl>
@@ -2878,7 +2981,7 @@
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
-		<effectPoint>-7985</effectPoint>
+		<effectPoint>-8784</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -3436,12 +3539,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="393" toLevel="1" name="none">
+	<skill id="393" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="394" toLevel="1" name="none">
+	<skill id="394" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3460,7 +3563,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3500,7 +3603,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3555,17 +3658,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="397" toLevel="1" name="none">
+	<skill id="397" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="398" toLevel="1" name="none">
+	<skill id="398" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="399" toLevel="1" name="none">
+	<skill id="399" toLevel="1" name="">
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

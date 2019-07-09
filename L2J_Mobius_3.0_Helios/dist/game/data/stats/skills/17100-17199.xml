@@ -80,16 +80,14 @@
 	</skill>
 	<skill id="17114" toLevel="1" name="Promise Cube">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17115" toLevel="1" name="Promise Cube Skill">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17116" toLevel="1" name="Promise Cube Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17117" toLevel="2" name="Emperor's Rune">
+	<skill id="17117" toLevel="2" name="Rune of Bountiful Growth">
 		<!-- Increases acquired XP and SP by $s1. -->
 		<icon>
 			<value level="1">icon.ev_charge_run</value>
@@ -110,7 +108,7 @@
 		<itemConsumeId>37560</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -131,7 +129,7 @@
 		<itemConsumeId>37561</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -152,7 +150,7 @@
 		<itemConsumeId>37562</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -177,7 +175,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17124" toLevel="24" name="Snake's Blessing - Stage 24">
+	<skill id="17124" toLevel="24" name="Snake's Blessing - Stage 1">
 		<!-- Happy $s1! You can obtain a card in $s2 hr. There are $s3 stages, so you can acquire up to $s4 cards. Return to Snake for another buff when the buff wears out. <Note:> If you are dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
@@ -215,7 +213,8 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17126" toLevel="24" name="Snake's Blessing - Stage 24">
+	<skill id="17126" toLevel="24" name="Lucky Box 2">
+		<!-- Happy $s1! You can obtain a card in $s2 hr. There are $s3 stages, so you can acquire up to $s4 cards. <Note:> If you are dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -345,6 +344,7 @@
 		<itemConsumeId>37659</itemConsumeId> <!-- Mysterious Healthy Juice (HP/CP) -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -364,11 +364,13 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing... For 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -404,6 +406,8 @@
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
@@ -431,16 +435,16 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- A deliciously dark flavor surrounds you. For 2 hours, STR + 2, INT +2, and Attribute Resistance + 20. -->
+		<!-- A deliciously dark flavor surrounds you.\nFor 2 hours, STR + 2, INT +2, and Attribute Resistance + 20. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -485,16 +489,16 @@
 		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- An exhilarating thrill of sweet energy. For 2 hours, STR + 2, INT + 2, DEX + 2, and WIT + 2. -->
+		<!-- An exhilarating thrill of sweet energy.\nFor 2 hours, STR + 2, INT + 2, DEX + 2, and WIT + 2. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -523,16 +527,16 @@
 		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- Activating shield of self-built perfection. For 2 hours, STR + 2, INT + 2, CON + 2, and MEN + 2. -->
+		<!-- Activating shield of self-built perfection.\nFor 2 hours, STR + 2, INT + 2, CON + 2, and MEN + 2. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>100</effectPoint>
-		<hitTime>100</hitTime>
+		<hitTime>700</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -570,6 +574,9 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -592,10 +599,9 @@
 		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 minutes. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<castRange>-2</castRange>
 		<effectPoint>1000</effectPoint>
 		<effectRange>-2</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -620,11 +626,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -639,11 +646,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_candy_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -658,11 +666,12 @@
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_cookie_long</icon>
 		<operateType>A2</operateType>
+		<castRange>900</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<effectPoint>100</effectPoint>
+		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -769,7 +778,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17177" toLevel="1" name="GM's Blessing - Refreshing Sonata">
-		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.Accuracy by 4, P.Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
+		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.'Accuracy by 4, P.'Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -823,7 +832,6 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -896,7 +904,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37731</itemConsumeId> <!-- Dandy's Scroll: Challenge -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -921,7 +928,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37729</itemConsumeId> <!-- Dandy's Scroll: Faith -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -994,7 +1000,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37730</itemConsumeId> <!-- Dandy's Scroll: Passion -->
 		<effectPoint>1</effectPoint>
-		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1037,7 +1042,7 @@
 		<icon>icon.skill0810</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
-		<reuseDelay>180000</reuseDelay> <!-- 3 minutes -->
+		<reuseDelay>180000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

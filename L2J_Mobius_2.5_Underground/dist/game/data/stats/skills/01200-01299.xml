@@ -4322,7 +4322,7 @@
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4790,7 +4790,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1249" toLevel="3" name="The Vision of Pa'agrio">
+	<skill id="1249" toLevel="3" name="Pa'agrio's Vision">
 		<!-- Increases Accuracy of nearby clan members by $s2 for $s1. -->
 		<icon>icon.skill1249</icon>
 		<abnormalLvl>
@@ -4842,7 +4842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1250" toLevel="3" name="Under the Protection of Pa'agrio">
+	<skill id="1250" toLevel="3" name="Pa'agrio's Protection">
 		<!-- Increases Shield Defense of nearby clan members by $s2 for $s1. Effect $s3. -->
 		<icon>icon.skill1250</icon>
 		<abnormalLvl>
@@ -5142,7 +5142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1256" toLevel="13" name="The Heart of Pa'agrio">
+	<skill id="1256" toLevel="13" name="Pa'agrio's Heart">
 		<!-- Restores a clan member's HP with $s1 Power and recovers $s3 HP per second for $s2. -->
 		<icon>icon.skill1256</icon>
 		<abnormalLvl>
@@ -5424,7 +5424,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1260" toLevel="3" name="The Tact of Pa'agrio">
+	<skill id="1260" toLevel="3" name="Pa'agrio's Tact">
 		<!-- Increases nearby clan members' Evasion by $s2 for $s1. -->
 		<icon>icon.skill1260</icon>
 		<abnormalLvl>
@@ -5476,7 +5476,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1261" toLevel="2" name="The Rage of Pa'agrio">
+	<skill id="1261" toLevel="2" name="Pa'agrio's Rage">
 		<!-- Decreases nearby clan members' P. Def. by $s2, M. Def. by $s3, and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8, and Speed by $s9 for $s1. -->
 		<icon>icon.skill1261</icon>
 		<abnormalLvl>
@@ -6408,7 +6408,7 @@
 		</effects>
 	</skill>
 	<skill id="1271" toLevel="1" name="Benediction">
-		<!-- Fully restores party members' HP. Can be used when MP is under $s1. -->
+		<!-- Fully restores party members' HP. Can be used when MP is under 25%. -->
 		<icon>icon.skill1271</icon>
 		<affectRange>2000</affectRange>
 		<effectPoint>560</effectPoint>
@@ -7312,7 +7312,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1282" toLevel="2" name="Pa'agrian Haste">
+	<skill id="1282" toLevel="2" name="Pa'agrio's Haste">
 		<!-- Increases Speed of nearby clan members by $s2 for $s1. -->
 		<icon>icon.skill1282</icon>
 		<abnormalLvl>
@@ -7562,7 +7562,7 @@
 		</effects>
 	</skill>
 	<skill id="1288" toLevel="1" name="Aura Symphony">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Inflicts non-attribute damage on the enemy with 150 Power added to M. Atk. -->
 		<icon>icon.skill1288</icon>
 		<castRange>900</castRange>
 		<effectPoint>-4200</effectPoint>
@@ -7584,7 +7584,7 @@
 		</effects>
 	</skill>
 	<skill id="1289" toLevel="1" name="Inferno">
-		<!-- Inflicts fire damage on the enemy with $s1 Power added to M. Atk., and decreases HP by $s3 per second for $s2. -->
+		<!-- Inflicts fire damage on the enemy with 150 Power added to M. Atk., and decreases HP by 60 per second for 15 seconds. -->
 		<icon>icon.skill1289</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -7618,7 +7618,7 @@
 		</effects>
 	</skill>
 	<skill id="1290" toLevel="1" name="Blizzard">
-		<!-- Inflicts water damage on the enemy with $s1 Power added to M. Atk., and decreases their Speed by $s3 for $s2. -->
+		<!-- Inflicts water damage on the enemy with 150 Power added to M. Atk., and decreases their Speed by 50% for 30 seconds. -->
 		<icon>icon.skill1290</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -7653,7 +7653,7 @@
 		</effects>
 	</skill>
 	<skill id="1291" toLevel="1" name="Demon Wind">
-		<!-- Inflicts wind damage on the enemy with $s1 Power added to M. Atk., and decreases their HP recovery magic effect by $s3 for $s2. -->
+		<!-- Inflicts wind damage on the enemy with 150 Power added to M. Atk., and decreases their HP recovery magic effect by 50% for 2 minutes. -->
 		<icon>icon.skill1291</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -7686,7 +7686,7 @@
 		</effects>
 	</skill>
 	<skill id="1292" toLevel="1" name="Elemental Assault">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
+		<!-- Inflicts non-attribute damage on the enemy with 200 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1292</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
@@ -7709,7 +7709,7 @@
 		</effects>
 	</skill>
 	<skill id="1293" toLevel="1" name="Elemental Symphony">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
+		<!-- Inflicts non-attribute damage on the enemy with 200 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1293</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
@@ -7732,7 +7732,7 @@
 		</effects>
 	</skill>
 	<skill id="1294" toLevel="1" name="Elemental Storm">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Inflicts non-attribute damage on the enemy with 200 Power added to M. Atk. -->
 		<icon>icon.skill1294</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>

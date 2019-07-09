@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17200" toLevel="1" name="Potion of Protection: Sleep (Low-grade)">
-		<!-- Use this to increase the defense rate against Sleep by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Sleep by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37797</itemConsumeId>
@@ -23,7 +23,7 @@
 		</effects>
 	</skill>
 	<skill id="17201" toLevel="1" name="Potion of Protection: Poison (Low-grade)">
-		<!-- Use this to increase the defense rate against Poison by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Poison by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37798</itemConsumeId>
@@ -45,7 +45,7 @@
 		</effects>
 	</skill>
 	<skill id="17202" toLevel="1" name="Potion of Protection: Knock Back/ Knock Down (Low-grade)">
-		<!-- Use this to increase the defense rate against Knock Back/Knock Down by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Knock Back/Knock Down by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37799</itemConsumeId>
@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="17203" toLevel="1" name="Potion of Protection: Aerial Yoke (Low-grade)">
-		<!-- Use this to increase the defense rate against Aerial Yoke by $s1. Unavailable to use in Olympiad. -->
+		<!-- Use this to increase the defense rate against Aerial Yoke by 5%. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37800</itemConsumeId>
@@ -202,7 +202,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>1800000</reuseDelay>
 		<abnormalTime>1800</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
@@ -542,8 +542,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>
@@ -955,8 +954,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1010,8 +1007,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1065,8 +1060,6 @@
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
-		<hitTime>700</hitTime>
-		<coolTime>300</coolTime>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>

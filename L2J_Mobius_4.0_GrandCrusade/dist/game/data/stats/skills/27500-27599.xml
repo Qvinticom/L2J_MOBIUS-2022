@@ -2688,7 +2688,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27548" toLevel="1" name="Garnet - Purge">
+	<skill id="27548" toLevel="2" name="Garnet - Purge">
 		<!-- Cancels your debuffs. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
@@ -2713,7 +2713,7 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<targetType>SELF</targetType>
 		<effects>
 			<effect name="AbsorbDamage">
@@ -3911,7 +3911,7 @@
 		</effects>
 	</skill>
 	<skill id="27584" toLevel="1" name="Novice Adventurer's Shirt Effect">
-		<!-- CON + $s1 -->
+		<!-- CON + 2 -->
 		<icon>icon.etc_shirts_c_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3922,7 +3922,7 @@
 		</effects>
 	</skill>
 	<skill id="27585" toLevel="1" name="Adventurer's Shirt Effect">
-		<!-- INT + $s1, STR + $s2, Speed + $s3 -->
+		<!-- INT + 2, STR + 2, Speed + 7 -->
 		<icon>BranchIcon.icon.shirt_of_explorer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3941,7 +3941,7 @@
 		</effects>
 	</skill>
 	<skill id="27586" toLevel="1" name="Novice Adventurer's Circlet - Critical Rate">
-		<!-- Critical Rate + $s1 -->
+		<!-- Critical Rate + 10 -->
 		<icon>icon.accessory_au_karm_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3952,7 +3952,7 @@
 		</effects>
 	</skill>
 	<skill id="27587" toLevel="1" name="Experienced Adventurer's Circlet - Critical Rate">
-		<!-- Critical Rate + $s1 -->
+		<!-- Critical Rate + 20 -->
 		<icon>icon.accessory_ar_karm_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3963,7 +3963,7 @@
 		</effects>
 	</skill>
 	<skill id="27588" toLevel="1" name="Adventurer's Circlet ? Critical Rate">
-		<!-- P. Atk. + $s1, M. Atk. + $s2 -->
+		<!-- P. Atk. + 3%, M. Atk. + 6% -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3980,7 +3980,6 @@
 	<skill id="27589" toLevel="1" name="Adventurer's Support Cube">
 		<icon>Branchsys2.icon.cube_event_i02</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4187,6 +4186,7 @@
 		<!-- Can mount the Riding Wolf. -->
 		<icon>icon.skill0083</icon>
 		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -4247,6 +4247,7 @@
 		<!-- Swing the bat for a home run. P. Accuracy + 1 for 5 minutes. -->
 		<icon>BranchIcon.Icon.homerun</icon>
 		<operateType>A2</operateType>
+		<effectPoint>687</effectPoint>
 		<hitTime>5500</hitTime>
 		<coolTime>400</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -4255,6 +4256,7 @@
 		<!-- Throw the ball as best as you can for a strikeout. M. Accuracy + 1 for 5 minutes. -->
 		<icon>BranchIcon.Icon.strikeout</icon>
 		<operateType>A2</operateType>
+		<effectPoint>687</effectPoint>
 		<hitTime>5500</hitTime>
 		<coolTime>400</coolTime>
 		<reuseDelay>10000</reuseDelay>

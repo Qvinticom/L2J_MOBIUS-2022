@@ -1,5 +1,344 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="32500" toLevel="1" name="Fore Out Scale">
+		<!-- Due to the effects of the scattering scales, receives magic damage, and also inflicted with Fear and movement is restricted for 3 sec. -->
+		<icon>icon.skill1169</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>250</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32501" toLevel="1" name="Tabeth Spike">
+		<!-- Single Target Magic Attack -->
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>700</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32502" toLevel="1" name="Tabeth Spore Blast">
+		<!-- Powerful Magic Attack within Target Range -->
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>700</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32503" toLevel="1" name="Tabeth Spore Blossom">
+		<!-- Affected by a rising cloud of spores. Decreases Speed by 30 and receives damage over time for 5 sec. -->
+		<icon>icon.skill0516</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32504" toLevel="1" name="Tabeth Fatal Strike">
+		<!-- Single Target Powerful Physical Attack -->
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32505" toLevel="1" name="Tabeth Body Attack">
+		<!-- Deals physical damage to the target and stuns them. -->
+		<icon>icon.skill0092</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>250</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32506" toLevel="5" name="Energy of the Sea of Spores">
+		<!-- Energy of the Sea of Spores collected in the Sea of Spores increases P./ M. Def. by $s1 and HP Recovery by $s2. -->
+		<icon>
+			<value level="1">icon.skill32506_1</value>
+			<value level="2">icon.skill32506_2</value>
+			<value level="3">icon.skill32506_3</value>
+			<value level="4">icon.skill32506_4</value>
+			<value level="5">icon.skill32506_5</value>
+		</icon>
+		<operateType>A1</operateType>
+		<castRange>1500</castRange>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="32507" toLevel="5" name="Shroud of the Sea of Spores">
+		<!-- A barrier linked with the Energy of the Sea of Spores applied to Orfen. Deal a certain amount of damage to destroy it. The Energy of the Sea of Spores weakens when an Orfen's Handmaiden dies. -->
+		<icon>
+			<value level="1">icon.skill32507_1</value>
+			<value level="2">icon.skill32507_2</value>
+			<value level="3">icon.skill32507_3</value>
+			<value level="4">icon.skill32507_4</value>
+			<value level="5">icon.skill32507_5</value>
+		</icon>
+		<operateType>A1</operateType>
+		<castRange>1500</castRange>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="32508" toLevel="4" name="Death Strike">
+		<!-- Strong pounding attack. -->
+		<icon>icon.skill0476</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32509" toLevel="4" name="Death Pierce">
+		<!-- Attacks the enemy powerfully with a spear. -->
+		<icon>icon.skill0921</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32510" toLevel="4" name="Stun Shot">
+		<!-- Shoots an arrow at the enemy to deal physical damage and stun them for $s1. -->
+		<icon>icon.skill0101</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32511" toLevel="4" name="Death Bomber">
+		<!-- Strikes the enemy powerfully to deal physical damage and knock them down for $s1. -->
+		<icon>icon.skill10262</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32512" toLevel="4" name="Aggression">
+		<!-- Provokes an enemy, forcing them to attack you for $s1. -->
+		<icon>icon.skill0028</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>400</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32513" toLevel="4" name="Blood Blow">
+		<!-- Attacks the enemy's vital spot to deal physical damage and inflict Bleed for $s1. -->
+		<icon>icon.skill10508</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32514" toLevel="4" name="Death Rage">
+		<!-- Unleashes deathly energy at the enemy, dealing physical damage and decreasing their P. Def. by $s2 for $s1. -->
+		<icon>icon.skill0939</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32515" toLevel="4" name="Death Spike">
+		<!-- Unleashes Dark magic at the enemy to inflict damage. -->
+		<icon>icon.skill1148</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32516" toLevel="4" name="Death Crash">
+		<!-- Attacks the enemy with powerful magic. -->
+		<icon>icon.skill11018</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32517" toLevel="3" name="Death Smash">
+		<!-- Strong pounding attack. -->
+		<icon>icon.skill0255</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32518" toLevel="3" name="Death Bluff">
+		<!-- Inflicts Bluff on the enemy, making them turn around for $s1. -->
+		<icon>icon.skill10554</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32519" toLevel="3" name="Rush">
+		<!-- Charges at the enemy and inflicts physical damage. -->
+		<icon>icon.skill0484</icon>
+		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32520" toLevel="3" name="Berserker">
+		<!-- Increases Debuff Resistance, Speed, P. Atk., P. Accuracy, P. Def., Atk. Spd., and Critical Damage, and killing an enemy restores $s1 HP. When HP is $s2 or below, additionally increases P. Atk. by $s3 and Critical Rate by $s4. When HP is $s5 or below, additionally increases P. Atk. by $s6 and Critical Rate by $s7. -->
+		<icon>icon.skill10274</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="32521" toLevel="3" name="Raise Skeleton">
+		<icon>icon.skill32521</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="32522" toLevel="2" name="Unholy Barrier">
+		<!-- A barrier surrounded by dark energy. It disappears when it is struck $s1 times. -->
+		<icon>icon.skill32522</icon>
+		<operateType>A1</operateType>
+		<hitTime>300</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="32523" toLevel="3" name="Death Spike">
+		<!-- Unleashes Dark magic at the enemy to inflict damage. -->
+		<icon>icon.skill1148</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32524" toLevel="3" name="Death Crash">
+		<!-- Attacks the enemy with powerful magic. -->
+		<icon>icon.skill11018</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32525" toLevel="3" name="Death Howl">
+		<!-- Deals magic damage to nearby enemies and knocks them down for $s1. -->
+		<icon>icon.skill11032</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32526" toLevel="3" name="Raise Death Squad">
+		<icon>icon.skill32526</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="32527" toLevel="1" name="Rift of Power">
+		<!-- A rift forms in Orfen's power, decreasing her P. Atk./ M. Atk./ Speed by 33%. -->
+		<icon>icon.skill32527</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="32528" toLevel="1" name="Liberation">
+		<!-- Liberates shackled powers, increasing M. Atk. and M. Def. 4-fold, Casting Spd. 2-fold, and HP Recovery 10-fold for 1 hr. -->
+		<icon>icon.skill30020</icon>
+		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="32529" toLevel="1" name="Tabeth Mass Slam">
+		<!-- Deals physical damage to nearby enemies and knocks them down for 5 sec. -->
+		<icon>icon.skill10266</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32530" toLevel="10" name="Red Nosed Rudolph - Stage 1">
+		<!-- You can receive items after $s1. A total of $s2 stages. Increases all basic stats by $s3, and decreases Vitality Consumption by $s4.\n<Warning> If you are dead at the time the items are given, you can't receive Red Nosed Rudolph Buff or the items. You also can't receive the items if there is no room in your inventory. -->
+		<icon>icon.rudolph_buff</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32531" toLevel="5" name="Red Nosed Rudolph - Buff Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="32532" toLevel="1" name="Mysterious Ancient Herb">
+		<!-- Mysterious ancient power energizes you and increases P. Def. by 2837, M. Def. by 1785, Speed by 7, Vampiric Rage effect by 5%. -->
+		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="32533" toLevel="24" name="Super Lucky Dog - Stage 1">
+		<!-- Golden Dog's golden energy decreases your Vitality Consumption by $s1. You can receive items after $s2. A total of $s3 stages.\n<Warning> If you are dead at the time the items are given, you can't receive Super Lucky Dog Buff or the items. You also can't receive the items if there is no room in your inventory. -->
+		<icon>icon.christmas_card_box2</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32534" toLevel="23" name="Super Lucky Dog">
+		<!-- 1-Set Reward - H/ A -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
 	<skill id="32535" toLevel="8" name="Raid Boss (Lv. 107)">
 		<!-- Corrupted Atrofa was one of the Atrofas in the Sea of Spores that became completely corrupted after being exposed to unusually powerful Energy of the Sea of Spores. It no longer has a place in the Sea of Spores, but assimilation with the Energy of the Sea of Spores allows it to stay there. -->
 		<icon>icon.skillraid</icon>

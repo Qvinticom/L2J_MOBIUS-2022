@@ -553,7 +553,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23136" toLevel="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
+	<skill id="23136" toLevel="1" name="Nepal Snow Agathion Special Skill: Snow's Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Cooldown is 1 hours. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
@@ -599,7 +599,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23138" toLevel="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
+	<skill id="23138" toLevel="1" name="Round Ball Snow Agathion Special Skill: Snow's Acumen">
 		<!-- Increases Casting Spd. by 30% for 20 minutes. Cooldown is 1 hr. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
@@ -645,7 +645,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23140" toLevel="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
+	<skill id="23140" toLevel="1" name="Ladder Snow Agathion Special Skill: Snow's Wind Walk">
 		<!-- Increases Spd. by 33 for 20 minutes. Cooldown is 1 hr. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
@@ -1376,7 +1376,6 @@
 		<icon>BranchSys2.icon.br_rosalia_rose_red_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
-		<reuseDelay>600000</reuseDelay>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>

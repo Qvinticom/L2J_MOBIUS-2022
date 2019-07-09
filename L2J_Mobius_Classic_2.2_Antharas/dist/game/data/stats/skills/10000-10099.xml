@@ -26,7 +26,10 @@
 		<hitTime>1000</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-2173</effectPoint>
+		<effectPoint>
+			<value level="1">-2066</value>
+			<value level="2">-2099</value>
+		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<trait>PULL</trait>
@@ -47,7 +50,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
+	<skill id="10094" toLevel="2" name="Mass Lightning Strike">
 		<!-- A lightning strike inflicts damage to the target and nearby enemies. Power $s1. Paralyzes enemies for $s2 Consumes $s3 Soulstone(s). -->
 		<icon>icon.skll10094</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -55,8 +58,7 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="7">40</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="2">40</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
@@ -65,11 +67,6 @@
 		<itemConsumeCount>
 			<value level="1">1</value>
 			<value level="2">2</value>
-			<value level="3">4</value>
-			<value level="4">6</value>
-			<value level="5">6</value>
-			<value level="6">6</value>
-			<value level="7">6</value>
 		</itemConsumeCount>
 		<lvlBonusRate>1</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -79,27 +76,20 @@
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
-			<value level="3">95</value>
-			<value level="4">99</value>
-			<value level="5">101</value>
-			<value level="6">103</value>
-			<value level="7">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">143</value>
-			<value level="3">155</value>
-			<value level="4">165</value>
-			<value level="5">175</value>
-			<value level="6">185</value>
-			<value level="7">195</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>-828</effectPoint>
+		<effectPoint>
+			<value level="1">-828</value>
+			<value level="2">-848</value>
+		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>PARALYZE</trait>
 		<conditions>
@@ -110,12 +100,6 @@
 				<power>
 					<value level="1">11997</value>
 					<value level="2">14177</value>
-					<value level="3">16357</value>
-					<value level="4">18101</value>
-					<value level="5">18973</value>
-					<value level="6">19845</value>
-					<value level="7">20717</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">

@@ -4315,7 +4315,6 @@
 		</effects>
 	</skill>
 	<skill id="4671" toLevel="1" name="Teleport">
-		<castRange>1500</castRange>
 		<effectRange>2000</effectRange>
 		<magicLvl>40</magicLvl>
 		<operateType>A1</operateType>
@@ -4727,7 +4726,7 @@
 	</skill>
 	<skill id="4681" toLevel="1" name="Valakas Trample">
 		<affectRange>300</affectRange>
-		<castRange>300</castRange>
+		<castRange>50</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
@@ -4747,7 +4746,7 @@
 	</skill>
 	<skill id="4682" toLevel="1" name="Valakas Trample">
 		<affectRange>300</affectRange>
-		<castRange>300</castRange>
+		<castRange>50</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
@@ -4765,20 +4764,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4683" toLevel="1" name="Valakas Dragon Breath">
+	<skill id="4683" toLevel="4" name="Valakas Dragon Breath">
 		<!-- HP decreases rapidly from flame momentarily. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
 		<coolTime>2000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">-100</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
 		<fanRange>0;0;2500;900</fanRange>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
@@ -4793,20 +4799,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4684" toLevel="1" name="Valakas Dragon Breath">
+	<skill id="4684" toLevel="4" name="Valakas Dragon Breath">
 		<!-- HP decreases rapidly from flame momentarily. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
 		<coolTime>2000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">-100</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
 		<fanRange>0;0;2500;900</fanRange>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
@@ -4850,12 +4863,10 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
-		<hitTime>3000</hitTime>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
@@ -4874,7 +4885,6 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
@@ -4893,15 +4903,18 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4688" toLevel="1" name="Valakas Tail Rash">
+	<skill id="4688" toLevel="2" name="Valakas Tail Rash">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4688</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>1000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<coolTime>3000</coolTime>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">0</value>
+		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
@@ -4919,7 +4932,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4689" toLevel="2" name="Valakas Fear">
+	<skill id="4689" toLevel="3" name="Valakas Fear">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill4689</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -4928,7 +4941,11 @@
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<affectRange>600</affectRange>
 		<coolTime>2000</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">-100</value>
+			<value level="3">0</value>
+		</effectPoint>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>110</magicLvl>
@@ -4951,6 +4968,7 @@
 		<hitTime>8000</hitTime>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

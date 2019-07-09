@@ -435,7 +435,7 @@
 		</effects>
 	</skill>
 	<skill id="13526" toLevel="1" name="Blessed Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-second Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -881,7 +881,7 @@
 		</effects>
 	</skill>
 	<skill id="13542" toLevel="1" name="Lindvior's Earring">
-		<!-- Immediately cancels out Knock Down/ Knock Back effect when used -->
+		<!-- Immediately cancels out Knock Down/ Knock Back effect when used; gives 5-second Knock Down/ Knock Back Resistance. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1966,8 +1966,10 @@
 		<!-- Resistance for all weapons +3%. When equipped with a weapon that has an attribute, the Atk. Attribute +50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackAttribute">
@@ -2016,8 +2018,10 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">

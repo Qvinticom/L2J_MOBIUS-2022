@@ -1162,7 +1162,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15145" toLevel="1" name="Ruler's Authority">
+	<skill id="15145" toLevel="2" name="Ruler's Authority">
 		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, Received Damage -$s4, Damage Reflection Resistance +$s5, Inventory Slots +$s6, and all attribute resistance +$s7. -->
 		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
@@ -2106,7 +2106,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12439</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2129,7 +2129,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12660</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2152,7 +2152,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>-12772</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>

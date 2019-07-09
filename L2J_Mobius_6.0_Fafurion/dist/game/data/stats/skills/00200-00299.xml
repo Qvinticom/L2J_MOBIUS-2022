@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="205" toLevel="45" name="Sword/Blunt Weapon Mastery">
+	<skill id="205" toLevel="45" name="Sword/ Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon, with an additional increase of $s2 when using a sword, or $s3 when using a blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
@@ -756,7 +756,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="217" toLevel="45" name="Sword/Blunt Weapon Mastery">
+	<skill id="217" toLevel="45" name="Sword/ Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
@@ -874,7 +874,7 @@
 		</effects>
 	</skill>
 	<skill id="221" toLevel="1" name="Silent Move">
-		<!-- Disables preemptive attacks from enemies. Decreases Speed by $s1 and continuously consumes MP. -->
+		<!-- Disables preemptive attacks from enemies. Decreases Speed by 40% and continuously consumes MP. -->
 		<icon>icon.skill0221</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLvl>40</magicLvl>
@@ -2419,7 +2419,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="239" toLevel="11" name="Expertise">
+	<skill id="239" toLevel="11" name="Expertise D">
 		<!-- Increases expertise in using $s1 grade or lower equipment. -->
 		<icon>
 			<value level="1">icon.skill0239</value>
@@ -3508,7 +3508,7 @@
 		</effects>
 	</skill>
 	<skill id="256" toLevel="1" name="Accuracy">
-		<!-- Increases Accuracy by $s1. Continuously consumes MP proportionately to your level. -->
+		<!-- Increases Accuracy by 3. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0256</icon>
 		<magicLvl>24</magicLvl>
 		<mpConsume>5</mpConsume>
@@ -3526,7 +3526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="257" toLevel="45" name="Sword/Blunt Weapon Mastery">
+	<skill id="257" toLevel="45" name="Sword/ Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0257</icon>
 		<magicLvl>
@@ -4586,7 +4586,7 @@
 		</effects>
 	</skill>
 	<skill id="264" toLevel="1" name="Song of Earth">
-		<!-- Increases all party members' P. Def. by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' P. Def. by 25% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0264</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4612,7 +4612,7 @@
 		</effects>
 	</skill>
 	<skill id="265" toLevel="1" name="Song of Life">
-		<!-- Increases all party members' HP Recovery Bonus by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' HP Recovery Bonus by 20% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0265</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4638,7 +4638,7 @@
 		</effects>
 	</skill>
 	<skill id="266" toLevel="1" name="Song of Water">
-		<!-- Increases all party members' Evasion by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' Evasion by 3 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4664,7 +4664,7 @@
 		</effects>
 	</skill>
 	<skill id="267" toLevel="1" name="Song of Warding">
-		<!-- Increases all party members' M. Def. by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' M. Def. by 30% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0267</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4690,7 +4690,7 @@
 		</effects>
 	</skill>
 	<skill id="268" toLevel="1" name="Song of Wind">
-		<!-- Increases all party members' Speed by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' Speed by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0268</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4716,7 +4716,7 @@
 		</effects>
 	</skill>
 	<skill id="269" toLevel="1" name="Hunter's Song">
-		<!-- Increases all party members' Critical Rate by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' Critical Rate by 100% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4742,7 +4742,7 @@
 		</effects>
 	</skill>
 	<skill id="270" toLevel="1" name="Song of Invocation">
-		<!-- Increases all party members' Dark Attack Resistance by $s2 for $s1. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- Increases all party members' Dark Attack Resistance by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0270</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4768,7 +4768,7 @@
 		</effects>
 	</skill>
 	<skill id="271" toLevel="1" name="Dance of the Warrior">
-		<!-- Increases all party members' P. Atk. by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' P. Atk. by 12% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0271</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4802,7 +4802,7 @@
 		</effects>
 	</skill>
 	<skill id="272" toLevel="1" name="Dance of Inspiration">
-		<!-- Increases all party members' Accuracy by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' Accuracy by 4 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4836,7 +4836,7 @@
 		</effects>
 	</skill>
 	<skill id="273" toLevel="1" name="Dance of the Mystic">
-		<!-- Increases all party members' M. Atk. by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' M. Atk. by 20% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0273</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4870,7 +4870,7 @@
 		</effects>
 	</skill>
 	<skill id="274" toLevel="1" name="Dance of Fire">
-		<!-- Increases all party members' Critical Damage by $s2 for $s1. Additionally increases MP Consumption when dancing while sing/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' Critical Damage by 35% for 2 min. Additionally increases MP Consumption when dancing while sing/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0274</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4904,7 +4904,7 @@
 		</effects>
 	</skill>
 	<skill id="275" toLevel="1" name="Dance of Fury">
-		<!-- Increases all party members' Atk. Spd. by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' Atk. Spd. by 15% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0275</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4938,7 +4938,7 @@
 		</effects>
 	</skill>
 	<skill id="276" toLevel="1" name="Dance of Concentration">
-		<!-- Decreases all party members' magic cancel damage by $s2 and increases Casting Spd. by $s3 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Decreases all party members' magic cancel damage by 40 and increases Casting Spd. by 30% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0276</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4976,7 +4976,7 @@
 		</effects>
 	</skill>
 	<skill id="277" toLevel="1" name="Dance of Light">
-		<!-- Increases all party members' Holy P. Atk. by $s2 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases all party members' Holy P. Atk. by 20 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0277</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -6642,7 +6642,7 @@
 		</effects>
 	</skill>
 	<skill id="299" toLevel="1" name="Summon Wild Hog Cannon">
-		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes $s1. Requires $s2 B-grade Crystals. -->
+		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 sec. Requires 70 B-grade Crystals. -->
 		<icon>icon.skill0299</icon>
 		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

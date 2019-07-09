@@ -884,7 +884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4708" toLevel="17" name="Cursed Strike">
+	<skill id="4708" toLevel="19" name="Cursed Strike">
 		<!-- Debuff attack used by Cursed Man. Deals damage and shock simultaneously. Inflicts Stun on the enemy momentarily. $s1 power. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -912,6 +912,8 @@
 			<value level="15">-342</value>
 			<value level="16">-342</value>
 			<value level="17">-342</value>
+			<value level="18">-342</value>
+			<value level="19">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -935,6 +937,8 @@
 			<value level="15">101</value>
 			<value level="16">103</value>
 			<value level="17">105</value>
+			<value level="18">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -981,6 +985,8 @@
 					<value level="15">7863</value>
 					<value level="16">8288</value>
 					<value level="17">8713</value>
+					<value level="18">8713</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="19">8713</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 			<effect name="BlockActions">
@@ -988,7 +994,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4709" toLevel="17" name="Cursed Blow">
+	<skill id="4709" toLevel="19" name="Cursed Blow">
 		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
@@ -1009,6 +1015,8 @@
 			<value level="15">-342</value>
 			<value level="16">-342</value>
 			<value level="17">-342</value>
+			<value level="18">-342</value>
+			<value level="19">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -1030,6 +1038,8 @@
 			<value level="15">101</value>
 			<value level="16">103</value>
 			<value level="17">105</value>
+			<value level="18">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -1075,6 +1085,8 @@
 					<value level="15">9465</value>
 					<value level="16">9648</value>
 					<value level="17">9830</value>
+					<value level="18">9830</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="19">9830</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<criticalChance>10</criticalChance>
 				<chanceBoost>200</chanceBoost>

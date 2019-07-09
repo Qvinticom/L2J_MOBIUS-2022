@@ -3,13 +3,22 @@
 	<skill id="39200" toLevel="1" name="Weapons Ingredient Box - A-grade">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="39201" toLevel="1" name="Box of Best Dye">
 		<icon>icon.etc_box_of_adventure_4_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="39202" toLevel="1" name="Spellbok Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="39203" toLevel="1" name="Life Stone Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -17,6 +26,9 @@
 		<itemConsumeId>90035</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -44,7 +56,6 @@
 	<skill id="39204" toLevel="1" name="Dimensional Blessing">
 		<!-- Gives 3,700,000 XP / 1,110,000 SP. -->
 		<icon>icon.BranchSys.icon.br_lucky_bag_i00</icon>
-		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90044</itemConsumeId>
@@ -78,8 +89,7 @@
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
-		<hitTime>600</hitTime>
+		<reuseDelay>600000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
 		<irreplacableBuff>true</irreplacableBuff>
 		<basicProperty>NONE</basicProperty>
@@ -139,7 +149,7 @@
 	<skill id="39206" toLevel="1" name="Monster Arena Belt">
 		<!-- When using the Belt CON +1, HORN +1, HP Recovery +2.31, MP +1.54, CP +3.07, Max HP / MP / CP +10%%, damage received -3%. -->
 		<icon>icon.belt_of_tiat</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="39207" toLevel="1" name="Dimensional Gift">
 		<icon>icon.etc_box_of_adventure_5_i00</icon>
@@ -148,6 +158,9 @@
 		<itemConsumeId>90136</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -187,50 +200,70 @@
 		<!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39211" toLevel="1" name="Savior' Growth Scroll">
 		<!-- Increases XP/SP gain by 50% for 2 hours. Cooldown - 2 hours. Effect remains after death. Only usable up to level 75. -->
 		<icon>icon.etc_kalie_hero_scroll</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39212" toLevel="1" name="Einsahad�s Protection">
+	<skill id="39212" toLevel="1" name="Einsahad's Protection">
 		<!-- For 1 hour Increases XP/SP gain by 100%. Cooldown - 1 hour. Effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39213" toLevel="1" name="Savior Scroll: Enchant Weapon">
 		<!-- Can only be used together with weapons of Savior. Does not disappear after an unsuccessful Enchant. -->
 		<icon>icon.yogi_scroll_of_enchant_weapon_grade_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39214" toLevel="1" name="Savior�s Cube">
+	<skill id="39214" toLevel="1" name="Savior's Cube">
 		<icon>icon.etc_crystal_cube_event_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39215" toLevel="1" name="Ring of Savior">
 		<!-- Shock Resistance +5%, HP Recovery +1.8 / MP +1.1. Effect does not double when two of the same rings are equipped. -->
 		<icon>icon.event_classic_ring</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="39216" toLevel="1" name="Transformation into an Apostle">
 		<!-- Transformation into an Apostle. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39217" toLevel="1" name="Transformation into a Shillien Saint">
 		<!-- Transformation into a Shillien Saint. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39218" toLevel="1" name="Transformation into an Eva's Saint">
 		<!-- Transformation into Eva's Saint. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39219" toLevel="3" name="Dark Knight">
 		<!-- Transformed Dark Knight. Max HP / MP +5%, Stun / Paralysis / Fear Resistance +5%, Attack Power in PvP +5%, received damage -5%. -->
 		<icon>icon.dark_kninght</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39220" toLevel="1" name="Ticket for Monster Arena">
 		<icon>icon.etc_ticket_red_i00</icon>
@@ -243,11 +276,14 @@
 	<skill id="39222" toLevel="1" name="Battle Cure">
 		<icon>icon.super_elixir_potion</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="39223" toLevel="1" name="Banana for a Monkey">
-		<!-- For $s1 XP and SP gained through hunting +$s2, P. / M. Atk. +$s3, P. / M. Def. +$s4, Atk. Spd. / Casting Spd. +$s5, Speed +$s6. Disappears after restart. -->
+		<!-- For 5 minutes XP and SP gained through hunting +10%, P. / M. Atk. +15%, P. / M. Def. +15%, Atk. Spd. / Casting Spd. +10%, Speed +10. Disappears after restart. -->
 		<icon>Icon.ev_monkey_banana</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -422,25 +458,34 @@
 	<skill id="39227" toLevel="1" name="Tuna">
 		<icon>icon.fish_huge_i12</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="39228" toLevel="1" name="Chef's Fish Stew: Victory">
 		<!-- For 10 min. HP / MP Recovery +20%, Accuracy +4, Evasion +4, P. /M. Atk. +15%, Casting / Atk. Spd. +10%, P. / M. Critical Rate +15%, P. / M. Critical Damage +15%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39229" toLevel="1" name="Chef's Fish Stew: Fire">
 		<!-- For 10 min. Max HP +10%, HP Recovery +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39230" toLevel="1" name="Chef's Fish Stew: Water">
 		<!-- For 10 min. MP Recovery +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. MP Consumption -3%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39231" toLevel="1" name="Chef's Fish Stew: Wind">
 		<!-- For 10 min. Evasion +3, Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 </list>

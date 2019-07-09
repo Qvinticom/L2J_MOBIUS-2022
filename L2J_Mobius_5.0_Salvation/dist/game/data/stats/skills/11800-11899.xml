@@ -186,8 +186,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11805" toLevel="1" name="Summon Dominant Flag">
-		<icon>icon.skill19437</icon>
+	<skill id="11805" toLevel="1" name="Not in Use">
+		<icon>icon.skill1460</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic>
@@ -617,7 +617,6 @@
 		<icon>icon.skill11817</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
-		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-1733</value>
 			<value level="2">-1747</value>
@@ -756,14 +755,13 @@
 		</effects>
 	</skill>
 	<skill id="11820" toLevel="1" name="Power of Saha">
-		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<!-- For 30 minutes, party members' P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11820</icon>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -802,14 +800,13 @@
 		</effects>
 	</skill>
 	<skill id="11821" toLevel="1" name="Critical of Saha">
-		<!-- For $s1, party members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received -$s5. A chance to increase Critical Damage when hit. -->
+		<!-- For 30 minutes, party members' P. Critical Rate +30%, P. Critical Damage +30%, M. Critical Rate +40, and P. Critical Damage Received -50%. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11821</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -854,14 +851,13 @@
 		</effects>
 	</skill>
 	<skill id="11822" toLevel="1" name="Force of Saha">
-		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply the Vampiric Rage effect for $s5. -->
+		<!-- For 30 minutes, party members' Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply the Vampiric Rage effect for 9%. -->
 		<icon>icon.skill11822</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -896,14 +892,13 @@
 		</effects>
 	</skill>
 	<skill id="11823" toLevel="1" name="Speed of Saha">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For 30 minutes, party members' Atk. Spd. +60%, Casting Spd. +60%, and Speed +10, and Skill MP Consumption -10%. -->
 		<icon>icon.skill11823</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -946,14 +941,13 @@
 		</effects>
 	</skill>
 	<skill id="11824" toLevel="1" name="Resistance of Saha">
-		<!-- For $s1, all Defense attributes of party members +$s2. -->
+		<!-- For 30 minutes, all Defense attributes of party members +30. -->
 		<icon>icon.skill11567</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -987,14 +981,13 @@
 		</effects>
 	</skill>
 	<skill id="11825" toLevel="1" name="Clarity of Saha">
-		<!-- For $s1, a party member's Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
+		<!-- For 30 minutes, a party member's Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill11825</icon>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -1088,7 +1081,7 @@
 		</effects>
 	</skill>
 	<skill id="11828" toLevel="1" name="Progressive Heal">
-		<!-- Heals target and the $s1 most injured allies around target by up to $s2 of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<!-- Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<icon>icon.skill11828</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
@@ -1113,14 +1106,13 @@
 		</effects>
 	</skill>
 	<skill id="11830" toLevel="1" name="Blessing of Saha">
-		<!-- For $s1, party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +$s2. -->
+		<!-- For 30 minutes, party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ MEN +50%. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
@@ -1323,7 +1315,8 @@
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<reuseDelay>1</reuseDelay>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 		<effects>
 			<effect name="LimitSkill" />
 		</effects>
@@ -1848,12 +1841,14 @@
 		</effects>
 	</skill>
 	<skill id="11861" toLevel="1" name="Elemental Resistance">
-		<!-- For $s1, increases party member's Elemental Resistance by $s2. Consumes $s3 Spirit Ore. -->
+		<!-- For 30 minutes, increases party member's Elemental Resistance by 30. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -1904,8 +1899,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11862" toLevel="1" name="Limited Melee Weapon Resistance">
-		<!-- For $s1, increases party member's resistance to melee weapons by $s2. Consumes $s3 Spirit Ore. -->
+	<skill id="11862" toLevel="1" name="Melee Weapon Resistance">
+		<!-- For 30 minutes, increases party member's resistance to melee weapons by 5%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11862</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1960,8 +1955,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11863" toLevel="1" name="Limited Ranged Weapon Resistance">
-		<!-- For $s1, increases party member's resistance to ranged weapons by $s2. Consumes $s3 Spirit Ore. -->
+	<skill id="11863" toLevel="1" name="Ranged Weapon Resistance">
+		<!-- For 30 minutes, increases party member's resistance to ranged weapons by 5%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11863</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>

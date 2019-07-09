@@ -568,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. for $s2., decreases Speed by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Consumes $s6 MP every second. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. for 30 seconds., decreases Speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every second. Over-hit. -->
 		<icon>icon.skill1512</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -615,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="1513" toLevel="1" name="Soul Vortex Extinction">
-		<!-- Detonates an Soul Vortex to inflict non-attribute damage on the enemy with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Detonates an Soul Vortex to inflict non-attribute damage on the enemy with 195 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1513</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -657,7 +657,15 @@
 			<value fromLevel="6" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
-		<effectPoint>150</effectPoint>
+		<effectPoint>
+			<value level="1">138</value>
+			<value level="2">140</value>
+			<value level="3">142</value>
+			<value level="4">144</value>
+			<value level="5">146</value>
+			<value level="6">148</value>
+			<value level="7">150</value>
+		</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>58</magicLvl>
@@ -736,7 +744,7 @@
 		</effects>
 	</skill>
 	<skill id="1515" toLevel="1" name="Lightning Barrier">
-		<!-- Spreads lightning's defensive barrier for $s1. Paralyzes the target that attacked you. -->
+		<!-- Spreads lightning's defensive barrier for 20 minutes. Paralyzes the target that attacked you. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -768,7 +776,7 @@
 		</effects>
 	</skill>
 	<skill id="1516" toLevel="1" name="Soul Strike">
-		<!-- Consecutively throws souls to inflict non-attribute damage on the enemy using $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Consecutively throws souls to inflict non-attribute damage on the enemy using 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1516</icon>
 		<castRange>750</castRange>
 		<effectPoint>-662</effectPoint>
@@ -1269,7 +1277,7 @@
 			<value level="42">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2673,7 +2681,12 @@
 			<value level="3">800</value>
 			<value level="4">900</value>
 		</castRange>
-		<effectPoint>-635</effectPoint>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-495</value>
+			<value level="3">-582</value>
+			<value level="4">-635</value>
+		</effectPoint>
 		<effectRange>
 			<value level="1">1100</value>
 			<value level="2">1200</value>
@@ -3410,7 +3423,32 @@
 		<!-- Creates a tear in the dimension to inflict damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<icon>icon.skill1558</icon>
 		<castRange>900</castRange>
-		<effectPoint>-590</effectPoint>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-389</value>
+			<value level="3">-399</value>
+			<value level="4">-408</value>
+			<value level="5">-418</value>
+			<value level="6">-428</value>
+			<value level="7">-438</value>
+			<value level="8">-448</value>
+			<value level="9">-457</value>
+			<value level="10">-467</value>
+			<value level="11">-477</value>
+			<value level="12">-486</value>
+			<value level="13">-495</value>
+			<value level="14">-505</value>
+			<value level="15">-514</value>
+			<value level="16">-523</value>
+			<value level="17">-532</value>
+			<value level="18">-541</value>
+			<value level="19">-549</value>
+			<value level="20">-558</value>
+			<value level="21">-566</value>
+			<value level="22">-574</value>
+			<value level="23">-582</value>
+			<value level="24">-590</value>
+		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3630,7 +3668,13 @@
 		</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
-		<effectPoint>635</effectPoint>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">467</value>
+			<value level="3">549</value>
+			<value level="4">597</value>
+			<value level="5">635</value>
+		</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLvl>
 			<value level="1">40</value>

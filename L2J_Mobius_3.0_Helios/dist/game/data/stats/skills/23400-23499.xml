@@ -1248,7 +1248,6 @@
 		<magicLvl>55</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1980,10 +1979,7 @@
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-		</effectPoint>
+		<effectPoint>-687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -2043,10 +2039,7 @@
 			<value level="2">90</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
-		<effectPoint>
-			<value level="1">687</value>
-			<value level="2">698</value>
-		</effectPoint>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2221,7 +2214,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2263,7 +2259,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2346,7 +2345,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2386,7 +2388,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2442,7 +2447,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2486,7 +2494,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>700</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>140</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2553,7 +2564,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2595,7 +2609,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2637,7 +2654,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2724,7 +2744,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2811,7 +2834,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>698</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2851,7 +2877,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2891,7 +2920,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>151</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2947,7 +2979,10 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<mpConsume>170</mpConsume>
+		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>

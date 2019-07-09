@@ -18,29 +18,25 @@
 	<skill id="26905" toLevel="1" name="Visual Enchant Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26906" toLevel="4" name="Sayha's Rune: Growth Pack Lv. 4">
+	<skill id="26906" toLevel="4" name="Sayha's Rune: Growth Pack Lv. 1">
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Growth Pack Lv. $s1. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
-		<reuseDelay>604800000</reuseDelay>
 	</skill>
-	<skill id="26907" toLevel="4" name="Sayha's Rune: Skill Pack Lv. 4">
+	<skill id="26907" toLevel="4" name="Sayha's Rune: Skill Pack Lv. 1">
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Skill Pack Lv. $s1. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
-		<reuseDelay>604800000</reuseDelay>
 	</skill>
-	<skill id="26908" toLevel="4" name="Sayha's Rune: Luck Pack Lv. 4">
+	<skill id="26908" toLevel="4" name="Sayha's Rune: Luck Pack Lv. 1">
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Luck Pack Lv. $s1. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
-		<reuseDelay>604800000</reuseDelay>
 	</skill>
-	<skill id="26909" toLevel="4" name="Sayha's Rune Pack Lv. 4">
+	<skill id="26909" toLevel="4" name="Sayha's Rune Pack Lv. 1">
 		<!-- Master Alchemy. Transmutes Sayha's Rune Pack Lv. $s1. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
-		<reuseDelay>604800000</reuseDelay>
 	</skill>
 	<skill id="26910" toLevel="1" name="Luck Box 2">
 		<operateType>A1</operateType>
@@ -97,6 +93,7 @@
 		<!-- Transform into Priestess Tsubaki temporarily. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -131,7 +128,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
-		<coolTime>3000</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic>

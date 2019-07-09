@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14765" toLevel="5" name="Blood Siphon Resistance">
 		<icon>icon.skillraid</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="14767" toLevel="1" name="Siege Punch">
 		<!-- Launches a powerful attack on the target around you -->
@@ -13,7 +13,6 @@
 		<magicLvl>55</magicLvl>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<coolTime>733</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>

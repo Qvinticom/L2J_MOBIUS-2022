@@ -132,7 +132,7 @@
 		</effects>
 	</skill>
 	<skill id="16708" toLevel="2" name="Dwelling - Guitar Melody">
-		<!-- P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4 -->
+		<!-- P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4; P. Skill MP Consumption -$s5, M. Skill MP Consumption -$s6, Iss Enchanter Enhance Skill MP Consumption -$s7 for $s1. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -150,7 +150,7 @@
 		</effectPoint>
 	</skill>
 	<skill id="16709" toLevel="2" name="Dwelling - Drum Melody">
-		<!-- For $s1, Max MP +$s2, HP Recovery Bonus +$s3, M. Critical Rate +$s4, P. Critical Damage +$s5, P. Atk. +$s6, P. Def. +$s7, Atk. Spd. +$s8, M. Atk. +$s9, M. Def. +$s10, Casting Spd. +$s11, Debuff Resistance +$s12, Critical Damage Received -$s13 -->
+		<!-- For $s1, Max MP +$s2, HP Recovery Bonus +$s3, M. Critical Rate +$s4, P. Critical Damage +$s5, P. Atk. +$s6, P. Def. +$s7, Atk. Spd. +$s8, M. Atk. +$s9, M. Def. +$s10, Casting Spd. +$s11, Debuff Resistance +$s12, Critical Damage Received -$s13; Movement Speed -$s14 down. Additionally, for party members equipped with melee weapons, bows, or crossbows who have received attacks and suffered more than a certain amount of damage, Critical Damage is increased during normal attack. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -255,7 +255,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16719" toLevel="1" name="Dwelling - Elemental Resistance">
-		<!-- For $s1, resistance to the $s2 major Elemental Attributes (Fire/Water/Wind/Earth) is increased by$s3. -->
+		<!-- For 1 hour, resistance to the 4 major Elemental Attributes (Fire/Water/Wind/Earth) is increased by30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -265,7 +265,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16720" toLevel="1" name="Dwelling - Holy Attack Resistance">
-		<!-- For $s1, Divine and Dark Attack Resistance +$s2, and Poison & Bleed Resistance + $s3. -->
+		<!-- For 1 hour, Divine and Dark Attack Resistance +30, and Poison & Bleed Resistance + 50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -275,7 +275,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16721" toLevel="1" name="Dwelling - Elemental Resistance">
-		<!-- For $s1, Hold/Sleep/Mental Attack Resistance +$s2, and Cancel Buff Resistance Attack resistance +$s3, Debuff Attack Resistance +$s4. -->
+		<!-- For 1 hour, Hold/Sleep/Mental Attack Resistance +50, and Cancel Buff Resistance Attack resistance +30, Debuff Attack Resistance +20. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -285,7 +285,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16722" toLevel="1" name="Dwelling - Resistance of Saha">
-		<!-- For$s1, Stun Attack Resistance +$s2, Poison Attack Resistance +$s3, Divine and Dark Attack Resistance +$s4. -->
+		<!-- For1 hour, Stun Attack Resistance +40%, Poison Attack Resistance +50%, Divine and Dark Attack Resistance +30. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -389,7 +389,6 @@
 	</skill>
 	<skill id="16727" toLevel="1" name="Helios Storm Fist">
 		<operateType>A1</operateType>
-		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
@@ -404,6 +403,7 @@
 	<skill id="16728" toLevel="1" name="Side Slasher">
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<mpConsume>10</mpConsume>
 		<castRange>400</castRange>
 		<hitTime>2000</hitTime>
@@ -425,6 +425,7 @@
 		<!-- The opponents in range are knocked down for 10 seconds. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>20000</reuseDelay>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -589,13 +590,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16737" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
+	<skill id="16737" toLevel="10" name="Inherent Abilities - Kingdom's Royal Guard Talisman">
 		<!-- Damage received from Embryo -$s1. -->
 		<icon>etc_royalgurad_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
-	<skill id="16738" toLevel="10" name="Inherent Abilities - Mother Tree Guardians Talisman">
+	<skill id="16738" toLevel="10" name="Inherent Abilities - Unworldly Visitors Talisman">
 		<!-- Damage received from Spirits -$s1. -->
 		<icon>etc_stranger_talisman</icon>
 		<operateType>P</operateType>
@@ -1098,7 +1099,7 @@
 		<targetType>SELF</targetType>
 		<castRange>1200</castRange>
 	</skill>
-	<skill id="16761" toLevel="50" name="Dissolving Shield of Light Particles - 98%">
+	<skill id="16761" toLevel="50" name="Dissolving Shield of Light Particles - 2%">
 		<!-- The Particle Dissolver is being used to dissolve Helios' Shield of Light. -->
 		<icon>icon.giant_item_equip</icon>
 		<operateType>A2</operateType>
@@ -1260,7 +1261,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16777" toLevel="1" name="Reprieve">
-		<!-- There has been a stay..of the execution... For $s1... -->
+		<!-- There has been a stay..of the execution... For 7 minutes.. -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1315,7 +1316,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16781" toLevel="1" name="Ring of Corruption">
-		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. In the zone of corruption, users suffer $s1 damage per second, and speed is reduced by $s2. -->
+		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. In the zone of corruption, users suffer 1000 damage per second, and speed is reduced by 100. -->
 		<icon>icon.skill11023</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1382,7 +1383,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16786" toLevel="1" name="Revenge Will">
-		<!-- Makkum casts a spell of revenge -->
+		<!-- Makkum casts a spell of revenge; those attacking Makkum are faced with 500% times the damage of their own attack reflected back to them. -->
 		<icon>icon.skill10307</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1395,7 +1396,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16787" toLevel="1" name="Double Edge Slash">
-		<!-- A skill devised by Makkum in order to attack distant enemies. Additional damage equal to $s1 of total CON is dealt, but he also suffers half as much damage. -->
+		<!-- A skill devised by Makkum in order to attack distant enemies. Additional damage equal to 10% of total CON is dealt, but he also suffers half as much damage. -->
 		<icon>icon.skill1043</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>

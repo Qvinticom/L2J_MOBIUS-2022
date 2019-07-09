@@ -644,8 +644,6 @@
 			<effect name="DispelBySlot">
 				<dispel>
 					<value level="1">CHANGEBODY,-1</value>
-					<value level="2">TURN_STONE,-1</value>
-					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
 				</dispel>
 			</effect>
 			<effect name="Transformation">
@@ -2055,7 +2053,6 @@
 		<magicLvl>55</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2091,7 +2088,6 @@
 		<!-- Monster Duel in progress. Note: Logging out will abort the duel and render you ineligible for rewards. -->
 		<icon>BranchSys3.icon1.g_ev_sponsor_token</icon>
 		<operateType>A2</operateType>
-		<castRange>-2</castRange>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF3</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -2343,7 +2339,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23599" toLevel="1" name="P. Atk./ Atk. Spd. Boost">
-		<!-- For 10 sec., Atk.Spd. + 50%, P. Atk. + 50%. -->
+		<!-- For 10 sec., Atk .Spd. + 50%, P. Atk. + 50%. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>

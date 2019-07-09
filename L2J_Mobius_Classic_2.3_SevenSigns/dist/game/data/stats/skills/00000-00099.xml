@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="45" name="Triple Slash">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Over-hit. Ignores shield block. -->
+		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Over-hit. Ignores shield block. -->
 		<icon>icon.skill0001</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -9,7 +9,7 @@
 		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>167</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-213</value>
 			<value level="2">-219</value>
@@ -49,8 +49,13 @@
 			<value level="36">-386</value>
 			<value level="37">-388</value>
 			<value level="38">-391</value>
-			<value level="39">-393</value>
-			<value level="40">-396</value>
+			<value level="39">-394</value>
+			<value level="40">-397</value>
+			<value level="41">-403</value>
+			<value level="42">-406</value>
+			<value level="43">-409</value>
+			<value level="44">-412</value>
+			<value level="45">-415</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
@@ -417,7 +422,7 @@
 		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dual sword. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
-		<coolTime>167</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-372</value>
 			<value level="2">-381</value>
@@ -450,9 +455,9 @@
 			<value level="29">-574</value>
 			<value level="30">-578</value>
 			<value level="31">-582</value>
-			<value level="32">-586</value>
-			<value level="33">-590</value>
-			<value level="34">-596</value>
+			<value level="32">-585</value>
+			<value level="33">-588</value>
+			<value level="34">-591</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
@@ -587,7 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="6" toLevel="45" name="Sonic Blaster">
-		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dual sword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3. Over-hit. Critical. -->
+		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dual sword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3.  Over-hit. Critical. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -634,9 +639,14 @@
 			<value level="35">-328</value>
 			<value level="36">-331</value>
 			<value level="37">-333</value>
-			<value level="38">-335</value>
-			<value level="39">-337</value>
-			<value level="40">-340</value>
+			<value level="38">-336</value>
+			<value level="39">-339</value>
+			<value level="40">-342</value>
+			<value level="41">-348</value>
+			<value level="42">-351</value>
+			<value level="43">-354</value>
+			<value level="44">-357</value>
+			<value level="45">-360</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
@@ -735,6 +745,8 @@
 			<value level="45">130</value>
 		</mpConsume>
 		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
@@ -806,7 +818,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="7" toLevel="44" name="Sonic Storm">
+	<skill id="7" toLevel="31" name="Sonic Storm">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Increases Power upon consuming Momentum, and consumes up to $s2. Over-hit. Critical. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
@@ -842,22 +854,9 @@
 			<value level="26">-164</value>
 			<value level="27">-166</value>
 			<value level="28">-167</value>
-			<value level="29">-709</value>
-			<value level="30">-709</value>
-			<value level="31">-709</value>
-			<value level="32">-709</value>
-			<value level="33">-709</value>
-			<value level="34">-709</value>
-			<value level="35">-709</value>
-			<value level="36">-709</value>
-			<value level="37">-709</value>
-			<value level="38">-709</value>
-			<value level="39">-709</value>
-			<value level="40">-709</value>
-			<value level="41">-709</value>
-			<value level="42">-709</value>
-			<value level="43">-709</value>
-			<value level="44">-709</value>
+			<value level="29">-712</value>
+			<value level="30">-715</value>
+			<value level="31">-718</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -893,19 +892,6 @@
 			<value level="29">75</value>
 			<value level="30">77</value>
 			<value level="31">79</value>
-			<value level="32">81</value>
-			<value level="33">83</value>
-			<value level="34">85</value>
-			<value level="35">86</value>
-			<value level="36">88</value>
-			<value level="37">90</value>
-			<value level="38">92</value>
-			<value level="39">94</value>
-			<value level="40">96</value>
-			<value level="41">98</value>
-			<value level="42">101</value>
-			<value level="43">103</value>
-			<value level="44">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -939,19 +925,6 @@
 			<value level="29">161</value>
 			<value level="30">163</value>
 			<value level="31">169</value>
-			<value level="32">175</value>
-			<value level="33">180</value>
-			<value level="34">161</value>
-			<value level="35">163</value>
-			<value level="36">169</value>
-			<value level="37">175</value>
-			<value level="38">180</value>
-			<value level="39">186</value>
-			<value level="40">192</value>
-			<value level="41">198</value>
-			<value level="42">204</value>
-			<value level="43">210</value>
-			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1003,29 +976,13 @@
 					<value level="29">427</value>
 					<value level="30">451</value>
 					<value level="31">473</value>
-					<value level="32">496</value>
-					<value level="33">520</value>
-					<value level="34">15024</value>
-					<value level="35">15542</value>
-					<value level="36">16580</value>
-					<value level="37">17618</value>
-					<value level="38">18656</value>
-					<value level="39">19695</value>
-					<value level="40">20732</value>
-					<value level="41">21771</value>
-					<value level="42">23352</value>
-					<value level="43">24490</value>
-					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="31">15</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="31">1</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -1130,9 +1087,9 @@
 			<value level="32">-164</value>
 			<value level="33">-166</value>
 			<value level="34">-167</value>
-			<value level="35">-169</value>
-			<value level="36">-171</value>
-			<value level="37">-172</value>
+			<value level="35">-170</value>
+			<value level="36">-173</value>
+			<value level="37">-176</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -1889,7 +1846,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
-		<coolTime>217</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-116</value>
 			<value level="2">-119</value>
@@ -1925,9 +1882,9 @@
 			<value level="32">-192</value>
 			<value level="33">-193</value>
 			<value level="34">-194</value>
-			<value level="35">-195</value>
-			<value level="36">-197</value>
-			<value level="37">-198</value>
+			<value level="35">-197</value>
+			<value level="36">-200</value>
+			<value level="37">-203</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -2081,46 +2038,51 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
-			<value level="1">-4312</value>
-			<value level="2">-4427</value>
-			<value level="3">-4544</value>
-			<value level="4">-4661</value>
-			<value level="5">-4778</value>
-			<value level="6">-4895</value>
-			<value level="7">-5013</value>
-			<value level="8">-5131</value>
-			<value level="9">-5248</value>
-			<value level="10">-5365</value>
-			<value level="11">-5481</value>
-			<value level="12">-5597</value>
-			<value level="13">-5713</value>
-			<value level="14">-5827</value>
-			<value level="15">-5939</value>
-			<value level="16">-6051</value>
-			<value level="17">-6161</value>
-			<value level="18">-6271</value>
-			<value level="19">-6379</value>
-			<value level="20">-6483</value>
-			<value level="21">-6587</value>
-			<value level="22">-6688</value>
-			<value level="23">-6788</value>
-			<value level="24">-6884</value>
-			<value level="25">-6977</value>
-			<value level="26">-7069</value>
-			<value level="27">-7157</value>
-			<value level="28">-7243</value>
-			<value level="29">-7324</value>
-			<value level="30">-7403</value>
-			<value level="31">-7478</value>
-			<value level="32">-7550</value>
-			<value level="33">-7618</value>
-			<value level="34">-7682</value>
-			<value level="35">-7742</value>
-			<value level="36">-7798</value>
-			<value level="37">-7850</value>
-			<value level="38">-7904</value>
-			<value level="39">-7959</value>
-			<value level="40">-8012</value>
+			<value level="1">-1184</value>
+			<value level="2">-1216</value>
+			<value level="3">-1247</value>
+			<value level="4">-1280</value>
+			<value level="5">-1312</value>
+			<value level="6">-1344</value>
+			<value level="7">-1377</value>
+			<value level="8">-1409</value>
+			<value level="9">-1441</value>
+			<value level="10">-1474</value>
+			<value level="11">-1506</value>
+			<value level="12">-1538</value>
+			<value level="13">-1569</value>
+			<value level="14">-1601</value>
+			<value level="15">-1631</value>
+			<value level="16">-1662</value>
+			<value level="17">-1693</value>
+			<value level="18">-1723</value>
+			<value level="19">-1752</value>
+			<value level="20">-1781</value>
+			<value level="21">-1810</value>
+			<value level="22">-1837</value>
+			<value level="23">-1865</value>
+			<value level="24">-1891</value>
+			<value level="25">-1917</value>
+			<value level="26">-1943</value>
+			<value level="27">-1967</value>
+			<value level="28">-1990</value>
+			<value level="29">-2012</value>
+			<value level="30">-2034</value>
+			<value level="31">-2055</value>
+			<value level="32">-2075</value>
+			<value level="33">-2093</value>
+			<value level="34">-2111</value>
+			<value level="35">-2127</value>
+			<value level="36">-2143</value>
+			<value level="37">-2157</value>
+			<value level="38">-2171</value>
+			<value level="39">-2186</value>
+			<value level="40">-2200</value>
+			<value level="41">-2229</value>
+			<value level="42">-2243</value>
+			<value level="43">-2257</value>
+			<value level="44">-2272</value>
+			<value level="45">-2286</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2274,9 +2236,14 @@
 			<value level="35">-656</value>
 			<value level="36">-661</value>
 			<value level="37">-665</value>
-			<value level="38">-670</value>
-			<value level="39">-676</value>
-			<value level="40">-681</value>
+			<value level="38">-668</value>
+			<value level="39">-671</value>
+			<value level="40">-674</value>
+			<value level="41">-680</value>
+			<value level="42">-683</value>
+			<value level="43">-686</value>
+			<value level="44">-689</value>
+			<value level="45">-692</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -2584,9 +2551,9 @@
 			<value level="29">-328</value>
 			<value level="30">-331</value>
 			<value level="31">-333</value>
-			<value level="32">-335</value>
-			<value level="33">-338</value>
-			<value level="34">-340</value>
+			<value level="32">-336</value>
+			<value level="33">-339</value>
+			<value level="34">-341</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
@@ -2818,7 +2785,7 @@
 	<skill id="27" toLevel="14" name="Unlock">
 		<!-- Has a $s1 chance to open a level $s2 door, and $s3 chance to open a treasure chest. Requires $s4 Thief Keys. -->
 		<icon>icon.skill0027</icon>
-		<castRange>400</castRange>
+		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-1</value>
 			<value level="2">-2</value>
@@ -2975,61 +2942,71 @@
 			<value level="50">800</value>
 			<value level="51">800</value>
 			<value level="52">800</value>
+			<value level="53">800</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">800</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">800</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="56">800</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="57">800</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
-			<value level="1">-3928</value>
-			<value level="2">-4069</value>
-			<value level="3">-4213</value>
-			<value level="4">-4508</value>
-			<value level="5">-4659</value>
-			<value level="6">-4814</value>
-			<value level="7">-5129</value>
-			<value level="8">-5291</value>
-			<value level="9">-5453</value>
-			<value level="10">-5786</value>
-			<value level="11">-5953</value>
-			<value level="12">-6124</value>
-			<value level="13">-6468</value>
-			<value level="14">-6641</value>
-			<value level="15">-6815</value>
-			<value level="16">-6992</value>
-			<value level="17">-7166</value>
-			<value level="18">-7343</value>
-			<value level="19">-7519</value>
-			<value level="20">-7696</value>
-			<value level="21">-7872</value>
-			<value level="22">-8047</value>
-			<value level="23">-8221</value>
-			<value level="24">-8396</value>
-			<value level="25">-8569</value>
-			<value level="26">-8740</value>
-			<value level="27">-8909</value>
-			<value level="28">-9076</value>
-			<value level="29">-9242</value>
-			<value level="30">-9406</value>
-			<value level="31">-9568</value>
-			<value level="32">-9724</value>
-			<value level="33">-9881</value>
-			<value level="34">-10032</value>
-			<value level="35">-10181</value>
-			<value level="36">-10325</value>
-			<value level="37">-10466</value>
-			<value level="38">-10603</value>
-			<value level="39">-10736</value>
-			<value level="40">-10864</value>
-			<value level="41">-10986</value>
-			<value level="42">-11105</value>
-			<value level="43">-11216</value>
-			<value level="44">-11324</value>
-			<value level="45">-11427</value>
-			<value level="46">-11522</value>
-			<value level="47">-11612</value>
-			<value level="48">-11697</value>
-			<value level="49">-11774</value>
-			<value level="50">-11863</value>
-			<value level="51">-11951</value>
-			<value level="52">-12049</value>
+			<value level="1">-718</value>
+			<value level="2">-744</value>
+			<value level="3">-770</value>
+			<value level="4">-825</value>
+			<value level="5">-853</value>
+			<value level="6">-881</value>
+			<value level="7">-938</value>
+			<value level="8">-968</value>
+			<value level="9">-998</value>
+			<value level="10">-1059</value>
+			<value level="11">-1090</value>
+			<value level="12">-1121</value>
+			<value level="13">-1184</value>
+			<value level="14">-1216</value>
+			<value level="15">-1247</value>
+			<value level="16">-1280</value>
+			<value level="17">-1312</value>
+			<value level="18">-1344</value>
+			<value level="19">-1377</value>
+			<value level="20">-1409</value>
+			<value level="21">-1441</value>
+			<value level="22">-1474</value>
+			<value level="23">-1506</value>
+			<value level="24">-1538</value>
+			<value level="25">-1569</value>
+			<value level="26">-1601</value>
+			<value level="27">-1631</value>
+			<value level="28">-1662</value>
+			<value level="29">-1693</value>
+			<value level="30">-1723</value>
+			<value level="31">-1752</value>
+			<value level="32">-1781</value>
+			<value level="33">-1810</value>
+			<value level="34">-1837</value>
+			<value level="35">-1865</value>
+			<value level="36">-1891</value>
+			<value level="37">-1917</value>
+			<value level="38">-1943</value>
+			<value level="39">-1967</value>
+			<value level="40">-1990</value>
+			<value level="41">-2012</value>
+			<value level="42">-2034</value>
+			<value level="43">-2055</value>
+			<value level="44">-2075</value>
+			<value level="45">-2093</value>
+			<value level="46">-2111</value>
+			<value level="47">-2127</value>
+			<value level="48">-2143</value>
+			<value level="49">-2157</value>
+			<value level="50">-2171</value>
+			<value level="51">-2186</value>
+			<value level="52">-2200</value>
+			<value level="53">-2229</value>
+			<value level="54">-2243</value>
+			<value level="55">-2257</value>
+			<value level="56">-2272</value>
+			<value level="57">-2286</value>
 		</effectPoint>
 		<effectRange>
 			<value level="1">900</value>
@@ -3084,6 +3061,11 @@
 			<value level="50">1300</value>
 			<value level="51">1300</value>
 			<value level="52">1300</value>
+			<value level="53">1300</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">1300</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">1300</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="56">1300</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="57">1300</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectRange>
 		<hitTime>700</hitTime>
 		<isDebuff>true</isDebuff>
@@ -3306,8 +3288,13 @@
 			<value level="36">-551</value>
 			<value level="37">-554</value>
 			<value level="38">-558</value>
-			<value level="39">-562</value>
-			<value level="40">-566</value>
+			<value level="39">-561</value>
+			<value level="40">-564</value>
+			<value level="41">-570</value>
+			<value level="42">-573</value>
+			<value level="43">-576</value>
+			<value level="44">-579</value>
+			<value level="45">-582</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -3673,13 +3660,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35" toLevel="44" name="Force Storm">
+	<skill id="35" toLevel="31" name="Force Storm">
 		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
-		<coolTime>300</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-114</value>
 			<value level="2">-117</value>
@@ -3709,25 +3696,12 @@
 			<value level="26">-164</value>
 			<value level="27">-166</value>
 			<value level="28">-167</value>
-			<value level="29">-709</value>
-			<value level="30">-709</value>
-			<value level="31">-709</value>
-			<value level="32">-709</value>
-			<value level="33">-709</value>
-			<value level="34">-709</value>
-			<value level="35">-709</value>
-			<value level="36">-709</value>
-			<value level="37">-709</value>
-			<value level="38">-709</value>
-			<value level="39">-709</value>
-			<value level="40">-709</value>
-			<value level="41">-709</value>
-			<value level="42">-709</value>
-			<value level="43">-709</value>
-			<value level="44">-709</value>
+			<value level="29">-170</value>
+			<value level="30">-173</value>
+			<value level="31">-176</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
-		<hitTime>1790</hitTime>
+		<hitTime>1900</hitTime>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -3760,20 +3734,6 @@
 			<value level="29">74</value>
 			<value level="30">75</value>
 			<value level="31">77</value>
-			<value level="32">79</value>
-			<value level="33">81</value>
-			<value level="34">83</value>
-			<value level="35">85</value>
-			<value level="36">86</value>
-			<value level="37">88</value>
-			<value level="38">90</value>
-			<value level="39">92</value>
-			<value level="40">94</value>
-			<value level="41">96</value>
-			<value level="42">98</value>
-			<value level="43">101</value>
-			<value level="44">103</value>
-			<value level="45">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -3807,22 +3767,9 @@
 			<value level="29">161</value>
 			<value level="30">163</value>
 			<value level="31">169</value>
-			<value level="32">175</value>
-			<value level="33">180</value>
-			<value level="34">161</value>
-			<value level="35">163</value>
-			<value level="36">169</value>
-			<value level="37">175</value>
-			<value level="38">180</value>
-			<value level="39">186</value>
-			<value level="40">192</value>
-			<value level="41">198</value>
-			<value level="42">204</value>
-			<value level="43">210</value>
-			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3868,29 +3815,13 @@
 					<value level="29">427</value>
 					<value level="30">451</value>
 					<value level="31">473</value>
-					<value level="32">496</value>
-					<value level="33">520</value>
-					<value level="34">15024</value>
-					<value level="35">15542</value>
-					<value level="36">16580</value>
-					<value level="37">17618</value>
-					<value level="38">18656</value>
-					<value level="39">19695</value>
-					<value level="40">20732</value>
-					<value level="41">21771</value>
-					<value level="42">23352</value>
-					<value level="43">24490</value>
-					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="31">15</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="31">1</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -3940,8 +3871,8 @@
 			<value level="36">-331</value>
 			<value level="37">-333</value>
 			<value level="38">-336</value>
-			<value level="39">-338</value>
-			<value level="40">-340</value>
+			<value level="39">-339</value>
+			<value level="40">-342</value>
 		</effectPoint>
 		<hitTime>1067</hitTime>
 		<magicLvl>
@@ -4345,7 +4276,7 @@
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="48" toLevel="49" name="Thunder Storm">
+	<skill id="48" toLevel="45" name="Thunder Storm">
 		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -4353,8 +4284,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="49">50</value>
-			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="45">50</value>
+			<value fromLevel="45" toLevel="45" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4398,18 +4329,14 @@
 			<value level="35">-164</value>
 			<value level="36">-166</value>
 			<value level="37">-167</value>
-			<value level="38">-167</value>
-			<value level="39">-167</value>
-			<value level="40">-167</value>
-			<value level="41">-167</value>
-			<value level="42">-167</value>
-			<value level="43">-167</value>
-			<value level="44">-167</value>
-			<value level="45">-167</value>
-			<value level="46">-167</value>
-			<value level="47">-167</value>
-			<value level="48">-167</value>
-			<value level="49">-167</value>
+			<value level="38">-170</value>
+			<value level="39">-173</value>
+			<value level="40">-176</value>
+			<value level="41">-182</value>
+			<value level="42">-185</value>
+			<value level="43">-188</value>
+			<value level="44">-191</value>
+			<value level="45">-194</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
@@ -4460,10 +4387,6 @@
 			<value level="43">85</value>
 			<value level="44">90</value>
 			<value level="45">95</value>
-			<value level="46">99</value>
-			<value level="47">101</value>
-			<value level="48">103</value>
-			<value level="49">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4511,10 +4434,6 @@
 			<value level="43">122</value>
 			<value level="44">124</value>
 			<value level="45">129</value>
-			<value level="46">133</value>
-			<value level="47">137</value>
-			<value level="48">141</value>
-			<value level="49">145</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4578,16 +4497,12 @@
 					<value level="43">26003</value>
 					<value level="44">30494</value>
 					<value level="45">35883</value>
-					<value level="46">37680</value>
-					<value level="47">39349</value>
-					<value level="48">40997</value>
-					<value level="49">42645</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="45" toLevel="45" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
-					<value fromLevel="1" toLevel="49">15</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="45">15</value>
+					<value fromLevel="45" toLevel="45" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -4889,9 +4804,14 @@
 			<value level="47">-383</value>
 			<value level="48">-386</value>
 			<value level="49">-388</value>
-			<value level="50">-383</value>
-			<value level="51">-386</value>
-			<value level="52">-388</value>
+			<value level="50">-391</value>
+			<value level="51">-394</value>
+			<value level="52">-397</value>
+			<value level="53">-403</value>
+			<value level="54">-406</value>
+			<value level="55">-409</value>
+			<value level="56">-412</value>
+			<value level="57">-415</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
@@ -5014,6 +4934,7 @@
 			<value level="57">75</value>
 		</mpConsume>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
 		<!-- charge values -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -5604,8 +5525,11 @@
 			<value level="11">-635</value>
 			<value level="12">-646</value>
 			<value level="13">-655</value>
-			<value level="14">-664</value>
-			<value level="15">-675</value>
+			<value level="14">-659</value>
+			<value level="15">-663</value>
+			<value level="16">-667</value>
+			<value level="17">-671</value>
+			<value level="18">-675</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -5748,7 +5672,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="69" toLevel="32" name="Sacrifice">
+	<skill id="69" toLevel="36" name="Sacrifice">
 		<!-- Consumes your HP to recover the target's HP by $s1. -->
 		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
@@ -5782,9 +5706,13 @@
 			<value level="27">790</value>
 			<value level="28">795</value>
 			<value level="29">800</value>
-			<value level="30">805</value>
-			<value level="31">810</value>
-			<value level="32">815</value>
+			<value level="30">803</value>
+			<value level="31">805</value>
+			<value level="32">808</value>
+			<value level="33">810</value>
+			<value level="34">815</value>
+			<value level="35">820</value>
+			<value level="36">825</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -5821,6 +5749,10 @@
 			<value level="30">1583</value>
 			<value level="31">1594</value>
 			<value level="32">1605</value>
+			<value level="33">1605</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">1605</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">1605</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">1605</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</hpConsume>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -5856,6 +5788,10 @@
 			<value level="30">82</value>
 			<value level="31">83</value>
 			<value level="32">84</value>
+			<value level="33">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5897,6 +5833,10 @@
 					<value level="30">2179</value>
 					<value level="31">2210</value>
 					<value level="32">2241</value>
+					<value level="33">2241</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="34">2241</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="35">2241</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="36">2241</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -5961,7 +5901,7 @@
 			<value level="53">-655</value>
 			<value level="54">-659</value>
 			<value level="55">-663</value>
-			<value level="56">-668</value>
+			<value level="56">-667</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>DARK</attributeType>
@@ -6398,6 +6338,8 @@
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">408</value>
+			<value level="3">500</value>
+			<value level="4">550</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLvl>
@@ -6459,7 +6401,7 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<castRange>40</castRange>
-		<coolTime>440</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-266</value>
 			<value level="2">-304</value>
@@ -6623,7 +6565,8 @@
 			<value level="1">-523</value>
 			<value level="2">-566</value>
 			<value level="3">-646</value>
-			<value level="4">-712</value>
+			<value level="4">-706</value>
+			<value level="5">-766</value>
 		</effectPoint>
 		<hitTime>1833</hitTime>
 		<isDebuff>true</isDebuff>
@@ -6873,8 +6816,13 @@
 			<value level="51">-1300</value>
 			<value level="52">-1309</value>
 			<value level="53">-1318</value>
-			<value level="54">-1330</value>
-			<value level="55">-1341</value>
+			<value level="54">-1327</value>
+			<value level="55">-1336</value>
+			<value level="56">-1345</value>
+			<value level="57">-1354</value>
+			<value level="58">-1363</value>
+			<value level="59">-1372</value>
+			<value level="60">-1381</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
@@ -7181,8 +7129,8 @@
 			<value level="18">-635</value>
 			<value level="19">-646</value>
 			<value level="20">-655</value>
-			<value level="21">-664</value>
-			<value level="22">-673</value>
+			<value level="21">-658</value>
+			<value level="22">-661</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
@@ -7305,7 +7253,7 @@
 			<value level="4">-279</value>
 			<value level="5">-311</value>
 			<value level="6">-323</value>
-			<value level="7">-354</value>
+			<value level="7">-333</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -7385,8 +7333,8 @@
 			<value level="9">-635</value>
 			<value level="10">-646</value>
 			<value level="11">-655</value>
-			<value level="12">-669</value>
-			<value level="13">-682</value>
+			<value level="12">-659</value>
+			<value level="13">-663</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
@@ -7450,7 +7398,9 @@
 			<value level="3">-450</value>
 			<value level="4">-470</value>
 			<value level="5">-487</value>
-			<value level="6">-505</value>
+			<value level="6">-502</value>
+			<value level="7">-517</value>
+			<value level="8">-532</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>

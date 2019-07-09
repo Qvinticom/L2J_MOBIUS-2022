@@ -1,30 +1,62 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="28100" toLevel="12" name="Bountiful Resurrection">
+		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>13500000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28101" toLevel="12" name="Scorpion's Mass Exile">
+		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose $s1 HP/ second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>118000</reuseDelay>
+		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="28102" toLevel="12" name="Mass Binding Flood">
+		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>10000</hitTime>
+		<reuseDelay>118000</reuseDelay>
+		<effectPoint>-707</effectPoint>
 	</skill>
 	<skill id="28103" toLevel="12" name="Slippery Scale">
+		<!-- For $s1, defends against debuffs $s2 times. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<reuseDelay>2250000</reuseDelay>
+		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="28104" toLevel="12" name="Archer's Call">
+		<!-- Summons all party members to you. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_nov_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>15000</hitTime>
+		<reuseDelay>6750000</reuseDelay>
+		<effectPoint>467</effectPoint>
 	</skill>
 	<skill id="28105" toLevel="12" name="Exoskeletal Shield">
+		<!-- Reflects $s1 of received damage. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_june_skill_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>4500000</reuseDelay>
+		<effectPoint>379</effectPoint>
 	</skill>
 	<skill id="28106" toLevel="1" name="Summon Virgo Agathion">
+		<!-- Summons the Virgo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -39,6 +71,7 @@
 		</effects>
 	</skill>
 	<skill id="28107" toLevel="1" name="Summon Capricorn Agathion">
+		<!-- Summons the Capricorn Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -53,6 +86,7 @@
 		</effects>
 	</skill>
 	<skill id="28108" toLevel="1" name="Summon Libra Agathion">
+		<!-- Summons the Libra Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -67,6 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="28109" toLevel="1" name="Summon Aries Agathion">
+		<!-- Summons the Aries Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -81,6 +116,7 @@
 		</effects>
 	</skill>
 	<skill id="28110" toLevel="1" name="Summon Taurus Agathion">
+		<!-- Summons the Taurus Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -95,34 +131,49 @@
 		</effects>
 	</skill>
 	<skill id="28111" toLevel="1" name="Summon Leo Agathion">
+		<!-- Summons the Leo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28112" toLevel="1" name="Summon Gemini Agathion">
+		<!-- Summons the Gemini Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28113" toLevel="1" name="Summon Scorpio Agathion">
+		<!-- Summons the Scorpio Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28114" toLevel="1" name="Summon Aquarius Agathion">
+		<!-- Summons the Aquarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28115" toLevel="1" name="Summon Pisces Agathion">
+		<!-- Summons the Pisces Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28116" toLevel="1" name="Summon Sagittarius Agathion">
+		<!-- Summons the Sagittarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28117" toLevel="1" name="Summon Cancer Agathion">
+		<!-- Summons the Cancer Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28118" toLevel="1" name="Summon Virgo Agathion">
+		<!-- Summons the Virgo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -137,6 +188,7 @@
 		</effects>
 	</skill>
 	<skill id="28119" toLevel="1" name="Summon Capricorn Agathion">
+		<!-- Summons the Capricorn Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -151,6 +203,7 @@
 		</effects>
 	</skill>
 	<skill id="28120" toLevel="1" name="Summon Libra Agathion">
+		<!-- Summons the Libra Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -165,6 +218,7 @@
 		</effects>
 	</skill>
 	<skill id="28121" toLevel="1" name="Summon Aries Agathion">
+		<!-- Summons the Aries Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -179,6 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="28122" toLevel="1" name="Summon Taurus Agathion">
+		<!-- Summons the Taurus Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -193,34 +248,49 @@
 		</effects>
 	</skill>
 	<skill id="28123" toLevel="1" name="Summon Leo Agathion">
+		<!-- Summons the Leo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28124" toLevel="1" name="Summon Gemini Agathion">
+		<!-- Summons the Gemini Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28125" toLevel="1" name="Summon Scorpio Agathion">
+		<!-- Summons the Scorpio Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28126" toLevel="1" name="Summon Aquarius Agathion">
+		<!-- Summons the Aquarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28127" toLevel="1" name="Summon Pisces Agathion">
+		<!-- Summons the Pisces Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28128" toLevel="1" name="Summon Sagittarius Agathion">
+		<!-- Summons the Sagittarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28129" toLevel="1" name="Summon Cancer Agathion">
+		<!-- Summons the Cancer Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28130" toLevel="1" name="Summon Virgo Agathion">
+		<!-- Summons the Virgo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -235,6 +305,7 @@
 		</effects>
 	</skill>
 	<skill id="28131" toLevel="1" name="Summon Capricorn Agathion">
+		<!-- Summons the Capricorn Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -249,6 +320,7 @@
 		</effects>
 	</skill>
 	<skill id="28132" toLevel="1" name="Summon Libra Agathion">
+		<!-- Summons the Libra Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -263,6 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="28133" toLevel="1" name="Summon Aries Agathion">
+		<!-- Summons the Aries Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -277,6 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="28134" toLevel="1" name="Summon Taurus Agathion">
+		<!-- Summons the Taurus Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -291,32 +365,46 @@
 		</effects>
 	</skill>
 	<skill id="28135" toLevel="1" name="Summon Leo Agathion">
+		<!-- Summons the Leo Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28136" toLevel="1" name="Summon Gemini Agathion">
+		<!-- Summons the Gemini Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28137" toLevel="1" name="Summon Scorpio Agathion">
+		<!-- Summons the Scorpio Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28138" toLevel="1" name="Summon Aquarius Agathion">
+		<!-- Summons the Aquarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28139" toLevel="1" name="Summon Pisces Agathion">
+		<!-- Summons the Pisces Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28140" toLevel="1" name="Summon Sagittarius Agathion">
+		<!-- Summons the Sagittarius Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28141" toLevel="1" name="Summon Cancer Agathion">
+		<!-- Summons the Cancer Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28142" toLevel="10" name="Sayha's Talisman">
 		<!-- P. Def. +$s1, M. Def. +$s2, XP/ SP +$s3. -->
@@ -611,7 +699,7 @@
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>3000</hitTime>
+		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
 			<value level="1">1800000</value>
@@ -647,6 +735,8 @@
 	<skill id="28148" toLevel="1" name="Fortune Talisman Pack">
 		<!-- Double-click to obtain either Sayha's Talisman or Venir's Talisman. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28149" toLevel="10" name="Faint Attack Resistance">
 		<!-- Slightly resistant to Faint. -->
@@ -657,24 +747,37 @@
 		<!-- Increases acquired XP and SP by 300% for 2 minutes. All party members. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="28151" toLevel="4" name="Halloween Blessing">
 		<!-- Rico's Halloween buff. XP/ SP gain +$s1 when hunting, P./ M. Atk. +$s2, Received Damage -$s3. You can receive a Halloween gift once the buff expires. -->
 		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28152" toLevel="1" name="Halloween Blessing">
 		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28153" toLevel="1" name="Halloween Gift">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28154" toLevel="1" name="Talisman - Abundance Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>29077</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -736,8 +839,10 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28155" toLevel="1" name="Wondrous Jewelry Box">
+	<skill id="28155" toLevel="1" name="Ultimate Jewelry Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28156" toLevel="12" name="Virgo Agathion Charm Pack">
 		<operateType>A1</operateType>
@@ -747,17 +852,29 @@
 	</skill>
 	<skill id="28158" toLevel="1" name="Bonfire">
 		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="28159" toLevel="1" name="Regular Dish">
+		<!-- For 30 min., STR/ DEX/ CON/ INT/ WIT/ MEN +1. Additionally, acquired XP/ SP +10%. -->
 		<icon>icon.etc_food_dish_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="28160" toLevel="1" name="Match Sisters' Gift">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28161" toLevel="1" name="Match Sisters' Gratitude">
+	<skill id="28161" toLevel="1" name="Match Girls' Gratitude">
+		<!-- For 30 minutes, acquired XP/ SP +30%, Vitality XP Bonus +30%, P./ M. Atk. and P./ M. Def +15%. -->
 		<icon>icon.etc_candle_white_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="28162" toLevel="2" name="Cooking Ingredient">
 		<icon>
@@ -765,47 +882,80 @@
 			<value level="2">icon.skill0000</value>
 		</icon>
 		<operateType>A1</operateType>
+		<castRange>100</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-1</effectPoint>
 	</skill>
-	<skill id="28163" toLevel="1" name="Match Sisters' Blessing">
+	<skill id="28163" toLevel="1" name="Match Girls' Blessing">
+		<!-- Blessing from helping the Match Girls. For 2 hr., acquired XP/ SP +150% and XP/ SP from fishing +50%.\n\nCannot be stacked with XP Buff 50%, Fall of the Dragon and Dandy's Home Run Ball. Remains when moving to the Olympiad. Deleted when changing main/ dual/ sub classes. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>1200</castRange>
 	</skill>
 	<skill id="28164" toLevel="1" name="Freya's Charisma Potion">
+		<!-- Changes the appearance to that of a cat doll, and CHA +5 for 30 minutes. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 minutes. Buff effect persists through death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="28165" toLevel="1" name="Freya's Charisma Potion">
+		<!-- Changes the appearance to that of a panda doll, and CHA +5 for 30 minutes. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 minutes. Buff effect persists through death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="28166" toLevel="1" name="Freya's Heart-pounding Shopping Bag">
+	<skill id="28166" toLevel="1" name="Freya's Thrilling Shopping Bag">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28167" toLevel="3" name="Freya Winter Card">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28168" toLevel="1" name="Freya's Christmas Treasure Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28169" toLevel="1" name="Low-grade Zodiac Agathion">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28170" toLevel="1" name="Mid-grade Zodiac Agathion">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28171" toLevel="1" name="High-grade Zodiac Agathion">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28172" toLevel="1" name="High-grade Maphr's Rune">
+	<skill id="28172" toLevel="1" name="Prestige Rune 30%">
+		<!-- Adena drop rate +300%, and item drop rate and item acquisition through Spoil + 100%. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="28173" toLevel="1" name="Blessing of Protection">
+		<!-- Has a high chance of resisting abnormal state attacks and keeps you safe from attacks by chaotic characters who are more than 10 levels apart from you. -->
 		<icon>icon.skill0194</icon>
 		<operateType>A1</operateType>
+		<castRange>700</castRange>
 	</skill>
 	<skill id="28174" toLevel="1" name="Mochi">
 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="28175" toLevel="1" name="Lineage II Baseball Uniform Appearance Stone">
 		<operateType>A1</operateType>
@@ -814,89 +964,128 @@
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28177" toLevel="1" name="Light Imbued Treasure Chest">
+	<skill id="28177" toLevel="1" name="Falling Stars Chest">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28178" toLevel="1" name="Agathion Summon - Antharas">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28179" toLevel="1" name="Antharas' Cute Tricks">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28180" toLevel="1" name="Stable Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28181" toLevel="1" name="High-grade Spirit Stone Pack - Legendary">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28182" toLevel="1" name="High-grade Spirit Stone Pack - Cloak">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28183" toLevel="1" name="Summon Agathion - Mermaid">
+		<!-- Summons the Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28184" toLevel="1" name="Scroll: Enchant Mermaid Agathion">
+	<skill id="28184" toLevel="1" name="Mermaid Agathion Enchant Scroll">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28185" toLevel="1" name="Master's Fishing Potion">
+		<!-- Increases Bonus XP/SP when fishing is successful by 50% for 1 hour. It's not deleted when dying and cannot be deleted forcefully. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="28186" toLevel="1" name="Golden Fishing Shot">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28187" toLevel="1" name="Shining Fishing Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28188" toLevel="5" name="Fishing Scroll: XP">
+	<skill id="28188" toLevel="5" name="Fishing XP Scroll">
 		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="28189" toLevel="11" name="Mermaid Agathion Unique Ability">
+		<!-- Increases Fishing XP/SP when the Agathion grows. -->
 		<icon>icon.agathion_base</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="28190" toLevel="4" name="Blessing of Mermaid">
+	<skill id="28190" toLevel="4" name="Mermaid's Blessing">
+		<!-- Increases Fishing XP/SP by $s2 for $s1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>379</effectPoint>
 	</skill>
 	<skill id="28191" toLevel="1" name="Ultimate Fortune Jewelry Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28192" toLevel="1" name="Equip or unequip New User Sprout">
+	<skill id="28192" toLevel="1" name="Unequip New User's Leaf">
+		<!-- The New User's Leaf disappears. -->
 		<icon>icon.s_newbie_user_display</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="28193" toLevel="1" name="Equip or unequip Dormant User Sprout">
+	<skill id="28193" toLevel="1" name="Unequip Returning User's Leaf">
+		<!-- The Returning User's Leaf disappears. -->
 		<icon>icon.s_dormant_user_display</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="28194" toLevel="1" name="Suspicious Vault">
+	<skill id="28194" toLevel="1" name="Suspicious Safe">
+		<!-- Double-click to obtain an item. -->
 		<icon>icon.bm_strongbox</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28195" toLevel="1" name="Vitality Beer">
+		<!-- Double-click to recover some Vitality. -->
 		<icon>icon.bm_honey_beer</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="28196" toLevel="3" name="Honey Vitality Beer">
+		<!-- For $s1, CON/ MEN/ LUC/ CHA +$s2. When Honey Vitality Beer is used while the buff is in effect, it can be stacked up to Lv. 3. -->
 		<icon>
 			<value level="1">icon.bm_royal_honey_beer_lv1</value>
 			<value level="2">icon.bm_royal_honey_beer_lv2</value>
 			<value level="3">icon.bm_royal_honey_beer_lv3</value>
 		</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="28197" toLevel="1" name="Teddy Bear Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28198" toLevel="1" name="Cat Plushy Appearance Stone">
+	<skill id="28198" toLevel="1" name="Cat Plushie Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28199" toLevel="1" name="Panda Plushy Appearance Stone">
+	<skill id="28199" toLevel="1" name="Panda Plushie Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
 </list>

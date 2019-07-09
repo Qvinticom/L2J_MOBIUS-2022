@@ -1720,7 +1720,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5473" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine -->
+		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1764,7 +1764,6 @@
 	<skill id="5479" toLevel="1" name="Boss Petrification Resistance">
 		<!-- Resist against Petrification. -->
 		<icon>icon.skill5479</icon>
-		<hitTime>4000</hitTime>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1945,7 +1944,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5491" toLevel="1" name="Decrease Bow/Crossbow Atk. Spd.">
+	<skill id="5491" toLevel="1" name="Decrease Bow/ Crossbow Atk. Spd.">
 		<!-- Decreases Atk. Spd. when equipped with bow/ crossbow while transformed. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>

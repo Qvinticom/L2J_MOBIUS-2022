@@ -8,7 +8,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27602" toLevel="1" name="Adventurer's Bracelet">
-		<!-- MEN/WIT/CON/INT/DEX/STR + $s1. Can equip 3 Talismans. -->
+		<!-- MEN/WIT/CON/INT/DEX/STR + 1. Can equip 3 Talismans. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -67,8 +67,6 @@
 	</skill>
 	<skill id="27611" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -134,8 +132,6 @@
 	</skill>
 	<skill id="27612" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -201,8 +197,6 @@
 	</skill>
 	<skill id="27613" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -268,8 +262,6 @@
 	</skill>
 	<skill id="27614" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -476,7 +468,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27625" toLevel="1" name="Shadai's Shiny Jewelry Box">
+	<skill id="27625" toLevel="2" name="Shadai's Shiny Jewelry Box">
 		<icon>icon.etc_bm_jewelbox_shhadai</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -485,37 +477,53 @@
 	<skill id="27626" toLevel="1" name="Freya's Luxury Shopping Bag">
 		<!-- Double-click to obtain Freya's Frozen Scroll and Freya's Art of Seduction. Has a small chance of obtaining Freay/Sirra/Snow Man's Gift Box, Freya's Vital Rune (30 min) Box, or Freya's Recovery Potion. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27627" toLevel="5" name="Freya's Gift Box">
 		<!-- Double-click to obtain a rare accessory or a rare item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27628" toLevel="1" name="Black Freya's Kindness">
 		<!-- Double-click to obtain 1 random item out of the following: Dark/White Assassin Suit, Red/White Noblesse Outfit, Pirate Red/Crew Outfit, Cowboy Purple Outfit Appearance Stone. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27629" toLevel="1" name="Freya's Scroll of Storm">
-		<!-- Vitality consumption + $s1 and XP/SP + %s2 when hunting. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
+		<!-- Vitality consumption + 150% and XP/SP + %s2 when hunting. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.bm_freya_storm_scroll</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="27630" toLevel="1" name="Freya's Wish Stick">
 		<!-- Double-click to get 1 Freya's Frozen Scroll and 1 Freya's Art of Seduction. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27631" toLevel="1" name="Freya's Wish-filled Gift">
 		<!-- Double-click to get 1 random rare item. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27632" toLevel="1" name="Sirra's Wish-filled Gift">
 		<!-- Double-click to get one of the following: La Vie En Rose's Jewelry Box, various Enchant Stones and Dark/Bloody Enhancement Stones. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27633" toLevel="1" name="Snowman's Wish-filled Gift">
 		<!-- Double-click to get one of the following: Wind Vitality Tonic, or items that will help with enchanting skills. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27634" toLevel="1" name="Gran Kain's Necklace">
+	<skill id="27634" toLevel="6" name="Gran Kain's Necklace">
 		<!-- MP + 107, STR + 3, INT + 3, CON + 3, Skill Cooldown -10%, Damage Reflection + 5%, P. Atk. + 15%, M. Atk + 10%, Skill Power + 15%, Max HP + 3%, Max MP + 5%. Resistance to the following abnormal statuses: Stun + 25%, Aggression + 25%, Windstorm + 25%, Banishment + 25%, Disarm + 15%, Sleep + 15% -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>P</operateType>
@@ -899,7 +907,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27640" toLevel="1" name="Einhasad's Necklace">
+	<skill id="27640" toLevel="6" name="Einhasad's Necklace">
 		<!-- MP + 107, STR + 3, INT + 3, CON + 3, Skill Cooldown -10%, Damage Reflection + 5%, P. Atk. + 10%, M. Atk. + 15%, Skill Power + 15%, Max HP + 5%, Max MP + 3%. Resistance to the following abnormal statuses: Stun + 25%, Aggression + 25%, Disarm + 25%, Sleep + 25%, Windstorm + 15%, Banishment + 15% -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>P</operateType>
@@ -1283,7 +1291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27646" toLevel="1" name="Pa'agrio's Earring">
+	<skill id="27646" toLevel="6" name="Pa'agrio's Earring">
 		<!-- MP + 80, DEX + 3, WIT + 3, MEN + 3, Vampiric effect 5%, MP Consumption -5%, P. Def + 15%, M. Def + 10%, Physical and Magic Abnormal Status Reflection + 13%, Reflect Damage Magic chance + 13%, Physical Skill Evasion + 5%, P. Skill Power + 2%, Movement Speed + 2, Received Heal + 10%, Recovery Skill Power + 80. Resistance to the following abnormal statuses: Paralysis/Bluff/Sleep + 10%, Aerial Yoke/Mutation + 10%, Stun/Knock Back/Pull/Danger Zone/MEN + 30%, Petrify Bleed + 40%. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>P</operateType>
@@ -1799,7 +1807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27652" toLevel="1" name="Eva's Earring">
+	<skill id="27652" toLevel="6" name="Eva's Earring">
 		<!-- MP + 80, DEX + 3, WIT + 3, MEN + 3, Vampiric effect 5%, MP Consumption -5%, P. Def + 10%, M. Def + 15%, Physical and Magic Abnormal Status Reflection + 13%, Reflect Damage Magic chance + 13%, Physical Skill Evasion + 5%, P. Skill Power + 2%, Movement Speed + 2, Received Heal + 5%, Recovery Skill Power + 160. Resistance to the following abnormal statuses: Paralysis/Bluff/Aerial Yoke + 10%, Sleep/Mutation + 10%, Stun/Knock Back/Pull/Danger Zone/MEN + 30%, Petrify Bleed + 40%. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>P</operateType>
@@ -2315,7 +2323,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27658" toLevel="1" name="Sayha's Ring">
+	<skill id="27658" toLevel="6" name="Sayha's Ring">
 		<!-- MP + 53, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Resistances Against Fixed Damage Effects + 5%, Physical and Magic Skill Power + 5%, Movement Speed + 2, Physical/Mental Resistance + 10, Accuracy + 2, HP Recovery + 10% Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Banishment + 5%, Danger Zone Resistance + 10% -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>P</operateType>
@@ -2765,7 +2773,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27664" toLevel="1" name="Maphr's Ring">
+	<skill id="27664" toLevel="6" name="Maphr's Ring">
 		<!-- MP + 53, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Resistances Against Fixed Damage Effects + 5%, Physical and Magic Skill Power + 5%, Movement Speed + 2, Physical/Mental Resistance + 10, M. Accuracy + 2, MP Recovery + 10% Resistance to the following abnormal statuses: Stun / Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Banishment + 5%, Danger Zone Resistance + 10% -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>P</operateType>
@@ -3246,13 +3254,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27680" toLevel="1" name="PC Progression Support - Event">
-		<!-- Obtained XP/SP + 50%, Item Acquisition rate + 100%. Not for pets/servitors. Only applied during PC Caf? event. -->
+		<!-- Obtained XP/SP + 50%, Item Acquisition rate + 100%.  Not for pets/servitors. Only applied during PC Caf? event. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27681" toLevel="2" name="Shadai's Shiny Jewelry Box">
 		<icon>icon.etc_bm_jewelbox_shhadai</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27682" toLevel="1" name="Inherent Abilities - Damage Reduction">
 		<!-- Damage Received - 3%. -->

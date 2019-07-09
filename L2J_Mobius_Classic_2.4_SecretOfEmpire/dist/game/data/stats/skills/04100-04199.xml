@@ -382,6 +382,10 @@
 		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="4108" toLevel="1" name="Antharas Fear">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->
@@ -404,6 +408,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
@@ -432,6 +437,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
@@ -1185,6 +1191,7 @@
 		<hitTime>6000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1248,6 +1255,7 @@
 		<hitTime>2000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2847,7 +2855,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4164" toLevel="18" name="Cubic Paralysis">
+	<skill id="4164" toLevel="15" name="Cubic Paralysis">
 		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2874,9 +2882,6 @@
 			<value level="13">80</value>
 			<value level="14">81</value>
 			<value level="15">82</value>
-			<value level="16">83</value>
-			<value level="17">84</value>
-			<value level="18">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2905,7 +2910,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="4165" toLevel="17" name="Cubic Icy Air">
+	<skill id="4165" toLevel="14" name="Cubic Icy Air">
 		<!-- Continuously damaged by icy air. -->
 		<icon>icon.skill1183</icon>
 		<abnormalLvl>
@@ -2923,9 +2928,6 @@
 			<value level="12">8</value>
 			<value level="13">8</value>
 			<value level="14">8</value>
-			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2951,9 +2953,6 @@
 			<value level="12">80</value>
 			<value level="13">81</value>
 			<value level="14">82</value>
-			<value level="15">83</value>
-			<value level="16">84</value>
-			<value level="17">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2977,15 +2976,12 @@
 					<value level="12">164</value>
 					<value level="13">164</value>
 					<value level="14">164</value>
-					<value level="15">164</value>
-					<value level="16">164</value>
-					<value level="17">164</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4166" toLevel="18" name="Cubic Stun">
+	<skill id="4166" toLevel="15" name="Cubic Stun">
 		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3013,9 +3009,6 @@
 			<value level="13">80</value>
 			<value level="14">81</value>
 			<value level="15">82</value>
-			<value level="16">83</value>
-			<value level="17">84</value>
-			<value level="18">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>

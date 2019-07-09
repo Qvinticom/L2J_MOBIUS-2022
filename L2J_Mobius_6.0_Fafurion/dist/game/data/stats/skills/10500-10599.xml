@@ -6,7 +6,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -27,8 +27,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10501" toLevel="7" name="Superior Dagger Mastery">
-		<!-- When equipped with a dagger, P. Atk. +25% and +1425, Atk. Spd. +25%, P. Accuracy +8, and Vital Spot Attack Rate +5%. Additionally, STR +2. Depending on STR, skill cooldown can be reset or skill duration can be increased by 2 times. -->
+	<skill id="10501" toLevel="10" name="Superior Dagger Mastery">
+		<!-- When equipped with a dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. Depending on STR, skill cooldown can be reset or skill duration can be increased by $s7 times. -->
 		<icon>icon.skill10501</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -39,6 +39,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -61,6 +64,9 @@
 					<value level="5">1266</value>
 					<value level="6">1343</value>
 					<value level="7">1425</value>
+					<value level="8">1425</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">1425</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">1425</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -94,8 +100,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10502" toLevel="7" name="Superior Dual Dagger Mastery">
-		<!-- When equipped with a dual dagger, P. Atk. +25% and +1629, Atk. Spd. +25%, P. Accuracy +8, and Vital Spot Attack Rate +5%. Additionally, STR +2.	 -->
+	<skill id="10502" toLevel="10" name="Superior Dual Dagger Mastery">
+		<!-- When equipped with a dual dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. -->
 		<icon>icon.skill10502</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -106,6 +112,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -125,6 +134,9 @@
 					<value level="5">1447</value>
 					<value level="6">1535</value>
 					<value level="7">1629</value>
+					<value level="8">1629</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">1629</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">1629</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -158,8 +170,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10503" toLevel="7" name="Superior Light Armor Mastery">
-		<!-- Max HP +4880, P. Def. +1506, P. Evasion +20, chance of receiving critical attacks -35% when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +2 and applies Assassin's Reflex which accelerates Atk. Spd. at a 10% chance if successfully evaded. -->
+	<skill id="10503" toLevel="10" name="Superior Light Armor Mastery">
+		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, chance of receiving critical attacks -$s4 when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +$s5 and applies Assassin's Reflex which accelerates Atk. Spd. at a $s6 chance if successfully evaded. -->
 		<icon>icon.skill10503</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -170,6 +182,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -189,6 +204,9 @@
 					<value level="5">2196</value>
 					<value level="6">2279</value>
 					<value level="7">2365</value>
+					<value level="8">2365</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">2365</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">2365</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -234,7 +252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10504" toLevel="7" name="Superior Movement">
+	<skill id="10504" toLevel="10" name="Superior Movement">
 		<!-- Speed +$s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. STR +$s4. -->
 		<icon>icon.skill10504</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -246,6 +264,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -258,6 +279,9 @@
 					<value level="5">22</value>
 					<value level="6">23</value>
 					<value level="7">24</value>
+					<value level="8">24</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">24</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">24</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -275,7 +299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10505" toLevel="7" name="Superior Critical Mastery">
+	<skill id="10505" toLevel="10" name="Superior Critical Mastery">
 		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2, Skill Master Rate +$s3, P. Skill Power +$s4, P. Skill Critical Rate +$s5. Additionally, STR +$s4. -->
 		<icon>icon.skill10505</icon>
 		<magicLvl>
@@ -286,6 +310,9 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
+			<value level="8">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">104</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -299,6 +326,9 @@
 					<value level="5">970</value>
 					<value level="6">1085</value>
 					<value level="7">1200</value>
+					<value level="8">1200</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">1200</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">1200</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1315,7 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
-		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of $s1 and enter the Stealth mode for $s2 Additionally, decreases Speed by $s3. -->
+		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of 250 and enter the Stealth mode for 20 sec. Additionally, decreases Speed by 50. -->
 		<icon>icon.skill10517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1329,11 +1359,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>38</mpConsume>
-		<castRange>250</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
@@ -1490,6 +1519,7 @@
 		<!-- Throws a poison bottle at the target point to create a poisonous area for $s1 Enemies within the area suffer P. Atk. -$s2, P./ M. Def. -$s3, Speed -$s4, and Shield Def. -$s5 and cannot use magic skills. -->
 		<icon>icon.skill10522</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">76</value>
@@ -1506,11 +1536,11 @@
 		</mpConsume>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>800</hitTime>
+		<hitTime>2000</hitTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>
-			<value level="1">-707</value>
-			<value level="2">-709</value>
+			<value level="1">-711</value>
+			<value level="2">-711</value>
 			<value level="3">-711</value>
 			<value level="4">-711</value>
 			<value level="5">-711</value>
@@ -1518,8 +1548,8 @@
 			<value level="7">-711</value>
 			<value level="8">-711</value>
 			<value level="9">-711</value>
-			<value level="10">-711</value>
-			<value level="11">-711</value>
+			<value level="10">0</value>
+			<value level="11">0</value>
 		</effectPoint>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1556,7 +1586,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10523" toLevel="9" name="Thrown Poison Swarm">
+	<skill id="10523" toLevel="11" name="Thrown Poison Swarm">
 		<!-- Poisoned. P. Atk. -$s1, P. Def./ M. Def. -$s2, Speed -$s3, Shield Def. -$s4, cannot use magic skills, and HP -$s5 every second. -->
 		<icon>icon.skill1167</icon>
 		<abnormalLvl>
@@ -1569,6 +1599,8 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
+			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -1588,6 +1620,8 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
+			<value level="10">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<mpConsume>1</mpConsume>
@@ -1601,6 +1635,8 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -1621,6 +1657,8 @@
 					<value level="7">803</value>
 					<value level="8">823</value>
 					<value level="9">844</value>
+					<value level="10">844</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">844</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -1931,7 +1969,7 @@
 			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>92</mpConsume>
-		<castRange>400</castRange>
+		<castRange>300</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -2006,7 +2044,7 @@
 			<value fromLevel="1" toLevel="6">600</value>
 			<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + (10 * subIndex)}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -2198,8 +2236,8 @@
 			<value level="5">-711</value>
 			<value level="6">-713</value>
 			<value level="7">-715</value>
-			<value level="8">-717</value>
-			<value level="9">-719</value>
+			<value level="8">-715</value>
+			<value level="9">-715</value>
 		</effectPoint>
 		<reuseDelay>180000</reuseDelay>
 		<isMagic>4</isMagic>
@@ -2241,7 +2279,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10534" toLevel="3" name="Trace of Dagger">
+	<skill id="10534" toLevel="5" name="Trace of Dagger">
 		<!-- Critical damage has been boosted by $s1. -->
 		<icon>icon.skill1542</icon>
 		<abnormalTime>3</abnormalTime>
@@ -2539,6 +2577,7 @@
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
+		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2828,6 +2867,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="8">9</value>
+			<value level="9">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -3055,7 +3095,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="10550" toLevel="7" name="Illusion Step">
+	<skill id="10550" toLevel="9" name="Illusion Step">
 		<!-- Inflicts a powerful vital spot attack and decreases speed by $s2 for $s1. -->
 		<icon>icon.skill10550</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3085,6 +3125,8 @@
 			<value level="5">-719</value>
 			<value level="6">-726</value>
 			<value level="7">-734</value>
+			<value level="8">-742</value>
+			<value level="9">-750</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -3097,6 +3139,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3111,6 +3155,8 @@
 					<value level="5">26516</value>
 					<value level="6">27993</value>
 					<value level="7">29472</value>
+					<value level="8">29472</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">29472</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<chanceBoost>300</chanceBoost>
 			</effect>
@@ -3120,7 +3166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10551" toLevel="7" name="Illusion Trick">
+	<skill id="10551" toLevel="9" name="Illusion Trick">
 		<!-- Cancels the enemy's target and stops him from targeting for $s1. -->
 		<icon>icon.skill10551</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3151,6 +3197,8 @@
 			<value level="5">-719</value>
 			<value level="6">-726</value>
 			<value level="7">-734</value>
+			<value level="8">-742</value>
+			<value level="9">-750</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -3163,6 +3211,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">105</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3271,7 +3321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10553" toLevel="8" name="Chance of Wind">
+	<skill id="10553" toLevel="1" name="Chance of Wind">
 		<!-- Resets cooldown of certain skills. -->
 		<icon>icon.skill10878</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3280,28 +3330,13 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
-			<value level="2">86</value>
-			<value level="3">88</value>
-			<value level="4">90</value>
-			<value level="5">92</value>
-			<value level="6">94</value>
-			<value level="7">96</value>
-			<value level="8">98</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">133</value>
-			<value level="2">135</value>
-			<value level="3">140</value>
-			<value level="4">145</value>
-			<value level="5">149</value>
-			<value level="6">154</value>
-			<value level="7">159</value>
-			<value level="8">164</value>
 		</mpConsume>
-		<hitTime>1530</hitTime>
-		<coolTime>200</coolTime>
-		<effectPoint>-704</effectPoint>
-		<reuseDelay>10000</reuseDelay>
+		<hitTime>2000</hitTime>
+		<effectPoint>669</effectPoint>
+		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3317,13 +3352,6 @@
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">6871</value>
-					<value level="2">7012</value>
-					<value level="3">7300</value>
-					<value level="4">7599</value>
-					<value level="5">7909</value>
-					<value level="6">8232</value>
-					<value level="7">8568</value>
-					<value level="8">8917</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -3477,6 +3505,7 @@
 				<amount>
 					<value level="1">30</value>
 					<value level="1">40</value>
+					<value level="2">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3485,6 +3514,7 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="1">70</value>
+					<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -3504,7 +3534,7 @@
 		</effects>
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
-		<!-- For $s1, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<!-- For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3575,7 +3605,7 @@
 		</effects>
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
-		<!-- For $s1, Deadly Atk. Rate +$s2 and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
+		<!-- For 120 sec., Deadly Atk. Rate +10% and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11877</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3667,7 +3697,7 @@
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Tactics">
-		<!-- For $s1, increases Critical Damage by $s2, Deadly Atk. Rate by $s3, Critical Rate/ Damage from the front and the back by $s4, Critical Rate/ Damage from the flank by $s5. Requires dagger/ dual dagger. -->
+		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 10%, Critical Rate/ Damage from the front and the back by 50%, Critical Rate/ Damage from the flank by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10562</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

@@ -156,9 +156,9 @@
 			<value level="38">-656</value>
 			<value level="39">-661</value>
 			<value level="40">-665</value>
-			<value level="41">-672</value>
-			<value level="42">-677</value>
-			<value level="43">-683</value>
+			<value level="41">-668</value>
+			<value level="42">-671</value>
+			<value level="43">-674</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -367,8 +367,8 @@
 			<value level="14">-635</value>
 			<value level="15">-646</value>
 			<value level="16">-655</value>
-			<value level="17">-664</value>
-			<value level="18">-679</value>
+			<value level="17">-658</value>
+			<value level="18">-661</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
@@ -490,7 +490,7 @@
 			<value level="2">-549</value>
 			<value level="3">-582</value>
 			<value level="4">-635</value>
-			<value level="5">-691</value>
+			<value level="5">-639</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
@@ -591,8 +591,8 @@
 			<value level="22">-635</value>
 			<value level="23">-646</value>
 			<value level="24">-655</value>
-			<value level="25">-667</value>
-			<value level="26">-681</value>
+			<value level="25">-658</value>
+			<value level="26">-661</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>
@@ -802,8 +802,8 @@
 			<value level="7">-635</value>
 			<value level="8">-646</value>
 			<value level="9">-655</value>
-			<value level="10">-664</value>
-			<value level="11">-672</value>
+			<value level="10">-659</value>
+			<value level="11">-663</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -1118,8 +1118,8 @@
 			<value level="15">-318</value>
 			<value level="16">-323</value>
 			<value level="17">-328</value>
-			<value level="18">-333</value>
-			<value level="19">-340</value>
+			<value level="18">-331</value>
+			<value level="19">-334</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
@@ -1246,8 +1246,8 @@
 			<value level="12">-318</value>
 			<value level="13">-323</value>
 			<value level="14">-328</value>
-			<value level="15">-333</value>
-			<value level="16">-342</value>
+			<value level="15">-331</value>
+			<value level="16">-334</value>
 		</effectPoint>
 		<hitTime>1200</hitTime>
 		<isDebuff>true</isDebuff>
@@ -1507,8 +1507,8 @@
 			<value level="13">-318</value>
 			<value level="14">-323</value>
 			<value level="15">-328</value>
-			<value level="16">-333</value>
-			<value level="17">-342</value>
+			<value level="16">-331</value>
+			<value level="17">-334</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
@@ -1638,8 +1638,8 @@
 			<value level="12">-635</value>
 			<value level="13">-646</value>
 			<value level="14">-655</value>
-			<value level="13">-664</value>
-			<value level="14">-672</value>
+			<value level="15">-659</value>
+			<value level="16">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -2823,7 +2823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="172" toLevel="15" name="Create Item">
+	<skill id="172" toLevel="14" name="Create Item">
 		<!-- Allows the user to manufacture level $s1 items. -->
 		<icon>icon.skill0172</icon>
 		<magicLvl>
@@ -2841,7 +2841,6 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
-			<value level="15">104</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3157,7 +3156,7 @@
 			<value level="36">-331</value>
 			<value level="37">-333</value>
 			<value level="38">-336</value>
-			<value level="39">-338</value>
+			<value level="39">-339</value>
 			<value level="40">-341</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
