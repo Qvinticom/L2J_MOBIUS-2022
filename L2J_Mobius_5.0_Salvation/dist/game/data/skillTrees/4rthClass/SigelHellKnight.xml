@@ -138,10 +138,10 @@
 		
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="2" getLevel="89" levelUpSp="100000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="1" getLevel="89" levelUpSp="100000"> -->
-		<!-- 	<removeSkill id="107" /> Holy Aura -->
-		<!-- 	<removeSkill id="404" /> Mass Shackling -->
-		<!-- </skill> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="1" getLevel="89" levelUpSp="100000">
+			<removeSkill id="107" /> <!-- Holy Aura -->
+			<removeSkill id="404" /> <!-- Mass Shackling -->
+		</skill>
 		
 		<skill skillName="Grand Thorn of Vengeance" skillId="10069" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="2" getLevel="90" levelUpSp="370000" />
@@ -168,7 +168,7 @@
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="3" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="4" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="3" getLevel="91" levelUpSp="400000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="2" getLevel="91" levelUpSp="400000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="2" getLevel="91" levelUpSp="400000" />
 		
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="5" getLevel="92" levelUpSp="420000" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="5" getLevel="92" levelUpSp="420000" />
@@ -178,7 +178,7 @@
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="5" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="4" getLevel="93" levelUpSp="440000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="3" getLevel="93" levelUpSp="440000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="3" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="4" getLevel="94" levelUpSp="480000" />
@@ -203,8 +203,8 @@
 		<skill skillName="Summon Blood Panther" skillId="10068" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Two-Hand Stance" skillId="10244" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="4" getLevel="95" levelUpSp="1000000" /> -->
-		<!-- <skill skillName="Revenging Thorn" skillId="19553" skillLvl="1" getLevel="95" levelUpSp="1000000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="4" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Revenging Thorn" skillId="19553" skillLvl="1" getLevel="95" levelUpSp="1000000" />
 		
 		<skill skillName="Noble Sacrifice" skillId="10018" skillLvl="2" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="7" getLevel="96" levelUpSp="4970000" />
@@ -222,7 +222,7 @@
 		<skill skillName="Shadow Hunt" skillId="10102" skillLvl="1" getLevel="97" levelUpSp="4980000" >
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="5" getLevel="97" levelUpSp="4980000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="8" getLevel="98" levelUpSp="4990000" />
@@ -231,7 +231,7 @@
 		</skill>
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<!-- <skill skillName="Revenging Thorn" skillId="19553" skillLvl="2" getLevel="98" levelUpSp="4990000" /> -->
+		<skill skillName="Revenging Thorn" skillId="19553" skillLvl="2" getLevel="98" levelUpSp="4990000" />
 		
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
@@ -254,7 +254,7 @@
 		<skill skillName="Summon Blood Panther" skillId="10068" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="6" getLevel="99" levelUpSp="5000000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="6" getLevel="99" levelUpSp="5000000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="5" getLevel="100" levelUpSp="88099899" />
@@ -287,8 +287,8 @@
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="7" getLevel="101" levelUpSp="211440000" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="7" getLevel="101" levelUpSp="211440000" /> -->
-		<!-- <skill skillName="Revenging Thorn" skillId="19553" skillLvl="3" getLevel="101" levelUpSp="211440000" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Revenging Thorn" skillId="19553" skillLvl="3" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="6" getLevel="102" levelUpSp="507455418" />
@@ -302,7 +302,7 @@
 		<skill skillName="Raise Shield" skillId="10021" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		
-		<!-- <skill skillName="Noble Sacrifice" skillId="10018" skillLvl="3" getLevel="103" levelUpSp="608946501" /> -->
+		<skill skillName="Noble Sacrifice" skillId="10018" skillLvl="3" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="9" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="10" getLevel="103" levelUpSp="608946501" />
@@ -316,8 +316,8 @@
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="8" getLevel="103" levelUpSp="608946501" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="8" getLevel="103" levelUpSp="608946501" /> -->
-		<!-- <skill skillName="Revenging Thorn" skillId="19553" skillLvl="4" getLevel="103" levelUpSp="608946501" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Revenging Thorn" skillId="19553" skillLvl="4" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
@@ -344,8 +344,8 @@
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
-		<!-- <skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="9" getLevel="105" levelUpSp="1753765925" /> -->
-		<!-- <skill skillName="Revenging Thorn" skillId="19553" skillLvl="5" getLevel="105" levelUpSp="1753765925" /> -->
+		<skill skillName="Black Thorn Chain Strike" skillId="19559" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Revenging Thorn" skillId="19553" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 
 		<!-- Dual Maximum HP -->

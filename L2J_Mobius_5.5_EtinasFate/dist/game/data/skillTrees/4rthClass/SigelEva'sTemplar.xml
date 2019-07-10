@@ -144,10 +144,10 @@
 		
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="2" getLevel="89" levelUpSp="100000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="1" getLevel="89" levelUpSp="100000"> -->
-		<!-- 	<removeSkill id="107" /> Holy Aura -->
-		<!-- 	<removeSkill id="404" /> Mass Shackling -->
-		<!-- </skill> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="1" getLevel="89" levelUpSp="100000">
+			<removeSkill id="107" /> <!-- Holy Aura -->
+			<removeSkill id="404" /> <!-- Mass Shackling -->
+		</skill>
 		
 		<skill skillName="Grand Othellot's Wave" skillId="10076" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="2" getLevel="90" levelUpSp="370000" />
@@ -174,7 +174,7 @@
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="3" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="3" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="4" getLevel="91" levelUpSp="400000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="2" getLevel="91" levelUpSp="400000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="2" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="3" getLevel="91" levelUpSp="400000" />
 		
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="5" getLevel="92" levelUpSp="420000" />
@@ -184,7 +184,7 @@
 		
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="5" getLevel="93" levelUpSp="440000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="3" getLevel="93" levelUpSp="440000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="3" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		
@@ -204,9 +204,9 @@
 		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="5" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="4" getLevel="95" levelUpSp="1000000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="4" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Guardian's Frenzy" skillId="10100" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<!-- <skill skillName="Maelstrom" skillId="19555" skillLvl="1" getLevel="95" levelUpSp="1000000" /> -->
+		<skill skillName="Maelstrom" skillId="19555" skillLvl="1" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Raise Shield" skillId="10021" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -225,7 +225,7 @@
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="6" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="7" getLevel="97" levelUpSp="4980000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="5" getLevel="97" levelUpSp="4980000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Protection of Faith" skillId="10019" skillLvl="2" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="1" getLevel="97" levelUpSp="4980000" >
@@ -234,7 +234,7 @@
 		
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<!-- <skill skillName="Maelstrom" skillId="19555" skillLvl="2" getLevel="98" levelUpSp="4990000" /> -->
+		<skill skillName="Maelstrom" skillId="19555" skillLvl="2" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="2" getLevel="98" levelUpSp="4990000" >
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
@@ -253,7 +253,7 @@
 		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="6" getLevel="99" levelUpSp="5000000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Nine Aegis" skillId="10024" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Guardian's Frenzy" skillId="10100" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="3" getLevel="99" levelUpSp="5000000" >
@@ -287,11 +287,11 @@
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="8" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="9" getLevel="101" levelUpSp="211440000" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="7" getLevel="101" levelUpSp="211440000" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="9" getLevel="101" levelUpSp="211440000" />
-		<!-- <skill skillName="Maelstrom" skillId="19555" skillLvl="3" getLevel="101" levelUpSp="211440000" /> -->
+		<skill skillName="Maelstrom" skillId="19555" skillLvl="3" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="4" getLevel="101" levelUpSp="211440000" >
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
@@ -313,15 +313,15 @@
 		<skill skillName="Raise Shield" skillId="10021" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		
-		<!-- <skill skillName="Noble Sacrifice" skillId="10018" skillLvl="3" getLevel="103" levelUpSp="608946501" /> -->
+		<skill skillName="Noble Sacrifice" skillId="10018" skillLvl="3" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="9" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="10" getLevel="103" levelUpSp="608946501" />
-		<!-- <skill skillName="Gigantic Wave" skillId="19567" skillLvl="8" getLevel="103" levelUpSp="608946501" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="10" getLevel="103" levelUpSp="608946501" />
-		<!-- <skill skillName="Maelstrom" skillId="19555" skillLvl="4" getLevel="103" levelUpSp="608946501" /> -->
+		<skill skillName="Maelstrom" skillId="19555" skillLvl="4" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="5" getLevel="103" levelUpSp="608946501" >
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
@@ -346,11 +346,11 @@
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
-		<!-- skill skillName="Gigantic Wave" skillId="19567" skillLvl="9" getLevel="105" levelUpSp="1753765925" /> -->
+		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
-		<!-- <skill skillName="Maelstrom" skillId="19555" skillLvl="5" getLevel="105" levelUpSp="1753765925" /> -->
+		<skill skillName="Maelstrom" skillId="19555" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="6" getLevel="105" levelUpSp="1753765925" >
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
