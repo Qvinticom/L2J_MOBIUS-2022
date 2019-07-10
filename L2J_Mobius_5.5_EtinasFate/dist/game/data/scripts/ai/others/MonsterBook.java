@@ -33,6 +33,7 @@ import ai.AbstractNpcAI;
 public class MonsterBook extends AbstractNpcAI
 {
 	private static final int MAXIMUM_REWARD_RANGE = 2500;
+	private static final int MINIMUM_PARTY_LEVEL = 99;
 	
 	private MonsterBook()
 	{
@@ -59,7 +60,7 @@ public class MonsterBook extends AbstractNpcAI
 		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardByMonsterId(npc.getId());
 		for (PlayerInstance player : rewardedPlayers)
 		{
-			if ((player != null) && (player.calculateDistance2D(killer) < MAXIMUM_REWARD_RANGE))
+			if (((player != null) && (player.calculateDistance2D(killer) < MAXIMUM_REWARD_RANGE)) && (player.getLevel() >= MINIMUM_PARTY_LEVEL))
 			{
 				player.updateMonsterBook(card);
 			}
