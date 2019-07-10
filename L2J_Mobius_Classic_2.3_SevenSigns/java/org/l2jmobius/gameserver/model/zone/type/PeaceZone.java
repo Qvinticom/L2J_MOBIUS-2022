@@ -63,6 +63,15 @@ public class PeaceZone extends ZoneType
 		{
 			creature.setInsideZone(ZoneId.NO_STORE, true);
 		}
+		
+		// Send player info to nearby players.
+		if (creature.isPlayer())
+		{
+			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, nearby ->
+			{
+				creature.sendInfo(nearby);
+			});
+		}
 	}
 	
 	@Override
@@ -76,6 +85,15 @@ public class PeaceZone extends ZoneType
 		if (!getAllowStore())
 		{
 			creature.setInsideZone(ZoneId.NO_STORE, false);
+		}
+		
+		// Send player info to nearby players.
+		if (creature.isPlayer())
+		{
+			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, nearby ->
+			{
+				creature.sendInfo(nearby);
+			});
 		}
 	}
 	

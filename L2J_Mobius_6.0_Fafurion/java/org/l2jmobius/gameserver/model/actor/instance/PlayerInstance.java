@@ -4146,17 +4146,17 @@ public final class PlayerInstance extends Playable
 				if ((oldrelation == null) || (oldrelation != relation))
 				{
 					final RelationChanged rc = new RelationChanged();
-					rc.addRelation(this, relation, isAutoAttackable(player));
+					rc.addRelation(this, relation, !isInsideZone(ZoneId.PEACE));
 					if (hasSummon())
 					{
 						final Summon pet = getPet();
 						if (pet != null)
 						{
-							rc.addRelation(pet, relation, isAutoAttackable(player));
+							rc.addRelation(pet, relation, !isInsideZone(ZoneId.PEACE));
 						}
 						if (hasServitors())
 						{
-							getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+							getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneId.PEACE)));
 						}
 					}
 					player.sendPacket(rc);
@@ -6401,16 +6401,16 @@ public final class PlayerInstance extends Playable
 			if ((oldrelation == null) || (oldrelation != relation))
 			{
 				final RelationChanged rc = new RelationChanged();
-				rc.addRelation(this, relation, isAutoAttackable(player));
+				rc.addRelation(this, relation, !isInsideZone(ZoneId.PEACE));
 				if (hasSummon())
 				{
 					if (_pet != null)
 					{
-						rc.addRelation(_pet, relation, isAutoAttackable(player));
+						rc.addRelation(_pet, relation, !isInsideZone(ZoneId.PEACE));
 					}
 					if (hasServitors())
 					{
-						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+						getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneId.PEACE)));
 					}
 				}
 				player.sendPacket(rc);
@@ -10443,6 +10443,12 @@ public final class PlayerInstance extends Playable
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
 		}
+		
+		// send info to nearby players
+		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		{
+			sendInfo(player);
+		});
 	}
 	
 	@Override
@@ -12277,32 +12283,32 @@ public final class PlayerInstance extends Playable
 		
 		final int relation1 = getRelation(player);
 		final RelationChanged rc1 = new RelationChanged();
-		rc1.addRelation(this, relation1, isAutoAttackable(player));
+		rc1.addRelation(this, relation1, !isInsideZone(ZoneId.PEACE));
 		if (hasSummon())
 		{
 			if (_pet != null)
 			{
-				rc1.addRelation(_pet, relation1, isAutoAttackable(player));
+				rc1.addRelation(_pet, relation1, !isInsideZone(ZoneId.PEACE));
 			}
 			if (hasServitors())
 			{
-				getServitors().values().forEach(s -> rc1.addRelation(s, relation1, isAutoAttackable(player)));
+				getServitors().values().forEach(s -> rc1.addRelation(s, relation1, !isInsideZone(ZoneId.PEACE)));
 			}
 		}
 		player.sendPacket(rc1);
 		
 		final int relation2 = player.getRelation(this);
 		final RelationChanged rc2 = new RelationChanged();
-		rc2.addRelation(player, relation2, player.isAutoAttackable(this));
+		rc2.addRelation(player, relation2, !player.isInsideZone(ZoneId.PEACE));
 		if (player.hasSummon())
 		{
 			if (_pet != null)
 			{
-				rc2.addRelation(_pet, relation2, player.isAutoAttackable(this));
+				rc2.addRelation(_pet, relation2, !player.isInsideZone(ZoneId.PEACE));
 			}
 			if (hasServitors())
 			{
-				getServitors().values().forEach(s -> rc2.addRelation(s, relation2, player.isAutoAttackable(this)));
+				getServitors().values().forEach(s -> rc2.addRelation(s, relation2, !player.isInsideZone(ZoneId.PEACE)));
 			}
 		}
 		sendPacket(rc2);
