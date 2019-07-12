@@ -146,7 +146,7 @@ public class HtmCache
 	public String getHtm(PlayerInstance player, String path)
 	{
 		final String prefix = player != null ? player.getHtmlPrefix() : "";
-		final String newPath = prefix + path;
+		String newPath = prefix + path;
 		String content = HTML_CACHE.get(newPath);
 		if (Config.LAZY_CACHE && (content == null))
 		{
@@ -156,9 +156,12 @@ public class HtmCache
 				content = loadFile(new File(Config.SCRIPT_ROOT, newPath));
 			}
 		}
-		if (content == null)
+		
+		// In case localisation does not exist try the default path.
+		if ((content == null) && !prefix.contentEquals(""))
 		{
 			content = HTML_CACHE.get(path);
+			newPath = path;
 		}
 		
 		if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
