@@ -156,6 +156,10 @@ public class HtmCache
 				content = loadFile(new File(Config.SCRIPT_ROOT, newPath));
 			}
 		}
+		if (content == null)
+		{
+			content = HTML_CACHE.get(path);
+		}
 		
 		if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
 		{

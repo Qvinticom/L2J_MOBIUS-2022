@@ -12644,7 +12644,7 @@ public final class PlayerInstance extends Playable
 				_lang = Config.MULTILANG_DEFAULT;
 			}
 			
-			_htmlPrefix = "data/lang/" + _lang + "/";
+			_htmlPrefix = _lang.equals("en") ? "" : "data/lang/" + _lang + "/";
 		}
 		else
 		{
