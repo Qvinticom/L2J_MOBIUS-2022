@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -141,7 +142,7 @@ public final class NpcSay implements IClientOutgoingPacket
 				if (nsl != null)
 				{
 					packet.writeD(-1);
-					packet.writeS(nsl.getLocalisation(_parameters));
+					packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
 					return true;
 				}
 			}

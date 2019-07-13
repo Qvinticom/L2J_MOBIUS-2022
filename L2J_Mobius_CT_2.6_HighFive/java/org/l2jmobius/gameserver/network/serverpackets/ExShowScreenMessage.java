@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -259,7 +260,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_time);
 						packet.writeD(_fade ? 0x01 : 0x00);
 						packet.writeD(-1);
-						packet.writeS(_parameters != null ? sml.getLocalisation(_parameters) : _text);
+						packet.writeS(sml.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
 						return true;
 					}
 				}
@@ -283,7 +284,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_time);
 						packet.writeD(_fade ? 0x01 : 0x00);
 						packet.writeD(-1);
-						packet.writeS(_parameters != null ? nsl.getLocalisation(_parameters) : _text);
+						packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
 						return true;
 					}
 				}
