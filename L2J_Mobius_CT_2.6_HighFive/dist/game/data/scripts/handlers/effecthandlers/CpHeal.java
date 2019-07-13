@@ -73,14 +73,14 @@ public final class CpHeal extends AbstractEffect
 		final Creature caster = info.getEffector();
 		if ((caster != null) && (caster != target))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
 			sm.addString(caster.getName());
 			sm.addInt((int) amount);
 			target.sendPacket(sm);
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
 			sm.addInt((int) amount);
 			target.sendPacket(sm);
 		}

@@ -52,7 +52,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 		
 		if (pc.getClient().isDetached())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
 			sm.addPcName(pc);
 			activeChar.sendPacket(sm);
 			return false;

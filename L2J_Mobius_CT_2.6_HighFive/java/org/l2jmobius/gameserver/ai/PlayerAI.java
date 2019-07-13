@@ -193,7 +193,7 @@ public class PlayerAI extends PlayableAI
 		if (_actor.getActingPlayer().getDuelState() == Duel.DUELSTATE_DEAD)
 		{
 			clientActionFailed();
-			_actor.getActingPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_WHILE_FROZEN_PLEASE_WAIT));
+			_actor.getActingPlayer().sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_MOVE_WHILE_FROZEN_PLEASE_WAIT));
 			return;
 		}
 		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isAttackingNow())

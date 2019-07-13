@@ -186,7 +186,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 					}
 					player.addSkill(enchantedSkill, true);
 					
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 					sm.addSkillName(_skillId);
 					player.sendPacket(sm);
 					
@@ -203,7 +203,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 					}
 					else if (_type == SkillEnchantType.BLESSED)
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED).addSkillName(skill));
+						player.sendPacket(new SystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED).addSkillName(skill));
 					}
 					player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
 					
@@ -225,7 +225,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 					}
 					player.addSkill(enchantedSkill, true);
 					
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
 					sm.addSkillName(_skillId);
 					player.sendPacket(sm);
 					

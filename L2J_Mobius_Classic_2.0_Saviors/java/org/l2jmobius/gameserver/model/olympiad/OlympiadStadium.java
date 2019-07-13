@@ -137,11 +137,11 @@ public class OlympiadStadium
 		final SystemMessage sm;
 		if (battleStarted)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
 		
 		for (PlayerInstance player : _instance.getPlayers())

@@ -192,7 +192,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		{
 			castle.addToTreasuryNoTax(totalPrice);
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
 			sm.addLong(totalPrice);
 			player.sendPacket(sm);
 			

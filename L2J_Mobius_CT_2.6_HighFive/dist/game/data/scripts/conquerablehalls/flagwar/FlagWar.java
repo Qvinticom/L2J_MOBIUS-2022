@@ -452,7 +452,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		
 		_hall.banishForeigners();
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
 		msg.addString(getName());
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
@@ -468,7 +468,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			onSiegeEnds();
 			getAttackers().clear();
 			_hall.updateNextSiege();
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
 			Broadcast.toAllOnlinePlayers(sm);
 			return;

@@ -329,7 +329,7 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer() && !instantCast)
 		{
 			// Send a system message to the player.
-			caster.sendPacket(_skill.getId() != 2046 ? SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+			caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			
 			// Show the gauge bar for casting.
 			caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));
@@ -360,7 +360,7 @@ public class SkillCaster implements Runnable
 				}
 				player.setFame(player.getFame() - _skill.getFamePointConsume());
 				
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_FAME_HAS_BEEN_CONSUMED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_FAME_HAS_BEEN_CONSUMED);
 				msg.addInt(_skill.getFamePointConsume());
 				player.sendPacket(msg);
 			}
@@ -376,7 +376,7 @@ public class SkillCaster implements Runnable
 				}
 				clan.takeReputationScore(_skill.getClanRepConsume(), true);
 				
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
 				msg.addInt(_skill.getClanRepConsume());
 				player.sendPacket(msg);
 			}
@@ -1020,14 +1020,14 @@ public class SkillCaster implements Runnable
 			{
 				if (skill.hasEffectType(EffectType.SUMMON))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
 					sm.addItemName(skill.getItemConsumeId());
 					sm.addInt(skill.getItemConsumeCount());
 					caster.sendPacket(sm);
 				}
 				else
 				{
-					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
+					caster.sendPacket(new SystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
 				}
 				return false;
 			}
@@ -1056,7 +1056,7 @@ public class SkillCaster implements Runnable
 			// Check if not in AirShip
 			if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
 				return false;
@@ -1082,7 +1082,7 @@ public class SkillCaster implements Runnable
 			// Check for skill reuse (fixes macro right click press exploit).
 			if (caster.hasSkillReuse(skill.getReuseHashCode()))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 				sm.addSkillName(skill);
 				caster.sendPacket(sm);
 				return false;

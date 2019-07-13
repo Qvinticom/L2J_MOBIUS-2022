@@ -50,7 +50,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
+			SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
 			sm.addString(name);
 			player.sendPacket(sm);
 			player.onTransactionResponse();
@@ -71,7 +71,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			final String name = FakePlayerData.getInstance().getProperName(_player);
 			if (player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.SIEGE))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL);
 				sm.addString(name);
 				player.sendPacket(sm);
 				return;
@@ -86,19 +86,19 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			}
 			if (!npcInRange)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 				sm.addString(name);
 				player.sendPacket(sm);
 				return;
 			}
 			if (player.isProcessingRequest())
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				msg.addString(name);
 				player.sendPacket(msg);
 				return;
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 			sm.addString(name);
 			player.sendPacket(sm);
 			ThreadPool.schedule(() -> scheduleDeny(player, name), 10000);
@@ -132,7 +132,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 		// Players may not be too far apart
 		else if (!player.isInsideRadius2D(targetChar, 250))
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 			msg.addString(targetChar.getName());
 			player.sendPacket(msg);
 			return;
@@ -192,17 +192,17 @@ public final class RequestDuelStart implements IClientIncomingPacket
 					player.onTransactionRequest(partyLeader);
 					partyLeader.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
 					
-					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+					SystemMessage msg = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 					msg.addString(partyLeader.getName());
 					player.sendPacket(msg);
 					
-					msg = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL);
+					msg = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL);
 					msg.addString(player.getName());
 					targetChar.sendPacket(msg);
 				}
 				else
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 					msg.addString(partyLeader.getName());
 					player.sendPacket(msg);
 				}
@@ -216,17 +216,17 @@ public final class RequestDuelStart implements IClientIncomingPacket
 				player.onTransactionRequest(targetChar);
 				targetChar.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
 				
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+				SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 				msg.addString(targetChar.getName());
 				player.sendPacket(msg);
 				
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL);
+				msg = new SystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL);
 				msg.addString(player.getName());
 				targetChar.sendPacket(msg);
 			}
 			else
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				msg.addString(targetChar.getName());
 				player.sendPacket(msg);
 			}

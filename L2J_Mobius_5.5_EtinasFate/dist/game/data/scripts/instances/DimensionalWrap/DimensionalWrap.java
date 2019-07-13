@@ -140,7 +140,7 @@ public class DimensionalWrap extends AbstractInstance
 			{
 				if (!player.getParty().isLeader(player))
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 				}
 				else
 				{
@@ -176,7 +176,7 @@ public class DimensionalWrap extends AbstractInstance
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 						break;
 					}
 					switch (player.getParty().getMemberCount())
@@ -213,7 +213,7 @@ public class DimensionalWrap extends AbstractInstance
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 						break;
 					}
 					switch (player.getParty().getMemberCount())
@@ -250,7 +250,7 @@ public class DimensionalWrap extends AbstractInstance
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 						break;
 					}
 					switch (player.getParty().getMemberCount())
@@ -639,7 +639,7 @@ public class DimensionalWrap extends AbstractInstance
 					packet.setHtml(getHtm(ps, "33975-03.html"));
 					packet.replace("%count%", Integer.toString(_count));
 					ps.sendPacket(packet);
-					ps.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addString(ps.getName()));
+					ps.sendPacket(new SystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addString(ps.getName()));
 					canStart = false;
 				}
 			}

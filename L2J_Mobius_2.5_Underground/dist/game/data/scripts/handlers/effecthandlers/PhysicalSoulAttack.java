@@ -89,7 +89,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		final int souls = Math.min(skill.getMaxSoulConsumeCount(), effector.getActingPlayer().getCharges());
 		if (!effector.getActingPlayer().decreaseCharges(souls))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);
 			effector.sendPacket(sm);
 			return;

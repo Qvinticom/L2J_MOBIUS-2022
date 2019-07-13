@@ -159,7 +159,7 @@ public class RaceManagerInstance extends Npc
 	
 	public void makeAnnouncement(SystemMessageId type)
 	{
-		final SystemMessage sm = SystemMessage.getSystemMessage(type);
+		final SystemMessage sm = new SystemMessage(type);
 		switch (type.getId())
 		{
 			case 816: // SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1
@@ -480,7 +480,7 @@ public class RaceManagerInstance extends Npc
 			}
 			player.setRace(0, 0);
 			player.setRace(1, 0);
-			sm = SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_S2);
+			sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 			sm.addInt(_raceNumber);
 			sm.addItemName(4443);
 			player.sendPacket(sm);

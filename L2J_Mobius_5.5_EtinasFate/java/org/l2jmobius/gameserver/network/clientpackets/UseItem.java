@@ -117,7 +117,7 @@ public final class UseItem implements IClientIncomingPacket
 		// Char cannot use item when dead
 		if (player.isDead() || !player.getInventory().canManipulateWithItemId(item.getId()))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item);
 			player.sendPacket(sm);
 			return;
@@ -223,7 +223,7 @@ public final class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
 					sm.addItemName(item);
 					player.sendPacket(sm);
 					return;
@@ -241,7 +241,7 @@ public final class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVEN_T_EQUIPPED_AN_ARTIFACT_BOOK_SO_S1_CANNOT_BE_EQUIPPED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVEN_T_EQUIPPED_AN_ARTIFACT_BOOK_SO_S1_CANNOT_BE_EQUIPPED);
 					sm.addItemName(item);
 					player.sendPacket(sm);
 					return;
@@ -304,20 +304,20 @@ public final class UseItem implements IClientIncomingPacket
 		final SystemMessage sm;
 		if (hours > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 			sm.addInt(hours);
 			sm.addInt(minutes);
 		}
 		else if (minutes > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 			sm.addInt(minutes);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 		}
 		sm.addInt(seconds);

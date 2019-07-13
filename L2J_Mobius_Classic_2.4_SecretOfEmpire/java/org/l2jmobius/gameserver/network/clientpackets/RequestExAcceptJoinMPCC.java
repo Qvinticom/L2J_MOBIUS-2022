@@ -57,14 +57,14 @@ public final class RequestExAcceptJoinMPCC implements IClientIncomingPacket
 				if (!requestor.getParty().isInCommandChannel())
 				{
 					new CommandChannel(requestor); // Create new CC
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
+					sm = new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
 					requestor.sendPacket(sm);
 					newCc = true;
 				}
 				requestor.getParty().getCommandChannel().addParty(player.getParty());
 				if (!newCc)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_THE_COMMAND_CHANNEL);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_THE_COMMAND_CHANNEL);
 					player.sendPacket(sm);
 				}
 			}

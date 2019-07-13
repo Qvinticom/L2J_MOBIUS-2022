@@ -58,7 +58,7 @@ public final class GiveClanReputation extends AbstractEffect
 		{
 			if (member.isOnline())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION);
 				sm.addInt(_reputation);
 				member.getPlayerInstance().sendPacket(sm);
 			}

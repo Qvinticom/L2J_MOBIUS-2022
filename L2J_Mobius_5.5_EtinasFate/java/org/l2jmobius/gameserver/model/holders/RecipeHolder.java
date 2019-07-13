@@ -243,7 +243,7 @@ public class RecipeHolder implements IIdentifiable
 			{
 				if (sendMessage)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_MORE_S1_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_MORE_S1_S);
 					sm.addItemName(ingredient.getId());
 					sm.addLong(ingredient.getCount() - count);
 					player.sendPacket(sm);

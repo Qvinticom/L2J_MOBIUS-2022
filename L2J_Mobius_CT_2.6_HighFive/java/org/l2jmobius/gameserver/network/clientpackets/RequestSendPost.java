@@ -215,7 +215,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 		
 		if (accessLevel.isGm() && !player.getAccessLevel().isGm())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
 			sm.addString(_receiver);
 			player.sendPacket(sm);
 			return;
@@ -229,7 +229,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 		
 		if (BlockList.isInBlockList(receiverId, player.getObjectId()))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
 			sm.addString(_receiver);
 			player.sendPacket(sm);
 			return;

@@ -89,7 +89,7 @@ public class Recipes implements IItemHandler
 		
 		if (recipeLimit)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_BE_REGISTERED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_BE_REGISTERED);
 			sm.addInt(rp.isDwarvenRecipe() ? player.getDwarfRecipeLimit() : player.getCommonRecipeLimit());
 			player.sendPacket(sm);
 			return false;
@@ -105,7 +105,7 @@ public class Recipes implements IItemHandler
 		}
 		
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
 		sm.addItemName(item);
 		player.sendPacket(sm);
 		return true;

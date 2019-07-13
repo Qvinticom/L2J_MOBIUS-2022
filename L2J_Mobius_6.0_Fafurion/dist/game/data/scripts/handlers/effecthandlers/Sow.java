@@ -75,11 +75,11 @@ public final class Sow extends AbstractEffect
 		{
 			player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 			target.setSeeded(player.getActingPlayer());
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
+			sm = new SystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
+			sm = new SystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 		}
 		
 		final Party party = player.getParty();

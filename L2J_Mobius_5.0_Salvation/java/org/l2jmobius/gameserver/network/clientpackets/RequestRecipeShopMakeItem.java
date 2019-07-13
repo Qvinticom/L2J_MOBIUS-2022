@@ -218,14 +218,14 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			}
 			if (craftedItem.getCount() > 1)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
+				SystemMessage sm = new SystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
 				sm.addString(player.getName());
 				sm.addInt((int) craftedItem.getCount());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
 				manufacturer.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S3_S2_S_AT_THE_PRICE_OF_S4_ADENA);
+				sm = new SystemMessage(SystemMessageId.C1_CREATED_S3_S2_S_AT_THE_PRICE_OF_S4_ADENA);
 				sm.addString(manufacturer.getName());
 				sm.addInt((int) craftedItem.getCount());
 				sm.addItemName(craftedItem.getId());
@@ -235,13 +235,13 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			else
 			{
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
+				SystemMessage sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
 				sm.addString(player.getName());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
 				manufacturer.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
+				sm = new SystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
 				sm.addString(manufacturer.getName());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
@@ -250,13 +250,13 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		}
 		else
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FAILED_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA);
 			sm.addString(player.getName());
 			sm.addItemName(craftedItem.getId());
 			sm.addLong(manufactureRecipeCost);
 			manufacturer.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
+			sm = new SystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
 			sm.addString(manufacturer.getName());
 			sm.addItemName(craftedItem.getId());
 			sm.addLong(manufactureRecipeCost);

@@ -52,7 +52,7 @@ public final class HpByLevel extends AbstractEffect
 		final int restored = (int) (absorb - effector.getCurrentHp());
 		effector.setCurrentHp(absorb);
 		// System message
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 		sm.addInt(restored);
 		effector.sendPacket(sm);
 	}

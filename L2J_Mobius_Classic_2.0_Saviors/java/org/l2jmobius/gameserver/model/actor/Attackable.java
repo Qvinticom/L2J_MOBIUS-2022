@@ -389,7 +389,7 @@ public class Attackable extends Npc
 			if (_isRaid && !_isRaidMinion)
 			{
 				final PlayerInstance player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
-				broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+				broadcastPacket(new SystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 				final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
 				final Party party = player.getParty();
 				
@@ -406,7 +406,7 @@ public class Attackable extends Npc
 					{
 						final int points = Math.max(raidbossPoints / members.size(), 1);
 						p.increaseRaidbossPoints(points);
-						p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+						p.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
 						
 						if (p.isNoble())
 						{
@@ -418,7 +418,7 @@ public class Attackable extends Npc
 				{
 					final int points = Math.max(raidbossPoints, 1);
 					player.increaseRaidbossPoints(points);
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
 					if (player.isNoble())
 					{
 						Hero.getInstance().setRBkilled(player.getObjectId(), getId());
@@ -1049,7 +1049,7 @@ public class Attackable extends Npc
 				// Broadcast message if RaidBoss was defeated
 				if (_isRaid && !_isRaidMinion)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
 					sm.addString(getName());
 					sm.addItemName(item);
 					sm.addLong(drop.getCount());

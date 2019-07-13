@@ -283,7 +283,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		}
 		if ((party.getCommandChannel().getMembers().size() < Config.HEART_DEFENCE_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.HEART_DEFENCE_MAX_PLAYERS))// 18 27
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 			party.getCommandChannel().broadcastPacket(sm);
 			return false;
 		}
@@ -291,7 +291,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2097);
+				final SystemMessage sm = new SystemMessage(2097);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -299,7 +299,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2096);
+				final SystemMessage sm = new SystemMessage(2096);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -308,7 +308,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2100);
+				final SystemMessage sm = new SystemMessage(2100);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;

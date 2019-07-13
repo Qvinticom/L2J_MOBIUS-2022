@@ -293,7 +293,7 @@ public final class BotReportTable
 				final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FIVE_YEARS_HAVE_PASSED_SINCE_THIS_CHARACTER_S_CREATION);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.FIVE_YEARS_HAVE_PASSED_SINCE_THIS_CHARACTER_S_CREATION);
 					sm.addInt((int) (reuse / 60000));
 					sm.addInt(rcdRep.getPointsLeft());
 					reporter.sendPacket(sm);
@@ -320,11 +320,11 @@ public final class BotReportTable
 			_charRegistry.put(reporterId, rcdRep);
 		}
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_REPORTED_AS_A_BOT);
+		SystemMessage sm = new SystemMessage(SystemMessageId.C1_WAS_REPORTED_AS_A_BOT);
 		sm.addString(bot.getName());
 		reporter.sendPacket(sm);
 		
-		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_USED_A_REPORT_POINT_ON_C1_YOU_HAVE_S2_POINTS_REMAINING_ON_THIS_ACCOUNT);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_USED_A_REPORT_POINT_ON_C1_YOU_HAVE_S2_POINTS_REMAINING_ON_THIS_ACCOUNT);
 		sm.addString(bot.getName());
 		sm.addInt(rcdRep.getPointsLeft());
 		reporter.sendPacket(sm);

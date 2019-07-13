@@ -59,7 +59,7 @@ public final class RequestAnswerJoinParty implements IClientIncomingPacket
 		{
 			case -1: // Party disable by player client config
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
 				sm.addPcName(player);
 				requestor.sendPacket(sm);
 				break;
@@ -76,7 +76,7 @@ public final class RequestAnswerJoinParty implements IClientIncomingPacket
 				{
 					if (requestor.getParty().getMemberCount() >= 9)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
 						player.sendPacket(sm);
 						requestor.sendPacket(sm);
 						return;

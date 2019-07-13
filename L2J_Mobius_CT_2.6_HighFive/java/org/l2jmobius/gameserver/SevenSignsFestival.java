@@ -1110,7 +1110,7 @@ public class SevenSignsFestival implements SpawnListener
 			if (player.getClan() != null)
 			{
 				player.getClan().addReputationScore(Config.FESTIVAL_WIN_POINTS, true);
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 				sm.addString(partyMemberName);
 				sm.addInt(Config.FESTIVAL_WIN_POINTS);
 				player.getClan().broadcastToOnlineMembers(sm);
@@ -1133,7 +1133,7 @@ public class SevenSignsFestival implements SpawnListener
 							if (clan != null)
 							{
 								clan.addReputationScore(Config.FESTIVAL_WIN_POINTS, true);
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 								sm.addString(partyMemberName);
 								sm.addInt(Config.FESTIVAL_WIN_POINTS);
 								clan.broadcastToOnlineMembers(sm);

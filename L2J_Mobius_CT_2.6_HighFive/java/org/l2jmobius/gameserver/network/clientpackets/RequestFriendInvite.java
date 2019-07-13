@@ -75,7 +75,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		// Target is blocked.
 		if (BlockList.isBlocked(player, friend))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BLOCKED_C1);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_BLOCKED_C1);
 			sm.addString(friend.getName());
 			player.sendPacket(sm);
 			return;
@@ -83,7 +83,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		// Target already in friend list.
 		if (player.getFriendList().contains(friend.getObjectId()))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
+			sm = new SystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			return;
@@ -91,7 +91,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		// Target is busy.
 		if (friend.isProcessingRequest())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			sm = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			return;
@@ -99,7 +99,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		// Friend request sent.
 		player.onTransactionRequest(friend);
 		friend.sendPacket(new FriendAddRequest(player.getName()));
-		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
+		sm = new SystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 		sm.addString(_name);
 		player.sendPacket(sm);
 	}

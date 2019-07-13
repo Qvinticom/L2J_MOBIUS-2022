@@ -59,7 +59,7 @@ public final class GiveExpAndSp extends AbstractEffect
 			effector.getActingPlayer().getStat().addSp(_sp);
 			
 			SystemMessage sm = null;
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
 			sm.addLong(_xp);
 			sm.addLong(0);
 			sm.addLong(_sp);

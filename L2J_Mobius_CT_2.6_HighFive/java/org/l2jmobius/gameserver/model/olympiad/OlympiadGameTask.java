@@ -184,7 +184,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_game.broadcastPacket(sm);
 					}
@@ -215,7 +215,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_zone.broadcastPacket(sm);
 					}
@@ -237,7 +237,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_zone.broadcastPacket(sm);
 					}
@@ -294,7 +294,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_game.broadcastPacket(sm);
 					}
@@ -430,7 +430,7 @@ public final class OlympiadGameTask implements Runnable
 			{
 				// game successfully started
 				_game.broadcastOlympiadInfo(_zone);
-				_zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
+				_zone.broadcastPacket(new SystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
 				_zone.updateZoneStatusForCharactersInside();
 				return true;
 			}

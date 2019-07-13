@@ -115,7 +115,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public void broadcastMessage(SystemMessageId message)
 	{
-		broadcastPacket(SystemMessage.getSystemMessage(message));
+		broadcastPacket(new SystemMessage(message));
 	}
 	
 	/**
@@ -124,7 +124,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public void broadcastString(String text)
 	{
-		broadcastPacket(SystemMessage.sendString(text));
+		broadcastPacket(new SystemMessage(text));
 	}
 	
 	public void broadcastCreatureSay(CreatureSay msg, PlayerInstance broadcaster)

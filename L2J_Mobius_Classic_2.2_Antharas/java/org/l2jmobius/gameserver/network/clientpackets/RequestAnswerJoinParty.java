@@ -74,7 +74,7 @@ public final class RequestAnswerJoinParty implements IClientIncomingPacket
 		{
 			if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
 				player.sendPacket(sm);
 				requestor.sendPacket(sm);
 				return;
@@ -97,7 +97,7 @@ public final class RequestAnswerJoinParty implements IClientIncomingPacket
 		}
 		else if (_response == -1)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
 			sm.addPcName(player);
 			requestor.sendPacket(sm);
 			

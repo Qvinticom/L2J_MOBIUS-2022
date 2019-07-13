@@ -165,7 +165,7 @@ public class PlayerStatus extends PlayableStatus
 				else
 				{
 					getActiveChar().reduceCurrentMp(mpDam);
-					final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
 					smsg.addInt(mpDam);
 					getActiveChar().sendPacket(smsg);
 					return;
@@ -228,7 +228,7 @@ public class PlayerStatus extends PlayableStatus
 			{
 				SystemMessage smsg;
 				// Send a System Message to the PlayerInstance
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
+				smsg = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 				smsg.addString(getActiveChar().getName());
 				smsg.addString(attacker.getName());
 				smsg.addInt(fullValue);
@@ -236,7 +236,7 @@ public class PlayerStatus extends PlayableStatus
 				
 				if ((tDmg > 0) && (attackerPlayer != null))
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DEALT_S1_DAMAGE_TO_YOUR_TARGET_AND_S2_DAMAGE_TO_THE_SERVITOR);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_DEALT_S1_DAMAGE_TO_YOUR_TARGET_AND_S2_DAMAGE_TO_THE_SERVITOR);
 					smsg.addInt(fullValue);
 					smsg.addInt(tDmg);
 					attackerPlayer.sendPacket(smsg);

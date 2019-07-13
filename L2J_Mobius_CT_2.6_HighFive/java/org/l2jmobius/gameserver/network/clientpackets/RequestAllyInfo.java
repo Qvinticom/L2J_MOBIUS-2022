@@ -52,53 +52,53 @@ public final class RequestAllyInfo implements IClientIncomingPacket
 			player.sendPacket(ai);
 			
 			// send for player
-			sm = SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_INFORMATION);
+			sm = new SystemMessage(SystemMessageId.ALLIANCE_INFORMATION);
 			player.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_NAME_S1);
+			sm = new SystemMessage(SystemMessageId.ALLIANCE_NAME_S1);
 			sm.addString(ai.getName());
 			player.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_LEADER_S2_OF_S1);
+			sm = new SystemMessage(SystemMessageId.ALLIANCE_LEADER_S2_OF_S1);
 			sm.addString(ai.getLeaderC());
 			sm.addString(ai.getLeaderP());
 			player.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2);
+			sm = new SystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2);
 			sm.addInt(ai.getOnline());
 			sm.addInt(ai.getTotal());
 			player.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.AFFILIATED_CLANS_TOTAL_S1_CLAN_S);
+			sm = new SystemMessage(SystemMessageId.AFFILIATED_CLANS_TOTAL_S1_CLAN_S);
 			sm.addInt(ai.getAllies().length);
 			player.sendPacket(sm);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_INFORMATION);
+			sm = new SystemMessage(SystemMessageId.CLAN_INFORMATION);
 			for (ClanInfo aci : ai.getAllies())
 			{
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_S1);
+				sm = new SystemMessage(SystemMessageId.CLAN_NAME_S1);
 				sm.addString(aci.getClan().getName());
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEADER_S1);
+				sm = new SystemMessage(SystemMessageId.CLAN_LEADER_S1);
 				sm.addString(aci.getClan().getLeaderName());
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEVEL_S1);
+				sm = new SystemMessage(SystemMessageId.CLAN_LEVEL_S1);
 				sm.addInt(aci.getClan().getLevel());
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2);
+				sm = new SystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2);
 				sm.addInt(aci.getOnline());
 				sm.addInt(aci.getTotal());
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_4);
+				sm = new SystemMessage(SystemMessageId.EMPTY_4);
 			}
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_5);
+			sm = new SystemMessage(SystemMessageId.EMPTY_5);
 			player.sendPacket(sm);
 		}
 		else

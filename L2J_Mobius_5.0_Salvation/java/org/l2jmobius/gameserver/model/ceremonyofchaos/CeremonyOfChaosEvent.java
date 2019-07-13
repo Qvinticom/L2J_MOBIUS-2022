@@ -285,14 +285,14 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
-			msg = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+			msg = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 		}
 		else
 		{
 			final PlayerInstance winner = winners.get(0).getPlayer();
 			if (winner != null)
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				msg = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				msg.addString(winner.getName());
 				
 				// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
@@ -512,24 +512,24 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 			case "teleport_message1":
 			{
-				broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.PROVE_YOUR_ABILITIES));
+				broadcastPacket(new SystemMessage(SystemMessageId.PROVE_YOUR_ABILITIES));
 				break;
 			}
 			case "teleport_message2":
 			{
-				broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_ALLIES_HERE_EVERYONE_IS_AN_ENEMY));
+				broadcastPacket(new SystemMessage(SystemMessageId.THERE_ARE_NO_ALLIES_HERE_EVERYONE_IS_AN_ENEMY));
 				break;
 			}
 			case "teleport_message3":
 			{
-				broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_WILL_BE_A_LONELY_BATTLE_BUT_I_WISH_YOU_VICTORY));
+				broadcastPacket(new SystemMessage(SystemMessageId.IT_WILL_BE_A_LONELY_BATTLE_BUT_I_WISH_YOU_VICTORY));
 				break;
 			}
 			case "match_start_countdown":
 			{
 				final int time = params.getInt("time", 0);
 				
-				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SEC);
+				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SEC);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				
@@ -555,7 +555,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			case "match_end_countdown":
 			{
 				final int time = params.getInt("time", 0);
-				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.IN_S1_SEC_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
+				final SystemMessage countdown = new SystemMessage(SystemMessageId.IN_S1_SEC_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				

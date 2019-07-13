@@ -63,7 +63,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 		});
 		
 		// Send SystemMessage to others player
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 		sm.addPcName(player);
 		getMembers().stream().filter(p -> p != player).forEach(sm::sendTo);
 		
@@ -81,7 +81,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 			p.sendPacket(new ExMPCCRoomMember(player, this));
 		});
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(kicked ? SystemMessageId.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMessageId.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM);
+		final SystemMessage sm = new SystemMessage(kicked ? SystemMessageId.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMessageId.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 		player.sendPacket(sm);
 	}
 	

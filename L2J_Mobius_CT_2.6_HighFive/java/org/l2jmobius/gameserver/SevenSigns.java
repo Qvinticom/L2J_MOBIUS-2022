@@ -1212,22 +1212,22 @@ public class SevenSigns
 		{
 			case PERIOD_COMP_RECRUITING:
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_PREPARATIONS_HAVE_BEGUN_FOR_THE_NEXT_QUEST_EVENT);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_PREPARATIONS_HAVE_BEGUN_FOR_THE_NEXT_QUEST_EVENT);
 				break;
 			}
 			case PERIOD_COMPETITION:
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_BEGUN_SPEAK_WITH_A_PRIEST_OF_DAWN_OR_DUSK_PRIESTESS_IF_YOU_WISH_TO_PARTICIPATE_IN_THE_EVENT);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_BEGUN_SPEAK_WITH_A_PRIEST_OF_DAWN_OR_DUSK_PRIESTESS_IF_YOU_WISH_TO_PARTICIPATE_IN_THE_EVENT);
 				break;
 			}
 			case PERIOD_COMP_RESULTS:
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_QUEST_EVENT_HAS_ENDED_RESULTS_ARE_BEING_TALLIED);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_QUEST_EVENT_HAS_ENDED_RESULTS_ARE_BEING_TALLIED);
 				break;
 			}
 			case PERIOD_SEAL_VALIDATION:
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_THIS_IS_THE_SEAL_VALIDATION_PERIOD_A_NEW_QUEST_EVENT_PERIOD_BEGINS_NEXT_MONDAY);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_THIS_IS_THE_SEAL_VALIDATION_PERIOD_A_NEW_QUEST_EVENT_PERIOD_BEGINS_NEXT_MONDAY);
 				break;
 			}
 		}
@@ -1241,7 +1241,7 @@ public class SevenSigns
 	 */
 	public void sendMessageToAll(SystemMessageId sysMsgId)
 	{
-		Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(sysMsgId));
+		Broadcast.toAllOnlinePlayers(new SystemMessage(sysMsgId));
 	}
 	
 	/**

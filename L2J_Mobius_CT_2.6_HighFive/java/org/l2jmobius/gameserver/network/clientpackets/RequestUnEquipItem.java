@@ -108,12 +108,12 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			SystemMessage sm = null;
 			if (unequipped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(unequipped[0].getEnchantLevel());
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 			}
 			sm.addItemName(unequipped[0]);
 			player.sendPacket(sm);

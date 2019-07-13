@@ -409,7 +409,7 @@ public final class TerritoryWarManager implements Siegable
 				updateTerritoryData(terNew);
 				if (broadcastMessage)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_CAPTURING_S2_S_TERRITORY_WARD);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_CAPTURING_S2_S_TERRITORY_WARD);
 					sm.addString(terNew.getOwnerClan().getName());
 					sm.addCastleId(territoryId);
 					announceToParticipants(sm, 135000, 13500);
@@ -572,7 +572,7 @@ public final class TerritoryWarManager implements Siegable
 				}
 				if (isKilled)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CHARACTER_THAT_ACQUIRED_S1_S_WARD_HAS_BEEN_KILLED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CHARACTER_THAT_ACQUIRED_S1_S_WARD_HAS_BEEN_KILLED);
 					sm.addString(twWard.getNpc().getName().replaceAll(" Ward", ""));
 					announceToParticipants(sm, 0, 0);
 				}
@@ -1000,7 +1000,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.TERRITORY_WAR_HAS_BEGUN);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_BEGUN);
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
@@ -1115,7 +1115,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		
 		// change next TW date
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.TERRITORY_WAR_HAS_ENDED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_ENDED);
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
@@ -1261,14 +1261,14 @@ public final class TerritoryWarManager implements Siegable
 				}
 				else if ((timeRemaining <= 7200000) && (timeRemaining > 1200000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_REQUEST_PERIOD_HAS_ENDED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_REQUEST_PERIOD_HAS_ENDED);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isRegistrationOver = true;
 					_scheduledStartTWTask = ThreadPool.schedule(new ScheduleStartTWTask(), timeRemaining - 1200000); // Prepare task for 20 mins left before TW start.
 				}
 				else if ((timeRemaining <= 1200000) && (timeRemaining > 600000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_BEGIN_IN_20_MINUTES_TERRITORY_RELATED_FUNCTIONS_I_E_BATTLEFIELD_CHANNEL_DISGUISE_SCROLLS_TRANSFORMATIONS_ETC_CAN_NOW_BE_USED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_BEGIN_IN_20_MINUTES_TERRITORY_RELATED_FUNCTIONS_I_E_BATTLEFIELD_CHANNEL_DISGUISE_SCROLLS_TRANSFORMATIONS_ETC_CAN_NOW_BE_USED);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
@@ -1277,7 +1277,7 @@ public final class TerritoryWarManager implements Siegable
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_10_MINUTES);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_10_MINUTES);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
@@ -1286,7 +1286,7 @@ public final class TerritoryWarManager implements Siegable
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 60000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_5_MINUTES);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_5_MINUTES);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
@@ -1295,7 +1295,7 @@ public final class TerritoryWarManager implements Siegable
 				}
 				else if ((timeRemaining <= 60000) && (timeRemaining > 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_1_MINUTE);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_BEGINS_IN_1_MINUTE);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
@@ -1335,35 +1335,35 @@ public final class TerritoryWarManager implements Siegable
 				final long timeRemaining = (_startTWDate.getTimeInMillis() + WARLENGTH) - Calendar.getInstance().getTimeInMillis();
 				if (timeRemaining > 3600000)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_HOUR_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_HOUR_S);
 					sm.addInt(2);
 					announceToParticipants(sm, 0, 0);
 					_scheduledEndTWTask = ThreadPool.schedule(new ScheduleEndTWTask(), timeRemaining - 3600000); // Prepare task for 1 hr left.
 				}
 				else if ((timeRemaining <= 3600000) && (timeRemaining > 600000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
 					_scheduledEndTWTask = ThreadPool.schedule(new ScheduleEndTWTask(), timeRemaining - 600000); // Prepare task for 10 minute left.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
 					_scheduledEndTWTask = ThreadPool.schedule(new ScheduleEndTWTask(), timeRemaining - 300000); // Prepare task for 5 minute left.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 10000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
 					_scheduledEndTWTask = ThreadPool.schedule(new ScheduleEndTWTask(), timeRemaining - 10000); // Prepare task for 10 seconds count down
 				}
 				else if ((timeRemaining <= 10000) && (timeRemaining > 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_TO_THE_END_OF_TERRITORY_WAR);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_SECOND_S_TO_THE_END_OF_TERRITORY_WAR);
 					sm.addInt((int) (timeRemaining / 1000));
 					announceToParticipants(sm, 0, 0);
 					_scheduledEndTWTask = ThreadPool.schedule(new ScheduleEndTWTask(), timeRemaining); // Prepare task for second count down

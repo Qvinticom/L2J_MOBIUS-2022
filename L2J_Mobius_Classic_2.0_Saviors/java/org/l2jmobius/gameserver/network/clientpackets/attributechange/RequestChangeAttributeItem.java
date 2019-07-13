@@ -78,7 +78,7 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		item.setAttribute(new AttributeHolder(AttributeType.findByClientId(_newElementId), elementValue), true);
 		
 		// send packets
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
 		msg.addItemName(item);
 		msg.addAttribute(oldElementId);
 		msg.addAttribute(_newElementId);

@@ -94,7 +94,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 		_items.put(player.getObjectId(), item);
 		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		dlg.addTime(15000);
-		dlg.addNpcName(holder.getNpcId());
+		dlg.getSystemMessage().addNpcName(holder.getNpcId());
 		player.sendPacket(dlg);
 		player.addAction(PlayerAction.MERCENARY_CONFIRM);
 		return true;

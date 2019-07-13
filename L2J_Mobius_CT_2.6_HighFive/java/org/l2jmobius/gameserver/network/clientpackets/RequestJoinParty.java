@@ -77,7 +77,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		
 		if (target.isPartyBanned())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
@@ -92,7 +92,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		SystemMessage sm;
 		if (target.isInParty())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED);
+			sm = new SystemMessage(SystemMessageId.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
@@ -100,7 +100,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		
 		if (BlockList.isBlocked(target, requestor))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
@@ -133,7 +133,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			}
 		}
 		
-		sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
+		sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
 		sm.addString(target.getName());
 		requestor.sendPacket(sm);
 		
@@ -187,7 +187,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 		}

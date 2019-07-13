@@ -257,7 +257,7 @@ public final class SubclassCertification extends AbstractNpcAI
 				return null;
 			}
 			
-			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			smsg.addItemName(item);
 			player.sendPacket(smsg);
 			

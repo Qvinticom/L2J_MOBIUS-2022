@@ -146,7 +146,7 @@ public class RecipeController
 		// Check if player is busy (possible if alt game creation is enabled)
 		if (Config.ALT_GAME_CREATION && _activeMakers.containsKey(player.getObjectId()))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1);
 			sm.addItemName(recipeList.getItemId());
 			sm.addString("You are busy creating.");
 			player.sendPacket(sm);
@@ -407,12 +407,12 @@ public class RecipeController
 				{
 					if (_target != _player)
 					{
-						SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_ATTEMPT_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA_HAS_FAILED);
+						SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_ATTEMPT_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA_HAS_FAILED);
 						msg.addString(_target.getName());
 						msg.addItemName(_recipeList.getItemId());
 						msg.addLong(_price);
 						_player.sendPacket(msg);
-						msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
+						msg = new SystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
 						msg.addString(_player.getName());
 						msg.addItemName(_recipeList.getItemId());
 						msg.addLong(_price);
@@ -481,7 +481,7 @@ public class RecipeController
 				
 				if (_target == _player)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -601,7 +601,7 @@ public class RecipeController
 					// check materials
 					if (itemQuantityAmount < recipe.getQuantity())
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_MISSING_S2_S1_REQUIRED_TO_CREATE_THAT);
+						sm = new SystemMessage(SystemMessageId.YOU_ARE_MISSING_S2_S1_REQUIRED_TO_CREATE_THAT);
 						sm.addItemName(recipe.getItemId());
 						sm.addLong(recipe.getQuantity() - itemQuantityAmount);
 						_target.sendPacket(sm);
@@ -623,13 +623,13 @@ public class RecipeController
 					
 					if (tmp.getQuantity() > 1)
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+						sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						sm.addItemName(tmp.getItemId());
 						sm.addLong(tmp.getQuantity());
 					}
 					else
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+						sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 						sm.addItemName(tmp.getItemId());
 					}
 					_target.sendPacket(sm);
@@ -668,13 +668,13 @@ public class RecipeController
 				// inform manufacturer of earned profit
 				if (itemCount == 1)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
+					sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
 					sm.addString(_target.getName());
 					sm.addItemName(itemId);
 					sm.addLong(_price);
 					_player.sendPacket(sm);
 					
-					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
+					sm = new SystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
 					sm.addString(_player.getName());
 					sm.addItemName(itemId);
 					sm.addLong(_price);
@@ -682,14 +682,14 @@ public class RecipeController
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S3_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
+					sm = new SystemMessage(SystemMessageId.S2_S3_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
 					sm.addString(_target.getName());
 					sm.addInt(itemCount);
 					sm.addItemName(itemId);
 					sm.addLong(_price);
 					_player.sendPacket(sm);
 					
-					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S2_S3_AT_THE_PRICE_OF_S4_ADENA);
+					sm = new SystemMessage(SystemMessageId.C1_CREATED_S2_S3_AT_THE_PRICE_OF_S4_ADENA);
 					sm.addString(_player.getName());
 					sm.addInt(itemCount);
 					sm.addItemName(itemId);
@@ -700,13 +700,13 @@ public class RecipeController
 			
 			if (itemCount > 1)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				sm.addItemName(itemId);
 				sm.addLong(itemCount);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 				sm.addItemName(itemId);
 			}
 			_target.sendPacket(sm);

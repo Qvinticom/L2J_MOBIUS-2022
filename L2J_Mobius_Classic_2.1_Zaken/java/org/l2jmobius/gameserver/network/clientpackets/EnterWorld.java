@@ -365,7 +365,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
 			if ((ch != null) && (ch.getCostFailDay() > 0))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 				sm.addInt(ch.getLease());
 				player.sendPacket(sm);
 			}
@@ -468,7 +468,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(player.getName());
 		for (int id : player.getFriendList())
 		{
@@ -601,7 +601,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		else if (birthday != -1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
+			sm = new SystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
 			sm.addString(Integer.toString(birthday));
 			player.sendPacket(sm);
 		}
@@ -685,7 +685,7 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
 			
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
 			msg.addString(player.getName());
 			clan.broadcastToOtherOnlineMembers(msg, player);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
@@ -702,7 +702,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				sponsor.sendPacket(msg);
 			}
@@ -712,7 +712,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice != null)
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				apprentice.sendPacket(msg);
 			}

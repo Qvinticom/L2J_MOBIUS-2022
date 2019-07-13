@@ -126,7 +126,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							// Send message
 							if (!pet.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
 								client.sendPacket(sm);
 							}
@@ -138,7 +138,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							// Send message
 							if (!summon.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
 								client.sendPacket(sm);
 							}
@@ -167,7 +167,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 					
 					// Send message
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 					sm.addItemName(item);
 					client.sendPacket(sm);
 					
@@ -182,7 +182,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 				client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 				
 				// Send message
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addItemName(item);
 				client.sendPacket(sm);
 			}

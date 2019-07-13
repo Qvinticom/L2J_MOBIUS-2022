@@ -821,23 +821,23 @@ public class TradeList
 			SystemMessage msg;
 			if (newItem.isStackable())
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
+				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 				_owner.sendPacket(msg);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
+				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 			}
 			else
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
+				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S2);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				_owner.sendPacket(msg);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
+				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 			}
@@ -1001,23 +1001,23 @@ public class TradeList
 			SystemMessage msg;
 			if (newItem.isStackable())
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
+				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 				_owner.sendPacket(msg);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
+				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 			}
 			else
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
+				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				_owner.sendPacket(msg);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
+				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S2);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 			}

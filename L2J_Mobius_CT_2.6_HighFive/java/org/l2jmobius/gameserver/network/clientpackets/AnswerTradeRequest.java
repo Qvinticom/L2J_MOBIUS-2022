@@ -60,7 +60,7 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+			player.sendPacket(new SystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			player.setActiveRequester(null);
 			return;
 		}
@@ -68,7 +68,7 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+			player.sendPacket(new SystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			player.setActiveRequester(null);
 			return;
 		}
@@ -79,7 +79,7 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
 			msg.addString(player.getName());
 			partner.sendPacket(msg);
 		}

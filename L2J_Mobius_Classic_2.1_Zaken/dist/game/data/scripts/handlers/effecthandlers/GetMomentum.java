@@ -62,7 +62,7 @@ public class GetMomentum extends AbstractEffect
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1);
 				sm.addInt(newCharge);
 				player.sendPacket(sm);
 			}

@@ -46,8 +46,10 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
+import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.security.SecondaryPasswordAuth;
@@ -248,6 +250,27 @@ public final class GameClient extends ChannelInboundHandler<GameClient>
 			return;
 		}
 		
+		// TODO: Set as parameter to packets used?
+		if (Config.MULTILANG_ENABLE && (_player != null))
+		{
+			final String lang = _player.getLang();
+			if ((lang != null) && !lang.equals("en"))
+			{
+				if (packet instanceof SystemMessage)
+				{
+					((SystemMessage) packet).setLang(lang);
+				}
+				else if (packet instanceof NpcSay)
+				{
+					((NpcSay) packet).setLang(lang);
+				}
+				else if (packet instanceof ExShowScreenMessage)
+				{
+					((ExShowScreenMessage) packet).setLang(lang);
+				}
+			}
+		}
+		
 		// Write into the channel.
 		_channel.writeAndFlush(packet);
 		
@@ -260,7 +283,7 @@ public final class GameClient extends ChannelInboundHandler<GameClient>
 	 */
 	public void sendPacket(SystemMessageId smId)
 	{
-		sendPacket(SystemMessage.getSystemMessage(smId));
+		sendPacket(new SystemMessage(smId));
 	}
 	
 	public boolean isDetached()

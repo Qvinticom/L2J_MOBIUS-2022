@@ -73,7 +73,7 @@ public final class RequestJoinAlly implements IClientIncomingPacket
 			return;
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_LEADER_S2_HAS_REQUESTED_AN_ALLIANCE);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_LEADER_S2_HAS_REQUESTED_AN_ALLIANCE);
 		sm.addString(player.getClan().getAllyName());
 		sm.addString(player.getName());
 		target.sendPacket(sm);

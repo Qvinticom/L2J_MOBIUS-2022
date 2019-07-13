@@ -328,11 +328,11 @@ public class Party extends AbstractPlayerGroup
 			}
 		}
 		
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
+		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
 		msg.addString(getLeader().getName());
 		player.sendPacket(msg);
 		
-		msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY);
+		msg = new SystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY);
 		msg.addString(player.getName());
 		broadcastPacket(msg);
 		
@@ -445,7 +445,7 @@ public class Party extends AbstractPlayerGroup
 			// Add the new sign
 			_tacticalSigns.put(tacticalSignId, target);
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
 			sm.addPcName(player);
 			sm.addString(target.getName());
 			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
@@ -468,7 +468,7 @@ public class Party extends AbstractPlayerGroup
 			// Otherwise, delete the old sign, and apply it to the new target
 			_tacticalSigns.replace(tacticalSignId, target);
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
 			sm.addPcName(player);
 			sm.addString(target.getName());
 			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
@@ -554,14 +554,14 @@ public class Party extends AbstractPlayerGroup
 			if (type == MessageType.EXPELLED)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
+				msg = new SystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastPacket(msg);
 			}
 			else if ((type == MessageType.LEFT) || (type == MessageType.DISCONNECTED))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
+				msg = new SystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastPacket(msg);
 			}
@@ -586,7 +586,7 @@ public class Party extends AbstractPlayerGroup
 			}
 			if (isLeader && (_members.size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == MessageType.DISCONNECTED)))
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
+				msg = new SystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 				msg.addString(getLeader().getName());
 				broadcastPacket(msg);
 				broadcastToPartyMembersNewLeader();
@@ -638,7 +638,7 @@ public class Party extends AbstractPlayerGroup
 		_disbanding = true;
 		if (_members != null)
 		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+			broadcastPacket(new SystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
 			for (PlayerInstance member : _members)
 			{
 				if (member != null)
@@ -678,14 +678,14 @@ public class Party extends AbstractPlayerGroup
 					_members.set(0, player);
 					_members.set(p1, temp);
 					
-					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
+					SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
 					broadcastPacket(msg);
 					broadcastToPartyMembersNewLeader();
 					if (isInCommandChannel() && _commandChannel.isLeader(temp))
 					{
 						_commandChannel.setLeader(getLeader());
-						msg = SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_C1);
+						msg = new SystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_C1);
 						msg.addString(_commandChannel.getLeader().getName());
 						_commandChannel.broadcastPacket(msg);
 					}
@@ -735,7 +735,7 @@ public class Party extends AbstractPlayerGroup
 		// Send messages to other party members about reward
 		if (item.getCount() > 1)
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item);
 			msg.addLong(item.getCount());
@@ -743,7 +743,7 @@ public class Party extends AbstractPlayerGroup
 		}
 		else
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item);
 			broadcastToPartyMembers(target, msg);
@@ -773,7 +773,7 @@ public class Party extends AbstractPlayerGroup
 		// Send messages to other party members about reward
 		if (itemCount > 1)
 		{
-			final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(itemId);
 			msg.addLong(itemCount);
@@ -781,7 +781,7 @@ public class Party extends AbstractPlayerGroup
 		}
 		else
 		{
-			final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(itemId);
 			broadcastToPartyMembers(looter, msg);
@@ -1104,7 +1104,7 @@ public class Party extends AbstractPlayerGroup
 		
 		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
 		sm.addSystemString(partyDistributionType.getSysStringId());
 		getLeader().sendPacket(sm);
 	}
@@ -1149,14 +1149,14 @@ public class Party extends AbstractPlayerGroup
 		{
 			broadcastPacket(new ExSetPartyLooting(1, _changeRequestDistributionType));
 			_distributionType = _changeRequestDistributionType;
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
 			sm.addSystemString(_changeRequestDistributionType.getSysStringId());
 			broadcastPacket(sm);
 		}
 		else
 		{
 			broadcastPacket(new ExSetPartyLooting(0, _distributionType));
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
+			broadcastPacket(new SystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
 		}
 		_changeRequestDistributionType = null;
 		_changeDistributionTypeAnswers = null;

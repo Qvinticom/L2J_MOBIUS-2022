@@ -9755,6 +9755,7 @@ public final class SystemMessageId
 	static
 	{
 		buildFastLookupTable();
+		loadLocalisations();
 	}
 	
 	private static void buildFastLookupTable()
@@ -9825,7 +9826,7 @@ public final class SystemMessageId
 		}
 	}
 	
-	public static void reloadLocalisations()
+	public static void loadLocalisations()
 	{
 		for (SystemMessageId smId : VALUES.values())
 		{
@@ -9835,13 +9836,13 @@ public final class SystemMessageId
 			}
 		}
 		
-		if (!Config.MULTILANG_SM_ENABLE)
+		if (!Config.MULTILANG_ENABLE)
 		{
 			LOGGER.log(Level.INFO, "SystemMessageId: MultiLanguage disabled.");
 			return;
 		}
 		
-		final List<String> languages = Config.MULTILANG_SM_ALLOWED;
+		final List<String> languages = Config.MULTILANG_ALLOWED;
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
@@ -9854,7 +9855,7 @@ public final class SystemMessageId
 		String text;
 		for (String lang : languages)
 		{
-			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/sm/SystemMessageLocalisation.xml");
+			file = new File("data/lang/" + lang + "/SystemMessageLocalisation.xml");
 			if (!file.isFile())
 			{
 				continue;
@@ -9871,40 +9872,35 @@ public final class SystemMessageId
 					{
 						for (Node nb = na.getFirstChild(); nb != null; nb = nb.getNextSibling())
 						{
-							if ("sm".equals(nb.getNodeName()))
+							if ("localisation".equals(nb.getNodeName()))
 							{
 								nnmb = nb.getAttributes();
 								node = nnmb.getNamedItem("id");
 								if (node != null)
 								{
 									smId = getSystemMessageId(Integer.parseInt(node.getNodeValue()));
+									if (smId == null)
+									{
+										LOGGER.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+										continue;
+									}
+									
+									node = nnmb.getNamedItem("text");
+									if (node == null)
+									{
+										LOGGER.log(Level.WARNING, "SystemMessageId: No text defined for SMID '" + smId + "', lang '" + lang + "'.");
+										continue;
+									}
+									
+									text = node.getNodeValue();
+									if (text.isEmpty() || (text.length() > 255))
+									{
+										LOGGER.log(Level.WARNING, "SystemMessageId: Invalid text defined for SMID '" + smId + "' (to long or empty), lang '" + lang + "'.");
+										continue;
+									}
+									
+									smId.attachLocalizedText(lang, text);
 								}
-								else
-								{
-									node = nnmb.getNamedItem("name");
-									smId = getSystemMessageId(node.getNodeValue());
-								}
-								if (smId == null)
-								{
-									LOGGER.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-									continue;
-								}
-								
-								node = nnmb.getNamedItem("text");
-								if (node == null)
-								{
-									LOGGER.log(Level.WARNING, "SystemMessageId: No text defined for SMID '" + smId + "', lang '" + lang + "'.");
-									continue;
-								}
-								
-								text = node.getNodeValue();
-								if (text.isEmpty() || (text.length() > 255))
-								{
-									LOGGER.log(Level.WARNING, "SystemMessageId: Invalid text defined for SMID '" + smId + "' (to long or empty), lang '" + lang + "'.");
-									continue;
-								}
-								
-								smId.attachLocalizedText(lang, text);
 							}
 						}
 					}
@@ -9934,7 +9930,7 @@ public final class SystemMessageId
 		return _id;
 	}
 	
-	private final void setName(String name)
+	private void setName(String name)
 	{
 		_name = name;
 	}

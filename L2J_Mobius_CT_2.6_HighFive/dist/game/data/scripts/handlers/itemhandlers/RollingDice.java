@@ -70,7 +70,7 @@ public class RollingDice implements IItemHandler
 		
 		Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), itemId, number, destination.getX(), destination.getY(), destination.getZ()));
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
 		sm.addString(player.getName());
 		sm.addInt(number);
 		

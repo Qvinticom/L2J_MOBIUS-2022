@@ -87,7 +87,7 @@ public final class RequestPartyMatchDetail implements IClientIncomingPacket
 				
 				_member.sendPacket(new ExManagePartyRoomMember(_player, _room, 0));
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 				sm.addString(_player.getName());
 				_member.sendPacket(sm);
 			}

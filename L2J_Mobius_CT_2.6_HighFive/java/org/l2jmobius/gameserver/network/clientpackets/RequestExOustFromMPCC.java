@@ -53,13 +53,13 @@ public final class RequestExOustFromMPCC implements IClientIncomingPacket
 			
 			target.getParty().getCommandChannel().removeParty(target.getParty());
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL);
 			target.getParty().broadcastPacket(sm);
 			
 			// check if CC has not been canceled
 			if (player.getParty().isInCommandChannel())
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL);
+				sm = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL);
 				sm.addString(target.getParty().getLeader().getName());
 				player.getParty().getCommandChannel().broadcastPacket(sm);
 			}

@@ -182,7 +182,7 @@ public class ClanTable
 		if (getClanByName(clanName) != null)
 		{
 			// clan name is already taken
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 			sm.addString(clanName);
 			player.sendPacket(sm);
 			return null;
@@ -219,7 +219,7 @@ public class ClanTable
 			return;
 		}
 		
-		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
+		clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
 		final int castleId = clan.getCastleId();
 		if (castleId == 0)
 		{

@@ -58,7 +58,7 @@ public class TeleportToPlayer extends AbstractEffect
 			final PlayerInstance target = (PlayerInstance) effector.getTarget();
 			if (target.isAlikeDead())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
 				effector.sendPacket(sm);
 				return;
@@ -66,7 +66,7 @@ public class TeleportToPlayer extends AbstractEffect
 			
 			if (target.isInStoreMode())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
 				effector.sendPacket(sm);
 				return;
@@ -74,7 +74,7 @@ public class TeleportToPlayer extends AbstractEffect
 			
 			if (target.isRooted() || target.isInCombat())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
 				effector.sendPacket(sm);
 				return;
@@ -94,7 +94,7 @@ public class TeleportToPlayer extends AbstractEffect
 			
 			if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING_2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING_2);
 				sm.addString(target.getName());
 				effector.sendPacket(sm);
 				return;
@@ -102,7 +102,7 @@ public class TeleportToPlayer extends AbstractEffect
 			
 			if (target.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneId.JAIL))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());
 				effector.sendPacket(sm);
 				return;
@@ -111,7 +111,7 @@ public class TeleportToPlayer extends AbstractEffect
 			final Instance instance = target.getInstanceWorld();
 			if ((instance != null) && !instance.isPlayerSummonAllowed())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());
 				effector.sendPacket(sm);
 				return;

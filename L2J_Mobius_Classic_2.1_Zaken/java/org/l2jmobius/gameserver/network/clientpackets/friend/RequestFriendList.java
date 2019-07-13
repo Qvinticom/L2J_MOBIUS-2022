@@ -66,13 +66,13 @@ public final class RequestFriendList implements IClientIncomingPacket
 			if ((friend == null) || !friend.isOnline())
 			{
 				// (Currently: Offline)
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
+				sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
 				sm.addString(friendName);
 			}
 			else
 			{
 				// (Currently: Online)
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE);
+				sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE);
 				sm.addString(friendName);
 			}
 			

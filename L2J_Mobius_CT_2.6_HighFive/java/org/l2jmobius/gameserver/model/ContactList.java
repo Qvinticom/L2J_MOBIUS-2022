@@ -107,7 +107,7 @@ public class ContactList
 		}
 		else if (contactId < 1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_NAME_S1_DOESN_T_EXIST_PLEASE_TRY_ANOTHER_NAME);
+			sm = new SystemMessage(SystemMessageId.THE_NAME_S1_DOESN_T_EXIST_PLEASE_TRY_ANOTHER_NAME);
 			sm.addString(name);
 			_player.sendPacket(sm);
 			return false;
@@ -133,7 +133,7 @@ public class ContactList
 			
 			_contacts.add(name);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST);
+			sm = new SystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST);
 			sm.addString(name);
 			_player.sendPacket(sm);
 		}
@@ -168,7 +168,7 @@ public class ContactList
 			statement.setInt(2, contactId);
 			statement.execute();
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
 			sm.addString(name);
 			_player.sendPacket(sm);
 		}

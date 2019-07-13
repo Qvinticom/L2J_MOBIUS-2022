@@ -780,11 +780,11 @@ public abstract class Summon extends Playable
 			
 			if (target.isInvul() && !target.isNpc())
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
+				sm = new SystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
+				sm = new SystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);
@@ -800,7 +800,7 @@ public abstract class Summon extends Playable
 		super.reduceCurrentHp(damage, attacker, skill);
 		if ((_owner != null) && (attacker != null))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 			sm.addNpcName(this);
 			sm.addString(attacker.getName());
 			sm.addInt((int) damage);

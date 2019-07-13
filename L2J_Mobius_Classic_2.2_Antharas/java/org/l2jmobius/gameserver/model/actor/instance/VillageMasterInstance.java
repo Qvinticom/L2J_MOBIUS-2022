@@ -226,7 +226,7 @@ public class VillageMasterInstance extends NpcInstance
 			final ClanMember member = clan.getClanMember(cmdParams);
 			if (member == null)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
 				sm.addString(cmdParams);
 				player.sendPacket(sm);
 				return;
@@ -1008,7 +1008,7 @@ public class VillageMasterInstance extends NpcInstance
 			{
 				if (pledgeType == Clan.SUBUNIT_ACADEMY)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 					sm.addString(clanName);
 					player.sendPacket(sm);
 				}
@@ -1048,22 +1048,22 @@ public class VillageMasterInstance extends NpcInstance
 		SystemMessage sm;
 		if (pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED);
+			sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else if (pledgeType >= Clan.SUBUNIT_KNIGHT1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED);
+			sm = new SystemMessage(SystemMessageId.THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else if (pledgeType >= Clan.SUBUNIT_ROYAL1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED);
+			sm = new SystemMessage(SystemMessageId.THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
+			sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		}
 		player.sendPacket(sm);
 		
@@ -1164,7 +1164,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		clan.broadcastClanStatus();
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
 		sm.addString(leaderName);
 		sm.addString(clanName);
 		clan.broadcastToOnlineMembers(sm);
@@ -1191,7 +1191,7 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			if (player.getClan().getLevel() < 8)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				if (player.getClan().getLevel() < 5)
 				{
 					sm.addInt(5);

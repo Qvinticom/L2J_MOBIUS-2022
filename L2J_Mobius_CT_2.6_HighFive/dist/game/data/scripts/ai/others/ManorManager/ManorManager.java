@@ -125,7 +125,7 @@ public final class ManorManager extends AbstractNpcAI
 			{
 				if (templateId != castleId)
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR).addCastleId(templateId));
+					player.sendPacket(new SystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR).addCastleId(templateId));
 					return;
 				}
 				player.sendPacket(new BuyListSeed(player.getAdena(), castleId));

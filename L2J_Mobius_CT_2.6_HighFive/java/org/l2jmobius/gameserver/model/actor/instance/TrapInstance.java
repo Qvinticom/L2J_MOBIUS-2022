@@ -331,7 +331,7 @@ public final class TrapInstance extends Npc
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
 			sm.addString(this.getName());
 			sm.addString(target.getName());
 			sm.addInt(damage);

@@ -94,7 +94,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		else if (state == 0)
 		{
 			state++;
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THEY_RE_OFF);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THEY_RE_OFF);
 			sm.addInt(0);
 			activeChar.sendPacket(sm);
 			final PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);

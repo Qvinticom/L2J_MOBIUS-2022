@@ -50,7 +50,7 @@ public class RecoGiveTask implements Runnable
 			
 			_player.setRecomLeft(_player.getRecomLeft() + recoToGive);
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
 			sm.addInt(recoToGive);
 			_player.sendPacket(sm);
 			_player.sendPacket(new UserInfo(_player));

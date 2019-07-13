@@ -81,7 +81,7 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 		}
 		else if (_answer == -1) // refused
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			target.sendPacket(sm);
 		}

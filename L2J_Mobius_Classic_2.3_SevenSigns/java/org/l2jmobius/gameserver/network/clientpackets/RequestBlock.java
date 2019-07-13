@@ -69,13 +69,13 @@ public final class RequestBlock implements IClientIncomingPacket
 				{
 					if (_type == BLOCK)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST);
 						sm.addString(FakePlayerData.getInstance().getProperName(_name));
 						player.sendPacket(sm);
 					}
 					else
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_IGNORE_LIST);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_IGNORE_LIST);
 						sm.addString(FakePlayerData.getInstance().getProperName(_name));
 						player.sendPacket(sm);
 					}

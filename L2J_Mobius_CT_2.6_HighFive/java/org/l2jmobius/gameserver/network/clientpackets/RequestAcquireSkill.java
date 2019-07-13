@@ -194,7 +194,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 								return;
 							}
 							
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 							sm.addItemName(item.getId());
 							sm.addLong(item.getCount());
 							player.sendPacket(sm);
@@ -203,7 +203,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 					
 					clan.takeReputationScore(repCost, true);
 					
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addInt(repCost);
 					player.sendPacket(cr);
 					
@@ -258,7 +258,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 						return;
 					}
 					
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(item.getId());
 					sm.addLong(item.getCount());
 					player.sendPacket(sm);
@@ -267,7 +267,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				if (repCost > 0)
 				{
 					clan.takeReputationScore(repCost, true);
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addInt(repCost);
 					player.sendPacket(cr);
 				}
@@ -512,7 +512,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	private void giveSkill(PlayerInstance player, Npc trainer, Skill skill)
 	{
 		// Send message.
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		

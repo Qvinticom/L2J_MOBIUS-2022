@@ -193,7 +193,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_game.broadcastPacket(sm);
 					}
@@ -236,7 +236,7 @@ public final class OlympiadGameTask implements Runnable
 						}
 						else
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 							sm.addInt(_countDown);
 							_stadium.broadcastPacket(sm);
 						}
@@ -260,7 +260,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_stadium.broadcastPacket(sm);
 					}
@@ -293,7 +293,7 @@ public final class OlympiadGameTask implements Runnable
 					{
 						if (announceTime == remaining)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_GAME_WILL_END_IN_S1_SECOND_S);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.THE_GAME_WILL_END_IN_S1_SECOND_S);
 							sm.addInt(announceTime);
 							_stadium.broadcastPacket(sm);
 							break;
@@ -320,7 +320,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
 						_game.broadcastPacket(sm);
 					}
@@ -439,7 +439,7 @@ public final class OlympiadGameTask implements Runnable
 			{
 				// game successfully started
 				_game.broadcastOlympiadInfo(_stadium);
-				_stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
+				_stadium.broadcastPacket(new SystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
 				_stadium.updateZoneStatusForCharactersInside();
 				return true;
 			}

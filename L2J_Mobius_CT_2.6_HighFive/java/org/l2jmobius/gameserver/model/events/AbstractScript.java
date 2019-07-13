@@ -2218,7 +2218,7 @@ public abstract class AbstractScript extends ManagedScript
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
 			smsg.addLong(count);
 			player.sendPacket(smsg);
 		}
@@ -2227,14 +2227,14 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			if (count > 1)
 			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				smsg.addItemName(item);
 				smsg.addLong(count);
 				player.sendPacket(smsg);
 			}
 			else
 			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 				smsg.addItemName(item);
 				player.sendPacket(smsg);
 			}

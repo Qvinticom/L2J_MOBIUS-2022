@@ -114,7 +114,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				// Send message to the master.
 				if (playable.isPet())
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_USES_S1);
 					sm.addSkillName(itemSkill);
 					playable.sendPacket(sm);
 				}
@@ -207,7 +207,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				SystemMessage sm = null;
 				if (hours > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HR_S3_MIN_AND_S4_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HR_S3_MIN_AND_S4_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);
@@ -221,7 +221,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				else if (minutes > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MIN_S3_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MIN_S3_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);
@@ -234,7 +234,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);

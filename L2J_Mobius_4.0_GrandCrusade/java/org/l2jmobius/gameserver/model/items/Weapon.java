@@ -305,7 +305,7 @@ public final class Weapon extends Item
 				}
 				if (caster.isPlayer())
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
 					sm.addSkillName(skill);
 					caster.sendPacket(sm);
 				}

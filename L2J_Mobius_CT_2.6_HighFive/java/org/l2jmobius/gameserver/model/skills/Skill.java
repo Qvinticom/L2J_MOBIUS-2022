@@ -984,7 +984,7 @@ public final class Skill implements IIdentifiable
 		
 		if (creature.isPlayer() && creature.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(_id);
 			creature.sendPacket(sm);
 			return false;
@@ -1005,7 +1005,7 @@ public final class Skill implements IIdentifiable
 				final int msgId = cond.getMessageId();
 				if (msgId != 0)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
+					final SystemMessage sm = new SystemMessage(msgId);
 					if (cond.isAddName())
 					{
 						sm.addSkillName(_id);

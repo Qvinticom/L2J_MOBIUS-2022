@@ -71,7 +71,7 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
 				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
 				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				

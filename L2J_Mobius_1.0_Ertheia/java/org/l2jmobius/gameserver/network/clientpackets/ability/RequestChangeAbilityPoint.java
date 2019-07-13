@@ -80,7 +80,7 @@ public class RequestChangeAbilityPoint implements IClientIncomingPacket
 		final long spRequired = AbilityPointsData.getInstance().getPrice(player.getAbilityPoints());
 		if (spRequired > player.getSp())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S1_SP_TO_CONVERT_TO1_ABILITY_POINT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S1_SP_TO_CONVERT_TO1_ABILITY_POINT);
 			sm.addLong(spRequired);
 			player.sendPacket(sm);
 			return;

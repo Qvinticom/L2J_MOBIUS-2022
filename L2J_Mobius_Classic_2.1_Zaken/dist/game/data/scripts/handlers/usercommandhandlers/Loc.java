@@ -52,7 +52,7 @@ public class Loc implements IUserCommandHandler
 		SystemMessage sm;
 		if (region > 0)
 		{
-			sm = SystemMessage.getSystemMessage(region);
+			sm = new SystemMessage(region);
 			if (sm.getSystemMessageId().getParamCount() == 3)
 			{
 				sm.addInt(player.getX());
@@ -62,7 +62,7 @@ public class Loc implements IUserCommandHandler
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CURRENT_LOCATION_S1);
+			sm = new SystemMessage(SystemMessageId.CURRENT_LOCATION_S1);
 			sm.addString(player.getX() + ", " + player.getY() + ", " + player.getZ());
 		}
 		player.sendPacket(sm);

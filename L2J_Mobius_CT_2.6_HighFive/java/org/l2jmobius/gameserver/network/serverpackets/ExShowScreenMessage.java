@@ -21,8 +21,10 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId.NSLocalisation;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
 /**
  * ExShowScreenMessage server packet implementation.
@@ -42,7 +44,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	private final String _text;
 	private final int _time;
 	private final int _npcString;
-	private List<String> _parameters = null;
+	private List<String> _parameters;
+	// Localisation related.
+	private String _lang;
 	// Positions
 	public static final byte TOP_LEFT = 0x01;
 	public static final byte TOP_CENTER = 0x02;
@@ -52,6 +56,11 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	public static final byte MIDDLE_RIGHT = 0x06;
 	public static final byte BOTTOM_CENTER = 0x07;
 	public static final byte BOTTOM_RIGHT = 0x08;
+	
+	public void setLang(String lang)
+	{
+		_lang = lang;
+	}
 	
 	/**
 	 * Display a String on the screen for a given time.
@@ -227,6 +236,60 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
+		
+		// Localisation related.
+		if (_lang != null)
+		{
+			if (_sysMessageId > -1)
+			{
+				final SystemMessageId sm = SystemMessageId.getSystemMessageId(_sysMessageId);
+				if (sm != null)
+				{
+					final SMLocalisation sml = sm.getLocalisation(_lang);
+					if (sml != null)
+					{
+						packet.writeD(_type);
+						packet.writeD(-1);
+						packet.writeD(_position);
+						packet.writeD(_unk1);
+						packet.writeD(_size);
+						packet.writeD(_unk2);
+						packet.writeD(_unk3);
+						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_time);
+						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(-1);
+						packet.writeS(_parameters != null ? sml.getLocalisation(_parameters) : _text);
+						return true;
+					}
+				}
+			}
+			else if (_npcString > -1)
+			{
+				final NpcStringId ns = NpcStringId.getNpcStringId(_npcString);
+				if (ns != null)
+				{
+					final NSLocalisation nsl = ns.getLocalisation(_lang);
+					if (nsl != null)
+					{
+						packet.writeD(_type);
+						packet.writeD(-1);
+						packet.writeD(_position);
+						packet.writeD(_unk1);
+						packet.writeD(_size);
+						packet.writeD(_unk2);
+						packet.writeD(_unk3);
+						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_time);
+						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(-1);
+						packet.writeS(_parameters != null ? nsl.getLocalisation(_parameters) : _text);
+						return true;
+					}
+				}
+			}
+		}
+		
 		packet.writeD(_type);
 		packet.writeD(_sysMessageId);
 		packet.writeD(_position);
@@ -242,14 +305,11 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 		{
 			packet.writeS(_text);
 		}
-		else
+		else if (_parameters != null)
 		{
-			if (_parameters != null)
+			for (String s : _parameters)
 			{
-				for (String s : _parameters)
-				{
-					packet.writeS(s);
-				}
+				packet.writeS(s);
 			}
 		}
 		return true;

@@ -96,7 +96,7 @@ public final class AnswerJoinPartyRoom implements IClientIncomingPacket
 					}
 					
 					member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
-					member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM).addPcName(player));
+					member.sendPacket(new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM).addPcName(player));
 				}
 				room.addMember(player);
 				

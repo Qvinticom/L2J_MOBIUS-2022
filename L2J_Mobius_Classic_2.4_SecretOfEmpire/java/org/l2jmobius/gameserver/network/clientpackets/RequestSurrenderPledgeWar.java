@@ -82,7 +82,7 @@ public final class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		
 		if (clanWar == null)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_AGAINST_THE_CLAN_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_AGAINST_THE_CLAN_S1);
 			sm.addString(targetClan.getName());
 			player.sendPacket(sm);
 			client.sendPacket(ActionFailed.STATIC_PACKET);

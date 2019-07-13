@@ -219,7 +219,7 @@ public final class RequestPostAttachment implements IClientIncomingPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
 			player.sendPacket(sm);
@@ -249,7 +249,7 @@ public final class RequestPostAttachment implements IClientIncomingPacket
 			if (sender != null)
 			{
 				sender.addAdena("PayMail", adena, player, false);
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
+				sm = new SystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
 				sm.addLong(adena);
 				sm.addString(player.getName());
 				sender.sendPacket(sm);
@@ -265,7 +265,7 @@ public final class RequestPostAttachment implements IClientIncomingPacket
 		}
 		else if (sender != null)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);
+			sm = new SystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);
 			sm.addString(player.getName());
 			sender.sendPacket(sm);
 		}

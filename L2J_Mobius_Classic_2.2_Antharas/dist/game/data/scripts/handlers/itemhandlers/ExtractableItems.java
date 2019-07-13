@@ -224,19 +224,19 @@ public class ExtractableItems implements IItemHandler
 		final SystemMessage sm;
 		if (count > 1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 			sm.addItemName(item);
 			sm.addLong(count);
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
 			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 			sm.addItemName(item);
 		}
 		player.sendPacket(sm);

@@ -57,13 +57,13 @@ public class ChangeAttributeCrystal implements IItemHandler
 		final PlayerInstance player = playable.getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP));
 			return false;
 		}
 		
 		if (ITEM_GRADES.get(item.getId()) == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHANGING_ATTRIBUTES_HAS_BEEN_FAILED));
+			player.sendPacket(new SystemMessage(SystemMessageId.CHANGING_ATTRIBUTES_HAS_BEEN_FAILED));
 			return false;
 		}
 		
@@ -78,7 +78,7 @@ public class ChangeAttributeCrystal implements IItemHandler
 		
 		if (itemList.isEmpty())
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST));
+			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST));
 			return false;
 		}
 		

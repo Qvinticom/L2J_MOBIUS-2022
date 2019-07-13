@@ -143,7 +143,7 @@ public final class TerritoryWardInstance extends Attackable
 			{
 				TerritoryWarManager.getInstance().getTerritoryWard(getId() - 36491).spawnMe();
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_WARD_HAS_BEEN_DESTROYED_C2_NOW_HAS_THE_TERRITORY_WARD);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_S1_WARD_HAS_BEEN_DESTROYED_C2_NOW_HAS_THE_TERRITORY_WARD);
 			sm.addString(getName().replaceAll(" Ward", ""));
 			sm.addPcName((PlayerInstance) killer);
 			TerritoryWarManager.getInstance().announceToParticipants(sm, 0, 0);

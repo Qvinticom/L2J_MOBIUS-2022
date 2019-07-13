@@ -76,7 +76,7 @@ public class PartyInfo implements IUserCommandHandler
 			
 			if (!party.isLeader(player))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LEADER_C1);
 				sm.addPcName(party.getLeader());
 				player.sendPacket(sm);
 			}

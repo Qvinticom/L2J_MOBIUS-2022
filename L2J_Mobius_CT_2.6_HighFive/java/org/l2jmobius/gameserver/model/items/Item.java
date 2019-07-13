@@ -871,7 +871,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 					}
 					else if (msgId != 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
+						final SystemMessage sm = new SystemMessage(msgId);
 						if (preCondition.isAddName())
 						{
 							sm.addItemName(_itemId);

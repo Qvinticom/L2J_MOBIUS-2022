@@ -213,7 +213,7 @@ public class Loto implements IBypassHandler
 			}
 			if (player.getAdena() < price)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				return;
 			}
@@ -223,7 +223,7 @@ public class Loto implements IBypassHandler
 			}
 			Lottery.getInstance().increasePrize(price);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
@@ -321,7 +321,7 @@ public class Loto implements IBypassHandler
 			}
 			final long[] check = Lottery.getInstance().checkTicket(item);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			

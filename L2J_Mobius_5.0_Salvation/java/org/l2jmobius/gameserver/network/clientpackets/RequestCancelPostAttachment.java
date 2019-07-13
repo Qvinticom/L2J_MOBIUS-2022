@@ -188,7 +188,7 @@ public final class RequestCancelPostAttachment implements IClientIncomingPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
 			player.sendPacket(sm);
@@ -209,7 +209,7 @@ public final class RequestCancelPostAttachment implements IClientIncomingPacket
 		final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
 			sm.addString(player.getName());
 			receiver.sendPacket(sm);
 			receiver.sendPacket(new ExChangePostState(true, _msgId, Message.DELETED));

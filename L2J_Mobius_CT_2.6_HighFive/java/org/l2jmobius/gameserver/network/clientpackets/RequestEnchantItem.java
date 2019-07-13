@@ -213,7 +213,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					final int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
 					if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
 						sm.addString(player.getName());
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
@@ -276,14 +276,14 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 						{
 							if (item.getEnchantLevel() > 0)
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
 								player.sendPacket(sm);
 							}
 							else
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 								sm.addItemName(item);
 								player.sendPacket(sm);
 							}
@@ -374,7 +374,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								count = count < 1 ? 1 : count;
 								player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 								sm.addItemName(crystalId);
 								sm.addLong(count);
 								player.sendPacket(sm);

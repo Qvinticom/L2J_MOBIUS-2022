@@ -91,7 +91,7 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
 					sm.addLong(ClanEntryManager.getInstance().getClanLockTime(clan.getId()));
 					player.sendPacket(sm);
 				}
@@ -105,7 +105,7 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
 					sm.addLong(ClanEntryManager.getInstance().getClanLockTime(clan.getId()));
 					player.sendPacket(sm);
 				}

@@ -65,7 +65,7 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 		if (player.getFriendList().contains(requestor.getObjectId()) //
 			|| requestor.getFriendList().contains(player.getObjectId()))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_ON_YOUR_FRIEND_LIST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_ALREADY_ON_YOUR_FRIEND_LIST);
 			sm.addString(player.getName());
 			requestor.sendPacket(sm);
 			return;
@@ -81,17 +81,17 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 				statement.setInt(3, player.getObjectId());
 				statement.setInt(4, requestor.getObjectId());
 				statement.execute();
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
+				SystemMessage msg = new SystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
 				requestor.sendPacket(msg);
 				
 				// Player added to your friend list
-				msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
+				msg = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
 				requestor.getFriendList().add(player.getObjectId());
 				
 				// has joined as friend.
-				msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
+				msg = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
 				msg.addString(requestor.getName());
 				player.sendPacket(msg);
 				player.getFriendList().add(requestor.getObjectId());
@@ -107,7 +107,7 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 			requestor.sendPacket(msg);
 		}
 		

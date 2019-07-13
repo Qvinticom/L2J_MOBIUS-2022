@@ -633,7 +633,7 @@ public class DoorInstance extends Creature
 		
 		if (isFort || isCastle || isHall)
 		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
+			broadcastPacket(new SystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
 		}
 		
 		return true;

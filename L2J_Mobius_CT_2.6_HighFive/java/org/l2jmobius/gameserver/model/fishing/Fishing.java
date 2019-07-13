@@ -247,12 +247,12 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Reeling is successful, Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
+				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				if (pen > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
+					sm = new SystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
 					sm.addInt(pen);
 					_fisher.sendPacket(sm);
 				}
@@ -262,7 +262,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Reeling failed, Damage: $s1
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -272,7 +272,7 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Reeling failed, Damage: $s1
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
 			sm.addInt(dmg);
 			_fisher.sendPacket(sm);
 			_goodUse = 2;
@@ -281,12 +281,12 @@ public class Fishing implements Runnable
 		else
 		{
 			// Reeling is successful, Damage: $s1
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
 			sm.addInt(dmg);
 			_fisher.sendPacket(sm);
 			if (pen > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
+				sm = new SystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
 				sm.addInt(pen);
 				_fisher.sendPacket(sm);
 			}
@@ -314,12 +314,12 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Pumping is successful. Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
+				SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				if (pen > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
+					sm = new SystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
 					sm.addInt(pen);
 					_fisher.sendPacket(sm);
 				}
@@ -329,7 +329,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Pumping failed, Regained: $s1
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -339,7 +339,7 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Pumping failed, Regained: $s1
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
 			sm.addInt(dmg);
 			_fisher.sendPacket(sm);
 			_goodUse = 2;
@@ -348,12 +348,12 @@ public class Fishing implements Runnable
 		else
 		{
 			// Pumping is successful. Damage: $s1
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
 			sm.addInt(dmg);
 			_fisher.sendPacket(sm);
 			if (pen > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
+				sm = new SystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1);
 				sm.addInt(pen);
 				_fisher.sendPacket(sm);
 			}

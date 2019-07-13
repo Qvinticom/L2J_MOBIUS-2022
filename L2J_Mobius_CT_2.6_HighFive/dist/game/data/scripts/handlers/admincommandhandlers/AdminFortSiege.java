@@ -89,7 +89,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 				{
 					if (fort.getSiege().addAttacker(player, false) == 4)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
 						sm.addCastleId(fort.getResidenceId());
 						player.sendPacket(sm);
 					}

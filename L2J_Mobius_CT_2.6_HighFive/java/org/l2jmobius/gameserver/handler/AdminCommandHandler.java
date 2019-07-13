@@ -106,7 +106,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		{
 			player.setAdminConfirmCmd(fullCommand);
 			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1_3);
-			dlg.addString("Are you sure you want execute command '" + commandNoPrefix + "' ?");
+			dlg.getSystemMessage().addString("Are you sure you want execute command '" + commandNoPrefix + "' ?");
 			player.addAction(PlayerAction.ADMIN_COMMAND);
 			player.sendPacket(dlg);
 		}

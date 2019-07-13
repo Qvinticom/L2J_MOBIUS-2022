@@ -193,7 +193,7 @@ public final class Evolve
 		
 		// deleting old pet item
 		final ItemInstance removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);
 		

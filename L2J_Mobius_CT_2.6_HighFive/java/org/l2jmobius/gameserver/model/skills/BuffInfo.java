@@ -240,7 +240,7 @@ public final class BuffInfo
 		// When effects are initialized, the successfully landed.
 		if (_effected.isPlayer() && !_skill.isPassive())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 			sm.addSkillName(_skill);
 			_effected.sendPacket(sm);
 		}
@@ -357,7 +357,7 @@ public final class BuffInfo
 			
 			if (smId != null)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(smId);
+				final SystemMessage sm = new SystemMessage(smId);
 				sm.addSkillName(_skill);
 				_effected.sendPacket(sm);
 			}

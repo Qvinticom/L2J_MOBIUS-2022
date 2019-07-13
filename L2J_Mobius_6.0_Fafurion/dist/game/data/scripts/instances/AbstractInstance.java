@@ -112,7 +112,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		{
 			if (instance.getTemplateId() != templateId)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
+				player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
 				return;
 			}
 			onEnter(player, instance, false);
@@ -155,14 +155,14 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				if (getPlayerInstance(member) != null)
 				{
-					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(p.getName())));
+					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(p.getName())));
 					return;
 				}
 				
 				// Check if any player from the group has already finished the instance
 				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0)
 				{
-					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
+					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
 					return;
 				}
 			}

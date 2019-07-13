@@ -191,7 +191,7 @@ public final class GameTimeController extends Thread
 			_shadowSenseCharacters.add(creature);
 			if (isNight())
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
 				msg.addSkillName(SHADOW_SENSE_ID);
 				creature.sendPacket(msg);
 			}
@@ -205,7 +205,7 @@ public final class GameTimeController extends Thread
 	
 	private void notifyShadowSense()
 	{
-		final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
+		final SystemMessage msg = new SystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
 		msg.addSkillName(SHADOW_SENSE_ID);
 		for (Creature creature : _shadowSenseCharacters)
 		{

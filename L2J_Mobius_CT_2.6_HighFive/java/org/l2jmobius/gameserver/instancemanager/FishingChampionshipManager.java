@@ -137,7 +137,7 @@ public class FishingChampionshipManager
 			len += Rnd.get(0, 3000) / 1000.;
 		}
 		
-		pl.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAUGHT_A_FISH_S1_IN_LENGTH).addString(String.valueOf(len)));
+		pl.sendPacket(new SystemMessage(SystemMessageId.YOU_CAUGHT_A_FISH_S1_IN_LENGTH).addString(String.valueOf(len)));
 		
 		if (_tmpPlayers.size() < 5)
 		{

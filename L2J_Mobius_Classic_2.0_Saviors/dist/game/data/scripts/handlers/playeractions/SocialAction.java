@@ -124,7 +124,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (FakePlayerData.getInstance().isTalkable(target.getName()))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			if (!player.isProcessingRequest())
@@ -151,7 +151,7 @@ public final class SocialAction implements IPlayerActionHandler
 		SystemMessage sm;
 		if (player.isInStoreMode() || player.isCrafting())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -159,7 +159,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isInCombat() || player.isInDuel() || AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -173,7 +173,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.getReputation() < 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -181,7 +181,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -189,7 +189,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isInSiege())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -197,14 +197,14 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isInHideoutSiege())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_CLAN_HALL_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_CLAN_HALL_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 		}
 		
 		if (player.isMounted() || player.isFlyingMounted() || player.isInBoat() || player.isInAirShip())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -212,7 +212,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isTransformed())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -220,7 +220,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isAlikeDead())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return;
@@ -230,7 +230,7 @@ public final class SocialAction implements IPlayerActionHandler
 		final PlayerInstance partner = target.getActingPlayer();
 		if (partner.isInStoreMode() || partner.isCrafting())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -238,7 +238,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isInCombat() || partner.isInDuel() || AttackStanceTaskManager.getInstance().hasAttackStanceTask(partner))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -246,7 +246,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.getMultiSociaAction() > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -254,7 +254,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isFishing())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_FISHING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_FISHING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -262,7 +262,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.getReputation() < 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -270,7 +270,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isInOlympiadMode())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -278,7 +278,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isInHideoutSiege())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_CLAN_HALL_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_CLAN_HALL_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -286,7 +286,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isInSiege())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -294,7 +294,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isMounted() || partner.isFlyingMounted() || partner.isInBoat() || partner.isInAirShip())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -302,7 +302,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isTeleporting())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -310,7 +310,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isTransformed())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -318,7 +318,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (partner.isAlikeDead())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
 			player.sendPacket(sm);
 			return;
@@ -331,7 +331,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 		
 		player.setMultiSocialAction(id, partner.getObjectId());
-		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
 		sm.addPcName(partner);
 		player.sendPacket(sm);
 		

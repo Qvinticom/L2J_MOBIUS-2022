@@ -72,7 +72,7 @@ public class MotherTreeZone extends ZoneType
 			creature.setInsideZone(ZoneId.MOTHER_TREE, true);
 			if (_enterMsg != 0)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
+				player.sendPacket(new SystemMessage(_enterMsg));
 			}
 		}
 	}
@@ -86,7 +86,7 @@ public class MotherTreeZone extends ZoneType
 			player.setInsideZone(ZoneId.MOTHER_TREE, false);
 			if (_leaveMsg != 0)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));
+				player.sendPacket(new SystemMessage(_leaveMsg));
 			}
 		}
 	}

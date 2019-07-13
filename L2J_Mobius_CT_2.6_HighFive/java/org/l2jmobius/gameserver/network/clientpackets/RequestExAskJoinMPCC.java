@@ -79,7 +79,7 @@ public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 						// targets party already in a CChannel?
 						if (target.getParty().isInCommandChannel())
 						{
-							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
+							sm = new SystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
 							sm.addString(target.getName());
 							player.sendPacket(sm);
 						}
@@ -99,7 +99,7 @@ public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 				else if (activeParty.isInCommandChannel() && !activeParty.getCommandChannel().getLeader().equals(player))
 				{
 					// in CC, but not the CCLeader
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
+					sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
 					player.sendPacket(sm);
 				}
 				else
@@ -110,7 +110,7 @@ public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 						// targets party already in a CChannel?
 						if (target.getParty().isInCommandChannel())
 						{
-							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
+							sm = new SystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
 							sm.addString(target.getName());
 							player.sendPacket(sm);
 						}
@@ -166,7 +166,7 @@ public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 		if (!targetLeader.isProcessingRequest())
 		{
 			requestor.onTransactionRequest(targetLeader);
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_INVITING_YOU_TO_A_COMMAND_CHANNEL_DO_YOU_ACCEPT);
+			sm = new SystemMessage(SystemMessageId.C1_IS_INVITING_YOU_TO_A_COMMAND_CHANNEL_DO_YOU_ACCEPT);
 			sm.addString(requestor.getName());
 			targetLeader.sendPacket(sm);
 			targetLeader.sendPacket(new ExAskJoinMPCC(requestor.getName()));
@@ -175,7 +175,7 @@ public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			sm = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(targetLeader.getName());
 			requestor.sendPacket(sm);
 		}

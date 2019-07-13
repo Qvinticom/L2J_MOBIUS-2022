@@ -809,7 +809,7 @@ public final class Instance
 		{
 			timeLeft = remaining / 60000;
 			interval = 300000;
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
 			Broadcast.toPlayersInInstance(sm, _id);
 			remaining -= 300000;
@@ -818,7 +818,7 @@ public final class Instance
 		{
 			timeLeft = remaining / 60000;
 			interval = 60000;
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
 			Broadcast.toPlayersInInstance(sm, _id);
 			remaining -= 60000;
@@ -885,7 +885,7 @@ public final class Instance
 		if (!player.isOnEvent() && (_ejectTime > 0))
 		{
 			// Send message
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
 			sm.addInt(_ejectTime / 60 / 1000);
 			player.sendPacket(sm);
 			

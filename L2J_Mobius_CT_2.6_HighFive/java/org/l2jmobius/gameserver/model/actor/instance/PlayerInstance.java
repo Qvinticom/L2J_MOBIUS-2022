@@ -2110,12 +2110,12 @@ public final class PlayerInstance extends Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(item.getEnchantLevel());
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 			}
 			sm.addItemName(item);
 			sendPacket(sm);
@@ -2139,12 +2139,12 @@ public final class PlayerInstance extends Playable
 			{
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
+					sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 				}
 				sm.addItemName(item);
 				sendPacket(sm);
@@ -2257,7 +2257,7 @@ public final class PlayerInstance extends Playable
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
 				msg.addPcName(this);
 				_clan.broadcastToOnlineMembers(msg);
 				_clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -2935,7 +2935,7 @@ public final class PlayerInstance extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
 			sm.addLong(count);
 			sendPacket(sm);
 		}
@@ -3000,7 +3000,7 @@ public final class PlayerInstance extends Playable
 			
 			if (sendMessage)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
 				sm.addLong(count);
 				sendPacket(sm);
 			}
@@ -3020,7 +3020,7 @@ public final class PlayerInstance extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 			sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 			sm.addLong(count);
 			sendPacket(sm);
@@ -3089,13 +3089,13 @@ public final class PlayerInstance extends Playable
 				final SystemMessage sm;
 				if (count > 1)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+					sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 					sm.addLong(count);
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+					sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 					sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 				}
 				sendPacket(sm);
@@ -3122,19 +3122,19 @@ public final class PlayerInstance extends Playable
 				final SystemMessage sm;
 				if (item.getCount() > 1)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					sm.addItemName(item);
 					sm.addLong(item.getCount());
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 					sm.addItemName(item);
 				}
 				sendPacket(sm);
@@ -3176,7 +3176,7 @@ public final class PlayerInstance extends Playable
 				if (FortSiegeManager.getInstance().activateCombatFlag(this, item))
 				{
 					final Fort fort = FortManager.getInstance().getFort(this);
-					fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
+					fort.getSiege().announceToPlayer(new SystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
 				}
 			}
 			// Territory Ward
@@ -3217,14 +3217,14 @@ public final class PlayerInstance extends Playable
 				{
 					if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);
 					}
 					else
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);
@@ -3234,13 +3234,13 @@ public final class PlayerInstance extends Playable
 				{
 					if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 						sm.addItemName(itemId);
 						sendPacket(sm);
 					}
 					else
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 						sm.addItemName(itemId);
 						sendPacket(sm);
 					}
@@ -3358,13 +3358,13 @@ public final class PlayerInstance extends Playable
 			final SystemMessage sm;
 			if (count > 1)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(item);
 				sm.addLong(count);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(item);
 			}
 			sendPacket(sm);
@@ -3474,13 +3474,13 @@ public final class PlayerInstance extends Playable
 			final SystemMessage sm;
 			if (count > 1)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(itemId);
 				sm.addLong(count);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(itemId);
 			}
 			sendPacket(sm);
@@ -3698,7 +3698,7 @@ public final class PlayerInstance extends Playable
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
 			sm.addItemName(item);
 			sendPacket(sm);
 		}
@@ -3787,7 +3787,7 @@ public final class PlayerInstance extends Playable
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
 			sm.addItemName(item);
 			sendPacket(sm);
 		}
@@ -3950,7 +3950,7 @@ public final class PlayerInstance extends Playable
 		// Check if the spell using charges or not in AirShip
 		if ((_charges.get() < skill.getChargeConsume()) || (isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP)))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);
 			sendPacket(sm);
 			return false;
@@ -4223,7 +4223,7 @@ public final class PlayerInstance extends Playable
 	@Override
 	public void sendPacket(SystemMessageId id)
 	{
-		sendPacket(SystemMessage.getSystemMessage(id));
+		sendPacket(new SystemMessage(id));
 	}
 	
 	/**
@@ -4350,7 +4350,7 @@ public final class PlayerInstance extends Playable
 			if (!target.getDropProtection().tryPickUp(this))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+				smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 				smsg.addItemName(target);
 				sendPacket(smsg);
 				return;
@@ -4372,18 +4372,18 @@ public final class PlayerInstance extends Playable
 			{
 				if (target.getId() == Inventory.ADENA_ID)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
 					smsg.addLong(target.getCount());
 				}
 				else if (target.getCount() > 1)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
 					smsg.addItemName(target);
 					smsg.addLong(target.getCount());
 				}
 				else
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 					smsg.addItemName(target);
 				}
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -4440,13 +4440,13 @@ public final class PlayerInstance extends Playable
 			{
 				if (target.getEnchantLevel() > 0)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
+					smsg = new SystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
 					smsg.addPcName(this);
 					smsg.addInt(target.getEnchantLevel());
 				}
 				else
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
+					smsg = new SystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
 					smsg.addPcName(this);
 				}
 				smsg.addItemName(target.getId());
@@ -4520,7 +4520,7 @@ public final class PlayerInstance extends Playable
 			{
 				if (Util.checkIfInRange(creature.getMinShopDistance(), this, creature, true))
 				{
-					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
+					sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
 					return false;
 				}
 			}
@@ -4634,7 +4634,7 @@ public final class PlayerInstance extends Playable
 		if (_transformation != null)
 		{
 			// You already polymorphed and cannot polymorph again.
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 			sendPacket(msg);
 			return;
 		}
@@ -5059,7 +5059,7 @@ public final class PlayerInstance extends Playable
 						msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1);
 							sm.addString(msg);
 							Broadcast.toAllOnlinePlayers(sm);
 						}
@@ -5073,7 +5073,7 @@ public final class PlayerInstance extends Playable
 						msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1);
 							sm.addString(msg);
 							Broadcast.toAllOnlinePlayers(sm);
 						}
@@ -5832,7 +5832,7 @@ public final class PlayerInstance extends Playable
 		_activeTradeList = new TradeList(this);
 		_activeTradeList.setPartner(partner);
 		
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1);
 		msg.addPcName(partner);
 		sendPacket(msg);
 		sendPacket(new TradeStart(this));
@@ -5840,7 +5840,7 @@ public final class PlayerInstance extends Playable
 	
 	public void onTradeConfirm(PlayerInstance partner)
 	{
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CONFIRMED_THE_TRADE);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_CONFIRMED_THE_TRADE);
 		msg.addPcName(partner);
 		sendPacket(msg);
 		sendPacket(TradeOtherDone.STATIC_PACKET);
@@ -5857,7 +5857,7 @@ public final class PlayerInstance extends Playable
 		_activeTradeList = null;
 		
 		sendPacket(new TradeDone(0));
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CANCELLED_THE_TRADE);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_CANCELLED_THE_TRADE);
 		msg.addPcName(partner);
 		sendPacket(msg);
 	}
@@ -6215,12 +6215,12 @@ public final class PlayerInstance extends Playable
 			final SystemMessage sm;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(unequiped[0].getEnchantLevel());
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 			}
 			sm.addItemName(unequiped[0]);
 			sendPacket(sm);
@@ -6254,12 +6254,12 @@ public final class PlayerInstance extends Playable
 				SystemMessage sm = null;
 				if (unequiped[0].getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addInt(unequiped[0].getEnchantLevel());
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 				}
 				sm.addItemName(unequiped[0]);
 				sendPacket(sm);
@@ -8085,7 +8085,7 @@ public final class PlayerInstance extends Playable
 		_inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
 		reduceAdena("Henna", henna.getCancelFee(), this, false);
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(henna.getDyeItemId());
 		sm.addLong(henna.getCancelCount());
 		sendPacket(sm);
@@ -8321,7 +8321,7 @@ public final class PlayerInstance extends Playable
 			
 			if (isInParty())
 			{
-				_party.broadcastPacket(SystemMessage.sendString(getName() + " has been removed from the upcoming Festival."));
+				_party.broadcastPacket(new SystemMessage(getName() + " has been removed from the upcoming Festival."));
 			}
 		}
 		
@@ -8746,20 +8746,20 @@ public final class PlayerInstance extends Playable
 				final int seconds = remainingTime % 60;
 				if (hours > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 					sm.addInt(minutes);
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 				}
 				
@@ -8767,7 +8767,7 @@ public final class PlayerInstance extends Playable
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
+				sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 				sm.addSkillName(skill);
 			}
 			
@@ -9455,7 +9455,7 @@ public final class PlayerInstance extends Playable
 			removeAutoSoulShot(itemId);
 			sendPacket(new ExAutoSoulShot(itemId, 0));
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
 			return true;
@@ -9471,7 +9471,7 @@ public final class PlayerInstance extends Playable
 		for (int itemId : _activeSoulShots)
 		{
 			sendPacket(new ExAutoSoulShot(itemId, 0));
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
 		}
@@ -9552,7 +9552,7 @@ public final class PlayerInstance extends Playable
 	@Override
 	public void sendMessage(String message)
 	{
-		sendPacket(SystemMessage.sendString(message));
+		sendPacket(new SystemMessage(message));
 	}
 	
 	public void enterObserverMode(Location loc)
@@ -9909,7 +9909,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public SystemMessage getNoDuelReason()
 	{
-		final SystemMessage sm = SystemMessage.getSystemMessage(_noDuelReason);
+		final SystemMessage sm = new SystemMessage(_noDuelReason);
 		sm.addPcName(this);
 		_noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
 		return sm;
@@ -10756,8 +10756,8 @@ public final class PlayerInstance extends Playable
 				return;
 			}
 			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_MAKING_AN_ATTEMPT_TO_RESURRECT_YOU_IF_YOU_CHOOSE_THIS_PATH_S2_EXPERIENCE_POINTS_WILL_BE_RETURNED_TO_YOU_DO_YOU_WANT_TO_BE_RESURRECTED.getId());
-			dlg.addPcName(reviver);
-			dlg.addString(Integer.toString(restoreExp));
+			dlg.getSystemMessage().addPcName(reviver);
+			dlg.getSystemMessage().addString(Integer.toString(restoreExp));
 			sendPacket(dlg);
 		}
 	}
@@ -12344,7 +12344,7 @@ public final class PlayerInstance extends Playable
 	public void increaseSouls(int count)
 	{
 		_souls += count;
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
 		sm.addInt(count);
 		sm.addInt(_souls);
 		sendPacket(sm);
@@ -12481,7 +12481,7 @@ public final class PlayerInstance extends Playable
 		_deathPenaltyBuffLevel++;
 		addSkill(SkillData.getInstance().getSkill(5076, getDeathPenaltyBuffLevel()), false);
 		sendPacket(new EtcStatusUpdate(this));
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
 		sm.addInt(_deathPenaltyBuffLevel);
 		sendPacket(sm);
 	}
@@ -12506,7 +12506,7 @@ public final class PlayerInstance extends Playable
 		{
 			addSkill(SkillData.getInstance().getSkill(5076, getDeathPenaltyBuffLevel()), false);
 			sendPacket(new EtcStatusUpdate(this));
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
 			sm.addInt(_deathPenaltyBuffLevel);
 			sendPacket(sm);
 		}
@@ -12539,12 +12539,12 @@ public final class PlayerInstance extends Playable
 		{
 			if (target.isPlayer())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 				sm.addPcName(target.getActingPlayer());
 				sm.addString(getName());
 				target.sendPacket(sm);
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
 			sm.addPcName(this);
 			sendPacket(sm);
 			return;
@@ -12553,7 +12553,7 @@ public final class PlayerInstance extends Playable
 		// Check if hit is critical
 		if (pcrit)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
 			sm.addPcName(this);
 			sendPacket(sm);
 		}
@@ -12571,16 +12571,16 @@ public final class PlayerInstance extends Playable
 		
 		if (target.isInvul() && !target.isNpc())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
+			sm = new SystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 		}
 		else if (target.isDoor() || (target instanceof ControlTowerInstance))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
+			sm = new SystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
 			sm.addInt(damage);
 		}
 		else if (this != target)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
+			sm = new SystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
 			sm.addPcName(this);
 			sm.addString(target.getName());
 			sm.addInt(damage);
@@ -12653,12 +12653,12 @@ public final class PlayerInstance extends Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addInt(equippedItem.getEnchantLevel());
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 				}
 				sm.addItemName(equippedItem);
 				sendPacket(sm);
@@ -12875,7 +12875,7 @@ public final class PlayerInstance extends Playable
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1);
 			sm.addInt(_charges.get());
 			sendPacket(sm);
 		}
@@ -12997,7 +12997,7 @@ public final class PlayerInstance extends Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
 			return;
 		}
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(13016);
 		sendPacket(sm);
 		
@@ -13075,7 +13075,7 @@ public final class PlayerInstance extends Playable
 			return false;
 		}
 		/*
-		 * TODO: Instant Zone still not implemented else if (isInsideZone(ZoneId.INSTANT)) { sendPacket(SystemMessage.getSystemMessage(2357)); return; }
+		 * TODO: Instant Zone still not implemented else if (isInsideZone(ZoneId.INSTANT)) { sendPacket(new SystemMessage(2357)); return; }
 		 */
 		else
 		{
@@ -13114,7 +13114,7 @@ public final class PlayerInstance extends Playable
 		
 		destroyItem("Consume", _inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(20033);
 		sendPacket(sm);
 		
@@ -13631,7 +13631,7 @@ public final class PlayerInstance extends Playable
 			if ((_fallingDamage > 0) && !isInvul())
 			{
 				reduceCurrentHp(Math.min(_fallingDamage, getCurrentHp() - 1), null, false, true, null);
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
 				sm.addInt(_fallingDamage);
 				sendPacket(sm);
 			}

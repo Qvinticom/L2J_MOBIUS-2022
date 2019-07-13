@@ -47,7 +47,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
+			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
 			sm.addString(name);
 			player.sendPacket(sm);
 			player.onTransactionResponse();
@@ -84,7 +84,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 				}
 				else
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 					msg.addString(player.getTarget().getName());
 					player.sendPacket(msg);
 				}

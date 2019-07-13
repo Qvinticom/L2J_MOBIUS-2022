@@ -94,7 +94,7 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 		final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
 		if (sender != null)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
 			sm.addString(player.getName());
 			sender.sendPacket(sm);
 		}

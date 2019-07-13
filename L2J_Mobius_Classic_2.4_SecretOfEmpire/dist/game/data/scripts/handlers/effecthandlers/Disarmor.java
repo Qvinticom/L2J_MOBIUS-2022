@@ -81,13 +81,13 @@ public final class Disarmor extends AbstractEffect
 			SystemMessage sm = null;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(unequiped[0].getEnchantLevel());
 				sm.addItemName(unequiped[0]);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 				sm.addItemName(unequiped[0]);
 			}
 			player.sendPacket(sm);
@@ -123,13 +123,13 @@ public final class Disarmor extends AbstractEffect
 				{
 					if (item.getEnchantLevel() > 0)
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
+						sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 					}
 					else
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+						sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 						sm.addItemName(item);
 					}
 					player.sendPacket(sm);

@@ -321,7 +321,7 @@ public final class MultisellData implements IXmlReader
 			case CLAN_REPUTATION:
 			{
 				player.getClan().takeReputationScore((int) amount, true);
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 				smsg.addLong(amount);
 				player.sendPacket(smsg);
 				return true;

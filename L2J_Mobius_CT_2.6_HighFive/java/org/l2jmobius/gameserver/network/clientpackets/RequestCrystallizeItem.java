@@ -186,13 +186,13 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 				sm.addItemName(itemToRemove);
 			}
 			player.sendPacket(sm);
@@ -210,11 +210,11 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		final int crystalAmount = itemToRemove.getCrystalCount();
 		final ItemInstance createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, player);
 		
-		sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_CRYSTALLIZED);
+		sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_CRYSTALLIZED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);
 		
-		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(createditem);
 		sm.addLong(crystalAmount);
 		player.sendPacket(sm);

@@ -95,7 +95,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 							
 							// start the auto soulshot use
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 							sm.addItemName(item);
 							player.sendPacket(sm);
 							
@@ -131,7 +131,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 						}
 						
 						// start the auto soulshot use
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 						sm.addItemName(item);
 						player.sendPacket(sm);
 						
@@ -145,7 +145,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 				player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 				
 				// cancel the auto soulshot use
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addItemName(item);
 				player.sendPacket(sm);
 			}

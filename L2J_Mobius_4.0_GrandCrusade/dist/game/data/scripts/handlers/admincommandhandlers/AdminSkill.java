@@ -317,7 +317,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (!player.isClanLeader())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 			sm.addString(player.getName());
 			activeChar.sendPacket(sm);
 		}
@@ -595,7 +595,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final PlayerInstance player = target.getActingPlayer();
 		if (!player.isClanLeader())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 			sm.addString(player.getName());
 			activeChar.sendPacket(sm);
 			showMainPage(activeChar);
@@ -616,7 +616,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final String skillname = skill.getName();
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		final Clan clan = player.getClan();

@@ -572,7 +572,7 @@ public class LoginServerThread extends Thread
 			{
 				ACCOUNTING_LOGGER.info("Kicked by login, " + client);
 			}
-			client.close(SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
+			client.close(new SystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 		}
 		sendLogout(account);
 	}

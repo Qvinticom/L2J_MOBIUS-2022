@@ -130,11 +130,11 @@ public final class DenOfEvil extends AbstractNpcAI
 		if (skillLevel == 3) // 3+1=4
 		{
 			ThreadPool.schedule(new KashaDestruction(zone), 2 * 60 * 1000);
-			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE));
+			zone.broadcastPacket(new SystemMessage(SystemMessageId.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE));
 		}
 		else if (skillLevel == 2)
 		{
-			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.I_CAN_FEEL_THAT_THE_ENERGY_BEING_FLOWN_IN_THE_KASHA_S_EYE_IS_GETTING_STRONGER_RAPIDLY));
+			zone.broadcastPacket(new SystemMessage(SystemMessageId.I_CAN_FEEL_THAT_THE_ENERGY_BEING_FLOWN_IN_THE_KASHA_S_EYE_IS_GETTING_STRONGER_RAPIDLY));
 		}
 		return super.onSpawn(npc);
 	}

@@ -428,7 +428,7 @@ public class ServitorInstance extends Summon implements Runnable
 			{
 				if (destroyItemByItemId("Consume", _itemConsume.getId(), _itemConsume.getCount(), this, false))
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.A_SUMMONED_MONSTER_USES_S1);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.A_SUMMONED_MONSTER_USES_S1);
 					msg.addItemName(_itemConsume.getId());
 					sendPacket(msg);
 					

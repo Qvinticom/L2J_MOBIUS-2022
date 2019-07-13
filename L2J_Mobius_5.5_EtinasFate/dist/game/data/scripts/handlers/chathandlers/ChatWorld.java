@@ -61,7 +61,7 @@ public final class ChatWorld implements IChatHandler
 		
 		if (activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1);
 			msg.addInt(Config.WORLD_CHAT_MIN_LEVEL);
 			activeChar.sendPacket(msg);
 		}
@@ -87,7 +87,7 @@ public final class ChatWorld implements IChatHandler
 				if ((instant != null) && instant.isAfter(now))
 				{
 					final Duration timeDiff = Duration.between(now, instant);
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_SEC_UNTIL_YOU_ARE_ABLE_TO_USE_WORLD_CHAT);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_S1_SEC_UNTIL_YOU_ARE_ABLE_TO_USE_WORLD_CHAT);
 					msg.addInt((int) timeDiff.getSeconds());
 					activeChar.sendPacket(msg);
 					return;

@@ -128,7 +128,7 @@ public final class CHSiegeManager
 		}
 		else if (hall.isWaitingBattle())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
 			sm.addString(hall.getName());
 			player.sendPacket(sm);
 		}

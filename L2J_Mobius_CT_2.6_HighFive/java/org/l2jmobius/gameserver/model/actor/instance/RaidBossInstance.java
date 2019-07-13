@@ -66,7 +66,7 @@ public class RaidBossInstance extends MonsterInstance
 		final PlayerInstance player = killer.getActingPlayer();
 		if (player != null)
 		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+			broadcastPacket(new SystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			if (player.getParty() != null)
 			{
 				for (PlayerInstance member : player.getParty().getMembers())

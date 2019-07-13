@@ -154,7 +154,7 @@ public final class RequestExEnchantSkillSafe implements IClientIncomingPacket
 				
 				player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 				sm.addSkillName(_skillId);
 				player.sendPacket(sm);
 			}
@@ -165,7 +165,7 @@ public final class RequestExEnchantSkillSafe implements IClientIncomingPacket
 					LOGGER_ENCHANT.log(Level.INFO, "Safe Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", Skill:" + skill + ", SPB:" + spb + ", Rate:" + rate);
 				}
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED);
 				sm.addSkillName(_skillId);
 				player.sendPacket(sm);
 				player.sendPacket(ExEnchantSkillResult.valueOf(false));
@@ -181,7 +181,7 @@ public final class RequestExEnchantSkillSafe implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 			player.sendPacket(sm);
 		}
 	}

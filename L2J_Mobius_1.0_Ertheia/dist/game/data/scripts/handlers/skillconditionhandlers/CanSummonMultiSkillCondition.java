@@ -69,7 +69,7 @@ public class CanSummonMultiSkillCondition implements ISkillCondition
 		}
 		else if ((player.getSummonPoints() + _summonPoints) > player.getMaxSummonPoints())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_THE_S1_SKILL_DUE_TO_INSUFFICIENT_SUMMON_POINTS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THE_S1_SKILL_DUE_TO_INSUFFICIENT_SUMMON_POINTS);
 			sm.addSkillName(skill);
 			player.sendPacket(sm);
 			canSummon = false;

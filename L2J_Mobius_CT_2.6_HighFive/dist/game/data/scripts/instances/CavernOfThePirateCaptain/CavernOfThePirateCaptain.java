@@ -256,7 +256,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	
 	private void broadcastSystemMessage(PlayerInstance player, PlayerInstance member, SystemMessageId msgId, boolean toGroup)
 	{
-		final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
+		final SystemMessage sm = new SystemMessage(msgId);
 		
 		if (toGroup)
 		{

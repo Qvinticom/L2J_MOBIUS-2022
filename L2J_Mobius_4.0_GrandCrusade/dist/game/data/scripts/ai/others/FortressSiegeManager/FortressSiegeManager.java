@@ -142,7 +142,7 @@ public final class FortressSiegeManager extends AbstractNpcAI
 							}
 							case 4:
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
 								sm.addString(npc.getFort().getName());
 								player.sendPacket(sm);
 								htmltext = "FortressSiegeManager-05.html";

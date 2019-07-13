@@ -17792,6 +17792,7 @@ public final class NpcStringId
 	static
 	{
 		buildFastLookupTable();
+		loadLocalisations();
 	}
 	
 	private static void buildFastLookupTable()
@@ -17867,7 +17868,7 @@ public final class NpcStringId
 		}
 	}
 	
-	public static void reloadLocalisations()
+	public static void loadLocalisations()
 	{
 		for (NpcStringId nsId : VALUES.values())
 		{
@@ -17877,13 +17878,13 @@ public final class NpcStringId
 			}
 		}
 		
-		if (!Config.MULTILANG_NS_ENABLE)
+		if (!Config.MULTILANG_ENABLE)
 		{
 			LOGGER.log(Level.INFO, "NpcStringId: MultiLanguage disabled.");
 			return;
 		}
 		
-		final List<String> languages = Config.MULTILANG_NS_ALLOWED;
+		final List<String> languages = Config.MULTILANG_ALLOWED;
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
@@ -17896,7 +17897,7 @@ public final class NpcStringId
 		String text;
 		for (String lang : languages)
 		{
-			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/ns/NpcStringLocalisation.xml");
+			file = new File("data/lang/" + lang + "/NpcStringLocalisation.xml");
 			if (!file.isFile())
 			{
 				continue;
@@ -17913,40 +17914,35 @@ public final class NpcStringId
 					{
 						for (Node nb = na.getFirstChild(); nb != null; nb = nb.getNextSibling())
 						{
-							if ("ns".equals(nb.getNodeName()))
+							if ("localisation".equals(nb.getNodeName()))
 							{
 								nnmb = nb.getAttributes();
 								node = nnmb.getNamedItem("id");
 								if (node != null)
 								{
 									nsId = getNpcStringId(Integer.parseInt(node.getNodeValue()));
+									if (nsId == null)
+									{
+										LOGGER.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+										continue;
+									}
+									
+									node = nnmb.getNamedItem("text");
+									if (node == null)
+									{
+										LOGGER.log(Level.WARNING, "NpcStringId: No text defined for NSID '" + nsId + "', lang '" + lang + "'.");
+										continue;
+									}
+									
+									text = node.getNodeValue();
+									if (text.isEmpty() || (text.length() > 255))
+									{
+										LOGGER.log(Level.WARNING, "NpcStringId: Invalid text defined for NSID '" + nsId + "' (to long or empty), lang '" + lang + "'.");
+										continue;
+									}
+									
+									nsId.attachLocalizedText(lang, text);
 								}
-								else
-								{
-									node = nnmb.getNamedItem("name");
-									nsId = getNpcStringId(node.getNodeValue());
-								}
-								if (nsId == null)
-								{
-									LOGGER.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-									continue;
-								}
-								
-								node = nnmb.getNamedItem("text");
-								if (node == null)
-								{
-									LOGGER.log(Level.WARNING, "NpcStringId: No text defined for NSID '" + nsId + "', lang '" + lang + "'.");
-									continue;
-								}
-								
-								text = node.getNodeValue();
-								if (text.isEmpty() || (text.length() > 255))
-								{
-									LOGGER.log(Level.WARNING, "NpcStringId: Invalid text defined for NSID '" + nsId + "' (to long or empty), lang '" + lang + "'.");
-									continue;
-								}
-								
-								nsId.attachLocalizedText(lang, text);
 							}
 						}
 					}

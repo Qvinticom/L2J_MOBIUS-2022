@@ -54,7 +54,7 @@ public final class ChatTrade implements IChatHandler
 		}
 		if (activeChar.getLevel() < 20)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_USE_TRADE_CHAT_AFTER_LV_S1).addInt(20));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.PLAYERS_CAN_USE_TRADE_CHAT_AFTER_LV_S1).addInt(20));
 			return;
 		}
 		

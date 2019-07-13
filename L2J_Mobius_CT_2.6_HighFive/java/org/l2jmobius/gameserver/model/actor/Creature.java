@@ -1856,12 +1856,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				case 2046: // Wolf Collar
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET);
+					sm = new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET);
 					break;
 				}
 				default:
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.USE_S1);
+					sm = new SystemMessage(SystemMessageId.USE_S1);
 					sm.addSkillName(skill);
 					break;
 				}
@@ -2011,7 +2011,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			if (!canCast)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
 				sendPacket(sm);
 				return false;
@@ -2057,7 +2057,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				// Checked: when a summon skill failed, server show required consume item count
 				if (skill.hasEffectType(EffectType.SUMMON))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
 					sm.addItemName(skill.getItemConsumeId());
 					sm.addInt(skill.getItemConsumeCount());
 					sendPacket(sm);
@@ -6223,7 +6223,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if (miss && target.isPlayer())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 			sm.addPcName(target.getActingPlayer());
 			sm.addString(getName());
 			target.sendPacket(sm);

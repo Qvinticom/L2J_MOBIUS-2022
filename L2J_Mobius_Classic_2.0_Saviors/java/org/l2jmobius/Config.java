@@ -2937,13 +2937,13 @@ public final class Config
 			// Load MultilingualSupport config file (if exists)
 			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
 			
-			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
+			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en").toLowerCase();
 			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
 			final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
 			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
-				MULTILANG_ALLOWED.add(lang);
+				MULTILANG_ALLOWED.add(lang.toLowerCase());
 			}
 			if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT))
 			{

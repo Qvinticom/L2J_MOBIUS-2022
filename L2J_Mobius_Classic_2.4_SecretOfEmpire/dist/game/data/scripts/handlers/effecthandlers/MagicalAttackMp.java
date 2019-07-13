@@ -66,7 +66,7 @@ public final class MagicalAttackMp extends AbstractEffect
 			}
 			if (effected.isPlayer())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_DRAIN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_C2_S_DRAIN);
 				sm.addString(effected.getName());
 				sm.addString(effector.getName());
 				effected.sendPacket(sm);
@@ -111,7 +111,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		
 		if (effected.isPlayer())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
 			sm.addString(effector.getName());
 			sm.addInt((int) mp);
 			effected.sendPacket(sm);
@@ -119,7 +119,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		
 		if (effector.isPlayer())
 		{
-			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
+			final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 			sm2.addInt((int) mp);
 			effector.sendPacket(sm2);
 		}

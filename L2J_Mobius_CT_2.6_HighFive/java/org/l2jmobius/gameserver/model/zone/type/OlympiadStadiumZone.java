@@ -223,7 +223,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 		
 		final boolean battleStarted = getSettings().getOlympiadTask().isBattleStarted();
-		final SystemMessage sm = battleStarted ? SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE) : SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+		final SystemMessage sm = battleStarted ? new SystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE) : new SystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)

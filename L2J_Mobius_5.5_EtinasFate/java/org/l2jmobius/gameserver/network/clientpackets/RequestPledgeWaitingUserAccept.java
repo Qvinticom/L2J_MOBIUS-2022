@@ -74,7 +74,7 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 				target.setClanPrivileges(target.getClan().getRankPrivs(target.getPowerGrade()));
 				target.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
 				sm.addString(target.getName());
 				clan.broadcastToOnlineMembers(sm);
 				

@@ -84,11 +84,11 @@ public final class Lethal extends AbstractEffect
 		// Calculate instant kill resistance first.
 		if (Rnd.get(100) < effected.getStat().getValue(Stats.INSTANT_KILL_RESIST, 0))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 			sm.addString(effected.getName());
 			sm.addString(effector.getName());
 			effected.sendPacket(sm);
-			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
+			final SystemMessage sm2 = new SystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
 			sm2.addString(effector.getName());
 			effector.sendPacket(sm2);
 		}

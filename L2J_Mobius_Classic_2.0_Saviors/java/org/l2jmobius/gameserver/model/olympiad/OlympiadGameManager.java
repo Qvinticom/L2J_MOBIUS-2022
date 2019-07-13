@@ -156,7 +156,7 @@ public class OlympiadGameManager implements Runnable
 						final PlayerInstance noble = World.getInstance().getPlayer(id);
 						if (noble != null)
 						{
-							noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
+							noble.sendPacket(new SystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
 						}
 					}
 					
@@ -172,7 +172,7 @@ public class OlympiadGameManager implements Runnable
 							final PlayerInstance noble = World.getInstance().getPlayer(id);
 							if (noble != null)
 							{
-								noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
+								noble.sendPacket(new SystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
 							}
 						}
 					}

@@ -243,14 +243,14 @@ public final class BuffInfo
 			{
 				if (!_hideStartMessage && !_skill.isAura())
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 					sm.addSkillName(_skill);
 					_effected.sendPacket(sm);
 				}
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(_skill.isToggle() ? SystemMessageId.S1_HAS_BEEN_ABORTED : SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
+				final SystemMessage sm = new SystemMessage(_skill.isToggle() ? SystemMessageId.S1_HAS_BEEN_ABORTED : SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
 				sm.addSkillName(_skill);
 				_effected.sendPacket(sm);
 			}
@@ -309,7 +309,7 @@ public final class BuffInfo
 		// When effects are initialized, the successfully landed.
 		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMessages() && !_skill.isAura())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 			sm.addSkillName(_skill);
 			_effected.sendPacket(sm);
 		}
@@ -417,7 +417,7 @@ public final class BuffInfo
 			
 			if ((smId != null) && (_effected.getActingPlayer() != null) && _effected.getActingPlayer().isOnline())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(smId);
+				final SystemMessage sm = new SystemMessage(smId);
 				sm.addSkillName(_skill);
 				_effected.sendPacket(sm);
 			}

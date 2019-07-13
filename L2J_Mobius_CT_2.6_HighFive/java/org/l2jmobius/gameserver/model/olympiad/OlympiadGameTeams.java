@@ -691,7 +691,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			{
 				if (tTwoCrash && !tOneCrash)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+					sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 					sm.addString(_teamOne[0].getName());
 					stadium.broadcastPacket(sm);
 					
@@ -722,7 +722,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				}
 				else if (tOneCrash && !tTwoCrash)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+					sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 					sm.addString(_teamTwo[0].getName());
 					stadium.broadcastPacket(sm);
 					
@@ -753,7 +753,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				}
 				else if (tOneCrash && tTwoCrash)
 				{
-					stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
+					stadium.broadcastPacket(new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
 					
 					for (int i = _teamOneSize; --i >= 0;)
 					{
@@ -843,7 +843,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			
 			if (((teamTwoHp == 0) && (teamOneHp != 0)) || ((_damageT1 > _damageT2) && (teamTwoHp != 0) && (teamOneHp != 0)))
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_teamOne[0].getName());
 				stadium.broadcastPacket(sm);
 				
@@ -874,7 +874,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else if (((teamOneHp == 0) && (teamTwoHp != 0)) || ((_damageT2 > _damageT1) && (teamOneHp != 0) && (teamTwoHp != 0)))
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_teamTwo[0].getName());
 				stadium.broadcastPacket(sm);
 				
@@ -905,7 +905,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
+				stadium.broadcastPacket(new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
 				
 				for (int i = 0; i < _teamOneSize; i++)
 				{

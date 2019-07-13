@@ -136,7 +136,7 @@ public abstract class Condition
 		// Send system message if condition has any
 		if (_systemMsg != null)
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(_systemMsg);
+			final SystemMessage msg = new SystemMessage(_systemMsg);
 			if (_systemMsgParams != null)
 			{
 				_systemMsgParams.accept(msg, member);

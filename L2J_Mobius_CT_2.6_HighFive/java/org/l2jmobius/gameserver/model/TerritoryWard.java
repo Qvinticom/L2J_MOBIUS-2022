@@ -150,7 +150,7 @@ public class TerritoryWard
 			_item = item;
 		}
 		_player.getInventory().equipItem(_item);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 		sm.addItemName(_item);
 		_player.sendPacket(sm);
 		

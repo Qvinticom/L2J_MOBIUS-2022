@@ -374,7 +374,7 @@ public final class Fort extends AbstractResidence
 			return false;
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED);
 		sm.addCastleId(getResidenceId());
 		getSiege().announceToPlayer(sm);
 		
@@ -402,7 +402,7 @@ public final class Fort extends AbstractResidence
 		// if clan already have castle, don't store him in fortress
 		if (clan.getCastleId() > 0)
 		{
-			getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_REBEL_ARMY_RECAPTURED_THE_FORTRESS));
+			getSiege().announceToPlayer(new SystemMessage(SystemMessageId.THE_REBEL_ARMY_RECAPTURED_THE_FORTRESS));
 			return false;
 		}
 		
@@ -804,7 +804,7 @@ public final class Fort extends AbstractResidence
 			if (clan != null)
 			{
 				clan.setFortId(getResidenceId()); // Set has fort flag for new owner
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
 				sm.addString(clan.getName());
 				sm.addCastleId(getResidenceId());
 				World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));

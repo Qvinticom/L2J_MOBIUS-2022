@@ -160,7 +160,7 @@ public class VillageMasterInstance extends NpcInstance
 			final ClanMember member = clan.getClanMember(cmdParams);
 			if (member == null)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
 				sm.addString(cmdParams);
 				player.sendPacket(sm);
 				return;

@@ -180,7 +180,7 @@ public final class TrainingCamp extends AbstractNpcAI
 							final long spGained = (long) (Config.TRAINING_CAMP_SP_MULTIPLIER * (expGained / 250L));
 							player.addExpAndSp(expGained, spGained);
 							
-							final SystemMessage sysMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_COMPLETED_TRAINING_IN_THE_ROYAL_TRAINING_CAMP_AND_OBTAINED_S1_XP_AND_S2_SP);
+							final SystemMessage sysMsg = new SystemMessage(SystemMessageId.YOU_HAVE_COMPLETED_TRAINING_IN_THE_ROYAL_TRAINING_CAMP_AND_OBTAINED_S1_XP_AND_S2_SP);
 							sysMsg.addLong(expGained);
 							sysMsg.addLong(spGained);
 							player.sendPacket(sysMsg);
@@ -230,13 +230,13 @@ public final class TrainingCamp extends AbstractNpcAI
 	{
 		if (player.getLevel() <= Config.TRAINING_CAMP_MIN_LEVEL)
 		{
-			final SystemMessage sysMsg = SystemMessage.getSystemMessage(SystemMessageId.LV_S1_OR_ABOVE).addInt(Config.TRAINING_CAMP_MIN_LEVEL);
+			final SystemMessage sysMsg = new SystemMessage(SystemMessageId.LV_S1_OR_ABOVE).addInt(Config.TRAINING_CAMP_MIN_LEVEL);
 			player.sendPacket(sysMsg);
 			return false;
 		}
 		else if (player.getLevel() >= Config.TRAINING_CAMP_MAX_LEVEL)
 		{
-			final SystemMessage sysMsg = SystemMessage.getSystemMessage(SystemMessageId.LV_S1_OR_BELOW).addInt(Config.TRAINING_CAMP_MAX_LEVEL);
+			final SystemMessage sysMsg = new SystemMessage(SystemMessageId.LV_S1_OR_BELOW).addInt(Config.TRAINING_CAMP_MAX_LEVEL);
 			player.sendPacket(sysMsg);
 			return false;
 		}

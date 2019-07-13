@@ -162,7 +162,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			final long rewardItemCount = i.getPrice() / rewardPrice;
 			if (rewardItemCount < 1)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
 				sm.addItemName(i.getId());
 				sm.addLong(i.getCount());
 				player.sendPacket(sm);
@@ -173,12 +173,12 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			final long fee = (castleId == i.getManorId()) ? 0 : ((long) (i.getPrice() * 0.05));
 			if ((fee != 0) && (player.getAdena() < fee))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
+				SystemMessage sm = new SystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
 				sm.addItemName(i.getId());
 				sm.addLong(i.getCount());
 				player.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				continue;
 			}

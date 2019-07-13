@@ -443,7 +443,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			{
 				if (_pTwoCrash && !_pOneCrash)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+					sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 					sm.addString(_playerOne.getName());
 					stadium.broadcastPacket(sm);
 					
@@ -469,7 +469,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				}
 				else if (_pOneCrash && !_pTwoCrash)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+					sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 					sm.addString(_playerTwo.getName());
 					stadium.broadcastPacket(sm);
 					
@@ -494,7 +494,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				}
 				else if (_pOneCrash && _pTwoCrash)
 				{
-					stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
+					stadium.broadcastPacket(new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
 					
 					_playerOne.updateStat(COMP_LOST, 1);
 					removePointsFromParticipant(_playerOne, pointDiff);
@@ -576,12 +576,12 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			{
 				_playerOne.updateStat(COMP_DRAWN, 1);
 				_playerTwo.updateStat(COMP_DRAWN, 1);
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+				sm = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 			}
 			else if ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerOne.getName());
 				stadium.broadcastPacket(sm);
 				
@@ -606,7 +606,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerTwo.getName());
 				stadium.broadcastPacket(sm);
 				
@@ -634,7 +634,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 0, _startTime, _fightTime, getType());
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+				sm = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 				
 				int value = Math.min(playerOnePoints / getDivider(), Config.ALT_OLY_MAX_POINTS);

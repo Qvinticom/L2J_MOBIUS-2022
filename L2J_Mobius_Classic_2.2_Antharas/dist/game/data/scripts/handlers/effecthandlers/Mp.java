@@ -88,12 +88,12 @@ public final class Mp extends AbstractEffect
 			SystemMessage sm;
 			if (effector.getObjectId() != effected.getObjectId())
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1);
+				sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1);
 				sm.addString(effector.getName());
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
+				sm = new SystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
 			}
 			sm.addInt((int) amount);
 			effected.sendPacket(sm);

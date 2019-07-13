@@ -1011,7 +1011,7 @@ public class Attackable extends Npc
 				// Broadcast message if RaidBoss was defeated
 				if (_isRaid && !_isRaidMinion && (drop.getCount() > 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2);
 					sm.addString(getName());
 					sm.addItemName(item);
 					sm.addLong(drop.getCount());

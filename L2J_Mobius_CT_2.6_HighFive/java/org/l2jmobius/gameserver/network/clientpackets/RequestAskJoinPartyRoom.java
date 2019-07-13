@@ -59,7 +59,7 @@ public class RequestAskJoinPartyRoom implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(target));
+				player.sendPacket(new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(target));
 			}
 		}
 		else

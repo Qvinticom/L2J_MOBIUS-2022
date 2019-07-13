@@ -59,7 +59,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 				canResurrect = false;
 				if (caster.isPlayer())
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
 					caster.sendPacket(msg);
 				}
@@ -90,7 +90,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 				canResurrect = false;
 				if (caster.isPlayer())
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
 					caster.sendPacket(msg);
 				}

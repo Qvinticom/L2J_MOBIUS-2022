@@ -320,7 +320,7 @@ public class Fishing
 					final long sp = (long) (Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier);
 					_player.addExpAndSp(xp, sp, true);
 					_player.getInventory().addItem("Fishing Reward", fishingCatchData.getItemId(), 1, _player, null);
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					msg.addItemName(fishingCatchData.getItemId());
 					_player.sendPacket(msg);
 					_player.unchargeShot(ShotType.FISH_SOULSHOTS);

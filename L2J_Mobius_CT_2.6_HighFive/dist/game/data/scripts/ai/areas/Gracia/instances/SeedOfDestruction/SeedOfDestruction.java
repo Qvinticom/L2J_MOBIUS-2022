@@ -824,37 +824,37 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 		if (player.getParty() == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 			return false;
 		}
 		final CommandChannel channel = player.getParty().getCommandChannel();
 		if (channel == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 			return false;
 		}
 		else if (channel.getLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+			player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 			return false;
 		}
 		else if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 			return false;
 		}
 		for (PlayerInstance channelMember : channel.getMembers())
 		{
 			if (channelMember.getLevel() < Config.MIN_TIAT_LEVEL)
 			{
-				final SystemMessage sm = (SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
+				final SystemMessage sm = (new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 				sm.addPcName(channelMember);
 				channel.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, channelMember, true))
 			{
-				final SystemMessage sm = (SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED));
+				final SystemMessage sm = (new SystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED));
 				sm.addPcName(channelMember);
 				channel.broadcastPacket(sm);
 				return false;
@@ -862,7 +862,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), INSTANCE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				final SystemMessage sm = (SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET));
+				final SystemMessage sm = (new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET));
 				sm.addPcName(channelMember);
 				channel.broadcastPacket(sm);
 				return false;
@@ -891,7 +891,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		final int inst = checkworld(player);
 		if (inst == 0)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 			return 0;
 		}
 		else if (inst == 1)
@@ -1154,7 +1154,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_REFRESHED_EVERYTHING_APPEARS_CLEAR);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_REFRESHED_EVERYTHING_APPEARS_CLEAR);
 		sm.addString(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
 		
 		// set instance reenter time for all allowed players

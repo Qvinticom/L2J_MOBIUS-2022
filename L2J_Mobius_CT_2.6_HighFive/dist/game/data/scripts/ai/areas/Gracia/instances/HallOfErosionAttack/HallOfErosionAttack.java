@@ -266,7 +266,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		
 		if ((party.getCommandChannel().getMembers().size() < Config.EROSION_ATTACK_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.EROSION_ATTACK_MAX_PLAYERS))// 18 27
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 			party.getCommandChannel().broadcastPacket(sm);
 			return false;
 		}
@@ -275,7 +275,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2097);
+				final SystemMessage sm = new SystemMessage(2097);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -283,7 +283,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2096);
+				final SystemMessage sm = new SystemMessage(2096);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -292,7 +292,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(2100);
+				final SystemMessage sm = new SystemMessage(2100);
 				sm.addPcName(partyMember);
 				party.getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -301,7 +301,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final QuestState qs = partyMember.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
 			if ((qs == null) || !qs.isCond(1))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				player.getParty().getCommandChannel().broadcastPacket(sm);
 				return false;
@@ -485,7 +485,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				final Calendar reenter = Calendar.getInstance();
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
 				for (PlayerInstance player : tmpworld.getAllowed())
@@ -610,7 +610,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			}
 			reenter.set(Calendar.HOUR_OF_DAY, 6);
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addInstanceName(INSTANCEID);
 			
 			for (PlayerInstance plr : world.getAllowed())

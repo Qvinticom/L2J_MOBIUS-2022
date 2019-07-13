@@ -261,7 +261,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 			case "count_down":
 			{
 				final int time = params.getInt("time", 0);
-				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_ARENA_IN_S1_SEC);
+				final SystemMessage countdown = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_ARENA_IN_S1_SEC);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				

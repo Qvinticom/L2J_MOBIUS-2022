@@ -43,7 +43,7 @@ public class AdminMessages implements IAdminCommandHandler
 		{
 			try
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(Integer.parseInt(command.substring(10).trim())));
+				activeChar.sendPacket(new SystemMessage(Integer.parseInt(command.substring(10).trim())));
 				return true;
 			}
 			catch (Exception e)
@@ -60,7 +60,7 @@ public class AdminMessages implements IAdminCommandHandler
 				return false;
 			}
 			
-			final SystemMessage sm = SystemMessage.getSystemMessage(Integer.parseInt(tokens[1]));
+			final SystemMessage sm = new SystemMessage(Integer.parseInt(tokens[1]));
 			String val;
 			int lastPos = 0;
 			for (int i = 2; i < tokens.length; i++)

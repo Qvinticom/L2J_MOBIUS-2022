@@ -67,7 +67,7 @@ public final class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
 		player.sendPacket(msg);
 		ClanTable.getInstance().deleteClanWars(_clan.getId(), clan.getId());
@@ -82,7 +82,7 @@ public final class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		//
 		// if (leader.isTransactionInProgress())
 		// {
-		// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
+		// SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
 		// sm.addString(leader.getName());
 		// player.sendPacket(sm);
 		// return;

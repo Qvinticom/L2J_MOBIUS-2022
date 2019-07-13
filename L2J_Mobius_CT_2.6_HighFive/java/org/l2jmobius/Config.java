@@ -1222,10 +1222,6 @@ public final class Config
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static String MULTILANG_DEFAULT;
 	public static boolean MULTILANG_VOICED_ALLOW;
-	public static boolean MULTILANG_SM_ENABLE;
-	public static List<String> MULTILANG_SM_ALLOWED = new ArrayList<>();
-	public static boolean MULTILANG_NS_ENABLE;
-	public static List<String> MULTILANG_NS_ALLOWED = new ArrayList<>();
 	public static boolean L2WALKER_PROTECTION;
 	public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
@@ -2862,39 +2858,19 @@ public final class Config
 			// Load MultilingualSupport config file (if exists)
 			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
 			
-			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
+			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en").toLowerCase();
 			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
-			String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
+			final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
 			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
-				MULTILANG_ALLOWED.add(lang);
+				MULTILANG_ALLOWED.add(lang.toLowerCase());
 			}
 			if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT))
 			{
 				LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
 			}
 			MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
-			MULTILANG_SM_ENABLE = MultilingualSupport.getBoolean("MultiLangSystemMessageEnable", false);
-			allowed = MultilingualSupport.getString("MultiLangSystemMessageAllowed", "").split(";");
-			MULTILANG_SM_ALLOWED = new ArrayList<>(allowed.length);
-			for (String lang : allowed)
-			{
-				if (!lang.isEmpty())
-				{
-					MULTILANG_SM_ALLOWED.add(lang);
-				}
-			}
-			MULTILANG_NS_ENABLE = MultilingualSupport.getBoolean("MultiLangNpcStringEnable", false);
-			allowed = MultilingualSupport.getString("MultiLangNpcStringAllowed", "").split(";");
-			MULTILANG_NS_ALLOWED = new ArrayList<>(allowed.length);
-			for (String lang : allowed)
-			{
-				if (!lang.isEmpty())
-				{
-					MULTILANG_NS_ALLOWED.add(lang);
-				}
-			}
 			
 			// Load OfflineTrade config file (if exists)
 			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
@@ -2908,8 +2884,8 @@ public final class Config
 			OFFLINE_FAME = OfflineTrade.getBoolean("OfflineFame", true);
 			RESTORE_OFFLINERS = OfflineTrade.getBoolean("RestoreOffliners", false);
 			OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
-			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
 			OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
+			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
 			
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);

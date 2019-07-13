@@ -93,7 +93,7 @@ public class RequestVipAttendanceCheck implements IClientIncomingPacket
 			// Add items to player.
 			player.addItem("Attendance Reward", reward, player, true);
 			// Send message.
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_RECEIVED_YOUR_VIP_ATTENDANCE_REWARD_FOR_DAY_S1);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_VE_RECEIVED_YOUR_VIP_ATTENDANCE_REWARD_FOR_DAY_S1);
 			msg.addInt(rewardIndex + 1);
 			player.sendPacket(msg);
 			// Send confirm packet.

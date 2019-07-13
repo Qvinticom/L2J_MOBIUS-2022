@@ -60,7 +60,7 @@ public final class RequestFriendDel implements IClientIncomingPacket
 		
 		if (id == -1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
+			sm = new SystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			return;
@@ -68,7 +68,7 @@ public final class RequestFriendDel implements IClientIncomingPacket
 		
 		if (!player.getFriendList().contains(id))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
+			sm = new SystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			return;
@@ -84,7 +84,7 @@ public final class RequestFriendDel implements IClientIncomingPacket
 			statement.execute();
 			
 			// Player deleted from your friend list
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST_2);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST_2);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			

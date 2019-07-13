@@ -230,7 +230,7 @@ public final class BabyPetInstance extends PetInstance
 		setTarget(getOwner());
 		useMagic(skill, false, false);
 		
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_PET_USES_S1);
 		msg.addSkillName(skill);
 		sendPacket(msg);
 		

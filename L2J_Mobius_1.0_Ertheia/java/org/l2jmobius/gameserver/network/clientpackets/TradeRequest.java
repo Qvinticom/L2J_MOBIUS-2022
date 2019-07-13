@@ -54,7 +54,7 @@ public final class TradeRequest implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
 			sm.addString(name);
 			player.sendPacket(sm);
 			player.onTransactionResponse();
@@ -121,12 +121,12 @@ public final class TradeRequest implements IClientIncomingPacket
 			}
 			if (!npcInRange)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 				return;
 			}
 			if (!player.isProcessingRequest())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
 				sm.addString(name);
 				player.sendPacket(sm);
 				ThreadPool.schedule(() -> scheduleDeny(player, name), 10000);
@@ -159,7 +159,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			{
 				if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
 					sm.addString(partner.getName());
 					client.sendPacket(sm);
 					client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -202,7 +202,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		SystemMessage sm;
 		if (partner.isProcessingRequest() || partner.isProcessingTransaction())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			sm = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(partner.getName());
 			client.sendPacket(sm);
 			return;
@@ -216,7 +216,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		
 		if (BlockList.isBlocked(partner, player))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
+			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(partner.getName());
 			client.sendPacket(sm);
 			return;
@@ -230,7 +230,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		
 		player.onTransactionRequest(partner);
 		partner.sendPacket(new SendTradeRequest(player.getObjectId()));
-		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
 		sm.addString(partner.getName());
 		client.sendPacket(sm);
 	}

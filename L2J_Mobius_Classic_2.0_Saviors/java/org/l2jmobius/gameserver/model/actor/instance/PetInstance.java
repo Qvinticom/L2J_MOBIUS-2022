@@ -186,7 +186,7 @@ public class PetInstance extends Summon
 					final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
 					if (handler != null)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
 						sm.addItemName(food.getId());
 						sendPacket(sm);
 						handler.useItem(PetInstance.this, food, false);
@@ -408,14 +408,14 @@ public class PetInstance extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sendPacket(sm);
 			}
@@ -455,14 +455,14 @@ public class PetInstance extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sendPacket(sm);
 			}
@@ -496,7 +496,7 @@ public class PetInstance extends Summon
 		// Cursed weapons
 		if (CursedWeaponsManager.getInstance().isCursed(target.getId()))
 		{
-			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getId());
 			sendPacket(smsg);
 			return;
@@ -520,7 +520,7 @@ public class PetInstance extends Summon
 			if (!target.getDropProtection().tryPickUp(this))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+				smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 				smsg.addItemName(target);
 				sendPacket(smsg);
 				return;
@@ -537,18 +537,18 @@ public class PetInstance extends Summon
 			{
 				if (target.getId() == Inventory.ADENA_ID)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
 					smsg.addLong(target.getCount());
 				}
 				else if (target.getCount() > 1)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
 					smsg.addItemName(target);
 					smsg.addLong(target.getCount());
 				}
 				else
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 					smsg.addItemName(target);
 				}
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -590,27 +590,27 @@ public class PetInstance extends Summon
 		{
 			if (target.getId() == Inventory.ADENA_ID)
 			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA);
+				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA);
 				smsg.addLong(target.getCount());
 				sendPacket(smsg);
 			}
 			else if (target.getEnchantLevel() > 0)
 			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_S2);
+				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_S2);
 				smsg.addInt(target.getEnchantLevel());
 				smsg.addItemName(target);
 				sendPacket(smsg);
 			}
 			else if (target.getCount() > 1)
 			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
+				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
 				smsg.addLong(target.getCount());
 				smsg.addItemName(target);
 				sendPacket(smsg);
 			}
 			else
 			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1);
+				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1);
 				smsg.addItemName(target);
 				sendPacket(smsg);
 			}
@@ -757,7 +757,7 @@ public class PetInstance extends Summon
 				removedItem = owner.getInventory().destroyItem("PetDestroy", _controlObjectId, 1, getOwner(), this);
 				if (removedItem != null)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 					sm.addItemName(removedItem);
 					owner.sendPacket(sm);
 				}

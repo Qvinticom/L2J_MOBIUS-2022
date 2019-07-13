@@ -110,7 +110,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	private static final int STARSTONE = 13277;
 	private static final int SUMMON_COST = 5;
 	
-	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DON_T_HAVE_ENOUGH_S1).addItemName(STARSTONE);
+	private static final SystemMessage SM_NEED_MORE = new SystemMessage(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DON_T_HAVE_ENOUGH_S1).addItemName(STARSTONE);
 	
 	public AirShipController()
 	{

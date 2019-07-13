@@ -71,7 +71,7 @@ public final class MessageDeletionTask implements Runnable
 				final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
 				if (receiver != null)
 				{
-					receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
+					receiver.sendPacket(new SystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
 				}
 			}
 			catch (Exception e)

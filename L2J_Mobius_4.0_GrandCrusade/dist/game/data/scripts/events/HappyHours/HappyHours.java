@@ -80,7 +80,7 @@ public class HappyHours extends LongTimeEvent
 					{
 						_lastRewardTime = System.currentTimeMillis();
 						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
-						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBIS_COINS);
+						final SystemMessage systemMsg = new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBIS_COINS);
 						systemMsg.addInt(20);
 						for (PlayerInstance plr : World.getInstance().getPlayers())
 						{

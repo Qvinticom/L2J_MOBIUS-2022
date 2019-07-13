@@ -23,6 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId.NSLocalisation;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -36,6 +37,7 @@ public final class NpcSay implements IClientOutgoingPacket
 	private String _text;
 	private final int _npcString;
 	private List<String> _parameters;
+	private String _lang;
 	
 	/**
 	 * @param objectId
@@ -115,6 +117,11 @@ public final class NpcSay implements IClientOutgoingPacket
 		return this;
 	}
 	
+	public void setLang(String lang)
+	{
+		_lang = lang;
+	}
+	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
@@ -123,6 +130,23 @@ public final class NpcSay implements IClientOutgoingPacket
 		packet.writeD(_objectId);
 		packet.writeD(_textType.getClientId());
 		packet.writeD(_npcId);
+		
+		// Localisation related.
+		if (_lang != null)
+		{
+			final NpcStringId ns = NpcStringId.getNpcStringId(_npcString);
+			if (ns != null)
+			{
+				final NSLocalisation nsl = ns.getLocalisation(_lang);
+				if (nsl != null)
+				{
+					packet.writeD(-1);
+					packet.writeS(nsl.getLocalisation(_parameters));
+					return true;
+				}
+			}
+		}
+		
 		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{

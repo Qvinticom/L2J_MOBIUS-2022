@@ -461,7 +461,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		client.sendPacket(new FriendList(player));
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(player.getName());
 		for (int id : player.getFriendList())
 		{
@@ -608,7 +608,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		else if (birthday != -1)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
+			sm = new SystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
 			sm.addString(Integer.toString(birthday));
 			player.sendPacket(sm);
 		}
@@ -684,7 +684,7 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
 			
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
 			msg.addString(player.getName());
 			clan.broadcastToOtherOnlineMembers(msg, player);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
@@ -701,7 +701,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				sponsor.sendPacket(msg);
 			}
@@ -711,7 +711,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice != null)
 			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				apprentice.sendPacket(msg);
 			}

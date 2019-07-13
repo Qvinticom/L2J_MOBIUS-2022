@@ -263,7 +263,7 @@ public final class Castle extends AbstractResidence
 			return;
 		}
 		setOwner(clan);
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCESSFULLY_ENGRAVED_THE_HOLY_ARTIFACT);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCESSFULLY_ENGRAVED_THE_HOLY_ARTIFACT);
 		msg.addString(clan.getName());
 		getSiege().announceToPlayer(msg, true);
 	}

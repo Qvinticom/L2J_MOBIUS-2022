@@ -64,7 +64,7 @@ public final class PartyMatchingRoom extends MatchingRoom
 		});
 		
 		// Send SystemMessage to others player
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 		sm.addPcName(player);
 		getMembers().stream().filter(p -> p != player).forEach(sm::sendTo);
 		
@@ -76,7 +76,7 @@ public final class PartyMatchingRoom extends MatchingRoom
 	@Override
 	protected void notifyRemovedMember(PlayerInstance player, boolean kicked, boolean leaderChanged)
 	{
-		final SystemMessage sm = SystemMessage.getSystemMessage(kicked ? SystemMessageId.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
+		final SystemMessage sm = new SystemMessage(kicked ? SystemMessageId.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
 		sm.addPcName(player);
 		
 		getMembers().forEach(p ->
@@ -87,7 +87,7 @@ public final class PartyMatchingRoom extends MatchingRoom
 			p.sendPacket(SystemMessageId.THE_LEADER_OF_THE_PARTY_ROOM_HAS_CHANGED);
 		});
 		
-		final SystemMessage sm2 = SystemMessage.getSystemMessage(kicked ? SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
+		final SystemMessage sm2 = new SystemMessage(kicked ? SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 		player.sendPacket(sm2);
 		player.sendPacket(ExClosePartyRoom.STATIC_PACKET);
 	}

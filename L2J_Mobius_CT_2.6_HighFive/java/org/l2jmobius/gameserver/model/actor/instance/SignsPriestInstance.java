@@ -118,7 +118,7 @@ public class SignsPriestInstance extends Npc
 					}
 					player.getInventory().addItem("SevenSigns", SevenSigns.RECORD_SEVEN_SIGNS_ID, 1, player, this);
 					
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					sm.addItemName(SevenSigns.RECORD_SEVEN_SIGNS_ID);
 					player.sendPacket(sm);
 					
@@ -380,7 +380,7 @@ public class SignsPriestInstance extends Npc
 						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContrib, this, false))
 						{
 							contribStonesFound = true;
-							final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 							msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
 							msg.addLong(redContrib);
 							player.sendPacket(msg);
@@ -391,7 +391,7 @@ public class SignsPriestInstance extends Npc
 						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContrib, this, false))
 						{
 							contribStonesFound = true;
-							final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 							msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
 							msg.addLong(greenContrib);
 							player.sendPacket(msg);
@@ -402,7 +402,7 @@ public class SignsPriestInstance extends Npc
 						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContrib, this, false))
 						{
 							contribStonesFound = true;
-							final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 							msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
 							msg.addLong(blueContrib);
 							player.sendPacket(msg);
@@ -423,7 +423,7 @@ public class SignsPriestInstance extends Npc
 					else
 					{
 						score = SevenSigns.getInstance().addPlayerStoneContrib(player.getObjectId(), blueContrib, greenContrib, redContrib);
-						sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
+						sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
 						sm.addLong(score);
 						player.sendPacket(sm);
 						
@@ -523,7 +523,7 @@ public class SignsPriestInstance extends Npc
 									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContribCount, this, false))
 									{
 										stonesFound = true;
-										final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 										msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
 										msg.addLong(redContribCount);
 										player.sendPacket(msg);
@@ -534,7 +534,7 @@ public class SignsPriestInstance extends Npc
 									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
 									{
 										stonesFound = true;
-										final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 										msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
 										msg.addLong(greenContribCount);
 										player.sendPacket(msg);
@@ -545,7 +545,7 @@ public class SignsPriestInstance extends Npc
 									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
 									{
 										stonesFound = true;
-										final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 										msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
 										msg.addLong(blueContribCount);
 										player.sendPacket(msg);
@@ -566,7 +566,7 @@ public class SignsPriestInstance extends Npc
 								else
 								{
 									contribScore = SevenSigns.getInstance().addPlayerStoneContrib(player.getObjectId(), blueContribCount, greenContribCount, redContribCount);
-									sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
+									sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
 									sm.addLong(contribScore);
 									player.sendPacket(sm);
 									

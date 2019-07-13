@@ -291,7 +291,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		_hall.free();
 		_hall.banishForeigners();
-		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
 		msg.addString(getName());
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
@@ -309,7 +309,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			_hall.updateNextSiege();
 			_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getSiegeDate().getTimeInMillis());
 			_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
 			Broadcast.toAllOnlinePlayers(sm);
 			return;
@@ -345,7 +345,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	@Override
 	public void endSiege()
 	{
-		final SystemMessage end = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
+		final SystemMessage end = new SystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
 		end.addString(_hall.getName());
 		Broadcast.toAllOnlinePlayers(end);
 		
@@ -355,12 +355,12 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		{
 			_hall.setOwner(winner);
 			winner.setHideoutId(_hall.getId());
-			finalMsg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE);
+			finalMsg = new SystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE);
 			finalMsg.addString(winner.getName());
 		}
 		else
 		{
-			finalMsg = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW);
+			finalMsg = new SystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW);
 		}
 		finalMsg.addString(_hall.getName());
 		Broadcast.toAllOnlinePlayers(finalMsg);

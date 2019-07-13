@@ -182,17 +182,17 @@ public class PlayerStat extends PlayableStat
 		SystemMessage sm = null;
 		if (!expAdded && spAdded)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP);
 			sm.addLong(finalSp);
 		}
 		else if (expAdded && !spAdded)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP);
 			sm.addLong(finalExp);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
 			sm.addLong(finalExp);
 			sm.addLong(Math.round(addToExp - baseExp));
 			sm.addLong(finalSp);
@@ -218,10 +218,10 @@ public class PlayerStat extends PlayableStat
 		if (sendMessage)
 		{
 			// Send a Server->Client System Message to the PlayerInstance
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_XP_HAS_DECREASED_BY_S1);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_XP_HAS_DECREASED_BY_S1);
 			sm.addLong(addToExp);
 			getActiveChar().sendPacket(sm);
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+			sm = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 			sm.addLong(addToSp);
 			getActiveChar().sendPacket(sm);
 			if (getLevel() < level)

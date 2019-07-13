@@ -70,7 +70,7 @@ public final class RequestPetUseItem implements IClientIncomingPacket
 		
 		if (player.isAlikeDead() || pet.isDead())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item);
 			player.sendPacket(sm);
 			return;

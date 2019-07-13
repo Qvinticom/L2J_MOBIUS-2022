@@ -268,7 +268,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 					// Add the mentee skill
 					handleMenteeSkills(player);
 					
-					mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addString(player.getName()));
+					mentor.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addString(player.getName()));
 					mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 				}
 			}
@@ -284,7 +284,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 					MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
 				}
 				
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addString(player.getName()));
+				mentor.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addString(player.getName()));
 				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 			}
 		}
@@ -320,7 +320,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 					}
 				}
 				
-				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addString(player.getName()));
+				mentee.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addString(player.getName()));
 				mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
 			});
 				
@@ -343,7 +343,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 			startQuestTimer("REMOVE_BUFFS " + player.getObjectId(), 5 * 60 * 1000, null, null);
 			MentorManager.getInstance().getMentees(player.getObjectId()).stream().filter(Objects::nonNull).filter(Mentee::isOnline).forEach(mentee ->
 			{
-				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_DISCONNECTED).addString(player.getName()));
+				mentee.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_DISCONNECTED).addString(player.getName()));
 				mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
 			});
 		}
@@ -490,7 +490,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 			
 			if (mentor.isOnline())
 			{
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
+				mentor.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
 				
 				if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
 				{
@@ -505,7 +505,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
 			
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
 			
 			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 		}

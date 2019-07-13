@@ -74,7 +74,7 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 				castle.getSiegeDate().setTimeInMillis(_time);
 				castle.setIsTimeRegistrationOver(true);
 				castle.getSiege().saveSiegeDate();
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
 				msg.addCastleId(_castleId);
 				Broadcast.toAllOnlinePlayers(msg);
 				player.sendPacket(new SiegeInfo(castle, player));

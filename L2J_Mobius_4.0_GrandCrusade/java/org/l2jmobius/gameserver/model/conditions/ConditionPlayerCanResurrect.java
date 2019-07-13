@@ -62,7 +62,7 @@ public class ConditionPlayerCanResurrect extends Condition
 				canResurrect = false;
 				if (effector.isPlayer())
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
 					effector.sendPacket(msg);
 				}
@@ -133,7 +133,7 @@ public class ConditionPlayerCanResurrect extends Condition
 				canResurrect = false;
 				if (effector.isPlayer())
 				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
 					effector.sendPacket(msg);
 				}

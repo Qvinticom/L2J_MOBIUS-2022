@@ -117,7 +117,7 @@ public class AdminGeodata implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
+						activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 					}
 				}
 				else

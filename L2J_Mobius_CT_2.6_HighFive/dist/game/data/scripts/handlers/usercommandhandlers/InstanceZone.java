@@ -53,7 +53,7 @@ public class InstanceZone implements IUserCommandHandler
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if ((world != null) && (world.getTemplateId() >= 0))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_IN_USE_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_IN_USE_S1);
 			sm.addInstanceName(world.getTemplateId());
 			player.sendPacket(sm);
 		}
@@ -74,7 +74,7 @@ public class InstanceZone implements IUserCommandHandler
 					}
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
 					sm.addInstanceName(instanceId);
 					sm.addInt(hours);
 					sm.addInt(minutes);

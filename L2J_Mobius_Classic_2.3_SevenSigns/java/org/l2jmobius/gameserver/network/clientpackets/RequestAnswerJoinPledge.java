@@ -61,10 +61,10 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 		
 		if (_answer == 0)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DIDN_T_RESPOND_TO_S1_S_INVITATION_JOINING_HAS_BEEN_CANCELLED);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DIDN_T_RESPOND_TO_S1_S_INVITATION_JOINING_HAS_BEEN_CANCELLED);
 			sm.addString(requestor.getName());
 			player.sendPacket(sm);
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
+			sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
 			sm.addString(player.getName());
 			requestor.sendPacket(sm);
 		}
@@ -111,7 +111,7 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 				player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
 				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
 				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				

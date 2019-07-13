@@ -1200,7 +1200,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		final int oldReputation = player.getReputation();
 		player.setReputation(newReputation);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
 		sm.addInt(newReputation);
 		player.sendPacket(sm);
 		BuilderUtil.sendSysMessage(activeChar, "Successfully Changed karma for " + player.getName() + " from (" + oldReputation + ") to (" + newReputation + ").");

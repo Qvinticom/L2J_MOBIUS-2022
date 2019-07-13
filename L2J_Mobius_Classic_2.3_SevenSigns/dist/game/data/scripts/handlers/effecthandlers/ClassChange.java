@@ -72,7 +72,7 @@ public class ClassChange extends AbstractEffect
 					identifyCrisis.applyEffects(player, player);
 				}
 				
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2);
 				msg.addClassId(activeClass);
 				msg.addClassId(player.getClassId().getId());
 				player.sendPacket(msg);

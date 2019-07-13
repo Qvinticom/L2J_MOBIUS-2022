@@ -51,7 +51,7 @@ public class PetStatus extends SummonStatus
 		{
 			if (!isDOT && (getActiveChar().getOwner() != null))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
 				sm.addString(attacker.getName());
 				sm.addInt((int) value);
 				getActiveChar().sendPacket(sm);

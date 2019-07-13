@@ -54,7 +54,7 @@ public final class ChatShout implements IChatHandler
 		}
 		if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_SHOUT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.PLAYERS_CAN_SHOUT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
 			return;
 		}
 		

@@ -160,7 +160,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 				player.addSkill(skill, true);
 				player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 				sm.addSkillName(_skillId);
 				player.sendPacket(sm);
 			}

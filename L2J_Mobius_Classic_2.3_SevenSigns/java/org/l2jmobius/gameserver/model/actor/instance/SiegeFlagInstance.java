@@ -161,7 +161,7 @@ public class SiegeFlagInstance extends Npc
 				if (_clan != null)
 				{
 					// send warning to owners of headquarters that theirs base is under attack
-					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
+					_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
 					setCanTalk(false);
 					ThreadPool.schedule(new ScheduleTalkTask(), 20000);
 				}

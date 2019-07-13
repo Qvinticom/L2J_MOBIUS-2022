@@ -76,14 +76,14 @@ public final class Petition
 			else
 			{
 				// Ending petition consultation with <Player>.
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PETITION_CONSULTATION_WITH_C1_HAS_ENDED);
+				SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CONSULTATION_WITH_C1_HAS_ENDED);
 				sm.addString(_petitioner.getName());
 				_responder.sendPacket(sm);
 				
 				if (endState == PetitionState.PETITIONER_CANCEL)
 				{
 					// Receipt No. <ID> petition cancelled.
-					sm = SystemMessage.getSystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED);
+					sm = new SystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED);
 					sm.addInt(_id);
 					_responder.sendPacket(sm);
 				}

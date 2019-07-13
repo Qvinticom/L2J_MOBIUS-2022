@@ -53,7 +53,7 @@ public final class TakeCastleStart extends AbstractEffect
 		final Castle castle = CastleManager.getInstance().getCastle(effected);
 		if ((castle != null) && castle.getSiege().isInProgress())
 		{
-			castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_CLAN_HAS_STARTED_S1).addSkillName(skill.getId()), false);
+			castle.getSiege().announceToPlayer(new SystemMessage(SystemMessageId.THE_OPPOSING_CLAN_HAS_STARTED_S1).addSkillName(skill.getId()), false);
 		}
 	}
 }

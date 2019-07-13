@@ -477,7 +477,7 @@ public final class ItemAuctionInstance
 	
 	final void onAuctionFinished(ItemAuction auction)
 	{
-		auction.broadcastToAllBiddersInternal(SystemMessage.getSystemMessage(SystemMessageId.S1_S_AUCTION_HAS_ENDED).addInt(auction.getAuctionId()));
+		auction.broadcastToAllBiddersInternal(new SystemMessage(SystemMessageId.S1_S_AUCTION_HAS_ENDED).addInt(auction.getAuctionId()));
 		
 		final ItemAuctionBid bid = auction.getHighestBid();
 		if (bid != null)
