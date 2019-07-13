@@ -411,10 +411,8 @@ public final class SystemMessage implements IClientOutgoingPacket
 		
 		packet.writeH(getId());
 		packet.writeC(_params.length);
-		SMParam param;
-		for (int i = 0; i < _paramIndex; i++)
+		for (SMParam param : _params)
 		{
-			param = _params[i];
 			packet.writeC(param.getType());
 			switch (param.getType())
 			{
