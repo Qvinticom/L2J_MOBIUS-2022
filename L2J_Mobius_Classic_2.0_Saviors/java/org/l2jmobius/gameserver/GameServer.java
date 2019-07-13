@@ -86,6 +86,7 @@ import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import org.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import org.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.ShuttleData;
 import org.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -340,6 +341,10 @@ public class GameServer
 		if (Config.SELLBUFF_ENABLED)
 		{
 			SellBuffsManager.getInstance();
+		}
+		if (Config.MULTILANG_ENABLE)
+		{
+			SendMessageLocalisationData.getInstance();
 		}
 		
 		printSection("Scripts");

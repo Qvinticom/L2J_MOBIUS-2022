@@ -72,6 +72,7 @@ import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
+import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
@@ -8986,6 +8987,15 @@ public final class PlayerInstance extends Playable
 	@Override
 	public void sendMessage(String message)
 	{
+		if (Config.MULTILANG_ENABLE)
+		{
+			final String localisation = SendMessageLocalisationData.getInstance().getLocalisation(_lang, message);
+			if (localisation != null)
+			{
+				sendPacket(new SystemMessage(localisation));
+				return;
+			}
+		}
 		sendPacket(new SystemMessage(message));
 	}
 	

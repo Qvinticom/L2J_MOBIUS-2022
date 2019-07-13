@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
@@ -283,6 +284,7 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					SystemMessageId.loadLocalisations();
 					NpcStringId.loadLocalisations();
+					SendMessageLocalisationData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Localisation data.");
 					break;
 				}
