@@ -80,7 +80,6 @@ public final class SystemMessage implements IClientOutgoingPacket
 		}
 	}
 	
-	public static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
 	// id 22 d (shared with 1-3,17,22
 	// id 21 h
 	// id 20 c
@@ -340,12 +339,6 @@ public final class SystemMessage implements IClientOutgoingPacket
 		return this;
 	}
 	
-	public SystemMessage addFactionName(int factionId)
-	{
-		append(new SMParam(TYPE_FACTION_NAME, factionId));
-		return this;
-	}
-	
 	public SystemMessage addPopup(int target, int attacker, int damage)
 	{
 		append(new SMParam(TYPE_POPUP_ID, new int[]
@@ -418,7 +411,6 @@ public final class SystemMessage implements IClientOutgoingPacket
 			{
 				case TYPE_ELEMENT_NAME:
 				case TYPE_BYTE:
-				case TYPE_FACTION_NAME:
 				{
 					packet.writeC(param.getIntValue());
 					break;

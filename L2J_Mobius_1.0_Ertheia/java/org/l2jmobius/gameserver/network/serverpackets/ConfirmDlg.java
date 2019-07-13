@@ -79,7 +79,6 @@ public class ConfirmDlg implements IClientOutgoingPacket
 			{
 				case SystemMessage.TYPE_ELEMENT_NAME:
 				case SystemMessage.TYPE_BYTE:
-				case SystemMessage.TYPE_FACTION_NAME:
 				{
 					packet.writeC(param.getIntValue());
 					break;
