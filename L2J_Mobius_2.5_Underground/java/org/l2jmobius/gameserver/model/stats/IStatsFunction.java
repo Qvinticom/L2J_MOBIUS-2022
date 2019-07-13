@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
  * @author UnAfraid
@@ -222,7 +223,7 @@ public interface IStatsFunction
 		{
 			case R:
 			{
-				if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -234,7 +235,7 @@ public interface IStatsFunction
 			}
 			case S:
 			{
-				if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -252,7 +253,7 @@ public interface IStatsFunction
 			}
 			case A:
 			{
-				if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -271,7 +272,7 @@ public interface IStatsFunction
 			case B:
 			case C:
 			{
-				if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
