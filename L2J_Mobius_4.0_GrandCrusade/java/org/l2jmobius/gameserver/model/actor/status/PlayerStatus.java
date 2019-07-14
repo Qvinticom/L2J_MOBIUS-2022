@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -253,7 +254,19 @@ public class PlayerStatus extends PlayableStatus
 				// Send a System Message to the PlayerInstance
 				SystemMessage smsg = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 				smsg.addString(getActiveChar().getName());
-				smsg.addString(attacker.getName());
+				
+				// Localisation related.
+				String targetName = attacker.getName();
+				if (Config.MULTILANG_ENABLE && attacker.isNpc())
+				{
+					final String[] localisation = NpcNameLocalisationData.getInstance().getLocalisation(getActiveChar().getLang(), attacker.getId());
+					if (localisation != null)
+					{
+						targetName = localisation[0];
+					}
+				}
+				
+				smsg.addString(targetName);
 				smsg.addInt(fullValue);
 				smsg.addPopup(getActiveChar().getObjectId(), attacker.getObjectId(), -fullValue);
 				getActiveChar().sendPacket(smsg);

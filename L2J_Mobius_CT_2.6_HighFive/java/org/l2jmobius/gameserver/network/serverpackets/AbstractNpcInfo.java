@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -90,6 +91,17 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		private int _allyId = 0;
 		private int _clanId = 0;
 		private int _displayEffect = 0;
+		private String[] _localisation;
+		
+		public void setLang(String lang)
+		{
+			_localisation = NpcNameLocalisationData.getInstance().getLocalisation(lang, _npc.getId());
+			if (_localisation != null)
+			{
+				_name = _localisation[0];
+				_title = _localisation[1];
+			}
+		}
 		
 		public NpcInfo(Npc cha, Creature attacker)
 		{
@@ -102,9 +114,10 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_collisionHeight = cha.getCollisionHeight();// On every subclass
 			_collisionRadius = cha.getCollisionRadius();// On every subclass
 			_isAttackable = cha.isAutoAttackable(attacker);
-			if (cha.getTemplate().isUsingServerSideName())
+			
+			if (_name.equals("") && cha.getTemplate().isUsingServerSideName())
 			{
-				_name = cha.getName();// On every subclass
+				_name = cha.getName(); // On every subclass
 			}
 			
 			if (_npc.isInvisible())
@@ -115,13 +128,16 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			{
 				_title = (Config.CHAMP_TITLE); // On every subclass
 			}
-			else if (cha.getTemplate().isUsingServerSideTitle())
+			else if (_title.equals(""))
 			{
-				_title = cha.getTemplate().getTitle(); // On every subclass
-			}
-			else
-			{
-				_title = cha.getTitle(); // On every subclass
+				if (cha.getTemplate().isUsingServerSideTitle())
+				{
+					_title = cha.getTemplate().getTitle(); // On every subclass
+				}
+				else
+				{
+					_title = cha.getTitle(); // On every subclass
+				}
 			}
 			
 			if (Config.SHOW_NPC_LVL && _npc.isMonster())

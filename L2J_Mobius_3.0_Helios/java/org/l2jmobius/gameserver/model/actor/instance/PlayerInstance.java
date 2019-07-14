@@ -68,6 +68,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.HennaData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
@@ -11667,7 +11668,19 @@ public final class PlayerInstance extends Playable
 		{
 			sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
 			sm.addPcName(this);
-			sm.addString(target.getName());
+			
+			// Localisation related.
+			String targetName = target.getName();
+			if (Config.MULTILANG_ENABLE && target.isNpc())
+			{
+				final String[] localisation = NpcNameLocalisationData.getInstance().getLocalisation(_lang, target.getId());
+				if (localisation != null)
+				{
+					targetName = localisation[0];
+				}
+			}
+			
+			sm.addString(targetName);
 			sm.addInt(damage);
 			sm.addPopup(target.getObjectId(), getObjectId(), -damage);
 		}

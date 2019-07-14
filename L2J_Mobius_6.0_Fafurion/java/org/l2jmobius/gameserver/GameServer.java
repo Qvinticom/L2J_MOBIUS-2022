@@ -81,6 +81,7 @@ import org.l2jmobius.gameserver.data.xml.impl.LuckyGameData;
 import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.OptionData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.impl.PetSkillData;
@@ -355,6 +356,7 @@ public class GameServer
 		if (Config.MULTILANG_ENABLE)
 		{
 			SendMessageLocalisationData.getInstance();
+			NpcNameLocalisationData.getInstance();
 		}
 		
 		printSection("Scripts");

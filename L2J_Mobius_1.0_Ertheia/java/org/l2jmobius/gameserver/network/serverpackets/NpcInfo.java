@@ -21,6 +21,8 @@ import java.util.Set;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.NpcInfoType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -56,6 +58,40 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	private int _clanId = 0;
 	private int _statusMask = 0;
 	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
+	
+	private String[] _localisation;
+	
+	public void setLang(String lang)
+	{
+		_localisation = NpcNameLocalisationData.getInstance().getLocalisation(lang, _npc.getId());
+		if (_localisation != null)
+		{
+			if (!containsMask(NpcInfoType.NAME))
+			{
+				addComponentType(NpcInfoType.NAME);
+			}
+			_blockSize -= _npc.getName().length() * 2;
+			_blockSize += _localisation[0].length() * 2;
+			
+			if (!_localisation[1].equals(""))
+			{
+				if (!containsMask(NpcInfoType.TITLE))
+				{
+					addComponentType(NpcInfoType.TITLE);
+				}
+				final String title = _npc.getTitle();
+				_initSize -= title.length() * 2;
+				if (title.equals(""))
+				{
+					_initSize += _localisation[1].length() * 2;
+				}
+				else
+				{
+					_initSize += title.replace(NpcData.getInstance().getTemplate(_npc.getId()).getTitle(), _localisation[1]).length() * 2;
+				}
+			}
+		}
+	}
 	
 	public NpcInfo(Npc npc)
 	{
@@ -283,7 +319,22 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
-			packet.writeS(_npc.getTitle());
+			String title = _npc.getTitle();
+			
+			// Localisation related.
+			if ((_localisation != null) && !_localisation[1].equals(""))
+			{
+				if (title.equals(""))
+				{
+					title = _localisation[1];
+				}
+				else
+				{
+					title = title.replace(NpcData.getInstance().getTemplate(_npc.getId()).getTitle(), _localisation[1]);
+				}
+			}
+			
+			packet.writeS(title);
 		}
 		
 		// Block 2
@@ -344,7 +395,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.FLYING))
 		{
-			packet.writeD(_npc.isFlying() ? 0x01 : 00);
+			packet.writeD(_npc.isFlying() ? 0x01 : 0x00);
 		}
 		if (containsMask(NpcInfoType.CLONE))
 		{
@@ -389,7 +440,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.NAME))
 		{
-			packet.writeS(_npc.getName());
+			packet.writeS(_localisation != null ? _localisation[0] : _npc.getName());
 		}
 		if (containsMask(NpcInfoType.NAME_NPCSTRINGID))
 		{

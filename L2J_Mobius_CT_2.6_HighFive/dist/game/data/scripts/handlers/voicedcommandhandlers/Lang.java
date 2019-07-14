@@ -19,8 +19,15 @@ package handlers.voicedcommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
+import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Lang implements IVoicedCommandHandler
@@ -61,6 +68,18 @@ public class Lang implements IVoicedCommandHandler
 			{
 				msg.setFile(activeChar, "data/html/mods/Lang/Ok.htm");
 				activeChar.sendPacket(msg);
+				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				{
+					if (obj.isNpc() && NpcNameLocalisationData.getInstance().hasLocalisation(obj.getId()))
+					{
+						activeChar.sendPacket(new DeleteObject(obj));
+						ThreadPool.schedule(() ->
+						{
+							activeChar.sendPacket(new NpcInfo((Npc) obj, activeChar));
+						}, 1000);
+					}
+				}
+				activeChar.setTarget(null);
 				return true;
 			}
 			msg.setFile(activeChar, "data/html/mods/Lang/Error.htm");

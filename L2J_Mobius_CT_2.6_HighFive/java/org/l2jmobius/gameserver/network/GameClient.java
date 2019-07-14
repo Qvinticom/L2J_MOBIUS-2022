@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -262,6 +263,10 @@ public final class GameClient extends ChannelInboundHandler<GameClient>
 				else if (packet instanceof ExShowScreenMessage)
 				{
 					((ExShowScreenMessage) packet).setLang(lang);
+				}
+				else if (packet instanceof NpcInfo)
+				{
+					((NpcInfo) packet).setLang(lang);
 				}
 			}
 		}
