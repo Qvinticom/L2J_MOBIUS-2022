@@ -44030,7 +44030,7 @@ public final class NpcStringId
 										continue;
 									}
 									
-									node = nnmb.getNamedItem("text");
+									node = nnmb.getNamedItem("translation");
 									if (node == null)
 									{
 										LOGGER.log(Level.WARNING, "NpcStringId: No text defined for NSID '" + nsId + "', lang '" + lang + "'.");

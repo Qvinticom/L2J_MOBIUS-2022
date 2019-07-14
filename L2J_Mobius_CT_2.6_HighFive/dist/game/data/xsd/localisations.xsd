@@ -6,7 +6,7 @@
 				<element name="localisation" minOccurs="0" maxOccurs="unbounded">
 					<complexType>
 						<attribute name="id" type="nonNegativeInteger" use="required" />
-						<attribute name="text" type="normalizedString" use="required" />
+						<attribute name="translation" type="normalizedString" use="required" />
 					</complexType>
 				</element>
 			</sequence>

@@ -16313,7 +16313,7 @@ public final class SystemMessageId
 										continue;
 									}
 									
-									node = nnmb.getNamedItem("text");
+									node = nnmb.getNamedItem("translation");
 									if (node == null)
 									{
 										LOGGER.log(Level.WARNING, "SystemMessageId: No text defined for SMID '" + smId + "', lang '" + lang + "'.");
