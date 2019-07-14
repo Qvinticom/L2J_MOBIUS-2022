@@ -45,7 +45,7 @@ public final class AttackTrait extends AbstractEffect
 		
 		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			_attackTraits.put(TraitType.valueOf(param.getKey()), Float.parseFloat((String) param.getValue()) / 100);
+			_attackTraits.put(TraitType.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue()) / 100) + 1);
 		}
 	}
 	
