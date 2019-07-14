@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -67,7 +68,7 @@ public class NpcNameLocalisationData implements IXmlReader
 				}
 				else
 				{
-					LOGGER.info(getClass().getSimpleName() + ": Loaded localisations for '" + lang + "'");
+					LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded localisations for [" + lang + "].");
 				}
 			}
 		}

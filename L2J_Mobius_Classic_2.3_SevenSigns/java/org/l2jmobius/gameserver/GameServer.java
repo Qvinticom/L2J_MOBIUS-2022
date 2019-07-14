@@ -147,6 +147,8 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.votereward.VoteSystem;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
@@ -345,6 +347,8 @@ public class GameServer
 		}
 		if (Config.MULTILANG_ENABLE)
 		{
+			SystemMessageId.loadLocalisations();
+			NpcStringId.loadLocalisations();
 			SendMessageLocalisationData.getInstance();
 			NpcNameLocalisationData.getInstance();
 		}

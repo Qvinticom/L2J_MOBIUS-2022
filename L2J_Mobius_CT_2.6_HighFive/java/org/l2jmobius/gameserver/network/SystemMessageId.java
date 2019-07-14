@@ -39,10 +39,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public final class SystemMessageId
 {
 	private static final Logger LOGGER = Logger.getLogger(SystemMessageId.class.getName());
-	private static final SMLocalisation[] EMPTY_SML_ARRAY = new SMLocalisation[0];
-	public static final SystemMessageId[] EMPTY_ARRAY = new SystemMessageId[0];
 	
-	private static Map<Integer, SystemMessageId> VALUES = new HashMap<>();
+	private static final SMLocalisation[] EMPTY_SML_ARRAY = new SMLocalisation[0];
+	private static final Map<Integer, SystemMessageId> VALUES = new HashMap<>();
 	
 	@ClientString(id = 0, message = "You have been disconnected from the server.")
 	public static SystemMessageId YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER;
@@ -9755,7 +9754,6 @@ public final class SystemMessageId
 	static
 	{
 		buildFastLookupTable();
-		loadLocalisations();
 	}
 	
 	private static void buildFastLookupTable()
@@ -9861,8 +9859,6 @@ public final class SystemMessageId
 				continue;
 			}
 			
-			LOGGER.log(Level.INFO, "SystemMessageId: Loading localisation for '" + lang + "'");
-			
 			try
 			{
 				doc = factory.newDocumentBuilder().parse(file);
@@ -9910,6 +9906,8 @@ public final class SystemMessageId
 			{
 				LOGGER.log(Level.SEVERE, "SystemMessageId: Failed loading '" + file + "'", e);
 			}
+			
+			LOGGER.log(Level.INFO, "SystemMessageId: Loaded localisations for [" + lang + "].");
 		}
 	}
 	

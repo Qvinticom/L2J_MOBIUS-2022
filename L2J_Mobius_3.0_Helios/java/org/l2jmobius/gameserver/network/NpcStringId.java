@@ -39,10 +39,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 public final class NpcStringId
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcStringId.class.getName());
-	private static final NSLocalisation[] EMPTY_NSL_ARRAY = new NSLocalisation[0];
-	public static final NpcStringId[] EMPTY_ARRAY = new NpcStringId[0];
 	
-	private static Map<Integer, NpcStringId> VALUES = new HashMap<>();
+	private static final NSLocalisation[] EMPTY_NSL_ARRAY = new NSLocalisation[0];
+	private static final Map<Integer, NpcStringId> VALUES = new HashMap<>();
 	
 	@ClientString(id = 1, message = "Hello! I am $s1. You are $s2, right? Hehehe")
 	public static NpcStringId HELLO_I_AM_S1_YOU_ARE_S2_RIGHT_HEHEHE;
@@ -37961,7 +37960,6 @@ public final class NpcStringId
 	static
 	{
 		buildFastLookupTable();
-		loadLocalisations();
 	}
 	
 	private static void buildFastLookupTable()
@@ -38073,8 +38071,6 @@ public final class NpcStringId
 				continue;
 			}
 			
-			LOGGER.log(Level.INFO, "NpcStringId: Loading localisation for '" + lang + "'");
-			
 			try
 			{
 				doc = factory.newDocumentBuilder().parse(file);
@@ -38122,6 +38118,8 @@ public final class NpcStringId
 			{
 				LOGGER.log(Level.SEVERE, "NpcStringId: Failed loading '" + file + "'", e);
 			}
+			
+			LOGGER.log(Level.INFO, "NpcStringId: Loaded localisations for [" + lang + "].");
 		}
 	}
 	

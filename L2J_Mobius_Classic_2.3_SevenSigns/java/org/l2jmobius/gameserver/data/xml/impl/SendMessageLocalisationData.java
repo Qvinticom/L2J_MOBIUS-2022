@@ -20,6 +20,7 @@ import java.io.File;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -69,7 +70,7 @@ public class SendMessageLocalisationData implements IXmlReader
 				}
 				else
 				{
-					LOGGER.info(getClass().getSimpleName() + ": Loaded localisations for '" + lang + "'");
+					LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded localisations for [" + lang + "].");
 				}
 			}
 		}
