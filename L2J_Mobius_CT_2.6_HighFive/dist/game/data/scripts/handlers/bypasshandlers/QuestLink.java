@@ -17,11 +17,13 @@
 package handlers.bypasshandlers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -34,6 +36,8 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId.NSLocalisation;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -132,7 +136,20 @@ public class QuestLink implements IBypassHandler
 			}
 			else
 			{
-				sb.append("<fstring>" + quest.getNpcStringId() + state + "</fstring>");
+				String localisation = "<fstring>" + quest.getNpcStringId() + state + "</fstring>";
+				if (Config.MULTILANG_ENABLE)
+				{
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + state));
+					if (ns != null)
+					{
+						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+						if (nsl != null)
+						{
+							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+						}
+					}
+				}
+				sb.append(localisation);
 			}
 			// sb.append("]</font></a><br>");
 			sb.append("]</a><br>");
@@ -141,12 +158,38 @@ public class QuestLink implements IBypassHandler
 			{
 				if (questId == TO_LEAD_AND_BE_LED)
 				{
-					sb.append("<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>");
+					String localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>";
+					if (Config.MULTILANG_ENABLE)
+					{
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
+						if (ns != null)
+						{
+							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+							if (nsl != null)
+							{
+								localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + nsl.getLocalisation(Collections.EMPTY_LIST) + " (Sponsor)]</a><br>";
+							}
+						}
+					}
+					sb.append(localisation);
 				}
 				
 				if (questId == THE_LEADER_AND_THE_FOLLOWER)
 				{
-					sb.append("<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>");
+					String localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>";
+					if (Config.MULTILANG_ENABLE)
+					{
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
+						if (ns != null)
+						{
+							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+							if (nsl != null)
+							{
+								localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + nsl.getLocalisation(Collections.EMPTY_LIST) + " (Sponsor)]</a><br>";
+							}
+						}
+					}
+					sb.append(localisation);
 				}
 			}
 		}

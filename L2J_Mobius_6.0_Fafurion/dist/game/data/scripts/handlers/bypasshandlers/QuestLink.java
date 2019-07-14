@@ -17,6 +17,7 @@
 package handlers.bypasshandlers;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -32,6 +33,8 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId.NSLocalisation;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -121,14 +124,40 @@ public class QuestLink implements IBypassHandler
 				{
 					sbCanStart.append("<font color=\"bbaa88\">");
 					sbCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-					sbCanStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
+					String localisation = quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>";
+					if (Config.MULTILANG_ENABLE)
+					{
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "01"));
+						if (ns != null)
+						{
+							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+							if (nsl != null)
+							{
+								localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+							}
+						}
+					}
+					sbCanStart.append(localisation);
 					sbCanStart.append("</button></font>");
 				}
 				else
 				{
 					sbCantStart.append("<font color=\"a62f31\">");
 					sbCantStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-					sbCantStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
+					String localisation = quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>";
+					if (Config.MULTILANG_ENABLE)
+					{
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "01"));
+						if (ns != null)
+						{
+							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+							if (nsl != null)
+							{
+								localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+							}
+						}
+					}
+					sbCantStart.append(localisation);
 					sbCantStart.append("</button></font>");
 				}
 			}
@@ -140,14 +169,40 @@ public class QuestLink implements IBypassHandler
 			{
 				sbStarted.append("<font color=\"ffdd66\">");
 				sbStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-				sbStarted.append(quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>");
+				String localisation = quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>";
+				if (Config.MULTILANG_ENABLE)
+				{
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "02"));
+					if (ns != null)
+					{
+						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+						if (nsl != null)
+						{
+							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+						}
+					}
+				}
+				sbStarted.append(localisation);
 				sbStarted.append("</button></font>");
 			}
 			else if (qs.isCompleted())
 			{
 				sbCompleted.append("<font color=\"787878\">");
 				sbCompleted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-				sbCompleted.append(quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>");
+				String localisation = quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>";
+				if (Config.MULTILANG_ENABLE)
+				{
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "03"));
+					if (ns != null)
+					{
+						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
+						if (nsl != null)
+						{
+							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+						}
+					}
+				}
+				sbCompleted.append(localisation);
 				sbCompleted.append("</button></font>");
 			}
 		}
