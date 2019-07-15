@@ -578,10 +578,22 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="51291" toLevel="1" name="Blessed Scroll: Enchant Weapon (S-grade)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51292" toLevel="1" name="Blessed Scroll: Enchant Armor (S-grade)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51293" toLevel="1" name="Solid Scroll: Enchant Weapon (S-grade)">
 		<operateType>A1</operateType>
