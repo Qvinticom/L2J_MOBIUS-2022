@@ -115,42 +115,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_collisionRadius = cha.getCollisionRadius();// On every subclass
 			_isAttackable = cha.isAutoAttackable(attacker);
 			
-			if (_name.equals("") && cha.getTemplate().isUsingServerSideName())
-			{
-				_name = cha.getName(); // On every subclass
-			}
-			
-			if (_npc.isInvisible())
-			{
-				_title = "Invisible";
-			}
-			else if (Config.CHAMPION_ENABLE && cha.isChampion())
-			{
-				_title = (Config.CHAMP_TITLE); // On every subclass
-			}
-			else if (_title.equals(""))
-			{
-				if (cha.getTemplate().isUsingServerSideTitle())
-				{
-					_title = cha.getTemplate().getTitle(); // On every subclass
-				}
-				else
-				{
-					_title = cha.getTitle(); // On every subclass
-				}
-			}
-			
-			if (Config.SHOW_NPC_LVL && _npc.isMonster())
-			{
-				String t = "Lv " + cha.getLevel() + (cha.isAggressive() ? "*" : "");
-				if (_title != null)
-				{
-					t += " " + _title;
-				}
-				
-				_title = t;
-			}
-			
 			// npc crest of owning clan/ally of castle
 			if (cha.isNpc() && cha.isInsideZone(ZoneId.TOWN) && (Config.SHOW_CREST_WITHOUT_QUEST || cha.getCastle().getShowNpcCrest()) && (cha.getCastle().getOwnerId() != 0))
 			{
@@ -207,8 +171,40 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(_npc.isAlikeDead() ? 1 : 0);
 			packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 			packet.writeD(-1); // High Five NPCString ID
+			if ((_localisation == null) && _npc.getTemplate().isUsingServerSideName())
+			{
+				_name = _npc.getName(); // On every subclass
+			}
 			packet.writeS(_name);
 			packet.writeD(-1); // High Five NPCString ID
+			if (_npc.isInvisible())
+			{
+				_title = "Invisible";
+			}
+			else if (Config.CHAMPION_ENABLE && _npc.isChampion())
+			{
+				_title = (Config.CHAMP_TITLE); // On every subclass
+			}
+			else if (_localisation == null)
+			{
+				if (_npc.getTemplate().isUsingServerSideTitle())
+				{
+					_title = _npc.getTemplate().getTitle(); // On every subclass
+				}
+				else
+				{
+					_title = _npc.getTitle(); // On every subclass
+				}
+			}
+			if (Config.SHOW_NPC_LVL && _npc.isMonster())
+			{
+				String t = "Lv " + _npc.getLevel() + (_npc.isAggressive() ? "*" : "");
+				if (_title != null)
+				{
+					t += " " + _title;
+				}
+				_title = t;
+			}
 			packet.writeS(_title);
 			packet.writeD(0x00); // Title color 0=client default
 			packet.writeD(0x00); // pvp flag
