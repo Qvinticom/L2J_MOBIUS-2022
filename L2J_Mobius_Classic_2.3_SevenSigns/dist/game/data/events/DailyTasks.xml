@@ -30,11 +30,11 @@
 
 
 			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
-			<conditionalSchedule>
+			<!-- <conditionalSchedule>
 				<run name="reset" if="HASNT_RUN" />
 				<run name="clanLeaderApply" if="HASNT_RUN" />
 				<run name="vitalityReset" if="HASNT_RUN" />
-			</conditionalSchedule>
+			</conditionalSchedule> -->
 		</scheduler>
 	</event>
 </list>
