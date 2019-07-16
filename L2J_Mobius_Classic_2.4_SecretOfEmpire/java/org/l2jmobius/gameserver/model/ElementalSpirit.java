@@ -18,12 +18,14 @@ package org.l2jmobius.gameserver.model;
 
 import static java.lang.Math.max;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
+import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.impl.ElementalSpiritData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
-import org.l2jmobius.gameserver.instancemanager.ElementalSpiritInstanceManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnElementalSpiritUpgrade;
@@ -42,6 +44,8 @@ import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ExElement
  */
 public class ElementalSpirit
 {
+	private static final String STORE_ELEMENTAL_SPIRIT_QUERY = "REPLACE INTO character_spirits (charId, type, level, stage, experience, attack_points, defense_points, crit_rate_points, crit_damage_points, in_use) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	
 	private final PlayerInstance _owner;
 	private ElementalSpiritTemplateHolder _template;
 	private final ElementalSpiritDataHolder _data;
@@ -235,7 +239,25 @@ public class ElementalSpirit
 	
 	public void save()
 	{
-		ElementalSpiritInstanceManager.getInstance().save(_data);
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(STORE_ELEMENTAL_SPIRIT_QUERY))
+		{
+			statement.setInt(1, _data.getCharId());
+			statement.setInt(2, _data.getType());
+			statement.setInt(3, _data.getLevel());
+			statement.setInt(4, _data.getStage());
+			statement.setLong(5, _data.getExperience());
+			statement.setInt(6, _data.getAttackPoints());
+			statement.setInt(7, _data.getDefensePoints());
+			statement.setInt(8, _data.getCritRatePoints());
+			statement.setInt(9, _data.getCritDamagePoints());
+			statement.setInt(10, _data.isInUse() ? 1 : 0);
+			statement.execute();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public void addAttackPoints(byte attackPoints)

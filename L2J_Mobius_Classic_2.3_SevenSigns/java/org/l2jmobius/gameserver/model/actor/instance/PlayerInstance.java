@@ -110,7 +110,6 @@ import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
-import org.l2jmobius.gameserver.instancemanager.ElementalSpiritInstanceManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
@@ -395,10 +394,13 @@ public final class PlayerInstance extends Playable
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
 	
-	// Character Recipe List Save
+	// Character Recipe List Save:
 	private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
 	private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
 	private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
+	
+	// Elemental Spirits:
+	private static final String RESTORE_ELEMENTAL_SPIRITS = "SELECT * FROM character_spirits WHERE charId=?";
 	
 	private static final String COND_OVERRIDE_KEY = "cond_override";
 	
@@ -13990,11 +13992,39 @@ public final class PlayerInstance extends Playable
 	
 	private void tryLoadSpirits()
 	{
-		final List<ElementalSpiritDataHolder> spiritsData = ElementalSpiritInstanceManager.getInstance().findByPlayerId(getObjectId());
-		if (!spiritsData.isEmpty())
+		final List<ElementalSpiritDataHolder> restoredSpirits = new ArrayList<>();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement stmt = con.prepareStatement(RESTORE_ELEMENTAL_SPIRITS))
+		{
+			stmt.setInt(1, getObjectId());
+			try (ResultSet rset = stmt.executeQuery())
+			{
+				while (rset.next())
+				{
+					final ElementalSpiritDataHolder newHolder = new ElementalSpiritDataHolder();
+					newHolder.setCharId(rset.getInt("charId"));
+					newHolder.setType(rset.getByte("type"));
+					newHolder.setLevel(rset.getByte("level"));
+					newHolder.setStage(rset.getByte("stage"));
+					newHolder.setExperience(rset.getLong("experience"));
+					newHolder.setAttackPoints(rset.getByte("attack_points"));
+					newHolder.setDefensePoints(rset.getByte("defense_points"));
+					newHolder.setCritRatePoints(rset.getByte("crit_rate_points"));
+					newHolder.setCritDamagePoints(rset.getByte("crit_damage_points"));
+					newHolder.setInUse(rset.getByte("in_use") == 1);
+					restoredSpirits.add(newHolder);
+				}
+			}
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		
+		if (!restoredSpirits.isEmpty())
 		{
 			_spirits = new ElementalSpirit[ElementalType.values().length - 1];
-			for (ElementalSpiritDataHolder spiritData : spiritsData)
+			for (ElementalSpiritDataHolder spiritData : restoredSpirits)
 			{
 				_spirits[spiritData.getType() - 1] = new ElementalSpirit(spiritData, this);
 				if (spiritData.isInUse())
