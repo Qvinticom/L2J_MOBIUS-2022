@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleport;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneExit;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnElementalSpiritUpgrade;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAggroRangeEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFactionCall;
@@ -56,6 +57,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSpawn;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleport;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleportRequest;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnElementalSpiritLearn;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAbilityPointsChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
@@ -286,7 +288,10 @@ public enum EventType
 	ON_INSTANCE_DESTROY(OnInstanceDestroy.class, void.class),
 	ON_INSTANCE_ENTER(OnInstanceEnter.class, void.class),
 	ON_INSTANCE_LEAVE(OnInstanceLeave.class, void.class),
-	ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class);
+	ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class),
+	
+	ON_ELEMENTAL_SPIRIT_UPGRADE(OnElementalSpiritUpgrade.class, void.class),
+	ON_ELEMENTAL_SPIRIT_LEARN(OnElementalSpiritLearn.class, void.class);
 	
 	private final Class<? extends IBaseEvent> _eventClass;
 	private final Class<?>[] _returnClass;

@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.enums.DropType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.MpRewardType;
 import org.l2jmobius.gameserver.enums.Race;
@@ -118,6 +119,9 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	
 	private List<Integer> _extendDrop;
 	
+	private ElementalType _elementalType;
+	private long _attributeExp;
+	
 	/**
 	 * Constructor of Creature.
 	 * @param set The StatsSet object to transfer data to the method
@@ -142,6 +146,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		setRace(set.getEnum("race", Race.class, Race.NONE));
 		_sex = set.getEnum("sex", Sex.class, Sex.ETC);
 		
+		_elementalType = set.getEnum("elementalType", ElementalType.class, ElementalType.NONE);
+		
 		_chestId = set.getInt("chestId", 0);
 		_rhandId = set.getInt("rhandId", 0);
 		_lhandId = set.getInt("lhandId", 0);
@@ -150,6 +156,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_exp = set.getDouble("exp", 0);
 		_sp = set.getDouble("sp", 0);
 		_raidPoints = set.getDouble("raidPoints", 0);
+		_attributeExp = set.getLong("attribute_exp", 0);
 		
 		_unique = set.getBoolean("unique", false);
 		_attackable = set.getBoolean("attackable", true);
@@ -352,6 +359,16 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	public double getRaidPoints()
 	{
 		return _raidPoints;
+	}
+	
+	public long getAttributeExp()
+	{
+		return _attributeExp;
+	}
+	
+	public ElementalType getElementalType()
+	{
+		return _elementalType;
 	}
 	
 	public boolean isUnique()

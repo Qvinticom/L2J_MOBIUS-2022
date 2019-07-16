@@ -8,26 +8,70 @@
 	<skill id="51101" toLevel="1" name="Agathion Summon - Ignis">
 		<!-- Summon Ignis Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13568</npcId> <!-- Median Flame Ignis -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51102" toLevel="1" name="Agathion Summon - Nebula">
 		<!-- Summon Nebula Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13572</npcId> <!-- Median Water Procella-->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51103" toLevel="1" name="Agathion Summon - Procella">
 		<!-- Summon Procella Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13576</npcId> <!-- Median Wind Procella-->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51104" toLevel="1" name="Agathion Summon - Petram">
 		<!-- Summon Petram Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13580</npcId> <!-- Median Earth Petram -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51105" toLevel="1" name="Improved Master Fisherman's Blessing">
 		<!-- For 2 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
@@ -161,18 +205,54 @@
 	<skill id="51125" toLevel="1" name="Quick MP Recovery Potion">
 		<icon>icon.etc_potion_blue_i00</icon>
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<reuseDelay>0</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51126" toLevel="1" name="Intermediate Spirit's Blessing">
 		<!-- For 20 min., Acquired attribute XP +30%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SpiritExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51127" toLevel="1" name="Advanced Spirit's Blessing">
 		<!-- For 20 min., Acquired attribute XP +50%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SpiritExpModify">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51128" toLevel="1" name="Spirit's Varnish">
 		<icon>icon.ev_charge_scroll</icon>
@@ -185,30 +265,74 @@
 	<skill id="51130" toLevel="1" name="Fire Attribute Attack Potion">
 		<!-- Use to get Fire Attack Power +50 for 20 min. -->
 		<icon>icon.etc_fire_potion_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>50</amount>
+				<type>FIRE</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51131" toLevel="1" name="Water Attribute Attack Potion">
 		<!-- Use to get Water Attack Power +50 for 20 min. -->
 		<icon>icon.etc_water_potion_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>50</amount>
+				<type>WATER</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51132" toLevel="1" name="Wind Attribute Attack Potion">
 		<!-- Use to get Wind Attack Power +50 for 20 min. -->
 		<icon>icon.etc_wind_potion_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>50</amount>
+				<type>WIND</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51133" toLevel="1" name="Earth Attribute Attack Potion">
 		<!-- Use to get Earth Attack Power +50 for 20 min. -->
 		<icon>icon.etc_earth_potion_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>50</amount>
+				<type>EARTH</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51134" toLevel="1" name="Scroll of Escape: Forge of the Gods">
 		<operateType>A1</operateType>
@@ -356,7 +480,20 @@
 	<skill id="51162" toLevel="1" name="Quality Quick MP Recovery Potion">
 		<!-- Instantly recovers 300 MP. -->
 		<icon>icon.etc_potion_blue_i00</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51163" toLevel="1" name="Sealed Rune Lvl 14">
 		<operateType>A1</operateType>

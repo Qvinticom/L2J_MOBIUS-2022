@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -866,6 +867,17 @@ public class Npc extends Creature
 		final Instance instance = getInstanceWorld();
 		final float rateMul = instance != null ? instance.getSPRate() : Config.RATE_SP;
 		return getTemplate().getSP() * rateMul;
+	}
+	
+	public long getAttributeExp()
+	{
+		return getTemplate().getAttributeExp();
+	}
+	
+	@Override
+	public ElementalType getElementalSpiritType()
+	{
+		return getTemplate().getElementalType();
 	}
 	
 	/**

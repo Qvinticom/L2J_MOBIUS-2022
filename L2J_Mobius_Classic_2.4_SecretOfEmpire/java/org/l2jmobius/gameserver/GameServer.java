@@ -55,6 +55,7 @@ import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.impl.CubicData;
 import org.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
+import org.l2jmobius.gameserver.data.xml.impl.ElementalSpiritData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
@@ -240,6 +241,7 @@ public class GameServer
 		ClanRewardData.getInstance();
 		DailyMissionHandler.getInstance().executeScript();
 		DailyMissionData.getInstance();
+		ElementalSpiritData.getInstance();
 		
 		printSection("Skills");
 		SkillConditionHandler.getInstance().executeScript();

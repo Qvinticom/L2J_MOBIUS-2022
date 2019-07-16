@@ -249,11 +249,11 @@ public final class TrapInstance extends Npc
 	public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
 		super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
-		sendDamageMessage(target, skill, (int) damage, critical, false);
+		sendDamageMessage(target, skill, (int) damage, 0, critical, false);
 	}
 	
 	@Override
-	public void sendDamageMessage(Creature target, Skill skill, int damage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
 	{
 		if (miss || (_owner == null))
 		{

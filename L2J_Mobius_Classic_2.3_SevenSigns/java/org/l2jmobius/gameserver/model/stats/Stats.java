@@ -89,6 +89,19 @@ public enum Stats
 	HATE_ATTACK("attackHate"),
 	REAR_DAMAGE_RATE("rearDamage"),
 	
+	// ELEMENTAL SPIRITS
+	ELEMENTAL_SPIRIT_FIRE_ATTACK("elementalSpiritFireAttack"),
+	ELEMENTAL_SPIRIT_WATER_ATTACK("elementalSpiritWaterAttack"),
+	ELEMENTAL_SPIRIT_WIND_ATTACK("elementalSpiritWindAttack"),
+	ELEMENTAL_SPIRIT_EARTH_ATTACK("elementalSpiritEarthAttack"),
+	ELEMENTAL_SPIRIT_FIRE_DEFENSE("elementalSpiritFireDefense"),
+	ELEMENTAL_SPIRIT_WATER_DEFENSE("elementalSpiritWaterDefense"),
+	ELEMENTAL_SPIRIT_WIND_DEFENSE("elementalSpiritWindDefense"),
+	ELEMENTAL_SPIRIT_EARTH_DEFENSE("elementalSpiritEarthDefense"),
+	ELEMENTAL_SPIRIT_CRITICAL_RATE("elementalSpiritCriticalRate"),
+	ELEMENTAL_SPIRIT_CRITICAL_DAMAGE("elementalSpiritCriticalDamage"),
+	ELEMENTAL_SPIRIT_BONUS_EXP("elementalSpiritExp"),
+	
 	// PVP BONUS
 	PVP_PHYSICAL_ATTACK_DAMAGE("pvpPhysDmg"),
 	PVP_MAGICAL_SKILL_DAMAGE("pvpMagicalDmg"),

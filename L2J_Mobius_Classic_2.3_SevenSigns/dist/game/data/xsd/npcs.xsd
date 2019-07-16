@@ -66,6 +66,7 @@
 									<xs:attribute name="exp" type="xs:decimal" />
 									<xs:attribute name="sp" type="xs:decimal" />
 									<xs:attribute name="raidPoints" type="xs:decimal" />
+									<xs:attribute name="attribute_exp" type="xs:decimal" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="mpReward" minOccurs="0" maxOccurs="1">
@@ -302,6 +303,7 @@
 						<xs:attribute name="usingServerSideName" type="xs:boolean" />
 						<xs:attribute name="title" type="xs:string" />
 						<xs:attribute name="usingServerSideTitle" type="xs:boolean" />
+						<xs:attribute name="element" type="xs:string" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

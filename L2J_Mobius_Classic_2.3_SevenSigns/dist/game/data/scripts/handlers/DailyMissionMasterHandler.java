@@ -29,6 +29,7 @@ import handlers.dailymissionhandlers.LoginWeekendDailyMissionHandler;
 import handlers.dailymissionhandlers.OlympiadDailyMissionHandler;
 import handlers.dailymissionhandlers.QuestDailyMissionHandler;
 import handlers.dailymissionhandlers.SiegeDailyMissionHandler;
+import handlers.dailymissionhandlers.SpiritDailyMissionHandler;
 
 /**
  * @author UnAfraid
@@ -48,6 +49,7 @@ public class DailyMissionMasterHandler
 		DailyMissionHandler.getInstance().registerHandler("ceremonyofchaos", CeremonyOfChaosDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("boss", BossDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("fishing", FishingDailyMissionHandler::new);
+		DailyMissionHandler.getInstance().registerHandler("spirit", SpiritDailyMissionHandler::new);
 		LOGGER.info(DailyMissionMasterHandler.class.getSimpleName() + ":  Loaded " + DailyMissionHandler.getInstance().size() + " handlers.");
 	}
 }

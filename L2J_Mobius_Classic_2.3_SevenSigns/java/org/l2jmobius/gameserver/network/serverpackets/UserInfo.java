@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -376,12 +375,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
 		{
 			packet.writeH(26);
-			packet.writeD(_player.getAttackElementValue(_player.getAttackElement())); // Attribute Attack Power
-			packet.writeD(_player.getDefenseElementValue(AttributeType.FIRE)); // Fire defence
-			packet.writeD(_player.getDefenseElementValue(AttributeType.WATER)); // Water defence
-			packet.writeD(_player.getDefenseElementValue(AttributeType.WIND)); // Wind defence
-			packet.writeD(_player.getDefenseElementValue(AttributeType.EARTH)); // Earth defence
-			packet.writeD(0x00); // Enabled 1 - Disabled 0 // Third class player?
+			packet.writeD((int) _player.getActiveElementalSpiritAttack());
+			packet.writeD((int) _player.getFireSpiritDefense());
+			packet.writeD((int) _player.getWaterSpiritDefense());
+			packet.writeD((int) _player.getWindSpiritDefense());
+			packet.writeD((int) _player.getEarthSpiritDefense());
+			packet.writeD(_player.getActiveElementalSpiritType());
 		}
 		
 		return true;

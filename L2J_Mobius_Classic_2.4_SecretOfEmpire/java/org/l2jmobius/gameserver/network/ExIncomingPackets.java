@@ -60,7 +60,16 @@ import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalInitTalent;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritAbsorb;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritAbsorbInfo;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritChangeType;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritEvolution;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritEvolutionInfo;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritExtract;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritExtractInfo;
 import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritInfo;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritSetTalent;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
@@ -424,21 +433,21 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_BUY(0x14F, null, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_INFO(0x150, ExElementalSpiritInfo::new, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_EVOLUTION(0x154, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_INIT_TALENT(0x156, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_ABSORB(0x158, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, ExElementalSpiritExtractInfo::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, ExElementalSpiritExtract::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, ExElementalSpiritEvolutionInfo::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EVOLUTION(0x154, ExElementalSpiritEvolution::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, ExElementalSpiritSetTalent::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_INIT_TALENT(0x156, ExElementalInitTalent::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, ExElementalSpiritAbsorbInfo::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_ABSORB(0x158, ExElementalSpiritAbsorb::new, ConnectionState.IN_GAME),
 	EX_REQUEST_LOCKED_ITEM(0x159, null, ConnectionState.IN_GAME),
 	EX_REQUEST_UNLOCKED_ITEM(0x15A, null, ConnectionState.IN_GAME),
 	EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
 	EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
-	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
-	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15F, null, ConnectionState.IN_GAME), // 152
+	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15D, ExElementalSpiritChangeType::new, ConnectionState.IN_GAME), // 152
+	REQUEST_BLOCK_LIST_FOR_AD(0x15E, null, ConnectionState.IN_GAME),
+	REQUEST_USER_BAN_INFO(0x15F, null, ConnectionState.IN_GAME),
 	EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
 	EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152
 	EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME); // 152

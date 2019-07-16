@@ -80,6 +80,7 @@ public final class SystemMessage implements IClientOutgoingPacket
 		}
 	}
 	
+	public static final byte TYPE_ELEMENTAL_SPIRIT = 26;
 	public static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
 	// id 22 d (shared with 1-3,17,22
 	// id 21 h
@@ -374,6 +375,12 @@ public final class SystemMessage implements IClientOutgoingPacket
 		return this;
 	}
 	
+	public SystemMessage addElementalSpirit(int elementType)
+	{
+		append(new SMParam(TYPE_ELEMENTAL_SPIRIT, elementType));
+		return this;
+	}
+	
 	public SMParam[] getParams()
 	{
 		return _params;
@@ -419,6 +426,7 @@ public final class SystemMessage implements IClientOutgoingPacket
 				case TYPE_ELEMENT_NAME:
 				case TYPE_BYTE:
 				case TYPE_FACTION_NAME:
+				case TYPE_ELEMENTAL_SPIRIT:
 				{
 					packet.writeC(param.getIntValue());
 					break;

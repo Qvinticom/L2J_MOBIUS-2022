@@ -54,6 +54,7 @@ import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.BasicProperty;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.Race;
@@ -2691,6 +2692,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 							info.addComponentType(UserInfoType.ATK_ELEMENTAL);
 							break;
 						}
+						case ELEMENTAL_SPIRIT_EARTH_ATTACK:
+						case ELEMENTAL_SPIRIT_EARTH_DEFENSE:
+						case ELEMENTAL_SPIRIT_FIRE_ATTACK:
+						case ELEMENTAL_SPIRIT_FIRE_DEFENSE:
+						case ELEMENTAL_SPIRIT_WATER_ATTACK:
+						case ELEMENTAL_SPIRIT_WATER_DEFENSE:
+						case ELEMENTAL_SPIRIT_WIND_ATTACK:
+						case ELEMENTAL_SPIRIT_WIND_DEFENSE:
+						{
+							info.addComponentType(UserInfoType.ATT_SPIRITS);
+							break;
+						}
 					}
 				}
 			}
@@ -4506,11 +4519,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
-		final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
-		if (damageCap > 0)
-		{
-			value = Math.min(value, damageCap);
-		}
+		double elementalDamage = 0;
 		
 		// Calculate PvP/PvE damage received. It is a post-attack stat.
 		if (attacker != null)
@@ -4523,6 +4532,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				value *= (100 + _stat.getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
 			}
+			
+			elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this);
+			value += elementalDamage;
+		}
+		
+		final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
+		{
+			value = Math.min(value, damageCap);
 		}
 		
 		if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0))
@@ -4540,7 +4558,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (attacker != null)
 		{
-			attacker.sendDamageMessage(this, skill, (int) value, critical, false);
+			attacker.sendDamageMessage(this, skill, (int) value, elementalDamage, critical, false);
 		}
 	}
 	
@@ -4671,10 +4689,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param target
 	 * @param skill
 	 * @param damage
+	 * @param elementalDamage
 	 * @param crit
 	 * @param miss
 	 */
-	public void sendDamageMessage(Creature target, Skill skill, int damage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
 	{
 		
 	}
@@ -5471,5 +5490,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			_buffFinishTask = null;
 		}
+	}
+	
+	public double getElementalSpiritDefenseOf(ElementalType type)
+	{
+		return getElementalSpiritType() == type ? 100 : 0;
+	}
+	
+	public ElementalType getElementalSpiritType()
+	{
+		return ElementalType.NONE;
 	}
 }

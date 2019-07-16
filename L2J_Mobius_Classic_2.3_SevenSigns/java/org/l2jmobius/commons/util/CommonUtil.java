@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.commons.util;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,11 +30,14 @@ import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
+import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
 
 import org.l2jmobius.Config;
 
@@ -586,5 +592,30 @@ public final class CommonUtil
 	{
 		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
 		return formatter.format(val);
+	}
+	
+	public static boolean isNullOrEmpty(final CharSequence value)
+	{
+		return isNull(value) || (value.length() == 0);
+	}
+	
+	public static boolean isNotEmpty(final String value)
+	{
+		return nonNull(value) && !value.isEmpty();
+	}
+	
+	public static boolean isNullOrEmpty(final Collection<?> collection)
+	{
+		return isNull(collection) || collection.isEmpty();
+	}
+	
+	public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> action)
+	{
+		return isNull(obj) ? 0 : action.applyAsInt(obj);
+	}
+	
+	public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate)
+	{
+		return nonNull(obj) && predicate.test(obj);
 	}
 }

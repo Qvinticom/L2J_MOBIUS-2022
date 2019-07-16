@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.datatables.EventDroplist.DateDrop;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.DropType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -50,6 +51,7 @@ import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.AggroInfo;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DamageDoneInfo;
+import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -519,6 +521,8 @@ public class Attackable extends Npc
 									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
 									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
 								}
+								
+								rewardAttributeExp(attacker, damage, totalDamage);
 							}
 						}
 					}
@@ -616,6 +620,11 @@ public class Attackable extends Npc
 						if (partyDmg > 0)
 						{
 							attackerParty.distributeXpAndSp(exp, sp, rewardedMembers, partyLvl, partyDmg, this);
+							
+							for (PlayerInstance rewardedMember : rewardedMembers)
+							{
+								rewardAttributeExp(rewardedMember, damage, totalDamage);
+							}
 						}
 					}
 				}
@@ -624,6 +633,19 @@ public class Attackable extends Npc
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "", e);
+		}
+	}
+	
+	private void rewardAttributeExp(PlayerInstance player, long damage, long totalDamage)
+	{
+		if ((player.getActiveElementalSpiritType() > 0) && (getAttributeExp() > 0) && (getElementalSpiritType() != ElementalType.NONE))
+		{
+			final long attributeExp = (long) (((getAttributeExp() * damage) / totalDamage) * player.getElementalSpiritXpBonus());
+			final ElementalSpirit spirit = player.getElementalSpirit(getElementalSpiritType().getDominating());
+			if (spirit != null)
+			{
+				spirit.addExperience(attributeExp);
+			}
 		}
 	}
 	

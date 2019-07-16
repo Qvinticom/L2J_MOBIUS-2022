@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.Party;
@@ -682,6 +683,31 @@ public class PlayerStat extends PlayableStat
 	public int getArtifactSlots()
 	{
 		return (int) getValue(Stats.ARTIFACT_SLOTS, 0);
+	}
+	
+	public double getElementalSpiritXpBonus()
+	{
+		return getValue(Stats.ELEMENTAL_SPIRIT_BONUS_EXP, 1);
+	}
+	
+	public double getElementalSpiritPower(ElementalType type, double base)
+	{
+		return type == null ? 0 : getValue(type.getAttackStat(), base);
+	}
+	
+	public double getElementalSpiritCriticalRate(int base)
+	{
+		return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_RATE, base);
+	}
+	
+	public double getElementalSpiritCriticalDamage(double base)
+	{
+		return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_DAMAGE, base);
+	}
+	
+	public double getElementalSpiritDefense(ElementalType type, double base)
+	{
+		return type == null ? 0 : getValue(type.getDefenseStat(), base);
 	}
 	
 	@Override

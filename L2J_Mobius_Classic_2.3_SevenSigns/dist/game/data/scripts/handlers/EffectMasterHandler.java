@@ -130,6 +130,8 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DispelBySlotProbability", DispelBySlotProbability::new);
 		EffectHandler.getInstance().registerHandler("DoubleCast", DoubleCast::new);
 		EffectHandler.getInstance().registerHandler("DuelistFury", DuelistFury::new);
+		EffectHandler.getInstance().registerHandler("ElementalSpiritAttack", ElementalSpiritAttack::new);
+		EffectHandler.getInstance().registerHandler("ElementalSpiritDefense", ElementalSpiritDefense::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);
 		EffectHandler.getInstance().registerHandler("EnergyAttack", EnergyAttack::new);
 		EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);
@@ -309,6 +311,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Sow", Sow::new);
 		EffectHandler.getInstance().registerHandler("Speed", Speed::new);
 		EffectHandler.getInstance().registerHandler("SphericBarrier", SphericBarrier::new);
+		EffectHandler.getInstance().registerHandler("SpiritXpModify", SpiritExpModify::new);
 		EffectHandler.getInstance().registerHandler("SpModify", SpModify::new);
 		EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);

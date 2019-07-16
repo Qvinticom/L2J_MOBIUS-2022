@@ -47,6 +47,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
@@ -83,6 +84,7 @@ import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClanWarState;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.GroupType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -108,6 +110,7 @@ import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
+import org.l2jmobius.gameserver.instancemanager.ElementalSpiritInstanceManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
@@ -125,6 +128,7 @@ import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.ContactList;
+import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroList;
@@ -213,6 +217,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerReputa
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSubChange;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
@@ -846,6 +851,9 @@ public final class PlayerInstance extends Playable
 	private boolean _hasCharmOfCourage = false;
 	
 	private final Set<Integer> _whisperers = ConcurrentHashMap.newKeySet();
+	
+	private ElementalSpirit[] _spirits;
+	private ElementalType _activeElementalSpiritType;
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -2350,6 +2358,7 @@ public final class PlayerInstance extends Playable
 			if (getClassId().level() == 3)
 			{
 				sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST);
+				initElementalSpirits();
 			}
 			else
 			{
@@ -6662,6 +6671,11 @@ public final class PlayerInstance extends Playable
 					player.setSponsor(rset.getInt("sponsor"));
 					player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
 					
+					if ((player.getLevel() >= 76) && (player.getClassId().level() > 2))
+					{
+						player.initElementalSpirits();
+					}
+					
 					CursedWeaponsManager.getInstance().checkPlayer(player);
 					
 					// Set the x,y,z position of the PlayerInstance and make it invisible
@@ -7084,6 +7098,17 @@ public final class PlayerInstance extends Playable
 		if (aVars != null)
 		{
 			aVars.storeMe();
+		}
+		
+		if (_spirits != null)
+		{
+			for (ElementalSpirit spirit : _spirits)
+			{
+				if (spirit != null)
+				{
+					spirit.save();
+				}
+			}
 		}
 	}
 	
@@ -11434,7 +11459,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void sendDamageMessage(Creature target, Skill skill, int damage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
 	{
 		// Check if hit is missed
 		if (miss)
@@ -11497,7 +11522,15 @@ public final class PlayerInstance extends Playable
 		}
 		else if (this != target)
 		{
-			sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+			if (elementalDamage != 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+			}
+			
 			sm.addPcName(this);
 			
 			// Localisation related.
@@ -11513,6 +11546,10 @@ public final class PlayerInstance extends Playable
 			
 			sm.addString(targetName);
 			sm.addInt(damage);
+			if (elementalDamage != 0)
+			{
+				sm.addInt((int) elementalDamage);
+			}
 			sm.addPopup(target.getObjectId(), getObjectId(), -damage);
 		}
 		
@@ -13921,5 +13958,140 @@ public final class PlayerInstance extends Playable
 			getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
 			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
+	}
+	
+	public void initElementalSpirits()
+	{
+		tryLoadSpirits();
+		
+		if (_spirits == null)
+		{
+			final ElementalType[] types = ElementalType.values();
+			_spirits = new ElementalSpirit[types.length - 1]; // exclude None
+			
+			for (ElementalType type : types)
+			{
+				if (ElementalType.NONE == type)
+				{
+					continue;
+				}
+				
+				final ElementalSpirit spirit = new ElementalSpirit(type, this);
+				_spirits[type.getId() - 1] = spirit;
+				spirit.save();
+			}
+		}
+		
+		if (_activeElementalSpiritType == null)
+		{
+			changeElementalSpirit(ElementalType.FIRE.getId());
+		}
+	}
+	
+	private void tryLoadSpirits()
+	{
+		final List<ElementalSpiritDataHolder> spiritsData = ElementalSpiritInstanceManager.getInstance().findByPlayerId(getObjectId());
+		if (!spiritsData.isEmpty())
+		{
+			_spirits = new ElementalSpirit[ElementalType.values().length - 1];
+			for (ElementalSpiritDataHolder spiritData : spiritsData)
+			{
+				_spirits[spiritData.getType() - 1] = new ElementalSpirit(spiritData, this);
+				if (spiritData.isInUse())
+				{
+					_activeElementalSpiritType = ElementalType.of(spiritData.getType());
+				}
+			}
+		}
+	}
+	
+	public double getActiveElementalSpiritAttack()
+	{
+		return getStat().getElementalSpiritPower(_activeElementalSpiritType, CommonUtil.zeroIfNullOrElse(getElementalSpirit(_activeElementalSpiritType), ElementalSpirit::getAttack));
+	}
+	
+	public double getFireSpiritDefense()
+	{
+		return getElementalSpiritDefenseOf(ElementalType.FIRE);
+	}
+	
+	public double getWaterSpiritDefense()
+	{
+		return getElementalSpiritDefenseOf(ElementalType.WATER);
+	}
+	
+	public double getWindSpiritDefense()
+	{
+		return getElementalSpiritDefenseOf(ElementalType.WIND);
+	}
+	
+	public double getEarthSpiritDefense()
+	{
+		return getElementalSpiritDefenseOf(ElementalType.EARTH);
+	}
+	
+	@Override
+	public double getElementalSpiritDefenseOf(ElementalType type)
+	{
+		return getStat().getElementalSpiritDefense(type, CommonUtil.zeroIfNullOrElse(getElementalSpirit(type), ElementalSpirit::getDefense));
+	}
+	
+	public double getElementalSpiritCritRate()
+	{
+		return getStat().getElementalSpiritCriticalRate(CommonUtil.zeroIfNullOrElse(getElementalSpirit(_activeElementalSpiritType), ElementalSpirit::getCriticalRate));
+	}
+	
+	public double getElementalSpiritCritDamage()
+	{
+		return getStat().getElementalSpiritCriticalDamage(CommonUtil.zeroIfNullOrElse(getElementalSpirit(_activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
+	}
+	
+	public double getElementalSpiritXpBonus()
+	{
+		return getStat().getElementalSpiritXpBonus();
+	}
+	
+	public ElementalSpirit getElementalSpirit(ElementalType type)
+	{
+		if ((_spirits == null) || (type == null) || (type == ElementalType.NONE))
+		{
+			return null;
+		}
+		return _spirits[type.getId() - 1];
+	}
+	
+	public byte getActiveElementalSpiritType()
+	{
+		return (byte) CommonUtil.zeroIfNullOrElse(_activeElementalSpiritType, ElementalType::getId);
+	}
+	
+	public void changeElementalSpirit(byte element)
+	{
+		_activeElementalSpiritType = ElementalType.of(element);
+		
+		if (_spirits != null)
+		{
+			for (ElementalSpirit spirit : _spirits)
+			{
+				if (spirit != null)
+				{
+					spirit.setInUse(spirit.getType() == element);
+				}
+			}
+		}
+		
+		final UserInfo userInfo = new UserInfo(this, false);
+		userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+		sendPacket(userInfo);
+	}
+	
+	public ElementalSpirit[] getSpirits()
+	{
+		return _spirits;
+	}
+	
+	public boolean isInBattle()
+	{
+		return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
 	}
 }

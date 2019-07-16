@@ -42,6 +42,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.DropType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.MpRewardType;
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -110,6 +111,7 @@ public class NpcData implements IXmlReader
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
 						set.set("usingServerSideTitle", parseBoolean(attrs, "usingServerSideTitle"));
+						set.set("elementalType", parseEnum(attrs, ElementalType.class, "element"));
 						for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 						{
 							attrs = npcNode.getAttributes();
@@ -143,6 +145,7 @@ public class NpcData implements IXmlReader
 									set.set("exp", parseDouble(attrs, "exp"));
 									set.set("sp", parseDouble(attrs, "sp"));
 									set.set("raidPoints", parseDouble(attrs, "raidPoints"));
+									set.set("attribute_exp", parseLong(attrs, "attribute_exp"));
 									break;
 								}
 								case "mpreward":

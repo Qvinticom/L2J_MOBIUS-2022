@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.data.xml.impl.KarmaData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.BasicProperty;
 import org.l2jmobius.gameserver.enums.DispelSlotType;
+import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.Position;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -1651,5 +1652,78 @@ public final class Formulas
 		}
 		
 		return 1;
+	}
+	
+	public static double calcSpiritElementalDamage(Creature attacker, Creature target)
+	{
+		if (attacker.isPlayer())
+		{
+			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
+			
+			if (ElementalType.NONE == type)
+			{
+				return 0;
+			}
+			
+			final double critRate = attackerPlayer.getElementalSpiritCritRate();
+			final boolean isCrit = Math.min(critRate, 380) > Rnd.get(1000);
+			final double critDamage = attackerPlayer.getElementalSpiritCritDamage();
+			final double attack = attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type);
+			if (target.isPlayer())
+			{
+				return calcSpiritElementalPvPDamage(attack, critDamage, isCrit);
+			}
+			return calcSpiritElementalPvEDamage(type, target.getElementalSpiritType(), attack, critDamage, isCrit);
+		}
+		
+		return 0;
+	}
+	
+	private static double calcSpiritElementalPvPDamage(double attack, double critDamage, boolean isCrit)
+	{
+		double damage = (attack * 1.223) + Rnd.get(-20, +20);
+		if (isCrit)
+		{
+			damage += (attack * 1.223) + (((attack * 0.03) + 24) * critDamage) + Rnd.get(-5, 30);
+		}
+		return damage;
+	}
+	
+	private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit)
+	{
+		double damage;
+		double baseDamage = (attack * 0.8) + Rnd.get(-25, 25);
+		double bonus = 1;
+		if (targetType == ElementalType.NONE)
+		{
+			damage = attack * 0.735;
+		}
+		else if (attackerType.getDominating() == targetType)
+		{
+			damage = (-1136 + baseDamage) * 0.6;
+			bonus = 0.6;
+		}
+		else if (targetType.getDominating() == attackerType)
+		{
+			damage = (185 + baseDamage) * 1.2;
+			bonus = 1.2;
+		}
+		else if (targetType == attackerType)
+		{
+			damage = baseDamage;
+		}
+		else
+		{
+			damage = (-477 + baseDamage) * 0.8;
+			bonus = 0.8;
+		}
+		
+		if (isCrit)
+		{
+			damage += ((40 + ((9.2 + (attack * 0.048)) * critDamage)) * bonus) + Rnd.get(-10, 50);
+		}
+		
+		return damage;
 	}
 }

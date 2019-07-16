@@ -20,19 +20,19 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
 public class ExElementalSpiritInfo implements IClientIncomingPacket
 {
-	@SuppressWarnings("unused")
-	private int _id;
+	private byte _type;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = packet.readC();
+		_type = (byte) packet.readC();
 		return true;
 	}
 	
@@ -45,6 +45,6 @@ public class ExElementalSpiritInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		// player.sendPacket(new org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritInfo());
+		client.sendPacket(new ElementalSpiritInfo(player, player.getActiveElementalSpiritType(), _type));
 	}
 }
