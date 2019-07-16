@@ -271,7 +271,7 @@ public final class EventEngineData implements IXmlReader
 								}
 								break;
 							}
-							case "HAVENT_RUN":
+							case "HASNT_RUN":
 							{
 								conditionalSchedulers.add(new HaventRunConditionalScheduler(eventManager, name));
 								break;
