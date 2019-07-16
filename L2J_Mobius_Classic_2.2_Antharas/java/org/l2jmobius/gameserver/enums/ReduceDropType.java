@@ -21,6 +21,7 @@ package org.l2jmobius.gameserver.enums;
  */
 public enum ReduceDropType
 {
+	ANY,
 	MOB,
 	PK,
 	RAID

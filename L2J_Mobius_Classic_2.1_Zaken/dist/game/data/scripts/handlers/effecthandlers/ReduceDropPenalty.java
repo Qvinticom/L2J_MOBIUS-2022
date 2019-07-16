@@ -62,6 +62,16 @@ public class ReduceDropPenalty extends AbstractEffect
 				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
 				break;
 			}
+			case ANY:
+			{
+				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
+				break;
+			}
 		}
 	}
 }

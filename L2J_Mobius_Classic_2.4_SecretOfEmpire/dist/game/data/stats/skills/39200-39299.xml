@@ -885,7 +885,18 @@
 	</skill>
 	<skill id="39257" toLevel="1" name="Newbie MP Recovery Potion">
 		<icon>icon.etc_reagent_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>40</amount> <!--  need confirm -->
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39258" toLevel="1" name="Warrior MP Recovery Potion">
 		<icon>icon.etc_reagent_white_i00</icon>

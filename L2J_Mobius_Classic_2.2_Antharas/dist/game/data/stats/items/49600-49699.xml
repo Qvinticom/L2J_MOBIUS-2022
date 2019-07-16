@@ -219,7 +219,7 @@
 		<!-- P. Atk. +200, M. Atk. +275, M. Damage Resistance +8%, Skill Power +3%, Resistance to All Weapons +3%, CON +1, MEN +1, STR +1, INT +1. P./ M. Critical Rate +10. Skill MP Consumption -4%. Can only be used by characters Lv. 60 and above. Blacksmith Baggins in Giran can help exchange this Talisman and Baium? Soul for Talisman of Baium. Effects from two such talismans do not stack. -->
 		<set name="icon" val="icon.tallisman_oman_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />

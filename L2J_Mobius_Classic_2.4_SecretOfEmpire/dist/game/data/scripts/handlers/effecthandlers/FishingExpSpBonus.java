@@ -14,15 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package handlers.effecthandlers;
+
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * @author Sdw
+ * @author Mobius
  */
-public enum ReduceDropType
+public class FishingExpSpBonus extends AbstractStatEffect
 {
-	ANY,
-	MOB,
-	PK,
-	RAID
+	public FishingExpSpBonus(StatsSet params)
+	{
+		super(params, Stats.FISHING_EXP_SP_BONUS);
+	}
 }

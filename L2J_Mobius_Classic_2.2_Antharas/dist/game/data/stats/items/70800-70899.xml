@@ -347,12 +347,18 @@
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55710" level="1" type="ON_EQUIP"/> <!-- Bright light -->
+			<skill id="55711" level="1" type="ON_UNEQUIP"/> <!-- Bright light fades -->
+			<skill id="55712" level="1"/>  <!-- Activates 5 jewel slots. -->
+			<skill id="55713" level="1"/> <!-- Inventory Slot +12. -->
+		</skills>
 	</item>
 	<item id="70832" name="Fortune Red Cat's Eye Chest" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 1-5 Red Cat's Eye. Cannot be dropped. -->
