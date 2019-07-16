@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Mobius
  */
-public class FishingExpSpBonus extends AbstractStatEffect
+public class FishingExpSpBonus extends AbstractStatPercentEffect
 {
 	public FishingExpSpBonus(StatsSet params)
 	{
