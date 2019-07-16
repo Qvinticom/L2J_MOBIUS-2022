@@ -439,6 +439,20 @@
 			<item id="5706" /> <!-- Damascus*Damascus -->
 			<item id="8938" /> <!-- Tallum Blade*Damascus -->
 		</itemGroup>
+		<!-- Weapon S-Grade -->
+		<itemGroup id="5">
+			<item id="6364" /> <!-- Forgotten Blade -->
+			<item id="6365" /> <!-- Basalt Battle hammer -->
+			<item id="6366" /> <!-- Imperial Staff -->
+			<item id="6367" /> <!-- Angel Slayer -->
+			<item id="6369" /> <!-- Dragon Hunter Axe -->
+			<item id="6370" /> <!-- Saint Spear -->
+			<item id="6371" /> <!-- Demon Splinter -->
+			<item id="6372" /> <!-- Heaven's Divider -->
+			<item id="6579" /> <!-- Arcana Mace -->
+			<item id="6580" /> <!-- Tallum Blade*Dark Legion's Edge -->
+			<item id="7575" /> <!-- Draconic Bow -->
+		</itemGroup>
 	</itemGroups>
 	<fees>
 		<!-- Gemstone (D-grade) Weapon D-grade -->
@@ -449,12 +463,16 @@
 		<fee itemGroup="2" itemId="2130" itemCount="200" cancelFee="80000">
 			<mineral id="90012" /> <!-- Common Life Stone-->
 		</fee>
-		<!-- Gemstone (D-grade) Weapon B-grade-->
+		<!-- Gemstone (D-grade) Weapon B-grade -->
 		<fee itemGroup="3" itemId="2130" itemCount="200" cancelFee="80000">
 			<mineral id="90012" /> <!-- Common Life Stone-->
 		</fee>
-		<!-- Gemstone (D-grade) Weapon A-grade-->
+		<!-- Gemstone (D-grade) Weapon A-grade -->
 		<fee itemGroup="4" itemId="2130" itemCount="200" cancelFee="80000">
+			<mineral id="90012" /> <!-- Common Life Stone-->
+		</fee>
+		<!-- Gemstone (D-grade) Weapon S-grade -->
+		<fee itemGroup="5" itemId="2130" itemCount="200" cancelFee="80000">
 			<mineral id="90012" /> <!-- Common Life Stone-->
 		</fee>
 		<!-- Gemstone (C-grade) Weapon D-grade -->
@@ -465,12 +483,16 @@
 		<fee itemGroup="2" itemId="2131" itemCount="300" cancelFee="240000">
 			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
 		</fee>
-		<!-- Gemstone (C-grade) Weapon B-grade-->
+		<!-- Gemstone (C-grade) Weapon B-grade -->
 		<fee itemGroup="3" itemId="2131" itemCount="300" cancelFee="240000">
 			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
 		</fee>
-		<!-- Gemstone (C-grade) Weapon A-grade-->
+		<!-- Gemstone (C-grade) Weapon A-grade -->
 		<fee itemGroup="4" itemId="2131" itemCount="300" cancelFee="240000">
+			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (C-grade) Weapon S-grade -->
+		<fee itemGroup="5" itemId="2131" itemCount="300" cancelFee="240000">
 			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
 		</fee>
 		<!-- Gemstone (B-grade) Weapon D-grade -->
@@ -481,13 +503,57 @@
 		<fee itemGroup="2" itemId="2132" itemCount="400" cancelFee="720000">
 			<mineral id="90014" /> <!-- High-Grade Life Stone-->
 		</fee>
-		<!-- Gemstone (B-grade) Weapon B-grade-->
+		<!-- Gemstone (B-grade) Weapon B-grade -->
 		<fee itemGroup="3" itemId="2132" itemCount="400" cancelFee="720000">
 			<mineral id="90014" /> <!-- High-Grade Life Stone-->
 		</fee>
-		<!-- Gemstone (B-grade) Weapon A-grade-->
+		<!-- Gemstone (B-grade) Weapon A-grade -->
 		<fee itemGroup="4" itemId="2132" itemCount="400" cancelFee="720000">
 			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (B-grade) Weapon S-grade -->
+		<fee itemGroup="5" itemId="2132" itemCount="400" cancelFee="720000">
+			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (A-grade) Weapon D-grade -->
+		<fee itemGroup="1" itemId="2133" itemCount="200" cancelFee="1540000">
+			<mineral id="90015" /> <!-- Top-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (A-grade) Weapon C-grade -->
+		<fee itemGroup="2" itemId="2133" itemCount="200" cancelFee="1540000">
+			<mineral id="90015" /> <!-- Top-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (A-grade) Weapon B-grade -->
+		<fee itemGroup="3" itemId="2133" itemCount="200" cancelFee="1540000">
+			<mineral id="90015" /> <!-- Top-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (A-grade) Weapon A-grade -->
+		<fee itemGroup="4" itemId="2133" itemCount="200" cancelFee="1540000">
+			<mineral id="90015" /> <!-- Top-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (A-grade) Weapon S-grade -->
+		<fee itemGroup="5" itemId="2133" itemCount="200" cancelFee="1540000">
+			<mineral id="90015" /> <!-- Top-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (S-grade) Weapon D-grade -->
+		<fee itemGroup="1" itemId="2134" itemCount="200" cancelFee="2250000">
+			<mineral id="90016" /> <!-- Shining Life Stone-->
+		</fee>
+		<!-- Gemstone (S-grade) Weapon C-grade -->
+		<fee itemGroup="2" itemId="2134" itemCount="200" cancelFee="2250000">
+			<mineral id="90016" /> <!-- Shining Life Stone-->
+		</fee>
+		<!-- Gemstone (S-grade) Weapon B-grade -->
+		<fee itemGroup="3" itemId="2134" itemCount="200" cancelFee="2250000">
+			<mineral id="90016" /> <!-- Shining Life Stone-->
+		</fee>
+		<!-- Gemstone (S-grade) Weapon A-grade -->
+		<fee itemGroup="4" itemId="2134" itemCount="200" cancelFee="720000">
+			<mineral id="90016" /> <!-- Shining Life Stone-->
+		</fee>
+		<!-- Gemstone (S-grade) Weapon S-grade -->
+		<fee itemGroup="5" itemId="2134" itemCount="200" cancelFee="720000">
+			<mineral id="90016" /> <!-- Shining Life Stone-->
 		</fee>
 	</fees>
 </list>
