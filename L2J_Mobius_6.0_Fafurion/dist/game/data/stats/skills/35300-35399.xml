@@ -1068,6 +1068,37 @@
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1 and allows 5 Talismans to be equipped. -->
 		<icon>icon.r2_bracelet_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35353" toLevel="1" name="Bloody Cloak">
 		<!-- All basic abilities +1. -->

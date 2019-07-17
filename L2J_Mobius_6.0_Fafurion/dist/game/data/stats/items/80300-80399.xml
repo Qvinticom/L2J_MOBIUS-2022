@@ -296,6 +296,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35352" level="1" /> <!-- Paulina Twilight Bracelet -->
+		</skills>
 	</item>
 	<item id="80321" name="Bloody Cloak" type="Armor">
 		<!-- A limited-edition cloak that a Dwarf Artisan has stitched with great care to celebrate the opening of the Bloody Server. Can be used only in the Bloody Server. <Additional option>. All stats +1, all Attribute Resistance +5 -->
