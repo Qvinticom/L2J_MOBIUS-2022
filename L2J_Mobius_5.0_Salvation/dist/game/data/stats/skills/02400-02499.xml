@@ -1386,10 +1386,10 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<PHOENIX_KNIGHT />
-					<HELL_KNIGHT />
-					<EVA_TEMPLAR />
-					<SHILLIEN_TEMPLAR />
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SHILLIEN_TEMPLAR</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -1565,18 +1565,18 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<PHOENIX_KNIGHT />
-					<HELL_KNIGHT />
-					<EVA_TEMPLAR />
-					<SHILLIEN_TEMPLAR />
-					<ADVENTURER />
-					<SWORD_MUSE />
-					<WIND_RIDER />
-					<SPECTRAL_DANCER />
-					<GHOST_HUNTER />
-					<MALE_SOUL_HOUND />
-					<FEMALE_SOUL_HOUND />
-					<TRICKSTER />
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SHILLIEN_TEMPLAR</item>
+					<item>ADVENTURER</item>
+					<item>SWORD_MUSE</item>
+					<item>WIND_RIDER</item>
+					<item>SPECTRAL_DANCER</item>
+					<item>GHOST_HUNTER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>TRICKSTER</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -1612,18 +1612,18 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<DUELIST />
-					<DREADNOUGHT />
-					<TITAN />
-					<GRAND_KHAVATARI />
-					<FORTUNE_SEEKER />
-					<MAESTRO />
-					<ADVENTURER />
-					<WIND_RIDER />
-					<GHOST_HUNTER />
-					<MALE_SOUL_HOUND />
-					<FEMALE_SOUL_HOUND />
-					<DOOMBRINGER />
+					<item>DUELIST</item>
+					<item>DREADNOUGHT</item>
+					<item>TITAN</item>
+					<item>GRAND_KHAVATARI</item>
+					<item>FORTUNE_SEEKER</item>
+					<item>MAESTRO</item>
+					<item>ADVENTURER</item>
+					<item>WIND_RIDER</item>
+					<item>GHOST_HUNTER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>DOOMBRINGER</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -2169,9 +2169,9 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<ARCANA_LORD />
-					<ELEMENTAL_MASTER />
-					<SPECTRAL_MASTER />
+					<item>ARCANA_LORD</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>SPECTRAL_MASTER</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -2207,9 +2207,9 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<ARCANA_LORD />
-					<ELEMENTAL_MASTER />
-					<SPECTRAL_MASTER />
+					<item>ARCANA_LORD</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>SPECTRAL_MASTER</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -2245,9 +2245,9 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<ARCANA_LORD />
-					<ELEMENTAL_MASTER />
-					<SPECTRAL_MASTER />
+					<item>ARCANA_LORD</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>SPECTRAL_MASTER</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
@@ -2852,8 +2852,8 @@
 			</condition>
 			<condition name="OpCheckClassList">
 				<classIds>
-					<MALE_SOUL_HOUND />
-					<FEMALE_SOUL_HOUND />
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
 				</classIds>
 				<affectType>CASTER</affectType>
 				<isWithin>true</isWithin>
