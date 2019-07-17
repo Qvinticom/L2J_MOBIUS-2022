@@ -380,14 +380,14 @@ public final class VillageMasterInstance extends FolkInstance
 					// If they both exist, remove both unique items and continue with adding the sub-class.
 					if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
 					{
-						QuestState qs = player.getQuestState("235_MimirsElixir");
+						QuestState qs = player.getQuestState("Q235_MimirsElixir");
 						if ((qs == null) || !qs.isCompleted())
 						{
 							player.sendMessage("You must have completed the Mimir's Elixir quest to continue adding your sub class.");
 							player.setLocked(false);
 							return;
 						}
-						qs = player.getQuestState("234_FatesWhisper");
+						qs = player.getQuestState("Q234_FatesWhisper");
 						if ((qs == null) || !qs.isCompleted())
 						{
 							player.sendMessage("You must have completed the Fate's Whisper quest to continue adding your sub class.");
