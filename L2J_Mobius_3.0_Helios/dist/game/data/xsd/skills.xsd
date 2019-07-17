@@ -2277,7 +2277,13 @@
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
 														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="percentType" type="xs:string" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillIds">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>
