@@ -1076,14 +1076,14 @@
 		<icon>icon.skill10324</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkill">
-				<skillId>261</skillId> <!-- Triple Sonic Slash -->
-				<skillId>10258</skillId> <!-- Armor Destruction -->
-				<skillId>10260</skillId> <!-- Mega Strike -->
-				<skillId>10262</skillId> <!-- Power Bomber -->
-				<skillId>10265</skillId> <!-- Eruption -->
-				<skillId>10269</skillId> <!-- Jump Attack -->
-				<skillId>10318</skillId> <!-- Sonic Flash -->
+			<condition name="OpCheckSkillList">
+				<item>261</item> <!-- Triple Sonic Slash -->
+				<item>10258</item> <!-- Armor Destruction -->
+				<item>10260</item> <!-- Mega Strike -->
+				<item>10262</item> <!-- Power Bomber -->
+				<item>10265</item> <!-- Eruption -->
+				<item>10269</item> <!-- Jump Attack -->
+				<item>10318</item> <!-- Sonic Flash -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>

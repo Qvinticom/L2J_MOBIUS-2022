@@ -524,7 +524,7 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="classId" type="xs:string" />
 														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillLevel" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
 														<xs:element minOccurs="0" name="level">
@@ -2185,7 +2185,7 @@
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
 														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="percentType" type="xs:string" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>

@@ -4,7 +4,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element maxOccurs="unbounded" name="skill">
-					<xs:complexType mixed="true">
+					<xs:complexType>
 						<xs:sequence>
 							<xs:choice maxOccurs="unbounded">
 								<xs:element name="icon">
@@ -661,7 +661,7 @@
 											<xs:element minOccurs="0" name="dispel">
 												<xs:complexType>
 													<xs:sequence>
-														<xs:element maxOccurs="unbounded" name="value">
+														<xs:element name="value">
 															<xs:complexType>
 																<xs:simpleContent>
 																	<xs:extension base="xs:string">
@@ -2277,7 +2277,7 @@
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
 														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="percentType" type="xs:string" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>
@@ -2918,11 +2918,9 @@
 							</xs:choice>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:unsignedInt" use="required" />
-						<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
+						<xs:attribute name="toLevel" type="xs:unsignedByte" use="required" />
 						<xs:attribute name="name" type="xs:string" use="required" />
-						<xs:attribute name="levels" type="xs:unsignedByte" use="optional" />
 						<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
-						<xs:attribute name="usingServerSideName" type="xs:boolean" use="optional" />
 						<xs:attribute name="displayId" type="xs:unsignedShort" use="optional" />
 					</xs:complexType>
 				</xs:element>
