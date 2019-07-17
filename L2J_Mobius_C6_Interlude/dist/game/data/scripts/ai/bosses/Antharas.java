@@ -59,7 +59,7 @@ public class Antharas extends Quest
 {
 	protected static final Logger LOGGER = Logger.getLogger(Antharas.class.getName());
 	
-	// config
+	// Config
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
 	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
 	// private static final int FWA_INACTIVITYTIME = 900000;

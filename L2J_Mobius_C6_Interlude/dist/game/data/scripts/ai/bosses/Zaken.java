@@ -603,7 +603,6 @@ public class Zaken extends Quest
 				cancelQuestTimer("1003", null, null);
 			}
 		}
-		
 		else if (event.equals("zaken_unlock"))
 		{
 			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
@@ -624,9 +623,9 @@ public class Zaken extends Quest
 		{
 			return super.onFactionCall(npc, caller, attacker, isPet);
 		}
+		
 		final int npcId = npc.getNpcId();
 		final int callerId = caller.getNpcId();
-		
 		if ((getTimeHour() < 5) && (callerId != ZAKEN) && (npcId == ZAKEN))
 		{
 			final int damage = 0; // well damage required :x

@@ -53,7 +53,6 @@ import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * @version $Revision: $ $Date: $
  * @author L2J_JP SANDMAN
  **/
 public class VanHalter extends Quest
@@ -504,7 +503,6 @@ public class VanHalter extends Quest
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
 		}
-		
 		_royalGuardCaptain.clear();
 	}
 	

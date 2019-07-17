@@ -162,7 +162,6 @@ public class Core extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
-		
 		if (event.equals("core_unlock"))
 		{
 			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);

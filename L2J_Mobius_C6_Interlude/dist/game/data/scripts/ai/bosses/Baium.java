@@ -72,49 +72,26 @@ public class Baium extends Quest
 	private static final int LIVE_BAIUM = 29020;
 	private static final int ARCHANGEL = 29021;
 	
-	// Baium status tracking
-	private static final byte ASLEEP = 0; // baium is in the stone version, waiting to be woken up. Entry is unlocked
+	// Baium status tracking,
+	private static final byte ASLEEP = 0; // baium is in the stone version, waiting to be woken up. Entry is unlocked,
 	private static final byte AWAKE = 1; // baium is awake and fighting. Entry is locked.
-	private static final byte DEAD = 2; // baium has been killed and has not yet spawned. Entry is locked
+	private static final byte DEAD = 2; // baium has been killed and has not yet spawned. Entry is locked,
 	
-	// fixed archangel spawnloc
+	// Archangel locations.
+	// @formatter:off
 	private static final int ANGEL_LOCATION[][] =
 	{
-		{
-			114239,
-			17168,
-			10080,
-			63544
-		},
-		{
-			115780,
-			15564,
-			10080,
-			13620
-		},
-		{
-			114880,
-			16236,
-			10080,
-			5400
-		},
-		{
-			115168,
-			17200,
-			10080,
-			0
-		},
-		{
-			115792,
-			16608,
-			10080,
-			0
-		},
+		{114239, 17168, 10080, 63544},
+		{115780, 15564, 10080, 13620},
+		{114880, 16236, 10080, 5400},
+		{115168, 17200, 10080, 0},
+		{115792, 16608, 10080, 0},
 	};
+	// @formatter:on
 	
-	private long _LastAttackVsBaiumTime = 0;
-	private final List<NpcInstance> _Minions = new CopyOnWriteArrayList<>();
-	protected BossZone _Zone;
+	private long _lastAttackVsBaiumTime = 0;
+	private final List<NpcInstance> _minions = new CopyOnWriteArrayList<>();
+	protected BossZone _zone;
 	
 	public Baium(int questId, String name, String descr)
 	{
@@ -131,7 +108,7 @@ public class Baium extends Quest
 		addStartNpc(ANGELIC_VORTEX);
 		addTalkId(STONE_BAIUM);
 		addTalkId(ANGELIC_VORTEX);
-		_Zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
+		_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
@@ -228,7 +205,7 @@ public class Baium extends Quest
 				npc.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
 				npc.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 5));
 				// start monitoring baium's inactivity
-				_LastAttackVsBaiumTime = System.currentTimeMillis();
+				_lastAttackVsBaiumTime = System.currentTimeMillis();
 				
 				if (!npc.getSpawn().is_customBossInstance())
 				{
@@ -252,7 +229,7 @@ public class Baium extends Quest
 						// baium.setIsImobilised(false);
 						// for (NpcInstance minion : _Minions)
 						// minion.setShowSummonAnimation(false);
-						baium.getAttackByList().addAll(_Zone.getCharactersInside().values());
+						baium.getAttackByList().addAll(_zone.getCharactersInside().values());
 					}
 					catch (Exception e)
 					{
@@ -265,8 +242,8 @@ public class Baium extends Quest
 				{
 					final MonsterInstance angel = (MonsterInstance) addSpawn(ARCHANGEL, element[0], element[1], element[2], element[3], false, 0);
 					angel.setIsInvul(true);
-					_Minions.add(angel);
-					angel.getAttackByList().addAll(_Zone.getCharactersInside().values());
+					_minions.add(angel);
+					angel.getAttackByList().addAll(_zone.getCharactersInside().values());
 					angel.isAggressive();
 				}
 			}
@@ -278,14 +255,14 @@ public class Baium extends Quest
 			if (npc.getNpcId() == LIVE_BAIUM)
 			{
 				// just in case the zone reference has been lost (somehow...), restore the reference
-				if (_Zone == null)
+				if (_zone == null)
 				{
-					_Zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
+					_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 				}
-				if ((_LastAttackVsBaiumTime + (Config.BAIUM_SLEEP * 1000)) < System.currentTimeMillis())
+				if ((_lastAttackVsBaiumTime + (Config.BAIUM_SLEEP * 1000)) < System.currentTimeMillis())
 				{
 					npc.deleteMe(); // despawn the live-baium
-					for (NpcInstance minion : _Minions)
+					for (NpcInstance minion : _minions)
 					{
 						if (minion != null)
 						{
@@ -293,13 +270,13 @@ public class Baium extends Quest
 							minion.deleteMe();
 						}
 					}
-					_Minions.clear();
+					_minions.clear();
 					addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0); // spawn stone-baium
 					GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP); // mark that Baium is not awake any more
-					_Zone.oustAllPlayers();
+					_zone.oustAllPlayers();
 					cancelQuestTimer("baium_despawn", npc, null);
 				}
-				else if (((_LastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
+				else if (((_lastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
 				{
 					// npc.setIsCastingNow(false); //just in case
 					npc.setTarget(npc);
@@ -316,11 +293,11 @@ public class Baium extends Quest
 	{
 		final int npcId = npc.getNpcId();
 		String htmltext = "";
-		if (_Zone == null)
+		if (_zone == null)
 		{
-			_Zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
+			_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 		}
-		if (_Zone == null)
+		if (_zone == null)
 		{
 			return "<html><body>Angelic Vortex:<br>You may not enter while admin disabled this zone</body></html>";
 		}
@@ -329,7 +306,7 @@ public class Baium extends Quest
 		
 		if ((npcId == STONE_BAIUM) && (status == ASLEEP))
 		{
-			if (Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM || _Zone.isPlayerAllowed(player))
+			if (Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM || _zone.isPlayerAllowed(player))
 			{
 				// once Baium is awaken, no more people may enter until he dies, the server reboots, or
 				// 30 minutes pass with no attacks made against Baium.
@@ -372,7 +349,7 @@ public class Baium extends Quest
 				player.getQuestState("baium").takeItems(4295, 1);
 				// allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
 				// Note: this just means 30secs to get in, no limits on how long it takes before we get out.
-				_Zone.allowPlayerEntry(player, 30);
+				_zone.allowPlayerEntry(player, 30);
 				player.teleToLocation(113100, 14500, 10077);
 			}
 			else
@@ -401,7 +378,7 @@ public class Baium extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		if (!_Zone.isInsideZone(attacker))
+		if (!_zone.isInsideZone(attacker))
 		{
 			attacker.reduceCurrentHp(attacker.getCurrentHp(), attacker, false);
 			return super.onAttack(npc, attacker, damage, isPet);
@@ -434,7 +411,7 @@ public class Baium extends Quest
 				}
 			}
 			// update a variable with the last action against baium
-			_LastAttackVsBaiumTime = System.currentTimeMillis();
+			_lastAttackVsBaiumTime = System.currentTimeMillis();
 			callSkillAI(npc);
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -460,7 +437,7 @@ public class Baium extends Quest
 			GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM, info);
 		}
 		
-		for (NpcInstance minion : _Minions)
+		for (NpcInstance minion : _minions)
 		{
 			if (minion != null)
 			{
@@ -468,7 +445,7 @@ public class Baium extends Quest
 				minion.deleteMe();
 			}
 		}
-		_Minions.clear();
+		_minions.clear();
 		
 		if (getQuestTimer("skill_range", npc, null) != null)
 		{
@@ -510,7 +487,7 @@ public class Baium extends Quest
 		}
 		if (result.isEmpty())
 		{
-			for (NpcInstance minion : _Minions)
+			for (NpcInstance minion : _minions)
 			{
 				if (minion != null)
 				{
@@ -542,7 +519,7 @@ public class Baium extends Quest
 			return;
 		}
 		
-		if ((_target == null) || _target.isDead() || !(_Zone.isInsideZone(_target)))
+		if ((_target == null) || _target.isDead() || !(_zone.isInsideZone(_target)))
 		{
 			_target = getRandomTarget(npc);
 			if (_target != null)
@@ -557,7 +534,7 @@ public class Baium extends Quest
 		{
 			skill = SkillTable.getInstance().getInfo(getRandomSkill(npc), 1);
 		}
-		if ((target == null) || target.isDead() || !(_Zone.isInsideZone(target)))
+		if ((target == null) || target.isDead() || !(_zone.isInsideZone(target)))
 		{
 			// npc.setIsCastingNow(false);
 			return;

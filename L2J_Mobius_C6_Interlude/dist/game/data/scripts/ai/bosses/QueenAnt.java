@@ -49,11 +49,11 @@ public class QueenAnt extends Quest
 	private static final int DEAD = 1; // Queen Ant has been killed.
 	
 	@SuppressWarnings("unused")
-	private static BossZone _Zone;
+	private static BossZone _zone;
 	private MonsterInstance _larva = null;
 	private MonsterInstance _queen = null;
-	private final List<MonsterInstance> _Minions = new CopyOnWriteArrayList<>();
-	private final List<MonsterInstance> _Nurses = new CopyOnWriteArrayList<>();
+	private final List<MonsterInstance> _minions = new CopyOnWriteArrayList<>();
+	private final List<MonsterInstance> _nurses = new CopyOnWriteArrayList<>();
 	
 	enum Event
 	{
@@ -88,7 +88,7 @@ public class QueenAnt extends Quest
 			addEventId(mob, Quest.QuestEventType.ON_ATTACK);
 		}
 		
-		_Zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
+		_zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
 		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
 		
@@ -193,8 +193,8 @@ public class QueenAnt extends Quest
 				{
 					final int x = (int) (radius * Math.cos(i * 1.407)); // 1.407~2pi/6
 					final int y = (int) (radius * Math.sin(i * 1.407));
-					_Nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
-					_Nurses.get(i).setIsAttackDisabled(true);
+					_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
+					_nurses.get(i).setIsAttackDisabled(true);
 				}
 			}
 				break;
@@ -205,46 +205,46 @@ public class QueenAnt extends Quest
 				{
 					final int x = (int) (radius * Math.cos(i * .7854)); // .7854~2pi/8
 					final int y = (int) (radius * Math.sin(i * .7854));
-					_Minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
+					_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
 				}
 			}
 				break;
 			case RESPAWN_ROYAL:
 			{
-				_Minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
+				_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
 			}
 			case RESPAWN_NURSE:
 			{
-				_Nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
+				_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
 			}
 				break;
 			case DESPAWN_MINIONS:
 			{
-				for (int i = 0; i < _Minions.size(); i++)
+				for (int i = 0; i < _minions.size(); i++)
 				{
-					final Attackable mob = _Minions.get(i);
+					final Attackable mob = _minions.get(i);
 					if (mob != null)
 					{
 						mob.decayMe();
 					}
 				}
-				for (int k = 0; k < _Nurses.size(); k++)
+				for (int k = 0; k < _nurses.size(); k++)
 				{
-					final MonsterInstance _nurse = _Nurses.get(k);
+					final MonsterInstance _nurse = _nurses.get(k);
 					if (_nurse != null)
 					{
 						_nurse.decayMe();
 					}
 				}
-				_Nurses.clear();
-				_Minions.clear();
+				_nurses.clear();
+				_minions.clear();
 			}
 				break;
 			case CHECK_MINIONS_ZONE:
 			{
-				for (int i = 0; i < _Minions.size(); i++)
+				for (int i = 0; i < _minions.size(); i++)
 				{
-					final Attackable mob = _Minions.get(i);
+					final Attackable mob = _minions.get(i);
 					if ((mob != null) && !mob.isInsideRadius(npc.getX(), npc.getY(), 700, false))/* !_Zone.isInsideZone(mob)) */
 					{
 						mob.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
@@ -255,14 +255,14 @@ public class QueenAnt extends Quest
 			case CHECK_NURSE_ALIVE:
 			{
 				int deadNurses = 0;
-				for (MonsterInstance nurse : _Nurses)
+				for (MonsterInstance nurse : _nurses)
 				{
 					if (nurse.isDead())
 					{
 						deadNurses++;
 					}
 				}
-				if (deadNurses == _Nurses.size())
+				if (deadNurses == _nurses.size())
 				{
 					startQuestTimer("RESPAWN_NURSE", Config.QA_RESP_NURSE * 1000, npc, null);
 				}
@@ -296,7 +296,7 @@ public class QueenAnt extends Quest
 				final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
 				final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
 				boolean nurseNeedHeal = false;
-				for (MonsterInstance nurse : _Nurses)
+				for (MonsterInstance nurse : _nurses)
 				{
 					nurseNeedHeal = (nurse != null) && (nurse.getCurrentHp() < nurse.getMaxHp());
 					if ((nurse == null) || nurse.isDead() || nurse.isCastingNow())
@@ -329,11 +329,11 @@ public class QueenAnt extends Quest
 					{
 						if ((nurse.getTarget() != nurse) || notCasting)
 						{
-							for (int k = 0; k < _Nurses.size(); k++)
+							for (int k = 0; k < _nurses.size(); k++)
 							{
-								getIntoPosition(_Nurses.get(k), nurse);
-								_Nurses.get(k).setTarget(nurse);
-								_Nurses.get(k).doCast(SkillTable.getInstance().getInfo(4020, 1));
+								getIntoPosition(_nurses.get(k), nurse);
+								_nurses.get(k).setTarget(nurse);
+								_nurses.get(k).doCast(SkillTable.getInstance().getInfo(4020, 1));
 							}
 						}
 					}
@@ -402,13 +402,13 @@ public class QueenAnt extends Quest
 			if ((npcId == ROYAL) || (npcId == NURSE))
 			{
 				npc.decayMe();
-				if (_Minions.contains(npc))
+				if (_minions.contains(npc))
 				{
-					_Minions.remove(npc);
+					_minions.remove(npc);
 				}
 				else
 				{
-					_Nurses.remove(npc);
+					_nurses.remove(npc);
 				}
 				
 				if (npcId == ROYAL)

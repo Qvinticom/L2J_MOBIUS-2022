@@ -38,10 +38,10 @@ public class Orfen extends Quest
 	private static final int LIVE = 0;
 	private static final int DEAD = 1;
 	
-	private boolean FirstAttacked = false;
-	private boolean Teleported = false;
+	private boolean _firstAttacked = false;
+	private boolean _teleported = false;
 	
-	GrandBossInstance orfen = null;
+	GrandBossInstance _orfen = null;
 	
 	enum Event
 	{
@@ -80,16 +80,16 @@ public class Orfen extends Quest
 					final int loc_y = 17368;
 					final int loc_z = -5412;
 					final int heading = 0;
-					orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+					_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
-						Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
+						Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 					}
 					GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
-					GrandBossManager.getInstance().addBoss(orfen);
+					GrandBossManager.getInstance().addBoss(_orfen);
 				}
-			}
 				break;
+			}
 			case LIVE:
 			{
 				/*
@@ -101,28 +101,29 @@ public class Orfen extends Quest
 				final int heading = 0;
 				final int hp = info.getInteger("currentHP");
 				final int mp = info.getInteger("currentMP");
-				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
+					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
-				GrandBossManager.getInstance().addBoss(orfen);
-				orfen.setCurrentHpMp(hp, mp);
-			}
+				GrandBossManager.getInstance().addBoss(_orfen);
+				_orfen.setCurrentHpMp(hp, mp);
 				break;
+			}
 			default:
 			{
 				final int loc_x = 55024;
 				final int loc_y = 17368;
 				final int loc_z = -5412;
 				final int heading = 0;
-				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
+					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
-				GrandBossManager.getInstance().addBoss(orfen);
+				GrandBossManager.getInstance().addBoss(_orfen);
+				break;
 			}
 		}
 	}
@@ -140,15 +141,15 @@ public class Orfen extends Quest
 				final int loc_y = 17368;
 				final int loc_z = -5412;
 				final int heading = 0;
-				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
+					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
-				GrandBossManager.getInstance().addBoss(orfen);
-			}
+				GrandBossManager.getInstance().addBoss(_orfen);
 				break;
+			}
 			case ORFEN_REFRESH:
 			{
 				if ((npc == null) || (npc.getSpawn() == null))
@@ -166,7 +167,7 @@ public class Orfen extends Quest
 						GrandBossManager.getInstance().getStatsSet(ORFEN).set("currentHP", npc.getMaxHp());
 					}
 				}
-				if ((Teleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))))
+				if ((_teleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))))
 				{
 					cancelQuestTimer("ORFEN_REFRESH", npc, null);
 					startQuestTimer("ORFEN_RETURN", 10000, npc, null);
@@ -175,26 +176,27 @@ public class Orfen extends Quest
 				{ // restart the refresh scheduling
 					startQuestTimer("ORFEN_REFRESH", 10000, npc, null);
 				}
-			}
 				break;
+			}
 			case ORFEN_RETURN:
 			{
 				if ((npc == null) || (npc.getSpawn() == null))
 				{
 					break;
 				}
-				Teleported = false;
-				FirstAttacked = false;
+				_teleported = false;
+				_firstAttacked = false;
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				npc.getSpawn().setX(55024);
 				npc.getSpawn().setY(17368);
 				npc.getSpawn().setZ(-5412);
 				npc.teleToLocation(55024, 17368, -5412, false);
-			}
 				break;
+			}
 			default:
 			{
 				LOGGER.info("ORFEN: Not defined event: " + event + "!");
+				break;
 			}
 		}
 		
@@ -207,13 +209,13 @@ public class Orfen extends Quest
 		final int npcId = npc.getNpcId();
 		if (npcId == ORFEN)
 		{
-			if (FirstAttacked)
+			if (_firstAttacked)
 			{
-				if (((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)) && !Teleported)
+				if (((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)) && !_teleported)
 				{
 					GrandBossManager.getInstance().getStatsSet(ORFEN).set("currentHP", npc.getCurrentHp());
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					Teleported = true;
+					_teleported = true;
 					npc.getSpawn().setX(43577);
 					npc.getSpawn().setY(15985);
 					npc.getSpawn().setZ(-4396);
@@ -229,7 +231,7 @@ public class Orfen extends Quest
 			}
 			else
 			{
-				FirstAttacked = true;
+				_firstAttacked = true;
 			}
 		}
 		
