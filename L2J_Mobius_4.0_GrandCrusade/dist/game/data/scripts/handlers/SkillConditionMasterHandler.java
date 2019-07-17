@@ -109,6 +109,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpTargetPc", OpTargetPcSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpMainjob", OpMainjobSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpCheckSkill", OpCheckSkillSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpCheckSkillList", OpCheckSkillListSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpRestartPoint", OpRestartPointSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNeedSummonOrPet", OpNeedSummonOrPetSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpUsePraseed", OpUsePraseedSkillCondition::new);
