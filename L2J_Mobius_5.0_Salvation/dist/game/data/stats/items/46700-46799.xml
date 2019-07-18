@@ -1164,13 +1164,27 @@
 	<item id="46782" name="Graduation Gift" type="EtcItem">
 		<!-- Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), PA - Art of Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
 		<set name="icon" val="icon.new_user_box" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="33640" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="33518" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="33794" min="25000" max="25000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
+			<item id="37928" min="10" max="10" chance="100" /> <!-- PA - Art of Seduction -->
+			<item id="33780" min="50000" max="50000" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="46783" name="Blue Dynasty Transformation Potion" type="EtcItem">
 		<!-- Equips the Blue Dynasty for 1 hour. Will be deleted when the event ends. -->
