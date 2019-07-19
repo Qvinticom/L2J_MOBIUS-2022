@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="12800" toLevel="1" name="Box for the Awakened">
+	<skill id="12800" toLevel="1" name="Abelius' Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32264</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -17,16 +17,15 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="30310" count="1" /> <!-- Abelius Cloak - Sigel Knight -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="30310" count="1" /> <!-- Abelius Cloak Sigel Knight -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12801" toLevel="1" name="Box for the Awakened">
+	<skill id="12801" toLevel="1" name="Sapyros' Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32265</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -43,16 +42,15 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="30311" count="1" /> <!-- Sapyros Cloak - Tyrr Warrior -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="30311" count="1" /> <!-- Abelius Cloak Sigel Knight -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12802" toLevel="1" name="Box for the Awakened">
+	<skill id="12802" toLevel="1" name="Ashagen's Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32266</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -70,15 +68,14 @@
 				<items>
 					<item chance="100">
 						<item id="30312" count="1" /> <!-- Ashagen Cloak - Othell Rogue -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12803" toLevel="1" name="Box for the Awakened">
+	<skill id="12803" toLevel="1" name="Cranigg's Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32267</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -96,15 +93,14 @@
 				<items>
 					<item chance="100">
 						<item id="30313" count="1" /> <!-- Cranigg Cloak - Yul Archer -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12804" toLevel="1" name="Box for the Awakened">
+	<skill id="12804" toLevel="1" name="Soltkreig's Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32268</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -122,41 +118,14 @@
 				<items>
 					<item chance="100">
 						<item id="30314" count="1" /> <!-- Soltkreig Cloak - Feoh Wizard -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12805" toLevel="1" name="Box for the Awakened">
-		<icon>icon.etc_pi_gift_box_i04</icon>
-		<itemConsumeId>32270</itemConsumeId>
-		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>2000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="RestorationRandom">
-				<items>
-					<item chance="100">
-						<item id="30316" count="1" /> <!-- Leister Cloak - Iss Enchanter -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-					</item>
-				</items>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="12806" toLevel="1" name="Box for the Awakened">
+	<skill id="12805" toLevel="1" name="Naviarope's Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32269</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -174,15 +143,39 @@
 				<items>
 					<item chance="100">
 						<item id="30315" count="1" /> <!-- Naviarope Cloak - Wynn Summoner -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12807" toLevel="1" name="Box for the Awakened">
+	<skill id="12806" toLevel="1" name="Leister's Power">
+		<icon>icon.etc_pi_gift_box_i04</icon>
+		<itemConsumeId>32270</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="30316" count="1" /> <!-- Leister Cloak - Iss Enchanter -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="12807" toLevel="1" name="Lakcis' Power">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32271</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -200,9 +193,8 @@
 				<items>
 					<item chance="100">
 						<item id="30317" count="1" /> <!-- Lakcis Cloak - Aeore Healer -->
-						<item id="30275" count="5" /> <!-- Scroll: 1,000,000 SP -->
-						<item id="33766" count="5" /> <!-- Elixir of Blessing -->
-						<item id="33502" count="2" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+						<item id="80320" count="1" /> <!-- Paulina Twilight Bracelet -->
+						<item id="46782" count="1" /> <!-- Graduation Gift -->
 					</item>
 				</items>
 			</effect>

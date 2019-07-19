@@ -1114,7 +1114,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1123,13 +1123,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30310" max="1" min="1" /> <!-- Abelius Cloak Sigel Knight -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12800" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12800" level="1" /> <!-- Abelius' Power -->
 		</skills>
 	</item>
 	<item id="32265" name="Sapyros' Power" additionalName="Tyrr Warrior" type="EtcItem">
@@ -1139,7 +1134,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1148,13 +1143,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30311" max="1" min="1" /> <!-- Sapyros Cloak Tyrr Warrior -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12801" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12801" level="1" /> <!-- Sapyros' Power -->
 		</skills>
 	</item>
 	<item id="32266" name="Ashagen's Power" additionalName="Othell Rogue" type="EtcItem">
@@ -1164,7 +1154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1173,13 +1163,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30312" max="1" min="1" /> <!-- Ashagen Cloak Othell Rogue -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12802" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12802" level="1" /> <!-- Ashagen's Power -->
 		</skills>
 	</item>
 	<item id="32267" name="Cranigg's Power" additionalName="Yul Archer" type="EtcItem">
@@ -1189,7 +1174,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1198,13 +1183,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30313" max="1" min="1" /> <!-- Cranigg Cloak Yul Archer -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12803" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12803" level="1" /> <!-- Cranigg's Power -->
 		</skills>
 	</item>
 	<item id="32268" name="Soltkreig's Power" additionalName="Feoh Wizard" type="EtcItem">
@@ -1214,7 +1194,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1223,13 +1203,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30314" max="1" min="1" /> <!-- Soltkreig Cloak Feoh Wizard -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12804" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12804" level="1" /> <!-- Soltkreig's Power -->
 		</skills>
 	</item>
 	<item id="32269" name="Naviarope's Power" additionalName="Wynn Summoner" type="EtcItem">
@@ -1239,7 +1214,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1248,13 +1223,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30315" max="1" min="1" /> <!-- Naviarope Cloak Wynn Summoner -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12806" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12805" level="1" /> <!-- Naviarope's Power -->
 		</skills>
 	</item>
 	<item id="32270" name="Leister's Power" additionalName="Iss Enchanter" type="EtcItem">
@@ -1264,7 +1234,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1273,13 +1243,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30316" max="1" min="1" /> <!-- Leister Cloak Iss Enchanter -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12805" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12806" level="1" /> <!-- Leister's Power -->
 		</skills>
 	</item>
 	<item id="32271" name="Lakcis' Power" additionalName="Aeore Healer" type="EtcItem">
@@ -1289,7 +1254,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1298,13 +1263,8 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item chance="100.0" id="30317" max="1" min="1" /> <!-- Lakcis Cloak Aeore Healer -->
-			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
-			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
-		</capsuled_items>
 		<skills>
-			<skill id="12807" level="1" /> <!-- Box for the Awakened -->
+			<skill id="12807" level="1" /> <!-- Lakcis' Power -->
 		</skills>
 	</item>
 	<item id="32272" name="Expedition Volunteer's Reward Box" type="EtcItem">
