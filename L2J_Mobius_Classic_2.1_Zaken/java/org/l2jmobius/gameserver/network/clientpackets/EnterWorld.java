@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -77,7 +76,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
@@ -454,19 +452,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Friend list
 		client.sendPacket(new L2FriendList(player));
-		
-		if (Config.SHOW_GOD_VIDEO_INTRO && player.getVariables().getBoolean("intro_god_video", false))
-		{
-			player.getVariables().remove("intro_god_video");
-			if (player.getRace() == Race.ERTHEIA)
-			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA);
-			}
-			else
-			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
-			}
-		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(player.getName());
