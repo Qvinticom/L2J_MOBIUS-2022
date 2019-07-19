@@ -373,6 +373,12 @@
 	</skill>
 	<skill id="39369" toLevel="1" name="Shilen's Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39370" toLevel="2" name="Gale Scroll">
 		<!-- A scroll to level-up as fast as the wind. Acquired XP/ SP +$s1. Remains active after death. Duration 10 min. Cooldown 9 min. -->
@@ -613,9 +619,84 @@
 	</skill>
 	<skill id="39397" toLevel="6" name="+5 Radiant Warrior's Circlet Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>400</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="100">
+						<item id="48204" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="100">
+						<item id="48207" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="3">
+				<items>
+					<item chance="100">
+						<item id="48210" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="4">
+				<items>
+					<item chance="100">
+						<item id="48493" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="5">
+				<items>
+					<item chance="16.6">
+						<item id="17709" count="10" />
+					</item>
+					<item chance="17">
+						<item id="17710" count="10" />
+					</item>
+					<item chance="16.6">
+						<item id="17711" count="10" />
+					</item>
+					<item chance="16.6">
+						<item id="17712" count="10" />
+					</item>
+					<item chance="16.6">
+						<item id="17713" count="10" />
+					</item>
+					<item chance="16.6">
+						<item id="17714" count="10" />
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="6">
+				<items>
+					<item chance="16.6">
+						<item id="17691" count="10" />
+					</item>      
+					<item chance="17">
+						<item id="17692" count="10" />
+					</item>      
+					<item chance="16.6">
+						<item id="17693" count="10" />
+					</item>      
+					<item chance="16.6">
+						<item id="17694" count="10" />
+					</item>      
+					<item chance="16.6">
+						<item id="17695" count="10" />
+					</item>      
+					<item chance="16.6">
+						<item id="17696" count="10" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39398" toLevel="1" name="Gold Trophy">
 		<operateType>A1</operateType>
