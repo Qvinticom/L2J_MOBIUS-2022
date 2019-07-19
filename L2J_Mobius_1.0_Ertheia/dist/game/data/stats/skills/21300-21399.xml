@@ -1150,7 +1150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21364" toLevel="12" name="Talisman - Abundance (High-grade) - Lv. 4">
+	<skill id="21364" toLevel="12" name="Talisman - Abundance">
 		<!-- P. Atk. + 154, M. Atk. + 181, P./ M. Evasion + 4. -->
 		<icon>
 			<value level="1">BranchSys2.icon.g_giant_gem</value>
@@ -1167,6 +1167,20 @@
 			<value level="12">BranchIcon.Icon.g_therich_i03</value>
 		</icon>
 		<magicLvl>55</magicLvl>
+		<abnormalLvl>
+			<value level="1">1</value> <!-- Talisman - Abundance War -->
+			<value level="2">2</value> <!-- Talisman - Abundance Tactics -->
+			<value level="3">3</value> <!-- Talisman - Abundance Morale -->
+			<value level="4">4</value> <!-- Talisman - Abundance Physique -->
+			<value level="5">5</value> <!-- Talisman - Hunter -->
+			<value level="6">6</value> <!-- Talisman - Slaughterer -->
+			<value level="7">7</value> <!-- Talisman - Conquerer -->
+			<value level="8">8</value> <!-- Talisman - Outlaw -->
+			<value level="9">9</value> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+			<value level="10">10</value> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+			<value level="11">11</value> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+			<value level="12">12</value> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+		</abnormalLvl>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1399,7 +1413,7 @@
 					<value level="4">0</value>
 					<value level="5">13</value>
 					<value level="6">0</value>
-					<value level="7">0</value>
+					<value level="7">13</value>
 					<value level="8">13</value>
 					<value level="9">0</value>
 					<value level="10">0</value>
@@ -1416,7 +1430,7 @@
 					<value level="4">0</value>
 					<value level="5">13</value>
 					<value level="6">0</value>
-					<value level="7">0</value>
+					<value level="7">13</value>
 					<value level="8">13</value>
 					<value level="9">0</value>
 					<value level="10">0</value>
@@ -1429,16 +1443,16 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">-10</value>
+					<value level="3">10</value>
 					<value level="4">0</value>
-					<value level="5">-15</value>
+					<value level="5">15</value>
 					<value level="6">0</value>
-					<value level="7">-15</value>
-					<value level="8">-15</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
+					<value level="7">15</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1446,16 +1460,16 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">-10</value>
+					<value level="3">10</value>
 					<value level="4">0</value>
-					<value level="5">-15</value>
+					<value level="5">15</value>
 					<value level="6">0</value>
-					<value level="7">-15</value>
-					<value level="8">-15</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
+					<value level="7">15</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1465,14 +1479,14 @@
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
-					<value level="5">0</value>
+					<value level="5">15</value>
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
+					<value level="9">0</value>
+					<value level="10">0</value>
+					<value level="11">0</value>
+					<value level="12">0</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1480,16 +1494,16 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">-10</value>
+					<value level="3">10</value>
 					<value level="4">0</value>
-					<value level="5">-15</value>
+					<value level="5">15</value>
 					<value level="6">0</value>
-					<value level="7">-15</value>
-					<value level="8">-15</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
+					<value level="7">15</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
