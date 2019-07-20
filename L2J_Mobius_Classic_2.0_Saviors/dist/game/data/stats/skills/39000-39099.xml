@@ -1064,11 +1064,129 @@
 	</skill>
 	<skill id="39072" toLevel="1" name="Weapon Supply Box (D-grade)">
 		<icon>icon.etc_raid_e_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49491</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.14">
+						<item id="2499" count="1" /> <!-- Elven Long Sword -->
+					</item>
+					<item chance="7.14">
+						<item id="70" count="1" /> <!-- Claymore -->
+					</item>
+					<item chance="7.14">
+						<item id="224" count="1" /> <!-- Maingauche -->
+					</item>
+					<item chance="7.14">
+						<item id="225" count="1" /> <!-- Mithril Dagger -->
+					</item>
+					<item chance="7.14">
+						<item id="1660" count="1" /> <!-- Cursed Maingauche -->
+					</item>
+					<item chance="7.14">
+						<item id="278" count="1" /> <!-- Gastraphetes -->
+					</item>
+					<item chance="7.14">
+						<item id="279" count="1" /> <!-- Reinforced Longbow -->
+					</item>
+					<item chance="7.14">
+						<item id="280" count="1" /> <!-- Light Crossbow -->
+					</item>
+					<item chance="7.14">
+						<item id="262" count="1" /> <!-- Scallop Jamadhr -->
+					</item>
+					<item chance="7.14">
+						<item id="297" count="1" /> <!-- Glaive -->
+					</item>
+					<item chance="7.14">
+						<item id="159" count="1" /> <!-- Bonebreaker -->
+					</item>
+					<item chance="7.14">
+						<item id="189" count="1" /> <!-- Staff of Life -->
+					</item>
+					<item chance="7.14">
+						<item id="188" count="1" /> <!-- Ghost Staff -->
+					</item>
+					<item chance="7.14">
+						<item id="190" count="1" /> <!-- Atuba Mace -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39073" toLevel="1" name="Weapon Supply Box (C-grade)">
 		<icon>icon.etc_raid_e_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49492</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3">
+						<item id="242" count="1" /> <!-- Soulfire Dirk -->
+					</item>
+					<item chance="8.3">
+						<item id="7887" count="1" /> <!-- Mysterious Sword -->
+					</item>
+					<item chance="8.3">
+						<item id="72" count="1" /> <!-- Stormbringer -->
+					</item>
+					<item chance="8.3">
+						<item id="71" count="1" /> <!-- Flamberge -->
+					</item>
+					<item chance="8.3">
+						<item id="281" count="1" /> <!-- Crystallized Ice Bow -->
+					</item>
+					<item chance="8.3">
+						<item id="193" count="1" /> <!-- Stick of Faith -->
+					</item>
+					<item chance="8.3">
+						<item id="160" count="1" /> <!-- Battle Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="161" count="1" /> <!-- Silver Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="192" count="1" /> <!-- Crystal Staff -->
+					</item>
+					<item chance="8.3">
+						<item id="194" count="1" /> <!-- Heavy Doom Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="302" count="1" /> <!-- Body Slasher -->
+					</item>
+					<item chance="8.3">
+						<item id="263" count="1" /> <!-- Chakram -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39074" toLevel="1" name="Angel Cat's Energy">
 		<!-- For 30 minutes, Max. HP/MP + 5%, and XP/SP Gain + 20%. Buff remains after death. -->
@@ -1111,8 +1229,23 @@
 		</effects>
 	</skill>
 	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
-		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49087</itemConsumeId> <!-- Improved Scroll of Escape -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39076" toLevel="1" name="Fish Stew - The Guild's Gratitude.">
 		<!-- For 20 minutes., obtained XP/SP + 10%. -->

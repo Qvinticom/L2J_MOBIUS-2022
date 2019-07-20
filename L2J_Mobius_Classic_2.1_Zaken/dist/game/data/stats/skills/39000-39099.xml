@@ -1229,8 +1229,23 @@
 		</effects>
 	</skill>
 	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
-		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49087</itemConsumeId> <!-- Improved Scroll of Escape -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39076" toLevel="1" name="Fish Stew - The Guild's Gratitude.">
 		<!-- For 20 min. XP/SP +10% while hunting. -->
