@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -53,6 +54,8 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 {
+	private static final Logger LOGGER = Logger.getLogger(NpcTemplate.class.getName());
+	
 	private int _id;
 	private int _displayId;
 	private byte _level;
@@ -149,8 +152,21 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_elementalType = set.getEnum("elementalType", ElementalType.class, ElementalType.NONE);
 		
 		_chestId = set.getInt("chestId", 0);
+		if ((_chestId > 0) && (ItemTable.getInstance().getTemplate(_chestId) == null))
+		{
+			LOGGER.warning("NpcTemplate " + _id + ": Could not find item for chestId with id " + _chestId + ".");
+		}
 		_rhandId = set.getInt("rhandId", 0);
+		if ((_rhandId > 0) && (ItemTable.getInstance().getTemplate(_rhandId) == null))
+		{
+			LOGGER.warning("NpcTemplate " + _id + ": Could not find item for rhandId with id " + _rhandId + ".");
+		}
 		_lhandId = set.getInt("lhandId", 0);
+		if ((_lhandId > 0) && (ItemTable.getInstance().getTemplate(_lhandId) == null))
+		{
+			LOGGER.warning("NpcTemplate " + _id + ": Could not find item for lhandId with id " + _lhandId + ".");
+		}
+		
 		_weaponEnchant = set.getInt("weaponEnchant", 0);
 		
 		_exp = set.getDouble("exp", 0);
