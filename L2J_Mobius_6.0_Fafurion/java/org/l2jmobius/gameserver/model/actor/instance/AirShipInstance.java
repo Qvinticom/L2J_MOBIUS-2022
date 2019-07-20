@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Vehicle;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAirShipInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOffAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
  */
 public class AirShipInstance extends Vehicle
 {
-	public AirShipInstance(CharTemplate template)
+	public AirShipInstance(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.AirShipInstance);

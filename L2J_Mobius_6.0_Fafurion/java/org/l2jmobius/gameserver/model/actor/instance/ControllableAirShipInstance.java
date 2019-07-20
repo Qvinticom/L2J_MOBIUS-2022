@@ -22,7 +22,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.actor.stat.ControllableAirShipStat;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
@@ -43,7 +43,7 @@ public class ControllableAirShipInstance extends AirShipInstance
 	private Future<?> _consumeFuelTask;
 	private Future<?> _checkTask;
 	
-	public ControllableAirShipInstance(CharTemplate template, int ownerId)
+	public ControllableAirShipInstance(CreatureTemplate template, int ownerId)
 	{
 		super(template);
 		setInstanceType(InstanceType.ControllableAirShipInstance);

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAirShipTeleportList;
 
 public class AirShipManager
@@ -44,7 +44,7 @@ public class AirShipManager
 	private static final String ADD_DB = "INSERT INTO airships (owner_id,fuel) VALUES (?,?)";
 	private static final String UPDATE_DB = "UPDATE airships SET fuel=? WHERE owner_id=?";
 	
-	private CharTemplate _airShipTemplate = null;
+	private CreatureTemplate _airShipTemplate = null;
 	private final Map<Integer, StatsSet> _airShipsInfo = new HashMap<>();
 	private final Map<Integer, AirShipInstance> _airShips = new HashMap<>();
 	private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
@@ -94,7 +94,7 @@ public class AirShipManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		_airShipTemplate = new CharTemplate(npcDat);
+		_airShipTemplate = new CreatureTemplate(npcDat);
 		
 		load();
 	}

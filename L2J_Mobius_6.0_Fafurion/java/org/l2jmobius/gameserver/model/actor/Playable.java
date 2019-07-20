@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanWar;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -59,14 +59,14 @@ public abstract class Playable extends Creature
 	 * @param objectId the object id
 	 * @param template The CreatureTemplate to apply to the Playable
 	 */
-	public Playable(int objectId, CharTemplate template)
+	public Playable(int objectId, CreatureTemplate template)
 	{
 		super(objectId, template);
 		setInstanceType(InstanceType.Playable);
 		setIsInvul(false);
 	}
 	
-	public Playable(CharTemplate template)
+	public Playable(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.Playable);

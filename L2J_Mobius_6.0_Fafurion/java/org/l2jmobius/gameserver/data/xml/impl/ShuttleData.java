@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleEngine;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
@@ -164,7 +164,7 @@ public final class ShuttleData implements IXmlReader
 	{
 		for (ShuttleDataHolder data : _shuttles.values())
 		{
-			final ShuttleInstance shuttle = new ShuttleInstance(new CharTemplate(new StatsSet()));
+			final ShuttleInstance shuttle = new ShuttleInstance(new CreatureTemplate(new StatsSet()));
 			shuttle.setData(data);
 			shuttle.setHeading(data.getLocation().getHeading());
 			shuttle.setLocationInvisible(data.getLocation());

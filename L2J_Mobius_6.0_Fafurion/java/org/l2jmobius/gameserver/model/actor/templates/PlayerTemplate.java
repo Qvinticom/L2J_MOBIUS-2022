@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 /**
  * @author mkizub, Zoey76
  */
-public class PlayerTemplate extends CharTemplate
+public class PlayerTemplate extends CreatureTemplate
 {
 	private final ClassId _classId;
 	

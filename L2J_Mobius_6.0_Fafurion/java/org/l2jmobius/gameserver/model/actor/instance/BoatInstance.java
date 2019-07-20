@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.ai.BoatAI;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Vehicle;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
@@ -34,7 +34,7 @@ public class BoatInstance extends Vehicle
 {
 	protected static final Logger LOGGER_BOAT = Logger.getLogger(BoatInstance.class.getName());
 	
-	public BoatInstance(CharTemplate template)
+	public BoatInstance(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.BoatInstance);

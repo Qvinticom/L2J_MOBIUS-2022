@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Character template.
  * @author Zoey76
  */
-public class CharTemplate extends ListenersContainer
+public class CreatureTemplate extends ListenersContainer
 {
 	// BaseStats
 	private WeaponType _baseAttackType;
@@ -49,7 +49,7 @@ public class CharTemplate extends ListenersContainer
 	/** The creature's race. */
 	private Race _race;
 	
-	public CharTemplate(StatsSet set)
+	public CreatureTemplate(StatsSet set)
 	{
 		set(set);
 	}

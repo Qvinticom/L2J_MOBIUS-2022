@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
  * Doors template.
  * @author JIV
  */
-public class DoorTemplate extends CharTemplate implements IIdentifiable
+public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 {
 	private final int _doorId;
 	private final int _nodeX[];

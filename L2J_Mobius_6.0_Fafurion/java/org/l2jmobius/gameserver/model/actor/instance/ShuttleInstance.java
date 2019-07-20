@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.ai.ShuttleAI;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Vehicle;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
 import org.l2jmobius.gameserver.network.serverpackets.shuttle.ExShuttleGetOff;
@@ -37,7 +37,7 @@ public class ShuttleInstance extends Vehicle
 {
 	private ShuttleDataHolder _shuttleData;
 	
-	public ShuttleInstance(CharTemplate template)
+	public ShuttleInstance(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.ShuttleInstance);

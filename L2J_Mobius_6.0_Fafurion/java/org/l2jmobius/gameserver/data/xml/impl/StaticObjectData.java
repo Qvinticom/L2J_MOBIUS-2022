@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
 /**
  * This class loads and holds all static object data.
@@ -88,7 +88,7 @@ public final class StaticObjectData implements IXmlReader
 	 */
 	private void addObject(StatsSet set)
 	{
-		final StaticObjectInstance obj = new StaticObjectInstance(new CharTemplate(new StatsSet()), set.getInt("id"));
+		final StaticObjectInstance obj = new StaticObjectInstance(new CreatureTemplate(new StatsSet()), set.getInt("id"));
 		obj.setType(set.getInt("type", 0));
 		obj.setName(set.getString("name"));
 		obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));

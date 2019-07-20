@@ -87,7 +87,7 @@ import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.NotifyAITask;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -198,7 +198,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private CreatureStat _stat;
 	private CreatureStatus _status;
-	private CharTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
+	private CreatureTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
 	private String _title;
 	
 	public static final double MAX_HP_BAR_PX = 352.0;
@@ -288,7 +288,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Creates a creature.
 	 * @param template the creature template
 	 */
-	public Creature(CharTemplate template)
+	public Creature(CreatureTemplate template)
 	{
 		this(IdFactory.getInstance().getNextId(), template);
 	}
@@ -311,7 +311,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The CreatureTemplate to apply to the object
 	 */
-	public Creature(int objectId, CharTemplate template)
+	public Creature(int objectId, CreatureTemplate template)
 	{
 		super(objectId);
 		if (template == null)
@@ -2226,7 +2226,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_status = value;
 	}
 	
-	public CharTemplate getTemplate()
+	public CreatureTemplate getTemplate()
 	{
 		return _template;
 	}
@@ -2240,7 +2240,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * When a new instance of Creature is spawned, server just create a link between the instance and the template This link is stored in <B>_template</B>.
 	 * @param template
 	 */
-	protected final void setTemplate(CharTemplate template)
+	protected final void setTemplate(CreatureTemplate template)
 	{
 		_template = template;
 	}

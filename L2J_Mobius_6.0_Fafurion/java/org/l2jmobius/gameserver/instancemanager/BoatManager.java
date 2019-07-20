@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class BoatManager
@@ -100,7 +100,7 @@ public class BoatManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		final CharTemplate template = new CharTemplate(npcDat);
+		final CreatureTemplate template = new CreatureTemplate(npcDat);
 		final BoatInstance boat = new BoatInstance(template);
 		_boats.put(boat.getObjectId(), boat);
 		boat.setHeading(heading);

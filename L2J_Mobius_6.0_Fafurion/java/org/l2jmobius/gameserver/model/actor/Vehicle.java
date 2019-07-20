@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.VehicleStat;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -56,7 +56,7 @@ public abstract class Vehicle extends Creature
 	protected VehiclePathPoint[] _currentPath = null;
 	protected int _runState = 0;
 	
-	public Vehicle(CharTemplate template)
+	public Vehicle(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.Vehicle);

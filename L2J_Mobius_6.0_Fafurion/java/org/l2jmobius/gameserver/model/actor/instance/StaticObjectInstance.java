@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.stat.StaticObjectStat;
 import org.l2jmobius.gameserver.model.actor.status.StaticObjectStatus;
-import org.l2jmobius.gameserver.model.actor.templates.CharTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -63,7 +63,7 @@ public final class StaticObjectInstance extends Creature
 	 * @param template
 	 * @param staticId
 	 */
-	public StaticObjectInstance(CharTemplate template, int staticId)
+	public StaticObjectInstance(CreatureTemplate template, int staticId)
 	{
 		super(template);
 		setInstanceType(InstanceType.StaticObjectInstance);
