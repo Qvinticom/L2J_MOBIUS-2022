@@ -64,7 +64,7 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int WEAPON_STAFF_D = 46797;
 	// private static final int WEAPON_ANCIENT_D = 46798;
 	// private static final int WEAPON_RAPIER_D = 46799;
-	private static final int WEAPON_CROSSBOW_D = 46880;
+	private static final int WEAPON_CROSSBOW_D = 46795;
 	// C-Grade weapon rewards
 	private static final int WEAPON_SWORD_C = 46801;
 	private static final int WEAPON_GSWORD_C = 46802;
