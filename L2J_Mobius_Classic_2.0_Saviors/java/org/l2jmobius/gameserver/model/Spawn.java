@@ -398,6 +398,12 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			}
 		}
 		
+		// Do not correct z of flying NPCs.
+		if (!npc.isFlying())
+		{
+			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+		}
+		
 		// Set is not random walk default value
 		npc.setRandomWalking(_randomWalk);
 		

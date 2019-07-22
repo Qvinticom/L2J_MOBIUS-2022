@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.TerritoryTable;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -497,44 +498,53 @@ public class Spawn
 			newlocz = _locZ;
 		}
 		
-		if (npc != null)
+		// if (npc != null)
+		// {
+		
+		// Do not correct z of flying NPCs.
+		if (!npc.isFlying())
 		{
-			npc.stopAllEffects();
-			
-			// Set the HP and MP of the NpcInstance to the max
-			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
-			
-			// Set the heading of the NpcInstance (random heading if not defined)
-			if (_heading == -1)
-			{
-				npc.setHeading(Rnd.get(61794));
-			}
-			else
-			{
-				npc.setHeading(_heading);
-			}
-			
-			// Reset decay info
-			npc.setDecayed(false);
-			
-			// Link the NpcInstance to this Spawn
-			npc.setSpawn(this);
-			
-			// Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
-			npc.spawnMe(newlocx, newlocy, newlocz);
-			
-			notifyNpcSpawned(npc);
-			
-			_lastSpawn = npc;
-			
-			for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
-			{
-				quest.notifySpawn(npc);
-			}
-			
-			// Increase the current number of NpcInstance managed by this Spawn
-			_currentCount++;
+			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 		}
+		
+		npc.stopAllEffects();
+		
+		// Set the HP and MP of the NpcInstance to the max
+		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
+		
+		// Set the heading of the NpcInstance (random heading if not defined)
+		if (_heading == -1)
+		{
+			npc.setHeading(Rnd.get(61794));
+		}
+		else
+		{
+			npc.setHeading(_heading);
+		}
+		
+		// Reset decay info
+		npc.setDecayed(false);
+		
+		// Link the NpcInstance to this Spawn
+		npc.setSpawn(this);
+		
+		// Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
+		npc.spawnMe(newlocx, newlocy, newlocz);
+		
+		notifyNpcSpawned(npc);
+		
+		_lastSpawn = npc;
+		
+		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
+		{
+			quest.notifySpawn(npc);
+		}
+		
+		// Increase the current number of NpcInstance managed by this Spawn
+		_currentCount++;
+		
+		// }
+		
 		return npc;
 	}
 	
