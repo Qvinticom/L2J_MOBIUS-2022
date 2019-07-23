@@ -115,6 +115,13 @@ public class NpcAction implements IActionHandler
 							npc.onRandomAnimation(Rnd.get(8));
 						}
 					}
+					
+					// Stop movement when trying to talk to a moving NPC.
+					if (npc.isMoving())
+					{
+						player.stopMove(null);
+					}
+					
 					// Open a chat window on client with the text of the Npc
 					if (npc.getVariables().getBoolean("eventmob", false))
 					{
