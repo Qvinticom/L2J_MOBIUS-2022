@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71683" name="Transformation Sealbook Fragment" type="EtcItem">
-		<!-- Take several such fragments to Pona to exchange for a Transformation Sealbook. Cannot be exchanged, dropped or sold.  Can be stored in a private warehouse. -->
+		<!-- Take several such fragments to Pona to exchange for a Transformation Sealbook. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_book_piece" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -905,7 +905,7 @@
 		</stats>
 	</item>
 	<item id="71697" name="Dragon Pendant - Magic Power" additionalName="Lv. 3" type="Armor">
-		<!-- A pendant that contains the magic  energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
+		<!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_pendant_dragon_m" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

@@ -461,7 +461,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15"/>
 			<!-- Casting Spd. +15% -->
-			<!--<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/><mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/> -->
+			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/> <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/> -->
 		</for>
 	</skill>
 	<skill id="3048" levels="3" name="Special Ability: Conversion">

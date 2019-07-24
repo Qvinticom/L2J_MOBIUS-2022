@@ -971,13 +971,13 @@
 					<value level="20">14</value>
 				</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">	<!-- Guess -->
+			<effect name="TriggerSkillByAttack"> <!-- Guess -->
 				<!-- Spirit of Aden -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>30</chance>	<!-- Guess -->
+				<chance>30</chance> <!-- Guess -->
 				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
@@ -1161,13 +1161,13 @@
 					<value level="20">14</value>
 				</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">	<!-- Guess -->
+			<effect name="TriggerSkillByAttack"> <!-- Guess -->
 				<!-- Spirit of Elmore -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>30</chance>	<!-- Guess -->
+				<chance>30</chance> <!-- Guess -->
 				<targetType>SELF</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
@@ -1580,7 +1580,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>	<!-- Guess -->
+		<abnormalTime>10</abnormalTime> <!-- Guess -->
 		<coolTime>300</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -1603,7 +1603,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>	<!-- Guess -->
+		<abnormalTime>10</abnormalTime> <!-- Guess -->
 		<coolTime>300</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>

@@ -197,9 +197,9 @@
 				<includeMe>false</includeMe>
 			</condition>
 		</conditions>
-        <effects>
+		<effects>
 			<effect name="CallPc" />
-        </effects>
+		</effects>
 	</skill>
 	<skill id="19008" toLevel="1" name="Clan Guardian">
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/MP/CP. Consumes 100 Spirit Ores. Consumes 1000 Clan Reputation. Distinguished King or above only. -->
@@ -220,17 +220,17 @@
 		<conditions>
 			<condition name="CanUseInBattlefield" />
 		</conditions>
-        <effects>
-            <effect name="HealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="CpHealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="ManaHealPercent">
-                <power>100</power>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19009" toLevel="1" name="Clan Advent">
 		<!-- When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5. -->
@@ -347,13 +347,13 @@
 		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>150</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
-        <effects>
-            <effect name="Hide" />
-            <effect name="Speed">
-                <amount>0.5</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="Hide" />
+			<effect name="Speed">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19013" toLevel="1" name="Clan Un-debuff">
 		<!-- Cancels all debuffs of nearby clan members. Consumes 30 Spirit Ore. Consumes 1500 Individual Fame. Applies after the marquis stage. -->
@@ -405,19 +405,19 @@
 		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-        <effects>
-            <effect name="DamageBlock">
-                <type>BLOCK_HP</type>
-            </effect>
-            <effect name="DamageBlock">
-                <type>BLOCK_MP</type>
-            </effect>
-            <effect name="DebuffBlock" />
-            <effect name="ResistDispelByCategory">
-                <amount>-100</amount>
-                <slot>ALL</slot>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19015" toLevel="1" name="Clan Friendly">
 		<!-- Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage. -->
@@ -478,13 +478,13 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="PAtk">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19017" toLevel="1" name="Clan Prison">
@@ -537,17 +537,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="HealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="CpHealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="ManaHealPercent">
-                <power>100</power>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19019" toLevel="1" name="Revolution Blade">
 		<!-- Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->

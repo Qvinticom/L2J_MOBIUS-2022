@@ -901,7 +901,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
 		<set name="enchant_enabled" val="1" />
-		<set name="element_enabled" val="true" />	
+		<set name="element_enabled" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -923,7 +923,7 @@
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="immediate_effect" val="true" />		
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_questitem" val="true" />
@@ -937,7 +937,7 @@
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<skills>
 			<skill id="2329" level="1" /> <!-- Fire Stone -->
-		</skills>		
+		</skills>
 	</item>
 	<item id="48170" name="Enhancement Practice Long Sword" type="Weapon">
 		<!-- A training sword you received from Blacksmith Rupio to practice weapon enchanting. It is worthless as a weapon. Take it to Rupio after enchanting it to the enchantment level he asked for. -->
@@ -985,7 +985,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9185" level="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-		</skills>		
+		</skills>
 	</item>
 	<item id="48172" name="Herphah's Mission List" type="EtcItem">
 		<!-- A list of missions that Herphah instructed you to complete. "Complete missions for the following people and return with the certificates they give you. - Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden" -->

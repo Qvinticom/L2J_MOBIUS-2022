@@ -18721,8 +18721,8 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
-    <door id="22230711" name="Superion_Du_S.superion_boss_door">
-        <nodes nodeZ="-9868">
+	<door id="22230711" name="Superion_Du_S.superion_boss_door">
+		<nodes nodeZ="-9868">
 			<node x="86325" y="176154" />
 			<node x="86325" y="176154" />
 			<node x="86325" y="176154" />
@@ -18732,5 +18732,5 @@
 		<stats basePDef="1" baseMDef="1" baseHpMax="1" />
 		<status showHp="false" />
 		<openStatus openMethod="BY_ITEM" default="close" />
-    </door>
+	</door>
 </list>

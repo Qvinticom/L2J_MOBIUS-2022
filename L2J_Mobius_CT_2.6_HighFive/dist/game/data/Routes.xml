@@ -43,31 +43,31 @@
 	</route>
 	<!-- Hellbound Town routes for Patrols -->
 	<route name="castletownguard01" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="14840" spawnY="251949" spawnZ="-2009" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="14840" spawnY="251949" spawnZ="-2009" /> <!-- Town Patrolman -->
 		<point X="14840" Y="251949" Z="-1992" delay="0" run="false" />
 		<point X="14679" Y="253399" Z="-2016" delay="0" run="false" />
 	</route>
 	<route name="castletownguard02" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="16082" spawnY="251790" spawnZ="-2000" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="16082" spawnY="251790" spawnZ="-2000" /> <!-- Town Patrolman -->
 		<point X="16082" Y="251790" Z="-1992" delay="0" run="false" />
 		<point X="16388" Y="252456" Z="-2000" delay="0" run="false" />
 		<point X="16093" Y="254443" Z="-2064" delay="0" run="false" />
 	</route>
 	<route name="castletownguard03" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="16524" spawnY="255244" spawnZ="-2080" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="16524" spawnY="255244" spawnZ="-2080" /> <!-- Town Patrolman -->
 		<point X="16524" Y="255244" Z="-2072" delay="0" run="false" />
 		<point X="17211" Y="256290" Z="-2064" delay="0" run="false" />
 		<point X="18805" Y="256302" Z="-2088" delay="0" run="false" />
 	</route>
 	<route name="castletownguard04" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="17670" spawnY="252256" spawnZ="-2022" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="17670" spawnY="252256" spawnZ="-2022" /> <!-- Town Patrolman -->
 		<point X="17344" Y="251070" Z="-1952" delay="0" run="false" />
 		<point X="18708" Y="250659" Z="-1992" delay="0" run="false" />
 		<point X="19533" Y="250667" Z="-2016" delay="0" run="false" />
 	</route>
 	<!-- Anomic Foundry routes for Lesser and Greater Evil -->
 	<route name="malign_conveyor_1_1" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="27883" spawnY="248613" spawnZ="-3209" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="27883" spawnY="248613" spawnZ="-3209" /> <!-- Lesser Evil -->
 		<point X="27886" Y="248609" Z="-3208" delay="0" run="true" />
 		<point X="28150" Y="247726" Z="-3272" delay="0" run="true" />
 		<point X="27340" Y="246649" Z="-3680" delay="0" run="true" />
@@ -81,7 +81,7 @@
 		<!-- <point X="28770" Y="244248" Z="-2496" delay="0" run="true" /> --> <!-- retail -->
 	</route>
 	<route name="malign_conveyor_1_2" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="26142" spawnY="246442" spawnZ="-3216" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="26142" spawnY="246442" spawnZ="-3216" /> <!-- Lesser Evil -->
 		<point X="26144" Y="246444" Z="-3208" delay="0" run="true" />
 		<point X="28063" Y="247940" Z="-3248" delay="0" run="true" />
 		<point X="28276" Y="247756" Z="-3272" delay="0" run="true" />
@@ -91,21 +91,21 @@
 		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
 	<route name="malign_conveyor_1_3" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="27335" spawnY="246217" spawnZ="-3668" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="27335" spawnY="246217" spawnZ="-3668" /> <!-- Lesser Evil -->
 		<point X="27336" Y="246216" Z="-3656" delay="0" run="true" />
 		<point X="27645" Y="245921" Z="-3672" delay="0" run="true" />
 		<!-- <point X="28245" Y="245904" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
 		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
 	<route name="malign_conveyor_1_4" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="28486" spawnY="245913" spawnZ="-3698" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="28486" spawnY="245913" spawnZ="-3698" /> <!-- Lesser Evil -->
 		<point X="28476" Y="245914" Z="-3696" delay="0" run="true" />
 		<point X="29058" Y="245894" Z="-3672" delay="0" run="true" />
 		<point X="29433" Y="245216" Z="-3688" delay="0" run="true" />
 		<point X="28942" Y="244492" Z="-3696" delay="0" run="true" />
 	</route>
 	<route name="malign_conveyor_2_1" repeat="true" repeatStyle="conveyor">
-		<target id="22399" spawnX="28684" spawnY="244118" spawnZ="-3700" />	<!-- Greater Evil -->
+		<target id="22399" spawnX="28684" spawnY="244118" spawnZ="-3700" /> <!-- Greater Evil -->
 		<point X="28771" Y="244251" Z="-2496" delay="0" run="true" />
 		<point X="28495" Y="243839" Z="-3696" delay="0" run="true" />
 		<point X="28727" Y="242939" Z="-3592" delay="0" run="true" />
@@ -1402,8 +1402,8 @@
 	<!-- cooker_09 -->
 	<!-- Unconfirmed -->
 	<route name="cooker_01_cooker_09" repeat="true" repeatStyle="back">
-		<target id="18908" spawnX="85852" spawnY="53212" spawnZ="-3624" />	<!-- Sel Mahum Chef -->
-		<target id="18908" spawnX="82814" spawnY="69481" spawnZ="-3192" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="85852" spawnY="53212" spawnZ="-3624" /> <!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="82814" spawnY="69481" spawnZ="-3192" /> <!-- Sel Mahum Chef -->
 		<point string="" X="85764" Y="54368" Z="-3604" delay="0" run="false" />
 		<point string="" X="86760" Y="53968" Z="-3696" delay="0" run="false" />
 		<point string="" X="87310" Y="54592" Z="-3648" delay="0" run="false" />
@@ -1414,7 +1414,7 @@
 	</route>
 	<!-- cooker_02 --> <!-- Unconfirmed -->
 	<route name="cooker_02" repeat="true" repeatStyle="back">
-		<target id="18908" spawnX="93964" spawnY="55692" spawnZ="-3352" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="93964" spawnY="55692" spawnZ="-3352" /> <!-- Sel Mahum Chef -->
 		<point string="" X="91260" Y="55012" Z="-3760" delay="0" run="false" />
 		<point string="" X="94418" Y="54744" Z="-3576" delay="0" run="false" />
 		<point string="" X="93952" Y="54461" Z="-3632" delay="0" run="false" />
@@ -1426,8 +1426,8 @@
 	<!-- cooker_05 -->
 	<!-- Unconfirmed -->
 	<route name="cooker_03_cooker_05" repeat="true" repeatStyle="back">
-		<target id="18908" spawnX="87612" spawnY="59356" spawnZ="-3552" />	<!-- Sel Mahum Chef -->
-		<target id="18908" spawnX="88532" spawnY="60352" spawnZ="-3642" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="87612" spawnY="59356" spawnZ="-3552" /> <!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="88532" spawnY="60352" spawnZ="-3642" /> <!-- Sel Mahum Chef -->
 		<point string="" X="88092" Y="60352" Z="-3584" delay="0" run="false" />
 		<point string="" X="89265" Y="60176" Z="-3648" delay="0" run="false" />
 		<point string="" X="90031" Y="60799" Z="-3664" delay="0" run="false" />
@@ -1436,7 +1436,7 @@
 	</route>
 	<!-- cooker_04 --> <!-- Custom -->
 	<route name="cooker_04" repeat="true" repeatStyle="cycle">
-		<target id="18908" spawnX="83724" spawnY="62668" spawnZ="-3472" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="83724" spawnY="62668" spawnZ="-3472" /> <!-- Sel Mahum Chef -->
 		<point string="" X="84435" Y="62668" Z="-3472" delay="0" run="false" />
 		<point string="" X="86646" Y="63097" Z="-3652" delay="0" run="false" />
 		<point string="" X="86408" Y="62564" Z="-3685" delay="0" run="false" />
@@ -1452,7 +1452,7 @@
 	</route>
 	<!-- cooker_06 --> <!-- Custom -->
 	<route name="cooker_06" repeat="true" repeatStyle="cycle">
-		<target id="18908" spawnX="92981" spawnY="60834" spawnZ="-3288" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="92981" spawnY="60834" spawnZ="-3288" /> <!-- Sel Mahum Chef -->
 		<point string="" X="93445" Y="60087" Z="-3282" delay="0" run="false" />
 		<point string="" X="92139" Y="60386" Z="-3432" delay="0" run="false" />
 		<point string="" X="93047" Y="61857" Z="-3263" delay="0" run="false" />
@@ -1460,7 +1460,7 @@
 	</route>
 	<!-- cooker_07 --> <!-- Custom -->
 	<route name="cooker_07" repeat="true" repeatStyle="cycle">
-		<target id="18908" spawnX="78332" spawnY="63440" spawnZ="-3640" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="78332" spawnY="63440" spawnZ="-3640" /> <!-- Sel Mahum Chef -->
 		<point string="" X="78999" Y="63663" Z="-3624" delay="0" run="false" />
 		<point string="" X="79097" Y="65036" Z="-3390" delay="0" run="false" />
 		<point string="" X="80332" Y="64954" Z="-3319" delay="0" run="false" />
@@ -1470,7 +1470,7 @@
 	</route>
 	<!-- cooker_08 --> <!-- Custom -->
 	<route name="cooker_08" repeat="true" repeatStyle="cycle">
-		<target id="18908" spawnX="77836" spawnY="68796" spawnZ="-3312" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="77836" spawnY="68796" spawnZ="-3312" /> <!-- Sel Mahum Chef -->
 		<point string="" X="78040" Y="69515" Z="-3136" delay="0" run="false" />
 		<point string="" X="79025" Y="69859" Z="-3261" delay="0" run="false" />
 		<point string="" X="79168" Y="69256" Z="-3328" delay="0" run="false" />
@@ -1483,13 +1483,13 @@
 	</route>
 	<!-- cooker_10 --> <!-- Unconfirmed -->
 	<route name="cooker_10" repeat="true" repeatStyle="cycle">
-		<target id="18908" spawnX="83404" spawnY="65772" spawnZ="-3032" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="83404" spawnY="65772" spawnZ="-3032" /> <!-- Sel Mahum Chef -->
 		<point string="" X="83631" Y="66179" Z="-3040" delay="0" run="false" />
 		<point string="" X="84128" Y="65740" Z="-3152" delay="0" run="false" />
 	</route>
 	<!-- cooker_11 --> <!-- Unconfirmed -->
 	<route name="cooker_11" repeat="true" repeatStyle="back">
-		<target id="18908" spawnX="96487" spawnY="69432" spawnZ="-3408" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="96487" spawnY="69432" spawnZ="-3408" /> <!-- Sel Mahum Chef -->
 		<point string="" X="93792" Y="69440" Z="-3851" delay="0" run="false" />
 		<point string="" X="95163" Y="70886" Z="-3851" delay="0" run="false" />
 		<point string="" X="93795" Y="71347" Z="-3851" delay="0" run="false" />
@@ -1503,7 +1503,7 @@
 	</route>
 	<!-- cooker_12 --> <!-- Unconfirmed -->
 	<route name="cooker_12" repeat="true" repeatStyle="back">
-		<target id="18908" spawnX="91238" spawnY="67728" spawnZ="-3631" />	<!-- Sel Mahum Chef -->
+		<target id="18908" spawnX="91238" spawnY="67728" spawnZ="-3631" /> <!-- Sel Mahum Chef -->
 		<point string="" X="93792" Y="69440" Z="-3851" delay="0" run="false" />
 		<point string="" X="95163" Y="70886" Z="-3851" delay="0" run="false" />
 		<point string="" X="93795" Y="71347" Z="-3851" delay="0" run="false" />

@@ -778,7 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="1615" toLevel="4" name="Weapon Reinforcement">
-		<!-- For 5 min., enhances polearms and blunt weapons,  P. Atk. +$s1. At a certain chance to decrease target's Atk. Spd. and Casting Spd. -$s2. -->
+		<!-- For 5 min., enhances polearms and blunt weapons, P. Atk. +$s1. At a certain chance to decrease target's Atk. Spd. and Casting Spd. -$s2. -->
 		<icon>icon.skill1615</icon>
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
@@ -1207,7 +1207,7 @@
 		<effects>
 			<effect name="BlockControl" />
 			<effect name="Fear" />
-			<effect name="Speed" >
+			<effect name="Speed">
 				<amount>-90</amount>
 				<mode>PER</mode>
 			</effect>

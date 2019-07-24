@@ -1012,7 +1012,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.07"/>
-			<!--   <target pvp="1"/></mul><mul order="0x30" stat="pvpPhysDmg" val="1.05"/><mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> -->
+			<!-- <target pvp="1"/> </mul> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> -->
 		</for>
 	</skill>
 	<skill id="3565" levels="1" name="Special Ability: Focus">
@@ -1058,7 +1058,7 @@
 		<set name="effectRange" val="-1"/>
 		<for>
 			<mul order="0x30" stat="regHp" val="1.5"/>
-			<!-- <target pvp="1"/></mul><mul order="0x30" stat="pvpPhysDmg" val="1.05"/> -->
+			<!-- <target pvp="1"/> </mul> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> -->
 		</for>
 	</skill>
 	<skill id="3570" levels="1" name="Special Ability: Robust Health">
@@ -1111,7 +1111,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
-			<!--  <target pvp="1"/></add><mul order="0x30" stat="pvpPhysDmg" val="1.05"/><mul order="0x50" stat="mAtk" val="1.05"><target pvp="1"/></mul> -->
+			<!-- <target pvp="1"/> </add> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <mul order="0x50" stat="mAtk" val="1.05"> <target pvp="1"/> </mul> -->
 		</for>
 	</skill>
 	<skill id="3573" levels="1" name="Special Ability: Guidance">
@@ -1123,7 +1123,7 @@
 		<set name="effectRange" val="-1"/>
 		<for>
 			<add order="0x40" stat="accCombat" val="5"/>
-			<!--  <target pvp="1"/></add><mul order="0x30" stat="pvpPhysDmg" val="1.05"/> -->
+			<!-- <target pvp="1"/> </add> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> -->
 		</for>
 	</skill>
 	<skill id="3574" levels="1" name="Special Ability: Crt. Slow">
@@ -1162,7 +1162,7 @@
 		<set name="effectRange" val="-1"/>
 		<for>
 			<mul order="0x40" stat="regMp" val="1.5"/>
-			<!--  <target pvp="1"/></add> -->
+			<!-- <target pvp="1"/> </add> -->
 		</for>
 	</skill>
 	<skill id="3577" levels="1" name="Special Ability: Magic Hold">

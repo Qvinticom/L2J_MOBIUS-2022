@@ -51,28 +51,28 @@
 	</doorlist>
 	<spawnlist>
 		<group>
-			<npc id="18919" x="-42922" y="-16244" z="-12208" /> <!--  -->
+			<npc id="18919" x="-42922" y="-16244" z="-12208" /> <!-- -->
 		</group>
 		<group name="BOSSES" spawnByDefault="false">
 			<npc id="26093" x="-43380" y="-16243" z="-12224" /> <!-- Mino -->
-			<npc id="26094" x="-45717" y="-16241" z="-11960" > <!-- Sola -->
+			<npc id="26094" x="-45717" y="-16241" z="-11960"> <!-- Sola -->
 				<minions>
 					<minion id="26095" count="2" respawnTime="3min" /> <!-- Knife Maid -->
 				</minions>
 			</npc>
-			<npc id="26096" x="-48051" y="-16243" z="-11696" > <!-- Ariarc -->
+			<npc id="26096" x="-48051" y="-16243" z="-11696"> <!-- Ariarc -->
 				<minions>
 					<minion id="26097" count="2" respawnTime="3min" /> <!-- Angel of Punishment -->
 					<minion id="26098" count="2" respawnTime="3min" /> <!-- Angel of Death -->
 				</minions>
 			</npc>
-			<npc id="26099" x="-50386" y="-16241" z="-11432" > <!-- Sirra -->
+			<npc id="26099" x="-50386" y="-16241" z="-11432"> <!-- Sirra -->
 				<minions>
 					<minion id="26100" count="2" respawnTime="3min" /> <!-- Sirra's Knight -->
 					<minion id="26101" count="2" respawnTime="3min" /> <!-- Sirra's Ice Golem -->
 				</minions>
 			</npc>
-			<npc id="26102" x="-54166" y="-16242" z="-10992" > <!-- Dark Rider -->
+			<npc id="26102" x="-54166" y="-16242" z="-10992"> <!-- Dark Rider -->
 				<minions>
 					<minion id="26103" count="2" respawnTime="3min" /> <!-- Berserk Dragon Warrior -->
 					<minion id="26104" count="2" respawnTime="3min" /> <!-- Berserk Dragon Wizard -->

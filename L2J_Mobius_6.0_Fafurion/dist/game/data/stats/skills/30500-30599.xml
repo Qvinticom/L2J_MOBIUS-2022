@@ -1269,7 +1269,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>
-			<value fromLevel="7" toLevel="13">80</value>  <!-- Guessed -->
+			<value fromLevel="7" toLevel="13">80</value><!-- Guessed -->
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
@@ -1326,7 +1326,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="7" toLevel="13">80</value>  <!-- Guessed -->
+			<value fromLevel="7" toLevel="13">80</value><!-- Guessed -->
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>2-6</affectLimit>
@@ -1366,7 +1366,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack"><!-- TODO: Damage increases twice with each enemy affected. -->
+			<effect name="PhysicalAttack"> <!-- TODO: Damage increases twice with each enemy affected. -->
 				<power>
 					<value level="1">19693</value>
 					<value level="2">20582</value>

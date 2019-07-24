@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="TownOfGoddard">
 		<group>
-			<npc id="30767" x="149272" y="-55888" z="-2760" heading="48000" respawnTime="60sec" > <!-- Auctioneer -->
+			<npc id="30767" x="149272" y="-55888" z="-2760" heading="48000" respawnTime="60sec"> <!-- Auctioneer -->
 				<parameters>
 					<param name="fnAgitMap" value="godard"/>
 				</parameters>

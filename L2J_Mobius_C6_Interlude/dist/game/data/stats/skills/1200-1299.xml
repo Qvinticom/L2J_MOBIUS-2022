@@ -608,7 +608,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 		<for>
 			<!-- retail value: "#hot"/sec; stat update every time unit (2/3 sec) -->
-			<!-- Verified by slyce -  Interlude - Aug 2007 -->
+			<!-- Verified by slyce - Interlude - Aug 2007 -->
 			<effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="LifeChant"/>
 		</for>
 		<enchant1for>

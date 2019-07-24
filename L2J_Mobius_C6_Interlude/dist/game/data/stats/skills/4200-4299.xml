@@ -1284,7 +1284,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
-		<!-- <for><set order="0x40" stat="attackDark" val="20"/></for> -->
+		<!-- <for> <set order="0x40" stat="attackDark" val="20"/> </for> -->
 	</skill>
 	<skill id="4279" levels="5" name="Fire Attack Weak Point">
 		<!-- Vulnerable to fire attacks. -->

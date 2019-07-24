@@ -1837,7 +1837,7 @@
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="staticReuse" val="true"/>
-		<!--  <for><effect count="1" name="Petrify" time="30" val="0" stackOrder="30" stackType="turn_stone"/></for> -->
+		<!-- <for> <effect count="1" name="Petrify" time="30" val="0" stackOrder="30" stackType="turn_stone"/> </for> -->
 	</skill>
 	<skill id="3194" levels="10" name="Item Skill: Fear">
 		<!-- Active: Momentarily throws the target into a state of fear and causes him to flee. -->

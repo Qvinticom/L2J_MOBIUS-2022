@@ -1379,7 +1379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2428-1" /> <!-- Scroll of Transformation  - Rabbit -->
+		<set name="item_skill" val="2428-1" /> <!-- Scroll of Transformation - Rabbit -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

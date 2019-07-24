@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21602" level="65" type="Monster" name="Ancient Holy Ground's Wing">
-	    <!-- Classic Monster -->
+		<!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -532,7 +532,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21609" level="69" type="Monster" name="Netherworld Royal Guard">
-	    <!-- Classic Monster -->
+		<!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -574,7 +574,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4086" level="1" /> <!--  -->
+			<skill id="4086" level="1" /> <!-- -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>

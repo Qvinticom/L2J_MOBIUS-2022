@@ -4,7 +4,7 @@
 	<xpRate min="1" max="1" /> <!-- XP modifiction rate -->
 	<spRate min="1" max="1" /> <!-- SP modifiction rate -->
 	<baits>
-		<bait itemId="45495" minPlayerLevel="85" chance="64" timeMin="105000" waitMin="15000" > <!-- Normal Bait -->
+		<bait itemId="45495" minPlayerLevel="85" chance="64" timeMin="105000" waitMin="15000"> <!-- Normal Bait -->
 			<catch itemId="45473" chance="70" multiplier ="1" /> <!-- Fresh Blue Mackerel -->
 			<catch itemId="45474" chance="3" multiplier ="1" /> <!-- Fresh Minnow -->
 			<catch itemId="45475" chance="3" multiplier ="1" /> <!-- Fresh Flatcatch -->
@@ -15,7 +15,7 @@
 			<catch itemId="45480" chance="3" multiplier ="1" /> <!-- Fresh Eel -->
 			<catch itemId="45486" chance="3" multiplier ="1" /> <!-- Wooden Treasure Chest -->
 		</bait>
-		<bait itemId="45496" minPlayerLevel="99" chance="64" timeMin="105000" waitMin="15000" > <!-- Special Bait -->
+		<bait itemId="45496" minPlayerLevel="99" chance="64" timeMin="105000" waitMin="15000"> <!-- Special Bait -->
 			<catch itemId="45481" chance="14" multiplier ="1" /> <!-- Fresh Marlin -->
 			<catch itemId="45482" chance="14" multiplier ="1" /> <!-- Fresh Catcatch -->
 			<catch itemId="45483" chance="14" multiplier ="1" /> <!-- Fresh Tuna -->
@@ -24,7 +24,7 @@
 			<catch itemId="45487" chance="14" multiplier ="1" /> <!-- Silver Treasure Chest -->
 			<catch itemId="45488" chance="14" multiplier ="1" /> <!-- Golden Treasure Chest -->
 		</bait>
-		<bait itemId="45496" minPlayerLevel="99" chance="30" timeMin="105000" waitMin="15000" > <!-- Player Commendation Special Bait -->
+		<bait itemId="45496" minPlayerLevel="99" chance="30" timeMin="105000" waitMin="15000"> <!-- Player Commendation Special Bait -->
 			<catch itemId="46085" chance="20" multiplier ="1" /> <!-- Treasure Map Piece - 1 -->
 			<catch itemId="46086" chance="20" multiplier ="1" /> <!-- Treasure Map Piece - 2 -->
 			<catch itemId="46087" chance="20" multiplier ="1" /> <!-- Treasure Map Piece - 3 -->

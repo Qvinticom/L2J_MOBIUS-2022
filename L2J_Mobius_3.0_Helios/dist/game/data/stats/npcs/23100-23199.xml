@@ -1350,7 +1350,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment rhand="15302" /> 
+		<equipment rhand="15302" />
 		<acquire exp="894810384" sp="894807" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1118252.67345" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
@@ -1926,7 +1926,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="15302" /> 
+		<equipment rhand="15302" />
 		<acquire exp="731391143" sp="731384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1032551.70351" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
@@ -1968,7 +1968,7 @@
 		</parameters>
 		<race>ORC</race>
 		<sex>MALE</sex>
-		<equipment rhand="10004" /> 
+		<equipment rhand="10004" />
 		<acquire exp="731391143" sp="731384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1032551.70351" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
@@ -3933,7 +3933,8 @@
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-		</dropLists>		<collision>
+		</dropLists>
+		<collision>
 			<radius normal="18" />
 			<height normal="25" />
 		</collision>

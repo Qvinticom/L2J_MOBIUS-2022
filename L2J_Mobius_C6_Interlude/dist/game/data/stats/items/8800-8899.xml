@@ -346,7 +346,7 @@
 			<enchant val="0" order="0x0C" stat="pAtk"/>
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Cheap Shot -->
-			<!-- reduces MPconsume by only 1 MP... bad description  ??? -->
+			<!-- reduces MPconsume by only 1 MP... bad description ??? -->
 			<sub val="1" order="0x40" stat="MpConsume">
 				<and>
 					<game skill="false" chance="30"/>

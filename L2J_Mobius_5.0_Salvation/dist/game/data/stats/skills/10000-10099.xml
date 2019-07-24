@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10000" toLevel="1" name="Steel Door Guild Reward Box  (Top-grade)">
+	<skill id="10000" toLevel="1" name="Steel Door Guild Reward Box (Top-grade)">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37394</itemConsumeId>
@@ -1409,7 +1409,7 @@
 		</effects>
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
-		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def  and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->
+		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
@@ -4319,7 +4319,7 @@
 			<value level="5">48</value>
 			<value level="6">51</value>
 			<value level="7">53</value>
-		</mpConsume>	
+		</mpConsume>
 		<hitTime>2200</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -5243,7 +5243,7 @@
 		</effects>
 	</skill>
 	<skill id="10092" toLevel="7" name="Summon Spirit Hawk Cubic">
-		<!-- Summons the  Spirit Hawk Cubic, which recovers every $s1 the summoner's P. Def/ M. Def by $s2, Speed by $s3 and Shield Def. by $s4 and makes him immune to debuffs. -->
+		<!-- Summons the Spirit Hawk Cubic, which recovers every $s1 the summoner's P. Def/ M. Def by $s2, Speed by $s3 and Shield Def. by $s4 and makes him immune to debuffs. -->
 		<icon>icon.skill10092_2</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="TownOfAden">
 		<group>
-			<npc id="30767" x="148472" y="27107" z="-2200" heading="33000" respawnTime="60sec" > <!-- Auctioneer -->
+			<npc id="30767" x="148472" y="27107" z="-2200" heading="33000" respawnTime="60sec"> <!-- Auctioneer -->
 				<parameters>
 					<param name="fnAgitMap" value="aden"/>
 				</parameters>

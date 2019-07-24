@@ -18,7 +18,7 @@
 		</condition>
 		<condition type="Level">
 			<param name="min" value="90" />
-			<param name="max" value="94" />			
+			<param name="max" value="94" />
 		</condition>
 		<condition type="Item" showMessageAndHtml="true">
 			<param name="id" value="17612"/> <!-- Memory Fragment -->
@@ -41,7 +41,7 @@
 	<doorlist>
 		<door id="26190001">
 			<openStatus default="close" />
-		</door>	
+		</door>
 		<door id="26190002">
 			<openStatus default="close" />
 		</door>
@@ -56,55 +56,55 @@
 		</door>
 		<door id="26190006">
 			<openStatus default="close" />
-		</door>		
+		</door>
 		<door id="26190007">
 			<openStatus default="close" />
 		</door>
 		<door id="26190010">
 			<openStatus default="close" />
-		</door>			
+		</door>
  		<door id="26210021">
 			<openStatus default="close" />
-		</door>    
+		</door>
 		<door id="26210022">
 			<openStatus default="open" />
-		</door>    
+		</door>
 		<door id="26210023">
 			<openStatus default="close" />
 		</door>
 		<door id="26210024">
 			<openStatus default="open" />
-		</door>    
+		</door>
 		<door id="26210025">
 			<openStatus default="open" />
-		</door>    
+		</door>
 		<door id="26210026">
 			<openStatus default="close" />
-		</door>    
+		</door>
 		<door id="26210027">
 			<openStatus default="close" />
-		</door>	    
+		</door>
 		<door id="26210028">
 			<openStatus default="open" />
-		</door>	
+		</door>
 		<door id="26210029">
 			<openStatus default="close" />
-		</door>	    
+		</door>
 		<door id="26210030">
 			<openStatus default="close" />
-		</door>	
+		</door>
 		<door id="26210031">
 			<openStatus default="close" />
-		</door>        
+		</door> 
 		<door id="26210032">
 			<openStatus default="open" />
-		</door>    
+		</door>
 		<door id="26210033">
 			<openStatus default="open" />
-		</door>	
+		</door>
 		<door id="26210041">
 			<openStatus default="open" />
-		</door>     
+		</door>
 		<door id="26210042">
 			<openStatus default="open" />
 		</door>
@@ -127,7 +127,7 @@
 			</territories>
 			<npc id="19018" respawnTime="36sec" count="1" /> <!-- Lizard Charmer -->
 			<npc id="19019" respawnTime="36sec" count="1" /> <!-- Lizard Spearman -->
-			<npc id="33239" x="217976" y="119275" z="-1760" respawnTime="36sec" count="1" /> <!--  -->
+			<npc id="33239" x="217976" y="119275" z="-1760" respawnTime="36sec" count="1" /> <!-- -->
 		</group>
 		<group name="magmeld_2522_02m1">
 			<territories>
@@ -140,7 +140,7 @@
 			</territories>
 			<npc id="19018" respawnTime="36sec" count="1" /> <!-- Lizard Charmer -->
 			<npc id="19020" respawnTime="36sec" count="1" /> <!-- Lizard Spearman -->
-			<npc id="33278" x="209486" y="119184" z="-1352" respawnTime="36sec" count="1" /> <!--  -->
+			<npc id="33278" x="209486" y="119184" z="-1352" respawnTime="36sec" count="1" /> <!-- -->
 		</group>
 		<group name="magmeld_2522_03m1">
 			<territories>
@@ -153,7 +153,7 @@
 			</territories>
 			<npc id="19018" respawnTime="36sec" count="1" /> <!-- Lizard Charmer -->
 			<npc id="19019" respawnTime="36sec" count="1" /> <!-- Lizard Spearman -->
-			<npc id="33279" x="213707" y="114867" z="-848" respawnTime="36sec" count="1" /> <!--  -->
+			<npc id="33279" x="213707" y="114867" z="-848" respawnTime="36sec" count="1" /> <!-- -->
 		</group>
 		<group name="magmeld_2522_04m1">
 			<territories>
@@ -164,10 +164,10 @@
 					<node x="217195" y="111227" />
 				</territory>
 			</territories>
-			<npc id="33222" x="218102" y="111314" z="-1310" respawnTime="36sec" count="1" /> <!--  -->
+			<npc id="33222" x="218102" y="111314" z="-1310" respawnTime="36sec" count="1" /> <!-- -->
 			<npc id="19018" respawnTime="36sec" count="1" /> <!-- Lizard Charmer -->
 			<npc id="19019" respawnTime="36sec" count="1" /> <!-- Lizard Spearman -->
-			<npc id="32947" respawnTime="36sec" count="1" /> <!--  -->
+			<npc id="32947" respawnTime="36sec" count="1" /> <!-- -->
 		</group>
 		<group name="magmeld_2521_01m1">
 			<territories>

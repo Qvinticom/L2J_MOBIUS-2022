@@ -22,7 +22,7 @@
 		<passiveConditions>
 			<condition name="OpSkillAcquire">
 				<!-- TODO: Enchant has to be higher than +8 13341 lvl 3-4-5 -->
-				<skillId>13341</skillId> <!--  Enchant Robe Armor Set + 6 (R-grade) -->
+				<skillId>13341</skillId> <!-- Enchant Robe Armor Set + 6 (R-grade) -->
 				<hasLearned>true</hasLearned>
 			</condition>
 		</passiveConditions>
@@ -534,7 +534,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Restoration" >
+			<effect name="Restoration">
 				<items>
 					<itemId>48669</itemId>
 					<itemCount>1</itemCount>
@@ -564,7 +564,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Restoration" >
+			<effect name="Restoration">
 				<items>
 					<itemId>48841</itemId>
 					<itemCount>1</itemCount>
@@ -678,19 +678,19 @@
 				<items>
 					<item chance="16.6">
 						<item id="17691" count="10" />
-					</item>      
+					</item> 
 					<item chance="17">
 						<item id="17692" count="10" />
-					</item>      
+					</item> 
 					<item chance="16.6">
 						<item id="17693" count="10" />
-					</item>      
+					</item> 
 					<item chance="16.6">
 						<item id="17694" count="10" />
-					</item>      
+					</item> 
 					<item chance="16.6">
 						<item id="17695" count="10" />
-					</item>      
+					</item> 
 					<item chance="16.6">
 						<item id="17696" count="10" />
 					</item>

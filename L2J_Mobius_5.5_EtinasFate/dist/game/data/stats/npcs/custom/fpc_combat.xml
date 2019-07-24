@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
 	<!-- Sigel Phoenix Knight -->
-	<npc id="81001" level="94" type="Monster" name="Siegfield" title="Sigel Phoenix Knight" >
+	<npc id="81001" level="94" type="Monster" name="Siegfield" title="Sigel Phoenix Knight">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="39" dex="55" wit="39" con="82" men="38">
@@ -18,7 +18,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -41,7 +41,7 @@
 		</skillList>
 	</npc>
 	<!-- Tyrr Titan -->
-	<npc id="81002" level="94" type="Monster" name="Tyrrion" title="Tyrr Titan" >
+	<npc id="81002" level="94" type="Monster" name="Tyrrion" title="Tyrr Titan">
 		<race>ORC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="37" dex="50" wit="38" con="87" men="41">
@@ -58,7 +58,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -77,7 +77,7 @@
 		</skillList>
 	</npc>
 	<!-- Othell Fortune Seeker -->
-	<npc id="81003" level="94" type="Monster" name="Othelo" title="Othell Fortune Seeker" >
+	<npc id="81003" level="94" type="Monster" name="Othelo" title="Othell Fortune Seeker">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<stats str="87" int="39" dex="53" wit="37" con="85" men="40">
@@ -94,7 +94,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -115,7 +115,7 @@
 		</skillList>
 	</npc>
 	<!-- Yul Trickster -->
-	<npc id="81004" level="94" type="Monster" name="Yully" title="Yul Trickster" >
+	<npc id="81004" level="94" type="Monster" name="Yully" title="Yul Trickster">
 		<race>KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="43" dex="57" wit="36" con="80" men="37">
@@ -132,7 +132,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="ARCHER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="ARCHER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -153,7 +153,7 @@
 		</skillList>
 	</npc>
 	<!-- Feoh Archmage -->
-	<npc id="81005" level="94" type="Monster" name="Feoth" title="Feoh Archmage" >
+	<npc id="81005" level="94" type="Monster" name="Feoth" title="Feoh Archmage">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="38" int="79" dex="27" wit="78" con="41" men="78">
@@ -170,7 +170,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="MAGE" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="MAGE" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -193,7 +193,7 @@
 		</skillList>
 	</npc>
 	<!-- Iss Spectral Dancer -->
-	<npc id="81006" level="94" type="Monster" name="Isda" title="Iss Spectral Dancer" >
+	<npc id="81006" level="94" type="Monster" name="Isda" title="Iss Spectral Dancer">
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<stats str="92" int="42" dex="56" wit="39" con="77" men="35">
@@ -210,7 +210,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -231,7 +231,7 @@
 		</skillList>
 	</npc>
 	<!-- Aeore Eva's Saint -->
-	<npc id="81007" level="94" type="Monster" name="Aorta" title="Aeore Eva's Saint" >
+	<npc id="81007" level="94" type="Monster" name="Aorta" title="Aeore Eva's Saint">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<stats str="36" int="74" dex="32" wit="84" con="38" men="77">
@@ -248,7 +248,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="HEALER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="HEALER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -267,7 +267,7 @@
 		</skillList>
 	</npc>
 	<!-- Eviscerator -->
-	<npc id="81008" level="94" type="Monster" name="Breezer" title="Eviscerator" >
+	<npc id="81008" level="94" type="Monster" name="Breezer" title="Eviscerator">
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
 		<stats str="89" int="40" dex="52" wit="37" con="84" men="39">
@@ -284,7 +284,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>
@@ -303,7 +303,7 @@
 		</skillList>
 	</npc>
 	<!-- Sayha's Seer -->
-	<npc id="81009" level="94" type="Monster" name="Hoppy" title="Sayha's Seer" >
+	<npc id="81009" level="94" type="Monster" name="Hoppy" title="Sayha's Seer">
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
 		<stats str="37" int="79" dex="27" wit="76" con="42" men="80">
@@ -320,7 +320,7 @@
 			</speed>
 		</stats>
 		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
-		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true" > <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
 				<clan>FAKE_PLAYER</clan>
 			</clanList>

@@ -757,7 +757,7 @@
 			<radius normal="13" />
 			<height normal="11" />
 		</collision>
-		<dropLists>	<!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="118" max="236" chance="70" /> <!-- Adena -->
 				<item id="315" min="1" max="1" chance="0.0062" /> <!-- Divine Tome -->
@@ -825,7 +825,7 @@
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
-		<dropLists>	<!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="184" max="367" chance="70" /> <!-- Adena -->
 				<item id="83" min="1" max="1" chance="0.0016" /> <!-- Sword of Magic -->
@@ -970,7 +970,7 @@
 			<radius normal="19" />
 			<height normal="36" />
 		</collision>
-		<dropLists>	<!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="223" max="446" chance="70" /> <!-- Adena -->
 				<item id="850" min="1" max="1" chance="0.012" /> <!-- Elven Earring -->
@@ -4768,7 +4768,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
-		<acquire exp="12060" sp="948" />  <!-- Neeed confirm retail values -->
+		<acquire exp="12060" sp="948" /> <!-- Neeed confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2209" hpRegen="13" mp="832" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

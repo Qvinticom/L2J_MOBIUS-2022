@@ -27,7 +27,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#val"/>
-			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam"/><mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam"/> -->
+			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam"/> <mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam"/> -->
 			<add order="0x40" stat="poleTargetCount" val="4"/>
 		</for>
 	</skill>
@@ -42,7 +42,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<add order="0x40" stat="accCombat" val="#val"/>
-			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam"/><mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam"/> -->
+			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam"/> <mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam"/> -->
 		</for>
 	</skill>
 	<skill id="3603" levels="10" name="Demonic Sword Zariche">

@@ -36,19 +36,19 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="204" order="0x08" stat="pAtk"/>
-    <set val="89" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="4" order="0x10" stat="accCombat">
-      <and>
-        <using slotitem="2600;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="204" order="0x08" stat="pAtk"/>
+			<set val="89" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="4" order="0x10" stat="accCombat">
+				<and>
+					<using slotitem="2600;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2601" type="Weapon" name="Raid Sword*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
@@ -86,20 +86,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="204" order="0x08" stat="pAtk"/>
-    <set val="89" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="146" order="0x10" stat="cAtk">
-      <and>
-        <using slotitem="2601;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="204" order="0x08" stat="pAtk"/>
+			<set val="89" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="146" order="0x10" stat="cAtk">
+				<and>
+					<using slotitem="2601;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2602" type="Weapon" name="Raid Sword*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
@@ -137,20 +137,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="204" order="0x08" stat="pAtk"/>
-    <set val="89" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.25" order="0x30" stat="maxHp">
-      <and>
-        <using slotitem="2602;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="204" order="0x08" stat="pAtk"/>
+			<set val="89" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.25" order="0x30" stat="maxHp">
+				<and>
+					<using slotitem="2602;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2603" type="Weapon" name="Raid Sword*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
@@ -188,20 +188,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="204" order="0x08" stat="pAtk"/>
-    <set val="89" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="65" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2603;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="204" order="0x08" stat="pAtk"/>
+			<set val="89" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="65" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2603;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2604" type="Weapon" name="Raid Sword*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
@@ -239,20 +239,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="204" order="0x08" stat="pAtk"/>
-    <set val="89" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.06" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2604;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="204" order="0x08" stat="pAtk"/>
+			<set val="89" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.06" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2604;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2605" type="Weapon" name="Raid Sword*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 43. -->
@@ -290,20 +290,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="220" order="0x08" stat="pAtk"/>
-    <set val="94" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="43" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2605;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="220" order="0x08" stat="pAtk"/>
+			<set val="94" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="43" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2605;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2606" type="Weapon" name="Caliburs*Caliburs">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 during a critical attack. -->
@@ -341,20 +341,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="127" order="0x10" stat="cAtk">
-      <and>
-        <using slotitem="2606;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="127" order="0x10" stat="cAtk">
+				<and>
+					<using slotitem="2606;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2607" type="Weapon" name="Caliburs*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
@@ -392,20 +392,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.25" order="0x30" stat="maxHp">
-      <and>
-        <using slotitem="2607;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.25" order="0x30" stat="maxHp">
+				<and>
+					<using slotitem="2607;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2608" type="Weapon" name="Caliburs*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54. -->
@@ -443,20 +443,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="54" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2608;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="54" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2608;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2609" type="Weapon" name="Caliburs*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 5%. -->
@@ -494,20 +494,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.05" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2609;14;4"/>
-      </and>
-     </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.05" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2609;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2610" type="Weapon" name="Caliburs*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
@@ -545,19 +545,19 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="4" order="0x10" stat="accCombat">
-      <and>
-        <using slotitem="2610;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="4" order="0x10" stat="accCombat">
+				<and>
+					<using slotitem="2610;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2611" type="Weapon" name="Caliburs*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 5%. -->
@@ -595,20 +595,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="228" order="0x08" stat="pAtk"/>
-    <set val="97" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.05" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2611;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="228" order="0x08" stat="pAtk"/>
+			<set val="97" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.05" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2611;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2612" type="Weapon" name="Sword of Limit*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 during a critical attack. -->
@@ -646,20 +646,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="127" order="0x10" stat="cAtk">
-      <and>
-        <using slotitem="2612;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="127" order="0x10" stat="cAtk">
+				<and>
+					<using slotitem="2612;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2613" type="Weapon" name="Sword of Limit*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
@@ -697,20 +697,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.25" order="0x30" stat="maxHp">
-      <and>
-        <using slotitem="2613;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.25" order="0x30" stat="maxHp">
+				<and>
+					<using slotitem="2613;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2614" type="Weapon" name="Sword of Limit*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54. -->
@@ -748,20 +748,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="54" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2614;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="54" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2614;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2615" type="Weapon" name="Sword of Limit*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 5%. -->
@@ -799,20 +799,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.05" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2615;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.05" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2615;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2616" type="Weapon" name="Sword of Limit*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 3. -->
@@ -850,19 +850,19 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="228" order="0x08" stat="pAtk"/>
-    <set val="97" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="3" order="0x10" stat="accCombat">
-      <and>
-        <using slotitem="2616;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="228" order="0x08" stat="pAtk"/>
+			<set val="97" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="3" order="0x10" stat="accCombat">
+				<and>
+					<using slotitem="2616;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2617" type="Weapon" name="Sword of Delusion*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
@@ -900,19 +900,19 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="4" order="0x10" stat="accCombat">
-      <and>
-        <using slotitem="2617;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="4" order="0x10" stat="accCombat">
+				<and>
+					<using slotitem="2617;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2618" type="Weapon" name="Sword of Delusion*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 during a critical attack. -->
@@ -950,20 +950,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="127" order="0x10" stat="cAtk">
-      <and>
-        <using slotitem="2618;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="127" order="0x10" stat="cAtk">
+				<and>
+					<using slotitem="2618;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2619" type="Weapon" name="Sword of Delusion*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
@@ -1001,20 +1001,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.25" order="0x30" stat="maxHp">
-      <and>
-        <using slotitem="2619;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.25" order="0x30" stat="maxHp">
+				<and>
+					<using slotitem="2619;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2620" type="Weapon" name="Sword of Delusion*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 133 during a critical attack. -->
@@ -1052,20 +1052,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="228" order="0x08" stat="pAtk"/>
-    <set val="97" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="133" order="0x10" stat="cAtk">
-      <and>
-        <using slotitem="2620;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="228" order="0x08" stat="pAtk"/>
+			<set val="97" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="133" order="0x10" stat="cAtk">
+				<and>
+					<using slotitem="2620;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2621" type="Weapon" name="Sword of Nightmare*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54. -->
@@ -1103,20 +1103,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="54" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2621;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="54" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2621;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2622" type="Weapon" name="Sword of Nightmare*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 5%. -->
@@ -1154,20 +1154,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.05" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2622;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.05" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2622;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2623" type="Weapon" name="Sword of Nightmare*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
@@ -1205,20 +1205,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="228" order="0x08" stat="pAtk"/>
-    <set val="97" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.25" order="0x30" stat="maxHp">
-      <and>
-        <using slotitem="2623;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="228" order="0x08" stat="pAtk"/>
+			<set val="97" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.25" order="0x30" stat="maxHp">
+				<and>
+					<using slotitem="2623;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2624" type="Weapon" name="Tsurugi*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54. -->
@@ -1256,20 +1256,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="213" order="0x08" stat="pAtk"/>
-    <set val="91" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="54" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2624;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="91" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="54" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2624;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2625" type="Weapon" name="Tsurugi*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 52. -->
@@ -1307,20 +1307,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="228" order="0x08" stat="pAtk"/>
-    <set val="97" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="52" order="0x40" stat="rCrit">
-      <and>
-        <using slotitem="2625;14;4"/>
-      </and>
-    </add>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="228" order="0x08" stat="pAtk"/>
+			<set val="97" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<add val="52" order="0x40" stat="rCrit">
+				<and>
+					<using slotitem="2625;14;4"/>
+				</and>
+			</add>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2626" type="Weapon" name="Samurai Long Sword*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 4%. -->
@@ -1358,20 +1358,20 @@
 		<set name="onCrit_skill_id" val="0"/>
 		<set name="onCrit_skill_lvl" val="0"/>
 		<set name="onCrit_skill_chance" val="0"/>
-  <for>
-    <set val="236" order="0x08" stat="pAtk"/>
-    <set val="99" order="0x08" stat="mAtk"/>
-    <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.04" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="2626;14;4"/>
-      </and>
-    </mul>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+		<for>
+			<set val="236" order="0x08" stat="pAtk"/>
+			<set val="99" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<mul val="1.04" order="0x30" stat="pAtkSpd">
+				<and>
+					<using slotitem="2626;14;4"/>
+				</and>
+			</mul>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
 	</item>
 	<item id="2627" type="EtcItem" name="Mark of Challenger">
 		<!-- A mark given to those who have passed the Trial of the Challenger. An item for occupational change. -->

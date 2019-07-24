@@ -45,7 +45,7 @@
 		<set name="item_skill_id" val="0"/>
 		<set name="item_skill_lvl" val="0"/>
 		<for>
-			<add stat="pDef" order="0x10"  val="30"/>
+			<add stat="pDef" order="0x10" val="30"/>
 			<add val="67" order="0x60" stat="maxMp"/>
 		</for>
 	</item>

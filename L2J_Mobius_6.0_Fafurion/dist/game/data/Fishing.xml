@@ -4,22 +4,22 @@
 	<xpRate min="1" max="1" /> <!-- XP modifiction rate -->
 	<spRate min="1" max="1" /> <!-- SP modifiction rate -->
 	<baits>
-		<bait itemId="46737" minPlayerLevel="95" chance="40" timeMin="105000" waitMin="15000" > <!-- Practice Bait -->
+		<bait itemId="46737" minPlayerLevel="95" chance="40" timeMin="105000" waitMin="15000"> <!-- Practice Bait -->
 			<catch itemId="46736" chance="70" multiplier="1" /> <!-- Practice Fish -->
-		</bait>	
-		<bait itemId="47547" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000" > <!-- Bait -->
+		</bait>
+		<bait itemId="47547" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait -->
 			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->
 			<catch itemId="47552" chance="3" multiplier="1" /> <!-- Powerful Fish -->
 			<catch itemId="47553" chance="2" multiplier="1" /> <!-- Blueish Box -->
 		</bait>
-		<bait itemId="47548" minPlayerLevel="99" chance="40" timeMin="105000" waitMin="15000" > <!-- Bait(R99) -->
+		<bait itemId="47548" minPlayerLevel="99" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait(R99) -->
 			<catch itemId="47550" chance="70" multiplier="1476" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1804" /> <!-- Nimble Fish -->
 			<catch itemId="47552" chance="3" multiplier="1968" /> <!-- Powerful Fish -->
 			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Reddish Box -->
 		</bait>
-		<bait itemId="47549" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000" > <!-- PA Bait -->
+		<bait itemId="47549" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000"> <!-- PA Bait -->
 			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->
 			<catch itemId="47552" chance="3" multiplier="1" /> <!-- Powerful Fish -->

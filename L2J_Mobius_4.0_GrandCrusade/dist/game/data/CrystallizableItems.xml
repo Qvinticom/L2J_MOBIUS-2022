@@ -3,88 +3,88 @@
 	<!-- Templates for generating automatically crystallization data. Chance is multiplied by the amount of crystals the item template has. -->
 	<templates>
 		<crystallizable_template crystalType="A" crystallizationType="WEAPON">
-	        <item id="729" count="1" chance="0.1041894606706846" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-	        <item id="6569" count="1" chance="0.0037508205841446" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
-	        <item id="36388" count="1" chance="0.0312611469690826" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
-	        <item id="36513" count="1" chance="0.0187541029207232" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="A" crystallizationType="ARMOR">
-	        <item id="730" count="1" chance="0.2610028860028860" /> <!-- Scroll: Enchant Armor (A-grade) -->
-	        <item id="6570" count="1" chance="0.0417532467532468" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
-	        <item id="36391" count="1" chance="0.3476367205789645" /> <!-- Giant's Scroll: Enchant Armor (A-grade) -->
-	        <item id="36513" count="1" chance="0.0187541029207232" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S" crystallizationType="WEAPON">
-	        <item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-	        <item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S" crystallizationType="ARMOR">
-	        <item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
-	        <item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-	        <item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S80" crystallizationType="WEAPON">
-	        <item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-	        <item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S80" crystallizationType="ARMOR">
-	        <item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
-	        <item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-	        <item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S84" crystallizationType="WEAPON">
-	        <item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-	        <item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="S84" crystallizationType="ARMOR">
-	        <item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
-	        <item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-	        <item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
-	        <item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="R" crystallizationType="WEAPON">
-	        <item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-	        <item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="R" crystallizationType="ARMOR">
-	        <item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
-	        <item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-	        <item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+			<item id="729" count="1" chance="0.1041894606706846" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			<item id="6569" count="1" chance="0.0037508205841446" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+			<item id="36388" count="1" chance="0.0312611469690826" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
+			<item id="36513" count="1" chance="0.0187541029207232" /> <!-- Elcyum Powder -->
 		</crystallizable_template>
-	    <crystallizable_template crystalType="R95" crystallizationType="WEAPON">
-	        <item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-	        <item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="R95" crystallizationType="ARMOR">
-	        <item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
-	        <item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-	        <item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		<crystallizable_template crystalType="A" crystallizationType="ARMOR">
+			<item id="730" count="1" chance="0.2610028860028860" /> <!-- Scroll: Enchant Armor (A-grade) -->
+			<item id="6570" count="1" chance="0.0417532467532468" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+			<item id="36391" count="1" chance="0.3476367205789645" /> <!-- Giant's Scroll: Enchant Armor (A-grade) -->
+			<item id="36513" count="1" chance="0.0187541029207232" /> <!-- Elcyum Powder -->
 		</crystallizable_template>
-	    <crystallizable_template crystalType="R99" crystallizationType="WEAPON">
-	        <item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-	        <item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
-	    </crystallizable_template>
-	    <crystallizable_template crystalType="R99" crystallizationType="ARMOR">
-	        <item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
-	        <item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-	        <item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		<crystallizable_template crystalType="S" crystallizationType="WEAPON">
+			<item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			<item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			<item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="S" crystallizationType="ARMOR">
+			<item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+			<item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="S80" crystallizationType="WEAPON">
+			<item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			<item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			<item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="S80" crystallizationType="ARMOR">
+			<item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+			<item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="S84" crystallizationType="WEAPON">
+			<item id="959" count="1" chance="0.0062516000000000" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			<item id="6577" count="1" chance="0.0010419333333333" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			<item id="36387" count="1" chance="0.0001929506172840" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="S84" crystallizationType="ARMOR">
+			<item id="960" count="1" chance="0.6251600000000000" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<item id="6578" count="1" chance="0.0277829872739451" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+			<item id="36390" count="1" chance="0.0173677160080375" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
+			<item id="36513" count="1" chance="0.0312592096450100" /> <!-- Elcyum Powder -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R" crystallizationType="WEAPON">
+			<item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			<item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			<item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R" crystallizationType="ARMOR">
+			<item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+			<item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R95" crystallizationType="WEAPON">
+			<item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			<item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			<item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R95" crystallizationType="ARMOR">
+			<item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+			<item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R99" crystallizationType="WEAPON">
+			<item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			<item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			<item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
+		<crystallizable_template crystalType="R99" crystallizationType="ARMOR">
+			<item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+			<item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+			<item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
 		</crystallizable_template>
 	</templates>
 	<items>
