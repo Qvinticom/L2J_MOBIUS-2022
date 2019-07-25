@@ -1263,6 +1263,9 @@
 		<set name="material" val="CLOTH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35046" level="1" /> <!-- Land Dragon Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
@@ -1277,6 +1280,9 @@
 		<set name="material" val="CLOTH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35047" level="1" /> <!-- Fire Dragon Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
