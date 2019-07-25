@@ -23,8 +23,8 @@ import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import org.openjavac.tools.JavaCompiler;
-import org.openjavac.tools.javac.api.JavacTool;
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
 
 /**
  * @author Mobius
@@ -34,7 +34,7 @@ public class JavaScriptingEngine
 	private static final Logger LOGGER = Logger.getLogger(JavaScriptingEngine.class.getName());
 	
 	private final static Map<String, String> _properties = new HashMap<>();
-	private final static JavaCompiler _compiler = JavacTool.create();
+	private final static JavaCompiler _compiler = ToolProvider.getSystemJavaCompiler();
 	
 	public JavaScriptingEngine()
 	{

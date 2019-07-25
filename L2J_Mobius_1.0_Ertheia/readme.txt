@@ -4,7 +4,7 @@ Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
 Geodata: http://www.mediafire.com/file/9g4lc54v9735nvw/L2J_Mobius_1.0_Ertheia_Geodata.zip
-JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
+JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
 Working features...

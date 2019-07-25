@@ -4,7 +4,7 @@ Client: https://drive.google.com/uc?id=0B_wJFNF_2fcJTE5oVm96emtlSlE&export=downl
 Mirror: https://mega.nz/#!Uo9TTCSQ!JDstscgcLFY3GeM3Q6j8nUq7jpixzqIV1Gl4z2ob0eA
 
 Geodata: http://www.mediafire.com/file/25dragzinodp52k/L2J_Mobius_3.0_Helios_Geodata.zip
-JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
+JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
 Working features...

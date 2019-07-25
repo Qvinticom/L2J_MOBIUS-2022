@@ -26,8 +26,7 @@ import java.nio.file.Path;
 
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.NestingKind;
-
-import org.openjavac.tools.JavaFileObject;
+import javax.tools.JavaFileObject;
 
 /**
  * @author HorridoJoho

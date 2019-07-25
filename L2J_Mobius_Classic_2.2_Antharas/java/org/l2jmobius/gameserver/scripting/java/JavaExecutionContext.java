@@ -30,9 +30,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import org.openjavac.tools.Diagnostic;
-import org.openjavac.tools.DiagnosticCollector;
-import org.openjavac.tools.JavaFileObject;
+import javax.tools.Diagnostic;
+import javax.tools.DiagnosticCollector;
+import javax.tools.JavaFileObject;
 
 import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 
