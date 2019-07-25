@@ -281,7 +281,7 @@
 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Atk. Causes Bleed on the target for $s2. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/ dual dagger to be equipped. -->
 		<icon>icon.skill10705</icon>
- 		<!-- Updated to GRAND CRUSADE -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Atk. Causes Bleed on the target for 15 seconds. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/dual dagger to be equipped -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -297,7 +297,7 @@
 		<isDebuff>true</isDebuff>
 		<effectPoint>-1</effectPoint>
 		<targetType>ENEMY</targetType>
- 		<affectScope>SINGLE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">77</value>
 			<value level="2">79</value>

@@ -2227,17 +2227,17 @@
 				<chance>30</chance>
 			</effect>
 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.4 + 0.6 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.4 + 0.6 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{-1 - ((subIndex - 1} * 0.5)}</value>
@@ -2302,17 +2302,17 @@
 		<effects>
 			<effect name="DebuffBlock" />
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="6" fromSubLevel="1001" toSubLevel="1020">
- 				<amount>
- 					<value fromLevel="4" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="4" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="4" toLevel="6" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="4" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="4" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="4" toLevel="6" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="4" toLevel="6" fromSubLevel="3001" toSubLevel="3020">{-1 - ((subIndex - 1} * 0.5)}</value>
@@ -2551,17 +2551,17 @@
 				<HOLD>100</HOLD>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11539" toLevel="11" name="Petrify">
@@ -2726,17 +2726,17 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="8001" toSubLevel="8020">
 				<amount>
 					<value fromLevel="7" toLevel="7" fromSubLevel="8001" toSubLevel="8020">{2 * subIndex}</value>
@@ -2926,17 +2926,17 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6020">
- 				<amount>
- 					<value fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7020">
- 				<amount>
- 					<value fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11544" toLevel="1" name="Battle Rhapsody">
@@ -2977,23 +2977,23 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
- 				</amount>
- 				<mode>DIFF</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">
@@ -3026,23 +3026,23 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
- 				</amount>
- 				<mode>DIFF</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11546" toLevel="4" name="Chaos Symphony">

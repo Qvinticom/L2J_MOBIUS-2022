@@ -1538,11 +1538,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10271" toLevel="2" name="Power Provoke">
@@ -1649,11 +1649,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
@@ -2652,12 +2652,12 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
- 			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10290" toLevel="8" name="Hurricane Slasher">
@@ -2933,12 +2933,12 @@
 				<ANIMAL_WEAKNESS>10</ANIMAL_WEAKNESS>
 				<PLANT_WEAKNESS>10</PLANT_WEAKNESS>
 			</effect>
- 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10297" toLevel="1" name="Spirit of the Slayer">
@@ -2967,12 +2967,12 @@
 				<CONSTRUCT_WEAKNESS>10</CONSTRUCT_WEAKNESS>
 				<DRAGON_WEAKNESS>10</DRAGON_WEAKNESS>
 			</effect>
- 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10298" toLevel="1" name="Power Revival">

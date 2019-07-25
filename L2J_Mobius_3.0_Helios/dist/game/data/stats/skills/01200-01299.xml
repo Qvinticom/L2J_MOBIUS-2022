@@ -4416,17 +4416,17 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</pveEffects>
 	</skill>
 	<skill id="1245" toLevel="14" name="Steal Essence">

@@ -1624,11 +1624,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
 					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
@@ -2638,12 +2638,12 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
- 			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10290" toLevel="8" name="Hurricane Slasher">

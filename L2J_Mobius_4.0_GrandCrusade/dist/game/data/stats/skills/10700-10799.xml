@@ -255,7 +255,7 @@
 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Attack and decrease Speed by $s2. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for $s3. Half-kill is possible. Requires dagger/dual dagger. -->
 		<icon>icon.skill10705</icon>
- 		<!-- Updated to GRAND CRUSADE -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Attack and decrease Speed by 50. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for 10 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -268,7 +268,7 @@
 		<isDebuff>true</isDebuff>
 		<effectPoint>-1</effectPoint>
 		<targetType>ENEMY</targetType>
- 		<affectScope>SINGLE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">77</value>
 			<value level="2">79</value>

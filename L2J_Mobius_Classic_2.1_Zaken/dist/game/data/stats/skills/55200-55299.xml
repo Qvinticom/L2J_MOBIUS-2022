@@ -465,12 +465,12 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>
- 					<value level="1">100</value>
+					<value level="1">100</value>
 				</amount>
 			</effect>
 			<effect name="SpModify">
 				<amount>
- 					<value level="1">100</value>
+					<value level="1">100</value>
 				</amount>
 			</effect>
 		</effects>
@@ -503,7 +503,7 @@
 	<skill id="55236" toLevel="1" name="Adventurer's Potion - Casting Spd.">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
- 	<!-- 	Increase Cast speed by 15%	-->
+	<!--	Increase Cast speed by 15%	-->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>

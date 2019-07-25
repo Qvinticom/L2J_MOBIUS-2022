@@ -457,15 +457,15 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
 			<effect name="IgnoreDeath" />
-		 </effects>
-		 <endEffects>
+		</effects>
+		<endEffects>
 			<effect name="HealPercent">
 				<power>
 					<value level="1">20</value>
 					<value level="2">30</value>
 				</power>
 			</effect>
-		 </endEffects>
+		</endEffects>
 	</skill>
 	<skill id="1609" toLevel="4" name="Sword Expert">
 		<!-- P. Atk. +$s1, P. Accuracy +$s2. Atk. Spd. +$s3 when using a sword/ two-handed sword. Continuously consumes MP proportionately to your level. -->

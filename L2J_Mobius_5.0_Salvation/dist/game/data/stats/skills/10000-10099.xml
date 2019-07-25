@@ -1336,11 +1336,11 @@
 				</amount>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
@@ -1625,11 +1625,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
@@ -1660,11 +1660,11 @@
 		<effects>
 			<effect name="IgnoreDeath" />
 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
