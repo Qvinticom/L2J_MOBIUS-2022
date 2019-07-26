@@ -35,10 +35,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.quest.jython.QuestJython;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
-public class SagasSuperClass extends QuestJython
+public class SagasSuperClass extends Quest
 {
 	public String qn = "SagasSuperClass";
 	public int qnu;
