@@ -39,7 +39,7 @@ public class RequestTutorialPassCmdToServer extends GameClientPacket
 			return;
 		}
 		
-		final QuestState qs = player.getQuestState("255_Tutorial");
+		final QuestState qs = player.getQuestState("Tutorial");
 		if (qs != null)
 		{
 			qs.getQuest().notifyEvent(_bypass, null, player);

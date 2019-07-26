@@ -42,7 +42,7 @@ public class RequestTutorialQuestionMark extends GameClientPacket
 			return;
 		}
 		
-		final QuestState qs = player.getQuestState("255_Tutorial");
+		final QuestState qs = player.getQuestState("Tutorial");
 		if (qs != null)
 		{
 			qs.getQuest().notifyEvent("QM" + _number + "", null, player);

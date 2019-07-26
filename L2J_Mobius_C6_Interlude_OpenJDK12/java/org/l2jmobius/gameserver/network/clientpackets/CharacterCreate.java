@@ -282,7 +282,11 @@ public final class CharacterCreate extends GameClientPacket
 			}
 		}
 		
-		startTutorialQuest(newChar);
+		if (!Config.DISABLE_TUTORIAL && !Config.ALT_DEV_NO_QUESTS)
+		{
+			startTutorialQuest(newChar);
+		}
+		
 		newChar.store();
 		newChar.deleteMe(); // Release the world of this character and it's inventory
 		
@@ -301,17 +305,26 @@ public final class CharacterCreate extends GameClientPacket
 	
 	public void startTutorialQuest(PlayerInstance player)
 	{
-		final QuestState qs = player.getQuestState("255_Tutorial");
-		Quest q = null;
-		
-		if ((qs == null) && !Config.ALT_DEV_NO_QUESTS)
+		final QuestState qs1 = player.getQuestState("NewbieHelper");
+		Quest q1 = null;
+		if (qs1 == null)
 		{
-			q = QuestManager.getInstance().getQuest("255_Tutorial");
+			q1 = QuestManager.getInstance().getQuest("NewbieHelper");
+		}
+		if (q1 != null)
+		{
+			q1.newQuestState(player);
 		}
 		
-		if (q != null)
+		final QuestState qs2 = player.getQuestState("Tutorial");
+		Quest q2 = null;
+		if (qs2 == null)
 		{
-			q.newQuestState(player);
+			q2 = QuestManager.getInstance().getQuest("Tutorial");
+		}
+		if (q2 != null)
+		{
+			q2.newQuestState(player);
 		}
 	}
 }

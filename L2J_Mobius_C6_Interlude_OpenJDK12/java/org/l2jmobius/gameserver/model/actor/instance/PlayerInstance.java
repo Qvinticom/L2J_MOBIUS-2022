@@ -2515,7 +2515,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public void refreshMasteryPenality()
 	{
-		if (!Config.MASTERY_PENALTY || (getLevel() <= Config.LEVEL_TO_GET_PENALITY))
+		if (!Config.MASTERY_PENALTY || (getLevel() <= Config.LEVEL_TO_GET_PENALTY))
 		{
 			return;
 		}
@@ -2634,7 +2634,7 @@ public final class PlayerInstance extends Playable
 	 */
 	public void refreshMasteryWeapPenality()
 	{
-		if (!Config.MASTERY_WEAPON_PENALTY || (getLevel() <= Config.LEVEL_TO_GET_WEAPON_PENALITY))
+		if (!Config.MASTERY_WEAPON_PENALTY || (getLevel() <= Config.LEVEL_TO_GET_WEAPON_PENALTY))
 		{
 			return;
 		}

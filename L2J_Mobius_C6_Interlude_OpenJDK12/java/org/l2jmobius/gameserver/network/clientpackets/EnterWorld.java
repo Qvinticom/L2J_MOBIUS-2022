@@ -913,7 +913,7 @@ public class EnterWorld extends GameClientPacket
 	
 	private void loadTutorial(PlayerInstance player)
 	{
-		final QuestState qs = player.getQuestState("255_Tutorial");
+		final QuestState qs = player.getQuestState("Tutorial");
 		if (qs != null)
 		{
 			qs.getQuest().notifyEvent("UC", null, player);

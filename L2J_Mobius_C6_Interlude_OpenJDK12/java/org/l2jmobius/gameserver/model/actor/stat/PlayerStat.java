@@ -210,7 +210,7 @@ public class PlayerStat extends PlayableStat
 				getActiveChar().setNewbie(false);
 			}
 			
-			QuestState qs = getActiveChar().getQuestState("255_Tutorial");
+			QuestState qs = getActiveChar().getQuestState("Tutorial");
 			
 			if ((qs != null) && (qs.getQuest() != null))
 			{

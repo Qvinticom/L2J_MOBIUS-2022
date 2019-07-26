@@ -1244,12 +1244,11 @@ public final class QuestState
 	
 	public void showTutorialHTML(String html)
 	{
-		String text = HtmCache.getInstance().getHtm("data/scripts/quests/255_Tutorial/" + html);
-		
+		String text = HtmCache.getInstance().getHtm("data/scripts/ai/others/Tutorial/" + html);
 		if (text == null)
 		{
-			LOGGER.warning("missing html page data/scripts/quests/255_Tutorial/" + html);
-			text = "<html><body>File data/scripts/quests/255_Tutorial/" + html + " not found or file is empty.</body></html>";
+			LOGGER.warning("missing html page data/scripts/ai/others/Tutorial/" + html);
+			text = "<html><body>File data/scripts/ai/others/Tutorial/" + html + " not found or file is empty.</body></html>";
 		}
 		
 		_player.sendPacket(new TutorialShowHtml(text));
