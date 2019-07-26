@@ -156,7 +156,7 @@ public class DynamicExtension
 		try
 		{
 			final Class<?> extension = Class.forName(className, true, _classLoader);
-			final Object obj = extension.newInstance();
+			final Object obj = extension.getDeclaredConstructor().newInstance();
 			extension.getMethod("init", new Class[0]).invoke(obj, new Object[0]);
 			LOGGER.info("Extension " + className + " loaded.");
 			_loadedExtensions.put(className, obj);

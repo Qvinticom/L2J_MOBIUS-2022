@@ -290,7 +290,6 @@ public class ItemsOnGroundManager
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final ItemsOnGroundManager INSTANCE = new ItemsOnGroundManager();

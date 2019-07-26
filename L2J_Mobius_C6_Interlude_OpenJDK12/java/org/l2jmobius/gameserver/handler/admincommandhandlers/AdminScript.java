@@ -20,12 +20,9 @@ import java.io.File;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import javax.script.ScriptException;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
 
 /**
  * @author KidZor
@@ -57,14 +54,14 @@ public class AdminScript implements IAdminCommandHandler
 				
 				if (file.isFile())
 				{
-					try
-					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-					}
-					catch (ScriptException e)
-					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-					}
+					// try
+					// {
+					// L2ScriptEngineManager.getInstance().executeScript(file);
+					// }
+					// catch (ScriptException e)
+					// {
+					// ScriptEngineManager.getInstance().reportScriptFileError(file, e);
+					// }
 				}
 				else
 				{

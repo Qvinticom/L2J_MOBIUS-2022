@@ -138,9 +138,17 @@ public class DBConfigGUI extends JFrame
 		
 		final ActionListener connectListener = e ->
 		{
-			final MySqlConnect connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
+			MySqlConnect connector = null;
+			try
+			{
+				connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
+			}
+			catch (Exception ex)
+			{
+				ex.printStackTrace();
+			}
 			
-			if (connector.getConnection() != null)
+			if ((connector != null) && (connector.getConnection() != null))
 			{
 				_prop.put("dbHost_" + _db, _dbHost.getText());
 				_prop.put("dbPort_" + _db, _dbPort.getText());
@@ -193,6 +201,8 @@ public class DBConfigGUI extends JFrame
 		add(btnConnect);
 		
 		SpringUtilities.makeCompactGrid(getContentPane(), 6, 2, 5, 5, 5, 5);
+		
+		pack();
 	}
 	
 	@Override

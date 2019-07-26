@@ -121,7 +121,6 @@ public class DocumentEngine
 		return list;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final DocumentEngine INSTANCE = new DocumentEngine();

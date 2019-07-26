@@ -81,7 +81,6 @@ public final class Config
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
 	private static final String ID_CONFIG_FILE = "./config/protected/IdFactory.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
-	private static final String SCRIPT_CONFIG_FILE = "./config/protected/Script.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
 	// events
 	private static final String EVENT_CTF_CONFIG_FILE = "./config/events/CtF.ini";
@@ -1143,10 +1142,7 @@ public final class Config
 	public static String RAID_INFO_IDS;
 	public static List<Integer> RAID_INFO_IDS_LIST = new ArrayList<>();
 	
-	public static boolean SCRIPT_DEBUG;
-	public static boolean SCRIPT_ALLOW_COMPILATION;
-	public static boolean SCRIPT_CACHE;
-	public static boolean SCRIPT_ERROR_LOG;
+	public static File SCRIPT_ROOT;
 	
 	public static Map<String, List<String>> EXTENDERS;
 	
@@ -1364,6 +1360,7 @@ public final class Config
 			BACKUP_DAYS = Integer.parseInt(serverSettings.getProperty("BackupDays", "30"));
 			
 			DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
+			SCRIPT_ROOT = new File(serverSettings.getProperty("ScriptRoot", "./data/scripts").replaceAll("\\\\", "/")).getCanonicalFile();
 			
 			final Random ppc = new Random();
 			int z = ppc.nextInt(6);
@@ -3578,27 +3575,6 @@ public final class Config
 		{
 			e.printStackTrace();
 			throw new Error("Failed to Load " + BOSS_CONFIG_FILE + " File.");
-		}
-	}
-	
-	public static void loadScriptConfig()
-	{
-		try
-		{
-			final Properties scriptSetting = new Properties();
-			final InputStream is = new FileInputStream(new File(SCRIPT_CONFIG_FILE));
-			scriptSetting.load(is);
-			is.close();
-			
-			SCRIPT_DEBUG = Boolean.valueOf(scriptSetting.getProperty("EnableScriptDebug", "false"));
-			SCRIPT_ALLOW_COMPILATION = Boolean.valueOf(scriptSetting.getProperty("AllowCompilation", "true"));
-			SCRIPT_CACHE = Boolean.valueOf(scriptSetting.getProperty("UseCache", "true"));
-			SCRIPT_ERROR_LOG = Boolean.valueOf(scriptSetting.getProperty("EnableScriptErrorLog", "true"));
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-			throw new Error("Failed to Load " + SCRIPT_CONFIG_FILE + " File.");
 		}
 	}
 	

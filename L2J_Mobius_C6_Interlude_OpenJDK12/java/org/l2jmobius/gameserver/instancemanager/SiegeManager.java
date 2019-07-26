@@ -455,7 +455,6 @@ public class SiegeManager
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final SiegeManager INSTANCE = new SiegeManager();

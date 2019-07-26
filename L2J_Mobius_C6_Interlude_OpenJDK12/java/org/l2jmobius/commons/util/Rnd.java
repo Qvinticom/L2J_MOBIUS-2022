@@ -27,7 +27,7 @@ public final class Rnd
 	 * Thread-specific random number generator.<br>
 	 * Each is seeded with the thread ID, so the sequence of random numbers are unique between threads.
 	 */
-	private static ThreadLocal<Random> RANDOM = new ThreadLocal<Random>()
+	private static ThreadLocal<Random> RANDOM = new ThreadLocal<>()
 	{
 		@Override
 		protected Random initialValue()

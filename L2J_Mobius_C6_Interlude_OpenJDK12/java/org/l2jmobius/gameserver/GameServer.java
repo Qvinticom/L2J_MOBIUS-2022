@@ -133,8 +133,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GamePacketHandler;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
-import org.l2jmobius.gameserver.scripting.CompiledScriptCache;
-import org.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.thread.LoginServerThread;
 import org.l2jmobius.gameserver.thread.daemons.DeadlockDetector;
@@ -204,7 +203,7 @@ public class GameServer
 		
 		HtmCache.getInstance();
 		CrestCache.getInstance();
-		L2ScriptEngineManager.getInstance();
+		ScriptEngineManager.getInstance();
 		
 		nProtect.getInstance();
 		if (nProtect.isEnabled())
@@ -438,27 +437,8 @@ public class GameServer
 		Util.printSection("Scripts");
 		if (!Config.ALT_DEV_NO_SCRIPT)
 		{
-			final File scripts = new File(Config.DATAPACK_ROOT, "data/scripts.cfg");
-			L2ScriptEngineManager.getInstance().executeScriptsList(scripts);
-			
-			final CompiledScriptCache compiledScriptCache = L2ScriptEngineManager.getInstance().getCompiledScriptCache();
-			if (compiledScriptCache == null)
-			{
-				LOGGER.info("Compiled Scripts Cache is disabled.");
-			}
-			else
-			{
-				compiledScriptCache.purge();
-				if (compiledScriptCache.isModified())
-				{
-					compiledScriptCache.save();
-					LOGGER.info("Compiled Scripts Cache was saved.");
-				}
-				else
-				{
-					LOGGER.info("Compiled Scripts Cache is up-to-date.");
-				}
-			}
+			LOGGER.info("ScriptEngineManager: Loading server scripts:");
+			ScriptEngineManager.getInstance().executeScriptList();
 			FaenorScriptEngine.getInstance();
 		}
 		else

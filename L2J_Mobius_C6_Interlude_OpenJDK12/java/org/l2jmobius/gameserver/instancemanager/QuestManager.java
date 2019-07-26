@@ -16,17 +16,13 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
-import org.l2jmobius.gameserver.scripting.ScriptManager;
 
-public class QuestManager extends ScriptManager<Quest>
+public final class QuestManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
 	private Map<String, Quest> _quests = new HashMap<>();
@@ -76,19 +72,19 @@ public class QuestManager extends ScriptManager<Quest>
 	
 	public final void reloadAllQuests()
 	{
-		LOGGER.info("Reloading Server Scripts");
-		// unload all scripts
-		for (Quest quest : _quests.values())
-		{
-			if (quest != null)
-			{
-				quest.unload();
-			}
-		}
-		// now load all scripts
-		final File scripts = new File(Config.DATAPACK_ROOT + "/data/scripts.cfg");
-		L2ScriptEngineManager.getInstance().executeScriptsList(scripts);
-		getInstance().report();
+		// LOGGER.info("Reloading Server Scripts");
+		//// unload all scripts
+		// for (Quest quest : _quests.values())
+		// {
+		// if (quest != null)
+		// {
+		// quest.unload();
+		// }
+		// }
+		//// now load all scripts
+		// final File scripts = new File(Config.DATAPACK_ROOT + "/data/scripts.cfg");
+		// ScriptEngineManager.getInstance().executeScriptsList(scripts);
+		// getInstance().report();
 	}
 	
 	public final void report()
@@ -154,20 +150,17 @@ public class QuestManager extends ScriptManager<Quest>
 		_instance = new QuestManager();
 	}
 	
-	@Override
 	public Iterable<Quest> getAllManagedScripts()
 	{
 		return _quests.values();
 	}
 	
-	@Override
 	public boolean unload(Quest ms)
 	{
 		ms.saveGlobalData();
 		return removeQuest(ms);
 	}
 	
-	@Override
 	public String getScriptManagerName()
 	{
 		return "QuestManager";

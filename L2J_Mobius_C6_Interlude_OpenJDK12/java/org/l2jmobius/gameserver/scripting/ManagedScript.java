@@ -16,25 +16,29 @@
  */
 package org.l2jmobius.gameserver.scripting;
 
-import java.io.File;
-
-import javax.script.ScriptException;
+import java.nio.file.Path;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- * Abstract class for classes that are meant to be implemented by scripts.
+ * Abstract class for classes that are meant to be implemented by scripts.<BR>
  * @author KenM
  */
 public abstract class ManagedScript
 {
-	private final File _scriptFile;
+	private static final Logger LOGGER = Logger.getLogger(ManagedScript.class.getName());
+	
+	private final Path _scriptFile;
 	private long _lastLoadTime;
 	private boolean _isActive;
 	
 	public ManagedScript()
 	{
-		_scriptFile = L2ScriptEngineManager.getInstance().getCurrentLoadScript();
+		_scriptFile = getScriptPath();
 		setLastLoadTime(System.currentTimeMillis());
 	}
+	
+	public abstract Path getScriptPath();
 	
 	/**
 	 * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<BR>
@@ -45,11 +49,12 @@ public abstract class ManagedScript
 	{
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScript(getScriptFile());
+			ScriptEngineManager.getInstance().executeScript(getScriptFile());
 			return true;
 		}
-		catch (ScriptException e)
+		catch (Exception e)
 		{
+			LOGGER.log(Level.WARNING, "Failed to reload script!", e);
 			return false;
 		}
 	}
@@ -69,7 +74,7 @@ public abstract class ManagedScript
 	/**
 	 * @return Returns the scriptFile.
 	 */
-	public File getScriptFile()
+	public Path getScriptFile()
 	{
 		return _scriptFile;
 	}
@@ -91,6 +96,4 @@ public abstract class ManagedScript
 	}
 	
 	public abstract String getScriptName();
-	
-	public abstract ScriptManager<?> getScriptManager();
 }

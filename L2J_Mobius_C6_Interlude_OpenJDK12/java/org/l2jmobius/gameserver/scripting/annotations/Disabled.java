@@ -14,30 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.scripting;
+package org.l2jmobius.gameserver.scripting.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * @author KenM
- * @param <S>
+ * @author UnAfraid
  */
-public abstract class ScriptManager<S extends ManagedScript>
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Disabled
 {
-	public abstract Iterable<S> getAllManagedScripts();
 	
-	public boolean reload(S ms)
-	{
-		return ms.reload();
-	}
-	
-	public boolean unload(S ms)
-	{
-		return ms.unload();
-	}
-	
-	public void setActive(S ms, boolean status)
-	{
-		ms.setActive(status);
-	}
-	
-	public abstract String getScriptManagerName();
 }

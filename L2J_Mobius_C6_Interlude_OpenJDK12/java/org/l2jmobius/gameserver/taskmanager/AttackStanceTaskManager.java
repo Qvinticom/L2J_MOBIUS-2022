@@ -128,7 +128,6 @@ public class AttackStanceTaskManager
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final AttackStanceTaskManager INSTANCE = new AttackStanceTaskManager();

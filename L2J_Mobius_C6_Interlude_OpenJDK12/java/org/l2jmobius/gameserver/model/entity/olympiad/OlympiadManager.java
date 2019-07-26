@@ -424,7 +424,6 @@ class OlympiadManager implements Runnable
 		return titles;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final OlympiadManager INSTANCE = new OlympiadManager();

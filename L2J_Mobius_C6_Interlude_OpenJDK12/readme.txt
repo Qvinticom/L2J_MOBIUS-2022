@@ -1,8 +1,9 @@
-L2J-Mobius Interlude
+L2J-Mobius Interlude (OpenJDK 12)
+[All existing python scripts do not work.]
 
 Client: https://drive.google.com/uc?id=1LcKCQTbRXJvteJcuvc_rnX8i2gT1fcHB&export=download
 Geodata: http://www.mediafire.com/file/xdpoj68vrx8hp5u/L2J_Mobius_C6_Interlude_Geodata.zip
-JDK: http://www.mediafire.com/file/ffc3trl5axsl2kt/jdk-8u181-windows-x64.exe
+JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
 Prelude: http://legacy.lineage2.com/news/career.html
@@ -84,8 +85,6 @@ Dueling system.
 
 
 TODO:
-Rewrite Python scripts to Java.
-Use Java 10.
 Convert CSV files to XML.
 Drop knownlists -> Use L2World.
 Drop MmoCore -> Use Netty.

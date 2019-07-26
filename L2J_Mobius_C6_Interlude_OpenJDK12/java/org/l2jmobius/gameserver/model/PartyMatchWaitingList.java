@@ -59,7 +59,6 @@ public class PartyMatchWaitingList
 		return SingletonHolder.INSTANCE;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final PartyMatchWaitingList INSTANCE = new PartyMatchWaitingList();

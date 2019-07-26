@@ -16,8 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.quest;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,6 +27,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -35,7 +35,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -52,7 +51,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.scripting.ManagedScript;
-import org.l2jmobius.gameserver.scripting.ScriptManager;
+import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -818,43 +817,14 @@ public class Quest extends ManagedScript
 	 */
 	public boolean showError(Creature object, Throwable t)
 	{
-		if (getScriptFile() != null)
+		LOGGER.log(Level.WARNING, getScriptFile().toAbsolutePath().toString(), t);
+		if (t.getMessage() == null)
 		{
-			LOGGER.warning(getScriptFile().getAbsolutePath() + " " + t);
+			LOGGER.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
-		
-		if (object == null)
+		if ((object != null) && object.isPlayer() && object.getActingPlayer().getAccessLevel().isGm())
 		{
-			return false;
-		}
-		
-		if (object instanceof PlayerInstance)
-		{
-			PlayerInstance player = (PlayerInstance) object;
-			if (player.getAccessLevel().isGm())
-			{
-				final StringWriter sw = new StringWriter();
-				PrintWriter pw = new PrintWriter(sw);
-				
-				t.printStackTrace(pw);
-				pw.close();
-				
-				final String res = "<html><body><title>Script error</title>" + sw + "</body></html>";
-				
-				return showResult(player, res);
-			}
-		}
-		else
-		{
-			final StringWriter sw = new StringWriter();
-			PrintWriter pw = new PrintWriter(sw);
-			
-			t.printStackTrace(pw);
-			pw.close();
-			
-			final String res = "Script error: " + sw;
-			GmListTable.broadcastMessageToGMs(res);
-			
+			final String res = "<html><body><title>Script error</title>" + t.getMessage() + "</body></html>";
 			return showResult(object, res);
 		}
 		return false;
@@ -1880,12 +1850,6 @@ public class Quest extends ManagedScript
 	}
 	
 	@Override
-	public ScriptManager<?> getScriptManager()
-	{
-		return QuestManager.getInstance();
-	}
-	
-	@Override
 	public boolean unload()
 	{
 		saveGlobalData();
@@ -1964,5 +1928,11 @@ public class Quest extends ManagedScript
 	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		return null;
+	}
+	
+	@Override
+	public Path getScriptPath()
+	{
+		return ScriptEngineManager.getInstance().getCurrentLoadingScript();
 	}
 }

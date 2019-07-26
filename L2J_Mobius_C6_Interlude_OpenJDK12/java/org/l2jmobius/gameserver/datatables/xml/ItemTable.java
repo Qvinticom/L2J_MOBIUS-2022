@@ -365,7 +365,6 @@ public class ItemTable
 		return _allTemplates.length;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final ItemTable INSTANCE = new ItemTable();

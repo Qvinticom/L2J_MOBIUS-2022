@@ -117,7 +117,6 @@ public class ExperienceData
 		return SingletonHolder.INSTANCE;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final ExperienceData INSTANCE = new ExperienceData();
