@@ -31,8 +31,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
  */
 public final class HotSprings extends Quest
 {
-	private static final String qn = "HotSprings";
-	
 	// NPCs
 	private static final int BANDERSNATCHLING = 21314;
 	private static final int FLAVA = 21316;
@@ -50,7 +48,7 @@ public final class HotSprings extends Quest
 	
 	private HotSprings()
 	{
-		super(-1, qn, "areas");
+		super(-1, "HotSprings", "ai/areas");
 		
 		addAttackId(BANDERSNATCHLING, FLAVA, ATROXSPAWN, NEPENTHES, ATROX, BANDERSNATCH);
 	}

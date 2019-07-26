@@ -149,6 +149,16 @@ public class Antharas extends Quest
 		init();
 	}
 	
+	@Override
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	{
+		if (event.equals("setAntharasSpawnTask"))
+		{
+			setAntharasSpawnTask();
+		}
+		return null;
+	}
+	
 	// Initialize
 	private void init()
 	{
