@@ -1241,26 +1241,155 @@
 		<!-- When using the Belt, Inventory slot +2, weight limit +1000. You can enhance it to Rag Belt with magic. -->
 		<icon>icon.belt_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>2</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35041" toLevel="1" name="Rag Belt">
 		<!-- When using the Belt, Inventory slot +2, weight limit +2000. HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
 		<icon>icon.belt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>2000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>2</amount>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.24</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>1.66</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35042" toLevel="1" name="Leather Belt">
 		<!-- When using the Belt, Inventory slot +3, weight limit +3000. HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery +1.96, Max HP/ MP/ CP +100. You can enhance it to Iron Belt with magic. -->
 		<icon>icon.belt_i02</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>3000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>3</amount>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.47</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.98</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>1.96</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35043" toLevel="1" name="Iron Belt">
 		<!-- When using the Belt, Inventory slot +4, weight limit +4000. HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery +2.26, Max HP/ MP/ CP +150. You can enhance it to Mithril Belt with magic. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>4000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>4</amount>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.70</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.13</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>2.26</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35044" toLevel="1" name="Mithril Belt">
 		<!-- When using the Belt, Inventory slot +5, weight limit +5000. HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery +2.56, Max HP/ MP/ CP +200. -->
 		<icon>icon.belt_i04</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>5</amount>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.92</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.28</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>2.56</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35045" toLevel="1" name="Talisman of Battle - Liberate">
 		<!-- Cancels all debuffs. Cooldown: 10 min. -->
@@ -1296,7 +1425,7 @@
 				<amount>1</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="WeightPenalty">
+			<effect name="WeightLimit">
 				<amount>7000</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1345,7 +1474,7 @@
 				<amount>1</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="WeightPenalty">
+			<effect name="WeightLimit">
 				<amount>7000</amount>
 				<mode>DIFF</mode>
 			</effect>

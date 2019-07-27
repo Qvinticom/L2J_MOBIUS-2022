@@ -514,10 +514,128 @@
 	</skill>
 	<skill id="39368" toLevel="1" name="Weapon Supply Box +15 (A-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90961</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3">
+						<item id="235" count="1" minEnchant="16" maxEnchant="16"/> <!-- Bloody Orchid -->
+					</item>
+					<item chance="3">
+						<item id="236" count="1" minEnchant="16" maxEnchant="16"/> <!-- Soul Separator -->
+					</item>
+					<item chance="3">
+						<item id="8682" count="1" minEnchant="16" maxEnchant="16"/> <!-- Naga Storm -->
+					</item>
+					<item chance="3">
+						<item id="80" count="1" minEnchant="16" maxEnchant="16"/> <!-- Tallum Blade -->
+					</item>
+					<item chance="3">
+						<item id="2500" count="1" minEnchant="16" maxEnchant="16"/> <!-- Dark Legion's Edge -->
+					</item>
+					<item chance="3">
+						<item id="8678" count="1" minEnchant="16" maxEnchant="16"/> <!-- Sirra's Blade -->
+					</item>
+					<item chance="3">
+						<item id="7884" count="1" minEnchant="16" maxEnchant="16"/> <!-- Infernal Master -->
+					</item>
+					<item chance="3">
+						<item id="81" count="1" minEnchant="16" maxEnchant="16"/> <!-- Dragon Slayer -->
+					</item>
+					<item chance="3">
+						<item id="8679" count="1" minEnchant="16" maxEnchant="16"/> <!-- Sword of Ipos -->
+					</item>
+					<item chance="3">
+						<item id="288" count="1" minEnchant="16" maxEnchant="16"/> <!-- Carnage Bow -->
+					</item>
+					<item chance="3">
+						<item id="289" count="1" minEnchant="16" maxEnchant="16"/> <!-- Soul Bow -->
+					</item>
+					<item chance="3">
+						<item id="8684" count="1" minEnchant="16" maxEnchant="16"/> <!-- Shyeed's Bow -->
+					</item>
+					<item chance="3">
+						<item id="2504" count="1" minEnchant="16" maxEnchant="16"/> <!-- Meteor Shower -->
+					</item>
+					<item chance="3">
+						<item id="164" count="1" minEnchant="16" maxEnchant="16"/> <!-- Elysian -->
+					</item>
+					<item chance="3">
+						<item id="8680" count="1" minEnchant="16" maxEnchant="16"/> <!-- Barakiel's Axe -->
+					</item>
+					<item chance="3">
+						<item id="7899" count="1" minEnchant="16" maxEnchant="16"/> <!-- Destroyer Hammer -->
+					</item>
+					<item chance="3">
+						<item id="7902" count="1" minEnchant="16" maxEnchant="16"/> <!-- Doom Crusher -->
+					</item>
+					<item chance="3">
+						<item id="8681" count="1" minEnchant="16" maxEnchant="16"/> <!-- Behemoth' Tuning Fork -->
+					</item>
+					<item chance="3">
+						<item id="98" count="1" minEnchant="16" maxEnchant="16"/> <!-- Halberd -->
+					</item>
+					<item chance="3">
+						<item id="305" count="1" minEnchant="16" maxEnchant="16"/> <!-- Tallum Glaive -->
+					</item>
+					<item chance="3">
+						<item id="8683" count="1" minEnchant="16" maxEnchant="16"/> <!-- Tiphon's Spear -->
+					</item>
+					<item chance="3">
+						<item id="269" count="1" minEnchant="16" maxEnchant="16"/> <!-- Blood Tornado -->
+					</item>
+					<item chance="3">
+						<item id="270" count="1" minEnchant="16" maxEnchant="16"/> <!-- Dragon Grinder -->
+					</item>
+					<item chance="3">
+						<item id="8685" count="1" minEnchant="16" maxEnchant="16"/> <!-- Sobekk's Hurricane -->
+					</item>
+					<item chance="3">
+						<item id="150" count="1" minEnchant="16" maxEnchant="16"/> <!-- Elemental Sword -->
+					</item>
+					<item chance="3">
+						<item id="151" count="1" minEnchant="16" maxEnchant="16"/> <!-- Sword of Miracles -->
+					</item>
+					<item chance="3">
+						<item id="8686" count="1" minEnchant="16" maxEnchant="16"/> <!-- Themis' Tongue -->
+					</item>
+					<item chance="3">
+						<item id="212" count="1" minEnchant="16" maxEnchant="16"/> <!-- Dasparion's Staff -->
+					</item>
+					<item chance="3">
+						<item id="213" count="1" minEnchant="16" maxEnchant="16"/> <!-- Branch of the Mother Tree -->
+					</item>
+					<item chance="3">
+						<item id="8688" count="1" minEnchant="16" maxEnchant="16"/> <!-- Daimon Crystal -->
+					</item>
+					<item chance="3">
+						<item id="7894" count="1" minEnchant="16" maxEnchant="16"/> <!-- Spiritual Eye -->
+					</item>
+					<item chance="3">
+						<item id="7895" count="1" minEnchant="16" maxEnchant="16"/> <!-- Flaming Dragon Skull -->
+					</item>
+					<item chance="3">
+						<item id="8687" count="1" minEnchant="16" maxEnchant="16"/> <!-- Cabrio's Hand -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39369" toLevel="1" name="Transformation Scroll: White Knight">
 		<!-- Transforms into White Knight. Max HP/ MP +10%, Stun/ Paralysis/ Mental Resistance +5%, PvE P. Atk. +5%, Received Damage -5%. -->

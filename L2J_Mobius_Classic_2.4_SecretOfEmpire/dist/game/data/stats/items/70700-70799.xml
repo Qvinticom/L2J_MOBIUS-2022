@@ -899,6 +899,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55674" level="1" /> <!-- Eva's Hair Accessory Pack -->
+		</skills>
 	</item>
 	<item id="70759" name="Eva's Life Stone - Hair Accessory" type="EtcItem">
 		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation. Augmentation requires C-grade Gemstones. Cannot be dropped. -->

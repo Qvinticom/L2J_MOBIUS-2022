@@ -646,9 +646,13 @@
 	<item id="90961" name="Weapon Supply Box +15 (A-grade)" type="EtcItem">
 		<!-- Double-click to receive an A-grade Weapon +15. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39368" level="1" /> <!-- Weapon Supply Box +15 (A-grade)" -->
+		</skills>
 	</item>
 	<item id="90962" name="Chronicle Pencil" type="Weapon">
 		<!-- Pencil for the 1000th day after Lineage 2 Classic version start. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -771,9 +775,13 @@
 	<item id="90972" name="Weapon Supply Box +8 (A-grade)" type="EtcItem">
 		<!-- Double-click to receive an A-grade Weapon +8 exept high-level weapons. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51057" level="1" /> <!-- Weapon Supply Box +8 (A-grade) -->
+		</skills>
 	</item>
 	<item id="90973" name="Zaken's Cloak" additionalName="30-day" type="Armor">
 		<!-- Zaken's Cloak that makes you feel Zaken's sorrow. Increases Max HP by 5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
