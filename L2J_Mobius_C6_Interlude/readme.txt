@@ -1,5 +1,4 @@
-L2J-Mobius Interlude (OpenJDK 12)
-[All existing python scripts do not work.]
+L2J-Mobius Interlude
 
 Client: https://drive.google.com/uc?id=1LcKCQTbRXJvteJcuvc_rnX8i2gT1fcHB&export=download
 Geodata: http://www.mediafire.com/file/xdpoj68vrx8hp5u/L2J_Mobius_C6_Interlude_Geodata.zip
