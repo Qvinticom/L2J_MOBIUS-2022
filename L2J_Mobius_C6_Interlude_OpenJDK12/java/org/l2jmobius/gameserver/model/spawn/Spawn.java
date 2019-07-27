@@ -512,6 +512,9 @@ public class Spawn
 		// Set the HP and MP of the NpcInstance to the max
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 		
+		// Clear script value.
+		npc.setScriptValue(0);
+		
 		// Set the heading of the NpcInstance (random heading if not defined)
 		if (_heading == -1)
 		{
