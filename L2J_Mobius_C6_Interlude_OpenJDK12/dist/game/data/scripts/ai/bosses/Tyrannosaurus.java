@@ -51,9 +51,9 @@ public class Tyrannosaurus extends Quest
 		new Location(26740, -16596, -2688, 13790)
 	};
 	
-	public Tyrannosaurus(int questId, String name, String descr)
+	public Tyrannosaurus()
 	{
-		super(questId, name, descr);
+		super(-1, "Tyrannosaurus", "ai/bosses");
 		addKillId(TREX);
 		addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0);
 	}
@@ -70,6 +70,6 @@ public class Tyrannosaurus extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Tyrannosaurus(-1, "Tyrannosaurus", "ai");
+		new Tyrannosaurus();
 	}
 }

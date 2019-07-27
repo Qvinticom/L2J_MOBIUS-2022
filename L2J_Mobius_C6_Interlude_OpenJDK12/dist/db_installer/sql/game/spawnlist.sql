@@ -32008,14 +32008,6 @@ INSERT INTO `spawnlist` VALUES
 (NULL, "4Sepulchers", 1, 31943, 175413, -75859, -7218, 0, 0, 49152, 60, 0, 0),
 (NULL, "4Sepulchers", 1, 31944, 175413, -74048, -7218, 0, 0, 49152, 60, 0, 0),
 (NULL, "ImperialTomb", 1, 32011, 181376, -81008, -2728, 0, 0, 16500, 60, 0, 0);
- 
-INSERT INTO `spawnlist` VALUES
-(NULL,'rune_chamberlain_etc',1,35503,18376,-49020,-1212,0,0,37945,60,0,0),
-(NULL,'rune_chamberlain_etc',1,35503,18625,-49359,-1220,0,0,64153,60,0,0),
-(NULL,'rune_chamberlain_etc',1,35504,15668,-49024,-1058,0,0,34435,60,0,0),
-(NULL,'rune_chamberlain_etc',1,35504,15868,-49283,-1058,0,0,65149,60,0,0),
-(NULL,'rune_chamberlain_etc',1,35505,15272,-49075,-1058,0,0,31547,60,0,0),
-(NULL,'rune_chamberlain_etc',1,35505,15428,-49274,-1058,0,0,1523,60,0,0);
 
 INSERT INTO `spawnlist` VALUES
 (NULL,'schuttgart_chmberlain_etc',1,35555,77495,-153314,-415,0,0,2059,60,0,0),
@@ -32027,9 +32019,7 @@ INSERT INTO `spawnlist` VALUES
 (NULL,'schuttgart_chmberlain_etc',1,35545,76346,-153227,1050,0,0,35323,60,0,0),
 (NULL,'schuttgart_chmberlain_etc',1,35544,78752,-153229,1050,0,0,53375,60,0,0),
 (NULL,'schuttgart_chmberlain_etc',1,35549,75731,-152159,-678,0,0,30710,60,0,0),
-(NULL,'schuttgart_chmberlain_etc',1,35549,76006,-152166,-678,0,0,62180,60,0,0),
-(NULL,'schuttgart_chmberlain_etc',1,35548,77365,-149682,-353,0,0,57062,60,0,0),
-(NULL,'schuttgart_chmberlain_etc',1,35548,77893,-149383,-379,0,0,15733,60,0,0);
+(NULL,'schuttgart_chmberlain_etc',1,35549,76006,-152166,-678,0,0,62180,60,0,0);
 
 INSERT INTO `spawnlist` VALUES 
 (NULL,'Crypts of Disgrace',1,22001,46734,-115708,-3815,0,0,31429,60,0,0),
