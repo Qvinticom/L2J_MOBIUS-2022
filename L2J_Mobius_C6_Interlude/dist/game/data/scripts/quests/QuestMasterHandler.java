@@ -225,6 +225,7 @@ import quests.Q344_1000YearsTheEndOfLamentation.Q344_1000YearsTheEndOfLamentatio
 import quests.Q345_MethodToRaiseTheDead.Q345_MethodToRaiseTheDead;
 import quests.Q347_GoGetTheCalculator.Q347_GoGetTheCalculator;
 import quests.Q348_AnArrogantSearch.Q348_AnArrogantSearch;
+import quests.Q350_EnhanceYourWeapon.Q350_EnhanceYourWeapon;
 import quests.Q351_BlackSwan.Q351_BlackSwan;
 import quests.Q352_HelpRoodRaiseANewPet.Q352_HelpRoodRaiseANewPet;
 import quests.Q353_PowerOfDarkness.Q353_PowerOfDarkness;
@@ -556,6 +557,7 @@ public class QuestMasterHandler
 		Q345_MethodToRaiseTheDead.class,
 		Q347_GoGetTheCalculator.class,
 		Q348_AnArrogantSearch.class,
+		Q350_EnhanceYourWeapon.class,
 		Q351_BlackSwan.class,
 		Q352_HelpRoodRaiseANewPet.class,
 		Q353_PowerOfDarkness.class,
