@@ -42,6 +42,8 @@ import quests.Q020_BringUpWithLove.Q020_BringUpWithLove;
 import quests.Q021_HiddenTruth.Q021_HiddenTruth;
 import quests.Q022_TragedyInVonHellmannForest.Q022_TragedyInVonHellmannForest;
 import quests.Q023_LidiasHeart.Q023_LidiasHeart;
+import quests.Q024_InhabitantsOfTheForrestOfTheDead.Q024_InhabitantsOfTheForrestOfTheDead;
+import quests.Q025_HidingBehindTheTruth.Q025_HidingBehindTheTruth;
 import quests.Q027_ChestCaughtWithABaitOfWind.Q027_ChestCaughtWithABaitOfWind;
 import quests.Q028_ChestCaughtWithABaitOfIcyAir.Q028_ChestCaughtWithABaitOfIcyAir;
 import quests.Q029_ChestCaughtWithABaitOfEarth.Q029_ChestCaughtWithABaitOfEarth;
@@ -112,10 +114,12 @@ import quests.Q111_ElrokianHuntersProof.Q111_ElrokianHuntersProof;
 import quests.Q112_WalkOfFate.Q112_WalkOfFate;
 import quests.Q113_StatusOfTheBeaconTower.Q113_StatusOfTheBeaconTower;
 import quests.Q114_ResurrectionOfAnOldManager.Q114_ResurrectionOfAnOldManager;
+import quests.Q115_TheOtherSideOfTruth.Q115_TheOtherSideOfTruth;
 import quests.Q116_BeyondTheHillsOfWinter.Q116_BeyondTheHillsOfWinter;
 import quests.Q117_TheOceanOfDistantStars.Q117_TheOceanOfDistantStars;
 import quests.Q118_ToLeadAndBeLed.Q118_ToLeadAndBeLed;
 import quests.Q119_LastImperialPrince.Q119_LastImperialPrince;
+import quests.Q120_PavelsResearch.Q120_PavelsResearch;
 import quests.Q121_PavelTheGiant.Q121_PavelTheGiant;
 import quests.Q122_OminousNews.Q122_OminousNews;
 import quests.Q123_TheLeaderAndTheFollower.Q123_TheLeaderAndTheFollower;
@@ -285,6 +289,9 @@ import quests.Q422_RepentYourSins.Q422_RepentYourSins;
 import quests.Q426_QuestForFishingShot.Q426_QuestForFishingShot;
 import quests.Q431_WeddingMarch.Q431_WeddingMarch;
 import quests.Q432_BirthdayPartySong.Q432_BirthdayPartySong;
+import quests.Q501_ProofOfClanAlliance.Q501_ProofOfClanAlliance;
+import quests.Q504_CompetitionForTheBanditStronghold.Q504_CompetitionForTheBanditStronghold;
+import quests.Q505_BloodOffering.Q505_BloodOffering;
 import quests.Q601_WatchingEyes.Q601_WatchingEyes;
 import quests.Q602_ShadowOfLight.Q602_ShadowOfLight;
 import quests.Q603_DaimonTheWhiteEyed_Part1.Q603_DaimonTheWhiteEyed_Part1;
@@ -318,6 +325,8 @@ import quests.Q631_DeliciousTopChoiceMeat.Q631_DeliciousTopChoiceMeat;
 import quests.Q632_NecromancersRequest.Q632_NecromancersRequest;
 import quests.Q633_InTheForgottenVillage.Q633_InTheForgottenVillage;
 import quests.Q634_InSearchOfFragmentsOfDimension.Q634_InSearchOfFragmentsOfDimension;
+import quests.Q635_InTheDimensionalRift.Q635_InTheDimensionalRift;
+import quests.Q636_TheTruthBeyondTheGate.Q636_TheTruthBeyondTheGate;
 import quests.Q637_ThroughTheGateOnceMore.Q637_ThroughTheGateOnceMore;
 import quests.Q638_SeekersOfTheHolyGrail.Q638_SeekersOfTheHolyGrail;
 import quests.Q639_GuardiansOfTheHolyGrail.Q639_GuardiansOfTheHolyGrail;
@@ -329,12 +338,14 @@ import quests.Q644_GraveRobberAnnihilation.Q644_GraveRobberAnnihilation;
 import quests.Q645_GhostsOfBatur.Q645_GhostsOfBatur;
 import quests.Q646_SignsOfRevolt.Q646_SignsOfRevolt;
 import quests.Q647_InfluxOfMachines.Q647_InfluxOfMachines;
+import quests.Q648_AnIceMerchantsDream.Q648_AnIceMerchantsDream;
 import quests.Q649_ALooterAndARailroadMan.Q649_ALooterAndARailroadMan;
 import quests.Q650_ABrokenDream.Q650_ABrokenDream;
 import quests.Q651_RunawayYouth.Q651_RunawayYouth;
 import quests.Q652_AnAgedExAdventurer.Q652_AnAgedExAdventurer;
 import quests.Q653_WildMaiden.Q653_WildMaiden;
 import quests.Q654_JourneyToASettlement.Q654_JourneyToASettlement;
+import quests.Q655_AGrandPlanForTamingWildBeasts.Q655_AGrandPlanForTamingWildBeasts;
 import quests.Q659_IdRatherBeCollectingFairyBreath.Q659_IdRatherBeCollectingFairyBreath;
 import quests.Q660_AidingTheFloranVillage.Q660_AidingTheFloranVillage;
 import quests.Q661_MakingTheHarvestGroundsSafe.Q661_MakingTheHarvestGroundsSafe;
@@ -374,6 +385,8 @@ public class QuestMasterHandler
 		Q021_HiddenTruth.class,
 		Q022_TragedyInVonHellmannForest.class,
 		Q023_LidiasHeart.class,
+		Q024_InhabitantsOfTheForrestOfTheDead.class,
+		Q025_HidingBehindTheTruth.class,
 		Q027_ChestCaughtWithABaitOfWind.class,
 		Q028_ChestCaughtWithABaitOfIcyAir.class,
 		Q029_ChestCaughtWithABaitOfEarth.class,
@@ -444,10 +457,12 @@ public class QuestMasterHandler
 		Q112_WalkOfFate.class,
 		Q113_StatusOfTheBeaconTower.class,
 		Q114_ResurrectionOfAnOldManager.class,
+		Q115_TheOtherSideOfTruth.class,
 		Q116_BeyondTheHillsOfWinter.class,
 		Q117_TheOceanOfDistantStars.class,
 		Q118_ToLeadAndBeLed.class,
 		Q119_LastImperialPrince.class,
+		Q120_PavelsResearch.class,
 		Q121_PavelTheGiant.class,
 		Q122_OminousNews.class,
 		Q123_TheLeaderAndTheFollower.class,
@@ -549,10 +564,14 @@ public class QuestMasterHandler
 		Q330_AdeptOfTaste.class,
 		Q331_ArrowOfVengeance.class,
 		Q333_HuntOfTheBlackLion.class,
+		// TODO: Q334_TheWishingPotion.class,
+		// TODO: Q335_TheSongOfTheHunter.class,
+		// TODO: Q336_CoinsOfMagic.class,
 		Q337_AudienceWithTheLandDragon.class,
 		Q338_AlligatorHunter.class,
 		Q340_SubjugationOfLizardmen.class,
 		Q341_HuntingForWildBeasts.class,
+		// TODO: Q343_UnderTheShadowOfTheIvoryTower.class,
 		Q344_1000YearsTheEndOfLamentation.class,
 		Q345_MethodToRaiseTheDead.class,
 		Q347_GoGetTheCalculator.class,
@@ -592,6 +611,7 @@ public class QuestMasterHandler
 		Q383_SearchingForTreasure.class,
 		Q384_WarehouseKeepersPastime.class,
 		Q385_YokeOfThePast.class,
+		// TODO: Q386_StolenDignity.class,
 		Q401_PathToAWarrior.class,
 		Q402_PathToAHumanKnight.class,
 		Q403_PathToARogue.class,
@@ -617,6 +637,13 @@ public class QuestMasterHandler
 		Q426_QuestForFishingShot.class,
 		Q431_WeddingMarch.class,
 		Q432_BirthdayPartySong.class,
+		Q501_ProofOfClanAlliance.class,
+		// TODO: Q503_PursuitClanAmbition.class,
+		Q504_CompetitionForTheBanditStronghold.class,
+		Q505_BloodOffering.class,
+		// TODO: Q508_TheClansReputation.class,
+		// TODO: Q509_TheClansPrestige.class,
+		// TODO: Q510_AClansReputation.class,
 		Q601_WatchingEyes.class,
 		Q602_ShadowOfLight.class,
 		Q603_DaimonTheWhiteEyed_Part1.class,
@@ -650,6 +677,8 @@ public class QuestMasterHandler
 		Q632_NecromancersRequest.class,
 		Q633_InTheForgottenVillage.class,
 		Q634_InSearchOfFragmentsOfDimension.class,
+		Q635_InTheDimensionalRift.class,
+		Q636_TheTruthBeyondTheGate.class,
 		Q637_ThroughTheGateOnceMore.class,
 		Q638_SeekersOfTheHolyGrail.class,
 		Q639_GuardiansOfTheHolyGrail.class,
@@ -661,12 +690,14 @@ public class QuestMasterHandler
 		Q645_GhostsOfBatur.class,
 		Q646_SignsOfRevolt.class,
 		Q647_InfluxOfMachines.class,
+		Q648_AnIceMerchantsDream.class,
 		Q649_ALooterAndARailroadMan.class,
 		Q650_ABrokenDream.class,
 		Q651_RunawayYouth.class,
 		Q652_AnAgedExAdventurer.class,
 		Q653_WildMaiden.class,
 		Q654_JourneyToASettlement.class,
+		Q655_AGrandPlanForTamingWildBeasts.class,
 		Q659_IdRatherBeCollectingFairyBreath.class,
 		Q660_AidingTheFloranVillage.class,
 		Q661_MakingTheHarvestGroundsSafe.class,

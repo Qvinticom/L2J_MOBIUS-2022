@@ -134,11 +134,11 @@ public class Q350_EnhanceYourWeapon extends Quest
 		return htmltext;
 	}
 	
-	private boolean check(QuestState st)
+	private boolean check(QuestState qs)
 	{
 		for (int i = 4629; i <= 4665; i++)
 		{
-			if (st.getQuestItemsCount(i) > 0)
+			if (qs.getQuestItemsCount(i) > 0)
 			{
 				return true;
 			}
