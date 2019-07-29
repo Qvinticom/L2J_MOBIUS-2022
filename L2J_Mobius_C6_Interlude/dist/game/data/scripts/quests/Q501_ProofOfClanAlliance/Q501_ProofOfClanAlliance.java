@@ -572,6 +572,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 		return false;
 	}
 	
+	@Override
 	public QuestState getClanLeaderQuestState(PlayerInstance player, NpcInstance npc)
 	{
 		final Clan clan = player.getClan();

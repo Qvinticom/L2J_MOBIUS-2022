@@ -292,6 +292,9 @@ import quests.Q432_BirthdayPartySong.Q432_BirthdayPartySong;
 import quests.Q501_ProofOfClanAlliance.Q501_ProofOfClanAlliance;
 import quests.Q504_CompetitionForTheBanditStronghold.Q504_CompetitionForTheBanditStronghold;
 import quests.Q505_BloodOffering.Q505_BloodOffering;
+import quests.Q508_AClansReputation.Q508_AClansReputation;
+import quests.Q509_TheClansPrestige.Q509_TheClansPrestige;
+import quests.Q510_AClansReputation.Q510_AClansReputation;
 import quests.Q601_WatchingEyes.Q601_WatchingEyes;
 import quests.Q602_ShadowOfLight.Q602_ShadowOfLight;
 import quests.Q603_DaimonTheWhiteEyed_Part1.Q603_DaimonTheWhiteEyed_Part1;
@@ -641,9 +644,9 @@ public class QuestMasterHandler
 		// TODO: Q503_PursuitClanAmbition.class,
 		Q504_CompetitionForTheBanditStronghold.class,
 		Q505_BloodOffering.class,
-		// TODO: Q508_TheClansReputation.class,
-		// TODO: Q509_TheClansPrestige.class,
-		// TODO: Q510_AClansReputation.class,
+		Q508_AClansReputation.class,
+		Q509_TheClansPrestige.class,
+		Q510_AClansReputation.class,
 		Q601_WatchingEyes.class,
 		Q602_ShadowOfLight.class,
 		Q603_DaimonTheWhiteEyed_Part1.class,

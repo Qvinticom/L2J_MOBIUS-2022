@@ -1935,4 +1935,35 @@ public class Quest extends ManagedScript
 	{
 		return ScriptEngineManager.getInstance().getCurrentLoadingScript();
 	}
+	
+	public QuestState getClanLeaderQuestState(PlayerInstance player, NpcInstance npc)
+	{
+		// If player is the leader, retrieves directly the qS and bypass others checks
+		if (player.isClanLeader() && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		{
+			return player.getQuestState(getName());
+		}
+		
+		// Verify if the player got a clan
+		Clan clan = player.getClan();
+		if (clan == null)
+		{
+			return null;
+		}
+		
+		// Verify if the leader is online
+		PlayerInstance leader = clan.getLeader().getPlayerInstance();
+		if (leader == null)
+		{
+			return null;
+		}
+		
+		// Verify if the player is on the radius of the leader. If true, send leader's quest state.
+		if (leader.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		{
+			return leader.getQuestState(getName());
+		}
+		
+		return null;
+	}
 }
