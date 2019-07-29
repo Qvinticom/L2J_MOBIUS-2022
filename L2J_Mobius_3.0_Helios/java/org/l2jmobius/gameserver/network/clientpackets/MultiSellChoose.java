@@ -511,16 +511,18 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						if (_soulCrystalOptions != null)
 						{
-							for (int i = 0; i < _soulCrystalOptions.length; i++)
+							int pos = -1;
+							for (EnsoulOption ensoul : _soulCrystalOptions)
 							{
-								addedItem.addSpecialAbility(_soulCrystalOptions[i], i + 1, 1, false);
+								pos++;
+								addedItem.addSpecialAbility(ensoul, pos, 1, false);
 							}
 						}
 						if (_soulCrystalSpecialOptions != null)
 						{
-							for (int i = 0; i < _soulCrystalSpecialOptions.length; i++)
+							for (EnsoulOption ensoul : _soulCrystalSpecialOptions)
 							{
-								addedItem.addSpecialAbility(_soulCrystalSpecialOptions[i], i + 1, 2, false);
+								addedItem.addSpecialAbility(ensoul, 0, 2, false);
 							}
 						}
 						addedItem.updateDatabase(true);
