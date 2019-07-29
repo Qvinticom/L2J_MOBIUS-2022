@@ -54,7 +54,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 	
 	public Q343_UnderTheShadowOfTheIvoryTower()
 	{
-		super(343, qn, "Under The Shadow Of The Ivory Tower");
+		super(343, qn, "Under the Shadow of the Ivory Tower");
 		MOBS = new int[]
 		{
 			20563,

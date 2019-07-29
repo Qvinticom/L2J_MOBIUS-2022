@@ -86,7 +86,7 @@ public class Q224_TestOfSagittarius extends Quest
 	
 	public Q224_TestOfSagittarius()
 	{
-		super(224, qn, "Test Of Sagittarius");
+		super(224, qn, "Test of Sagittarius");
 		
 		registerQuestItems(BERNARD_INTRODUCTION, HAMIL_LETTER_1, HAMIL_LETTER_2, HAMIL_LETTER_3, HUNTER_RUNE_1, HUNTER_RUNE_2, TALISMAN_OF_KADESH, TALISMAN_OF_SNAKE, MITHRIL_CLIP, STAKATO_CHITIN, REINFORCED_BOWSTRING, MANASHEN_HORN, BLOOD_OF_LIZARDMAN, CRESCENT_MOON_BOW);
 		

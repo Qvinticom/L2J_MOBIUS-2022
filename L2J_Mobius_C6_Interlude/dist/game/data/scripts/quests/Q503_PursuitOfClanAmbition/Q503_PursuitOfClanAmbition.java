@@ -104,7 +104,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	
 	public Q503_PursuitOfClanAmbition()
 	{
-		super(503, qn, "Pursuit of Clan Ambition");
+		super(503, qn, "Pursuit of Clan Ambition!");
 		
 		registerQuestItems(MI_DRAKE_EGGS, BL_WYRM_EGGS, DRAKE_EGGS, TH_WYRM_EGGS, BROOCH, NEBULITE_CRYSTALS, BROKE_POWER_STONE, POWER_STONE, IMP_KEYS, G_LET_MARTIEN, G_LET_BALTHAZAR, G_LET_RODEMAI, SCEPTER_JUDGEMENT);
 		

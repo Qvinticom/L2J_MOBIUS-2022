@@ -246,7 +246,7 @@ public class Q333_HuntOfTheBlackLion extends Quest
 	
 	public Q333_HuntOfTheBlackLion()
 	{
-		super(333, qn, "Hunt Of The Black Lion");
+		super(333, qn, "Hunt of the Black Lion");
 		
 		registerQuestItems(LION_CLAW, LION_EYE, GUILD_COIN, UNDEAD_ASH, BLOODY_AXE_INSIGNIA, DELU_FANG, STAKATO_TALON, SOPHYA_LETTER_1, SOPHYA_LETTER_2, SOPHYA_LETTER_3, SOPHYA_LETTER_4);
 		

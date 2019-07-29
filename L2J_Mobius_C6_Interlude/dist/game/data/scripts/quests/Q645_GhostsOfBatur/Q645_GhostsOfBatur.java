@@ -64,7 +64,7 @@ public class Q645_GhostsOfBatur extends Quest
 	
 	public Q645_GhostsOfBatur()
 	{
-		super(645, qn, "Ghosts Of Batur");
+		super(645, qn, "Ghosts of Batur");
 		
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);

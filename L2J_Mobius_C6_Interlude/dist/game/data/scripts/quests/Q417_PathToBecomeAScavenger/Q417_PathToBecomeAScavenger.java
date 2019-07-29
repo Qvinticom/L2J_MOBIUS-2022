@@ -67,7 +67,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	
 	public Q417_PathToBecomeAScavenger()
 	{
-		super(417, qn, "Path To Become A Scavenger");
+		super(417, qn, "Path to become a Scavenger");
 		
 		registerQuestItems(PIPPI_LETTER, RAUT_TELEPORT_SCROLL, SUCCUBUS_UNDIES, MION_LETTER, BRONK_INGOT, SHARI_AXE, ZIMENF_POTION, BRONK_PAY, SHARI_PAY, ZIMENF_PAY, BEAR_PICTURE, TARANTULA_PICTURE, HONEY_JAR, BEAD, BEAD_PARCEL_1, BEAD_PARCEL_2);
 		

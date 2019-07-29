@@ -56,7 +56,7 @@ public class Q646_SignsOfRevolt extends Quest
 	
 	public Q646_SignsOfRevolt()
 	{
-		super(646, qn, "Signs Of Revolt");
+		super(646, qn, "Signs of Revolt");
 		
 		registerQuestItems(CURSED_DOLL);
 		

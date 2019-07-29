@@ -41,7 +41,7 @@ public class Q381_LetsBecomeARoyalMember extends Quest
 	
 	public Q381_LetsBecomeARoyalMember()
 	{
-		super(381, qn, "Lets Become a Royal Member!");
+		super(381, qn, "Let's Become a Royal Member!");
 		
 		registerQuestItems(KAIL_COIN, GOLDEN_CLOVER_COIN);
 		

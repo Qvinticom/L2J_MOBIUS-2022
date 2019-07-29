@@ -53,7 +53,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	
 	public Q025_HidingBehindTheTruth()
 	{
-		super(25, qn, "Hiding Behind The Truth");
+		super(25, qn, "Hiding Behind the Truth");
 		
 		addStartNpc(BENEDICT);
 		addTalkId(AGRIPEL, BENEDICT, BOOKSHELF, BOOKSHELF2, BOOKSHELF3, WIZARD, LIDIA, TOMBSTONE, COFFIN);

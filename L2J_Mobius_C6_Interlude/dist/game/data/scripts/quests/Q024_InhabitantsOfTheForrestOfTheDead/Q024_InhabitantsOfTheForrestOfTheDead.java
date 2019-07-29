@@ -47,7 +47,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 	
 	public Q024_InhabitantsOfTheForrestOfTheDead()
 	{
-		super(24, qn, "Inhabitants Of The Forrest Of The Dead");
+		super(24, qn, "Inhabitants of the Forest of the Dead");
 		
 		addStartNpc(DORIAN);
 		addTalkId(DORIAN, TOMBSTONE, MAID_OF_LIDIA, WIZARD);

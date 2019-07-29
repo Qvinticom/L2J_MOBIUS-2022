@@ -62,7 +62,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	
 	public Q344_1000YearsTheEndOfLamentation()
 	{
-		super(344, qn, "1000 Years, the End of Lamentation");
+		super(344, qn, "1000 years, the End of Lamentation");
 		
 		registerQuestItems(ARTICLE_DEAD_HERO, OLD_KEY, OLD_HILT, OLD_TOTEM, CRUCIFIX);
 		

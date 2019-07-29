@@ -34,7 +34,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 	
 	public Q053_LinnaeusSpecialBait()
 	{
-		super(53, qn, "Linnaues' Special Bait");
+		super(53, qn, "Linnaeus' Special Bait");
 		
 		registerQuestItems(CRIMSON_DRAKE_HEART);
 		

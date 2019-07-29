@@ -68,7 +68,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 	
 	public Q416_PathToAnOrcShaman()
 	{
-		super(416, qn, "Path To An Orc Shaman");
+		super(416, qn, "Path to an Orc Shaman");
 		
 		registerQuestItems(FIRE_CHARM, KASHA_BEAR_PELT, KASHA_BLADE_SPIDER_HUSK, FIERY_EGG_1, HESTUI_MASK, FIERY_EGG_2, TOTEM_SPIRIT_CLAW, TATARU_LETTER, FLAME_CHARM, GRIZZLY_BLOOD, BLOOD_CAULDRON, SPIRIT_NET, BOUND_DURKA_SPIRIT, DURKA_PARASITE, TOTEM_SPIRIT_BLOOD);
 		

@@ -68,7 +68,7 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 	
 	public Q377_ExplorationOfTheGiantsCave_Part2()
 	{
-		super(377, qn, "Exploration of the Giants' Cave, Part 2");
+		super(377, qn, "Exploration of Giants Cave, Part 2");
 		
 		addStartNpc(31147); // Sobling
 		addTalkId(31147);

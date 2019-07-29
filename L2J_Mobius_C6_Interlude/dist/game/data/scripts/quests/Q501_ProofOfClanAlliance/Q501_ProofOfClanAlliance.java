@@ -119,7 +119,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	
 	public Q501_ProofOfClanAlliance()
 	{
-		super(501, qn, "Proof Of Clan Alliance");
+		super(501, qn, "Proof of Clan Alliance");
 		
 		registerQuestItems(HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA, ATHREAS_COIN, SYMBOL_OF_LOYALTY, VOUCHER_OF_FAITH, ANTIDOTE_RECIPE_LIST);
 		

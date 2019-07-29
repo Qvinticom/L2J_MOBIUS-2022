@@ -62,7 +62,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	
 	public Q604_DaimonTheWhiteEyed_Part2()
 	{
-		super(604, qn, "Daimon The White-Eyed - Part 2");
+		super(604, qn, "Daimon the White-Eyed - Part 2");
 		
 		registerQuestItems(SUMMON_CRYSTAL, ESSENCE_OF_DAIMON);
 		

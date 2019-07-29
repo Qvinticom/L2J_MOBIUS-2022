@@ -56,7 +56,7 @@ public class Q635_InTheDimensionalRift extends Quest
 	
 	public Q635_InTheDimensionalRift()
 	{
-		super(635, qn, "In The Dimensional Rift");
+		super(635, qn, "In the Dimensional Rift");
 		
 		for (int i = 31494; i <= 31508; i++)
 		{

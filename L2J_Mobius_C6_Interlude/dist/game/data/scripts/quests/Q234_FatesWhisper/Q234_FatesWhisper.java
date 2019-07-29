@@ -80,7 +80,7 @@ public class Q234_FatesWhisper extends Quest
 	
 	public Q234_FatesWhisper()
 	{
-		super(234, qn, "Fate's Whispers");
+		super(234, qn, "Fate's Whisper");
 		
 		registerQuestItems(PIPETTE_KNIFE, RED_PIPETTE_KNIFE);
 		

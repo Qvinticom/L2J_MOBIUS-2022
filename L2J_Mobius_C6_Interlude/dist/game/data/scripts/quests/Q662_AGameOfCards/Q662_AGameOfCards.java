@@ -116,7 +116,7 @@ public class Q662_AGameOfCards extends Quest
 	
 	public Q662_AGameOfCards()
 	{
-		super(662, qn, "A Game Of Cards");
+		super(662, qn, "A Game of Cards");
 		
 		registerQuestItems(RED_GEM);
 		

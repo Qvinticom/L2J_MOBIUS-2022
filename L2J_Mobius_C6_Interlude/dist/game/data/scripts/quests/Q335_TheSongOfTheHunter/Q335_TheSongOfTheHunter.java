@@ -154,7 +154,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 	
 	public Q335_TheSongOfTheHunter()
 	{
-		super(335, qn, "The Song of the Hunter");
+		super(335, qn, "Song of the Hunter");
 		
 		addStartNpc(GREY);
 		addTalkId(GREY, CYBELLIN, TOR);

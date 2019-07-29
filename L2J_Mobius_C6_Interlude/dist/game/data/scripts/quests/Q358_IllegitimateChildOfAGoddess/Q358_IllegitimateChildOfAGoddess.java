@@ -45,7 +45,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 	
 	public Q358_IllegitimateChildOfAGoddess()
 	{
-		super(358, qn, "Illegitimate Child of a Goddess");
+		super(358, qn, "Illegitimate Child of A Goddess");
 		
 		registerQuestItems(SCALE);
 		

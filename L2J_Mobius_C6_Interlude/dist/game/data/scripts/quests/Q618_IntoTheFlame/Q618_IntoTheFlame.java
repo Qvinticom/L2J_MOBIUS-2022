@@ -39,7 +39,7 @@ public class Q618_IntoTheFlame extends Quest
 	
 	public Q618_IntoTheFlame()
 	{
-		super(618, qn, "Into The Flame");
+		super(618, qn, "Into the Flame");
 		
 		registerQuestItems(VACUALITE_ORE, VACUALITE);
 		

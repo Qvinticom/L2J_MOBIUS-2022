@@ -52,7 +52,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 	
 	public Q414_PathToAnOrcRaider()
 	{
-		super(414, qn, "Path To An Orc Raider");
+		super(414, qn, "Path to an Orc Raider");
 		
 		registerQuestItems(GREEN_BLOOD, GOBLIN_DWELLING_MAP, KURUKA_RATMAN_TOOTH, BETRAYER_REPORT_1, BETRAYER_REPORT_2, HEAD_OF_BETRAYER, TIMORA_ORC_HEAD);
 		

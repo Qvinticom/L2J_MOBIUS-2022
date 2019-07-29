@@ -38,7 +38,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 	
 	public Q636_TheTruthBeyondTheGate()
 	{
-		super(636, qn, "The Truth Beyond the Gate");
+		super(636, qn, "Truth Beyond the Gate");
 		
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);

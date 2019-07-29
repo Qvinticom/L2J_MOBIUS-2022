@@ -38,7 +38,7 @@ public class Q257_TheGuardIsBusy extends Quest
 	
 	public Q257_TheGuardIsBusy()
 	{
-		super(257, qn, "The Guard Is Busy");
+		super(257, qn, "The Guard is Busy");
 		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG, GLUDIO_LORD_MARK);
 		
