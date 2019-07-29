@@ -146,9 +146,4 @@ public class Q510_AClansReputation extends Quest
 		
 		return null;
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q510_AClansReputation();
-	}
 }

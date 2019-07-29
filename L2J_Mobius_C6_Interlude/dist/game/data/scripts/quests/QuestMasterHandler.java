@@ -221,10 +221,14 @@ import quests.Q329_CuriosityOfADwarf.Q329_CuriosityOfADwarf;
 import quests.Q330_AdeptOfTaste.Q330_AdeptOfTaste;
 import quests.Q331_ArrowOfVengeance.Q331_ArrowOfVengeance;
 import quests.Q333_HuntOfTheBlackLion.Q333_HuntOfTheBlackLion;
+import quests.Q334_TheWishingPotion.Q334_TheWishingPotion;
+import quests.Q335_TheSongOfTheHunter.Q335_TheSongOfTheHunter;
+import quests.Q336_CoinsOfMagic.Q336_CoinsOfMagic;
 import quests.Q337_AudienceWithTheLandDragon.Q337_AudienceWithTheLandDragon;
 import quests.Q338_AlligatorHunter.Q338_AlligatorHunter;
 import quests.Q340_SubjugationOfLizardmen.Q340_SubjugationOfLizardmen;
 import quests.Q341_HuntingForWildBeasts.Q341_HuntingForWildBeasts;
+import quests.Q343_UnderTheShadowOfTheIvoryTower.Q343_UnderTheShadowOfTheIvoryTower;
 import quests.Q344_1000YearsTheEndOfLamentation.Q344_1000YearsTheEndOfLamentation;
 import quests.Q345_MethodToRaiseTheDead.Q345_MethodToRaiseTheDead;
 import quests.Q347_GoGetTheCalculator.Q347_GoGetTheCalculator;
@@ -264,6 +268,7 @@ import quests.Q382_KailsMagicCoin.Q382_KailsMagicCoin;
 import quests.Q383_SearchingForTreasure.Q383_SearchingForTreasure;
 import quests.Q384_WarehouseKeepersPastime.Q384_WarehouseKeepersPastime;
 import quests.Q385_YokeOfThePast.Q385_YokeOfThePast;
+import quests.Q386_StolenDignity.Q386_StolenDignity;
 import quests.Q401_PathToAWarrior.Q401_PathToAWarrior;
 import quests.Q402_PathToAHumanKnight.Q402_PathToAHumanKnight;
 import quests.Q403_PathToARogue.Q403_PathToARogue;
@@ -568,14 +573,14 @@ public class QuestMasterHandler
 		Q330_AdeptOfTaste.class,
 		Q331_ArrowOfVengeance.class,
 		Q333_HuntOfTheBlackLion.class,
-		// TODO: Q334_TheWishingPotion.class,
-		// TODO: Q335_TheSongOfTheHunter.class,
-		// TODO: Q336_CoinsOfMagic.class,
+		Q334_TheWishingPotion.class,
+		Q335_TheSongOfTheHunter.class,
+		Q336_CoinsOfMagic.class,
 		Q337_AudienceWithTheLandDragon.class,
 		Q338_AlligatorHunter.class,
 		Q340_SubjugationOfLizardmen.class,
 		Q341_HuntingForWildBeasts.class,
-		// TODO: Q343_UnderTheShadowOfTheIvoryTower.class,
+		Q343_UnderTheShadowOfTheIvoryTower.class,
 		Q344_1000YearsTheEndOfLamentation.class,
 		Q345_MethodToRaiseTheDead.class,
 		Q347_GoGetTheCalculator.class,
@@ -615,7 +620,7 @@ public class QuestMasterHandler
 		Q383_SearchingForTreasure.class,
 		Q384_WarehouseKeepersPastime.class,
 		Q385_YokeOfThePast.class,
-		// TODO: Q386_StolenDignity.class,
+		Q386_StolenDignity.class,
 		Q401_PathToAWarrior.class,
 		Q402_PathToAHumanKnight.class,
 		Q403_PathToARogue.class,

@@ -246,9 +246,4 @@ public class Q509_TheClansPrestige extends Quest
 		
 		return null;
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q509_TheClansPrestige();
-	}
 }
