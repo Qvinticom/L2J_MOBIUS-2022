@@ -1976,7 +1976,7 @@ public class Quest extends ManagedScript
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?)");
+			PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
 			
 			for (Integer charId : objectsId)
 			{
@@ -2002,7 +2002,7 @@ public class Quest extends ManagedScript
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and charId IN (SELECT charId FROM characters WHERE clanId = ? AND online = 0)");
+			PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_Id FROM characters WHERE clanid = ? AND online = 0)");
 			
 			stm.setString(1, getName());
 			stm.setInt(2, clanId);
