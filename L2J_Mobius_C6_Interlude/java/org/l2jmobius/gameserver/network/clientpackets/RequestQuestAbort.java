@@ -52,6 +52,11 @@ public final class RequestQuestAbort extends GameClientPacket
 		
 		if (qe != null)
 		{
+			if ((_questId == 503) && (player.getClan() != null) && player.isClanLeader())
+			{
+				qe.finishQuestToClan(player);
+			}
+			
 			final QuestState qs = player.getQuestState(qe.getName());
 			if (qs != null)
 			{

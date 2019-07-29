@@ -78,7 +78,7 @@ public final class RequestExSetPledgeCrestLarge extends GameClientPacket
 			clan.setHasCrestLarge(false);
 			player.sendMessage("The insignia has been removed.");
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				member.broadcastUserInfo();
 			}
@@ -133,7 +133,7 @@ public final class RequestExSetPledgeCrestLarge extends GameClientPacket
 			
 			player.sendPacket(SystemMessageId.CLAN_EMBLEM_WAS_SUCCESSFULLY_REGISTERED);
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				member.broadcastUserInfo();
 			}

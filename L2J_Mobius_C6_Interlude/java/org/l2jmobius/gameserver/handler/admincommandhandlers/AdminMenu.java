@@ -151,7 +151,7 @@ public class AdminMenu implements IAdminCommandHandler
 					return true;
 				}
 				
-				PlayerInstance[] members = clan.getOnlineMembers("");
+				PlayerInstance[] members = clan.getOnlineMembers();
 				
 				for (PlayerInstance member : members)
 				{

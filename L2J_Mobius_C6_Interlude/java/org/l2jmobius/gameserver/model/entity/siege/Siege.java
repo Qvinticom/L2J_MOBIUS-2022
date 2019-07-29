@@ -652,7 +652,7 @@ public class Siege
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -675,7 +675,7 @@ public class Siege
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -834,7 +834,7 @@ public class Siege
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -864,7 +864,7 @@ public class Siege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -903,7 +903,7 @@ public class Siege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{

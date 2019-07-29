@@ -1958,6 +1958,11 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
+		if (leader.isDead())
+		{
+			return null;
+		}
+		
 		// Verify if the player is on the radius of the leader. If true, send leader's quest state.
 		if (leader.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
 		{
@@ -1965,5 +1970,101 @@ public class Quest extends ManagedScript
 		}
 		
 		return null;
+	}
+	
+	private void setQuestToOfflineMembers(Integer[] objectsId)
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?)");
+			
+			for (Integer charId : objectsId)
+			{
+				stm.setInt(1, charId.intValue());
+				stm.setString(2, getName());
+				stm.setString(3, "<state>");
+				stm.setString(4, "1");
+				
+				stm.executeUpdate();
+			}
+			
+			stm.close();
+			con.close();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error in updating character_quest table from Quest.java on method setQuestToOfflineMembers");
+			LOGGER.info(e.toString());
+		}
+	}
+	
+	private void deleteQuestToOfflineMembers(int clanId)
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and charId IN (SELECT charId FROM characters WHERE clanId = ? AND online = 0)");
+			
+			stm.setString(1, getName());
+			stm.setInt(2, clanId);
+			
+			stm.executeUpdate();
+			
+			stm.close();
+			con.close();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error in deleting infos from character_quest table from Quest.java on method deleteQuestToOfflineMembers");
+			LOGGER.info(e.toString());
+		}
+	}
+	
+	/**
+	 * Sets the current quest to clan offline's members
+	 * @param player the current player (should be clan leader)
+	 */
+	public void setQuestToClanMembers(PlayerInstance player)
+	{
+		if (player.isClanLeader())
+		{
+			PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
+			Integer[] offlineMembersIds = player.getClan().getOfflineMembersIds();
+			
+			// Setting it for online members...
+			for (PlayerInstance onlineMember : onlineMembers)
+			{
+				if (!onlineMember.isClanLeader())
+				{
+					onlineMember.setQuestState(player.getQuestState(getName()));
+				}
+			}
+			
+			// Setting it for offline members...
+			setQuestToOfflineMembers(offlineMembersIds);
+		}
+	}
+	
+	/**
+	 * Finish the current quest to a clan's members
+	 * @param player clan's leader
+	 */
+	public void finishQuestToClan(PlayerInstance player)
+	{
+		if (player.isClanLeader())
+		{
+			PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
+			
+			// Deleting it for online members...
+			for (PlayerInstance onlineMember : onlineMembers)
+			{
+				if (!onlineMember.isClanLeader())
+				{
+					onlineMember.delQuestState(getName());
+				}
+			}
+			
+			// Deleting it for offline members...
+			deleteQuestToOfflineMembers(player.getClanId());
+		}
 	}
 }

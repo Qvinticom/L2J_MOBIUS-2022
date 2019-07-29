@@ -111,7 +111,7 @@ public final class RequestSetAllyCrest extends GameClientPacket
 				if (clan.getAllyId() == player.getAllyId())
 				{
 					clan.setAllyCrestId(newId);
-					for (PlayerInstance member : clan.getOnlineMembers(""))
+					for (PlayerInstance member : clan.getOnlineMembers())
 					{
 						member.broadcastUserInfo();
 					}

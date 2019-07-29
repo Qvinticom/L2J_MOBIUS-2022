@@ -278,7 +278,7 @@ public class RequestAquireSkill extends GameClientPacket
 			
 			player.getClan().broadcastToOnlineMembers(new PledgeSkillList(player.getClan()));
 			
-			for (PlayerInstance member : player.getClan().getOnlineMembers(""))
+			for (PlayerInstance member : player.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();
 			}

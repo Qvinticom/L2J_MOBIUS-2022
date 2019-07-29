@@ -290,6 +290,7 @@ import quests.Q426_QuestForFishingShot.Q426_QuestForFishingShot;
 import quests.Q431_WeddingMarch.Q431_WeddingMarch;
 import quests.Q432_BirthdayPartySong.Q432_BirthdayPartySong;
 import quests.Q501_ProofOfClanAlliance.Q501_ProofOfClanAlliance;
+import quests.Q503_PursuitOfClanAmbition.Q503_PursuitOfClanAmbition;
 import quests.Q504_CompetitionForTheBanditStronghold.Q504_CompetitionForTheBanditStronghold;
 import quests.Q505_BloodOffering.Q505_BloodOffering;
 import quests.Q508_AClansReputation.Q508_AClansReputation;
@@ -641,7 +642,7 @@ public class QuestMasterHandler
 		Q431_WeddingMarch.class,
 		Q432_BirthdayPartySong.class,
 		Q501_ProofOfClanAlliance.class,
-		// TODO: Q503_PursuitClanAmbition.class,
+		Q503_PursuitOfClanAmbition.class,
 		Q504_CompetitionForTheBanditStronghold.class,
 		Q505_BloodOffering.class,
 		Q508_AClansReputation.class,

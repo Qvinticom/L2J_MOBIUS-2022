@@ -89,7 +89,7 @@ public final class RequestSetPledgeCrest extends GameClientPacket
 			clan.setHasCrest(false);
 			player.sendPacket(SystemMessageId.CLAN_CREST_HAS_BEEN_DELETED);
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				member.broadcastUserInfo();
 			}
@@ -136,7 +136,7 @@ public final class RequestSetPledgeCrest extends GameClientPacket
 			clan.setCrestId(newId);
 			clan.setHasCrest(true);
 			
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				member.broadcastUserInfo();
 			}

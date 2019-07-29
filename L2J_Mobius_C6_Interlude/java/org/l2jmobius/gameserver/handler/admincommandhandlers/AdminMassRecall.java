@@ -55,7 +55,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				PlayerInstance[] m = clan.getOnlineMembers("");
+				PlayerInstance[] m = clan.getOnlineMembers();
 				
 				for (PlayerInstance element : m)
 				{
@@ -84,7 +84,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (ally == 0)
 				{
-					PlayerInstance[] m = clan.getOnlineMembers("");
+					PlayerInstance[] m = clan.getOnlineMembers();
 					
 					for (PlayerInstance element : m)
 					{
@@ -97,7 +97,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					{
 						if (aclan.getAllyId() == ally)
 						{
-							PlayerInstance[] m = aclan.getOnlineMembers("");
+							PlayerInstance[] m = aclan.getOnlineMembers();
 							
 							for (PlayerInstance element : m)
 							{

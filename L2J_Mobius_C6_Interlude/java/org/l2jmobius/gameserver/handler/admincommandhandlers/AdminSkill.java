@@ -587,7 +587,7 @@ public class AdminSkill implements IAdminCommandHandler
 			
 			activeChar.getClan().broadcastToOnlineMembers(new PledgeSkillList(activeChar.getClan()));
 			
-			for (PlayerInstance member : activeChar.getClan().getOnlineMembers(""))
+			for (PlayerInstance member : activeChar.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();
 			}

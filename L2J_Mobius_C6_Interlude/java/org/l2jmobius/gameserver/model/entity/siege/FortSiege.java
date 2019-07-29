@@ -482,7 +482,7 @@ public class FortSiege
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -505,7 +505,7 @@ public class FortSiege
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -667,7 +667,7 @@ public class FortSiege
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -697,7 +697,7 @@ public class FortSiege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -736,7 +736,7 @@ public class FortSiege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{

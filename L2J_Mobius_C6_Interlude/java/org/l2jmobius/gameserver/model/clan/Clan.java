@@ -475,6 +475,21 @@ public class Clan
 		return _members.values().toArray(new ClanMember[_members.size()]);
 	}
 	
+	public Integer[] getOfflineMembersIds()
+	{
+		List<Integer> list = new ArrayList<>();
+		
+		for (ClanMember temp : _members.values())
+		{
+			if ((temp != null) && !temp.isOnline())
+			{
+				list.add(temp.getObjectId());
+			}
+		}
+		
+		return list.toArray(new Integer[list.size()]);
+	}
+	
 	public int getMembersCount()
 	{
 		return _members.size();
@@ -562,7 +577,7 @@ public class Clan
 		return limit;
 	}
 	
-	public PlayerInstance[] getOnlineMembers(String exclude)
+	public PlayerInstance[] getOnlineMembers()
 	{
 		final List<PlayerInstance> result = new ArrayList<>();
 		
@@ -570,7 +585,7 @@ public class Clan
 		{
 			try
 			{
-				if (temp.isOnline() && !temp.getName().equals(exclude))
+				if (temp.isOnline())
 				{
 					result.add(temp.getPlayerInstance());
 				}
@@ -1302,7 +1317,7 @@ public class Clan
 	
 	public void broadcastClanStatus()
 	{
-		for (PlayerInstance member : getOnlineMembers(""))
+		for (PlayerInstance member : getOnlineMembers())
 		{
 			member.sendPacket(new PledgeShowMemberListDeleteAll());
 			member.sendPacket(new PledgeShowMemberListAll(this, member));

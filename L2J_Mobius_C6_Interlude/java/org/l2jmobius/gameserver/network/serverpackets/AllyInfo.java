@@ -60,7 +60,7 @@ public class AllyInfo extends GameServerPacket
 			if (clan.getAllyId() == _player.getAllyId())
 			{
 				clancount++;
-				online += clan.getOnlineMembers("").length;
+				online += clan.getOnlineMembers().length;
 				count += clan.getMembers().length;
 			}
 		}
