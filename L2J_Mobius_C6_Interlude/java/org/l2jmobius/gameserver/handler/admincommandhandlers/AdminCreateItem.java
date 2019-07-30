@@ -292,7 +292,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		for (ItemInstance item : activeChar.getInventory().getItems())
 		{
-			if (item.getLocation() == ItemInstance.ItemLocation.INVENTORY)
+			if (item.getItemLocation() == ItemInstance.ItemLocation.INVENTORY)
 			{
 				activeChar.getInventory().destroyItem("Destroy", item.getObjectId(), item.getCount(), activeChar, null);
 			}

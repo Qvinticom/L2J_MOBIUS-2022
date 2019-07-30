@@ -72,7 +72,7 @@ public class ItemsAutoDestroy
 		
 		for (ItemInstance item : _items)
 		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getLocation() != ItemInstance.ItemLocation.VOID))
+			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemInstance.ItemLocation.VOID))
 			{
 				_items.remove(item);
 			}

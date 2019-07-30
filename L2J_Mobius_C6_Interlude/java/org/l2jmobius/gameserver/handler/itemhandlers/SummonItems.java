@@ -245,7 +245,7 @@ public class SummonItems implements IItemHandler
 				_player.sendPacket(new MagicSkillLaunched(_player, 2046, 1));
 				
 				// check for summon item validity
-				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getLocation() != ItemInstance.ItemLocation.INVENTORY))
+				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getItemLocation() != ItemInstance.ItemLocation.INVENTORY))
 				{
 					return;
 				}

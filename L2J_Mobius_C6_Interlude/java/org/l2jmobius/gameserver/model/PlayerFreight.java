@@ -123,7 +123,7 @@ public class PlayerFreight extends ItemContainer
 		super.addItem(item);
 		if (_activeLocationId > 0)
 		{
-			item.setLocation(item.getLocation(), _activeLocationId);
+			item.setLocation(item.getItemLocation(), _activeLocationId);
 		}
 	}
 	

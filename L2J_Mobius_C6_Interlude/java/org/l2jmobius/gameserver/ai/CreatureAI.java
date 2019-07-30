@@ -498,7 +498,7 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
-		if ((object instanceof ItemInstance) && (((ItemInstance) object).getLocation() != ItemLocation.VOID))
+		if ((object instanceof ItemInstance) && (((ItemInstance) object).getItemLocation() != ItemLocation.VOID))
 		{
 			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
 			clientActionFailed();

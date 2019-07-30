@@ -214,10 +214,10 @@ public final class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Gets the location.
-	 * @return the location
+	 * Gets the item location.
+	 * @return the item location
 	 */
-	public ItemLocation getLocation()
+	public ItemLocation getItemLocation()
 	{
 		return _loc;
 	}
@@ -1080,7 +1080,7 @@ public final class ItemInstance extends WorldObject
 				inst._mana = manaLeft;
 				
 				// consume 1 mana
-				if ((inst._mana > 0) && (inst.getLocation() == ItemLocation.PAPERDOLL))
+				if ((inst._mana > 0) && (inst.getItemLocation() == ItemLocation.PAPERDOLL))
 				{
 					inst.decreaseMana(false);
 				}
@@ -1096,7 +1096,7 @@ public final class ItemInstance extends WorldObject
 					
 					return null;
 				}
-				else if ((inst._mana > 0) && (inst.getLocation() == ItemLocation.PAPERDOLL))
+				else if ((inst._mana > 0) && (inst.getItemLocation() == ItemLocation.PAPERDOLL))
 				{
 					inst.scheduleConsumeManaTask();
 				}

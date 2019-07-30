@@ -630,7 +630,7 @@ public final class RequestEnchantItem extends GameClientPacket
 					return;
 				}
 				
-				if ((item.getLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getLocation() != ItemInstance.ItemLocation.PAPERDOLL))
+				if ((item.getItemLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getItemLocation() != ItemInstance.ItemLocation.PAPERDOLL))
 				{
 					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
 					return;

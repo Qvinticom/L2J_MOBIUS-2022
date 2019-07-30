@@ -339,7 +339,7 @@ public class PetInstance extends Summon
 	{
 		for (ItemInstance item : _inventory.getItems())
 		{
-			if ((item.getLocation() == ItemInstance.ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
+			if ((item.getItemLocation() == ItemInstance.ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
 			{
 				return item;
 			}
