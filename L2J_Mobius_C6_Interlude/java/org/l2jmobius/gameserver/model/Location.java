@@ -20,10 +20,10 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class Location
 {
-	public int _x;
-	public int _y;
-	public int _z;
-	public int _heading = 0;
+	protected int _x;
+	protected int _y;
+	protected int _z;
+	private int _heading = 0;
 	
 	public Location(int x, int y, int z)
 	{

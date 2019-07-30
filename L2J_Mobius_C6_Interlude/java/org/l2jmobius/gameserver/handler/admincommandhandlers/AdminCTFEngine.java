@@ -752,7 +752,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		
 		final Location npc_loc = CTF.get_npcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.get_npcId() + " on pos " + npc_loc._x + "," + npc_loc._y + "," + npc_loc._z + "</font><br1>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
 		replyMSG.append("<button value=\"Tele->NPC\" action=\"bypass -h admin_ctf_tele_npc\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + CTF.get_rewardId() + "</font><br1>");
 		if (ItemTable.getInstance().getTemplate(CTF.get_rewardId()) != null)

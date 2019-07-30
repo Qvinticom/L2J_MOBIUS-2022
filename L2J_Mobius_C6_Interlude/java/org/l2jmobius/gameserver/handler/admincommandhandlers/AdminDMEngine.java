@@ -299,7 +299,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		
 		final Location npc_loc = DM.get_npcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.get_npcId() + " on pos " + npc_loc._x + "," + npc_loc._y + "," + npc_loc._z + "</font><br1>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + DM.get_rewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + DM.get_rewardAmount() + "</font><br><br>");
 		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + DM.get_minlvl() + "</font><br>");
@@ -308,7 +308,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		
 		final Location player_loc = DM.get_playersSpawnLocation();
 		
-		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + player_loc._x + "," + player_loc._y + "," + player_loc._z + "</font><br><br>");
+		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + player_loc.getX() + "," + player_loc.getY() + "," + player_loc.getZ() + "</font><br><br>");
 		replyMSG.append("Current players:<br1>");
 		
 		if (!DM.is_started())

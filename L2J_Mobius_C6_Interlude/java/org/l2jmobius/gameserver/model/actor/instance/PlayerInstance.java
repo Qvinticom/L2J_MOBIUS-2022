@@ -6677,7 +6677,7 @@ public final class PlayerInstance extends Playable
 						ThreadPool.schedule(() ->
 						{
 							final Location p_loc = DM.get_playersSpawnLocation();
-							teleToLocation(p_loc._x, p_loc._y, p_loc._z, false);
+							teleToLocation(p_loc.getX(), p_loc.getY(), p_loc.getZ(), false);
 							doRevive();
 						}, Config.DM_REVIVE_DELAY);
 					}
@@ -6690,7 +6690,7 @@ public final class PlayerInstance extends Playable
 						ThreadPool.schedule(() ->
 						{
 							final Location players_loc = DM.get_playersSpawnLocation();
-							teleToLocation(players_loc._x, players_loc._y, players_loc._z, false);
+							teleToLocation(players_loc.getX(), players_loc.getY(), players_loc.getZ(), false);
 							doRevive();
 						}, 20000);
 					}

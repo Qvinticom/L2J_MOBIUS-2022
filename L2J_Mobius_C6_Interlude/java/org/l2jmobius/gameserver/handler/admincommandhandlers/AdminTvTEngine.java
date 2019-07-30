@@ -428,7 +428,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		
 		final Location npc_loc = TvT.get_npcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.get_npcId() + " on pos " + npc_loc._x + "," + npc_loc._y + "," + npc_loc._z + "</font><br1>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + TvT.get_rewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + TvT.get_rewardAmount() + "</font><br><br>");
 		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + TvT.get_minlvl() + "</font><br>");
