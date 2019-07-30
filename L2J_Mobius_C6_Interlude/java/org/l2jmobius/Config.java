@@ -66,6 +66,7 @@ public final class Config
 	private static final String ELIT_CLANHALL_CONFIG_FILE = "./config/main/EliteClanhall.ini";
 	private static final String ENCHANT_CONFIG_FILE = "./config/main/Enchant.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/main/Fort.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/main/GameServer.ini";
 	private static final String GEODATA_CONFIG_FILE = "./config/main/GeoEngine.ini";
 	private static final String OLYMP_CONFIG_FILE = "./config/main/Olympiad.ini";
 	private static final String OPTIONS_CONFIG_FILE = "./config/main/Options.ini";
@@ -96,9 +97,8 @@ public final class Config
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
-	// network
-	private static final String SERVER_CONFIG_FILE = "./config/network/GameServer.ini";
-	private static final String LOGIN_CONFIG_FILE = "./config/network/LoginServer.ini";
+	// login
+	private static final String LOGIN_CONFIG_FILE = "./config/main/LoginServer.ini";
 	// others
 	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
 	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
