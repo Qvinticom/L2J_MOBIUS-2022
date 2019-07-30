@@ -45,7 +45,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.thread.LoginServerThread;
 
 /**
- * This class provides the functions for shutting down and restarting the server It closes all open client connections and saves all data.
+ * This class provides the functions for shutting down and restarting the server.<br>
+ * It closes all open client connections and saves all data.
  * @version $Revision: 1.2.4.6 $ $Date: 2009/05/12 19:45:09 $
  */
 public class Shutdown extends Thread
@@ -371,11 +372,6 @@ public class Shutdown extends Thread
 			DatabaseBackup.performBackup();
 		}
 		
-		System.runFinalization();
-		System.gc();
-		
-		LOGGER.info("Memory cleanup, recycled unused objects.");
-		
 		LOGGER.info("[STATUS] Server shutdown successfully.");
 		
 		if (_instance._shutdownMode == GM_RESTART)
@@ -432,35 +428,11 @@ public class Shutdown extends Thread
 			LOGGER.warning("Error saving offline shops. " + t);
 		}
 		
-		try
-		{
-			wait(1000);
-		}
-		catch (InterruptedException e1)
-		{
-		}
-		
 		// Disconnect all the players from the server
 		disconnectAllCharacters();
 		
-		try
-		{
-			wait(5000);
-		}
-		catch (InterruptedException e1)
-		{
-		}
-		
 		// Save players data!
 		saveAllPlayers();
-		
-		try
-		{
-			wait(10000);
-		}
-		catch (InterruptedException e1)
-		{
-		}
 		
 		// Seven Signs data is now saved along with Festival data.
 		if (!SevenSigns.getInstance().isSealValidationPeriod())
@@ -525,7 +497,7 @@ public class Shutdown extends Thread
 		
 		try
 		{
-			wait(5000);
+			Thread.sleep(5000);
 		}
 		catch (InterruptedException e)
 		{

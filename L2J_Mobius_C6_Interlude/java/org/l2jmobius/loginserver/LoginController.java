@@ -174,13 +174,6 @@ public class LoginController
 	public void shutdown()
 	{
 		_stopNow = true;
-		try
-		{
-			Thread.sleep(10000);
-		}
-		catch (Exception e)
-		{
-		}
 	}
 	
 	private void generateBlowFishKeys()

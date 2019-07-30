@@ -203,7 +203,6 @@ public class LoginServer
 		}
 		
 		LoginController.getInstance().shutdown();
-		System.gc();
 		Runtime.getRuntime().exit(restart ? 2 : 0);
 	}
 	
