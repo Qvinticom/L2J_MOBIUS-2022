@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import org.l2jmobius.commons.util.Point3D;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * Format: (ch) d[ddddd].
@@ -52,9 +52,9 @@ public class ExCursedWeaponLocation extends GameServerPacket
 				writeD(w.id);
 				writeD(w.activated);
 				
-				writeD(w.pos.getX());
-				writeD(w.pos.getY());
-				writeD(w.pos.getZ());
+				writeD(w.loc.getX());
+				writeD(w.loc.getY());
+				writeD(w.loc.getZ());
 			}
 		}
 		else
@@ -69,8 +69,8 @@ public class ExCursedWeaponLocation extends GameServerPacket
 	 */
 	public static class CursedWeaponInfo
 	{
-		/** The pos. */
-		public Point3D pos;
+		/** The location. */
+		public Location loc;
 		
 		/** The id. */
 		public int id;
@@ -80,13 +80,13 @@ public class ExCursedWeaponLocation extends GameServerPacket
 		
 		/**
 		 * Instantiates a new cursed weapon info.
-		 * @param p the p
+		 * @param location the Location
 		 * @param ID the iD
 		 * @param status the status
 		 */
-		public CursedWeaponInfo(Point3D p, int ID, int status)
+		public CursedWeaponInfo(Location location, int ID, int status)
 		{
-			pos = p;
+			loc = location;
 			id = ID;
 			activated = status;
 		}

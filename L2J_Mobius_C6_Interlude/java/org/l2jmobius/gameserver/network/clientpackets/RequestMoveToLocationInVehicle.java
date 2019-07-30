@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
@@ -28,8 +27,8 @@ import org.l2jmobius.gameserver.thread.TaskPriority;
 
 public final class RequestMoveToLocationInVehicle extends GameClientPacket
 {
-	private final Point3D _pos = new Point3D(0, 0, 0);
-	private final Point3D _origin_pos = new Point3D(0, 0, 0);
+	private final Location _pos = new Location(0, 0, 0);
+	private final Location _origin_pos = new Location(0, 0, 0);
 	private int _boatId;
 	
 	public TaskPriority getPriority()

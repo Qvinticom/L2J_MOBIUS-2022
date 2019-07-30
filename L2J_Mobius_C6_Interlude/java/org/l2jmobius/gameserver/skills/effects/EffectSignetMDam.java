@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.skills.effects;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
@@ -32,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.skills.Env;
@@ -84,8 +84,7 @@ public final class EffectSignetMDam extends Effect
 		
 		if ((getEffector() instanceof PlayerInstance) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
-			final Point3D wordPosition = ((PlayerInstance) getEffector()).getCurrentSkillWorldPosition();
-			
+			final Location wordPosition = ((PlayerInstance) getEffector()).getCurrentSkillWorldPosition();
 			if (wordPosition != null)
 			{
 				x = wordPosition.getX();

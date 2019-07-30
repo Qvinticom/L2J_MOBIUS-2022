@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
 public final class RequestGetOnVehicle extends GameClientPacket
@@ -55,7 +55,7 @@ public final class RequestGetOnVehicle extends GameClientPacket
 		}
 		
 		final GetOnVehicle Gon = new GetOnVehicle(player, boat, _x, _y, _z);
-		player.setInBoatPosition(new Point3D(_x, _y, _z));
+		player.setInBoatPosition(new Location(_x, _y, _z));
 		player.getPosition().setXYZ(boat.getPosition().getX(), boat.getPosition().getY(), boat.getPosition().getZ());
 		player.broadcastPacket(Gon);
 		player.revalidateZone(true);

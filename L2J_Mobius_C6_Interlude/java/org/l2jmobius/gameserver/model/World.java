@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.commons.util.object.L2ObjectMap;
 import org.l2jmobius.commons.util.object.L2ObjectSet;
 import org.l2jmobius.gameserver.datatables.GmListTable;
@@ -33,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * @version $Revision: 1.21.2.5.2.7 $ $Date: 2005/03/27 15:29:32 $
@@ -862,12 +862,12 @@ public final class World
 	 * <BR>
 	 * <li>Set position of a new WorldObject (drop, spawn...)</li>
 	 * <li>Update position of a WorldObject after a mouvement</li><BR>
-	 * @param point the point
+	 * @param location the point
 	 * @return the region
 	 */
-	public WorldRegion getRegion(Point3D point)
+	public WorldRegion getRegion(Location location)
 	{
-		return _worldRegions[(point.getX() >> SHIFT_BY) + OFFSET_X][(point.getY() >> SHIFT_BY) + OFFSET_Y];
+		return _worldRegions[(location.getX() >> SHIFT_BY) + OFFSET_X][(location.getY() >> SHIFT_BY) + OFFSET_Y];
 	}
 	
 	/**

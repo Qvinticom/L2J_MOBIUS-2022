@@ -30,7 +30,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.AttackableAI;
@@ -1613,7 +1612,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			boolean canCast = true;
 			if ((skill.getTargetType() == SkillTargetType.TARGET_GROUND) && (this instanceof PlayerInstance))
 			{
-				final Point3D wp = ((PlayerInstance) this).getCurrentSkillWorldPosition();
+				final Location wp = ((PlayerInstance) this).getCurrentSkillWorldPosition();
 				if (!region.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
 				{
 					canCast = false;

@@ -41,7 +41,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.RecipeController;
@@ -370,7 +369,7 @@ public final class PlayerInstance extends Playable
 	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
 	private boolean _inBoat;
 	private BoatInstance _boat;
-	private Point3D _inBoatPosition;
+	private Location _inBoatPosition;
 	private int _mountType;
 	private int _mountObjectID = 0;
 	public int _telemode = 0;
@@ -486,7 +485,7 @@ public final class PlayerInstance extends Playable
 	private SkillDat _currentPetSkill;
 	private SkillDat _queuedSkill;
 	private boolean _IsWearingFormalWear = false;
-	private Point3D _currentSkillWorldPosition;
+	private Location _currentSkillWorldPosition;
 	private int _cursedWeaponEquipedId = 0;
 	private int _reviveRequested = 0;
 	private double _revivePower = 0;
@@ -543,7 +542,7 @@ public final class PlayerInstance extends Playable
 	private long _fallingTimestamp = 0;
 	private volatile int _fallingDamage = 0;
 	private Future<?> _fallingDamageTask = null;
-	private final Point3D _lastPartyPosition = new Point3D(0, 0, 0);
+	private final Location _lastPartyPosition = new Location(0, 0, 0);
 	private PunishLevel _punishLevel = PunishLevel.NONE;
 	private long _punishTimer = 0;
 	private ScheduledFuture<?> _punishTask;
@@ -11540,9 +11539,7 @@ public final class PlayerInstance extends Playable
 			}
 		}
 		
-		final Point3D worldPosition = getCurrentSkillWorldPosition();
-		
-		if ((sklTargetType == SkillTargetType.TARGET_GROUND) && (worldPosition == null))
+		if ((sklTargetType == SkillTargetType.TARGET_GROUND) && (getCurrentSkillWorldPosition() == null))
 		{
 			LOGGER.info("WorldPosition is null for skill: " + skill.getName() + ", player: " + getName() + ".");
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -15030,18 +15027,18 @@ public final class PlayerInstance extends Playable
 	 * Gets the in boat position.
 	 * @return the in boat position
 	 */
-	public Point3D getInBoatPosition()
+	public Location getInBoatPosition()
 	{
 		return _inBoatPosition;
 	}
 	
 	/**
 	 * Sets the in boat position.
-	 * @param pt the new in boat position
+	 * @param location the new in boat location
 	 */
-	public void setInBoatPosition(Point3D pt)
+	public void setInBoatPosition(Location location)
 	{
-		_inBoatPosition = pt;
+		_inBoatPosition = location;
 	}
 	
 	/**
@@ -16583,18 +16580,18 @@ public final class PlayerInstance extends Playable
 	 * Gets the current skill world position.
 	 * @return the current skill world position
 	 */
-	public Point3D getCurrentSkillWorldPosition()
+	public Location getCurrentSkillWorldPosition()
 	{
 		return _currentSkillWorldPosition;
 	}
 	
 	/**
 	 * Sets the current skill world position.
-	 * @param worldPosition the new current skill world position
+	 * @param location the new current skill world position
 	 */
-	public void setCurrentSkillWorldPosition(Point3D worldPosition)
+	public void setCurrentSkillWorldPosition(Location location)
 	{
-		_currentSkillWorldPosition = worldPosition;
+		_currentSkillWorldPosition = location;
 	}
 	
 	/**

@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 
@@ -55,11 +55,10 @@ public final class RequestCursedWeaponLocation extends GameClientPacket
 				continue;
 			}
 			
-			final Point3D pos = cw.getWorldPosition();
-			
-			if (pos != null)
+			final Location location = cw.getWorldPosition();
+			if (location != null)
 			{
-				list.add(new CursedWeaponInfo(pos, cw.getItemId(), cw.isActivated() ? 1 : 0));
+				list.add(new CursedWeaponInfo(location, cw.getItemId(), cw.isActivated() ? 1 : 0));
 			}
 		}
 		

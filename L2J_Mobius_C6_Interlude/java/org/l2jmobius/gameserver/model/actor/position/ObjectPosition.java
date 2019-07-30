@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.actor.position;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
@@ -32,7 +31,7 @@ public class ObjectPosition
 	
 	private final WorldObject _activeObject;
 	private int _heading = 0;
-	private Point3D _worldPosition;
+	private Location _worldPosition;
 	private WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
 	private Boolean _changingRegion = false;
 	
@@ -249,11 +248,11 @@ public class ObjectPosition
 	 * Gets the world position.
 	 * @return the world position
 	 */
-	public final Point3D getWorldPosition()
+	public final Location getWorldPosition()
 	{
 		if (_worldPosition == null)
 		{
-			_worldPosition = new Point3D(0, 0, 0);
+			_worldPosition = new Location(0, 0, 0);
 		}
 		
 		return _worldPosition;
@@ -272,11 +271,11 @@ public class ObjectPosition
 	
 	/**
 	 * Sets the world position.
-	 * @param newPosition the new world position
+	 * @param location the new world position
 	 */
-	public final void setWorldPosition(Point3D newPosition)
+	public final void setWorldPosition(Location location)
 	{
-		setWorldPosition(newPosition.getX(), newPosition.getY(), newPosition.getZ());
+		setWorldPosition(location.getX(), location.getY(), location.getZ());
 	}
 	
 	/**

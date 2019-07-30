@@ -32,11 +32,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -127,8 +127,7 @@ public final class FenceData
 	
 	private void addFence(FenceInstance fence)
 	{
-		final Point3D point = new Point3D(fence.getX(), fence.getY(), fence.getZ());
-		
+		final Location point = new Location(fence.getX(), fence.getY(), fence.getZ());
 		_fences.put(fence.getObjectId(), fence);
 		_regions.computeIfAbsent(World.getInstance().getRegion(point), key -> new ArrayList<>()).add(fence);
 	}
@@ -137,7 +136,7 @@ public final class FenceData
 	{
 		_fences.remove(fence.getObjectId());
 		
-		final Point3D point = new Point3D(fence.getX(), fence.getY(), fence.getZ());
+		final Location point = new Location(fence.getX(), fence.getY(), fence.getZ());
 		final List<FenceInstance> fencesInRegion = _regions.get(World.getInstance().getRegion(point));
 		if (fencesInRegion != null)
 		{
@@ -204,8 +203,7 @@ public final class FenceData
 			return false;
 		};
 		
-		final Point3D point = new Point3D(x, y, z);
-		return _regions.getOrDefault(World.getInstance().getRegion(point), Collections.emptyList()).stream().anyMatch(filter);
+		return _regions.getOrDefault(World.getInstance().getRegion(new Location(x, y, z)), Collections.emptyList()).stream().anyMatch(filter);
 	}
 	
 	private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax)

@@ -23,11 +23,11 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 
 public class WayPointNode extends WorldObject
@@ -68,12 +68,12 @@ public class WayPointNode extends WorldObject
 		return spawn(isItemId ? "item" : "npc", id, player.getX(), player.getY(), player.getZ());
 	}
 	
-	public static WayPointNode spawn(boolean isItemId, int id, Point3D point)
+	public static WayPointNode spawn(boolean isItemId, int id, Location point)
 	{
 		return spawn(isItemId ? "item" : "npc", id, point.getX(), point.getY(), point.getZ());
 	}
 	
-	public static WayPointNode spawn(Point3D point)
+	public static WayPointNode spawn(Location point)
 	{
 		return spawn(Config.NEW_NODE_TYPE, Config.NEW_NODE_ID, point.getX(), point.getY(), point.getZ());
 	}

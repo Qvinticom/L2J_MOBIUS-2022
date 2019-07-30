@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.skills.handlers;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
@@ -25,6 +24,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
@@ -60,8 +60,7 @@ public final class SkillSignet extends Skill
 		
 		if ((caster instanceof PlayerInstance) && (getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
-			final Point3D wordPosition = ((PlayerInstance) caster).getCurrentSkillWorldPosition();
-			
+			final Location wordPosition = ((PlayerInstance) caster).getCurrentSkillWorldPosition();
 			if (wordPosition != null)
 			{
 				x = wordPosition.getX();

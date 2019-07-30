@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -33,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
@@ -680,7 +680,7 @@ public class CursedWeapon
 		}
 	}
 	
-	public Point3D getWorldPosition()
+	public Location getWorldPosition()
 	{
 		if (_isActivated && (_player != null))
 		{

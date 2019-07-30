@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -68,7 +68,7 @@ public final class RequestExMagicSkillUseGround extends GameClientPacket
 		
 		if (skill != null)
 		{
-			player.setCurrentSkillWorldPosition(new Point3D(_x, _y, _z));
+			player.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
 			
 			// normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
 			player.setHeading(Util.calculateHeadingFrom(player.getX(), player.getY(), _x, _y));

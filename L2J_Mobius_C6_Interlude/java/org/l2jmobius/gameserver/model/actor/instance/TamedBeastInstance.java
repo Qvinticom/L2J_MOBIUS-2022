@@ -21,13 +21,13 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.util.Point3D;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
@@ -104,9 +104,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 * Gets the home.
 	 * @return the home
 	 */
-	public Point3D getHome()
+	public Location getHome()
 	{
-		return new Point3D(_homeX, _homeY, _homeZ);
+		return new Location(_homeX, _homeY, _homeZ);
 	}
 	
 	/**
