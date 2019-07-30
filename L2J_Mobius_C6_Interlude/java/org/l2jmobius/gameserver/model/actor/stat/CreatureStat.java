@@ -568,15 +568,12 @@ public class CreatureStat
 	 */
 	public final float getMovementSpeedMultiplier()
 	{
-		// No need: getRunSpeed() calculates multipliers.
+		if (_creature == null)
+		{
+			return 1;
+		}
 		
-		// if (_creature == null)
-		// {
-		// return 1;
-		// }
-		// return getRunSpeed() / _creature.getTemplate().baseRunSpd;
-		
-		return 1;
+		return Math.max(1, getRunSpeed() / _creature.getTemplate().baseRunSpd);
 	}
 	
 	public void setGmSpeedMultiplier(float multipier)
