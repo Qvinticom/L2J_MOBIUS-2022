@@ -620,11 +620,6 @@ public final class RequestEnchantItem extends GameClientPacket
 			}
 		}
 		
-		final Object aChance = item.fireEvent("calcEnchantChance", new Object[chance]);
-		if (aChance != null)
-		{
-			chance = (Integer) aChance;
-		}
 		synchronized (item)
 		{
 			if (rndValue < chance)
@@ -725,10 +720,6 @@ public final class RequestEnchantItem extends GameClientPacket
 						count = 1;
 					}
 					
-					if (item.fireEvent("enchantFail", new Object[] {}) != null)
-					{
-						return;
-					}
 					final ItemInstance destroyItem = player.getInventory().destroyItem("Enchant", item, player, null);
 					if (destroyItem == null)
 					{

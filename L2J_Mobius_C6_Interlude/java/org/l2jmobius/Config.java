@@ -77,7 +77,6 @@ public final class Config
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
 	private static final String DAEMONS_CONFIG_FILE = "./config/protected/Daemons.ini";
-	public static final String EXTENDER_CONFIG_FILE = "./config/protected/Extender.ini";
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
 	private static final String ID_CONFIG_FILE = "./config/protected/IdFactory.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
@@ -1143,10 +1142,6 @@ public final class Config
 	public static String RAID_INFO_IDS;
 	public static List<Integer> RAID_INFO_IDS_LIST = new ArrayList<>();
 	
-	public static File SCRIPT_ROOT;
-	
-	public static Map<String, List<String>> EXTENDERS;
-	
 	public static long AUTOSAVE_INITIAL_TIME;
 	public static long AUTOSAVE_DELAY_TIME;
 	public static long CHECK_CONNECTION_INACTIVITY_TIME;
@@ -1168,6 +1163,7 @@ public final class Config
 	public static int LOGIN_TRY_BEFORE_BAN;
 	public static int LOGIN_BLOCK_AFTER_BAN;
 	public static File DATAPACK_ROOT;
+	public static File SCRIPT_ROOT;
 	public static int GAME_SERVER_LOGIN_PORT;
 	public static String GAME_SERVER_LOGIN_HOST;
 	public static String INTERNAL_HOSTNAME;
@@ -3580,67 +3576,6 @@ public final class Config
 		}
 	}
 	
-	public static void loadExtendersConfig()
-	{
-		EXTENDERS = new HashMap<>();
-		final File f = new File(EXTENDER_CONFIG_FILE);
-		if (f.exists())
-		{
-			LineNumberReader lineReader = null;
-			try
-			{
-				lineReader = new LineNumberReader(new BufferedReader(new FileReader(f)));
-				String line;
-				while ((line = lineReader.readLine()) != null)
-				{
-					int iPos = line.indexOf("#");
-					
-					if (iPos != -1)
-					{
-						line = line.substring(0, iPos);
-					}
-					
-					if (line.trim().length() == 0)
-					{
-						continue;
-					}
-					
-					iPos = line.indexOf("=");
-					if (iPos != -1)
-					{
-						final String baseName = line.substring(0, iPos).trim();
-						final String className = line.substring(iPos + 1).trim();
-						
-						if (EXTENDERS.get(baseName) == null)
-						{
-							EXTENDERS.put(baseName, new ArrayList<String>());
-						}
-						
-						EXTENDERS.get(baseName).add(className);
-					}
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning("Failed to Load " + EXTENDER_CONFIG_FILE + " File.");
-			}
-			finally
-			{
-				if (lineReader != null)
-				{
-					try
-					{
-						lineReader.close();
-					}
-					catch (IOException e)
-					{
-						e.printStackTrace();
-					}
-				}
-			}
-		}
-	}
-	
 	public static void loadDaemonsConf()
 	{
 		try
@@ -4047,7 +3982,6 @@ public final class Config
 			loadOfflineConfig();
 			
 			// Other
-			loadExtendersConfig();
 			loadDaemonsConf();
 			
 			if (USE_SAY_FILTER)

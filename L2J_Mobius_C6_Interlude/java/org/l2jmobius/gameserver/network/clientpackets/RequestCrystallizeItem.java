@@ -112,14 +112,8 @@ public final class RequestCrystallizeItem extends GameClientPacket
 		}
 		
 		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
-		
 		if ((itemToRemove == null) || itemToRemove.isWear())
 		{
-			return;
-		}
-		if (itemToRemove.fireEvent("CRYSTALLIZE", (Object[]) null) != null)
-		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
 			return;
 		}
 		

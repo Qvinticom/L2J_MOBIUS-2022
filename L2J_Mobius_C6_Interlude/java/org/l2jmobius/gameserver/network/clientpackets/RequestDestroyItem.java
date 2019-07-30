@@ -85,11 +85,6 @@ public final class RequestDestroyItem extends GameClientPacket
 		{
 			return;
 		}
-		if (itemToRemove.fireEvent("DESTROY", (Object[]) null) != null)
-		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
-			return;
-		}
 		
 		// Cannot discard item that the skill is consumming
 		if (player.isCastingNow())

@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.NullKnownList;
 import org.l2jmobius.gameserver.model.actor.position.Location;
-import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -160,14 +159,7 @@ public final class ItemInstance extends WorldObject
 	 */
 	public void setOwnerId(String process, int owner_id, PlayerInstance creator, WorldObject reference)
 	{
-		final int oldOwner = _ownerId;
 		setOwnerId(owner_id);
-		
-		fireEvent(EventType.SETOWNER.name, new Object[]
-		{
-			process,
-			oldOwner
-		});
 	}
 	
 	/**
@@ -1141,14 +1133,6 @@ public final class ItemInstance extends WorldObject
 			LOGGER.warning("Could not restore item " + objectId + " from DB " + e);
 		}
 		
-		if (inst != null)
-		{
-			inst.fireEvent(EventType.LOAD.name, new Object[]
-			{
-				// con
-			});
-		}
-		
 		return inst;
 	}
 	
@@ -1261,11 +1245,6 @@ public final class ItemInstance extends WorldObject
 		{
 			LOGGER.warning("Could not update item " + getObjectId() + " in DB: Reason: " + e);
 		}
-		
-		if (_existsInDb)
-		{
-			fireEvent(EventType.STORE.name, (Object[]) null);
-		}
 	}
 	
 	/**
@@ -1344,11 +1323,6 @@ public final class ItemInstance extends WorldObject
 		{
 			LOGGER.warning("Could not delete item " + getObjectId() + " in DB: " + e);
 			e.printStackTrace();
-		}
-		
-		if (!_existsInDb)
-		{
-			fireEvent(EventType.DELETE.name, (Object[]) null);
 		}
 	}
 	

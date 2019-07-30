@@ -148,7 +148,6 @@ import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
-import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
 import org.l2jmobius.gameserver.model.holders.TimestampHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -9369,8 +9368,6 @@ public final class PlayerInstance extends Playable
 		
 		if (player != null)
 		{
-			player.fireEvent(EventType.LOAD.name, (Object[]) null);
-			
 			try
 			{
 				Thread.sleep(100);
@@ -9703,8 +9700,6 @@ public final class PlayerInstance extends Playable
 		{
 			aVars.storeMe();
 		}
-		
-		fireEvent(EventType.STORE.name, (Object[]) null);
 		
 		// If char is in Offline trade, setStored must be true
 		if (isInOfflineMode())

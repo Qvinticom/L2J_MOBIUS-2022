@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -29,8 +28,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList;
 import org.l2jmobius.gameserver.model.actor.poly.ObjectPoly;
 import org.l2jmobius.gameserver.model.actor.position.ObjectPosition;
-import org.l2jmobius.gameserver.model.extender.BaseExtender;
-import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.GetItem;
@@ -58,99 +55,9 @@ public abstract class WorldObject
 	// Objects can only see objects in same instancezone, instance 0 is normal world -1 the all seeing world
 	private int _instanceId = 0;
 	
-	private BaseExtender _extender = null;
-	
 	public WorldObject(int objectId)
 	{
 		_objectId = objectId;
-		if (Config.EXTENDERS.get(getClass().getName()) != null)
-		{
-			for (String className : Config.EXTENDERS.get(getClass().getName()))
-			{
-				try
-				{
-					final Class<?> clazz = Class.forName(className);
-					if (clazz == null)
-					{
-						continue;
-					}
-					if (!BaseExtender.class.isAssignableFrom(clazz))
-					{
-						continue;
-					}
-					if (!(Boolean) clazz.getMethod("canCreateFor", WorldObject.class).invoke(null, this))
-					{
-						continue;
-					}
-					final Constructor<?> construct = clazz.getConstructor(WorldObject.class);
-					if (construct != null)
-					{
-						addExtender((BaseExtender) construct.newInstance(this));
-					}
-				}
-				catch (Exception e)
-				{
-					continue;
-				}
-			}
-		}
-	}
-	
-	/**
-	 * @param newExtender as BaseExtender
-	 */
-	public void addExtender(BaseExtender newExtender)
-	{
-		if (_extender == null)
-		{
-			_extender = newExtender;
-		}
-		else
-		{
-			_extender.addExtender(newExtender);
-		}
-	}
-	
-	/**
-	 * @param simpleName as String<br>
-	 * @return as BaseExtender - null<br>
-	 */
-	public BaseExtender getExtender(String simpleName)
-	{
-		if (_extender == null)
-		{
-			return null;
-		}
-		return _extender.getExtender(simpleName);
-	}
-	
-	/**
-	 * @param event as String<br>
-	 * @param params
-	 * @return as Object
-	 */
-	public Object fireEvent(String event, Object... params)
-	{
-		if (_extender == null)
-		{
-			return null;
-		}
-		return _extender.onEvent(event, params);
-	}
-	
-	public void removeExtender(BaseExtender ext)
-	{
-		if (_extender != null)
-		{
-			if (_extender == ext)
-			{
-				_extender = _extender.getNextExtender();
-			}
-			else
-			{
-				_extender.removeExtender(ext);
-			}
-		}
 	}
 	
 	public void onAction(PlayerInstance player)
@@ -188,7 +95,6 @@ public abstract class WorldObject
 	 */
 	public void onSpawn()
 	{
-		fireEvent(EventType.SPAWN.name, (Object[]) null);
 	}
 	
 	// Position - Should remove to fully move to WorldObjectPosition
@@ -268,8 +174,6 @@ public abstract class WorldObject
 		{
 			ItemsOnGroundManager.getInstance().removeObject(this);
 		}
-		
-		fireEvent(EventType.DELETE.name, (Object[]) null);
 	}
 	
 	/**

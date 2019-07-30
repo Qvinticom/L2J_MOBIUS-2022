@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.position.Location;
-import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -287,10 +286,6 @@ abstract class AbstractAI implements Ctrl
 				break;
 			}
 		}
-		_actor.fireEvent(EventType.SETINTENTION.name, new Object[]
-		{
-			intention
-		});
 	}
 	
 	/**

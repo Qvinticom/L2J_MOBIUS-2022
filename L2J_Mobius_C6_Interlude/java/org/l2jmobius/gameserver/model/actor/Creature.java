@@ -93,7 +93,6 @@ import org.l2jmobius.gameserver.model.entity.event.GameEvent;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.event.VIP;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -1203,10 +1202,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (attack.hasHits())
 		{
 			broadcastPacket(attack);
-			fireEvent(EventType.ATTACK.name, new Object[]
-			{
-				_target
-			});
 		}
 		
 		// Like L2OFF mobs id 27181 can teleport players near cabrio
@@ -1967,12 +1962,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			onMagicLaunchedTimer(targets, skill, coolTime, true);
 		}
-		fireEvent(EventType.CAST.name, new Object[]
-		{
-			skill,
-			target,
-			targets
-		});
 	}
 	
 	/**
@@ -2143,10 +2132,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			((PlayerInstance) this).reviveRequest(((PlayerInstance) this), null, false);
 		}
-		fireEvent(EventType.DIE.name, new Object[]
-		{
-			killer
-		});
 		
 		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
 		updateEffectIcons();
@@ -2204,7 +2189,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			setIsPendingRevive(true);
 		}
-		fireEvent(EventType.REVIVE.name, (Object[]) null);
 	}
 	
 	/**

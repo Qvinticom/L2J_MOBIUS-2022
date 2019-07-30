@@ -140,7 +140,6 @@ import org.l2jmobius.gameserver.thread.daemons.DeadlockDetector;
 import org.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.thread.daemons.PcPoint;
 import org.l2jmobius.gameserver.ui.Gui;
-import org.l2jmobius.gameserver.util.DynamicExtension;
 import org.l2jmobius.status.Status;
 
 public class GameServer
@@ -472,14 +471,6 @@ public class GameServer
 		Util.printSection("Game Server");
 		
 		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
-		try
-		{
-			DynamicExtension.getInstance();
-		}
-		catch (Exception ex)
-		{
-			LOGGER.info("DynamicExtension could not be loaded and initialized" + ex);
-		}
 		
 		Util.printSection("Custom Mods");
 		
