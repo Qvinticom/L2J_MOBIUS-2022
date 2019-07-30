@@ -169,13 +169,12 @@ public class CharInfo extends GameServerPacket
 				// }
 				// else
 				// {
-				// writeC(_activeChar.getAppearance().getInvisible() ? 1 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
+				// writeC(_player.getAppearance().getInvisible() ? 1 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 				// }
 				
 				writeS(_player.getName());
 				
 				if (_player.getAppearance().getInvisible())
-				// if(gmSeeInvis)
 				{
 					writeS("Invisible");
 				}
@@ -186,10 +185,9 @@ public class CharInfo extends GameServerPacket
 				
 				writeD(0);
 				writeD(0);
-				writeD(0000); // hmm karma ??
+				writeD(0); // hmm karma ??
 				
 				if (_player.getAppearance().getInvisible())
-				// if(gmSeeInvis)
 				{
 					writeD((_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH));
 				}
@@ -294,7 +292,6 @@ public class CharInfo extends GameServerPacket
 			writeD(_player.getAppearance().getFace());
 			
 			if (_player.getAppearance().getInvisible())
-			// if(gmSeeInvis)
 			{
 				writeS("[Invisible]");
 			}
@@ -345,7 +342,6 @@ public class CharInfo extends GameServerPacket
 			// writeC(0x00); // find party members
 			
 			if (_player.getAppearance().getInvisible())
-			// if(gmSeeInvis)
 			{
 				writeD((_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH));
 			}

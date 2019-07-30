@@ -22,6 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Inventory;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -283,7 +284,15 @@ public class UserInfo extends GameServerPacket
 		
 		writeC(_player.isInPartyMatchRoom() ? 1 : 0);
 		
-		writeD(_player.getAbnormalEffect());
+		if (_player.getAppearance().getInvisible())
+		{
+			writeD((_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH));
+		}
+		else
+		{
+			writeD(_player.getAbnormalEffect()); // C2
+		}
+		
 		writeC(0x00); // unk
 		
 		writeD(_player.getClanPrivileges());
