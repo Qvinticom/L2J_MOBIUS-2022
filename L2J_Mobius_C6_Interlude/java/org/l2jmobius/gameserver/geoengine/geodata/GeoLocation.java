@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.geoengine.geodata;
 
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.actor.position.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 /**
  * @author Hasha

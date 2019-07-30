@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.skills.effects;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
@@ -26,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.skills.Env;
 
 /**

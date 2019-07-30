@@ -37,7 +37,7 @@ import org.xml.sax.SAXParseException;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.file.filter.XMLFilter;
-import org.l2jmobius.gameserver.model.actor.position.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 /**
  * Interface for XML parsers.

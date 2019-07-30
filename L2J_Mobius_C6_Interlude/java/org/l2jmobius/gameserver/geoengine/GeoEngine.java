@@ -35,10 +35,10 @@ import org.l2jmobius.gameserver.geoengine.geodata.BlockNull;
 import org.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import org.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import org.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.util.MathUtil;
 
 /**

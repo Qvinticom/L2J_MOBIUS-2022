@@ -33,10 +33,10 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.FenceState;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * @author HoridoJoho / FBIagent

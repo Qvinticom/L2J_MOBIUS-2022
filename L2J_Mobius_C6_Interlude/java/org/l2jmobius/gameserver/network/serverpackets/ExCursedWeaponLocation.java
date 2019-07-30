@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.position.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 /**
  * Format: (ch) d[ddddd].

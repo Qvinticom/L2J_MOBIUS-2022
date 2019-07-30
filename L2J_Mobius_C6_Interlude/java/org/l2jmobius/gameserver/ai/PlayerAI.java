@@ -27,6 +27,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -34,7 +35,6 @@ import org.l2jmobius.gameserver.model.actor.Creature.AIAccessor;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList.KnownListAsynchronousUpdateTask;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 
 public class PlayerAI extends CreatureAI
 {

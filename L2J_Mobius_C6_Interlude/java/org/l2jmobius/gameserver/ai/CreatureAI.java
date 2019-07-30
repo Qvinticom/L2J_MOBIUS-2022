@@ -28,6 +28,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import org.l2jmobius.gameserver.ai.PlayerAI.IntentionCommand;
 import org.l2jmobius.gameserver.model.Inventory;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -37,7 +38,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;

@@ -25,7 +25,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import org.l2jmobius.gameserver.geoengine.pathfinding.Node;
 import org.l2jmobius.gameserver.geoengine.pathfinding.NodeBuffer;
-import org.l2jmobius.gameserver.model.actor.position.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 /**
  * @author Hasha

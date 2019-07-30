@@ -21,10 +21,10 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcWalkerInstance;
-import org.l2jmobius.gameserver.model.actor.position.Location;
 
 public class NpcWalkerAI extends CreatureAI implements Runnable
 {
