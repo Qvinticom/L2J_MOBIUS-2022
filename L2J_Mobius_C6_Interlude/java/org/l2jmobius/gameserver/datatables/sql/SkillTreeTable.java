@@ -104,7 +104,7 @@ public class SkillTreeTable
 				statement2.close();
 				
 				count += map.size();
-				LOGGER.info("SkillTreeTable: skill tree for class " + classId + " has " + map.size() + " skills.");
+				// LOGGER.info("SkillTreeTable: skill tree for class " + classId + " has " + map.size() + " skills.");
 			}
 			
 			classlist.close();
