@@ -568,12 +568,15 @@ public class CreatureStat
 	 */
 	public final float getMovementSpeedMultiplier()
 	{
-		if (_creature == null)
-		{
-			return 1;
-		}
+		// No need: getRunSpeed() calculates multipliers.
 		
-		return getRunSpeed() / _creature.getTemplate().baseRunSpd;
+		// if (_creature == null)
+		// {
+		// return 1;
+		// }
+		// return getRunSpeed() / _creature.getTemplate().baseRunSpd;
+		
+		return 1;
 	}
 	
 	public void setGmSpeedMultiplier(float multipier)
@@ -883,7 +886,6 @@ public class CreatureStat
 		
 		// err we should be adding TO the persons run speed not making it a constant
 		int val = (int) calcStat(Stats.RUN_SPEED, _creature.getTemplate().baseRunSpd, null, null) + Config.RUN_SPD_BOOST;
-		
 		if (_creature.isInsideZone(ZoneId.WATER))
 		{
 			val /= 2;
@@ -902,7 +904,6 @@ public class CreatureStat
 		}
 		
 		val /= _creature.getArmourExpertisePenalty();
-		
 		if ((val > Config.MAX_RUN_SPEED) && !_creature.charIsGM())
 		{
 			val = Config.MAX_RUN_SPEED;
