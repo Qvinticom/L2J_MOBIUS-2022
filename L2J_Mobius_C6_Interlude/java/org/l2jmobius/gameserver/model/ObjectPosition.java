@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -58,11 +57,6 @@ public class ObjectPosition
 	 */
 	public final void setXYZ(int x, int y, int z)
 	{
-		if (Config.ASSERT)
-		{
-			assert getWorldRegion() != null;
-		}
-		
 		setWorldPosition(x, y, z);
 		
 		try
@@ -110,10 +104,6 @@ public class ObjectPosition
 	 */
 	public final void setXYZInvisible(int x, int y, int z)
 	{
-		if (Config.ASSERT)
-		{
-			assert getWorldRegion() == null;
-		}
 		if (x > World.MAP_MAX_X)
 		{
 			x = World.MAP_MAX_X - 5000;

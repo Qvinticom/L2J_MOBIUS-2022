@@ -20,7 +20,6 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.WorldObject;
 
 /**
@@ -174,10 +173,6 @@ public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 			expand();
 		}
 		final int hashcode = obj.getObjectId();
-		if (Config.ASSERT)
-		{
-			assert hashcode > 0;
-		}
 		int seed = hashcode;
 		final int incr = 1 + (((seed >> 5) + 1) % (_table.length - 1));
 		int ntry = 0;
@@ -210,11 +205,6 @@ public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 				if (_table[pos] == obj)
 				{
 					return;
-				}
-				// this should never happen
-				if (Config.ASSERT)
-				{
-					assert obj.getObjectId() != _table[pos].getObjectId();
 				}
 				// if there was no collisions at this slot, and we found a free
 				// slot previously - use found slot
@@ -252,10 +242,6 @@ public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 			return;
 		}
 		final int hashcode = obj.getObjectId();
-		if (Config.ASSERT)
-		{
-			assert hashcode > 0;
-		}
 		int seed = hashcode;
 		final int incr = 1 + (((seed >> 5) + 1) % (_table.length - 1));
 		int ntry = 0;
@@ -307,10 +293,6 @@ public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 			return false;
 		}
 		final int hashcode = obj.getObjectId();
-		if (Config.ASSERT)
-		{
-			assert hashcode > 0;
-		}
 		int seed = hashcode;
 		final int incr = 1 + (((seed >> 5) + 1) % (size - 1));
 		int ntry = 0;

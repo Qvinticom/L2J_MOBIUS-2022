@@ -109,31 +109,16 @@ public abstract class WorldObject
 	
 	public final int getX()
 	{
-		if (Config.ASSERT)
-		{
-			assert (getPosition().getWorldRegion() != null) || _isVisible;
-		}
-		
 		return getPosition().getX();
 	}
 	
 	public final int getY()
 	{
-		if (Config.ASSERT)
-		{
-			assert (getPosition().getWorldRegion() != null) || _isVisible;
-		}
-		
 		return getPosition().getY();
 	}
 	
 	public final int getZ()
 	{
-		if (Config.ASSERT)
-		{
-			assert (getPosition().getWorldRegion() != null) || _isVisible;
-		}
-		
 		return getPosition().getZ();
 	}
 	
@@ -158,11 +143,6 @@ public abstract class WorldObject
 	 */
 	public final void decayMe()
 	{
-		if (Config.ASSERT)
-		{
-			assert getPosition().getWorldRegion() != null;
-		}
-		
 		// Remove the WorldObject from the world
 		_isVisible = false;
 		World.getInstance().removeVisibleObject(this, getPosition().getWorldRegion());
@@ -198,16 +178,6 @@ public abstract class WorldObject
 	 */
 	public final void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
 	{
-		if (Config.ASSERT)
-		{
-			assert this instanceof ItemInstance;
-		}
-		
-		if (Config.ASSERT)
-		{
-			assert getPosition().getWorldRegion() != null;
-		}
-		
 		WorldRegion oldregion = getPosition().getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the ItemInstance
@@ -264,11 +234,6 @@ public abstract class WorldObject
 	 */
 	public final void spawnMe()
 	{
-		if (Config.ASSERT)
-		{
-			assert (getPosition().getWorldRegion() == null) && (getPosition().getWorldPosition().getX() != 0) && (getPosition().getWorldPosition().getY() != 0) && (getPosition().getWorldPosition().getZ() != 0);
-		}
-		
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
@@ -291,11 +256,6 @@ public abstract class WorldObject
 	
 	public final void spawnMe(int x, int y, int z)
 	{
-		if (Config.ASSERT)
-		{
-			assert getPosition().getWorldRegion() == null;
-		}
-		
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion

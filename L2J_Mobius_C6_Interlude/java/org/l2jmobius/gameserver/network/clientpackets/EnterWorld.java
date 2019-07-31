@@ -550,13 +550,6 @@ public class EnterWorld extends GameClientPacket
 			player.removeSkill(3628, true);
 		}
 		
-		// If it's a Beta server all players got GM SPEED skill for better testing
-		if (Config.BETASERVER)
-		{
-			player.addSkill(SkillTable.getInstance().getInfo(7029, 4), true);
-			player.sendMessage("Server is on Beta mode. Skill Gm Haste 4 added for better testing.");
-		}
-		
 		// Send all skills to char
 		player.sendSkillList();
 		

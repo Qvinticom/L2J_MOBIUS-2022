@@ -339,11 +339,6 @@ public final class WorldRegion
 	 */
 	public void addVisibleObject(WorldObject object)
 	{
-		if (Config.ASSERT)
-		{
-			assert object.getWorldRegion() == this;
-		}
-		
 		if (object == null)
 		{
 			return;
@@ -372,11 +367,6 @@ public final class WorldRegion
 	 */
 	public void removeVisibleObject(WorldObject object)
 	{
-		if (Config.ASSERT)
-		{
-			assert (object.getWorldRegion() == this) || (object.getWorldRegion() == null);
-		}
-		
 		if (object == null)
 		{
 			return;

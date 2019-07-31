@@ -20,7 +20,6 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.WorldObject;
 
 /**
@@ -213,10 +212,6 @@ public final class L2ObjectHashMap<T extends WorldObject>extends L2ObjectMap<T>
 			expand();
 		}
 		final int hashcode = obj.getObjectId();
-		if (Config.ASSERT)
-		{
-			assert hashcode > 0;
-		}
 		int seed = hashcode;
 		final int incr = 1 + (((seed >> 5) + 1) % (_table.length - 1));
 		int ntry = 0;
@@ -254,11 +249,6 @@ public final class L2ObjectHashMap<T extends WorldObject>extends L2ObjectMap<T>
 				if (_table[pos] == obj)
 				{
 					return;
-				}
-				// this should never happen
-				if (Config.ASSERT)
-				{
-					assert obj.getObjectId() != _table[pos].getObjectId();
 				}
 				// if there was no collisions at this slot, and we found a free
 				// slot previously - use found slot
@@ -300,10 +290,6 @@ public final class L2ObjectHashMap<T extends WorldObject>extends L2ObjectMap<T>
 	public synchronized void remove(T obj)
 	{
 		final int hashcode = obj.getObjectId();
-		if (Config.ASSERT)
-		{
-			assert hashcode > 0;
-		}
 		int seed = hashcode;
 		final int incr = 1 + (((seed >> 5) + 1) % (_table.length - 1));
 		int ntry = 0;
@@ -418,10 +404,6 @@ public final class L2ObjectHashMap<T extends WorldObject>extends L2ObjectMap<T>
 				continue;
 			}
 			final int hashcode = _keys[i] & 0x7FFFFFFF;
-			if (Config.ASSERT)
-			{
-				assert hashcode == obj.getObjectId();
-			}
 			int seed = hashcode;
 			final int incr = 1 + (((seed >> 5) + 1) % (newSize - 1));
 			int ntry = 0;
@@ -430,10 +412,6 @@ public final class L2ObjectHashMap<T extends WorldObject>extends L2ObjectMap<T>
 				final int pos = (seed % newSize) & 0x7FFFFFFF;
 				if (newTable[pos] == null)
 				{
-					if (Config.ASSERT)
-					{
-						assert (newKeys[pos] == 0) && (hashcode != 0);
-					}
 					// found an empty slot without previous collisions,
 					// but use previously found slot
 					newKeys[pos] = hashcode;

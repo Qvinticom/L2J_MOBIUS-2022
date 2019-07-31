@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
@@ -196,11 +195,6 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			if (Config.ASSERT)
-			{
-				assert null == getPaperdollItem(PAPERDOLL_LRHAND);
-			}
-			
 			if (item.getItemType() == WeaponType.BOW)
 			{
 				ItemInstance arrow = getPaperdollItem(PAPERDOLL_LHAND);
@@ -232,11 +226,6 @@ public abstract class Inventory extends ItemContainer
 			if (slot != PAPERDOLL_LRHAND)
 			{
 				return;
-			}
-			
-			if (Config.ASSERT)
-			{
-				assert item == getPaperdollItem(PAPERDOLL_LRHAND);
 			}
 			
 			if (item.getItemType() == WeaponType.BOW)
@@ -889,11 +878,6 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public synchronized void addPaperdollListener(PaperdollListener listener)
 	{
-		if (Config.ASSERT)
-		{
-			assert !_paperdollListeners.contains(listener);
-		}
-		
 		_paperdollListeners.add(listener);
 	}
 	

@@ -23,8 +23,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
-
 public class OlympiadLogger
 {
 	private static final Logger LOGGER = Logger.getLogger(OlympiadLogger.class.getName());
@@ -68,16 +66,5 @@ public class OlympiadLogger
 		{
 			add(text, null);
 		}
-	}
-	
-	public static final void Assert(boolean exp, String cmt)
-	{
-		if (exp || !Config.ASSERT)
-		{
-			return;
-		}
-		
-		LOGGER.info("Assertion error [" + cmt + "]");
-		Thread.dumpStack();
 	}
 }

@@ -353,11 +353,6 @@ public final class ItemInstance extends WorldObject
 	 */
 	public int getEquipSlot()
 	{
-		if (Config.ASSERT)
-		{
-			assert (_loc == ItemLocation.PAPERDOLL) || (_loc == ItemLocation.PET_EQUIP) || (_loc == ItemLocation.FREIGHT);
-		}
-		
 		return _locData;
 	}
 	
@@ -1162,11 +1157,6 @@ public final class ItemInstance extends WorldObject
 	 */
 	public final void dropMe(Creature dropper, int x, int y, int z)
 	{
-		if (Config.ASSERT)
-		{
-			assert getPosition().getWorldRegion() == null;
-		}
-		
 		if (Config.PATHFINDING && (dropper != null))
 		{
 			Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
@@ -1207,11 +1197,6 @@ public final class ItemInstance extends WorldObject
 	 */
 	private void updateInDb()
 	{
-		if (Config.ASSERT)
-		{
-			assert _existsInDb;
-		}
-		
 		if (_wear)
 		{
 			return;
@@ -1257,11 +1242,6 @@ public final class ItemInstance extends WorldObject
 			return;
 		}
 		
-		if (Config.ASSERT)
-		{
-			assert !_existsInDb && (getObjectId() != 0);
-		}
-		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,price_sell,price_buy,object_id,custom_type1,custom_type2,mana_left) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -1297,11 +1277,6 @@ public final class ItemInstance extends WorldObject
 		if (_wear)
 		{
 			return;
-		}
-		
-		if (Config.ASSERT)
-		{
-			assert _existsInDb;
 		}
 		
 		// delete augmentation data
@@ -1470,11 +1445,6 @@ public final class ItemInstance extends WorldObject
 	 */
 	public int getLocationSlot()
 	{
-		if (Config.ASSERT)
-		{
-			assert (_loc == ItemLocation.PAPERDOLL) || (_loc == ItemLocation.PET_EQUIP) || (_loc == ItemLocation.FREIGHT) || (_loc == ItemLocation.INVENTORY);
-		}
-		
 		return _locData;
 	}
 	
