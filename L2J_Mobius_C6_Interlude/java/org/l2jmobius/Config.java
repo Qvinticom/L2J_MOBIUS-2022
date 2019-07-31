@@ -34,7 +34,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Random;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ClassMasterSettings;
@@ -213,14 +212,6 @@ public final class Config
 	public static String BACKUP_PATH;
 	public static int BACKUP_DAYS;
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
-	public static boolean RWHO_LOG;
-	public static int RWHO_FORCE_INC;
-	public static int RWHO_KEEP_STAT;
-	public static int RWHO_MAX_ONLINE;
-	public static boolean RWHO_SEND_TRASH;
-	public static int RWHO_ONLINE_INCREMENT;
-	public static float RWHO_PRIV_STORE_FACTOR;
-	public static int RWHO_ARRAY[] = new int[13];
 	
 	public static boolean IS_TELNET_ENABLED;
 	
@@ -1358,37 +1349,6 @@ public final class Config
 			
 			DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
 			SCRIPT_ROOT = new File(serverSettings.getProperty("ScriptRoot", "./data/scripts").replaceAll("\\\\", "/")).getCanonicalFile();
-			
-			final Random ppc = new Random();
-			int z = ppc.nextInt(6);
-			if (z == 0)
-			{
-				z += 2;
-			}
-			for (int x = 0; x < 8; x++)
-			{
-				if (x == 4)
-				{
-					RWHO_ARRAY[x] = 44;
-				}
-				else
-				{
-					RWHO_ARRAY[x] = 51 + ppc.nextInt(z);
-				}
-			}
-			RWHO_ARRAY[11] = 37265 + ppc.nextInt((z * 2) + 3);
-			RWHO_ARRAY[8] = 51 + ppc.nextInt(z);
-			z = 36224 + ppc.nextInt(z * 2);
-			RWHO_ARRAY[9] = z;
-			RWHO_ARRAY[10] = z;
-			RWHO_ARRAY[12] = 1;
-			RWHO_LOG = Boolean.parseBoolean(serverSettings.getProperty("RemoteWhoLog", "false"));
-			RWHO_SEND_TRASH = Boolean.parseBoolean(serverSettings.getProperty("RemoteWhoSendTrash", "false"));
-			RWHO_MAX_ONLINE = Integer.parseInt(serverSettings.getProperty("RemoteWhoMaxOnline", "0"));
-			RWHO_KEEP_STAT = Integer.parseInt(serverSettings.getProperty("RemoteOnlineKeepStat", "5"));
-			RWHO_ONLINE_INCREMENT = Integer.parseInt(serverSettings.getProperty("RemoteOnlineIncrement", "0"));
-			RWHO_PRIV_STORE_FACTOR = Float.parseFloat(serverSettings.getProperty("RemotePrivStoreFactor", "0"));
-			RWHO_FORCE_INC = Integer.parseInt(serverSettings.getProperty("RemoteWhoForceInc", "0"));
 		}
 		catch (Exception e)
 		{

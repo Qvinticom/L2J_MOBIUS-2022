@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
-import org.l2jmobius.gameserver.network.serverpackets.SendStatus;
 
 public final class ProtocolVersion extends GameClientPacket
 {
@@ -37,21 +36,7 @@ public final class ProtocolVersion extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// this packet is never encrypted
-		if ((_version == 65534) || (_version == -2)) // Ping
-		{
-			getClient().close((GameServerPacket) null);
-		}
-		else if ((_version == 65533) || (_version == -3)) // RWHO
-		{
-			if (Config.RWHO_LOG)
-			{
-				LOGGER.info(getClient() + " RWHO received");
-			}
-			
-			getClient().close(new SendStatus());
-		}
-		else if ((_version < Config.MIN_PROTOCOL_REVISION) || (_version > Config.MAX_PROTOCOL_REVISION))
+		if ((_version < Config.MIN_PROTOCOL_REVISION) || (_version > Config.MAX_PROTOCOL_REVISION))
 		{
 			LOGGER.info("Client: " + getClient() + " -> Protocol Revision: " + _version + " is invalid. Minimum is " + Config.MIN_PROTOCOL_REVISION + " and Maximum is " + Config.MAX_PROTOCOL_REVISION + " are supported. Closing connection.");
 			LOGGER.warning("Wrong Protocol Version " + _version);
@@ -59,8 +44,7 @@ public final class ProtocolVersion extends GameClientPacket
 		}
 		else
 		{
-			final KeyPacket pk = new KeyPacket(getClient().enableCrypt());
-			getClient().sendPacket(pk);
+			getClient().sendPacket(new KeyPacket(getClient().enableCrypt()));
 		}
 	}
 }
