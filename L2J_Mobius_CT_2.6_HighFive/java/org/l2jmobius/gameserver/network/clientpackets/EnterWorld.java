@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.SevenSigns;
@@ -172,41 +173,44 @@ public class EnterWorld implements IClientIncomingPacket
 		// Apply special GM properties to the GM when entering
 		if (player.isGM())
 		{
-			gmStartupProcess:
+			ThreadPool.schedule(() -> // Needs a small delay.
 			{
-				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
+				gmStartupProcess:
 				{
-					BuilderUtil.setHiding(player, true);
+					if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
+					{
+						BuilderUtil.setHiding(player, true);
+						
+						BuilderUtil.sendSysMessage(player, "hide is default for builder.");
+						BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
+						BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
+						
+						// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+						break gmStartupProcess;
+					}
 					
-					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
-					BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
-					BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
+					if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
+					{
+						player.setIsInvul(true);
+					}
 					
-					// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-					break gmStartupProcess;
+					if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
+					{
+						player.setInvisible(true);
+					}
+					
+					if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
+					{
+						player.setSilenceMode(true);
+					}
+					
+					if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", player.getAccessLevel()))
+					{
+						player.setDietMode(true);
+						player.refreshOverloaded();
+					}
 				}
-				
-				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
-				{
-					player.setIsInvul(true);
-				}
-				
-				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
-				{
-					player.setInvisible(true);
-				}
-				
-				if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
-				{
-					player.setSilenceMode(true);
-				}
-				
-				if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", player.getAccessLevel()))
-				{
-					player.setDietMode(true);
-					player.refreshOverloaded();
-				}
-			}
+			}, 15);
 			
 			if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
 			{
