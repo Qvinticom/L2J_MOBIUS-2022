@@ -166,7 +166,7 @@ public class NpcInfo extends GameServerPacket
 		
 		if (_creature instanceof Summon)
 		{
-			if ((((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().getInvisible())
+			if ((((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible())
 			{
 				return;
 			}

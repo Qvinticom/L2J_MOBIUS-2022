@@ -90,7 +90,7 @@ public final class Action extends GameClientPacket
 		}
 		
 		// Only GMs can directly interact with invisible characters
-		if ((obj instanceof PlayerInstance) && (((PlayerInstance) obj).getAppearance().getInvisible()) && !player.isGM())
+		if ((obj instanceof PlayerInstance) && (((PlayerInstance) obj).getAppearance().isInvisible()) && !player.isGM())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;

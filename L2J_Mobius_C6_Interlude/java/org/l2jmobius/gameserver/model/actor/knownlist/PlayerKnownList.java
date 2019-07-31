@@ -261,12 +261,12 @@ public class PlayerKnownList extends PlayableKnownList
 		if ((object_char != null) && !active_char.isGM())
 		{ // GM has to receive remove however because he can see any invisible or inobservermode player
 			
-			if (!object_char.getAppearance().getInvisible() && !object_char.inObserverMode())
+			if (!object_char.getAppearance().isInvisible() && !object_char.inObserverMode())
 			{
 				// Send Server-Client Packet DeleteObject to the PlayerInstance
 				active_char.sendPacket(new DeleteObject(object));
 			}
-			else if (object_char.isGM() && object_char.getAppearance().getInvisible() && !object_char.isTeleporting())
+			else if (object_char.isGM() && object_char.getAppearance().isInvisible() && !object_char.isTeleporting())
 			{
 				// Send Server-Client Packet DeleteObject to the PlayerInstance
 				active_char.sendPacket(new DeleteObject(object));

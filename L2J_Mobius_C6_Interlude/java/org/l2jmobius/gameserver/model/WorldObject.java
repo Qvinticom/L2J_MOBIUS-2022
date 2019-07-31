@@ -44,10 +44,10 @@ public abstract class WorldObject
 {
 	private final Logger LOGGER = Logger.getLogger(WorldObject.class.getName());
 	
-	private boolean _isVisible; // Object visibility
+	private boolean _visible;
 	private WorldObjectKnownList _knownList;
 	private String _name;
-	private int _objectId; // Object identifier
+	private int _objectId;
 	private ObjectPoly _poly;
 	private ObjectPosition _position;
 	
@@ -144,7 +144,7 @@ public abstract class WorldObject
 	public final void decayMe()
 	{
 		// Remove the WorldObject from the world
-		_isVisible = false;
+		_visible = false;
 		World.getInstance().removeVisibleObject(this, getPosition().getWorldRegion());
 		World.getInstance().removeObject(this);
 		getPosition().setWorldRegion(null);
@@ -186,7 +186,7 @@ public abstract class WorldObject
 		
 		synchronized (this)
 		{
-			_isVisible = false;
+			_visible = false;
 			getPosition().setWorldRegion(null);
 		}
 		
@@ -237,7 +237,7 @@ public abstract class WorldObject
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
-			_isVisible = true;
+			_visible = true;
 			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
 			
 			// Add the WorldObject spawn in the _allobjects of World
@@ -259,7 +259,7 @@ public abstract class WorldObject
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
-			_isVisible = true;
+			_visible = true;
 			
 			if (x > World.MAP_MAX_X)
 			{
@@ -325,16 +325,16 @@ public abstract class WorldObject
 	 * <BR>
 	 * @return the visibility state of the WorldObject.
 	 */
-	public final boolean isVisible()
+	public boolean isVisible()
 	{
 		return getPosition().getWorldRegion() != null;
 	}
 	
-	public final void setIsVisible(boolean value)
+	public void setVisible(boolean value)
 	{
-		_isVisible = value;
+		_visible = value;
 		
-		if (!_isVisible)
+		if (!_visible)
 		{
 			getPosition().setWorldRegion(null);
 		}
@@ -414,7 +414,7 @@ public abstract class WorldObject
 		_instanceId = instanceId;
 		
 		// If we change it for visible objects, me must clear & revalidates knownlists
-		if (_isVisible && (_knownList != null))
+		if (_visible && (_knownList != null))
 		{
 			if (this instanceof PlayerInstance)
 			{

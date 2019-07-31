@@ -12368,7 +12368,7 @@ public final class PlayerInstance extends Playable
 		setIsParalyzed(true);
 		setIsInvul(true);
 		
-		_wasInvisible = getAppearance().getInvisible();
+		_wasInvisible = getAppearance().isInvisible();
 		getAppearance().setInvisible();
 		
 		sendPacket(new ObservationMode(x, y, z));
@@ -12418,7 +12418,7 @@ public final class PlayerInstance extends Playable
 		_observerMode = true;
 		setTarget(null);
 		setIsInvul(true);
-		_wasInvisible = getAppearance().getInvisible();
+		_wasInvisible = getAppearance().isInvisible();
 		getAppearance().setInvisible();
 		
 		teleToLocation(x, y, z, false);
@@ -14013,7 +14013,7 @@ public final class PlayerInstance extends Playable
 				sendMessage("Entering world in Invulnerable mode.");
 			}
 			
-			if (getAppearance().getInvisible())
+			if (getAppearance().isInvisible())
 			{
 				sendMessage("Entering world in Invisible mode.");
 			}

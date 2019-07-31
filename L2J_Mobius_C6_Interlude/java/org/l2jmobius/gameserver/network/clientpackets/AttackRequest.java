@@ -92,7 +92,7 @@ public final class AttackRequest extends GameClientPacket
 		}
 		
 		// Only GMs can directly attack invisible characters
-		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).getAppearance().getInvisible() && !player.isGM())
+		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).getAppearance().isInvisible() && !player.isGM())
 		{
 			return;
 		}

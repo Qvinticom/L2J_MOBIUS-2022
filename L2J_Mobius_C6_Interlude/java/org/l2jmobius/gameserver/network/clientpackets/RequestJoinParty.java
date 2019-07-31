@@ -94,7 +94,7 @@ public final class RequestJoinParty extends GameClientPacket
 			return;
 		}
 		
-		if (target.isGM() && target.getAppearance().getInvisible())
+		if (target.isGM() && target.getAppearance().isInvisible())
 		{
 			requestor.sendMessage("You can't invite GM in invisible mode.");
 			return;

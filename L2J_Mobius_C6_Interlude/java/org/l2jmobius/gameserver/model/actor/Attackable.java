@@ -1210,7 +1210,7 @@ public class Attackable extends NpcInstance
 			return 0;
 		}
 		
-		if ((ai._attacker instanceof PlayerInstance) && (((PlayerInstance) ai._attacker).getAppearance().getInvisible() || ((PlayerInstance) ai._attacker).isSpawnProtected() || ((PlayerInstance) ai._attacker).isTeleportProtected() || ai._attacker.isInvul()))
+		if ((ai._attacker instanceof PlayerInstance) && (((PlayerInstance) ai._attacker).getAppearance().isInvisible() || ((PlayerInstance) ai._attacker).isSpawnProtected() || ((PlayerInstance) ai._attacker).isTeleportProtected() || ai._attacker.isInvul()))
 		{
 			// Remove Object Should Use This Method and Can be Blocked While iterating
 			_aggroList.remove(target);

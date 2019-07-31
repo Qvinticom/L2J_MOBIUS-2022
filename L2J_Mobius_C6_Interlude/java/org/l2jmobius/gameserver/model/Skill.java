@@ -1685,7 +1685,7 @@ public abstract class Skill
 							{
 								continue;
 							}
-							if (((PlayerInstance) obj).getAppearance().getInvisible())
+							if (((PlayerInstance) obj).getAppearance().isInvisible())
 							{
 								continue;
 							}
@@ -1867,7 +1867,7 @@ public abstract class Skill
 								{
 									continue;
 								}
-								if (((PlayerInstance) obj).getAppearance().getInvisible())
+								if (((PlayerInstance) obj).getAppearance().isInvisible())
 								{
 									continue;
 								}

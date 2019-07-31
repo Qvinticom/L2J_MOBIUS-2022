@@ -70,7 +70,7 @@ public final class Broadcast
 			}
 			
 			// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
-			if ((creature instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) creature).getAppearance().getInvisible() || ((PlayerInstance) creature).inObserverMode()))
+			if ((creature instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) creature).getAppearance().isInvisible() || ((PlayerInstance) creature).inObserverMode()))
 			{
 				return;
 			}

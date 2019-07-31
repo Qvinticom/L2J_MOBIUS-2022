@@ -141,7 +141,7 @@ public class ItemsOnGroundManager
 					item.setProtected(false);
 				}
 				
-				item.setIsVisible(true);
+				item.setVisible(true);
 				World.getInstance().addVisibleObject(item, item.getPosition().getWorldRegion(), null);
 				_items.add(item);
 				count++;

@@ -248,7 +248,7 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.isGM() ? 1 : 0); // builder level
 		
 		String title = _player.getTitle();
-		if (_player.getAppearance().getInvisible() && _player.isGM())
+		if (_player.getAppearance().isInvisible() && _player.isGM())
 		{
 			title = "[Invisible]";
 		}
@@ -284,7 +284,7 @@ public class UserInfo extends GameServerPacket
 		
 		writeC(_player.isInPartyMatchRoom() ? 1 : 0);
 		
-		if (_player.getAppearance().getInvisible())
+		if (_player.getAppearance().isInvisible())
 		{
 			writeD((_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH));
 		}

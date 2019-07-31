@@ -125,7 +125,7 @@ public class ObjectPosition
 		}
 		
 		setWorldPosition(x, y, z);
-		_activeObject.setIsVisible(false);
+		_activeObject.setVisible(false);
 	}
 	
 	/**

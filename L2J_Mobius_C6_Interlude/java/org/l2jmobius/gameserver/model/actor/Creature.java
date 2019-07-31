@@ -455,7 +455,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (player != null)
 			{
-				if ((this instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) this).getAppearance().getInvisible() || ((PlayerInstance) this).inObserverMode()))
+				if ((this instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) this).getAppearance().isInvisible() || ((PlayerInstance) this).inObserverMode()))
 				{
 					return;
 				}
