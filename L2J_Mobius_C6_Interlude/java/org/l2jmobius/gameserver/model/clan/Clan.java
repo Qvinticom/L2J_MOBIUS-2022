@@ -1689,13 +1689,11 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("INSERT INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE privs = ?");
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
 				statement.setInt(4, privs);
-				statement.setInt(5, privs);
-				
 				statement.execute();
 				statement.close();
 			}
@@ -1726,7 +1724,7 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("INSERT INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)");
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
