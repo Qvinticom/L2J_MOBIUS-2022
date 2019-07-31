@@ -1023,7 +1023,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="true" />	
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9823" level="1" /> <!-- Escort's Supply Box -->
+		</skills>
 	</item>
 	<item id="36395" name="Golden Chest (Reward)" type="EtcItem">
 		<!-- You can get a gift that Amadeo Cadmus, the king of Aden, prepared for your return. You can sometimes get a Luminous Golden Chest. -->
