@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @version $Revision: 1.21.2.5.2.7 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class World
+public class World
 {
 	private static Logger LOGGER = Logger.getLogger(World.class.getName());
 	
@@ -220,7 +220,7 @@ public final class World
 	 * Added by Tempy - 08 Aug 05 Allows easy retrevial of all visible objects in world. -- do not use that fucntion, its unsafe!
 	 * @return the all visible objects
 	 */
-	public final L2ObjectMap<WorldObject> getAllVisibleObjects()
+	public L2ObjectMap<WorldObject> getAllVisibleObjects()
 	{
 		return _allObjects;
 	}
@@ -230,7 +230,7 @@ public final class World
 	 * <br>
 	 * @return count off all World objects
 	 */
-	public final int getAllVisibleObjectsCount()
+	public int getAllVisibleObjectsCount()
 	{
 		return _allObjects.size();
 	}

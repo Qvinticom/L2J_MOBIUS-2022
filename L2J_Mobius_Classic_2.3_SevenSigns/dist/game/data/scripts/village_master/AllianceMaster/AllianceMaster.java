@@ -24,7 +24,7 @@ import ai.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-public final class AllianceMaster extends AbstractNpcAI
+public class AllianceMaster extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Targeting disable effect implementation. When affected, player will lose target and be unable to target for the duration.
  * @author Nik
  */
-public final class DisableTargeting extends AbstractEffect
+public class DisableTargeting extends AbstractEffect
 {
 	public DisableTargeting(StatsSet params)
 	{

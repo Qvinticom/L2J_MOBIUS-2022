@@ -32,7 +32,7 @@ import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
  * @URL https://l2wiki.com/The_Origin_of_Monsters
  * @author Gigi
  */
-public final class Q10444_TheOriginOfMonsters extends Quest
+public class Q10444_TheOriginOfMonsters extends Quest
 {
 	// NPCs
 	private static final int PARAJAN = 33842;

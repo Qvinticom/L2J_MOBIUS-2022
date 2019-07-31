@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Traces of Evil (268)
  * @author xban1x
  */
-public final class Q00268_TracesOfEvil extends Quest
+public class Q00268_TracesOfEvil extends Quest
 {
 	// NPC
 	private static final int KUNAI = 30559;

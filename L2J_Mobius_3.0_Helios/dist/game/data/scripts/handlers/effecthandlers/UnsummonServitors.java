@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Unsummon my servitors effect implementation.
  * @author Nik
  */
-public final class UnsummonServitors extends AbstractEffect
+public class UnsummonServitors extends AbstractEffect
 {
 	public UnsummonServitors(StatsSet params)
 	{

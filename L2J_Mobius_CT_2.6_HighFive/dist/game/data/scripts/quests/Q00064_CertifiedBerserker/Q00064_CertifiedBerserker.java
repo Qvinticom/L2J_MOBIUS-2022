@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Certified Berserker (64)
  * @author ivantotov
  */
-public final class Q00064_CertifiedBerserker extends Quest
+public class Q00064_CertifiedBerserker extends Quest
 {
 	// NPCs
 	private static final int MASTER_ENTIENS = 32200;

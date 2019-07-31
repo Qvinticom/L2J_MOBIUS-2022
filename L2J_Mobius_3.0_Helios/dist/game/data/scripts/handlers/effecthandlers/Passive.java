@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Passive effect implementation.
  * @author Mobius
  */
-public final class Passive extends AbstractEffect
+public class Passive extends AbstractEffect
 {
 	public Passive(StatsSet params)
 	{

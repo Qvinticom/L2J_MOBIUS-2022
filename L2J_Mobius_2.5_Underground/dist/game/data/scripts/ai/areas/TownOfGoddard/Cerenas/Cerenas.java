@@ -27,7 +27,7 @@ import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
  * Cerenas AI.
  * @author Gladicek
  */
-public final class Cerenas extends AbstractNpcAI
+public class Cerenas extends AbstractNpcAI
 {
 	// NPC
 	private static final int CERENAS = 31281;

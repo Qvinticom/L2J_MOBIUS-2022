@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Method to Raise the Dead (345)
  * @author Adry_85
  */
-public final class Q00345_MethodToRaiseTheDead extends Quest
+public class Q00345_MethodToRaiseTheDead extends Quest
 {
 	// NPCs
 	private static final int XENOVIA = 30912;

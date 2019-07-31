@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestDropItem extends GameClientPacket
+public class RequestDropItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestDropItem.class.getName());
 	

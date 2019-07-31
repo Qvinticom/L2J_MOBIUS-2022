@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Client packet for setting/deleting clan crest.
  */
-public final class RequestSetPledgeCrest implements IClientIncomingPacket
+public class RequestSetPledgeCrest implements IClientIncomingPacket
 {
 	private int _length;
 	private byte[] _data = null;

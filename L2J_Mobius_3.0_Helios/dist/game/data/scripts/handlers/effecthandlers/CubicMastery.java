@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public final class CubicMastery extends AbstractStatAddEffect
+public class CubicMastery extends AbstractStatAddEffect
 {
 	public CubicMastery(StatsSet params)
 	{

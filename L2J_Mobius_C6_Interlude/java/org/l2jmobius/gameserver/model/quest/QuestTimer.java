@@ -121,38 +121,38 @@ public class QuestTimer
 		return (npc == _npc) && (player == _player);
 	}
 	
-	public final boolean getIsActive()
+	public boolean getIsActive()
 	{
 		return _isActive;
 	}
 	
-	public final boolean getIsRepeating()
+	public boolean getIsRepeating()
 	{
 		return _isRepeating;
 	}
 	
-	public final Quest getQuest()
+	public Quest getQuest()
 	{
 		return _quest;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final NpcInstance getNpc()
+	public NpcInstance getNpc()
 	{
 		return _npc;
 	}
 	
-	public final PlayerInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return _name;
 	}

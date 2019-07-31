@@ -39,27 +39,27 @@ public class ListContainer
 		_listId = listId;
 	}
 	
-	public final List<Entry> getEntries()
+	public List<Entry> getEntries()
 	{
 		return _entries;
 	}
 	
-	public final int getListId()
+	public int getListId()
 	{
 		return _listId;
 	}
 	
-	public final void setApplyTaxes(boolean applyTaxes)
+	public void setApplyTaxes(boolean applyTaxes)
 	{
 		_applyTaxes = applyTaxes;
 	}
 	
-	public final boolean getApplyTaxes()
+	public boolean getApplyTaxes()
 	{
 		return _applyTaxes;
 	}
 	
-	public final void setMaintainEnchantment(boolean maintainEnchantment)
+	public void setMaintainEnchantment(boolean maintainEnchantment)
 	{
 		_maintainEnchantment = maintainEnchantment;
 	}
@@ -79,7 +79,7 @@ public class ListContainer
 		_useRate = rate;
 	}
 	
-	public final boolean getMaintainEnchantment()
+	public boolean getMaintainEnchantment()
 	{
 		return _maintainEnchantment;
 	}

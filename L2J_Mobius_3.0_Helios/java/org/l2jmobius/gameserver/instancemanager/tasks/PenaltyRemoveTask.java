@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
  * Handys Block Checker penalty remove.
  * @author xban1x
  */
-public final class PenaltyRemoveTask implements Runnable
+public class PenaltyRemoveTask implements Runnable
 {
 	private final int _objectId;
 	

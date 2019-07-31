@@ -256,7 +256,7 @@ public enum ClassId implements IIdentifiable
 	 * @return the ID of the class
 	 */
 	@Override
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -264,7 +264,7 @@ public enum ClassId implements IIdentifiable
 	/**
 	 * @return {code true} if the class is a mage class.
 	 */
-	public final boolean isMage()
+	public boolean isMage()
 	{
 		return _isMage;
 	}
@@ -272,7 +272,7 @@ public enum ClassId implements IIdentifiable
 	/**
 	 * @return {code true} if the class is a summoner class.
 	 */
-	public final boolean isSummoner()
+	public boolean isSummoner()
 	{
 		return _isSummoner;
 	}
@@ -280,7 +280,7 @@ public enum ClassId implements IIdentifiable
 	/**
 	 * @return the Race object of the class.
 	 */
-	public final Race getRace()
+	public Race getRace()
 	{
 		return _race;
 	}
@@ -289,7 +289,7 @@ public enum ClassId implements IIdentifiable
 	 * @param cid the parent ClassId to check.
 	 * @return {code true} if this Class is a child of the selected ClassId.
 	 */
-	public final boolean childOf(ClassId cid)
+	public boolean childOf(ClassId cid)
 	{
 		if (_parent == null)
 		{
@@ -308,7 +308,7 @@ public enum ClassId implements IIdentifiable
 	 * @param cid the parent ClassId to check.
 	 * @return {code true} if this Class is equal to the selected ClassId or a child of the selected ClassId.
 	 */
-	public final boolean equalsOrChildOf(ClassId cid)
+	public boolean equalsOrChildOf(ClassId cid)
 	{
 		return (this == cid) || childOf(cid);
 	}
@@ -316,7 +316,7 @@ public enum ClassId implements IIdentifiable
 	/**
 	 * @return the child level of this Class (0=root, 1=child leve 1...)
 	 */
-	public final int level()
+	public int level()
 	{
 		if (_parent == null)
 		{
@@ -329,12 +329,12 @@ public enum ClassId implements IIdentifiable
 	/**
 	 * @return its parent Class Id
 	 */
-	public final ClassId getParent()
+	public ClassId getParent()
 	{
 		return _parent;
 	}
 	
-	public final ClassId getRootClassId()
+	public ClassId getRootClassId()
 	{
 		if (_parent != null)
 		{

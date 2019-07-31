@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  * Trap instance.
  * @author Zoey76
  */
-public final class TrapInstance extends Npc
+public class TrapInstance extends Npc
 {
 	private static final int TICK = 1000; // 1s
 	private boolean _hasLifeTime;

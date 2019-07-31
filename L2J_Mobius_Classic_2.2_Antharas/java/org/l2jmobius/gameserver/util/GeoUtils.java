@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 /**
  * @author HorridoJoho
  */
-public final class GeoUtils
+public class GeoUtils
 {
 	public static void debug2DLine(PlayerInstance player, int x, int y, int tx, int ty, int z)
 	{

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Magical Soul Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalSoulAttack extends AbstractEffect
+public class MagicalSoulAttack extends AbstractEffect
 {
 	public MagicalSoulAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

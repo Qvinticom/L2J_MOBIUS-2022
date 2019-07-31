@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class AuctioneerInstance extends FolkInstance
+public class AuctioneerInstance extends FolkInstance
 {
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;

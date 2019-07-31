@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Typhoon's AI.
  * @author GKR
  */
-public final class Typhoon extends AbstractNpcAI
+public class Typhoon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TYPHOON = 25539;
@@ -48,7 +48,7 @@ public final class Typhoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("CAST") && (npc != null) && !npc.isDead())
 		{
@@ -66,7 +66,7 @@ public final class Typhoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("CAST", 5000, npc, null);
 		return super.onSpawn(npc);

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class AskJoinPledge implements IClientOutgoingPacket
+public class AskJoinPledge implements IClientOutgoingPacket
 {
 	private final PlayerInstance _requestor;
 	private final int _pledgeType;

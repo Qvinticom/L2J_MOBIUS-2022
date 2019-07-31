@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Summon Npc effect implementation.
  * @author Zoey76
  */
-public final class SummonNpc extends AbstractEffect
+public class SummonNpc extends AbstractEffect
 {
 	private int _despawnDelay;
 	private final int _npcId;

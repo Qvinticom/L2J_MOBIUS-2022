@@ -35,32 +35,32 @@ public class ObjectPoly
 		setPolyType(polyType);
 	}
 	
-	public final WorldObject getActiveObject()
+	public WorldObject getActiveObject()
 	{
 		return _activeObject;
 	}
 	
-	public final boolean isMorphed()
+	public boolean isMorphed()
 	{
 		return _polyType != null;
 	}
 	
-	public final int getPolyId()
+	public int getPolyId()
 	{
 		return _polyId;
 	}
 	
-	public final void setPolyId(int value)
+	public void setPolyId(int value)
 	{
 		_polyId = value;
 	}
 	
-	public final String getPolyType()
+	public String getPolyType()
 	{
 		return _polyType;
 	}
 	
-	public final void setPolyType(String value)
+	public void setPolyType(String value)
 	{
 		_polyType = value;
 	}

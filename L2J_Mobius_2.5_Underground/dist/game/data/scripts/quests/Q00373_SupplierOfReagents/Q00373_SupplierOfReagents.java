@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Supplier of Reagents (373)
  * @author Joxit
  */
-public final class Q00373_SupplierOfReagents extends Quest
+public class Q00373_SupplierOfReagents extends Quest
 {
 	// NPCs
 	private static final int WESLEY = 30166;

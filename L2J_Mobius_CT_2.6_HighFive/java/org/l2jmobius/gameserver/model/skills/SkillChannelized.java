@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 /**
  * @author UnAfraid
  */
-public final class SkillChannelized
+public class SkillChannelized
 {
 	private final Map<Integer, Map<Integer, Creature>> _channelizers = new ConcurrentHashMap<>();
 	

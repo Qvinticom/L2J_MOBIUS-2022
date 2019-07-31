@@ -44,7 +44,7 @@ import instances.AbstractInstance;
  * Urban Area instance zone.
  * @author GKR
  */
-public final class UrbanArea extends AbstractInstance
+public class UrbanArea extends AbstractInstance
 {
 	// NPCs
 	private static final int TOMBSTONE = 32343;
@@ -91,7 +91,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (!npc.isAffectedBySkill(STONE.getSkillId()))
 		{
@@ -170,7 +170,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -219,7 +219,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == DOWNTOWN_NATIVE)
 		{

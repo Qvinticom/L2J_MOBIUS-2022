@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestSurrenderPledgeWar extends GameClientPacket
+public class RequestSurrenderPledgeWar extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestSurrenderPledgeWar.class.getName());
 	

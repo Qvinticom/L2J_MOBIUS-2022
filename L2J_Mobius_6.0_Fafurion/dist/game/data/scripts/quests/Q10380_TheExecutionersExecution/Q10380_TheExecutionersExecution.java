@@ -35,7 +35,7 @@ import quests.Q10379_AnUninvitedGuest.Q10379_AnUninvitedGuest;
  * @URL https://l2wiki.com/The_Executioner%27s_Execution
  * @author Gigi
  */
-public final class Q10380_TheExecutionersExecution extends Quest
+public class Q10380_TheExecutionersExecution extends Quest
 {
 	// NPCs
 	private static final int ENDRIGO = 30632;

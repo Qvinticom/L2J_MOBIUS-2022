@@ -32,7 +32,7 @@ import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
  * Free Spirit (10764)
  * @author malyelfik
  */
-public final class Q10764_FreeSpirit extends Quest
+public class Q10764_FreeSpirit extends Quest
 {
 	// NPC
 	private static final int VORBOS = 33966;

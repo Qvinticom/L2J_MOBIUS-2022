@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of Witchcraft (229)
  * @author ivantotov
  */
-public final class Q00229_TestOfWitchcraft extends Quest
+public class Q00229_TestOfWitchcraft extends Quest
 {
 	// NPCs
 	private static final int GROCER_LARA = 30063;

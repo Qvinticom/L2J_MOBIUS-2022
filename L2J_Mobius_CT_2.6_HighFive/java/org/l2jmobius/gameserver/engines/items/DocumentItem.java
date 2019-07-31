@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase
+public class DocumentItem extends DocumentBase
 {
 	private ItemDataHolder _currentItem = null;
 	private final List<Item> _itemsInFile = new ArrayList<>();

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * HP Drain effect implementation.
  * @author Adry_85
  */
-public final class HpDrain extends AbstractEffect
+public class HpDrain extends AbstractEffect
 {
 	private final double _power;
 	

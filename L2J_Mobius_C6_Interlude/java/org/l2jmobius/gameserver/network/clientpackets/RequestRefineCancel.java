@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
  * Format(ch) d
  * @author -Wooden-
  */
-public final class RequestRefineCancel extends GameClientPacket
+public class RequestRefineCancel extends GameClientPacket
 {
 	private int _targetItemObjId;
 	

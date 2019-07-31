@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * The Hidden Veins (293)
  * @author xban1x
  */
-public final class Q00293_TheHiddenVeins extends Quest
+public class Q00293_TheHiddenVeins extends Quest
 {
 	// NPCs
 	private static final int FILAUR = 30535;

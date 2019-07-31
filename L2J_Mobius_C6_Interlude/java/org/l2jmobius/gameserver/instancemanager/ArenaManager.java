@@ -54,7 +54,7 @@ public class ArenaManager
 		_arenas.add(arena);
 	}
 	
-	public final ArenaZone getArena(Creature creature)
+	public ArenaZone getArena(Creature creature)
 	{
 		if (_arenas != null)
 		{
@@ -70,7 +70,7 @@ public class ArenaManager
 		return null;
 	}
 	
-	public final ArenaZone getArena(int x, int y, int z)
+	public ArenaZone getArena(int x, int y, int z)
 	{
 		if (_arenas != null)
 		{

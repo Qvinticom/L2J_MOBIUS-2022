@@ -33,7 +33,7 @@ import ai.areas.FaeronVillage.RemembranceTower.RemembranceTower;
  * Never Forget (10740)
  * @author Sdw
  */
-public final class Q10740_NeverForget extends Quest
+public class Q10740_NeverForget extends Quest
 {
 	// NPCs
 	private static final int SIVANTHE = 33951;

@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Sebion AI.
  * @author Gladicek
  */
-public final class Sebion extends AbstractNpcAI
+public class Sebion extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SEBION = 32978;

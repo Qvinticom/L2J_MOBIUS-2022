@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.interfaces.IUniqueId;
 /**
  * @author xban1x
  */
-public final class AbsorberInfo implements IUniqueId
+public class AbsorberInfo implements IUniqueId
 {
 	private int _objectId;
 	private double _absorbedHp;
@@ -54,13 +54,13 @@ public final class AbsorberInfo implements IUniqueId
 	}
 	
 	@Override
-	public final boolean equals(Object obj)
+	public boolean equals(Object obj)
 	{
 		return (this == obj) || ((obj instanceof AbsorberInfo) && (((AbsorberInfo) obj).getObjectId() == _objectId));
 	}
 	
 	@Override
-	public final int hashCode()
+	public int hashCode()
 	{
 		return _objectId;
 	}

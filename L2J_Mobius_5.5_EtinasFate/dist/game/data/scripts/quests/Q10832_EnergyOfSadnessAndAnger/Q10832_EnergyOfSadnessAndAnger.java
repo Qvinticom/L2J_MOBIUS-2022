@@ -36,7 +36,7 @@ import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
  * @URL https://l2wiki.com/Energy_of_Sadness_and_Anger
  * @author Gigi
  */
-public final class Q10832_EnergyOfSadnessAndAnger extends Quest
+public class Q10832_EnergyOfSadnessAndAnger extends Quest
 {
 	// NPC
 	private static final int BELAS = 34056;

@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Area Skill Npc AI.
  * @author St3eT
  */
-public final class AreaSkillNpc extends AbstractNpcAI
+public class AreaSkillNpc extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] BASIC = // area_skill_npc

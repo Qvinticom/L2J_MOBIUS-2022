@@ -244,7 +244,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Gets the quest timers.
 	 * @return the quest timers
 	 */
-	public final Map<String, List<QuestTimer>> getQuestTimers()
+	public Map<String, List<QuestTimer>> getQuestTimers()
 	{
 		if (_questTimers == null)
 		{
@@ -404,7 +404,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param isSummon if {@code true}, the attack was actually made by the player's summon
 	 * @param skill the skill used to attack the NPC (can be null)
 	 */
-	public final void notifyAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public void notifyAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		String res = null;
 		try
@@ -424,7 +424,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param victim the character that was killed by the {@code killer}
 	 * @param qs the quest state object of the player to be notified of this event
 	 */
-	public final void notifyDeath(Creature killer, Creature victim, QuestState qs)
+	public void notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
 		try
@@ -443,7 +443,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param item
 	 * @param player
 	 */
-	public final void notifyItemUse(Item item, PlayerInstance player)
+	public void notifyItemUse(Item item, PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -463,7 +463,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param player
 	 * @param skill
 	 */
-	public final void notifySpellFinished(Npc instance, PlayerInstance player, Skill skill)
+	public void notifySpellFinished(Npc instance, PlayerInstance player, Skill skill)
 	{
 		String res = null;
 		try
@@ -484,7 +484,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param trigger the character which makes effect on the trap
 	 * @param action 0: trap casting its skill. 1: trigger detects the trap. 2: trigger removes the trap
 	 */
-	public final void notifyTrapAction(TrapInstance trap, Creature trigger, TrapAction action)
+	public void notifyTrapAction(TrapInstance trap, Creature trigger, TrapAction action)
 	{
 		String res = null;
 		try
@@ -509,7 +509,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc the spawned NPC
 	 */
-	public final void notifySpawn(Npc npc)
+	public void notifySpawn(Npc npc)
 	{
 		try
 		{
@@ -524,7 +524,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc the teleport NPC
 	 */
-	public final void notifyTeleport(Npc npc)
+	public void notifyTeleport(Npc npc)
 	{
 		try
 		{
@@ -541,7 +541,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param npc
 	 * @param player
 	 */
-	public final void notifyEvent(String event, Npc npc, PlayerInstance player)
+	public void notifyEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -559,7 +559,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param player the player entering the world
 	 */
-	public final void notifyEnterWorld(PlayerInstance player)
+	public void notifyEnterWorld(PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -579,7 +579,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param killer
 	 * @param isSummon
 	 */
-	public final void notifyKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public void notifyKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		String res = null;
 		try
@@ -598,7 +598,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param npc
 	 * @param player
 	 */
-	public final void notifyTalk(Npc npc, PlayerInstance player)
+	public void notifyTalk(Npc npc, PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -628,7 +628,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param npc the NPC whose dialogs to override
 	 * @param player the player talking to the NPC
 	 */
-	public final void notifyFirstTalk(Npc npc, PlayerInstance player)
+	public void notifyFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -650,7 +650,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param skill the skill
 	 * @param type the skill learn type
 	 */
-	public final void notifyAcquireSkill(Npc npc, PlayerInstance player, Skill skill, AcquireSkillType type)
+	public void notifyAcquireSkill(Npc npc, PlayerInstance player, Skill skill, AcquireSkillType type)
 	{
 		String res = null;
 		try
@@ -669,7 +669,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param item
 	 * @param player
 	 */
-	public final void notifyItemTalk(ItemInstance item, PlayerInstance player)
+	public void notifyItemTalk(ItemInstance item, PlayerInstance player)
 	{
 		String res = null;
 		try
@@ -699,7 +699,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param player
 	 * @param event
 	 */
-	public final void notifyItemEvent(ItemInstance item, PlayerInstance player, String event)
+	public void notifyItemEvent(ItemInstance item, PlayerInstance player, String event)
 	{
 		String res = null;
 		try
@@ -728,7 +728,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param targets
 	 * @param isSummon
 	 */
-	public final void notifySkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public void notifySkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		String res = null;
 		try
@@ -749,7 +749,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param attacker
 	 * @param isSummon
 	 */
-	public final void notifyFactionCall(Npc npc, Npc caller, PlayerInstance attacker, boolean isSummon)
+	public void notifyFactionCall(Npc npc, Npc caller, PlayerInstance attacker, boolean isSummon)
 	{
 		String res = null;
 		try
@@ -769,7 +769,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param player
 	 * @param isSummon
 	 */
-	public final void notifyAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public void notifyAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		String res = null;
 		try
@@ -789,7 +789,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param creature the creature seen by the NPC
 	 * @param isSummon
 	 */
-	public final void notifySeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void notifySeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		PlayerInstance player = null;
 		if (isSummon || creature.isPlayer())
@@ -821,7 +821,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param receiver - NPC, who received event
 	 * @param reference - WorldObject to pass, if needed
 	 */
-	public final void notifyEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference)
+	public void notifyEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference)
 	{
 		try
 		{
@@ -837,7 +837,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param creature
 	 * @param zone
 	 */
-	public final void notifyEnterZone(Creature creature, ZoneType zone)
+	public void notifyEnterZone(Creature creature, ZoneType zone)
 	{
 		final PlayerInstance player = creature.getActingPlayer();
 		String res = null;
@@ -863,7 +863,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param creature
 	 * @param zone
 	 */
-	public final void notifyExitZone(Creature creature, ZoneType zone)
+	public void notifyExitZone(Creature creature, ZoneType zone)
 	{
 		final PlayerInstance player = creature.getActingPlayer();
 		String res = null;
@@ -890,7 +890,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param looser
 	 * @param type
 	 */
-	public final void notifyOlympiadMatch(Participant winner, Participant looser, CompetitionType type)
+	public void notifyOlympiadMatch(Participant winner, Participant looser, CompetitionType type)
 	{
 		try
 		{
@@ -905,7 +905,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc
 	 */
-	public final void notifyMoveFinished(Npc npc)
+	public void notifyMoveFinished(Npc npc)
 	{
 		try
 		{
@@ -920,7 +920,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc
 	 */
-	public final void notifyNodeArrived(Npc npc)
+	public void notifyNodeArrived(Npc npc)
 	{
 		try
 		{
@@ -935,7 +935,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc
 	 */
-	public final void notifyRouteFinished(Npc npc)
+	public void notifyRouteFinished(Npc npc)
 	{
 		try
 		{
@@ -952,7 +952,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param player
 	 * @return {@code true} if player can see this npc, {@code false} otherwise.
 	 */
-	public final boolean notifyOnCanSeeMe(Npc npc, PlayerInstance player)
+	public boolean notifyOnCanSeeMe(Npc npc, PlayerInstance player)
 	{
 		try
 		{

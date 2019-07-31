@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * TutorialShowHtml server packet implementation.
  * @author HorridoJoho
  */
-public final class TutorialShowHtml extends AbstractHtmlPacket
+public class TutorialShowHtml extends AbstractHtmlPacket
 {
 	public TutorialShowHtml(String html)
 	{

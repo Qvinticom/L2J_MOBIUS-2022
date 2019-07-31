@@ -61,7 +61,7 @@ public class OlympiadStadium
 		return _zone;
 	}
 	
-	public final void registerTask(OlympiadGameTask task)
+	public void registerTask(OlympiadGameTask task)
 	{
 		_task = task;
 	}
@@ -76,29 +76,29 @@ public class OlympiadStadium
 		return _instance;
 	}
 	
-	public final void openDoors()
+	public void openDoors()
 	{
 		_instance.getDoors().forEach(DoorInstance::openMe);
 	}
 	
-	public final void closeDoors()
+	public void closeDoors()
 	{
 		_instance.getDoors().forEach(DoorInstance::closeMe);
 	}
 	
-	public final void spawnBuffers()
+	public void spawnBuffers()
 	{
 		_buffers.forEach(Spawn::startRespawn);
 		_buffers.forEach(Spawn::doSpawn);
 	}
 	
-	public final void deleteBuffers()
+	public void deleteBuffers()
 	{
 		_buffers.forEach(Spawn::stopRespawn);
 		_buffers.stream().map(Spawn::getLastSpawn).filter(Objects::nonNull).forEach(Npc::deleteMe);
 	}
 	
-	public final void broadcastStatusUpdate(PlayerInstance player)
+	public void broadcastStatusUpdate(PlayerInstance player)
 	{
 		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
 		for (PlayerInstance target : _instance.getPlayers())
@@ -110,12 +110,12 @@ public class OlympiadStadium
 		}
 	}
 	
-	public final void broadcastPacket(IClientOutgoingPacket packet)
+	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
 		_instance.broadcastPacket(packet);
 	}
 	
-	public final void broadcastPacketToObservers(IClientOutgoingPacket packet)
+	public void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
 		for (PlayerInstance target : _instance.getPlayers())
 		{
@@ -126,7 +126,7 @@ public class OlympiadStadium
 		}
 	}
 	
-	public final void updateZoneStatusForCharactersInside()
+	public void updateZoneStatusForCharactersInside()
 	{
 		if (_task == null)
 		{
@@ -165,7 +165,7 @@ public class OlympiadStadium
 		}
 	}
 	
-	public final void updateZoneInfoForObservers()
+	public void updateZoneInfoForObservers()
 	{
 		if (_task == null)
 		{

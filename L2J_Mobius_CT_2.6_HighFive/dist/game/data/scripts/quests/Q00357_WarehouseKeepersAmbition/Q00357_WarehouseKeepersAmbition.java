@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Warehouse Keeper's Ambition (357)
  * @author Janiko, Pandragon
  */
-public final class Q00357_WarehouseKeepersAmbition extends Quest
+public class Q00357_WarehouseKeepersAmbition extends Quest
 {
 	// NPC
 	private static final int SILVA = 30686;

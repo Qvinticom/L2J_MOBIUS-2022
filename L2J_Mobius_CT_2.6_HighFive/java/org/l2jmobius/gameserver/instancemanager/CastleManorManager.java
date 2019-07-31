@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Castle manor system.
  * @author malyelfik
  */
-public final class CastleManorManager implements IXmlReader, IStorable
+public class CastleManorManager implements IXmlReader, IStorable
 {
 	// SQL queries
 	private static final String INSERT_PRODUCT = "INSERT INTO castle_manor_production VALUES (?, ?, ?, ?, ?, ?)";
@@ -113,7 +113,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	}
 	
 	@Override
-	public final void load()
+	public void load()
 	{
 		parseDatapackFile("data/Seeds.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _seeds.size() + " seeds.");
@@ -276,7 +276,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		ThreadPool.schedule(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
 	}
 	
-	public final void changeMode()
+	public void changeMode()
 	{
 		switch (_mode)
 		{
@@ -427,7 +427,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		scheduleModeChange();
 	}
 	
-	public final void setNextSeedProduction(List<SeedProduction> list, int castleId)
+	public void setNextSeedProduction(List<SeedProduction> list, int castleId)
 	{
 		_productionNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
@@ -463,7 +463,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final void setNextCropProcure(List<CropProcure> list, int castleId)
+	public void setNextCropProcure(List<CropProcure> list, int castleId)
 	{
 		_procureNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
@@ -500,7 +500,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final void updateCurrentProduction(int castleId, Collection<SeedProduction> items)
+	public void updateCurrentProduction(int castleId, Collection<SeedProduction> items)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_production SET amount = ? WHERE castle_id = ? AND seed_id = ? AND next_period = 0"))
@@ -520,7 +520,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final void updateCurrentProcure(int castleId, Collection<CropProcure> items)
+	public void updateCurrentProcure(int castleId, Collection<CropProcure> items)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_procure SET amount = ? WHERE castle_id = ? AND crop_id = ? AND next_period = 0"))
@@ -540,12 +540,12 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final List<SeedProduction> getSeedProduction(int castleId, boolean nextPeriod)
+	public List<SeedProduction> getSeedProduction(int castleId, boolean nextPeriod)
 	{
 		return nextPeriod ? _productionNext.get(castleId) : _production.get(castleId);
 	}
 	
-	public final SeedProduction getSeedProduct(int castleId, int seedId, boolean nextPeriod)
+	public SeedProduction getSeedProduct(int castleId, int seedId, boolean nextPeriod)
 	{
 		for (SeedProduction sp : getSeedProduction(castleId, nextPeriod))
 		{
@@ -557,12 +557,12 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		return null;
 	}
 	
-	public final List<CropProcure> getCropProcure(int castleId, boolean nextPeriod)
+	public List<CropProcure> getCropProcure(int castleId, boolean nextPeriod)
 	{
 		return nextPeriod ? _procureNext.get(castleId) : _procure.get(castleId);
 	}
 	
-	public final CropProcure getCropProcure(int castleId, int cropId, boolean nextPeriod)
+	public CropProcure getCropProcure(int castleId, int cropId, boolean nextPeriod)
 	{
 		for (CropProcure cp : getCropProcure(castleId, nextPeriod))
 		{
@@ -574,7 +574,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		return null;
 	}
 	
-	public final long getManorCost(int castleId, boolean nextPeriod)
+	public long getManorCost(int castleId, boolean nextPeriod)
 	{
 		final List<CropProcure> procure = getCropProcure(castleId, nextPeriod);
 		final List<SeedProduction> production = getSeedProduction(castleId, nextPeriod);
@@ -593,7 +593,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	}
 	
 	@Override
-	public final boolean storeMe()
+	public boolean storeMe()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ds = con.prepareStatement("DELETE FROM castle_manor_production");
@@ -684,7 +684,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final void resetManorData(int castleId)
+	public void resetManorData(int castleId)
 	{
 		_procure.get(castleId).clear();
 		_procureNext.get(castleId).clear();
@@ -712,27 +712,27 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	public final boolean isUnderMaintenance()
+	public boolean isUnderMaintenance()
 	{
 		return _mode == ManorMode.MAINTENANCE;
 	}
 	
-	public final boolean isManorApproved()
+	public boolean isManorApproved()
 	{
 		return _mode == ManorMode.APPROVED;
 	}
 	
-	public final boolean isModifiablePeriod()
+	public boolean isModifiablePeriod()
 	{
 		return _mode == ManorMode.MODIFIABLE;
 	}
 	
-	public final String getCurrentModeName()
+	public String getCurrentModeName()
 	{
 		return _mode.toString();
 	}
 	
-	public final String getNextModeChange()
+	public String getNextModeChange()
 	{
 		return new SimpleDateFormat("dd/MM HH:mm:ss").format(_nextModeChange.getTime());
 	}
@@ -740,7 +740,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	// -------------------------------------------------------
 	// Seed methods
 	// -------------------------------------------------------
-	public final List<Seed> getCrops()
+	public List<Seed> getCrops()
 	{
 		final List<Seed> seeds = new ArrayList<>();
 		final List<Integer> cropIds = new ArrayList<>();
@@ -756,27 +756,27 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		return seeds;
 	}
 	
-	public final Set<Seed> getSeedsForCastle(int castleId)
+	public Set<Seed> getSeedsForCastle(int castleId)
 	{
 		return _seeds.values().stream().filter(s -> s.getCastleId() == castleId).collect(Collectors.toSet());
 	}
 	
-	public final Set<Integer> getSeedIds()
+	public Set<Integer> getSeedIds()
 	{
 		return _seeds.keySet();
 	}
 	
-	public final Set<Integer> getCropIds()
+	public Set<Integer> getCropIds()
 	{
 		return _seeds.values().stream().map(Seed::getCropId).collect(Collectors.toSet());
 	}
 	
-	public final Seed getSeed(int seedId)
+	public Seed getSeed(int seedId)
 	{
 		return _seeds.get(seedId);
 	}
 	
-	public final Seed getSeedByCrop(int cropId, int castleId)
+	public Seed getSeedByCrop(int cropId, int castleId)
 	{
 		for (Seed s : getSeedsForCastle(castleId))
 		{
@@ -788,7 +788,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		return null;
 	}
 	
-	public final Seed getSeedByCrop(int cropId)
+	public Seed getSeedByCrop(int cropId)
 	{
 		for (Seed s : _seeds.values())
 		{

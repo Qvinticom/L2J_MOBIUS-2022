@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
-public final class ProtocolVersion extends GameClientPacket
+public class ProtocolVersion extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(ProtocolVersion.class.getName());
 	private int _version;

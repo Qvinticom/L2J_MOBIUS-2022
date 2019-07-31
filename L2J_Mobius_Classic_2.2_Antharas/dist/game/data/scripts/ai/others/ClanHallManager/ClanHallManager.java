@@ -45,7 +45,7 @@ import ai.AbstractNpcAI;
  * Clan Hall Manager AI.
  * @author St3eT
  */
-public final class ClanHallManager extends AbstractNpcAI
+public class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
 	//	35461, 35463, 35465, 35467, // Goddard

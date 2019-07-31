@@ -52,7 +52,7 @@ import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGlutton
  * Kartia Labyrinth instance zone.
  * @author flanagak
  */
-public final class KartiasLabyrinth extends AbstractInstance
+public class KartiasLabyrinth extends AbstractInstance
 {
 	// NPCs
 	private static final int KARTIA_RESEARCHER = 33647;

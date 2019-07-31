@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 /**
  * @author xban1x
  */
-public final class AggroInfo
+public class AggroInfo
 {
 	private final Creature _attacker;
 	private int _hate = 0;
@@ -73,7 +73,7 @@ public final class AggroInfo
 	}
 	
 	@Override
-	public final boolean equals(Object obj)
+	public boolean equals(Object obj)
 	{
 		if (this == obj)
 		{
@@ -89,7 +89,7 @@ public final class AggroInfo
 	}
 	
 	@Override
-	public final int hashCode()
+	public int hashCode()
 	{
 		return _attacker.getObjectId();
 	}

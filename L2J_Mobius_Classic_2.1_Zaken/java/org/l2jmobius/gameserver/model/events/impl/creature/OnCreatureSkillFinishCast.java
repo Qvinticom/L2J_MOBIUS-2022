@@ -41,12 +41,12 @@ public class OnCreatureSkillFinishCast implements IBaseEvent
 		_target = target;
 	}
 	
-	public final Creature getCaster()
+	public Creature getCaster()
 	{
 		return _caster;
 	}
 	
-	public final WorldObject getTarget()
+	public WorldObject getTarget()
 	{
 		return _target;
 	}

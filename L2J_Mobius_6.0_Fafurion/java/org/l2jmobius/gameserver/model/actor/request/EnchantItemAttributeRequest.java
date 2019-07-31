@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 /**
  * @author UnAfraid
  */
-public final class EnchantItemAttributeRequest extends AbstractRequest
+public class EnchantItemAttributeRequest extends AbstractRequest
 {
 	private volatile int _enchantingItemObjectId;
 	private volatile int _enchantingStoneObjectId;

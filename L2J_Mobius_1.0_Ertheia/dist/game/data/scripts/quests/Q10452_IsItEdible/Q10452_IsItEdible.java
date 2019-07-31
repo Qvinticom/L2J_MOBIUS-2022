@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * @URL https://l2wiki.com/Is_it_Edible%3F
  * @author Gigi
  */
-public final class Q10452_IsItEdible extends Quest
+public class Q10452_IsItEdible extends Quest
 {
 	// NPCs
 	private static final int SALLY = 32743;

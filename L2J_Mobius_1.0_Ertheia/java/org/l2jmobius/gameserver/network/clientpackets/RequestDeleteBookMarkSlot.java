@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * @author ShanSoft
  * @structure: chdd
  */
-public final class RequestDeleteBookMarkSlot implements IClientIncomingPacket
+public class RequestDeleteBookMarkSlot implements IClientIncomingPacket
 {
 	private int _id;
 	

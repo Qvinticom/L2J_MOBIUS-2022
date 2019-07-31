@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestGiveItemToPet extends GameClientPacket
+public class RequestGiveItemToPet extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	

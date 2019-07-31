@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
  * Task which starts npc movement.
  * @author xban1x
  */
-public final class StartMovingTask implements Runnable
+public class StartMovingTask implements Runnable
 {
 	final Npc _npc;
 	final String _routeName;

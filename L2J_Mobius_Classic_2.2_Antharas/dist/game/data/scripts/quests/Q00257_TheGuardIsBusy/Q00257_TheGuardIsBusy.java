@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * The Guard is Busy (257)
  * @author xban1x
  */
-public final class Q00257_TheGuardIsBusy extends Quest
+public class Q00257_TheGuardIsBusy extends Quest
 {
 	public static final class MobDrop extends ItemHolder
 	{

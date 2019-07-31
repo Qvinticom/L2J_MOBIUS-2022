@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.model.Crest;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PledgeCrest implements IClientOutgoingPacket
+public class PledgeCrest implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;

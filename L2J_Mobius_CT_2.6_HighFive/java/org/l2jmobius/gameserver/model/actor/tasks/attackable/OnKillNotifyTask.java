@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 /**
  * @author xban1x
  */
-public final class OnKillNotifyTask implements Runnable
+public class OnKillNotifyTask implements Runnable
 {
 	private final Attackable _attackable;
 	private final Quest _quest;

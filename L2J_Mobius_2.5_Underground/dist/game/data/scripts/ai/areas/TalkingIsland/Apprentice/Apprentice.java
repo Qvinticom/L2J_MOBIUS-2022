@@ -32,7 +32,7 @@ import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
  * Apprentice AI.
  * @author St3eT
  */
-public final class Apprentice extends AbstractNpcAI
+public class Apprentice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int APPRENTICE = 33124;

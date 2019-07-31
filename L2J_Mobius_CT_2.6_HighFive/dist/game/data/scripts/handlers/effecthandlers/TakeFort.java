@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Take Fort effect implementation.
  * @author Adry_85
  */
-public final class TakeFort extends AbstractEffect
+public class TakeFort extends AbstractEffect
 {
 	public TakeFort(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

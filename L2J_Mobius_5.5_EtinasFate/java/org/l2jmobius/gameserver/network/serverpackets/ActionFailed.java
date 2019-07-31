@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ActionFailed implements IClientOutgoingPacket
+public class ActionFailed implements IClientOutgoingPacket
 {
 	public static final ActionFailed STATIC_PACKET = new ActionFailed();
 	private static final Map<SkillCastingType, ActionFailed> STATIC_PACKET_BY_CASTING_TYPE = new EnumMap<>(SkillCastingType.class);

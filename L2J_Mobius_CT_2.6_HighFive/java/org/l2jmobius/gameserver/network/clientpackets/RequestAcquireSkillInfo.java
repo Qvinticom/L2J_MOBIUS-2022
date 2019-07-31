@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
  * Request Acquire Skill Info client packet implementation.
  * @author Zoey76
  */
-public final class RequestAcquireSkillInfo implements IClientIncomingPacket
+public class RequestAcquireSkillInfo implements IClientIncomingPacket
 {
 	private int _id;
 	private int _level;

@@ -137,27 +137,27 @@ public class Attackable extends Npc
 		return new AttackableAI(this);
 	}
 	
-	public final Map<Creature, AggroInfo> getAggroList()
+	public Map<Creature, AggroInfo> getAggroList()
 	{
 		return _aggroList;
 	}
 	
-	public final boolean isReturningToSpawnPoint()
+	public boolean isReturningToSpawnPoint()
 	{
 		return _isReturningToSpawnPoint;
 	}
 	
-	public final void setisReturningToSpawnPoint(boolean value)
+	public void setisReturningToSpawnPoint(boolean value)
 	{
 		_isReturningToSpawnPoint = value;
 	}
 	
-	public final boolean canReturnToSpawnPoint()
+	public boolean canReturnToSpawnPoint()
 	{
 		return _canReturnToSpawnPoint;
 	}
 	
-	public final void setCanReturnToSpawnPoint(boolean value)
+	public void setCanReturnToSpawnPoint(boolean value)
 	{
 		_canReturnToSpawnPoint = value;
 	}
@@ -1454,7 +1454,7 @@ public class Attackable extends Npc
 	 * Gets the spoiler object ID.
 	 * @return the spoiler object ID if its spoiled, 0 otherwise
 	 */
-	public final int getSpoilerObjectId()
+	public int getSpoilerObjectId()
 	{
 		return _spoilerObjectId;
 	}
@@ -1463,7 +1463,7 @@ public class Attackable extends Npc
 	 * Sets the spoiler object ID.
 	 * @param spoilerObjectId spoilerObjectId the spoiler object ID
 	 */
-	public final void setSpoilerObjectId(int spoilerObjectId)
+	public void setSpoilerObjectId(int spoilerObjectId)
 	{
 		_spoilerObjectId = spoilerObjectId;
 	}
@@ -1472,7 +1472,7 @@ public class Attackable extends Npc
 	 * Sets state of the mob to seeded. Parameters needed to be set before.
 	 * @param seeder
 	 */
-	public final void setSeeded(PlayerInstance seeder)
+	public void setSeeded(PlayerInstance seeder)
 	{
 		if ((_seed == null) || (_seederObjId != seeder.getObjectId()))
 		{
@@ -1542,7 +1542,7 @@ public class Attackable extends Npc
 	 * @param seed - instance {@link Seed} of used seed
 	 * @param seeder - player who sows the seed
 	 */
-	public final void setSeeded(Seed seed, PlayerInstance seeder)
+	public void setSeeded(Seed seed, PlayerInstance seeder)
 	{
 		if (_seeded)
 		{
@@ -1552,17 +1552,17 @@ public class Attackable extends Npc
 		_seederObjId = seeder.getObjectId();
 	}
 	
-	public final int getSeederId()
+	public int getSeederId()
 	{
 		return _seederObjId;
 	}
 	
-	public final Seed getSeed()
+	public Seed getSeed()
 	{
 		return _seed;
 	}
 	
-	public final boolean isSeeded()
+	public boolean isSeeded()
 	{
 		return _seeded;
 	}
@@ -1571,12 +1571,12 @@ public class Attackable extends Npc
 	 * Set delay for onKill() call, in ms Default: 5000 ms
 	 * @param delay
 	 */
-	public final void setOnKillDelay(int delay)
+	public void setOnKillDelay(int delay)
 	{
 		_onKillDelay = delay;
 	}
 	
-	public final int getOnKillDelay()
+	public int getOnKillDelay()
 	{
 		return _onKillDelay;
 	}

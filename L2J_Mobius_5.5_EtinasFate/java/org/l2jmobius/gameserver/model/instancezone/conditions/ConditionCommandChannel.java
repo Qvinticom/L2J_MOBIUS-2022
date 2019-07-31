@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Command channel condition
  * @author malyelfik
  */
-public final class ConditionCommandChannel extends Condition
+public class ConditionCommandChannel extends Condition
 {
 	
 	public ConditionCommandChannel(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)

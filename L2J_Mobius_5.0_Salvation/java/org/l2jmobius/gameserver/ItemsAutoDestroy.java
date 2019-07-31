@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public final class ItemsAutoDestroy
+public class ItemsAutoDestroy
 {
 	private final List<ItemInstance> _items = new LinkedList<>();
 	

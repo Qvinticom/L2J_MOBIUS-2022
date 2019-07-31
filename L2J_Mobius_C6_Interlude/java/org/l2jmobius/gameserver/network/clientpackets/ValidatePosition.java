@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 
-public final class ValidatePosition extends GameClientPacket
+public class ValidatePosition extends GameClientPacket
 {
 	private int _x;
 	private int _y;

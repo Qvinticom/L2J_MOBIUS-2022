@@ -35,7 +35,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * The Guard is Busy (257)
  * @author xban1x
  */
-public final class Q00257_TheGuardIsBusy extends Quest
+public class Q00257_TheGuardIsBusy extends Quest
 {
 	public static final class MobDrop extends ItemHolder
 	{

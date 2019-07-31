@@ -228,7 +228,7 @@ public class DecoyInstance extends Creature
 	}
 	
 	@Override
-	public final int getId()
+	public int getId()
 	{
 		return getTemplate().getId();
 	}
@@ -244,7 +244,7 @@ public class DecoyInstance extends Creature
 		decayMe();
 	}
 	
-	public final PlayerInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _owner;
 	}

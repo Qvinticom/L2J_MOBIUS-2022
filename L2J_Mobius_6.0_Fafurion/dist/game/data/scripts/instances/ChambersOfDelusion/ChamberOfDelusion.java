@@ -45,7 +45,7 @@ import instances.AbstractInstance;
  * Chambers of Delusion.
  * @author GKR
  */
-public final class ChamberOfDelusion extends AbstractInstance
+public class ChamberOfDelusion extends AbstractInstance
 {
 	// NPCs
 	private static final Map<Integer, Integer> ENTRANCE_GATEKEEPER = new HashMap<>();

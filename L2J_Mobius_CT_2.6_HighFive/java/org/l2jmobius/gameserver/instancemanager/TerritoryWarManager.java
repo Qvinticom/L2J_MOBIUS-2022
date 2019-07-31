@@ -61,7 +61,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class TerritoryWarManager implements Siegable
+public class TerritoryWarManager implements Siegable
 {
 	private static final Logger LOGGER = Logger.getLogger(TerritoryWarManager.class.getName());
 	
@@ -170,7 +170,7 @@ public final class TerritoryWarManager implements Siegable
 	 * @param clan The Clan of the player
 	 * @return true if the clan is registered
 	 */
-	public final boolean checkIsRegistered(int castleId, Clan clan)
+	public boolean checkIsRegistered(int castleId, Clan clan)
 	{
 		if (clan == null)
 		{
@@ -201,7 +201,7 @@ public final class TerritoryWarManager implements Siegable
 	 * @param objId
 	 * @return true if the player is registered
 	 */
-	public final boolean checkIsRegistered(int castleId, int objId)
+	public boolean checkIsRegistered(int castleId, int objId)
 	{
 		if (castleId == -1)
 		{

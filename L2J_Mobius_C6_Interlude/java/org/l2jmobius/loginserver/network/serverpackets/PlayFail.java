@@ -19,7 +19,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public final class PlayFail extends LoginServerPacket
+public class PlayFail extends LoginServerPacket
 {
 	public enum PlayFailReason
 	{
@@ -36,7 +36,7 @@ public final class PlayFail extends LoginServerPacket
 			_code = code;
 		}
 		
-		public final int getCode()
+		public int getCode()
 		{
 			return _code;
 		}

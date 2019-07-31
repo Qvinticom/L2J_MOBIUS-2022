@@ -29,7 +29,7 @@ import quests.Q00194_SevenSignsMammonsContract.Q00194_SevenSignsMammonsContract;
  * Seven Signs, Secret Ritual of the Priests (195)
  * @author Adry_85
  */
-public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
+public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;

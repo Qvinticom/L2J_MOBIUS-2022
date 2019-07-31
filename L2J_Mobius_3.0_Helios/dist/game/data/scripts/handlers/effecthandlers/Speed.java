@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public final class Speed extends AbstractEffect
+public class Speed extends AbstractEffect
 {
 	private final double _amount;
 	private final StatModifierType _mode;

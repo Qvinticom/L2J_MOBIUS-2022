@@ -487,12 +487,12 @@ public class SevenSigns
 		return sealName;
 	}
 	
-	public final int getCurrentCycle()
+	public int getCurrentCycle()
 	{
 		return _currentCycle;
 	}
 	
-	public final int getCurrentPeriod()
+	public int getCurrentPeriod()
 	{
 		return _activePeriod;
 	}
@@ -507,7 +507,7 @@ public class SevenSigns
 		return 7 - numDays;
 	}
 	
-	public final long getMilliToPeriodChange()
+	public long getMilliToPeriodChange()
 	{
 		return (_nextPeriodChange.getTimeInMillis() - System.currentTimeMillis());
 	}
@@ -552,7 +552,7 @@ public class SevenSigns
 		LOGGER.info("SevenSigns: Next period change set to " + _nextPeriodChange.getTime());
 	}
 	
-	public final String getCurrentPeriodName()
+	public String getCurrentPeriodName()
 	{
 		String periodName = null;
 		
@@ -585,17 +585,17 @@ public class SevenSigns
 	/**
 	 * @return {@code true} if it's competition period, {@code false} otherwise
 	 */
-	public final boolean isCompetitionPeriod()
+	public boolean isCompetitionPeriod()
 	{
 		return (_activePeriod == PERIOD_COMPETITION);
 	}
 	
-	public final boolean isSealValidationPeriod()
+	public boolean isSealValidationPeriod()
 	{
 		return (_activePeriod == PERIOD_SEAL_VALIDATION);
 	}
 	
-	public final boolean isCompResultsPeriod()
+	public boolean isCompResultsPeriod()
 	{
 		return (_activePeriod == PERIOD_COMP_RESULTS);
 	}
@@ -655,7 +655,7 @@ public class SevenSigns
 		return true;
 	}
 	
-	public final int getCurrentScore(int cabal)
+	public int getCurrentScore(int cabal)
 	{
 		final double totalStoneScore = _dawnStoneScore + _duskStoneScore;
 		
@@ -678,7 +678,7 @@ public class SevenSigns
 		return 0;
 	}
 	
-	public final double getCurrentStoneScore(int cabal)
+	public double getCurrentStoneScore(int cabal)
 	{
 		switch (cabal)
 		{
@@ -699,7 +699,7 @@ public class SevenSigns
 		return 0;
 	}
 	
-	public final int getCurrentFestivalScore(int cabal)
+	public int getCurrentFestivalScore(int cabal)
 	{
 		switch (cabal)
 		{
@@ -720,7 +720,7 @@ public class SevenSigns
 		return 0;
 	}
 	
-	public final int getCabalHighestScore()
+	public int getCabalHighestScore()
 	{
 		if (getCurrentScore(CABAL_DUSK) == getCurrentScore(CABAL_DAWN))
 		{
@@ -736,12 +736,12 @@ public class SevenSigns
 		}
 	}
 	
-	public final int getSealOwner(int seal)
+	public int getSealOwner(int seal)
 	{
 		return _signsSealOwners.get(seal);
 	}
 	
-	public final int getSealProportion(int seal, int cabal)
+	public int getSealProportion(int seal, int cabal)
 	{
 		if (cabal == CABAL_NULL)
 		{
@@ -757,7 +757,7 @@ public class SevenSigns
 		}
 	}
 	
-	public final int getTotalMembers(int cabal)
+	public int getTotalMembers(int cabal)
 	{
 		int cabalMembers = 0;
 		final String cabalName = getCabalShortName(cabal);
@@ -940,7 +940,7 @@ public class SevenSigns
 		}
 	}
 	
-	public final void saveSevenSignsData(int objectId)
+	public void saveSevenSignsData(int objectId)
 	{
 		final StatsSet sevenDat = _signsPlayerData.get(objectId);
 		if (sevenDat == null)
@@ -967,7 +967,7 @@ public class SevenSigns
 		}
 	}
 	
-	public final void saveSevenSignsStatus()
+	public void saveSevenSignsStatus()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_STATUS))

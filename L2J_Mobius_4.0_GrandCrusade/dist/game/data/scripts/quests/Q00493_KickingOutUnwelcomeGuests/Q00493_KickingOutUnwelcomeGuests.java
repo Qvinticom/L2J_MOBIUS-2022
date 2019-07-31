@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Kicking Out Unwelcome Guests (493)
  * @author St3eT
  */
-public final class Q00493_KickingOutUnwelcomeGuests extends Quest
+public class Q00493_KickingOutUnwelcomeGuests extends Quest
 {
 	// NPCs
 	private static final int GEORGIO = 33515;

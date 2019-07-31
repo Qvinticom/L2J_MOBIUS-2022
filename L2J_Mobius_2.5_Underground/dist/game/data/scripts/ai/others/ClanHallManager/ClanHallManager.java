@@ -45,7 +45,7 @@ import ai.AbstractNpcAI;
  * Clan Hall Manager AI.
  * @author St3eT
  */
-public final class ClanHallManager extends AbstractNpcAI
+public class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

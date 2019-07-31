@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.1.2.2.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopManageQuit implements IClientIncomingPacket
+public class RequestRecipeShopManageQuit implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

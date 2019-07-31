@@ -24,7 +24,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public final class Cyrax extends AbstractNpcAI
+public class Cyrax extends AbstractNpcAI
 {
 	// NPC
 	private static final int CYRAX = 29374;

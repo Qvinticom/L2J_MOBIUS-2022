@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) dSS
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster extends GameClientPacket
+public class RequestPledgeSetAcademyMaster extends GameClientPacket
 {
 	private String _currPlayerName;
 	private int _set; // 1 set, 0 delete

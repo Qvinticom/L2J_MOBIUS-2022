@@ -50,22 +50,22 @@ public class SkillHolder
 		_skillSubLevel = skill.getSubLevel();
 	}
 	
-	public final int getSkillId()
+	public int getSkillId()
 	{
 		return _skillId;
 	}
 	
-	public final int getSkillLevel()
+	public int getSkillLevel()
 	{
 		return _skillLevel;
 	}
 	
-	public final int getSkillSubLevel()
+	public int getSkillSubLevel()
 	{
 		return _skillSubLevel;
 	}
 	
-	public final Skill getSkill()
+	public Skill getSkill()
 	{
 		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
 	}

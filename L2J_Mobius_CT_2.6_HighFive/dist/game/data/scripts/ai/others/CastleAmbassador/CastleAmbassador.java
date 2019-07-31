@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Castle Ambassador AI.
  * @author St3eT
  */
-public final class CastleAmbassador extends AbstractNpcAI
+public class CastleAmbassador extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

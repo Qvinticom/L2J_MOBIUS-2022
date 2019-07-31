@@ -30,7 +30,7 @@ import quests.Q10311_PeacefulDaysAreOver.Q10311_PeacefulDaysAreOver;
  * @URL https://l2wiki.com/To_the_Prison_of_Darkness
  * @author Gigi
  */
-public final class Q10315_ToThePrisonOfDarkness extends Quest
+public class Q10315_ToThePrisonOfDarkness extends Quest
 {
 	// NPCs
 	private static final int SLASKI = 32893;

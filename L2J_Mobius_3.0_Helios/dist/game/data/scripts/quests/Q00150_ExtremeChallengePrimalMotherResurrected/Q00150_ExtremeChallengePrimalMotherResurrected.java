@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Extreme_Challenge:_Primal_Mother_Resurrected
  * @author Gigi
  */
-public final class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest
+public class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest
 {
 	// NPCs
 	private static final int RUMIESE = 33293;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Shillien Oracle (413)
  * @author ivantotov
  */
-public final class Q00413_PathOfTheShillienOracle extends Quest
+public class Q00413_PathOfTheShillienOracle extends Quest
 {
 	// NPCs
 	private static final int MAGISTER_SIDRA = 30330;

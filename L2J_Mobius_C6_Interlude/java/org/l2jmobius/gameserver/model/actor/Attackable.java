@@ -91,7 +91,7 @@ public class Attackable extends NpcInstance
 	 * <li>damage : Number of damages that the attaker Creature gave to this Attackable</li><BR>
 	 * <BR>
 	 */
-	public final class AggroInfo
+	public class AggroInfo
 	{
 		/** The attaker Creature concerned by this AggroInfo of this Attackable */
 		protected Creature _attacker;
@@ -198,7 +198,7 @@ public class Attackable extends NpcInstance
 	 * <BR>
 	 * <li>absorber : The attacker Creature concerned by this AbsorberInfo of this Attackable</li>
 	 */
-	public final class AbsorberInfo
+	public class AbsorberInfo
 	{
 		/** The attacker Creature concerned by this AbsorberInfo of this Attackable */
 		protected PlayerInstance _absorber;
@@ -254,7 +254,7 @@ public class Attackable extends NpcInstance
 	 * This class is used to create item reward lists instead of creating item instances.<BR>
 	 * <BR>
 	 */
-	public final class RewardItem
+	public class RewardItem
 	{
 		protected int _itemId;
 		protected int _count;
@@ -285,31 +285,31 @@ public class Attackable extends NpcInstance
 	 * Use this to Remove Object from this Map This Should be Synchronized While Interacting over This Map - ie u cant Interacting and removing object at once
 	 * @return
 	 */
-	public final Map<Creature, AggroInfo> getAggroList()
+	public Map<Creature, AggroInfo> getAggroList()
 	{
 		return _aggroList;
 	}
 	
 	private boolean _isReturningToSpawnPoint = false;
 	
-	public final boolean isReturningToSpawnPoint()
+	public boolean isReturningToSpawnPoint()
 	{
 		return _isReturningToSpawnPoint;
 	}
 	
-	public final void setisReturningToSpawnPoint(boolean value)
+	public void setisReturningToSpawnPoint(boolean value)
 	{
 		_isReturningToSpawnPoint = value;
 	}
 	
 	private boolean _canReturnToSpawnPoint = true;
 	
-	public final boolean canReturnToSpawnPoint()
+	public boolean canReturnToSpawnPoint()
 	{
 		return _canReturnToSpawnPoint;
 	}
 	
-	public final void setCanReturnToSpawnPoint(boolean value)
+	public void setCanReturnToSpawnPoint(boolean value)
 	{
 		_canReturnToSpawnPoint = value;
 	}

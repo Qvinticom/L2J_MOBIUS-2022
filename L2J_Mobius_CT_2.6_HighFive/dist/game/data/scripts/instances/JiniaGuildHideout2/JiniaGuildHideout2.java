@@ -29,7 +29,7 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  * Jinia Guild Hideout instance zone.
  * @author Adry_85
  */
-public final class JiniaGuildHideout2 extends AbstractInstance
+public class JiniaGuildHideout2 extends AbstractInstance
 {
 	// NPC
 	private static final int RAFFORTY = 32020;

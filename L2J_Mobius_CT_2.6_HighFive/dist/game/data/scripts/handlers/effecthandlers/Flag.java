@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Flag effect implementation.
  * @author BiggBoss
  */
-public final class Flag extends AbstractEffect
+public class Flag extends AbstractEffect
 {
 	public Flag(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

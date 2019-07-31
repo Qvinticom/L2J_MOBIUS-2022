@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public final class CastleManager implements InstanceListManager
+public class CastleManager implements InstanceListManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
@@ -57,12 +57,12 @@ public final class CastleManager implements InstanceListManager
 		8183
 	};
 	
-	public final Castle findNearestCastle(WorldObject obj)
+	public Castle findNearestCastle(WorldObject obj)
 	{
 		return findNearestCastle(obj, Long.MAX_VALUE);
 	}
 	
-	public final Castle findNearestCastle(WorldObject obj, long maxDistance)
+	public Castle findNearestCastle(WorldObject obj, long maxDistance)
 	{
 		Castle nearestCastle = getCastle(obj);
 		if (nearestCastle == null)
@@ -81,12 +81,12 @@ public final class CastleManager implements InstanceListManager
 		return nearestCastle;
 	}
 	
-	public final Castle getCastleById(int castleId)
+	public Castle getCastleById(int castleId)
 	{
 		return _castles.get(castleId);
 	}
 	
-	public final Castle getCastleByOwner(Clan clan)
+	public Castle getCastleByOwner(Clan clan)
 	{
 		for (Castle temp : _castles.values())
 		{
@@ -98,7 +98,7 @@ public final class CastleManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Castle getCastle(String name)
+	public Castle getCastle(String name)
 	{
 		for (Castle temp : _castles.values())
 		{
@@ -110,7 +110,7 @@ public final class CastleManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Castle getCastle(int x, int y, int z)
+	public Castle getCastle(int x, int y, int z)
 	{
 		for (Castle temp : _castles.values())
 		{
@@ -122,12 +122,12 @@ public final class CastleManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Castle getCastle(WorldObject activeObject)
+	public Castle getCastle(WorldObject activeObject)
 	{
 		return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final Collection<Castle> getCastles()
+	public Collection<Castle> getCastles()
 	{
 		return _castles.values();
 	}

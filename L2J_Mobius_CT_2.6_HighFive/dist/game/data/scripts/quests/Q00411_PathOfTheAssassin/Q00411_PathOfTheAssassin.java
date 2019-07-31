@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Assassin (411)
  * @author ivantotov
  */
-public final class Q00411_PathOfTheAssassin extends Quest
+public class Q00411_PathOfTheAssassin extends Quest
 {
 	// NPCs
 	private static final int TRISKEL = 30416;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author KenM
  */
-public final class ExPartyPetWindowAdd implements IClientOutgoingPacket
+public class ExPartyPetWindowAdd implements IClientOutgoingPacket
 {
 	private final Summon _summon;
 	

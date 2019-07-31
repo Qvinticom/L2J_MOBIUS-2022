@@ -21,7 +21,7 @@ import java.util.Objects;
 /**
  * @author HorridoJoho
  */
-public final class AccountInfo
+public class AccountInfo
 {
 	private final String _login;
 	private final String _passHash;

@@ -30,7 +30,7 @@ import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
  * @URL https://l2wiki.com/Commando_Supplies
  * @author Gigi
  */
-public final class Q10544_SeekerSupplies extends Quest
+public class Q10544_SeekerSupplies extends Quest
 {
 	// NPCs
 	private static final int WILFORD = 30005;

@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Summoner (230)
  * @author ivantotov
  */
-public final class Q00230_TestOfTheSummoner extends Quest
+public class Q00230_TestOfTheSummoner extends Quest
 {
 	// NPCs
 	private static final int GROCER_LARA = 30063;

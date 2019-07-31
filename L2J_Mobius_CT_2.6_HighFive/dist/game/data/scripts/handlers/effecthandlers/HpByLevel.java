@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Hp By Level effect implementation.
  * @author Zoey76
  */
-public final class HpByLevel extends AbstractEffect
+public class HpByLevel extends AbstractEffect
 {
 	private final double _power;
 	

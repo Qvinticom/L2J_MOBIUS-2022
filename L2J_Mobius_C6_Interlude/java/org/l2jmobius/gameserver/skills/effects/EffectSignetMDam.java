@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 /**
  * @author Shyla
  */
-public final class EffectSignetMDam extends Effect
+public class EffectSignetMDam extends Effect
 {
 	private EffectPointInstance _actor;
 	private boolean bss;

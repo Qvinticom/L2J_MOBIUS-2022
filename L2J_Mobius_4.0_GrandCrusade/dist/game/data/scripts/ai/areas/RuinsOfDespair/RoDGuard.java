@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Guard AI.
  * @author St3eT
  */
-public final class RoDGuard extends AbstractNpcAI
+public class RoDGuard extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GUARD = 33432;

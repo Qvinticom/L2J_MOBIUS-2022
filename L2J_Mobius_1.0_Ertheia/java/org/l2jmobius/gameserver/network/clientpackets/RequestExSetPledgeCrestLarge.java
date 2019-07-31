@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  * @author -Wooden-
  */
-public final class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
+public class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 {
 	private int _length;
 	private byte[] _data = null;

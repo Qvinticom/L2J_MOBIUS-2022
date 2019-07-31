@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.FriendListExtended;
 /**
  * @author mrTJO & UnAfraid
  */
-public final class RequestExFriendListExtended implements IClientIncomingPacket
+public class RequestExFriendListExtended implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * @author ShanSoft
  * @structure chdSdS
  */
-public final class RequestSaveBookMarkSlot implements IClientIncomingPacket
+public class RequestSaveBookMarkSlot implements IClientIncomingPacket
 {
 	private int icon;
 	private String name;

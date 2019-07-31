@@ -28,7 +28,7 @@ import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishR
  * Unsettling Shadow and Rumors (10302)
  * @author Gladicek
  */
-public final class Q10302_UnsettlingShadowAndRumors extends Quest
+public class Q10302_UnsettlingShadowAndRumors extends Quest
 {
 	// NPCs
 	private static final int KANTARUBIS = 32898;

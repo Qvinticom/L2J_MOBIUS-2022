@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author Java
  */
-public final class EffectDeflectBuff extends Effect
+public class EffectDeflectBuff extends Effect
 {
 	public EffectDeflectBuff(Env env, EffectTemplate template)
 	{

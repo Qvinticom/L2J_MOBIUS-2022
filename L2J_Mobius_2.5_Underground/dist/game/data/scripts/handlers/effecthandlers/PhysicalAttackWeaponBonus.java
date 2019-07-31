@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
  * @author Adry_85, Nik
  */
-public final class PhysicalAttackWeaponBonus extends AbstractEffect
+public class PhysicalAttackWeaponBonus extends AbstractEffect
 {
 	private final double _power;
 	private final double _criticalChance;

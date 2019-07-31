@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.skills.effects.EffectForce;
 /**
  * @author kombat
  */
-public final class ForceBuff
+public class ForceBuff
 {
 	protected int _forceId;
 	protected int _forceLevel;

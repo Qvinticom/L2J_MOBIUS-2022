@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author BiggBoss
  */
-public final class BotReportTable
+public class BotReportTable
 {
 	// Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
 	private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());

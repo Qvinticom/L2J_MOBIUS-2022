@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Lucky effect implementation.
  * @author Zoey76
  */
-public final class Lucky extends AbstractEffect
+public class Lucky extends AbstractEffect
 {
 	public Lucky(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

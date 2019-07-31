@@ -29,7 +29,7 @@ import quests.Q10761_AnOrcInLove.Q10761_AnOrcInLove;
  * Marionette Spirit (10762)
  * @author malyelfik
  */
-public final class Q10762_MarionetteSpirit extends Quest
+public class Q10762_MarionetteSpirit extends Quest
 {
 	// NPC
 	private static final int VORBOS = 33966;

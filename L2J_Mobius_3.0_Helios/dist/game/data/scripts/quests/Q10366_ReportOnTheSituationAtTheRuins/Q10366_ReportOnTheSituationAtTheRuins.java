@@ -35,7 +35,7 @@ import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
  * @URL https://l2wiki.com/Report_on_the_situation_at_the_ruins
  * @author Gigi
  */
-public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
+public class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 {
 	// NPCs
 	private static final int SEBION = 32978;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Dezmond_snz - Packet Format: cddd
  */
-public final class DlgAnswer extends GameClientPacket
+public class DlgAnswer extends GameClientPacket
 {
 	private int _messageId;
 	private int _answer;

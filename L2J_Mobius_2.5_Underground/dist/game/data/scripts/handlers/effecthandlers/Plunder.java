@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Sdw
  */
-public final class Plunder extends AbstractEffect
+public class Plunder extends AbstractEffect
 {
 	public Plunder(StatsSet params)
 	{

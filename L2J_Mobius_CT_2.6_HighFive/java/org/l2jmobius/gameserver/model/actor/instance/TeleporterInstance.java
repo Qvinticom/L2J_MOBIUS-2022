@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 /**
  * @author NightMarez
  */
-public final class TeleporterInstance extends Npc
+public class TeleporterInstance extends Npc
 {
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;

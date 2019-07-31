@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: Kampf's Whereabouts (10419)
  * @author St3eT
  */
-public final class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
+public class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
 {
 	// NPCs
 	private static final int ANDREI = 31292;

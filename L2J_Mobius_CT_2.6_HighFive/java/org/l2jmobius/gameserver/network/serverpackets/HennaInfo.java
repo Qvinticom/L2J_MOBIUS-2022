@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * This server packet sends the player's henna information.
  * @author Zoey76
  */
-public final class HennaInfo implements IClientOutgoingPacket
+public class HennaInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final List<Henna> _hennas = new ArrayList<>();

@@ -28,7 +28,7 @@ import java.util.Locale;
  * The Locator is a utility class which is used to find certain items in the environment.
  * @since Ant 1.6
  */
-public final class Locator
+public class Locator
 {
 	/**
 	 * Not instantiable
@@ -241,7 +241,7 @@ public final class Locator
 	 * @return an array of URLs of matching files.
 	 * @exception MalformedURLException if the URLs for the files cannot be formed.
 	 */
-	public static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
+	public static URL[] getLocationURLs(File location, String[] extensions) throws MalformedURLException
 	{
 		
 		URL[] urls = new URL[0];

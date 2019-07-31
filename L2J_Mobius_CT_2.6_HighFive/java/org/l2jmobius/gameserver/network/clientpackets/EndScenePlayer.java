@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author JIV
  */
-public final class EndScenePlayer implements IClientIncomingPacket
+public class EndScenePlayer implements IClientIncomingPacket
 {
 	private int _movieId;
 	

@@ -36,7 +36,7 @@ import ai.AbstractNpcAI;
  * Subclass certification
  * @author xban1x, jurchiks
  */
-public final class SubclassCertification extends AbstractNpcAI
+public class SubclassCertification extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

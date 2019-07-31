@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  * Clan chat handler
  * @author durgus
  */
-public final class ChatClan implements IChatHandler
+public class ChatClan implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

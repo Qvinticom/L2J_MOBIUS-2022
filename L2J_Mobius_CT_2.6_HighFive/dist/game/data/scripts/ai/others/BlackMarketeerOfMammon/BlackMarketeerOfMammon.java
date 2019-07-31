@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Black Marketeer of Mammon - Exchange Adena for AA.
  * @author Adry_85
  */
-public final class BlackMarketeerOfMammon extends AbstractNpcAI
+public class BlackMarketeerOfMammon extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_MARKETEER = 31092;

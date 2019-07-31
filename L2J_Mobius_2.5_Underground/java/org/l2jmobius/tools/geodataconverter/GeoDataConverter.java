@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.World;
 /**
  * @author Hasha
  */
-public final class GeoDataConverter
+public class GeoDataConverter
 {
 	private static GeoFormat _format;
 	private static ABlock[][] _blocks;

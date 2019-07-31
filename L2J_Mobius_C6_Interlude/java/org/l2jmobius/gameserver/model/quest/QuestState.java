@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.skills.Stats;
 /**
  * @author Luis Arias
  */
-public final class QuestState
+public class QuestState
 {
 	protected static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
 	
@@ -1048,7 +1048,7 @@ public final class QuestState
 	 * Return true if quest is to exited on clean up by QuestStateManager
 	 * @return boolean
 	 */
-	public final boolean isExitQuestOnCleanUp()
+	public boolean isExitQuestOnCleanUp()
 	{
 		return _isExitQuestOnCleanUp;
 	}
@@ -1093,7 +1093,7 @@ public final class QuestState
 	 * @return QuestTimer<BR>
 	 *         Return null if name does not exist
 	 */
-	public final QuestTimer getQuestTimer(String name)
+	public QuestTimer getQuestTimer(String name)
 	{
 		return getQuest().getQuestTimer(name, null, getPlayer());
 	}

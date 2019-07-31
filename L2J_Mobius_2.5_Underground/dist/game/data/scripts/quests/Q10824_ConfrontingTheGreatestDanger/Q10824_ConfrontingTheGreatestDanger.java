@@ -29,7 +29,7 @@ import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersT
  * @URL https://l2wiki.com/Confronting_the_Greatest_Danger
  * @author Mobius
  */
-public final class Q10824_ConfrontingTheGreatestDanger extends Quest
+public class Q10824_ConfrontingTheGreatestDanger extends Quest
 {
 	// NPC
 	private static final int MERLOT = 34019;

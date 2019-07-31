@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 /**
  * Debuff effect implementation.
  */
-public final class Debuff extends AbstractEffect
+public class Debuff extends AbstractEffect
 {
 	public Debuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

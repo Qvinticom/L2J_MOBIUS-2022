@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * [Nymph Rose (Elegant), Nymph Lily (Elegant), Nymph Tulip (Elegant), Nymph Cosmos (Elegant)]
  * @author Gigi
  */
-public final class FlowerBud extends AbstractNpcAI
+public class FlowerBud extends AbstractNpcAI
 {
 	// NPCs
 	private static final int FLOWER_BUD = 19600;

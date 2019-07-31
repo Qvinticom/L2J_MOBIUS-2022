@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Elven Wizard (408)
  * @author ivantotov
  */
-public final class Q00408_PathOfTheElvenWizard extends Quest
+public class Q00408_PathOfTheElvenWizard extends Quest
 {
 	// NPCs
 	private static final int ROSSELA = 30414;

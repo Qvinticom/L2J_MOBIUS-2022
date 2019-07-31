@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * RequestBBSwrite client packet implementation.
  * @author -Wooden-, Zoey76
  */
-public final class RequestBBSwrite implements IClientIncomingPacket
+public class RequestBBSwrite implements IClientIncomingPacket
 {
 	private String _url;
 	private String _arg1;

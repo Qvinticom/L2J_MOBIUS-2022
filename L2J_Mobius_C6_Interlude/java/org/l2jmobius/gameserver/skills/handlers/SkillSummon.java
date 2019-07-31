@@ -266,7 +266,7 @@ public class SkillSummon extends Skill
 		activeChar.sendPacket(new PetInfo(summon));
 	}
 	
-	public final boolean isCubic()
+	public boolean isCubic()
 	{
 		return _isCubic;
 	}

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Collection of flood protectors for single player.
  * @author fordfrog
  */
-public final class FloodProtectors
+public class FloodProtectors
 {
 	/**
 	 * Use-item flood protector.

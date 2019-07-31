@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Take Castle effect implementation.
  * @author Adry_85
  */
-public final class TakeCastle extends AbstractEffect
+public class TakeCastle extends AbstractEffect
 {
 	public TakeCastle(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

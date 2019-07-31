@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 /**
  * @author lord_rex
  */
-public final class AdminHide implements IAdminCommandHandler
+public class AdminHide implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -72,7 +72,7 @@ public final class AdminHide implements IAdminCommandHandler
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			BuilderUtil.sendSysMessage(player, "//hide [on|off]");
 			return true;

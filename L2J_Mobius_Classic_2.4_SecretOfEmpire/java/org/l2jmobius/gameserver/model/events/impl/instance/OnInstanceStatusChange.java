@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyelfik
  */
-public final class OnInstanceStatusChange implements IBaseEvent
+public class OnInstanceStatusChange implements IBaseEvent
 {
 	private final Instance _world;
 	private final int _status;

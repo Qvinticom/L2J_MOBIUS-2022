@@ -59,7 +59,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		setSettings(settings);
 	}
 	
-	public final class Settings extends AbstractZoneSettings
+	public class Settings extends AbstractZoneSettings
 	{
 		private OlympiadGameTask _task = null;
 		
@@ -90,12 +90,12 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		return (Settings) super.getSettings();
 	}
 	
-	public final void registerTask(OlympiadGameTask task)
+	public void registerTask(OlympiadGameTask task)
 	{
 		getSettings().setTask(task);
 	}
 	
-	public final void openDoors()
+	public void openDoors()
 	{
 		for (DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
@@ -106,7 +106,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void closeDoors()
+	public void closeDoors()
 	{
 		for (DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
@@ -117,7 +117,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void spawnBuffers()
+	public void spawnBuffers()
 	{
 		for (Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
@@ -128,7 +128,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void deleteBuffers()
+	public void deleteBuffers()
 	{
 		for (Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
@@ -139,7 +139,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void broadcastStatusUpdate(PlayerInstance player)
+	public void broadcastStatusUpdate(PlayerInstance player)
 	{
 		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
 		for (PlayerInstance target : getPlayersInside())
@@ -151,7 +151,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void broadcastPacketToObservers(IClientOutgoingPacket packet)
+	public void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
 		for (Creature creature : getCharactersInside())
 		{
@@ -215,7 +215,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void updateZoneStatusForCharactersInside()
+	public void updateZoneStatusForCharactersInside()
 	{
 		if (getSettings().getOlympiadTask() == null)
 		{

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Fromat:(ch) dddddc
  * @author -Wooden-
  */
-public final class RequestExMagicSkillUseGround implements IClientIncomingPacket
+public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;

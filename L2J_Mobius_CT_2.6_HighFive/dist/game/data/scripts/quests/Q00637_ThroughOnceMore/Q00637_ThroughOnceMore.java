@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Original Jython script by BiTi! and DrLecter.
  * @author DS
  */
-public final class Q00637_ThroughOnceMore extends Quest
+public class Q00637_ThroughOnceMore extends Quest
 {
 	private static final int FLAURON = 32010;
 	private static final int[] MOBS =
@@ -55,7 +55,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -75,7 +75,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.getState() == State.STARTED))
@@ -110,7 +110,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		

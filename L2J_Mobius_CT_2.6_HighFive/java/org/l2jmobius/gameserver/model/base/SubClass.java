@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
  * Used to store key information about a character's sub-class.
  * @author Tempy
  */
-public final class SubClass
+public class SubClass
 {
 	private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 	

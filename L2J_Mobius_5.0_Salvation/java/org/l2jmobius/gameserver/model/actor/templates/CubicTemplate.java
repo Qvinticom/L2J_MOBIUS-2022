@@ -44,7 +44,7 @@ public class CubicTemplate implements ICubicConditionHolder
 	private final double _power;
 	private final CubicTargetType _targetType;
 	private final List<ICubicCondition> _conditions = new ArrayList<>();
-	public final List<CubicSkill> _skills = new ArrayList<>();
+	public List<CubicSkill> _skills = new ArrayList<>();
 	
 	public CubicTemplate(StatsSet set)
 	{

@@ -41,7 +41,7 @@ import ai.AbstractNpcAI;
  * Venom AI on Rune Castle.
  * @author nonom, MELERIX
  */
-public final class Venom extends AbstractNpcAI
+public class Venom extends AbstractNpcAI
 {
 	private static final int CASTLE = 8; // Rune
 	
@@ -266,7 +266,7 @@ public final class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{

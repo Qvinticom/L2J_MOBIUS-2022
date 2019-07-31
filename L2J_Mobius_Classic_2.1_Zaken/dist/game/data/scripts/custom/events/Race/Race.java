@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 /**
  * @author Gnacik
  */
-public final class Race extends Event
+public class Race extends Event
 {
 	// Event NPCs list
 	private List<Npc> _npclist;

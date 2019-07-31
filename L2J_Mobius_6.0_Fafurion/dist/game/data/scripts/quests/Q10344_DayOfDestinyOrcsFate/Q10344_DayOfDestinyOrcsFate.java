@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Orc's Fate (10344)
  * @author St3eT
  */
-public final class Q10344_DayOfDestinyOrcsFate extends ThirdClassTransferQuest
+public class Q10344_DayOfDestinyOrcsFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int LADANZA = 30865;

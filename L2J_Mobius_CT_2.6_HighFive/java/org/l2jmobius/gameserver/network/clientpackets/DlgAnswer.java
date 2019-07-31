@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Dezmond_snz
  */
-public final class DlgAnswer implements IClientIncomingPacket
+public class DlgAnswer implements IClientIncomingPacket
 {
 	private int _messageId;
 	private int _answer;

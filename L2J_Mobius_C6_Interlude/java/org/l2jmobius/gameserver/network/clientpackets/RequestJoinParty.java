@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestJoinParty extends GameClientPacket
+public class RequestJoinParty extends GameClientPacket
 {
 	private String _name;
 	private int _itemDistribution;

@@ -31,7 +31,7 @@ import quests.Q00118_ToLeadAndBeLed.Q00118_ToLeadAndBeLed;
  * The Leader And The Follower (123)
  * @author ivantotov
  */
-public final class Q00123_TheLeaderAndTheFollower extends Quest
+public class Q00123_TheLeaderAndTheFollower extends Quest
 {
 	// NPC
 	private static final int HEAD_BLACKSMITH_NEWYEAR = 31961;

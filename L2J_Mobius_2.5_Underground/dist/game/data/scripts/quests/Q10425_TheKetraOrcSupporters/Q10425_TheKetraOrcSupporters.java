@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * The Ketra Orc Supporters (10425)
  * @author Stayway
  */
-public final class Q10425_TheKetraOrcSupporters extends Quest
+public class Q10425_TheKetraOrcSupporters extends Quest
 {
 	// NPCs
 	private static final int LUGONNES = 33852;

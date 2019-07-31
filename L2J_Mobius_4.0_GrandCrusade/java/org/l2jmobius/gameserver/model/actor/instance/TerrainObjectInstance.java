@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class TerrainObjectInstance extends Npc
+public class TerrainObjectInstance extends Npc
 {
 	public TerrainObjectInstance(NpcTemplate template)
 	{

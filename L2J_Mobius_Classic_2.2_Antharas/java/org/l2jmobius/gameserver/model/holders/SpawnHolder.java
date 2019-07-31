@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 /**
  * @author St3eT
  */
-public final class SpawnHolder extends Location
+public class SpawnHolder extends Location
 {
 	private final int _npcId;
 	private final int _respawnDelay;
@@ -59,12 +59,12 @@ public final class SpawnHolder extends Location
 		_spawnAnimation = spawnAnimation;
 	}
 	
-	public final int getNpcId()
+	public int getNpcId()
 	{
 		return _npcId;
 	}
 	
-	public final boolean isSpawnAnimation()
+	public boolean isSpawnAnimation()
 	{
 		return _spawnAnimation;
 	}

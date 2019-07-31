@@ -870,7 +870,7 @@ public class VillageMasterInstance extends NpcInstance
 	 * @param classId
 	 * @return
 	 */
-	public final boolean checkVillageMaster(int classId)
+	public boolean checkVillageMaster(int classId)
 	{
 		return checkVillageMaster(PlayerClass.values()[classId]);
 	}
@@ -880,7 +880,7 @@ public class VillageMasterInstance extends NpcInstance
 	 * @param pclass
 	 * @return
 	 */
-	public final boolean checkVillageMaster(PlayerClass pclass)
+	public boolean checkVillageMaster(PlayerClass pclass)
 	{
 		if (Config.ALT_GAME_SUBCLASS_EVERYWHERE)
 		{

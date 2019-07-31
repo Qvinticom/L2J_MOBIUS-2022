@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Dispel By Slot Probability effect implementation.
  * @author Adry_85, Zoey76
  */
-public final class DispelBySlotProbability extends AbstractEffect
+public class DispelBySlotProbability extends AbstractEffect
 {
 	private final Set<AbnormalType> _dispelAbnormals;
 	private final int _rate;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Clan Gate effect implementation.
  * @author ZaKaX
  */
-public final class ClanGate extends AbstractEffect
+public class ClanGate extends AbstractEffect
 {
 	public ClanGate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

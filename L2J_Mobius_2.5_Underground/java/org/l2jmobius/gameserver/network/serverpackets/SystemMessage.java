@@ -34,11 +34,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 /**
  * @author Forsaiken
  */
-public final class SystemMessage implements IClientOutgoingPacket
+public class SystemMessage implements IClientOutgoingPacket
 {
 	private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
 	
-	public final class SMParam
+	public class SMParam
 	{
 		private final byte _type;
 		private final Object _value;
@@ -49,32 +49,32 @@ public final class SystemMessage implements IClientOutgoingPacket
 			_value = value;
 		}
 		
-		public final byte getType()
+		public byte getType()
 		{
 			return _type;
 		}
 		
-		public final Object getValue()
+		public Object getValue()
 		{
 			return _value;
 		}
 		
-		public final String getStringValue()
+		public String getStringValue()
 		{
 			return (String) _value;
 		}
 		
-		public final int getIntValue()
+		public int getIntValue()
 		{
 			return ((Integer) _value).intValue();
 		}
 		
-		public final long getLongValue()
+		public long getLongValue()
 		{
 			return ((Long) _value).longValue();
 		}
 		
-		public final int[] getIntArrayValue()
+		public int[] getIntArrayValue()
 		{
 			return (int[]) _value;
 		}

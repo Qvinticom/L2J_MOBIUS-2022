@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class DeleteObject implements IClientOutgoingPacket
+public class DeleteObject implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	

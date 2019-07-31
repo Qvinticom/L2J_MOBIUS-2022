@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Untargetable effect implementation.
  * @author UnAfraid
  */
-public final class Untargetable extends AbstractEffect
+public class Untargetable extends AbstractEffect
 {
 	public Untargetable(StatsSet params)
 	{

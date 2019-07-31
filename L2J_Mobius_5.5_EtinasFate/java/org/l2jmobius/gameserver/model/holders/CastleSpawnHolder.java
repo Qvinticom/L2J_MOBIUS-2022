@@ -34,12 +34,12 @@ public class CastleSpawnHolder extends Location
 		_side = side;
 	}
 	
-	public final int getNpcId()
+	public int getNpcId()
 	{
 		return _npcId;
 	}
 	
-	public final CastleSide getSide()
+	public CastleSide getSide()
 	{
 		return _side;
 	}

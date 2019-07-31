@@ -47,7 +47,7 @@ import quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
  * Pailaka (Varka Silenos Barracks) Instance zone.
  * @author Sdw
  */
-public final class PailakaInjuredDragon extends AbstractInstance
+public class PailakaInjuredDragon extends AbstractInstance
 {
 	// NPCs
 	private static final int KETRA_ORC_SHAMAN = 32499;

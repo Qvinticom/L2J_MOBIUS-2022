@@ -31,7 +31,7 @@ import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManage
  * Pavel's Last Research (120)
  * @author jurchiks
  */
-public final class Q00120_PavelsLastResearch extends Quest
+public class Q00120_PavelsLastResearch extends Quest
 {
 	// NPCs
 	private static final int SUSPICIOUS_LOOKING_PILE_OF_STONES = 32046;

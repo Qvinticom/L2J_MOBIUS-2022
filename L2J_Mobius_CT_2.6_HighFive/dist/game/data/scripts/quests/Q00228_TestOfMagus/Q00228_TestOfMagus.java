@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of Magus (228)
  * @author ivantotov
  */
-public final class Q00228_TestOfMagus extends Quest
+public class Q00228_TestOfMagus extends Quest
 {
 	// NPCs
 	private static final int PARINA = 30391;

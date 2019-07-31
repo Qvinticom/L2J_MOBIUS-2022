@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
  * Shadow of Terror: Blackish Red Fog (10301)
  * @author St3eT, Gigi
  */
-public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
+public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 {
 	// NPCs
 	private static final int LADA = 33100;

@@ -78,7 +78,7 @@ public abstract class AbstractEnchantItem
 	/**
 	 * @return id of current item
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -86,7 +86,7 @@ public abstract class AbstractEnchantItem
 	/**
 	 * @return bonus chance that would be added
 	 */
-	public final double getBonusRate()
+	public double getBonusRate()
 	{
 		return _bonusRate;
 	}
@@ -94,7 +94,7 @@ public abstract class AbstractEnchantItem
 	/**
 	 * @return {@link Item} current item/scroll
 	 */
-	public final Item getItem()
+	public Item getItem()
 	{
 		return ItemTable.getInstance().getTemplate(_id);
 	}
@@ -102,7 +102,7 @@ public abstract class AbstractEnchantItem
 	/**
 	 * @return grade of the item/scroll.
 	 */
-	public final CrystalType getGrade()
+	public CrystalType getGrade()
 	{
 		return _grade;
 	}

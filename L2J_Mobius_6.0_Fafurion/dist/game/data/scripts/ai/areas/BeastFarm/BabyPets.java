@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * Baby Pets AI.
  * @author St3eT
  */
-public final class BabyPets extends AbstractNpcAI
+public class BabyPets extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] BABY_PETS =

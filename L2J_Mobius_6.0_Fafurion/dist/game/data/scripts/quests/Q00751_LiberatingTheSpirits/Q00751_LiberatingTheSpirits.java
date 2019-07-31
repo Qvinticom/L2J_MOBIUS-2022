@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * @URL https://l2wiki.com/Liberating_the_Spirits
  * @author Gigi
  */
-public final class Q00751_LiberatingTheSpirits extends Quest
+public class Q00751_LiberatingTheSpirits extends Quest
 {
 	// Npc
 	private static final int RODERIK = 30631;

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Make Spears Dull! (735)
  * @author Gigiikun
  */
-public final class Q00735_MakeSpearsDull extends TerritoryWarSuperClass
+public class Q00735_MakeSpearsDull extends TerritoryWarSuperClass
 {
 	public Q00735_MakeSpearsDull()
 	{

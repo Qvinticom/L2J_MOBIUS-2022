@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.Disconnection;
 /**
  * Task that handles illegal player actions.
  */
-public final class IllegalPlayerActionTask implements Runnable
+public class IllegalPlayerActionTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger("audit");
 	

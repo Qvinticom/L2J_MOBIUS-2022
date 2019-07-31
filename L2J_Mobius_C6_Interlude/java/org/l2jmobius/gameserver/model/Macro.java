@@ -26,19 +26,19 @@ public class Macro
 	public static final int CMD_TYPE_SHORTCUT = 4;
 	
 	public int id;
-	public final int icon;
-	public final String name;
-	public final String descr;
-	public final String acronym;
-	public final MacroCmd[] commands;
+	public int icon;
+	public String name;
+	public String descr;
+	public String acronym;
+	public MacroCmd[] commands;
 	
 	public static class MacroCmd
 	{
-		public final int entry;
-		public final int type;
-		public final int d1; // skill_id or page for shortcuts
-		public final int d2; // shortcut
-		public final String cmd;
+		public int entry;
+		public int type;
+		public int d1; // skill_id or page for shortcuts
+		public int d2; // shortcut
+		public String cmd;
 		
 		public MacroCmd(int pEntry, int pType, int pD1, int pD2, String pCmd)
 		{

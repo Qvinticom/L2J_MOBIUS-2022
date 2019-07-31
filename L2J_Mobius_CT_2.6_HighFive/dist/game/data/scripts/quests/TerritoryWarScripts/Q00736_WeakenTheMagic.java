@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Weaken the magic! (736)
  * @author Gigiikun
  */
-public final class Q00736_WeakenTheMagic extends TerritoryWarSuperClass
+public class Q00736_WeakenTheMagic extends TerritoryWarSuperClass
 {
 	public Q00736_WeakenTheMagic()
 	{

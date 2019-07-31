@@ -34,7 +34,7 @@ import org.l2jmobius.loginserver.network.OutgoingPackets;
  * s: blowfish key
  * </pre>
  */
-public final class Init implements IOutgoingPacket
+public class Init implements IOutgoingPacket
 {
 	private final int _sessionId;
 	

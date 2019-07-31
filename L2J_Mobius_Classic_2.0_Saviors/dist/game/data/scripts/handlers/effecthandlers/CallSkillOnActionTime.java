@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
 /**
  * Dam Over Time effect implementation.
  */
-public final class CallSkillOnActionTime extends AbstractEffect
+public class CallSkillOnActionTime extends AbstractEffect
 {
 	private final SkillHolder _skill;
 	

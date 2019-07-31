@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * format ch c: (id) 0xD0 h: (subid) 0x12
  * @author -Wooden-
  */
-public final class RequestOlympiadObserverEnd extends GameClientPacket
+public class RequestOlympiadObserverEnd extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

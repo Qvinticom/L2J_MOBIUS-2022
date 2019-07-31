@@ -34,7 +34,7 @@ import instances.AbstractInstance;
  * Tower of Infinitum (10th Floor) instance zone.
  * @author GKR
  */
-public final class RankuFloor extends AbstractInstance
+public class RankuFloor extends AbstractInstance
 {
 	// NPCs
 	private static final int GK_9 = 32752;

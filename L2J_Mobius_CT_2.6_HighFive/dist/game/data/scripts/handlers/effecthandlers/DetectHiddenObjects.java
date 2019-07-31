@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Detect Hidden Objects effect implementation.
  * @author UnAfraid
  */
-public final class DetectHiddenObjects extends AbstractEffect
+public class DetectHiddenObjects extends AbstractEffect
 {
 	public DetectHiddenObjects(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PartySmallWindowAll implements IClientOutgoingPacket
+public class PartySmallWindowAll implements IClientOutgoingPacket
 {
 	private final Party _party;
 	private final PlayerInstance _exclude;

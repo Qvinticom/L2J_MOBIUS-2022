@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger Skill By Death Blow effect implementation.
  * @author Sdw
  */
-public final class TriggerSkillByDeathBlow extends AbstractEffect
+public class TriggerSkillByDeathBlow extends AbstractEffect
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;

@@ -47,7 +47,7 @@ public class DoormanInstance extends FolkInstance
 		super(objectID, template);
 	}
 	
-	public final ClanHall getClanHall()
+	public ClanHall getClanHall()
 	{
 		if (_clanHall == null)
 		{

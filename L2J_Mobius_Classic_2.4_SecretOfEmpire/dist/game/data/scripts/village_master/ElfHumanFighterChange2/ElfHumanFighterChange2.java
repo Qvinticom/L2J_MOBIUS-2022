@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Elf Human class transfer AI.
  * @author Adry_85
  */
-public final class ElfHumanFighterChange2 extends AbstractNpcAI
+public class ElfHumanFighterChange2 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =

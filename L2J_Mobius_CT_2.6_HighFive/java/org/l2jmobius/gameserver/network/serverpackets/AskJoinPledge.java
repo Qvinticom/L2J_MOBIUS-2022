@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class AskJoinPledge implements IClientOutgoingPacket
+public class AskJoinPledge implements IClientOutgoingPacket
 {
 	private final int _requestorObjId;
 	private final String _subPledgeName;

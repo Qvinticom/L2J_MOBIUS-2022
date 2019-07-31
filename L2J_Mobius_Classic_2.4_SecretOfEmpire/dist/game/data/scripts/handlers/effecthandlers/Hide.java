@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Hide effect implementation.
  * @author ZaKaX, nBd
  */
-public final class Hide extends AbstractEffect
+public class Hide extends AbstractEffect
 {
 	public Hide(StatsSet params)
 	{

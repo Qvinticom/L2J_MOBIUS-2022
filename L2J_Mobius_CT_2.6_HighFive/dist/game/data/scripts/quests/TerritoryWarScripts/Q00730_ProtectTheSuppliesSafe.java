@@ -20,7 +20,7 @@ package quests.TerritoryWarScripts;
  * Protect the Supplies Safe (730)
  * @author Gigiikun
  */
-public final class Q00730_ProtectTheSuppliesSafe extends TerritoryWarSuperClass
+public class Q00730_ProtectTheSuppliesSafe extends TerritoryWarSuperClass
 {
 	public Q00730_ProtectTheSuppliesSafe()
 	{

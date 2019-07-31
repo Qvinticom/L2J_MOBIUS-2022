@@ -21,7 +21,7 @@ import java.util.Random;
 /**
  * @author Mobius
  */
-public final class Rnd
+public class Rnd
 {
 	/**
 	 * Thread-specific random number generator.<br>

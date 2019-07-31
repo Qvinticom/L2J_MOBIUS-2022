@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * @URL https://l2wiki.com/Winds_of_Fate:_Encounters
  * @author malyelfik
  */
-public final class Q10751_WindsOfFateEncounters extends Quest
+public class Q10751_WindsOfFateEncounters extends Quest
 {
 	// NPC
 	private static final int NAVARI = 33931;

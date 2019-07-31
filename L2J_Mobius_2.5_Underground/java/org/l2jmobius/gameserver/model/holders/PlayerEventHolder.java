@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * </ul>
  * @author Nik, xban1x
  */
-public final class PlayerEventHolder
+public class PlayerEventHolder
 {
 	private final PlayerInstance _player;
 	private final String _name;

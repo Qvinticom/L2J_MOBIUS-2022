@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
  * Let's Go To The Central Square (10320)
  * @author ivantotov, Gladicek
  */
-public final class Q10320_LetsGoToTheCentralSquare extends Quest
+public class Q10320_LetsGoToTheCentralSquare extends Quest
 {
 	// NPCs
 	private static final int PANTHEON = 32972;

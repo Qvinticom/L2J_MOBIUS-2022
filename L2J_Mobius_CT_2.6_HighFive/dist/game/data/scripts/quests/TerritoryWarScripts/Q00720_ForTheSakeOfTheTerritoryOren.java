@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Oren (720)
  * @author Gigiikun
  */
-public final class Q00720_ForTheSakeOfTheTerritoryOren extends TerritoryWarSuperClass
+public class Q00720_ForTheSakeOfTheTerritoryOren extends TerritoryWarSuperClass
 {
 	public Q00720_ForTheSakeOfTheTerritoryOren()
 	{

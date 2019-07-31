@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * Social Action player action handler.
  * @author Nik
  */
-public final class SocialAction implements IPlayerActionHandler
+public class SocialAction implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

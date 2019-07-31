@@ -26,7 +26,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Solomon AI.
  * @author DS
  */
-public final class Solomon extends AbstractNpcAI
+public class Solomon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SOLOMON = 32355;
@@ -37,7 +37,7 @@ public final class Solomon extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (HellboundEngine.getInstance().getLevel() == 5)
 		{

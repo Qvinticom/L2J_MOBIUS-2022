@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Aden Reconstructor Manager AI.
  * @author St3eT
  */
-public final class AdenReconstructorManager extends AbstractNpcAI
+public class AdenReconstructorManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =

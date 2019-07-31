@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Remnants AI.
  * @author DS
  */
-public final class Remnants extends AbstractNpcAI
+public class Remnants extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{
@@ -48,14 +48,14 @@ public final class Remnants extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsMortal(false);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public final String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (skill.getId() == SKILL_HOLY_WATER)
 		{

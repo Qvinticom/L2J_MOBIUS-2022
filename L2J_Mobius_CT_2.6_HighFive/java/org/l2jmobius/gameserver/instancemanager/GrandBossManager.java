@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.zone.type.BossZone;
  * Grand Boss manager.
  * @author DaRkRaGe Revised by Emperorc
  */
-public final class GrandBossManager implements IStorable
+public class GrandBossManager implements IStorable
 {
 	// SQL queries
 	private static final String DELETE_GRAND_BOSS_LIST = "DELETE FROM grandboss_list";

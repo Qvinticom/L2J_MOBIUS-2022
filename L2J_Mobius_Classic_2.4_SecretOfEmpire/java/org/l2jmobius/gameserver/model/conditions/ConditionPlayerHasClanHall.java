@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionPlayerHasClanHall.
  * @author MrPoke
  */
-public final class ConditionPlayerHasClanHall extends Condition
+public class ConditionPlayerHasClanHall extends Condition
 {
 	private final ArrayList<Integer> _clanHall;
 	

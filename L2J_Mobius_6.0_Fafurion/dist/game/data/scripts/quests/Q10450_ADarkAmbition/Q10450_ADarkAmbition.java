@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Dark Ambition (10450)
  * @author St3eT
  */
-public final class Q10450_ADarkAmbition extends Quest
+public class Q10450_ADarkAmbition extends Quest
 {
 	// NPCs
 	private static final int MATHIAS = 31340;

@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 /**
  * @author St3eT
  */
-public final class ClanHallData implements IXmlReader
+public class ClanHallData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ClanHallData.class.getName());
 	private static final Map<Integer, ClanHall> _clanHalls = new ConcurrentHashMap<>();

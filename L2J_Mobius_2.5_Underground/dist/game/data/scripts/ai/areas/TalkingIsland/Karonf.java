@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Karonf AI.
  * @author St3eT
  */
-public final class Karonf extends AbstractNpcAI
+public class Karonf extends AbstractNpcAI
 {
 	// NPC
 	private static final int KARONF = 33242;

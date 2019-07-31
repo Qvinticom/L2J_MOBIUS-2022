@@ -30,18 +30,18 @@ public class FolkStatus extends NpcStatus
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false);
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
 	{
 	}
 	
 	@Override
-	public final void reduceMp(double value)
+	public void reduceMp(double value)
 	{
 		// If Clan Hall buff are free and it's a Clan Hall Manager MP won't get reduced.
 		if (Config.CH_BUFF_FREE && (getActiveChar() instanceof ClanHallManagerInstance))

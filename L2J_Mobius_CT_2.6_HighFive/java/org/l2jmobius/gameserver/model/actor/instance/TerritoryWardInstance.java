@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class TerritoryWardInstance extends Attackable
+public class TerritoryWardInstance extends Attackable
 {
 	/**
 	 * Creates territory ward.

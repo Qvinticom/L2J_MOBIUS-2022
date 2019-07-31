@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Zoey76
  */
-public final class RequestHennaEquip implements IClientIncomingPacket
+public class RequestHennaEquip implements IClientIncomingPacket
 {
 	private int _symbolId;
 	

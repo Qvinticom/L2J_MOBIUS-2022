@@ -166,7 +166,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final boolean addLevel(byte value)
+	public boolean addLevel(byte value)
 	{
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -277,19 +277,19 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final long getExpForLevel(int level)
+	public long getExpForLevel(int level)
 	{
 		return ExperienceData.getInstance().getExpForLevel(level);
 	}
 	
 	@Override
-	public final PlayerInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
 		return (PlayerInstance) super.getActiveChar();
 	}
 	
 	@Override
-	public final long getExp()
+	public long getExp()
 	{
 		final PlayerInstance player = getActiveChar();
 		if ((player != null) && player.isSubClassActive())
@@ -309,7 +309,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final void setExp(long value)
+	public void setExp(long value)
 	{
 		final PlayerInstance player = getActiveChar();
 		
@@ -330,7 +330,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		try
 		{
@@ -354,7 +354,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final void setLevel(int value)
+	public void setLevel(int value)
 	{
 		if (value > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -380,7 +380,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getMaxCp()
+	public int getMaxCp()
 	{
 		final int val = super.getMaxCp();
 		
@@ -399,7 +399,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getMaxHp()
+	public int getMaxHp()
 	{
 		// Get the Max HP (base+modifier) of the PlayerInstance
 		final int val = super.getMaxHp();
@@ -421,7 +421,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getMaxMp()
+	public int getMaxMp()
 	{
 		// Get the Max MP (base+modifier) of the PlayerInstance
 		final int val = super.getMaxMp();
@@ -443,7 +443,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getSp()
+	public int getSp()
 	{
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
@@ -460,7 +460,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final void setSp(int value)
+	public void setSp(int value)
 	{
 		
 		final PlayerInstance player = getActiveChar();

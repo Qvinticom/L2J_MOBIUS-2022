@@ -55,7 +55,7 @@ public class OlympiadStadiaManager
 		_olympiadStadias.add(arena);
 	}
 	
-	public final OlympiadStadiumZone getStadium(Creature creature)
+	public OlympiadStadiumZone getStadium(Creature creature)
 	{
 		for (OlympiadStadiumZone temp : _olympiadStadias)
 		{
@@ -68,7 +68,7 @@ public class OlympiadStadiaManager
 		return null;
 	}
 	
-	public final OlympiadStadiumZone getStadiumByLoc(int x, int y, int z)
+	public OlympiadStadiumZone getStadiumByLoc(int x, int y, int z)
 	{
 		if (_olympiadStadias != null)
 		{

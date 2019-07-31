@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Unsummon effect implementation.
  * @author Adry_85
  */
-public final class Unsummon extends AbstractEffect
+public class Unsummon extends AbstractEffect
 {
 	private final int _chance;
 	

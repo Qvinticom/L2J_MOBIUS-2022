@@ -552,7 +552,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		return _spawnedNpcs.peekLast();
 	}
 	
-	public final Deque<Npc> getSpawnedNpcs()
+	public Deque<Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
 	}
@@ -571,12 +571,12 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		return _template;
 	}
 	
-	public final boolean getRandomWalking()
+	public boolean getRandomWalking()
 	{
 		return _randomWalk;
 	}
 	
-	public final void setRandomWalking(boolean value)
+	public void setRandomWalking(boolean value)
 	{
 		_randomWalk = value;
 	}

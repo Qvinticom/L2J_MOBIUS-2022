@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Cp Heal effect implementation.
  * @author UnAfraid
  */
-public final class CpHeal extends AbstractEffect
+public class CpHeal extends AbstractEffect
 {
 	private final double _power;
 	

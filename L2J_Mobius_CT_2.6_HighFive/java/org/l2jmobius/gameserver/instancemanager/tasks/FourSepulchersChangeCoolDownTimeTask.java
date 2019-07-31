@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
  * Four Sepulchers change cool down time task.
  * @author xban1x
  */
-public final class FourSepulchersChangeCoolDownTimeTask implements Runnable
+public class FourSepulchersChangeCoolDownTimeTask implements Runnable
 {
 	@Override
 	public void run()

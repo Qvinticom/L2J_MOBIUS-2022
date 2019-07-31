@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format:(ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestDuelSurrender implements IClientIncomingPacket
+public class RequestDuelSurrender implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

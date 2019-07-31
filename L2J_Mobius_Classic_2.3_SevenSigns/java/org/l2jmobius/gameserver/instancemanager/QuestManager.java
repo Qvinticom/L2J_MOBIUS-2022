@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
  * Quests and scripts manager.
  * @author Zoey76
  */
-public final class QuestManager
+public class QuestManager
 {
 	private static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
 	

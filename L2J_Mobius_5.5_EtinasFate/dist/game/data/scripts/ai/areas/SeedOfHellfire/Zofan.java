@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Zofan AI.
  * @author St3eT
  */
-public final class Zofan extends AbstractNpcAI
+public class Zofan extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] ZOFAN =

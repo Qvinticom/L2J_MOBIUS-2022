@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Freya's Steward AI.
  * @author Adry_85
  */
-public final class FreyasSteward extends AbstractNpcAI
+public class FreyasSteward extends AbstractNpcAI
 {
 	// NPC
 	private static final int FREYAS_STEWARD = 32029;

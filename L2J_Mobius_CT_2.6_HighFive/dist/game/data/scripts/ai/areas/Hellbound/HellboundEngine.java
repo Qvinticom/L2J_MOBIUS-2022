@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Hellbound Engine.
  * @author Zoey76
  */
-public final class HellboundEngine extends AbstractNpcAI
+public class HellboundEngine extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[][] DOOR_LIST =

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.teleporter.TeleportLocation;
  * Player teleport request listner - called from {@link TeleportHolder#doTeleport(PlayerInstance, Npc, int)}
  * @author malyelfik
  */
-public final class OnNpcTeleportRequest implements IBaseEvent
+public class OnNpcTeleportRequest implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final Npc _npc;

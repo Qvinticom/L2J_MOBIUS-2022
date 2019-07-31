@@ -62,7 +62,7 @@ import ai.AbstractNpcAI;
  * Mentor Guide AI.
  * @author Gnacik, UnAfraid
  */
-public final class MentorGuide extends AbstractNpcAI implements IXmlReader
+public class MentorGuide extends AbstractNpcAI implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MentorGuide.class.getName());
 	

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit implements IClientIncomingPacket
+public class SnoopQuit implements IClientIncomingPacket
 {
 	private int _snoopID;
 	

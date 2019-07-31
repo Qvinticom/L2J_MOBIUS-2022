@@ -63,7 +63,7 @@ public enum TriggerType
 		_mask = mask;
 	}
 	
-	public final boolean check(int event)
+	public boolean check(int event)
 	{
 		return (_mask & event) != 0; // Trigger (sub-)type contains event (sub-)type
 	}

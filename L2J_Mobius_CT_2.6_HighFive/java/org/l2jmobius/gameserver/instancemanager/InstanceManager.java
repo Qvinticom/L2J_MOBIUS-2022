@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 /**
  * @author evill33t, GodKratos
  */
-public final class InstanceManager implements IXmlReader
+public class InstanceManager implements IXmlReader
 {
 	private static final Map<Integer, Instance> INSTANCES = new ConcurrentHashMap<>();
 	private final Map<Integer, InstanceWorld> _instanceWorlds = new ConcurrentHashMap<>();

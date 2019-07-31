@@ -234,7 +234,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class TradeStart extends AbstractItemPacket
+public class TradeStart extends AbstractItemPacket
 {
 	private final int _sendType;
 	private final PlayerInstance _player;

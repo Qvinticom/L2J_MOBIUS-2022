@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * This class handles commands for gm to forge packets
  * @author Maktakien, HorridoJoho
  */
-public final class AdminPForge implements IAdminCommandHandler
+public class AdminPForge implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: A Clue Completed (10393)
  * @author St3eT
  */
-public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
+public class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 {
 	// NPCs
 	private static final int FLUTER = 30677;

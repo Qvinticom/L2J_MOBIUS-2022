@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Disappeared Sakum (10333)
  * @author St3eT
  */
-public final class Q10333_DisappearedSakum extends Quest
+public class Q10333_DisappearedSakum extends Quest
 {
 	// NPCs
 	private static final int BATHIS = 30332;

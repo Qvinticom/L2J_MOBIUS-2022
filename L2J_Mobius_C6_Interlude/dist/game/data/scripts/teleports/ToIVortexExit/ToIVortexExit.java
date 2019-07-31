@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
  * @author Mobius
  * @note Based on python script
  */
-public final class ToIVortexExit extends Quest
+public class ToIVortexExit extends Quest
 {
 	private static final String qn = "ToIVortexExit";
 	

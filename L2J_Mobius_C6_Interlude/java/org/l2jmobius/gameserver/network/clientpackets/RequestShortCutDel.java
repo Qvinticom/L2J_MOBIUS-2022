@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestShortCutDel extends GameClientPacket
+public class RequestShortCutDel extends GameClientPacket
 {
 	private int _slot;
 	private int _page;

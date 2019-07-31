@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Orc Barracks AI
  * @author malyelfik
  */
-public final class OrcBarracks extends AbstractNpcAI
+public class OrcBarracks extends AbstractNpcAI
 {
 	// NPC
 	private static final int TUREK_ORC_FOOTMAN = 20499;

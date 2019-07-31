@@ -65,7 +65,7 @@ public class ClanHallZone extends ResidenceZone
 	}
 	
 	@Override
-	public final Location getBanishSpawnLoc()
+	public Location getBanishSpawnLoc()
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(getResidenceId());
 		if (clanHall == null)

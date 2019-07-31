@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 /**
  * @version $Revision: 1.5.2.8.2.8 $ $Date: 2005/04/02 10:43:04 $
  */
-public final class ProtocolVersion implements IClientIncomingPacket
+public class ProtocolVersion implements IClientIncomingPacket
 {
 	private static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	

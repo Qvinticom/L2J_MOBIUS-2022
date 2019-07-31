@@ -60,7 +60,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * Global calculations, can be modified by server admins
  */
-public final class Formulas
+public class Formulas
 {
 	protected static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
 	
@@ -1925,7 +1925,7 @@ public final class Formulas
 	 * @param chance
 	 * @return
 	 */
-	public final boolean calcBlow(Creature creature, Creature target, int chance)
+	public boolean calcBlow(Creature creature, Creature target, int chance)
 	{
 		return creature.calcStat(Stats.BLOW_RATE, chance * (1.0 + ((creature.getDEX() - 20) / 100)), target, null) > Rnd.get(100);
 	}
@@ -2074,7 +2074,7 @@ public final class Formulas
 	 * @param rate
 	 * @return
 	 */
-	public final int calcPAtkSpd(Creature attacker, Creature target, double rate)
+	public int calcPAtkSpd(Creature attacker, Creature target, double rate)
 	{
 		// measured Oct 2006 by Tank6585, formula by Sami
 		// attack speed 312 equals 1500 ms delay... (or 300 + 40 ms delay?)
@@ -2093,7 +2093,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public final int calcMAtkSpd(Creature attacker, Creature target, Skill skill, double skillTime)
+	public int calcMAtkSpd(Creature attacker, Creature target, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
 		{
@@ -2109,7 +2109,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public final int calcMAtkSpd(Creature attacker, Skill skill, double skillTime)
+	public int calcMAtkSpd(Creature attacker, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
 		{

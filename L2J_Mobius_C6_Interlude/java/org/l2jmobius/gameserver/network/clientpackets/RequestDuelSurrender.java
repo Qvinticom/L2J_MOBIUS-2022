@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.DuelManager;
  * Format:(ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends GameClientPacket
+public class RequestDuelSurrender extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

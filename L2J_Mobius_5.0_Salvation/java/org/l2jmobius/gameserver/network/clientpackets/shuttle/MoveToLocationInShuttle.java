@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.shuttle.ExStopMoveInShuttl
 /**
  * @author UnAfraid
  */
-public final class MoveToLocationInShuttle implements IClientIncomingPacket
+public class MoveToLocationInShuttle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private int _targetX;

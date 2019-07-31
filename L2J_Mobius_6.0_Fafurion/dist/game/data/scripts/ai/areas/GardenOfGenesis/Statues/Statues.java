@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Statues AI.
  * @author St3eT
  */
-public final class Statues extends AbstractNpcAI
+public class Statues extends AbstractNpcAI
 {
 	// NPCs
 	private static final int STATUE_1 = 33138; // Genesis Angel Statue

@@ -29,7 +29,7 @@ import quests.Q10762_MarionetteSpirit.Q10762_MarionetteSpirit;
  * Terrifying Chertuba (10763)
  * @author malyelfik
  */
-public final class Q10763_TerrifyingChertuba extends Quest
+public class Q10763_TerrifyingChertuba extends Quest
 {
 	// NPC
 	private static final int VORBOS = 33966;

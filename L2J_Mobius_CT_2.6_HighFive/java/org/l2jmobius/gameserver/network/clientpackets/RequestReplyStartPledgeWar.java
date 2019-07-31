@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestReplyStartPledgeWar implements IClientIncomingPacket
+public class RequestReplyStartPledgeWar implements IClientIncomingPacket
 {
 	private int _answer;
 	

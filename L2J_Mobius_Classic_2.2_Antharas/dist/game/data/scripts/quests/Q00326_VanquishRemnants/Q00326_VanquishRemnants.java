@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Vanquish Remnants (326)
  * @author xban1x
  */
-public final class Q00326_VanquishRemnants extends Quest
+public class Q00326_VanquishRemnants extends Quest
 {
 	// NPC
 	private static final int LEOPOLD = 30435;

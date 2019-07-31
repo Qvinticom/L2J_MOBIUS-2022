@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Change Face effect implementation.
  * @author Zoey76
  */
-public final class ChangeFace extends AbstractEffect
+public class ChangeFace extends AbstractEffect
 {
 	private final int _value;
 	

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestQuestAbort implements IClientIncomingPacket
+public class RequestQuestAbort implements IClientIncomingPacket
 {
 	private int _questId;
 	

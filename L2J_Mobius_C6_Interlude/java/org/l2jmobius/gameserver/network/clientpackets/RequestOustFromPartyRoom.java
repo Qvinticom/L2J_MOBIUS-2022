@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
  * format (ch) d
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom extends GameClientPacket
+public class RequestOustFromPartyRoom extends GameClientPacket
 {
 	private int _charid;
 	

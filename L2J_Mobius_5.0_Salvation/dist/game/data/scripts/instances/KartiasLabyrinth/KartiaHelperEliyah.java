@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Eliyah AI. Summoner
  * @author flanagak
  */
-public final class KartiaHelperEliyah extends AbstractNpcAI
+public class KartiaHelperEliyah extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_ELIYAH =

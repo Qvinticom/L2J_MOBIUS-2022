@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
  * Quest state class.
  * @author Luis Arias
  */
-public final class QuestState
+public class QuestState
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
 	
@@ -579,7 +579,7 @@ public final class QuestState
 	/**
 	 * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
 	 */
-	public final boolean isExitQuestOnCleanUp()
+	public boolean isExitQuestOnCleanUp()
 	{
 		return _isExitQuestOnCleanUp;
 	}

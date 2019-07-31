@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Fantasy Isle Parade
  * @author JOJO, Pandragon
  */
-public final class Parade extends AbstractNpcAI
+public class Parade extends AbstractNpcAI
 {
 	// @formatter:off
 	final int[] ACTORS =

@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 /**
  * @author UnAfraid
  */
-public final class EnchantRateItem
+public class EnchantRateItem
 {
 	private final String _name;
 	private int _itemId;

@@ -83,7 +83,7 @@ public class AutoSpawnHandler
 		return SingletonHolder.INSTANCE;
 	}
 	
-	public final int size()
+	public int size()
 	{
 		return _registeredSpawns.size();
 	}
@@ -317,7 +317,7 @@ public class AutoSpawnHandler
 	 * @param spawnInst
 	 * @return
 	 */
-	public final long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
+	public long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
 	{
 		final int objectId = spawnInst.getObjectId();
 		return !isSpawnRegistered(objectId) ? -1 : _runningSpawns.containsKey(objectId) ? _runningSpawns.get(objectId).getDelay(TimeUnit.MILLISECONDS) : 0;
@@ -330,7 +330,7 @@ public class AutoSpawnHandler
 	 * @param isObjectId
 	 * @return AutoSpawnInstance spawnInst
 	 */
-	public final AutoSpawnInstance getAutoSpawnInstance(int id, boolean isObjectId)
+	public AutoSpawnInstance getAutoSpawnInstance(int id, boolean isObjectId)
 	{
 		if (isObjectId)
 		{
@@ -370,7 +370,7 @@ public class AutoSpawnHandler
 	 * @param objectId
 	 * @return isAssigned
 	 */
-	public final boolean isSpawnRegistered(int objectId)
+	public boolean isSpawnRegistered(int objectId)
 	{
 		return _registeredSpawns.containsKey(objectId);
 	}
@@ -380,7 +380,7 @@ public class AutoSpawnHandler
 	 * @param spawnInst
 	 * @return boolean isAssigned
 	 */
-	public final boolean isSpawnRegistered(AutoSpawnInstance spawnInst)
+	public boolean isSpawnRegistered(AutoSpawnInstance spawnInst)
 	{
 		return _registeredSpawns.containsValue(spawnInst);
 	}

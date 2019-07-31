@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class ConditionUsingSkill extends Condition
+public class ConditionUsingSkill extends Condition
 {
 	private final int _skillId;
 	

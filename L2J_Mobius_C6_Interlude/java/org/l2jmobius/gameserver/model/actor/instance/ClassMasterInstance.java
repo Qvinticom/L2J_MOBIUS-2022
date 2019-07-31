@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class ClassMasterInstance extends FolkInstance
+public class ClassMasterInstance extends FolkInstance
 {
 	private static ClassMasterInstance _instance;
 	

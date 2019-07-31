@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Bard's Mandolin (362)
  * @author Adry_85
  */
-public final class Q00362_BardsMandolin extends Quest
+public class Q00362_BardsMandolin extends Quest
 {
 	// NPCs
 	private static final int WOODROW = 30837;

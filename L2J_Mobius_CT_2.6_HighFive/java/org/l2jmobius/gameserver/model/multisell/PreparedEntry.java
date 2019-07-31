@@ -105,7 +105,7 @@ public class PreparedEntry extends Entry
 	}
 	
 	@Override
-	public final long getTaxAmount()
+	public long getTaxAmount()
 	{
 		return _taxAmount;
 	}

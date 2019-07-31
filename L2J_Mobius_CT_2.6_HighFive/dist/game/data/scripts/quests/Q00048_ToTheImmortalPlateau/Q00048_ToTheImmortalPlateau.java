@@ -32,7 +32,7 @@ import quests.Q00009_IntoTheCityOfHumans.Q00009_IntoTheCityOfHumans;
  * To The Immortal Plateau (48)
  * @author janiko
  */
-public final class Q00048_ToTheImmortalPlateau extends Quest
+public class Q00048_ToTheImmortalPlateau extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;

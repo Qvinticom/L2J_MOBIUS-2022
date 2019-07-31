@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 /**
  * @author godson
  */
-public final class DayNightSpawnManager
+public class DayNightSpawnManager
 {
 	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	

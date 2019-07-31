@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Land Dragon Conqueror (10290)
  * @author malyelfik
  */
-public final class Q10290_LandDragonConqueror extends Quest
+public class Q10290_LandDragonConqueror extends Quest
 {
 	// NPC
 	private static final int THEODRIC = 30755;

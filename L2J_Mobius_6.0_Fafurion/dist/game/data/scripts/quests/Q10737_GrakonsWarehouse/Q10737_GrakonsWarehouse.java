@@ -33,7 +33,7 @@ import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
  * Grakons Warehouse (10737)
  * @author Sdw
  */
-public final class Q10737_GrakonsWarehouse extends Quest
+public class Q10737_GrakonsWarehouse extends Quest
 {
 	// NPCs
 	private static final int KATALIN = 33943;

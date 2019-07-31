@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Certification of Fate (10360)
  * @author St3eT
  */
-public final class Q10360_CertificationOfFate extends Quest
+public class Q10360_CertificationOfFate extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;

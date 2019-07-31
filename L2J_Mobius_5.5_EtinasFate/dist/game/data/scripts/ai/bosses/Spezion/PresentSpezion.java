@@ -24,7 +24,7 @@ import ai.AbstractNpcAI;
  * Present Spezion AI.
  * @author St3eT
  */
-public final class PresentSpezion extends AbstractNpcAI
+public class PresentSpezion extends AbstractNpcAI
 {
 	// NPCs
 	private static final int PRESENT_SPEZION = 32948;

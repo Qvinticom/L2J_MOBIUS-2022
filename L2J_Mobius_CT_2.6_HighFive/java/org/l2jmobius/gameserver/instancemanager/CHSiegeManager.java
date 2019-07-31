@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author BiggBoss
  */
-public final class CHSiegeManager
+public class CHSiegeManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CHSiegeManager.class.getName());
 	private static final String SQL_LOAD_HALLS = "SELECT * FROM siegable_clanhall";
@@ -94,12 +94,12 @@ public final class CHSiegeManager
 		return _siegableHalls.get(clanHall);
 	}
 	
-	public final SiegableHall getNearbyClanHall(Creature creature)
+	public SiegableHall getNearbyClanHall(Creature creature)
 	{
 		return getNearbyClanHall(creature.getX(), creature.getY(), 10000);
 	}
 	
-	public final SiegableHall getNearbyClanHall(int x, int y, int maxDist)
+	public SiegableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
 		
@@ -114,13 +114,13 @@ public final class CHSiegeManager
 		return null;
 	}
 	
-	public final ClanHallSiegeEngine getSiege(Creature creature)
+	public ClanHallSiegeEngine getSiege(Creature creature)
 	{
 		final SiegableHall hall = getNearbyClanHall(creature);
 		return hall == null ? null : hall.getSiege();
 	}
 	
-	public final void registerClan(Clan clan, SiegableHall hall, PlayerInstance player)
+	public void registerClan(Clan clan, SiegableHall hall, PlayerInstance player)
 	{
 		if (clan.getLevel() < Config.CHS_CLAN_MINLEVEL)
 		{
@@ -162,7 +162,7 @@ public final class CHSiegeManager
 		}
 	}
 	
-	public final void unRegisterClan(Clan clan, SiegableHall hall)
+	public void unRegisterClan(Clan clan, SiegableHall hall)
 	{
 		if (!hall.isRegistering())
 		{
@@ -171,7 +171,7 @@ public final class CHSiegeManager
 		hall.removeAttacker(clan);
 	}
 	
-	public final boolean isClanParticipating(Clan clan)
+	public boolean isClanParticipating(Clan clan)
 	{
 		for (SiegableHall hall : _siegableHalls.values())
 		{
@@ -183,7 +183,7 @@ public final class CHSiegeManager
 		return false;
 	}
 	
-	public final void onServerShutDown()
+	public void onServerShutDown()
 	{
 		for (SiegableHall hall : _siegableHalls.values())
 		{

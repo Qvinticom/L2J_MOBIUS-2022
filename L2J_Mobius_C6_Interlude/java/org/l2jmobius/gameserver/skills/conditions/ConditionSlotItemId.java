@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class ConditionSlotItemId extends ConditionInventory
+public class ConditionSlotItemId extends ConditionInventory
 {
 	private final int _itemId;
 	private final int _enchantLevel;

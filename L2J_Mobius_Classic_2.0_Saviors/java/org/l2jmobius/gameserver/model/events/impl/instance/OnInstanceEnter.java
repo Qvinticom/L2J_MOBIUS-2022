@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyelfik
  */
-public final class OnInstanceEnter implements IBaseEvent
+public class OnInstanceEnter implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final Instance _instance;

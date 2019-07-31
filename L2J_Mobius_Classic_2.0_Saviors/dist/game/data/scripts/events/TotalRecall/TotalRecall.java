@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
  * @URL https://eu.4gameforum.com/threads/578395/
  * @author QuangNguyen
  */
-public final class TotalRecall extends LongTimeEvent
+public class TotalRecall extends LongTimeEvent
 {
 	// NPC
 	private static final int FROG = 9013;

@@ -28,7 +28,7 @@ import quests.Q10732_AForeignLand.Q10732_AForeignLand;
  * The Test For Survival (10733)
  * @author Sdw
  */
-public final class Q10733_TheTestForSurvival extends Quest
+public class Q10733_TheTestForSurvival extends Quest
 {
 	// NPCs
 	private static final int GERETH = 33932;

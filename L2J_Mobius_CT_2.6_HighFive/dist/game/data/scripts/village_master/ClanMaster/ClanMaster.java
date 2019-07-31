@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-public final class ClanMaster extends AbstractNpcAI
+public class ClanMaster extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

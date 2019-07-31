@@ -51,7 +51,7 @@ import ai.AbstractNpcAI;
  * Tower Of Naia.
  * @author GKR
  */
-public final class TowerOfNaia extends AbstractNpcAI
+public class TowerOfNaia extends AbstractNpcAI
 {
 	// Challenge states
 	private static final int STATE_SPORE_CHALLENGE_IN_PROGRESS = 1;
@@ -380,7 +380,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		
@@ -409,7 +409,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
@@ -729,7 +729,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final int npcId = npc.getId();
 		

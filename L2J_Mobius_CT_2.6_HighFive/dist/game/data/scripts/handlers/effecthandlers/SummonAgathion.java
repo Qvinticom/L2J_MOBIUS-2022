@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Summon Agathion effect implementation.
  * @author Zoey76
  */
-public final class SummonAgathion extends AbstractEffect
+public class SummonAgathion extends AbstractEffect
 {
 	private final int _npcId;
 	

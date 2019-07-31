@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) d
  * @author -Wooden-, Tryskell
  */
-public final class AnswerJoinPartyRoom implements IClientIncomingPacket
+public class AnswerJoinPartyRoom implements IClientIncomingPacket
 {
 	private int _answer; // 1 or 0
 	

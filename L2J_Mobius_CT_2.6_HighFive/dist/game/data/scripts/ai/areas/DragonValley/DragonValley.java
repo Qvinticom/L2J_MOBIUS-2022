@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Dragon Valley AI.
  * @author St3eT
  */
-public final class DragonValley extends AbstractNpcAI
+public class DragonValley extends AbstractNpcAI
 {
 	// NPC
 	private static final int NECROMANCER_OF_THE_VALLEY = 22858;

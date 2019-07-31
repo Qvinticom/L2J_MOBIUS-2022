@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 /**
  * @author xban1x
  */
-public final class ExperienceGain implements IVoicedCommandHandler
+public class ExperienceGain implements IVoicedCommandHandler
 {
 	private final String[] COMMANDS = new String[]
 	{

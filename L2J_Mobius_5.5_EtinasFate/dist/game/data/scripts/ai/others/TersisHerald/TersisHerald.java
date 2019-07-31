@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Tersi's Herald AI.
  * @author St3eT
  */
-public final class TersisHerald extends AbstractNpcAI
+public class TersisHerald extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HERALD = 4326; // Tersi's Herald

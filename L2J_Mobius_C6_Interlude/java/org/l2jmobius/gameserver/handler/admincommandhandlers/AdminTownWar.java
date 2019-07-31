@@ -37,7 +37,7 @@ public class AdminTownWar implements IAdminCommandHandler
 	};
 	private WorldObject _activeObject;
 	
-	public final WorldObject getActiveObject()
+	public WorldObject getActiveObject()
 	{
 		return _activeObject;
 	}

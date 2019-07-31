@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Npc Location Info AI.
  * @author Nyaran
  */
-public final class NpcLocationInfo extends AbstractNpcAI
+public class NpcLocationInfo extends AbstractNpcAI
 {
 	private static final int[] NPC =
 	{

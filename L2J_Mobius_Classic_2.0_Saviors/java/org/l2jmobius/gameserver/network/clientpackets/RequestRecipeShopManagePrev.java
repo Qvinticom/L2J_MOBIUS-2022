@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
 /**
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopManagePrev implements IClientIncomingPacket
+public class RequestRecipeShopManagePrev implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

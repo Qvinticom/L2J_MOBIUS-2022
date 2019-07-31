@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Servitor Attack player action handler.
  * @author St3eT
  */
-public final class ServitorAttack implements IPlayerActionHandler
+public class ServitorAttack implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

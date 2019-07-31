@@ -27,7 +27,7 @@ import instances.AbstractInstance;
  * Hideout of the Dawn instance zone.
  * @author Adry_85
  */
-public final class SSQHideoutOfTheDawn extends AbstractInstance
+public class SSQHideoutOfTheDawn extends AbstractInstance
 {
 	// NPCs
 	private static final int WOOD = 32593;

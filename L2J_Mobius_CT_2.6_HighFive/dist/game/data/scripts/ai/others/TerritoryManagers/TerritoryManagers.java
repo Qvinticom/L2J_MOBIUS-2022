@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
  * @author Zoey76
  * @version 1.1
  */
-public final class TerritoryManagers extends AbstractNpcAI
+public class TerritoryManagers extends AbstractNpcAI
 {
 	private static final int[] preciousSoul1ItemIds =
 	{

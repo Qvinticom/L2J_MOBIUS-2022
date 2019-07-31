@@ -49,27 +49,27 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket
 		}
 	}
 	
-	public final void addItem(ItemInstance item)
+	public void addItem(ItemInstance item)
 	{
 		_items.put(item.getObjectId(), new ItemInfo(item));
 	}
 	
-	public final void addNewItem(ItemInstance item)
+	public void addNewItem(ItemInstance item)
 	{
 		_items.put(item.getObjectId(), new ItemInfo(item, 1));
 	}
 	
-	public final void addModifiedItem(ItemInstance item)
+	public void addModifiedItem(ItemInstance item)
 	{
 		_items.put(item.getObjectId(), new ItemInfo(item, 2));
 	}
 	
-	public final void addRemovedItem(ItemInstance item)
+	public void addRemovedItem(ItemInstance item)
 	{
 		_items.put(item.getObjectId(), new ItemInfo(item, 3));
 	}
 	
-	public final void addItems(List<ItemInstance> items)
+	public void addItems(List<ItemInstance> items)
 	{
 		for (ItemInstance item : items)
 		{
@@ -77,7 +77,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket
 		}
 	}
 	
-	public final Collection<ItemInfo> getItems()
+	public Collection<ItemInfo> getItems()
 	{
 		return _items.values();
 	}

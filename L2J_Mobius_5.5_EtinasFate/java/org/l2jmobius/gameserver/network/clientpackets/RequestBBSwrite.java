@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * RequestBBSwrite client packet implementation.
  * @author -Wooden-, Zoey76
  */
-public final class RequestBBSwrite implements IClientIncomingPacket
+public class RequestBBSwrite implements IClientIncomingPacket
 {
 	private String _url;
 	private String _arg1;
@@ -34,7 +34,7 @@ public final class RequestBBSwrite implements IClientIncomingPacket
 	private String _arg5;
 	
 	@Override
-	public final boolean read(GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_url = packet.readS();
 		_arg1 = packet.readS();
@@ -46,7 +46,7 @@ public final class RequestBBSwrite implements IClientIncomingPacket
 	}
 	
 	@Override
-	public final void run(GameClient client)
+	public void run(GameClient client)
 	{
 		CommunityBoardHandler.getInstance().handleWriteCommand(client.getPlayer(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
 	}

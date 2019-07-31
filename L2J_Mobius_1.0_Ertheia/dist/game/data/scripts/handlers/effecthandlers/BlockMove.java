@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Immobile Buff effect implementation.
  * @author mkizub
  */
-public final class BlockMove extends AbstractEffect
+public class BlockMove extends AbstractEffect
 {
 	public BlockMove(StatsSet params)
 	{

@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExNevitAdventTimeChange;
  */
 public class NevitSystem implements IUniqueId
 {
-	public final PlayerInstance _player;
+	public PlayerInstance _player;
 	
 	private volatile ScheduledFuture<?> _adventTask;
 	private volatile ScheduledFuture<?> _nevitEffectTask;

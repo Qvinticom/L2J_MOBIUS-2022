@@ -47,7 +47,7 @@ import ai.AbstractNpcAI;
  * Valakas' AI.
  * @author Tryskell
  */
-public final class Valakas extends AbstractNpcAI
+public class Valakas extends AbstractNpcAI
 {
 	// NPC
 	private static final int VALAKAS = 29028;

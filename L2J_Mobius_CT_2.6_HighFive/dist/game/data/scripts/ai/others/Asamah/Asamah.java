@@ -28,7 +28,7 @@ import quests.Q00111_ElrokianHuntersProof.Q00111_ElrokianHuntersProof;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Asamah extends AbstractNpcAI
+public class Asamah extends AbstractNpcAI
 {
 	// NPC
 	private static final int ASAMAH = 32115;

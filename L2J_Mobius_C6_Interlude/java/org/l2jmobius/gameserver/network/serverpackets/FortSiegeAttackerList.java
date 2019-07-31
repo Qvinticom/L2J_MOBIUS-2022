@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
  * d = AllyCrestID<BR>
  * @author programmos, scoria dev
  */
-public final class FortSiegeAttackerList extends GameServerPacket
+public class FortSiegeAttackerList extends GameServerPacket
 {
 	private final Fort _fort;
 	

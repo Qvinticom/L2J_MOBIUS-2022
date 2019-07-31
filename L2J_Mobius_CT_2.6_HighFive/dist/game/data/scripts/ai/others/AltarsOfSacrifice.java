@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
 /**
  * @author HorridoJoho, janiko, FinalDestination, lion
  */
-public final class AltarsOfSacrifice extends AbstractNpcAI
+public class AltarsOfSacrifice extends AbstractNpcAI
 {
 	private final class Altar
 	{

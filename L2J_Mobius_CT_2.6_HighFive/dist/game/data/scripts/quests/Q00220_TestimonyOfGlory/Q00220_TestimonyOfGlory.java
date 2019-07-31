@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Testimony Of Glory (220)
  * @author ivantotov
  */
-public final class Q00220_TestimonyOfGlory extends Quest
+public class Q00220_TestimonyOfGlory extends Quest
 {
 	// NPCs
 	private static final int PREFECT_KASMAN = 30501;

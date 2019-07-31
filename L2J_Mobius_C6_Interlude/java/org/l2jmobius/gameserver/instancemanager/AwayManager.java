@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 /**
  * @author Michiru
  */
-public final class AwayManager
+public class AwayManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AwayManager.class.getName());
 	private static AwayManager _instance;

@@ -45,7 +45,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * The Class GameServerTable loads the game server names and initialize the game server tables.
  * @author KenM, Zoey76
  */
-public final class GameServerTable implements IXmlReader
+public class GameServerTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServerTable.class.getName());
 	

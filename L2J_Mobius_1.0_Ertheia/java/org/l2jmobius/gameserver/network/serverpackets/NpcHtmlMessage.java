@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * NpcHtmlMessage server packet implementation.
  * @author HorridoJoho
  */
-public final class NpcHtmlMessage extends AbstractHtmlPacket
+public class NpcHtmlMessage extends AbstractHtmlPacket
 {
 	private final int _itemId;
 	

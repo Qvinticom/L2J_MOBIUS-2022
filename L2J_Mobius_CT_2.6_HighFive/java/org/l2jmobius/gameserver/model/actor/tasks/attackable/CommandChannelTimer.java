@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 /**
  * @author xban1x
  */
-public final class CommandChannelTimer implements Runnable
+public class CommandChannelTimer implements Runnable
 {
 	private final Attackable _attackable;
 	

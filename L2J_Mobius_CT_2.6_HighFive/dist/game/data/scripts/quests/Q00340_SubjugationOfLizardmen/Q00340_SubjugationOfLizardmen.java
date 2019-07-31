@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Subjugation Of Lizardmen (340)
  * @author ivantotov
  */
-public final class Q00340_SubjugationOfLizardmen extends Quest
+public class Q00340_SubjugationOfLizardmen extends Quest
 {
 	// NPCs
 	private static final int HIGH_PRIESTESS_LEVIAN = 30037;

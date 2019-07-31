@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger Skill By Skill effect implementation.
  * @author Zealar
  */
-public final class TriggerSkillBySkill extends AbstractEffect
+public class TriggerSkillBySkill extends AbstractEffect
 {
 	private final int _castSkillId;
 	private final int _chance;

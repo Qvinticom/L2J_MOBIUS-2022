@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class TeleportBookmark implements IPlayerActionHandler
+public class TeleportBookmark implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

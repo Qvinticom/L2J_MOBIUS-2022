@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Fields of Massacre (10785)
  * @author malyelfik
  */
-public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQuest
+public class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQuest
 {
 	// NPCs
 	private static final int ORVEN = 30857;

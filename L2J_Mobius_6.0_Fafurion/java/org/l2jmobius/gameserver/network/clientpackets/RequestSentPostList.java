@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowSentPostList;
 /**
  * @author Migi, DS
  */
-public final class RequestSentPostList implements IClientIncomingPacket
+public class RequestSentPostList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

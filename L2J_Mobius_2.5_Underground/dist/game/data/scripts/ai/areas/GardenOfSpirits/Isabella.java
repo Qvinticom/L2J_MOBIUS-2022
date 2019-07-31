@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * @URL https://www.youtube.com/watch?v=3M73b6Kre6Y
  * @author Gigi
  */
-public final class Isabella extends AbstractNpcAI
+public class Isabella extends AbstractNpcAI
 {
 	// NPC
 	private static final int ISABELLA = 26131;

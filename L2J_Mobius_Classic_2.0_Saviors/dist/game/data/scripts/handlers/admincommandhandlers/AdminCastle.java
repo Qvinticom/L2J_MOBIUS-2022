@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Admin Castle manage admin commands.
  * @author St3eT
  */
-public final class AdminCastle implements IAdminCommandHandler
+public class AdminCastle implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

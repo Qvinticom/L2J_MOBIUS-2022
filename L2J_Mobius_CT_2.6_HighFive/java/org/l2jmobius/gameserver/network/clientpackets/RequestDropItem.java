@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/02 21:25:21 $
  */
-public final class RequestDropItem implements IClientIncomingPacket
+public class RequestDropItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;

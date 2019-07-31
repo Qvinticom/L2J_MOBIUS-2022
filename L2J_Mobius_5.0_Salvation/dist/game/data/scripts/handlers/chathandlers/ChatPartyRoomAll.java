@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  * Party Room All chat handler.
  * @author durgus
  */
-public final class ChatPartyRoomAll implements IChatHandler
+public class ChatPartyRoomAll implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

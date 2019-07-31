@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Summon Cubic effect implementation.
  * @author Zoey76
  */
-public final class SummonCubic extends AbstractEffect
+public class SummonCubic extends AbstractEffect
 {
 	/** Cubic ID. */
 	private final int _cubicId;

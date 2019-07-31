@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Message deletion task.
  * @author xban1x
  */
-public final class MessageDeletionTask implements Runnable
+public class MessageDeletionTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(MessageDeletionTask.class.getName());
 	

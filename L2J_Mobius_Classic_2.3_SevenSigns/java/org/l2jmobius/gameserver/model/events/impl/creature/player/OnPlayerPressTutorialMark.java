@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author St3eT
  */
-public final class OnPlayerPressTutorialMark implements IBaseEvent
+public class OnPlayerPressTutorialMark implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final int _markId;

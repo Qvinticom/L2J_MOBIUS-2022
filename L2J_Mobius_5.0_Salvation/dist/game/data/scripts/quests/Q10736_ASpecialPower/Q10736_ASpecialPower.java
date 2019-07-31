@@ -35,7 +35,7 @@ import quests.Q10734_DoOrDie.Q10734_DoOrDie;
  * A Special Power (10736)
  * @author Sdw
  */
-public final class Q10736_ASpecialPower extends Quest
+public class Q10736_ASpecialPower extends Quest
 {
 	// NPC
 	private static final int KATALIN = 33943;

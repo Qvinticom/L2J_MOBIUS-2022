@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Info - http://www.lineage2.com/en/news/events/hunt-for-santa.php
  * @author Mobius
  */
-public final class HuntForSanta extends LongTimeEvent
+public class HuntForSanta extends LongTimeEvent
 {
 	// NPC
 	private static final int NOELLE = 34008;

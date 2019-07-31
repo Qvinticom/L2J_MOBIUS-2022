@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
 /**
  * Dark Water Dragon's AI.
  */
-public final class DarkWaterDragon extends AbstractNpcAI
+public class DarkWaterDragon extends AbstractNpcAI
 {
 	private static final int DRAGON = 22267;
 	private static final int SHADE1 = 22268;

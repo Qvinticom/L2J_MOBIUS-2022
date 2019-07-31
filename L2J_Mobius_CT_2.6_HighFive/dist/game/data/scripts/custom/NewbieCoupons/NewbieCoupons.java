@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Original Jython script by Vice.
  * @author Nyaran
  */
-public final class NewbieCoupons extends AbstractNpcAI
+public class NewbieCoupons extends AbstractNpcAI
 {
 	private static final int COUPON_ONE = 7832;
 	private static final int COUPON_TWO = 7833;

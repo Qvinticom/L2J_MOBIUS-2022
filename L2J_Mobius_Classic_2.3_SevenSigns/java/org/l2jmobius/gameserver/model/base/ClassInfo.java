@@ -22,7 +22,7 @@ import java.util.regex.Matcher;
  * This class will hold the information of the player classes.
  * @author Zoey76
  */
-public final class ClassInfo
+public class ClassInfo
 {
 	private final ClassId _classId;
 	private final String _className;

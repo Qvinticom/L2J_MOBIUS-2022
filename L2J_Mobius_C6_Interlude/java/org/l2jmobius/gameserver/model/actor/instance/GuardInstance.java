@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * <BR>
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
  */
-public final class GuardInstance extends Attackable
+public class GuardInstance extends Attackable
 {
 	private static final int RETURN_INTERVAL = 60000;
 	private int _homeX;
@@ -77,7 +77,7 @@ public final class GuardInstance extends Attackable
 	}
 	
 	@Override
-	public final GuardKnownList getKnownList()
+	public GuardKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof GuardKnownList))
 		{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Teleport effect implementation.
  * @author Adry_85
  */
-public final class Teleport extends AbstractEffect
+public class Teleport extends AbstractEffect
 {
 	private final Location _loc;
 	

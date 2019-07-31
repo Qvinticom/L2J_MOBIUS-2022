@@ -36,7 +36,7 @@ import quests.Q10566_BestChoice.Q10566_BestChoice;
  * @author NightBR
  * @html by Werum
  */
-public final class Q10578_TheSoulOfASword extends Quest
+public class Q10578_TheSoulOfASword extends Quest
 {
 	// NPCs
 	private static final int VINCENZ = 31316;

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author -Wooden-
  */
-public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
+public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 {
 	private final int _pledgeType;
 	private int _hasSponsor;

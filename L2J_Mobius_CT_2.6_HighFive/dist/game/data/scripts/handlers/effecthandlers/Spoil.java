@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Spoil effect implementation.
  * @author _drunk_, Ahmed, Zoey76
  */
-public final class Spoil extends AbstractEffect
+public class Spoil extends AbstractEffect
 {
 	public Spoil(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Skirmish with the Werewolves (274)
  * @author xban1x
  */
-public final class Q00274_SkirmishWithTheWerewolves extends Quest
+public class Q00274_SkirmishWithTheWerewolves extends Quest
 {
 	// NPC
 	private static final int BRUKURSE = 30569;

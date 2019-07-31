@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Bring Wolf Pelts (258)
  * @author xban1x
  */
-public final class Q00258_BringWolfPelts extends Quest
+public class Q00258_BringWolfPelts extends Quest
 {
 	// Npc
 	private static final int LECTOR = 30001;

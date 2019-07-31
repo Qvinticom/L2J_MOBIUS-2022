@@ -27,7 +27,7 @@ import quests.Q00188_SealRemoval.Q00188_SealRemoval;
  * Vain Conclusion (191)
  * @author ivantotov
  */
-public final class Q00191_VainConclusion extends Quest
+public class Q00191_VainConclusion extends Quest
 {
 	// NPCs
 	private static final int SHEGFIELD = 30068;

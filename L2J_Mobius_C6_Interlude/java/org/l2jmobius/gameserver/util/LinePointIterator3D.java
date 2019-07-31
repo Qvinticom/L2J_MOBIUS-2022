@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.util;
 /**
  * @author HorridoJoho
  */
-public final class LinePointIterator3D
+public class LinePointIterator3D
 {
 	private int _srcX;
 	private int _srcY;

@@ -154,7 +154,7 @@ public class AuctionManager
 		}
 	}
 	
-	public final Auction getAuction(int auctionId)
+	public Auction getAuction(int auctionId)
 	{
 		final int index = getAuctionIndex(auctionId);
 		if (index >= 0)
@@ -165,7 +165,7 @@ public class AuctionManager
 		return null;
 	}
 	
-	public final int getAuctionIndex(int auctionId)
+	public int getAuctionIndex(int auctionId)
 	{
 		Auction auction;
 		
@@ -181,7 +181,7 @@ public class AuctionManager
 		return -1;
 	}
 	
-	public final List<Auction> getAuctions()
+	public List<Auction> getAuctions()
 	{
 		return _auctions;
 	}

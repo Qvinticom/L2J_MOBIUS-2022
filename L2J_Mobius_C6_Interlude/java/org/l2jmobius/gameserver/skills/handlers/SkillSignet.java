@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class SkillSignet extends Skill
+public class SkillSignet extends Skill
 {
 	private final int _effectNpcId;
 	public int effectId;

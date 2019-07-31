@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import org.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public final class CharacterCreate implements IClientIncomingPacket
+public class CharacterCreate implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	

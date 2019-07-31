@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Magical Soul Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalSoulAttack extends AbstractEffect
+public class MagicalSoulAttack extends AbstractEffect
 {
 	private final double _power;
 	

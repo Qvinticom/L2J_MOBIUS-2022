@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Deny Blessings (737)
  * @author Gigiikun
  */
-public final class Q00737_DenyBlessings extends TerritoryWarSuperClass
+public class Q00737_DenyBlessings extends TerritoryWarSuperClass
 {
 	public Q00737_DenyBlessings()
 	{

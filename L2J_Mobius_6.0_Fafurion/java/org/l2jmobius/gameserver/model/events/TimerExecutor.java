@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
  * @author UnAfraid
  * @param <T>
  */
-public final class TimerExecutor<T>
+public class TimerExecutor<T>
 {
 	private final Map<T, Set<TimerHolder<T>>> _timers = new ConcurrentHashMap<>();
 	private final IEventTimerEvent<T> _eventListener;

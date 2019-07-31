@@ -28,7 +28,7 @@ import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
  * Nikola's Cooperation (185)
  * @author ivantotov
  */
-public final class Q00185_NikolasCooperation extends Quest
+public class Q00185_NikolasCooperation extends Quest
 {
 	// NPCs
 	private static final int MAESTRO_NIKOLA = 30621;

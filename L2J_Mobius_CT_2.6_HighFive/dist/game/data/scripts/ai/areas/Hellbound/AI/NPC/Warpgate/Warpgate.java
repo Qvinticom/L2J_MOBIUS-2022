@@ -34,7 +34,7 @@ import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
  * Warpgate teleport AI.
  * @author _DS_
  */
-public final class Warpgate extends AbstractNpcAI
+public class Warpgate extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] WARPGATES =
@@ -63,7 +63,7 @@ public final class Warpgate extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enter"))
 		{
@@ -90,7 +90,7 @@ public final class Warpgate extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onEnterZone(Creature creature, ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (creature.isPlayer())
 		{

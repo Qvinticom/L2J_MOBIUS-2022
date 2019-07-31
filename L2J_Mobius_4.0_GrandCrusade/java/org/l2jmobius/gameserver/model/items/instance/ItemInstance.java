@@ -94,7 +94,7 @@ import org.l2jmobius.gameserver.util.GMAudit;
  * This class manages items.
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
-public final class ItemInstance extends WorldObject
+public class ItemInstance extends WorldObject
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemInstance.class.getName());
 	private static final Logger LOG_ITEMS = Logger.getLogger("item");
@@ -278,7 +278,7 @@ public final class ItemInstance extends WorldObject
 	 * <BR>
 	 * @param creature Character that pick up the item
 	 */
-	public final void pickupMe(Creature creature)
+	public void pickupMe(Creature creature)
 	{
 		final WorldRegion oldregion = getWorldRegion();
 		
@@ -715,7 +715,7 @@ public final class ItemInstance extends WorldObject
 	/**
 	 * @return the quantity of crystals for crystallization.
 	 */
-	public final int getCrystalCount()
+	public int getCrystalCount()
 	{
 		return _item.getCrystalCount(_enchantLevel);
 	}
@@ -1550,7 +1550,7 @@ public final class ItemInstance extends WorldObject
 		}
 		
 		@Override
-		public final void run()
+		public void run()
 		{
 			if (_dropper != null)
 			{
@@ -1586,7 +1586,7 @@ public final class ItemInstance extends WorldObject
 		}
 	}
 	
-	public final void dropMe(Creature dropper, int x, int y, int z)
+	public void dropMe(Creature dropper, int x, int y, int z)
 	{
 		ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
 		if ((dropper != null) && dropper.isPlayer())
@@ -1960,7 +1960,7 @@ public final class ItemInstance extends WorldObject
 		}
 	}
 	
-	public final DropProtection getDropProtection()
+	public DropProtection getDropProtection()
 	{
 		return _dropProtection;
 	}
@@ -2481,7 +2481,7 @@ public final class ItemInstance extends WorldObject
 		}
 	}
 	
-	public final ItemVariables getVariables()
+	public ItemVariables getVariables()
 	{
 		final ItemVariables vars = getScript(ItemVariables.class);
 		return vars != null ? vars : addScript(new ItemVariables(getObjectId()));

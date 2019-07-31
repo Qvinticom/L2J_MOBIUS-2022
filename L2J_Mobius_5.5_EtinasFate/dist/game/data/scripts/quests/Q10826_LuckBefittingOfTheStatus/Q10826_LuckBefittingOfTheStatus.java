@@ -32,7 +32,7 @@ import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersT
  * @URL https://l2wiki.com/Luck_Befitting_of_the_Status
  * @author Mobius
  */
-public final class Q10826_LuckBefittingOfTheStatus extends Quest
+public class Q10826_LuckBefittingOfTheStatus extends Quest
 {
 	// NPC
 	private static final int BLACKSMITH_OF_MAMMON = 31126;

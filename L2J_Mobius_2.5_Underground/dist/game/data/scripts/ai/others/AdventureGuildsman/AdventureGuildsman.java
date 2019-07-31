@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Adventurers Guidsman AI.
  * @author St3eT
  */
-public final class AdventureGuildsman extends AbstractNpcAI
+public class AdventureGuildsman extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

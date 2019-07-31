@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Nik
  */
-public final class Incarnation extends AbstractNpcAI
+public class Incarnation extends AbstractNpcAI
 {
 	public Incarnation()
 	{

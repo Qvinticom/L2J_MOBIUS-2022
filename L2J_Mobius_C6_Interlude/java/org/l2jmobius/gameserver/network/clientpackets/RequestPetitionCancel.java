@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (c) d
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetitionCancel extends GameClientPacket
+public class RequestPetitionCancel extends GameClientPacket
 {
 	// private int _unknown;
 	

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Gather Ingredients for Pie (299)
  * @author xban1x
  */
-public final class Q00299_GatherIngredientsForPie extends Quest
+public class Q00299_GatherIngredientsForPie extends Quest
 {
 	// NPCs
 	private static final int LARS = 30063;

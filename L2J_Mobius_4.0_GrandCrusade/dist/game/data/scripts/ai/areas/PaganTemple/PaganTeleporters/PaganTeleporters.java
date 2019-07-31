@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Pagan Temple teleport AI.<br>
  * @author Plim
  */
-public final class PaganTeleporters extends AbstractNpcAI
+public class PaganTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;

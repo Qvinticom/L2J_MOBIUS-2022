@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 @SuppressWarnings("unused")
-public final class AttackRequest extends GameClientPacket
+public class AttackRequest extends GameClientPacket
 {
 	private int _objectId;
 	private int _originX;

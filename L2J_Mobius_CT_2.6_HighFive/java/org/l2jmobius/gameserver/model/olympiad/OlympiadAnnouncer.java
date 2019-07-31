@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 /**
  * @author DS
  */
-public final class OlympiadAnnouncer implements Runnable
+public class OlympiadAnnouncer implements Runnable
 {
 	private static final int OLY_MANAGER = 31688;
 	private final Set<Spawn> _managers;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance item condition
  * @author malyelfik
  */
-public final class ConditionItem extends Condition
+public class ConditionItem extends Condition
 {
 	private final int _itemId;
 	private final long _count;

@@ -71,7 +71,7 @@ public class NodeBuffer
 	 * @param gtz : target point z
 	 * @return Node : first node of path
 	 */
-	public final Node findPath(int gox, int goy, short goz, int gtx, int gty, short gtz)
+	public Node findPath(int gox, int goy, short goz, int gtx, int gty, short gtz)
 	{
 		// set coordinates (middle of the line (gox,goy) - (gtx,gty), will be in the center of the buffer)
 		_cx = gox + ((gtx - gox - _size) / 2);
@@ -104,12 +104,12 @@ public class NodeBuffer
 		return null;
 	}
 	
-	public final boolean isLocked()
+	public boolean isLocked()
 	{
 		return _lock.tryLock();
 	}
 	
-	public final void free()
+	public void free()
 	{
 		_current = null;
 		

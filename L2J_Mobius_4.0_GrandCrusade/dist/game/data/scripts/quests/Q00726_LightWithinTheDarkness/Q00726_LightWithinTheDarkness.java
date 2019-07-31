@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Light within the Darkness (726)
  * @author Mobius
  */
-public final class Q00726_LightWithinTheDarkness extends Quest
+public class Q00726_LightWithinTheDarkness extends Quest
 {
 	// NPCs
 	private static final int[] NPCS =

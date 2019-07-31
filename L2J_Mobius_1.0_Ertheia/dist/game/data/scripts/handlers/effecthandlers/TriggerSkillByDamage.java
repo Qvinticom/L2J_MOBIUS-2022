@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public final class TriggerSkillByDamage extends AbstractEffect
+public class TriggerSkillByDamage extends AbstractEffect
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;

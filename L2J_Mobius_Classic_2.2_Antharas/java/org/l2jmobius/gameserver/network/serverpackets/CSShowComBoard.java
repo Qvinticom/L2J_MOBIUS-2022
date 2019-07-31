@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class CSShowComBoard implements IClientOutgoingPacket
+public class CSShowComBoard implements IClientOutgoingPacket
 {
 	private final byte[] _html;
 	

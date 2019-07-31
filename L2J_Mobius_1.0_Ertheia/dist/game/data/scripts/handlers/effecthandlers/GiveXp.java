@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Give XP effect implementation.
  * @author Mobius
  */
-public final class GiveXp extends AbstractEffect
+public class GiveXp extends AbstractEffect
 {
 	private final int _xp;
 	

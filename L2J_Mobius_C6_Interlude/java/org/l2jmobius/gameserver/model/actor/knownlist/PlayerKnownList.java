@@ -283,7 +283,7 @@ public class PlayerKnownList extends PlayableKnownList
 	}
 	
 	@Override
-	public final PlayerInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
 		return (PlayerInstance) super.getActiveChar();
 	}

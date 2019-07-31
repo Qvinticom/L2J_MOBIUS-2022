@@ -23,7 +23,7 @@ import org.l2jmobius.commons.util.Rnd;
 /**
  * @author Pere
  */
-public final class OptionDataCategory
+public class OptionDataCategory
 {
 	private final Map<Options, Double> _options;
 	private final double _chance;

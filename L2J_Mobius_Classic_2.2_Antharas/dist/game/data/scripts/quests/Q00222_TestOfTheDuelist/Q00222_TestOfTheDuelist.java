@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Duelist (222)
  * @author ivantotov
  */
-public final class Q00222_TestOfTheDuelist extends Quest
+public class Q00222_TestOfTheDuelist extends Quest
 {
 	// NPC
 	private static final int DUELIST_KAIEN = 30623;

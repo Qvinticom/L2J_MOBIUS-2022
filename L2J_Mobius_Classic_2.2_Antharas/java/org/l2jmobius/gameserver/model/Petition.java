@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Petition
  * @author xban1x
  */
-public final class Petition
+public class Petition
 {
 	private final long _submitTime = System.currentTimeMillis();
 	private final int _id;

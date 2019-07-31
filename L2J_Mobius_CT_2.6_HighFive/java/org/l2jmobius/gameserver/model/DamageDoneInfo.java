@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author xban1x
  */
-public final class DamageDoneInfo
+public class DamageDoneInfo
 {
 	private final PlayerInstance _attacker;
 	private long _damage = 0;
@@ -47,13 +47,13 @@ public final class DamageDoneInfo
 	}
 	
 	@Override
-	public final boolean equals(Object obj)
+	public boolean equals(Object obj)
 	{
 		return (this == obj) || ((obj instanceof DamageDoneInfo) && (((DamageDoneInfo) obj).getAttacker() == _attacker));
 	}
 	
 	@Override
-	public final int hashCode()
+	public int hashCode()
 	{
 		return _attacker.getObjectId();
 	}

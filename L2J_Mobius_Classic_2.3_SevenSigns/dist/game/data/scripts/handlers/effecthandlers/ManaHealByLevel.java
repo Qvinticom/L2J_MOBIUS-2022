@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Mana Heal By Level effect implementation.
  * @author UnAfraid
  */
-public final class ManaHealByLevel extends AbstractEffect
+public class ManaHealByLevel extends AbstractEffect
 {
 	private final double _power;
 	

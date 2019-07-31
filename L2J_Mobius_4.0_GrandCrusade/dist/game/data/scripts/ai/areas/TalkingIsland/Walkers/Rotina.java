@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Rotina AI.
  * @author Gladicek
  */
-public final class Rotina extends AbstractNpcAI
+public class Rotina extends AbstractNpcAI
 {
 	// NPC
 	private static final int ROTINA = 33027;

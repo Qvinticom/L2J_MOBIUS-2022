@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
  * Restoration effect implementation.
  * @author Zoey76
  */
-public final class Restoration extends AbstractEffect
+public class Restoration extends AbstractEffect
 {
 	private final int _itemId;
 	private final int _itemCount;

@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Proof of Clan Alliance (501)
  * @author Zoey76
  */
-public final class Q00501_ProofOfClanAlliance extends Quest
+public class Q00501_ProofOfClanAlliance extends Quest
 {
 	// NPCs
 	private static final int SIR_KRISTOF_RODEMAI = 30756;

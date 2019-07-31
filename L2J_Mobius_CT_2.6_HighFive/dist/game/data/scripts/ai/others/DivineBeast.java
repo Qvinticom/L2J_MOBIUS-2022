@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Simple AI that manages special conditions for Divine Beast summon.
  * @author UnAfraid
  */
-public final class DivineBeast extends AbstractNpcAI
+public class DivineBeast extends AbstractNpcAI
 {
 	private static final int DIVINE_BEAST = 14870;
 	private static final int TRANSFORMATION_ID = 258;

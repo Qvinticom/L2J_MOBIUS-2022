@@ -30,26 +30,26 @@ import org.l2jmobius.gameserver.skills.funcs.Lambda;
 /**
  * @author mkizub
  */
-public final class EffectTemplate
+public class EffectTemplate
 {
 	static Logger LOGGER = Logger.getLogger(EffectTemplate.class.getName());
 	
 	private final Class<?> _func;
 	private final Constructor<?> _constructor;
 	
-	public final Condition attachCond;
-	public final Condition applayCond;
-	public final Lambda lambda;
-	public final int counter;
+	public Condition attachCond;
+	public Condition applayCond;
+	public Lambda lambda;
+	public int counter;
 	public int period; // in seconds
-	public final int abnormalEffect;
+	public int abnormalEffect;
 	public FuncTemplate[] funcTemplates;
 	public boolean showIcon;
 	
-	public final String stackType;
-	public final float stackOrder;
-	public final double effectPower; // to thandle chance
-	public final SkillType effectType; // to handle resistences etc...
+	public String stackType;
+	public float stackOrder;
+	public double effectPower; // to thandle chance
+	public SkillType effectType; // to handle resistences etc...
 	
 	public EffectTemplate(Condition pAttachCond, Condition pApplayCond, String func, Lambda pLambda, int pCounter, int pPeriod, int pAbnormalEffect, String pStackType, float pStackOrder, int pShowIcon, SkillType eType, double ePower)
 	{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Summon skill use player action handler.
  * @author Nik
  */
-public final class ServitorSkillUse implements IPlayerActionHandler
+public class ServitorSkillUse implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

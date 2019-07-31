@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Warrior (401)
  * @author ivantotov
  */
-public final class Q00401_PathOfTheWarrior extends Quest
+public class Q00401_PathOfTheWarrior extends Quest
 {
 	// NPCs
 	private static final int MASTER_AURON = 30010;

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.TraitType;
  * Attack Trait effect implementation.
  * @author NosBit
  */
-public final class AttackTrait extends AbstractEffect
+public class AttackTrait extends AbstractEffect
 {
 	private final Map<TraitType, Float> _attackTraits = new HashMap<>();
 	

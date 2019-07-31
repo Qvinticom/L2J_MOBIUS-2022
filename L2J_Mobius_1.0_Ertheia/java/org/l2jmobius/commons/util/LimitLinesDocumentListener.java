@@ -82,7 +82,7 @@ public class LimitLinesDocumentListener implements DocumentListener
 	 * Handle insertion of new text into the Document.
 	 */
 	@Override
-	public void insertUpdate(final DocumentEvent e)
+	public void insertUpdate(DocumentEvent e)
 	{
 		// Changes to the Document can not be done within the listener so we need to add the processing to the end of the EDT.
 		SwingUtilities.invokeLater(() -> removeLines(e));

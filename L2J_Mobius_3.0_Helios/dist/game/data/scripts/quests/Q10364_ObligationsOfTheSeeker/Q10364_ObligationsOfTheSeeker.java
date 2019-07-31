@@ -31,7 +31,7 @@ import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
  * @URL https://l2wiki.com/Obligations_of_the_Seeker
  * @author Gladicek
  */
-public final class Q10364_ObligationsOfTheSeeker extends Quest
+public class Q10364_ObligationsOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int CELIN = 33451;

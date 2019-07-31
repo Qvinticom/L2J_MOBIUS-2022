@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionPlayerPledgeClass.
  * @author MrPoke
  */
-public final class ConditionPlayerPledgeClass extends Condition
+public class ConditionPlayerPledgeClass extends Condition
 {
 	
 	private final int _pledgeClass;

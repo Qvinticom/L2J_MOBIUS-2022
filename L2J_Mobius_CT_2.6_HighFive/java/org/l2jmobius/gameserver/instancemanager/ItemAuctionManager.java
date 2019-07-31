@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
 /**
  * @author Forsaiken
  */
-public final class ItemAuctionManager
+public class ItemAuctionManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
 	
@@ -115,7 +115,7 @@ public final class ItemAuctionManager
 		}
 	}
 	
-	public final void shutdown()
+	public void shutdown()
 	{
 		for (ItemAuctionInstance instance : _managerInstances.values())
 		{
@@ -123,12 +123,12 @@ public final class ItemAuctionManager
 		}
 	}
 	
-	public final ItemAuctionInstance getManagerInstance(int instanceId)
+	public ItemAuctionInstance getManagerInstance(int instanceId)
 	{
 		return _managerInstances.get(instanceId);
 	}
 	
-	public final int getNextAuctionId()
+	public int getNextAuctionId()
 	{
 		return _auctionIds.getAndIncrement();
 	}

@@ -1731,7 +1731,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 	/**
 	 * @return the PledgeHall this NpcInstance belongs to.
 	 */
-	public final ClanHall getClanHall()
+	public ClanHall getClanHall()
 	{
 		if (_clanHallId < 0)
 		{

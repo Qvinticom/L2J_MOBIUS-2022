@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Immobile Pet Buff effect implementation.
  * @author demonia
  */
-public final class ImmobilePetBuff extends AbstractEffect
+public class ImmobilePetBuff extends AbstractEffect
 {
 	public ImmobilePetBuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

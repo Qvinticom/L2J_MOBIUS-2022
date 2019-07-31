@@ -30,18 +30,18 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Fort;
 
-public final class FortManager implements InstanceListManager
+public class FortManager implements InstanceListManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
 	private static final List<Fort> _forts = new ArrayList<>();
 	
-	public final int findNearestFortIndex(WorldObject obj)
+	public int findNearestFortIndex(WorldObject obj)
 	{
 		return findNearestFortIndex(obj, Long.MAX_VALUE);
 	}
 	
-	public final int findNearestFortIndex(WorldObject obj, long maxDistance)
+	public int findNearestFortIndex(WorldObject obj, long maxDistance)
 	{
 		int index = getFortIndex(obj);
 		if (index < 0)
@@ -66,7 +66,7 @@ public final class FortManager implements InstanceListManager
 		return index;
 	}
 	
-	public final Fort getFortById(int fortId)
+	public Fort getFortById(int fortId)
 	{
 		for (Fort f : _forts)
 		{
@@ -78,7 +78,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFortByOwner(Clan clan)
+	public Fort getFortByOwner(Clan clan)
 	{
 		for (Fort f : _forts)
 		{
@@ -90,7 +90,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(String name)
+	public Fort getFort(String name)
 	{
 		for (Fort f : _forts)
 		{
@@ -102,7 +102,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(int x, int y, int z)
+	public Fort getFort(int x, int y, int z)
 	{
 		for (Fort f : _forts)
 		{
@@ -114,12 +114,12 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(WorldObject activeObject)
+	public Fort getFort(WorldObject activeObject)
 	{
 		return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getFortIndex(int fortId)
+	public int getFortIndex(int fortId)
 	{
 		Fort fort;
 		for (int i = 0; i < _forts.size(); i++)
@@ -133,12 +133,12 @@ public final class FortManager implements InstanceListManager
 		return -1;
 	}
 	
-	public final int getFortIndex(WorldObject activeObject)
+	public int getFortIndex(WorldObject activeObject)
 	{
 		return getFortIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getFortIndex(int x, int y, int z)
+	public int getFortIndex(int x, int y, int z)
 	{
 		Fort fort;
 		for (int i = 0; i < _forts.size(); i++)
@@ -152,7 +152,7 @@ public final class FortManager implements InstanceListManager
 		return -1;
 	}
 	
-	public final List<Fort> getForts()
+	public List<Fort> getForts()
 	{
 		return _forts;
 	}

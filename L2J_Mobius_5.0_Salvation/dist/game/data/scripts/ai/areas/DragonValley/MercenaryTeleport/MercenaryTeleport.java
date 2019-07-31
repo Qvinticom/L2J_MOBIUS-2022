@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Mercenary and Mercenary Captain teleport AI.
  * @author Gigi
  */
-public final class MercenaryTeleport extends AbstractNpcAI
+public class MercenaryTeleport extends AbstractNpcAI
 {
 	// NPCs
 	private static final int NAMO = 33973;

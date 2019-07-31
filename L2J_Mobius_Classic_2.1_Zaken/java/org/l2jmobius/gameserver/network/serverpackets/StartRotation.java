@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class StartRotation implements IClientOutgoingPacket
+public class StartRotation implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _degree;

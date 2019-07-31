@@ -58,7 +58,7 @@ import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommi
 /**
  * @author NosBit
  */
-public final class CommissionManager
+public class CommissionManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CommissionManager.class.getName());
 	

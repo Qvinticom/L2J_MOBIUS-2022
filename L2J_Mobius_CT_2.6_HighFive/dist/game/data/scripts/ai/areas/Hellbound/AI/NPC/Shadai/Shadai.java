@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Shadai AI.
  * @author GKR
  */
-public final class Shadai extends AbstractNpcAI
+public class Shadai extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SHADAI = 32347;
@@ -41,7 +41,7 @@ public final class Shadai extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("VALIDATE_POS") && (npc != null))
 		{
@@ -67,7 +67,7 @@ public final class Shadai extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("VALIDATE_POS", 60000, npc, null, true);
 		return super.onSpawn(npc);

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
  * @URL https://l2wiki.com/Looking_for_the_Blackbird_Clan_Member
  * @author Gigi
  */
-public final class Q10837_LookingForTheBlackbirdClanMember extends Quest
+public class Q10837_LookingForTheBlackbirdClanMember extends Quest
 {
 	// NPC
 	private static final int ADOLF = 34058;

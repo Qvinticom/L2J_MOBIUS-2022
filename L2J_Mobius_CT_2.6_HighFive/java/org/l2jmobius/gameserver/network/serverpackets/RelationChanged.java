@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Luca Baldi
  */
-public final class RelationChanged implements IClientOutgoingPacket
+public class RelationChanged implements IClientOutgoingPacket
 {
 	public static final int RELATION_PARTY1 = 0x00001; // party member
 	public static final int RELATION_PARTY2 = 0x00002; // party member

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * The Food Chain (280)
  * @author xban1x
  */
-public final class Q00280_TheFoodChain extends Quest
+public class Q00280_TheFoodChain extends Quest
 {
 	// Npc
 	private static final int BIXON = 32175;

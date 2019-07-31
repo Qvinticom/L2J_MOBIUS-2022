@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Trespassing into the Holy Ground (368)
  * @author Adry_85
  */
-public final class Q00368_TrespassingIntoTheHolyGround extends Quest
+public class Q00368_TrespassingIntoTheHolyGround extends Quest
 {
 	// NPC
 	private static final int RESTINA = 30926;

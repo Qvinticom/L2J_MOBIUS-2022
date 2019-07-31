@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * NOTE: This quest is no longer available since Freya(CT2.5)
  * @author corbin12
  */
-public final class Q00639_GuardiansOfTheHolyGrail extends Quest
+public class Q00639_GuardiansOfTheHolyGrail extends Quest
 {
 	// NPC
 	private static final int DOMINIC = 31350;

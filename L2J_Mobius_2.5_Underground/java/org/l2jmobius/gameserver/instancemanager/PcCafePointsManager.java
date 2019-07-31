@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class PcCafePointsManager
+public class PcCafePointsManager
 {
 	public void givePcCafePoint(PlayerInstance player, double exp)
 	{

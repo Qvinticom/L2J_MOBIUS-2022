@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * sample 5F 01 00 00 00 format cdd
  */
-public final class RequestAnswerJoinAlly extends GameClientPacket
+public class RequestAnswerJoinAlly extends GameClientPacket
 {
 	private int _response;
 	

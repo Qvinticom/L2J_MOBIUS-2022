@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author Kerberos
  */
-public final class EffectFusion extends Effect
+public class EffectFusion extends Effect
 {
 	public int _effect;
 	public int _maxEffect;

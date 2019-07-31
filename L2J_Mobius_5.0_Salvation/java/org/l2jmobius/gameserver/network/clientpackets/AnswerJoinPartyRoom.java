@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Format: (ch) d
  * @author -Wooden-, Tryskell
  */
-public final class AnswerJoinPartyRoom implements IClientIncomingPacket
+public class AnswerJoinPartyRoom implements IClientIncomingPacket
 {
 	private boolean _answer;
 	

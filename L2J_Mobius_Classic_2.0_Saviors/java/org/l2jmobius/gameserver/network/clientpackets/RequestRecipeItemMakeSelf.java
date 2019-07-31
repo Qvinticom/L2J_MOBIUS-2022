@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Administrator
  */
-public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
+public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 {
 	private int _id;
 	

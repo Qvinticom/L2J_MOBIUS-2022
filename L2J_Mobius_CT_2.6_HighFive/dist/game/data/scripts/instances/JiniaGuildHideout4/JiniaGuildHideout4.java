@@ -29,7 +29,7 @@ import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
  * Jinia Guild Hideout instance zone.
  * @author Adry_85
  */
-public final class JiniaGuildHideout4 extends AbstractInstance
+public class JiniaGuildHideout4 extends AbstractInstance
 {
 	// NPC
 	private static final int RAFFORTY = 32020;

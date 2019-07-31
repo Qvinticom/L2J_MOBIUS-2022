@@ -619,7 +619,7 @@ public class Auction
 	 * Get var auction.
 	 * @return the id
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -628,7 +628,7 @@ public class Auction
 	 * Gets the current bid.
 	 * @return the current bid
 	 */
-	public final int getCurrentBid()
+	public int getCurrentBid()
 	{
 		return _currentBid;
 	}
@@ -637,7 +637,7 @@ public class Auction
 	 * Gets the end date.
 	 * @return the end date
 	 */
-	public final long getEndDate()
+	public long getEndDate()
 	{
 		return _endDate;
 	}
@@ -646,7 +646,7 @@ public class Auction
 	 * Gets the highest bidder id.
 	 * @return the highest bidder id
 	 */
-	public final int getHighestBidderId()
+	public int getHighestBidderId()
 	{
 		return _highestBidderId;
 	}
@@ -655,7 +655,7 @@ public class Auction
 	 * Gets the highest bidder name.
 	 * @return the highest bidder name
 	 */
-	public final String getHighestBidderName()
+	public String getHighestBidderName()
 	{
 		return _highestBidderName;
 	}
@@ -664,7 +664,7 @@ public class Auction
 	 * Gets the highest bidder max bid.
 	 * @return the highest bidder max bid
 	 */
-	public final int getHighestBidderMaxBid()
+	public int getHighestBidderMaxBid()
 	{
 		return _highestBidderMaxBid;
 	}
@@ -673,7 +673,7 @@ public class Auction
 	 * Gets the item id.
 	 * @return the item id
 	 */
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
@@ -682,7 +682,7 @@ public class Auction
 	 * Gets the item name.
 	 * @return the item name
 	 */
-	public final String getItemName()
+	public String getItemName()
 	{
 		return _itemName;
 	}
@@ -691,7 +691,7 @@ public class Auction
 	 * Gets the item object id.
 	 * @return the item object id
 	 */
-	public final int getItemObjectId()
+	public int getItemObjectId()
 	{
 		return _itemObjectId;
 	}
@@ -700,7 +700,7 @@ public class Auction
 	 * Gets the item quantity.
 	 * @return the item quantity
 	 */
-	public final int getItemQuantity()
+	public int getItemQuantity()
 	{
 		return _itemQuantity;
 	}
@@ -709,7 +709,7 @@ public class Auction
 	 * Gets the item type.
 	 * @return the item type
 	 */
-	public final String getItemType()
+	public String getItemType()
 	{
 		return _itemType;
 	}
@@ -718,7 +718,7 @@ public class Auction
 	 * Gets the seller id.
 	 * @return the seller id
 	 */
-	public final int getSellerId()
+	public int getSellerId()
 	{
 		return _sellerId;
 	}
@@ -727,7 +727,7 @@ public class Auction
 	 * Gets the seller name.
 	 * @return the seller name
 	 */
-	public final String getSellerName()
+	public String getSellerName()
 	{
 		return _sellerName;
 	}
@@ -736,7 +736,7 @@ public class Auction
 	 * Gets the seller clan name.
 	 * @return the seller clan name
 	 */
-	public final String getSellerClanName()
+	public String getSellerClanName()
 	{
 		return _sellerClanName;
 	}
@@ -745,7 +745,7 @@ public class Auction
 	 * Gets the starting bid.
 	 * @return the starting bid
 	 */
-	public final int getStartingBid()
+	public int getStartingBid()
 	{
 		return _startingBid;
 	}
@@ -754,7 +754,7 @@ public class Auction
 	 * Gets the bidders.
 	 * @return the bidders
 	 */
-	public final Map<Integer, Bidder> getBidders()
+	public Map<Integer, Bidder> getBidders()
 	{
 		return _bidders;
 	}

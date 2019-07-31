@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * Grow effect implementation.
  */
-public final class Grow extends AbstractEffect
+public class Grow extends AbstractEffect
 {
 	public Grow(StatsSet params)
 	{

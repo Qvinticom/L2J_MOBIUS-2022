@@ -45,7 +45,7 @@ import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishR
  * Ancient Arcan City AI.
  * @author St3eT
  */
-public final class AncientArcanCity extends AbstractNpcAI
+public class AncientArcanCity extends AbstractNpcAI
 {
 	// NPC
 	private static final int CEREMONIAL_CAT = 33093;

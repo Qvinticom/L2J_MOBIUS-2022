@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Law Enforcement (61)
  * @author Gladicek
  */
-public final class Q00061_LawEnforcement extends Quest
+public class Q00061_LawEnforcement extends Quest
 {
 	// NPCs
 	private static final int LIANE = 32222;

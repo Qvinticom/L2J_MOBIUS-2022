@@ -33,7 +33,7 @@ public abstract class Operators
 		builtinOperators[INDEX_ADDITION] = new Operator("+", 2, true, Operator.PRECEDENCE_ADDITION)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return args[0] + args[1];
 			}
@@ -41,7 +41,7 @@ public abstract class Operators
 		builtinOperators[INDEX_SUBTRACTION] = new Operator("-", 2, true, Operator.PRECEDENCE_ADDITION)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return args[0] - args[1];
 			}
@@ -49,7 +49,7 @@ public abstract class Operators
 		builtinOperators[INDEX_UNARYMINUS] = new Operator("-", 1, false, Operator.PRECEDENCE_UNARY_MINUS)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return -args[0];
 			}
@@ -57,7 +57,7 @@ public abstract class Operators
 		builtinOperators[INDEX_UNARYPLUS] = new Operator("+", 1, false, Operator.PRECEDENCE_UNARY_PLUS)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return args[0];
 			}
@@ -65,7 +65,7 @@ public abstract class Operators
 		builtinOperators[INDEX_MUTLIPLICATION] = new Operator("*", 2, true, Operator.PRECEDENCE_MULTIPLICATION)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return args[0] * args[1];
 			}
@@ -73,7 +73,7 @@ public abstract class Operators
 		builtinOperators[INDEX_DIVISION] = new Operator("/", 2, true, Operator.PRECEDENCE_DIVISION)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				if (args[1] == 0d)
 				{
@@ -85,7 +85,7 @@ public abstract class Operators
 		builtinOperators[INDEX_POWER] = new Operator("^", 2, false, Operator.PRECEDENCE_POWER)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				return Math.pow(args[0], args[1]);
 			}
@@ -93,7 +93,7 @@ public abstract class Operators
 		builtinOperators[INDEX_MODULO] = new Operator("%", 2, true, Operator.PRECEDENCE_MODULO)
 		{
 			@Override
-			public double apply(final double... args)
+			public double apply(double... args)
 			{
 				if (args[1] == 0d)
 				{
@@ -104,7 +104,7 @@ public abstract class Operators
 		};
 	}
 	
-	public static Operator getBuiltinOperator(final char symbol, final int numArguments)
+	public static Operator getBuiltinOperator(char symbol, int numArguments)
 	{
 		switch (symbol)
 		{

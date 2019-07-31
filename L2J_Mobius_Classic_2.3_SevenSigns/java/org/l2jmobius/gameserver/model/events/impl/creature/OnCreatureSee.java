@@ -34,12 +34,12 @@ public class OnCreatureSee implements IBaseEvent
 		_seen = seen;
 	}
 	
-	public final Creature getSeer()
+	public Creature getSeer()
 	{
 		return _seer;
 	}
 	
-	public final Creature getSeen()
+	public Creature getSeen()
 	{
 		return _seen;
 	}

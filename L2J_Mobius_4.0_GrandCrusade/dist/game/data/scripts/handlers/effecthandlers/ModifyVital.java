@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Modify vital effect implementation.
  * @author malyelfik
  */
-public final class ModifyVital extends AbstractEffect
+public class ModifyVital extends AbstractEffect
 {
 	// Modify types
 	private enum ModifyType

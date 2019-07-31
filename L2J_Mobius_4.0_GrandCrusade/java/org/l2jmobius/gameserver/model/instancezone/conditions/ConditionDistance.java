@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Distance instance condition
  * @author malyelfik
  */
-public final class ConditionDistance extends Condition
+public class ConditionDistance extends Condition
 {
 	public ConditionDistance(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

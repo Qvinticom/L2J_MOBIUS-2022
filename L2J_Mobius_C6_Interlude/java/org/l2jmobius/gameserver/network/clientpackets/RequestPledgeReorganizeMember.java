@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember extends GameClientPacket
+public class RequestPledgeReorganizeMember extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

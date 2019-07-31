@@ -27,7 +27,7 @@ import quests.Q00186_ContractExecution.Q00186_ContractExecution;
  * Contract Completion (189)
  * @author ivantotov
  */
-public final class Q00189_ContractCompletion extends Quest
+public class Q00189_ContractCompletion extends Quest
 {
 	// NPCs
 	private static final int SHEGFIELD = 30068;

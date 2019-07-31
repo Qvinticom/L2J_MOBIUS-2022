@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Run Away effect implementation.
  * @author Zoey76
  */
-public final class RunAway extends AbstractEffect
+public class RunAway extends AbstractEffect
 {
 	private final int _power;
 	private final int _time;

@@ -24,7 +24,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
-public final class GraciaSeedsManager
+public class GraciaSeedsManager
 {
 	private static final Logger LOGGER = Logger.getLogger(GraciaSeedsManager.class.getName());
 	

@@ -30,7 +30,7 @@ import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_Assassinatio
  * Assassination of the Varka Silenos Chief (10422)
  * @author Stayway
  */
-public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
+public class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 {
 	// NPCs
 	private static final int HANSEN = 33853;

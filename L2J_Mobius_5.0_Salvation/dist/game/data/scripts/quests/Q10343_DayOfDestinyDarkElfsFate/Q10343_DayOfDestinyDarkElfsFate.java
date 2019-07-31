@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Dark Elf's Fate (10343)
  * @author St3eT
  */
-public final class Q10343_DayOfDestinyDarkElfsFate extends ThirdClassTransferQuest
+public class Q10343_DayOfDestinyDarkElfsFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int OLTRAN = 30862;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
  * @URL http://www.lineage2.com/en/news/events/02102016-the-power-of-love-part-iii.php
  * @author hlwrave
  */
-public final class ThePowerOfLove extends LongTimeEvent
+public class ThePowerOfLove extends LongTimeEvent
 {
 	// NPC
 	private static final int COCO = 33893;

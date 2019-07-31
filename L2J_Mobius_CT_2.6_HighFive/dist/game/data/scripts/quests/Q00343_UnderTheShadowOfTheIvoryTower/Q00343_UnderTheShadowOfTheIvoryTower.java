@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Under The Shadow Of The Ivory Tower (343)
  * @author ivantotov
  */
-public final class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
+public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 {
 	// NPCs
 	private static final int MAGIC_TRADER_CEMA = 30834;

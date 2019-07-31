@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * This class extends Guard class for quests, that require tracking of onAttack and onKill events from monsters' attacks.
  * @author GKR
  */
-public final class QuestGuardInstance extends GuardInstance
+public class QuestGuardInstance extends GuardInstance
 {
 	private boolean _isAutoAttackable = true;
 	private boolean _isPassive = false;

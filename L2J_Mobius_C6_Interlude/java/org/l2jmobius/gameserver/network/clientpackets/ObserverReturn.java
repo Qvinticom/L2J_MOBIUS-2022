@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class ObserverReturn extends GameClientPacket
+public class ObserverReturn extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

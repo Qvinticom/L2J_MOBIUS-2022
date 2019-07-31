@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Seekers Of The Holy Grail (638)
  * @author netvirus
  */
-public final class Q00638_SeekersOfTheHolyGrail extends Quest
+public class Q00638_SeekersOfTheHolyGrail extends Quest
 {
 	private static class DropInfo extends ItemChanceHolder
 	{

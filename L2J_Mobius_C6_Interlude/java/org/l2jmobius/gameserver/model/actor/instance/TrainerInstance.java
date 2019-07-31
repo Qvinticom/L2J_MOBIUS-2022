@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class TrainerInstance extends FolkInstance
+public class TrainerInstance extends FolkInstance
 {
 	/**
 	 * Instantiates a new l2 trainer instance.

@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Nornil Teleport Device AI.
  * @author St3eT
  */
-public final class NornilTeleportDevice extends AbstractNpcAI
+public class NornilTeleportDevice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int DEVICE = 33790; // Nornil Teleport Device

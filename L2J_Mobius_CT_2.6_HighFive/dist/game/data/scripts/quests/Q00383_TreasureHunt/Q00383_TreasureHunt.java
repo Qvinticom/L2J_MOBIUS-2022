@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Treasure Hunt (383)
  * @author Adry_85
  */
-public final class Q00383_TreasureHunt extends Quest
+public class Q00383_TreasureHunt extends Quest
 {
 	// NPCs
 	private static final int ESPEN = 30890;

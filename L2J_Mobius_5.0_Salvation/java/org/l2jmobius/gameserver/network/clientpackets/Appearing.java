@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * <p>
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class Appearing implements IClientIncomingPacket
+public class Appearing implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

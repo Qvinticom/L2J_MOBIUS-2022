@@ -46,7 +46,7 @@ import instances.AbstractInstance;
  * Last Imperial Tomb AI
  * @author Mobius (reworked from L2J version)
  */
-public final class LastImperialTomb extends AbstractInstance
+public class LastImperialTomb extends AbstractInstance
 {
 	// NPCs
 	private static final int GUIDE = 32011;

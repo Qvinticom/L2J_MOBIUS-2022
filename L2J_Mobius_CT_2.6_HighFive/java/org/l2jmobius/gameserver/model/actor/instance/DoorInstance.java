@@ -134,7 +134,7 @@ public class DoorInstance extends Creature
 	}
 	
 	@Override
-	public final DoorStatus getStatus()
+	public DoorStatus getStatus()
 	{
 		return (DoorStatus) super.getStatus();
 	}
@@ -160,7 +160,7 @@ public class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by skill.
 	 */
-	public final boolean isOpenableBySkill()
+	public boolean isOpenableBySkill()
 	{
 		return (getTemplate().getOpenType() & OPEN_BY_SKILL) == OPEN_BY_SKILL;
 	}
@@ -168,7 +168,7 @@ public class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by item.
 	 */
-	public final boolean isOpenableByItem()
+	public boolean isOpenableByItem()
 	{
 		return (getTemplate().getOpenType() & OPEN_BY_ITEM) == OPEN_BY_ITEM;
 	}
@@ -176,7 +176,7 @@ public class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by double-click.
 	 */
-	public final boolean isOpenableByClick()
+	public boolean isOpenableByClick()
 	{
 		return (getTemplate().getOpenType() & OPEN_BY_CLICK) == OPEN_BY_CLICK;
 	}
@@ -184,7 +184,7 @@ public class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by time.
 	 */
-	public final boolean isOpenableByTime()
+	public boolean isOpenableByTime()
 	{
 		return (getTemplate().getOpenType() & OPEN_BY_TIME) == OPEN_BY_TIME;
 	}
@@ -192,13 +192,13 @@ public class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by Field Cycle system.
 	 */
-	public final boolean isOpenableByCycle()
+	public boolean isOpenableByCycle()
 	{
 		return (getTemplate().getOpenType() & OPEN_BY_CYCLE) == OPEN_BY_CYCLE;
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate().getLevel();
 	}
@@ -271,7 +271,7 @@ public class DoorInstance extends Creature
 	}
 	
 	// TODO: Replace index with the castle id itself.
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		if (_castleIndex < 0)
 		{
@@ -285,7 +285,7 @@ public class DoorInstance extends Creature
 	}
 	
 	// TODO: Replace index with the fort id itself.
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		if (_fortIndex < 0)
 		{
@@ -456,7 +456,7 @@ public class DoorInstance extends Creature
 		}
 	}
 	
-	public final void openMe()
+	public void openMe()
 	{
 		if (getGroupName() != null)
 		{
@@ -468,7 +468,7 @@ public class DoorInstance extends Creature
 		startAutoCloseTask();
 	}
 	
-	public final void closeMe()
+	public void closeMe()
 	{
 		// remove close task
 		final Future<?> oldTask = _autoCloseTask;

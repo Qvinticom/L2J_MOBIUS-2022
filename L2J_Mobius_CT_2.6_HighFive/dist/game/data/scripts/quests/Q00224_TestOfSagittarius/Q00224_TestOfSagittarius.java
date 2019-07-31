@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of Sagittarius (224)
  * @author ivantotov
  */
-public final class Q00224_TestOfSagittarius extends Quest
+public class Q00224_TestOfSagittarius extends Quest
 {
 	// NPCs
 	private static final int PREFECT_VOKIAN = 30514;

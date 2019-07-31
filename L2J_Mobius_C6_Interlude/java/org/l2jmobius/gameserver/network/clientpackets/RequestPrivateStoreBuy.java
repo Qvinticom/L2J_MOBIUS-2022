@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestPrivateStoreBuy extends GameClientPacket
+public class RequestPrivateStoreBuy extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestPrivateStoreBuy.class.getName());
 	

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Tarantula's Spider Silk (296)
  * @author xban1x
  */
-public final class Q00296_TarantulasSpiderSilk extends Quest
+public class Q00296_TarantulasSpiderSilk extends Quest
 {
 	// NPCs
 	private static final int TRADER_MION = 30519;

@@ -81,12 +81,12 @@ public class MMOConnection<T extends MMOClient<?>>
 		_client = client;
 	}
 	
-	public final T getClient()
+	public T getClient()
 	{
 		return _client;
 	}
 	
-	public final void sendPacket(SendablePacket<T> sp)
+	public void sendPacket(SendablePacket<T> sp)
 	{
 		sp._client = _client;
 		
@@ -118,12 +118,12 @@ public class MMOConnection<T extends MMOClient<?>>
 		return _selectionKey;
 	}
 	
-	public final InetAddress getInetAddress()
+	public InetAddress getInetAddress()
 	{
 		return _address;
 	}
 	
-	public final int getPort()
+	public int getPort()
 	{
 		return _port;
 	}
@@ -200,12 +200,12 @@ public class MMOConnection<T extends MMOClient<?>>
 		return _readBuffer;
 	}
 	
-	public final boolean isConnected()
+	public boolean isConnected()
 	{
 		return !_socket.isClosed() && _socket.isConnected();
 	}
 	
-	public final boolean isChannelConnected()
+	public boolean isChannelConnected()
 	{
 		boolean output = false;
 		
@@ -226,7 +226,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		return output;
 	}
 	
-	public final boolean isClosed()
+	public boolean isClosed()
 	{
 		return _pendingClose;
 	}
@@ -241,7 +241,7 @@ public class MMOConnection<T extends MMOClient<?>>
 	 */
 	
 	@SuppressWarnings("unchecked")
-	public final void close(SendablePacket<T> sp)
+	public void close(SendablePacket<T> sp)
 	{
 		close(new SendablePacket[]
 		{
@@ -249,7 +249,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		});
 	}
 	
-	public final void close(SendablePacket<T>[] closeList)
+	public void close(SendablePacket<T>[] closeList)
 	{
 		if (_pendingClose)
 		{

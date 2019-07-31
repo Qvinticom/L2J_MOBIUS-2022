@@ -583,7 +583,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public final Location getInnerSpawnLoc(PlayerInstance player)
+	public Location getInnerSpawnLoc(PlayerInstance player)
 	{
 		Location loc = null;
 		if (player.getClanId() == _hall.getOwnerId())
@@ -610,13 +610,13 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public final boolean canPlantFlag()
+	public boolean canPlantFlag()
 	{
 		return false;
 	}
 	
 	@Override
-	public final boolean doorIsAutoAttackable()
+	public boolean doorIsAutoAttackable()
 	{
 		return false;
 	}
@@ -760,7 +760,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	public abstract String getAllyHtml(int ally);
 	
 	@Override
-	public final void loadAttackers()
+	public void loadAttackers()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

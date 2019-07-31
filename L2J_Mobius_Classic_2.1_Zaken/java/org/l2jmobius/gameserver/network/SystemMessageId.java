@@ -36,7 +36,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.clientstrings.Builder;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class SystemMessageId
+public class SystemMessageId
 {
 	private static final Logger LOGGER = Logger.getLogger(SystemMessageId.class.getName());
 	
@@ -16355,7 +16355,7 @@ public final class SystemMessageId
 		_localisations = EMPTY_SML_ARRAY;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -16365,17 +16365,17 @@ public final class SystemMessageId
 		_name = name;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final int getParamCount()
+	public int getParamCount()
 	{
 		return _params;
 	}
 	
-	public final void setParamCount(int params)
+	public void setParamCount(int params)
 	{
 		if (params < 0)
 		{
@@ -16395,7 +16395,7 @@ public final class SystemMessageId
 		_params = (byte) params;
 	}
 	
-	public final SMLocalisation getLocalisation(String lang)
+	public SMLocalisation getLocalisation(String lang)
 	{
 		SMLocalisation sml;
 		for (int i = _localisations.length; i-- > 0;)
@@ -16409,7 +16409,7 @@ public final class SystemMessageId
 		return null;
 	}
 	
-	public final void attachLocalizedText(String lang, String text)
+	public void attachLocalizedText(String lang, String text)
 	{
 		final int length = _localisations.length;
 		final SMLocalisation[] localisations = Arrays.copyOf(_localisations, length + 1);
@@ -16417,23 +16417,23 @@ public final class SystemMessageId
 		_localisations = localisations;
 	}
 	
-	public final void removeAllLocalisations()
+	public void removeAllLocalisations()
 	{
 		_localisations = EMPTY_SML_ARRAY;
 	}
 	
-	public final SystemMessage getStaticSystemMessage()
+	public SystemMessage getStaticSystemMessage()
 	{
 		return _staticSystemMessage;
 	}
 	
-	public final void setStaticSystemMessage(SystemMessage sm)
+	public void setStaticSystemMessage(SystemMessage sm)
 	{
 		_staticSystemMessage = sm;
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return "SM[" + getId() + ": " + getName() + "]";
 	}
@@ -16449,12 +16449,12 @@ public final class SystemMessageId
 			_builder = Builder.newBuilder(text);
 		}
 		
-		public final String getLanguage()
+		public String getLanguage()
 		{
 			return _lang;
 		}
 		
-		public final String getLocalisation(Object... params)
+		public String getLocalisation(Object... params)
 		{
 			return _builder.toString(params);
 		}

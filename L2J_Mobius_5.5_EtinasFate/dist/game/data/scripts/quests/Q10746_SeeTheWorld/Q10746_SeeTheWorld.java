@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * See the World (10746)
  * @author Sdw
  */
-public final class Q10746_SeeTheWorld extends Quest
+public class Q10746_SeeTheWorld extends Quest
 {
 	// NPCs
 	private static final int KARLA = 33933;

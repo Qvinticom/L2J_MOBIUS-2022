@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Reworked by xban1x.
  * @author Plim
  */
-public final class ToIVortex extends AbstractNpcAI
+public class ToIVortex extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KEPLON = 30949;

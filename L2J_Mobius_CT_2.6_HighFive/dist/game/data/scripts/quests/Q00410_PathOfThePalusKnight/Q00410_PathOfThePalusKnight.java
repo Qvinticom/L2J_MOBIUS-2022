@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Palus Knight (410)
  * @author ivantotov
  */
-public final class Q00410_PathOfThePalusKnight extends Quest
+public class Q00410_PathOfThePalusKnight extends Quest
 {
 	// NPCs
 	private static final int MASTER_VIRGIL = 30329;

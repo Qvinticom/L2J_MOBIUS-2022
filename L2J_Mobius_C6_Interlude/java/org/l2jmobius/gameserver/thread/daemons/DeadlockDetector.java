@@ -29,7 +29,7 @@ import org.l2jmobius.commons.util.Util;
  * @author ProGramMoS
  * @version 0.4 Stable
  */
-public final class DeadlockDetector implements Runnable
+public class DeadlockDetector implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(DeadlockDetector.class.getName());
 	private final Set<Long> _logged = new HashSet<>();

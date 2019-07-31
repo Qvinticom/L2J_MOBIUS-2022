@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Item Effect: Gives teleport bookmark slots to the owner.
  * @author Nik
  */
-public final class AddTeleportBookmarkSlot extends AbstractEffect
+public class AddTeleportBookmarkSlot extends AbstractEffect
 {
 	private final int _amount;
 	

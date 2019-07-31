@@ -283,7 +283,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 	}
 	
-	public final void broadcastPacket(IClientOutgoingPacket... packets)
+	public void broadcastPacket(IClientOutgoingPacket... packets)
 	{
 		getRegisteredPlayers().forEach(member -> member.sendPacket(packets));
 	}

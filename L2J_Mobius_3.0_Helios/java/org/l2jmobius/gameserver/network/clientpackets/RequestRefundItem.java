@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * RequestRefundItem client packet class.
  */
-public final class RequestRefundItem implements IClientIncomingPacket
+public class RequestRefundItem implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 4; // length of the one item
 	private static final int CUSTOM_CB_SELL_LIST = 423;

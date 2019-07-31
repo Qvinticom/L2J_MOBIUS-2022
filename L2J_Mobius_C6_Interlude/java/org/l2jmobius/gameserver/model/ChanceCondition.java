@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.templates.StatsSet;
 /**
  * @author kombat
  */
-public final class ChanceCondition
+public class ChanceCondition
 {
 	public static final int EVT_HIT = 1;
 	public static final int EVT_CRIT = 2;

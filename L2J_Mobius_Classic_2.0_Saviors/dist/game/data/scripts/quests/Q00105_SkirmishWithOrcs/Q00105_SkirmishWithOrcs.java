@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Skimirish with Orcs (105)
  * @author janiko
  */
-public final class Q00105_SkirmishWithOrcs extends Quest
+public class Q00105_SkirmishWithOrcs extends Quest
 {
 	// NPC
 	private static final int KENDNELL = 30218;

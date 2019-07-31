@@ -29,7 +29,7 @@ import quests.Q10391_ASuspiciousHelper.Q10391_ASuspiciousHelper;
  * Failure and its Consequences (10392)
  * @author St3eT
  */
-public final class Q10392_FailureAndItsConsequences extends Quest
+public class Q10392_FailureAndItsConsequences extends Quest
 {
 	// NPCs
 	private static final int IASON = 33859;

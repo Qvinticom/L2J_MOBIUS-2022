@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author l3x
  */
-public final class ExSendManorList implements IClientOutgoingPacket
+public class ExSendManorList implements IClientOutgoingPacket
 {
 	public static final ExSendManorList STATIC_PACKET = new ExSendManorList();
 	

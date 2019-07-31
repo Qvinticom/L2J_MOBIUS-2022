@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Anais AI.
  * @author nonom
  */
-public final class Anais extends AbstractNpcAI
+public class Anais extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ANAIS = 25701;

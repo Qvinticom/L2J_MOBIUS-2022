@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Ranku's AI.
  * @author GKR
  */
-public final class Ranku extends AbstractNpcAI
+public class Ranku extends AbstractNpcAI
 {
 	// NPCs
 	private static final int RANKU = 25542;
@@ -51,7 +51,7 @@ public final class Ranku extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("checkup") && (npc.getId() == RANKU) && !npc.isDead())
 		{

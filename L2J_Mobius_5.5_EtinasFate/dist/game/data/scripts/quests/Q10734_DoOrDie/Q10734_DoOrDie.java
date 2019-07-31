@@ -33,7 +33,7 @@ import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
  * Do Or Die (10734)
  * @author Sdw
  */
-public final class Q10734_DoOrDie extends Quest
+public class Q10734_DoOrDie extends Quest
 {
 	// NPCs
 	private static final int KATALIN = 33943;

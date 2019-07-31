@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 /**
  * @author zabbix Lets drink to code!
  */
-public final class DummyPacket extends GameClientPacket
+public class DummyPacket extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

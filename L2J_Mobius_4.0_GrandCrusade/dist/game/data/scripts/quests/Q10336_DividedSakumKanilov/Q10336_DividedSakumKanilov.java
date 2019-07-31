@@ -32,7 +32,7 @@ import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
  * Divided Sakum, Kanilov (10336)
  * @author St3eT
  */
-public final class Q10336_DividedSakumKanilov extends Quest
+public class Q10336_DividedSakumKanilov extends Quest
 {
 	// NPCs
 	private static final int ZENATH = 33509;

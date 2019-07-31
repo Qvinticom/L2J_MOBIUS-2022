@@ -35,7 +35,7 @@ public class NpcStat extends CreatureStat
 	}
 	
 	@Override
-	public final int getMaxHp()
+	public int getMaxHp()
 	{
 		return (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().baseHpMax, null, null);
 	}

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExColosseumFenceInfo;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceInstance extends WorldObject
+public class FenceInstance extends WorldObject
 {
 	private final int _xMin;
 	private final int _xMax;

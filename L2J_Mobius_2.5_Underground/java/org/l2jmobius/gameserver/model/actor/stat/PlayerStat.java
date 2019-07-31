@@ -234,7 +234,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final boolean addLevel(byte value)
+	public boolean addLevel(byte value)
 	{
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -320,19 +320,19 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final long getExpForLevel(int level)
+	public long getExpForLevel(int level)
 	{
 		return ExperienceData.getInstance().getExpForLevel(level);
 	}
 	
 	@Override
-	public final PlayerInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
 		return (PlayerInstance) super.getActiveChar();
 	}
 	
 	@Override
-	public final long getExp()
+	public long getExp()
 	{
 		if (getActiveChar().isSubClassActive())
 		{
@@ -342,13 +342,13 @@ public class PlayerStat extends PlayableStat
 		return super.getExp();
 	}
 	
-	public final long getBaseExp()
+	public long getBaseExp()
 	{
 		return super.getExp();
 	}
 	
 	@Override
-	public final void setExp(long value)
+	public void setExp(long value)
 	{
 		if (getActiveChar().isSubClassActive())
 		{
@@ -398,7 +398,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final byte getLevel()
+	public byte getLevel()
 	{
 		if (getActiveChar().isDualClassActive())
 		{
@@ -411,13 +411,13 @@ public class PlayerStat extends PlayableStat
 		return super.getLevel();
 	}
 	
-	public final byte getBaseLevel()
+	public byte getBaseLevel()
 	{
 		return super.getLevel();
 	}
 	
 	@Override
-	public final void setLevel(byte value)
+	public void setLevel(byte value)
 	{
 		if (value > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -435,7 +435,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public final long getSp()
+	public long getSp()
 	{
 		if (getActiveChar().isSubClassActive())
 		{
@@ -445,13 +445,13 @@ public class PlayerStat extends PlayableStat
 		return super.getSp();
 	}
 	
-	public final long getBaseSp()
+	public long getBaseSp()
 	{
 		return super.getSp();
 	}
 	
 	@Override
-	public final void setSp(long value)
+	public void setSp(long value)
 	{
 		if (getActiveChar().isSubClassActive())
 		{

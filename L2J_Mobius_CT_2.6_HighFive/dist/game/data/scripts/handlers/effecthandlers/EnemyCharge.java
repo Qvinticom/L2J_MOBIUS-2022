@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 /**
  * Enemy Charge effect implementation.
  */
-public final class EnemyCharge extends AbstractEffect
+public class EnemyCharge extends AbstractEffect
 {
 	public EnemyCharge(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

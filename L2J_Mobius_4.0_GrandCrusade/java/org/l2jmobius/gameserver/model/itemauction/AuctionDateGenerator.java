@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 /**
  * @author Forsaiken
  */
-public final class AuctionDateGenerator
+public class AuctionDateGenerator
 {
 	public static final String FIELD_INTERVAL = "interval";
 	public static final String FIELD_DAY_OF_WEEK = "day_of_week";
@@ -55,7 +55,7 @@ public final class AuctionDateGenerator
 		checkMinuteOfHour(0);
 	}
 	
-	public final synchronized long nextDate(long date)
+	public synchronized long nextDate(long date)
 	{
 		_calendar.setTimeInMillis(date);
 		_calendar.set(Calendar.MILLISECOND, 0);

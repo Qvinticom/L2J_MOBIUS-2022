@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author Gnacik
  */
-public final class RecoBonus
+public class RecoBonus
 {
 	private static final int[][] _recoBonus =
 	{

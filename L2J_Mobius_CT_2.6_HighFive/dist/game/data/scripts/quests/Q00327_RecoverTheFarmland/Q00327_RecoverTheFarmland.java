@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * @author GKR
  */
 
-public final class Q00327_RecoverTheFarmland extends Quest
+public class Q00327_RecoverTheFarmland extends Quest
 {
 	// NPCs
 	private static final int IRIS = 30034;

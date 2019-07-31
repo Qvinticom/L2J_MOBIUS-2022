@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * World chat handler.
  * @author UnAfraid
  */
-public final class ChatWorld implements IChatHandler
+public class ChatWorld implements IChatHandler
 {
 	private static final Map<Integer, Instant> REUSE = new ConcurrentHashMap<>();
 	

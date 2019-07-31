@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ShortCutInit implements IClientOutgoingPacket
+public class ShortCutInit implements IClientOutgoingPacket
 {
 	private Shortcut[] _shortCuts;
 	

@@ -40,7 +40,7 @@ import instances.EvasHiddenSpace.EvasHiddenSpace;
  * Noblesse, Soul Testing (10369)
  * @author Gladicek, St3eT
  */
-public final class Q10369_NoblesseSoulTesting extends Quest
+public class Q10369_NoblesseSoulTesting extends Quest
 {
 	// NPCs
 	private static final int CERENAS = 31281;

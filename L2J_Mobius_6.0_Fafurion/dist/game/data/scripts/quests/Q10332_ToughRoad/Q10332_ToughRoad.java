@@ -34,7 +34,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
  * Tough Road (10332)
  * @author St3eT
  */
-public final class Q10332_ToughRoad extends Quest
+public class Q10332_ToughRoad extends Quest
 {
 	// NPCs
 	private static final int KAKAI = 30565;

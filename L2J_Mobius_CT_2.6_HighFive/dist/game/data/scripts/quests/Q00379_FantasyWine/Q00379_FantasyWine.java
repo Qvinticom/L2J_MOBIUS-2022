@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Fantasy Wine (379)
  * @author Adry_85
  */
-public final class Q00379_FantasyWine extends Quest
+public class Q00379_FantasyWine extends Quest
 {
 	// NPC
 	private static final int HARLAN = 30074;

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Physical Attack HP Link effect implementation.
  * @author Adry_85
  */
-public final class PhysicalAttackHpLink extends AbstractEffect
+public class PhysicalAttackHpLink extends AbstractEffect
 {
 	public PhysicalAttackHpLink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

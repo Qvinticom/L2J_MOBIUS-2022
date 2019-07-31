@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * URL https://l2wiki.com/Atelia_Fortress
  * @author hlwrave, Stayway, Mobius
  */
-public final class AteliaManager extends AbstractNpcAI
+public class AteliaManager extends AbstractNpcAI
 {
 	// Npc Devianne
 	private static final int DEVIANNE = 34089;

@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
  * AI for controllable mobs
  * @author littlecrow
  */
-public final class ControllableMobAI extends AttackableAI
+public class ControllableMobAI extends AttackableAI
 {
 	public static final int AI_IDLE = 1;
 	public static final int AI_NORMAL = 2;

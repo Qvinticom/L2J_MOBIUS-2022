@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Admin Prime Points manage admin commands.
  * @author St3eT
  */
-public final class AdminPrimePoints implements IAdminCommandHandler
+public class AdminPrimePoints implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

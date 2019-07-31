@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00
  * @author -Wooden-
  */
-public final class RequestExOustFromMPCC implements IClientIncomingPacket
+public class RequestExOustFromMPCC implements IClientIncomingPacket
 {
 	private String _name;
 	

@@ -19,7 +19,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 /**
  * @author KenM
  */
-public final class AccountKicked extends LoginServerPacket
+public class AccountKicked extends LoginServerPacket
 {
 	public enum AccountKickedReason
 	{
@@ -35,7 +35,7 @@ public final class AccountKicked extends LoginServerPacket
 			_code = code;
 		}
 		
-		public final int getCode()
+		public int getCode()
 		{
 			return _code;
 		}

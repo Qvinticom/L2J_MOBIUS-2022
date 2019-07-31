@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance enter group max size
  * @author malyelfik
  */
-public final class ConditionGroupMax extends Condition
+public class ConditionGroupMax extends Condition
 {
 	public ConditionGroupMax(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

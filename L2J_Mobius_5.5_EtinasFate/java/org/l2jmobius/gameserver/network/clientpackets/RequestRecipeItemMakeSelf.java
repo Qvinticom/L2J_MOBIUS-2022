@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Nik
  */
-public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
+public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 {
 	private int _id;
 	private ItemHolder[] _offeredItems;

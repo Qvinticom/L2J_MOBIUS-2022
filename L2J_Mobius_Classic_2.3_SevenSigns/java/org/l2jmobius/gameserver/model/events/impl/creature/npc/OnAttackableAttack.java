@@ -43,12 +43,12 @@ public class OnAttackableAttack implements IBaseEvent
 		_isSummon = isSummon;
 	}
 	
-	public final PlayerInstance getAttacker()
+	public PlayerInstance getAttacker()
 	{
 		return _attacker;
 	}
 	
-	public final Attackable getTarget()
+	public Attackable getTarget()
 	{
 		return _target;
 	}

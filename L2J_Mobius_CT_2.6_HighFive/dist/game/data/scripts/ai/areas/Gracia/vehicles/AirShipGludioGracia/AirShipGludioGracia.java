@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
 /**
  * @author DS
  */
-public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
+public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 {
 	private static final int[] CONTROLLERS =
 	{
@@ -162,7 +162,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player.isTransformed())
 		{
@@ -228,7 +228,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}

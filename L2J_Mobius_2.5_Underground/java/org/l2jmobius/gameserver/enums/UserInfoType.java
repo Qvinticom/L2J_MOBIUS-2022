@@ -64,7 +64,7 @@ public enum UserInfoType implements IUpdateTypeComponent
 	 * @return the int mask
 	 */
 	@Override
-	public final int getMask()
+	public int getMask()
 	{
 		return _mask;
 	}

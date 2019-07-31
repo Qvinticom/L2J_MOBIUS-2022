@@ -35,7 +35,7 @@ import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
  * Certification of The Seeker (10362)
  * @author Gladicek
  */
-public final class Q10362_CertificationOfTheSeeker extends Quest
+public class Q10362_CertificationOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int CHESHA = 33449;

@@ -31,7 +31,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: The Seal of Punishment (10436)
  * @author Stayway
  */
-public final class Q10436_KekropusLetterTheSealOfPunishment extends LetterQuest
+public class Q10436_KekropusLetterTheSealOfPunishment extends LetterQuest
 {
 	// NPCs
 	private static final int MOUEN = 30196;

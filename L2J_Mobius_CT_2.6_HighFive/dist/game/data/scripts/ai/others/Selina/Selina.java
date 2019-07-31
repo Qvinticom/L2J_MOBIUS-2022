@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Mercenary Medic Selina AI.
  * @author Zoey76
  */
-public final class Selina extends AbstractNpcAI
+public class Selina extends AbstractNpcAI
 {
 	// NPC
 	private static final int SELINA = 31556;

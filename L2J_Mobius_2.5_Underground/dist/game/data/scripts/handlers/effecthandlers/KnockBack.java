@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Check if this effect is not counted as being stunned.
  * @author UnAfraid, Mobius
  */
-public final class KnockBack extends AbstractEffect
+public class KnockBack extends AbstractEffect
 {
 	private final int _distance;
 	private final int _speed;

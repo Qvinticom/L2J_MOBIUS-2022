@@ -32,7 +32,7 @@ import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
  * Black Swan (351)
  * @author Adry_85
  */
-public final class Q00351_BlackSwan extends Quest
+public class Q00351_BlackSwan extends Quest
 {
 	// NPCs
 	private static final int ROMAN = 30897;

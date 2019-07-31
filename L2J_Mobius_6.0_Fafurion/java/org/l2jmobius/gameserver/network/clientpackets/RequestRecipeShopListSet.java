@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * RequestRecipeShopListSet client packet class.
  */
-public final class RequestRecipeShopListSet implements IClientIncomingPacket
+public class RequestRecipeShopListSet implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12;
 	

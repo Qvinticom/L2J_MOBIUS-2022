@@ -80,7 +80,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * Global calculations.
  */
-public final class Formulas
+public class Formulas
 {
 	/** Regeneration Task period. */
 	private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs

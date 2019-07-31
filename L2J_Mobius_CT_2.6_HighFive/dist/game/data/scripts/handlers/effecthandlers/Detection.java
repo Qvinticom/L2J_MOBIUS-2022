@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Detection effect implementation.
  * @author UnAfraid
  */
-public final class Detection extends AbstractEffect
+public class Detection extends AbstractEffect
 {
 	public Detection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

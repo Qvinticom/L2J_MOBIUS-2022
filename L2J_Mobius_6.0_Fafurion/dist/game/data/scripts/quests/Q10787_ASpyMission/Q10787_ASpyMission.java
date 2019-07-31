@@ -31,7 +31,7 @@ import quests.Q10786_ResidentProblemSolver.Q10786_ResidentProblemSolver;
  * A Spy Mission (10787)
  * @author malyelfik
  */
-public final class Q10787_ASpyMission extends Quest
+public class Q10787_ASpyMission extends Quest
 {
 	// NPCs
 	private static final int SHUVANN = 33867;

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Sakum's Impact (10337)
  * @author St3eT
  */
-public final class Q10337_SakumsImpact extends Quest
+public class Q10337_SakumsImpact extends Quest
 {
 	// NPCs
 	private static final int ADVENTURE_GUILDSMAN = 31795;

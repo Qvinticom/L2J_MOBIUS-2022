@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Dwarf's Fate (10345)
  * @author St3eT
  */
-public final class Q10345_DayOfDestinyDwarfsFate extends ThirdClassTransferQuest
+public class Q10345_DayOfDestinyDwarfsFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int FERRIS = 30847;

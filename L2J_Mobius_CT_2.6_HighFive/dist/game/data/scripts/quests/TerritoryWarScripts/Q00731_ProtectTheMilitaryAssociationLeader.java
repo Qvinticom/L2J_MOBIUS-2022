@@ -20,7 +20,7 @@ package quests.TerritoryWarScripts;
  * Protect the Military Association Leader (731)
  * @author Gigiikun
  */
-public final class Q00731_ProtectTheMilitaryAssociationLeader extends TerritoryWarSuperClass
+public class Q00731_ProtectTheMilitaryAssociationLeader extends TerritoryWarSuperClass
 {
 	public Q00731_ProtectTheMilitaryAssociationLeader()
 	{

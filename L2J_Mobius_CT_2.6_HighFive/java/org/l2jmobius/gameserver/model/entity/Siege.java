@@ -1552,13 +1552,13 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public final SiegeClan getAttackerClan(Clan clan)
+	public SiegeClan getAttackerClan(Clan clan)
 	{
 		return clan == null ? null : getAttackerClan(clan.getId());
 	}
 	
 	@Override
-	public final SiegeClan getAttackerClan(int clanId)
+	public SiegeClan getAttackerClan(int clanId)
 	{
 		for (SiegeClan sc : getAttackerClans())
 		{
@@ -1571,29 +1571,29 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public final List<SiegeClan> getAttackerClans()
+	public List<SiegeClan> getAttackerClans()
 	{
 		return _isNormalSide ? _attackerClans : _defenderClans;
 	}
 	
-	public final int getAttackerRespawnDelay()
+	public int getAttackerRespawnDelay()
 	{
 		return SiegeManager.getInstance().getAttackerRespawnDelay();
 	}
 	
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		return _castle == null ? null : _castle;
 	}
 	
 	@Override
-	public final SiegeClan getDefenderClan(Clan clan)
+	public SiegeClan getDefenderClan(Clan clan)
 	{
 		return clan == null ? null : getDefenderClan(clan.getId());
 	}
 	
 	@Override
-	public final SiegeClan getDefenderClan(int clanId)
+	public SiegeClan getDefenderClan(int clanId)
 	{
 		for (SiegeClan sc : getDefenderClans())
 		{
@@ -1606,17 +1606,17 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public final List<SiegeClan> getDefenderClans()
+	public List<SiegeClan> getDefenderClans()
 	{
 		return _isNormalSide ? _defenderClans : _attackerClans;
 	}
 	
-	public final SiegeClan getDefenderWaitingClan(Clan clan)
+	public SiegeClan getDefenderWaitingClan(Clan clan)
 	{
 		return clan == null ? null : getDefenderWaitingClan(clan.getId());
 	}
 	
-	public final SiegeClan getDefenderWaitingClan(int clanId)
+	public SiegeClan getDefenderWaitingClan(int clanId)
 	{
 		for (SiegeClan sc : _defenderWaitingClans)
 		{
@@ -1628,33 +1628,33 @@ public class Siege implements Siegable
 		return null;
 	}
 	
-	public final List<SiegeClan> getDefenderWaitingClans()
+	public List<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}
 	
-	public final boolean isInProgress()
+	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
-	public final boolean getIsRegistrationOver()
+	public boolean getIsRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
 	
-	public final boolean getIsTimeRegistrationOver()
+	public boolean getIsTimeRegistrationOver()
 	{
 		return getCastle().getIsTimeRegistrationOver();
 	}
 	
 	@Override
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return getCastle().getSiegeDate();
 	}
 	
-	public final Calendar getTimeRegistrationOverDate()
+	public Calendar getTimeRegistrationOverDate()
 	{
 		return getCastle().getTimeRegistrationOverDate();
 	}
@@ -1682,7 +1682,7 @@ public class Siege implements Siegable
 		return null;
 	}
 	
-	public final SiegeGuardManager getSiegeGuardManager()
+	public SiegeGuardManager getSiegeGuardManager()
 	{
 		if (_siegeGuardManager == null)
 		{

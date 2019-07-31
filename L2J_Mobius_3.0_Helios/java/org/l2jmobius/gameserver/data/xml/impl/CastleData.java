@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 /**
  * @author St3eT
  */
-public final class CastleData implements IXmlReader
+public class CastleData implements IXmlReader
 {
 	private final Map<Integer, List<CastleSpawnHolder>> _spawns = new ConcurrentHashMap<>();
 	private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new ConcurrentHashMap<>();
@@ -117,17 +117,17 @@ public final class CastleData implements IXmlReader
 		}
 	}
 	
-	public final List<CastleSpawnHolder> getSpawnsForSide(int castleId, CastleSide side)
+	public List<CastleSpawnHolder> getSpawnsForSide(int castleId, CastleSide side)
 	{
 		return _spawns.getOrDefault(castleId, Collections.emptyList()).stream().filter(s -> s.getSide() == side).collect(Collectors.toList());
 	}
 	
-	public final List<SiegeGuardHolder> getSiegeGuardsForCastle(int castleId)
+	public List<SiegeGuardHolder> getSiegeGuardsForCastle(int castleId)
 	{
 		return _siegeGuards.getOrDefault(castleId, Collections.emptyList());
 	}
 	
-	public final Map<Integer, List<SiegeGuardHolder>> getSiegeGuards()
+	public Map<Integer, List<SiegeGuardHolder>> getSiegeGuards()
 	{
 		return _siegeGuards;
 	}

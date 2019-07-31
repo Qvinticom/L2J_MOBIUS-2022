@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Protection Blessing effect implementation.
  * @author kerberos_20
  */
-public final class ProtectionBlessing extends AbstractEffect
+public class ProtectionBlessing extends AbstractEffect
 {
 	public ProtectionBlessing(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

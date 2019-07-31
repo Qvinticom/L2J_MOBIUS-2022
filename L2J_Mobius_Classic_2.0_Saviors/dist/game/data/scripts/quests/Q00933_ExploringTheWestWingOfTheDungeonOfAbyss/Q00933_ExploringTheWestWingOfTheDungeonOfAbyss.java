@@ -33,13 +33,13 @@ public class Q00933_ExploringTheWestWingOfTheDungeonOfAbyss extends Quest
 	private static final int MAGRIT = 31774;
 	private static final int INGRIT = 31775;
 	// Monsters
-	public final int MERTT = 21638;
-	public final int DUHT = 21639;
-	public final int PRIZT = 21640;
-	public final int KOVART = 21641;
+	public int MERTT = 21638;
+	public int DUHT = 21639;
+	public int PRIZT = 21640;
+	public int KOVART = 21641;
 	// Items
-	public final ItemHolder OSKZLA = new ItemHolder(90008, 1);
-	public final ItemHolder POD = new ItemHolder(90136, 1);
+	public ItemHolder OSKZLA = new ItemHolder(90008, 1);
+	public ItemHolder POD = new ItemHolder(90136, 1);
 	
 	public Q00933_ExploringTheWestWingOfTheDungeonOfAbyss()
 	{

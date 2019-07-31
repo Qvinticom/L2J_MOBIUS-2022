@@ -36,7 +36,7 @@ import quests.Q10734_DoOrDie.Q10734_DoOrDie;
  * Instance part is implemented in <b>FaeronTrainingGrounds1</b> script.
  * @author Sdw
  */
-public final class Q10735_ASpecialPower extends Quest
+public class Q10735_ASpecialPower extends Quest
 {
 	// NPC
 	private static final int AYANTHE = 33942;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SiegeAttackerList;
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestSiegeAttackerList implements IClientIncomingPacket
+public class RequestSiegeAttackerList implements IClientIncomingPacket
 {
 	private int _castleId;
 	

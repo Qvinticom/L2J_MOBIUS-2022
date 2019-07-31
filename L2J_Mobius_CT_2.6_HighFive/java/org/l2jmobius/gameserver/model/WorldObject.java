@@ -84,7 +84,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * Gets the instance type of object.
 	 * @return the instance type
 	 */
-	public final InstanceType getInstanceType()
+	public InstanceType getInstanceType()
 	{
 		return _instanceType;
 	}
@@ -103,12 +103,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * @param instanceTypes the instance types to verify
 	 * @return {@code true} if object is of any given instance types, {@code false} otherwise
 	 */
-	public final boolean isInstanceTypes(InstanceType... instanceTypes)
+	public boolean isInstanceTypes(InstanceType... instanceTypes)
 	{
 		return _instanceType.isTypes(instanceTypes);
 	}
 	
-	public final void onAction(PlayerInstance player)
+	public void onAction(PlayerInstance player)
 	{
 		onAction(player, true);
 	}
@@ -162,7 +162,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	@Override
-	public final boolean spawnMe()
+	public boolean spawnMe()
 	{
 		synchronized (this)
 		{
@@ -186,7 +186,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return true;
 	}
 	
-	public final void spawnMe(int x, int y, int z)
+	public void spawnMe(int x, int y, int z)
 	{
 		synchronized (this)
 		{
@@ -226,12 +226,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	
 	public abstract boolean isAutoAttackable(Creature attacker);
 	
-	public final boolean isSpawned()
+	public boolean isSpawned()
 	{
 		return _isSpawned;
 	}
 	
-	public final void setSpawned(boolean value)
+	public void setSpawned(boolean value)
 	{
 		_isSpawned = value;
 	}
@@ -248,7 +248,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	@Override
-	public final int getObjectId()
+	public int getObjectId()
 	{
 		return _objectId;
 	}
@@ -454,7 +454,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * @param script
 	 * @return
 	 */
-	public final <T> T addScript(T script)
+	public <T> T addScript(T script)
 	{
 		if (_scripts == null)
 		{
@@ -477,7 +477,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public final <T> T removeScript(Class<T> script)
+	public <T> T removeScript(Class<T> script)
 	{
 		if (_scripts == null)
 		{
@@ -492,7 +492,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public final <T> T getScript(Class<T> script)
+	public <T> T getScript(Class<T> script)
 	{
 		if (_scripts == null)
 		{
@@ -506,7 +506,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		
 	}
 	
-	public final void setXYZInvisible(int x, int y, int z)
+	public void setXYZInvisible(int x, int y, int z)
 	{
 		if (x > World.MAP_MAX_X)
 		{
@@ -529,12 +529,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		setSpawned(false);
 	}
 	
-	public final void setLocationInvisible(ILocational loc)
+	public void setLocationInvisible(ILocational loc)
 	{
 		setXYZInvisible(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
-	public final WorldRegion getWorldRegion()
+	public WorldRegion getWorldRegion()
 	{
 		return _worldRegion;
 	}

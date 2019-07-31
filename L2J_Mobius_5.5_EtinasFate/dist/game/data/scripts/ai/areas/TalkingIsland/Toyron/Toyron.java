@@ -30,7 +30,7 @@ import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
  * Toyron AI.
  * @author Gladicek
  */
-public final class Toyron extends AbstractNpcAI
+public class Toyron extends AbstractNpcAI
 {
 	// NPC
 	private static final int TOYRON = 33004;

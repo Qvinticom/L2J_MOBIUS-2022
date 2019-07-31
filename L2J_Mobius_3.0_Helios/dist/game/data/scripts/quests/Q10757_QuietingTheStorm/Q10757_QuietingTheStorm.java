@@ -34,7 +34,7 @@ import quests.Q10756_AnInterdimensionalDraft.Q10756_AnInterdimensionalDraft;
  * Quieting the Storm (10757)
  * @author malyelfik
  */
-public final class Q10757_QuietingTheStorm extends Quest
+public class Q10757_QuietingTheStorm extends Quest
 {
 	// NPC
 	private static final int PIO = 33963;

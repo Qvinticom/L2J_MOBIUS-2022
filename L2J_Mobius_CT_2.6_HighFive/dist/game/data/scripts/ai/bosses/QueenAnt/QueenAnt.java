@@ -43,7 +43,7 @@ import ai.AbstractNpcAI;
  * Queen Ant's AI
  * @author Emperorc
  */
-public final class QueenAnt extends AbstractNpcAI
+public class QueenAnt extends AbstractNpcAI
 {
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;

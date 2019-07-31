@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.zone.type.BossZone;
  * @author Mobius
  * @note Based on python script
  */
-public final class GrandBossTeleporters extends Quest
+public class GrandBossTeleporters extends Quest
 {
 	private static final String qn = "GrandBossTeleporters";
 	

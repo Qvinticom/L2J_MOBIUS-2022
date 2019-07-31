@@ -36,7 +36,7 @@ import ai.bosses.Helios.Helios;
  * Kekropus AI
  * @author Gigi
  */
-public final class Kekropus extends AbstractNpcAI
+public class Kekropus extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KEKROPUS = 34222;

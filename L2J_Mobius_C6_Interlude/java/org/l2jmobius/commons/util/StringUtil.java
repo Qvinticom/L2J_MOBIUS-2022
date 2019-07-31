@@ -178,7 +178,7 @@ import org.l2jmobius.Config;
  * 
  * @author fordfrog
  */
-public final class StringUtil
+public class StringUtil
 {
 	private StringUtil()
 	{

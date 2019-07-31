@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Plunder Supplies (360)
  * @author netvirus
  */
-public final class Q00360_PlunderTheirSupplies extends Quest
+public class Q00360_PlunderTheirSupplies extends Quest
 {
 	// Npc
 	private static final int COLEMAN = 30873;

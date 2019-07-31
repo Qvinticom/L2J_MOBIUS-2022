@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Detect Hidden Objects effect implementation.
  * @author UnAfraid
  */
-public final class DetectHiddenObjects extends AbstractEffect
+public class DetectHiddenObjects extends AbstractEffect
 {
 	public DetectHiddenObjects(StatsSet params)
 	{

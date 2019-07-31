@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.serverpackets.CharTemplates;
 import org.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
-public final class NewCharacter extends GameClientPacket
+public class NewCharacter extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Budenka AI.
  * @author St3eT
  */
-public final class Budenka extends AbstractNpcAI
+public class Budenka extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BUDENKA = 32294;
@@ -41,7 +41,7 @@ public final class Budenka extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -59,7 +59,7 @@ public final class Budenka extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (hasQuestItems(player, STANDART_CERT, PREMIUM_CERT))

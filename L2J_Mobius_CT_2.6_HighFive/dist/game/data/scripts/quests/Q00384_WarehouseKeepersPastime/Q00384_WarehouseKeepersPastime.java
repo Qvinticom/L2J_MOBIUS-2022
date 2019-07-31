@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * @author Zealar
  * @since 2.6.0.0
  */
-public final class Q00384_WarehouseKeepersPastime extends Quest
+public class Q00384_WarehouseKeepersPastime extends Quest
 {
 	// NPCs
 	private static final int CLIFF = 30182;

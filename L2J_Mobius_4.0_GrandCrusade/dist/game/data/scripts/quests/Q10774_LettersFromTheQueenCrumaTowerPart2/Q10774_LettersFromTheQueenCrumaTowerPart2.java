@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Cruma Tower, Part 2 (10774)
  * @author malyelfik
  */
-public final class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
+public class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 {
 	// NPCs
 	private static final int SYLVAIN = 30070;

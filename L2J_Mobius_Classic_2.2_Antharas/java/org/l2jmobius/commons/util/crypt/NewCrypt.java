@@ -24,7 +24,7 @@ package org.l2jmobius.commons.util.crypt;
  * Login Server <-> Game Server<br>
  * Also a static method is provided for the initial xor encryption between Login Server <-> Game Client.
  */
-public final class NewCrypt
+public class NewCrypt
 {
 	private final BlowfishEngine _cipher;
 	

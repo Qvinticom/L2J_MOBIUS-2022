@@ -60,7 +60,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Zoey76: TODO: Use Location DTO instead of array of int.
  * @author sandman
  */
-public final class FourSepulchersManager
+public class FourSepulchersManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FourSepulchersManager.class.getName());
 	

@@ -36,7 +36,7 @@ import quests.Q00021_HiddenTruth.Q00021_HiddenTruth;
  * Tragedy in Von Hellmann Forest (22)
  * @author Joxit
  */
-public final class Q00022_TragedyInVonHellmannForest extends Quest
+public class Q00022_TragedyInVonHellmannForest extends Quest
 {
 	// NPCs
 	private static final int INNOCENTIN = 31328;

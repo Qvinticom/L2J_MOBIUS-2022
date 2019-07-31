@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Return of the Alligator Hunter (10460)
  * @author St3eT
  */
-public final class Q10460_ReturnOfTheAlligatorHunter extends Quest
+public class Q10460_ReturnOfTheAlligatorHunter extends Quest
 {
 	// NPCs
 	private static final int ENRON = 33860;

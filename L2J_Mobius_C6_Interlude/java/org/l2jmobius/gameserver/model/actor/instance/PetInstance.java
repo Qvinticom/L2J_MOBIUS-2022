@@ -77,7 +77,7 @@ public class PetInstance extends Summon
 	 * Gets the pet data.
 	 * @return the pet data
 	 */
-	public final PetData getPetData()
+	public PetData getPetData()
 	{
 		if (_data == null)
 		{
@@ -91,7 +91,7 @@ public class PetInstance extends Summon
 	 * Sets the pet data.
 	 * @param value the new pet data
 	 */
-	public final void setPetData(PetData value)
+	public void setPetData(PetData value)
 	{
 		_data = value;
 	}
@@ -1055,7 +1055,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getStat().getLevel();
 	}
@@ -1130,7 +1130,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getSkillLevel(int skillId)
+	public int getSkillLevel(int skillId)
 	{
 		if ((getSkills() == null) || (getSkills().get(skillId) == null))
 		{
@@ -1154,7 +1154,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
+	public void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
 	{
 		if (miss)
 		{

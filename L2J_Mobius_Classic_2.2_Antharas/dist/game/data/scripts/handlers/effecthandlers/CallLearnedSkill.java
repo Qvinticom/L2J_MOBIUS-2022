@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
  * Call Learned Skill by Level effect implementation.
  * @author Kazumi
  */
-public final class CallLearnedSkill extends AbstractEffect
+public class CallLearnedSkill extends AbstractEffect
 {
 	private final int _skillId;
 	

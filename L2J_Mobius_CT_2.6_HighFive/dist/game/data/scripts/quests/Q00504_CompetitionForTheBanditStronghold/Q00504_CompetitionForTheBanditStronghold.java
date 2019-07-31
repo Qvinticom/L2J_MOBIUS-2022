@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Competition for the Bandit Stronghold (504)
  * @author BiggBoss, Zoey76
  */
-public final class Q00504_CompetitionForTheBanditStronghold extends Quest
+public class Q00504_CompetitionForTheBanditStronghold extends Quest
 {
 	// Misc
 	private static final SiegableHall BANDIT_STRONGHOLD = CHSiegeManager.getInstance().getSiegableHall(35);
@@ -78,7 +78,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs == null) || !hasQuestItems(killer, CONTEST_CERTIFICATE) || !qs.isStarted())
@@ -102,7 +102,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final Clan clan = player.getClan();

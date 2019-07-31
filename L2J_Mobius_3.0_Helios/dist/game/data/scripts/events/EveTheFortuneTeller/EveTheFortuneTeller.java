@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * Info - http://www.lineage2.com/en/news/events/11182015-eve-the-fortune-teller-returns.php
  * @author Mobius
  */
-public final class EveTheFortuneTeller extends LongTimeEvent
+public class EveTheFortuneTeller extends LongTimeEvent
 {
 	// NPCs
 	private static final int EVE = 8542;

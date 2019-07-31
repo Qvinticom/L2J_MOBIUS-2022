@@ -195,7 +195,7 @@ public class Q386_StolenDignity extends Quest
 		// private static final String template_choice = "<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp; ";
 		private final QuestState _qs;
 		
-		public Bingo(final QuestState qs)
+		public Bingo(QuestState qs)
 		{
 			super("<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp;  ");
 			_qs = qs;
@@ -217,7 +217,7 @@ public class Q386_StolenDignity extends Quest
 			return result;
 		}
 		
-		private void reward(final int[][] rew)
+		private void reward(int[][] rew)
 		{
 			final int[] r = rew[Rnd.get(rew.length)];
 			_qs.giveItems(r[0], r[1]);

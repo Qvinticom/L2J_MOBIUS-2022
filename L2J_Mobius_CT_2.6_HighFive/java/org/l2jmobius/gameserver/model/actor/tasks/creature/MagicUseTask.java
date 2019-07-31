@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Task dedicated to magic use of character
  * @author xban1x
  */
-public final class MagicUseTask implements Runnable
+public class MagicUseTask implements Runnable
 {
 	private final Creature _creature;
 	private WorldObject[] _targets;

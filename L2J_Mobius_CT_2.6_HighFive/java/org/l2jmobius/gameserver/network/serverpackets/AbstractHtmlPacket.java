@@ -66,12 +66,12 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		setHtml(html);
 	}
 	
-	public final void disableValidation()
+	public void disableValidation()
 	{
 		_disabledValidation = true;
 	}
 	
-	public final void setHtml(String html)
+	public void setHtml(String html)
 	{
 		if (html.length() > 17200)
 		{
@@ -87,7 +87,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		_html = html;
 	}
 	
-	public final boolean setFile(PlayerInstance player, String path)
+	public boolean setFile(PlayerInstance player, String path)
 	{
 		final String content = HtmCache.getInstance().getHtm(player, path);
 		if (content == null)
@@ -101,38 +101,38 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		return true;
 	}
 	
-	public final void replace(String pattern, String value)
+	public void replace(String pattern, String value)
 	{
 		_html = _html.replaceAll(pattern, value.replaceAll("\\$", "\\\\\\$"));
 	}
 	
-	public final void replace(String pattern, CharSequence value)
+	public void replace(String pattern, CharSequence value)
 	{
 		replace(pattern, String.valueOf(value));
 	}
 	
-	public final void replace(String pattern, boolean val)
+	public void replace(String pattern, boolean val)
 	{
 		replace(pattern, String.valueOf(val));
 	}
 	
-	public final void replace(String pattern, int val)
+	public void replace(String pattern, int val)
 	{
 		replace(pattern, String.valueOf(val));
 	}
 	
-	public final void replace(String pattern, long val)
+	public void replace(String pattern, long val)
 	{
 		replace(pattern, String.valueOf(val));
 	}
 	
-	public final void replace(String pattern, double val)
+	public void replace(String pattern, double val)
 	{
 		replace(pattern, String.valueOf(val));
 	}
 	
 	@Override
-	public final void runImpl(PlayerInstance player)
+	public void runImpl(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -150,12 +150,12 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		}
 	}
 	
-	public final int getNpcObjId()
+	public int getNpcObjId()
 	{
 		return _npcObjId;
 	}
 	
-	public final String getHtml()
+	public String getHtml()
 	{
 		return _html;
 	}

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower implements IClientIncomingPacket
+public class RequestPledgePower implements IClientIncomingPacket
 {
 	private int _rank;
 	private int _action;

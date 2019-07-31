@@ -53,7 +53,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author BiggBoss
  */
-public final class BlockCheckerEngine
+public class BlockCheckerEngine
 {
 	protected static final Logger LOGGER = Logger.getLogger(BlockCheckerEngine.class.getName());
 	// The object which holds all basic members info

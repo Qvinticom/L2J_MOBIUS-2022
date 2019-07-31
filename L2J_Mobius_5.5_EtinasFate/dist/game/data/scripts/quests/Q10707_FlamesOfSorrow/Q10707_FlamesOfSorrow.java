@@ -36,7 +36,7 @@ import quests.Q10395_NotATraitor.Q10395_NotATraitor;
  * @author St3eT
  * @author Night
  */
-public final class Q10707_FlamesOfSorrow extends Quest
+public class Q10707_FlamesOfSorrow extends Quest
 {
 	// NPCs
 	private static final int LEO = 33863;

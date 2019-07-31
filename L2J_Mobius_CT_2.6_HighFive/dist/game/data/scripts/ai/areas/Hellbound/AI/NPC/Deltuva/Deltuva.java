@@ -28,7 +28,7 @@ import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
  * Deltuva AI.
  * @author GKR
  */
-public final class Deltuva extends AbstractNpcAI
+public class Deltuva extends AbstractNpcAI
 {
 	// NPCs
 	private static final int DELTUVA = 32313;
@@ -42,7 +42,7 @@ public final class Deltuva extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("teleport"))
 		{

@@ -60,7 +60,7 @@ import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
  * Instance manager.
  * @author evill33t, GodKratos, malyelfik
  */
-public final class InstanceManager implements IXmlReader
+public class InstanceManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(InstanceManager.class.getName());
 	// Database query

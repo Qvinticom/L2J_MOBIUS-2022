@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Hunt Of The Black Lion (333)
  * @author ivantotov
  */
-public final class Q00333_HuntOfTheBlackLion extends Quest
+public class Q00333_HuntOfTheBlackLion extends Quest
 {
 	// NPCs
 	private static final int ABYSSAL_CELEBRANT_UNDRIAS = 30130;

@@ -34,42 +34,42 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	 */
 	
 	@Override
-	public final void set(String name, boolean value)
+	public void set(String name, boolean value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public final void set(String name, double value)
+	public void set(String name, double value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public final void set(String name, Enum<?> value)
+	public void set(String name, Enum<?> value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public final void set(String name, int value)
+	public void set(String name, int value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public final void set(String name, long value)
+	public void set(String name, long value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public final void set(String name, String value)
+	public void set(String name, String value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
@@ -88,7 +88,7 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	/**
 	 * @return {@code true} if changes are made since last load/save.
 	 */
-	public final boolean hasChanges()
+	public boolean hasChanges()
 	{
 		return _hasChanges.get();
 	}
@@ -99,7 +99,7 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	 * @param update
 	 * @return {@code true} if successful. {@code false} return indicates that the actual value was not equal to the expected value.
 	 */
-	public final boolean compareAndSetChanges(boolean expect, boolean update)
+	public boolean compareAndSetChanges(boolean expect, boolean update)
 	{
 		return _hasChanges.compareAndSet(expect, update);
 	}
@@ -109,7 +109,7 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	 * @param name
 	 */
 	@Override
-	public final void remove(String name)
+	public void remove(String name)
 	{
 		_hasChanges.compareAndSet(false, true);
 		getSet().remove(name);

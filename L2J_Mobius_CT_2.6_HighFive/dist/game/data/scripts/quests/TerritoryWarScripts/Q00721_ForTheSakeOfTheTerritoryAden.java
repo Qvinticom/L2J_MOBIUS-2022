@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Aden (721)
  * @author Gigiikun
  */
-public final class Q00721_ForTheSakeOfTheTerritoryAden extends TerritoryWarSuperClass
+public class Q00721_ForTheSakeOfTheTerritoryAden extends TerritoryWarSuperClass
 {
 	public Q00721_ForTheSakeOfTheTerritoryAden()
 	{

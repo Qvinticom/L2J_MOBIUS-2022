@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.items.PlayerItemTemplate;
  * What items get each newly created character and if this item is equipped upon creation (<b>Requires the item to be equippable</b>).
  * @author Zoey76
  */
-public final class InitialEquipmentData implements IXmlReader
+public class InitialEquipmentData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(InitialEquipmentData.class.getName());
 	

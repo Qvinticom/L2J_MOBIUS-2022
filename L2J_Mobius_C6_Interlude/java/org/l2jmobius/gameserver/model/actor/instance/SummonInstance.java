@@ -93,7 +93,7 @@ public class SummonInstance extends Summon
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate() != null ? getTemplate().level : 0;
 	}
@@ -294,7 +294,7 @@ public class SummonInstance extends Summon
 	}
 	
 	@Override
-	public final void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
+	public void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
 	{
 		if (miss)
 		{

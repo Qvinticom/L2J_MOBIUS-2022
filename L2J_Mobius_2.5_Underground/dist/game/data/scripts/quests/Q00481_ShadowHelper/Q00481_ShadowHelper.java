@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Shadow Helper (481)
  * @author malyelfik
  */
-public final class Q00481_ShadowHelper extends Quest
+public class Q00481_ShadowHelper extends Quest
 {
 	// NPC
 	private static final int RIDENBAG = 33302;

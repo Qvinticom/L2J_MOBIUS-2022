@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Dig Up the Sea of Spores! (356)
  * @author Adry_85
  */
-public final class Q00356_DigUpTheSeaOfSpores extends Quest
+public class Q00356_DigUpTheSeaOfSpores extends Quest
 {
 	// NPC
 	private static final int GAUEN = 30717;

@@ -97,7 +97,7 @@ public class PunishmentTask implements Runnable
 	/**
 	 * @return milliseconds to the end of the current punishment, -1 for infinity.
 	 */
-	public final long getExpirationTime()
+	public long getExpirationTime()
 	{
 		return _expirationTime;
 	}
@@ -129,7 +129,7 @@ public class PunishmentTask implements Runnable
 	/**
 	 * @return {@code true} if current punishment task has expired, {@code false} otherwise.
 	 */
-	public final boolean isExpired()
+	public boolean isExpired()
 	{
 		return (_expirationTime > 0) && (System.currentTimeMillis() > _expirationTime);
 	}
@@ -154,7 +154,7 @@ public class PunishmentTask implements Runnable
 	/**
 	 * Stops the punishment task.
 	 */
-	public final void stopPunishment()
+	public void stopPunishment()
 	{
 		abortTask();
 		onEnd();
@@ -246,7 +246,7 @@ public class PunishmentTask implements Runnable
 	 * Runs when punishment task ends in order to stop and remove it.
 	 */
 	@Override
-	public final void run()
+	public void run()
 	{
 		PunishmentManager.getInstance().stopPunishment(_key, _affect, _type);
 	}

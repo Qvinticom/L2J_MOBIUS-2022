@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.World;
  * Spawn data retriever.
  * @author Zoey76, Mobius
  */
-public final class SpawnTable
+public class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Traces of an Ambush (10783)
  * @author malyelfik
  */
-public final class Q10783_TracesOfAnAmbush extends Quest
+public class Q10783_TracesOfAnAmbush extends Quest
 {
 	// NPC
 	private static final int NOVAIN = 33866;

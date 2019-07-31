@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 /**
  * @version $Revision: 1.4.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPledgeCrest implements IClientIncomingPacket
+public class RequestPledgeCrest implements IClientIncomingPacket
 {
 	private int _crestId;
 	

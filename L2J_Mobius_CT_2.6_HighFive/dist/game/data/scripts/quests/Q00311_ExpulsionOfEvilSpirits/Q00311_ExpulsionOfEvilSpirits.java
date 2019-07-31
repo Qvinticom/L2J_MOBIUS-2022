@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Expulsion of Evil Spirits (311)
  * @author Zoey76
  */
-public final class Q00311_ExpulsionOfEvilSpirits extends Quest
+public class Q00311_ExpulsionOfEvilSpirits extends Quest
 {
 	// NPC
 	private static final int CHAIREN = 32655;

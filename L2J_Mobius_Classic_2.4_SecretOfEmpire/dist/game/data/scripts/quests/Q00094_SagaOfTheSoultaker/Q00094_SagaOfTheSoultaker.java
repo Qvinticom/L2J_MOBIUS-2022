@@ -36,39 +36,39 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00094_SagaOfTheSoultaker extends Quest
 {
 	// NPCs
-	public final int HARDIN = 30832;
-	public final int ORVEN = 30857;
-	public final int ROO_ROO = 34271;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31648;
-	public final int TABLET_OF_VISION_3 = 31651;
-	public final int TABLET_OF_VISION_4 = 31654;
-	public final int HINDEMITH_TRUEVOICE = 31645;
+	private static final int HARDIN = 30832;
+	private static final int ORVEN = 30857;
+	private static final int ROO_ROO = 34271;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31648;
+	private static final int TABLET_OF_VISION_3 = 31651;
+	private static final int TABLET_OF_VISION_4 = 31654;
+	private static final int HINDEMITH_TRUEVOICE = 31645;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int KEEPER_OF_THE_HOLY_EDICT = 27215;
-	public final int ARCHANGEL_ICONOCLASSIS = 27257;
-	public final int HALISHA_ARCHON = 27219;
-	public final int LICH_KING_ICARUS = 27265;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int KEEPER_OF_THE_HOLY_EDICT = 27215;
+	private static final int ARCHANGEL_ICONOCLASSIS = 27257;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int LICH_KING_ICARUS = 27265;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49828;
-	public final int HALISHA_BADGE = 7509;
-	public final int RESONANCE_AMULET = 7292;
-	public final int RESONANCE_AMULET_2 = 7323;
-	public final int RESONANCE_AMULET_3 = 7354;
-	public final int RESONANCE_AMULET_4 = 7385;
-	public final int INVESTIGATIVE_REPORT = 7533;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49828;
+	private static final int HALISHA_BADGE = 7509;
+	private static final int RESONANCE_AMULET = 7292;
+	private static final int RESONANCE_AMULET_2 = 7323;
+	private static final int RESONANCE_AMULET_3 = 7354;
+	private static final int RESONANCE_AMULET_4 = 7385;
+	private static final int INVESTIGATIVE_REPORT = 7533;
 	// Reward
-	public final int BOOK_GOLD_LION = 90038;
+	private static final int BOOK_GOLD_LION = 90038;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

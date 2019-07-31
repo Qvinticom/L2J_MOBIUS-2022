@@ -135,12 +135,12 @@ public class WayPointNode extends WorldObject
 		changeID(Config.SELECTED_NODE_ID, SELECTED);
 	}
 	
-	public final String getTitle()
+	public String getTitle()
 	{
 		return _title;
 	}
 	
-	public final void setTitle(String title)
+	public void setTitle(String title)
 	{
 		_title = title;
 	}

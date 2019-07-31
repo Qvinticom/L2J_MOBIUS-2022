@@ -28,7 +28,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Outpost Captain's AI.
  * @author DS
  */
-public final class OutpostCaptain extends AbstractNpcAI
+public class OutpostCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final int CAPTAIN = 18466;
@@ -46,7 +46,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final DoorInstance door = DoorData.getInstance().getDoor(20250001);
 		if (door != null)
@@ -61,7 +61,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		

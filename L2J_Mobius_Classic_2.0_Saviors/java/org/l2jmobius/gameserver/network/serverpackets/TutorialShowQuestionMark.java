@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Mobius
  */
-public final class TutorialShowQuestionMark implements IClientOutgoingPacket
+public class TutorialShowQuestionMark implements IClientOutgoingPacket
 {
 	private final int _markId;
 	private final int _markType;

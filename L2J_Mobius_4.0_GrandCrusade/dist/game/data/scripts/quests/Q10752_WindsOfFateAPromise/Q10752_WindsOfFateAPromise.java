@@ -51,7 +51,7 @@ import quests.Q10751_WindsOfFateEncounters.Q10751_WindsOfFateEncounters;
  * Winds of Fate: A Promise (10752)
  * @author Gladicek
  */
-public final class Q10752_WindsOfFateAPromise extends Quest
+public class Q10752_WindsOfFateAPromise extends Quest
 {
 	// NPCs
 	private static final int KATALIN = 33943;

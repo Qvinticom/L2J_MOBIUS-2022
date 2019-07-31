@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Pet attack player action handler.
  * @author Nik
  */
-public final class PetAttack implements IPlayerActionHandler
+public class PetAttack implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

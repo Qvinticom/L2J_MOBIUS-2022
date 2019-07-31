@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
  * The result of the calculation is stored in the value property of an Env class instance.<br>
  * Method addFunc and removeFunc permit to add and remove a Func object from a Calculator.
  */
-public final class Calculator
+public class Calculator
 {
 	/** Empty Func table definition */
 	private static final AbstractFunction[] EMPTY_FUNCS = new AbstractFunction[0];

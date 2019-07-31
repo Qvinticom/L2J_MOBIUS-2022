@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestCancelPostAttachment implements IClientIncomingPacket
+public class RequestCancelPostAttachment implements IClientIncomingPacket
 {
 	private int _msgId;
 	

@@ -41,7 +41,7 @@ public class FaenorEventParser extends FaenorParser
 	private DateRange _eventDates = null;
 	
 	@Override
-	public void parseScript(final Node eventNode, ScriptContext context)
+	public void parseScript(Node eventNode, ScriptContext context)
 	{
 		String ID = attribute(eventNode, "ID");
 		_eventDates = DateRange.parse(attribute(eventNode, "Active"), DATE_FORMAT);

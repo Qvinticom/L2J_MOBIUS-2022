@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Transfer Damage effect implementation.
  * @author UnAfraid
  */
-public final class TransferDamage extends AbstractEffect
+public class TransferDamage extends AbstractEffect
 {
 	public TransferDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

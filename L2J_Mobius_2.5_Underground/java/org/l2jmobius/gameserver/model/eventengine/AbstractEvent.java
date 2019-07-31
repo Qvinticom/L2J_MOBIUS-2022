@@ -33,44 +33,44 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	private final Map<Integer, T> _members = new ConcurrentHashMap<>();
 	private IEventState _state;
 	
-	public final Map<Integer, T> getMembers()
+	public Map<Integer, T> getMembers()
 	{
 		return _members;
 	}
 	
-	public final T getMember(int objectId)
+	public T getMember(int objectId)
 	{
 		return _members.get(objectId);
 	}
 	
-	public final void addMember(T member)
+	public void addMember(T member)
 	{
 		_members.put(member.getObjectId(), member);
 	}
 	
-	public final void broadcastPacket(IClientOutgoingPacket... packets)
+	public void broadcastPacket(IClientOutgoingPacket... packets)
 	{
 		_members.values().forEach(member -> member.sendPacket(packets));
 	}
 	
-	public final IEventState getState()
+	public IEventState getState()
 	{
 		return _state;
 	}
 	
-	public final void setState(IEventState state)
+	public void setState(IEventState state)
 	{
 		_state = state;
 	}
 	
 	@Override
-	public final String getScriptName()
+	public String getScriptName()
 	{
 		return getClass().getSimpleName();
 	}
 	
 	@Override
-	public final Path getScriptPath()
+	public Path getScriptPath()
 	{
 		return null;
 	}

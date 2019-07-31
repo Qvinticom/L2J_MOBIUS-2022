@@ -29,7 +29,7 @@ import quests.Q10830_TheLostGardenOfSpirits.Q10830_TheLostGardenOfSpirits;
  * @URL https://l2wiki.com/Unbelievable_Sight
  * @author Gigi
  */
-public final class Q10831_UnbelievableSight extends Quest
+public class Q10831_UnbelievableSight extends Quest
 {
 	// NPC
 	private static final int BELAS = 34056;

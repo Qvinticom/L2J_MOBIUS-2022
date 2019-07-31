@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Covert Business (294)
  * @author xban1x
  */
-public final class Q00294_CovertBusiness extends Quest
+public class Q00294_CovertBusiness extends Quest
 {
 	// NPC
 	private static final int KEEF = 30534;

@@ -30,7 +30,7 @@ import quests.Q10326_RespectYourElders.Q10326_RespectYourElders;
  * Intruder Who Wants the Book of Giants (10327)
  * @author Gladicek
  */
-public final class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
+public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 {
 	// NPCs
 	private static final int PANTHEON = 32972;

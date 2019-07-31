@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
 /**
  * Heal Over Time effect implementation.
  */
-public final class HealOverTime extends AbstractEffect
+public class HealOverTime extends AbstractEffect
 {
 	private final double _power;
 	

@@ -34,7 +34,7 @@ import java.util.Arrays;
  * @author wolfgang.hoschek@cern.ch
  * @version 1.0, 09/24/99
  */
-public final class PrimeFinder
+public class PrimeFinder
 {
 	/**
 	 * The largest prime this class can generate; currently equal to <tt>Integer.MAX_VALUE</tt>.

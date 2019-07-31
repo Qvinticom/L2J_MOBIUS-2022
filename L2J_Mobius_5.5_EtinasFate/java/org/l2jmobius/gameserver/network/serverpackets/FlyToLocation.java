@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author KenM
  */
-public final class FlyToLocation implements IClientOutgoingPacket
+public class FlyToLocation implements IClientOutgoingPacket
 {
 	private final int _destX;
 	private final int _destY;

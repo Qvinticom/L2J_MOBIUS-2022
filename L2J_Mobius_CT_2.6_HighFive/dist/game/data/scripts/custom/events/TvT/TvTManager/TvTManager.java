@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * TvT Manager AI.
  * @author Zoey76
  */
-public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
+public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 {
 	private static final int MANAGER_ID = 70010;
 	private static final String[] COMMANDS =

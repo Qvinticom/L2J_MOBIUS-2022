@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
  * The residence functions data
  * @author UnAfraid
  */
-public final class ResidenceFunctionsData implements IXmlReader
+public class ResidenceFunctionsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ResidenceFunctionsData.class.getName());
 	private final Map<Integer, List<ResidenceFunctionTemplate>> _functions = new HashMap<>();

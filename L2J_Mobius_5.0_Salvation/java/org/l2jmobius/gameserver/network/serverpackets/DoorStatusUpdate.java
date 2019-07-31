@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class DoorStatusUpdate implements IClientOutgoingPacket
+public class DoorStatusUpdate implements IClientOutgoingPacket
 {
 	private final DoorInstance _door;
 	

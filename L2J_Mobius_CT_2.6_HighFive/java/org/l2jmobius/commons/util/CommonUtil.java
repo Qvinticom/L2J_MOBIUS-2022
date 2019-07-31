@@ -31,7 +31,7 @@ import java.util.StringJoiner;
 
 import org.l2jmobius.Config;
 
-public final class CommonUtil
+public class CommonUtil
 {
 	private static final char[] ILLEGAL_CHARACTERS =
 	{

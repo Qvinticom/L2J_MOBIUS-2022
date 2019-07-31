@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * </p>
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetition implements IClientIncomingPacket
+public class RequestPetition implements IClientIncomingPacket
 {
 	private String _content;
 	private int _type; // 1 = on : 0 = off;

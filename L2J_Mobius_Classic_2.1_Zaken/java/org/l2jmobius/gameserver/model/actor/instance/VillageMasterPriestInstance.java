@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassType;
 import org.l2jmobius.gameserver.model.base.PlayerClass;
 
-public final class VillageMasterPriestInstance extends VillageMasterInstance
+public class VillageMasterPriestInstance extends VillageMasterInstance
 {
 	/**
 	 * Creates a village master.

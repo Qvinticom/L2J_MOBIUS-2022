@@ -35,7 +35,7 @@ import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMon
  * @URL https://l2wiki.com/Seven_Signs,_Solina%27s_Tomb
  * @author Mobius
  */
-public final class Q10295_SevenSignsSolinasTomb extends Quest
+public class Q10295_SevenSignsSolinasTomb extends Quest
 {
 	// NPCs
 	private static final int ERIS_EVIL_THOUGHTS = 32792;

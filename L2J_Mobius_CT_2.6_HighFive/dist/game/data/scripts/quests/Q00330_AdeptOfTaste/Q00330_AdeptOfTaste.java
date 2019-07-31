@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Adept Of Taste (330)
  * @author ivantotov
  */
-public final class Q00330_AdeptOfTaste extends Quest
+public class Q00330_AdeptOfTaste extends Quest
 {
 	// NPCs
 	private static final int ACCESSORY_MERCHANT_SONIA = 30062;

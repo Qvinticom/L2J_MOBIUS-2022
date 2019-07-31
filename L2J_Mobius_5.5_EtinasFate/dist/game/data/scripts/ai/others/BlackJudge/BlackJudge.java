@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Black Judge AI.
  * @author St3eT
  */
-public final class BlackJudge extends AbstractNpcAI
+public class BlackJudge extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_JUDGE = 30981;

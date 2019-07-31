@@ -36,7 +36,7 @@ import ai.AbstractNpcAI;
  * Nevit's Herald AI.
  * @author Sacrifice, Mobius
  */
-public final class NevitsHerald extends AbstractNpcAI
+public class NevitsHerald extends AbstractNpcAI
 {
 	private static final int NEVITS_HERALD = 4326;
 	private static final List<Npc> SPAWNS = new ArrayList<>();

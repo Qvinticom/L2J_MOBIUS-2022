@@ -63,7 +63,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * Main class for game instances.
  * @author evill33t, GodKratos
  */
-public final class Instance
+public class Instance
 {
 	private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
 	

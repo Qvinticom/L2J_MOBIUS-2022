@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Elven Fate (10342)
  * @author St3eT
  */
-public final class Q10342_DayOfDestinyElvenFate extends ThirdClassTransferQuest
+public class Q10342_DayOfDestinyElvenFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int WINONIN = 30856;

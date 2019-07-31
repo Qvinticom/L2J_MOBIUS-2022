@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  * Seize Your Destiny (10338)
  * @author Sdw, Mobius
  */
-public final class Q10338_SeizeYourDestiny extends Quest
+public class Q10338_SeizeYourDestiny extends Quest
 {
 	// NPCs
 	private static final int CELLPHINE = 33477;

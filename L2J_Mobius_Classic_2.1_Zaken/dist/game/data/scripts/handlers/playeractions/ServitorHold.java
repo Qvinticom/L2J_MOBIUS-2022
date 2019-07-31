@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Servitor hold position player action handler.
  * @author Nik
  */
-public final class ServitorHold implements IPlayerActionHandler
+public class ServitorHold implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

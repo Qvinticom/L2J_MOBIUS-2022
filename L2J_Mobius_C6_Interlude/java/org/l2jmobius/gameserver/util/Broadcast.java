@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
-public final class Broadcast
+public class Broadcast
 {
 	/**
 	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature that have the Character targeted.<BR>

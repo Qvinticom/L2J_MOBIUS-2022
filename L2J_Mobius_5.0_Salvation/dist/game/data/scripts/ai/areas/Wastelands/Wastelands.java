@@ -40,7 +40,7 @@ import ai.AbstractNpcAI;
  * Wastelands AI.
  * @author St3eT
  */
-public final class Wastelands extends AbstractNpcAI
+public class Wastelands extends AbstractNpcAI
 {
 	// NPCs
 	private static final int JOEL = 33516;

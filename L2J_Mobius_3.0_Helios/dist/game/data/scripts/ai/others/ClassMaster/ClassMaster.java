@@ -63,7 +63,7 @@ import ai.AbstractNpcAI;
  * Class Master AI.
  * @author Nik
  */
-public final class ClassMaster extends AbstractNpcAI implements IXmlReader
+public class ClassMaster extends AbstractNpcAI implements IXmlReader
 {
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Dispel All effect implementation.
  * @author UnAfraid
  */
-public final class DispelAll extends AbstractEffect
+public class DispelAll extends AbstractEffect
 {
 	public DispelAll(StatsSet params)
 	{

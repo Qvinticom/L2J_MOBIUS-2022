@@ -50,7 +50,7 @@ public class CharNameTable
 		}
 	}
 	
-	public final void addName(PlayerInstance player)
+	public void addName(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -70,13 +70,13 @@ public class CharNameTable
 		}
 	}
 	
-	public final void removeName(int objId)
+	public void removeName(int objId)
 	{
 		_chars.remove(objId);
 		_accessLevels.remove(objId);
 	}
 	
-	public final int getIdByName(String name)
+	public int getIdByName(String name)
 	{
 		if ((name == null) || name.isEmpty())
 		{
@@ -127,7 +127,7 @@ public class CharNameTable
 		return -1; // not found
 	}
 	
-	public final String getNameById(int id)
+	public String getNameById(int id)
 	{
 		if (id <= 0)
 		{
@@ -168,7 +168,7 @@ public class CharNameTable
 		return null; // not found
 	}
 	
-	public final int getAccessLevelById(int objectId)
+	public int getAccessLevelById(int objectId)
 	{
 		return getNameById(objectId) != null ? _accessLevels.get(objectId) : 0;
 	}

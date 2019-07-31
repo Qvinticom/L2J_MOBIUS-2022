@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Shadow Weapons AI.<br>
  * @author Nyaran, jurchiks
  */
-public final class ShadowWeapons extends AbstractNpcAI
+public class ShadowWeapons extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

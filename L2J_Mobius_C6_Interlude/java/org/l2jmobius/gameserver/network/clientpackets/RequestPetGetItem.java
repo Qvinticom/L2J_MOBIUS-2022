@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestPetGetItem extends GameClientPacket
+public class RequestPetGetItem extends GameClientPacket
 {
 	private int _objectId;
 	

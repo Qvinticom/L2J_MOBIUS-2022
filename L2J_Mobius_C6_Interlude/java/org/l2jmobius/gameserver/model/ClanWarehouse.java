@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 
-public final class ClanWarehouse extends Warehouse
+public class ClanWarehouse extends Warehouse
 {
 	private final Clan _clan;
 	

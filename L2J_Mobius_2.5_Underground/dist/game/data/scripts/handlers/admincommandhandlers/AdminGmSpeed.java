@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * A retail-like implementation of //gmspeed builder command.
  * @author lord_rex
  */
-public final class AdminGmSpeed implements IAdminCommandHandler
+public class AdminGmSpeed implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

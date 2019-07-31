@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class FlyTerrainObjectInstance extends Npc
+public class FlyTerrainObjectInstance extends Npc
 {
 	/**
 	 * Creates a fly terrain object.

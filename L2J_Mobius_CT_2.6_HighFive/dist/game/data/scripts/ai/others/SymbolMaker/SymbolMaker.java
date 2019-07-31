@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Symbol Maker AI.
  * @author Adry_85
  */
-public final class SymbolMaker extends AbstractNpcAI
+public class SymbolMaker extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =

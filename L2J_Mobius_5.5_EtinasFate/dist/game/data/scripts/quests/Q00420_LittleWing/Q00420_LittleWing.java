@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Little Wing (420)
  * @author Pandragon / Stayway (Rework Helios)
  */
-public final class Q00420_LittleWing extends Quest
+public class Q00420_LittleWing extends Quest
 {
 	// NPCs
 	private static final int MARIA = 30608;

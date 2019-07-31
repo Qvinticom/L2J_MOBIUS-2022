@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that allows the player to create dwarven recipe items up to a certain level.
  * @author Nik
  */
-public final class CreateItem extends AbstractEffect
+public class CreateItem extends AbstractEffect
 {
 	private final int _recipeLevel;
 	

@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Lailly AI.
  * @author Stayway
  */
-public final class Lailly extends AbstractNpcAI
+public class Lailly extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LAILLY = 34181;

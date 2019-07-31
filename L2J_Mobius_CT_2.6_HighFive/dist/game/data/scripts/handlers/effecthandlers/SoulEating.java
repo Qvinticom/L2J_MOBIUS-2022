@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
  * Soul Eating effect implementation.
  * @author UnAfraid
  */
-public final class SoulEating extends AbstractEffect
+public class SoulEating extends AbstractEffect
 {
 	private final int _expNeeded;
 	

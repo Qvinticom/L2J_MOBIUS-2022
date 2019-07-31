@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * sample 2a 01 00 00 00 format cdd
  */
-public final class RequestAnswerJoinParty extends GameClientPacket
+public class RequestAnswerJoinParty extends GameClientPacket
 {
 	private int _response;
 	

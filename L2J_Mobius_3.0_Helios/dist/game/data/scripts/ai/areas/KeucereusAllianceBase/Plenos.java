@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Plenos AI.
  * @author St3eT
  */
-public final class Plenos extends AbstractNpcAI
+public class Plenos extends AbstractNpcAI
 {
 	// NPCs
 	private static final int PLENOS = 32563;

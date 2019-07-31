@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Dark Elven Change Part 1.
  * @author nonom
  */
-public final class DarkElfChange1 extends AbstractNpcAI
+public class DarkElfChange1 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =

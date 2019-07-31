@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @version $Revision: 1.3.4.4 $ $Date: 2005/04/06 16:13:48 $
  */
-public final class RequestChangePetName implements IClientIncomingPacket
+public class RequestChangePetName implements IClientIncomingPacket
 {
 	private String _name;
 	

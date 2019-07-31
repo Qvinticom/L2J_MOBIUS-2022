@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * SendWareHouseDepositList client packet class.
  */
-public final class SendWareHouseDepositList implements IClientIncomingPacket
+public class SendWareHouseDepositList implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12;
 	

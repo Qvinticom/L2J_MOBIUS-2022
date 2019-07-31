@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.skills.Env;
 
-public final class EffectChameleonRest extends Effect
+public class EffectChameleonRest extends Effect
 {
 	public EffectChameleonRest(Env env, EffectTemplate template)
 	{

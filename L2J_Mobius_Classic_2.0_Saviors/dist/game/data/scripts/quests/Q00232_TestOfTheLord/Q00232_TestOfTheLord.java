@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Lord (232)
  * @author ivantotov
  */
-public final class Q00232_TestOfTheLord extends Quest
+public class Q00232_TestOfTheLord extends Quest
 {
 	// NPCs
 	private static final int SEER_SOMAK = 30510;

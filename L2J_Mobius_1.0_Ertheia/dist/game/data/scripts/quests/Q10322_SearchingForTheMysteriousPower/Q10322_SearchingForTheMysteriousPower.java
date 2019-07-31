@@ -34,7 +34,7 @@ import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
  * Searching For The Mysterious Power (10322)
  * @author ivantotov, Gladicek
  */
-public final class Q10322_SearchingForTheMysteriousPower extends Quest
+public class Q10322_SearchingForTheMysteriousPower extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

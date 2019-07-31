@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
  * Format: (ch) Sd
  * @author -Wooden-
  */
-public final class RequestPledgeSetMemberPowerGrade extends GameClientPacket
+public class RequestPledgeSetMemberPowerGrade extends GameClientPacket
 {
 	private int _powerGrade;
 	private String _member;

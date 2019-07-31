@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Dispel By Slot effect implementation.
  * @author Gnacik, Zoey76, Adry_85
  */
-public final class DispelBySlotMyself extends AbstractEffect
+public class DispelBySlotMyself extends AbstractEffect
 {
 	private final Set<AbnormalType> _dispelAbnormals;
 	

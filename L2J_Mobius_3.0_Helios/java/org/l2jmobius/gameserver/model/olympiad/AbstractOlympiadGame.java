@@ -69,12 +69,12 @@ public abstract class AbstractOlympiadGame
 		_stadiumId = id;
 	}
 	
-	public final boolean isAborted()
+	public boolean isAborted()
 	{
 		return _aborted;
 	}
 	
-	public final int getStadiumId()
+	public int getStadiumId()
 	{
 		return _stadiumId;
 	}

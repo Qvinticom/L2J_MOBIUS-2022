@@ -37,7 +37,7 @@ import instances.AbstractInstance;
  * Prison of Darkness instance zone.
  * @author St3eT
  */
-public final class PrisonOfDarkness extends AbstractInstance
+public class PrisonOfDarkness extends AbstractInstance
 {
 	// NPCs
 	private static final int SPEZION = 25779;

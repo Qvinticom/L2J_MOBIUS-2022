@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.templates.StatsSet;
  * This class is dedicated to the management of EtcItem.
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:30:10 $
  */
-public final class EtcItem extends Item
+public class EtcItem extends Item
 {
 	/**
 	 * Constructor for EtcItem.
@@ -50,7 +50,7 @@ public final class EtcItem extends Item
 	 * @return boolean
 	 */
 	@Override
-	public final boolean isConsumable()
+	public boolean isConsumable()
 	{
 		return (getItemType() == EtcItemType.SHOT) || (getItemType() == EtcItemType.POTION); // || (type == EtcItemType.SCROLL));
 	}

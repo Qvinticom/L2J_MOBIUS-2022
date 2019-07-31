@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Death Gate AI.
  * @author Sdw
  */
-public final class GateOfUnlimitedSummoning extends AbstractNpcAI
+public class GateOfUnlimitedSummoning extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> DEATH_GATE = new HashMap<>();

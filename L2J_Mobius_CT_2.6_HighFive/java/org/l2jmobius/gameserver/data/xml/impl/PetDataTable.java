@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
  * TODO: load and use all pet parameters.
  * @author Zoey76 (rework)
  */
-public final class PetDataTable implements IXmlReader
+public class PetDataTable implements IXmlReader
 {
 	private final Map<Integer, PetData> _pets = new ConcurrentHashMap<>();
 	

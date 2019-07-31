@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
  * Original Jython script by Polo, BiTi and DrLecter.
  * @author DS
  */
-public final class Q00636_TruthBeyond extends Quest
+public class Q00636_TruthBeyond extends Quest
 {
 	private static final int ELIYAH = 31329;
 	private static final int FLAURON = 32010;
@@ -47,7 +47,7 @@ public final class Q00636_TruthBeyond extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -68,7 +68,7 @@ public final class Q00636_TruthBeyond extends Quest
 	}
 	
 	@Override
-	public final String onEnterZone(Creature creature, ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		// QuestState already null on enter because quest is finished
 		if (creature.isPlayer())
@@ -82,7 +82,7 @@ public final class Q00636_TruthBeyond extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		

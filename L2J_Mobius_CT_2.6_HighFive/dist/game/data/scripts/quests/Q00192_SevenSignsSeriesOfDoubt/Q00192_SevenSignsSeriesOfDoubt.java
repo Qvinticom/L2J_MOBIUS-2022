@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Seven Signs, Series of Doubt (192)
  * @author Adry_85
  */
-public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
+public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 {
 	// NPCs
 	private static final int HOLLINT = 30191;

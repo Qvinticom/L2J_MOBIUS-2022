@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Chameleon Rest effect implementation.
  */
-public final class ChameleonRest extends AbstractEffect
+public class ChameleonRest extends AbstractEffect
 {
 	private final double _power;
 	

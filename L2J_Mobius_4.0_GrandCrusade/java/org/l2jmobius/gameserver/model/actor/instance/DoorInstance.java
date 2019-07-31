@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class DoorInstance extends Creature
+public class DoorInstance extends Creature
 {
 	boolean _open = false;
 	private boolean _isAttackableDoor = false;
@@ -117,7 +117,7 @@ public final class DoorInstance extends Creature
 	}
 	
 	@Override
-	public final DoorStatus getStatus()
+	public DoorStatus getStatus()
 	{
 		return (DoorStatus) super.getStatus();
 	}
@@ -143,7 +143,7 @@ public final class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by skill.
 	 */
-	public final boolean isOpenableBySkill()
+	public boolean isOpenableBySkill()
 	{
 		return (getTemplate().getOpenType()) == DoorOpenType.BY_SKILL;
 	}
@@ -151,7 +151,7 @@ public final class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by item.
 	 */
-	public final boolean isOpenableByItem()
+	public boolean isOpenableByItem()
 	{
 		return (getTemplate().getOpenType()) == DoorOpenType.BY_ITEM;
 	}
@@ -159,7 +159,7 @@ public final class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by double-click.
 	 */
-	public final boolean isOpenableByClick()
+	public boolean isOpenableByClick()
 	{
 		return (getTemplate().getOpenType()) == DoorOpenType.BY_CLICK;
 	}
@@ -167,7 +167,7 @@ public final class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by time.
 	 */
-	public final boolean isOpenableByTime()
+	public boolean isOpenableByTime()
 	{
 		return (getTemplate().getOpenType()) == DoorOpenType.BY_TIME;
 	}
@@ -175,13 +175,13 @@ public final class DoorInstance extends Creature
 	/**
 	 * @return {@code true} if door is open-able by Field Cycle system.
 	 */
-	public final boolean isOpenableByCycle()
+	public boolean isOpenableByCycle()
 	{
 		return (getTemplate().getOpenType()) == DoorOpenType.BY_CYCLE;
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate().getLevel();
 	}
@@ -262,12 +262,12 @@ public final class DoorInstance extends Creature
 		return dmg;
 	}
 	
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		return CastleManager.getInstance().getCastle(this);
 	}
 	
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		return FortManager.getInstance().getFort(this);
 	}
@@ -403,7 +403,7 @@ public final class DoorInstance extends Creature
 		}
 	}
 	
-	public final void openCloseMe(boolean open)
+	public void openCloseMe(boolean open)
 	{
 		if (open)
 		{
@@ -415,7 +415,7 @@ public final class DoorInstance extends Creature
 		}
 	}
 	
-	public final void openMe()
+	public void openMe()
 	{
 		if (getGroupName() != null)
 		{
@@ -427,7 +427,7 @@ public final class DoorInstance extends Creature
 		startAutoCloseTask();
 	}
 	
-	public final void closeMe()
+	public void closeMe()
 	{
 		// remove close task
 		final Future<?> oldTask = _autoCloseTask;

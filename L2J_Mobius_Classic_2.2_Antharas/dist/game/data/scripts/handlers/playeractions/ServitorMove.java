@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Servitor move to target player action handler.
  * @author Nik
  */
-public final class ServitorMove implements IPlayerActionHandler
+public class ServitorMove implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

@@ -238,7 +238,7 @@ import org.l2jmobius.gameserver.util.Util;
  * This class represents all player characters in the world.<br>
  * There is always a client-thread connected to this (except if a player-store is activated upon logout).
  */
-public final class PlayerInstance extends Playable
+public class PlayerInstance extends Playable
 {
 	/** SQL queries */
 	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,str=?,con=?,dex=?,_int=?,men=?,wit=?,face=?,hairStyle=?,hairColor=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,maxload=?,race=?,classid=?,deletetime=?,title=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,punish_level=?,punish_timer=?,newbie=?,nobless=?,power_grade=?,subpledge=?,last_recom_date=?,lvl_joined_academy=?,apprentice=?,sponsor=?,varka_ketra_ally=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,pc_point=?,name_color=?,title_color=?,aio=?,aio_end=? WHERE obj_id=?";
@@ -461,7 +461,7 @@ public final class PlayerInstance extends Playable
 	protected boolean _inventoryDisable = false;
 	protected Map<Integer, CubicInstance> _cubics = new ConcurrentHashMap<>();
 	protected Map<Integer, Integer> _activeSoulShots = new ConcurrentHashMap<>();
-	public final ReentrantLock soulShotLock = new ReentrantLock();
+	public ReentrantLock soulShotLock = new ReentrantLock();
 	public Quest dialog = null;
 	private final int _loto[] = new int[5];
 	private final int _race[] = new int[2];
@@ -1224,7 +1224,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final PlayerKnownList getKnownList()
+	public PlayerKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof PlayerKnownList))
 		{
@@ -1234,7 +1234,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final PlayerStat getStat()
+	public PlayerStat getStat()
 	{
 		if ((super.getStat() == null) || !(super.getStat() instanceof PlayerStat))
 		{
@@ -1244,7 +1244,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final PlayerStatus getStatus()
+	public PlayerStatus getStatus()
 	{
 		if ((super.getStatus() == null) || !(super.getStatus() instanceof PlayerStatus))
 		{
@@ -1257,7 +1257,7 @@ public final class PlayerInstance extends Playable
 	 * Gets the appearance.
 	 * @return the appearance
 	 */
-	public final PlayerAppearance getAppearance()
+	public PlayerAppearance getAppearance()
 	{
 		return _appearance;
 	}
@@ -1267,7 +1267,7 @@ public final class PlayerInstance extends Playable
 	 * <BR>
 	 * @return the base template
 	 */
-	public final PlayerTemplate getBaseTemplate()
+	public PlayerTemplate getBaseTemplate()
 	{
 		return CharTemplateTable.getInstance().getTemplate(_baseClass);
 	}
@@ -1277,7 +1277,7 @@ public final class PlayerInstance extends Playable
 	 * @return the template
 	 */
 	@Override
-	public final PlayerTemplate getTemplate()
+	public PlayerTemplate getTemplate()
 	{
 		return (PlayerTemplate) super.getTemplate();
 	}
@@ -1324,7 +1324,7 @@ public final class PlayerInstance extends Playable
 	
 	/** Return the Level of the PlayerInstance. */
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		int level = getStat().getLevel();
 		
@@ -3535,7 +3535,7 @@ public final class PlayerInstance extends Playable
 		return _movingTaskDefined;
 	}
 	
-	public final void setMovingTaskDefined(boolean value)
+	public void setMovingTaskDefined(boolean value)
 	{
 		_movingTaskDefined = value;
 	}
@@ -5738,7 +5738,7 @@ public final class PlayerInstance extends Playable
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</B></FONT><BR>
 	 * <BR>
 	 */
-	public final void broadcastUserInfo()
+	public void broadcastUserInfo()
 	{
 		// Send a Server->Client packet UserInfo to this PlayerInstance
 		sendPacket(new UserInfo(this));
@@ -5748,7 +5748,7 @@ public final class PlayerInstance extends Playable
 	/**
 	 * Broadcast title info.
 	 */
-	public final void broadcastTitleInfo()
+	public void broadcastTitleInfo()
 	{
 		// Send a Server->Client packet UserInfo to this PlayerInstance
 		sendPacket(new UserInfo(this));
@@ -9603,7 +9603,7 @@ public final class PlayerInstance extends Playable
 	 * @param script
 	 * @return
 	 */
-	public final <T> T addScript(T script)
+	public <T> T addScript(T script)
 	{
 		_scripts.put(script.getClass().getName(), script);
 		return script;
@@ -9615,7 +9615,7 @@ public final class PlayerInstance extends Playable
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public final <T> T removeScript(Class<T> script)
+	public <T> T removeScript(Class<T> script)
 	{
 		return _scripts == null ? null : (T) _scripts.remove(script.getName());
 	}
@@ -9626,7 +9626,7 @@ public final class PlayerInstance extends Playable
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public final <T> T getScript(Class<T> script)
+	public <T> T getScript(Class<T> script)
 	{
 		return _scripts == null ? null : (T) _scripts.get(script.getName());
 	}
@@ -14315,7 +14315,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final void onTeleported()
+	public void onTeleported()
 	{
 		super.onTeleported();
 		
@@ -14349,7 +14349,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final boolean updatePosition(int gameTicks)
+	public boolean updatePosition(int gameTicks)
 	{
 		// Disables custom movement for NCInstance when Old Synchronization is selected
 		if (Config.COORD_SYNCHRONIZE == -1)
@@ -16468,7 +16468,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
+	public void sendDamageMessage(Creature target, int damage, boolean mcrit, boolean pcrit, boolean miss)
 	{
 		// Check if hit is missed
 		if (miss)
@@ -17338,7 +17338,7 @@ public final class PlayerInstance extends Playable
 	 * @param z the z
 	 * @return true, if is falling
 	 */
-	public final boolean isFalling(int z)
+	public boolean isFalling(int z)
 	{
 		if (isDead() || isFlying() || isInFunEvent() || isInsideZone(ZoneId.WATER))
 		{
@@ -17890,7 +17890,7 @@ public final class PlayerInstance extends Playable
 	 * Gets the multi sell id.
 	 * @return the multi sell id
 	 */
-	public final int getMultiSellId()
+	public int getMultiSellId()
 	{
 		return _currentMultiSellId;
 	}
@@ -17899,7 +17899,7 @@ public final class PlayerInstance extends Playable
 	 * Sets the multi sell id.
 	 * @param listid the new multi sell id
 	 */
-	public final void setMultiSellId(int listid)
+	public void setMultiSellId(int listid)
 	{
 		_currentMultiSellId = listid;
 	}

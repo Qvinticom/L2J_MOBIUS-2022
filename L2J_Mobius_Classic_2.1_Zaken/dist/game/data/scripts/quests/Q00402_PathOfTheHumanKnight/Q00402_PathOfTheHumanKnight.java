@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Human Knight (402)
  * @author ivantotov
  */
-public final class Q00402_PathOfTheHumanKnight extends Quest
+public class Q00402_PathOfTheHumanKnight extends Quest
 {
 	// NPCs
 	private static final int HIGH_PRIEST_BIOTIN = 30031;

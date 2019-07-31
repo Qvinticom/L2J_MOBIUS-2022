@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Collector of Jewels (369)
  * @author Adry_85
  */
-public final class Q00369_CollectorOfJewels extends Quest
+public class Q00369_CollectorOfJewels extends Quest
 {
 	// NPC
 	private static final int NELL = 30376;

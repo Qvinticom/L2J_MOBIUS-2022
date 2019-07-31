@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Hera AI.
  * @author St3eT
  */
-public final class Hera extends AbstractNpcAI
+public class Hera extends AbstractNpcAI
 {
 	// NPC
 	private static final int HERA = 33208;

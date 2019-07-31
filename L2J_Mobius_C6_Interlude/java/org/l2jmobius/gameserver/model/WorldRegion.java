@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
-public final class WorldRegion
+public class WorldRegion
 {
 	private static Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	

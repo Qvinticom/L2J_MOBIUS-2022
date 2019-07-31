@@ -66,7 +66,7 @@ public class StatsSet implements IParserAdvUtils
 	 * Returns the set of values
 	 * @return HashMap
 	 */
-	public final Map<String, Object> getSet()
+	public Map<String, Object> getSet()
 	{
 		return _set;
 	}
@@ -698,7 +698,7 @@ public class StatsSet implements IParserAdvUtils
 	}
 	
 	@SuppressWarnings("unchecked")
-	public final <A> A getObject(String name, Class<A> type)
+	public <A> A getObject(String name, Class<A> type)
 	{
 		Objects.requireNonNull(name);
 		Objects.requireNonNull(type);
@@ -712,7 +712,7 @@ public class StatsSet implements IParserAdvUtils
 	}
 	
 	@SuppressWarnings("unchecked")
-	public final <A> A getObject(String name, Class<A> type, A defaultValue)
+	public <A> A getObject(String name, Class<A> type, A defaultValue)
 	{
 		Objects.requireNonNull(name);
 		Objects.requireNonNull(type);

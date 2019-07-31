@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Silent Move effect implementation.
  */
-public final class SilentMove extends AbstractEffect
+public class SilentMove extends AbstractEffect
 {
 	private final double _power;
 	

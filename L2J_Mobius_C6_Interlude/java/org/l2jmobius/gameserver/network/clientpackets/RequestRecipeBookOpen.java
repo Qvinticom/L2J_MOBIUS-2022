@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.RecipeController;
 
-public final class RequestRecipeBookOpen extends GameClientPacket
+public class RequestRecipeBookOpen extends GameClientPacket
 {
 	private boolean _isDwarvenCraft;
 	

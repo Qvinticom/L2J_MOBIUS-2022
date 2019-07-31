@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Rebalance HP effect implementation.
  * @author Adry_85, earendil
  */
-public final class RebalanceHP extends AbstractEffect
+public class RebalanceHP extends AbstractEffect
 {
 	public RebalanceHP(StatsSet params)
 	{

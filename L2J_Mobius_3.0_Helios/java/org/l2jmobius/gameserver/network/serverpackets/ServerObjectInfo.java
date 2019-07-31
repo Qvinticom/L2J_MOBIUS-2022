@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author devScarlet, mrTJO
  */
-public final class ServerObjectInfo implements IClientOutgoingPacket
+public class ServerObjectInfo implements IClientOutgoingPacket
 {
 	private final Npc _activeChar;
 	private final int _x;

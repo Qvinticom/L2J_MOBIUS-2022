@@ -34,7 +34,7 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  * Meeting Sirra (10285)
  * @author Adry_85
  */
-public final class Q10285_MeetingSirra extends Quest
+public class Q10285_MeetingSirra extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;

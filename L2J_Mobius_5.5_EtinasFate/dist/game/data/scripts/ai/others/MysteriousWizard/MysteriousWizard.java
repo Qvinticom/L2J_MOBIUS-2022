@@ -28,7 +28,7 @@ import quests.Q10751_WindsOfFateEncounters.Q10751_WindsOfFateEncounters;
  * Mysterious Wizard AI.
  * @author Gladicek
  */
-public final class MysteriousWizard extends AbstractNpcAI
+public class MysteriousWizard extends AbstractNpcAI
 {
 	// Npc
 	private static final int MYSTERIOUS_WIZARD = 33980;

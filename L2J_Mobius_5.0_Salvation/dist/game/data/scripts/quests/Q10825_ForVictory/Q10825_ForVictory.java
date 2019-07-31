@@ -35,7 +35,7 @@ import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersT
  * @URL https://l2wiki.com/For_Victory
  * @author Mobius
  */
-public final class Q10825_ForVictory extends Quest
+public class Q10825_ForVictory extends Quest
 {
 	// NPC
 	private static final int KURTIZ = 34019;

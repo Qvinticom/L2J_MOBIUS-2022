@@ -33,12 +33,12 @@ public class TemplateChanceHolder
 		_maxChance = maxChance;
 	}
 	
-	public final int getTemplateId()
+	public int getTemplateId()
 	{
 		return _templateId;
 	}
 	
-	public final boolean calcChance(int chance)
+	public boolean calcChance(int chance)
 	{
 		return (_maxChance > chance) && (chance >= _minChance);
 	}

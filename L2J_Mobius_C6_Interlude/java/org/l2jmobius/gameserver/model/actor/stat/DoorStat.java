@@ -34,7 +34,7 @@ public class DoorStat extends CreatureStat
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return 1;
 	}

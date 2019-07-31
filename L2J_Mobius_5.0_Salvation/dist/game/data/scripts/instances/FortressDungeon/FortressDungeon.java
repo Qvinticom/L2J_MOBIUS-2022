@@ -41,7 +41,7 @@ import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
  * <b>Fortress dungeon</b> instance for quest <b>Awl Under Foot (511)</b>
  * @author malyelfik
  */
-public final class FortressDungeon extends AbstractInstance
+public class FortressDungeon extends AbstractInstance
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();

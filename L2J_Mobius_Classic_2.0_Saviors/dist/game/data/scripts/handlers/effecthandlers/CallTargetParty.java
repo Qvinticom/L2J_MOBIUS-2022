@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * GM Effect: Call Target's Party around target effect implementation.
  * @author Nik
  */
-public final class CallTargetParty extends AbstractEffect
+public class CallTargetParty extends AbstractEffect
 {
 	public CallTargetParty(StatsSet params)
 	{

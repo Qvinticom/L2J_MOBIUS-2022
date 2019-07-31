@@ -28,7 +28,7 @@ import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
  * An Inner Beauty (10738)
  * @author Sdw
  */
-public final class Q10738_AnInnerBeauty extends Quest
+public class Q10738_AnInnerBeauty extends Quest
 {
 	// NPCs
 	private static final int GRAKON = 33947;

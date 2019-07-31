@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author l3x
  */
-public final class BuyListSeed implements IClientOutgoingPacket
+public class BuyListSeed implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private final long _money;

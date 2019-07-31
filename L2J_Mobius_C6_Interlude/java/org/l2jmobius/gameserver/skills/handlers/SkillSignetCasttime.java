@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.templates.StatsSet;
 
-public final class SkillSignetCasttime extends Skill
+public class SkillSignetCasttime extends Skill
 {
 	public int _effectNpcId;
 	public int effectId;

@@ -537,82 +537,82 @@ public class Auction
 	 * Get var auction
 	 * @return
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
 	
-	public final long getCurrentBid()
+	public long getCurrentBid()
 	{
 		return _currentBid;
 	}
 	
-	public final long getEndDate()
+	public long getEndDate()
 	{
 		return _endDate;
 	}
 	
-	public final int getHighestBidderId()
+	public int getHighestBidderId()
 	{
 		return _highestBidderId;
 	}
 	
-	public final String getHighestBidderName()
+	public String getHighestBidderName()
 	{
 		return _highestBidderName;
 	}
 	
-	public final long getHighestBidderMaxBid()
+	public long getHighestBidderMaxBid()
 	{
 		return _highestBidderMaxBid;
 	}
 	
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
 	
-	public final String getItemName()
+	public String getItemName()
 	{
 		return _itemName;
 	}
 	
-	public final int getItemObjectId()
+	public int getItemObjectId()
 	{
 		return _itemObjectId;
 	}
 	
-	public final long getItemQuantity()
+	public long getItemQuantity()
 	{
 		return _itemQuantity;
 	}
 	
-	public final String getItemType()
+	public String getItemType()
 	{
 		return _itemType;
 	}
 	
-	public final int getSellerId()
+	public int getSellerId()
 	{
 		return _sellerId;
 	}
 	
-	public final String getSellerName()
+	public String getSellerName()
 	{
 		return _sellerName;
 	}
 	
-	public final String getSellerClanName()
+	public String getSellerClanName()
 	{
 		return _sellerClanName;
 	}
 	
-	public final long getStartingBid()
+	public long getStartingBid()
 	{
 		return _startingBid;
 	}
 	
-	public final Map<Integer, Bidder> getBidders()
+	public Map<Integer, Bidder> getBidders()
 	{
 		return _bidders;
 	}

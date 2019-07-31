@@ -220,17 +220,17 @@ public class VariationData implements IXmlReader
 		return ((option1 != null) && (option2 != null)) ? new VariationInstance(variation.getMineralId(), option1, option2) : null;
 	}
 	
-	public final Variation getVariation(int mineralId)
+	public Variation getVariation(int mineralId)
 	{
 		return _variations.get(mineralId);
 	}
 	
-	public final VariationFee getFee(int itemId, int mineralId)
+	public VariationFee getFee(int itemId, int mineralId)
 	{
 		return _fees.getOrDefault(itemId, Collections.emptyMap()).get(mineralId);
 	}
 	
-	public final long getCancelFee(int itemId, int mineralId)
+	public long getCancelFee(int itemId, int mineralId)
 	{
 		final Map<Integer, VariationFee> fees = _fees.get(itemId);
 		if (fees == null)
@@ -253,7 +253,7 @@ public class VariationData implements IXmlReader
 		return fee.getCancelFee();
 	}
 	
-	public final boolean hasFeeData(int itemId)
+	public boolean hasFeeData(int itemId)
 	{
 		Map<Integer, VariationFee> itemFees = _fees.get(itemId);
 		return (itemFees != null) && !itemFees.isEmpty();

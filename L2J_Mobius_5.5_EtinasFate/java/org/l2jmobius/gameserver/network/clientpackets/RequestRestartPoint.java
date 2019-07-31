@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestartPoint implements IClientIncomingPacket
+public class RequestRestartPoint implements IClientIncomingPacket
 {
 	protected int _requestedPointType;
 	protected boolean _continuation;

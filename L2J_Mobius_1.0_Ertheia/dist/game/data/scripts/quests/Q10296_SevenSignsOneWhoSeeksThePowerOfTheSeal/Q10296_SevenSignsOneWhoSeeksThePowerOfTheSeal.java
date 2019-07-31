@@ -32,7 +32,7 @@ import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
  * @URL https://l2wiki.com/Seven_Signs,_One_Who_Seeks_the_Power_of_the_Seal
  * @author Mobius
  */
-public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
+public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 {
 	// NPCs
 	private static final int ERIS_EVIL_THOUGHTS = 32792;

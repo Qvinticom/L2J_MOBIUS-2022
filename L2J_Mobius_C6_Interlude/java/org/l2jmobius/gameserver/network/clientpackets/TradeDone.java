@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class TradeDone extends GameClientPacket
+public class TradeDone extends GameClientPacket
 {
 	private int _response;
 	

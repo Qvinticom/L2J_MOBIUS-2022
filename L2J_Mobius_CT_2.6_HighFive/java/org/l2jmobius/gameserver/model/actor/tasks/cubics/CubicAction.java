@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * Cubic action task.
  * @author Zoey76
  */
-public final class CubicAction implements Runnable
+public class CubicAction implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicAction.class.getName());
 	private final CubicInstance _cubic;

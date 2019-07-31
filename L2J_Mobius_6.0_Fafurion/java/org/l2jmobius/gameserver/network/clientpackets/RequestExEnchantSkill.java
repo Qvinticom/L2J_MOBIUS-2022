@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author -Wooden-
  */
-public final class RequestExEnchantSkill implements IClientIncomingPacket
+public class RequestExEnchantSkill implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestExEnchantSkill.class.getName());
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");

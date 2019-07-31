@@ -85,7 +85,7 @@ import org.l2jmobius.gameserver.model.zone.type.WaterZone;
  * This class manages the zones
  * @author durgus
  */
-public final class ZoneManager implements IXmlReader
+public class ZoneManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ZoneManager.class.getName());
 	
@@ -426,7 +426,7 @@ public final class ZoneManager implements IXmlReader
 	}
 	
 	@Override
-	public final void load()
+	public void load()
 	{
 		_classZones.clear();
 		_classZones.put(ArenaZone.class, new ConcurrentHashMap<>());
@@ -717,7 +717,7 @@ public final class ZoneManager implements IXmlReader
 	 * @param creature the creature
 	 * @return the arena
 	 */
-	public final ArenaZone getArena(Creature creature)
+	public ArenaZone getArena(Creature creature)
 	{
 		if (creature == null)
 		{
@@ -740,7 +740,7 @@ public final class ZoneManager implements IXmlReader
 	 * @param creature the creature
 	 * @return the olympiad stadium
 	 */
-	public final OlympiadStadiumZone getOlympiadStadium(Creature creature)
+	public OlympiadStadiumZone getOlympiadStadium(Creature creature)
 	{
 		if (creature == null)
 		{

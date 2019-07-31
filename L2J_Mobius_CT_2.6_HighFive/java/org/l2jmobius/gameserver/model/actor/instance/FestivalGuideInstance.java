@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  * Festival of Darkness Guide (Seven Signs)
  * @author Tempy
  */
-public final class FestivalGuideInstance extends Npc
+public class FestivalGuideInstance extends Npc
 {
 	private final int _festivalType;
 	private final int _festivalOracle;
@@ -192,7 +192,7 @@ public final class FestivalGuideInstance extends Npc
 		}
 	}
 	
-	public final void showChatWindow(PlayerInstance player, int val, String suffix, boolean isDescription)
+	public void showChatWindow(PlayerInstance player, int val, String suffix, boolean isDescription)
 	{
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH + "festival/";
 		filename += (isDescription) ? "desc_" : "festival_";

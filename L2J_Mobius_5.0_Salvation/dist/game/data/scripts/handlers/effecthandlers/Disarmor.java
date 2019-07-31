@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Disarm by inventory slot effect implementation. At end of effect, it re-equips that item.
  * @author Nik
  */
-public final class Disarmor extends AbstractEffect
+public class Disarmor extends AbstractEffect
 {
 	private final Map<Integer, Integer> _unequippedItems; // PlayerObjId, ItemObjId
 	private final long _slot;

@@ -107,7 +107,7 @@ public class WarehouseItem
 	/**
 	 * @return the unique objectId.
 	 */
-	public final int getObjectId()
+	public int getObjectId()
 	{
 		return _object;
 	}
@@ -115,7 +115,7 @@ public class WarehouseItem
 	/**
 	 * @return the owner.
 	 */
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _owner;
 	}
@@ -123,7 +123,7 @@ public class WarehouseItem
 	/**
 	 * @return the location slot.
 	 */
-	public final int getLocationSlot()
+	public int getLocationSlot()
 	{
 		return _locationSlot;
 	}
@@ -131,7 +131,7 @@ public class WarehouseItem
 	/**
 	 * @return the count.
 	 */
-	public final long getCount()
+	public long getCount()
 	{
 		return _count;
 	}
@@ -139,7 +139,7 @@ public class WarehouseItem
 	/**
 	 * @return the first type.
 	 */
-	public final int getType1()
+	public int getType1()
 	{
 		return _item.getType1();
 	}
@@ -147,7 +147,7 @@ public class WarehouseItem
 	/**
 	 * @return the second type.
 	 */
-	public final int getType2()
+	public int getType2()
 	{
 		return _item.getType2();
 	}
@@ -155,7 +155,7 @@ public class WarehouseItem
 	/**
 	 * @return the second type.
 	 */
-	public final ItemType getItemType()
+	public ItemType getItemType()
 	{
 		return _item.getItemType();
 	}
@@ -163,7 +163,7 @@ public class WarehouseItem
 	/**
 	 * @return the ItemId.
 	 */
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _item.getId();
 	}
@@ -171,7 +171,7 @@ public class WarehouseItem
 	/**
 	 * @return the part of body used with this item.
 	 */
-	public final long getBodyPart()
+	public long getBodyPart()
 	{
 		return _item.getBodyPart();
 	}
@@ -179,7 +179,7 @@ public class WarehouseItem
 	/**
 	 * @return the enchant level.
 	 */
-	public final int getEnchantLevel()
+	public int getEnchantLevel()
 	{
 		return _enchant;
 	}
@@ -187,7 +187,7 @@ public class WarehouseItem
 	/**
 	 * @return the item grade
 	 */
-	public final CrystalType getItemGrade()
+	public CrystalType getItemGrade()
 	{
 		return _grade;
 	}
@@ -195,7 +195,7 @@ public class WarehouseItem
 	/**
 	 * @return {@code true} if the item is a weapon, {@code false} otherwise.
 	 */
-	public final boolean isWeapon()
+	public boolean isWeapon()
 	{
 		return (_item instanceof Weapon);
 	}
@@ -203,7 +203,7 @@ public class WarehouseItem
 	/**
 	 * @return {@code true} if the item is an armor, {@code false} otherwise.
 	 */
-	public final boolean isArmor()
+	public boolean isArmor()
 	{
 		return (_item instanceof Armor);
 	}
@@ -211,7 +211,7 @@ public class WarehouseItem
 	/**
 	 * @return {@code true} if the item is an etc item, {@code false} otherwise.
 	 */
-	public final boolean isEtcItem()
+	public boolean isEtcItem()
 	{
 		return (_item instanceof EtcItem);
 	}
@@ -240,17 +240,17 @@ public class WarehouseItem
 		return _item.getName();
 	}
 	
-	public final int getCustomType1()
+	public int getCustomType1()
 	{
 		return _customType1;
 	}
 	
-	public final int getCustomType2()
+	public int getCustomType2()
 	{
 		return _customType2;
 	}
 	
-	public final int getMana()
+	public int getMana()
 	{
 		return _mana;
 	}

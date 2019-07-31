@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
  * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo extends GameClientPacket
+public class RequestExEnchantSkillInfo extends GameClientPacket
 {
 	private int _skillId;
 	private int _skillLvl;

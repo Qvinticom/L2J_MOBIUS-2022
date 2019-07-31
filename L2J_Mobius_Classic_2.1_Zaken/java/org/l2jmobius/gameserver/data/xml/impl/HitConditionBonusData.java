@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  * This class load, holds and calculates the hit condition bonuses.
  * @author Nik
  */
-public final class HitConditionBonusData implements IXmlReader
+public class HitConditionBonusData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(HitConditionBonusData.class.getName());
 	

@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 // In addition, it can be fed in order to increase its duration.
 // This class handles the running tasks, AI, and feed of the mob.
 // The (mostly optional) AI on feeding the spawn is handled by the datapack ai script
-public final class TamedBeastInstance extends FeedableBeastInstance
+public class TamedBeastInstance extends FeedableBeastInstance
 {
 	private int _foodSkillId;
 	private static final int MAX_DISTANCE_FROM_HOME = 30000;

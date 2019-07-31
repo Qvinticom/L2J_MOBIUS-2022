@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Heal effect implementation.
  * @author UnAfraid
  */
-public final class Heal extends AbstractEffect
+public class Heal extends AbstractEffect
 {
 	private final double _power;
 	

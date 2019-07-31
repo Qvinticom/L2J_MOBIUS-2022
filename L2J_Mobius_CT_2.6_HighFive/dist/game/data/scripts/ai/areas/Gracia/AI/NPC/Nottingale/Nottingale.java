@@ -33,7 +33,7 @@ import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
  * Nottingale AI
  * @author xban1x
  */
-public final class Nottingale extends AbstractNpcAI
+public class Nottingale extends AbstractNpcAI
 {
 	// NPC
 	private static final int NOTTINGALE = 32627;

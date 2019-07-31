@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Lethal effect implementation.
  * @author Adry_85
  */
-public final class Lethal extends AbstractEffect
+public class Lethal extends AbstractEffect
 {
 	private final int _fullLethal;
 	private final int _halfLethal;

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The War Spirit (233)
  * @author ivantotov
  */
-public final class Q00233_TestOfTheWarSpirit extends Quest
+public class Q00233_TestOfTheWarSpirit extends Quest
 {
 	// NPCs
 	private static final int PRIESTESS_VIVYAN = 30030;

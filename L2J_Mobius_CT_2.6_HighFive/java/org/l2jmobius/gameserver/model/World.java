@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCreatureSee;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
-public final class World
+public class World
 {
 	private static final Logger LOGGER = Logger.getLogger(World.class.getName());
 	/** Gracia border Flying objects not allowed to the east of it. */

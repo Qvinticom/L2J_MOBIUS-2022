@@ -63,12 +63,12 @@ public class MerchantInstance extends NpcInstance
 		return "data/html/merchant/" + pom + ".htm";
 	}
 	
-	public final void showBuyWindow(PlayerInstance player, int val)
+	public void showBuyWindow(PlayerInstance player, int val)
 	{
 		showBuyWindow(player, val, true);
 	}
 	
-	public final void showBuyWindow(PlayerInstance player, int val, boolean applyCastleTax)
+	public void showBuyWindow(PlayerInstance player, int val, boolean applyCastleTax)
 	{
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)

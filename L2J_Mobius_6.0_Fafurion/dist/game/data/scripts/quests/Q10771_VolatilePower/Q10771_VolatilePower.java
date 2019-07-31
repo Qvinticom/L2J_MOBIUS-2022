@@ -33,7 +33,7 @@ import quests.Q10770_InSearchOfTheGrail.Q10770_InSearchOfTheGrail;
  * Volatile Power (10771)
  * @author malyelfik
  */
-public final class Q10771_VolatilePower extends Quest
+public class Q10771_VolatilePower extends Quest
 {
 	// NPCs
 	private static final int JANSSEN = 30484;

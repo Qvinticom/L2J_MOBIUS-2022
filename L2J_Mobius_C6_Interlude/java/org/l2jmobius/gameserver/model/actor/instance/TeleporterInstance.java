@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * @author NightMarez
  * @version $Revision: 1.3.2.2.2.5 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class TeleporterInstance extends FolkInstance
+public class TeleporterInstance extends FolkInstance
 {
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;

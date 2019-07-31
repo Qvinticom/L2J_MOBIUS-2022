@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Curiosity Of A Dwarf (329)
  * @author ivantotov
  */
-public final class Q00329_CuriosityOfADwarf extends Quest
+public class Q00329_CuriosityOfADwarf extends Quest
 {
 	// NPC
 	private static final int TRADER_ROLENTO = 30437;

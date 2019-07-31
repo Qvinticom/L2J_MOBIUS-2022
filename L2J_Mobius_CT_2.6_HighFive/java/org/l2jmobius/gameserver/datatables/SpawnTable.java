@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  * Spawn data retriever.
  * @author Zoey76, Mobius
  */
-public final class SpawnTable implements IXmlReader
+public class SpawnTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	private static final String OTHER_XML_FOLDER = "data/spawns/Others";

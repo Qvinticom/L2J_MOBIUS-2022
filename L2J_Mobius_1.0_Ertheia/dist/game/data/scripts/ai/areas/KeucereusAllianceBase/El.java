@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * El AI.
  * @author St3eT
  */
-public final class El extends AbstractNpcAI
+public class El extends AbstractNpcAI
 {
 	// NPCs
 	private static final int EL = 32556;

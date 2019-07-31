@@ -44,7 +44,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  * Step Up (10815)
  * @author Gladicek
  */
-public final class Q10815_StepUp extends Quest
+public class Q10815_StepUp extends Quest
 {
 	// Npc
 	private static final int SIR_ERIC_RODEMAI = 30868;

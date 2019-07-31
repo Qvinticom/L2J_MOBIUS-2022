@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Kratei's Cube AI
  * @author Mobius
  */
-public final class KrateisCube extends AbstractNpcAI
+public class KrateisCube extends AbstractNpcAI
 {
 	// NPC
 	private static final int MANAGER = 32503; // Kratei's Cube Entrance Manager

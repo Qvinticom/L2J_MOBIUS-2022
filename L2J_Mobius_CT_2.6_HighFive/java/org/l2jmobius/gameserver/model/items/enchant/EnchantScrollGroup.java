@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 /**
  * @author UnAfraid
  */
-public final class EnchantScrollGroup
+public class EnchantScrollGroup
 {
 	private final int _id;
 	private List<EnchantRateItem> _rateGroups;

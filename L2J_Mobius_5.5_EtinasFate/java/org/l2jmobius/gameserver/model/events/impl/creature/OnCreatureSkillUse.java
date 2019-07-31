@@ -38,7 +38,7 @@ public class OnCreatureSkillUse implements IBaseEvent
 		_simultaneously = simultaneously;
 	}
 	
-	public final Creature getCaster()
+	public Creature getCaster()
 	{
 		return _caster;
 	}

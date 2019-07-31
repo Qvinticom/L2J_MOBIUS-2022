@@ -28,7 +28,7 @@ public abstract class AbstractPacket<T extends MMOClient<?>>
 	
 	T _client;
 	
-	public final T getClient()
+	public T getClient()
 	{
 		return _client;
 	}

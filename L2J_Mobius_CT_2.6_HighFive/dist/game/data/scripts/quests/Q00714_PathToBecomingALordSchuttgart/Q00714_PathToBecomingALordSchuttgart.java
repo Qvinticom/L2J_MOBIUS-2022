@@ -212,7 +212,7 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		if ((qs != null) && qs.isCond(5))

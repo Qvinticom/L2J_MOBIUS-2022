@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Mount/Dismount player action handler.
  * @author Nik
  */
-public final class Ride implements IPlayerActionHandler
+public class Ride implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

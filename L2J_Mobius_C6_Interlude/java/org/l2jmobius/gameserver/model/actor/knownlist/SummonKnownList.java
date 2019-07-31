@@ -27,7 +27,7 @@ public class SummonKnownList extends PlayableKnownList
 	}
 	
 	@Override
-	public final Summon getActiveChar()
+	public Summon getActiveChar()
 	{
 		return (Summon) super.getActiveChar();
 	}

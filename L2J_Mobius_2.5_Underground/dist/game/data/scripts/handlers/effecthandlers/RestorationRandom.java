@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76, Mobius
  */
-public final class RestorationRandom extends AbstractEffect
+public class RestorationRandom extends AbstractEffect
 {
 	private final List<ExtractableProductItem> _products = new ArrayList<>();
 	

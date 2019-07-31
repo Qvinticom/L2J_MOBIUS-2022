@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
  * @URL http://www.lineage2.com/en/news/events/letter-collector-event-05112016.php
  * @author Mobius, Gigi
  */
-public final class LetterCollector extends LongTimeEvent
+public class LetterCollector extends LongTimeEvent
 {
 	// NPC
 	private static final int ANGEL_CAT = 33873;

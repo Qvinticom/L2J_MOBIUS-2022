@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * as the clearance of the participants list or liberate the arena.
  * @author BiggBoss
  */
-public final class HandysBlockCheckerManager
+public class HandysBlockCheckerManager
 {
 	// All the participants and their team classified by arena
 	private static final ArenaParticipantsHolder[] _arenaPlayers = new ArenaParticipantsHolder[4];

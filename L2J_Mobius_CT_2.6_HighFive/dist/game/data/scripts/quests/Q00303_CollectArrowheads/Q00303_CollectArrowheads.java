@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Collect Arrowheads (303)
  * @author ivantotov
  */
-public final class Q00303_CollectArrowheads extends Quest
+public class Q00303_CollectArrowheads extends Quest
 {
 	// NPC
 	private static final int MINIA = 30029;

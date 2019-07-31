@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Hermuncus' Minion AI.
  * @author St3eT
  */
-public final class HermuncusMinion extends AbstractNpcAI
+public class HermuncusMinion extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> HERMUNCUS_MINIONS = new HashMap<>();

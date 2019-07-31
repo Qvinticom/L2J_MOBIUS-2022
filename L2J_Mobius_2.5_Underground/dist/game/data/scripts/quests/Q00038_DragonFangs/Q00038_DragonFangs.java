@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Dragon Fangs (38)
  * @author Janiko
  */
-public final class Q00038_DragonFangs extends Quest
+public class Q00038_DragonFangs extends Quest
 {
 	// NPCs
 	private static final int IRIS = 30034;

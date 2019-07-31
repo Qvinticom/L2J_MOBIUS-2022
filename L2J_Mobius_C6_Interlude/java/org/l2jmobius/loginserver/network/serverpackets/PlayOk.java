@@ -18,7 +18,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 
 import org.l2jmobius.loginserver.SessionKey;
 
-public final class PlayOk extends LoginServerPacket
+public class PlayOk extends LoginServerPacket
 {
 	private final int _playOk1;
 	private final int _playOk2;

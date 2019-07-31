@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author malyelfik
  */
-public final class OnPlayerSubChange implements IBaseEvent
+public class OnPlayerSubChange implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	
@@ -32,7 +32,7 @@ public final class OnPlayerSubChange implements IBaseEvent
 		_player = player;
 	}
 	
-	public final PlayerInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}

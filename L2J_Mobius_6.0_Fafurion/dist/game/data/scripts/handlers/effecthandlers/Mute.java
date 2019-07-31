@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * Mute effect implementation.
  */
-public final class Mute extends AbstractEffect
+public class Mute extends AbstractEffect
 {
 	public Mute(StatsSet params)
 	{

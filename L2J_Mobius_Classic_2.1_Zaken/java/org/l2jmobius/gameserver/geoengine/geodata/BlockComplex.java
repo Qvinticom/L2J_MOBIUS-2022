@@ -77,13 +77,13 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final boolean hasGeoPos()
+	public boolean hasGeoPos()
 	{
 		return true;
 	}
 	
 	@Override
-	public final short getHeightNearest(int geoX, int geoY, int worldZ)
+	public short getHeightNearest(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -99,7 +99,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final short getHeightAbove(int geoX, int geoY, int worldZ)
+	public short getHeightAbove(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -112,7 +112,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final short getHeightBelow(int geoX, int geoY, int worldZ)
+	public short getHeightBelow(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -125,7 +125,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweNearest(int geoX, int geoY, int worldZ)
+	public byte getNsweNearest(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -141,7 +141,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweAbove(int geoX, int geoY, int worldZ)
+	public byte getNsweAbove(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -154,7 +154,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweBelow(int geoX, int geoY, int worldZ)
+	public byte getNsweBelow(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -167,13 +167,13 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final int getIndexNearest(int geoX, int geoY, int worldZ)
+	public int getIndexNearest(int geoX, int geoY, int worldZ)
 	{
 		return (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
 	}
 	
 	@Override
-	public final int getIndexAbove(int geoX, int geoY, int worldZ)
+	public int getIndexAbove(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -192,7 +192,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final int getIndexBelow(int geoX, int geoY, int worldZ)
+	public int getIndexBelow(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = (((geoX % GeoStructure.BLOCK_CELLS_X) * GeoStructure.BLOCK_CELLS_Y) + (geoY % GeoStructure.BLOCK_CELLS_Y)) * 3;
@@ -211,7 +211,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final short getHeight(int index)
+	public short getHeight(int index)
 	{
 		return (short) ((_buffer[index + 1] & 0x00FF) | (_buffer[index + 2] << 8));
 	}
@@ -223,7 +223,7 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final byte getNswe(int index)
+	public byte getNswe(int index)
 	{
 		return _buffer[index];
 	}
@@ -235,13 +235,13 @@ public class BlockComplex extends ABlock
 	}
 	
 	@Override
-	public final void setNswe(int index, byte nswe)
+	public void setNswe(int index, byte nswe)
 	{
 		_buffer[index] = nswe;
 	}
 	
 	@Override
-	public final void saveBlock(BufferedOutputStream stream) throws IOException
+	public void saveBlock(BufferedOutputStream stream) throws IOException
 	{
 		// write block type
 		stream.write(GeoStructure.TYPE_COMPLEX_L2D);

@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Kamael's Fate (10346)
  * @author St3eT
  */
-public final class Q10346_DayOfDestinyKamaelsFate extends ThirdClassTransferQuest
+public class Q10346_DayOfDestinyKamaelsFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int BROME = 32221;

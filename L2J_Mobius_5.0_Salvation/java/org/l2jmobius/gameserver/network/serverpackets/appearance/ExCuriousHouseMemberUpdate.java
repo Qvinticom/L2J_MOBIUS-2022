@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExCuriousHouseMemberUpdate implements IClientOutgoingPacket
 {
-	public final int _objId;
-	public final int _maxHp;
-	public final int _maxCp;
-	public final int _currentHp;
-	public final int _currentCp;
+	public int _objId;
+	public int _maxHp;
+	public int _maxCp;
+	public int _currentHp;
+	public int _currentCp;
 	
 	public ExCuriousHouseMemberUpdate(CeremonyOfChaosMember member)
 	{

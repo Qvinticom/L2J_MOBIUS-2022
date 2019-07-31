@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * Vitality Point Up effect implementation.
  * @author Adry_85
  */
-public final class VitalityPointUp extends AbstractEffect
+public class VitalityPointUp extends AbstractEffect
 {
 	private final float _value;
 	

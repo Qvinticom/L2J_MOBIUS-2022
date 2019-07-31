@@ -45,7 +45,7 @@ import ai.AbstractNpcAI;
  * @author LasTravel, Gigi
  * @URL http://l2wiki.com/Gainak
  */
-public final class GainakSiege extends AbstractNpcAI
+public class GainakSiege extends AbstractNpcAI
 {
 	private static final int SIEGE_EFFECT = 20140700;
 	private static final int SIEGE_DURATION = 30;
@@ -78,7 +78,7 @@ public final class GainakSiege extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onEnterZone(Creature creature, ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (_isInSiege && creature.isPlayer())
 		{

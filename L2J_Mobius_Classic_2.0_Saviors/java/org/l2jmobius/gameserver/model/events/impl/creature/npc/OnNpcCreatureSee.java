@@ -38,12 +38,12 @@ public class OnNpcCreatureSee implements IBaseEvent
 		_isSummon = isSummon;
 	}
 	
-	public final Npc getNpc()
+	public Npc getNpc()
 	{
 		return _npc;
 	}
 	
-	public final Creature getCreature()
+	public Creature getCreature()
 	{
 		return _creature;
 	}

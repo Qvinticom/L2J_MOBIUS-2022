@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class AnswerJoinPartyRoom extends GameClientPacket
+public class AnswerJoinPartyRoom extends GameClientPacket
 {
 	private int _answer; // 1 or 0
 	

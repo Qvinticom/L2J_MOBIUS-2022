@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestBookMarkSlotInfo implements IClientIncomingPacket
+public class RequestBookMarkSlotInfo implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

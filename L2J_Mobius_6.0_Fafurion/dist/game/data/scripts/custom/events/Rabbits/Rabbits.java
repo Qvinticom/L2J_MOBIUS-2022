@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * Chests are hidden at Fantasy Isle and players must use the Rabbit transformation's skills to find and open them.
  * @author Gnacik, Zoey76
  */
-public final class Rabbits extends Event
+public class Rabbits extends Event
 {
 	// NPCs
 	private static final int NPC_MANAGER = 900101;

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Fate's Whisper (234)
  * @author Zealar
  */
-public final class Q00234_FatesWhisper extends Quest
+public class Q00234_FatesWhisper extends Quest
 {
 	// NPCs
 	private static final int ZENKIN = 30178;

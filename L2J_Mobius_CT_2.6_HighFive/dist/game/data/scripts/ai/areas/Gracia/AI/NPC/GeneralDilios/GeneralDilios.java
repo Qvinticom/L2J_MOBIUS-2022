@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Dilios AI
  * @author JIV, Sephiroth, Apocalipce
  */
-public final class GeneralDilios extends AbstractNpcAI
+public class GeneralDilios extends AbstractNpcAI
 {
 	private static final int GENERAL_ID = 32549;
 	private static final int GUARD_ID = 32619;

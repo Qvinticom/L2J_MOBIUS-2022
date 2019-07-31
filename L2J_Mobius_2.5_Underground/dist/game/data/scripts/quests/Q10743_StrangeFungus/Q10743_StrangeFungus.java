@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * Strange Fungus (10743)
  * @author Sdw
  */
-public final class Q10743_StrangeFungus extends Quest
+public class Q10743_StrangeFungus extends Quest
 {
 	// NPCs
 	private static final int LEIRA = 33952;

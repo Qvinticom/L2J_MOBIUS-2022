@@ -39,17 +39,17 @@ public class MultisellEntryHolder
 		_stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(Item::isStackable);
 	}
 	
-	public final List<ItemChanceHolder> getIngredients()
+	public List<ItemChanceHolder> getIngredients()
 	{
 		return _ingredients;
 	}
 	
-	public final List<ItemChanceHolder> getProducts()
+	public List<ItemChanceHolder> getProducts()
 	{
 		return _products;
 	}
 	
-	public final boolean isStackable()
+	public boolean isStackable()
 	{
 		return _stackable;
 	}

@@ -272,7 +272,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	}
 	
 	@Override
-	public final String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerCondition(player, npc, "cond", "3");
 		if (st == null)

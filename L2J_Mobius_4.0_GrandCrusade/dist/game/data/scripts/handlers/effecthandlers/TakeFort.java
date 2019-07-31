@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Take Fort effect implementation.
  * @author Adry_85
  */
-public final class TakeFort extends AbstractEffect
+public class TakeFort extends AbstractEffect
 {
 	public TakeFort(StatsSet params)
 	{

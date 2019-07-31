@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.loginserver.SessionKey;
 import org.l2jmobius.loginserver.network.OutgoingPackets;
 
-public final class PlayOk implements IOutgoingPacket
+public class PlayOk implements IOutgoingPacket
 {
 	private final int _playOk1;
 	private final int _playOk2;

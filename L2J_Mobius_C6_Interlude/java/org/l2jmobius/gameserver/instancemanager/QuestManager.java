@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.quest.Quest;
 
-public final class QuestManager
+public class QuestManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
 	private Map<String, Quest> _quests = new HashMap<>();
@@ -44,7 +44,7 @@ public final class QuestManager
 		_questCount = 0;
 	}
 	
-	public final boolean reload(String questFolder)
+	public boolean reload(String questFolder)
 	{
 		final Quest q = getQuest(questFolder);
 		if (q == null)
@@ -60,7 +60,7 @@ public final class QuestManager
 	 * @param questId The id of the quest to be reloaded
 	 * @return true if reload was succesful, false otherwise
 	 */
-	public final boolean reload(int questId)
+	public boolean reload(int questId)
 	{
 		final Quest q = getQuest(questId);
 		if (q == null)
@@ -70,7 +70,7 @@ public final class QuestManager
 		return q.reload();
 	}
 	
-	public final void reloadAllQuests()
+	public void reloadAllQuests()
 	{
 		// LOGGER.info("Reloading Server Scripts");
 		//// unload all scripts
@@ -87,12 +87,12 @@ public final class QuestManager
 		// getInstance().report();
 	}
 	
-	public final void report()
+	public void report()
 	{
 		LOGGER.info("Loaded: " + _questCount + " quest scripts.");
 	}
 	
-	public final void save()
+	public void save()
 	{
 		for (Quest q : getQuests().values())
 		{
@@ -100,12 +100,12 @@ public final class QuestManager
 		}
 	}
 	
-	public final Quest getQuest(String name)
+	public Quest getQuest(String name)
 	{
 		return getQuests().get(name);
 	}
 	
-	public final Quest getQuest(int questId)
+	public Quest getQuest(int questId)
 	{
 		for (Quest q : getQuests().values())
 		{
@@ -117,7 +117,7 @@ public final class QuestManager
 		return null;
 	}
 	
-	public final void addQuest(Quest newQuest)
+	public void addQuest(Quest newQuest)
 	{
 		if (getQuests().containsKey(newQuest.getName()))
 		{
@@ -132,7 +132,7 @@ public final class QuestManager
 		getQuests().put(newQuest.getName(), newQuest);
 	}
 	
-	public final Map<String, Quest> getQuests()
+	public Map<String, Quest> getQuests()
 	{
 		if (_quests == null)
 		{
@@ -166,12 +166,12 @@ public final class QuestManager
 		return "QuestManager";
 	}
 	
-	public final boolean removeQuest(Quest q)
+	public boolean removeQuest(Quest q)
 	{
 		return _quests.remove(q.getName()) != null;
 	}
 	
-	public final void unloadAllQuests()
+	public void unloadAllQuests()
 	{
 		LOGGER.info("Unloading Server Quests");
 		// unload all scripts

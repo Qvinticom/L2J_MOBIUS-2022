@@ -32,7 +32,7 @@ import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
  * @URL https://l2wiki.com/Request_of_the_Seeker
  * @author Gladicek, Gigi
  */
-public final class Q10363_RequestOfTheSeeker extends Quest
+public class Q10363_RequestOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int NAGEL = 33450;

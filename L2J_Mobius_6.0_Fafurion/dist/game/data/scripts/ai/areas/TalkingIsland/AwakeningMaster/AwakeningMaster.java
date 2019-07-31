@@ -52,7 +52,7 @@ import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroaching
  * AwakeningMaster AI.
  * @author Sdw
  */
-public final class AwakeningMaster extends AbstractNpcAI
+public class AwakeningMaster extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SIGEL_MASTER = 33397;

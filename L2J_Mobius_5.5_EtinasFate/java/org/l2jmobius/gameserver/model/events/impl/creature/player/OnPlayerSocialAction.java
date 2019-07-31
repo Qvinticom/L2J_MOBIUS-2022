@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author St3eT
  */
-public final class OnPlayerSocialAction implements IBaseEvent
+public class OnPlayerSocialAction implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final int _socialActionId;
@@ -34,12 +34,12 @@ public final class OnPlayerSocialAction implements IBaseEvent
 		_socialActionId = socialActionId;
 	}
 	
-	public final PlayerInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
 	
-	public final int getSocialActionId()
+	public int getSocialActionId()
 	{
 		return _socialActionId;
 	}

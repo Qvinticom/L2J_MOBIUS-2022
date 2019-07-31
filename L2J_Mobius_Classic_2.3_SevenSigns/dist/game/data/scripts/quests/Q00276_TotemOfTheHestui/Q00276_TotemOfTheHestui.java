@@ -35,7 +35,7 @@ import quests.Q00261_CollectorsDream.Q00261_CollectorsDream;
  * Totem of the Hestui (276)
  * @author xban1x
  */
-public final class Q00276_TotemOfTheHestui extends Quest
+public class Q00276_TotemOfTheHestui extends Quest
 {
 	// Npc
 	private static final int TANAPI = 30571;

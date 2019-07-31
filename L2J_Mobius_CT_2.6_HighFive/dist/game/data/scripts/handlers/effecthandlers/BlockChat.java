@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Block Chat effect implementation.
  * @author BiggBoss
  */
-public final class BlockChat extends AbstractEffect
+public class BlockChat extends AbstractEffect
 {
 	public BlockChat(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

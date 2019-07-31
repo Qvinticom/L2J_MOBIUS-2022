@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Magical Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalAttack extends AbstractEffect
+public class MagicalAttack extends AbstractEffect
 {
 	private final double _power;
 	private final boolean _overHit;

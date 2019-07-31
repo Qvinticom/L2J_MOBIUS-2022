@@ -349,7 +349,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		setIsInvul(true);
 	}
 	
-	public final EffectList getEffectList()
+	public EffectList getEffectList()
 	{
 		return _effectList;
 	}
@@ -382,7 +382,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @return {code true} if the character is in that zone
 	 */
 	@Override
-	public final boolean isInsideZone(ZoneId zone)
+	public boolean isInsideZone(ZoneId zone)
 	{
 		final Instance instance = getInstanceWorld();
 		switch (zone)
@@ -410,7 +410,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param zone
 	 * @param state
 	 */
-	public final void setInsideZone(ZoneId zone, boolean state)
+	public void setInsideZone(ZoneId zone, boolean state)
 	{
 		synchronized (_zones)
 		{
@@ -674,7 +674,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return false;
 	}
 	
-	public final void broadcastStatusUpdate()
+	public void broadcastStatusUpdate()
 	{
 		broadcastStatusUpdate(null);
 	}
@@ -1318,7 +1318,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets the item reuse time stamps map.
 	 * @return the item reuse time stamps map
 	 */
-	public final Map<Integer, TimeStamp> getItemReuseTimeStamps()
+	public Map<Integer, TimeStamp> getItemReuseTimeStamps()
 	{
 		return _reuseTimeStampsItems;
 	}
@@ -1328,7 +1328,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param item the item
 	 * @param reuse the reuse
 	 */
-	public final void addTimeStampItem(ItemInstance item, long reuse)
+	public void addTimeStampItem(ItemInstance item, long reuse)
 	{
 		addTimeStampItem(item, reuse, -1);
 	}
@@ -1340,7 +1340,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param reuse the reuse
 	 * @param systime the system time
 	 */
-	public final void addTimeStampItem(ItemInstance item, long reuse, long systime)
+	public void addTimeStampItem(ItemInstance item, long reuse, long systime)
 	{
 		if (_reuseTimeStampsItems == null)
 		{
@@ -1360,7 +1360,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param itemObjId the item object ID
 	 * @return if the item has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public final synchronized long getItemRemainingReuseTime(int itemObjId)
+	public synchronized long getItemRemainingReuseTime(int itemObjId)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -1371,7 +1371,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param group the shared reuse item group
 	 * @return if the shared reuse item group has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public final long getReuseDelayOnGroup(int group)
+	public long getReuseDelayOnGroup(int group)
 	{
 		if ((group > 0) && (_reuseTimeStampsItems != null))
 		{
@@ -1390,7 +1390,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets the skill reuse time stamps map.
 	 * @return the skill reuse time stamps map
 	 */
-	public final Map<Long, TimeStamp> getSkillReuseTimeStamps()
+	public Map<Long, TimeStamp> getSkillReuseTimeStamps()
 	{
 		return _reuseTimeStampsSkills;
 	}
@@ -1400,7 +1400,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param skill the skill
 	 * @param reuse the delay
 	 */
-	public final void addTimeStamp(Skill skill, long reuse)
+	public void addTimeStamp(Skill skill, long reuse)
 	{
 		addTimeStamp(skill, reuse, -1);
 	}
@@ -1412,7 +1412,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param reuse the reuse
 	 * @param systime the system time
 	 */
-	public final void addTimeStamp(Skill skill, long reuse, long systime)
+	public void addTimeStamp(Skill skill, long reuse, long systime)
 	{
 		if (_reuseTimeStampsSkills == null)
 		{
@@ -1431,7 +1431,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Removes a skill reuse time stamp.
 	 * @param skill the skill to remove
 	 */
-	public final synchronized void removeTimeStamp(Skill skill)
+	public synchronized void removeTimeStamp(Skill skill)
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -1442,7 +1442,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Removes all skill reuse time stamps.
 	 */
-	public final synchronized void resetTimeStamps()
+	public synchronized void resetTimeStamps()
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -1455,7 +1455,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public final synchronized long getSkillRemainingReuseTime(long hashCode)
+	public synchronized long getSkillRemainingReuseTime(long hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -1466,7 +1466,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return {@code true} if the skill is under reuse time, {@code false} otherwise
 	 */
-	public final synchronized boolean hasSkillReuse(long hashCode)
+	public synchronized boolean hasSkillReuse(long hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
@@ -1477,7 +1477,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the skill reuse time stamp, otherwise {@code null}
 	 */
-	public final synchronized TimeStamp getSkillReuseTimeStamp(long hashCode)
+	public synchronized TimeStamp getSkillReuseTimeStamp(long hashCode)
 	{
 		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
 	}
@@ -1534,7 +1534,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Removes all the disabled skills.
 	 */
-	public final synchronized void resetDisabledSkills()
+	public synchronized void resetDisabledSkills()
 	{
 		if (_disabledSkills != null)
 		{
@@ -1778,7 +1778,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets this creature's AI.
 	 * @return the AI
 	 */
-	public final CreatureAI getAI()
+	public CreatureAI getAI()
 	{
 		if (_ai == null)
 		{
@@ -1858,7 +1858,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return a list of Creature that attacked.
 	 */
-	public final Set<WeakReference<Creature>> getAttackByList()
+	public Set<WeakReference<Creature>> getAttackByList()
 	{
 		if (_attackByList == null)
 		{
@@ -1873,7 +1873,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _attackByList;
 	}
 	
-	public final boolean isControlBlocked()
+	public boolean isControlBlocked()
 	{
 		return isAffected(EffectFlag.BLOCK_CONTROL);
 	}
@@ -1881,7 +1881,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature can't use its skills (ex : stun, sleep...).
 	 */
-	public final boolean isAllSkillsDisabled()
+	public boolean isAllSkillsDisabled()
 	{
 		return _allSkillsDisabled || hasBlockActions();
 	}
@@ -1894,7 +1894,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
 	}
 	
-	public final boolean isConfused()
+	public boolean isConfused()
 	{
 		return isAffected(EffectFlag.CONFUSED);
 	}
@@ -1910,12 +1910,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature is dead.
 	 */
-	public final boolean isDead()
+	public boolean isDead()
 	{
 		return _isDead;
 	}
 	
-	public final void setIsDead(boolean value)
+	public void setIsDead(boolean value)
 	{
 		_isDead = value;
 	}
@@ -1930,17 +1930,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_isImmobilized = value;
 	}
 	
-	public final boolean isMuted()
+	public boolean isMuted()
 	{
 		return isAffected(EffectFlag.MUTED);
 	}
 	
-	public final boolean isPhysicalMuted()
+	public boolean isPhysicalMuted()
 	{
 		return isAffected(EffectFlag.PSYCHICAL_MUTED);
 	}
 	
-	public final boolean isPhysicalAttackMuted()
+	public boolean isPhysicalAttackMuted()
 	{
 		return isAffected(EffectFlag.PSYCHICAL_ATTACK_MUTED);
 	}
@@ -1954,7 +1954,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return hasBlockActions() || isRooted() || _isOverloaded || _isImmobilized || isAlikeDead() || _isTeleporting;
 	}
 	
-	public final boolean isOverloaded()
+	public boolean isOverloaded()
 	{
 		return _isOverloaded;
 	}
@@ -1963,22 +1963,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Set the overloaded status of the Creature is overloaded (if True, the PlayerInstance can't take more item).
 	 * @param value
 	 */
-	public final void setIsOverloaded(boolean value)
+	public void setIsOverloaded(boolean value)
 	{
 		_isOverloaded = value;
 	}
 	
-	public final boolean isPendingRevive()
+	public boolean isPendingRevive()
 	{
 		return _isDead && _isPendingRevive;
 	}
 	
-	public final void setIsPendingRevive(boolean value)
+	public void setIsPendingRevive(boolean value)
 	{
 		_isPendingRevive = value;
 	}
 	
-	public final boolean isDisarmed()
+	public boolean isDisarmed()
 	{
 		return isAffected(EffectFlag.DISARMED);
 	}
@@ -2007,7 +2007,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@code true} if the character has a summon, {@code false} otherwise
 	 */
-	public final boolean hasSummon()
+	public boolean hasSummon()
 	{
 		return (getPet() != null) || !getServitors().isEmpty();
 	}
@@ -2015,12 +2015,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@code true} if the character has a pet, {@code false} otherwise
 	 */
-	public final boolean hasPet()
+	public boolean hasPet()
 	{
 		return getPet() != null;
 	}
 	
-	public final boolean hasServitor(int objectId)
+	public boolean hasServitor(int objectId)
 	{
 		return getServitors().containsKey(objectId);
 	}
@@ -2028,7 +2028,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@code true} if the character has a servitor, {@code false} otherwise
 	 */
-	public final boolean hasServitors()
+	public boolean hasServitors()
 	{
 		return !getServitors().isEmpty();
 	}
@@ -2038,7 +2038,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		getServitors().remove(objectId);
 	}
 	
-	public final boolean isRooted()
+	public boolean isRooted()
 	{
 		return isAffected(EffectFlag.ROOTED);
 	}
@@ -2097,27 +2097,27 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/** Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance. */
-	public final void setRunning()
+	public void setRunning()
 	{
 		setIsRunning(true);
 	}
 	
-	public final boolean hasBlockActions()
+	public boolean hasBlockActions()
 	{
 		return _blockActions || isAffected(EffectFlag.BLOCK_ACTIONS) || isAffected(EffectFlag.CONDITIONAL_BLOCK_ACTIONS);
 	}
 	
-	public final void setBlockActions(boolean blockActions)
+	public void setBlockActions(boolean blockActions)
 	{
 		_blockActions = blockActions;
 	}
 	
-	public final boolean isBetrayed()
+	public boolean isBetrayed()
 	{
 		return isAffected(EffectFlag.BETRAYED);
 	}
 	
-	public final boolean isTeleporting()
+	public boolean isTeleporting()
 	{
 		return _isTeleporting;
 	}
@@ -2178,12 +2178,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return isAffected(EffectFlag.BLOCK_RESURRECTION);
 	}
 	
-	public final boolean isFlying()
+	public boolean isFlying()
 	{
 		return _isFlying;
 	}
 	
-	public final void setIsFlying(boolean mode)
+	public void setIsFlying(boolean mode)
 	{
 		_isFlying = mode;
 	}
@@ -2202,7 +2202,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_stat = new CreatureStat(this);
 	}
 	
-	public final void setStat(CreatureStat value)
+	public void setStat(CreatureStat value)
 	{
 		_stat = value;
 	}
@@ -2221,7 +2221,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_status = new CreatureStatus(this);
 	}
 	
-	public final void setStatus(CreatureStatus value)
+	public void setStatus(CreatureStatus value)
 	{
 		_status = value;
 	}
@@ -2248,7 +2248,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return the Title of the Creature.
 	 */
-	public final String getTitle()
+	public String getTitle()
 	{
 		// Champion titles
 		if (isChampion())
@@ -2277,7 +2277,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Set the Title of the Creature.
 	 * @param value
 	 */
-	public final void setTitle(String value)
+	public void setTitle(String value)
 	{
 		if (value == null)
 		{
@@ -2292,7 +2292,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Set the Creature movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance.
 	 */
-	public final void setWalking()
+	public void setWalking()
 	{
 		setIsRunning(false);
 	}
@@ -2300,7 +2300,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Active the abnormal effect Fake Death flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
-	public final void startFakeDeath()
+	public void startFakeDeath()
 	{
 		if (!isPlayer())
 		{
@@ -2327,7 +2327,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 	}
 	
-	public final void startParalyze()
+	public void startParalyze()
 	{
 		// Aborts any attacks/casts if paralyzed
 		abortAttack();
@@ -2367,7 +2367,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_effectList.stopSkillEffects(true, skill.getId());
 	}
 	
-	public final void stopEffects(EffectFlag effectFlag)
+	public void stopEffects(EffectFlag effectFlag)
 	{
 		_effectList.stopEffects(effectFlag);
 	}
@@ -2376,7 +2376,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Exits all buffs effects of the skills with "removedOnAnyAction" set.<br>
 	 * Called on any action except movement (attack, cast).
 	 */
-	public final void stopEffectsOnAction()
+	public void stopEffectsOnAction()
 	{
 		_effectList.stopEffectsOnAction();
 	}
@@ -2385,7 +2385,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Exits all buffs effects of the skills with "removedOnDamage" set.<br>
 	 * Called on decreasing HP and mana burn.
 	 */
-	public final void stopEffectsOnDamage()
+	public void stopEffectsOnDamage()
 	{
 		_effectList.stopEffectsOnDamage();
 	}
@@ -2400,7 +2400,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * </ul>
 	 * @param removeEffects
 	 */
-	public final void stopFakeDeath(boolean removeEffects)
+	public void stopFakeDeath(boolean removeEffects)
 	{
 		if (removeEffects)
 		{
@@ -2423,7 +2423,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Stop all block actions (stun) effects.<br>
 	 * @param removeEffects {@code true} removes all block actions effects, {@code false} only notifies AI to think.
 	 */
-	public final void stopStunning(boolean removeEffects)
+	public void stopStunning(boolean removeEffects)
 	{
 		if (removeEffects)
 		{
@@ -2446,7 +2446,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * </ul>
 	 * @param removeEffects
 	 */
-	public final void stopTransformation(boolean removeEffects)
+	public void stopTransformation(boolean removeEffects)
 	{
 		if (removeEffects)
 		{
@@ -2480,7 +2480,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * All active skills effects in progress (In Use and Not In Use because stacked) are represented by an icon on the client.<br>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method ONLY UPDATE the client of the player and not clients of all players in the party.</B></FONT>
 	 */
-	public final void updateEffectIcons()
+	public void updateEffectIcons()
 	{
 		updateEffectIcons(false);
 	}
@@ -2753,7 +2753,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 	}
 	
-	public final int getXdestination()
+	public int getXdestination()
 	{
 		final MoveData m = _move;
 		
@@ -2768,7 +2768,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return the Y destination of the Creature or the Y position if not in movement.
 	 */
-	public final int getYdestination()
+	public int getYdestination()
 	{
 		final MoveData m = _move;
 		
@@ -2783,7 +2783,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return the Z destination of the Creature or the Z position if not in movement.
 	 */
-	public final int getZdestination()
+	public int getZdestination()
 	{
 		final MoveData m = _move;
 		
@@ -2806,7 +2806,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature is moving.
 	 */
-	public final boolean isMoving()
+	public boolean isMoving()
 	{
 		return _move != null;
 	}
@@ -2814,7 +2814,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature is travelling a calculated path.
 	 */
-	public final boolean isOnGeodataPath()
+	public boolean isOnGeodataPath()
 	{
 		final MoveData m = _move;
 		if (m == null)
@@ -2835,17 +2835,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature is casting any kind of skill, including simultaneous skills like potions.
 	 */
-	public final boolean isCastingNow()
+	public boolean isCastingNow()
 	{
 		return !_skillCasters.isEmpty();
 	}
 	
-	public final boolean isCastingNow(SkillCastingType skillCastingType)
+	public boolean isCastingNow(SkillCastingType skillCastingType)
 	{
 		return _skillCasters.containsKey(skillCastingType);
 	}
 	
-	public final boolean isCastingNow(Predicate<SkillCaster> filter)
+	public boolean isCastingNow(Predicate<SkillCaster> filter)
 	{
 		return _skillCasters.values().stream().anyMatch(filter);
 	}
@@ -2853,7 +2853,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return True if the Creature is attacking.
 	 */
-	public final boolean isAttackingNow()
+	public boolean isAttackingNow()
 	{
 		return _attackEndTime > System.nanoTime();
 	}
@@ -2861,7 +2861,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Abort the attack of the Creature and send Server->Client ActionFailed packet.
 	 */
-	public final void abortAttack()
+	public void abortAttack()
 	{
 		if (isAttackingNow())
 		{
@@ -2879,7 +2879,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Abort the cast of all skills.
 	 */
-	public final void abortAllSkillCasters()
+	public void abortAllSkillCasters()
 	{
 		for (SkillCaster skillCaster : getSkillCasters())
 		{
@@ -2895,7 +2895,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Abort the cast of normal non-simultaneous skills.
 	 * @return {@code true} if a skill casting has been aborted, {@code false} otherwise.
 	 */
-	public final boolean abortCast()
+	public boolean abortCast()
 	{
 		return abortCast(SkillCaster::isAnyNormalType);
 	}
@@ -2905,7 +2905,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param filter
 	 * @return {@code true} if a skill casting has been aborted, {@code false} otherwise.
 	 */
-	public final boolean abortCast(Predicate<SkillCaster> filter)
+	public boolean abortCast(Predicate<SkillCaster> filter)
 	{
 		final SkillCaster skillCaster = getSkillCaster(SkillCaster::canAbortCast, filter);
 		if (skillCaster != null)
@@ -3170,7 +3170,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return the identifier of the WorldObject targeted or -1.
 	 */
-	public final int getTargetId()
+	public int getTargetId()
 	{
 		if (_target != null)
 		{
@@ -3182,7 +3182,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return the WorldObject targeted or null.
 	 */
-	public final WorldObject getTarget()
+	public WorldObject getTarget()
 	{
 		return _target;
 	}
@@ -3569,7 +3569,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param radius the radius around the target
 	 * @return true if the Creature is inside the radius.
 	 */
-	public final boolean isInsideRadius2D(ILocational loc, int radius)
+	public boolean isInsideRadius2D(ILocational loc, int radius)
 	{
 		return isInsideRadius2D(loc.getX(), loc.getY(), loc.getZ(), radius);
 	}
@@ -3582,7 +3582,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param radius the radius around the target
 	 * @return true if the Creature is inside the radius.
 	 */
-	public final boolean isInsideRadius2D(int x, int y, int z, int radius)
+	public boolean isInsideRadius2D(int x, int y, int z, int radius)
 	{
 		return calculateDistanceSq2D(x, y, z) < (radius * radius);
 	}
@@ -3593,7 +3593,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param radius the radius around the target
 	 * @return true if the Creature is inside the radius.
 	 */
-	public final boolean isInsideRadius3D(ILocational loc, int radius)
+	public boolean isInsideRadius3D(ILocational loc, int radius)
 	{
 		return isInsideRadius3D(loc.getX(), loc.getY(), loc.getZ(), radius);
 	}
@@ -3606,7 +3606,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param radius the radius around the target
 	 * @return true if the Creature is inside the radius.
 	 */
-	public final boolean isInsideRadius3D(int x, int y, int z, int radius)
+	public boolean isInsideRadius3D(int x, int y, int z, int radius)
 	{
 		return calculateDistanceSq3D(x, y, z) < (radius * radius);
 	}
@@ -4074,7 +4074,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return all skills this creature currently has.
 	 */
-	public final Collection<Skill> getAllSkills()
+	public Collection<Skill> getAllSkills()
 	{
 		return _skills.values();
 	}
@@ -4159,13 +4159,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return a multiplier based on weapon random damage
 	 */
-	public final double getRandomDamageMultiplier()
+	public double getRandomDamageMultiplier()
 	{
 		final int random = (int) _stat.getValue(Stats.RANDOM_DAMAGE);
 		return (1 + ((double) Rnd.get(-random, random) / 100));
 	}
 	
-	public final long getAttackEndTime()
+	public long getAttackEndTime()
 	{
 		return _attackEndTime;
 	}
@@ -4196,12 +4196,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getMagicEvasionRate();
 	}
 	
-	public final double getAttackSpeedMultiplier()
+	public double getAttackSpeedMultiplier()
 	{
 		return _stat.getAttackSpeedMultiplier();
 	}
 	
-	public final double getCriticalDmg(int init)
+	public double getCriticalDmg(int init)
 	{
 		return _stat.getCriticalDmg(init);
 	}
@@ -4216,17 +4216,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getEvasionRate();
 	}
 	
-	public final int getMagicalAttackRange(Skill skill)
+	public int getMagicalAttackRange(Skill skill)
 	{
 		return _stat.getMagicalAttackRange(skill);
 	}
 	
-	public final int getMaxCp()
+	public int getMaxCp()
 	{
 		return _stat.getMaxCp();
 	}
 	
-	public final int getMaxRecoverableCp()
+	public int getMaxRecoverableCp()
 	{
 		return _stat.getMaxRecoverableCp();
 	}
@@ -4261,7 +4261,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getMaxRecoverableHp();
 	}
 	
-	public final int getMCriticalHit()
+	public int getMCriticalHit()
 	{
 		return _stat.getMCriticalHit();
 	}
@@ -4286,7 +4286,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getPDef();
 	}
 	
-	public final int getPhysicalAttackRange()
+	public int getPhysicalAttackRange()
 	{
 		return _stat.getPhysicalAttackRange();
 	}
@@ -4306,12 +4306,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getWalkSpeed();
 	}
 	
-	public final double getSwimRunSpeed()
+	public double getSwimRunSpeed()
 	{
 		return _stat.getSwimRunSpeed();
 	}
 	
-	public final double getSwimWalkSpeed()
+	public double getSwimWalkSpeed()
 	{
 		return _stat.getSwimWalkSpeed();
 	}
@@ -4321,7 +4321,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getMoveSpeed();
 	}
 	
-	public final int getShldDef()
+	public int getShldDef()
 	{
 		return _stat.getShldDef();
 	}
@@ -4562,67 +4562,67 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_status.stopHpMpRegeneration();
 	}
 	
-	public final double getCurrentCp()
+	public double getCurrentCp()
 	{
 		return _status.getCurrentCp();
 	}
 	
-	public final int getCurrentCpPercent()
+	public int getCurrentCpPercent()
 	{
 		return (int) ((_status.getCurrentCp() * 100) / _stat.getMaxCp());
 	}
 	
-	public final void setCurrentCp(double newCp)
+	public void setCurrentCp(double newCp)
 	{
 		_status.setCurrentCp(newCp);
 	}
 	
-	public final void setCurrentCp(double newCp, boolean broadcast)
+	public void setCurrentCp(double newCp, boolean broadcast)
 	{
 		_status.setCurrentCp(newCp, broadcast);
 	}
 	
-	public final double getCurrentHp()
+	public double getCurrentHp()
 	{
 		return _status.getCurrentHp();
 	}
 	
-	public final int getCurrentHpPercent()
+	public int getCurrentHpPercent()
 	{
 		return (int) ((_status.getCurrentHp() * 100) / _stat.getMaxHp());
 	}
 	
-	public final void setCurrentHp(double newHp)
+	public void setCurrentHp(double newHp)
 	{
 		_status.setCurrentHp(newHp);
 	}
 	
-	public final void setCurrentHp(double newHp, boolean broadcast)
+	public void setCurrentHp(double newHp, boolean broadcast)
 	{
 		_status.setCurrentHp(newHp, broadcast);
 	}
 	
-	public final void setCurrentHpMp(double newHp, double newMp)
+	public void setCurrentHpMp(double newHp, double newMp)
 	{
 		_status.setCurrentHpMp(newHp, newMp);
 	}
 	
-	public final double getCurrentMp()
+	public double getCurrentMp()
 	{
 		return _status.getCurrentMp();
 	}
 	
-	public final int getCurrentMpPercent()
+	public int getCurrentMpPercent()
 	{
 		return (int) ((_status.getCurrentMp() * 100) / _stat.getMaxMp());
 	}
 	
-	public final void setCurrentMp(double newMp)
+	public void setCurrentMp(double newMp)
 	{
 		_status.setCurrentMp(newMp);
 	}
 	
-	public final void setCurrentMp(double newMp, boolean broadcast)
+	public void setCurrentMp(double newMp, boolean broadcast)
 	{
 		_status.setCurrentMp(newMp, false);
 	}
@@ -4696,7 +4696,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _stat.getDefenseElementValue(defenseAttribute);
 	}
 	
-	public final void startPhysicalAttackMuted()
+	public void startPhysicalAttackMuted()
 	{
 		abortAttack();
 	}
@@ -4904,7 +4904,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@link WeaponType} of current character's weapon or basic weapon type.
 	 */
-	public final WeaponType getAttackType()
+	public WeaponType getAttackType()
 	{
 		final Weapon weapon = getActiveWeaponItem();
 		if (weapon != null)
@@ -4916,12 +4916,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _transform.map(transform -> transform.getBaseAttackType(this, defaultWeaponType)).orElse(defaultWeaponType);
 	}
 	
-	public final boolean isInCategory(CategoryType type)
+	public boolean isInCategory(CategoryType type)
 	{
 		return CategoryData.getInstance().isInCategory(type, getId());
 	}
 	
-	public final boolean isInOneOfCategory(CategoryType... types)
+	public boolean isInOneOfCategory(CategoryType... types)
 	{
 		for (CategoryType type : types)
 		{
@@ -4954,7 +4954,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Adds a summoned NPC.
 	 * @param npc the summoned NPC
 	 */
-	public final void addSummonedNpc(Npc npc)
+	public void addSummonedNpc(Npc npc)
 	{
 		if (_summonedNpcs == null)
 		{
@@ -4976,7 +4976,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Removes a summoned NPC by object ID.
 	 * @param objectId the summoned NPC object ID
 	 */
-	public final void removeSummonedNpc(int objectId)
+	public void removeSummonedNpc(int objectId)
 	{
 		if (_summonedNpcs != null)
 		{
@@ -4988,7 +4988,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets the summoned NPCs.
 	 * @return the summoned NPCs
 	 */
-	public final Collection<Npc> getSummonedNpcs()
+	public Collection<Npc> getSummonedNpcs()
 	{
 		return _summonedNpcs != null ? _summonedNpcs.values() : Collections.emptyList();
 	}
@@ -4998,7 +4998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param objectId the summoned NPC object ID
 	 * @return the summoned NPC
 	 */
-	public final Npc getSummonedNpc(int objectId)
+	public Npc getSummonedNpc(int objectId)
 	{
 		if (_summonedNpcs != null)
 		{
@@ -5011,7 +5011,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets the summoned NPC count.
 	 * @return the summoned NPC count
 	 */
-	public final int getSummonedNpcCount()
+	public int getSummonedNpcCount()
 	{
 		return _summonedNpcs != null ? _summonedNpcs.size() : 0;
 	}
@@ -5019,7 +5019,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * Resets the summoned NPCs list.
 	 */
-	public final void resetSummonedNpcs()
+	public void resetSummonedNpcs()
 	{
 		if (_summonedNpcs != null)
 		{
@@ -5078,12 +5078,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@code true} if current character is casting channeling skill, {@code false} otherwise.
 	 */
-	public final boolean isChanneling()
+	public boolean isChanneling()
 	{
 		return (_channelizer != null) && _channelizer.isChanneling();
 	}
 	
-	public final SkillChannelizer getSkillChannelizer()
+	public SkillChannelizer getSkillChannelizer()
 	{
 		if (_channelizer == null)
 		{
@@ -5095,12 +5095,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/**
 	 * @return {@code true} if current character is affected by channeling skill, {@code false} otherwise.
 	 */
-	public final boolean isChannelized()
+	public boolean isChannelized()
 	{
 		return (_channelized != null) && !_channelized.isChannelized();
 	}
 	
-	public final SkillChannelized getSkillChannelized()
+	public SkillChannelized getSkillChannelized()
 	{
 		if (_channelized == null)
 		{
@@ -5192,7 +5192,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	@Override
-	public final void setXYZ(int newX, int newY, int newZ)
+	public void setXYZ(int newX, int newY, int newZ)
 	{
 		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
 		final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
@@ -5212,7 +5212,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		super.setXYZ(newX, newY, newZ);
 	}
 	
-	public final Map<Integer, Integer> getKnownRelations()
+	public Map<Integer, Integer> getKnownRelations()
 	{
 		return _knownRelations;
 	}

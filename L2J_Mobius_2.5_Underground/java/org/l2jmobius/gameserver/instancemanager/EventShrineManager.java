@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.instancemanager;
 /**
  * @author Mobius
  */
-public final class EventShrineManager
+public class EventShrineManager
 {
 	private static boolean ENABLE_SHRINES = false;
 	

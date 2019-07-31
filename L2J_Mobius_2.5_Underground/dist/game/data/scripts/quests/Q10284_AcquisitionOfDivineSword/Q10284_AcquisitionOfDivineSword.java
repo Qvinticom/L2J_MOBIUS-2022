@@ -31,7 +31,7 @@ import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
  * Acquisition of Divine Sword (10284)
  * @author Adry_85
  */
-public final class Q10284_AcquisitionOfDivineSword extends Quest
+public class Q10284_AcquisitionOfDivineSword extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;

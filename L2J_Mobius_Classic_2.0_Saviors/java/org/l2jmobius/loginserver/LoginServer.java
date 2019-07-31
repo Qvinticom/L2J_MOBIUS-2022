@@ -40,9 +40,9 @@ import org.l2jmobius.loginserver.ui.Gui;
 /**
  * @author KenM
  */
-public final class LoginServer
+public class LoginServer
 {
-	public final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	public Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
 	private static LoginServer INSTANCE;

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
  * @author Adry_85, Nik
  */
-public final class PhysicalSoulAttack extends AbstractEffect
+public class PhysicalSoulAttack extends AbstractEffect
 {
 	private final double _power;
 	private final double _criticalChance;

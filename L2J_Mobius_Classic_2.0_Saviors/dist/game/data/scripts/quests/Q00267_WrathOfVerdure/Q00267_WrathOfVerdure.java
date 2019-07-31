@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Wrath of Verdure (267)
  * @author xban1x
  */
-public final class Q00267_WrathOfVerdure extends Quest
+public class Q00267_WrathOfVerdure extends Quest
 {
 	// NPC
 	private static final int TREANT_BREMEC = 31853;

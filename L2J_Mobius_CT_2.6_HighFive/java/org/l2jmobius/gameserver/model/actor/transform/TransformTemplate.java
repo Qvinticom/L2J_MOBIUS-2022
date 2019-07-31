@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 /**
  * @author UnAfraid
  */
-public final class TransformTemplate
+public class TransformTemplate
 {
 	private final double _collisionRadius;
 	private final double _collisionHeight;

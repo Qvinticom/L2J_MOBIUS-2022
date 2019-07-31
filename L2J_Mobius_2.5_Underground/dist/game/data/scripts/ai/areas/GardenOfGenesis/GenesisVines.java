@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Genesis Vines AI.
  * @author St3eT
  */
-public final class GenesisVines extends AbstractNpcAI
+public class GenesisVines extends AbstractNpcAI
 {
 	// NPCs
 	private static final int VINE = 18987; // Vine

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerPkCount extends Condition
 {
-	public final int _pk;
+	public int _pk;
 	
 	/**
 	 * Instantiates a new condition player pk count.

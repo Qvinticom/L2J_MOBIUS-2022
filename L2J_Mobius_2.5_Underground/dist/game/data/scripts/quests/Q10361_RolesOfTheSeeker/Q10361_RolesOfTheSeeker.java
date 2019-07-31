@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * Roles of the Seeker (10361)
  * @author Gladicek
  */
-public final class Q10361_RolesOfTheSeeker extends Quest
+public class Q10361_RolesOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int LAKCIS = 32977;

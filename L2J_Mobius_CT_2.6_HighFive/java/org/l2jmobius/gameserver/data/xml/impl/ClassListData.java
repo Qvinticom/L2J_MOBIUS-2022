@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.base.ClassInfo;
  * Loads the the list of classes and it's info.
  * @author Zoey76
  */
-public final class ClassListData implements IXmlReader
+public class ClassListData implements IXmlReader
 {
 	private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
 	

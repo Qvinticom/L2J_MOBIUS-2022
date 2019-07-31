@@ -263,7 +263,7 @@ public class Npc extends Creature
 	
 	/** Return the NpcTemplate of the NpcInstance. */
 	@Override
-	public final NpcTemplate getTemplate()
+	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) super.getTemplate();
 	}
@@ -288,7 +288,7 @@ public class Npc extends Creature
 	 * Return the Level of this NpcInstance contained in the NpcTemplate.
 	 */
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate().getLevel();
 	}
@@ -423,7 +423,7 @@ public class Npc extends Creature
 	/**
 	 * @return the busy status of this NpcInstance.
 	 */
-	public final boolean isBusy()
+	public boolean isBusy()
 	{
 		return _isBusy;
 	}
@@ -499,7 +499,7 @@ public class Npc extends Creature
 	 * Set another tax zone which will be used for tax payments.
 	 * @param zone newly entered tax zone
 	 */
-	public final void setTaxZone(TaxZone zone)
+	public void setTaxZone(TaxZone zone)
 	{
 		_taxZone = ((zone != null) && !isInInstance()) ? zone : null;
 	}
@@ -508,7 +508,7 @@ public class Npc extends Creature
 	 * Gets castle for tax payments.
 	 * @return instance of {@link Castle} when NPC is inside {@link TaxZone} otherwise {@code null}
 	 */
-	public final Castle getTaxCastle()
+	public Castle getTaxCastle()
 	{
 		return (_taxZone != null) ? _taxZone.getCastle() : null;
 	}
@@ -518,7 +518,7 @@ public class Npc extends Creature
 	 * @param type type of tax
 	 * @return tax rate when NPC is inside tax zone otherwise {@code 0}
 	 */
-	public final double getCastleTaxRate(TaxType type)
+	public double getCastleTaxRate(TaxType type)
 	{
 		final Castle castle = getTaxCastle();
 		return (castle != null) ? (castle.getTaxPercent(type) / 100.0) : 0;
@@ -528,7 +528,7 @@ public class Npc extends Creature
 	 * Increase castle vault by specified tax amount.
 	 * @param amount tax amount
 	 */
-	public final void handleTaxPayment(long amount)
+	public void handleTaxPayment(long amount)
 	{
 		final Castle taxCastle = getTaxCastle();
 		if (taxCastle != null)
@@ -540,12 +540,12 @@ public class Npc extends Creature
 	/**
 	 * @return the nearest Castle this NpcInstance belongs to. Otherwise null.
 	 */
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		return CastleManager.getInstance().findNearestCastle(this);
 	}
 	
-	public final ClanHall getClanHall()
+	public ClanHall getClanHall()
 	{
 		return ClanHallData.getInstance().getClanHallByNpcId(getId());
 	}
@@ -555,7 +555,7 @@ public class Npc extends Creature
 	 * @param maxDistance long
 	 * @return Castle
 	 */
-	public final Castle getCastle(long maxDistance)
+	public Castle getCastle(long maxDistance)
 	{
 		return CastleManager.getInstance().findNearestCastle(this, maxDistance);
 	}
@@ -563,7 +563,7 @@ public class Npc extends Creature
 	/**
 	 * @return the nearest Fort this NpcInstance belongs to. Otherwise null.
 	 */
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		return FortManager.getInstance().findNearestFort(this);
 	}
@@ -573,7 +573,7 @@ public class Npc extends Creature
 	 * @param maxDistance long
 	 * @return Fort
 	 */
-	public final Fort getFort(long maxDistance)
+	public Fort getFort(long maxDistance)
 	{
 		return FortManager.getInstance().findNearestFort(this, maxDistance);
 	}
@@ -1295,7 +1295,7 @@ public class Npc extends Creature
 	}
 	
 	@Override
-	public final void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
+	public void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
 		if (target != null)
 		{
@@ -1586,7 +1586,7 @@ public class Npc extends Creature
 	}
 	
 	@Override
-	public final String getName()
+	public String getName()
 	{
 		return getTemplate().getName();
 	}

@@ -48,7 +48,7 @@ public class Q126_TheNameOfEvil_2 extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);

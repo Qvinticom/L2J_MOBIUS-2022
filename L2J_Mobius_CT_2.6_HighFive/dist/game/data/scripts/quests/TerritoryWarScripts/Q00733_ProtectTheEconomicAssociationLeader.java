@@ -20,7 +20,7 @@ package quests.TerritoryWarScripts;
  * Protect the Economic Association Leader (733)
  * @author Gigiikun
  */
-public final class Q00733_ProtectTheEconomicAssociationLeader extends TerritoryWarSuperClass
+public class Q00733_ProtectTheEconomicAssociationLeader extends TerritoryWarSuperClass
 {
 	public Q00733_ProtectTheEconomicAssociationLeader()
 	{

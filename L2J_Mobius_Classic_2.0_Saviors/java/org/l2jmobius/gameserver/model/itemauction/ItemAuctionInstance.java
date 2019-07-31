@@ -51,7 +51,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class ItemAuctionInstance
+public class ItemAuctionInstance
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemAuctionInstance.class.getName());
 	private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("HH:mm:ss dd.MM.yy");
@@ -199,17 +199,17 @@ public final class ItemAuctionInstance
 		checkAndSetCurrentAndNextAuction();
 	}
 	
-	public final ItemAuction getCurrentAuction()
+	public ItemAuction getCurrentAuction()
 	{
 		return _currentAuction;
 	}
 	
-	public final ItemAuction getNextAuction()
+	public ItemAuction getNextAuction()
 	{
 		return _nextAuction;
 	}
 	
-	public final void shutdown()
+	public void shutdown()
 	{
 		final ScheduledFuture<?> stateTask = _stateTask;
 		if (stateTask != null)
@@ -340,12 +340,12 @@ public final class ItemAuctionInstance
 		}
 	}
 	
-	public final ItemAuction getAuction(int auctionId)
+	public ItemAuction getAuction(int auctionId)
 	{
 		return _auctions.get(auctionId);
 	}
 	
-	public final ItemAuction[] getAuctionsByBidder(int bidderObjId)
+	public ItemAuction[] getAuctionsByBidder(int bidderObjId)
 	{
 		final Collection<ItemAuction> auctions = getAuctions();
 		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
@@ -363,7 +363,7 @@ public final class ItemAuctionInstance
 		return stack.toArray(new ItemAuction[stack.size()]);
 	}
 	
-	public final Collection<ItemAuction> getAuctions()
+	public Collection<ItemAuction> getAuctions()
 	{
 		final Collection<ItemAuction> auctions;
 		
@@ -385,7 +385,7 @@ public final class ItemAuctionInstance
 		}
 		
 		@Override
-		public final void run()
+		public void run()
 		{
 			try
 			{

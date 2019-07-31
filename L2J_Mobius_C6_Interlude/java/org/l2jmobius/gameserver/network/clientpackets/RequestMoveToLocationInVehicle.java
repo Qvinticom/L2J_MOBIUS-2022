@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.templates.item.WeaponType;
 import org.l2jmobius.gameserver.thread.TaskPriority;
 
-public final class RequestMoveToLocationInVehicle extends GameClientPacket
+public class RequestMoveToLocationInVehicle extends GameClientPacket
 {
 	private final Location _pos = new Location(0, 0, 0);
 	private final Location _origin_pos = new Location(0, 0, 0);

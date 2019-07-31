@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 /**
  * @author Luno
  */
-public final class ArmorSet
+public class ArmorSet
 {
 	private int _chestId;
 	private final List<Integer> _legs;

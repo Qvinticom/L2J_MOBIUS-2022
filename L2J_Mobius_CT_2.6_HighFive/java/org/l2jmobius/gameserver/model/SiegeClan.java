@@ -64,12 +64,12 @@ public class SiegeClan
 		_flag.clear();
 	}
 	
-	public final int getClanId()
+	public int getClanId()
 	{
 		return _clanId;
 	}
 	
-	public final List<Npc> getFlag()
+	public List<Npc> getFlag()
 	{
 		return _flag;
 	}

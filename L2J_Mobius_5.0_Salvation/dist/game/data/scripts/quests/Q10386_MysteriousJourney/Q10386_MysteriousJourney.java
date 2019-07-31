@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Mysterious Journey (10386)
  * @author St3eT
  */
-public final class Q10386_MysteriousJourney extends Quest
+public class Q10386_MysteriousJourney extends Quest
 {
 	// NPCs
 	private static final int TAPOY = 30499;

@@ -65,7 +65,7 @@ import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
  * Hellbound class-loader.
  * @author Zoey76
  */
-public final class HellboundLoader
+public class HellboundLoader
 {
 	private static final Logger LOGGER = Logger.getLogger(HellboundLoader.class.getName());
 	

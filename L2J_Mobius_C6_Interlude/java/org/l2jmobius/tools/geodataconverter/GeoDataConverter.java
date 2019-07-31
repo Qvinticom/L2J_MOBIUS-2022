@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.World;
 /**
  * @author Hasha
  */
-public final class GeoDataConverter
+public class GeoDataConverter
 {
 	final static String GEODATA_PATH = "./data/geodata/";
 	

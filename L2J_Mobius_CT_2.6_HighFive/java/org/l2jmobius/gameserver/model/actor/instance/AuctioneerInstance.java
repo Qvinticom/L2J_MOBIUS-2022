@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.entity.Auction.Bidder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-public final class AuctioneerInstance extends Npc
+public class AuctioneerInstance extends Npc
 {
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;

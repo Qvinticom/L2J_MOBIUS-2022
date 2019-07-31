@@ -944,7 +944,7 @@ public class MercTicketManager
 		return ITEM_IDS;
 	}
 	
-	public final List<ItemInstance> getDroppedTickets()
+	public List<ItemInstance> getDroppedTickets()
 	{
 		return _droppedTickets;
 	}

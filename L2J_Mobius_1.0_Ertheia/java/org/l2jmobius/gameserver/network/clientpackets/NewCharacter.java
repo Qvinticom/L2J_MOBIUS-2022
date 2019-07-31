@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NewCharacterSuccess;
 /**
  * @author Zoey76
  */
-public final class NewCharacter implements IClientIncomingPacket
+public class NewCharacter implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

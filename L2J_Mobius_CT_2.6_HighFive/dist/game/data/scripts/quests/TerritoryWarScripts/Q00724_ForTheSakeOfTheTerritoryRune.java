@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Rune (724)
  * @author Gigiikun
  */
-public final class Q00724_ForTheSakeOfTheTerritoryRune extends TerritoryWarSuperClass
+public class Q00724_ForTheSakeOfTheTerritoryRune extends TerritoryWarSuperClass
 {
 	public Q00724_ForTheSakeOfTheTerritoryRune()
 	{

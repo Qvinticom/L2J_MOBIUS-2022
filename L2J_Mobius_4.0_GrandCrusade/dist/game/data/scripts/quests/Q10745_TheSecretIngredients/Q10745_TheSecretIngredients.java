@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * The Secret Ingredients (10745)
  * @author Sdw
  */
-public final class Q10745_TheSecretIngredients extends Quest
+public class Q10745_TheSecretIngredients extends Quest
 {
 	// NPCs
 	private static final int DOLKIN = 33954;

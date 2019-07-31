@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestTargetCanceld implements IClientIncomingPacket
+public class RequestTargetCanceld implements IClientIncomingPacket
 {
 	private int _unselect;
 	

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * @URL https://l2wiki.com/Anomaly_in_the_Enchanted_Valley
  * @author Gigi
  */
-public final class Q10843_AnomalyInTheEnchantedValley extends Quest
+public class Q10843_AnomalyInTheEnchantedValley extends Quest
 {
 	// NPCs
 	private static final int CRONOS = 30610;

@@ -23,7 +23,7 @@ import org.l2jmobius.loginserver.network.OutgoingPackets;
 /**
  * Fromat: d d: response
  */
-public final class GGAuth implements IOutgoingPacket
+public class GGAuth implements IOutgoingPacket
 {
 	private final int _response;
 	

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinFriend;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestFriendInvite extends GameClientPacket
+public class RequestFriendInvite extends GameClientPacket
 {
 	private String _name;
 	

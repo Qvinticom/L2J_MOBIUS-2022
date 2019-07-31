@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author -Wooden- D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00
  */
-public final class RequestExOustFromMPCC extends GameClientPacket
+public class RequestExOustFromMPCC extends GameClientPacket
 {
 	private String _name;
 	

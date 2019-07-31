@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Orc Subjugation (263)
  * @author ivantotov
  */
-public final class Q00263_OrcSubjugation extends Quest
+public class Q00263_OrcSubjugation extends Quest
 {
 	// NPCs
 	private static final int KAYLEEN = 30346;

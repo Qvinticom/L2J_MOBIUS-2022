@@ -175,7 +175,7 @@ public class Bingo
 		return lines += (checkLine(2, 4, 6) ? 1 : 0);
 	}
 	
-	public boolean checkLine(final int idx1, final int idx2, final int idx3)
+	public boolean checkLine(int idx1, int idx2, int idx3)
 	{
 		return guesses.contains(board.get(idx1)) && guesses.contains(board.get(idx2)) && guesses.contains(board.get(idx3));
 	}

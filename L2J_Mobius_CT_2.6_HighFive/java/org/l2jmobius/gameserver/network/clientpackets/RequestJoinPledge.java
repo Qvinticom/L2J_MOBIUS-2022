@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 /**
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinPledge implements IClientIncomingPacket
+public class RequestJoinPledge implements IClientIncomingPacket
 {
 	private int _target;
 	private int _pledgeType;

@@ -20,7 +20,7 @@ package org.l2jmobius.commons.mmocore;
  * @author Forsaiken
  * @param <E>
  */
-public final class NioNetStackList<E>
+public class NioNetStackList<E>
 {
 	private final NioNetStackNode _start = new NioNetStackNode();
 	
@@ -33,7 +33,7 @@ public final class NioNetStackList<E>
 		clear();
 	}
 	
-	public final void addLast(E elem)
+	public void addLast(E elem)
 	{
 		final NioNetStackNode newEndNode = _buf.removeFirst();
 		_end._value = elem;
@@ -41,7 +41,7 @@ public final class NioNetStackList<E>
 		_end = newEndNode;
 	}
 	
-	public final E removeFirst()
+	public E removeFirst()
 	{
 		final NioNetStackNode old = _start._next;
 		final E value = old._value;
@@ -50,12 +50,12 @@ public final class NioNetStackList<E>
 		return value;
 	}
 	
-	public final boolean isEmpty()
+	public boolean isEmpty()
 	{
 		return _start._next == _end;
 	}
 	
-	public final void clear()
+	public void clear()
 	{
 		_start._next = _end;
 	}

@@ -27,7 +27,7 @@ import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
  * Seven Signs, Forbidden Book of the Elmore-Aden Kingdom (10293)
  * @author Adry_85
  */
-public final class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends Quest
+public class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends Quest
 {
 	// NPCs
 	private static final int SOPHIA1 = 32596;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Escape effect implementation.
  * @author Adry_85
  */
-public final class Escape extends AbstractEffect
+public class Escape extends AbstractEffect
 {
 	private final TeleportWhereType _escapeType;
 	

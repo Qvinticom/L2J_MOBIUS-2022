@@ -42,7 +42,7 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  * Disciple's Necropolis Past instance zone.
  * @author Adry_85
  */
-public final class SSQDisciplesNecropolisPast extends AbstractInstance
+public class SSQDisciplesNecropolisPast extends AbstractInstance
 {
 	// NPCs
 	private static final int SEAL_DEVICE = 27384;
@@ -412,7 +412,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsMortal(false);
 		return super.onSpawn(npc);

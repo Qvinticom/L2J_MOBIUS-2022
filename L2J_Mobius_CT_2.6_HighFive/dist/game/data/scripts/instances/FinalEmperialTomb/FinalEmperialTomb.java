@@ -72,7 +72,7 @@ import instances.AbstractInstance;
  * Use proper zone spawn system.
  * @author Gigiikun
  */
-public final class FinalEmperialTomb extends AbstractInstance implements IXmlReader
+public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(FinalEmperialTomb.class.getName());
 	

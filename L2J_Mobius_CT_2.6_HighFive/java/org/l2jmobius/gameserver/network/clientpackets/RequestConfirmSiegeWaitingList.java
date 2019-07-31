@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
+public class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
 {
 	private int _approved;
 	private int _castleId;

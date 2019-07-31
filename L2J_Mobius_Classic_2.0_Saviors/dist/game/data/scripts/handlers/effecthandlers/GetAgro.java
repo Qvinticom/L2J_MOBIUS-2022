@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Get Agro effect implementation.
  * @author Adry_85, Mobius
  */
-public final class GetAgro extends AbstractEffect
+public class GetAgro extends AbstractEffect
 {
 	public GetAgro(StatsSet params)
 	{

@@ -29,23 +29,23 @@ import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 public class Q00348_AnArrogantSearch extends Quest
 {
 	// NPCs
-	public final int HANELLIN = 30864;
-	public final int CLAUDIA_ATHEBALT = 31001;
-	public final int TABLE_OF_VISION = 31646;
+	private static final int HANELLIN = 30864;
+	private static final int CLAUDIA_ATHEBALT = 31001;
+	private static final int TABLE_OF_VISION = 31646;
 	// Monsters
-	public final int CRIMSON_DRAKE = 20670;
-	public final int KADIOS = 20671;
-	public final int PLATINUM_TRIBE_SHAMAN = 20828;
-	public final int PLATINUM_TRIBE_PREFECT = 20829;
-	public final int GUARDIAN_ANGEL = 20830;
-	public final int SEAL_ANGEL = 20831;
-	public final int STONE_WATCHMAN_EZEKIEL = 27296;
+	private static final int CRIMSON_DRAKE = 20670;
+	private static final int KADIOS = 20671;
+	private static final int PLATINUM_TRIBE_SHAMAN = 20828;
+	private static final int PLATINUM_TRIBE_PREFECT = 20829;
+	private static final int GUARDIAN_ANGEL = 20830;
+	private static final int SEAL_ANGEL = 20831;
+	private static final int STONE_WATCHMAN_EZEKIEL = 27296;
 	// Items
-	public final int SHELL_OF_MONSTERS = 14857;
-	public final int BOOK_OF_SAINT = 4397;
-	public final int HEALING_POTION = 1061;
-	public final int WHITE_CLOTH_PLATINUM = 4294;
-	public final int WHITE_CLOTH_ANGLE = 4400;
+	private static final int SHELL_OF_MONSTERS = 14857;
+	private static final int BOOK_OF_SAINT = 4397;
+	private static final int HEALING_POTION = 1061;
+	private static final int WHITE_CLOTH_PLATINUM = 4294;
+	private static final int WHITE_CLOTH_ANGLE = 4400;
 	private static final int BLOODED_FABRIC = 4295;
 	
 	public Q00348_AnArrogantSearch()

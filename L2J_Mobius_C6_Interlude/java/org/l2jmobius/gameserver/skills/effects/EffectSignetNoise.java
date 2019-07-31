@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import org.l2jmobius.gameserver.skills.Env;
 
-public final class EffectSignetNoise extends Effect
+public class EffectSignetNoise extends Effect
 {
 	private EffectPointInstance _actor;
 	

@@ -23,7 +23,7 @@ import org.l2jmobius.loginserver.network.OutgoingPackets;
 /**
  * Fromat: d d: the failure reason
  */
-public final class LoginFail implements IOutgoingPacket
+public class LoginFail implements IOutgoingPacket
 {
 	public enum LoginFailReason
 	{
@@ -74,7 +74,7 @@ public final class LoginFail implements IOutgoingPacket
 			_code = code;
 		}
 		
-		public final int getCode()
+		public int getCode()
 		{
 			return _code;
 		}

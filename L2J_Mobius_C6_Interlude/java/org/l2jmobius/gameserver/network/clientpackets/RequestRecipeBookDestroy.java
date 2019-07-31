@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
-public final class RequestRecipeBookDestroy extends GameClientPacket
+public class RequestRecipeBookDestroy extends GameClientPacket
 {
 	private int _recipeID;
 	

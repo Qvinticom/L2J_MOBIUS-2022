@@ -226,7 +226,7 @@ public abstract class ClanHall
 	/**
 	 * @return Id Of Clan hall
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _clanHallId;
 	}
@@ -234,7 +234,7 @@ public abstract class ClanHall
 	/**
 	 * @return the Clan Hall name.
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
@@ -242,7 +242,7 @@ public abstract class ClanHall
 	/**
 	 * @return OwnerId
 	 */
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
@@ -250,7 +250,7 @@ public abstract class ClanHall
 	/**
 	 * @return Desc
 	 */
-	public final String getDesc()
+	public String getDesc()
 	{
 		return _desc;
 	}
@@ -258,7 +258,7 @@ public abstract class ClanHall
 	/**
 	 * @return Location
 	 */
-	public final String getLocation()
+	public String getLocation()
 	{
 		return _location;
 	}
@@ -266,7 +266,7 @@ public abstract class ClanHall
 	/**
 	 * @return all DoorInstance
 	 */
-	public final ArrayList<DoorInstance> getDoors()
+	public ArrayList<DoorInstance> getDoors()
 	{
 		if (_doors == null)
 		{
@@ -279,7 +279,7 @@ public abstract class ClanHall
 	 * @param doorId
 	 * @return Door
 	 */
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{

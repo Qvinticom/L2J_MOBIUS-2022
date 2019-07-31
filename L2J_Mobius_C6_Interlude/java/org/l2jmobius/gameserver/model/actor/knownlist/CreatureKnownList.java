@@ -65,7 +65,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 	 * @param player The PlayerInstance to search in _knownPlayer
 	 * @return True if the PlayerInstance is in _knownPlayer of the Creature.
 	 */
-	public final boolean knowsThePlayer(PlayerInstance player)
+	public boolean knowsThePlayer(PlayerInstance player)
 	{
 		return (getActiveChar() == player) || getKnownPlayers().containsKey(player.getObjectId());
 	}
@@ -74,7 +74,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 	 * Remove all WorldObject from _knownObjects and _knownPlayer of the Creature then cancel Attak or Cast and notify AI.
 	 */
 	@Override
-	public final void removeAllKnownObjects()
+	public void removeAllKnownObjects()
 	{
 		super.removeAllKnownObjects();
 		getKnownPlayers().clear();
@@ -177,7 +177,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 		return result;
 	}
 	
-	public final Map<Integer, PlayerInstance> getKnownPlayers()
+	public Map<Integer, PlayerInstance> getKnownPlayers()
 	{
 		if (_knownPlayers == null)
 		{
@@ -187,7 +187,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 		return _knownPlayers;
 	}
 	
-	public final Map<Integer, Integer> getKnownRelations()
+	public Map<Integer, Integer> getKnownRelations()
 	{
 		if (_knownRelations == null)
 		{
@@ -197,7 +197,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 		return _knownRelations;
 	}
 	
-	public final Collection<PlayerInstance> getKnownPlayersInRadius(long radius)
+	public Collection<PlayerInstance> getKnownPlayersInRadius(long radius)
 	{
 		final List<PlayerInstance> result = new ArrayList<>();
 		

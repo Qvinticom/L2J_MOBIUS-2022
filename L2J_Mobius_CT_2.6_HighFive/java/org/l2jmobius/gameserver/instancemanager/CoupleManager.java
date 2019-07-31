@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.entity.Couple;
 /**
  * @author evill33t
  */
-public final class CoupleManager
+public class CoupleManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CoupleManager.class.getName());
 	
@@ -67,7 +67,7 @@ public final class CoupleManager
 		}
 	}
 	
-	public final Couple getCouple(int coupleId)
+	public Couple getCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
 		return index >= 0 ? _couples.get(index) : null;
@@ -117,7 +117,7 @@ public final class CoupleManager
 		_couples.remove(index);
 	}
 	
-	public final int getCoupleIndex(int coupleId)
+	public int getCoupleIndex(int coupleId)
 	{
 		int i = 0;
 		for (Couple temp : _couples)
@@ -131,7 +131,7 @@ public final class CoupleManager
 		return -1;
 	}
 	
-	public final List<Couple> getCouples()
+	public List<Couple> getCouples()
 	{
 		return _couples;
 	}

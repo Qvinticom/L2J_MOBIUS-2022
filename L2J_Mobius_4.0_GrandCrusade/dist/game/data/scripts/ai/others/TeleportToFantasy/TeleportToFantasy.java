@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Fantasy Island teleport AI.
  * @author Plim
  */
-public final class TeleportToFantasy extends AbstractNpcAI
+public class TeleportToFantasy extends AbstractNpcAI
 {
 	// NPC
 	private static final int PADDIES = 32378;

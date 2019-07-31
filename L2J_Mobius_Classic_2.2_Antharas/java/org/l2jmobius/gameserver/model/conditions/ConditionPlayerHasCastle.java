@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionPlayerHasCastle.
  * @author MrPoke
  */
-public final class ConditionPlayerHasCastle extends Condition
+public class ConditionPlayerHasCastle extends Condition
 {
 	private final int _castle;
 	

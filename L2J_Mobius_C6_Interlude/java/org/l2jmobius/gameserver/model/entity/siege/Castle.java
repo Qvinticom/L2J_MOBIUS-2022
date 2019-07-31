@@ -694,12 +694,12 @@ public class Castle
 		}
 	}
 	
-	public final int getCastleId()
+	public int getCastleId()
 	{
 		return _castleId;
 	}
 	
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -718,22 +718,22 @@ public class Castle
 		return null;
 	}
 	
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
-	public final Siege getSiege()
+	public Siege getSiege()
 	{
 		if (_siege == null)
 		{
@@ -746,32 +746,32 @@ public class Castle
 		return _siege;
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
 	
-	public final int getSiegeDayOfWeek()
+	public int getSiegeDayOfWeek()
 	{
 		return _siegeDayOfWeek;
 	}
 	
-	public final int getSiegeHourOfDay()
+	public int getSiegeHourOfDay()
 	{
 		return _siegeHourOfDay;
 	}
 	
-	public final int getTaxPercent()
+	public int getTaxPercent()
 	{
 		return _taxPercent;
 	}
 	
-	public final double getTaxRate()
+	public double getTaxRate()
 	{
 		return _taxRate;
 	}
 	
-	public final int getTreasury()
+	public int getTreasury()
 	{
 		return _treasury;
 	}

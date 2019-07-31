@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Cave Maiden, Keeper AI.
  * @author proGenitor
  */
-public final class CaveMaiden extends AbstractNpcAI
+public class CaveMaiden extends AbstractNpcAI
 {
 	// NPCs
 	private static final int CAVEMAIDEN = 20134;

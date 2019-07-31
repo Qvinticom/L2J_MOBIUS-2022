@@ -44,7 +44,7 @@ import ai.AbstractNpcAI;
  * TrainingCamp AI.
  * @author Gladicek, Mobius
  */
-public final class TrainingCamp extends AbstractNpcAI
+public class TrainingCamp extends AbstractNpcAI
 {
 	// NPC
 	private static final int RECRUITER = 4378;

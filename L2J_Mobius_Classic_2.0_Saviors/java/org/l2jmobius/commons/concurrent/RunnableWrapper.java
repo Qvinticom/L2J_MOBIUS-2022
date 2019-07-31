@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 /**
  * @author Mobius
  */
-public final class RunnableWrapper implements Runnable
+public class RunnableWrapper implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(RunnableWrapper.class.getName());
 	

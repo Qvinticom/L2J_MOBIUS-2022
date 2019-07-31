@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Cruma Tower AI
  * @author malyelfik
  */
-public final class CrumaTower extends AbstractNpcAI
+public class CrumaTower extends AbstractNpcAI
 {
 	// NPCs
 	private static final int CARSUS = 30483;

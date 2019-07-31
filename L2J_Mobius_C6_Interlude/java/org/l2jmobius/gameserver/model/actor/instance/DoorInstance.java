@@ -77,7 +77,7 @@ public class DoorInstance extends Creature
 	private ClanHall _clanHall;
 	protected int _autoActionDelay = -1;
 	private ScheduledFuture<?> _autoActionTask;
-	public final Territory pos;
+	public Territory pos;
 	
 	/**
 	 * This class may be created only by Creature and only for AI.
@@ -205,7 +205,7 @@ public class DoorInstance extends Creature
 	}
 	
 	@Override
-	public final DoorKnownList getKnownList()
+	public DoorKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof DoorKnownList))
 		{
@@ -216,7 +216,7 @@ public class DoorInstance extends Creature
 	}
 	
 	@Override
-	public final DoorStat getStat()
+	public DoorStat getStat()
 	{
 		if ((super.getStat() == null) || !(super.getStat() instanceof DoorStat))
 		{
@@ -227,7 +227,7 @@ public class DoorInstance extends Creature
 	}
 	
 	@Override
-	public final DoorStatus getStatus()
+	public DoorStatus getStatus()
 	{
 		if ((super.getStatus() == null) || !(super.getStatus() instanceof DoorStatus))
 		{
@@ -241,13 +241,13 @@ public class DoorInstance extends Creature
 	 * Checks if is unlockable.
 	 * @return true, if is unlockable
 	 */
-	public final boolean isUnlockable()
+	public boolean isUnlockable()
 	{
 		return _unlockable;
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return 1;
 	}
@@ -326,7 +326,7 @@ public class DoorInstance extends Creature
 	 * Gets the castle.
 	 * @return the castle
 	 */
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		if (_castleIndex < 0)
 		{
@@ -345,7 +345,7 @@ public class DoorInstance extends Creature
 	 * Gets the fort.
 	 * @return the fort
 	 */
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		if (_fortIndex < 0)
 		{
@@ -674,7 +674,7 @@ public class DoorInstance extends Creature
 		closeMe();
 	}
 	
-	public final void closeMe()
+	public void closeMe()
 	{
 		synchronized (this)
 		{
@@ -689,7 +689,7 @@ public class DoorInstance extends Creature
 		broadcastStatusUpdate();
 	}
 	
-	public final void openMe()
+	public void openMe()
 	{
 		synchronized (this)
 		{

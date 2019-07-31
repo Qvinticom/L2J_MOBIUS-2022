@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Blade Under Foot (512)
  * @author Mobius
  */
-public final class Q00512_BladeUnderFoot extends Quest
+public class Q00512_BladeUnderFoot extends Quest
 {
 	// NPCs
 	private static final int[] NPCS =

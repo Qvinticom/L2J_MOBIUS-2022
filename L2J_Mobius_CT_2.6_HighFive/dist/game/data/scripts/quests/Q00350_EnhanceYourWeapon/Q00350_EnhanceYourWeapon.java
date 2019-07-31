@@ -72,17 +72,17 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			_chance = chance;
 		}
 		
-		public final AbsorbCrystalType getAbsorbCrystalType()
+		public AbsorbCrystalType getAbsorbCrystalType()
 		{
 			return _absorbCrystalType;
 		}
 		
-		public final int getChance()
+		public int getChance()
 		{
 			return _chance;
 		}
 		
-		public final boolean isSkillNeeded()
+		public boolean isSkillNeeded()
 		{
 			return _isSkillNeeded;
 		}
@@ -101,17 +101,17 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			_leveledItemId = leveledItemId;
 		}
 		
-		public final int getItemId()
+		public int getItemId()
 		{
 			return _itemId;
 		}
 		
-		public final int getLevel()
+		public int getLevel()
 		{
 			return _level;
 		}
 		
-		public final int getLeveledItemId()
+		public int getLeveledItemId()
 		{
 			return _leveledItemId;
 		}

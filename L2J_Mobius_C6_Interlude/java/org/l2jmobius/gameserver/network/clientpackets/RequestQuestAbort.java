@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestQuestAbort extends GameClientPacket
+public class RequestQuestAbort extends GameClientPacket
 {
 	private int _questId;
 	

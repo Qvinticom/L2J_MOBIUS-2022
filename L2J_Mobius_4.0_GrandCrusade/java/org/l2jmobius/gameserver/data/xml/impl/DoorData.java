@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
  * This class loads and hold info about doors.
  * @author JIV, GodKratos, UnAfraid
  */
-public final class DoorData implements IXmlReader
+public class DoorData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(DoorData.class.getName());
 	

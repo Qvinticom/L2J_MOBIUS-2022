@@ -25,7 +25,7 @@ import java.util.Queue;
  * @author UnAfraid
  * @param <E>
  */
-public final class EmptyQueue<E> implements Queue<E>
+public class EmptyQueue<E> implements Queue<E>
 {
 	private static final Queue<Object> EMPTY_QUEUE = new EmptyQueue<>();
 	

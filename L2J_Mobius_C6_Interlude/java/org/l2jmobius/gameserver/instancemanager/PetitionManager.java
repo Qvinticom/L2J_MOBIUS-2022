@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Petition Manager
  * @author Tempy
  */
-public final class PetitionManager
+public class PetitionManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(PetitionManager.class.getName());
 	private static PetitionManager _instance;

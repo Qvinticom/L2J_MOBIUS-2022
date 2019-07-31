@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Call Party effect implementation.
  * @author Adry_85
  */
-public final class CallParty extends AbstractEffect
+public class CallParty extends AbstractEffect
 {
 	public CallParty(StatsSet params)
 	{

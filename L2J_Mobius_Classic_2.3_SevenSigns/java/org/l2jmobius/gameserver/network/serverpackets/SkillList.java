@@ -24,7 +24,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class SkillList implements IClientOutgoingPacket
+public class SkillList implements IClientOutgoingPacket
 {
 	private final List<Skill> _skills = new ArrayList<>();
 	private int _lastLearnedSkillId = 0;

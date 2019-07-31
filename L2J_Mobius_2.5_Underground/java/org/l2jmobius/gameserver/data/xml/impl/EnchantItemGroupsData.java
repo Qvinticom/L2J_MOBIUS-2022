@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public final class EnchantItemGroupsData implements IXmlReader
+public class EnchantItemGroupsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantItemGroupsData.class.getName());
 	

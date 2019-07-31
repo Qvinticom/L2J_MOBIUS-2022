@@ -31,7 +31,7 @@ import quests.Q00123_TheLeaderAndTheFollower.Q00123_TheLeaderAndTheFollower;
  * To Lead And Be Led (118)
  * @author ivantotov
  */
-public final class Q00118_ToLeadAndBeLed extends Quest
+public class Q00118_ToLeadAndBeLed extends Quest
 {
 	// NPC
 	private static final int BLACKSMITH_PINTER = 30298;

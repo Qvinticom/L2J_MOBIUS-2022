@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author Forsaiken
  */
-public final class ItemAuctionBid
+public class ItemAuctionBid
 {
 	private final int _playerObjId;
 	private long _lastBid;
@@ -33,12 +33,12 @@ public final class ItemAuctionBid
 		_lastBid = lastBid;
 	}
 	
-	public final int getPlayerObjId()
+	public int getPlayerObjId()
 	{
 		return _playerObjId;
 	}
 	
-	public final long getLastBid()
+	public long getLastBid()
 	{
 		return _lastBid;
 	}

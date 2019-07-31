@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Falk AI.
  * @author DS
  */
-public final class Falk extends AbstractNpcAI
+public class Falk extends AbstractNpcAI
 {
 	// NPCs
 	private static final int FALK = 32297;
@@ -43,7 +43,7 @@ public final class Falk extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))
 		{
@@ -53,7 +53,7 @@ public final class Falk extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))
 		{
@@ -63,7 +63,7 @@ public final class Falk extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("badges"))
 		{

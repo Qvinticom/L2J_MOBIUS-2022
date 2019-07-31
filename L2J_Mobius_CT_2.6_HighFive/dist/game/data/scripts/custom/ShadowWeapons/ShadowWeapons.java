@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Original Jython script by DrLecter.
  * @author Nyaran, jurchiks
  */
-public final class ShadowWeapons extends AbstractNpcAI
+public class ShadowWeapons extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

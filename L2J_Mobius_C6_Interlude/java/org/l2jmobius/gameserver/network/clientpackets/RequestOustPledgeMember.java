@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestOustPledgeMember extends GameClientPacket
+public class RequestOustPledgeMember extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestOustPledgeMember.class.getName());
 	

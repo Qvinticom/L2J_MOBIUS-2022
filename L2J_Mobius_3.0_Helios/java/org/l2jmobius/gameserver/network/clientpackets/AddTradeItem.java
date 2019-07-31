@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 /**
  * @version $Revision: 1.5.2.2.2.5 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class AddTradeItem implements IClientIncomingPacket
+public class AddTradeItem implements IClientIncomingPacket
 {
 	private int _tradeId;
 	private int _objectId;

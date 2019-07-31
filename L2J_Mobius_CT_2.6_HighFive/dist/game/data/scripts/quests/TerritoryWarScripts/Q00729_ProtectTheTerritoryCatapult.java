@@ -20,7 +20,7 @@ package quests.TerritoryWarScripts;
  * Protect the Territory Catapult! (729)
  * @author Gigiikun
  */
-public final class Q00729_ProtectTheTerritoryCatapult extends TerritoryWarSuperClass
+public class Q00729_ProtectTheTerritoryCatapult extends TerritoryWarSuperClass
 {
 	public Q00729_ProtectTheTerritoryCatapult()
 	{

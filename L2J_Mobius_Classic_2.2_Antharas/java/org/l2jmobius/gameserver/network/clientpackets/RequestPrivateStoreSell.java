@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestPrivateStoreSell implements IClientIncomingPacket
+public class RequestPrivateStoreSell implements IClientIncomingPacket
 {
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Champion (223)
  * @author ivantotov
  */
-public final class Q00223_TestOfTheChampion extends Quest
+public class Q00223_TestOfTheChampion extends Quest
 {
 	// NPCs
 	private static final int TRADER_GROOT = 30093;

@@ -48,7 +48,7 @@ public class BossZone extends ZoneType
 		0
 	};
 	
-	public final class Settings extends AbstractZoneSettings
+	public class Settings extends AbstractZoneSettings
 	{
 		// track the times that players got disconnected. Players are allowed
 		// to log back into the zone as long as their log-out was within _timeInvade time...

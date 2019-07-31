@@ -31,7 +31,7 @@ import quests.Q10757_QuietingTheStorm.Q10757_QuietingTheStorm;
  * The Oath of the Wind (10758)
  * @author malyelfik
  */
-public final class Q10758_TheOathOfTheWind extends Quest
+public class Q10758_TheOathOfTheWind extends Quest
 {
 	// NPC
 	private static final int PIO = 33963;

@@ -32,7 +32,7 @@ import quests.Q00007_ATripBegins.Q00007_ATripBegins;
  * Once More In The Arms Of The Mother Tree (46)
  * @author janiko
  */
-public final class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
+public class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;

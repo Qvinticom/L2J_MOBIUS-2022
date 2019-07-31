@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionItemId.
  * @author mkizub
  */
-public final class ConditionItemId extends Condition
+public class ConditionItemId extends Condition
 {
 	private final int _itemId;
 	

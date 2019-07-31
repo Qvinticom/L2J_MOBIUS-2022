@@ -29,14 +29,14 @@ final class FastStringBuilder
 		_array = new char[capacity];
 	}
 	
-	public final void append(String text)
+	public void append(String text)
 	{
 		text.getChars(0, text.length(), _array, _len);
 		_len += text.length();
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return new String(_array);
 	}

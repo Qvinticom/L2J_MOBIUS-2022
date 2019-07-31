@@ -37,7 +37,7 @@ import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
  * Fearon Training Grounds Instance Zone.
  * @author Sdw, malyelfik
  */
-public final class FaeronTrainingGrounds2 extends AbstractInstance
+public class FaeronTrainingGrounds2 extends AbstractInstance
 {
 	// NPCs
 	private static final int KATALIN = 33943;

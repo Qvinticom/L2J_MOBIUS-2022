@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  * <BR>
  * Note: If for a given exception a packet needs to be handled on more then one state, then it should be added to all these states.
  */
-public final class GamePacketHandler implements IPacketHandler<GameClient>, IClientFactory<GameClient>, IMMOExecutor<GameClient>
+public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFactory<GameClient>, IMMOExecutor<GameClient>
 {
 	private static final Logger LOGGER = Logger.getLogger(GamePacketHandler.class.getName());
 	

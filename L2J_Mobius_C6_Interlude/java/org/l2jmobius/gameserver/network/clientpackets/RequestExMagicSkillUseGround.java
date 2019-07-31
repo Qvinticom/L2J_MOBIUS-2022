@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * Fromat:(ch) dddddc
  */
-public final class RequestExMagicSkillUseGround extends GameClientPacket
+public class RequestExMagicSkillUseGround extends GameClientPacket
 {
 	private int _x;
 	private int _y;

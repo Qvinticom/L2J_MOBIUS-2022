@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Orc Hunting (260)
  * @author xban1x
  */
-public final class Q00260_OrcHunting extends Quest
+public class Q00260_OrcHunting extends Quest
 {
 	// NPC
 	private static final int RAYEN = 30221;

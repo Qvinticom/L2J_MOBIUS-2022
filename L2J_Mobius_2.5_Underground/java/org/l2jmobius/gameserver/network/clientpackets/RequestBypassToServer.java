@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.util.Util;
  * RequestBypassToServer client packet implementation.
  * @author HorridoJoho
  */
-public final class RequestBypassToServer implements IClientIncomingPacket
+public class RequestBypassToServer implements IClientIncomingPacket
 {
 	// FIXME: This is for compatibility, will be changed when bypass functionality got an overhaul by NosBit
 	private static final String[] _possibleNonHtmlCommands =

@@ -29,7 +29,7 @@ import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
  * @URL http://l2on.net/en/?c=quests&id=10705&game=1
  * @author Gigi
  */
-public final class Q10705_BottleOfTautisSoul extends Quest
+public class Q10705_BottleOfTautisSoul extends Quest
 {
 	// NPCs
 	private static final int FERGASON = 33681;

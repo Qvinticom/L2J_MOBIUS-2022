@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  * This class manages all chest.
  * @author Julian
  */
-public final class ChestInstance extends MonsterInstance
+public class ChestInstance extends MonsterInstance
 {
 	private volatile boolean _specialDrop;
 	

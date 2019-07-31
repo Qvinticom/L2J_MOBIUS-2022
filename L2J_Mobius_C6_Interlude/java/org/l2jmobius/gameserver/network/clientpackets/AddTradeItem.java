@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
 import org.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
 import org.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 
-public final class AddTradeItem extends GameClientPacket
+public class AddTradeItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
 	private int _tradeId;

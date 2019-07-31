@@ -30,7 +30,7 @@ import quests.Q10780_AWeakenedBarrier.Q10780_AWeakenedBarrier;
  * Ingredients to Enforcements (10781)
  * @author malyelfik
  */
-public final class Q10781_IngredientsToEnforcements extends Quest
+public class Q10781_IngredientsToEnforcements extends Quest
 {
 	// NPC
 	private static final int BACON = 33846;

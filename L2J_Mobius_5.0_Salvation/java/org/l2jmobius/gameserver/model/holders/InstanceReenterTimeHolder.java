@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * Simple class for storing Reenter Data for Instances.
  * @author FallenAngel
  */
-public final class InstanceReenterTimeHolder
+public class InstanceReenterTimeHolder
 {
 	private DayOfWeek _day = null;
 	private int _hour = -1;
@@ -42,22 +42,22 @@ public final class InstanceReenterTimeHolder
 		_minute = minute;
 	}
 	
-	public final long getTime()
+	public long getTime()
 	{
 		return _time;
 	}
 	
-	public final DayOfWeek getDay()
+	public DayOfWeek getDay()
 	{
 		return _day;
 	}
 	
-	public final int getHour()
+	public int getHour()
 	{
 		return _hour;
 	}
 	
-	public final int getMinute()
+	public int getMinute()
 	{
 		return _minute;
 	}

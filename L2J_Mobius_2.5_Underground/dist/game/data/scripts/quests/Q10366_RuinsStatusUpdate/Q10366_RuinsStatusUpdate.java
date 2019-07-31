@@ -31,7 +31,7 @@ import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
  * Ruins Status Update (10366)
  * @author Gladicek
  */
-public final class Q10366_RuinsStatusUpdate extends Quest
+public class Q10366_RuinsStatusUpdate extends Quest
 {
 	// NPCs
 	private static final int SEBION = 32978;

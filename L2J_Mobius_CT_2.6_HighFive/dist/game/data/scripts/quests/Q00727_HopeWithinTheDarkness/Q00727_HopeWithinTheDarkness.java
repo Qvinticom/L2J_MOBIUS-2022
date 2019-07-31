@@ -487,7 +487,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		// Buff players every two minutes, check for foes in aggro range
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 /**
  * @author UnAfraid
  */
-public final class EnchantSupportItem extends AbstractEnchantItem
+public class EnchantSupportItem extends AbstractEnchantItem
 {
 	private final boolean _isWeapon;
 	

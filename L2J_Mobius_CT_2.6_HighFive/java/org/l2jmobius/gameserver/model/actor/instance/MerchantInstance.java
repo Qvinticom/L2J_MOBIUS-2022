@@ -75,12 +75,12 @@ public class MerchantInstance extends NpcInstance
 		return _mpc;
 	}
 	
-	public final void showBuyWindow(PlayerInstance player, int val)
+	public void showBuyWindow(PlayerInstance player, int val)
 	{
 		showBuyWindow(player, val, true);
 	}
 	
-	public final void showBuyWindow(PlayerInstance player, int val, boolean applyTax)
+	public void showBuyWindow(PlayerInstance player, int val, boolean applyTax)
 	{
 		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)

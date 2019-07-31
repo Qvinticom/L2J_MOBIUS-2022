@@ -83,7 +83,7 @@ public abstract class BaseRecievePacket
 		return result;
 	}
 	
-	public final byte[] readB(int length)
+	public byte[] readB(int length)
 	{
 		final byte[] result = new byte[length];
 		System.arraycopy(_decrypt, _off, result, 0, length);

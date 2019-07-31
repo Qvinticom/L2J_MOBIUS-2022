@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Priest Of Blessing AI.
  * @author Gnacik
  */
-public final class PriestOfBlessing extends AbstractNpcAI
+public class PriestOfBlessing extends AbstractNpcAI
 {
 	// NPC
 	private static final int PRIEST = 32783;

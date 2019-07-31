@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
  * @URL http://www.lineage2.com/en/news/events/hungry-horse-event-09192017.php
  * @author Mobius
  */
-public final class HungryHorse extends LongTimeEvent
+public class HungryHorse extends LongTimeEvent
 {
 	// NPC
 	private static final int GALUP = 34010;

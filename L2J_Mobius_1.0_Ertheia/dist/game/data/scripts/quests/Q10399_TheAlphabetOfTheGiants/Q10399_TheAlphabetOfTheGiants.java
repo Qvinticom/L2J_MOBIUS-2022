@@ -29,7 +29,7 @@ import quests.Q10398_ASuspiciousBadge.Q10398_ASuspiciousBadge;
  * The Alphabet of the Giants (10399)
  * @author St3eT
  */
-public final class Q10399_TheAlphabetOfTheGiants extends Quest
+public class Q10399_TheAlphabetOfTheGiants extends Quest
 {
 	// NPCs
 	private static final int BACON = 33846;

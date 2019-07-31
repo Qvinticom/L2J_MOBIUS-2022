@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.taskmanager.TaskTypes;
 /**
  * @author Tempy
  */
-public final class TaskCleanUp extends Task
+public class TaskCleanUp extends Task
 {
 	private static final Logger LOGGER = Logger.getLogger(TaskCleanUp.class.getName());
 	public static final String NAME = "cleanup";

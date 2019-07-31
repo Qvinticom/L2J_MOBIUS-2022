@@ -32,7 +32,7 @@ import quests.Q00010_IntoTheWorld.Q00010_IntoTheWorld;
  * The Road Home (49)
  * @author janiko
  */
-public final class Q00049_TheRoadHome extends Quest
+public class Q00049_TheRoadHome extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;

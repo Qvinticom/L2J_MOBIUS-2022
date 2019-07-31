@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class ArtefactInstance extends Npc
+public class ArtefactInstance extends Npc
 {
 	/**
 	 * Creates a castle siege artifact.

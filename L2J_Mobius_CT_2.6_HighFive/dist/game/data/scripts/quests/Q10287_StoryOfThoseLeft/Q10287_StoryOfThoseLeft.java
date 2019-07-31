@@ -31,7 +31,7 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  * Story of Those Left (10287)
  * @author Adry_85
  */
-public final class Q10287_StoryOfThoseLeft extends Quest
+public class Q10287_StoryOfThoseLeft extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;

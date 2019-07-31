@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
  * Trigger Skill By Kill effect implementation.
  * @author Sdw
  */
-public final class TriggerSkillByKill extends AbstractEffect
+public class TriggerSkillByKill extends AbstractEffect
 {
 	private final int _chance;
 	private final SkillHolder _skill;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Dam Over Time effect implementation.
  */
-public final class DamOverTime extends AbstractEffect
+public class DamOverTime extends AbstractEffect
 {
 	private final boolean _canKill;
 	private final double _power;

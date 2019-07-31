@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
  * Lost and Found (457)
  * @author nonom
  */
-public final class Q00457_LostAndFound extends Quest
+public class Q00457_LostAndFound extends Quest
 {
 	// NPCs
 	private static final int GUMIEL = 32759;

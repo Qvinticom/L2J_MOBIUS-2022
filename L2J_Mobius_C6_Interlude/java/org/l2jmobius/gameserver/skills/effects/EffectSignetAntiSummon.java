@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.skills.Env;
 
-public final class EffectSignetAntiSummon extends Effect
+public class EffectSignetAntiSummon extends Effect
 {
 	private EffectPointInstance _actor;
 	

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * A Looter And A Railroad Man (649)
  * @author netvirus
  */
-public final class Q00649_ALooterAndARailroadMan extends Quest
+public class Q00649_ALooterAndARailroadMan extends Quest
 {
 	// Npc
 	private static final int RAILMAN_OBI = 32052;

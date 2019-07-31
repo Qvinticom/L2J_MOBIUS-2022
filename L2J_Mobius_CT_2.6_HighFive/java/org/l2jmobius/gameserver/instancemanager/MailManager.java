@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 /**
  * @author Migi, DS
  */
-public final class MailManager
+public class MailManager
 {
 	private static final Logger LOGGER = Logger.getLogger(MailManager.class.getName());
 	
@@ -87,17 +87,17 @@ public final class MailManager
 		LOGGER.info(getClass().getSimpleName() + ": Successfully loaded " + count + " messages.");
 	}
 	
-	public final Message getMessage(int msgId)
+	public Message getMessage(int msgId)
 	{
 		return _messages.get(msgId);
 	}
 	
-	public final Collection<Message> getMessages()
+	public Collection<Message> getMessages()
 	{
 		return _messages.values();
 	}
 	
-	public final boolean hasUnreadPost(PlayerInstance player)
+	public boolean hasUnreadPost(PlayerInstance player)
 	{
 		final int objectId = player.getObjectId();
 		for (Message msg : _messages.values())
@@ -110,7 +110,7 @@ public final class MailManager
 		return false;
 	}
 	
-	public final int getInboxSize(int objectId)
+	public int getInboxSize(int objectId)
 	{
 		int size = 0;
 		for (Message msg : _messages.values())
@@ -123,7 +123,7 @@ public final class MailManager
 		return size;
 	}
 	
-	public final int getOutboxSize(int objectId)
+	public int getOutboxSize(int objectId)
 	{
 		int size = 0;
 		for (Message msg : _messages.values())
@@ -136,7 +136,7 @@ public final class MailManager
 		return size;
 	}
 	
-	public final List<Message> getInbox(int objectId)
+	public List<Message> getInbox(int objectId)
 	{
 		final List<Message> inbox = new LinkedList<>();
 		for (Message msg : _messages.values())
@@ -149,7 +149,7 @@ public final class MailManager
 		return inbox;
 	}
 	
-	public final List<Message> getOutbox(int objectId)
+	public List<Message> getOutbox(int objectId)
 	{
 		final List<Message> outbox = new LinkedList<>();
 		for (Message msg : _messages.values())
@@ -184,7 +184,7 @@ public final class MailManager
 		ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
 	}
 	
-	public final void markAsReadInDb(int msgId)
+	public void markAsReadInDb(int msgId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isUnread = 'false' WHERE messageId = ?"))
@@ -198,7 +198,7 @@ public final class MailManager
 		}
 	}
 	
-	public final void markAsDeletedBySenderInDb(int msgId)
+	public void markAsDeletedBySenderInDb(int msgId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedBySender = 'true' WHERE messageId = ?"))
@@ -212,7 +212,7 @@ public final class MailManager
 		}
 	}
 	
-	public final void markAsDeletedByReceiverInDb(int msgId)
+	public void markAsDeletedByReceiverInDb(int msgId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedByReceiver = 'true' WHERE messageId = ?"))
@@ -226,7 +226,7 @@ public final class MailManager
 		}
 	}
 	
-	public final void removeAttachmentsInDb(int msgId)
+	public void removeAttachmentsInDb(int msgId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET hasAttachments = 'false' WHERE messageId = ?"))
@@ -240,7 +240,7 @@ public final class MailManager
 		}
 	}
 	
-	public final void deleteMessageInDb(int msgId)
+	public void deleteMessageInDb(int msgId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM messages WHERE messageId = ?"))

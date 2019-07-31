@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestEnchantItem implements IClientIncomingPacket
+public class RequestEnchantItem implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.items");
 	

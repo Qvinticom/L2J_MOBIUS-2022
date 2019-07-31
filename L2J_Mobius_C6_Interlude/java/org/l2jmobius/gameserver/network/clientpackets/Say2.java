@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class Say2 extends GameClientPacket
+public class Say2 extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(Say2.class.getName());
 	private static Logger _logChat = Logger.getLogger("chat");

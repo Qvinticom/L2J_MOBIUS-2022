@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Repent Your Sins (422)
  * @author ivantotov
  */
-public final class Q00422_RepentYourSins extends Quest
+public class Q00422_RepentYourSins extends Quest
 {
 	// NPCs
 	private static final int BLACKSMITH_PUSHKIN = 30300;

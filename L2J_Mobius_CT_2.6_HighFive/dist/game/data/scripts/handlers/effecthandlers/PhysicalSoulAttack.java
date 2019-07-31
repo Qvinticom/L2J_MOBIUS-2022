@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Physical Soul Attack effect implementation.
  * @author Adry_85
  */
-public final class PhysicalSoulAttack extends AbstractEffect
+public class PhysicalSoulAttack extends AbstractEffect
 {
 	public PhysicalSoulAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

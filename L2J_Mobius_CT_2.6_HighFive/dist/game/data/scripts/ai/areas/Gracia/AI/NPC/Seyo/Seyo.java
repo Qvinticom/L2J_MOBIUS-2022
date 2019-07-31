@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Seyo AI.
  * @author St3eT
  */
-public final class Seyo extends AbstractNpcAI
+public class Seyo extends AbstractNpcAI
 {
 	// NPC
 	private static final int SEYO = 32737;

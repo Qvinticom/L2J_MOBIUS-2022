@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 /**
  * @author Sdw
  */
-public final class BeautyShopData implements IXmlReader
+public class BeautyShopData implements IXmlReader
 {
 	private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
 	private final Map<Sex, BeautyData> _beautyData = new HashMap<>();

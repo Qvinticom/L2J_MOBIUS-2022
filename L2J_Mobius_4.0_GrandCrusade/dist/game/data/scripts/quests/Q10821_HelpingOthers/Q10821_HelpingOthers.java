@@ -29,7 +29,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
  * @URL https://l2wiki.com/Helping_Others
  * @author Mobius
  */
-public final class Q10821_HelpingOthers extends Quest
+public class Q10821_HelpingOthers extends Quest
 {
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;

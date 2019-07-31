@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.util;
 /**
  * @author HorridoJoho
  */
-public final class LinePointIterator
+public class LinePointIterator
 {
 	// src is moved towards dst in next()
 	private int _srcX;

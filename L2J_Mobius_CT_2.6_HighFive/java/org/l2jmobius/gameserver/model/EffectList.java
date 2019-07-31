@@ -59,7 +59,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
  * Methods may resemble List interface, although it doesn't implement such interface.
  * @author Zoey76
  */
-public final class EffectList
+public class EffectList
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */

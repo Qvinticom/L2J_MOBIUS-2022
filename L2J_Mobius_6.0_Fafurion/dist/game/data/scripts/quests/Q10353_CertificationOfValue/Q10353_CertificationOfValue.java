@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Certification_of_Value
  * @author Gigi
  */
-public final class Q10353_CertificationOfValue extends Quest
+public class Q10353_CertificationOfValue extends Quest
 {
 	// NPCs
 	private static final int RIEYI = 33155;

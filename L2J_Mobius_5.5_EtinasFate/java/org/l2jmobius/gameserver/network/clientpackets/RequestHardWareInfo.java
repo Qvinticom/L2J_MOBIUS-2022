@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Mobius
  */
-public final class RequestHardWareInfo implements IClientIncomingPacket
+public class RequestHardWareInfo implements IClientIncomingPacket
 {
 	private String _macAddress;
 	private int _windowsPlatformId;

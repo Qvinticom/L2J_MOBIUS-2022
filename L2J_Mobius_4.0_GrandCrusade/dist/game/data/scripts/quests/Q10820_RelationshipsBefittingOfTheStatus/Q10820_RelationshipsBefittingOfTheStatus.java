@@ -30,7 +30,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
  * @URL https://l2wiki.com/Relationships_Befitting_of_the_Status
  * @author Mobius
  */
-public final class Q10820_RelationshipsBefittingOfTheStatus extends Quest
+public class Q10820_RelationshipsBefittingOfTheStatus extends Quest
 {
 	// NPC
 	private static final int ISHUMA = 32615;

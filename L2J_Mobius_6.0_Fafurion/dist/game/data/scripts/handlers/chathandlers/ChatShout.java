@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Shout chat handler.
  * @author durgus
  */
-public final class ChatShout implements IChatHandler
+public class ChatShout implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

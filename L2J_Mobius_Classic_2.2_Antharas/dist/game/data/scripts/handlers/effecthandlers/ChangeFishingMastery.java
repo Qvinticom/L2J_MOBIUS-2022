@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
  * Change Fishing Mastery dummy effect implementation.
  * @author Zoey76
  */
-public final class ChangeFishingMastery extends AbstractEffect
+public class ChangeFishingMastery extends AbstractEffect
 {
 	public ChangeFishingMastery(StatsSet params)
 	{

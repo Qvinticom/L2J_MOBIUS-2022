@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.holders.RangeChanceHolder;
 /**
  * @author UnAfraid
  */
-public final class EnchantItemGroup
+public class EnchantItemGroup
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantItemGroup.class.getName());
 	private final List<RangeChanceHolder> _chances = new ArrayList<>();

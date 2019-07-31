@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 
-public final class RequestRecipeShopListSet extends GameClientPacket
+public class RequestRecipeShopListSet extends GameClientPacket
 {
 	private int _count;
 	private int[] _items; // count*2

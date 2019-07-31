@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * The Finest Ingredients - Part 1.
  * @author Citizen, jurchiks, xban1x
  */
-public final class Q00624_TheFinestIngredientsPart1 extends Quest
+public class Q00624_TheFinestIngredientsPart1 extends Quest
 {
 	// NPC
 	private static final int JEREMY = 31521;

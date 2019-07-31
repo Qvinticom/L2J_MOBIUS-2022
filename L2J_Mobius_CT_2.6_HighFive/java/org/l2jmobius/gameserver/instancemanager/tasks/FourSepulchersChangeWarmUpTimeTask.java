@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
  * Four Sepulchers change warm up time task.
  * @author xban1x
  */
-public final class FourSepulchersChangeWarmUpTimeTask implements Runnable
+public class FourSepulchersChangeWarmUpTimeTask implements Runnable
 {
 	@Override
 	public void run()

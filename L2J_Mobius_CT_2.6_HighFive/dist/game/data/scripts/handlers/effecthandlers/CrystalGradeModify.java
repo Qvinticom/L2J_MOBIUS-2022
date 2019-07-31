@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Crystal Grade Modify effect implementation.
  * @author Zoey76
  */
-public final class CrystalGradeModify extends AbstractEffect
+public class CrystalGradeModify extends AbstractEffect
 {
 	private final int _grade;
 	

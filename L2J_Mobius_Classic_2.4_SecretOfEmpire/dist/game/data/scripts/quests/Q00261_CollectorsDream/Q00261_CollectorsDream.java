@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Collector's Dream (261)
  * @author xban1x
  */
-public final class Q00261_CollectorsDream extends Quest
+public class Q00261_CollectorsDream extends Quest
 {
 	// Npc
 	private static final int ALSHUPES = 30222;

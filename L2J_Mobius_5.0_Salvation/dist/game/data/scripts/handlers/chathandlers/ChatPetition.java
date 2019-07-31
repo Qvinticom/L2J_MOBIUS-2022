@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Petition chat handler.
  * @author durgus
  */
-public final class ChatPetition implements IChatHandler
+public class ChatPetition implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

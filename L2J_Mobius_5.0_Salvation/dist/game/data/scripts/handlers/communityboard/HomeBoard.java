@@ -58,7 +58,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillLi
  * Home board.
  * @author Zoey76, Mobius
  */
-public final class HomeBoard implements IParseBoardHandler
+public class HomeBoard implements IParseBoardHandler
 {
 	// SQL Queries
 	private static final String COUNT_FAVORITES = "SELECT COUNT(*) AS favorites FROM `bbs_favorites` WHERE `playerId`=?";

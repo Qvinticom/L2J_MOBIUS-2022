@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class StatusUpdate implements IClientOutgoingPacket
+public class StatusUpdate implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private int _casterObjectId = 0;

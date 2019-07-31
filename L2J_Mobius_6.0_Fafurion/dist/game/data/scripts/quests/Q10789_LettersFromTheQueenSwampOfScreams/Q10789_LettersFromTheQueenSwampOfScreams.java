@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Swamp of Screams (10789)
  * @author malyelfik
  */
-public final class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
+public class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 {
 	// NPCs
 	private static final int INNOCENTIN = 31328;

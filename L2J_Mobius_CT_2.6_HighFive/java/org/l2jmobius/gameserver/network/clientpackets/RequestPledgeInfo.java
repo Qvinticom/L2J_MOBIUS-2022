@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 
-public final class RequestPledgeInfo implements IClientIncomingPacket
+public class RequestPledgeInfo implements IClientIncomingPacket
 {
 	private int _clanId;
 	

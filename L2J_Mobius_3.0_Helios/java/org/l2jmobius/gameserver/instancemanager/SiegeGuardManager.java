@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  * Siege Guard Manager.
  * @author St3eT
  */
-public final class SiegeGuardManager
+public class SiegeGuardManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
 	private static final Set<ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();

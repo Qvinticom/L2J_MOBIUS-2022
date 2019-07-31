@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class SetPrivateStoreListBuy implements IClientIncomingPacket
+public class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
 	private TradeItem[] _items = null;
 	

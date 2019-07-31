@@ -80,7 +80,7 @@ public class CommanderKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final CommanderInstance getActiveChar()
+	public CommanderInstance getActiveChar()
 	{
 		return (CommanderInstance) super.getActiveChar();
 	}

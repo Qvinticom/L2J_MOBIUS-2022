@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * This class is dedicated to the management of armors.
  */
-public final class Armor extends Item
+public class Armor extends Item
 {
 	/**
 	 * Skill that activates when armor is enchanted +4.
@@ -106,7 +106,7 @@ public final class Armor extends Item
 	 * @return the ID of the item after applying the mask.
 	 */
 	@Override
-	public final int getItemMask()
+	public int getItemMask()
 	{
 		return _type.mask();
 	}

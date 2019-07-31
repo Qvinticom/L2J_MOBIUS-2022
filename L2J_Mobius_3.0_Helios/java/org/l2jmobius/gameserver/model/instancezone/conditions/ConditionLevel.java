@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance level condition
  * @author malyelfik
  */
-public final class ConditionLevel extends Condition
+public class ConditionLevel extends Condition
 {
 	private final int _min;
 	private final int _max;

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
  * Cubic disappear task.
  * @author Zoey76
  */
-public final class CubicDisappear implements Runnable
+public class CubicDisappear implements Runnable
 {
 	private final CubicInstance _cubic;
 	

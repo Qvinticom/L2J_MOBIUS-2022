@@ -34,7 +34,7 @@ import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
  * @URL https://l2wiki.com/Hit_and_Run
  * @author Gigi
  */
-public final class Q10446_HitAndRun extends Quest
+public class Q10446_HitAndRun extends Quest
 {
 	// NPCs
 	private static final int BRUENER = 33840;

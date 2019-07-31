@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 
-public final class RequestAllyCrest extends GameClientPacket
+public class RequestAllyCrest extends GameClientPacket
 {
 	private int _crestId;
 	

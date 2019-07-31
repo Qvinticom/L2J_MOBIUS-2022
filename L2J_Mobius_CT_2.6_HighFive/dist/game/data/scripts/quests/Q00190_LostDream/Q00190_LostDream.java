@@ -27,7 +27,7 @@ import quests.Q00187_NikolasHeart.Q00187_NikolasHeart;
  * Lost Dream (190)
  * @author ivantotov
  */
-public final class Q00190_LostDream extends Quest
+public class Q00190_LostDream extends Quest
 {
 	// NPCs
 	private static final int JURIS = 30113;

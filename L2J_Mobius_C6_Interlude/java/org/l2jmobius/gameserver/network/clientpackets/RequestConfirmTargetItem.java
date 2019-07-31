@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
  * Format:(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmTargetItem extends GameClientPacket
+public class RequestConfirmTargetItem extends GameClientPacket
 {
 	private int _itemObjId;
 	

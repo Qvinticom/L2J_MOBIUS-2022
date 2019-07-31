@@ -34,7 +34,7 @@ import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
  * Seeker Escort (10365)
  * @author Gladicek
  */
-public final class Q10365_SeekerEscort extends Quest
+public class Q10365_SeekerEscort extends Quest
 {
 	// NPCs
 	private static final int DEP = 33453;

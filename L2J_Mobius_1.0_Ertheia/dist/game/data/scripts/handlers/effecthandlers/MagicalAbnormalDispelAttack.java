@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Magical Abnormal-depending dispel Attack effect implementation.
  * @author Nik
  */
-public final class MagicalAbnormalDispelAttack extends AbstractEffect
+public class MagicalAbnormalDispelAttack extends AbstractEffect
 {
 	private final double _power;
 	private final AbnormalType _abnormalType;

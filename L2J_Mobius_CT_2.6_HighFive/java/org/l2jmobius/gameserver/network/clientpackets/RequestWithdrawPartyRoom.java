@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 /**
  * @author Gnacik
  */
-public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
+public class RequestWithdrawPartyRoom implements IClientIncomingPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Fear effect implementation.
  * @author littlecrow
  */
-public final class Fear extends AbstractEffect
+public class Fear extends AbstractEffect
 {
 	public Fear(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

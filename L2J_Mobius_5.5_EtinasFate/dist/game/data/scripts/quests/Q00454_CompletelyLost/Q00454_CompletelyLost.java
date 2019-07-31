@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Completely Lost (454)
  * @author Zoey76
  */
-public final class Q00454_CompletelyLost extends Quest
+public class Q00454_CompletelyLost extends Quest
 {
 	// NPCs
 	private static final int INJURED_SOLDIER = 32738;

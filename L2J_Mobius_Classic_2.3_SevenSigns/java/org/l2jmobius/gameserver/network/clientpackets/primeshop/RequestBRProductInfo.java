@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductInfo implements IClientIncomingPacket
+public class RequestBRProductInfo implements IClientIncomingPacket
 {
 	private int _brId;
 	

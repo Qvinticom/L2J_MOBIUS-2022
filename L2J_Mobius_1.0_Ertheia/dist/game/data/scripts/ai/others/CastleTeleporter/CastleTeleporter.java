@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * Castle Teleporter AI.
  * @author malyelfik, St3eT
  */
-public final class CastleTeleporter extends AbstractNpcAI
+public class CastleTeleporter extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MASS_TELEPORTERS =

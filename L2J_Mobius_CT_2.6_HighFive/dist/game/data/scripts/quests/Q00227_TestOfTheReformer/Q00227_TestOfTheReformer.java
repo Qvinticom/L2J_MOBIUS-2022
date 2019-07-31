@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Reformer (227)
  * @author ivantotov
  */
-public final class Q00227_TestOfTheReformer extends Quest
+public class Q00227_TestOfTheReformer extends Quest
 {
 	// NPCs
 	private static final int PRIESTESS_PUPINA = 30118;

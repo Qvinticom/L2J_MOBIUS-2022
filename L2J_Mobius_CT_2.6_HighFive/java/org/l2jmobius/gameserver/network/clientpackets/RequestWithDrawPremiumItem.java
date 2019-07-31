@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
+public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 {
 	private int _itemNum;
 	private int _charId;

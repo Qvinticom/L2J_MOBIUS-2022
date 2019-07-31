@@ -141,7 +141,7 @@ public abstract class Effect
 	
 	private boolean _cancelEffect = false;
 	
-	public final class EffectTask implements Runnable
+	public class EffectTask implements Runnable
 	{
 		protected final int _delay;
 		protected final int _rate;
@@ -287,17 +287,17 @@ public abstract class Effect
 		return _stackOrder;
 	}
 	
-	public final Skill getSkill()
+	public Skill getSkill()
 	{
 		return _skill;
 	}
 	
-	public final Creature getEffector()
+	public Creature getEffector()
 	{
 		return _effector;
 	}
 	
-	public final Creature getEffected()
+	public Creature getEffected()
 	{
 		return _effected;
 	}
@@ -317,7 +317,7 @@ public abstract class Effect
 		return false;
 	}
 	
-	public final double calc()
+	public double calc()
 	{
 		final Env env = new Env();
 		env.player = _effector;
@@ -367,17 +367,17 @@ public abstract class Effect
 	 * <li>Stop the task of the Effect, remove it and update client magic icone</li><BR>
 	 * <BR>
 	 */
-	public final void exit()
+	public void exit()
 	{
 		exit(false, false);
 	}
 	
-	public final void exit(boolean cancelEffect)
+	public void exit(boolean cancelEffect)
 	{
 		exit(false, cancelEffect);
 	}
 	
-	public final void exit(boolean preventUpdate, boolean cancelEffect)
+	public void exit(boolean preventUpdate, boolean cancelEffect)
 	{
 		preventExitUpdate = preventUpdate;
 		_state = EffectState.FINISHING;
@@ -451,7 +451,7 @@ public abstract class Effect
 	 */
 	public abstract boolean onActionTime();
 	
-	public final void rescheduleEffect()
+	public void rescheduleEffect()
 	{
 		if (_state != EffectState.ACTING)
 		{
@@ -472,7 +472,7 @@ public abstract class Effect
 		}
 	}
 	
-	public final void scheduleEffect()
+	public void scheduleEffect()
 	{
 		if (_state == EffectState.CREATED)
 		{
@@ -578,7 +578,7 @@ public abstract class Effect
 		return funcs.toArray(new Func[funcs.size()]);
 	}
 	
-	public final void addIcon(MagicEffectIcons mi)
+	public void addIcon(MagicEffectIcons mi)
 	{
 		EffectTask task = _currentTask;
 		ScheduledFuture<?> future = _currentFuture;
@@ -630,7 +630,7 @@ public abstract class Effect
 		}
 	}
 	
-	public final void addPartySpelledIcon(PartySpelled ps)
+	public void addPartySpelledIcon(PartySpelled ps)
 	{
 		EffectTask task = _currentTask;
 		ScheduledFuture<?> future = _currentFuture;
@@ -648,7 +648,7 @@ public abstract class Effect
 		ps.addPartySpelledEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS));
 	}
 	
-	public final void addOlympiadSpelledIcon(ExOlympiadSpelledInfo os)
+	public void addOlympiadSpelledIcon(ExOlympiadSpelledInfo os)
 	{
 		EffectTask task = _currentTask;
 		ScheduledFuture<?> future = _currentFuture;
@@ -691,7 +691,7 @@ public abstract class Effect
 		_periodStartTicks = periodStartTicks;
 	}
 	
-	public final boolean getShowIcon()
+	public boolean getShowIcon()
 	{
 		return _template.showIcon;
 	}

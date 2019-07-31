@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * RequestSellItem client packet class.
  */
-public final class RequestSellItem implements IClientIncomingPacket
+public class RequestSellItem implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 16;
 	private static final int CUSTOM_CB_SELL_LIST = 423;

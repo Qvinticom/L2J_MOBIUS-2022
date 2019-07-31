@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Castle;
 
-public final class SiegeGuardManager
+public class SiegeGuardManager
 {
 	private static Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
 	
@@ -251,12 +251,12 @@ public final class SiegeGuardManager
 		}
 	}
 	
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		return _castle;
 	}
 	
-	public final List<Spawn> getSiegeGuardSpawn()
+	public List<Spawn> getSiegeGuardSpawn()
 	{
 		return _siegeGuardSpawn;
 	}

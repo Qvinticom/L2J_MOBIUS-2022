@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Fear effect implementation.
  * @author littlecrow
  */
-public final class Fear extends AbstractEffect
+public class Fear extends AbstractEffect
 {
 	private static final int FEAR_RANGE = 500;
 	

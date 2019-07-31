@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Request To Find Sakum (10335)
  * @author St3eT
  */
-public final class Q10335_RequestToFindSakum extends Quest
+public class Q10335_RequestToFindSakum extends Quest
 {
 	// NPCs
 	private static final int BATHIS = 30332;

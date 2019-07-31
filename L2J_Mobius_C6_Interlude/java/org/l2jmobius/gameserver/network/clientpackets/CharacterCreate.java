@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public final class CharacterCreate extends GameClientPacket
+public class CharacterCreate extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
 	private static final Object CREATION_LOCK = new Object();

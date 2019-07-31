@@ -125,17 +125,17 @@ public enum InstanceType
 		}
 	}
 	
-	public final InstanceType getParent()
+	public InstanceType getParent()
 	{
 		return _parent;
 	}
 	
-	public final boolean isType(InstanceType it)
+	public boolean isType(InstanceType it)
 	{
 		return ((_maskL & it._typeL) > 0) || ((_maskH & it._typeH) > 0);
 	}
 	
-	public final boolean isTypes(InstanceType... it)
+	public boolean isTypes(InstanceType... it)
 	{
 		for (InstanceType i : it)
 		{

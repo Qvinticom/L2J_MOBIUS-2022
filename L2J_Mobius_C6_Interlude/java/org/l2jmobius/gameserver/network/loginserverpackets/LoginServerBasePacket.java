@@ -83,7 +83,7 @@ public abstract class LoginServerBasePacket
 		return result;
 	}
 	
-	public final byte[] readB(int length)
+	public byte[] readB(int length)
 	{
 		final byte[] result = new byte[length];
 		for (int i = 0; i < length; i++)

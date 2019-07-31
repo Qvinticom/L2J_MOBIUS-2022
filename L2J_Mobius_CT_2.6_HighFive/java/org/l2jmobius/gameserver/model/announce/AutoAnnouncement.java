@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 /**
  * @author UnAfraid
  */
-public final class AutoAnnouncement extends Announcement implements Runnable
+public class AutoAnnouncement extends Announcement implements Runnable
 {
 	private static final String INSERT_QUERY = "INSERT INTO announcements (`type`, `content`, `author`, `initial`, `delay`, `repeat`) VALUES (?, ?, ?, ?, ?, ?)";
 	private static final String UPDATE_QUERY = "UPDATE announcements SET `type` = ?, `content` = ?, `author` = ?, `initial` = ?, `delay` = ?, `repeat` = ? WHERE id = ?";

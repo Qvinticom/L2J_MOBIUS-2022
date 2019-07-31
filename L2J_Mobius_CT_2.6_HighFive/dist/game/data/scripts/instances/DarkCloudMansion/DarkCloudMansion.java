@@ -39,7 +39,7 @@ import instances.AbstractInstance;
 /**
  * Dark Cloud Mansion instance zone.
  */
-public final class DarkCloudMansion extends AbstractInstance
+public class DarkCloudMansion extends AbstractInstance
 {
 	// NPCs
 	private static int YIYEN = 32282;

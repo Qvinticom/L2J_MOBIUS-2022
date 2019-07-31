@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 
 import ai.areas.Gracia.vehicles.AirShipController;
 
-public final class KeucereusNorthController extends AirShipController
+public class KeucereusNorthController extends AirShipController
 {
 	private static final int DOCK_ZONE = 50602;
 	private static final int LOCATION = 100;

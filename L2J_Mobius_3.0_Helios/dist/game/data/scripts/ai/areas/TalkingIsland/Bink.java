@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Bink AI.
  * @author Gladicek
  */
-public final class Bink extends AbstractNpcAI
+public class Bink extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BINK = 33223;

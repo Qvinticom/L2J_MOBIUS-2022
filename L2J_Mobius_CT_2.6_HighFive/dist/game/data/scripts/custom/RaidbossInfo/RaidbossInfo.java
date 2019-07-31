@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Original Jython script Kerberos.
  * @author Nyaran
  */
-public final class RaidbossInfo extends AbstractNpcAI
+public class RaidbossInfo extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPC =

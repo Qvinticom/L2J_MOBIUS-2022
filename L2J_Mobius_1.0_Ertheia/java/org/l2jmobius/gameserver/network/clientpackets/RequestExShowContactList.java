@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowContactList;
  * Format: (ch)
  * @author mrTJO & UnAfraid
  */
-public final class RequestExShowContactList implements IClientIncomingPacket
+public class RequestExShowContactList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

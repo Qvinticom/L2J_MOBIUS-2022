@@ -42,7 +42,7 @@ import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
  * Pailaka (Rune Castle)
  * @author Mobius
  */
-public final class PailakaRuneCastle extends AbstractInstance
+public class PailakaRuneCastle extends AbstractInstance
 {
 	// NPCs
 	private static final int[] VICTIMS =

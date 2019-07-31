@@ -21,7 +21,7 @@ import io.netty.buffer.ByteBuf;
 /**
  * @author Nos
  */
-public final class PacketReader
+public class PacketReader
 {
 	private final ByteBuf _buf;
 	

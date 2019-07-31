@@ -38,7 +38,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 		_event = event;
 	}
 	
-	public final int getObjectId()
+	public int getObjectId()
 	{
 		return _objectId;
 	}
@@ -95,7 +95,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 		return _score.addAndGet(score);
 	}
 	
-	public final T getEvent()
+	public T getEvent()
 	{
 		return _event;
 	}

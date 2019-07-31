@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Gnacik
  */
-public final class RequestPartyMatchDetail implements IClientIncomingPacket
+public class RequestPartyMatchDetail implements IClientIncomingPacket
 {
 	private int _roomId;
 	private int _location;

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $ CPU Disasm Packets: ddhhQQ cddb
  */
-public final class SetPrivateStoreListBuy implements IClientIncomingPacket
+public class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 40; // length of the one item
 	

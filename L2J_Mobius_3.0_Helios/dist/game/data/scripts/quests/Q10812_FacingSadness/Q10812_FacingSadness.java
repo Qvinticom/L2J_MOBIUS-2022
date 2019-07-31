@@ -32,7 +32,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  * Facing Sadness (10812)
  * @author Gladicek
  */
-public final class Q10812_FacingSadness extends Quest
+public class Q10812_FacingSadness extends Quest
 {
 	// Npc
 	private static final int ELIKIA = 31620;

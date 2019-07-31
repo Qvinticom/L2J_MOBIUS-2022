@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Star Stones AI.
  * @author Gigiikun
  */
-public final class StarStones extends AbstractNpcAI
+public class StarStones extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

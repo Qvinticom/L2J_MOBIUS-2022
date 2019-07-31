@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * MagicalAttack-damage over time effect implementation.
  * @author Nik
  */
-public final class MagicalDamOverTime extends AbstractEffect
+public class MagicalDamOverTime extends AbstractEffect
 {
 	private final double _power;
 	private final boolean _canKill;

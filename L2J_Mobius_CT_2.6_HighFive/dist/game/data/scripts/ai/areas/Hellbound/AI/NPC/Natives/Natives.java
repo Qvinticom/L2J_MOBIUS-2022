@@ -30,7 +30,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Natives AI.
  * @author DS, GKR
  */
-public final class Natives extends AbstractNpcAI
+public class Natives extends AbstractNpcAI
 {
 	// NPCs
 	private static final int NATIVE = 32362;
@@ -60,7 +60,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final int hellboundLevel = HellboundEngine.getInstance().getLevel();
@@ -97,7 +97,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (npc.getId() == TRAITOR)
@@ -176,7 +176,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if ((npc.getId() == NATIVE) && (HellboundEngine.getInstance().getLevel() < 6))
 		{

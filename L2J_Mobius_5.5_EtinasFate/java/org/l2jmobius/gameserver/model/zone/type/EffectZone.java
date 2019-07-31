@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
  * another type of damage zone with skills
  * @author kerberos
  */
-public final class EffectZone extends ZoneType
+public class EffectZone extends ZoneType
 {
 	int _chance;
 	private int _initialDelay;

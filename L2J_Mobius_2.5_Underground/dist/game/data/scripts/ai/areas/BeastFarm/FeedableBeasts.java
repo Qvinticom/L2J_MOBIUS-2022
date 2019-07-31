@@ -38,7 +38,7 @@ import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
  * Growth-capable mobs: Polymorphing upon successful feeding.
  * @author Fulminus
  */
-public final class FeedableBeasts extends AbstractNpcAI
+public class FeedableBeasts extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 6643;
 	private static final int CRYSTAL_SPICE = 6644;

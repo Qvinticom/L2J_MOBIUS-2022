@@ -33,7 +33,7 @@ import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
  * Respect Your Elders (10326)
  * @author Gladicek, St3eT, Neanrakyr
  */
-public final class Q10326_RespectYourElders extends Quest
+public class Q10326_RespectYourElders extends Quest
 {
 	// NPCs
 	private static final int GALLINT = 32980;

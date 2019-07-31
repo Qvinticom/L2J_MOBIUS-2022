@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 /**
  * @author Mobius
  */
-public final class DecayTaskManager
+public class DecayTaskManager
 {
 	private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
 	

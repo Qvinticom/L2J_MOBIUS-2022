@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 
-public final class SetPrivateStoreListBuy extends GameClientPacket
+public class SetPrivateStoreListBuy extends GameClientPacket
 {
 	private int _count;
 	private int[] _items; // count * 3

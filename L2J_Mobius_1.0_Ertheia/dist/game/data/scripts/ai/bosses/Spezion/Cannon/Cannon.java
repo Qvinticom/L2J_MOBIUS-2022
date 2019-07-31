@@ -36,7 +36,7 @@ import ai.AbstractNpcAI;
  * Cannon AI.
  * @author St3eT
  */
-public final class Cannon extends AbstractNpcAI
+public class Cannon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] CANNONS =

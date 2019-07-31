@@ -35,7 +35,7 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  * Seven Signs, The Sacred Book of Seal (197)
  * @author Adry_85
  */
-public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
+public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27396;

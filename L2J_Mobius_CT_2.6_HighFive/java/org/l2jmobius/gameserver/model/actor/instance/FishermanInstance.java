@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class FishermanInstance extends MerchantInstance
+public class FishermanInstance extends MerchantInstance
 {
 	/**
 	 * Creates a fisherman.

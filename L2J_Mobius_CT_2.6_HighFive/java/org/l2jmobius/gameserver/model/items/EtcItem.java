@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 /**
  * This class is dedicated to the management of EtcItem.
  */
-public final class EtcItem extends Item
+public class EtcItem extends Item
 {
 	private String _handler;
 	private EtcItemType _type;
@@ -160,7 +160,7 @@ public final class EtcItem extends Item
 	/**
 	 * @return {@code true} if the item is blessed, {@code false} otherwise.
 	 */
-	public final boolean isBlessed()
+	public boolean isBlessed()
 	{
 		return _isBlessed;
 	}

@@ -32,7 +32,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Tower Of Infinitum.
  * @author GKR
  */
-public final class TowerOfInfinitum extends AbstractNpcAI
+public class TowerOfInfinitum extends AbstractNpcAI
 {
 	// NPCs
 	private static final int JERIAN = 32302;
@@ -101,7 +101,7 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 	private static final Location ENTER_LOCATION = new Location(-22204, 277056, -15023);
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		final int npcId = npc.getId();

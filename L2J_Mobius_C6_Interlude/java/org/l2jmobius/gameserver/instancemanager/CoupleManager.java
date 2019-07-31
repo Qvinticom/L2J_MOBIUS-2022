@@ -81,7 +81,7 @@ public class CoupleManager
 		}
 	}
 	
-	public final Wedding getCouple(int coupleId)
+	public Wedding getCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
 		if (index >= 0)
@@ -136,7 +136,7 @@ public class CoupleManager
 		}
 	}
 	
-	public final int getCoupleIndex(int coupleId)
+	public int getCoupleIndex(int coupleId)
 	{
 		int i = 0;
 		for (Wedding temp : _couples)
@@ -150,7 +150,7 @@ public class CoupleManager
 		return -1;
 	}
 	
-	public final List<Wedding> getCouples()
+	public List<Wedding> getCouples()
 	{
 		return _couples;
 	}

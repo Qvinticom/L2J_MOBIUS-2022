@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.SkillEnchantConverter;
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
+public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLvl;

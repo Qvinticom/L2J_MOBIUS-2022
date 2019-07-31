@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Suspicious Helper (10391)
  * @author St3eT
  */
-public final class Q10391_ASuspiciousHelper extends Quest
+public class Q10391_ASuspiciousHelper extends Quest
 {
 	// NPCs
 	private static final int ELI = 33858;

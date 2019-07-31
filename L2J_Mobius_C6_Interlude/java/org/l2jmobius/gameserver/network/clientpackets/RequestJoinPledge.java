@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 
-public final class RequestJoinPledge extends GameClientPacket
+public class RequestJoinPledge extends GameClientPacket
 {
 	private int _target;
 	private int _pledgeType;

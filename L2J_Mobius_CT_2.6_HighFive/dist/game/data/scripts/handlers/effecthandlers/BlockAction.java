@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Block Action effect implementation.
  * @author BiggBoss
  */
-public final class BlockAction extends AbstractEffect
+public class BlockAction extends AbstractEffect
 {
 	private final Set<Integer> _blockedActions = new HashSet<>();
 	

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Searcher (225)
  * @author ivantotov
  */
-public final class Q00225_TestOfTheSearcher extends Quest
+public class Q00225_TestOfTheSearcher extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_ALEX = 30291;

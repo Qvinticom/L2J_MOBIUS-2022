@@ -23,7 +23,7 @@ import org.l2jmobius.commons.util.Rnd;
 /**
  * @author Pere
  */
-public final class OptionDataGroup
+public class OptionDataGroup
 {
 	private final List<OptionDataCategory> _categories;
 	

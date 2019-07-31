@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.templates.item.WeaponType;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestEnchantItem extends GameClientPacket
+public class RequestEnchantItem extends GameClientPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
 	private static final int[] CRYSTAL_SCROLLS =

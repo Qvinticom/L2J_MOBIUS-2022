@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Matras' Suspicious Request (691)
  * @author GKR
  */
-public final class Q00691_MatrasSuspiciousRequest extends Quest
+public class Q00691_MatrasSuspiciousRequest extends Quest
 {
 	// NPC
 	private static final int MATRAS = 32245;
@@ -134,7 +134,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final PlayerInstance pl = getRandomPartyMember(player, 1);
 		if (pl == null)
@@ -154,7 +154,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

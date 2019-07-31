@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GmViewQuestInfo;
 /**
  * @version $Revision: 1.1.2.2.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestGMCommand implements IClientIncomingPacket
+public class RequestGMCommand implements IClientIncomingPacket
 {
 	private String _targetName;
 	private int _command;

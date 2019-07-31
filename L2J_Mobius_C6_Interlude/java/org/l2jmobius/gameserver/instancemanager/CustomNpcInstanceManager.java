@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.Rnd;
  * @version 1.00
  * @author Darki699
  */
-public final class CustomNpcInstanceManager
+public class CustomNpcInstanceManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CustomNpcInstanceManager.class.getName());
 	private static CustomNpcInstanceManager _instance;
@@ -42,7 +42,7 @@ public final class CustomNpcInstanceManager
 	 * Small class to keep the npc poly data... Pretty code =)
 	 * @author Darki699
 	 */
-	public final class customInfo
+	public class customInfo
 	{
 		public String stringData[] = new String[2];
 		public int integerData[] = new int[27];
@@ -73,7 +73,7 @@ public final class CustomNpcInstanceManager
 	/**
 	 * Flush the old data, and load new data
 	 */
-	public final void reload()
+	public void reload()
 	{
 		if (spawns != null)
 		{
@@ -203,7 +203,7 @@ public final class CustomNpcInstanceManager
 	 * @param npcId - NpcInstance's npc template id
 	 * @return
 	 */
-	public final boolean isThisL2CustomNpcInstance(int spwnId, int npcId)
+	public boolean isThisL2CustomNpcInstance(int spwnId, int npcId)
 	{
 		if ((spwnId == 0) || (npcId == 0))
 		{
@@ -229,7 +229,7 @@ public final class CustomNpcInstanceManager
 	 * @param npcId - NpcInstance's npc template Id
 	 * @return customInfo type data pack, or null if no such data exists.
 	 */
-	public final customInfo getCustomData(int spwnId, int npcId)
+	public customInfo getCustomData(int spwnId, int npcId)
 	{
 		if ((spwnId == 0) || (npcId == 0))
 		{
@@ -260,7 +260,7 @@ public final class CustomNpcInstanceManager
 	/**
 	 * @return all template morphing queue
 	 */
-	public final Map<Integer, customInfo> getAllTemplates()
+	public Map<Integer, customInfo> getAllTemplates()
 	{
 		return templates;
 	}
@@ -268,7 +268,7 @@ public final class CustomNpcInstanceManager
 	/**
 	 * @return all spawns morphing queue
 	 */
-	public final Map<Integer, customInfo> getAllSpawns()
+	public Map<Integer, customInfo> getAllSpawns()
 	{
 		return spawns;
 	}
@@ -277,11 +277,11 @@ public final class CustomNpcInstanceManager
 	 * Already removed customInfo - Change is saved in the DB <b>NOT IMPLEMENTED YET!</b>
 	 * @param ciToRemove
 	 */
-	public final void updateRemoveInDB(customInfo ciToRemove)
+	public void updateRemoveInDB(customInfo ciToRemove)
 	{
 	}
 	
-	public final void AddInDB(customInfo ciToAdd)
+	public void AddInDB(customInfo ciToAdd)
 	{
 		String Query = "REPLACE INTO npc_to_pc_polymorph VALUES spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph";
 		

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author l3x
  */
-public final class RequestSetCrop implements IClientIncomingPacket
+public class RequestSetCrop implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 21; // length of the one item
 	

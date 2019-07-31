@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Death Link effect implementation.
  * @author Adry_85
  */
-public final class DeathLink extends AbstractEffect
+public class DeathLink extends AbstractEffect
 {
 	private final double _power;
 	

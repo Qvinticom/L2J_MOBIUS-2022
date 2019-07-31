@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
  * format ch c: (id) 0xD0 h: (subid) 0x13
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList extends GameClientPacket
+public class RequestOlympiadMatchList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

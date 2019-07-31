@@ -34,7 +34,7 @@ import ai.areas.Gracia.AI.NPC.Nemo.Nemo;
  * Maguen AI.
  * @author St3eT
  */
-public final class Maguen extends AbstractNpcAI
+public class Maguen extends AbstractNpcAI
 {
 	// NPC
 	private static final int MAGUEN = 18839; // Wild Maguen

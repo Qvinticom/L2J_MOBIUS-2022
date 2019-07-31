@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember implements IClientIncomingPacket
+public class RequestPledgeReorganizeMember implements IClientIncomingPacket
 {
 	private String _memberName;
 	private int _newPledgeType;

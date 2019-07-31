@@ -27,7 +27,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Hude AI.
  * @author DS
  */
-public final class Hude extends AbstractNpcAI
+public class Hude extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HUDE = 32298;
@@ -49,7 +49,7 @@ public final class Hude extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -105,7 +105,7 @@ public final class Hude extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (!hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))

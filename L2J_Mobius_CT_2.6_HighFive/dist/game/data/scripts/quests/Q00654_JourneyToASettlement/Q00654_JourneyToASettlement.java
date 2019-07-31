@@ -30,7 +30,7 @@ import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
  * Journey to a Settlement (654)
  * @author Adry_85
  */
-public final class Q00654_JourneyToASettlement extends Quest
+public class Q00654_JourneyToASettlement extends Quest
 {
 	// NPC
 	private static final int NAMELESS_SPIRIT = 31453;

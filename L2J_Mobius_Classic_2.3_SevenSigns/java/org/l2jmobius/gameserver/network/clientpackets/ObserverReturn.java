@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 18:46:19 $
  */
-public final class ObserverReturn implements IClientIncomingPacket
+public class ObserverReturn implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

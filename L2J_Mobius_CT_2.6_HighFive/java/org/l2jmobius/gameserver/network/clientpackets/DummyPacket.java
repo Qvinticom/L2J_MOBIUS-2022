@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author zabbix Lets drink to code!
  */
-public final class DummyPacket implements IClientIncomingPacket
+public class DummyPacket implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

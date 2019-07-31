@@ -26,15 +26,15 @@ import org.l2jmobius.gameserver.skills.conditions.Condition;
 /**
  * @author mkizub
  */
-public final class FuncTemplate
+public class FuncTemplate
 {
 	public Condition attachCond;
 	public Condition applayCond;
-	public final Class<?> func;
-	public final Constructor<?> constructor;
-	public final Stats stat;
-	public final int order;
-	public final Lambda lambda;
+	public Class<?> func;
+	public Constructor<?> constructor;
+	public Stats stat;
+	public int order;
+	public Lambda lambda;
 	
 	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stats pStat, int pOrder, Lambda pLambda)
 	{

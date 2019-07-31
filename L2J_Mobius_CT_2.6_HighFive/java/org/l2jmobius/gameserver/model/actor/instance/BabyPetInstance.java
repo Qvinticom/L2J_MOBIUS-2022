@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class BabyPetInstance extends PetInstance
+public class BabyPetInstance extends PetInstance
 {
 	private static final int BUFF_CONTROL = 5771;
 	private static final int AWAKENING = 5753;

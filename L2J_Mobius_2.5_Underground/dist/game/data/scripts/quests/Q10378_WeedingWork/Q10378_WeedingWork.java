@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * @URL https://l2wiki.com/Weeding_Work
  * @author Gigi
  */
-public final class Q10378_WeedingWork extends Quest
+public class Q10378_WeedingWork extends Quest
 {
 	// NPCs
 	private static final int DADFPHYNA = 33697;

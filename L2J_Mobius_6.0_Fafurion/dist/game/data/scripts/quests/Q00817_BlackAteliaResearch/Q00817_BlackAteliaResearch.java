@@ -30,7 +30,7 @@ import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
  * @URL https://l2wiki.com/Black_Atelia_Research
  * @author Gigi
  */
-public final class Q00817_BlackAteliaResearch extends Quest
+public class Q00817_BlackAteliaResearch extends Quest
 {
 	// NPC
 	private static final int KAYSYA = 34051;

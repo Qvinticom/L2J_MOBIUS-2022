@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Petrification effect implementation.
  */
-public final class Petrification extends AbstractEffect
+public class Petrification extends AbstractEffect
 {
 	public Petrification(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

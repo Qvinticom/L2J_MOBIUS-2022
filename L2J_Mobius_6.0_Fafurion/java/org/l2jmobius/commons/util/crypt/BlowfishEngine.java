@@ -19,7 +19,7 @@ package org.l2jmobius.commons.util.crypt;
 
 import java.io.IOException;
 
-public final class BlowfishEngine
+public class BlowfishEngine
 {
 	private static final int[] KP =
 	{

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Trade With The Ivory Tower (262)
  * @author ivantotov
  */
-public final class Q00262_TradeWithTheIvoryTower extends Quest
+public class Q00262_TradeWithTheIvoryTower extends Quest
 {
 	// NPCs
 	private static final int VOLLODOS = 30137;

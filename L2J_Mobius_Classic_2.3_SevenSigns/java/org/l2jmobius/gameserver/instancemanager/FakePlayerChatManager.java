@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 /**
  * @author Mobius
  */
-public final class FakePlayerChatManager implements IXmlReader
+public class FakePlayerChatManager implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(FakePlayerChatManager.class.getName());
 	final List<FakePlayerChatHolder> MESSAGES = new ArrayList<>();

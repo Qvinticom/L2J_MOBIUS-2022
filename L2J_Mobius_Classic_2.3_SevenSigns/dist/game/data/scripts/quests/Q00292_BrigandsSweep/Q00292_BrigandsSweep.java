@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Brigands Sweep (292)
  * @author xban1x
  */
-public final class Q00292_BrigandsSweep extends Quest
+public class Q00292_BrigandsSweep extends Quest
 {
 	// NPC's
 	private static final int SPIRON = 30532;

@@ -63,7 +63,7 @@ public class CastleManager
 		load();
 	}
 	
-	public final int findNearestCastlesIndex(WorldObject obj)
+	public int findNearestCastlesIndex(WorldObject obj)
 	{
 		int index = getCastleIndex(obj);
 		if (index < 0)
@@ -116,7 +116,7 @@ public class CastleManager
 		}
 	}
 	
-	public final Castle getCastleById(int castleId)
+	public Castle getCastleById(int castleId)
 	{
 		for (Castle temp : getCastles())
 		{
@@ -129,7 +129,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastleByOwner(Clan clan)
+	public Castle getCastleByOwner(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -147,7 +147,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastle(String name)
+	public Castle getCastle(String name)
 	{
 		if (name == null)
 		{
@@ -165,7 +165,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastle(int x, int y, int z)
+	public Castle getCastle(int x, int y, int z)
 	{
 		for (Castle temp : getCastles())
 		{
@@ -178,7 +178,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastle(WorldObject activeObject)
+	public Castle getCastle(WorldObject activeObject)
 	{
 		if (activeObject == null)
 		{
@@ -188,7 +188,7 @@ public class CastleManager
 		return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getCastleIndex(int castleId)
+	public int getCastleIndex(int castleId)
 	{
 		Castle castle;
 		for (int i = 0; i < getCastles().size(); i++)
@@ -202,12 +202,12 @@ public class CastleManager
 		return -1;
 	}
 	
-	public final int getCastleIndex(WorldObject activeObject)
+	public int getCastleIndex(WorldObject activeObject)
 	{
 		return getCastleIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getCastleIndex(int x, int y, int z)
+	public int getCastleIndex(int x, int y, int z)
 	{
 		Castle castle;
 		for (int i = 0; i < getCastles().size(); i++)
@@ -221,7 +221,7 @@ public class CastleManager
 		return -1;
 	}
 	
-	public final List<Castle> getCastles()
+	public List<Castle> getCastles()
 	{
 		if (_castles == null)
 		{
@@ -230,7 +230,7 @@ public class CastleManager
 		return _castles;
 	}
 	
-	public final void validateTaxes(int sealStrifeOwner)
+	public void validateTaxes(int sealStrifeOwner)
 	{
 		int maxTax;
 		

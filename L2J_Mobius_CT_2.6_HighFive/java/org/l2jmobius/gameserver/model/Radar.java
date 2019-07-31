@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 /**
  * @author dalrond
  */
-public final class Radar
+public class Radar
 {
 	private final PlayerInstance _player;
 	private final Set<RadarMarker> _markers = ConcurrentHashMap.newKeySet();

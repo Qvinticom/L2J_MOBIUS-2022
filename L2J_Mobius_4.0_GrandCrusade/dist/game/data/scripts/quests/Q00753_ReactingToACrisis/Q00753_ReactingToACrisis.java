@@ -37,7 +37,7 @@ import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
  * @VIDEO http://www.dailymotion.com/video/x24y4lx_quest-reacting-to-a-crisis_videogames
  * @author Gigi
  */
-public final class Q00753_ReactingToACrisis extends Quest
+public class Q00753_ReactingToACrisis extends Quest
 {
 	// Npc
 	private static final int BERNA = 33796;

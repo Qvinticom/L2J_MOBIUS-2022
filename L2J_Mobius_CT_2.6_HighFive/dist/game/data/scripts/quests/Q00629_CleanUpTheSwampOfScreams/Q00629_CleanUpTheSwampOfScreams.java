@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Clean Up The Swamp Of Screams (629)
  * @author netvirus
  */
-public final class Q00629_CleanUpTheSwampOfScreams extends Quest
+public class Q00629_CleanUpTheSwampOfScreams extends Quest
 {
 	// NPC
 	private static final int PIERCE = 31553;

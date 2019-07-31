@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Request Acquire Skill client packet implementation.
  * @author Zoey76
  */
-public final class RequestAcquireSkill implements IClientIncomingPacket
+public class RequestAcquireSkill implements IClientIncomingPacket
 {
 	private static final String[] QUEST_VAR_NAMES =
 	{

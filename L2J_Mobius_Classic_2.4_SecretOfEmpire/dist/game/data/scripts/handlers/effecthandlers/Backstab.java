@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Backstab effect implementation.
  * @author Adry_85
  */
-public final class Backstab extends AbstractEffect
+public class Backstab extends AbstractEffect
 {
 	private final double _power;
 	private final double _chanceBoost;

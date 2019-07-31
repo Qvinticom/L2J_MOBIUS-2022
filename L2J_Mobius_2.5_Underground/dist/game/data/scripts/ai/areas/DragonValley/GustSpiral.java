@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * AI for Gust Spiral (23447)
  * @author Gigi, Mobius
  */
-public final class GustSpiral extends AbstractNpcAI
+public class GustSpiral extends AbstractNpcAI
 {
 	// NPC
 	private static final int GUST_SPIRAL = 23447;

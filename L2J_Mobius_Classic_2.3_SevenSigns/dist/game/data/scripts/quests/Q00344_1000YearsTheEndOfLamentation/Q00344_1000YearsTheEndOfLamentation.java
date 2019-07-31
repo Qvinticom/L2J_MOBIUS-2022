@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * 1000 years, the End of Lamentation (344)
  * @author Pandragon
  */
-public final class Q00344_1000YearsTheEndOfLamentation extends Quest
+public class Q00344_1000YearsTheEndOfLamentation extends Quest
 {
 	// NPCs
 	private static final int KAIEN = 30623;

@@ -38,17 +38,17 @@ public class OnAttackableKill implements IBaseEvent
 		_isSummon = isSummon;
 	}
 	
-	public final PlayerInstance getAttacker()
+	public PlayerInstance getAttacker()
 	{
 		return _attacker;
 	}
 	
-	public final Attackable getTarget()
+	public Attackable getTarget()
 	{
 		return _target;
 	}
 	
-	public final boolean isSummon()
+	public boolean isSummon()
 	{
 		return _isSummon;
 	}

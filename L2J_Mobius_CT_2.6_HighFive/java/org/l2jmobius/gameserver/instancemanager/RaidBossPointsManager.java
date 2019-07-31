@@ -76,7 +76,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public final void updatePointsInDB(PlayerInstance player, int raidId, int points)
+	public void updatePointsInDB(PlayerInstance player, int raidId, int points)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_raid_points (`charId`,`boss_id`,`points`) VALUES (?,?,?)"))
@@ -92,13 +92,13 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public final void addPoints(PlayerInstance player, int bossId, int points)
+	public void addPoints(PlayerInstance player, int bossId, int points)
 	{
 		final Map<Integer, Integer> tmpPoint = _list.computeIfAbsent(player.getObjectId(), k -> new HashMap<>());
 		updatePointsInDB(player, bossId, tmpPoint.merge(bossId, points, Integer::sum));
 	}
 	
-	public final int getPointsByOwnerId(int ownerId)
+	public int getPointsByOwnerId(int ownerId)
 	{
 		final Map<Integer, Integer> tmpPoint = _list.get(ownerId);
 		int totalPoints = 0;
@@ -115,12 +115,12 @@ public class RaidBossPointsManager
 		return totalPoints;
 	}
 	
-	public final Map<Integer, Integer> getList(PlayerInstance player)
+	public Map<Integer, Integer> getList(PlayerInstance player)
 	{
 		return _list.get(player.getObjectId());
 	}
 	
-	public final void cleanUp()
+	public void cleanUp()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE from character_raid_points WHERE charId > 0"))
@@ -134,7 +134,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public final int calculateRanking(int playerObjId)
+	public int calculateRanking(int playerObjId)
 	{
 		final Map<Integer, Integer> rank = getRankList();
 		if (rank.containsKey(playerObjId))

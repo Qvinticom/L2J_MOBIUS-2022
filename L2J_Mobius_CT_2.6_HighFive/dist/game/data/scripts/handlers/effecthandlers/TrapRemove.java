@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Trap Remove effect implementation.
  * @author UnAfraid
  */
-public final class TrapRemove extends AbstractEffect
+public class TrapRemove extends AbstractEffect
 {
 	private final int _power;
 	

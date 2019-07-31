@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Wyvern Manager
  * @author xban1x
  */
-public final class WyvernManager extends AbstractNpcAI
+public class WyvernManager extends AbstractNpcAI
 {
 	private enum ManagerType
 	{

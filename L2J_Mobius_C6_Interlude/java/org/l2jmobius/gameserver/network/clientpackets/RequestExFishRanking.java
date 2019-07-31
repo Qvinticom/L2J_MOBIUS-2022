@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Format: (ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestExFishRanking extends GameClientPacket
+public class RequestExFishRanking extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

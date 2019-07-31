@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Revenge of the Redbonnet (291).
  * @author xban1x
  */
-public final class Q00291_RevengeOfTheRedbonnet extends Quest
+public class Q00291_RevengeOfTheRedbonnet extends Quest
 {
 	// NPC
 	private static final int MARYSE_REDBONNET = 30553;

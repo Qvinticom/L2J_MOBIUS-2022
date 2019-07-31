@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Block Actions effect implementation.
  * @author mkizub
  */
-public final class BlockActions extends AbstractEffect
+public class BlockActions extends AbstractEffect
 {
 	private final Set<Integer> _allowedSkills;
 	

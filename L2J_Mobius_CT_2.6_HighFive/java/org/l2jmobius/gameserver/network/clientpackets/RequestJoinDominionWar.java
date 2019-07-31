@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowDominionRegistry;
 /**
  * @author Gigiikun
  */
-public final class RequestJoinDominionWar implements IClientIncomingPacket
+public class RequestJoinDominionWar implements IClientIncomingPacket
 {
 	private int _territoryId;
 	private int _isClan;

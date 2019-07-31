@@ -34,7 +34,7 @@ import quests.Q10328_RequestToSealTheEvilFragment.Q10328_RequestToSealTheEvilFra
  * Backup Seekers (10329)
  * @author Gladicek
  */
-public final class Q10329_BackupSeekers extends Quest
+public class Q10329_BackupSeekers extends Quest
 {
 	// NPCs
 	private static final int KAKAI = 30565;

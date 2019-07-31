@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Fame Manager AI.
  * @author St3eT
  */
-public final class FameManager extends AbstractNpcAI
+public class FameManager extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] FAME_MANAGER =

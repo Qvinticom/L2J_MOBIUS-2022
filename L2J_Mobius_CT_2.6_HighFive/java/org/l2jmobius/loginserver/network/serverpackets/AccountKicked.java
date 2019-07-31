@@ -23,7 +23,7 @@ import org.l2jmobius.loginserver.network.OutgoingPackets;
 /**
  * @author KenM
  */
-public final class AccountKicked implements IOutgoingPacket
+public class AccountKicked implements IOutgoingPacket
 {
 	public enum AccountKickedReason
 	{
@@ -39,7 +39,7 @@ public final class AccountKicked implements IOutgoingPacket
 			_code = code;
 		}
 		
-		public final int getCode()
+		public int getCode()
 		{
 			return _code;
 		}

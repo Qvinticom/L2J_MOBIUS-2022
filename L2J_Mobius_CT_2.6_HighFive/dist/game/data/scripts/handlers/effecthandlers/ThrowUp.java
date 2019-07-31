@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 /**
  * Throw Up effect implementation.
  */
-public final class ThrowUp extends AbstractEffect
+public class ThrowUp extends AbstractEffect
 {
 	public ThrowUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

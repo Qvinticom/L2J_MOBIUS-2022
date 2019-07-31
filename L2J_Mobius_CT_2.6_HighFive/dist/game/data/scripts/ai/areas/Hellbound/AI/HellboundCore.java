@@ -29,7 +29,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Manages Naia's cast on the Hellbound Core
  * @author GKR
  */
-public final class HellboundCore extends AbstractNpcAI
+public class HellboundCore extends AbstractNpcAI
 {
 	// NPCs
 	private static final int NAIA = 18484;
@@ -61,7 +61,7 @@ public final class HellboundCore extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == NAIA)
 		{

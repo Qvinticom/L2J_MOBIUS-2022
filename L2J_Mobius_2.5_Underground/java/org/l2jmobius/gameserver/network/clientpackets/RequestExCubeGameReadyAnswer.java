@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format: chddd d: Arena d: Answer
  * @author mrTJO
  */
-public final class RequestExCubeGameReadyAnswer implements IClientIncomingPacket
+public class RequestExCubeGameReadyAnswer implements IClientIncomingPacket
 {
 	private int _arena;
 	private int _answer;

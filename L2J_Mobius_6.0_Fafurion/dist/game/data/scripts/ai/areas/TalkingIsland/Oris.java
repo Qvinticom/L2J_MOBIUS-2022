@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Oris AI.
  * @author Gladicek
  */
-public final class Oris extends AbstractNpcAI
+public class Oris extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ORIS = 33116;

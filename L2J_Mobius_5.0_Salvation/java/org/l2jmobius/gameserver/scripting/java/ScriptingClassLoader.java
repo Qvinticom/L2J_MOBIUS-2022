@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 /**
  * @author HorridoJoho
  */
-public final class ScriptingClassLoader extends ClassLoader
+public class ScriptingClassLoader extends ClassLoader
 {
 	public static final Logger LOGGER = Logger.getLogger(ScriptingClassLoader.class.getName());
 	

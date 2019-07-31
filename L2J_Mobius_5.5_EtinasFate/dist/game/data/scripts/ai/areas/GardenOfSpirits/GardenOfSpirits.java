@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Garden of Spirits teleport zones.
  * @author Mobius
  */
-public final class GardenOfSpirits extends AbstractNpcAI
+public class GardenOfSpirits extends AbstractNpcAI
 {
 	// Zones
 	private static final int ZONE_ID_1 = 200213;

@@ -44,7 +44,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Elise AI. Healer
  * @author flanagak
  */
-public final class KartiaHelperElise extends AbstractNpcAI
+public class KartiaHelperElise extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_ELISE =

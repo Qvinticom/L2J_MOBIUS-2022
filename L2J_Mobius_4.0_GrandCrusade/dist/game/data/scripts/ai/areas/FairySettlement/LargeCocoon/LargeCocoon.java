@@ -30,7 +30,7 @@ import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
  * Large Cocoon AI.
  * @author St3eT
  */
-public final class LargeCocoon extends AbstractNpcAI
+public class LargeCocoon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LARGE_COCOON = 32920;

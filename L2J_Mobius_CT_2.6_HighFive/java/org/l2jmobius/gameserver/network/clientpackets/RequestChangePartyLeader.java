@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * This packet is received from client when a party leader requests to change the leadership to another player in his party.
  */
-public final class RequestChangePartyLeader implements IClientIncomingPacket
+public class RequestChangePartyLeader implements IClientIncomingPacket
 {
 	private String _name;
 	

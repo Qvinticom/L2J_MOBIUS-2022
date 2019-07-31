@@ -30,7 +30,7 @@ import instances.AbstractInstance;
  * Library of Sages instance zone.
  * @author Adry_85
  */
-public final class SSQLibraryOfSages extends AbstractInstance
+public class SSQLibraryOfSages extends AbstractInstance
 {
 	// NPCs
 	private static final int SOPHIA1 = 32596;

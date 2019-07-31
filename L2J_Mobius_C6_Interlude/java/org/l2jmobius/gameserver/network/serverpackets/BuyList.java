@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
  * 3-questitem 4-adena 5-item 00 00 60 09 00 00 // price 00 00 00 00 00 00 b6 00 00 00 00 00 00 00 00 00 00 00 80 00 // body slot these 4 values are only used if itemtype1 = 0 or 1 00 00 // 00 00 // 00 00 // 50 c6 0c 00 format dd h (h dddhh hhhh d) revision 377 format dd h (h dddhh dhhh d)
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class BuyList extends GameServerPacket
+public class BuyList extends GameServerPacket
 {
 	private final int _listId;
 	private final ItemInstance[] _list;

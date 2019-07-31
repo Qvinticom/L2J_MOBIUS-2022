@@ -31,7 +31,7 @@ import quests.Q00193_SevenSignsDyingMessage.Q00193_SevenSignsDyingMessage;
  * Seven Signs, Mammon's Contract (194)
  * @author Adry_85
  */
-public final class Q00194_SevenSignsMammonsContract extends Quest
+public class Q00194_SevenSignsMammonsContract extends Quest
 {
 	// NPCs
 	private static final int SIR_GUSTAV_ATHEBALDT = 30760;

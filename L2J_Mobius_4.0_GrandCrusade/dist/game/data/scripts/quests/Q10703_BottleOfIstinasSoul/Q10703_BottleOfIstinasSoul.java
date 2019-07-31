@@ -29,7 +29,7 @@ import quests.Q00150_ExtremeChallengePrimalMotherResurrected.Q00150_ExtremeChall
  * @URL http://l2on.net/en/?c=quests&id=10703&game=1
  * @author Gigi
  */
-public final class Q10703_BottleOfIstinasSoul extends Quest
+public class Q10703_BottleOfIstinasSoul extends Quest
 {
 	// NPCs
 	private static final int RUMIESE = 33293;

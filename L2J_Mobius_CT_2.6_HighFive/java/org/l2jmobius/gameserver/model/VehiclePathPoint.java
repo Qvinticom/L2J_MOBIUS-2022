@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-public final class VehiclePathPoint extends Location
+public class VehiclePathPoint extends Location
 {
 	private final int _moveSpeed;
 	private final int _rotationSpeed;

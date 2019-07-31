@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class UseItem implements IClientIncomingPacket
+public class UseItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private boolean _ctrlPressed;

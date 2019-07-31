@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Divinity Protector (470)
  * @author St3eT
  */
-public final class Q00470_DivinityProtector extends Quest
+public class Q00470_DivinityProtector extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

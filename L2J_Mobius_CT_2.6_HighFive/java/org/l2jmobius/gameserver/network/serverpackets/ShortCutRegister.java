@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ShortCutRegister implements IClientOutgoingPacket
+public class ShortCutRegister implements IClientOutgoingPacket
 {
 	private final Shortcut _shortcut;
 	

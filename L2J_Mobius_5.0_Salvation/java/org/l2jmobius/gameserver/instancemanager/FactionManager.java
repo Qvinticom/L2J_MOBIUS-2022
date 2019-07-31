@@ -62,7 +62,7 @@ public class FactionManager
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " character faction values.");
 	}
 	
-	public final int getFactionByCharId(int id)
+	public int getFactionByCharId(int id)
 	{
 		if (id <= 0)
 		{
@@ -97,7 +97,7 @@ public class FactionManager
 		return 0; // not found
 	}
 	
-	public final boolean isSameFaction(PlayerInstance player1, PlayerInstance player2)
+	public boolean isSameFaction(PlayerInstance player1, PlayerInstance player2)
 	{
 		// TODO: Maybe add support for multiple factions?
 		return (player1.isGood() && player2.isGood()) || (player1.isEvil() && player2.isEvil());

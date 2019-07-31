@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * While a tamed beast behaves a lot like a pet (ingame) and does have an owner, in all other aspects, it acts like a mob. In addition, it can be fed in order to increase its duration.<br>
  * This class handles the running tasks, AI, and feed of the mob. The (mostly optional) AI on feeding the spawn is handled by the datapack ai script
  */
-public final class TamedBeastInstance extends FeedableBeastInstance
+public class TamedBeastInstance extends FeedableBeastInstance
 {
 	
 	private static final int MAX_DISTANCE_FROM_HOME = 30000;

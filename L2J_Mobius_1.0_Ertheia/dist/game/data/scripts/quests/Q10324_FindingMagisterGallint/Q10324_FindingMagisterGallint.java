@@ -29,7 +29,7 @@ import quests.Q10323_TrainLikeItsReal.Q10323_TrainLikeItsReal;
  * Finding Magister Gallint (10324)
  * @author ivantotov, Gladicek
  */
-public final class Q10324_FindingMagisterGallint extends Quest
+public class Q10324_FindingMagisterGallint extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

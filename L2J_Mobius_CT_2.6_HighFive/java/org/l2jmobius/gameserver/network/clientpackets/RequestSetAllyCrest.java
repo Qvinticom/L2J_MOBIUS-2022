@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Client packet for setting ally crest.
  */
-public final class RequestSetAllyCrest implements IClientIncomingPacket
+public class RequestSetAllyCrest implements IClientIncomingPacket
 {
 	private int _length;
 	private byte[] _data = null;

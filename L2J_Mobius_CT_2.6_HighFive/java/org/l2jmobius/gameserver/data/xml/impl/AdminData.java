@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Loads administrator access levels and commands.
  * @author UnAfraid
  */
-public final class AdminData implements IXmlReader
+public class AdminData implements IXmlReader
 {
 	private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
 	private final Map<String, AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();

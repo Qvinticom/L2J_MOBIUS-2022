@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Refuel Airship effect implementation.
  * @author Adry_85
  */
-public final class RefuelAirship extends AbstractEffect
+public class RefuelAirship extends AbstractEffect
 {
 	private final int _value;
 	

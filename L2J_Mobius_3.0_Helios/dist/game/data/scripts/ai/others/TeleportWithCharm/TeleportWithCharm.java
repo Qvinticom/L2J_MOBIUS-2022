@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Charm teleport AI.<br>
  * @author Plim
  */
-public final class TeleportWithCharm extends AbstractNpcAI
+public class TeleportWithCharm extends AbstractNpcAI
 {
 	// NPCs
 	private static final int WHIRPY = 30540;

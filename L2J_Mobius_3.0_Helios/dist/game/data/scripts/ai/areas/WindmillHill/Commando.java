@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Commando AI.
  * @author St3eT
  */
-public final class Commando extends AbstractNpcAI
+public class Commando extends AbstractNpcAI
 {
 	// NPCs
 	private static final int COMMANDO = 33422;

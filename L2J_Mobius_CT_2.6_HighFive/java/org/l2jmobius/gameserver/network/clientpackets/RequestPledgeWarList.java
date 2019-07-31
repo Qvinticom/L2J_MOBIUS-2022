@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
  * Format: (ch) dd
  * @author -Wooden-
  */
-public final class RequestPledgeWarList implements IClientIncomingPacket
+public class RequestPledgeWarList implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

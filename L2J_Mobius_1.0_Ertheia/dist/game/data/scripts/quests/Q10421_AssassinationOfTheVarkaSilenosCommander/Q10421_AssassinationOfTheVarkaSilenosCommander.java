@@ -30,7 +30,7 @@ import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
  * Assassination of the Varka Silenos Commander (10421)
  * @author St3eT
  */
-public final class Q10421_AssassinationOfTheVarkaSilenosCommander extends Quest
+public class Q10421_AssassinationOfTheVarkaSilenosCommander extends Quest
 {
 	// NPCs
 	private static final int HANSEN = 33853;

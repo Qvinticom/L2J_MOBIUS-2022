@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Outpost Destroy effect implementation.
  * @author UnAfraid
  */
-public final class OutpostDestroy extends AbstractEffect
+public class OutpostDestroy extends AbstractEffect
 {
 	public OutpostDestroy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

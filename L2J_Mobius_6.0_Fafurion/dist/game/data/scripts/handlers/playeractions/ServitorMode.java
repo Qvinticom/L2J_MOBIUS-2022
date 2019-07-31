@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Servitor passive/defend mode player action handler.
  * @author Nik
  */
-public final class ServitorMode implements IPlayerActionHandler
+public class ServitorMode implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

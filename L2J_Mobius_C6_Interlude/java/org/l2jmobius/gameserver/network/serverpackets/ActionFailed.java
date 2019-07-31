@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public final class ActionFailed extends GameServerPacket
+public class ActionFailed extends GameServerPacket
 {
 	public static final String _S__25_ACTIONFAILED = "[S] 25 ActionFailed";
 	public static final ActionFailed STATIC_PACKET = new ActionFailed();

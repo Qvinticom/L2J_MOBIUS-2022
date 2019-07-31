@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.GMAudit;
 /**
  * This class handles all GM commands triggered by //command
  */
-public final class SendBypassBuildCmd extends GameClientPacket
+public class SendBypassBuildCmd extends GameClientPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(SendBypassBuildCmd.class.getName());
 	public static final int GM_MESSAGE = 9;

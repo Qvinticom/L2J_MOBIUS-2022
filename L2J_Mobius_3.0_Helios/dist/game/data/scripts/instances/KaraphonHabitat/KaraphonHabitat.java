@@ -28,7 +28,7 @@ import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
  * Karaphon Habitat instance.
  * @author Sdw
  */
-public final class KaraphonHabitat extends AbstractInstance
+public class KaraphonHabitat extends AbstractInstance
 {
 	// NPCs
 	private static final int DOLKIN = 33954;

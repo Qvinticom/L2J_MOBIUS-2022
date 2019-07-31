@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  * @author NightMarez
  * @version $Revision: 1.3.2.2.2.5 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class ObservationInstance extends Npc
+public class ObservationInstance extends Npc
 {
 	/**
 	 * Creates an observation.

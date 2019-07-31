@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Kartia Support Troop AI.
  * @author St3eT
  */
-public final class KartiaSupportTroop extends AbstractNpcAI
+public class KartiaSupportTroop extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] SUPPORT_TROOPS =

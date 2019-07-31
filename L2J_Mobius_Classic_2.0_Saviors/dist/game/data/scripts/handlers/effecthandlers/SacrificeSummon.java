@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Mobius
  */
-public final class SacrificeSummon extends AbstractEffect
+public class SacrificeSummon extends AbstractEffect
 {
 	public SacrificeSummon(StatsSet params)
 	{

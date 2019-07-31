@@ -32,7 +32,7 @@ import quests.Q00008_AnAdventureBegins.Q00008_AnAdventureBegins;
  * Into The Dark Elven Forest (47)
  * @author janiko
  */
-public final class Q00047_IntoTheDarkElvenForest extends Quest
+public class Q00047_IntoTheDarkElvenForest extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;

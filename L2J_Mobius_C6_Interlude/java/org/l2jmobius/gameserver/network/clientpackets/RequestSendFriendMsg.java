@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.FriendRecvMsg;
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
  */
-public final class RequestSendFriendMsg extends GameClientPacket
+public class RequestSendFriendMsg extends GameClientPacket
 {
 	private static java.util.logging.Logger _logChat = java.util.logging.Logger.getLogger("chat");
 	

@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class FortSiegeManager
+public class FortSiegeManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FortSiegeManager.class.getName());
 	
@@ -67,7 +67,7 @@ public final class FortSiegeManager
 		load();
 	}
 	
-	public final void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(CommonSkill.SEAL_OF_RULER.getSkill(), false);
 		character.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
@@ -78,7 +78,7 @@ public final class FortSiegeManager
 	 * @param fortid
 	 * @return true if the clan is registered or owner of a fort
 	 */
-	public final boolean checkIsRegistered(Clan clan, int fortid)
+	public boolean checkIsRegistered(Clan clan, int fortid)
 	{
 		if (clan == null)
 		{
@@ -106,7 +106,7 @@ public final class FortSiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(CommonSkill.SEAL_OF_RULER.getSkill());
 		character.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
@@ -196,42 +196,42 @@ public final class FortSiegeManager
 		}
 	}
 	
-	public final List<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
+	public List<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
 	{
 		return _commanderSpawnList.get(_fortId);
 	}
 	
-	public final List<CombatFlag> getFlagList(int _fortId)
+	public List<CombatFlag> getFlagList(int _fortId)
 	{
 		return _flagList.get(_fortId);
 	}
 	
-	public final int getAttackerMaxClans()
+	public int getAttackerMaxClans()
 	{
 		return _attackerMaxClans;
 	}
 	
-	public final int getFlagMaxCount()
+	public int getFlagMaxCount()
 	{
 		return _flagMaxCount;
 	}
 	
-	public final boolean canRegisterJustTerritory()
+	public boolean canRegisterJustTerritory()
 	{
 		return _justToTerritory;
 	}
 	
-	public final int getSuspiciousMerchantRespawnDelay()
+	public int getSuspiciousMerchantRespawnDelay()
 	{
 		return _suspiciousMerchantRespawnDelay;
 	}
 	
-	public final FortSiege getSiege(WorldObject activeObject)
+	public FortSiege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final FortSiege getSiege(int x, int y, int z)
+	public FortSiege getSiege(int x, int y, int z)
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
@@ -243,22 +243,22 @@ public final class FortSiegeManager
 		return null;
 	}
 	
-	public final int getSiegeClanMinLevel()
+	public int getSiegeClanMinLevel()
 	{
 		return _siegeClanMinLevel;
 	}
 	
-	public final int getSiegeLength()
+	public int getSiegeLength()
 	{
 		return _siegeLength;
 	}
 	
-	public final int getCountDownLength()
+	public int getCountDownLength()
 	{
 		return _countDownLength;
 	}
 	
-	public final List<FortSiege> getSieges()
+	public List<FortSiege> getSieges()
 	{
 		if (_sieges == null)
 		{
@@ -267,7 +267,7 @@ public final class FortSiegeManager
 		return _sieges;
 	}
 	
-	public final void addSiege(FortSiege fortSiege)
+	public void addSiege(FortSiege fortSiege)
 	{
 		getSieges().add(fortSiege);
 	}

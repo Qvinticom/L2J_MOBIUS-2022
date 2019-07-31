@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format chS c (id) 0xD0 h (subid) 0x0C S the hero's words :)
  * @author -Wooden-
  */
-public final class RequestWriteHeroWords implements IClientIncomingPacket
+public class RequestWriteHeroWords implements IClientIncomingPacket
 {
 	private String _heroWords;
 	

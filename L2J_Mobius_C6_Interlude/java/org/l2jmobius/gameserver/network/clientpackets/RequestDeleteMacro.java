@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestDeleteMacro extends GameClientPacket
+public class RequestDeleteMacro extends GameClientPacket
 {
 	private int _id;
 	

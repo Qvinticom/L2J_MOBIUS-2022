@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestStartPledgeWar implements IClientIncomingPacket
+public class RequestStartPledgeWar implements IClientIncomingPacket
 {
 	private String _pledgeName;
 	

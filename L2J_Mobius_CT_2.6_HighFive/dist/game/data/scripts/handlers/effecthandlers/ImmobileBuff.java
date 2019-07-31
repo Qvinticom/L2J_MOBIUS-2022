@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Immobile Buff effect implementation.
  * @author mkizub
  */
-public final class ImmobileBuff extends Buff
+public class ImmobileBuff extends Buff
 {
 	public ImmobileBuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

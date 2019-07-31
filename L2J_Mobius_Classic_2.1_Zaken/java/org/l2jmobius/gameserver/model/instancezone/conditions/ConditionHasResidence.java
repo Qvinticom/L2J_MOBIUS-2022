@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
  * Instance residence condition
  * @author malyelfik
  */
-public final class ConditionHasResidence extends Condition
+public class ConditionHasResidence extends Condition
 {
 	public ConditionHasResidence(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

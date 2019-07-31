@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Castle Door Manager AI.
  * @author St3eT
  */
-public final class CastleDoorManager extends AbstractNpcAI
+public class CastleDoorManager extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

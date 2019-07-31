@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
  * Little Wing (420)
  * @author Pandragon
  */
-public final class Q00420_LittleWing extends Quest
+public class Q00420_LittleWing extends Quest
 {
 	// NPCs
 	private static final int MARIA = 30608;

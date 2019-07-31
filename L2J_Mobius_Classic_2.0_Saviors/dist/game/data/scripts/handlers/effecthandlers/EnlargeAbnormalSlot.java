@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Enlarge Abnormal Slot effect implementation.
  * @author Zoey76
  */
-public final class EnlargeAbnormalSlot extends AbstractEffect
+public class EnlargeAbnormalSlot extends AbstractEffect
 {
 	private final int _slots;
 	

@@ -29,7 +29,7 @@ import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
  * Daimon the White-eyed (10417)
  * @author St3eT
  */
-public final class Q10417_DaimonTheWhiteEyed extends Quest
+public class Q10417_DaimonTheWhiteEyed extends Quest
 {
 	// NPCs
 	private static final int EYE_OF_ARGOS = 31683;

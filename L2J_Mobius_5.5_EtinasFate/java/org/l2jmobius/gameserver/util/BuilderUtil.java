@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEf
 /**
  * @author lord_rex
  */
-public final class BuilderUtil
+public class BuilderUtil
 {
 	private BuilderUtil()
 	{

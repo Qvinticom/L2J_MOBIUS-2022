@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
  * Map Region Manager.
  * @author Nyaran
  */
-public final class MapRegionManager implements IXmlReader
+public class MapRegionManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MapRegionManager.class.getName());
 	
@@ -142,7 +142,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param locY
 	 * @return
 	 */
-	public final MapRegion getMapRegion(int locX, int locY)
+	public MapRegion getMapRegion(int locX, int locY)
 	{
 		for (MapRegion region : _regions.values())
 		{
@@ -159,7 +159,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param locY
 	 * @return
 	 */
-	public final int getMapRegionLocId(int locX, int locY)
+	public int getMapRegionLocId(int locX, int locY)
 	{
 		final MapRegion region = getMapRegion(locX, locY);
 		if (region != null)
@@ -173,7 +173,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param obj
 	 * @return
 	 */
-	public final MapRegion getMapRegion(WorldObject obj)
+	public MapRegion getMapRegion(WorldObject obj)
 	{
 		return getMapRegion(obj.getX(), obj.getY());
 	}
@@ -182,7 +182,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param obj
 	 * @return
 	 */
-	public final int getMapRegionLocId(WorldObject obj)
+	public int getMapRegionLocId(WorldObject obj)
 	{
 		return getMapRegionLocId(obj.getX(), obj.getY());
 	}
@@ -191,7 +191,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param posX
 	 * @return
 	 */
-	public final int getMapRegionX(int posX)
+	public int getMapRegionX(int posX)
 	{
 		return (posX >> 15) + 9 + 11; // + centerTileX;
 	}
@@ -200,7 +200,7 @@ public final class MapRegionManager implements IXmlReader
 	 * @param posY
 	 * @return
 	 */
-	public final int getMapRegionY(int posY)
+	public int getMapRegionY(int posY)
 	{
 		return (posY >> 15) + 10 + 8; // + centerTileX;
 	}

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author St3eT
  */
-public final class ExSendSelectedQuestZoneID implements IClientIncomingPacket
+public class ExSendSelectedQuestZoneID implements IClientIncomingPacket
 {
 	private int _questZoneId;
 	

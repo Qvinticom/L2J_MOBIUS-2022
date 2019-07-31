@@ -29,7 +29,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  * @URL https://l2wiki.com/Exalted,_One_Who_Overcomes_the_Limit
  * @author Mobius
  */
-public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
+public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 {
 	// NPC
 	private static final int LIONEL = 33907;

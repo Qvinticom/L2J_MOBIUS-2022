@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
  * @author mkizub
  * @param <T> type of values stored in this hashtable
  */
-public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
+public class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2ObjectHashSet.class.getName());
 	

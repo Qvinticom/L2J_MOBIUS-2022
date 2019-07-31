@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.templates.item.Henna;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestHennaEquip extends GameClientPacket
+public class RequestHennaEquip extends GameClientPacket
 {
 	private int _symbolId;
 	

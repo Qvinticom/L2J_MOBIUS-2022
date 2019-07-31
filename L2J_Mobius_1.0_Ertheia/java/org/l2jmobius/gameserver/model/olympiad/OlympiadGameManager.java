@@ -79,7 +79,7 @@ public class OlympiadGameManager implements Runnable
 	}
 	
 	@Override
-	public final void run()
+	public void run()
 	{
 		if (Olympiad.getInstance().isOlympiadEnd())
 		{
@@ -193,7 +193,7 @@ public class OlympiadGameManager implements Runnable
 		}
 	}
 	
-	public final boolean isAllTasksFinished()
+	public boolean isAllTasksFinished()
 	{
 		for (OlympiadStadium stadium : _tasks)
 		{
@@ -206,7 +206,7 @@ public class OlympiadGameManager implements Runnable
 		return true;
 	}
 	
-	public final OlympiadGameTask getOlympiadTask(int id)
+	public OlympiadGameTask getOlympiadTask(int id)
 	{
 		if ((id < 0) || (id >= _tasks.size()))
 		{
@@ -216,12 +216,12 @@ public class OlympiadGameManager implements Runnable
 		return _tasks.get(id).getTask();
 	}
 	
-	public final int getNumberOfStadiums()
+	public int getNumberOfStadiums()
 	{
 		return _tasks.size();
 	}
 	
-	public final void notifyCompetitorDamage(PlayerInstance attacker, int damage)
+	public void notifyCompetitorDamage(PlayerInstance attacker, int damage)
 	{
 		if (attacker == null)
 		{

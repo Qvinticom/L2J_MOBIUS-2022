@@ -64,7 +64,7 @@ import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class Skill implements IIdentifiable
+public class Skill implements IIdentifiable
 {
 	private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Summon effect implementation.
  * @author UnAfraid
  */
-public final class Summon extends AbstractEffect
+public class Summon extends AbstractEffect
 {
 	private final int _npcId;
 	private final float _expMultiplier;

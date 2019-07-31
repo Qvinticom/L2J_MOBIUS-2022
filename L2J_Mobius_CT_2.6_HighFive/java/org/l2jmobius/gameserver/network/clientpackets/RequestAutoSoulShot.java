@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @version $Revision: 1.0.0.0 $ $Date: 2005/07/11 15:29:30 $
  */
-public final class RequestAutoSoulShot implements IClientIncomingPacket
+public class RequestAutoSoulShot implements IClientIncomingPacket
 {
 	// format cd
 	private int _itemId;

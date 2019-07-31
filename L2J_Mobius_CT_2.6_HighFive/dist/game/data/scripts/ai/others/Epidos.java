@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-public final class Epidos extends AbstractNpcAI
+public class Epidos extends AbstractNpcAI
 {
 	private static final int[] EPIDOSES =
 	{
@@ -66,7 +66,7 @@ public final class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("check_minions"))
 		{
@@ -126,7 +126,7 @@ public final class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("check_minions", 10000, npc, null);
 		startQuestTimer("check_idle", 600000, npc, null);

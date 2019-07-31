@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Sweeper effect implementation.
  * @author Zoey76
  */
-public final class Sweeper extends AbstractEffect
+public class Sweeper extends AbstractEffect
 {
 	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

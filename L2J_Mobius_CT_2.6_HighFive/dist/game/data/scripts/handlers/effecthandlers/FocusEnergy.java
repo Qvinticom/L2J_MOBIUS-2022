@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Focus Energy effect implementation.
  * @author DS
  */
-public final class FocusEnergy extends AbstractEffect
+public class FocusEnergy extends AbstractEffect
 {
 	private final int _charge;
 	

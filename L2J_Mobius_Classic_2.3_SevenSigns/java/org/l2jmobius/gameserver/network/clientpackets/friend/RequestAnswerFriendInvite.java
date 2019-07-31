@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendAddRequestResult;
 
-public final class RequestAnswerFriendInvite implements IClientIncomingPacket
+public class RequestAnswerFriendInvite implements IClientIncomingPacket
 {
 	private int _response;
 	

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Mute effect implementation.
  */
-public final class Mute extends AbstractEffect
+public class Mute extends AbstractEffect
 {
 	public Mute(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

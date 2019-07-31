@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
  * @URL https://eu.4gameforum.com/threads/603119/
  * @author Mobius
  */
-public final class ChefMonkeyEvent extends LongTimeEvent
+public class ChefMonkeyEvent extends LongTimeEvent
 {
 	// NPC
 	private static final int CHEF_MONKEY = 34292;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Maestro (231)
  * @author ivantotov
  */
-public final class Q00231_TestOfTheMaestro extends Quest
+public class Q00231_TestOfTheMaestro extends Quest
 {
 	// NPCs
 	private static final int IRON_GATES_LOCKIRIN = 30531;

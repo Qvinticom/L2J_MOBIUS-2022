@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Kail's Magic Coin (382)
  * @author Sdw, jurchicks
  */
-public final class Q00382_KailsMagicCoin extends Quest
+public class Q00382_KailsMagicCoin extends Quest
 {
 	// NPCs
 	private static final int VERGARA = 30687;

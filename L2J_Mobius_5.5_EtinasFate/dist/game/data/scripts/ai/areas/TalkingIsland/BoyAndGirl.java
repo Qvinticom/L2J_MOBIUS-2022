@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Boy and Girl AI.
  * @author St3eT
  */
-public final class BoyAndGirl extends AbstractNpcAI
+public class BoyAndGirl extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BOY = 33224;

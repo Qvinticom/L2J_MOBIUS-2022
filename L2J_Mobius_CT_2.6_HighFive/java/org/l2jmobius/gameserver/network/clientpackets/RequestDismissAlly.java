@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestDismissAlly implements IClientIncomingPacket
+public class RequestDismissAlly implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

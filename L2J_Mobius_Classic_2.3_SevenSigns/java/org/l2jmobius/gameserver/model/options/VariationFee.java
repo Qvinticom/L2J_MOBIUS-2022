@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.options;
 /**
  * @author Pere
  */
-public final class VariationFee
+public class VariationFee
 {
 	private final int _itemId;
 	private final long _itemCount;

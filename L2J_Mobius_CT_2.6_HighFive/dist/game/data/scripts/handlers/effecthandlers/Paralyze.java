@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Paralyze effect implementation.
  */
-public final class Paralyze extends AbstractEffect
+public class Paralyze extends AbstractEffect
 {
 	public Paralyze(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

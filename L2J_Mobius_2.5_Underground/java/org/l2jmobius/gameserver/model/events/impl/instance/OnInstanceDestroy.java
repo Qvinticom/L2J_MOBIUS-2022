@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyelfik
  */
-public final class OnInstanceDestroy implements IBaseEvent
+public class OnInstanceDestroy implements IBaseEvent
 {
 	private final Instance _instance;
 	

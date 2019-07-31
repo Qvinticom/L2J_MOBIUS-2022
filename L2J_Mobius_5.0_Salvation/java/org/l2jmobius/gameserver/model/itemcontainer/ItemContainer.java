@@ -183,7 +183,7 @@ public abstract class ItemContainer
 	/**
 	 * @return true if player got item for self resurrection
 	 */
-	public final boolean haveItemForSelfResurrection()
+	public boolean haveItemForSelfResurrection()
 	{
 		return _items.values().stream().anyMatch(item -> item.getItem().isAllowSelfResurrection());
 	}

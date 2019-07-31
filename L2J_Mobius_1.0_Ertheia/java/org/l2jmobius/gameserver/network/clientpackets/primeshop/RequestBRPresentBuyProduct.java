@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRPresentBuyProduct implements IClientIncomingPacket
+public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 {
 	private static final int HERO_COINS = 23805;
 	

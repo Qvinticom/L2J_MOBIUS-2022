@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance party leader condition
  * @author malyelfik
  */
-public final class ConditionPartyLeader extends Condition
+public class ConditionPartyLeader extends Condition
 {
 	public ConditionPartyLeader(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestActionUse extends GameClientPacket
+public class RequestActionUse extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	

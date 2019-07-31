@@ -61,7 +61,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
  * Methods may resemble List interface, although it doesn't implement such interface.
  * @author Zoey76
  */
-public final class EffectList
+public class EffectList
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
@@ -183,7 +183,7 @@ public final class EffectList
 	 * @param type the abnormal skill type
 	 * @return {@code true} if there is any {@code BuffInfo} matching the specified {@code AbnormalType}, {@code false} otherwise
 	 */
-	public final boolean hasAbnormalType(AbnormalType type)
+	public boolean hasAbnormalType(AbnormalType type)
 	{
 		return _stackedEffects.contains(type);
 	}
@@ -1065,7 +1065,7 @@ public final class EffectList
 	 * Adds the abnormal visual and sends packet for updating them in client.
 	 * @param aves the abnormal visual effects
 	 */
-	public final void startAbnormalVisualEffect(AbnormalVisualEffect... aves)
+	public void startAbnormalVisualEffect(AbnormalVisualEffect... aves)
 	{
 		for (AbnormalVisualEffect ave : aves)
 		{
@@ -1078,7 +1078,7 @@ public final class EffectList
 	 * Removes the abnormal visual and sends packet for updating them in client.
 	 * @param aves the abnormal visual effects
 	 */
-	public final void stopAbnormalVisualEffect(AbnormalVisualEffect... aves)
+	public void stopAbnormalVisualEffect(AbnormalVisualEffect... aves)
 	{
 		for (AbnormalVisualEffect ave : aves)
 		{

@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Zealot of Shilen AI.
  * @author nonom, Mobius
  */
-public final class ZealotOfShilen extends AbstractNpcAI
+public class ZealotOfShilen extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ZEALOT = 18782;

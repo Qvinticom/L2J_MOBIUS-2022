@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Mahram AI.
  * @author St3eT
  */
-public final class Mahram extends AbstractNpcAI
+public class Mahram extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MAHRAM = 33271;

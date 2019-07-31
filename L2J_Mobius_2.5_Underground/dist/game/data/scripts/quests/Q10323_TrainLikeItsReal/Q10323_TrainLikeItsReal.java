@@ -37,7 +37,7 @@ import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMyster
  * Train Like Its Real (10323)
  * @author Sdw, Gladicek
  */
-public final class Q10323_TrainLikeItsReal extends Quest
+public class Q10323_TrainLikeItsReal extends Quest
 {
 	// NPCs
 	private static final int EVAIN = 33464;

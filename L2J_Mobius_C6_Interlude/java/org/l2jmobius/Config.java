@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.loginserver.LoginController;
 
-public final class Config
+public class Config
 {
 	private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
 	

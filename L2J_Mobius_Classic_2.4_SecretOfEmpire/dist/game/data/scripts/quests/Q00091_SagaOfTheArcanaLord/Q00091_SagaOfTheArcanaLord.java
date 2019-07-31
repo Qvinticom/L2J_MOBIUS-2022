@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00091_SagaOfTheArcanaLord extends Quest
 {
 	// NPCs
-	public final int KINSLEY = 31605;
-	public final int SPARKY_THE_CAT = 31585;
-	public final int KEATS = 31622;
-	public final int BELINDA = 31608;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31647;
-	public final int TABLET_OF_VISION_3 = 31650;
-	public final int TABLET_OF_VISION_4 = 31654;
-	public final int SPARKY_THE_CAT_1 = 31586;
+	private static final int KINSLEY = 31605;
+	private static final int SPARKY_THE_CAT = 31585;
+	private static final int KEATS = 31622;
+	private static final int BELINDA = 31608;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31647;
+	private static final int TABLET_OF_VISION_3 = 31650;
+	private static final int TABLET_OF_VISION_4 = 31654;
+	private static final int SPARKY_THE_CAT_1 = 31586;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GUARDIAN_OF_FORBIDDEN_KNOWLEDGE = 27214;
-	public final int VISION_GUARDIAN_SHAKIEL = 27313;
-	public final int HALISHA_ARCHON = 27219;
-	public final int KITANIS_VAN_HACKEN = 27310;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int GUARDIAN_OF_FORBIDDEN_KNOWLEDGE = 27214;
+	private static final int VISION_GUARDIAN_SHAKIEL = 27313;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int KITANIS_VAN_HACKEN = 27310;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49825;
-	public final int HALISHA_BADGE = 7506;
-	public final int RESONANCE_AMULET = 7289;
-	public final int RESONANCE_AMULET_2 = 7320;
-	public final int RESONANCE_AMULET_3 = 7351;
-	public final int RESONANCE_AMULET_4 = 7382;
-	public final int SUMMONER_KEAT_LETTER = 7604;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49825;
+	private static final int HALISHA_BADGE = 7506;
+	private static final int RESONANCE_AMULET = 7289;
+	private static final int RESONANCE_AMULET_2 = 7320;
+	private static final int RESONANCE_AMULET_3 = 7351;
+	private static final int RESONANCE_AMULET_4 = 7382;
+	private static final int SUMMONER_KEAT_LETTER = 7604;
 	// Reward
-	public final int BOOK_GOLD_LION = 90038;
+	private static final int BOOK_GOLD_LION = 90038;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

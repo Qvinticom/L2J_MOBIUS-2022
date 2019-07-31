@@ -38,7 +38,7 @@ import ai.AbstractNpcAI;
  * TODO: Rewrite.
  * @author DS
  */
-public final class SubClassSkills extends AbstractNpcAI
+public class SubClassSkills extends AbstractNpcAI
 {
 	// arrays must be sorted
 	// @formatter:off

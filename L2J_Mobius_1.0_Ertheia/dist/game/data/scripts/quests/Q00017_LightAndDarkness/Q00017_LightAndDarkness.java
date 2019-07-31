@@ -28,7 +28,7 @@ import quests.Q00015_SweetWhispers.Q00015_SweetWhispers;
  * Light And Darkness (17)
  * @author Gladicek
  */
-public final class Q00017_LightAndDarkness extends Quest
+public class Q00017_LightAndDarkness extends Quest
 {
 	// NPCs
 	private static final int HIERARCH = 31517;

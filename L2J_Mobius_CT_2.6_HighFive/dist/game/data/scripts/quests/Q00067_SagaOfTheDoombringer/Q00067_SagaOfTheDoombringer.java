@@ -24,7 +24,7 @@ import quests.AbstractSagaQuest;
  * Saga of the Doombringer (67)
  * @author Emperorc
  */
-public final class Q00067_SagaOfTheDoombringer extends AbstractSagaQuest
+public class Q00067_SagaOfTheDoombringer extends AbstractSagaQuest
 {
 	public Q00067_SagaOfTheDoombringer()
 	{

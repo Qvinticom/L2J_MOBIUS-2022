@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * The Ocean of Distant Stars (117)
  * @author Adry_85
  */
-public final class Q00117_TheOceanOfDistantStars extends Quest
+public class Q00117_TheOceanOfDistantStars extends Quest
 {
 	// NPCs
 	private static final int OBI = 32052;

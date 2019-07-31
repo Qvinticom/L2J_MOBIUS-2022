@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Pytan, Knorkiks AI.
  * @author Quangnguyen
  */
-public final class Pytan extends AbstractNpcAI
+public class Pytan extends AbstractNpcAI
 {
 	// NPCs
 	private static final int PYTAN = 20761;

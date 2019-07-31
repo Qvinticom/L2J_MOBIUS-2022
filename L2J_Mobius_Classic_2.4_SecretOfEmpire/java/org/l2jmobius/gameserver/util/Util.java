@@ -55,7 +55,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 /**
  * General Utility functions related to game server.
  */
-public final class Util
+public class Util
 {
 	private static final Logger LOGGER = Logger.getLogger(Util.class.getName());
 	private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);

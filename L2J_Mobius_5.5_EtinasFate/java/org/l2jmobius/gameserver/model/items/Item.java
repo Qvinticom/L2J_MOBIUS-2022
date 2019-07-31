@@ -288,7 +288,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns the duration of the item
 	 * @return int
 	 */
-	public final int getDuration()
+	public int getDuration()
 	{
 		return _duration;
 	}
@@ -297,7 +297,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns the time of the item
 	 * @return long
 	 */
-	public final long getTime()
+	public long getTime()
 	{
 		return _time;
 	}
@@ -305,7 +305,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the auto destroy time of the item in seconds: 0 or less - default
 	 */
-	public final int getAutoDestroyTime()
+	public int getAutoDestroyTime()
 	{
 		return _autoDestroyTime;
 	}
@@ -315,7 +315,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * @return int
 	 */
 	@Override
-	public final int getId()
+	public int getId()
 	{
 		return _itemId;
 	}
@@ -324,7 +324,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns the ID of the item
 	 * @return int
 	 */
-	public final int getDisplayId()
+	public int getDisplayId()
 	{
 		return _displayId;
 	}
@@ -335,7 +335,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Return the type of material of the item
 	 * @return MaterialType
 	 */
-	public final MaterialType getMaterialType()
+	public MaterialType getMaterialType()
 	{
 		return _materialType;
 	}
@@ -344,7 +344,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns the type 2 of the item
 	 * @return int
 	 */
-	public final int getType2()
+	public int getType2()
 	{
 		return _type2;
 	}
@@ -353,7 +353,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns the weight of the item
 	 * @return int
 	 */
-	public final int getWeight()
+	public int getWeight()
 	{
 		return _weight;
 	}
@@ -362,7 +362,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns if the item is crystallizable
 	 * @return boolean
 	 */
-	public final boolean isCrystallizable()
+	public boolean isCrystallizable()
 	{
 		return (_crystalType != CrystalType.NONE) && (_crystalCount > 0);
 	}
@@ -379,7 +379,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Return the type of crystal if item is crystallizable
 	 * @return CrystalType
 	 */
-	public final CrystalType getCrystalType()
+	public CrystalType getCrystalType()
 	{
 		return _crystalType;
 	}
@@ -388,7 +388,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Return the ID of crystal if item is crystallizable
 	 * @return int
 	 */
-	public final int getCrystalItemId()
+	public int getCrystalItemId()
 	{
 		return _crystalType.getCrystalId();
 	}
@@ -397,7 +397,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * For grades S80 and S84 return S, R95, and R99 return R
 	 * @return the grade of the item.
 	 */
-	public final CrystalType getCrystalTypePlus()
+	public CrystalType getCrystalTypePlus()
 	{
 		switch (_crystalType)
 		{
@@ -421,7 +421,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the quantity of crystals for crystallization.
 	 */
-	public final int getCrystalCount()
+	public int getCrystalCount()
 	{
 		return _crystalCount;
 	}
@@ -430,7 +430,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * @param enchantLevel
 	 * @return the quantity of crystals for crystallization on specific enchant level
 	 */
-	public final int getCrystalCount(int enchantLevel)
+	public int getCrystalCount(int enchantLevel)
 	{
 		if (enchantLevel > 3)
 		{
@@ -479,7 +479,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the name of the item.
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
@@ -530,7 +530,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the part of the body used with the item.
 	 */
-	public final long getBodyPart()
+	public long getBodyPart()
 	{
 		return _bodyPart;
 	}
@@ -538,7 +538,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the type 1 of the item.
 	 */
-	public final int getType1()
+	public int getType1()
 	{
 		return _type1;
 	}
@@ -546,7 +546,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item is stackable, {@code false} otherwise.
 	 */
-	public final boolean isStackable()
+	public boolean isStackable()
 	{
 		return _stackable;
 	}
@@ -562,7 +562,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the price of reference of the item.
 	 */
-	public final long getReferencePrice()
+	public long getReferencePrice()
 	{
 		return _referencePrice;
 	}
@@ -570,7 +570,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be sold, {@code false} otherwise.
 	 */
-	public final boolean isSellable()
+	public boolean isSellable()
 	{
 		return _sellable;
 	}
@@ -578,7 +578,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be dropped, {@code false} otherwise.
 	 */
-	public final boolean isDropable()
+	public boolean isDropable()
 	{
 		return _dropable;
 	}
@@ -586,7 +586,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be destroyed, {@code false} otherwise.
 	 */
-	public final boolean isDestroyable()
+	public boolean isDestroyable()
 	{
 		return _destroyable;
 	}
@@ -594,7 +594,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be traded, {@code false} otherwise.
 	 */
-	public final boolean isTradeable()
+	public boolean isTradeable()
 	{
 		return _tradeable;
 	}
@@ -602,7 +602,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be put into warehouse, {@code false} otherwise.
 	 */
-	public final boolean isDepositable()
+	public boolean isDepositable()
 	{
 		return _depositable;
 	}
@@ -611,7 +611,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * This method also check the enchant blacklist.
 	 * @return {@code true} if the item can be enchanted, {@code false} otherwise.
 	 */
-	public final int isEnchantable()
+	public int isEnchantable()
 	{
 		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
 	}
@@ -619,7 +619,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item can be elemented, {@code false} otherwise.
 	 */
-	public final boolean isElementable()
+	public boolean isElementable()
 	{
 		return _elementable;
 	}
@@ -628,7 +628,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns if item is common
 	 * @return boolean
 	 */
-	public final boolean isCommon()
+	public boolean isCommon()
 	{
 		return _common;
 	}
@@ -637,7 +637,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns if item is hero-only
 	 * @return
 	 */
-	public final boolean isHeroItem()
+	public boolean isHeroItem()
 	{
 		return _heroItem;
 	}
@@ -646,7 +646,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Returns if item is pvp
 	 * @return
 	 */
-	public final boolean isPvpItem()
+	public boolean isPvpItem()
 	{
 		return _pvpItem;
 	}
@@ -724,7 +724,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_funcTemplates.add(template);
 	}
 	
-	public final void attachCondition(Condition c)
+	public void attachCondition(Condition c)
 	{
 		if (_preConditions == null)
 		{
@@ -742,7 +742,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
 	 * @return Skills linked to this item as SkillHolder[]
 	 */
-	public final List<ItemSkillHolder> getAllSkills()
+	public List<ItemSkillHolder> getAllSkills()
 	{
 		return _skills;
 	}
@@ -751,7 +751,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * @param condition
 	 * @return {@code List} of {@link ItemSkillHolder} if item has skills and matches the condition, {@code null} otherwise
 	 */
-	public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition)
+	public List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition)
 	{
 		return _skills != null ? _skills.stream().filter(condition).collect(Collectors.toList()) : null;
 	}
@@ -760,7 +760,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * @param type
 	 * @return {@code List} of {@link ItemSkillHolder} if item has skills, {@code null} otherwise
 	 */
-	public final List<ItemSkillHolder> getSkills(ItemSkillType type)
+	public List<ItemSkillHolder> getSkills(ItemSkillType type)
 	{
 		return _skills != null ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : null;
 	}
@@ -770,7 +770,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * @param type
 	 * @param action
 	 */
-	public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action)
+	public void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action)
 	{
 		if (_skills != null)
 		{
@@ -905,7 +905,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return {@code true} if the item is blessed, {@code false} otherwise.
 	 */
-	public final boolean isBlessed()
+	public boolean isBlessed()
 	{
 		return _isBlessed;
 	}

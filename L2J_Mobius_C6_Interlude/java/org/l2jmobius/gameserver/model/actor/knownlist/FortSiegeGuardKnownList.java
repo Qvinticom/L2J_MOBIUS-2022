@@ -71,7 +71,7 @@ public class FortSiegeGuardKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final FortSiegeGuardInstance getActiveChar()
+	public FortSiegeGuardInstance getActiveChar()
 	{
 		return (FortSiegeGuardInstance) super.getActiveChar();
 	}

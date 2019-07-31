@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PledgeShowMemberListAdd implements IClientOutgoingPacket
+public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 {
 	private final String _name;
 	private final int _lvl;

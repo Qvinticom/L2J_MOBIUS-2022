@@ -40,7 +40,7 @@ import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
  * Ye Segira Teleport Device AI.
  * @author St3eT
  */
-public final class YeSegiraTeleportDevice extends AbstractNpcAI
+public class YeSegiraTeleportDevice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] TELEPORT_DEVICES =

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
  * Bluff effect implementation.
  * @author decad
  */
-public final class Bluff extends AbstractEffect
+public class Bluff extends AbstractEffect
 {
 	private final int _chance;
 	

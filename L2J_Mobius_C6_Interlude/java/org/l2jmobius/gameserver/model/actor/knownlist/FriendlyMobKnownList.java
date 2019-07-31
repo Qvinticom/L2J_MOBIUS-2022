@@ -89,7 +89,7 @@ public class FriendlyMobKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final FriendlyMobInstance getActiveChar()
+	public FriendlyMobInstance getActiveChar()
 	{
 		return (FriendlyMobInstance) super.getActiveChar();
 	}

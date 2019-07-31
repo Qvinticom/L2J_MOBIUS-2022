@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Target Me Probability effect implementation.
  * @author Adry_85
  */
-public final class TargetMeProbability extends AbstractEffect
+public class TargetMeProbability extends AbstractEffect
 {
 	private final int _chance;
 	

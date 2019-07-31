@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
-public final class RequestGetOnVehicle extends GameClientPacket
+public class RequestGetOnVehicle extends GameClientPacket
 {
 	private int _id;
 	private int _x;

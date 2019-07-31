@@ -258,7 +258,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		return _spawnedNpcs;
 	}
 	
-	public final Location getSpawnLocation()
+	public Location getSpawnLocation()
 	{
 		if (_locations != null)
 		{

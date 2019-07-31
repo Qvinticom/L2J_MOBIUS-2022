@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 /**
  * @author littlecrow
  */
-public final class MobGroup
+public class MobGroup
 {
 	private final NpcTemplate _npcTemplate;
 	private final int _groupId;

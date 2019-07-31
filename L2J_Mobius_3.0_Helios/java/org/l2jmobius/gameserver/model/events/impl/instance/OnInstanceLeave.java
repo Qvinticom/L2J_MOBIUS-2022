@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyeflik
  */
-public final class OnInstanceLeave implements IBaseEvent
+public class OnInstanceLeave implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final Instance _instance;

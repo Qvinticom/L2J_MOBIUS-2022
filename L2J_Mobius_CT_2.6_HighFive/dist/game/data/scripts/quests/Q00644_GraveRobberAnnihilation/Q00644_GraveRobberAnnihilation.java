@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Grave Robber Annihilation (644)
  * @author netvirus
  */
-public final class Q00644_GraveRobberAnnihilation extends Quest
+public class Q00644_GraveRobberAnnihilation extends Quest
 {
 	// NPC
 	private static final int KARUDA = 32017;

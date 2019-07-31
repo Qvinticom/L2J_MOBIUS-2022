@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * General Chat Handler.
  * @author durgus
  */
-public final class ChatGeneral implements IChatHandler
+public class ChatGeneral implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

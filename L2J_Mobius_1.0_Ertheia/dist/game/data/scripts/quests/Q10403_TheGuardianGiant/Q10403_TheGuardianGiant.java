@@ -31,7 +31,7 @@ import quests.Q10402_NowhereToTurn.Q10402_NowhereToTurn;
  * The Guardian Giant (10403)
  * @author St3eT
  */
-public final class Q10403_TheGuardianGiant extends Quest
+public class Q10403_TheGuardianGiant extends Quest
 {
 	// NPCs
 	private static final int NOVIAN = 33866;

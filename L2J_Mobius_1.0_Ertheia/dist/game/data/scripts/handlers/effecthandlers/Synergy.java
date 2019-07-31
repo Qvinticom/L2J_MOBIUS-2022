@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
 /**
  * Synergy effect implementation.
  */
-public final class Synergy extends AbstractEffect
+public class Synergy extends AbstractEffect
 {
 	private final Set<AbnormalType> _requiredSlots;
 	private final Set<AbnormalType> _optionalSlots;

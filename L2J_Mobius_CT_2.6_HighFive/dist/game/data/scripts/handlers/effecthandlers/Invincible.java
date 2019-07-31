@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 /**
  * Invincible effect implementation.
  */
-public final class Invincible extends AbstractEffect
+public class Invincible extends AbstractEffect
 {
 	public Invincible(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

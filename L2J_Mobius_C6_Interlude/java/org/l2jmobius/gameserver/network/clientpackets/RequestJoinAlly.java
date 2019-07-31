@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestJoinAlly extends GameClientPacket
+public class RequestJoinAlly extends GameClientPacket
 {
 	private int _id;
 	

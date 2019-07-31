@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.Revive;
  * Fake Death effect implementation.
  * @author mkizub
  */
-public final class FakeDeath extends AbstractEffect
+public class FakeDeath extends AbstractEffect
 {
 	private final double _power;
 	

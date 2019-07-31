@@ -320,7 +320,7 @@ public class ClanHall
 	 * Return if clanHall is paid or not.
 	 * @return the paid
 	 */
-	public final boolean getPaid()
+	public boolean getPaid()
 	{
 		return _paid;
 	}
@@ -329,7 +329,7 @@ public class ClanHall
 	 * Return Id Of Clan hall.
 	 * @return the id
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _clanHallId;
 	}
@@ -338,7 +338,7 @@ public class ClanHall
 	 * Return name.
 	 * @return the name
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
@@ -347,7 +347,7 @@ public class ClanHall
 	 * Return OwnerId.
 	 * @return the owner id
 	 */
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
@@ -356,7 +356,7 @@ public class ClanHall
 	 * Return lease.
 	 * @return the lease
 	 */
-	public final int getLease()
+	public int getLease()
 	{
 		return _lease;
 	}
@@ -365,7 +365,7 @@ public class ClanHall
 	 * Return Desc.
 	 * @return the desc
 	 */
-	public final String getDesc()
+	public String getDesc()
 	{
 		return _desc;
 	}
@@ -374,7 +374,7 @@ public class ClanHall
 	 * Return Location.
 	 * @return the location
 	 */
-	public final String getLocation()
+	public String getLocation()
 	{
 		return _location;
 	}
@@ -383,7 +383,7 @@ public class ClanHall
 	 * Return PaidUntil.
 	 * @return the paid until
 	 */
-	public final long getPaidUntil()
+	public long getPaidUntil()
 	{
 		return _paidUntil;
 	}
@@ -392,7 +392,7 @@ public class ClanHall
 	 * Return Grade.
 	 * @return the grade
 	 */
-	public final int getGrade()
+	public int getGrade()
 	{
 		return _grade;
 	}
@@ -401,7 +401,7 @@ public class ClanHall
 	 * Return all DoorInstance.
 	 * @return the doors
 	 */
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
@@ -411,7 +411,7 @@ public class ClanHall
 	 * @param doorId the door id
 	 * @return the door
 	 */
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{

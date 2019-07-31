@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Physical Attack Mute effect implementation.
  * @author -Rnn-
  */
-public final class PhysicalAttackMute extends AbstractEffect
+public class PhysicalAttackMute extends AbstractEffect
 {
 	public PhysicalAttackMute(StatsSet params)
 	{

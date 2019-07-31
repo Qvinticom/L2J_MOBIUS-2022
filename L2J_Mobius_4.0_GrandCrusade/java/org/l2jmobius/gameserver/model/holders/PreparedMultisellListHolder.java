@@ -82,7 +82,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 		return _inventoryOnly;
 	}
 	
-	public final boolean checkNpcObjectId(int npcObjectId)
+	public boolean checkNpcObjectId(int npcObjectId)
 	{
 		return (_npcObjectId == 0) || (_npcObjectId == npcObjectId);
 	}

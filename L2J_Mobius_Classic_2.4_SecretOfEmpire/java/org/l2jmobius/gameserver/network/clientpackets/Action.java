@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class Action implements IClientIncomingPacket
+public class Action implements IClientIncomingPacket
 {
 	private int _objectId;
 	@SuppressWarnings("unused")

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * In The Forgotten Village (633)
  * @author netvirus
  */
-public final class Q00633_InTheForgottenVillage extends Quest
+public class Q00633_InTheForgottenVillage extends Quest
 {
 	// NPC
 	private static final int MINA = 31388;

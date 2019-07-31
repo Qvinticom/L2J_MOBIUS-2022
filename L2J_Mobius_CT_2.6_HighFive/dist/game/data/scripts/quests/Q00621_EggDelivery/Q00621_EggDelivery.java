@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Egg Delivery (621)
  * @author Janiko
  */
-public final class Q00621_EggDelivery extends Quest
+public class Q00621_EggDelivery extends Quest
 {
 	// NPCs
 	private static final int JEREMY = 31521;

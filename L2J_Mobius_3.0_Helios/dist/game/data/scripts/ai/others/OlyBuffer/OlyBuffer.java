@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Olympiad Buffer AI.
  * @author St3eT
  */
-public final class OlyBuffer extends AbstractNpcAI
+public class OlyBuffer extends AbstractNpcAI
 {
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;

@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Forest of the Dead (10792)
  * @author malyelfik
  */
-public final class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
+public class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 {
 	// NPCs
 	private static final int INNOCENTIN = 31328;

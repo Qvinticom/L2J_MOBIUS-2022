@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * RequestShowBoard client packet implementation.
  * @author Zoey76
  */
-public final class RequestShowBoard implements IClientIncomingPacket
+public class RequestShowBoard implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;

@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Mumu AI.
  * @author St3eT
  */
-public final class Mumu extends AbstractNpcAI
+public class Mumu extends AbstractNpcAI
 {
 	// NPC
 	private static final int MUMU = 32900; // Mumu

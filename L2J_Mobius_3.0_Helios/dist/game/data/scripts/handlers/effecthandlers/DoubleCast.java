@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Double Casting effect implementation.
  * @author Nik
  */
-public final class DoubleCast extends AbstractEffect
+public class DoubleCast extends AbstractEffect
 {
 	private static final SkillHolder[] TOGGLE_SKILLS = new SkillHolder[]
 	{

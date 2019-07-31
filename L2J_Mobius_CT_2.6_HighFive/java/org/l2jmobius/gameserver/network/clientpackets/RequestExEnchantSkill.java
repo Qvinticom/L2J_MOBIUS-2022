@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkill implements IClientIncomingPacket
+public class RequestExEnchantSkill implements IClientIncomingPacket
 {
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	

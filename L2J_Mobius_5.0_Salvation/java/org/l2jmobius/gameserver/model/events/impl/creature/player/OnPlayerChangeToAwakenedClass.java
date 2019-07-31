@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author Sdw
  */
-public final class OnPlayerChangeToAwakenedClass implements IBaseEvent
+public class OnPlayerChangeToAwakenedClass implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
  * Regeneration or DOT shouldn't be blocked, Vampiric Rage and Balance Life as well.
  * @author Nik
  */
-public final class DamageBlock extends AbstractEffect
+public class DamageBlock extends AbstractEffect
 {
 	private final boolean _blockHp;
 	private final boolean _blockMp;

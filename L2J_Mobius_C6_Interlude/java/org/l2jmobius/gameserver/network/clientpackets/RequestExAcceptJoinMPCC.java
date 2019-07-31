@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author -Wooden-
  */
-public final class RequestExAcceptJoinMPCC extends GameClientPacket
+public class RequestExAcceptJoinMPCC extends GameClientPacket
 {
 	private int _response;
 	

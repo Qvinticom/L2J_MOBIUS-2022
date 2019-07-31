@@ -40,7 +40,7 @@ import instances.AbstractInstance;
  * Nursery instance zone.
  * @author St3eT
  */
-public final class Nursery extends AbstractInstance
+public class Nursery extends AbstractInstance
 {
 	// NPCs
 	private static final int TIE = 33152;

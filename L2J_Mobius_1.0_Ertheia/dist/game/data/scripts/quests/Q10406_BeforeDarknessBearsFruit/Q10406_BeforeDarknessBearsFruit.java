@@ -34,7 +34,7 @@ import quests.Q10405_KartiasSeed.Q10405_KartiasSeed;
  * Before Darkness Bears Fruit (10406)
  * @author St3eT
  */
-public final class Q10406_BeforeDarknessBearsFruit extends Quest
+public class Q10406_BeforeDarknessBearsFruit extends Quest
 {
 	// NPCs
 	private static final int SHUVANN = 33867;

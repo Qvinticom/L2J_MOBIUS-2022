@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.interfaces.IEventListener;
 /**
  * @author UnAfraid
  */
-public final class TvTEventListener implements IEventListener
+public class TvTEventListener implements IEventListener
 {
 	private final PlayerInstance _player;
 	

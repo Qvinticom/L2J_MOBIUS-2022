@@ -61,7 +61,7 @@ public class CreatureStat
 	 * @param skill The Skill whose properties will be used in the calculation (ex : Level...)
 	 * @return the double
 	 */
-	public final double calcStat(Stats stat, double init, Creature target, Skill skill)
+	public double calcStat(Stats stat, double init, Creature target, Skill skill)
 	{
 		if (_creature == null)
 		{
@@ -146,7 +146,7 @@ public class CreatureStat
 	 * Return the Attack Speed multiplier (base+modifier) of the Creature to get proper animations.
 	 * @return the attack speed multiplier
 	 */
-	public final float getAttackSpeedMultiplier()
+	public float getAttackSpeedMultiplier()
 	{
 		if (_creature == null)
 		{
@@ -160,7 +160,7 @@ public class CreatureStat
 	 * Return the CON of the Creature (base+modifier).
 	 * @return the cON
 	 */
-	public final int getCON()
+	public int getCON()
 	{
 		if (_creature == null)
 		{
@@ -176,7 +176,7 @@ public class CreatureStat
 	 * @param init the init
 	 * @return the critical dmg
 	 */
-	public final double getCriticalDmg(Creature target, double init)
+	public double getCriticalDmg(Creature target, double init)
 	{
 		return calcStat(Stats.CRITICAL_DAMAGE, init, target, null);
 	}
@@ -211,7 +211,7 @@ public class CreatureStat
 	 * Return the DEX of the Creature (base+modifier).
 	 * @return the dEX
 	 */
-	public final int getDEX()
+	public int getDEX()
 	{
 		if (_creature == null)
 		{
@@ -291,7 +291,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the magical attack range
 	 */
-	public final int getMagicalAttackRange(Skill skill)
+	public int getMagicalAttackRange(Skill skill)
 	{
 		if (skill != null)
 		{
@@ -501,7 +501,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the m critical hit
 	 */
-	public final int getMCriticalHit(Creature target, Skill skill)
+	public int getMCriticalHit(Creature target, Skill skill)
 	{
 		if (_creature == null)
 		{
@@ -552,7 +552,7 @@ public class CreatureStat
 	 * Return the MEN of the Creature (base+modifier).
 	 * @return the mEN
 	 */
-	public final int getMEN()
+	public int getMEN()
 	{
 		if (_creature == null)
 		{
@@ -566,7 +566,7 @@ public class CreatureStat
 	 * Gets the movement speed multiplier.
 	 * @return the movement speed multiplier
 	 */
-	public final float getMovementSpeedMultiplier()
+	public float getMovementSpeedMultiplier()
 	{
 		if (_creature == null)
 		{
@@ -585,7 +585,7 @@ public class CreatureStat
 	 * Return the RunSpeed (base+modifier) or WalkSpeed (base+modifier) of the Creature in function of the movement type.
 	 * @return the move speed
 	 */
-	public final float getMoveSpeed()
+	public float getMoveSpeed()
 	{
 		if (_creature == null)
 		{
@@ -605,7 +605,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the m reuse rate
 	 */
-	public final double getMReuseRate(Skill skill)
+	public double getMReuseRate(Skill skill)
 	{
 		if (_creature == null)
 		{
@@ -620,7 +620,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the p reuse rate
 	 */
-	public final double getPReuseRate(Skill skill)
+	public double getPReuseRate(Skill skill)
 	{
 		if (_creature == null)
 		{
@@ -657,7 +657,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk animals
 	 */
-	public final double getPAtkAnimals(Creature target)
+	public double getPAtkAnimals(Creature target)
 	{
 		return calcStat(Stats.PATK_ANIMALS, 1, target, null);
 	}
@@ -667,7 +667,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk dragons
 	 */
-	public final double getPAtkDragons(Creature target)
+	public double getPAtkDragons(Creature target)
 	{
 		return calcStat(Stats.PATK_DRAGONS, 1, target, null);
 	}
@@ -677,7 +677,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk angels
 	 */
-	public final double getPAtkAngels(Creature target)
+	public double getPAtkAngels(Creature target)
 	{
 		return calcStat(Stats.PATK_ANGELS, 1, target, null);
 	}
@@ -687,7 +687,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk insects
 	 */
-	public final double getPAtkInsects(Creature target)
+	public double getPAtkInsects(Creature target)
 	{
 		return calcStat(Stats.PATK_INSECTS, 1, target, null);
 	}
@@ -697,7 +697,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk monsters
 	 */
-	public final double getPAtkMonsters(Creature target)
+	public double getPAtkMonsters(Creature target)
 	{
 		return calcStat(Stats.PATK_MONSTERS, 1, target, null);
 	}
@@ -707,7 +707,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk plants
 	 */
-	public final double getPAtkPlants(Creature target)
+	public double getPAtkPlants(Creature target)
 	{
 		return calcStat(Stats.PATK_PLANTS, 1, target, null);
 	}
@@ -747,7 +747,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk undead
 	 */
-	public final double getPAtkUndead(Creature target)
+	public double getPAtkUndead(Creature target)
 	{
 		return calcStat(Stats.PATK_UNDEAD, 1, target, null);
 	}
@@ -757,7 +757,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def undead
 	 */
-	public final double getPDefUndead(Creature target)
+	public double getPDefUndead(Creature target)
 	{
 		return calcStat(Stats.PDEF_UNDEAD, 1, target, null);
 	}
@@ -767,7 +767,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def plants
 	 */
-	public final double getPDefPlants(Creature target)
+	public double getPDefPlants(Creature target)
 	{
 		return calcStat(Stats.PDEF_PLANTS, 1, target, null);
 	}
@@ -777,7 +777,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def insects
 	 */
-	public final double getPDefInsects(Creature target)
+	public double getPDefInsects(Creature target)
 	{
 		return calcStat(Stats.PDEF_INSECTS, 1, target, null);
 	}
@@ -787,7 +787,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def animals
 	 */
-	public final double getPDefAnimals(Creature target)
+	public double getPDefAnimals(Creature target)
 	{
 		return calcStat(Stats.PDEF_ANIMALS, 1, target, null);
 	}
@@ -797,7 +797,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def monsters
 	 */
-	public final double getPDefMonsters(Creature target)
+	public double getPDefMonsters(Creature target)
 	{
 		return calcStat(Stats.PDEF_MONSTERS, 1, target, null);
 	}
@@ -807,7 +807,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def dragons
 	 */
-	public final double getPDefDragons(Creature target)
+	public double getPDefDragons(Creature target)
 	{
 		return calcStat(Stats.PDEF_DRAGONS, 1, target, null);
 	}
@@ -817,7 +817,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def angels
 	 */
-	public final double getPDefAngels(Creature target)
+	public double getPDefAngels(Creature target)
 	{
 		return calcStat(Stats.PDEF_ANGELS, 1, target, null);
 	}
@@ -851,7 +851,7 @@ public class CreatureStat
 	 * Return the Physical Attack range (base+modifier) of the Creature.
 	 * @return the physical attack range
 	 */
-	public final int getPhysicalAttackRange()
+	public int getPhysicalAttackRange()
 	{
 		if (_creature == null)
 		{
@@ -865,7 +865,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the reuse modifier
 	 */
-	public final double getReuseModifier(Creature target)
+	public double getReuseModifier(Creature target)
 	{
 		return calcStat(Stats.ATK_REUSE, 1, target, null);
 	}
@@ -913,7 +913,7 @@ public class CreatureStat
 	 * Return the ShieldDef rate (base+modifier) of the Creature.
 	 * @return the shld def
 	 */
-	public final int getShldDef()
+	public int getShldDef()
 	{
 		return (int) calcStat(Stats.SHIELD_DEFENCE, 0, null, null);
 	}
@@ -940,7 +940,7 @@ public class CreatureStat
 	 * Return the STR of the Creature (base+modifier).
 	 * @return the sTR
 	 */
-	public final int getSTR()
+	public int getSTR()
 	{
 		if (_creature == null)
 		{
@@ -954,7 +954,7 @@ public class CreatureStat
 	 * Return the WalkSpeed (base+modifier) of the Creature.
 	 * @return the walk speed
 	 */
-	public final int getWalkSpeed()
+	public int getWalkSpeed()
 	{
 		if (_creature == null)
 		{
@@ -972,7 +972,7 @@ public class CreatureStat
 	 * Return the WIT of the Creature (base+modifier).
 	 * @return the wIT
 	 */
-	public final int getWIT()
+	public int getWIT()
 	{
 		if (_creature == null)
 		{
@@ -987,7 +987,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the mp consume
 	 */
-	public final int getMpConsume(Skill skill)
+	public int getMpConsume(Skill skill)
 	{
 		if (skill == null)
 		{
@@ -1009,7 +1009,7 @@ public class CreatureStat
 	 * @param skill the skill
 	 * @return the mp initial consume
 	 */
-	public final int getMpInitialConsume(Skill skill)
+	public int getMpInitialConsume(Skill skill)
 	{
 		if (skill == null)
 		{
@@ -1024,7 +1024,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def giants
 	 */
-	public final double getPDefGiants(Creature target)
+	public double getPDefGiants(Creature target)
 	{
 		return calcStat(Stats.PDEF_GIANTS, 1, target, null);
 	}
@@ -1034,7 +1034,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p def magic creatures
 	 */
-	public final double getPDefMagicCreatures(Creature target)
+	public double getPDefMagicCreatures(Creature target)
 	{
 		return calcStat(Stats.PDEF_MCREATURES, 1, target, null);
 	}
@@ -1044,7 +1044,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk giants
 	 */
-	public final double getPAtkGiants(Creature target)
+	public double getPAtkGiants(Creature target)
 	{
 		return calcStat(Stats.PATK_GIANTS, 1, target, null);
 	}
@@ -1054,7 +1054,7 @@ public class CreatureStat
 	 * @param target the target
 	 * @return the p atk magic creatures
 	 */
-	public final double getPAtkMagicCreatures(Creature target)
+	public double getPAtkMagicCreatures(Creature target)
 	{
 		return calcStat(Stats.PATK_MCREATURES, 1, target, null);
 	}

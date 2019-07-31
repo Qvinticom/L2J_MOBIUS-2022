@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Yoke of the Past (385)
  * @author Pandragon
  */
-public final class Q00385_YokeOfThePast extends Quest
+public class Q00385_YokeOfThePast extends Quest
 {
 	// NPCs
 	// @formatter:off

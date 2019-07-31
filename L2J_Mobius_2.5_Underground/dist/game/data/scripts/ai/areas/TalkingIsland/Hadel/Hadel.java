@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Hadel AI.
  * @author St3eT
  */
-public final class Hadel extends AbstractNpcAI
+public class Hadel extends AbstractNpcAI
 {
 	// NPC
 	private static final int HADEL = 33344;

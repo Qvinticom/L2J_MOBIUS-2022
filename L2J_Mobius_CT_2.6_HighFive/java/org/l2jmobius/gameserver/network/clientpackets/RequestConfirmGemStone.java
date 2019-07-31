@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVa
  * Format:(ch) dddd
  * @author -Wooden-
  */
-public final class RequestConfirmGemStone extends AbstractRefinePacket
+public class RequestConfirmGemStone extends AbstractRefinePacket
 {
 	private int _targetItemObjId;
 	private int _refinerItemObjId;

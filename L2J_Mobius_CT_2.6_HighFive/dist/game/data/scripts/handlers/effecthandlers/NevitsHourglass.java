@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
  * NevitsHourglass effect handler.
  * @author St3eT
  */
-public final class NevitsHourglass extends AbstractEffect
+public class NevitsHourglass extends AbstractEffect
 {
 	public NevitsHourglass(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

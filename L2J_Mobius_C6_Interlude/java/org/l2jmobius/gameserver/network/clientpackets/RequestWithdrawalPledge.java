@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestWithdrawalPledge extends GameClientPacket
+public class RequestWithdrawalPledge extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

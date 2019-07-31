@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author DS
  */
-public final class OlympiadGameTask implements Runnable
+public class OlympiadGameTask implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(OlympiadGameTask.class.getName());
 	
@@ -119,27 +119,27 @@ public final class OlympiadGameTask implements Runnable
 		_stadium.registerTask(this);
 	}
 	
-	public final boolean isRunning()
+	public boolean isRunning()
 	{
 		return _state != GameState.IDLE;
 	}
 	
-	public final boolean isGameStarted()
+	public boolean isGameStarted()
 	{
 		return (_state.ordinal() >= GameState.GAME_STARTED.ordinal()) && (_state.ordinal() <= GameState.CLEANUP.ordinal());
 	}
 	
-	public final boolean isBattleStarted()
+	public boolean isBattleStarted()
 	{
 		return _state == GameState.BATTLE_IN_PROGRESS;
 	}
 	
-	public final boolean isBattleFinished()
+	public boolean isBattleFinished()
 	{
 		return _state == GameState.TELEPORT_TO_TOWN;
 	}
 	
-	public final boolean needAnnounce()
+	public boolean needAnnounce()
 	{
 		if (_needAnnounce)
 		{
@@ -149,17 +149,17 @@ public final class OlympiadGameTask implements Runnable
 		return false;
 	}
 	
-	public final OlympiadStadium getStadium()
+	public OlympiadStadium getStadium()
 	{
 		return _stadium;
 	}
 	
-	public final AbstractOlympiadGame getGame()
+	public AbstractOlympiadGame getGame()
 	{
 		return _game;
 	}
 	
-	public final void attachGame(AbstractOlympiadGame game)
+	public void attachGame(AbstractOlympiadGame game)
 	{
 		if ((game != null) && (_state != GameState.IDLE))
 		{
@@ -174,7 +174,7 @@ public final class OlympiadGameTask implements Runnable
 	}
 	
 	@Override
-	public final void run()
+	public void run()
 	{
 		try
 		{

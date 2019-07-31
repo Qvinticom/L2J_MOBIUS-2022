@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Lizardmen's Conspiracy (298)
  * @author xban1x
  */
-public final class Q00298_LizardmensConspiracy extends Quest
+public class Q00298_LizardmensConspiracy extends Quest
 {
 	// NPCs
 	private static final int GUARD_PRAGA = 30333;

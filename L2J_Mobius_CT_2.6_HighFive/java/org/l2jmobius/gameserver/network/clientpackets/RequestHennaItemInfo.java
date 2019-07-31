@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.HennaItemDrawInfo;
 /**
  * @author Zoey76
  */
-public final class RequestHennaItemInfo implements IClientIncomingPacket
+public class RequestHennaItemInfo implements IClientIncomingPacket
 {
 	private int _symbolId;
 	

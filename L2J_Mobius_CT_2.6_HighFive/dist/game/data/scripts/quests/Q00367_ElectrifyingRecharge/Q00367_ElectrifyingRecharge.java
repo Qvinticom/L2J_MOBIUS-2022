@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Electrifying Recharge! (367)
  * @author Adry_85, jurchiks
  */
-public final class Q00367_ElectrifyingRecharge extends Quest
+public class Q00367_ElectrifyingRecharge extends Quest
 {
 	// NPC
 	private static final int LORAIN = 30673;

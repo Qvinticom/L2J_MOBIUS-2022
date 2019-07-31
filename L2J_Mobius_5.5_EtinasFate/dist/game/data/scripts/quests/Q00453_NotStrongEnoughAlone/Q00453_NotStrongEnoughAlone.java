@@ -37,7 +37,7 @@ import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
  * Not Strong Enough Alone (453)
  * @author malyelfik
  */
-public final class Q00453_NotStrongEnoughAlone extends Quest
+public class Q00453_NotStrongEnoughAlone extends Quest
 {
 	// NPCs
 	private static final int KLEMIS = 32734;

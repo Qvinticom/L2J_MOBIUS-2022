@@ -26,7 +26,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Kief AI.
  * @author DS
  */
-public final class Kief extends AbstractNpcAI
+public class Kief extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KIEF = 32354;
@@ -46,7 +46,7 @@ public final class Kief extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -152,7 +152,7 @@ public final class Kief extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		switch (HellboundEngine.getInstance().getLevel())
 		{

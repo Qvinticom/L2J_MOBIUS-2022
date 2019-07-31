@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class LambdaCalc extends Lambda
+public class LambdaCalc extends Lambda
 {
 	public Func[] funcs;
 	

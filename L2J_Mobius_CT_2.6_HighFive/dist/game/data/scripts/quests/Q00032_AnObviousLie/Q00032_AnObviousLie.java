@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * An Obvious Lie (32).
  * @author janiko
  */
-public final class Q00032_AnObviousLie extends Quest
+public class Q00032_AnObviousLie extends Quest
 {
 	// NPCs
 	private static final int MAXIMILIAN = 30120;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-public final class IllegalPlayerAction implements Runnable
+public class IllegalPlayerAction implements Runnable
 {
 	private static Logger _logAudit = Logger.getLogger("audit");
 	

@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.World;
 /**
  * @author Hasha
  */
-public final class GeoStructure
+public class GeoStructure
 {
 	// cells
 	public static final byte CELL_FLAG_E = 1 << 0;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Jovial Accordion (364)
  * @author Adry_85
  */
-public final class Q00364_JovialAccordion extends Quest
+public class Q00364_JovialAccordion extends Quest
 {
 	// NPCs
 	private static final int SABRIN = 30060;

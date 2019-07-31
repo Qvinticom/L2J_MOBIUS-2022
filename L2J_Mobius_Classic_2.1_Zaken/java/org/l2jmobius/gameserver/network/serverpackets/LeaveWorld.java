@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class LeaveWorld implements IClientOutgoingPacket
+public class LeaveWorld implements IClientOutgoingPacket
 {
 	public static final LeaveWorld STATIC_PACKET = new LeaveWorld();
 	

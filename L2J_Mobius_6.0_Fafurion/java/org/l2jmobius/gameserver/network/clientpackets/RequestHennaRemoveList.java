@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.HennaRemoveList;
 
-public final class RequestHennaRemoveList implements IClientIncomingPacket
+public class RequestHennaRemoveList implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;

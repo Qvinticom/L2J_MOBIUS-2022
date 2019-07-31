@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Talent Show AI.
  * @author Kerberos
  */
-public final class TalentShow extends AbstractNpcAI
+public class TalentShow extends AbstractNpcAI
 {
 	private static int MC = 32433;
 	// @formatter:off

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Location;
  * Chamber of Delusion West.
  * @author GKR
  */
-public final class ChamberOfDelusionWest extends Chamber
+public class ChamberOfDelusionWest extends Chamber
 {
 	// NPCs
 	private static final int ENTRANCE_GATEKEEPER = 32659;

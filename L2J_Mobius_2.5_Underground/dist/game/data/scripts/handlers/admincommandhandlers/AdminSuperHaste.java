@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The classical custom L2J implementation of the old //gmspeed GM command.
  * @author lord_rex (No, it wasn't me at all. Eclipse added my name there.)
  */
-public final class AdminSuperHaste implements IAdminCommandHandler
+public class AdminSuperHaste implements IAdminCommandHandler
 {
 	static final String[] ADMIN_COMMANDS =
 	{
@@ -66,7 +66,7 @@ public final class AdminSuperHaste implements IAdminCommandHandler
 						superHasteSkill.applyEffects(player, player, true, time);
 					}
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					player.sendMessage("Usage: //superhaste <Effect level (0-4)> <Time in seconds>");
 				}

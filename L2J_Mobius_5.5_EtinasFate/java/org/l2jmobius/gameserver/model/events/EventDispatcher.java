@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 /**
  * @author UnAfraid
  */
-public final class EventDispatcher
+public class EventDispatcher
 {
 	private static final Logger LOGGER = Logger.getLogger(EventDispatcher.class.getName());
 	

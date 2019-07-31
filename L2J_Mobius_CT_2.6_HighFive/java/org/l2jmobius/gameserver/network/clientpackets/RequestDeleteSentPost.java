@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestDeleteSentPost implements IClientIncomingPacket
+public class RequestDeleteSentPost implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 4; // length of the one item
 	

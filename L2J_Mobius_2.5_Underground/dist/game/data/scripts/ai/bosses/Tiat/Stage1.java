@@ -66,7 +66,7 @@ import instances.AbstractInstance;
  * Please maintain consistency between the Seed scripts.
  * @author Gigiikun
  */
-public final class Stage1 extends AbstractInstance implements IXmlReader
+public class Stage1 extends AbstractInstance implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(Stage1.class.getName());
 	

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Flood protector implementation.
  * @author fordfrog
  */
-public final class FloodProtectorAction
+public class FloodProtectorAction
 {
 	/**
 	 * Logger

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format:(ch) d[dd]
  * @author -Wooden-
  */
-public final class RequestSaveInventoryOrder implements IClientIncomingPacket
+public class RequestSaveInventoryOrder implements IClientIncomingPacket
 {
 	private List<InventoryOrder> _order;
 	

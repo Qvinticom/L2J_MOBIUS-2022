@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.GMAudit;
 
-public final class RequestBypassToServer extends GameClientPacket
+public class RequestBypassToServer extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
 	

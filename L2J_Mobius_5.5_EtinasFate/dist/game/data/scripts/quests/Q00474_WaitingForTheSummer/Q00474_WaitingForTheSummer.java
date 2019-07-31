@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Waiting for the Summer (474)
  * @author malyelfik
  */
-public final class Q00474_WaitingForTheSummer extends Quest
+public class Q00474_WaitingForTheSummer extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Take Territory Flag effect implementation.
  * @author UnAfraid
  */
-public final class TakeTerritoryFlag extends AbstractEffect
+public class TakeTerritoryFlag extends AbstractEffect
 {
 	private static final int FLAG_NPC_ID = 35062;
 	

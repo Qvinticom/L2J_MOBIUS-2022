@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.skills.effects;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.skills.Env;
 
-public final class EffectSeed extends Effect
+public class EffectSeed extends Effect
 {
 	private int _power = 1;
 	

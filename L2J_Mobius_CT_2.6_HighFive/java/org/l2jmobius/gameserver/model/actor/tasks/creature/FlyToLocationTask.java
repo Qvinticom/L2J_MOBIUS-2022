@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
  * Task dedicated to fly a player to the location
  * @author xban1x
  */
-public final class FlyToLocationTask implements Runnable
+public class FlyToLocationTask implements Runnable
 {
 	private final Creature _creature;
 	private final WorldObject _target;

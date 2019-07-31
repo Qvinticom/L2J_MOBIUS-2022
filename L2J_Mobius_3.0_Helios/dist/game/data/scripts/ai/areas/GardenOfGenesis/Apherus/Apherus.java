@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Apherus RB
  * @author Gigi
  */
-public final class Apherus extends AbstractNpcAI
+public class Apherus extends AbstractNpcAI
 {
 	private static final int APHERUS = 25775;
 	private static final int APHERUS_SUBORDINATE = 25865;

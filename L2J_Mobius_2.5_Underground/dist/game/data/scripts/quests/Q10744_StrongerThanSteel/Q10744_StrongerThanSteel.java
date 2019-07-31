@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Stronger Than Steel (10744)
  * @author Sdw
  */
-public final class Q10744_StrongerThanSteel extends Quest
+public class Q10744_StrongerThanSteel extends Quest
 {
 	// NPCs
 	private static final int MILONE = 33953;

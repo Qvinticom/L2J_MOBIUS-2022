@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Marsha AI.
  * @author St3eT
  */
-public final class Marsha extends AbstractNpcAI
+public class Marsha extends AbstractNpcAI
 {
 	// NPC
 	private static final int MARSHA = 33109;

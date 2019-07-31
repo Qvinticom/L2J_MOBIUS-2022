@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Dreaming of the Skies (295)
  * @author xban1x
  */
-public final class Q00295_DreamingOfTheSkies extends Quest
+public class Q00295_DreamingOfTheSkies extends Quest
 {
 	// NPC
 	private static final int ARIN = 30536;

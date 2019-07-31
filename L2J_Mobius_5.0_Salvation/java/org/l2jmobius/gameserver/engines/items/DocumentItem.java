@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase implements IXmlReader
+public class DocumentItem extends DocumentBase implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(DocumentItem.class.getName());
 	

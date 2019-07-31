@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * Festival of Darkness Guide (Seven Signs).
  * @author Tempy
  */
-public final class FestivalGuideInstance extends FolkInstance
+public class FestivalGuideInstance extends FolkInstance
 {
 	protected int _festivalType;
 	protected int _festivalOracle;

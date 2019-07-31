@@ -50,7 +50,7 @@ import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
  * Evil Incubator instance zone.
  * @author St3eT
  */
-public final class EvilIncubator extends AbstractInstance
+public class EvilIncubator extends AbstractInstance
 {
 	// NPCs
 	private static final int VANGUARD_MEMBER = 33165;

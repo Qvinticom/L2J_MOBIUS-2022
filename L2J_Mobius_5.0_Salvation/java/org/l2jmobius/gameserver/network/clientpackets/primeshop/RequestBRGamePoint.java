@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRGamePoint implements IClientIncomingPacket
+public class RequestBRGamePoint implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

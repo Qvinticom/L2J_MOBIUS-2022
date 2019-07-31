@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Gludio (717)
  * @author Gigiikun
  */
-public final class Q00717_ForTheSakeOfTheTerritoryGludio extends TerritoryWarSuperClass
+public class Q00717_ForTheSakeOfTheTerritoryGludio extends TerritoryWarSuperClass
 {
 	public Q00717_ForTheSakeOfTheTerritoryGludio()
 	{

@@ -29,7 +29,7 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
  * Warp Gate AI.
  * @author Gigi
  */
-public final class WrapGate extends AbstractNpcAI
+public class WrapGate extends AbstractNpcAI
 {
 	// NPC
 	private static final int WRAP_GATE = 33900;

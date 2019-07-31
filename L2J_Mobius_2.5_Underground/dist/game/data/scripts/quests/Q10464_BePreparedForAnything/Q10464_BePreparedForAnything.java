@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
  * Be Prepared for Anything (10464)
  * @author St3eT
  */
-public final class Q10464_BePreparedForAnything extends Quest
+public class Q10464_BePreparedForAnything extends Quest
 {
 	// NPCs
 	private static final int PATERSON = 33864;

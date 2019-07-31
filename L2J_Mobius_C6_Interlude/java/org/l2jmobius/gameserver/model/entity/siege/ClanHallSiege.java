@@ -88,22 +88,22 @@ public abstract class ClanHallSiege
 		}
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
 	
-	public final void setSiegeDate(Calendar par)
+	public void setSiegeDate(Calendar par)
 	{
 		_siegeDate = par;
 	}
 	
-	public final boolean getIsInProgress()
+	public boolean getIsInProgress()
 	{
 		return _isInProgress;
 	}
 	
-	public final void setIsInProgress(boolean par)
+	public void setIsInProgress(boolean par)
 	{
 		_isInProgress = par;
 	}

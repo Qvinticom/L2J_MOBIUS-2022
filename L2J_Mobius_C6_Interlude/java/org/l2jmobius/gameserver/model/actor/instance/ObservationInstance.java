@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * @author NightMarez
  * @version $Revision: 1.3.2.2.2.5 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class ObservationInstance extends FolkInstance
+public class ObservationInstance extends FolkInstance
 {
 	/**
 	 * Instantiates a new l2 observation instance.

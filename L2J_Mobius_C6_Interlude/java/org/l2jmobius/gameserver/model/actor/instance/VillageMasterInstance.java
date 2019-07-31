@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class VillageMasterInstance extends FolkInstance
+public class VillageMasterInstance extends FolkInstance
 {
 	/**
 	 * Instantiates a new l2 village master instance.

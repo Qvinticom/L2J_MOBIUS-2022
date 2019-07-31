@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Harvesting effect implementation.
  * @author l3x, Zoey76
  */
-public final class Harvesting extends AbstractEffect
+public class Harvesting extends AbstractEffect
 {
 	public Harvesting(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  * Teleport holder
  * @author UnAfraid
  */
-public final class TeleportHolder
+public class TeleportHolder
 {
 	private static final Logger LOGGER = Logger.getLogger(TeleportHolder.class.getName());
 	

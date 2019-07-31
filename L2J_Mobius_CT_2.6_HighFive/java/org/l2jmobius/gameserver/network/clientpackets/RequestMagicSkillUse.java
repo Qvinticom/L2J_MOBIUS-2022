@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestMagicSkillUse implements IClientIncomingPacket
+public class RequestMagicSkillUse implements IClientIncomingPacket
 {
 	private int _magicId;
 	private boolean _ctrlPressed;

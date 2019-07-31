@@ -33,7 +33,7 @@ import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
  * Kekropus' Letter (10390)
  * @author St3eT
  */
-public final class Q10390_KekropusLetter extends Quest
+public class Q10390_KekropusLetter extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;

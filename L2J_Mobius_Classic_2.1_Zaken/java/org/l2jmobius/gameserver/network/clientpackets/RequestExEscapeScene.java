@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author St3eT
  */
-public final class RequestExEscapeScene implements IClientIncomingPacket
+public class RequestExEscapeScene implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

@@ -31,7 +31,7 @@ import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
  * @URL https://l2wiki.com/Creation_of_Twisted_Spiral
  * @author Gigi
  */
-public final class Q10310_TwistedCreationTree extends Quest
+public class Q10310_TwistedCreationTree extends Quest
 {
 	// NPCs
 	private static final int SELINA = 33032;

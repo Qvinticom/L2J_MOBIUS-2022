@@ -86,7 +86,7 @@ public abstract class AbstractFunction
 	 * Gets the fuction owner.
 	 * @return the function owner
 	 */
-	public final Object getFuncOwner()
+	public Object getFuncOwner()
 	{
 		return _funcOwner;
 	}
@@ -95,7 +95,7 @@ public abstract class AbstractFunction
 	 * Gets the function order.
 	 * @return the order
 	 */
-	public final int getOrder()
+	public int getOrder()
 	{
 		return _order;
 	}
@@ -104,7 +104,7 @@ public abstract class AbstractFunction
 	 * Gets the stat.
 	 * @return the stat
 	 */
-	public final Stats getStat()
+	public Stats getStat()
 	{
 		return _stat;
 	}
@@ -113,7 +113,7 @@ public abstract class AbstractFunction
 	 * Gets the value.
 	 * @return the value
 	 */
-	public final double getValue()
+	public double getValue()
 	{
 		return _value;
 	}

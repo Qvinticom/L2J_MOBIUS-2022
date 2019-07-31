@@ -66,7 +66,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 
-public final class Castle extends AbstractResidence
+public class Castle extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
@@ -895,33 +895,33 @@ public final class Castle extends AbstractResidence
 		}
 	}
 	
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		return _doors.stream().filter(d -> d.getId() == doorId).findFirst().orElse(null);
 	}
 	
-	public final DoorInstance getDoor(String doorName)
+	public DoorInstance getDoor(String doorName)
 	{
 		return _doors.stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
 	}
 	
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
 	@Override
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
-	public final Clan getOwner()
+	public Clan getOwner()
 	{
 		return (_ownerId != 0) ? ClanTable.getInstance().getClan(_ownerId) : null;
 	}
 	
-	public final Siege getSiege()
+	public Siege getSiege()
 	{
 		if (_siege == null)
 		{
@@ -930,7 +930,7 @@ public final class Castle extends AbstractResidence
 		return _siege;
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
@@ -954,7 +954,7 @@ public final class Castle extends AbstractResidence
 		return _siegeTimeRegistrationEndDate;
 	}
 	
-	public final int getTaxPercent(TaxType type)
+	public int getTaxPercent(TaxType type)
 	{
 		final int taxPercent;
 		switch (_castleSide)
@@ -978,22 +978,22 @@ public final class Castle extends AbstractResidence
 		return taxPercent;
 	}
 	
-	public final double getTaxRate(TaxType taxType)
+	public double getTaxRate(TaxType taxType)
 	{
 		return getTaxPercent(taxType) / 100.0;
 	}
 	
-	public final long getTreasury()
+	public long getTreasury()
 	{
 		return _treasury;
 	}
 	
-	public final boolean getShowNpcCrest()
+	public boolean getShowNpcCrest()
 	{
 		return _showNpcCrest;
 	}
 	
-	public final void setShowNpcCrest(boolean showNpcCrest)
+	public void setShowNpcCrest(boolean showNpcCrest)
 	{
 		if (_showNpcCrest != showNpcCrest)
 		{

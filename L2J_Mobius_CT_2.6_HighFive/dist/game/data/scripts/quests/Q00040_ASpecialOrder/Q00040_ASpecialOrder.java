@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Special Order (40)
  * @author janiko
  */
-public final class Q00040_ASpecialOrder extends Quest
+public class Q00040_ASpecialOrder extends Quest
 {
 	// NPCs
 	private static final int HELVETIA = 30081;

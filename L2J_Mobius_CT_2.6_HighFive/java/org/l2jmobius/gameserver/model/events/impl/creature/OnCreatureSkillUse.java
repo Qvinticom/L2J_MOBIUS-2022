@@ -43,7 +43,7 @@ public class OnCreatureSkillUse implements IBaseEvent
 		_targets = targets;
 	}
 	
-	public final Creature getCaster()
+	public Creature getCaster()
 	{
 		return _caster;
 	}
@@ -58,7 +58,7 @@ public class OnCreatureSkillUse implements IBaseEvent
 		return _simultaneously;
 	}
 	
-	public final Creature getTarget()
+	public Creature getTarget()
 	{
 		return _target;
 	}

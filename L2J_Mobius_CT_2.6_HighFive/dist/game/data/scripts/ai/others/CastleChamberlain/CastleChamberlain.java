@@ -65,7 +65,7 @@ import ai.AbstractNpcAI;
  * Castle Chamberlain AI.
  * @author malyelfik
  */
-public final class CastleChamberlain extends AbstractNpcAI
+public class CastleChamberlain extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPC =
@@ -1389,7 +1389,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555})
 	// @formatter:on
-	public final void onNpcManorBypass(OnNpcManorBypass evt)
+	public void onNpcManorBypass(OnNpcManorBypass evt)
 	{
 		final PlayerInstance player = evt.getActiveChar();
 		final Npc npc = evt.getTarget();

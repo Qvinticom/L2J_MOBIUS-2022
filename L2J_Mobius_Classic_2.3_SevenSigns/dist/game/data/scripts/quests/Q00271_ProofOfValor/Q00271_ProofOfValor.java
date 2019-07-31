@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Proof of Valor (271)
  * @author xban1x
  */
-public final class Q00271_ProofOfValor extends Quest
+public class Q00271_ProofOfValor extends Quest
 {
 	// NPC
 	private static final int RUKAIN = 30577;

@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * @author GKR
  */
 
-public final class TurekOrcs extends AbstractNpcAI
+public class TurekOrcs extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MOBS =

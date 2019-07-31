@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.items.type.ArmorType;
 /**
  * This class is dedicated to the management of armors.
  */
-public final class Armor extends Item
+public class Armor extends Item
 {
 	private ArmorType _type;
 	
@@ -71,7 +71,7 @@ public final class Armor extends Item
 	 * @return the ID of the item after applying the mask.
 	 */
 	@Override
-	public final int getItemMask()
+	public int getItemMask()
 	{
 		return _type.mask();
 	}

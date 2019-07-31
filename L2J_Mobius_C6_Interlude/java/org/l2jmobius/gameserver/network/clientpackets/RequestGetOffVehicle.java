@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle extends GameClientPacket
+public class RequestGetOffVehicle extends GameClientPacket
 {
 	private int _id;
 	private int _x;

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestPrivateStoreBuy implements IClientIncomingPacket
+public class RequestPrivateStoreBuy implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	

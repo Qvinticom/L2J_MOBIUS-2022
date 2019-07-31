@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PledgeStatusChanged implements IClientOutgoingPacket
+public class PledgeStatusChanged implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	

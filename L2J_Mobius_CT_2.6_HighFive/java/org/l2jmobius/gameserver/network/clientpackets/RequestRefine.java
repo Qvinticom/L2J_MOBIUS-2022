@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
  * Format:(ch) dddd
  * @author -Wooden-
  */
-public final class RequestRefine extends AbstractRefinePacket
+public class RequestRefine extends AbstractRefinePacket
 {
 	private int _targetItemObjId;
 	private int _refinerItemObjId;

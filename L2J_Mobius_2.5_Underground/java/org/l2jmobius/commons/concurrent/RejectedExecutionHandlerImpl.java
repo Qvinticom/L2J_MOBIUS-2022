@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 /**
  * @author NB4L1
  */
-public final class RejectedExecutionHandlerImpl implements RejectedExecutionHandler
+public class RejectedExecutionHandlerImpl implements RejectedExecutionHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(RejectedExecutionHandlerImpl.class.getName());
 	

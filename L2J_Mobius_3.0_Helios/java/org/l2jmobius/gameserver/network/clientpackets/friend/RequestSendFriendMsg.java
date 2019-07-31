@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
  * @author Tempy
  */
-public final class RequestSendFriendMsg implements IClientIncomingPacket
+public class RequestSendFriendMsg implements IClientIncomingPacket
 {
 	private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 	

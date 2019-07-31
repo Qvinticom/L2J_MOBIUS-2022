@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
 /**
  * @author Layane
  */
-public final class TaskRestart extends Task
+public class TaskRestart extends Task
 {
 	private static final String NAME = "restart";
 	

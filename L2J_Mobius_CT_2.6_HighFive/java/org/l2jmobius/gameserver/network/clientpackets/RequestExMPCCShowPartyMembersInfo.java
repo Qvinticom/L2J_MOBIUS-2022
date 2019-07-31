@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
  * Format:(ch) d
  * @author chris_00
  */
-public final class RequestExMPCCShowPartyMembersInfo implements IClientIncomingPacket
+public class RequestExMPCCShowPartyMembersInfo implements IClientIncomingPacket
 {
 	private int _partyLeaderId;
 	

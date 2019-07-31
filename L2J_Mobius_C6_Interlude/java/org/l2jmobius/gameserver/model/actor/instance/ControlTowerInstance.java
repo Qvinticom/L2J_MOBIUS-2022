@@ -122,7 +122,7 @@ public class ControlTowerInstance extends NpcInstance
 		getGuards().add(guard);
 	}
 	
-	public final List<Spawn> getGuards()
+	public List<Spawn> getGuards()
 	{
 		if (_guards == null)
 		{

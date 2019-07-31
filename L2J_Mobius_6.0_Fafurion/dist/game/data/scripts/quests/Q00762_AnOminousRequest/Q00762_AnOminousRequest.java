@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * An Ominous Request (762)
  * @author St3eT
  */
-public final class Q00762_AnOminousRequest extends Quest
+public class Q00762_AnOminousRequest extends Quest
 {
 	// NPCs
 	private static final int MYSTERIOUS_WIZARD = 31522;

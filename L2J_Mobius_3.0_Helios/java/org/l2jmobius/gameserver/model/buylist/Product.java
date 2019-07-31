@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 /**
  * @author NosBit
  */
-public final class Product
+public class Product
 {
 	private static final Logger LOGGER = Logger.getLogger(Product.class.getName());
 	

@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  * Loads announcements from database.
  * @author UnAfraid
  */
-public final class AnnouncementsTable
+public class AnnouncementsTable
 {
 	private static Logger LOGGER = Logger.getLogger(AnnouncementsTable.class.getName());
 	

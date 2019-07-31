@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 /**
  * @author lord_rex
  */
-public final class BuilderUtil
+public class BuilderUtil
 {
 	private BuilderUtil()
 	{

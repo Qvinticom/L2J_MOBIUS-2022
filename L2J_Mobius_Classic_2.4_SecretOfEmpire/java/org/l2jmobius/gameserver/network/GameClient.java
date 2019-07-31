@@ -63,7 +63,7 @@ import io.netty.channel.ChannelHandlerContext;
  * Represents a client connected on Game Server.
  * @author KenM
  */
-public final class GameClient extends ChannelInboundHandler<GameClient>
+public class GameClient extends ChannelInboundHandler<GameClient>
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");

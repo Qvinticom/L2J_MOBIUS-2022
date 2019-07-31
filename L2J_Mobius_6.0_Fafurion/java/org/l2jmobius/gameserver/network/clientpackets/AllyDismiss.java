@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class AllyDismiss implements IClientIncomingPacket
+public class AllyDismiss implements IClientIncomingPacket
 {
 	private String _clanName;
 	

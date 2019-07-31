@@ -34,7 +34,7 @@ import org.l2jmobius.Config;
  * <li>Instant pool handles short-life events.</li>
  * </ul>
  */
-public final class ThreadPool
+public class ThreadPool
 {
 	private static final Logger LOGGER = Logger.getLogger(ThreadPool.class.getName());
 	

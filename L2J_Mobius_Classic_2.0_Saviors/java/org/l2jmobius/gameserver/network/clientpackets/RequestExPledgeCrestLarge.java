@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 /**
  * @author -Wooden-, Sdw
  */
-public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
+public class RequestExPledgeCrestLarge implements IClientIncomingPacket
 {
 	private int _crestId;
 	private int _clanId;

@@ -28,7 +28,7 @@ import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
+public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 {
 	// NPCs
 	private static final int HARDIN = 30832;

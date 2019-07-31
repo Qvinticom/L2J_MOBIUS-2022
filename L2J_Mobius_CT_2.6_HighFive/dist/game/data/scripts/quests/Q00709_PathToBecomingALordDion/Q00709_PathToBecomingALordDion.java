@@ -273,7 +273,7 @@ public class Q00709_PathToBecomingALordDion extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		

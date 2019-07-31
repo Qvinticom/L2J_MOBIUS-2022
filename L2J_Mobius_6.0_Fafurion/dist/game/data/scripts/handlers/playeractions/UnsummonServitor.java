@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Unsummon Servitor player action handler.
  * @author St3eT
  */
-public final class UnsummonServitor implements IPlayerActionHandler
+public class UnsummonServitor implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

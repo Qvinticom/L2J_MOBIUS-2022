@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Devil's Legacy (365)
  * @author Adry_85
  */
-public final class Q00365_DevilsLegacy extends Quest
+public class Q00365_DevilsLegacy extends Quest
 {
 	// NPCs
 	private static final int COLLOB = 30092;

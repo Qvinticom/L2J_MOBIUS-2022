@@ -59,7 +59,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * is less than half the maximum. as Normal between half and 4/5<br>
  * and Full when there's more than 4/5 of the maximum number of players.
  */
-public final class ServerList implements IOutgoingPacket
+public class ServerList implements IOutgoingPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(ServerList.class.getName());
 	

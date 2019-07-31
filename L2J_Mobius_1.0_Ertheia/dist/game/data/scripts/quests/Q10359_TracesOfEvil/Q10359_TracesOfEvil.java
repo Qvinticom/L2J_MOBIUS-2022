@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Traces of Evil (10359)
  * @author St3eT
  */
-public final class Q10359_TracesOfEvil extends Quest
+public class Q10359_TracesOfEvil extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER_GUIDE = 31795;

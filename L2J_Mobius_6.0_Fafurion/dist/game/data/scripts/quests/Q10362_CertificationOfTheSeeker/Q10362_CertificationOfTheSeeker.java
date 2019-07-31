@@ -34,7 +34,7 @@ import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
  * @URL https://l2wiki.com/Certification_of_the_Seeker
  * @author Gladicek, Gigi
  */
-public final class Q10362_CertificationOfTheSeeker extends Quest
+public class Q10362_CertificationOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int LAKCIS = 32977;

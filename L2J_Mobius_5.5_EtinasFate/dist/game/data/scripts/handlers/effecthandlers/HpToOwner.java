@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * HpToOwner effect implementation.
  * @author Sdw
  */
-public final class HpToOwner extends AbstractEffect
+public class HpToOwner extends AbstractEffect
 {
 	private final double _power;
 	private final int _stealAmount;

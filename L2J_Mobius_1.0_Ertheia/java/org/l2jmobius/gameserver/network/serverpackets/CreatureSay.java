@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class CreatureSay implements IClientOutgoingPacket
+public class CreatureSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final ChatType _textType;
@@ -196,7 +196,7 @@ public final class CreatureSay implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public final void runImpl(PlayerInstance player)
+	public void runImpl(PlayerInstance player)
 	{
 		if (player != null)
 		{

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Bonds of Slavery (265)
  * @author xban1x
  */
-public final class Q00265_BondsOfSlavery extends Quest
+public class Q00265_BondsOfSlavery extends Quest
 {
 	// Item
 	private static final int IMP_SHACKLES = 1368;

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  * Tactical Signs targeting player action handler.
  * @author Nik
  */
-public final class TacticalSignTarget implements IPlayerActionHandler
+public class TacticalSignTarget implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

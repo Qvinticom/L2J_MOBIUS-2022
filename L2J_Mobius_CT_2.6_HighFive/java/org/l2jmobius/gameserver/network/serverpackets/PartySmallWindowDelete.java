@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PartySmallWindowDelete implements IClientOutgoingPacket
+public class PartySmallWindowDelete implements IClientOutgoingPacket
 {
 	private final PlayerInstance _member;
 	

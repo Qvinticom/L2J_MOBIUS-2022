@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 /**
  * @author programmos
  */
-public final class QuestSpawn
+public class QuestSpawn
 {
 	private final Logger LOGGER = Quest.LOGGER;
 	private static QuestSpawn instance;

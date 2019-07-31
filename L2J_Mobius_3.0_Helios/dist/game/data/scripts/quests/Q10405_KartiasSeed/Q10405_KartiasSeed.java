@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Kartia's Seed (10405)
  * @author St3eT
  */
-public final class Q10405_KartiasSeed extends Quest
+public class Q10405_KartiasSeed extends Quest
 {
 	// NPCs
 	private static final int SHUVANN = 33867;

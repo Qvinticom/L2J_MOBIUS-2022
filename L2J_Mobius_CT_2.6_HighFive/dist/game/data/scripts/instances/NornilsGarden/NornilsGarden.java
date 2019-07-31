@@ -43,7 +43,7 @@ import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
  * @author Gnacik
  * @version 2010-10-15 Based on official server Naia
  */
-public final class NornilsGarden extends AbstractInstance
+public class NornilsGarden extends AbstractInstance
 {
 	protected class NornilsWorld extends InstanceWorld
 	{
@@ -218,7 +218,7 @@ public final class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public final void teleportPlayer(PlayerInstance player, Location loc, int instanceId)
+	public void teleportPlayer(PlayerInstance player, Location loc, int instanceId)
 	{
 		giveBuffs(player);
 		if (player.hasSummon())
@@ -488,7 +488,7 @@ public final class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		final QuestState st = getQuestState(player, false);
@@ -555,7 +555,7 @@ public final class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (CommonUtil.contains(_final_gates, npc.getId()))
 		{
@@ -571,14 +571,14 @@ public final class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		getQuestState(player, true);
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public final String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getId() == _herb_jar) && !npc.isDead())
 		{
@@ -594,7 +594,7 @@ public final class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)

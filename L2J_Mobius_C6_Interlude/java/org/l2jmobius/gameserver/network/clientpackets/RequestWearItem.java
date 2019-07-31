@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestWearItem extends GameClientPacket
+public class RequestWearItem extends GameClientPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(RequestWearItem.class.getName());
 	

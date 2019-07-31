@@ -66,7 +66,7 @@ public class MinionList
 	 * <BR>
 	 * @param minions
 	 */
-	public final void spawnMinions(List<MinionHolder> minions)
+	public void spawnMinions(List<MinionHolder> minions)
 	{
 		if (_master.isAlikeDead() || (minions == null))
 		{
@@ -343,12 +343,12 @@ public class MinionList
 		return count;
 	}
 	
-	public final int countSpawnedMinions()
+	public int countSpawnedMinions()
 	{
 		return _spawnedMinions.size();
 	}
 	
-	public final long lazyCountSpawnedMinionsGroups()
+	public long lazyCountSpawnedMinionsGroups()
 	{
 		return _spawnedMinions.stream().distinct().count();
 	}

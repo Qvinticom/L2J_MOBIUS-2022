@@ -34,12 +34,12 @@ public class OnPlayerQuestAbort implements IBaseEvent
 		_questId = questId;
 	}
 	
-	public final PlayerInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
 	
-	public final int getQuestId()
+	public int getQuestId()
 	{
 		return _questId;
 	}

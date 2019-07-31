@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 /**
  * @author Pere
  */
-public final class Variation
+public class Variation
 {
 	private static final Logger LOGGER = Logger.getLogger(Variation.class.getSimpleName());
 	

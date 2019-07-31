@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Fioren AI.
  * @author St3eT
  */
-public final class Fioren extends AbstractNpcAI
+public class Fioren extends AbstractNpcAI
 {
 	// NPCs
 	private static final int FIOREN = 33044;

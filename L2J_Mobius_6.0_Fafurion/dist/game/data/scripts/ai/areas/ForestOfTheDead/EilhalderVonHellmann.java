@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public final class EilhalderVonHellmann extends AbstractNpcAI
+public class EilhalderVonHellmann extends AbstractNpcAI
 {
 	private static final int EILHALDER_VON_HELLMANN = 25328;
 	private static final Location SPAWN_LOCATION = new Location(59090, -42188, -3003);

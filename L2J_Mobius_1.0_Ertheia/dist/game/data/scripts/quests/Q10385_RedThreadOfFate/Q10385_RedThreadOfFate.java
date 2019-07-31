@@ -46,7 +46,7 @@ import instances.TalkingIslandPast.TalkingIslandPast;
  * Red Thread of Fate (10385)
  * @author Gladicek
  */
-public final class Q10385_RedThreadOfFate extends Quest
+public class Q10385_RedThreadOfFate extends Quest
 {
 	// NPCs
 	private static final int RAINA = 33491;

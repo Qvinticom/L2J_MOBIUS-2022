@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Daimon the White-Eyed - Part 1 (603)
  * @author Pandragon
  */
-public final class Q00603_DaimonTheWhiteEyedPart1 extends Quest
+public class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 {
 	// NPC
 	private static final int EYE_OF_ARGOS = 31683;

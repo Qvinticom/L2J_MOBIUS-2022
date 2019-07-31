@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 
 import vehicles.AirShipController;
 
-public final class SoDController extends AirShipController
+public class SoDController extends AirShipController
 {
 	private static final int DOCK_ZONE = 50601;
 	private static final int LOCATION = 102;

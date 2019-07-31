@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
  * Block Resurrection effect implementation.
  * @author UnAfraid
  */
-public final class BlockResurrection extends AbstractEffect
+public class BlockResurrection extends AbstractEffect
 {
 	public BlockResurrection(StatsSet params)
 	{

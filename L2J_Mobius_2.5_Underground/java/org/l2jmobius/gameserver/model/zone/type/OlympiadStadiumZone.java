@@ -57,7 +57,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		setSettings(settings);
 	}
 	
-	public final class Settings extends AbstractZoneSettings
+	public class Settings extends AbstractZoneSettings
 	{
 		private OlympiadGameTask _task = null;
 		
@@ -101,7 +101,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public final void registerTask(OlympiadGameTask task)
+	public void registerTask(OlympiadGameTask task)
 	{
 		getSettings().setTask(task);
 	}

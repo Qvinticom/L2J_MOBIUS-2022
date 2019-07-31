@@ -33,7 +33,7 @@ import quests.Q10337_SakumsImpact.Q10337_SakumsImpact;
  * Divided Sakum, Poslof (10358)
  * @author St3eT
  */
-public final class Q10358_DividedSakumPoslof extends Quest
+public class Q10358_DividedSakumPoslof extends Quest
 {
 	// NPCs
 	private static final int LEF = 33510;

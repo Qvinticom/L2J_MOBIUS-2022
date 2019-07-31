@@ -36,17 +36,17 @@ public class ClanHallTeleportHolder extends Location
 		_cost = cost;
 	}
 	
-	public final NpcStringId getNpcStringId()
+	public NpcStringId getNpcStringId()
 	{
 		return _npcStringId;
 	}
 	
-	public final int getMinFunctionLevel()
+	public int getMinFunctionLevel()
 	{
 		return _minFunctionLevel;
 	}
 	
-	public final int getCost()
+	public int getCost()
 	{
 		return _cost;
 	}

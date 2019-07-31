@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Lets drink to code!
  * @author zabbix, HorridoJoho
  */
-public final class RequestLinkHtml implements IClientIncomingPacket
+public class RequestLinkHtml implements IClientIncomingPacket
 {
 	private String _link;
 	

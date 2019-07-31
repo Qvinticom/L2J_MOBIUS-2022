@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 /**
  * @author BiggBoss
  */
-public final class AdminCHSiege implements IAdminCommandHandler
+public class AdminCHSiege implements IAdminCommandHandler
 {
 	private static final String[] COMMANDS =
 	{

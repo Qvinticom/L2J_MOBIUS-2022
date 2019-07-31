@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format: (ch) S
  * @author -Wooden- TODO: GodKratos: This packet is wrong in Gracia Final!!
  */
-public final class RequestPCCafeCouponUse implements IClientIncomingPacket
+public class RequestPCCafeCouponUse implements IClientIncomingPacket
 {
 	private String _str;
 	

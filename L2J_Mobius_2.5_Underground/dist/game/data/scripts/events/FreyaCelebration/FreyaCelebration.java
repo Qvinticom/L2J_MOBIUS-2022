@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Freya Celebration event AI.
  * @author Gnacik
  */
-public final class FreyaCelebration extends LongTimeEvent
+public class FreyaCelebration extends LongTimeEvent
 {
 	// NPC
 	private static final int FREYA = 13296;

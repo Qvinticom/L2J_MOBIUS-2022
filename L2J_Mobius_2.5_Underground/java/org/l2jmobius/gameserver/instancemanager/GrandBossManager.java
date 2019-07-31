@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.interfaces.IStorable;
  * Grand Boss manager.
  * @author DaRkRaGe Revised by Emperorc
  */
-public final class GrandBossManager implements IStorable
+public class GrandBossManager implements IStorable
 {
 	// SQL queries
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";

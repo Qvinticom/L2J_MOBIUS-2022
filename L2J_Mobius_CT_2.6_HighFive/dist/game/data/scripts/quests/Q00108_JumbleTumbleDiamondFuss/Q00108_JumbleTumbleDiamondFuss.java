@@ -37,7 +37,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * Jumble, Tumble, Diamond Fuss (108)
  * @author Janiko
  */
-public final class Q00108_JumbleTumbleDiamondFuss extends Quest
+public class Q00108_JumbleTumbleDiamondFuss extends Quest
 {
 	// NPCs
 	private static final int COLLECTOR_GOUPH = 30523;

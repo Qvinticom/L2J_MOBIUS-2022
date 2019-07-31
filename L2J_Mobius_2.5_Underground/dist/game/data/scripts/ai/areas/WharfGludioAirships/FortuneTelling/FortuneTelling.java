@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Fortune Telling AI.
  * @author Nyaran
  */
-public final class FortuneTelling extends AbstractNpcAI
+public class FortuneTelling extends AbstractNpcAI
 {
 	// NPC
 	private static final int MINE = 32616;

@@ -30,12 +30,12 @@ import org.l2jmobius.gameserver.util.Util;
  * Help Rood Raise A New Pet! (352)
  * @author Adry_85
  */
-public final class Q00352_HelpRoodRaiseANewPet extends Quest
+public class Q00352_HelpRoodRaiseANewPet extends Quest
 {
 	private static final class DropInfo
 	{
-		public final int _firstChance;
-		public final int _secondChance;
+		public int _firstChance;
+		public int _secondChance;
 		
 		public DropInfo(int firstChance, int secondChance)
 		{

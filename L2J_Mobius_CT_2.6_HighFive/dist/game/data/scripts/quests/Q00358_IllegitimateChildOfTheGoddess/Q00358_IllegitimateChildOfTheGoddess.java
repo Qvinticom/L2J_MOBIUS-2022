@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Illegitimate Child of the Goddess (358)
  * @author Adry_85
  */
-public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
+public class Q00358_IllegitimateChildOfTheGoddess extends Quest
 {
 	// NPC
 	private static final int OLTRAN = 30862;

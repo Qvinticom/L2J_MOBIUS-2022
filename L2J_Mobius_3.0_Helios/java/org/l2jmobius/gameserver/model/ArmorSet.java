@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.stats.BaseStats;
 /**
  * @author UnAfraid
  */
-public final class ArmorSet
+public class ArmorSet
 {
 	private final int _id;
 	private final int _minimumPieces;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Block Party effect implementation.
  * @author BiggBoss
  */
-public final class BlockParty extends AbstractEffect
+public class BlockParty extends AbstractEffect
 {
 	public BlockParty(StatsSet params)
 	{

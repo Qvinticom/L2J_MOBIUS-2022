@@ -31,7 +31,7 @@ import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
  * Seven Signs, Girl of Doubt (10292)
  * @author Adry_85
  */
-public final class Q10292_SevenSignsGirlOfDoubt extends Quest
+public class Q10292_SevenSignsGirlOfDoubt extends Quest
 {
 	// NPCs
 	private static final int HARDIN = 30832;

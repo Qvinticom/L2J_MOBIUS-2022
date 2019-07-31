@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * AI for mobs in Plains of Dion (near Floran Village).
  * @author Gladicek
  */
-public final class PlainsOfDion extends AbstractNpcAI
+public class PlainsOfDion extends AbstractNpcAI
 {
 	private static final int DELU_LIZARDMEN[] =
 	{

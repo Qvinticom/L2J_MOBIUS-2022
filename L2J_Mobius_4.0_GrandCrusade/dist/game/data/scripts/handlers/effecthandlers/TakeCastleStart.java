@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Take Castle Start effect implementation.
  * @author St3eT
  */
-public final class TakeCastleStart extends AbstractEffect
+public class TakeCastleStart extends AbstractEffect
 {
 	public TakeCastleStart(StatsSet params)
 	{

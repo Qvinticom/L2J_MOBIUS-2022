@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * A Weakened Barrier (10780)
  * @author malyelfik
  */
-public final class Q10780_AWeakenedBarrier extends Quest
+public class Q10780_AWeakenedBarrier extends Quest
 {
 	// NPCs
 	private static final int ANDY = 33845;

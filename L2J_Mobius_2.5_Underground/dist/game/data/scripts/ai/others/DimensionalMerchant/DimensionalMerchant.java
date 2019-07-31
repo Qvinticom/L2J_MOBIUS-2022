@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Dimensional Merchant AI.
  * @author St3eT
  */
-public final class DimensionalMerchant extends AbstractNpcAI
+public class DimensionalMerchant extends AbstractNpcAI
 {
 	// NPC
 	private static final int MERCHANT = 32478; // Dimensional Merchant

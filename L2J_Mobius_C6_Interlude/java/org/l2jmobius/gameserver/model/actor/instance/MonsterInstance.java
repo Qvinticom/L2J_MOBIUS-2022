@@ -64,7 +64,7 @@ public class MonsterInstance extends Attackable
 	}
 	
 	@Override
-	public final MonsterKnownList getKnownList()
+	public MonsterKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof MonsterKnownList))
 		{

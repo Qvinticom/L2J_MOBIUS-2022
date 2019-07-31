@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Invaders of the Holy Land (273)
  * @author xban1x
  */
-public final class Q00273_InvadersOfTheHolyLand extends Quest
+public class Q00273_InvadersOfTheHolyLand extends Quest
 {
 	// NPC
 	private static final int VARKEES = 30566;

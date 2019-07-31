@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 /**
  * @author Zoey76
  */
-public final class SkillLearn
+public class SkillLearn
 {
 	private final String _skillName;
 	private final int _skillId;

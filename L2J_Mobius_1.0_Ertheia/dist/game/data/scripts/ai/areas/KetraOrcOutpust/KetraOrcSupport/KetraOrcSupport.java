@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Ketra Orc Support AI.<br>
  * @authors Nyaran
  */
-public final class KetraOrcSupport extends AbstractNpcAI
+public class KetraOrcSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{

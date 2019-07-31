@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Transfer Hate effect implementation.
  * @author Adry_85
  */
-public final class TransferHate extends AbstractEffect
+public class TransferHate extends AbstractEffect
 {
 	private final int _chance;
 	

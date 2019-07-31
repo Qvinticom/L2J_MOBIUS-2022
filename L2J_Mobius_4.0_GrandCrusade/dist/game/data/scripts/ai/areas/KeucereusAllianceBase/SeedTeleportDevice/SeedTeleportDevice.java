@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Seed Teleport Device AI.
  * @author St3eT
  */
-public final class SeedTeleportDevice extends AbstractNpcAI
+public class SeedTeleportDevice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SEED_TELEPORT_DEVICE = 15929;

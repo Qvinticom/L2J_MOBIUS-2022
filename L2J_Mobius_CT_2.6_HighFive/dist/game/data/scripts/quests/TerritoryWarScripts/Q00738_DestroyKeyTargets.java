@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Destroy Key Targets (738)
  * @author Gigiikun
  */
-public final class Q00738_DestroyKeyTargets extends TerritoryWarSuperClass
+public class Q00738_DestroyKeyTargets extends TerritoryWarSuperClass
 {
 	public Q00738_DestroyKeyTargets()
 	{

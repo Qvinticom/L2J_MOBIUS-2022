@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Gatekeeper Spirit AI.
  * @author Zoey76
  */
-public final class GatekeeperSpirit extends AbstractNpcAI
+public class GatekeeperSpirit extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GATEKEEPER_SPIRIT_ENTER = 31111;

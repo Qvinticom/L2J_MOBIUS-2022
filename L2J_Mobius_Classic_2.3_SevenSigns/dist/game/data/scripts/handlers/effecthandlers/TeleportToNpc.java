@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * Teleport player/party to summoned npc effect implementation.
  * @author Nik
  */
-public final class TeleportToNpc extends AbstractEffect
+public class TeleportToNpc extends AbstractEffect
 {
 	private final int _npcId;
 	private final boolean _party;

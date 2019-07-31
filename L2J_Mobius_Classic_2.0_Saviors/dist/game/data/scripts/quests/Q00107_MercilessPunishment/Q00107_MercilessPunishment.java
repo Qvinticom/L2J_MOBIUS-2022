@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Merciless Punishment (107)
  * @author janiko
  */
-public final class Q00107_MercilessPunishment extends Quest
+public class Q00107_MercilessPunishment extends Quest
 {
 	// Npc
 	private static final int URUTU_CHIEF_HATOS = 30568;

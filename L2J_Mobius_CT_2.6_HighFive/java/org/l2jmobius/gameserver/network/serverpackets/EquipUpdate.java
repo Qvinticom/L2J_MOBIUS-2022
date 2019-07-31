@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class EquipUpdate implements IClientOutgoingPacket
+public class EquipUpdate implements IClientOutgoingPacket
 {
 	private final ItemInstance _item;
 	private final int _change;

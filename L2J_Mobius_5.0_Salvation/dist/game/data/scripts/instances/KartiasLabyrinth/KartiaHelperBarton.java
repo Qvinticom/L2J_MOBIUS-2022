@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Barton AI. Tyrr Warrior
  * @author flanagak
  */
-public final class KartiaHelperBarton extends AbstractNpcAI
+public class KartiaHelperBarton extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_BARTON =

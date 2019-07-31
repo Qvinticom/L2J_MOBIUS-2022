@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.IXmlReader;
  * Point data parser.
  * @author Zoey76
  */
-public final class HellboundPointData implements IXmlReader
+public class HellboundPointData implements IXmlReader
 {
 	private final Map<Integer, int[]> _pointsInfo = new HashMap<>();
 	

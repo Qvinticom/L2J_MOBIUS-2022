@@ -30,7 +30,7 @@ import quests.Q10318_DecayingDarkness.Q10318_DecayingDarkness;
  * @URL https://l2wiki.com/Owner_of_Hall
  * @author Gigi
  */
-public final class Q10351_OwnerOfHall extends Quest
+public class Q10351_OwnerOfHall extends Quest
 {
 	// NPCs
 	private static final int LYDIA = 32892;

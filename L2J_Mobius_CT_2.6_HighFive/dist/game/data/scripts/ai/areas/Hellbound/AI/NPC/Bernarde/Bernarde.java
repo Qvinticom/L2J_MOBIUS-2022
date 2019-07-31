@@ -26,7 +26,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Bernarde AI.
  * @author DS
  */
-public final class Bernarde extends AbstractNpcAI
+public class Bernarde extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BERNARDE = 32300;
@@ -45,7 +45,7 @@ public final class Bernarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -85,7 +85,7 @@ public final class Bernarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		switch (HellboundEngine.getInstance().getLevel())
 		{

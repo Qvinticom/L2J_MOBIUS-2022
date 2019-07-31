@@ -34,7 +34,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Hellbound Slaves AI.
  * @author DS
  */
-public final class Slaves extends AbstractNpcAI
+public class Slaves extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MASTERS =
@@ -54,7 +54,7 @@ public final class Slaves extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		((MonsterInstance) npc).enableMinions(HellboundEngine.getInstance().getLevel() < 5);
 		((MonsterInstance) npc).setOnKillDelay(1000);
@@ -62,7 +62,7 @@ public final class Slaves extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (((MonsterInstance) npc).getMinionList() != null)
 		{

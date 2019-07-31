@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
  * @URL http://www.lineage2.com/en/news/events/birth-of-draco.php
  * @author Mobius
  */
-public final class BirthOfDraco extends LongTimeEvent
+public class BirthOfDraco extends LongTimeEvent
 {
 	// NPCs
 	private static final int ASLAN = 33687;

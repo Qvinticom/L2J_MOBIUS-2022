@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * In This Quiet Place (489)
  * @author St3eT
  */
-public final class Q00489_InThisQuietPlace extends Quest
+public class Q00489_InThisQuietPlace extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

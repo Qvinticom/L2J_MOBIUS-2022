@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * d = AllyCrestID<BR>
  * @author KenM
  */
-public final class SiegeDefenderList implements IClientOutgoingPacket
+public class SiegeDefenderList implements IClientOutgoingPacket
 {
 	private final Castle _castle;
 	

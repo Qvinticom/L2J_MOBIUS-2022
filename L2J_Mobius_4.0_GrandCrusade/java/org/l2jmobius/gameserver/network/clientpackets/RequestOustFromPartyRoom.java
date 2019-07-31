@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * format (ch) d
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom implements IClientIncomingPacket
+public class RequestOustFromPartyRoom implements IClientIncomingPacket
 {
 	private int _objectId;
 	

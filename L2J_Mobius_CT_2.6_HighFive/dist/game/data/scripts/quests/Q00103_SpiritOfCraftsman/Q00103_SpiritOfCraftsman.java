@@ -32,7 +32,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * Spirit of Craftsman (103)
  * @author janiko
  */
-public final class Q00103_SpiritOfCraftsman extends Quest
+public class Q00103_SpiritOfCraftsman extends Quest
 {
 	// NPCs
 	private static final int BLACKSMITH_KAROYD = 30307;

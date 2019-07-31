@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * CP Damage Percent effect implementation.
  * @author Zoey76, Adry_85
  */
-public final class CpDamPercent extends AbstractEffect
+public class CpDamPercent extends AbstractEffect
 {
 	private final double _power;
 	

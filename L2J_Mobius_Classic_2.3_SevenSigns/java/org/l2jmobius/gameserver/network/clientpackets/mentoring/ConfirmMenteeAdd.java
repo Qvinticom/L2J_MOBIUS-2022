@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.mentoring.ExMentorList;
  */
 public class ConfirmMenteeAdd implements IClientIncomingPacket
 {
-	// public final static int MENTEE_CERT = 33800;
+	// public static int MENTEE_CERT = 33800;
 	
 	private int _confirmed;
 	private String _mentor;

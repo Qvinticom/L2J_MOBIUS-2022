@@ -43,7 +43,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Adolph AI.
  * @author flanagak
  */
-public final class KartiaHelperAdolph extends AbstractNpcAI
+public class KartiaHelperAdolph extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_ADOLPH =

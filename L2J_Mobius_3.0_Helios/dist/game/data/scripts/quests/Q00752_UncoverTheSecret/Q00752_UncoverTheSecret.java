@@ -31,7 +31,7 @@ import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
  * @URL https://l2wiki.com/Uncover_the_Secret
  * @author Gigi
  */
-public final class Q00752_UncoverTheSecret extends Quest
+public class Q00752_UncoverTheSecret extends Quest
 {
 	// Npc
 	private static final int HESET = 33780;

@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Underground Coliseum teleport AI
  * @author malyelfik
  */
-public final class TeleportToUndergroundColiseum extends AbstractNpcAI
+public class TeleportToUndergroundColiseum extends AbstractNpcAI
 {
 	// NPCs
 	private static final int COLISEUM_HELPER = 32491;

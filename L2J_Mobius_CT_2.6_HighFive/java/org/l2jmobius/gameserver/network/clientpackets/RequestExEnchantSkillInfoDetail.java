@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
  * Format (ch) ddd c: (id) 0xD0 h: (subid) 0x31 d: type d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
+public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 {
 	private int _type;
 	private int _skillId;

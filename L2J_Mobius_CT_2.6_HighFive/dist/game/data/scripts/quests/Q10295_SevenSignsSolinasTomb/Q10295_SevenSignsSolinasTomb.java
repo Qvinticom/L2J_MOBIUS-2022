@@ -28,7 +28,7 @@ import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMon
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Q10295_SevenSignsSolinasTomb extends Quest
+public class Q10295_SevenSignsSolinasTomb extends Quest
 {
 	// NPCs
 	private static final int ELCADIA = 32787;

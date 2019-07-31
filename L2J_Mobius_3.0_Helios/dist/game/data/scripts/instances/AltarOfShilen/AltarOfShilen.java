@@ -535,7 +535,7 @@ public class AltarOfShilen extends AbstractInstance
 		}
 	}
 	
-	private void onStatusChanged(final Instance world)
+	private void onStatusChanged(Instance world)
 	{
 		final Instance instance = InstanceManager.getInstance().getInstance(world.getId());
 		switch (instance.getStatus())

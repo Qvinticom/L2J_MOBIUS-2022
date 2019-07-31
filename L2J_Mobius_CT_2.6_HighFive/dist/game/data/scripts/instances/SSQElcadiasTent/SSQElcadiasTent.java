@@ -33,7 +33,7 @@ import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOne
  * Elcadia's Tent instance zone.
  * @author Adry_85
  */
-public final class SSQElcadiasTent extends AbstractInstance
+public class SSQElcadiasTent extends AbstractInstance
 {
 	// NPCs
 	private static final int ELCADIA = 32784;

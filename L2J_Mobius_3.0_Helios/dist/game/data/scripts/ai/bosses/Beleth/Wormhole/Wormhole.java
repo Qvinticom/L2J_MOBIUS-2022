@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Wormhole AI (33901).
  * @author gigi
  */
-public final class Wormhole extends AbstractNpcAI
+public class Wormhole extends AbstractNpcAI
 {
 	// NPCs
 	private static final int WORMHOLE = 33901;

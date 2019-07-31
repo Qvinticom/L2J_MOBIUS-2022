@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
  * @URL https://l2wiki.com/Way_of_Wandering_Knight
  * @author NightBR
  */
-public final class Q10560_WayOfWanderingKnight extends Quest
+public class Q10560_WayOfWanderingKnight extends Quest
 {
 	// NPCs
 	private static final int HERPHAH = 34362;

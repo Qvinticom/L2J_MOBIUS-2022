@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestReplyStartPledgeWar extends GameClientPacket
+public class RequestReplyStartPledgeWar extends GameClientPacket
 {
 	private int _answer;
 	

@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * UnAfraid: TODO: MOVE IT TO DP AI
  */
-public final class Evolve
+public class Evolve
 {
 	protected static final Logger LOGGER = Logger.getLogger(Evolve.class.getName());
 	

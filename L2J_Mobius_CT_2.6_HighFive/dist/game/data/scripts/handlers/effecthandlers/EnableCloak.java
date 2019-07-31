@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Enable Cloak effect implementation.
  * @author Adry_85
  */
-public final class EnableCloak extends AbstractEffect
+public class EnableCloak extends AbstractEffect
 {
 	public EnableCloak(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestRecipeShopMakeItem extends GameClientPacket
+public class RequestRecipeShopMakeItem extends GameClientPacket
 {
 	private int _id;
 	private int _recipeId;

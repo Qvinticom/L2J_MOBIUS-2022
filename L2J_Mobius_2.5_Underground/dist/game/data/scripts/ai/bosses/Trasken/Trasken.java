@@ -389,7 +389,7 @@ public class Trasken extends AbstractNpcAI
 		});
 	}
 	
-	private void Fail(final boolean clean)
+	private void Fail(boolean clean)
 	{
 		if (clean)
 		{
@@ -469,7 +469,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(final Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -581,7 +581,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(final String event, final Npc npc, final PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -746,7 +746,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(final Creature creature, final ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if ((zone.getId() == ZONE_ID) && creature.isPlayer())
 		{
@@ -780,7 +780,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onExitZone(final Creature creature, final ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
 		if ((zone.getId() == ZONE_ID_HEART) && zone.getPlayersInside().isEmpty())
 		{

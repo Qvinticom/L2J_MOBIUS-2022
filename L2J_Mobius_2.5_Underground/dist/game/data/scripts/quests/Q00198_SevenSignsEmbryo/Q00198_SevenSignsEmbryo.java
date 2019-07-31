@@ -36,7 +36,7 @@ import quests.Q00197_SevenSignsTheSacredBookOfSeal.Q00197_SevenSignsTheSacredBoo
  * Seven Signs, Embryo (198)
  * @author Adry_85
  */
-public final class Q00198_SevenSignsEmbryo extends Quest
+public class Q00198_SevenSignsEmbryo extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27346;

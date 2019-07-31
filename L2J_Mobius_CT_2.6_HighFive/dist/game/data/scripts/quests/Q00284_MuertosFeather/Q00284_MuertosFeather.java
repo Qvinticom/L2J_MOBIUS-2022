@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Muertos Feather (284).
  * @author xban1x
  */
-public final class Q00284_MuertosFeather extends Quest
+public class Q00284_MuertosFeather extends Quest
 {
 	// NPC
 	private static final int TREVOR = 32166;

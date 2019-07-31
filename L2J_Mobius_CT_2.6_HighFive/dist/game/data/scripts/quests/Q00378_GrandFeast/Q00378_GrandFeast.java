@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Grand Feast (378)
  * @author Adry_85
  */
-public final class Q00378_GrandFeast extends Quest
+public class Q00378_GrandFeast extends Quest
 {
 	// NPC
 	private static final int RANSPO = 30594;

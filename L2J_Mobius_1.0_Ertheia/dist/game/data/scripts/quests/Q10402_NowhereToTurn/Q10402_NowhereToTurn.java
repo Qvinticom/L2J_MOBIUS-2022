@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Nowhere to Turn (10402)
  * @author St3eT
  */
-public final class Q10402_NowhereToTurn extends Quest
+public class Q10402_NowhereToTurn extends Quest
 {
 	// NPCs
 	private static final int EBLUNE = 33865;

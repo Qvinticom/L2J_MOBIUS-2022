@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Altar of Evil AI.
  * @author St3eT
  */
-public final class AltarOfEvil extends AbstractNpcAI
+public class AltarOfEvil extends AbstractNpcAI
 {
 	// NPCs
 	private static final int RIFTER = 23179; // Dimensional Rifter

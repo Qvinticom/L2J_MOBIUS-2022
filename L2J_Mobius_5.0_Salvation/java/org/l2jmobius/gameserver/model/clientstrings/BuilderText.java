@@ -29,25 +29,25 @@ final class BuilderText extends Builder
 	}
 	
 	@Override
-	public final String toString(Object param)
+	public String toString(Object param)
 	{
 		return toString();
 	}
 	
 	@Override
-	public final String toString(Object... params)
+	public String toString(Object... params)
 	{
 		return toString();
 	}
 	
 	@Override
-	public final int getIndex()
+	public int getIndex()
 	{
 		return -1;
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return _text;
 	}

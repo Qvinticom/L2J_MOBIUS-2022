@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Trainning Soldier AI.
  * @author Mobius
  */
-public final class TrainningSoldier extends AbstractNpcAI
+public class TrainningSoldier extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SOLDIER = 33201; // Trainning Soldier

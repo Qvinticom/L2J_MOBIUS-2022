@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 /**
  * Randomize Hate effect implementation.
  */
-public final class RandomizeHate extends AbstractEffect
+public class RandomizeHate extends AbstractEffect
 {
 	private final int _chance;
 	

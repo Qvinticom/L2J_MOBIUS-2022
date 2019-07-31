@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  * Resurrection effect implementation.
  * @author Adry_85
  */
-public final class Resurrection extends AbstractEffect
+public class Resurrection extends AbstractEffect
 {
 	private final int _power;
 	

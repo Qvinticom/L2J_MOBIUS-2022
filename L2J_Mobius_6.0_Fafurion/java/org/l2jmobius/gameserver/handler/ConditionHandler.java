@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 /**
  * @author Sdw
  */
-public final class ConditionHandler
+public class ConditionHandler
 {
 	private final Map<String, Function<StatsSet, ICondition>> _conditionHandlerFactories = new HashMap<>();
 	

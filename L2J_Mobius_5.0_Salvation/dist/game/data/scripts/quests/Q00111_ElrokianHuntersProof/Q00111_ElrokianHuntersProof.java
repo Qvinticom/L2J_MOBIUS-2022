@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Elrokian Hunter's Proof (111)
  * @author Adry_85
  */
-public final class Q00111_ElrokianHuntersProof extends Quest
+public class Q00111_ElrokianHuntersProof extends Quest
 {
 	// NPCs
 	private static final int MARQUEZ = 32113;

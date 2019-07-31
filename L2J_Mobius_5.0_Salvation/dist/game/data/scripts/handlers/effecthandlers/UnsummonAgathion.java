@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
  * Unsummon Agathion effect implementation.
  * @author Zoey76
  */
-public final class UnsummonAgathion extends AbstractEffect
+public class UnsummonAgathion extends AbstractEffect
 {
 	public UnsummonAgathion(StatsSet params)
 	{

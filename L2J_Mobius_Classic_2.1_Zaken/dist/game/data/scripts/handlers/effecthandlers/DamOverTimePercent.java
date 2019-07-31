@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Damage Over Time Percent effect implementation.
  * @author Adry_85
  */
-public final class DamOverTimePercent extends AbstractEffect
+public class DamOverTimePercent extends AbstractEffect
 {
 	private final boolean _canKill;
 	private final double _power;

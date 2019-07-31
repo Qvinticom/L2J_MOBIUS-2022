@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * @author Gnacik
  */
 @Disabled // Mobius: this needs to be rewritten.
-public final class DenOfEvil extends AbstractNpcAI
+public class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;
 	protected static final int[] EYE_IDS =

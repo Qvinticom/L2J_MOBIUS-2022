@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.cache.CrestCache;
  * format dd x...x
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class PledgeCrest extends GameServerPacket
+public class PledgeCrest extends GameServerPacket
 {
 	private final int _crestId;
 	private final byte[] _data;

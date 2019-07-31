@@ -87,12 +87,12 @@ public class MultiSort
 		return Arrays.asList(valueList);
 	}
 	
-	public final int getCount()
+	public int getCount()
 	{
 		return getValues().size();
 	}
 	
-	public final int getHarmonicMean()
+	public int getHarmonicMean()
 	{
 		if (getValues().isEmpty())
 		{
@@ -109,7 +109,7 @@ public class MultiSort
 		return getValues().size() / totalValue;
 	}
 	
-	public final List<?> getKeys()
+	public List<?> getKeys()
 	{
 		if (_keyList == null)
 		{
@@ -119,22 +119,22 @@ public class MultiSort
 		return _keyList;
 	}
 	
-	public final int getFrequency(int checkValue)
+	public int getFrequency(int checkValue)
 	{
 		return Collections.frequency(getValues(), checkValue);
 	}
 	
-	public final int getMaxValue()
+	public int getMaxValue()
 	{
 		return Collections.max(getValues());
 	}
 	
-	public final int getMinValue()
+	public int getMinValue()
 	{
 		return Collections.min(getValues());
 	}
 	
-	public final int getMean()
+	public int getMean()
 	{
 		if (getValues().isEmpty())
 		{
@@ -144,7 +144,7 @@ public class MultiSort
 		return getTotalValue() / getValues().size();
 	}
 	
-	public final double getStandardDeviation()
+	public double getStandardDeviation()
 	{
 		if (getValues().isEmpty())
 		{
@@ -172,7 +172,7 @@ public class MultiSort
 		return Math.sqrt(totalValue / (numValues - 1));
 	}
 	
-	public final int getTotalValue()
+	public int getTotalValue()
 	{
 		if (getValues().isEmpty())
 		{
@@ -189,7 +189,7 @@ public class MultiSort
 		return totalValue;
 	}
 	
-	public final List<Integer> getValues()
+	public List<Integer> getValues()
 	{
 		if (_valueList == null)
 		{
@@ -199,17 +199,17 @@ public class MultiSort
 		return _valueList;
 	}
 	
-	public final boolean isSortDescending()
+	public boolean isSortDescending()
 	{
 		return _isSortDescending;
 	}
 	
-	public final boolean isSorted()
+	public boolean isSorted()
 	{
 		return _isSorted;
 	}
 	
-	public final void setSortDescending(boolean isDescending)
+	public void setSortDescending(boolean isDescending)
 	{
 		_isSortDescending = isDescending;
 	}

@@ -58,7 +58,7 @@ import quests.Q00233_TestOfTheWarSpirit.Q00233_TestOfTheWarSpirit;
  * Good Work's Reward (60)
  * @author ivantotov
  */
-public final class Q00060_GoodWorksReward extends Quest
+public class Q00060_GoodWorksReward extends Quest
 {
 	// NPCs
 	private static final int GROCER_HELVERIA = 30081;

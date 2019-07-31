@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
  * Used to store key information about a character's sub-class.
  * @author Tempy
  */
-public final class SubClass
+public class SubClass
 {
 	private PlayerClass _class;
 	private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);

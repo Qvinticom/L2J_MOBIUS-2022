@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * A Daunting Task (763)
  * @author St3eT
  */
-public final class Q00763_ADauntingTask extends Quest
+public class Q00763_ADauntingTask extends Quest
 {
 	// NPCs
 	private static final int ANDREI = 31292;

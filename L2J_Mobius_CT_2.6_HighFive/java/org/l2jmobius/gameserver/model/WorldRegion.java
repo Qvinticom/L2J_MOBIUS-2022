@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
-public final class WorldRegion
+public class WorldRegion
 {
 	/** Map containing visible objects in this world region. */
 	private volatile Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class LambdaRnd extends Lambda
+public class LambdaRnd extends Lambda
 {
 	private final Lambda _max;
 	private final boolean _linear;

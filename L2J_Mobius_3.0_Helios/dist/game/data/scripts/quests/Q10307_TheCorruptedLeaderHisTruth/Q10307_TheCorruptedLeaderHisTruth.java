@@ -31,7 +31,7 @@ import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
  * @VIDEO https://www.youtube.com/watch?v=MI5Hyu7TtLw
  * @author Gigi
  */
-public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
+public class Q10307_TheCorruptedLeaderHisTruth extends Quest
 {
 	// NPCs
 	private static final int NEOTI_MIMILEAD = 32895;

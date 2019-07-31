@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.VehiclePathPoint;
 /**
  * @author UnAfraid
  */
-public final class ShuttleDataHolder
+public class ShuttleDataHolder
 {
 	private final int _id;
 	private final Location _loc;

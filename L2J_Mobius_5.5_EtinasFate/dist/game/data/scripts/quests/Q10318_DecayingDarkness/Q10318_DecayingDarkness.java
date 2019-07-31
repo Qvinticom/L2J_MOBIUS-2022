@@ -29,7 +29,7 @@ import quests.Q10317_OrbisWitch.Q10317_OrbisWitch;
  * @URL https://l2wiki.com/Decaying_Darkness_(quest)
  * @author Gigi
  */
-public final class Q10318_DecayingDarkness extends Quest
+public class Q10318_DecayingDarkness extends Quest
 {
 	// NPC
 	private static final int LYDIA = 32892;

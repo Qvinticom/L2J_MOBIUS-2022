@@ -27,7 +27,7 @@ import org.l2jmobius.commons.util.Rnd;
  * Dimensional Rift Room.
  * @author xban1x
  */
-public final class DimensionalRiftRoom
+public class DimensionalRiftRoom
 {
 	private final byte _type;
 	private final byte _room;

@@ -20,7 +20,7 @@ package quests.TerritoryWarScripts;
  * Protect the Religious Association Leader (732)
  * @author Gigiikun
  */
-public final class Q00732_ProtectTheReligiousAssociationLeader extends TerritoryWarSuperClass
+public class Q00732_ProtectTheReligiousAssociationLeader extends TerritoryWarSuperClass
 {
 	public Q00732_ProtectTheReligiousAssociationLeader()
 	{

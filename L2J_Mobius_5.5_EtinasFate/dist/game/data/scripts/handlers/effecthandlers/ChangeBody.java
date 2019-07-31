@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Transformation type effect, which disables attack or use of skills.
  * @author Nik
  */
-public final class ChangeBody extends AbstractEffect
+public class ChangeBody extends AbstractEffect
 {
 	private final Set<TemplateChanceHolder> _transformations = new HashSet<>();
 	

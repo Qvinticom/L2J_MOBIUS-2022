@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
  * A Foreign Land (10732)
  * @author Sdw
  */
-public final class Q10732_AForeignLand extends Quest
+public class Q10732_AForeignLand extends Quest
 {
 	// NPCs
 	private static final int NAVARI = 33931;

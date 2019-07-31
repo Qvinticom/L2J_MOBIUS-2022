@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * Format:(ch) ddd
  */
-public final class RequestDuelAnswerStart extends GameClientPacket
+public class RequestDuelAnswerStart extends GameClientPacket
 {
 	private int _partyDuel;
 	@SuppressWarnings("unused")

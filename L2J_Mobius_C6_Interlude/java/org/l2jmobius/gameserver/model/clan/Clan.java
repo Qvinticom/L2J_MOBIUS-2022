@@ -1001,7 +1001,7 @@ public class Clan
 		}
 	}
 	
-	public final Skill[] getAllSkills()
+	public Skill[] getAllSkills()
 	{
 		if (_skills == null)
 		{
@@ -1454,7 +1454,7 @@ public class Clan
 	 * @param pledgeType
 	 * @return
 	 */
-	public final SubPledge getSubPledge(int pledgeType)
+	public SubPledge getSubPledge(int pledgeType)
 	{
 		if (_subPledges == null)
 		{
@@ -1469,7 +1469,7 @@ public class Clan
 	 * @param pledgeName
 	 * @return
 	 */
-	public final SubPledge getSubPledge(String pledgeName)
+	public SubPledge getSubPledge(String pledgeName)
 	{
 		if (_subPledges == null)
 		{
@@ -1490,7 +1490,7 @@ public class Clan
 	 * used to retrieve all subPledges
 	 * @return
 	 */
-	public final SubPledge[] getAllSubPledges()
+	public SubPledge[] getAllSubPledges()
 	{
 		if (_subPledges == null)
 		{
@@ -1741,7 +1741,7 @@ public class Clan
 		}
 	}
 	
-	public final RankPrivs[] getAllRankPrivs()
+	public RankPrivs[] getAllRankPrivs()
 	{
 		if (_privs == null)
 		{

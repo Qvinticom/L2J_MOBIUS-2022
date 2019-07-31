@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class FishermanInstance extends MerchantInstance
+public class FishermanInstance extends MerchantInstance
 {
 	public FishermanInstance(NpcTemplate template)
 	{

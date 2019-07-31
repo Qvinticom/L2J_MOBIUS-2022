@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Specialty Liquor Delivery (622)
  * @author Janiko
  */
-public final class Q00622_SpecialtyLiquorDelivery extends Quest
+public class Q00622_SpecialtyLiquorDelivery extends Quest
 {
 	// NPCs
 	private static final int JEREMY = 31521;

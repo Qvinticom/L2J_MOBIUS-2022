@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
 /**
  * @author Mobius
  */
-public final class ScriptEngineManager implements IXmlReader
+public class ScriptEngineManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
 	
@@ -126,7 +126,7 @@ public final class ScriptEngineManager implements IXmlReader
 				}
 			});
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			LOGGER.log(Level.WARNING, "Couldn't load script exclusions.", e);
 		}

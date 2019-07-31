@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Format(ch) d
  * @author -Wooden-
  */
-public final class RequestRefineCancel implements IClientIncomingPacket
+public class RequestRefineCancel implements IClientIncomingPacket
 {
 	private int _targetItemObjId;
 	

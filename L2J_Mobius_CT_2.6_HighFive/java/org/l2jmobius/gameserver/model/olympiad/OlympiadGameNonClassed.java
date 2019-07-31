@@ -31,7 +31,7 @@ public class OlympiadGameNonClassed extends OlympiadGameNormal
 	}
 	
 	@Override
-	public final CompetitionType getType()
+	public CompetitionType getType()
 	{
 		return CompetitionType.NON_CLASSED;
 	}

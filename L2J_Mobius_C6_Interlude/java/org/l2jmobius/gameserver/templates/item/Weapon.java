@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.templates.StatsSet;
  * This class is dedicated to the management of weapons.
  * @version $Revision: 1.4.2.3.2.5 $ $Date: 2005/04/02 15:57:51 $
  */
-public final class Weapon extends Item
+public class Weapon extends Item
 {
 	private final int _soulShotCount;
 	private final int _spiritShotCount;

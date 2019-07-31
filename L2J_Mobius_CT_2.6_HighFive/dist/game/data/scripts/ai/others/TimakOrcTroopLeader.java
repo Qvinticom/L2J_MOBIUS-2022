@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Timak Orc Troop Leader AI.
  * @author Mobius
  */
-public final class TimakOrcTroopLeader extends AbstractNpcAI
+public class TimakOrcTroopLeader extends AbstractNpcAI
 {
 	private static final int TIMAK_ORC_TROOP_LEADER = 20767;
 	private static final NpcStringId[] ON_ATTACK_MSG =

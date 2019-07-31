@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Conquest of Alligator Island (354)
  * @author Adry_85
  */
-public final class Q00354_ConquestOfAlligatorIsland extends Quest
+public class Q00354_ConquestOfAlligatorIsland extends Quest
 {
 	// NPC
 	private static final int KLUCK = 30895;

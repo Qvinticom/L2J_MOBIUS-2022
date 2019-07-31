@@ -52,7 +52,7 @@ import ai.areas.Gracia.vehicles.SoIController.SoIController;
  * Gracia class-loader.
  * @author Pandragon
  */
-public final class GraciaLoader
+public class GraciaLoader
 {
 	private static final Logger LOGGER = Logger.getLogger(GraciaLoader.class.getName());
 	

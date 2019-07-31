@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * An effect that pulls effected target back to the effector.
  * @author Nik
  */
-public final class PullBack extends AbstractEffect
+public class PullBack extends AbstractEffect
 {
 	private final int _speed;
 	private final int _delay;

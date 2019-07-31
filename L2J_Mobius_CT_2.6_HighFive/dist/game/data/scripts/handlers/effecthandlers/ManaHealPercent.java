@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Mana Heal Percent effect implementation.
  * @author UnAfraid
  */
-public final class ManaHealPercent extends AbstractEffect
+public class ManaHealPercent extends AbstractEffect
 {
 	private final double _power;
 	

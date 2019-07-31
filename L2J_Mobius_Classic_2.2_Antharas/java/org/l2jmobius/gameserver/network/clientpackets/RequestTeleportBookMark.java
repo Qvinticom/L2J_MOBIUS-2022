@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author ShanSoft Packets Structure: chdd
  */
-public final class RequestTeleportBookMark implements IClientIncomingPacket
+public class RequestTeleportBookMark implements IClientIncomingPacket
 {
 	private int _id;
 	

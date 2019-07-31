@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * The Annihilated Plains - 1 (10442)
  * @author St3eT
  */
-public final class Q10442_TheAnnihilatedPlains1 extends Quest
+public class Q10442_TheAnnihilatedPlains1 extends Quest
 {
 	// NPCs
 	private static final int MATHIAS = 31340;

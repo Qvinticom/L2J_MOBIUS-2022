@@ -29,7 +29,7 @@ import quests.ThirdClassTransferQuest;
  * Day of Destiny: Human's Fate (10341)
  * @author St3eT
  */
-public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
+public class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 {
 	// NPC
 	private static final int ORVEN = 30857;

@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author St3eT
  */
-public final class ClanHall extends AbstractResidence
+public class ClanHall extends AbstractResidence
 {
 	// Static parameters
 	private final ClanHallGrade _grade;

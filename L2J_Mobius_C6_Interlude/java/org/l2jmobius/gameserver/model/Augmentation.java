@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.skills.funcs.LambdaConst;
  * Used to store an augmentation and its bonus
  * @author durgus
  */
-public final class Augmentation
+public class Augmentation
 {
 	private static final Logger LOGGER = Logger.getLogger(Augmentation.class.getName());
 	

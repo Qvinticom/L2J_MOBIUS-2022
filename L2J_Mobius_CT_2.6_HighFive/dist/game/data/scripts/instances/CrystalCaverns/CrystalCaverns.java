@@ -73,7 +73,7 @@ import quests.Q00131_BirdInACage.Q00131_BirdInACage;
  * 4. Baylor Raid is missing a lot of things This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.<br>
  * Original sources: theone, L2JEmu, L2JOfficial, L2JFree Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT Please maintain consistency between the Crystal Caverns scripts.
  */
-public final class CrystalCaverns extends AbstractInstance
+public class CrystalCaverns extends AbstractInstance
 {
 	protected static class CrystalGolem
 	{

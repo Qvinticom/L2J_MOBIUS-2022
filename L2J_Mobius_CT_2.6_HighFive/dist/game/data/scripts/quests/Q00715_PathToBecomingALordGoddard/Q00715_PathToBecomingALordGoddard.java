@@ -156,7 +156,7 @@ public class Q00715_PathToBecomingALordGoddard extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)

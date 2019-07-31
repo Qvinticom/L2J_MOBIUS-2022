@@ -26,7 +26,7 @@ import handlers.effecthandlers.*;
  * Effect Master handler.
  * @author NosBit
  */
-public final class EffectMasterHandler
+public class EffectMasterHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectMasterHandler.class.getName());
 	

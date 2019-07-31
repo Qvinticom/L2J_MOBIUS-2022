@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * To the Seed of Destruction (10269)
  * @author nonom
  */
-public final class Q10282_ToTheSeedOfAnnihilation extends Quest
+public class Q10282_ToTheSeedOfAnnihilation extends Quest
 {
 	// NPCs
 	private static final int KBALDIR = 32733;

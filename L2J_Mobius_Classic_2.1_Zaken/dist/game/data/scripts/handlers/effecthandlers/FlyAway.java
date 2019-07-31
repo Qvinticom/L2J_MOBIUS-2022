@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 /**
  * Throw Up effect implementation.
  */
-public final class FlyAway extends AbstractEffect
+public class FlyAway extends AbstractEffect
 {
 	private final int _radius;
 	

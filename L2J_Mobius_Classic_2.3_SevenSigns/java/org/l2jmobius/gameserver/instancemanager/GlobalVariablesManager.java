@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.variables.AbstractVariables;
  * Global Variables Manager.
  * @author xban1x
  */
-public final class GlobalVariablesManager extends AbstractVariables
+public class GlobalVariablesManager extends AbstractVariables
 {
 	private static final Logger LOGGER = Logger.getLogger(GlobalVariablesManager.class.getName());
 	

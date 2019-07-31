@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Allowed classes to wear each henna.
  * @author Zoey76, Mobius
  */
-public final class HennaData implements IXmlReader
+public class HennaData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(HennaData.class.getName());
 	

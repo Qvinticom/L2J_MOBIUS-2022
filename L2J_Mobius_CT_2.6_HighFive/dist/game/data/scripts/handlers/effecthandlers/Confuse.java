@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Confuse effect implementation.
  * @author littlecrow
  */
-public final class Confuse extends AbstractEffect
+public class Confuse extends AbstractEffect
 {
 	private final int _chance;
 	

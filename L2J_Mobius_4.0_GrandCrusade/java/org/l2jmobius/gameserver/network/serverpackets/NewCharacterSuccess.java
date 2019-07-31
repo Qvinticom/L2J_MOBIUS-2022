@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class NewCharacterSuccess implements IClientOutgoingPacket
+public class NewCharacterSuccess implements IClientOutgoingPacket
 {
 	private final List<PlayerTemplate> _chars = new ArrayList<>();
 	

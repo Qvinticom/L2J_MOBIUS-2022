@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class SpecialString implements IClientOutgoingPacket
+public class SpecialString implements IClientOutgoingPacket
 {
 	private final int _strId;
 	private final int _fontSize;

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Dark Winged Spies (275)
  * @author xban1x
  */
-public final class Q00275_DarkWingedSpies extends Quest
+public class Q00275_DarkWingedSpies extends Quest
 {
 	// Npc
 	private static final int NERUGA_CHIEF_TANTUS = 30567;

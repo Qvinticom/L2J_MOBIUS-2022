@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
  * Instance Zone Info player action handler.
  * @author St3eT
  */
-public final class InstanceZoneInfo implements IPlayerActionHandler
+public class InstanceZoneInfo implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

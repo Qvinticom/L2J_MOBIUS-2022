@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.util.Broadcast;
 
-public final class Elpies extends Event
+public class Elpies extends Event
 {
 	// NPC
 	private static final int ELPY = 900100;

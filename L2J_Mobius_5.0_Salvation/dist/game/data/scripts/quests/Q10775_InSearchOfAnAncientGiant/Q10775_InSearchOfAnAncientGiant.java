@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * In Search of an Ancient Giant (10775)
  * @author malyelfik
  */
-public final class Q10775_InSearchOfAnAncientGiant extends Quest
+public class Q10775_InSearchOfAnAncientGiant extends Quest
 {
 	// NPCs
 	private static final int BELKADHI = 30485;

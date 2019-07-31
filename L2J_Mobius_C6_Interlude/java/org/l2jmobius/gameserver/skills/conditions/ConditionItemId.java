@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class ConditionItemId extends Condition
+public class ConditionItemId extends Condition
 {
 	private final int _itemId;
 	

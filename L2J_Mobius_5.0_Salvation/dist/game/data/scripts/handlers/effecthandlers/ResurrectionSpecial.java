@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Resurrection Special effect implementation.
  * @author Zealar
  */
-public final class ResurrectionSpecial extends AbstractEffect
+public class ResurrectionSpecial extends AbstractEffect
 {
 	private final int _power;
 	private final Set<Integer> _instanceId;

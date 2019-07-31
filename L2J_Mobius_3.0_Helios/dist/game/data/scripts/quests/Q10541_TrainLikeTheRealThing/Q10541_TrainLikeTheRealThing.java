@@ -41,7 +41,7 @@ import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
  * @URL https://l2wiki.com/Train_Like_the_Real_Thing
  * @author Gigi
  */
-public final class Q10541_TrainLikeTheRealThing extends Quest
+public class Q10541_TrainLikeTheRealThing extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

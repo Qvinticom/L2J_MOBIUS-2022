@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Change Hair Style effect implementation.
  * @author Zoey76
  */
-public final class ChangeHairStyle extends AbstractEffect
+public class ChangeHairStyle extends AbstractEffect
 {
 	private final int _value;
 	

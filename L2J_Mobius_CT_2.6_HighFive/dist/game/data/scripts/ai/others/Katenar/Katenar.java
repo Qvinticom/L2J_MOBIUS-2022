@@ -29,7 +29,7 @@ import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
  * Katenar AI for quests Certified Soul Breaker (65)
  * @author ivantotov
  */
-public final class Katenar extends AbstractNpcAI
+public class Katenar extends AbstractNpcAI
 {
 	// NPC
 	private static final int KATENAR = 32242;

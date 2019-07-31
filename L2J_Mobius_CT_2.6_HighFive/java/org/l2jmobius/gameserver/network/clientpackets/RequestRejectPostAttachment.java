@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestRejectPostAttachment implements IClientIncomingPacket
+public class RequestRejectPostAttachment implements IClientIncomingPacket
 {
 	private int _msgId;
 	

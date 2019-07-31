@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Elmoreden Servant's Ghost AI.
  * @author St3eT
  */
-public final class ElmoredenServantsGhost extends AbstractNpcAI
+public class ElmoredenServantsGhost extends AbstractNpcAI
 {
 	// NPC
 	private static final int GHOST = 31920; // Elmoreden Servant's Ghost

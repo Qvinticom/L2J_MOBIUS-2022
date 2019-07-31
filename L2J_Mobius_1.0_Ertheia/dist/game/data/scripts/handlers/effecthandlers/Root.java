@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Root effect implementation.
  * @author mkizub
  */
-public final class Root extends AbstractEffect
+public class Root extends AbstractEffect
 {
 	public Root(StatsSet params)
 	{

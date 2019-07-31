@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Demon Prince's AI.
  * @author GKR
  */
-public final class DemonPrince extends AbstractNpcAI
+public class DemonPrince extends AbstractNpcAI
 {
 	// NPCs
 	private static final int DEMON_PRINCE = 25540;
@@ -97,7 +97,7 @@ public final class DemonPrince extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == FIEND)
 		{

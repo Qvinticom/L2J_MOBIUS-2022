@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.SoDManager;
  * Task which updates Seed of Destruction state.
  * @author xban1x
  */
-public final class UpdateSoDStateTask implements Runnable
+public class UpdateSoDStateTask implements Runnable
 {
 	@Override
 	public void run()

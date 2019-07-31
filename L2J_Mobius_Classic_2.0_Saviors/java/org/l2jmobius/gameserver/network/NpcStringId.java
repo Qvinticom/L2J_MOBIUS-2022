@@ -36,7 +36,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.clientstrings.Builder;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-public final class NpcStringId
+public class NpcStringId
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcStringId.class.getName());
 	
@@ -34057,7 +34057,7 @@ public final class NpcStringId
 		_id = id;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -34067,17 +34067,17 @@ public final class NpcStringId
 		_name = name;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final int getParamCount()
+	public int getParamCount()
 	{
 		return _params;
 	}
 	
-	public final void setParamCount(int params)
+	public void setParamCount(int params)
 	{
 		if (params < 0)
 		{
@@ -34094,7 +34094,7 @@ public final class NpcStringId
 		_params = (byte) params;
 	}
 	
-	public final NSLocalisation getLocalisation(String lang)
+	public NSLocalisation getLocalisation(String lang)
 	{
 		NSLocalisation nsl;
 		for (int i = _localisations.length; i-- > 0;)
@@ -34108,7 +34108,7 @@ public final class NpcStringId
 		return null;
 	}
 	
-	public final void attachLocalizedText(String lang, String text)
+	public void attachLocalizedText(String lang, String text)
 	{
 		final int length = _localisations.length;
 		final NSLocalisation[] localisations = Arrays.copyOf(_localisations, length + 1);
@@ -34116,23 +34116,23 @@ public final class NpcStringId
 		_localisations = localisations;
 	}
 	
-	public final void removeAllLocalisations()
+	public void removeAllLocalisations()
 	{
 		_localisations = EMPTY_NSL_ARRAY;
 	}
 	
-	public final ExShowScreenMessage getStaticScreenMessage()
+	public ExShowScreenMessage getStaticScreenMessage()
 	{
 		return _staticScreenMessage;
 	}
 	
-	public final void setStaticSystemMessage(ExShowScreenMessage ns)
+	public void setStaticSystemMessage(ExShowScreenMessage ns)
 	{
 		_staticScreenMessage = ns;
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return "NS[" + getId() + ":" + getName() + "]";
 	}
@@ -34148,12 +34148,12 @@ public final class NpcStringId
 			_builder = Builder.newBuilder(text);
 		}
 		
-		public final String getLanguage()
+		public String getLanguage()
 		{
 			return _lang;
 		}
 		
-		public final String getLocalisation(Object... params)
+		public String getLocalisation(Object... params)
 		{
 			return _builder.toString(params);
 		}

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
  * @author Adry_85, Nik
  */
-public final class PhysicalAttackHpLink extends AbstractEffect
+public class PhysicalAttackHpLink extends AbstractEffect
 {
 	private final double _power;
 	private final double _criticalChance;

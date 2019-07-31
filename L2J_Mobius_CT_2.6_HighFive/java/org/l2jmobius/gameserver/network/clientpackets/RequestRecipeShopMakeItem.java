@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Administrator
  */
-public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
+public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 {
 	private int _id;
 	private int _recipeId;

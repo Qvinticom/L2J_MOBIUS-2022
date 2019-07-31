@@ -3645,7 +3645,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Gets the current festival cycle.
 	 * @return the current festival cycle
 	 */
-	public final int getCurrentFestivalCycle()
+	public int getCurrentFestivalCycle()
 	{
 		return _festivalCycle;
 	}
@@ -3654,7 +3654,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Checks if is festival initialized.
 	 * @return true, if is festival initialized
 	 */
-	public final boolean isFestivalInitialized()
+	public boolean isFestivalInitialized()
 	{
 		return _festivalInitialized;
 	}
@@ -3663,7 +3663,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Checks if is festival in progress.
 	 * @return true, if is festival in progress
 	 */
-	public final boolean isFestivalInProgress()
+	public boolean isFestivalInProgress()
 	{
 		return _festivalInProgress;
 	}
@@ -3689,7 +3689,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Gets the mins to next cycle.
 	 * @return the mins to next cycle
 	 */
-	public final int getMinsToNextCycle()
+	public int getMinsToNextCycle()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -3703,7 +3703,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Gets the mins to next festival.
 	 * @return the mins to next festival
 	 */
-	public final int getMinsToNextFestival()
+	public int getMinsToNextFestival()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -3717,7 +3717,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Gets the time to next festival start.
 	 * @return the time to next festival start
 	 */
-	public final String getTimeToNextFestivalStart()
+	public String getTimeToNextFestivalStart()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -3732,7 +3732,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player the player
 	 * @return int[] playerFestivalInfo
 	 */
-	public final int[] getFestivalForPlayer(PlayerInstance player)
+	public int[] getFestivalForPlayer(PlayerInstance player)
 	{
 		final int[] playerFestivalInfo =
 		{
@@ -3778,7 +3778,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player the player
 	 * @return true, if is player participant
 	 */
-	public final boolean isPlayerParticipant(PlayerInstance player)
+	public boolean isPlayerParticipant(PlayerInstance player)
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -3815,7 +3815,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return the participants
 	 */
-	public final List<PlayerInstance> getParticipants(int oracle, int festivalId)
+	public List<PlayerInstance> getParticipants(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -3831,7 +3831,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return the previous participants
 	 */
-	public final List<PlayerInstance> getPreviousParticipants(int oracle, int festivalId)
+	public List<PlayerInstance> getPreviousParticipants(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -3911,7 +3911,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return the final score
 	 */
-	public final int getFinalScore(int oracle, int festivalId)
+	public int getFinalScore(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -3927,7 +3927,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return the highest score
 	 */
-	public final int getHighestScore(int oracle, int festivalId)
+	public int getHighestScore(int oracle, int festivalId)
 	{
 		return getHighestScoreData(oracle, festivalId).getInteger("score");
 	}
@@ -3938,7 +3938,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return StatsSet festivalDat
 	 */
-	public final StatsSet getHighestScoreData(int oracle, int festivalId)
+	public StatsSet getHighestScoreData(int oracle, int festivalId)
 	{
 		int offsetId = festivalId;
 		
@@ -3969,7 +3969,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return StatsSet result
 	 */
-	public final StatsSet getOverallHighestScoreData(int festivalId)
+	public StatsSet getOverallHighestScoreData(int festivalId)
 	{
 		StatsSet result = null;
 		int highestScore = 0;
@@ -4085,7 +4085,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return the accumulated bonus
 	 */
-	public final int getAccumulatedBonus(int festivalId)
+	public int getAccumulatedBonus(int festivalId)
 	{
 		return _accumulatedBonuses.get(festivalId);
 	}
@@ -4094,7 +4094,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * Gets the total accumulated bonus.
 	 * @return the total accumulated bonus
 	 */
-	public final int getTotalAccumulatedBonus()
+	public int getTotalAccumulatedBonus()
 	{
 		int totalAccumBonus = 0;
 		
@@ -4144,7 +4144,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player the player
 	 * @return playerBonus (the share of the bonus for the party)
 	 */
-	public final int distribAccumulatedBonus(PlayerInstance player)
+	public int distribAccumulatedBonus(PlayerInstance player)
 	{
 		int playerBonus = 0;
 		String playerName = player.getName();
@@ -4199,7 +4199,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId the festival id
 	 * @return boolean isChalIncreased
 	 */
-	public final boolean increaseChallenge(int oracle, int festivalId)
+	public boolean increaseChallenge(int oracle, int festivalId)
 	{
 		final DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
 		
@@ -4453,7 +4453,7 @@ public class SevenSignsFestival implements SpawnListener
 		 * @param festivalId the festival id
 		 * @return DarknessFestival festivalInst
 		 */
-		public final DarknessFestival getFestivalInstance(int oracle, int festivalId)
+		public DarknessFestival getFestivalInstance(int oracle, int festivalId)
 		{
 			if (!_festivalInitialized)
 			{

@@ -107,7 +107,7 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final GuardNoHTMLInstance getActiveChar()
+	public GuardNoHTMLInstance getActiveChar()
 	{
 		return (GuardNoHTMLInstance) super.getActiveChar();
 	}

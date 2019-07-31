@@ -41,7 +41,7 @@ import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
  * Servitor AI for quest Test Of The Summoner (230).
  * @author Zoey76
  */
-public final class Servitors extends AbstractNpcAI
+public class Servitors extends AbstractNpcAI
 {
 	// Quest Monster
 	private static final int PAKO_THE_CAT = 27102;

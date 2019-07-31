@@ -36,7 +36,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
  * @URL https://l2wiki.com/For_Honor
  * @author Mobius
  */
-public final class Q10819_ForHonor extends Quest
+public class Q10819_ForHonor extends Quest
 {
 	// NPC
 	private static final int OLYMPIAD_MANAGER = 31688;

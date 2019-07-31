@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
  * Fort Siege Spawn.
  * @author xban1x
  */
-public final class FortSiegeSpawn extends Location implements IIdentifiable
+public class FortSiegeSpawn extends Location implements IIdentifiable
 {
 	private final int _npcId;
 	private final int _fortId;

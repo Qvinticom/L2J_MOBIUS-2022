@@ -30,7 +30,7 @@ import quests.Q10324_FindingMagisterGallint.Q10324_FindingMagisterGallint;
  * Searching For New Power (10325)
  * @author Gladicek, Neanrakyr
  */
-public final class Q10325_SearchingForNewPower extends Quest
+public class Q10325_SearchingForNewPower extends Quest
 {
 	// NPCs
 	private static final int GALLINT = 32980;

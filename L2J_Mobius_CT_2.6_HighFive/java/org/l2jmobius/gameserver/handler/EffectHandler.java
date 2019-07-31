@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 /**
  * @author BiggBoss, UnAfraid
  */
-public final class EffectHandler implements IHandler<Class<? extends AbstractEffect>, String>
+public class EffectHandler implements IHandler<Class<? extends AbstractEffect>, String>
 {
 	private final Map<String, Class<? extends AbstractEffect>> _handlers;
 	

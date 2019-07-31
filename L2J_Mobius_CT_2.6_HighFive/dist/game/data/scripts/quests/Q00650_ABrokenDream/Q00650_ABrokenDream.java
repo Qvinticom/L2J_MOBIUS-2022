@@ -36,7 +36,7 @@ import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
  * A Broken Dream (650)
  * @author netvirus
  */
-public final class Q00650_ABrokenDream extends Quest
+public class Q00650_ABrokenDream extends Quest
 {
 	// Npc
 	private static final int GHOST_OF_A_RAILROAD_ENGINEER = 32054;

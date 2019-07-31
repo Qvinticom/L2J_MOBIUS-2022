@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Resist Skill effect implementaion.
  * @author UnAfraid
  */
-public final class ResistSkill extends AbstractEffect
+public class ResistSkill extends AbstractEffect
 {
 	private final List<SkillHolder> _skills = new ArrayList<>();
 	

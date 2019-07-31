@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Plain Mission (476)
  * @author St3eT
  */
-public final class Q00476_PlainMission extends Quest
+public class Q00476_PlainMission extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

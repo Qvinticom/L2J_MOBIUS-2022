@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Fabulous Feathers (286).
  * @author xban1x
  */
-public final class Q00286_FabulousFeathers extends Quest
+public class Q00286_FabulousFeathers extends Quest
 {
 	// NPC
 	private static final int ERINU = 32164;

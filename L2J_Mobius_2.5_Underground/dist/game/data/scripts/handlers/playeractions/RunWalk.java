@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Run/Walk player action handler.
  * @author Mobius
  */
-public final class RunWalk implements IPlayerActionHandler
+public class RunWalk implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

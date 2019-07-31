@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Delete Hate effect implementation.
  * @author Adry_85
  */
-public final class DeleteHate extends AbstractEffect
+public class DeleteHate extends AbstractEffect
 {
 	private final int _chance;
 	

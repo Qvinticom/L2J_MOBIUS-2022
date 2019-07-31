@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Red-eyed Invaders (39)
  * @author janiko
  */
-public final class Q00039_RedEyedInvaders extends Quest
+public class Q00039_RedEyedInvaders extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_BATHIS = 30332;

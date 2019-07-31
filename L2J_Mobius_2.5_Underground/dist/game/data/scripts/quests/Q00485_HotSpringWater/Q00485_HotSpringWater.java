@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Hot Spring Water (485)
  * @author St3eT
  */
-public final class Q00485_HotSpringWater extends Quest
+public class Q00485_HotSpringWater extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

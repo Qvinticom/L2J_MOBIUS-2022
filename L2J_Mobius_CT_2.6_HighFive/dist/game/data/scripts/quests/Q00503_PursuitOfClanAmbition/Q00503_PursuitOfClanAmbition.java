@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Pursuit Of Clan Ambition (503)
  * @author ivantotov, Zoey76
  */
-public final class Q00503_PursuitOfClanAmbition extends Quest
+public class Q00503_PursuitOfClanAmbition extends Quest
 {
 	// NPCs
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;

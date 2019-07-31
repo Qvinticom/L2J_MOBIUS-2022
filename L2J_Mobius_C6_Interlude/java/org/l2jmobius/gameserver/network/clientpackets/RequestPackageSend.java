@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.templates.item.EtcItemType;
 /**
  * @author -Wooden-
  */
-public final class RequestPackageSend extends GameClientPacket
+public class RequestPackageSend extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestPackageSend.class.getName());
 	private final List<Item> _items = new ArrayList<>();

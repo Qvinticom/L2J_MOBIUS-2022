@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class RestartResponse implements IClientOutgoingPacket
+public class RestartResponse implements IClientOutgoingPacket
 {
 	public static final RestartResponse TRUE = new RestartResponse(true);
 	public static final RestartResponse FALSE = new RestartResponse(false);

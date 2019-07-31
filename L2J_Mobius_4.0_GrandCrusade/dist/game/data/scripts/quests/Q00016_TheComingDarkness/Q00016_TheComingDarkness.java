@@ -28,7 +28,7 @@ import quests.Q00017_LightAndDarkness.Q00017_LightAndDarkness;
  * The Coming Darkness (16)
  * @author Gladicek
  */
-public final class Q00016_TheComingDarkness extends Quest
+public class Q00016_TheComingDarkness extends Quest
 {
 	// NPCs
 	private static final int HIERARCH = 31517;

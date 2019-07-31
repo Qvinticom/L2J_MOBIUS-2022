@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * <BR>
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
  */
-public final class ArtefactInstance extends NpcInstance
+public class ArtefactInstance extends NpcInstance
 {
 	/**
 	 * Constructor of ArtefactInstance (use Creature and NpcInstance constructor).<BR>

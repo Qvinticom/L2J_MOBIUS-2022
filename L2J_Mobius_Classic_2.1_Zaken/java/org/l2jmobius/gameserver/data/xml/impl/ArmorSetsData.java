@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.stats.BaseStats;
  * Loads armor set bonuses.
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IXmlReader
+public class ArmorSetsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
 	

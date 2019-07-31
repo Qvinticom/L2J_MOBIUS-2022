@@ -183,14 +183,14 @@ public abstract class Summon extends Playable
 	public abstract int getSummonType();
 	
 	@Override
-	public final void stopAllEffects()
+	public void stopAllEffects()
 	{
 		super.stopAllEffects();
 		updateAndBroadcastStatus(1);
 	}
 	
 	@Override
-	public final void stopAllEffectsExceptThoseThatLastThroughDeath()
+	public void stopAllEffectsExceptThoseThatLastThroughDeath()
 	{
 		super.stopAllEffectsExceptThoseThatLastThroughDeath();
 		updateAndBroadcastStatus(1);
@@ -232,24 +232,24 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public final int getKarma()
+	public int getKarma()
 	{
 		return _owner != null ? _owner.getKarma() : 0;
 	}
 	
 	@Override
-	public final byte getPvpFlag()
+	public byte getPvpFlag()
 	{
 		return _owner != null ? _owner.getPvpFlag() : 0;
 	}
 	
 	@Override
-	public final Team getTeam()
+	public Team getTeam()
 	{
 		return _owner != null ? _owner.getTeam() : Team.NONE;
 	}
 	
-	public final PlayerInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _owner;
 	}
@@ -259,7 +259,7 @@ public abstract class Summon extends Playable
 	 * @return the summon ID
 	 */
 	@Override
-	public final int getId()
+	public int getId()
 	{
 		return getTemplate().getId();
 	}
@@ -968,7 +968,7 @@ public abstract class Summon extends Playable
 	 * @param ctrlPressed {@code true} if Ctrl key is pressed
 	 * @return {@code true} if the summon can attack, {@code false} otherwise
 	 */
-	public final boolean canAttack(boolean ctrlPressed)
+	public boolean canAttack(boolean ctrlPressed)
 	{
 		if (_owner == null)
 		{

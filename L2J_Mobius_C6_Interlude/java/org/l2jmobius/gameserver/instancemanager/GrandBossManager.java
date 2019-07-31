@@ -191,7 +191,7 @@ public class GrandBossManager
 		}
 	}
 	
-	public final BossZone getZone(Creature creature)
+	public BossZone getZone(Creature creature)
 	{
 		if (_zones != null)
 		{
@@ -206,7 +206,7 @@ public class GrandBossManager
 		return null;
 	}
 	
-	public final BossZone getZone(int x, int y, int z)
+	public BossZone getZone(int x, int y, int z)
 	{
 		if (_zones != null)
 		{

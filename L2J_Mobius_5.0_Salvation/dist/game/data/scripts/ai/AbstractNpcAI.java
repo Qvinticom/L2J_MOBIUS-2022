@@ -81,7 +81,7 @@ public abstract class AbstractNpcAI extends Quest
 		}
 	}
 	
-	protected void followNpc(final Npc npc, int followedNpcId, int followingAngle, int minDistance, int maxDistance)
+	protected void followNpc(Npc npc, int followedNpcId, int followingAngle, int minDistance, int maxDistance)
 	{
 		World.getInstance().forEachVisibleObject(npc, Npc.class, npcAround ->
 		{

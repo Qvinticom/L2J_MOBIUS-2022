@@ -29,7 +29,7 @@ import io.netty.handler.ipfilter.AbstractRemoteAddressFilter;
  * @author lord_rex
  */
 @Sharable
-public final class BannedIpFilter extends AbstractRemoteAddressFilter<InetSocketAddress>
+public class BannedIpFilter extends AbstractRemoteAddressFilter<InetSocketAddress>
 {
 	@Override
 	protected boolean accept(ChannelHandlerContext ctx, InetSocketAddress remoteAddress) throws UnknownHostException

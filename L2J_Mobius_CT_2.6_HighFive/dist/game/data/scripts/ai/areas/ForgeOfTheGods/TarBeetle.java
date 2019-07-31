@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Tar Beetle AI
  * @author nonom, malyelfik
  */
-public final class TarBeetle extends AbstractNpcAI
+public class TarBeetle extends AbstractNpcAI
 {
 	// NPC
 	private static final int TAR_BEETLE = 18804;

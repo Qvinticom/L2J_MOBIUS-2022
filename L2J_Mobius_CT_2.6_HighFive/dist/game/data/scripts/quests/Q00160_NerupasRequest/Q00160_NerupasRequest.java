@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Nerupa's Request (160)
  * @author ivantotov
  */
-public final class Q00160_NerupasRequest extends Quest
+public class Q00160_NerupasRequest extends Quest
 {
 	// NPCs
 	private static final int NERUPA = 30370;

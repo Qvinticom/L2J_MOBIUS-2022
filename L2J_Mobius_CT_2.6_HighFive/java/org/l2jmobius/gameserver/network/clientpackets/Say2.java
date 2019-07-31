@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.16.2.12.2.7 $ $Date: 2005/04/11 10:06:11 $
  */
-public final class Say2 implements IClientIncomingPacket
+public class Say2 implements IClientIncomingPacket
 {
 	private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 	

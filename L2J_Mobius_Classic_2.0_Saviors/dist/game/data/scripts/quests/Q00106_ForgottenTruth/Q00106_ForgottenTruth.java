@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Forgotten Truth (106)
  * @author janiko
  */
-public final class Q00106_ForgottenTruth extends Quest
+public class Q00106_ForgottenTruth extends Quest
 {
 	// NPCs
 	private static final int THIFIELL = 30358;

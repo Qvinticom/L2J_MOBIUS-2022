@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-public final class DuelManager
+public class DuelManager
 {
 	private static final int[] ARENAS =
 	{

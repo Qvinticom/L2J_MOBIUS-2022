@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author KenM
  */
-public final class ExRpItemLink implements IClientOutgoingPacket
+public class ExRpItemLink implements IClientOutgoingPacket
 {
 	private final ItemInstance _item;
 	

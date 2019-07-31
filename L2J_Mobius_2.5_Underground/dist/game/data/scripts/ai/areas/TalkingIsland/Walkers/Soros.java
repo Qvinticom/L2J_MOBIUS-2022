@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Soros AI.
  * @author Gladicek
  */
-public final class Soros extends AbstractNpcAI
+public class Soros extends AbstractNpcAI
 {
 	// NPC
 	private static final int SOROS = 33218;

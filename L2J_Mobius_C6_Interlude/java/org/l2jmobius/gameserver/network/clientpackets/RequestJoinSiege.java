@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author ProGramMoS
  */
-public final class RequestJoinSiege extends GameClientPacket
+public class RequestJoinSiege extends GameClientPacket
 {
 	private int _castleId;
 	private int _isAttacker;

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Mana Heal Over Time effect implementation.
  */
-public final class ManaHealOverTime extends AbstractEffect
+public class ManaHealOverTime extends AbstractEffect
 {
 	private final double _power;
 	

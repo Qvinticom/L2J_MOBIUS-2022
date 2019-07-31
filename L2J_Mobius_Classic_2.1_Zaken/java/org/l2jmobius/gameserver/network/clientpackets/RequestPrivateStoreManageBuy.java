@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreManageBuy implements IClientIncomingPacket
+public class RequestPrivateStoreManageBuy implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

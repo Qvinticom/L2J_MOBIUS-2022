@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class UserInfo implements IClientOutgoingPacket
+public class UserInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private int _relation;

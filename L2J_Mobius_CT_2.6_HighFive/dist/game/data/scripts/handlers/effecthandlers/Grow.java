@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Grow effect implementation.
  */
-public final class Grow extends AbstractEffect
+public class Grow extends AbstractEffect
 {
 	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

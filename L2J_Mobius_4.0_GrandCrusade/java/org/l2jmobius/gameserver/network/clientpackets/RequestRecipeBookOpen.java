@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
-public final class RequestRecipeBookOpen implements IClientIncomingPacket
+public class RequestRecipeBookOpen implements IClientIncomingPacket
 {
 	private boolean _isDwarvenCraft;
 	

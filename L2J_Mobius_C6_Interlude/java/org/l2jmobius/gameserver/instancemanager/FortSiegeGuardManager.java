@@ -276,12 +276,12 @@ public class FortSiegeGuardManager
 		}
 	}
 	
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		return _fort;
 	}
 	
-	public final List<Spawn> getSiegeGuardSpawn()
+	public List<Spawn> getSiegeGuardSpawn()
 	{
 		return _siegeGuardSpawn;
 	}

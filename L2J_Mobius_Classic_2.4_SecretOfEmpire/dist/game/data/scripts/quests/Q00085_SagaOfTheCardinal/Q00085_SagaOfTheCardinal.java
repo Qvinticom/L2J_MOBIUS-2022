@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00085_SagaOfTheCardinal extends Quest
 {
 	// NPCs
-	public final int ORVEN = 30857;
-	public final int SERESIN = 30657;
-	public final int RIFKEN = 34268;
-	public final int LEONARD = 30861;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31648;
-	public final int TABLET_OF_VISION_3 = 31650;
-	public final int TABLET_OF_VISION_4 = 31654;
-	public final int WINTER_HUNTER_KADYTH = 31633;
+	private static final int ORVEN = 30857;
+	private static final int SERESIN = 30657;
+	private static final int RIFKEN = 34268;
+	private static final int LEONARD = 30861;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31648;
+	private static final int TABLET_OF_VISION_3 = 31650;
+	private static final int TABLET_OF_VISION_4 = 31654;
+	private static final int WINTER_HUNTER_KADYTH = 31633;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GATEKEEPER_OF_THE_HOLY_EDICT = 27215;
-	public final int FALLEN_ANGEL_HAURES = 27266;
-	public final int HALISHA_ARCHON = 27219;
-	public final int STONE_GUARDIAN_AZRAEL = 27302;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int GATEKEEPER_OF_THE_HOLY_EDICT = 27215;
+	private static final int FALLEN_ANGEL_HAURES = 27266;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int STONE_GUARDIAN_AZRAEL = 27302;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49819;
-	public final int HALISHA_BADGE = 7500;
-	public final int RESONANCE_AMULET = 7283;
-	public final int RESONANCE_AMULET_2 = 7314;
-	public final int RESONANCE_AMULET_3 = 7345;
-	public final int RESONANCE_AMULET_4 = 7376;
-	public final int FOOD_SACK = 49835;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49819;
+	private static final int HALISHA_BADGE = 7500;
+	private static final int RESONANCE_AMULET = 7283;
+	private static final int RESONANCE_AMULET_2 = 7314;
+	private static final int RESONANCE_AMULET_3 = 7345;
+	private static final int RESONANCE_AMULET_4 = 7376;
+	private static final int FOOD_SACK = 49835;
 	// Reward
-	public final int BOOK_GOLD_LION = 90038;
+	private static final int BOOK_GOLD_LION = 90038;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

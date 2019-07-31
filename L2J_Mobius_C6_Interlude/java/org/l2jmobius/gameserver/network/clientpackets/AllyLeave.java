@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class AllyLeave extends GameClientPacket
+public class AllyLeave extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

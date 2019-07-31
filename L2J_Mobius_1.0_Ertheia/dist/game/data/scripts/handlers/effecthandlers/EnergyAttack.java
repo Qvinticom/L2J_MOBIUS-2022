@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Energy Attack effect implementation.
  * @author NosBit
  */
-public final class EnergyAttack extends AbstractEffect
+public class EnergyAttack extends AbstractEffect
 {
 	private final double _power;
 	private final int _chargeConsume;

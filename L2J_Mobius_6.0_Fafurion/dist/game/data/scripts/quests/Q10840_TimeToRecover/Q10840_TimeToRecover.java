@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * @URL https://l2wiki.com/Time_to_Recover
  * @author Gigi
  */
-public final class Q10840_TimeToRecover extends Quest
+public class Q10840_TimeToRecover extends Quest
 {
 	// NPC
 	private static final int SHERRY = 34066;

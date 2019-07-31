@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author UnAfraid
  */
-public final class TransformLevelData
+public class TransformLevelData
 {
 	private final int _level;
 	private final double _levelMod;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 /**
  * @author Mobius
  */
-public final class Compelling extends AbstractEffect
+public class Compelling extends AbstractEffect
 {
 	public Compelling(StatsSet params)
 	{

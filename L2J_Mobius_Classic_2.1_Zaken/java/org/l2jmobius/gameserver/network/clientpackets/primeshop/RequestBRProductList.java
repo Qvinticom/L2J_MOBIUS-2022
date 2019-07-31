@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductList;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductList implements IClientIncomingPacket
+public class RequestBRProductList implements IClientIncomingPacket
 {
 	private int _type;
 	

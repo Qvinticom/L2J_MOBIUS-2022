@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Human Wizard (404)
  * @author ivantotov
  */
-public final class Q00404_PathOfTheHumanWizard extends Quest
+public class Q00404_PathOfTheHumanWizard extends Quest
 {
 	// NPCs
 	private static final int PARINA = 30391;

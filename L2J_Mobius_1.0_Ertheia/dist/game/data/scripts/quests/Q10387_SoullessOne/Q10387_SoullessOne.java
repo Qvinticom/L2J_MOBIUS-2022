@@ -29,7 +29,7 @@ import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
  * Soulless One (10387)
  * @author St3eT
  */
-public final class Q10387_SoullessOne extends Quest
+public class Q10387_SoullessOne extends Quest
 {
 	// NPCs
 	private static final int HASED = 33780;

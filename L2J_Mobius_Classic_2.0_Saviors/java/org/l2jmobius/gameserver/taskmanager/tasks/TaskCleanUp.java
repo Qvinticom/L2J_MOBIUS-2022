@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
 /**
  * @author Tempy
  */
-public final class TaskCleanUp extends Task
+public class TaskCleanUp extends Task
 {
 	private static final String NAME = "clean_up";
 	

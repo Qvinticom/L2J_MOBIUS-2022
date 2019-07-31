@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial Of The Pilgrim (215)
  * @author ivantotov
  */
-public final class Q00215_TrialOfThePilgrim extends Quest
+public class Q00215_TrialOfThePilgrim extends Quest
 {
 	// NPCs
 	private static final int PRIEST_PETRON = 30036;

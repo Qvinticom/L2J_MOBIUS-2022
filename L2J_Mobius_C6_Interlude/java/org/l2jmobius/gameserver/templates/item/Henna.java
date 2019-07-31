@@ -20,17 +20,17 @@ import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class Henna
 {
-	public final int symbolId;
-	public final String symbolName;
-	public final int dye;
-	public final int price;
-	public final int amount;
-	public final int statINT;
-	public final int statSTR;
-	public final int statCON;
-	public final int statMEM;
-	public final int statDEX;
-	public final int statWIT;
+	public int symbolId;
+	public String symbolName;
+	public int dye;
+	public int price;
+	public int amount;
+	public int statINT;
+	public int statSTR;
+	public int statCON;
+	public int statMEM;
+	public int statDEX;
+	public int statWIT;
 	
 	public Henna(StatsSet set)
 	{

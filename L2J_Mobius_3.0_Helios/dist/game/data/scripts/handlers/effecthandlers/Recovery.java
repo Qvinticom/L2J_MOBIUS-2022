@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Recovery effect implementation.
  * @author Kerberos
  */
-public final class Recovery extends AbstractEffect
+public class Recovery extends AbstractEffect
 {
 	public Recovery(StatsSet params)
 	{

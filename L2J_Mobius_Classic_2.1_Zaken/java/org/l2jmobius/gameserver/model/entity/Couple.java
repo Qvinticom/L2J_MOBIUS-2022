@@ -135,32 +135,32 @@ public class Couple
 		}
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _Id;
 	}
 	
-	public final int getPlayer1Id()
+	public int getPlayer1Id()
 	{
 		return _player1Id;
 	}
 	
-	public final int getPlayer2Id()
+	public int getPlayer2Id()
 	{
 		return _player2Id;
 	}
 	
-	public final boolean getMaried()
+	public boolean getMaried()
 	{
 		return _maried;
 	}
 	
-	public final Calendar getAffiancedDate()
+	public Calendar getAffiancedDate()
 	{
 		return _affiancedDate;
 	}
 	
-	public final Calendar getWeddingDate()
+	public Calendar getWeddingDate()
 	{
 		return _weddingDate;
 	}

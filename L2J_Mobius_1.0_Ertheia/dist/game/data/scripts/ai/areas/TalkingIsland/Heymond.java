@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Heymond AI.
  * @author St3eT
  */
-public final class Heymond extends AbstractNpcAI
+public class Heymond extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BANETTE = 33114;

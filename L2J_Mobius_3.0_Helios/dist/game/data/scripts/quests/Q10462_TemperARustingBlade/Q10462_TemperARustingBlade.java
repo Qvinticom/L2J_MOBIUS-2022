@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Temper_a_Rusting_Blade
  * @author Gigi
  */
-public final class Q10462_TemperARustingBlade extends Quest
+public class Q10462_TemperARustingBlade extends Quest
 {
 	// NPCs
 	private static final int FLUTTER = 30677;

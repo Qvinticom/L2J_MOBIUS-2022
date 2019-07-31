@@ -44,17 +44,17 @@ public class Entry
 	{
 	}
 	
-	public final void setEntryId(int id)
+	public void setEntryId(int id)
 	{
 		_entryId = id;
 	}
 	
-	public final int getEntryId()
+	public int getEntryId()
 	{
 		return _entryId;
 	}
 	
-	public final void addProduct(Ingredient product)
+	public void addProduct(Ingredient product)
 	{
 		_products.add(product);
 		
@@ -64,22 +64,22 @@ public class Entry
 		}
 	}
 	
-	public final List<Ingredient> getProducts()
+	public List<Ingredient> getProducts()
 	{
 		return _products;
 	}
 	
-	public final void addIngredient(Ingredient ingredient)
+	public void addIngredient(Ingredient ingredient)
 	{
 		_ingredients.add(ingredient);
 	}
 	
-	public final List<Ingredient> getIngredients()
+	public List<Ingredient> getIngredients()
 	{
 		return _ingredients;
 	}
 	
-	public final boolean isStackable()
+	public boolean isStackable()
 	{
 		return _stackable;
 	}

@@ -176,7 +176,7 @@ public enum ClassId
 	 * <BR>
 	 * @return the id
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -186,7 +186,7 @@ public enum ClassId
 	 * <BR>
 	 * @return true, if is mage
 	 */
-	public final boolean isMage()
+	public boolean isMage()
 	{
 		return _isMage;
 	}
@@ -196,7 +196,7 @@ public enum ClassId
 	 * <BR>
 	 * @return the race
 	 */
-	public final Race getRace()
+	public Race getRace()
 	{
 		return _race;
 	}
@@ -207,7 +207,7 @@ public enum ClassId
 	 * @param cid The parent ClassId to check
 	 * @return true, if successful
 	 */
-	public final boolean childOf(ClassId cid)
+	public boolean childOf(ClassId cid)
 	{
 		if (_parent == null)
 		{
@@ -228,7 +228,7 @@ public enum ClassId
 	 * @param cid The parent ClassId to check
 	 * @return true, if successful
 	 */
-	public final boolean equalsOrChildOf(ClassId cid)
+	public boolean equalsOrChildOf(ClassId cid)
 	{
 		return (this == cid) || childOf(cid);
 	}
@@ -238,7 +238,7 @@ public enum ClassId
 	 * <BR>
 	 * @return the int
 	 */
-	public final int level()
+	public int level()
 	{
 		if (_parent == null)
 		{
@@ -254,7 +254,7 @@ public enum ClassId
 	 * .
 	 * @return the parent
 	 */
-	public final ClassId getParent()
+	public ClassId getParent()
 	{
 		return _parent;
 	}

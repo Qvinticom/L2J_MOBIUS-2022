@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Lydia AI.
  * @author St3eT
  */
-public final class Lydia extends AbstractNpcAI
+public class Lydia extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LYDIA = 32892;

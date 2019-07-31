@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Open Common Recipe Book effect implementation.
  * @author Adry_85
  */
-public final class OpenCommonRecipeBook extends AbstractEffect
+public class OpenCommonRecipeBook extends AbstractEffect
 {
 	public OpenCommonRecipeBook(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

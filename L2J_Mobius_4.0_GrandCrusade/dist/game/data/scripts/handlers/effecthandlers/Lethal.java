@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Lethal effect implementation.
  * @author Adry_85
  */
-public final class Lethal extends AbstractEffect
+public class Lethal extends AbstractEffect
 {
 	private final double _fullLethal;
 	private final double _halfLethal;

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Outpost Create effect implementation.
  * @author UnAfraid
  */
-public final class OutpostCreate extends AbstractEffect
+public class OutpostCreate extends AbstractEffect
 {
 	private static final int HQ_NPC_ID = 36590;
 	

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 /**
  * @author Maktakien
  */
-public final class CannotMoveAnymoreInVehicle extends GameClientPacket
+public class CannotMoveAnymoreInVehicle extends GameClientPacket
 {
 	private int _x;
 	private int _y;

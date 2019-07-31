@@ -27,7 +27,7 @@ import java.util.logging.Logger;
  * Simplifies loading of property files and adds logging if a non existing property is requested.
  * @author NosBit
  */
-public final class PropertiesParser
+public class PropertiesParser
 {
 	private static final Logger LOGGER = Logger.getLogger(PropertiesParser.class.getName());
 	

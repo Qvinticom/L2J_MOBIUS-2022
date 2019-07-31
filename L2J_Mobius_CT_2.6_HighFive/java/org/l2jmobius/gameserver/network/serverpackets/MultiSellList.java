@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.ListContainer;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class MultiSellList implements IClientOutgoingPacket
+public class MultiSellList implements IClientOutgoingPacket
 {
 	private int _size;
 	private int _index;

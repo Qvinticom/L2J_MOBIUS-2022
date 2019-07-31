@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Sorrowful Sound of Flute (363)
  * @author Adry_85
  */
-public final class Q00363_SorrowfulSoundOfFlute extends Quest
+public class Q00363_SorrowfulSoundOfFlute extends Quest
 {
 	// NPCs
 	private static final int ALDO = 30057;

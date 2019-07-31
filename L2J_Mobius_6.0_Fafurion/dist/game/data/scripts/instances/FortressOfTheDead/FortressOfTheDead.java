@@ -32,7 +32,7 @@ import quests.Q10752_WindsOfFateAPromise.Q10752_WindsOfFateAPromise;
  * Fortress of the Dead instance zone.
  * @author Gladicek
  */
-public final class FortressOfTheDead extends AbstractInstance
+public class FortressOfTheDead extends AbstractInstance
 {
 	// NPCs
 	private static final int BROKEN_BOOKSHELF = 31526;

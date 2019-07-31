@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Echo Crystals AI.
  * @author Plim
  */
-public final class EchoCrystals extends AbstractNpcAI
+public class EchoCrystals extends AbstractNpcAI
 {
 	private static final int[] NPCs =
 	{

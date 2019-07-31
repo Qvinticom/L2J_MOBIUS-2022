@@ -111,13 +111,13 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final boolean hasGeoPos()
+	public boolean hasGeoPos()
 	{
 		return true;
 	}
 	
 	@Override
-	public final short getHeightNearest(int geoX, int geoY, int worldZ)
+	public short getHeightNearest(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = getIndexNearest(geoX, geoY, worldZ);
@@ -133,7 +133,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final short getHeightAbove(int geoX, int geoY, int worldZ)
+	public short getHeightAbove(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -168,7 +168,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final short getHeightBelow(int geoX, int geoY, int worldZ)
+	public short getHeightBelow(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -202,7 +202,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweNearest(int geoX, int geoY, int worldZ)
+	public byte getNsweNearest(int geoX, int geoY, int worldZ)
 	{
 		// get cell index
 		final int index = getIndexNearest(geoX, geoY, worldZ);
@@ -218,7 +218,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweAbove(int geoX, int geoY, int worldZ)
+	public byte getNsweAbove(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -253,7 +253,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final byte getNsweBelow(int geoX, int geoY, int worldZ)
+	public byte getNsweBelow(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -287,7 +287,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final int getIndexNearest(int geoX, int geoY, int worldZ)
+	public int getIndexNearest(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -327,7 +327,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final int getIndexAbove(int geoX, int geoY, int worldZ)
+	public int getIndexAbove(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -368,7 +368,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final int getIndexBelow(int geoX, int geoY, int worldZ)
+	public int getIndexBelow(int geoX, int geoY, int worldZ)
 	{
 		// move index to the cell given by coordinates
 		int index = 0;
@@ -408,7 +408,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final short getHeight(int index)
+	public short getHeight(int index)
 	{
 		// get height
 		return (short) ((_buffer[index + 1] & 0x00FF) | (_buffer[index + 2] << 8));
@@ -422,7 +422,7 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final byte getNswe(int index)
+	public byte getNswe(int index)
 	{
 		// get nswe
 		return _buffer[index];
@@ -436,14 +436,14 @@ public class BlockMultilayer extends ABlock
 	}
 	
 	@Override
-	public final void setNswe(int index, byte nswe)
+	public void setNswe(int index, byte nswe)
 	{
 		// set nswe
 		_buffer[index] = nswe;
 	}
 	
 	@Override
-	public final void saveBlock(BufferedOutputStream stream) throws IOException
+	public void saveBlock(BufferedOutputStream stream) throws IOException
 	{
 		// write block type
 		stream.write(GeoStructure.TYPE_MULTILAYER_L2D);

@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Galad AI.
  * @author Gladicek
  */
-public final class Galad extends AbstractNpcAI
+public class Galad extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GALAD = 33572;

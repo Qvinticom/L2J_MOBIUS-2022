@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestBlock implements IClientIncomingPacket
+public class RequestBlock implements IClientIncomingPacket
 {
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;

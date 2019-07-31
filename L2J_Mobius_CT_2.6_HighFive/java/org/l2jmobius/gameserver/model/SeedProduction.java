@@ -36,32 +36,32 @@ public class SeedProduction
 		_startAmount = startAmount;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _seedId;
 	}
 	
-	public final long getAmount()
+	public long getAmount()
 	{
 		return _amount.get();
 	}
 	
-	public final long getPrice()
+	public long getPrice()
 	{
 		return _price;
 	}
 	
-	public final long getStartAmount()
+	public long getStartAmount()
 	{
 		return _startAmount;
 	}
 	
-	public final void setAmount(long amount)
+	public void setAmount(long amount)
 	{
 		_amount.set(amount);
 	}
 	
-	public final boolean decreaseAmount(long val)
+	public boolean decreaseAmount(long val)
 	{
 		long current;
 		long next;

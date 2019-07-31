@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Give Clan reputation effect implementation.
  * @author Mobius
  */
-public final class GiveClanReputation extends AbstractEffect
+public class GiveClanReputation extends AbstractEffect
 {
 	private final int _reputation;
 	

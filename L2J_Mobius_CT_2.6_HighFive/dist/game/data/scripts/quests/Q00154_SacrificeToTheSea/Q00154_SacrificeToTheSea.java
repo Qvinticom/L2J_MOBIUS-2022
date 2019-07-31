@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Sacrifice to the Sea (154)
  * @author Pandragon
  */
-public final class Q00154_SacrificeToTheSea extends Quest
+public class Q00154_SacrificeToTheSea extends Quest
 {
 	// NPCs
 	private static final int ROCKSWELL = 30312;

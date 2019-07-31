@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
-public final class RequestPledgeMemberList extends GameClientPacket
+public class RequestPledgeMemberList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

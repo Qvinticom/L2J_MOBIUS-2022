@@ -1127,7 +1127,7 @@ public class BlowfishEngine
 		return "Blowfish";
 	}
 	
-	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
+	public int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
 	{
 		if (workingKey == null)
 		{

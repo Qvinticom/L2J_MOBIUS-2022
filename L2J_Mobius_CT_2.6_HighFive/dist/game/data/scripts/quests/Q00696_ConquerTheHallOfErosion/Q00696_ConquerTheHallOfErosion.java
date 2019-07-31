@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-public final class Q00696_ConquerTheHallOfErosion extends Quest
+public class Q00696_ConquerTheHallOfErosion extends Quest
 {
 	private static final int TEPIOS = 32603;
 	private static final int MARK_OF_KEUCEREUS_STAGE_1 = 13691;

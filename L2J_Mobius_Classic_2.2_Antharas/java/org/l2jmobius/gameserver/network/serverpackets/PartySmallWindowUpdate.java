@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType>
+public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType>
 {
 	private final PlayerInstance _member;
 	private int _flags = 0;

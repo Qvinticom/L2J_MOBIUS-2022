@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
 
-public final class RequestRecipeShopManagePrev extends GameClientPacket
+public class RequestRecipeShopManagePrev extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

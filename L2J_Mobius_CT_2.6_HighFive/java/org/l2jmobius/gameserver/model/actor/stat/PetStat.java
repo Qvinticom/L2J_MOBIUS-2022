@@ -64,7 +64,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public final boolean addLevel(byte value)
+	public boolean addLevel(byte value)
 	{
 		if ((getLevel() + value) > (getMaxLevel() - 1))
 		{
@@ -97,7 +97,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public final long getExpForLevel(int level)
+	public long getExpForLevel(int level)
 	{
 		try
 		{
@@ -119,12 +119,12 @@ public class PetStat extends SummonStat
 		return (PetInstance) super.getActiveChar();
 	}
 	
-	public final int getFeedBattle()
+	public int getFeedBattle()
 	{
 		return getActiveChar().getPetLevelData().getPetFeedBattle();
 	}
 	
-	public final int getFeedNormal()
+	public int getFeedNormal()
 	{
 		return getActiveChar().getPetLevelData().getPetFeedNormal();
 	}
@@ -148,7 +148,7 @@ public class PetStat extends SummonStat
 		}
 	}
 	
-	public final int getMaxFeed()
+	public int getMaxFeed()
 	{
 		return getActiveChar().getPetLevelData().getPetMaxFeed();
 	}

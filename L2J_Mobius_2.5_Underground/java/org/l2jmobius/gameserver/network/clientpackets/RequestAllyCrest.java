@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 /**
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestAllyCrest implements IClientIncomingPacket
+public class RequestAllyCrest implements IClientIncomingPacket
 {
 	private int _crestId;
 	

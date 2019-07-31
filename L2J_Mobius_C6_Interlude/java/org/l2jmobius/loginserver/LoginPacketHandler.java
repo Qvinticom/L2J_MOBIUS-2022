@@ -32,7 +32,7 @@ import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
  * @author KenM
  */
 
-public final class LoginPacketHandler implements IPacketHandler<LoginClient>
+public class LoginPacketHandler implements IPacketHandler<LoginClient>
 {
 	private final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
 	

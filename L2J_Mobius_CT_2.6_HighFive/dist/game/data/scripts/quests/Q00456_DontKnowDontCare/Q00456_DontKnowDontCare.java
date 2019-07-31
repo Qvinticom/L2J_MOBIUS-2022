@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Don't Know, Don't Care (456)
  * @author lion, ivantotov, jurchiks
  */
-public final class Q00456_DontKnowDontCare extends Quest
+public class Q00456_DontKnowDontCare extends Quest
 {
 	// NPCs
 	// @formatter:off

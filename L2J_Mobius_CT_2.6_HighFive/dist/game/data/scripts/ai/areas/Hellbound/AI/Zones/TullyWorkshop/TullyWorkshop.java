@@ -56,7 +56,7 @@ import ai.AbstractNpcAI;
  * Tully's Workshop.
  * @author GKR
  */
-public final class TullyWorkshop extends AbstractNpcAI
+public class TullyWorkshop extends AbstractNpcAI
 {
 	// NPCs
 	private static final int AGENT = 32372;
@@ -537,7 +537,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final ClassId classId = player.getClassId();
 		final int npcId = npc.getId();
@@ -695,7 +695,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
@@ -1397,7 +1397,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if ((npc.getId() == TULLY) && npc.isInsideRadius3D(-12557, 273901, -9000, 1000))
 		{

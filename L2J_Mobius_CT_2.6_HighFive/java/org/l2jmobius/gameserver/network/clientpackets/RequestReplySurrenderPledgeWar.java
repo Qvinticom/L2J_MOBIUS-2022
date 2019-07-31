@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 
-public final class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
+public class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
 {
 	private String _reqName;
 	private int _answer;

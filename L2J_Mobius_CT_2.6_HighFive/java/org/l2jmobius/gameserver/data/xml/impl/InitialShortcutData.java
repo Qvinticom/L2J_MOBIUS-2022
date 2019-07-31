@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
  * What shortcuts get each newly created character.
  * @author Zoey76
  */
-public final class InitialShortcutData implements IXmlReader
+public class InitialShortcutData implements IXmlReader
 {
 	private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();
 	private final List<Shortcut> _initialGlobalShortcutList = new ArrayList<>();

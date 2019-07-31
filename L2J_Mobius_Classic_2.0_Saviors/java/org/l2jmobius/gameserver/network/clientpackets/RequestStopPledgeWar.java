@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public final class RequestStopPledgeWar implements IClientIncomingPacket
+public class RequestStopPledgeWar implements IClientIncomingPacket
 {
 	private String _pledgeName;
 	

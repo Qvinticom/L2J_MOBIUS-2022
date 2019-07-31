@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * Admin PC Points manage admin commands.
  */
-public final class AdminPcCafePoints implements IAdminCommandHandler
+public class AdminPcCafePoints implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

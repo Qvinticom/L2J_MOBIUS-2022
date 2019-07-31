@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author Zoey76
  */
-public final class PlayerItemTemplate extends ItemHolder
+public class PlayerItemTemplate extends ItemHolder
 {
 	private final boolean _equipped;
 	

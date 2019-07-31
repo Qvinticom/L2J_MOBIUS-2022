@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Necromancer's Request (632)
  * @author Zoey76
  */
-public final class Q00632_NecromancersRequest extends Quest
+public class Q00632_NecromancersRequest extends Quest
 {
 	// NPC
 	private static final int MYSTERIOUS_WIZARD = 31522;

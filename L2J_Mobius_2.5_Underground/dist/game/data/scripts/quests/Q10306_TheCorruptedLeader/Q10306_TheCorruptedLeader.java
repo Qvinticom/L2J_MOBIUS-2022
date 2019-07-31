@@ -28,7 +28,7 @@ import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
  * The Corrupted Leader (10306)
  * @author Gladicek
  */
-public final class Q10306_TheCorruptedLeader extends Quest
+public class Q10306_TheCorruptedLeader extends Quest
 {
 	// NPCs
 	private static final int NOETI_KASHERON = 32896;

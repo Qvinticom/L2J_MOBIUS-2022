@@ -38,7 +38,7 @@ import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
  * @URL https://l2wiki.com/Searching_for_New_Power
  * @author Gigi
  */
-public final class Q10542_SearchingForNewPower extends Quest
+public class Q10542_SearchingForNewPower extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

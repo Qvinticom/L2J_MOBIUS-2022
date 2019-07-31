@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
  * sample format d
  * @version $Revision: 1 $ $Date: 2005/04/10 00:17:44 $
  */
-public final class RequestShowMiniMap implements IClientIncomingPacket
+public class RequestShowMiniMap implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

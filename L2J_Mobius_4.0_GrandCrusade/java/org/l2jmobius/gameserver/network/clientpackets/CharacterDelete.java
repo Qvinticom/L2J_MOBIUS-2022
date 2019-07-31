@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 /**
  * @version $Revision: 1.8.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class CharacterDelete implements IClientIncomingPacket
+public class CharacterDelete implements IClientIncomingPacket
 {
 	// cd
 	private int _charSlot;

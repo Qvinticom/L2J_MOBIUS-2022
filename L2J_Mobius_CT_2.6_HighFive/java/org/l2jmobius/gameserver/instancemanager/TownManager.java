@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 
-public final class TownManager
+public class TownManager
 {
 	public static int getTownCastle(int townId)
 	{

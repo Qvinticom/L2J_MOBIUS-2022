@@ -28,13 +28,13 @@ public class Q009_IntoTheCityOfHumans extends Quest
 	private static final String qn = "Q009_IntoTheCityOfHumans";
 	
 	// NPCs
-	public final int PETUKAI = 30583;
-	public final int TANAPI = 30571;
-	public final int TAMIL = 30576;
+	private final int PETUKAI = 30583;
+	private final int TANAPI = 30571;
+	private final int TAMIL = 30576;
 	
 	// Rewards
-	public final int MARK_OF_TRAVELER = 7570;
-	public final int SOE_GIRAN = 7126;
+	private final int MARK_OF_TRAVELER = 7570;
+	private final int SOE_GIRAN = 7126;
 	
 	public Q009_IntoTheCityOfHumans()
 	{

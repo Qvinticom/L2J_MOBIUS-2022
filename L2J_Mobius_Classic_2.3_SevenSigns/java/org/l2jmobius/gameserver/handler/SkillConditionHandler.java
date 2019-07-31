@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 /**
  * @author NosBit
  */
-public final class SkillConditionHandler
+public class SkillConditionHandler
 {
 	private final Map<String, Function<StatsSet, ISkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
 	

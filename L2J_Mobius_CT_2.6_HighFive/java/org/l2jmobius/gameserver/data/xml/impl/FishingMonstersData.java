@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.fishing.FishingMonster;
  * This class holds the Fishing Monsters information.
  * @author nonom
  */
-public final class FishingMonstersData implements IXmlReader
+public class FishingMonstersData implements IXmlReader
 {
 	private final Map<Integer, FishingMonster> _fishingMonstersData = new HashMap<>();
 	

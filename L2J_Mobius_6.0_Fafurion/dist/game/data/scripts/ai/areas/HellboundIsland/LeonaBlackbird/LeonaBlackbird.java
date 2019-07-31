@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Leona Blackbird AI.
  * @author St3eT
  */
-public final class LeonaBlackbird extends AbstractNpcAI
+public class LeonaBlackbird extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LEONA = 31595; // Leona Blackbird

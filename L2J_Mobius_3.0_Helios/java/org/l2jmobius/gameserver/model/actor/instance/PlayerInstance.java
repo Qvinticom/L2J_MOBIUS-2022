@@ -349,7 +349,7 @@ import org.l2jmobius.gameserver.util.Util;
  * This class represents all player characters in the world.<br>
  * There is always a client-thread connected to this (except if a player-store is activated upon logout).
  */
-public final class PlayerInstance extends Playable
+public class PlayerInstance extends Playable
 {
 	// Character Skill SQL String Definitions:
 	private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=? AND class_index=?";
@@ -708,7 +708,7 @@ public final class PlayerInstance extends Playable
 	private BroochJewel _activeRubyJewel = null;
 	private BroochJewel _activeShappireJewel = null;
 	
-	public final ReentrantLock soulShotLock = new ReentrantLock();
+	public ReentrantLock soulShotLock = new ReentrantLock();
 	
 	/** Event parameters */
 	private PlayerEventHolder eventStatus = null;
@@ -1149,7 +1149,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final PlayerStat getStat()
+	public PlayerStat getStat()
 	{
 		return (PlayerStat) super.getStat();
 	}
@@ -1161,7 +1161,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final PlayerStatus getStatus()
+	public PlayerStatus getStatus()
 	{
 		return (PlayerStatus) super.getStatus();
 	}
@@ -1172,17 +1172,17 @@ public final class PlayerInstance extends Playable
 		setStatus(new PlayerStatus(this));
 	}
 	
-	public final PlayerAppearance getAppearance()
+	public PlayerAppearance getAppearance()
 	{
 		return _appearance;
 	}
 	
-	public final boolean isHairAccessoryEnabled()
+	public boolean isHairAccessoryEnabled()
 	{
 		return getVariables().getBoolean(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, true);
 	}
 	
-	public final void setHairAccessoryEnabled(boolean enabled)
+	public void setHairAccessoryEnabled(boolean enabled)
 	{
 		getVariables().set(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, enabled);
 	}
@@ -1190,7 +1190,7 @@ public final class PlayerInstance extends Playable
 	/**
 	 * @return the base PlayerTemplate link to the PlayerInstance.
 	 */
-	public final PlayerTemplate getBaseTemplate()
+	public PlayerTemplate getBaseTemplate()
 	{
 		final ClassId originalClass = getOriginalClass();
 		if (originalClass != null)
@@ -1219,7 +1219,7 @@ public final class PlayerInstance extends Playable
 	 * @return the PlayerTemplate link to the PlayerInstance.
 	 */
 	@Override
-	public final PlayerTemplate getTemplate()
+	public PlayerTemplate getTemplate()
 	{
 		return (PlayerTemplate) super.getTemplate();
 	}
@@ -1240,7 +1240,7 @@ public final class PlayerInstance extends Playable
 	
 	/** Return the Level of the PlayerInstance. */
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getStat().getLevel();
 	}
@@ -1532,7 +1532,7 @@ public final class PlayerInstance extends Playable
 	/**
 	 * @return a list of QuestStates which registered for notify of death of this PlayerInstance.
 	 */
-	public final Set<QuestState> getNotifyQuestOfDeath()
+	public Set<QuestState> getNotifyQuestOfDeath()
 	{
 		if (_notifyQuestOfDeathList == null)
 		{
@@ -1548,7 +1548,7 @@ public final class PlayerInstance extends Playable
 		return _notifyQuestOfDeathList;
 	}
 	
-	public final boolean isNotifyQuestOfDeathEmpty()
+	public boolean isNotifyQuestOfDeathEmpty()
 	{
 		return (_notifyQuestOfDeathList == null) || _notifyQuestOfDeathList.isEmpty();
 	}
@@ -3936,13 +3936,13 @@ public final class PlayerInstance extends Playable
 		return _recentFakeDeathEndTime > GameTimeController.getInstance().getGameTicks();
 	}
 	
-	public final boolean isFakeDeath()
+	public boolean isFakeDeath()
 	{
 		return isAffected(EffectFlag.FAKE_DEATH);
 	}
 	
 	@Override
-	public final boolean isAlikeDead()
+	public boolean isAlikeDead()
 	{
 		return super.isAlikeDead() || isFakeDeath();
 	}
@@ -4131,7 +4131,7 @@ public final class PlayerInstance extends Playable
 	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as
 	 * MaxHP, STR, DEX...</B></FONT>
 	 */
-	public final void broadcastUserInfo()
+	public void broadcastUserInfo()
 	{
 		// Send user info to the current player
 		sendPacket(new UserInfo(this));
@@ -4140,7 +4140,7 @@ public final class PlayerInstance extends Playable
 		broadcastCharInfo();
 	}
 	
-	public final void broadcastUserInfo(UserInfoType... types)
+	public void broadcastUserInfo(UserInfoType... types)
 	{
 		// Send user info to the current player
 		final UserInfo ui = new UserInfo(this, false);
@@ -4151,7 +4151,7 @@ public final class PlayerInstance extends Playable
 		broadcastCharInfo();
 	}
 	
-	public final void broadcastCharInfo()
+	public void broadcastCharInfo()
 	{
 		final CharInfo charInfo = new CharInfo(this, false);
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
@@ -4193,7 +4193,7 @@ public final class PlayerInstance extends Playable
 		});
 	}
 	
-	public final void broadcastTitleInfo()
+	public void broadcastTitleInfo()
 	{
 		// Send a Server->Client packet UserInfo to this PlayerInstance
 		final UserInfo ui = new UserInfo(this, false);
@@ -4205,7 +4205,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final void broadcastPacket(IClientOutgoingPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
 		if (mov instanceof CharInfo)
 		{
@@ -4641,12 +4641,12 @@ public final class PlayerInstance extends Playable
 		}
 	}
 	
-	public final PreparedMultisellListHolder getMultiSell()
+	public PreparedMultisellListHolder getMultiSell()
 	{
 		return _currentMultiSell;
 	}
 	
-	public final void setMultiSell(PreparedMultisellListHolder list)
+	public void setMultiSell(PreparedMultisellListHolder list)
 	{
 		_currentMultiSell = list;
 	}
@@ -8695,20 +8695,20 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final void stopAllEffects()
+	public void stopAllEffects()
 	{
 		super.stopAllEffects();
 		updateAndBroadcastStatus(2);
 	}
 	
 	@Override
-	public final void stopAllEffectsExceptThoseThatLastThroughDeath()
+	public void stopAllEffectsExceptThoseThatLastThroughDeath()
 	{
 		super.stopAllEffectsExceptThoseThatLastThroughDeath();
 		updateAndBroadcastStatus(2);
 	}
 	
-	public final void stopCubics()
+	public void stopCubics()
 	{
 		if (!_cubics.isEmpty())
 		{
@@ -8717,7 +8717,7 @@ public final class PlayerInstance extends Playable
 		}
 	}
 	
-	public final void stopCubicsByOthers()
+	public void stopCubicsByOthers()
 	{
 		if (!_cubics.isEmpty())
 		{
@@ -10412,7 +10412,7 @@ public final class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public final void onTeleported()
+	public void onTeleported()
 	{
 		super.onTeleported();
 		
@@ -11788,7 +11788,7 @@ public final class PlayerInstance extends Playable
 	 * @return {@code skill} object refered to this skill id that this player has, {@code null} otherwise.
 	 */
 	@Override
-	public final Skill getKnownSkill(int skillId)
+	public Skill getKnownSkill(int skillId)
 	{
 		return !_transformSkills.isEmpty() ? _transformSkills.getOrDefault(skillId, super.getKnownSkill(skillId)) : super.getKnownSkill(skillId);
 	}
@@ -11892,7 +11892,7 @@ public final class PlayerInstance extends Playable
 		_data = null;
 	}
 	
-	public final PetData getPetData(int npcId)
+	public PetData getPetData(int npcId)
 	{
 		if (_data == null)
 		{
@@ -12665,42 +12665,42 @@ public final class PlayerInstance extends Playable
 		return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
 	}
 	
-	public final int getClientX()
+	public int getClientX()
 	{
 		return _clientX;
 	}
 	
-	public final int getClientY()
+	public int getClientY()
 	{
 		return _clientY;
 	}
 	
-	public final int getClientZ()
+	public int getClientZ()
 	{
 		return _clientZ;
 	}
 	
-	public final int getClientHeading()
+	public int getClientHeading()
 	{
 		return _clientHeading;
 	}
 	
-	public final void setClientX(int val)
+	public void setClientX(int val)
 	{
 		_clientX = val;
 	}
 	
-	public final void setClientY(int val)
+	public void setClientY(int val)
 	{
 		_clientY = val;
 	}
 	
-	public final void setClientZ(int val)
+	public void setClientZ(int val)
 	{
 		_clientZ = val;
 	}
 	
-	public final void setClientHeading(int val)
+	public void setClientHeading(int val)
 	{
 		_clientHeading = val;
 	}
@@ -12709,7 +12709,7 @@ public final class PlayerInstance extends Playable
 	 * @param z
 	 * @return true if character falling now on the start of fall return false for correct coord sync!
 	 */
-	public final boolean isFalling(int z)
+	public boolean isFalling(int z)
 	{
 		if (isDead() || isFlying() || isFlyingMounted() || isInsideZone(ZoneId.WATER))
 		{
@@ -12765,7 +12765,7 @@ public final class PlayerInstance extends Playable
 	/**
 	 * Set falling timestamp
 	 */
-	public final void setFalling()
+	public void setFalling()
 	{
 		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
 	}
@@ -13209,7 +13209,7 @@ public final class PlayerInstance extends Playable
 	 * @param skillId the display skill Id
 	 * @return the custom skill
 	 */
-	public final Skill getCustomSkill(int skillId)
+	public Skill getCustomSkill(int skillId)
 	{
 		return (_customSkills != null) ? _customSkills.get(skillId) : null;
 	}

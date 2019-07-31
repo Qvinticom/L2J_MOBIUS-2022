@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format:(ch) ddd
  * @author -Wooden-
  */
-public final class RequestDuelAnswerStart implements IClientIncomingPacket
+public class RequestDuelAnswerStart implements IClientIncomingPacket
 {
 	private int _partyDuel;
 	@SuppressWarnings("unused")

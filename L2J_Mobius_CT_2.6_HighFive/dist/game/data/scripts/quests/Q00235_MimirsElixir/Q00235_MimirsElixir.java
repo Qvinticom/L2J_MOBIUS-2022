@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
  * Mimir's Elixir (235)
  * @author Adry_85
  */
-public final class Q00235_MimirsElixir extends Quest
+public class Q00235_MimirsElixir extends Quest
 {
 	// NPCs
 	private static final int JOAN = 30718;

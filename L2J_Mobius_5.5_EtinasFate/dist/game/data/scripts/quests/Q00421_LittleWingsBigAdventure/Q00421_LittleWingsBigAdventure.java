@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Little Wing's Big Adventure (421)
  * @author Pandragon, jurchiks
  */
-public final class Q00421_LittleWingsBigAdventure extends Quest
+public class Q00421_LittleWingsBigAdventure extends Quest
 {
 	// NPCs
 	private static final int CRONOS = 30610;
@@ -499,10 +499,10 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	
 	private static final class NpcData
 	{
-		public final NpcStringId message;
-		public final int memoStateMod;
-		public final int memoStateValue;
-		public final int minHits;
+		public NpcStringId message;
+		public int memoStateMod;
+		public int memoStateValue;
+		public int minHits;
 		
 		public NpcData(NpcStringId message, int memoStateMod, int memoStateValue, int minHits)
 		{

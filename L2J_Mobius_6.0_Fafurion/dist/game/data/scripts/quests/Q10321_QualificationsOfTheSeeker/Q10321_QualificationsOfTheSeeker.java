@@ -29,7 +29,7 @@ import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
  * Qualifications Of The Seeker (10321)
  * @author ivantotov, Gladicek
  */
-public final class Q10321_QualificationsOfTheSeeker extends Quest
+public class Q10321_QualificationsOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

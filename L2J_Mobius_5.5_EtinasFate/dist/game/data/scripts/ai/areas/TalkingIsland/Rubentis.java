@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Rubentis AI.
  * @author St3eT
  */
-public final class Rubentis extends AbstractNpcAI
+public class Rubentis extends AbstractNpcAI
 {
 	// NPC
 	private static final int RUBENTIS = 33120;

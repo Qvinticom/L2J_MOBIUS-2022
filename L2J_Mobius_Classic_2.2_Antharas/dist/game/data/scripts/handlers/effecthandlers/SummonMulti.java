@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * SummonMulti effect implementation.
  * @author UnAfraid
  */
-public final class SummonMulti extends AbstractEffect
+public class SummonMulti extends AbstractEffect
 {
 	private final int _npcId;
 	private final float _expMultiplier;

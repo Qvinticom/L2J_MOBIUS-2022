@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Servitor stop action player action handler.
  * @author Nik
  */
-public final class ServitorStop implements IPlayerActionHandler
+public class ServitorStop implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

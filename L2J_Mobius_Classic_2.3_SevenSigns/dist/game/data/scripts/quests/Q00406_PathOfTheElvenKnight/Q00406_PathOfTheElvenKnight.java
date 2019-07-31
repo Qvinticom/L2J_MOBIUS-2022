@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Elven Knight (406)
  * @author ivantotov
  */
-public final class Q00406_PathOfTheElvenKnight extends Quest
+public class Q00406_PathOfTheElvenKnight extends Quest
 {
 	// NPCs
 	private static final int BLACKSMITH_KLUTO = 30317;

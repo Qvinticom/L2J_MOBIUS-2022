@@ -47,7 +47,7 @@ import instances.AbstractInstance;
  * Istina Cavern instance zone.
  * @author St3eT
  */
-public final class IstinaCavern extends AbstractInstance
+public class IstinaCavern extends AbstractInstance
 {
 	// NPCs
 	private static final int RUMIESE = 33151;

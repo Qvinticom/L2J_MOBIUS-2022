@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Micr0, Zerox, Mobius
  */
-public final class ScarletVanHalisha extends AbstractNpcAI
+public class ScarletVanHalisha extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HALISHA2 = 29046;

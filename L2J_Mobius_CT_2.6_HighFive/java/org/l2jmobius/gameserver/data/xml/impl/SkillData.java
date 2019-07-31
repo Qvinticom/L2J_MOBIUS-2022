@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * Skill data.
  */
-public final class SkillData
+public class SkillData
 {
 	private static Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	

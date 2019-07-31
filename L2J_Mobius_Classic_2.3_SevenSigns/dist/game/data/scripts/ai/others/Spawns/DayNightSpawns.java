@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-public final class DayNightSpawns extends AbstractNpcAI
+public class DayNightSpawns extends AbstractNpcAI
 {
 	private static final String NIGHT_GROUP_NAME = "nightTime";
 	private static final String DAY_GROUP_NAME = "dayTime";

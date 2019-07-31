@@ -31,7 +31,7 @@ import instances.AbstractInstance;
  * Pailaka Song of Ice and Fire Instance zone.
  * @author Gnacik, St3eT
  */
-public final class PailakaSongOfIceAndFire extends AbstractInstance
+public class PailakaSongOfIceAndFire extends AbstractInstance
 {
 	// NPCs
 	private static final int ADLER1 = 32497;
@@ -63,7 +63,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -106,7 +106,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		if ((damage > 0) && npc.isScriptValue(0))
 		{
@@ -148,7 +148,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		npc.dropItem(player, getRandomBoolean() ? SHIELD_POTION : HEAL_POTION, getRandom(1, 7));
 		return super.onKill(npc, player, isSummon);

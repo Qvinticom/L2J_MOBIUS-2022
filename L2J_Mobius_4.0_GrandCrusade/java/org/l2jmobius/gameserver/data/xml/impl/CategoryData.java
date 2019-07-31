@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
  * Loads the category data with Class or NPC IDs.
  * @author NosBit, xban1x
  */
-public final class CategoryData implements IXmlReader
+public class CategoryData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CategoryData.class.getName());
 	

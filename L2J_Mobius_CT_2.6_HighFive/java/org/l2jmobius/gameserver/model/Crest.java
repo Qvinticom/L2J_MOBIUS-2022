@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 /**
  * @author NosBit
  */
-public final class Crest implements IIdentifiable
+public class Crest implements IIdentifiable
 {
 	public enum CrestType
 	{

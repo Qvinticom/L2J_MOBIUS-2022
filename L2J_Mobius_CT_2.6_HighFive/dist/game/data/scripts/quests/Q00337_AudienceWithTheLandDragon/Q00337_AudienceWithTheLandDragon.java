@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Audience With The Land Dragon (337)
  * @author ivantotov
  */
-public final class Q00337_AudienceWithTheLandDragon extends Quest
+public class Q00337_AudienceWithTheLandDragon extends Quest
 {
 	// NPCs
 	private static final int WAREHOUSE_CHIEF_MOKE = 30498;

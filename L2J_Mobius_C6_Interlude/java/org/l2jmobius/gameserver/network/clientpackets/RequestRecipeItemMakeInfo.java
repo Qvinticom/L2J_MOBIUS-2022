@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
-public final class RequestRecipeItemMakeInfo extends GameClientPacket
+public class RequestRecipeItemMakeInfo extends GameClientPacket
 {
 	private int _id;
 	private PlayerInstance _player;

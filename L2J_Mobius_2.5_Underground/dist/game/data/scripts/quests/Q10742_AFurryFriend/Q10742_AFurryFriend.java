@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * A Furry Friend (10742)
  * @author Sdw
  */
-public final class Q10742_AFurryFriend extends Quest
+public class Q10742_AFurryFriend extends Quest
 {
 	// NPCs
 	private static final int LEIRA = 33952;

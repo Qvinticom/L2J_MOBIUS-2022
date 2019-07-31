@@ -28,7 +28,7 @@ import quests.Q10399_TheAlphabetOfTheGiants.Q10399_TheAlphabetOfTheGiants;
  * Strengthen the Barrier (10708)
  * @author St3eT
  */
-public final class Q10708_StrengthenTheBarrier extends Quest
+public class Q10708_StrengthenTheBarrier extends Quest
 {
 	// NPCs
 	private static final int BACON = 33846;

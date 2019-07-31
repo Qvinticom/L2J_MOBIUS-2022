@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * This class manages all Minions. In a group mob, there are one master called RaidBoss and several slaves called Minions.
  * @version $Revision: 1.20.4.6 $ $Date: 2005/04/06 16:13:39 $
  */
-public final class MinionInstance extends MonsterInstance
+public class MinionInstance extends MonsterInstance
 {
 	private MonsterInstance _master;
 	

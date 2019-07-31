@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: Decoding the Badge (10401)
  * @author St3eT
  */
-public final class Q10401_KekropusLetterDecodingTheBadge extends LetterQuest
+public class Q10401_KekropusLetterDecodingTheBadge extends LetterQuest
 {
 	// NPCs
 	private static final int PATERSON = 33864;

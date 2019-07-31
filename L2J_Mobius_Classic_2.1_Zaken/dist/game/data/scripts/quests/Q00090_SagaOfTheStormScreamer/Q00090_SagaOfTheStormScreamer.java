@@ -36,39 +36,39 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00090_SagaOfTheStormScreamer extends Quest
 {
 	// NPCs
-	public final int FAIREN = 30175;
-	public final int HANELLINE = 30864;
-	public final int BROOME = 34270;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31649;
-	public final int TABLET_OF_VISION_3 = 31652;
-	public final int TABLET_OF_VISION_4 = 31656;
-	public final int MEDINA_BLACKHEART = 31598;
+	private static final int FAIREN = 30175;
+	private static final int HANELLINE = 30864;
+	private static final int BROOME = 34270;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31649;
+	private static final int TABLET_OF_VISION_3 = 31652;
+	private static final int TABLET_OF_VISION_4 = 31656;
+	private static final int MEDINA_BLACKHEART = 31598;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int WATCHER_OF_THE_ANCIENT_PLEDGE = 27216;
-	public final int FALLEN_ANGEL_ALLECTOR = 27250;
-	public final int HALISHA_ARCHON = 27219;
-	public final int UNKNOWN_STOPPER = 27254;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int WATCHER_OF_THE_ANCIENT_PLEDGE = 27216;
+	private static final int FALLEN_ANGEL_ALLECTOR = 27250;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int UNKNOWN_STOPPER = 27254;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49824;
-	public final int HALISHA_BADGE = 7505;
-	public final int RESONANCE_AMULET = 7288;
-	public final int RESONANCE_AMULET_2 = 7319;
-	public final int RESONANCE_AMULET_3 = 7350;
-	public final int RESONANCE_AMULET_4 = 7381;
-	public final int INVESTIGATIVE_REPORT = 7531;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49824;
+	private static final int HALISHA_BADGE = 7505;
+	private static final int RESONANCE_AMULET = 7288;
+	private static final int RESONANCE_AMULET_2 = 7319;
+	private static final int RESONANCE_AMULET_3 = 7350;
+	private static final int RESONANCE_AMULET_4 = 7381;
+	private static final int INVESTIGATIVE_REPORT = 7531;
 	// Reward
-	public final int BOOK_SABERTOOTH = 90040;
+	private static final int BOOK_SABERTOOTH = 90040;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

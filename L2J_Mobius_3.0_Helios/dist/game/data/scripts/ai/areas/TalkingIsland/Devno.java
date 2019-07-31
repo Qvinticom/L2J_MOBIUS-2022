@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Devno AI.
  * @author St3eT
  */
-public final class Devno extends AbstractNpcAI
+public class Devno extends AbstractNpcAI
 {
 	// NPC
 	private static final int DEVNO = 33241;

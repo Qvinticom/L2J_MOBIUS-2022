@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * In Search of the Grail (10770)
  * @author malyelfik
  */
-public final class Q10770_InSearchOfTheGrail extends Quest
+public class Q10770_InSearchOfTheGrail extends Quest
 {
 	// NPCs
 	private static final int LORAIN = 30673;

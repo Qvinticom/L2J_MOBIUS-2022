@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Tired Of Waiting (26)
  * @author corbin12
  */
-public final class Q00026_TiredOfWaiting extends Quest
+public class Q00026_TiredOfWaiting extends Quest
 {
 	// NPCs
 	private static final int ISAEL_SILVERSHADOW = 30655;

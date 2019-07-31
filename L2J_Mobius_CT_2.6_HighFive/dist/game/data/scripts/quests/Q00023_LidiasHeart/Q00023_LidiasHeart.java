@@ -33,7 +33,7 @@ import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheFore
  * Lidia's Heart (23)
  * @author ivantotov
  */
-public final class Q00023_LidiasHeart extends Quest
+public class Q00023_LidiasHeart extends Quest
 {
 	// NPCs
 	private static final int HIGH_PRIEST_INNOCENTIN = 31328;

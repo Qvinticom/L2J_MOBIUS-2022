@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 /**
  * @version $Revision: 1.2.4.2 $ $Date: 2005/03/27 15:29:33 $
  */
-public final class SkillLearn
+public class SkillLearn
 {
 	// these two build the primary key
 	private final int _id;

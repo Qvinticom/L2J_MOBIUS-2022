@@ -29,7 +29,7 @@ import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
  * @URL https://l2wiki.com/Put_the_Queen_of_Spirits_to_Sleep
  * @author Gigi
  */
-public final class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
+public class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 {
 	// NPC
 	private static final int FERIN = 34054;

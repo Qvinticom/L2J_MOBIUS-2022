@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class StopMove implements IClientOutgoingPacket
+public class StopMove implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;

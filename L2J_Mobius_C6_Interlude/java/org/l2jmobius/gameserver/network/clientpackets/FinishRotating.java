@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
 @SuppressWarnings("unused")
-public final class FinishRotating extends GameClientPacket
+public class FinishRotating extends GameClientPacket
 {
 	private int _degree;
 	private int _unknown;

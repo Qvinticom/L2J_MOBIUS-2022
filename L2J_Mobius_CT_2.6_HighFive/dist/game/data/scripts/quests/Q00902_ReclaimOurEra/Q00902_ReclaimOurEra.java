@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Reclaim Our Era (902)
  * @author netvirus
  */
-public final class Q00902_ReclaimOurEra extends Quest
+public class Q00902_ReclaimOurEra extends Quest
 {
 	// Npc
 	private static final int MATHIAS = 31340;

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * An Elder Sows Seeds (370)
  * @author Adry_85
  */
-public final class Q00370_AnElderSowsSeeds extends Quest
+public class Q00370_AnElderSowsSeeds extends Quest
 {
 	// NPC
 	private static final int CASIAN = 30612;

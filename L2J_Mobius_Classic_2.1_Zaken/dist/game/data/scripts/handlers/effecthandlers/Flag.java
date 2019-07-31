@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Flag effect implementation.
  * @author BiggBoss
  */
-public final class Flag extends AbstractEffect
+public class Flag extends AbstractEffect
 {
 	public Flag(StatsSet params)
 	{

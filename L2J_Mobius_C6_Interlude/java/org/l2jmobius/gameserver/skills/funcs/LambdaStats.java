@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class LambdaStats extends Lambda
+public class LambdaStats extends Lambda
 {
 	public enum StatsType
 	{

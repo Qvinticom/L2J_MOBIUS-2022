@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Town Pets AI
  * @author malyelfik
  */
-public final class TownPets extends AbstractNpcAI
+public class TownPets extends AbstractNpcAI
 {
 	// Pet IDs
 	private static final int[] PETS =

@@ -73,7 +73,7 @@ public abstract class LetterQuest extends Quest
 	 * This sound will be played when player clicks on the tutorial question mark.
 	 * @param sound name of sound
 	 */
-	public final void setStartQuestSound(String sound)
+	public void setStartQuestSound(String sound)
 	{
 		_startQuestSound = sound;
 	}
@@ -83,7 +83,7 @@ public abstract class LetterQuest extends Quest
 	 * @param min minimum player's level to start quest
 	 * @param max maximum player's level to start quest
 	 */
-	public final void setLevel(int min, int max)
+	public void setLevel(int min, int max)
 	{
 		addCondLevel(min, max, "");
 	}
@@ -95,7 +95,7 @@ public abstract class LetterQuest extends Quest
 	 * @param itemId id of item which player gets on quest start
 	 * @param loc place where player will be teleported
 	 */
-	public final void setStartLocation(int itemId, Location loc)
+	public void setStartLocation(int itemId, Location loc)
 	{
 		_startSOE = itemId;
 		_startTeleport = loc;
@@ -105,7 +105,7 @@ public abstract class LetterQuest extends Quest
 	 * Sets if quest is only for Ertheia characters or not.
 	 * @param val {@code true} means {@code Race.ERTHEIA}, {@code false} means other
 	 */
-	public final void setIsErtheiaQuest(boolean val)
+	public void setIsErtheiaQuest(boolean val)
 	{
 		if (val)
 		{
@@ -119,7 +119,7 @@ public abstract class LetterQuest extends Quest
 		}
 	}
 	
-	public final void setStartMessage(NpcStringId msg)
+	public void setStartMessage(NpcStringId msg)
 	{
 		_startMessage = msg;
 	}

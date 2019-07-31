@@ -34,7 +34,7 @@ import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersT
  * @URL https://l2wiki.com/Step_Up_to_Lead
  * @author Mobius
  */
-public final class Q10827_StepUpToLead extends Quest
+public class Q10827_StepUpToLead extends Quest
 {
 	// NPC
 	private static final int GUSTAV = 30760;

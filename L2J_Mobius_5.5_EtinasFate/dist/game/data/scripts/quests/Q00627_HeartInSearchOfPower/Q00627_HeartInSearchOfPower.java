@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Heart in Search of Power (627)
  * @author Citizen
  */
-public final class Q00627_HeartInSearchOfPower extends Quest
+public class Q00627_HeartInSearchOfPower extends Quest
 {
 	// NPCs
 	private static final int MYSTERIOUS_NECROMANCER = 31518;

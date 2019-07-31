@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Scavenger (417)
  * @author ivantotov
  */
-public final class Q00417_PathOfTheScavenger extends Quest
+public class Q00417_PathOfTheScavenger extends Quest
 {
 	// NPCs
 	private static final int WAREHOUSE_KEEPER_RAUT = 30316;

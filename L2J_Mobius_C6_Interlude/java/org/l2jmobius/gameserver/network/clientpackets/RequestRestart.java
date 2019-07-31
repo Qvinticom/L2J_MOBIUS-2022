@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public final class RequestRestart extends GameClientPacket
+public class RequestRestart extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
 	

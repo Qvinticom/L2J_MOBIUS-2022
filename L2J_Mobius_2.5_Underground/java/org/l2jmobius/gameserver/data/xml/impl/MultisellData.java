@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
-public final class MultisellData implements IXmlReader
+public class MultisellData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
 	
@@ -230,7 +230,7 @@ public final class MultisellData implements IXmlReader
 	 * @param ingredientMultiplier
 	 * @param productMultiplier
 	 */
-	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier)
+	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier)
 	{
 		final MultisellListHolder template = _multisells.get(listId);
 		if (template == null)
@@ -269,7 +269,7 @@ public final class MultisellData implements IXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
+	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, Double.NaN, Double.NaN);
 	}

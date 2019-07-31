@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 /**
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopMakeInfo implements IClientIncomingPacket
+public class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 {
 	private int _playerObjectId;
 	private int _recipeId;

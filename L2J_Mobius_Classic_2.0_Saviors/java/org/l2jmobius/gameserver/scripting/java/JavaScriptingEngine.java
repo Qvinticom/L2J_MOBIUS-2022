@@ -61,7 +61,7 @@ public class JavaScriptingEngine
 		return new JavaExecutionContext(this);
 	}
 	
-	public final String getProperty(String key)
+	public String getProperty(String key)
 	{
 		return _properties.get(key);
 	}

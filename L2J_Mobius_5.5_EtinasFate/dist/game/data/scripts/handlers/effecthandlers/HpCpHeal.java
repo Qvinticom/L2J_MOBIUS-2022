@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * HpCpHeal effect implementation.
  * @author Sdw
  */
-public final class HpCpHeal extends AbstractEffect
+public class HpCpHeal extends AbstractEffect
 {
 	private final double _power;
 	

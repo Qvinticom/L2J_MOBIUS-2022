@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author l3x
  */
-public final class ExShowManorDefaultInfo implements IClientOutgoingPacket
+public class ExShowManorDefaultInfo implements IClientOutgoingPacket
 {
 	private final List<Seed> _crops;
 	private final boolean _hideButtons;

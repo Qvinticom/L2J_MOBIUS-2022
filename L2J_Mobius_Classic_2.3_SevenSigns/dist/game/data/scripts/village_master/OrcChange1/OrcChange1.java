@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Orc class transfer AI.
  * @author Adry_85
  */
-public final class OrcChange1 extends AbstractNpcAI
+public class OrcChange1 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =

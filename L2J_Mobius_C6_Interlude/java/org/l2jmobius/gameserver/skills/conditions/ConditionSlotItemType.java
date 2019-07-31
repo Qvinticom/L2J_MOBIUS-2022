@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class ConditionSlotItemType extends ConditionInventory
+public class ConditionSlotItemType extends ConditionInventory
 {
 	private final int _mask;
 	

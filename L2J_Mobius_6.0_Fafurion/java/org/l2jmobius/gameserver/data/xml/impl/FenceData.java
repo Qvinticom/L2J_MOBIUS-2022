@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData implements IXmlReader
+public class FenceData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FenceData.class.getSimpleName());
 	

@@ -48,7 +48,7 @@ public class Expression
 	 * Creates a new expression that is a copy of the existing one.
 	 * @param existing the expression to copy
 	 */
-	public Expression(final Expression existing)
+	public Expression(Expression existing)
 	{
 		tokens = Arrays.copyOf(existing.tokens, existing.tokens.length);
 		variables = new HashMap<>();
@@ -56,21 +56,21 @@ public class Expression
 		userFunctionNames = new HashSet<>(existing.userFunctionNames);
 	}
 	
-	Expression(final Token[] tokens)
+	Expression(Token[] tokens)
 	{
 		this.tokens = tokens;
 		variables = createDefaultVariables();
 		userFunctionNames = Collections.<String> emptySet();
 	}
 	
-	Expression(final Token[] tokens, Set<String> userFunctionNames)
+	Expression(Token[] tokens, Set<String> userFunctionNames)
 	{
 		this.tokens = tokens;
 		variables = createDefaultVariables();
 		this.userFunctionNames = userFunctionNames;
 	}
 	
-	public Expression setVariable(final String name, final double value)
+	public Expression setVariable(String name, double value)
 	{
 		checkVariableName(name);
 		variables.put(name, Double.valueOf(value));
@@ -97,7 +97,7 @@ public class Expression
 	public Set<String> getVariableNames()
 	{
 		final Set<String> variables = new HashSet<>();
-		for (final Token t : tokens)
+		for (Token t : tokens)
 		{
 			if (t.getType() == Token.TOKEN_VARIABLE)
 			{
@@ -113,7 +113,7 @@ public class Expression
 		if (checkVariablesSet)
 		{
 			/* check that all vars have a value set */
-			for (final Token t : tokens)
+			for (Token t : tokens)
 			{
 				if (t.getType() == Token.TOKEN_VARIABLE)
 				{

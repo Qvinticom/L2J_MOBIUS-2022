@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Task dedicated to use potion of character
  * @author xban1x
  */
-public final class UsePotionTask implements Runnable
+public class UsePotionTask implements Runnable
 {
 	private final Creature _creature;
 	private final Skill _skill;

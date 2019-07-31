@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
  * Destroy Plague Carriers (316)
  * @author ivantotov
  */
-public final class Q00316_DestroyPlagueCarriers extends Quest
+public class Q00316_DestroyPlagueCarriers extends Quest
 {
 	// NPC
 	private static final int ELLENIA = 30155;

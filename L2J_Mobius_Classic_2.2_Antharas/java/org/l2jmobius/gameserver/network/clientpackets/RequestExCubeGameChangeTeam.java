@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format: chdd d: Arena d: Team
  * @author mrTJO
  */
-public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
+public class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 {
 	private int _arena;
 	private int _team;

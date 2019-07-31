@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class MultisellData implements IXmlReader
+public class MultisellData implements IXmlReader
 {
 	private final Map<Integer, ListContainer> _entries = new ConcurrentHashMap<>();
 	
@@ -232,7 +232,7 @@ public final class MultisellData implements IXmlReader
 	 * @param productMultiplier
 	 * @param ingredientMultiplier
 	 */
-	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
+	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
 	{
 		final ListContainer template = _entries.get(listId);
 		if (template == null)
@@ -273,7 +273,7 @@ public final class MultisellData implements IXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
+	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}

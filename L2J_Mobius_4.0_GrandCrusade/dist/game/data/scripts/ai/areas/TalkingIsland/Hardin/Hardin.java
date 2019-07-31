@@ -43,7 +43,7 @@ import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroaching
  * Hardin (Agent of Chaos) AI.
  * @author Mobius
  */
-public final class Hardin extends AbstractNpcAI
+public class Hardin extends AbstractNpcAI
 {
 	// NPC
 	private static final int HARDIN = 33870;

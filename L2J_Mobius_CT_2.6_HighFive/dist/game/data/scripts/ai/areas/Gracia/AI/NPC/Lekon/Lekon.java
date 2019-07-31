@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Lekon AI.
  * @author St3eT
  */
-public final class Lekon extends AbstractNpcAI
+public class Lekon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LEKON = 32557;

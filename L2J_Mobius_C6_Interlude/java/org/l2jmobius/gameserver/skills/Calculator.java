@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.skills.funcs.Func;
  * Method addFunc and removeFunc permit to add and remove a Func object from a Calculator.<BR>
  * <BR>
  */
-public final class Calculator
+public class Calculator
 {
 	/** Empty Func table definition */
 	private static final Func[] _emptyFuncs = new Func[0];

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * How to Oppose Evil (692)
  * @author Gigiikun
  */
-public final class Q00692_HowtoOpposeEvil extends Quest
+public class Q00692_HowtoOpposeEvil extends Quest
 {
 	private static final int DILIOS = 32549;
 	private static final int KIRKLAN = 32550;
@@ -109,7 +109,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -170,7 +170,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final PlayerInstance partyMember = getRandomPartyMember(player, 3);
 		if (partyMember == null)
@@ -198,7 +198,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

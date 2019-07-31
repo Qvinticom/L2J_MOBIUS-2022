@@ -36,13 +36,13 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true);
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker, boolean awake)
+	public void reduceHp(double value, Creature attacker, boolean awake)
 	{
 		if (getActiveChar().isInvul() && (getActiveChar() != attacker))
 		{

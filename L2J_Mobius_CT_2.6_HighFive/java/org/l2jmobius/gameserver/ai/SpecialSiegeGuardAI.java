@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 /**
  * @author BiggBoss
  */
-public final class SpecialSiegeGuardAI extends SiegeGuardAI
+public class SpecialSiegeGuardAI extends SiegeGuardAI
 {
 	private final List<Integer> _allied = new ArrayList<>();
 	

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestSkillList extends GameClientPacket
+public class RequestSkillList extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Function template.
  * @author mkizub, Zoey76
  */
-public final class FuncTemplate
+public class FuncTemplate
 {
 	private static final Logger LOG = Logger.getLogger(FuncTemplate.class.getName());
 	

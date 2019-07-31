@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.fishing.FishingRod;
  * This class holds the Fishing information.
  * @author bit
  */
-public final class FishingData implements IXmlReader
+public class FishingData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
 	private final Map<Integer, FishingBait> _baitData = new HashMap<>();

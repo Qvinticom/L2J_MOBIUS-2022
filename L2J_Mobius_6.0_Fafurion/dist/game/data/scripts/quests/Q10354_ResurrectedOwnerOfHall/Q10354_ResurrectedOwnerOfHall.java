@@ -30,7 +30,7 @@ import quests.Q10351_OwnerOfHall.Q10351_OwnerOfHall;
  * @URL https://l2wiki.com/index.php?title=Resurrected_Owner_of_Hall&mobileaction=toggle_view_desktop
  * @author Gigi
  */
-public final class Q10354_ResurrectedOwnerOfHall extends Quest
+public class Q10354_ResurrectedOwnerOfHall extends Quest
 {
 	// NPCs
 	private static final int LYDIA = 32892;

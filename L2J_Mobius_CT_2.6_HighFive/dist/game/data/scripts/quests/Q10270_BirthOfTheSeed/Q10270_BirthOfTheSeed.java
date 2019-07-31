@@ -33,7 +33,7 @@ import quests.Q10272_LightFragment.Q10272_LightFragment;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Q10270_BirthOfTheSeed extends Quest
+public class Q10270_BirthOfTheSeed extends Quest
 {
 	// NPCs
 	private static final int ARTIUS = 32559;

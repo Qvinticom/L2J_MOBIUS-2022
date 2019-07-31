@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Hunt of the Golden Ram Mercenary Force (628)
  * @author netvirus, Zoey76
  */
-public final class Q00628_HuntGoldenRam extends Quest
+public class Q00628_HuntGoldenRam extends Quest
 {
 	// NPCs
 	private static final int KAHMAN = 31554;

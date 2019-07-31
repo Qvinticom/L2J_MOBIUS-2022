@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Transfer Hate effect implementation.
  * @author Adry_85
  */
-public final class TransferHate extends AbstractEffect
+public class TransferHate extends AbstractEffect
 {
 	private final int _chance;
 	

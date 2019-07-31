@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.base.ClassId;
  * Holds all skill learn data for all NPCs.
  * @author xban1x
  */
-public final class SkillLearnData implements IXmlReader
+public class SkillLearnData implements IXmlReader
 {
 	private final Map<Integer, List<ClassId>> _skillLearn = new HashMap<>();
 	

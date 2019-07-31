@@ -30,7 +30,7 @@ import quests.Q10403_TheGuardianGiant.Q10403_TheGuardianGiant;
  * The Stolen Seed (10709)
  * @author St3eT
  */
-public final class Q10709_TheStolenSeed extends Quest
+public class Q10709_TheStolenSeed extends Quest
 {
 	// NPCs
 	private static final int NOVIAN = 33866;

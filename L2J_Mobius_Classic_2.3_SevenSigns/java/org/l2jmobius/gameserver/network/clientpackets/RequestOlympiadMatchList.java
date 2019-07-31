@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * format ch c: (id) 0xD0 h: (subid) 0x13
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList implements IClientIncomingPacket
+public class RequestOlympiadMatchList implements IClientIncomingPacket
 {
 	private static final String COMMAND = "arenalist";
 	

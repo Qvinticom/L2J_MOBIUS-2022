@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Lindvior Scene AI.
  * @author nonom
  */
-public final class LindviorScene extends AbstractNpcAI
+public class LindviorScene extends AbstractNpcAI
 {
 	private static final int LINDVIOR_CAMERA = 18669;
 	private static final int TOMARIS = 32552;

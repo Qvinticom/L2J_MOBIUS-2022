@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Awl Under Foot (511)
  * @author Gigiikun
  */
-public final class Q00511_AwlUnderFoot extends Quest
+public class Q00511_AwlUnderFoot extends Quest
 {
 	protected class FAUWorld extends InstanceWorld
 	{

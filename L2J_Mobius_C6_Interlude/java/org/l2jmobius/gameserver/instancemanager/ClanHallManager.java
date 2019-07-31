@@ -128,7 +128,7 @@ public class ClanHallManager
 	/**
 	 * @return Map with all free ClanHalls
 	 */
-	public final Map<Integer, ClanHall> getFreeClanHalls()
+	public Map<Integer, ClanHall> getFreeClanHalls()
 	{
 		return _freeClanHall;
 	}
@@ -136,7 +136,7 @@ public class ClanHallManager
 	/**
 	 * @return Map with all ClanHalls that have owner
 	 */
-	public final Map<Integer, ClanHall> getClanHalls()
+	public Map<Integer, ClanHall> getClanHalls()
 	{
 		return _clanHall;
 	}
@@ -145,7 +145,7 @@ public class ClanHallManager
 	 * @param location
 	 * @return Map with all ClanHalls which are in location
 	 */
-	public final List<ClanHall> getClanHallsByLocation(String location)
+	public List<ClanHall> getClanHallsByLocation(String location)
 	{
 		if (!_allClanHalls.containsKey(location))
 		{
@@ -159,7 +159,7 @@ public class ClanHallManager
 	 * @param chId the clanHall id to check.
 	 * @return true if the clanHall is free.
 	 */
-	public final boolean isFree(int chId)
+	public boolean isFree(int chId)
 	{
 		return _freeClanHall.containsKey(chId);
 	}
@@ -168,7 +168,7 @@ public class ClanHallManager
 	 * Free a ClanHall
 	 * @param chId the id of clanHall to release.
 	 */
-	public final synchronized void setFree(int chId)
+	public synchronized void setFree(int chId)
 	{
 		_freeClanHall.put(chId, _clanHall.get(chId));
 		ClanTable.getInstance().getClan(_freeClanHall.get(chId).getOwnerId()).setHasHideout(0);
@@ -181,7 +181,7 @@ public class ClanHallManager
 	 * @param chId the clanHall id to make checks on.
 	 * @param clan the new clan owner.
 	 */
-	public final synchronized void setOwner(int chId, Clan clan)
+	public synchronized void setOwner(int chId, Clan clan)
 	{
 		if (!_clanHall.containsKey(chId))
 		{
@@ -201,7 +201,7 @@ public class ClanHallManager
 	 * @param clanHallId the id to use.
 	 * @return a clanHall by its id.
 	 */
-	public final ClanHall getClanHallById(int clanHallId)
+	public ClanHall getClanHallById(int clanHallId)
 	{
 		if (_clanHall.containsKey(clanHallId))
 		{
@@ -215,7 +215,7 @@ public class ClanHallManager
 		return null;
 	}
 	
-	public final ClanHall getNearbyClanHall(int x, int y, int maxDist)
+	public ClanHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
 		
@@ -242,7 +242,7 @@ public class ClanHallManager
 	 * @param clan the clan to use.
 	 * @return a clanHall by its owner.
 	 */
-	public final ClanHall getClanHallByOwner(Clan clan)
+	public ClanHall getClanHallByOwner(Clan clan)
 	{
 		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{

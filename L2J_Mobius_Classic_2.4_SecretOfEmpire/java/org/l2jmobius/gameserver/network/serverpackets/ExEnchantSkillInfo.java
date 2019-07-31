@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ExEnchantSkillInfo implements IClientOutgoingPacket
+public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final Set<Integer> _routes;
 	

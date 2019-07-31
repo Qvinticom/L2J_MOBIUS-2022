@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Gnacik
  */
-public final class RequestPartyMatchDetail implements IClientIncomingPacket
+public class RequestPartyMatchDetail implements IClientIncomingPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.handlers.SkillSignet;
 import org.l2jmobius.gameserver.skills.handlers.SkillSignetCasttime;
 
-public final class EffectSignet extends Effect
+public class EffectSignet extends Effect
 {
 	private Skill _skill;
 	private EffectPointInstance _actor;

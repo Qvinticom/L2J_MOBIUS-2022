@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Sell Buffs Manager
  * @author St3eT
  */
-public final class SellBuffsManager implements IXmlReader
+public class SellBuffsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SellBuffsManager.class.getName());
 	private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();

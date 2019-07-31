@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
  * Transformation data.
  * @author UnAfraid
  */
-public final class TransformData implements IXmlReader
+public class TransformData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(TransformData.class.getName());
 	

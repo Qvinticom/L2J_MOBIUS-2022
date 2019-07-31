@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
  * The Class ConditionUsingItemType.
  * @author mkizub
  */
-public final class ConditionUsingItemType extends Condition
+public class ConditionUsingItemType extends Condition
 {
 	private final boolean _armor;
 	private final int _mask;

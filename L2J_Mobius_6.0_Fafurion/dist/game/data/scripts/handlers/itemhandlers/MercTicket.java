@@ -43,7 +43,7 @@ import ai.AbstractNpcAI;
  * Mercenary Ticket Item Handler.
  * @author St3eT
  */
-public final class MercTicket extends AbstractNpcAI implements IItemHandler
+public class MercTicket extends AbstractNpcAI implements IItemHandler
 {
 	private final Map<Integer, ItemInstance> _items = new ConcurrentHashMap<>();
 	

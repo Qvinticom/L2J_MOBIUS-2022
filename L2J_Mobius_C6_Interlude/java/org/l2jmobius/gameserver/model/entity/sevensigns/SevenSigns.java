@@ -475,7 +475,7 @@ public class SevenSigns
 	 * Gets the current cycle.
 	 * @return the current cycle
 	 */
-	public final int getCurrentCycle()
+	public int getCurrentCycle()
 	{
 		return _currentCycle;
 	}
@@ -484,7 +484,7 @@ public class SevenSigns
 	 * Gets the current period.
 	 * @return the current period
 	 */
-	public final int getCurrentPeriod()
+	public int getCurrentPeriod()
 	{
 		return _activePeriod;
 	}
@@ -509,7 +509,7 @@ public class SevenSigns
 	 * Gets the milli to period change.
 	 * @return the milli to period change
 	 */
-	public final long getMilliToPeriodChange()
+	public long getMilliToPeriodChange()
 	{
 		final long currTimeMillis = System.currentTimeMillis();
 		final long changeTimeMillis = _calendar.getTimeInMillis();
@@ -563,7 +563,7 @@ public class SevenSigns
 	 * Gets the current period name.
 	 * @return the current period name
 	 */
-	public final String getCurrentPeriodName()
+	public String getCurrentPeriodName()
 	{
 		String periodName = null;
 		
@@ -598,7 +598,7 @@ public class SevenSigns
 	 * Checks if is seal validation period.
 	 * @return true, if is seal validation period
 	 */
-	public final boolean isSealValidationPeriod()
+	public boolean isSealValidationPeriod()
 	{
 		return _activePeriod == PERIOD_SEAL_VALIDATION;
 	}
@@ -607,7 +607,7 @@ public class SevenSigns
 	 * Checks if is comp results period.
 	 * @return true, if is comp results period
 	 */
-	public final boolean isCompResultsPeriod()
+	public boolean isCompResultsPeriod()
 	{
 		return _activePeriod == PERIOD_COMP_RESULTS;
 	}
@@ -617,7 +617,7 @@ public class SevenSigns
 	 * @param cabal the cabal
 	 * @return the current score
 	 */
-	public final int getCurrentScore(int cabal)
+	public int getCurrentScore(int cabal)
 	{
 		final double totalStoneScore = _dawnStoneScore + _duskStoneScore;
 		
@@ -645,7 +645,7 @@ public class SevenSigns
 	 * @param cabal the cabal
 	 * @return the current stone score
 	 */
-	public final double getCurrentStoneScore(int cabal)
+	public double getCurrentStoneScore(int cabal)
 	{
 		switch (cabal)
 		{
@@ -671,7 +671,7 @@ public class SevenSigns
 	 * @param cabal the cabal
 	 * @return the current festival score
 	 */
-	public final int getCurrentFestivalScore(int cabal)
+	public int getCurrentFestivalScore(int cabal)
 	{
 		switch (cabal)
 		{
@@ -696,7 +696,7 @@ public class SevenSigns
 	 * Gets the cabal highest score.
 	 * @return the cabal highest score
 	 */
-	public final int getCabalHighestScore()
+	public int getCabalHighestScore()
 	{
 		if (getCurrentScore(CABAL_DUSK) == getCurrentScore(CABAL_DAWN))
 		{
@@ -717,7 +717,7 @@ public class SevenSigns
 	 * @param seal the seal
 	 * @return the seal owner
 	 */
-	public final int getSealOwner(int seal)
+	public int getSealOwner(int seal)
 	{
 		return _signsSealOwners.get(seal);
 	}
@@ -728,7 +728,7 @@ public class SevenSigns
 	 * @param cabal the cabal
 	 * @return the seal proportion
 	 */
-	public final int getSealProportion(int seal, int cabal)
+	public int getSealProportion(int seal, int cabal)
 	{
 		if (cabal == CABAL_NULL)
 		{
@@ -749,7 +749,7 @@ public class SevenSigns
 	 * @param cabal the cabal
 	 * @return the total members
 	 */
-	public final int getTotalMembers(int cabal)
+	public int getTotalMembers(int cabal)
 	{
 		int cabalMembers = 0;
 		String cabalName = getCabalShortName(cabal);
@@ -770,7 +770,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player data
 	 */
-	public final StatsSet getPlayerData(PlayerInstance player)
+	public StatsSet getPlayerData(PlayerInstance player)
 	{
 		if (!hasRegisteredBefore(player))
 		{

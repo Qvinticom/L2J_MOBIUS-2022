@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * General Utility functions related to game server.
  */
-public final class Util
+public class Util
 {
 	private static final char[] ILLEGAL_CHARACTERS =
 	{

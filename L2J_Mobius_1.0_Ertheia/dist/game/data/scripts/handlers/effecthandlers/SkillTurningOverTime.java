@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 /**
  * Skill Turning effect implementation.
  */
-public final class SkillTurningOverTime extends AbstractEffect
+public class SkillTurningOverTime extends AbstractEffect
 {
 	private final int _chance;
 	private final boolean _staticChance;

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Daimon the White-Eyed - Part 2 (604)
  * @author Adry_85
  */
-public final class Q00604_DaimonTheWhiteEyedPart2 extends Quest
+public class Q00604_DaimonTheWhiteEyedPart2 extends Quest
 {
 	// NPCs
 	private static final int DAIMONS_ALTAR = 31541;

@@ -28,7 +28,7 @@ import quests.Q10310_TwistedCreationTree.Q10310_TwistedCreationTree;
  * @URL https://l2wiki.com/Abandoned_God%27s_Creature
  * @author Gigi
  */
-public final class Q10312_AbandonedGodsCreature extends Quest
+public class Q10312_AbandonedGodsCreature extends Quest
 {
 	// Npc
 	private static final int HORPINA = 33031;

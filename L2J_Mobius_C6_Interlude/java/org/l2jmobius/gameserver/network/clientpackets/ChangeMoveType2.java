@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class ChangeMoveType2 extends GameClientPacket
+public class ChangeMoveType2 extends GameClientPacket
 {
 	private boolean _typeRun;
 	

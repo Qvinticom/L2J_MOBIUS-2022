@@ -24,7 +24,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
-public final class SoDManager
+public class SoDManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SoDManager.class.getName());
 	

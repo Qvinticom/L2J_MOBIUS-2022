@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Fighting the Forgotten (10339)
  * @author St3eT
  */
-public final class Q10339_FightingTheForgotten extends Quest
+public class Q10339_FightingTheForgotten extends Quest
 {
 	// NPCs
 	private static final int THEODORE = 32975;

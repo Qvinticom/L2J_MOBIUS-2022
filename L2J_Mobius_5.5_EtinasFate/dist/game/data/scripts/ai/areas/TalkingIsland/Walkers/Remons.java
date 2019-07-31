@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Remons AI.
  * @author Gladicek
  */
-public final class Remons extends AbstractNpcAI
+public class Remons extends AbstractNpcAI
 {
 	// NPC
 	private static final int REMONS = 33570;

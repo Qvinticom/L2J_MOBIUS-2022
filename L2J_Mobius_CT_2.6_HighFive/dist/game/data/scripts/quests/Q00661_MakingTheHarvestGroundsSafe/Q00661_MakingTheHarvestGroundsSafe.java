@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Making the Harvest Grounds Safe (661)
  * @author Pandragon
  */
-public final class Q00661_MakingTheHarvestGroundsSafe extends Quest
+public class Q00661_MakingTheHarvestGroundsSafe extends Quest
 {
 	// NPC
 	private static final int NORMAN = 30210;

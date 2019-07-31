@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.OfflineTradeUtil;
 /**
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestart implements IClientIncomingPacket
+public class RequestRestart implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	

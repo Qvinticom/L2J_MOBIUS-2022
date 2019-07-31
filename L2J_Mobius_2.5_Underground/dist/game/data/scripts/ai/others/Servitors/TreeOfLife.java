@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Tree of Life AI.
  * @author St3eT.
  */
-public final class TreeOfLife extends AbstractNpcAI
+public class TreeOfLife extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] TREE_OF_LIFE =

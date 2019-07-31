@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class EnchantSkillGroup
+public class EnchantSkillGroup
 {
 	private final int _id;
 	private final List<EnchantSkillHolder> _enchantDetails = new ArrayList<>();

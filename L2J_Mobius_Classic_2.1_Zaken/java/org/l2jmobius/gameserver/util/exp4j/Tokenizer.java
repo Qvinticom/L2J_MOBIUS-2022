@@ -36,7 +36,7 @@ public class Tokenizer
 	
 	private Token lastToken;
 	
-	public Tokenizer(String expression, final Map<String, Function> userFunctions, final Map<String, Operator> userOperators, final Set<String> variableNames, final boolean implicitMultiplication)
+	public Tokenizer(String expression, Map<String, Function> userFunctions, Map<String, Operator> userOperators, Set<String> variableNames, boolean implicitMultiplication)
 	{
 		this.expression = expression.trim().toCharArray();
 		this.expressionLength = this.expression.length;
@@ -46,7 +46,7 @@ public class Tokenizer
 		this.implicitMultiplication = implicitMultiplication;
 	}
 	
-	public Tokenizer(String expression, final Map<String, Function> userFunctions, final Map<String, Operator> userOperators, final Set<String> variableNames)
+	public Tokenizer(String expression, Map<String, Function> userFunctions, Map<String, Operator> userOperators, Set<String> variableNames)
 	{
 		this.expression = expression.trim().toCharArray();
 		this.expressionLength = this.expression.length;
@@ -134,7 +134,7 @@ public class Tokenizer
 		return ch == ',';
 	}
 	
-	private Token parseParentheses(final boolean open)
+	private Token parseParentheses(boolean open)
 	{
 		if (open)
 		{
@@ -281,7 +281,7 @@ public class Tokenizer
 		return op;
 	}
 	
-	private Token parseNumberToken(final char firstChar)
+	private Token parseNumberToken(char firstChar)
 	{
 		final int offset = this.pos;
 		int len = 1;

@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Nottingale AI.
  * @author xban1x
  */
-public final class Nottingale extends AbstractNpcAI
+public class Nottingale extends AbstractNpcAI
 {
 	// NPC
 	private static final int NOTTINGALE = 32627;

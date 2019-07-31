@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class BuyList extends AbstractItemPacket
+public class BuyList extends AbstractItemPacket
 {
 	private final int _listId;
 	private final Collection<Product> _list;

@@ -31,7 +31,7 @@ import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
  * An Ice Merchant's Dream (648)
  * @author netvirus, Adry_85
  */
-public final class Q00648_AnIceMerchantsDream extends Quest
+public class Q00648_AnIceMerchantsDream extends Quest
 {
 	private static class DropInfo
 	{

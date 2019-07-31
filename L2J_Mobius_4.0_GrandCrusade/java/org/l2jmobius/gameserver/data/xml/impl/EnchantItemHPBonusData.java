@@ -90,7 +90,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 * @param item the item
 	 * @return the HP bonus
 	 */
-	public final int getHPBonus(ItemInstance item)
+	public int getHPBonus(ItemInstance item)
 	{
 		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))

@@ -27,7 +27,7 @@ import instances.AbstractInstance;
  * Secret Area in the Keucereus Fortress instance zone.
  * @author Gladicek
  */
-public final class SecretArea extends AbstractInstance
+public class SecretArea extends AbstractInstance
 {
 	// NPCs
 	private static final int GINBY = 32566;

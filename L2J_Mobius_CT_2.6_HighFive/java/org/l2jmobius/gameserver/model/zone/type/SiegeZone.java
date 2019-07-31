@@ -57,7 +57,7 @@ public class SiegeZone extends ZoneType
 		setSettings(settings);
 	}
 	
-	public final class Settings extends AbstractZoneSettings
+	public class Settings extends AbstractZoneSettings
 	{
 		private int _siegableId = -1;
 		private Siegable _siege = null;

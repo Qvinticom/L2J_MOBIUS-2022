@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Resident Problem Solver (10786)
  * @author malyelfik
  */
-public final class Q10786_ResidentProblemSolver extends Quest
+public class Q10786_ResidentProblemSolver extends Quest
 {
 	// NPC
 	private static final int SHUVANN = 33867;

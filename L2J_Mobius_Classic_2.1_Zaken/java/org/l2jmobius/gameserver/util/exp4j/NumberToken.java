@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.util.exp4j;
 /**
  * Represents a number in the expression
  */
-public final class NumberToken extends Token
+public class NumberToken extends Token
 {
 	private final double value;
 	
@@ -32,7 +32,7 @@ public final class NumberToken extends Token
 		this.value = value;
 	}
 	
-	NumberToken(final char[] expression, final int offset, final int len)
+	NumberToken(char[] expression, int offset, int len)
 	{
 		this(Double.parseDouble(String.valueOf(expression, offset, len)));
 	}

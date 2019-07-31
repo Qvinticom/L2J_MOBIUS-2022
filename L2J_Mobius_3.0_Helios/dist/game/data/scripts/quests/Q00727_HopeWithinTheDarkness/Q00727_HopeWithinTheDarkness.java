@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Hope within the Darkness (727)
  * @author Mobius
  */
-public final class Q00727_HopeWithinTheDarkness extends Quest
+public class Q00727_HopeWithinTheDarkness extends Quest
 {
 	// NPCs
 	private static final int[] NPCS =

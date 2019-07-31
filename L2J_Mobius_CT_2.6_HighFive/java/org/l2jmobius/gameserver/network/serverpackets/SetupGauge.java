@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class SetupGauge implements IClientOutgoingPacket
+public class SetupGauge implements IClientOutgoingPacket
 {
 	public static final int BLUE = 0;
 	public static final int RED = 1;

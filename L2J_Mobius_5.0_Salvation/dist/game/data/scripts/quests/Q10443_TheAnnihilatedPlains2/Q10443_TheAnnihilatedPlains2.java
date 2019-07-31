@@ -29,7 +29,7 @@ import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
  * @URL https://l2wiki.com/The_Annihilated_Plains_-_2
  * @author Gigi
  */
-public final class Q10443_TheAnnihilatedPlains2 extends Quest
+public class Q10443_TheAnnihilatedPlains2 extends Quest
 {
 	// NPCs
 	private static final int TUSKA = 33839;

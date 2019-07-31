@@ -30,7 +30,7 @@ import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Q10292_SevenSignsGirlOfDoubt extends Quest
+public class Q10292_SevenSignsGirlOfDoubt extends Quest
 {
 	// NPCs
 	private static final int HARDIN = 30832;

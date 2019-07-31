@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Draught For The Cold (10741)
  * @author Sdw
  */
-public final class Q10741_ADraughtForTheCold extends Quest
+public class Q10741_ADraughtForTheCold extends Quest
 {
 	// NPCs
 	private static final int SIVANTHE = 33951;

@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00078_SagaOfTheDoomcryer extends Quest
 {
 	// NPCs
-	public final int REVA = 30867;
-	public final int DUDA_MARA_TOTEM_SPIRIT = 30593;
-	public final int RIFKEN = 34268;
-	public final int LAZENBY = 30706;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31649;
-	public final int TABLET_OF_VISION_3 = 31651;
-	public final int TABLET_OF_VISION_4 = 31657;
-	public final int TAKAI_ZU_DUDA_MARA = 31642;
+	private static final int REVA = 30867;
+	private static final int DUDA_MARA_TOTEM_SPIRIT = 30593;
+	private static final int RIFKEN = 34268;
+	private static final int LAZENBY = 30706;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31649;
+	private static final int TABLET_OF_VISION_3 = 31651;
+	private static final int TABLET_OF_VISION_4 = 31657;
+	private static final int TAKAI_ZU_DUDA_MARA = 31642;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int WATCHER_OF_THE_ANCIENT_PLEDGE = 27216;
-	public final int SHARUSHI_MOUTH_MUDAHA = 27295;
-	public final int HALISHA_ARCHON = 27219;
-	public final int LIZARD_TOTEM_SHARUHI = 27285;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int WATCHER_OF_THE_ANCIENT_PLEDGE = 27216;
+	private static final int SHARUSHI_MOUTH_MUDAHA = 27295;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int LIZARD_TOTEM_SHARUHI = 27285;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49812;
-	public final int HALISHA_BADGE = 7493;
-	public final int RESONANCE_AMULET = 7276;
-	public final int RESONANCE_AMULET_2 = 7307;
-	public final int RESONANCE_AMULET_3 = 7338;
-	public final int RESONANCE_AMULET_4 = 7369;
-	public final int BITTER_COLD_VODKA = 49843;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49812;
+	private static final int HALISHA_BADGE = 7493;
+	private static final int RESONANCE_AMULET = 7276;
+	private static final int RESONANCE_AMULET_2 = 7307;
+	private static final int RESONANCE_AMULET_3 = 7338;
+	private static final int RESONANCE_AMULET_4 = 7369;
+	private static final int BITTER_COLD_VODKA = 49843;
 	// Reward
-	public final int BOOK_BLACK_BEAR = 90042;
+	private static final int BOOK_BLACK_BEAR = 90042;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

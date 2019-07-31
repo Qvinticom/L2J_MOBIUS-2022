@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.util.Util;
  * NPC template.
  * @author NosBit
  */
-public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
+public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 {
 	private int _id;
 	private int _displayId;

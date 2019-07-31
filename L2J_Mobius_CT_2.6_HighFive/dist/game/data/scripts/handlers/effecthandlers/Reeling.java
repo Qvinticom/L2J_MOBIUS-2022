@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  * Reeling effect implementation.
  * @author UnAfraid
  */
-public final class Reeling extends AbstractEffect
+public class Reeling extends AbstractEffect
 {
 	private final double _power;
 	

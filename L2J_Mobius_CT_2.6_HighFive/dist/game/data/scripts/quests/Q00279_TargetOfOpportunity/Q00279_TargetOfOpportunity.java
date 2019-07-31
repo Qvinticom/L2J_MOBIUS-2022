@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Target of Opportunity (279)
  * @author GKR
  */
-public final class Q00279_TargetOfOpportunity extends Quest
+public class Q00279_TargetOfOpportunity extends Quest
 {
 	// NPCs
 	private static final int JERIAN = 32302;
@@ -89,7 +89,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final PlayerInstance pl = getRandomPartyMember(player, "progress", "1");
 		final int idx = Arrays.binarySearch(MONSTERS, npc.getId());
@@ -118,7 +118,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

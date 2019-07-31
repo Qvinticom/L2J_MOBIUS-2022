@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class Revive implements IClientOutgoingPacket
+public class Revive implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	

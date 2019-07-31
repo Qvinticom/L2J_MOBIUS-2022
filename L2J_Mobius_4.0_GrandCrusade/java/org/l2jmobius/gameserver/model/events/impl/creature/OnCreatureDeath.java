@@ -35,12 +35,12 @@ public class OnCreatureDeath implements IBaseEvent
 		_target = target;
 	}
 	
-	public final Creature getAttacker()
+	public Creature getAttacker()
 	{
 		return _attacker;
 	}
 	
-	public final Creature getTarget()
+	public Creature getTarget()
 	{
 		return _target;
 	}

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * </ul>
  * @author malyelfik
  */
-public final class Q10472_WindsOfFateEncroachingShadows extends Quest
+public class Q10472_WindsOfFateEncroachingShadows extends Quest
 {
 	// NPCs
 	private static final int NAVARI = 33931;

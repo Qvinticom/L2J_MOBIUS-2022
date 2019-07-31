@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class Ride implements IClientOutgoingPacket
+public class Ride implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _mounted;

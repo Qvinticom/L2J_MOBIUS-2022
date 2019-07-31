@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Protection Blessing effect implementation.
  * @author kerberos_20
  */
-public final class ProtectionBlessing extends AbstractEffect
+public class ProtectionBlessing extends AbstractEffect
 {
 	public ProtectionBlessing(StatsSet params)
 	{

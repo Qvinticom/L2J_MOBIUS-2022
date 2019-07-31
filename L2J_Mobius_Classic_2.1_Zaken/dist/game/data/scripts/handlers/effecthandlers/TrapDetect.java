@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Trap Detect effect implementation.
  * @author UnAfraid
  */
-public final class TrapDetect extends AbstractEffect
+public class TrapDetect extends AbstractEffect
 {
 	private final int _power;
 	

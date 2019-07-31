@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Block Party effect implementation.
  * @author BiggBoss
  */
-public final class BlockParty extends AbstractEffect
+public class BlockParty extends AbstractEffect
 {
 	public BlockParty(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

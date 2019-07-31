@@ -41,7 +41,7 @@ import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheB
  * Museum Dungeon Instance Zone.
  * @author Gladicek
  */
-public final class MuseumDungeon extends AbstractInstance
+public class MuseumDungeon extends AbstractInstance
 {
 	// NPCs
 	private static final int PANTHEON = 32972;

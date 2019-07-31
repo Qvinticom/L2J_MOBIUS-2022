@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
  * Effect that blocks all incoming debuffs.
  * @author Nik
  */
-public final class BuffBlock extends AbstractEffect
+public class BuffBlock extends AbstractEffect
 {
 	public BuffBlock(StatsSet params)
 	{

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Community Board handler.
  * @author Zoey76
  */
-public final class CommunityBoardHandler implements IHandler<IParseBoardHandler, String>
+public class CommunityBoardHandler implements IHandler<IParseBoardHandler, String>
 {
 	private static final Logger LOG = Logger.getLogger(CommunityBoardHandler.class.getName());
 	/** The registered handlers. */

@@ -27,13 +27,13 @@ public class AttackableStatus extends NpcStatus
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false);
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
 	{
 		if (getActiveChar().isDead())
 		{

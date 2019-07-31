@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * This packet manages the trade request.
  */
-public final class TradeRequest implements IClientIncomingPacket
+public class TradeRequest implements IClientIncomingPacket
 {
 	private int _objectId;
 	

@@ -33,7 +33,7 @@ import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
  * Contract Execution (186)
  * @author ivantotov
  */
-public final class Q00186_ContractExecution extends Quest
+public class Q00186_ContractExecution extends Quest
 {
 	// NPCs
 	private static final int MAESTRO_NIKOLA = 30621;

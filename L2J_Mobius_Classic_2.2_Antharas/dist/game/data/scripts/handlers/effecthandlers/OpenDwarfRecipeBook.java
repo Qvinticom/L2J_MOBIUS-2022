@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Open Dwarf Recipe Book effect implementation.
  * @author Adry_85
  */
-public final class OpenDwarfRecipeBook extends AbstractEffect
+public class OpenDwarfRecipeBook extends AbstractEffect
 {
 	public OpenDwarfRecipeBook(StatsSet params)
 	{

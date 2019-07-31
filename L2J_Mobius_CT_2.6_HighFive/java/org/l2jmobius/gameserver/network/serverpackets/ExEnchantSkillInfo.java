@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ExEnchantSkillInfo implements IClientOutgoingPacket
+public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final List<Integer> _routes = new ArrayList<>(); // skill lvls for each route
 	

@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Morgan AI.
  * @author St3eT
  */
-public final class Morgan extends AbstractNpcAI
+public class Morgan extends AbstractNpcAI
 {
 	// NPC
 	private static final int MORGAN = 33121;

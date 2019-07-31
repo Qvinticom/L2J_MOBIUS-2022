@@ -104,13 +104,13 @@ public class EffectPointInstance extends Npc
 	}
 	
 	@Override
-	public final byte getPvpFlag()
+	public byte getPvpFlag()
 	{
 		return _owner != null ? _owner.getPvpFlag() : 0;
 	}
 	
 	@Override
-	public final Team getTeam()
+	public Team getTeam()
 	{
 		return _owner != null ? _owner.getTeam() : Team.NONE;
 	}

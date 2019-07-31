@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Wrath of Ancestors (272)
  * @author xban1x
  */
-public final class Q00272_WrathOfAncestors extends Quest
+public class Q00272_WrathOfAncestors extends Quest
 {
 	// NPC
 	private static final int LIVINA = 30572;

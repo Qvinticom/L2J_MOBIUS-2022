@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Set Skill effect implementation.
  * @author Zoey76
  */
-public final class SetSkill extends AbstractEffect
+public class SetSkill extends AbstractEffect
 {
 	private final int _skillId;
 	private final int _skillLvl;

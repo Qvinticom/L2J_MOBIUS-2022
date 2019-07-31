@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit extends GameClientPacket
+public class SnoopQuit extends GameClientPacket
 {
 	private int _snoopID;
 	

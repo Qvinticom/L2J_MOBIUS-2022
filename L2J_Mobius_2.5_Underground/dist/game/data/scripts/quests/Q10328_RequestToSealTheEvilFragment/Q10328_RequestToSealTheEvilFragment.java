@@ -28,7 +28,7 @@ import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheB
  * Request to Seal the Evil Fragment (10328)
  * @author Gladicek
  */
-public final class Q10328_RequestToSealTheEvilFragment extends Quest
+public class Q10328_RequestToSealTheEvilFragment extends Quest
 {
 	// NPCs
 	private static final int PANTHEON = 32972;

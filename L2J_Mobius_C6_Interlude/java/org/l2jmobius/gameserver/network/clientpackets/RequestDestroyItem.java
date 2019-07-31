@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestDestroyItem extends GameClientPacket
+public class RequestDestroyItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestDestroyItem.class.getName());
 	

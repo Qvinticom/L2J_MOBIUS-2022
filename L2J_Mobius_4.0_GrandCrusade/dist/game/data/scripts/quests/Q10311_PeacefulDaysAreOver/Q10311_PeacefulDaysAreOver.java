@@ -28,7 +28,7 @@ import quests.Q10312_AbandonedGodsCreature.Q10312_AbandonedGodsCreature;
  * @URL https://l2wiki.com/Peaceful_Days_are_Over
  * @author Gigi
  */
-public final class Q10311_PeacefulDaysAreOver extends Quest
+public class Q10311_PeacefulDaysAreOver extends Quest
 {
 	// npc
 	private static final int SELINA = 33032;

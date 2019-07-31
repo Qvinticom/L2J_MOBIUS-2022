@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.templates.StatsSet;
  * This class is dedicated to the management of armors.
  * @version $Revision: 1.2.2.1.2.6 $ $Date: 2005/03/27 15:30:10 $
  */
-public final class Armor extends Item
+public class Armor extends Item
 {
 	private final int _avoidModifier;
 	private final int _pDef;
@@ -84,7 +84,7 @@ public final class Armor extends Item
 	 * @return int : ID of the item
 	 */
 	@Override
-	public final int getItemMask()
+	public int getItemMask()
 	{
 		return getItemType().mask();
 	}
@@ -93,7 +93,7 @@ public final class Armor extends Item
 	 * Returns the magical defense of the armor
 	 * @return int : value of the magic defense
 	 */
-	public final int getMDef()
+	public int getMDef()
 	{
 		return _mDef;
 	}
@@ -102,7 +102,7 @@ public final class Armor extends Item
 	 * Returns the physical defense of the armor
 	 * @return int : value of the physical defense
 	 */
-	public final int getPDef()
+	public int getPDef()
 	{
 		return _pDef;
 	}
@@ -111,7 +111,7 @@ public final class Armor extends Item
 	 * Returns avoid modifier given by the armor
 	 * @return int : avoid modifier
 	 */
-	public final int getAvoidModifier()
+	public int getAvoidModifier()
 	{
 		return _avoidModifier;
 	}
@@ -120,7 +120,7 @@ public final class Armor extends Item
 	 * Returns magical bonus given by the armor
 	 * @return int : value of the magical bonus
 	 */
-	public final int getMpBonus()
+	public int getMpBonus()
 	{
 		return _mpBonus;
 	}
@@ -129,7 +129,7 @@ public final class Armor extends Item
 	 * Returns physical bonus given by the armor
 	 * @return int : value of the physical bonus
 	 */
-	public final int getHpBonus()
+	public int getHpBonus()
 	{
 		return _hpBonus;
 	}

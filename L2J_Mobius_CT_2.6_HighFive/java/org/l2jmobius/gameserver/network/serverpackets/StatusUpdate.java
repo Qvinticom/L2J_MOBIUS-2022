@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class StatusUpdate implements IClientOutgoingPacket
+public class StatusUpdate implements IClientOutgoingPacket
 {
 	public static final int LEVEL = 0x01;
 	public static final int EXP = 0x02;

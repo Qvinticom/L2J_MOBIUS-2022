@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Oracle teleport AI.
  * @author Charus
  */
-public final class OracleTeleport extends AbstractNpcAI
+public class OracleTeleport extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] TOWN_DAWN =

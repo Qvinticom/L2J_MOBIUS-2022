@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Mercenary Supplier Abercrombie AI.
  * @author Zoey76
  */
-public final class Abercrombie extends AbstractNpcAI
+public class Abercrombie extends AbstractNpcAI
 {
 	// NPC
 	private static final int ABERCROMBIE = 31555;

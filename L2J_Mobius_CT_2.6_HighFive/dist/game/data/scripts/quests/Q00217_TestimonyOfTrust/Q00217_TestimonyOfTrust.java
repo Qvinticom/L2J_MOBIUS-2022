@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Testimony Of Trust (217)
  * @author ivantotov
  */
-public final class Q00217_TestimonyOfTrust extends Quest
+public class Q00217_TestimonyOfTrust extends Quest
 {
 	// NPCs
 	private static final int HIGH_PRIEST_BIOTIN = 30031;

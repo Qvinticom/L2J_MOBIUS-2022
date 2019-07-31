@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyelfik
  */
-public final class OnInstanceCreated implements IBaseEvent
+public class OnInstanceCreated implements IBaseEvent
 {
 	private final Instance _instance;
 	private final PlayerInstance _creator;

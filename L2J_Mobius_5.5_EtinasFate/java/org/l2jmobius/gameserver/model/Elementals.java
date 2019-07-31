@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public final class Elementals
+public class Elementals
 {
 	private static final Map<Integer, ElementalItems> TABLE = new HashMap<>();
 	
@@ -265,10 +265,10 @@ public final class Elementals
 		GoD_36976(DARK, 36976, ElementalItemType.CrystalSuper, 0),
 		GoD_36977(HOLY, 36977, ElementalItemType.CrystalSuper, 0);
 		
-		public final byte _element;
-		public final int _itemId;
-		public final ElementalItemType _type;
-		public final int _fixedPower;
+		public byte _element;
+		public int _itemId;
+		public ElementalItemType _type;
+		public int _fixedPower;
 		
 		ElementalItems(byte element, int itemId, ElementalItemType type, int fixedPower)
 		{

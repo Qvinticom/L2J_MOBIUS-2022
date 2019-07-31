@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Soul Blow effect implementation.
  * @author Adry_85
  */
-public final class SoulBlow extends AbstractEffect
+public class SoulBlow extends AbstractEffect
 {
 	public SoulBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * An Interdimensional Draft (10756)
  * @author malyelfik
  */
-public final class Q10756_AnInterdimensionalDraft extends Quest
+public class Q10756_AnInterdimensionalDraft extends Quest
 {
 	// NPC
 	private static final int PIO = 33963;

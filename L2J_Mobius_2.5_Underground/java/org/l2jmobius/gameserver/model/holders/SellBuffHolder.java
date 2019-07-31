@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.model.holders;
  * Simple class for storing info for Selling Buffs system.
  * @author St3eT
  */
-public final class SellBuffHolder
+public class SellBuffHolder
 {
 	private final int _skillId;
 	private long _price;
@@ -31,17 +31,17 @@ public final class SellBuffHolder
 		_price = price;
 	}
 	
-	public final int getSkillId()
+	public int getSkillId()
 	{
 		return _skillId;
 	}
 	
-	public final void setPrice(int price)
+	public void setPrice(int price)
 	{
 		_price = price;
 	}
 	
-	public final long getPrice()
+	public long getPrice()
 	{
 		return _price;
 	}

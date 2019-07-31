@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public final class FactionSystem extends AbstractNpcAI
+public class FactionSystem extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MANAGER = 500;

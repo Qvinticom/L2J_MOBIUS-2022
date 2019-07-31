@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
  * What shortcuts get each newly created character.
  * @author Zoey76
  */
-public final class InitialShortcutData implements IXmlReader
+public class InitialShortcutData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(InitialShortcutData.class.getName());
 	

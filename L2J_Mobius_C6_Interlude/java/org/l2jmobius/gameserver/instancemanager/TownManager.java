@@ -57,7 +57,7 @@ public class TownManager
 		_towns.add(arena);
 	}
 	
-	public final TownZone getClosestTown(WorldObject activeObject)
+	public TownZone getClosestTown(WorldObject activeObject)
 	{
 		switch (MapRegionTable.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
 		{
@@ -218,7 +218,7 @@ public class TownManager
 		return 0;
 	}
 	
-	public final boolean townHasCastleInSiege(int townId)
+	public boolean townHasCastleInSiege(int townId)
 	{
 		final int[] castleidarray =
 		{
@@ -255,7 +255,7 @@ public class TownManager
 		return false;
 	}
 	
-	public final boolean townHasCastleInSiege(int x, int y)
+	public boolean townHasCastleInSiege(int x, int y)
 	{
 		final int curtown = MapRegionTable.getInstance().getMapRegion(x, y);
 		final int[] castleidarray =
@@ -293,7 +293,7 @@ public class TownManager
 		return false;
 	}
 	
-	public final TownZone getTown(int townId)
+	public TownZone getTown(int townId)
 	{
 		for (TownZone temp : _towns)
 		{
@@ -313,7 +313,7 @@ public class TownManager
 	 * @param z
 	 * @return
 	 */
-	public final TownZone getTown(int x, int y, int z)
+	public TownZone getTown(int x, int y, int z)
 	{
 		for (TownZone temp : _towns)
 		{

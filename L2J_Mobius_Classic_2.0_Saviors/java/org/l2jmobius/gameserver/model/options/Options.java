@@ -45,7 +45,7 @@ public class Options
 		_id = id;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}

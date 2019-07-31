@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestStartPledgeWar extends GameClientPacket
+public class RequestStartPledgeWar extends GameClientPacket
 {
 	private String _pledgeName;
 	private Clan _clan;

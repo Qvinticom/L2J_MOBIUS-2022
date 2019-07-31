@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Testimony Of Prosperity (221)
  * @author ivantotov
  */
-public final class Q00221_TestimonyOfProsperity extends Quest
+public class Q00221_TestimonyOfProsperity extends Quest
 {
 	// NPCs
 	private static final int WAREHOUSE_KEEPER_WILFORD = 30005;

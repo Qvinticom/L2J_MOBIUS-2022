@@ -29,7 +29,7 @@ import quests.Q10354_ResurrectedOwnerOfHall.Q10354_ResurrectedOwnerOfHall;
  * @URL http://l2on.net/en/?c=quests&id=10704&game=1
  * @author Gigi
  */
-public final class Q10704_BottleOfOctavisSoul extends Quest
+public class Q10704_BottleOfOctavisSoul extends Quest
 {
 	// NPCs
 	private static final int LYDIA = 32892;

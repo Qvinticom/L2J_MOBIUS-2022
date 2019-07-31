@@ -189,7 +189,7 @@ public class PetManagerInstance extends MerchantInstance
 		}
 	}
 	
-	public final void exchange(PlayerInstance player, int itemIdtake, int itemIdgive)
+	public void exchange(PlayerInstance player, int itemIdtake, int itemIdgive)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (player.destroyItemByItemId("Consume", itemIdtake, 1, this, true))

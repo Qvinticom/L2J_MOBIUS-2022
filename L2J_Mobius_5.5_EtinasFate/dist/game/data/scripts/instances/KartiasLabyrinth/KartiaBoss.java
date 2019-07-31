@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Kartia Boss AI.
  * @author flanagak
  */
-public final class KartiaBoss extends AbstractNpcAI
+public class KartiaBoss extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] BOSSES =

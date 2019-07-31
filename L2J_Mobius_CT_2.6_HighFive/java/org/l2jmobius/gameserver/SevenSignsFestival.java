@@ -1223,17 +1223,17 @@ public class SevenSignsFestival implements SpawnListener
 		LOGGER.info("SevenSignsFestival: Reinitialized engine for next competition period.");
 	}
 	
-	public final int getCurrentFestivalCycle()
+	public int getCurrentFestivalCycle()
 	{
 		return _festivalCycle;
 	}
 	
-	public final boolean isFestivalInitialized()
+	public boolean isFestivalInitialized()
 	{
 		return _festivalInitialized;
 	}
 	
-	public final boolean isFestivalInProgress()
+	public boolean isFestivalInProgress()
 	{
 		return _festivalInProgress;
 	}
@@ -1248,7 +1248,7 @@ public class SevenSignsFestival implements SpawnListener
 		_nextFestivalStart = System.currentTimeMillis() + milliFromNow;
 	}
 	
-	public final long getMinsToNextCycle()
+	public long getMinsToNextCycle()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -1258,7 +1258,7 @@ public class SevenSignsFestival implements SpawnListener
 		return (_nextFestivalCycleStart - System.currentTimeMillis()) / 60000;
 	}
 	
-	public final int getMinsToNextFestival()
+	public int getMinsToNextFestival()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -1268,7 +1268,7 @@ public class SevenSignsFestival implements SpawnListener
 		return (int) (((_nextFestivalStart - System.currentTimeMillis()) / 60000) + 1);
 	}
 	
-	public final String getTimeToNextFestivalStr()
+	public String getTimeToNextFestivalStr()
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -1283,7 +1283,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player
 	 * @return int[] playerFestivalInfo
 	 */
-	public final int[] getFestivalForPlayer(PlayerInstance player)
+	public int[] getFestivalForPlayer(PlayerInstance player)
 	{
 		final int[] playerFestivalInfo =
 		{
@@ -1322,7 +1322,7 @@ public class SevenSignsFestival implements SpawnListener
 		return playerFestivalInfo;
 	}
 	
-	public final boolean isParticipant(PlayerInstance player)
+	public boolean isParticipant(PlayerInstance player)
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -1353,7 +1353,7 @@ public class SevenSignsFestival implements SpawnListener
 		return false;
 	}
 	
-	public final List<Integer> getParticipants(int oracle, int festivalId)
+	public List<Integer> getParticipants(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -1363,7 +1363,7 @@ public class SevenSignsFestival implements SpawnListener
 		return _duskFestivalParticipants.get(festivalId);
 	}
 	
-	public final List<Integer> getPreviousParticipants(int oracle, int festivalId)
+	public List<Integer> getPreviousParticipants(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -1447,7 +1447,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 	}
 	
-	public final long getFinalScore(int oracle, int festivalId)
+	public long getFinalScore(int oracle, int festivalId)
 	{
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
@@ -1457,7 +1457,7 @@ public class SevenSignsFestival implements SpawnListener
 		return _duskFestivalScores.get(festivalId);
 	}
 	
-	public final int getHighestScore(int oracle, int festivalId)
+	public int getHighestScore(int oracle, int festivalId)
 	{
 		return getHighestScoreData(oracle, festivalId).getInt("score");
 	}
@@ -1468,7 +1468,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId
 	 * @return StatsSet festivalDat
 	 */
-	public final StatsSet getHighestScoreData(int oracle, int festivalId)
+	public StatsSet getHighestScoreData(int oracle, int festivalId)
 	{
 		int offsetId = festivalId;
 		
@@ -1500,7 +1500,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId
 	 * @return StatsSet result
 	 */
-	public final StatsSet getOverallHighestScoreData(int festivalId)
+	public StatsSet getOverallHighestScoreData(int festivalId)
 	{
 		StatsSet result = null;
 		int highestScore = 0;
@@ -1604,12 +1604,12 @@ public class SevenSignsFestival implements SpawnListener
 		return false;
 	}
 	
-	public final int getAccumulatedBonus(int festivalId)
+	public int getAccumulatedBonus(int festivalId)
 	{
 		return _accumulatedBonuses.get(festivalId);
 	}
 	
-	public final int getTotalAccumulatedBonus()
+	public int getTotalAccumulatedBonus()
 	{
 		int totalAccumBonus = 0;
 		
@@ -1653,7 +1653,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player
 	 * @return playerBonus (the share of the bonus for the party)
 	 */
-	public final int distribAccumulatedBonus(PlayerInstance player)
+	public int distribAccumulatedBonus(PlayerInstance player)
 	{
 		int playerBonus = 0;
 		final String playerName = player.getName();
@@ -1724,7 +1724,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId
 	 * @return boolean isChalIncreased
 	 */
-	public final boolean increaseChallenge(int oracle, int festivalId)
+	public boolean increaseChallenge(int oracle, int festivalId)
 	{
 		final DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
 		
@@ -2015,7 +2015,7 @@ public class SevenSignsFestival implements SpawnListener
 		 * @param festivalId
 		 * @return DarknessFestival festivalInst
 		 */
-		public final DarknessFestival getFestivalInstance(int oracle, int festivalId)
+		public DarknessFestival getFestivalInstance(int oracle, int festivalId)
 		{
 			if (!_festivalInitialized)
 			{

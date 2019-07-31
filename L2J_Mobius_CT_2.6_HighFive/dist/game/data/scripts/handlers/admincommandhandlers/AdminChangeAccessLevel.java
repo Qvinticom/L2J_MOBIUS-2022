@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 /**
  * Change access level command handler.
  */
-public final class AdminChangeAccessLevel implements IAdminCommandHandler
+public class AdminChangeAccessLevel implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

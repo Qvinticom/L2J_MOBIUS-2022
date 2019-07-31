@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Rogue (403)
  * @author ivantotov
  */
-public final class Q00403_PathOfTheRogue extends Quest
+public class Q00403_PathOfTheRogue extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_BEZIQUE = 30379;

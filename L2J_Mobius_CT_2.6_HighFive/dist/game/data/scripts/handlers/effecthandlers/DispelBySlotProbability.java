@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Dispel By Slot Probability effect implementation.
  * @author Adry_85, Zoey76
  */
-public final class DispelBySlotProbability extends AbstractEffect
+public class DispelBySlotProbability extends AbstractEffect
 {
 	private final String _dispel;
 	private final Map<AbnormalType, Short> _dispelAbnormals;

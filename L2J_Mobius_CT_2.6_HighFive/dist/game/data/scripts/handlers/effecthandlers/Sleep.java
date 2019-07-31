@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Sleep effect implementation.
  * @author mkizub
  */
-public final class Sleep extends AbstractEffect
+public class Sleep extends AbstractEffect
 {
 	public Sleep(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

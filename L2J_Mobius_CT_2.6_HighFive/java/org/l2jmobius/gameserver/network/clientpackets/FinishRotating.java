@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 /**
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class FinishRotating implements IClientIncomingPacket
+public class FinishRotating implements IClientIncomingPacket
 {
 	private int _degree;
 	@SuppressWarnings("unused")

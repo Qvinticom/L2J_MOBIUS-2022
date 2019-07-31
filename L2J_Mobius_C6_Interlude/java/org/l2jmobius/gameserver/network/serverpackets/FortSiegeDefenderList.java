@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
  * d = AllyCrestID<BR>
  * @author programmos
  */
-public final class FortSiegeDefenderList extends GameServerPacket
+public class FortSiegeDefenderList extends GameServerPacket
 {
 	private final Fort _fort;
 	

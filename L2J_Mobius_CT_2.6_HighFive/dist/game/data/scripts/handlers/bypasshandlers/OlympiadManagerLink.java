@@ -75,7 +75,7 @@ public class OlympiadManagerLink implements IBypassHandler
 	};
 	
 	@Override
-	public final boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!(target instanceof OlympiadManagerInstance))
 		{
@@ -388,7 +388,7 @@ public class OlympiadManagerLink implements IBypassHandler
 	}
 	
 	@Override
-	public final String[] getBypassList()
+	public String[] getBypassList()
 	{
 		return COMMANDS;
 	}

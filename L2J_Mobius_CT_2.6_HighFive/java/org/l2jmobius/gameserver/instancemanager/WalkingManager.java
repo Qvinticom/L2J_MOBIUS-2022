@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * This class manages walking monsters.
  * @author GKR
  */
-public final class WalkingManager implements IXmlReader
+public class WalkingManager implements IXmlReader
 {
 	// Repeat style:
 	// -1 - no repeat
@@ -76,7 +76,7 @@ public final class WalkingManager implements IXmlReader
 	}
 	
 	@Override
-	public final void load()
+	public void load()
 	{
 		parseDatapackFile("data/Routes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " walking routes.");

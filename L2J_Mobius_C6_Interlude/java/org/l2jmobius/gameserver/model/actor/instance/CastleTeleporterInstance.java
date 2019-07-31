@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
  * The Class CastleTeleporterInstance.
  * @author Kerberos
  */
-public final class CastleTeleporterInstance extends NpcInstance
+public class CastleTeleporterInstance extends NpcInstance
 {
 	public static final Logger LOGGER = Logger.getLogger(CastleTeleporterInstance.class.getName());
 	

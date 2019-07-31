@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  * A Grand Plan for Taming Wild Beasts (655)
  * @author Zoey76
  */
-public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
+public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 {
 	// NPCs
 	private static final int MESSENGER = 35627;

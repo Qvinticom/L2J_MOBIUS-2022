@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  * Format: (ch)
  * @author ProGramMoS
  */
-public final class RequestCursedWeaponLocation extends GameClientPacket
+public class RequestCursedWeaponLocation extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

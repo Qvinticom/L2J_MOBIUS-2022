@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 
-public final class L2Properties extends Properties
+public class L2Properties extends Properties
 {
 	protected static final Logger LOGGER = Logger.getLogger(Config.class.getName());
 	

@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Dragon Valley summoner NPC AI
  * @author Gigi, Mobius
  */
-public final class DragonValleySummoners extends AbstractNpcAI
+public class DragonValleySummoners extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BLOODY_GRAVE_WARRIOR = 23441;

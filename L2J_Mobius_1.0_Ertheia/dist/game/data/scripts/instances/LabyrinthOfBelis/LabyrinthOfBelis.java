@@ -45,7 +45,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
  * Labyrinth of Belis Instance Zone.
  * @author Gladicek
  */
-public final class LabyrinthOfBelis extends AbstractInstance
+public class LabyrinthOfBelis extends AbstractInstance
 {
 	// NPCs
 	private static final int SEBION = 32972;

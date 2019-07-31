@@ -37,7 +37,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  * Sanctum of the Lords of Dawn instance zone.
  * @author Adry_85
  */
-public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
+public class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 {
 	// NPCs
 	private static final int GUARDS_OF_THE_DAWN = 18834;

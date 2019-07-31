@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Disappeared_Clan_Member
  * @author Gigi
  */
-public final class Q10836_DisappearedClanMember extends Quest
+public class Q10836_DisappearedClanMember extends Quest
 {
 	// NPC
 	private static final int ELIKIA = 34057;

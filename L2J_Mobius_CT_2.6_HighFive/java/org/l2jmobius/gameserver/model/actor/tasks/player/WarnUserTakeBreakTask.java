@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Task dedicated to warn user to take a break.
  * @author UnAfraid
  */
-public final class WarnUserTakeBreakTask implements Runnable
+public class WarnUserTakeBreakTask implements Runnable
 {
 	private final PlayerInstance _player;
 	

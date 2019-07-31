@@ -33,13 +33,13 @@ final class BuilderObject extends Builder
 	}
 	
 	@Override
-	public final String toString(Object param)
+	public String toString(Object param)
 	{
 		return param == null ? "null" : param.toString();
 	}
 	
 	@Override
-	public final String toString(Object... params)
+	public String toString(Object... params)
 	{
 		if ((params == null) || (params.length == 0))
 		{
@@ -49,13 +49,13 @@ final class BuilderObject extends Builder
 	}
 	
 	@Override
-	public final int getIndex()
+	public int getIndex()
 	{
 		return _index;
 	}
 	
 	@Override
-	public final String toString()
+	public String toString()
 	{
 		return "[PARAM-" + (_index + 1) + "]";
 	}

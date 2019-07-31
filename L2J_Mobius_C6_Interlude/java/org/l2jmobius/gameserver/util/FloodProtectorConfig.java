@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.util;
  * Flood protector configuration
  * @author fordfrog
  */
-public final class FloodProtectorConfig
+public class FloodProtectorConfig
 {
 	/**
 	 * Type used for identification of logging output.

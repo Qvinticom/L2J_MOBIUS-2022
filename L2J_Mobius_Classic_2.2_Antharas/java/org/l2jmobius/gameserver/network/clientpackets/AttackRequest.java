@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class AttackRequest implements IClientIncomingPacket
+public class AttackRequest implements IClientIncomingPacket
 {
 	// cddddc
 	private int _objectId;

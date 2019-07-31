@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Sea of Spores (10779)
  * @author malyelfik
  */
-public final class Q10779_LettersFromTheQueenSeaOfSpores extends LetterQuest
+public class Q10779_LettersFromTheQueenSeaOfSpores extends LetterQuest
 {
 	// NPCs
 	private static final int HOLINT = 30191;

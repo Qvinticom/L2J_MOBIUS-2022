@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Convert Item effect implementation.
  * @author Zoey76
  */
-public final class ConvertItem extends AbstractEffect
+public class ConvertItem extends AbstractEffect
 {
 	public ConvertItem(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * Format:(ch) Sd
  */
-public final class RequestDuelStart extends GameClientPacket
+public class RequestDuelStart extends GameClientPacket
 {
 	private String _player;
 	private int _partyDuel;

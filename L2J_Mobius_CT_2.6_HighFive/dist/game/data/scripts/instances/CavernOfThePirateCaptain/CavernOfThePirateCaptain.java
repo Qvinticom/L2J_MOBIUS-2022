@@ -37,7 +37,7 @@ import instances.AbstractInstance;
  * Cavern Of The Pirate Captain (Day Dream) instance Zone.
  * @author St3eT
  */
-public final class CavernOfThePirateCaptain extends AbstractInstance
+public class CavernOfThePirateCaptain extends AbstractInstance
 {
 	// NPCs
 	private static final int PATHFINDER = 32713; // Pathfinder Worker

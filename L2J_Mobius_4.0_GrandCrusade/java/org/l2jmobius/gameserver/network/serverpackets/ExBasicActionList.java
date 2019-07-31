@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author KenM
  */
-public final class ExBasicActionList implements IClientOutgoingPacket
+public class ExBasicActionList implements IClientOutgoingPacket
 {
 	//@formatter:off
 	public static final int[] ACTIONS_ON_TRANSFORM =

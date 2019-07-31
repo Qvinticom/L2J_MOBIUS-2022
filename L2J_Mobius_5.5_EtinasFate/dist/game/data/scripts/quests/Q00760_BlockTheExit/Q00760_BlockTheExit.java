@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Block the Exit (760)
  * @author St3eT
  */
-public final class Q00760_BlockTheExit extends Quest
+public class Q00760_BlockTheExit extends Quest
 {
 	// NPCs
 	private static final int KURTIZ = 30870;

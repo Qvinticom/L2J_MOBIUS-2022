@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Unknown, UnAfraid
  */
-public final class RequestAutoSoulShot implements IClientIncomingPacket
+public class RequestAutoSoulShot implements IClientIncomingPacket
 {
 	private int _itemId;
 	private boolean _enable;

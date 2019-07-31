@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestSurrenderPledgeWar implements IClientIncomingPacket
+public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 {
 	private String _pledgeName;
 	

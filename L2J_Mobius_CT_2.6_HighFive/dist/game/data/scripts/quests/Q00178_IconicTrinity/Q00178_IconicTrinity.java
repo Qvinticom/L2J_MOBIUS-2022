@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Iconic Trinity (178)
  * @author ivantotov
  */
-public final class Q00178_IconicTrinity extends Quest
+public class Q00178_IconicTrinity extends Quest
 {
 	// NPCs
 	private static final int HIERARCH_KEKROPUS = 32138;

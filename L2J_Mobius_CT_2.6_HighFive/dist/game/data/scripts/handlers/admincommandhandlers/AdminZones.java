@@ -389,7 +389,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void dumpPoints(final PlayerInstance activeChar)
+	private void dumpPoints(PlayerInstance activeChar)
 	{
 		final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
 		if ((holder != null) && !holder.getNodes().isEmpty())
@@ -504,7 +504,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		return COMMANDS;
 	}
 	
-	private void buildHtmlWindow(final PlayerInstance activeChar, final int page)
+	private void buildHtmlWindow(PlayerInstance activeChar, int page)
 	{
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 		msg.setFile(activeChar, "data/html/admin/zone_editor_create.htm");

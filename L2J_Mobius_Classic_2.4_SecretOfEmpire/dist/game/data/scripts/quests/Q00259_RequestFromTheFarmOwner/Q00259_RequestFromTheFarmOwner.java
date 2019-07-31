@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Request from the Farm Owner (259)
  * @author xban1x
  */
-public final class Q00259_RequestFromTheFarmOwner extends Quest
+public class Q00259_RequestFromTheFarmOwner extends Quest
 {
 	// Npcs
 	private static final int EDMOND = 30497;

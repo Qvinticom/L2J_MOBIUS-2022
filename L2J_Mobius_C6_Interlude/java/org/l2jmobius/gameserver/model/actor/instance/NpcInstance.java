@@ -288,7 +288,7 @@ public class NpcInstance extends Creature
 	 * @return the template
 	 */
 	@Override
-	public final NpcTemplate getTemplate()
+	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) super.getTemplate();
 	}
@@ -323,7 +323,7 @@ public class NpcInstance extends Creature
 	 * <BR>
 	 * @return the faction id
 	 */
-	public final String getFactionId()
+	public String getFactionId()
 	{
 		return getTemplate().factionId;
 	}
@@ -334,7 +334,7 @@ public class NpcInstance extends Creature
 	 * @return the level
 	 */
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate().level;
 	}
@@ -517,7 +517,7 @@ public class NpcInstance extends Creature
 	 * Gets the checks if is spoiled by.
 	 * @return the checks if is spoiled by
 	 */
-	public final int getIsSpoiledBy()
+	public int getIsSpoiledBy()
 	{
 		return _isSpoiledBy;
 	}
@@ -526,7 +526,7 @@ public class NpcInstance extends Creature
 	 * Sets the checks if is spoiled by.
 	 * @param value the new checks if is spoiled by
 	 */
-	public final void setIsSpoiledBy(int value)
+	public void setIsSpoiledBy(int value)
 	{
 		_isSpoiledBy = value;
 	}
@@ -536,7 +536,7 @@ public class NpcInstance extends Creature
 	 * <BR>
 	 * @return true, if is busy
 	 */
-	public final boolean isBusy()
+	public boolean isBusy()
 	{
 		return _isBusy;
 	}
@@ -556,7 +556,7 @@ public class NpcInstance extends Creature
 	 * <BR>
 	 * @return the busy message
 	 */
-	public final String getBusyMessage()
+	public String getBusyMessage()
 	{
 		return _busyMessage;
 	}
@@ -1129,7 +1129,7 @@ public class NpcInstance extends Creature
 	 * Return the Castle this NpcInstance belongs to.
 	 * @return the castle
 	 */
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		// Get castle this NPC belongs to (excluding Attackable)
 		if (_castleIndex < 0)
@@ -1163,7 +1163,7 @@ public class NpcInstance extends Creature
 	 * Return the Fort this NpcInstance belongs to.
 	 * @return the fort
 	 */
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		// Get Fort this NPC belongs to (excluding Attackable)
 		if (_fortIndex < 0)
@@ -1189,7 +1189,7 @@ public class NpcInstance extends Creature
 	 * Gets the checks if is in town.
 	 * @return the checks if is in town
 	 */
-	public final boolean getIsInTown()
+	public boolean getIsInTown()
 	{
 		if (_castleIndex < 0)
 		{

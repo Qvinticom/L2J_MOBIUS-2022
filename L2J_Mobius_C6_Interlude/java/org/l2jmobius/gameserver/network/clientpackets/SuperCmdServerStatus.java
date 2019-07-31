@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
  * Format ch c: (id) 0x39 h: (subid) 0x02
  * @author -Wooden-
  */
-public final class SuperCmdServerStatus extends GameClientPacket
+public class SuperCmdServerStatus extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Forsaiken
  */
-public final class ItemAuction
+public class ItemAuction
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
 	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
@@ -97,7 +97,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final ItemAuctionState getAuctionState()
+	public ItemAuctionState getAuctionState()
 	{
 		final ItemAuctionState auctionState;
 		
@@ -109,7 +109,7 @@ public final class ItemAuction
 		return auctionState;
 	}
 	
-	public final boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
+	public boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
 	{
 		synchronized (_auctionStateLock)
 		{
@@ -124,72 +124,72 @@ public final class ItemAuction
 		}
 	}
 	
-	public final int getAuctionId()
+	public int getAuctionId()
 	{
 		return _auctionId;
 	}
 	
-	public final int getInstanceId()
+	public int getInstanceId()
 	{
 		return _instanceId;
 	}
 	
-	public final ItemInfo getItemInfo()
+	public ItemInfo getItemInfo()
 	{
 		return _itemInfo;
 	}
 	
-	public final ItemInstance createNewItemInstance()
+	public ItemInstance createNewItemInstance()
 	{
 		return _auctionItem.createNewItemInstance();
 	}
 	
-	public final long getAuctionInitBid()
+	public long getAuctionInitBid()
 	{
 		return _auctionItem.getAuctionInitBid();
 	}
 	
-	public final ItemAuctionBid getHighestBid()
+	public ItemAuctionBid getHighestBid()
 	{
 		return _highestBid;
 	}
 	
-	public final ItemAuctionExtendState getAuctionEndingExtendState()
+	public ItemAuctionExtendState getAuctionEndingExtendState()
 	{
 		return _auctionEndingExtendState;
 	}
 	
-	public final ItemAuctionExtendState getScheduledAuctionEndingExtendState()
+	public ItemAuctionExtendState getScheduledAuctionEndingExtendState()
 	{
 		return _scheduledAuctionEndingExtendState;
 	}
 	
-	public final void setScheduledAuctionEndingExtendState(ItemAuctionExtendState state)
+	public void setScheduledAuctionEndingExtendState(ItemAuctionExtendState state)
 	{
 		_scheduledAuctionEndingExtendState = state;
 	}
 	
-	public final long getStartingTime()
+	public long getStartingTime()
 	{
 		return _startingTime;
 	}
 	
-	public final long getEndingTime()
+	public long getEndingTime()
 	{
 		return _endingTime;
 	}
 	
-	public final long getStartingTimeRemaining()
+	public long getStartingTimeRemaining()
 	{
 		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
-	public final long getFinishingTimeRemaining()
+	public long getFinishingTimeRemaining()
 	{
 		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
-	public final void storeMe()
+	public void storeMe()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
@@ -209,7 +209,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final int getAndSetLastBidPlayerObjectId(int playerObjId)
+	public int getAndSetLastBidPlayerObjectId(int playerObjId)
 	{
 		final int lastBid = _lastBidPlayerObjId;
 		_lastBidPlayerObjId = playerObjId;
@@ -243,7 +243,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final void registerBid(PlayerInstance player, long newBid)
+	public void registerBid(PlayerInstance player, long newBid)
 	{
 		if (player == null)
 		{
@@ -400,12 +400,12 @@ public final class ItemAuction
 		}
 	}
 	
-	public final void broadcastToAllBidders(IClientOutgoingPacket packet)
+	public void broadcastToAllBidders(IClientOutgoingPacket packet)
 	{
 		ThreadPool.execute(() -> broadcastToAllBiddersInternal(packet));
 	}
 	
-	public final void broadcastToAllBiddersInternal(IClientOutgoingPacket packet)
+	public void broadcastToAllBiddersInternal(IClientOutgoingPacket packet)
 	{
 		for (int i = _auctionBids.size(); i-- > 0;)
 		{
@@ -421,7 +421,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final boolean cancelBid(PlayerInstance player)
+	public boolean cancelBid(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -488,7 +488,7 @@ public final class ItemAuction
 		return true;
 	}
 	
-	public final void clearCanceledBids()
+	public void clearCanceledBids()
 	{
 		if (getAuctionState() != ItemAuctionState.FINISHED)
 		{
@@ -528,13 +528,13 @@ public final class ItemAuction
 	 * @param player The player that made the bid
 	 * @return The last bid the player made or -1
 	 */
-	public final long getLastBid(PlayerInstance player)
+	public long getLastBid(PlayerInstance player)
 	{
 		final ItemAuctionBid bid = getBidFor(player.getObjectId());
 		return bid != null ? bid.getLastBid() : -1L;
 	}
 	
-	public final ItemAuctionBid getBidFor(int playerObjId)
+	public ItemAuctionBid getBidFor(int playerObjId)
 	{
 		final int index = getBidIndexFor(playerObjId);
 		return index != -1 ? _auctionBids.get(index) : null;

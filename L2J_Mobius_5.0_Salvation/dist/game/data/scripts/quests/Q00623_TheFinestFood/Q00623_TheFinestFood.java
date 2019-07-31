@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * The Finest Food (623)
  * @author janiko
  */
-public final class Q00623_TheFinestFood extends Quest
+public class Q00623_TheFinestFood extends Quest
 {
 	// NPCs
 	private static final int JEREMY = 31521;

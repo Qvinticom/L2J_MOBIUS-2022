@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class MultiSellList extends AbstractItemPacket
+public class MultiSellList extends AbstractItemPacket
 {
 	private int _size;
 	private int _index;

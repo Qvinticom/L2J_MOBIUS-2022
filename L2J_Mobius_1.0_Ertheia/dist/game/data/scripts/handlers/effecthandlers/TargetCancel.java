@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Target Cancel effect implementation.
  * @author -Nemesiss-, Adry_85
  */
-public final class TargetCancel extends AbstractEffect
+public class TargetCancel extends AbstractEffect
 {
 	private final int _chance;
 	

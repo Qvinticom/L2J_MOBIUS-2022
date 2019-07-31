@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author Luno
  */
-public final class ArmorSet
+public class ArmorSet
 {
 	private final int _chest;
 	private final int _legs;

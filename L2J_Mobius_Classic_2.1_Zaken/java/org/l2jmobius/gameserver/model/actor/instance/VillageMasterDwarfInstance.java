@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.PlayerClass;
 
-public final class VillageMasterDwarfInstance extends VillageMasterInstance
+public class VillageMasterDwarfInstance extends VillageMasterInstance
 {
 	/**
 	 * Creates a village master.

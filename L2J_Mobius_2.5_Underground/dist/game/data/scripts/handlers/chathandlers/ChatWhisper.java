@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Tell chat handler.
  * @author durgus
  */
-public final class ChatWhisper implements IChatHandler
+public class ChatWhisper implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

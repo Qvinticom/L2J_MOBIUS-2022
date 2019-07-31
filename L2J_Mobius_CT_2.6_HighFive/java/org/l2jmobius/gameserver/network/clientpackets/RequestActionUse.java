@@ -62,7 +62,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * This class manages the action use request packet.
  * @author Zoey76
  */
-public final class RequestActionUse implements IClientIncomingPacket
+public class RequestActionUse implements IClientIncomingPacket
 {
 	private static final int SIN_EATER_ID = 12564;
 	private static final int SWITCH_STANCE_ID = 6054;

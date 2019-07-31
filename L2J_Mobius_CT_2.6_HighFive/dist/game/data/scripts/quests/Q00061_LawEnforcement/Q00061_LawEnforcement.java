@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Law Enforcement (61)
  * @author Adry_85
  */
-public final class Q00061_LawEnforcement extends Quest
+public class Q00061_LawEnforcement extends Quest
 {
 	// NPCs
 	private static final int LIANE = 32222;

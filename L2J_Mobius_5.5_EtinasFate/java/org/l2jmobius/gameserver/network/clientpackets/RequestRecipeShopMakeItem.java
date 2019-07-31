@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.util.Util;
  * from your own recipe list crafting are skipped. With the exception of trading, if you request trade, it is cancelled, if you are already trading, you get message.
  * @author Nik
  */
-public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
+public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private int _recipeId;

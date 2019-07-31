@@ -36,39 +36,39 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00070_SagaOfThePhoenixKnight extends Quest
 {
 	// NPCs
-	public final int SEDRICK = 30849;
-	public final int FELIX = 31277;
-	public final int RIFKEN = 34268;
-	public final int ERIC_RAMSHEART = 31631;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31647;
-	public final int TABLET_OF_VISION_3 = 31651;
-	public final int TABLET_OF_VISION_4 = 31654;
+	private static final int SEDRICK = 30849;
+	private static final int FELIX = 31277;
+	private static final int RIFKEN = 34268;
+	private static final int ERIC_RAMSHEART = 31631;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31647;
+	private static final int TABLET_OF_VISION_3 = 31651;
+	private static final int TABLET_OF_VISION_4 = 31654;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214; // check drop item
-	public final int FALLEN_KNIGHT_ADHIL = 27286;
-	public final int HALISHA_ARCHON = 27219; // blazing spawn
-	public final int BELETH_SHADOW = 27278; // blazing spawn
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214; // check drop item
+	private static final int FALLEN_KNIGHT_ADHIL = 27286;
+	private static final int HALISHA_ARCHON = 27219; // blazing spawn
+	private static final int BELETH_SHADOW = 27278; // blazing spawn
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49804;
-	public final int HALISHA_BADGE = 7485;
-	public final int RESONANCE_AMULET = 7268;
-	public final int RESONANCE_AMULET_2 = 7299;
-	public final int RESONANCE_AMULET_3 = 7330;
-	public final int RESONANCE_AMULET_4 = 7361;
-	public final int PURE_ICE = 7534;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49804;
+	private static final int HALISHA_BADGE = 7485;
+	private static final int RESONANCE_AMULET = 7268;
+	private static final int RESONANCE_AMULET_2 = 7299;
+	private static final int RESONANCE_AMULET_3 = 7330;
+	private static final int RESONANCE_AMULET_4 = 7361;
+	private static final int PURE_ICE = 7534;
 	// Reward
-	public final int BOOK_GOLD_LION = 90038;
+	private static final int BOOK_GOLD_LION = 90038;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

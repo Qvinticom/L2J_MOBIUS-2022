@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: A Hidden Meaning (10404)
  * @author St3eT
  */
-public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
+public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 {
 	// NPCs
 	private static final int PATERSON = 33864;

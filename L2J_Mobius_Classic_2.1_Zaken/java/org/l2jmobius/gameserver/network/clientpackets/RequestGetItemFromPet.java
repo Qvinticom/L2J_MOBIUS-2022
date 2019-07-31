@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class RequestGetItemFromPet implements IClientIncomingPacket
+public class RequestGetItemFromPet implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _amount;

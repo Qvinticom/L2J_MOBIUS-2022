@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Open Door effect implementation.
  * @author Adry_85
  */
-public final class OpenDoor extends AbstractEffect
+public class OpenDoor extends AbstractEffect
 {
 	private final int _chance;
 	private final boolean _isItem;

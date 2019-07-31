@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Go Get the Calculator (347)
  * @author Pandragon
  */
-public final class Q00347_GoGetTheCalculator extends Quest
+public class Q00347_GoGetTheCalculator extends Quest
 {
 	// NPCs
 	private static final int BRUNON = 30526;

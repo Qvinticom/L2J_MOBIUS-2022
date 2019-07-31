@@ -40,7 +40,7 @@ public class CombatFlag
 	
 	private final int _itemId;
 	
-	public CombatFlag(final int x, int y, int z, int heading, int item_id)
+	public CombatFlag(int x, int y, int z, int heading, int item_id)
 	{
 		_location = new Location(x, y, z, heading);
 		_itemId = item_id;

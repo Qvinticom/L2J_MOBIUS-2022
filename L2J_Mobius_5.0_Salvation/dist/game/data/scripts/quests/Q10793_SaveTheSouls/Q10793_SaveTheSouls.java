@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Save the Souls (10793)
  * @author malyelfik
  */
-public final class Q10793_SaveTheSouls extends Quest
+public class Q10793_SaveTheSouls extends Quest
 {
 	// NPC
 	private static final int HATUBA = 33849;

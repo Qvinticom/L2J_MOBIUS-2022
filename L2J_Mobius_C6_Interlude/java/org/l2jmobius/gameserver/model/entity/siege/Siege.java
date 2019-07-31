@@ -1703,7 +1703,7 @@ public class Siege
 	 * @param clan the clan
 	 * @return the attacker clan
 	 */
-	public final SiegeClan getAttackerClan(Clan clan)
+	public SiegeClan getAttackerClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1718,7 +1718,7 @@ public class Siege
 	 * @param clanId the clan id
 	 * @return the attacker clan
 	 */
-	public final SiegeClan getAttackerClan(int clanId)
+	public SiegeClan getAttackerClan(int clanId)
 	{
 		for (SiegeClan sc : getAttackerClans())
 		{
@@ -1735,7 +1735,7 @@ public class Siege
 	 * Gets the attacker clans.
 	 * @return the attacker clans
 	 */
-	public final List<SiegeClan> getAttackerClans()
+	public List<SiegeClan> getAttackerClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1749,7 +1749,7 @@ public class Siege
 	 * Gets the attacker respawn delay.
 	 * @return the attacker respawn delay
 	 */
-	public final int getAttackerRespawnDelay()
+	public int getAttackerRespawnDelay()
 	{
 		return SiegeManager.getInstance().getAttackerRespawnDelay();
 	}
@@ -1758,7 +1758,7 @@ public class Siege
 	 * Gets the castle.
 	 * @return the castle
 	 */
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		if ((_castle == null) || (_castle.length <= 0))
 		{
@@ -1773,7 +1773,7 @@ public class Siege
 	 * @param clan the clan
 	 * @return the defender clan
 	 */
-	public final SiegeClan getDefenderClan(Clan clan)
+	public SiegeClan getDefenderClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1788,7 +1788,7 @@ public class Siege
 	 * @param clanId the clan id
 	 * @return the defender clan
 	 */
-	public final SiegeClan getDefenderClan(int clanId)
+	public SiegeClan getDefenderClan(int clanId)
 	{
 		for (SiegeClan sc : getDefenderClans())
 		{
@@ -1805,7 +1805,7 @@ public class Siege
 	 * Gets the defender clans.
 	 * @return the defender clans
 	 */
-	public final List<SiegeClan> getDefenderClans()
+	public List<SiegeClan> getDefenderClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1820,7 +1820,7 @@ public class Siege
 	 * @param clan the clan
 	 * @return the defender waiting clan
 	 */
-	public final SiegeClan getDefenderWaitingClan(Clan clan)
+	public SiegeClan getDefenderWaitingClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1835,7 +1835,7 @@ public class Siege
 	 * @param clanId the clan id
 	 * @return the defender waiting clan
 	 */
-	public final SiegeClan getDefenderWaitingClan(int clanId)
+	public SiegeClan getDefenderWaitingClan(int clanId)
 	{
 		for (SiegeClan sc : _defenderWaitingClans)
 		{
@@ -1852,7 +1852,7 @@ public class Siege
 	 * Gets the defender waiting clans.
 	 * @return the defender waiting clans
 	 */
-	public final List<SiegeClan> getDefenderWaitingClans()
+	public List<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}
@@ -1861,7 +1861,7 @@ public class Siege
 	 * Gets the defender respawn delay.
 	 * @return the defender respawn delay
 	 */
-	public final int getDefenderRespawnDelay()
+	public int getDefenderRespawnDelay()
 	{
 		return SiegeManager.getInstance().getDefenderRespawnDelay() + _defenderRespawnDelayPenalty;
 	}
@@ -1870,7 +1870,7 @@ public class Siege
 	 * Gets the checks if is in progress.
 	 * @return the checks if is in progress
 	 */
-	public final boolean getIsInProgress()
+	public boolean getIsInProgress()
 	{
 		return _isInProgress;
 	}
@@ -1879,7 +1879,7 @@ public class Siege
 	 * Gets the checks if is registration over.
 	 * @return the checks if is registration over
 	 */
-	public final boolean getIsRegistrationOver()
+	public boolean getIsRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
@@ -1888,7 +1888,7 @@ public class Siege
 	 * Gets the siege date.
 	 * @return the siege date
 	 */
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return getCastle().getSiegeDate();
 	}
@@ -1915,7 +1915,7 @@ public class Siege
 	 * Gets the siege guard manager.
 	 * @return the siege guard manager
 	 */
-	public final SiegeGuardManager getSiegeGuardManager()
+	public SiegeGuardManager getSiegeGuardManager()
 	{
 		if (_siegeGuardManager == null)
 		{

@@ -254,7 +254,7 @@ public class Functions
 	 * @param name te name of the function
 	 * @return a Function instance
 	 */
-	public static Function getBuiltinFunction(final String name)
+	public static Function getBuiltinFunction(String name)
 	{
 		if (name.equals("sin"))
 		{

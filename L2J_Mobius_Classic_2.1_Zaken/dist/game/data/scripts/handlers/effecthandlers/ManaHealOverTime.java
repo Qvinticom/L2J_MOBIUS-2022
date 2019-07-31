@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * Mana Heal Over Time effect implementation.
  */
-public final class ManaHealOverTime extends AbstractEffect
+public class ManaHealOverTime extends AbstractEffect
 {
 	private final double _power;
 	

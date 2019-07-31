@@ -49,7 +49,7 @@ import ai.AbstractNpcAI;
  * Baium AI.
  * @author St3eT
  */
-public final class Baium extends AbstractNpcAI
+public class Baium extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BAIUM = 29020; // Baium

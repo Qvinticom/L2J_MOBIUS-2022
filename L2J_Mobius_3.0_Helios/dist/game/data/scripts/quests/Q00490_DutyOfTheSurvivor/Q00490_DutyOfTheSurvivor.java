@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Duty of the Survivor (400)
  * @author St3eT
  */
-public final class Q00490_DutyOfTheSurvivor extends Quest
+public class Q00490_DutyOfTheSurvivor extends Quest
 {
 	// NPCs
 	private static final int VOLLODOS = 30137;

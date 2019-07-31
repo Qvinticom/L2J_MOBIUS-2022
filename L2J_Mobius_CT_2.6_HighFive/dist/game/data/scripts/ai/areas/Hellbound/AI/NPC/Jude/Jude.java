@@ -26,7 +26,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Jude AI.
  * @author DS
  */
-public final class Jude extends AbstractNpcAI
+public class Jude extends AbstractNpcAI
 {
 	// NPCs
 	private static final int JUDE = 32356;
@@ -41,7 +41,7 @@ public final class Jude extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ("TreasureSacks".equalsIgnoreCase(event))
 		{
@@ -60,7 +60,7 @@ public final class Jude extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		switch (HellboundEngine.getInstance().getLevel())
 		{

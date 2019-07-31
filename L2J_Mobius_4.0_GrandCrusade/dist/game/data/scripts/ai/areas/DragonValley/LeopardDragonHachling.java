@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Leopard Dragon Hachling AI.
  * @author Mobius
  */
-public final class LeopardDragonHachling extends AbstractNpcAI
+public class LeopardDragonHachling extends AbstractNpcAI
 {
 	// NPCs
 	private static final int DRAGON_HACHLING = 23434;

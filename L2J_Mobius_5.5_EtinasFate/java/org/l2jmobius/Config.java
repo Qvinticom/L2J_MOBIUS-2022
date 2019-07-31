@@ -71,7 +71,7 @@ import org.l2jmobius.gameserver.util.Util;
  * The files are usually located in config folder in server root folder.<br>
  * Each configuration has a default value (that should reflect retail behavior).
  */
-public final class Config
+public class Config
 {
 	private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
 	

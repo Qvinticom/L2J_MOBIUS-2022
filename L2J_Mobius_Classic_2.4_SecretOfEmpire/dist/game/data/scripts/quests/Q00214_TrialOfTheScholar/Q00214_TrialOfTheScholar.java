@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial Of The Scholar (214)
  * @author ivantotov
  */
-public final class Q00214_TrialOfTheScholar extends Quest
+public class Q00214_TrialOfTheScholar extends Quest
 {
 	// NPCs
 	private static final int HIGH_PRIEST_SYLVAIN = 30070;

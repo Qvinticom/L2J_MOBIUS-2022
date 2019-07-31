@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestReplySurrenderPledgeWar extends GameClientPacket
+public class RequestReplySurrenderPledgeWar extends GameClientPacket
 {
 	private int _answer;
 	

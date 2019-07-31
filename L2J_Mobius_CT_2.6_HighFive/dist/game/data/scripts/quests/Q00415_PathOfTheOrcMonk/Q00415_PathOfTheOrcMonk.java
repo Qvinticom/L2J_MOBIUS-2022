@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Orc Monk (415)
  * @author ivantotov
  */
-public final class Q00415_PathOfTheOrcMonk extends Quest
+public class Q00415_PathOfTheOrcMonk extends Quest
 {
 	// NPCs
 	private static final int PREFECT_KASMAN = 30501;

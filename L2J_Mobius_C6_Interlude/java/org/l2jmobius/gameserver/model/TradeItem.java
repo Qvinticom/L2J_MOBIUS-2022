@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class TradeItem
+public class TradeItem
 {
 	private int _objectId;
 	private int _itemId;

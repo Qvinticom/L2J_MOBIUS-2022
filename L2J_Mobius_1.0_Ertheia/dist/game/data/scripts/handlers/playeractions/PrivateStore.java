@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
  * Open/Close private store player action handler.
  * @author Nik
  */
-public final class PrivateStore implements IPlayerActionHandler
+public class PrivateStore implements IPlayerActionHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(PrivateStore.class.getName());
 	

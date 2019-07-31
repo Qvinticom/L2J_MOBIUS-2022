@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * An Impending Threat (10445)
  * @author St3eT
  */
-public final class Q10445_AnImpendingThreat extends Quest
+public class Q10445_AnImpendingThreat extends Quest
 {
 	// NPCs
 	private static final int MATHIAS = 31340;

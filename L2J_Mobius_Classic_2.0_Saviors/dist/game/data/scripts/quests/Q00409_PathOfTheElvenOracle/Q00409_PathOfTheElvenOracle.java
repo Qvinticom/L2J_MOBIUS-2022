@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path of the Elven Oracle (409)
  * @author ivantotov
  */
-public final class Q00409_PathOfTheElvenOracle extends Quest
+public class Q00409_PathOfTheElvenOracle extends Quest
 {
 	// NPCs
 	private static final int PRIEST_MANUEL = 30293;

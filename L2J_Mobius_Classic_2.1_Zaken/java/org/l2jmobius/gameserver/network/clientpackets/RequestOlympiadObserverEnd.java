@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * format ch c: (id) 0xD0 h: (subid) 0x12
  * @author -Wooden-
  */
-public final class RequestOlympiadObserverEnd implements IClientIncomingPacket
+public class RequestOlympiadObserverEnd implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

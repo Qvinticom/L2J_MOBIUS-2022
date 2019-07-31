@@ -29,7 +29,7 @@ import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
  * To the Ruins of Ye Sagira (10330)
  * @author Gladicek
  */
-public final class Q10330_ToTheRuinsOfYeSagira extends Quest
+public class Q10330_ToTheRuinsOfYeSagira extends Quest
 {
 	// NPCs
 	private static final int FRANCO = 32153; // Human

@@ -42,7 +42,7 @@ import instances.AbstractInstance;
  * Teredor Warzone instance zone.
  * @author St3eT
  */
-public final class TeredorWarzone extends AbstractInstance
+public class TeredorWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int FILAUR = 30535;

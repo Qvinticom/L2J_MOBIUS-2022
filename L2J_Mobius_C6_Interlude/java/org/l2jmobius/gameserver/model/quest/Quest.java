@@ -535,7 +535,7 @@ public class Quest extends ManagedScript
 	}
 	
 	// these are methods to call from java
-	public final boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		String res = null;
 		
@@ -551,7 +551,7 @@ public class Quest extends ManagedScript
 		return showResult(attacker, res);
 	}
 	
-	public final boolean notifyDeath(Creature killer, Creature victim, QuestState qs)
+	public boolean notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
 		
@@ -567,7 +567,7 @@ public class Quest extends ManagedScript
 		return showResult(qs.getPlayer(), res);
 	}
 	
-	public final boolean notifyEvent(String event, NpcInstance npc, PlayerInstance player)
+	public boolean notifyEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
 		
@@ -583,7 +583,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifyKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public boolean notifyKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		String res = null;
 		
@@ -599,7 +599,7 @@ public class Quest extends ManagedScript
 		return showResult(killer, res);
 	}
 	
-	public final boolean notifyTalk(NpcInstance npc, QuestState qs)
+	public boolean notifyTalk(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
 		
@@ -618,7 +618,7 @@ public class Quest extends ManagedScript
 	}
 	
 	// override the default NPC dialogs when a quest defines this for the given NPC
-	public final boolean notifyFirstTalk(NpcInstance npc, PlayerInstance player)
+	public boolean notifyFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
 		
@@ -644,7 +644,7 @@ public class Quest extends ManagedScript
 		return true;
 	}
 	
-	public final boolean notifySkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public boolean notifySkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		String res = null;
 		
@@ -660,7 +660,7 @@ public class Quest extends ManagedScript
 		return showResult(caster, res);
 	}
 	
-	public final boolean notifySpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public boolean notifySpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		String res = null;
 		try
@@ -674,7 +674,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifyFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
+	public boolean notifyFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
 	{
 		String res = null;
 		try
@@ -688,7 +688,7 @@ public class Quest extends ManagedScript
 		return showResult(attacker, res);
 	}
 	
-	public final boolean notifyAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public boolean notifyAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		String res = null;
 		
@@ -703,7 +703,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifySpawn(NpcInstance npc)
+	public boolean notifySpawn(NpcInstance npc)
 	{
 		String res = null;
 		
@@ -1188,7 +1188,7 @@ public class Quest extends ManagedScript
 	 * @param var : String designating the name of the variable for the quest
 	 * @param value : String designating the value of the variable for the quest
 	 */
-	public final void saveGlobalQuestVar(String var, String value)
+	public void saveGlobalQuestVar(String var, String value)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -1212,7 +1212,7 @@ public class Quest extends ManagedScript
 	 * @param var : String designating the name of the variable for the quest
 	 * @return String : String representing the loaded value for the passed var, or an empty string if the var was invalid
 	 */
-	public final String loadGlobalQuestVar(String var)
+	public String loadGlobalQuestVar(String var)
 	{
 		String result = "";
 		try (Connection con = DatabaseFactory.getConnection())
@@ -1242,7 +1242,7 @@ public class Quest extends ManagedScript
 	 * Permanently delete from the database a global quest variable that was previously saved for this quest.
 	 * @param var : String designating the name of the variable for the quest
 	 */
-	public final void deleteGlobalQuestVar(String var)
+	public void deleteGlobalQuestVar(String var)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -1262,7 +1262,7 @@ public class Quest extends ManagedScript
 	/**
 	 * Permanently delete from the database all global quest variables that was previously saved for this quest.
 	 */
-	public final void deleteAllGlobalQuestVars()
+	public void deleteAllGlobalQuestVars()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

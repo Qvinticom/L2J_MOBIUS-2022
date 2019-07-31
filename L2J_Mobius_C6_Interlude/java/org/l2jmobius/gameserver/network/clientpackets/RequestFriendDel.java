@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestFriendDel extends GameClientPacket
+public class RequestFriendDel extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestFriendDel.class.getName());
 	

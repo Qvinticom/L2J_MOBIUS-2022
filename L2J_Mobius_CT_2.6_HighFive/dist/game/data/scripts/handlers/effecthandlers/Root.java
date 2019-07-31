@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Root effect implementation.
  * @author mkizub
  */
-public final class Root extends AbstractEffect
+public class Root extends AbstractEffect
 {
 	public Root(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

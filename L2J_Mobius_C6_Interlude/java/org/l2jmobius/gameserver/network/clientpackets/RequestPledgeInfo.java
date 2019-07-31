@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 
-public final class RequestPledgeInfo extends GameClientPacket
+public class RequestPledgeInfo extends GameClientPacket
 {
 	private int clanId;
 	

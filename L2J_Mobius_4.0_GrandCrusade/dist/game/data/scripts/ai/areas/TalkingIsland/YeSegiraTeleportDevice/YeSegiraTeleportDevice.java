@@ -40,7 +40,7 @@ import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
  * Ye Segira Teleport Device AI.
  * @author St3eT
  */
-public final class YeSegiraTeleportDevice extends AbstractNpcAI
+public class YeSegiraTeleportDevice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] TELEPORT_DEVICES =

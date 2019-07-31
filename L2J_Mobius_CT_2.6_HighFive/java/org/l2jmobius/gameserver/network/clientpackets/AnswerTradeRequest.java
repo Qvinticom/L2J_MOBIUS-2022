@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeDone;
 /**
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AnswerTradeRequest implements IClientIncomingPacket
+public class AnswerTradeRequest implements IClientIncomingPacket
 {
 	private int _response;
 	

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower extends GameClientPacket
+public class RequestPledgePower extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(ManagePledgePower.class.getName());
 	private int _rank;

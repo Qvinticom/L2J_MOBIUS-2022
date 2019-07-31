@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/29 23:15:16 $
  */
-public final class SendWareHouseWithDrawList implements IClientIncomingPacket
+public class SendWareHouseWithDrawList implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	

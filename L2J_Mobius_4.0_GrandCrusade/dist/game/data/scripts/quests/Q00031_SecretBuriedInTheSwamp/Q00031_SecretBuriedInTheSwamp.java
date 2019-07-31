@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Secret Buried in the Swamp (31)
  * @author janiko
  */
-public final class Q00031_SecretBuriedInTheSwamp extends Quest
+public class Q00031_SecretBuriedInTheSwamp extends Quest
 {
 	// NPCs
 	private static final int ABERCROMBIE = 31555;

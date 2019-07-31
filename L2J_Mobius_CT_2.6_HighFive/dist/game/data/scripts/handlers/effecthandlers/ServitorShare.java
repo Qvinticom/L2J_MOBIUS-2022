@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
  * @author UnAfraid, Zoey76
  */
-public final class ServitorShare extends AbstractEffect
+public class ServitorShare extends AbstractEffect
 {
 	private static final class ScheduledEffectExitTask implements Runnable
 	{

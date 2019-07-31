@@ -712,42 +712,42 @@ public abstract class Skill
 	/**
 	 * @return true if character should attack target after skill
 	 */
-	public final boolean nextActionIsAttack()
+	public boolean nextActionIsAttack()
 	{
 		return _nextActionIsAttack;
 	}
 	
-	public final boolean isPotion()
+	public boolean isPotion()
 	{
 		return _ispotion;
 	}
 	
-	public final int getArmorsAllowed()
+	public int getArmorsAllowed()
 	{
 		return _armorsAllowed;
 	}
 	
-	public final int getConditionValue()
+	public int getConditionValue()
 	{
 		return _conditionValue;
 	}
 	
-	public final SkillType getSkillType()
+	public SkillType getSkillType()
 	{
 		return _skillType;
 	}
 	
-	public final boolean hasEffectWhileCasting()
+	public boolean hasEffectWhileCasting()
 	{
 		return _skillType == SkillType.SIGNET_CASTTIME;
 	}
 	
-	public final BaseStats getSavevs()
+	public BaseStats getSavevs()
 	{
 		return _saveVs;
 	}
 	
-	public final int getElement()
+	public int getElement()
 	{
 		return _element;
 	}
@@ -755,22 +755,22 @@ public abstract class Skill
 	/**
 	 * @return the target type of the skill : SELF, PARTY, CLAN, PET...
 	 */
-	public final SkillTargetType getTargetType()
+	public SkillTargetType getTargetType()
 	{
 		return _targetType;
 	}
 	
-	public final int getCondition()
+	public int getCondition()
 	{
 		return _condition;
 	}
 	
-	public final boolean isOverhit()
+	public boolean isOverhit()
 	{
 		return _overhit;
 	}
 	
-	public final boolean isSuicideAttack()
+	public boolean isSuicideAttack()
 	{
 		return _isSuicideAttack;
 	}
@@ -779,7 +779,7 @@ public abstract class Skill
 	 * @param creature
 	 * @return the power of the skill.
 	 */
-	public final double getPower(Creature creature)
+	public double getPower(Creature creature)
 	{
 		if ((_skillType == SkillType.FATALCOUNTER) && (creature != null))
 		{
@@ -788,37 +788,37 @@ public abstract class Skill
 		return _power;
 	}
 	
-	public final double getPower()
+	public double getPower()
 	{
 		return _power;
 	}
 	
-	public final int getEffectPoints()
+	public int getEffectPoints()
 	{
 		return _effectPoints;
 	}
 	
-	public final String[] getNegateSkillTypes()
+	public String[] getNegateSkillTypes()
 	{
 		return _negateSkillTypes;
 	}
 	
-	public final String[] getNegateEffectTypes()
+	public String[] getNegateEffectTypes()
 	{
 		return _negateEffectTypes;
 	}
 	
-	public final float getNegatePower()
+	public float getNegatePower()
 	{
 		return _negatePower;
 	}
 	
-	public final int getNegateId()
+	public int getNegateId()
 	{
 		return _negateId;
 	}
 	
-	public final int getMagicLevel()
+	public int getMagicLevel()
 	{
 		return _magicLevel;
 	}
@@ -826,7 +826,7 @@ public abstract class Skill
 	/**
 	 * @return Returns true to set static reuse.
 	 */
-	public final boolean isStaticReuse()
+	public boolean isStaticReuse()
 	{
 		return _staticReuse;
 	}
@@ -834,12 +834,12 @@ public abstract class Skill
 	/**
 	 * @return Returns true to set static hittime.
 	 */
-	public final boolean isStaticHitTime()
+	public boolean isStaticHitTime()
 	{
 		return _staticHitTime;
 	}
 	
-	public final int getLevelDepend()
+	public int getLevelDepend()
 	{
 		return _levelDepend;
 	}
@@ -847,7 +847,7 @@ public abstract class Skill
 	/**
 	 * @return the additional effect power or base probability.
 	 */
-	public final int getEffectPower()
+	public int getEffectPower()
 	{
 		return _effectPower;
 	}
@@ -855,7 +855,7 @@ public abstract class Skill
 	/**
 	 * @return the additional effect Id.
 	 */
-	public final int getEffectId()
+	public int getEffectId()
 	{
 		return _effectId;
 	}
@@ -863,7 +863,7 @@ public abstract class Skill
 	/**
 	 * @return the additional effect level.
 	 */
-	public final int getEffectLvl()
+	public int getEffectLvl()
 	{
 		return _effectLvl;
 	}
@@ -871,7 +871,7 @@ public abstract class Skill
 	/**
 	 * @return the additional effect skill type (ex : STUN, PARALYZE,...).
 	 */
-	public final SkillType getEffectType()
+	public SkillType getEffectType()
 	{
 		return _effectType;
 	}
@@ -879,7 +879,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the buffDuration.
 	 */
-	public final int getBuffDuration()
+	public int getBuffDuration()
 	{
 		return _buffDuration;
 	}
@@ -887,7 +887,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the castRange.
 	 */
-	public final int getCastRange()
+	public int getCastRange()
 	{
 		return _castRange;
 	}
@@ -895,7 +895,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the effectRange.
 	 */
-	public final int getEffectRange()
+	public int getEffectRange()
 	{
 		return _effectRange;
 	}
@@ -903,7 +903,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the hpConsume.
 	 */
-	public final int getHpConsume()
+	public int getHpConsume()
 	{
 		return _hpConsume;
 	}
@@ -911,7 +911,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the id.
 	 */
-	public final int getId()
+	public int getId()
 	{
 		return _id;
 	}
@@ -939,7 +939,7 @@ public abstract class Skill
 	/**
 	 * @return the skill type (ex : BLEED, SLEEP, WATER...).
 	 */
-	public final Stats getStat()
+	public Stats getStat()
 	{
 		return _stat;
 	}
@@ -947,7 +947,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume.
 	 */
-	public final int getItemConsume()
+	public int getItemConsume()
 	{
 		return _itemConsume;
 	}
@@ -955,7 +955,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsumeId.
 	 */
-	public final int getItemConsumeId()
+	public int getItemConsumeId()
 	{
 		return _itemConsumeId;
 	}
@@ -963,7 +963,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume count over time.
 	 */
-	public final int getItemConsumeOT()
+	public int getItemConsumeOT()
 	{
 		return _itemConsumeOT;
 	}
@@ -971,7 +971,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsumeId over time.
 	 */
-	public final int getItemConsumeIdOT()
+	public int getItemConsumeIdOT()
 	{
 		return _itemConsumeIdOT;
 	}
@@ -979,7 +979,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume count over time.
 	 */
-	public final int getItemConsumeSteps()
+	public int getItemConsumeSteps()
 	{
 		return _itemConsumeSteps;
 	}
@@ -987,7 +987,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume count over time.
 	 */
-	public final int getTotalLifeTime()
+	public int getTotalLifeTime()
 	{
 		return _summonTotalLifeTime;
 	}
@@ -995,7 +995,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume count over time.
 	 */
-	public final int getTimeLostIdle()
+	public int getTimeLostIdle()
 	{
 		return _summonTimeLostIdle;
 	}
@@ -1003,7 +1003,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsumeId over time.
 	 */
-	public final int getTimeLostActive()
+	public int getTimeLostActive()
 	{
 		return _summonTimeLostActive;
 	}
@@ -1011,7 +1011,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the itemConsume time in milliseconds.
 	 */
-	public final int getItemConsumeTime()
+	public int getItemConsumeTime()
 	{
 		return _itemConsumeTime;
 	}
@@ -1019,7 +1019,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the level.
 	 */
-	public final int getLevel()
+	public int getLevel()
 	{
 		return _level;
 	}
@@ -1027,7 +1027,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the magic.
 	 */
-	public final boolean isMagic()
+	public boolean isMagic()
 	{
 		return _magic;
 	}
@@ -1035,7 +1035,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the mpConsume.
 	 */
-	public final int getMpConsume()
+	public int getMpConsume()
 	{
 		return _mpConsume;
 	}
@@ -1043,7 +1043,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the mpInitialConsume.
 	 */
-	public final int getMpInitialConsume()
+	public int getMpInitialConsume()
 	{
 		return _mpInitialConsume;
 	}
@@ -1051,7 +1051,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the name.
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
@@ -1059,18 +1059,18 @@ public abstract class Skill
 	/**
 	 * @return Returns the reuseDelay.
 	 */
-	public final int getReuseDelay()
+	public int getReuseDelay()
 	{
 		return _reuseDelay;
 	}
 	
 	@Deprecated
-	public final int getSkillTime()
+	public int getSkillTime()
 	{
 		return _hitTime;
 	}
 	
-	public final int getHitTime()
+	public int getHitTime()
 	{
 		return _hitTime;
 	}
@@ -1078,32 +1078,32 @@ public abstract class Skill
 	/**
 	 * @return Returns the coolTime.
 	 */
-	public final int getCoolTime()
+	public int getCoolTime()
 	{
 		return _coolTime;
 	}
 	
-	public final int getSkillRadius()
+	public int getSkillRadius()
 	{
 		return _skillRadius;
 	}
 	
-	public final boolean isActive()
+	public boolean isActive()
 	{
 		return _operateType == SkillOpType.OP_ACTIVE;
 	}
 	
-	public final boolean isPassive()
+	public boolean isPassive()
 	{
 		return _operateType == SkillOpType.OP_PASSIVE;
 	}
 	
-	public final boolean isToggle()
+	public boolean isToggle()
 	{
 		return _operateType == SkillOpType.OP_TOGGLE;
 	}
 	
-	public final boolean isChance()
+	public boolean isChance()
 	{
 		return _operateType == SkillOpType.OP_CHANCE;
 	}
@@ -1113,77 +1113,77 @@ public abstract class Skill
 		return _chanceCondition;
 	}
 	
-	public final boolean isDance()
+	public boolean isDance()
 	{
 		return _isDance;
 	}
 	
-	public final int getNextDanceMpCost()
+	public int getNextDanceMpCost()
 	{
 		return _nextDanceCost;
 	}
 	
-	public final float getSSBoost()
+	public float getSSBoost()
 	{
 		return _sSBoost;
 	}
 	
-	public final int getAggroPoints()
+	public int getAggroPoints()
 	{
 		return _aggroPoints;
 	}
 	
-	public final float getPvpMulti()
+	public float getPvpMulti()
 	{
 		return _pvpMulti;
 	}
 	
-	public final boolean useSoulShot()
+	public boolean useSoulShot()
 	{
 		return (_skillType == SkillType.PDAM) || (_skillType == SkillType.STUN) || (_skillType == SkillType.CHARGEDAM) || (_skillType == SkillType.BLOW);
 	}
 	
-	public final boolean useSpiritShot()
+	public boolean useSpiritShot()
 	{
 		return _magic;
 	}
 	
-	public final boolean useFishShot()
+	public boolean useFishShot()
 	{
 		return (_skillType == SkillType.PUMPING) || (_skillType == SkillType.REELING);
 	}
 	
-	public final int getWeaponsAllowed()
+	public int getWeaponsAllowed()
 	{
 		return _weaponsAllowed;
 	}
 	
-	public final int getCrossLearnAdd()
+	public int getCrossLearnAdd()
 	{
 		return _addCrossLearn;
 	}
 	
-	public final float getCrossLearnMul()
+	public float getCrossLearnMul()
 	{
 		return _mulCrossLearn;
 	}
 	
-	public final float getCrossLearnRace()
+	public float getCrossLearnRace()
 	{
 		return _mulCrossLearnRace;
 	}
 	
-	public final float getCrossLearnProf()
+	public float getCrossLearnProf()
 	{
 		return _mulCrossLearnProf;
 	}
 	
-	public final boolean getCanLearn(ClassId cls)
+	public boolean getCanLearn(ClassId cls)
 	{
 		return (_canLearn == null) || _canLearn.contains(cls);
 	}
 	
-	public final boolean canTeachBy(int npcId)
+	public boolean canTeachBy(int npcId)
 	{
 		return (_teachers == null) || _teachers.contains(npcId);
 	}
@@ -1193,7 +1193,7 @@ public abstract class Skill
 		return _minPledgeClass;
 	}
 	
-	public final boolean isPvpSkill()
+	public boolean isPvpSkill()
 	{
 		switch (_skillType)
 		{
@@ -1231,37 +1231,37 @@ public abstract class Skill
 		}
 	}
 	
-	public final boolean isOffensive()
+	public boolean isOffensive()
 	{
 		return _isOffensive;
 	}
 	
-	public final boolean isHeroSkill()
+	public boolean isHeroSkill()
 	{
 		return _isHeroSkill;
 	}
 	
-	public final int getNumCharges()
+	public int getNumCharges()
 	{
 		return _numCharges;
 	}
 	
-	public final int getBaseCritRate()
+	public int getBaseCritRate()
 	{
 		return _baseCritRate;
 	}
 	
-	public final int getLethalChance1()
+	public int getLethalChance1()
 	{
 		return _lethalEffect1;
 	}
 	
-	public final int getLethalChance2()
+	public int getLethalChance2()
 	{
 		return _lethalEffect2;
 	}
 	
-	public final boolean getDmgDirectlyToHP()
+	public boolean getDmgDirectlyToHP()
 	{
 		return _directHpDmg;
 	}
@@ -1276,7 +1276,7 @@ public abstract class Skill
 		return _triggeredId > 1;
 	}
 	
-	public final boolean isSkillTypeOffensive()
+	public boolean isSkillTypeOffensive()
 	{
 		switch (_skillType)
 		{
@@ -1333,7 +1333,7 @@ public abstract class Skill
 		}
 	}
 	
-	public final boolean getWeaponDependancy(Creature creature)
+	public boolean getWeaponDependancy(Creature creature)
 	{
 		if (getWeaponDependancy(creature, false))
 		{
@@ -1346,7 +1346,7 @@ public abstract class Skill
 		return false;
 	}
 	
-	public final boolean getWeaponDependancy(Creature creature, boolean chance)
+	public boolean getWeaponDependancy(Creature creature, boolean chance)
 	{
 		final int weaponsAllowed = _weaponsAllowed;
 		// check to see if skill has a weapon dependency.
@@ -1411,7 +1411,7 @@ public abstract class Skill
 		return true;
 	}
 	
-	public final WorldObject[] getTargetList(Creature creature, boolean onlyFirst)
+	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst)
 	{
 		// Init to null the target of the skill
 		Creature target = null;
@@ -1449,7 +1449,7 @@ public abstract class Skill
 	 * @param target
 	 * @return
 	 */
-	public final WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature target)
+	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature target)
 	{
 		if (creature instanceof PlayerInstance)
 		{ // to avoid attacks during oly start period
@@ -2828,12 +2828,12 @@ public abstract class Skill
 		}// end switch
 	}
 	
-	public final WorldObject[] getTargetList(Creature creature)
+	public WorldObject[] getTargetList(Creature creature)
 	{
 		return getTargetList(creature, false);
 	}
 	
-	public final WorldObject getFirstOfTargetList(Creature creature)
+	public WorldObject getFirstOfTargetList(Creature creature)
 	{
 		WorldObject[] targets;
 		
@@ -2845,7 +2845,7 @@ public abstract class Skill
 		return targets[0];
 	}
 	
-	public final Func[] getStatFuncs(Effect effect, Creature creature)
+	public Func[] getStatFuncs(Effect effect, Creature creature)
 	{
 		if (!(creature instanceof PlayerInstance) && !(creature instanceof Attackable) && !(creature instanceof Summon))
 		{
@@ -2884,12 +2884,12 @@ public abstract class Skill
 		return (_effectTemplates != null) && (_effectTemplates.length > 0);
 	}
 	
-	public final Effect[] getEffects(Creature effector, Creature effected)
+	public Effect[] getEffects(Creature effector, Creature effected)
 	{
 		return getEffects(effector, effected, false, false, false);
 	}
 	
-	public final Effect[] getEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
+	public Effect[] getEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
 	{
 		if (isPassive())
 		{
@@ -2953,7 +2953,7 @@ public abstract class Skill
 		return effects.toArray(new Effect[effects.size()]);
 	}
 	
-	public final Effect[] getEffectsSelf(Creature effector)
+	public Effect[] getEffectsSelf(Creature effector)
 	{
 		if (isPassive())
 		{
@@ -3017,7 +3017,7 @@ public abstract class Skill
 		return effects.toArray(new Effect[effects.size()]);
 	}
 	
-	public final void attach(FuncTemplate f)
+	public void attach(FuncTemplate f)
 	{
 		if (_funcTemplates == null)
 		{
@@ -3036,7 +3036,7 @@ public abstract class Skill
 		}
 	}
 	
-	public final void attach(EffectTemplate effect)
+	public void attach(EffectTemplate effect)
 	{
 		if (_effectTemplates == null)
 		{
@@ -3055,7 +3055,7 @@ public abstract class Skill
 		}
 	}
 	
-	public final void attachSelf(EffectTemplate effect)
+	public void attachSelf(EffectTemplate effect)
 	{
 		if (_effectTemplatesSelf == null)
 		{
@@ -3097,7 +3097,7 @@ public abstract class Skill
 		return false;
 	}
 	
-	public final void attach(Condition c, boolean itemOrWeapon)
+	public void attach(Condition c, boolean itemOrWeapon)
 	{
 		if (itemOrWeapon)
 		{
@@ -3161,7 +3161,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the _targetConsumeId.
 	 */
-	public final int getTargetConsumeId()
+	public int getTargetConsumeId()
 	{
 		return _targetConsumeId;
 	}
@@ -3169,7 +3169,7 @@ public abstract class Skill
 	/**
 	 * @return Returns the targetConsume.
 	 */
-	public final int getTargetConsume()
+	public int getTargetConsume()
 	{
 		return _targetConsume;
 	}
@@ -3182,7 +3182,7 @@ public abstract class Skill
 	/**
 	 * @return minimum skill/effect land rate (default is 1).
 	 */
-	public final int getMinChance()
+	public int getMinChance()
 	{
 		return _minChance;
 	}
@@ -3190,7 +3190,7 @@ public abstract class Skill
 	/**
 	 * @return maximum skill/effect land rate (default is 99).
 	 */
-	public final int getMaxChance()
+	public int getMaxChance()
 	{
 		return _maxChance;
 	}

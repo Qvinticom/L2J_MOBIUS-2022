@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.interfaces.ILocational;
  * Holds depending between NPCs spawn point and route
  * @author GKR
  */
-public final class NpcRoutesHolder
+public class NpcRoutesHolder
 {
 	private final Map<String, String> _correspondences;
 	

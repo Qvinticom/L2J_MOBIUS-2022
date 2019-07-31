@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Stolen Dignity (386)
  * @author Zealar / Stayway (Rework Helios)
  */
-public final class Q00386_StolenDignity extends Quest
+public class Q00386_StolenDignity extends Quest
 {
 	// NPCs
 	private static final int WAREHOUSE_KEEPER_ROMP = 30843;

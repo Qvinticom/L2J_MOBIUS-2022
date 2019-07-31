@@ -62,7 +62,7 @@ import instances.AbstractInstance;
  * Memory Of Disaster instance zone.
  * @author Sdw
  */
-public final class MemoryOfDisaster extends AbstractInstance
+public class MemoryOfDisaster extends AbstractInstance
 {
 	// NPCs
 	private static final int INVISIBLE_NPC = 18919;

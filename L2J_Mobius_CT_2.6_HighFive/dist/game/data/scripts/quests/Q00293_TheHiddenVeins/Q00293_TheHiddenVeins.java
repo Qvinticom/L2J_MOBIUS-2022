@@ -30,7 +30,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * The Hidden Veins (293)
  * @author xban1x
  */
-public final class Q00293_TheHiddenVeins extends Quest
+public class Q00293_TheHiddenVeins extends Quest
 {
 	// NPCs
 	private static final int FILAUR = 30535;

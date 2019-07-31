@@ -129,7 +129,7 @@ public class ArenaZone extends ZoneType
 		}
 	}
 	
-	public final int[] getSpawnLoc()
+	public int[] getSpawnLoc()
 	{
 		return _spawnLoc;
 	}

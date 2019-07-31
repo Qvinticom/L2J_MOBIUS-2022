@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Clan Hall Door Manager AI.
  * @author St3eT
  */
-public final class ClanHallDoorManager extends AbstractNpcAI
+public class ClanHallDoorManager extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

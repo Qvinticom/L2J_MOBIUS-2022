@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAnswerJoinPledge extends GameClientPacket
+public class RequestAnswerJoinPledge extends GameClientPacket
 {
 	private int _answer;
 	

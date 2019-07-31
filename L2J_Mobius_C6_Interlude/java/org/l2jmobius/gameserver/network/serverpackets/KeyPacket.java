@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class KeyPacket extends GameServerPacket
+public class KeyPacket extends GameServerPacket
 {
 	private final byte[] _key;
 	

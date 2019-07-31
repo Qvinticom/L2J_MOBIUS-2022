@@ -62,7 +62,7 @@ import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroaching
  * Raina AI.
  * @author St3eT
  */
-public final class Raina extends AbstractNpcAI
+public class Raina extends AbstractNpcAI
 {
 	// NPC
 	private static final int RAINA = 33491;
@@ -469,7 +469,7 @@ public final class Raina extends AbstractNpcAI
 	@RegisterEvent(EventType.ON_NPC_MENU_SELECT)
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id(RAINA)
-	public final void OnNpcMenuSelect(OnNpcMenuSelect event)
+	public void OnNpcMenuSelect(OnNpcMenuSelect event)
 	{
 		final PlayerInstance player = event.getTalker();
 		final Npc npc = event.getNpc();
@@ -796,7 +796,7 @@ public final class Raina extends AbstractNpcAI
 		return leveled;
 	}
 	
-	public final List<PlayerClass> getAvailableDualclasses(PlayerInstance player)
+	public List<PlayerClass> getAvailableDualclasses(PlayerInstance player)
 	{
 		final List<PlayerClass> dualClasses = new ArrayList<>();
 		
@@ -826,7 +826,7 @@ public final class Raina extends AbstractNpcAI
 		return tempList;
 	}
 	
-	public final Set<PlayerClass> getSubclasses(PlayerInstance player, int classId)
+	public Set<PlayerClass> getSubclasses(PlayerInstance player, int classId)
 	{
 		Set<PlayerClass> subclasses = null;
 		final PlayerClass pClass = PlayerClass.values()[classId];

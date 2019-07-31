@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Magical Attack By Abnormal effect implementation.
  * @author Adry_85
  */
-public final class MagicalAttackByAbnormal extends AbstractEffect
+public class MagicalAttackByAbnormal extends AbstractEffect
 {
 	private final double _power;
 	

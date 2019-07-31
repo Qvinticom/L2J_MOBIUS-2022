@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 /**
  * @author Mobius
  */
-public final class AirBind extends AbstractEffect
+public class AirBind extends AbstractEffect
 {
 	// skill data
 	private static final Map<ClassId, Integer> _chainedAirSkills = new HashMap<>(36);

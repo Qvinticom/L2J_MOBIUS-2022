@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestDismissAlly extends GameClientPacket
+public class RequestDismissAlly extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

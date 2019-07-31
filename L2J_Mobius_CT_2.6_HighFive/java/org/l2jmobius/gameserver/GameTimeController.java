@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  * Game Time controller class.
  * @author Forsaiken
  */
-public final class GameTimeController extends Thread
+public class GameTimeController extends Thread
 {
 	private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
 	
@@ -67,22 +67,22 @@ public final class GameTimeController extends Thread
 		_instance = new GameTimeController();
 	}
 	
-	public final int getGameTime()
+	public int getGameTime()
 	{
 		return (getGameTicks() % TICKS_PER_IG_DAY) / MILLIS_IN_TICK;
 	}
 	
-	public final int getGameHour()
+	public int getGameHour()
 	{
 		return getGameTime() / 60;
 	}
 	
-	public final int getGameMinute()
+	public int getGameMinute()
 	{
 		return getGameTime() % 60;
 	}
 	
-	public final boolean isNight()
+	public boolean isNight()
 	{
 		return getGameHour() < 6;
 	}
@@ -91,7 +91,7 @@ public final class GameTimeController extends Thread
 	 * The true GameTime tick. Directly taken from current time. This represents the tick of the time.
 	 * @return
 	 */
-	public final int getGameTicks()
+	public int getGameTicks()
 	{
 		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
 	}
@@ -100,7 +100,7 @@ public final class GameTimeController extends Thread
 	 * Add a Creature to movingObjects of GameTimeController.
 	 * @param creature The Creature to add to movingObjects of GameTimeController
 	 */
-	public final void registerMovingObject(Creature creature)
+	public void registerMovingObject(Creature creature)
 	{
 		if (creature == null)
 		{
@@ -129,14 +129,14 @@ public final class GameTimeController extends Thread
 		_movingObjects.removeIf(Creature::updatePosition);
 	}
 	
-	public final void stopTimer()
+	public void stopTimer()
 	{
 		super.interrupt();
 		LOGGER.info(getClass().getSimpleName() + ": Stopped.");
 	}
 	
 	@Override
-	public final void run()
+	public void run()
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Started.");
 		

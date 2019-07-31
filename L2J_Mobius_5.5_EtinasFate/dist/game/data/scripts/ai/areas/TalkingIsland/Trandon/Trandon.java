@@ -40,7 +40,7 @@ import ai.AbstractNpcAI;
  * Trandon AI.
  * @author malyelfik
  */
-public final class Trandon extends AbstractNpcAI
+public class Trandon extends AbstractNpcAI
 {
 	// NPC
 	private static final int NPC_ID = 33490;
@@ -321,7 +321,7 @@ public final class Trandon extends AbstractNpcAI
 	// TODO: Move this to char skills
 	@RegisterEvent(EventType.ON_PLAYER_SUB_CHANGE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public final void onSubChange(OnPlayerSubChange evt)
+	public void onSubChange(OnPlayerSubChange evt)
 	{
 		final PlayerInstance player = evt.getPlayer();
 		if (player.isDualClassActive() || !player.isSubClassActive())
@@ -333,7 +333,7 @@ public final class Trandon extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public final void onLogin(OnPlayerLogin evt)
+	public void onLogin(OnPlayerLogin evt)
 	{
 		final PlayerInstance player = evt.getPlayer();
 		if (player.isDualClassActive() || !player.isSubClassActive())

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Suspicious Badge (10398)
  * @author St3eT
  */
-public final class Q10398_ASuspiciousBadge extends Quest
+public class Q10398_ASuspiciousBadge extends Quest
 {
 	// NPCs
 	private static final int ANDY = 33845;

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Gnacik
  */
-public final class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacket
+public class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

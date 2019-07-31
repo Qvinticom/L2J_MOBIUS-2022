@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Legacy Of Insolence (372)
  * @author ivantotov
  */
-public final class Q00372_LegacyOfInsolence extends Quest
+public class Q00372_LegacyOfInsolence extends Quest
 {
 	// NPCs
 	private static final int TRADER_HOLLY = 30839;

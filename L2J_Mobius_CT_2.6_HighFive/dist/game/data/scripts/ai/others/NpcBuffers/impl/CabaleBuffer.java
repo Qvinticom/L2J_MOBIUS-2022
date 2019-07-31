@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Preacher of Doom and Orator of Revelations AI
  * @author UnAfraid, malyelfik
  */
-public final class CabaleBuffer extends AbstractNpcAI
+public class CabaleBuffer extends AbstractNpcAI
 {
 	private static final int DISTANCE_TO_WATCH_OBJECT = 900;
 	

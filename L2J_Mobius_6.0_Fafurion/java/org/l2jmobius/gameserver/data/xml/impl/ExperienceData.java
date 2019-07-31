@@ -32,7 +32,7 @@ import org.l2jmobius.commons.util.IXmlReader;
  * This class holds the Experience points for each level for players and pets.
  * @author mrTJO
  */
-public final class ExperienceData implements IXmlReader
+public class ExperienceData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
 	

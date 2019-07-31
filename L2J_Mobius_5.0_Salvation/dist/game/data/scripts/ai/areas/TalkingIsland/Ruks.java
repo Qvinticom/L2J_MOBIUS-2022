@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Ruks AI.
  * @author St3eT
  */
-public final class Ruks extends AbstractNpcAI
+public class Ruks extends AbstractNpcAI
 {
 	// NPC
 	private static final int RUKS = 33207;

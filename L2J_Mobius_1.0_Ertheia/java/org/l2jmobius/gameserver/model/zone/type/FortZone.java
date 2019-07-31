@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
  * A castle zone
  * @author durgus
  */
-public final class FortZone extends ResidenceZone
+public class FortZone extends ResidenceZone
 {
 	public FortZone(int id)
 	{

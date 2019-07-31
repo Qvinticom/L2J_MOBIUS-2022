@@ -55,7 +55,7 @@ public class Attack extends GameServerPacket
 	}
 	
 	protected final int _attackerObjId;
-	public final boolean soulshot;
+	public boolean soulshot;
 	protected int _grade;
 	private final int _x;
 	private final int _y;

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Sow effect implementation.
  * @author Adry_85, l3x
  */
-public final class Sow extends AbstractEffect
+public class Sow extends AbstractEffect
 {
 	public Sow(StatsSet params)
 	{

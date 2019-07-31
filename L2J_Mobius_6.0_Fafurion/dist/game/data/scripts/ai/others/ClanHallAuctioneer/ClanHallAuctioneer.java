@@ -51,7 +51,7 @@ import ai.AbstractNpcAI;
  * Clan Hall Auctioneer AI.
  * @author Sdw
  */
-public final class ClanHallAuctioneer extends AbstractNpcAI
+public class ClanHallAuctioneer extends AbstractNpcAI
 {
 	// NPC
 	private static final int AUCTIONEER = 30767; // Auctioneer

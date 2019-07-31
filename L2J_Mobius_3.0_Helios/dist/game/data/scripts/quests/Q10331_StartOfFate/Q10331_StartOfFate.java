@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
  * @URL https://l2wiki.com/Start_of_Fate
  * @author Gladicek, Gigi, Stayway
  */
-public final class Q10331_StartOfFate extends Quest
+public class Q10331_StartOfFate extends Quest
 {
 	// NPCs
 	private static final int FRANCO = 32153;

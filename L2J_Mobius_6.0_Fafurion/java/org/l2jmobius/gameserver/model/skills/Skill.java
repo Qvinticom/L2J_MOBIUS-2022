@@ -63,7 +63,7 @@ import org.l2jmobius.gameserver.model.stats.TraitType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class Skill implements IIdentifiable
+public class Skill implements IIdentifiable
 {
 	private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	
@@ -1458,7 +1458,7 @@ public final class Skill implements IIdentifiable
 	 * @param item
 	 * @param targets the targets
 	 */
-	public final void activateSkill(Creature caster, CubicInstance cubic, ItemInstance item, WorldObject... targets)
+	public void activateSkill(Creature caster, CubicInstance cubic, ItemInstance item, WorldObject... targets)
 	{
 		for (WorldObject targetObject : targets)
 		{

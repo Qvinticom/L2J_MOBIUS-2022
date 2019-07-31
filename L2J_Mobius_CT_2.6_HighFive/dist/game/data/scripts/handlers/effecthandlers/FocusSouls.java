@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Focus Souls effect implementation.
  * @author nBd, Adry_85
  */
-public final class FocusSouls extends AbstractEffect
+public class FocusSouls extends AbstractEffect
 {
 	private final int _charge;
 	

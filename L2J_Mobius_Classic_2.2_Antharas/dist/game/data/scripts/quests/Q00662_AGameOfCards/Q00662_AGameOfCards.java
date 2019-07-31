@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * A Game of Cards (662)
  * @author Zoey76
  */
-public final class Q00662_AGameOfCards extends Quest
+public class Q00662_AGameOfCards extends Quest
 {
 	// NPC
 	private static final int KLUMP = 30845;

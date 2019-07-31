@@ -237,22 +237,22 @@ public class Message
 		return stmt;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return _messageId;
 	}
 	
-	public final int getSenderId()
+	public int getSenderId()
 	{
 		return _senderId;
 	}
 	
-	public final int getReceiverId()
+	public int getReceiverId()
 	{
 		return _receiverId;
 	}
 	
-	public final String getSenderName()
+	public String getSenderName()
 	{
 		switch (_messageType)
 		{
@@ -279,7 +279,7 @@ public class Message
 		return _senderName;
 	}
 	
-	public final String getReceiverName()
+	public String getReceiverName()
 	{
 		if (_receiverName == null)
 		{
@@ -292,37 +292,37 @@ public class Message
 		return _receiverName;
 	}
 	
-	public final String getSubject()
+	public String getSubject()
 	{
 		return _subject;
 	}
 	
-	public final String getContent()
+	public String getContent()
 	{
 		return _content;
 	}
 	
-	public final boolean isLocked()
+	public boolean isLocked()
 	{
 		return _reqAdena > 0;
 	}
 	
-	public final long getExpiration()
+	public long getExpiration()
 	{
 		return _expiration;
 	}
 	
-	public final int getExpirationSeconds()
+	public int getExpirationSeconds()
 	{
 		return (int) (_expiration / 1000);
 	}
 	
-	public final boolean isUnread()
+	public boolean isUnread()
 	{
 		return _unread;
 	}
 	
-	public final void markAsRead()
+	public void markAsRead()
 	{
 		if (_unread)
 		{
@@ -331,12 +331,12 @@ public class Message
 		}
 	}
 	
-	public final boolean isDeletedBySender()
+	public boolean isDeletedBySender()
 	{
 		return _deletedBySender;
 	}
 	
-	public final void setDeletedBySender()
+	public void setDeletedBySender()
 	{
 		if (!_deletedBySender)
 		{
@@ -352,12 +352,12 @@ public class Message
 		}
 	}
 	
-	public final boolean isDeletedByReceiver()
+	public boolean isDeletedByReceiver()
 	{
 		return _deletedByReceiver;
 	}
 	
-	public final void setDeletedByReceiver()
+	public void setDeletedByReceiver()
 	{
 		if (!_deletedByReceiver)
 		{
@@ -373,27 +373,27 @@ public class Message
 		}
 	}
 	
-	public final MailType getMailType()
+	public MailType getMailType()
 	{
 		return _messageType;
 	}
 	
-	public final boolean isReturned()
+	public boolean isReturned()
 	{
 		return _returned;
 	}
 	
-	public final void setIsReturned(boolean val)
+	public void setIsReturned(boolean val)
 	{
 		_returned = val;
 	}
 	
-	public final long getReqAdena()
+	public long getReqAdena()
 	{
 		return _reqAdena;
 	}
 	
-	public final synchronized Mail getAttachments()
+	public synchronized Mail getAttachments()
 	{
 		if (!_hasAttachments)
 		{
@@ -408,7 +408,7 @@ public class Message
 		return _attachments;
 	}
 	
-	public final boolean hasAttachments()
+	public boolean hasAttachments()
 	{
 		return _hasAttachments;
 	}
@@ -428,7 +428,7 @@ public class Message
 		return _elementals;
 	}
 	
-	public final synchronized void removeAttachments()
+	public synchronized void removeAttachments()
 	{
 		if (_attachments != null)
 		{
@@ -438,7 +438,7 @@ public class Message
 		}
 	}
 	
-	public final synchronized Mail createAttachments()
+	public synchronized Mail createAttachments()
 	{
 		if (_hasAttachments || (_attachments != null))
 		{

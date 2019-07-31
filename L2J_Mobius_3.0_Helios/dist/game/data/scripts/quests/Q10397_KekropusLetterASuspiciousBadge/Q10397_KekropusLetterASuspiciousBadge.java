@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: A Suspicious Badge (10397)
  * @author St3eT
  */
-public final class Q10397_KekropusLetterASuspiciousBadge extends LetterQuest
+public class Q10397_KekropusLetterASuspiciousBadge extends LetterQuest
 {
 	// NPCs
 	private static final int MOUEN = 30196;

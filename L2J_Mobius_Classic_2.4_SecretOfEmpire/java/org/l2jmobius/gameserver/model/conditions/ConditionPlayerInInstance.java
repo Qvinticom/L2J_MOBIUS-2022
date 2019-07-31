@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerInInstance extends Condition
 {
-	public final boolean _inInstance;
+	public boolean _inInstance;
 	
 	public ConditionPlayerInInstance(boolean inInstance)
 	{

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Teleport To Target effect implementation.
  * @author Didldak, Adry_85
  */
-public final class TeleportToSummon extends AbstractEffect
+public class TeleportToSummon extends AbstractEffect
 {
 	private final double _maxDistance;
 	

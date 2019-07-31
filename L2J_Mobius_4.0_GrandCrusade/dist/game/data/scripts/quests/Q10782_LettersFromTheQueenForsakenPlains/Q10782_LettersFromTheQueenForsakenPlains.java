@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Forsaken Plains (10782)
  * @author malyelfik
  */
-public final class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
+public class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 {
 	// NPCs
 	private static final int ORVEN = 30857;

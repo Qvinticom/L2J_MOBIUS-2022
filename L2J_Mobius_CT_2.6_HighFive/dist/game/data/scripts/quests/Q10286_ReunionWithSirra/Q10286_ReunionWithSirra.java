@@ -34,7 +34,7 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  * Reunion with Sirra (10286)
  * @author Adry_85
  */
-public final class Q10286_ReunionWithSirra extends Quest
+public class Q10286_ReunionWithSirra extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;

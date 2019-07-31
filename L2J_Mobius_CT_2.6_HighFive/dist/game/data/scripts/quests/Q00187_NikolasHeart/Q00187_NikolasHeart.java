@@ -27,7 +27,7 @@ import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
  * Nikola's Heart (187)
  * @author ivantotov
  */
-public final class Q00187_NikolasHeart extends Quest
+public class Q00187_NikolasHeart extends Quest
 {
 	// NPCs
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;

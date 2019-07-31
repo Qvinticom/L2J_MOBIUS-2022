@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.base.ClassId;
  * Loads player's base stats.
  * @author Forsaiken, Zoey76, GKR
  */
-public final class PlayerTemplateData implements IXmlReader
+public class PlayerTemplateData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PlayerTemplateData.class.getName());
 	

@@ -514,22 +514,22 @@ public class Fort
 		}
 	}
 	
-	public final int getFortId()
+	public int getFortId()
 	{
 		return _fortId;
 	}
 	
-	public final Clan getOwnerClan()
+	public Clan getOwnerClan()
 	{
 		return _fortOwner;
 	}
 	
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -548,12 +548,12 @@ public class Fort
 		return null;
 	}
 	
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
-	public final FortSiege getSiege()
+	public FortSiege getSiege()
 	{
 		if (_siege == null)
 		{
@@ -566,27 +566,27 @@ public class Fort
 		return _siege;
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
 	
-	public final void setSiegeDate(Calendar siegeDate)
+	public void setSiegeDate(Calendar siegeDate)
 	{
 		_siegeDate = siegeDate;
 	}
 	
-	public final int getSiegeDayOfWeek()
+	public int getSiegeDayOfWeek()
 	{
 		return _siegeDayOfWeek;
 	}
 	
-	public final int getSiegeHourOfDay()
+	public int getSiegeHourOfDay()
 	{
 		return _siegeHourOfDay;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}

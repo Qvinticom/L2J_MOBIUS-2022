@@ -67,19 +67,19 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		_residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId());
 	}
 	
-	public final int getResidenceId()
+	public int getResidenceId()
 	{
 		return _residenceId;
 	}
 	
 	@Override
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
 	// TODO: Remove it later when both castles and forts are loaded from same table.
-	public final void setName(String name)
+	public void setName(String name)
 	{
 		_name = name;
 	}

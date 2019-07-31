@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GMViewQuestList;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewSkillInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
 
-public final class RequestGMCommand extends GameClientPacket
+public class RequestGMCommand extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestGMCommand.class.getName());
 	

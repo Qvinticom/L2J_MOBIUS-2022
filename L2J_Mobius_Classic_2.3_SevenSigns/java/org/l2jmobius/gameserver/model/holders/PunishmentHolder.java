@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 /**
  * @author UnAfraid
  */
-public final class PunishmentHolder
+public class PunishmentHolder
 {
 	private final Map<String, Map<PunishmentType, PunishmentTask>> _holder = new ConcurrentHashMap<>();
 	

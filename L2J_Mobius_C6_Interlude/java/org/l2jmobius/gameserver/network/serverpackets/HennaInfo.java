@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class HennaInfo extends GameServerPacket
+public class HennaInfo extends GameServerPacket
 {
 	private final PlayerInstance _player;
 	private final HennaInstance[] _hennas = new HennaInstance[3];

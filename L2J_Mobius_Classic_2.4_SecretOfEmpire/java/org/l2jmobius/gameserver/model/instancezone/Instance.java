@@ -73,7 +73,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Instance world.
  * @author malyelfik
  */
-public final class Instance implements IIdentifiable, INamable
+public class Instance implements IIdentifiable, INamable
 {
 	private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
 	

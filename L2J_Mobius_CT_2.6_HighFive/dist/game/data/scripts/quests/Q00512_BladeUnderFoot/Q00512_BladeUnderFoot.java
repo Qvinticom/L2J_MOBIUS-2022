@@ -36,8 +36,8 @@ public class Q00512_BladeUnderFoot extends Quest
 {
 	private static final class DropInfo
 	{
-		public final int _firstChance;
-		public final int _secondChance;
+		public int _firstChance;
+		public int _secondChance;
 		
 		public DropInfo(int firstChance, int secondChance)
 		{

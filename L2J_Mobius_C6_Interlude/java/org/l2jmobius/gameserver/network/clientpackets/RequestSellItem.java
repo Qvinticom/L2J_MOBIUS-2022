@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestSellItem extends GameClientPacket
+public class RequestSellItem extends GameClientPacket
 {
 	private int _listId;
 	private int _count;

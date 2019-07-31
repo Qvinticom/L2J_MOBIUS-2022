@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  * Pumping effect implementation.
  * @author UnAfraid
  */
-public final class Pumping extends AbstractEffect
+public class Pumping extends AbstractEffect
 {
 	private final double _power;
 	

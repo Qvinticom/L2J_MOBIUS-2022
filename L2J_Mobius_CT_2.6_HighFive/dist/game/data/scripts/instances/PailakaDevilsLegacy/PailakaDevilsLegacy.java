@@ -41,7 +41,7 @@ import quests.Q00129_PailakaDevilsLegacy.Q00129_PailakaDevilsLegacy;
  * Pailaka Devil's Legacy Instance zone.
  * @author St3eT
  */
-public final class PailakaDevilsLegacy extends AbstractInstance
+public class PailakaDevilsLegacy extends AbstractInstance
 {
 	// NPCs
 	private static final int LEMATAN = 18633; // Lematan
@@ -97,7 +97,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		String htmltext = null;
@@ -169,7 +169,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -252,7 +252,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)

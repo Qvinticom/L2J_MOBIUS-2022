@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Teleporter Belas AI
  * @author Gigi
  */
-public final class Belas extends AbstractNpcAI
+public class Belas extends AbstractNpcAI
 {
 	// NPC
 	private static final int BELAS = 34056;

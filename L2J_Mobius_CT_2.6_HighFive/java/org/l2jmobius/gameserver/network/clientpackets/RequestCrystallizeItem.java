@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.2.2.3.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestCrystallizeItem implements IClientIncomingPacket
+public class RequestCrystallizeItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;

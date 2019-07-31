@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestPrivateStoreManageSell extends GameClientPacket
+public class RequestPrivateStoreManageSell extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
 	

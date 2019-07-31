@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Zoey76
  */
-public final class HennaItemRemoveInfo implements IClientOutgoingPacket
+public class HennaItemRemoveInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final Henna _henna;

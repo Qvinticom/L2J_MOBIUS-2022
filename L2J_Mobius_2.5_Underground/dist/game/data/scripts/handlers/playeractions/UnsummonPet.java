@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Unsummon Pet player action handler.
  * @author St3eT
  */
-public final class UnsummonPet implements IPlayerActionHandler
+public class UnsummonPet implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

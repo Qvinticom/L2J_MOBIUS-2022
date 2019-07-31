@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Ye Sagira Guards AI.
  * @author Mobius
  */
-public final class YeSagiraGuards extends AbstractNpcAI
+public class YeSagiraGuards extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GUARDS[] =

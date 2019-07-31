@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestChangePetName extends GameClientPacket
+public class RequestChangePetName extends GameClientPacket
 {
 	private String _name;
 	

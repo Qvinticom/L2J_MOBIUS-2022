@@ -58,27 +58,27 @@ public class ItemInfo
 		_elementals[5] = 0;
 	}
 	
-	public final int getEnchantLevel()
+	public int getEnchantLevel()
 	{
 		return _enchantLevel;
 	}
 	
-	public final int getAugmentId()
+	public int getAugmentId()
 	{
 		return _augmentId;
 	}
 	
-	public final byte getElementId()
+	public byte getElementId()
 	{
 		return _elementId;
 	}
 	
-	public final int getElementPower()
+	public int getElementPower()
 	{
 		return _elementPower;
 	}
 	
-	public final int[] getElementals()
+	public int[] getElementals()
 	{
 		return _elementals;
 	}

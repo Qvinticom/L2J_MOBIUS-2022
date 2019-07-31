@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Varka Silenos Support AI.<br>
  * @author Nyaran
  */
-public final class VarkaSilenosSupport extends AbstractNpcAI
+public class VarkaSilenosSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{

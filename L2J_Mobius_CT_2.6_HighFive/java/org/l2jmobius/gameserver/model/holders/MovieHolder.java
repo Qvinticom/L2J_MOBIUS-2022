@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author St3eT
  */
-public final class MovieHolder
+public class MovieHolder
 {
 	private final Movie _movie;
 	private final List<PlayerInstance> _players;

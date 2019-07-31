@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Deep_Inside_Atelia_Fortress
  * @author Gigi
  */
-public final class Q10841_DeepInsideAteliaFortress extends Quest
+public class Q10841_DeepInsideAteliaFortress extends Quest
 {
 	// NPCs
 	private static final int ELIKIA = 34057;

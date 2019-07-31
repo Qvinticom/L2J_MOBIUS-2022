@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
  * RequestHennaList - 0xba
  * @author Tempy
  */
-public final class RequestHennaList extends GameClientPacket
+public class RequestHennaList extends GameClientPacket
 {
 	// This is just a trigger packet...
 	@SuppressWarnings("unused")

@@ -494,7 +494,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{

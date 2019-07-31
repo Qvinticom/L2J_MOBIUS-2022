@@ -285,7 +285,7 @@ public class GeoEngine
 	 * @param geoY : Geodata Y
 	 * @return boolean : True, if given geo coordinates have geodata
 	 */
-	public final boolean hasGeoPos(int geoX, int geoY)
+	public boolean hasGeoPos(int geoX, int geoY)
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		if (block == null) // null block check
@@ -304,7 +304,7 @@ public class GeoEngine
 	 * @param worldZ : Cell world Z coordinate.
 	 * @return short : Cell geodata Z coordinate, closest to given coordinates.
 	 */
-	public final short getHeightNearest(int geoX, int geoY, int worldZ)
+	public short getHeightNearest(int geoX, int geoY, int worldZ)
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		return block != null ? block.getHeightNearest(geoX, geoY, worldZ) : (short) worldZ;
@@ -317,7 +317,7 @@ public class GeoEngine
 	 * @param worldZ : Cell world Z coordinate.
 	 * @return short : Cell NSWE flag byte coordinate, closest to given coordinates.
 	 */
-	public final byte getNsweNearest(int geoX, int geoY, int worldZ)
+	public byte getNsweNearest(int geoX, int geoY, int worldZ)
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		return block != null ? block.getNsweNearest(geoX, geoY, worldZ) : (byte) 0xFF;
@@ -329,7 +329,7 @@ public class GeoEngine
 	 * @param worldY : World Y
 	 * @return boolean : True, if given world coordinates have geodata
 	 */
-	public final boolean hasGeo(int worldX, int worldY)
+	public boolean hasGeo(int worldX, int worldY)
 	{
 		return hasGeoPos(getGeoX(worldX), getGeoY(worldY));
 	}
@@ -341,7 +341,7 @@ public class GeoEngine
 	 * @param worldZ : world z
 	 * @return short : nearest Z coordinates according to geodata
 	 */
-	public final short getHeight(int worldX, int worldY, int worldZ)
+	public short getHeight(int worldX, int worldY, int worldZ)
 	{
 		return getHeightNearest(getGeoX(worldX), getGeoY(worldY), worldZ);
 	}
@@ -354,7 +354,7 @@ public class GeoEngine
 	 * @param target : The target object.
 	 * @return {@code boolean} : True if origin can see target
 	 */
-	public final boolean canSeeTarget(WorldObject origin, WorldObject target)
+	public boolean canSeeTarget(WorldObject origin, WorldObject target)
 	{
 		if (target.isDoor())
 		{
@@ -427,7 +427,7 @@ public class GeoEngine
 	 * @param position : The target position.
 	 * @return {@code boolean} : True if object can see position
 	 */
-	public final boolean canSeeTarget(WorldObject origin, Location position)
+	public boolean canSeeTarget(WorldObject origin, Location position)
 	{
 		// get origin and target world coordinates
 		final int ox = origin.getX();
@@ -675,7 +675,7 @@ public class GeoEngine
 	 * @param instanceId
 	 * @return {code boolean} : True if target coordinates are reachable from origin coordinates
 	 */
-	public final boolean canMoveToTarget(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
+	public boolean canMoveToTarget(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
@@ -719,7 +719,7 @@ public class GeoEngine
 	 * @param instanceId
 	 * @return {@link Location} : Last point where object can walk (just before wall)
 	 */
-	public final Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
+	public Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
 		// Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
 		if (DoorTable.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author malyelfik
  */
-public final class OnNpcManorBypass implements IBaseEvent
+public class OnNpcManorBypass implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final Npc _target;

@@ -40,7 +40,7 @@ import ai.AbstractNpcAI;
  * Seed Of Annihilation AI.
  * @author Gigiikun
  */
-public final class SeedOfAnnihilation extends AbstractNpcAI
+public class SeedOfAnnihilation extends AbstractNpcAI
 {
 	private static final Map<Integer, Location> TELEPORT_ZONES = new HashMap<>();
 	static

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 /**
  * @author UnAfraid
  */
-public final class PunishmentManager
+public class PunishmentManager
 {
 	private static final Logger LOGGER = Logger.getLogger(PunishmentManager.class.getName());
 	

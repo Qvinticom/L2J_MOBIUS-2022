@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Function template.
  * @author mkizub, Zoey76
  */
-public final class FuncTemplate
+public class FuncTemplate
 {
 	private final Class<?> _functionClass;
 	private final Condition _attachCond;

@@ -31,7 +31,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * server is down d: 2nd bit: clock 3rd bit: wont dsiplay server name 4th bit: test server (used by client?) c: 0 if you dont want to display brackets in front of sever name ] Server will be considered as Good when the number of online players is less than half the maximum. as Normal between half
  * and 4/5 and Full when there's more than 4/5 of the maximum number of players
  */
-public final class ServerList extends LoginServerPacket
+public class ServerList extends LoginServerPacket
 {
 	private final List<ServerData> _servers;
 	private final int _lastServer;

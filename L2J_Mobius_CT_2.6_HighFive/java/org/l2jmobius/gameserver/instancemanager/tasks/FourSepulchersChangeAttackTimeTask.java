@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
  * Four Sepulchers change attack time task.
  * @author xban1x
  */
-public final class FourSepulchersChangeAttackTimeTask implements Runnable
+public class FourSepulchersChangeAttackTimeTask implements Runnable
 {
 	@Override
 	public void run()

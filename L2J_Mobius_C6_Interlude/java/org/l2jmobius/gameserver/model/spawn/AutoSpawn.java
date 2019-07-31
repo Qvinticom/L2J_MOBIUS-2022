@@ -340,7 +340,7 @@ public class AutoSpawn
 	 * @param spawnInst
 	 * @return
 	 */
-	public final long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
+	public long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
 	{
 		if (spawnInst == null)
 		{
@@ -368,7 +368,7 @@ public class AutoSpawn
 	 * @param isObjectId
 	 * @return AutoSpawnInstance spawnInst
 	 */
-	public final AutoSpawnInstance getAutoSpawnInstance(int id, boolean isObjectId)
+	public AutoSpawnInstance getAutoSpawnInstance(int id, boolean isObjectId)
 	{
 		if (isObjectId)
 		{
@@ -417,7 +417,7 @@ public class AutoSpawn
 	 * @param objectId
 	 * @return boolean isAssigned
 	 */
-	public final boolean isSpawnRegistered(int objectId)
+	public boolean isSpawnRegistered(int objectId)
 	{
 		synchronized (_registeredSpawns)
 		{

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Call Party effect implementation.
  * @author Adry_85
  */
-public final class CallParty extends AbstractEffect
+public class CallParty extends AbstractEffect
 {
 	public CallParty(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

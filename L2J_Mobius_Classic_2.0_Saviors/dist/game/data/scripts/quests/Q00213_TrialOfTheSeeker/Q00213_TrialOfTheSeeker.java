@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial Of The Seeker (213)
  * @author ivantotov
  */
-public final class Q00213_TrialOfTheSeeker extends Quest
+public class Q00213_TrialOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int MASTER_TERRY = 30064;

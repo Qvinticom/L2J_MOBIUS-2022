@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  * Battlefield Chat Handler.
  * @author Gigiikun
  */
-public final class ChatBattlefield implements IChatHandler
+public class ChatBattlefield implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

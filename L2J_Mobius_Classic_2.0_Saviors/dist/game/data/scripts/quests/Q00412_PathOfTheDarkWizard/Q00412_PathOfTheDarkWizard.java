@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Dark Wizard (412)
  * @author ivantotov
  */
-public final class Q00412_PathOfTheDarkWizard extends Quest
+public class Q00412_PathOfTheDarkWizard extends Quest
 {
 	// NPCs
 	private static final int CHARKEREN = 30415;

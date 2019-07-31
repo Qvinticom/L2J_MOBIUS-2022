@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionSiegeZone.
  * @author Gigiikun
  */
-public final class ConditionSiegeZone extends Condition
+public class ConditionSiegeZone extends Condition
 {
 	// conditional values
 	public static final int COND_NOT_ZONE = 0x0001;

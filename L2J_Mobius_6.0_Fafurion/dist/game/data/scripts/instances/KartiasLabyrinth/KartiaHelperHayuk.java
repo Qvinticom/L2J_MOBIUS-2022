@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Hayuk AI. Archer
  * @author flanagak
  */
-public final class KartiaHelperHayuk extends AbstractNpcAI
+public class KartiaHelperHayuk extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_ADOLPH =

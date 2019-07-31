@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Warder (63)
  * @author ivantotov
  */
-public final class Q00063_PathOfTheWarder extends Quest
+public class Q00063_PathOfTheWarder extends Quest
 {
 	// NPCs
 	private static final int MASTER_SIONE = 32195;

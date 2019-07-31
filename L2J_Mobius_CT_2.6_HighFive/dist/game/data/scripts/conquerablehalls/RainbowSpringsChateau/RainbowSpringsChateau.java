@@ -60,7 +60,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * Rainbow Springs Chateau clan hall siege script.
  * @author BiggBoss
  */
-public final class RainbowSpringsChateau extends ClanHallSiegeEngine
+public class RainbowSpringsChateau extends ClanHallSiegeEngine
 {
 	protected static class SetFinalAttackers implements Runnable
 	{

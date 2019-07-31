@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class EnchantSkillLearn
+public class EnchantSkillLearn
 {
 	// these two build the primary key
 	private final int id;

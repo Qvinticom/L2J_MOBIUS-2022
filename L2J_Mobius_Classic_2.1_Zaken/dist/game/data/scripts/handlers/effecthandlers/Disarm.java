@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Disarm effect implementation.
  * @author nBd
  */
-public final class Disarm extends AbstractEffect
+public class Disarm extends AbstractEffect
 {
 	public Disarm(StatsSet params)
 	{

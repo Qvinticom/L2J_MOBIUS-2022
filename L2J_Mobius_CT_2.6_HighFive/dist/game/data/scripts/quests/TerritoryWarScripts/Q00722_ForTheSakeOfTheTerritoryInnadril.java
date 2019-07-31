@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Innadril (722)
  * @author Gigiikun
  */
-public final class Q00722_ForTheSakeOfTheTerritoryInnadril extends TerritoryWarSuperClass
+public class Q00722_ForTheSakeOfTheTerritoryInnadril extends TerritoryWarSuperClass
 {
 	public Q00722_ForTheSakeOfTheTerritoryInnadril()
 	{

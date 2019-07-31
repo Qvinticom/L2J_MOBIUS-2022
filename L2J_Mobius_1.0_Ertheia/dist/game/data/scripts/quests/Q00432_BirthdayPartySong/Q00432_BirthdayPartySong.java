@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Birthday Party Song (432)
  * @author malyelfik
  */
-public final class Q00432_BirthdayPartySong extends Quest
+public class Q00432_BirthdayPartySong extends Quest
 {
 	// NPC
 	private static final int OCTAVIA = 31043;

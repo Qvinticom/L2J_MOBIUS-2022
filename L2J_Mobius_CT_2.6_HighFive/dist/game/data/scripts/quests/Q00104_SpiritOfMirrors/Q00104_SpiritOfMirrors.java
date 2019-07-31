@@ -35,7 +35,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * Spirit of Mirrors (104)
  * @author xban1x
  */
-public final class Q00104_SpiritOfMirrors extends Quest
+public class Q00104_SpiritOfMirrors extends Quest
 {
 	// NPCs
 	private static final int GALLINT = 30017;

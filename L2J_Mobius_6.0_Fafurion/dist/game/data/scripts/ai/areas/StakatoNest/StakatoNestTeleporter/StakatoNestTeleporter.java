@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Stakato Nest Teleport AI.
  * @author Charus
  */
-public final class StakatoNestTeleporter extends AbstractNpcAI
+public class StakatoNestTeleporter extends AbstractNpcAI
 {
 	// Locations
 	private static final Location[] LOCS =

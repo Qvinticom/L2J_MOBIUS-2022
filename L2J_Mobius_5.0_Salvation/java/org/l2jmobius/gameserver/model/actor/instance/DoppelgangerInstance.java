@@ -103,13 +103,13 @@ public class DoppelgangerInstance extends Npc
 	}
 	
 	@Override
-	public final byte getPvpFlag()
+	public byte getPvpFlag()
 	{
 		return getSummoner() != null ? getSummoner().getPvpFlag() : 0;
 	}
 	
 	@Override
-	public final Team getTeam()
+	public Team getTeam()
 	{
 		return getSummoner() != null ? getSummoner().getTeam() : Team.NONE;
 	}

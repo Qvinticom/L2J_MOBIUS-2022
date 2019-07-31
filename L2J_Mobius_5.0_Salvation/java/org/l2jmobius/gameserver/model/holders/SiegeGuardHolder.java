@@ -40,32 +40,32 @@ public class SiegeGuardHolder
 		_maxNpcAmount = maxNpcAmount;
 	}
 	
-	public final int getCastleId()
+	public int getCastleId()
 	{
 		return _castleId;
 	}
 	
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
 	
-	public final SiegeGuardType getType()
+	public SiegeGuardType getType()
 	{
 		return _type;
 	}
 	
-	public final boolean isStationary()
+	public boolean isStationary()
 	{
 		return _stationary;
 	}
 	
-	public final int getNpcId()
+	public int getNpcId()
 	{
 		return _npcId;
 	}
 	
-	public final int getMaxNpcAmout()
+	public int getMaxNpcAmout()
 	{
 		return _maxNpcAmount;
 	}

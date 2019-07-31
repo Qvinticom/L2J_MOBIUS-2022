@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * The Finest Ingredients Part - 2 (625)
  * @author Janiko
  */
-public final class Q00625_TheFinestIngredientsPart2 extends Quest
+public class Q00625_TheFinestIngredientsPart2 extends Quest
 {
 	// NPCs
 	private static final int JEREMY = 31521;

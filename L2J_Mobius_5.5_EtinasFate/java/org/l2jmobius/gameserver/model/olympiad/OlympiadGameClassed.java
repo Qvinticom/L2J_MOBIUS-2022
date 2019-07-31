@@ -33,7 +33,7 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 	}
 	
 	@Override
-	public final CompetitionType getType()
+	public CompetitionType getType()
 	{
 		return CompetitionType.CLASSED;
 	}

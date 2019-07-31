@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-public final class LambdaConst extends Lambda
+public class LambdaConst extends Lambda
 {
 	private final double _value;
 	

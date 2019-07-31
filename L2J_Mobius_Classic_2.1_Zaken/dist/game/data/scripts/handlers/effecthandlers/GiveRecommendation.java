@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * Give Recommendation effect implementation.
  * @author NosBit
  */
-public final class GiveRecommendation extends AbstractEffect
+public class GiveRecommendation extends AbstractEffect
 {
 	private final int _amount;
 	

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-public final class RequestEvaluate extends GameClientPacket
+public class RequestEvaluate extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _targetId;

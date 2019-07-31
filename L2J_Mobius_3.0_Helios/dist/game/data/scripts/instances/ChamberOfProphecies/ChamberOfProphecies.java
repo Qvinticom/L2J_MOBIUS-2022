@@ -42,7 +42,7 @@ import quests.Q10753_WindsOfFateChoices.Q10753_WindsOfFateChoices;
  * Chamber of Prophecies instance.
  * @author Gigi, Mobius
  */
-public final class ChamberOfProphecies extends AbstractInstance
+public class ChamberOfProphecies extends AbstractInstance
 {
 	// NPCs
 	private static final int KAIN_VAN_HALTER = 31639;

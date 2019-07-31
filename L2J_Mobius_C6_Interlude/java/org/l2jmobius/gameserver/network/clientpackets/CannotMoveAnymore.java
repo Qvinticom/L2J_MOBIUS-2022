@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class CannotMoveAnymore extends GameClientPacket
+public class CannotMoveAnymore extends GameClientPacket
 {
 	private int _x;
 	private int _y;

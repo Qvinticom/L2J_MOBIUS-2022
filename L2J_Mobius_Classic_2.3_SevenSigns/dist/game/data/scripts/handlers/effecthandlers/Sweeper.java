@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Sweeper effect implementation.
  * @author Zoey76
  */
-public final class Sweeper extends AbstractEffect
+public class Sweeper extends AbstractEffect
 {
 	public Sweeper(StatsSet params)
 	{

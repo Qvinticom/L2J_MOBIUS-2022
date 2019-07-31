@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Pleas of Pixies (266)
  * @author xban1x
  */
-public final class Q00266_PleasOfPixies extends Quest
+public class Q00266_PleasOfPixies extends Quest
 {
 	// NPC
 	private static final int PIXY_MURIKA = 31852;

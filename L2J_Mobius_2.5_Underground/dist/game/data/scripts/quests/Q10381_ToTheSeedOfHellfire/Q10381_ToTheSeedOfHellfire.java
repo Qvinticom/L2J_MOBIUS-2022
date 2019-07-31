@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * To The Seed of Hellfire (10381)
  * @author Gladicek
  */
-public final class Q10381_ToTheSeedOfHellfire extends Quest
+public class Q10381_ToTheSeedOfHellfire extends Quest
 {
 	// NPCs
 	private static final int KEUCEREUS = 32548;

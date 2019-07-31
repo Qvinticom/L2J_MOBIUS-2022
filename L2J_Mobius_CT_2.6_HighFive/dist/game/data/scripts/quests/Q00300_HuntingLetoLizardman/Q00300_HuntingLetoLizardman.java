@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Hunting Leto Lizardman (300)
  * @author ivantotov
  */
-public final class Q00300_HuntingLetoLizardman extends Quest
+public class Q00300_HuntingLetoLizardman extends Quest
 {
 	// NPCs
 	private static final int RATH = 30126;

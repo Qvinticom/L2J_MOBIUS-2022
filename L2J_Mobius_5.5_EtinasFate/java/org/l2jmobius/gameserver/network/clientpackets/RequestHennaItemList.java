@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 /**
  * @author Tempy, Zoey76
  */
-public final class RequestHennaItemList implements IClientIncomingPacket
+public class RequestHennaItemList implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;

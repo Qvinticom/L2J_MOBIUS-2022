@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Cp Heal Percent effect implementation.
  * @author UnAfraid
  */
-public final class CpHealPercent extends AbstractEffect
+public class CpHealPercent extends AbstractEffect
 {
 	private final double _power;
 	

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Transformation effect implementation.
  * @author nBd
  */
-public final class Transformation extends AbstractEffect
+public class Transformation extends AbstractEffect
 {
 	private final List<Integer> _id;
 	

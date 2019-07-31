@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ItemList extends AbstractItemPacket
+public class ItemList extends AbstractItemPacket
 {
 	private final PlayerInstance _player;
 	private final List<ItemInstance> _items = new ArrayList<>();

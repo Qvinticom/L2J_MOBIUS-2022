@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestSentPost implements IClientIncomingPacket
+public class RequestSentPost implements IClientIncomingPacket
 {
 	private int _msgId;
 	

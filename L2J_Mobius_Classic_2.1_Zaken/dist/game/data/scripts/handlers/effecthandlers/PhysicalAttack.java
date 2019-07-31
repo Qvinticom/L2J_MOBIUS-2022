@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef <br>
  * @author Nik
  */
-public final class PhysicalAttack extends AbstractEffect
+public class PhysicalAttack extends AbstractEffect
 {
 	private final double _power;
 	private final double _pAtkMod;

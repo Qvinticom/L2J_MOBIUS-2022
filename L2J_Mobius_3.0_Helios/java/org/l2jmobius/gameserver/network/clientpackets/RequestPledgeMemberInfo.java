@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
  * Format: (ch) dS
  * @author -Wooden-
  */
-public final class RequestPledgeMemberInfo implements IClientIncomingPacket
+public class RequestPledgeMemberInfo implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

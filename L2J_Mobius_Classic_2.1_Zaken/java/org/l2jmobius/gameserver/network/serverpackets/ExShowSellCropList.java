@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author l3x
  */
-public final class ExShowSellCropList implements IClientOutgoingPacket
+public class ExShowSellCropList implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private final Map<Integer, ItemInstance> _cropsItems = new HashMap<>();

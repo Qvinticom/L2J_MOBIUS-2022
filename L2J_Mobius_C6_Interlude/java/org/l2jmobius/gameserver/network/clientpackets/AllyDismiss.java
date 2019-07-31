@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class AllyDismiss extends GameClientPacket
+public class AllyDismiss extends GameClientPacket
 {
 	private String _clanName;
 	

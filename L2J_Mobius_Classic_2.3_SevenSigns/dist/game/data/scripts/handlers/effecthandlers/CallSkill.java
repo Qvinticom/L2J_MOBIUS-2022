@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
  * Call Skill effect implementation.
  * @author NosBit
  */
-public final class CallSkill extends AbstractEffect
+public class CallSkill extends AbstractEffect
 {
 	private final SkillHolder _skill;
 	private final int _skillLevelScaleTo;

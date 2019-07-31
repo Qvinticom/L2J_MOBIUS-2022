@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  * Format: (ch)
  * @author -Wooden-
  */
-public final class RequestCursedWeaponLocation implements IClientIncomingPacket
+public class RequestCursedWeaponLocation implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

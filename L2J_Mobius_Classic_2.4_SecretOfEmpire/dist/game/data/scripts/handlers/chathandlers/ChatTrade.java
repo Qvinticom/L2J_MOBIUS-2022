@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Trade chat handler.
  * @author durgus
  */
-public final class ChatTrade implements IChatHandler
+public class ChatTrade implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

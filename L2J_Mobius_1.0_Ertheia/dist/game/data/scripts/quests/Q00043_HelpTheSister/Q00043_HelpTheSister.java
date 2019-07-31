@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Help The Sister! (43)
  * @author malyelfik
  */
-public final class Q00043_HelpTheSister extends Quest
+public class Q00043_HelpTheSister extends Quest
 {
 	// NPCs
 	private static final int COOPER = 30829;

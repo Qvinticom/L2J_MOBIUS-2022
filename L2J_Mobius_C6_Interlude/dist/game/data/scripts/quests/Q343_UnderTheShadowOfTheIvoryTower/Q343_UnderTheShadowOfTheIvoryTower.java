@@ -28,15 +28,15 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 {
-	public final int CEMA = 30834;
-	public final int ICARUS = 30835;
-	public final int MARSHA = 30934;
-	public final int TRUMPIN = 30935;
-	public final int[] MOBS;
-	public final int ORB = 4364;
-	public final int ECTOPLASM = 4365;
-	public final int CHANCE = 50;
-	public final int[] ALLOWED_CLASSES =
+	public int CEMA = 30834;
+	public int ICARUS = 30835;
+	public int MARSHA = 30934;
+	public int TRUMPIN = 30935;
+	public int[] MOBS;
+	public int ORB = 4364;
+	public int ECTOPLASM = 4365;
+	public int CHANCE = 50;
+	public int[] ALLOWED_CLASSES =
 	{
 		11,
 		12,
@@ -65,7 +65,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 		
 		addStartNpc(30834);
 		addTalkId(30834, 30835, 30934, 30935);
-		for (final int i : MOBS)
+		for (int i : MOBS)
 		{
 			addKillId(i);
 		}
@@ -356,7 +356,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			{
 				if (id != 2)
 				{
-					for (final int i : ALLOWED_CLASSES)
+					for (int i : ALLOWED_CLASSES)
 					{
 						if ((st.getPlayer().getClassId().getId() == i) && (st.getPlayer().getLevel() >= 40))
 						{

@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Manages spawn of NPCs having several random spawn points.
  * @author GKR
  */
-public final class RandomSpawn extends AbstractNpcAI
+public class RandomSpawn extends AbstractNpcAI
 {
 	private static final Map<Integer, Location[]> SPAWN_POINTS = new HashMap<>();
 	static
@@ -83,7 +83,7 @@ public final class RandomSpawn extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Location[] spawnlist = SPAWN_POINTS.get(npc.getId());
 		final Location loc = spawnlist[getRandom(spawnlist.length)];

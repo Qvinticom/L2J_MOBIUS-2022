@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.model;
  * Holds a list of all AirShip teleports.
  * @author xban1x
  */
-public final class AirShipTeleportList
+public class AirShipTeleportList
 {
 	private final int _location;
 	private final int[] _fuel;

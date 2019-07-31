@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * to copy retail issues/bugs/typos.
  * @author Gladicek
  */
-public final class ClassTransferTalk extends AbstractNpcAI
+public class ClassTransferTalk extends AbstractNpcAI
 {
 	// NPCs
 	// Talking Island Village (Administrative office)

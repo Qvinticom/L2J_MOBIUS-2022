@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger skill by isMagic type.
  * @author Nik
  */
-public final class TriggerSkillByMagicType extends AbstractEffect
+public class TriggerSkillByMagicType extends AbstractEffect
 {
 	private final int[] _magicTypes;
 	private final int _chance;

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Dispel By Category effect implementation.
  * @author DS, Adry_85
  */
-public final class DispelByCategory extends AbstractEffect
+public class DispelByCategory extends AbstractEffect
 {
 	private final String _slot;
 	private final int _rate;

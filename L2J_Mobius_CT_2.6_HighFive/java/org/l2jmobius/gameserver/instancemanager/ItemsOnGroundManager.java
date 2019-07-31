@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  * This class manage all items on ground.
  * @author Enforcer
  */
-public final class ItemsOnGroundManager implements Runnable
+public class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	

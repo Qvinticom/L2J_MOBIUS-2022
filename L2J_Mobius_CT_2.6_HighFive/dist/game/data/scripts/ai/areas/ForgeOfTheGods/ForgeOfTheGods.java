@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Forge of the Gods AI
  * @author nonom, malyelfik
  */
-public final class ForgeOfTheGods extends AbstractNpcAI
+public class ForgeOfTheGods extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] FOG_MOBS =
@@ -169,7 +169,7 @@ public final class ForgeOfTheGods extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("suicide", 60000, npc, null);
 		return super.onSpawn(npc);

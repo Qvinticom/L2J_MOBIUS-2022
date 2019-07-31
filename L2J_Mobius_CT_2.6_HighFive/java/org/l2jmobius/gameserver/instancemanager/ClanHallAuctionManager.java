@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.entity.Auction;
 /**
  * Zoey76: TODO: Rewrite it and unharcode it.
  */
-public final class ClanHallAuctionManager
+public class ClanHallAuctionManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(ClanHallAuctionManager.class.getName());
 	private final List<Auction> _auctions = new ArrayList<>();
@@ -114,7 +114,7 @@ public final class ClanHallAuctionManager
 		}
 	}
 	
-	public final Auction getAuction(int auctionId)
+	public Auction getAuction(int auctionId)
 	{
 		final int index = getAuctionIndex(auctionId);
 		if (index >= 0)
@@ -124,7 +124,7 @@ public final class ClanHallAuctionManager
 		return null;
 	}
 	
-	public final int getAuctionIndex(int auctionId)
+	public int getAuctionIndex(int auctionId)
 	{
 		Auction auction;
 		for (int i = 0; i < _auctions.size(); i++)
@@ -138,7 +138,7 @@ public final class ClanHallAuctionManager
 		return -1;
 	}
 	
-	public final List<Auction> getAuctions()
+	public List<Auction> getAuctions()
 	{
 		return _auctions;
 	}

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.fishing.FishingRod;
  * This class holds the Fishing Rods information.
  * @author nonom
  */
-public final class FishingRodsData implements IXmlReader
+public class FishingRodsData implements IXmlReader
 {
 	private final Map<Integer, FishingRod> _fishingRods = new HashMap<>();
 	

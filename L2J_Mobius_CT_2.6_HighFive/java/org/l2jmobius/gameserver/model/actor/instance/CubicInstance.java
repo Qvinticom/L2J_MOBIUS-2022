@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class CubicInstance implements IIdentifiable
+public class CubicInstance implements IIdentifiable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicInstance.class.getName());
 	

@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Dwarf class transfer AI.
  * @author Adry_85
  */
-public final class DwarfWarehouseChange2 extends AbstractNpcAI
+public class DwarfWarehouseChange2 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =

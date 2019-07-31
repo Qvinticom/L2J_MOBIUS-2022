@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Testimony Of Fate (219)
  * @author ivantotov
  */
-public final class Q00219_TestimonyOfFate extends Quest
+public class Q00219_TestimonyOfFate extends Quest
 {
 	// NPCs
 	private static final int MAGISTER_ROA = 30114;

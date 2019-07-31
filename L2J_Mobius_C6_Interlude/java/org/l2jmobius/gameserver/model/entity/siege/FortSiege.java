@@ -1442,7 +1442,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the attacker clan
 	 */
-	public final SiegeClan getAttackerClan(Clan clan)
+	public SiegeClan getAttackerClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1457,7 +1457,7 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the attacker clan
 	 */
-	public final SiegeClan getAttackerClan(int clanId)
+	public SiegeClan getAttackerClan(int clanId)
 	{
 		for (SiegeClan sc : getAttackerClans())
 		{
@@ -1474,7 +1474,7 @@ public class FortSiege
 	 * Gets the attacker clans.
 	 * @return the attacker clans
 	 */
-	public final List<SiegeClan> getAttackerClans()
+	public List<SiegeClan> getAttackerClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1488,7 +1488,7 @@ public class FortSiege
 	 * Gets the attacker respawn delay.
 	 * @return the attacker respawn delay
 	 */
-	public final int getAttackerRespawnDelay()
+	public int getAttackerRespawnDelay()
 	{
 		return FortSiegeManager.getInstance().getAttackerRespawnDelay();
 	}
@@ -1497,7 +1497,7 @@ public class FortSiege
 	 * Gets the fort.
 	 * @return the fort
 	 */
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		if ((_fort == null) || (_fort.length <= 0))
 		{
@@ -1512,7 +1512,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the defender clan
 	 */
-	public final SiegeClan getDefenderClan(Clan clan)
+	public SiegeClan getDefenderClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1527,7 +1527,7 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the defender clan
 	 */
-	public final SiegeClan getDefenderClan(int clanId)
+	public SiegeClan getDefenderClan(int clanId)
 	{
 		for (SiegeClan sc : getDefenderClans())
 		{
@@ -1544,7 +1544,7 @@ public class FortSiege
 	 * Gets the defender clans.
 	 * @return the defender clans
 	 */
-	public final List<SiegeClan> getDefenderClans()
+	public List<SiegeClan> getDefenderClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1559,7 +1559,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the defender waiting clan
 	 */
-	public final SiegeClan getDefenderWaitingClan(Clan clan)
+	public SiegeClan getDefenderWaitingClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1574,7 +1574,7 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the defender waiting clan
 	 */
-	public final SiegeClan getDefenderWaitingClan(int clanId)
+	public SiegeClan getDefenderWaitingClan(int clanId)
 	{
 		for (SiegeClan sc : _defenderWaitingClans)
 		{
@@ -1591,7 +1591,7 @@ public class FortSiege
 	 * Gets the defender waiting clans.
 	 * @return the defender waiting clans
 	 */
-	public final List<SiegeClan> getDefenderWaitingClans()
+	public List<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}
@@ -1600,7 +1600,7 @@ public class FortSiege
 	 * Gets the defender respawn delay.
 	 * @return the defender respawn delay
 	 */
-	public final int getDefenderRespawnDelay()
+	public int getDefenderRespawnDelay()
 	{
 		return FortSiegeManager.getInstance().getDefenderRespawnDelay() + _defenderRespawnDelayPenalty;
 	}
@@ -1609,7 +1609,7 @@ public class FortSiege
 	 * Gets the checks if is in progress.
 	 * @return the checks if is in progress
 	 */
-	public final boolean getIsInProgress()
+	public boolean getIsInProgress()
 	{
 		return _isInProgress;
 	}
@@ -1618,7 +1618,7 @@ public class FortSiege
 	 * Gets the checks if is scheduled.
 	 * @return the checks if is scheduled
 	 */
-	public final boolean getIsScheduled()
+	public boolean getIsScheduled()
 	{
 		return _isScheduled;
 	}
@@ -1627,7 +1627,7 @@ public class FortSiege
 	 * Sets the checks if is scheduled.
 	 * @param isScheduled the new checks if is scheduled
 	 */
-	public final void setIsScheduled(boolean isScheduled)
+	public void setIsScheduled(boolean isScheduled)
 	{
 		_isScheduled = isScheduled;
 	}
@@ -1636,7 +1636,7 @@ public class FortSiege
 	 * Gets the checks if is registration over.
 	 * @return the checks if is registration over
 	 */
-	public final boolean getIsRegistrationOver()
+	public boolean getIsRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
@@ -1645,7 +1645,7 @@ public class FortSiege
 	 * Gets the siege date.
 	 * @return the siege date
 	 */
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return getFort().getSiegeDate();
 	}
@@ -1673,7 +1673,7 @@ public class FortSiege
 	 * Gets the siege guard manager.
 	 * @return the siege guard manager
 	 */
-	public final FortSiegeGuardManager getSiegeGuardManager()
+	public FortSiegeGuardManager getSiegeGuardManager()
 	{
 		if (_siegeGuardManager == null)
 		{

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg implements IClientIncomingPacket
+public class RequestShortCutReg implements IClientIncomingPacket
 {
 	private ShortcutType _type;
 	private int _id;

@@ -34,7 +34,7 @@ import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
  * Seeds Of Chaos (236)
  * @author ivantotov
  */
-public final class Q00236_SeedsOfChaos extends Quest
+public class Q00236_SeedsOfChaos extends Quest
 {
 	// NPCs
 	private static final int KURSTIN = 31387;

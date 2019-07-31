@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Mp Consume Per Level effect implementation.
  */
-public final class MpConsumePerLevel extends AbstractEffect
+public class MpConsumePerLevel extends AbstractEffect
 {
 	private final double _power;
 	

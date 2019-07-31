@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  * This class manages all Grand Bosses.
  * @version $Revision: 1.0.0.0 $ $Date: 2006/06/16 $
  */
-public final class GrandBossInstance extends MonsterInstance
+public class GrandBossInstance extends MonsterInstance
 {
 	private boolean _useRaidCurse = true;
 	

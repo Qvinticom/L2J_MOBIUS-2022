@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * @URL https://l2wiki.com/Blackbird%27s_Name_Value
  * @author Gigi
  */
-public final class Q10839_BlackbirdsNameValue extends Quest
+public class Q10839_BlackbirdsNameValue extends Quest
 {
 	// NPC
 	private static final int LAFFIAN = 34065;

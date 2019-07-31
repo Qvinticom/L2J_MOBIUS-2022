@@ -37,7 +37,7 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  * Mithril Mine instance zone.
  * @author Adry_85
  */
-public final class MithrilMine extends AbstractInstance
+public class MithrilMine extends AbstractInstance
 {
 	// NPCs
 	private static final int KEGOR = 18846;

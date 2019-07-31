@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Noblesse Blessing effect implementation.
  * @author earendil
  */
-public final class NoblesseBless extends AbstractEffect
+public class NoblesseBless extends AbstractEffect
 {
 	public NoblesseBless(StatsSet params)
 	{

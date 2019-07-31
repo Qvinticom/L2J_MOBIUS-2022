@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Go to the Pastureland (19)
  * @author malyelfik
  */
-public final class Q00019_GoToThePastureland extends Quest
+public class Q00019_GoToThePastureland extends Quest
 {
 	// NPCs
 	private static final int VLADIMIR = 31302;

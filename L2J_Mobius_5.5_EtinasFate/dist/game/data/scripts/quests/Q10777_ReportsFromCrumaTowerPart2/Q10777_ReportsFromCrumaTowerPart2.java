@@ -35,7 +35,7 @@ import quests.Q10776_TheWrathOfTheGiants.Q10776_TheWrathOfTheGiants;
  * Reports from Cruma Tower, Part 2 (10777)
  * @author malyelfik
  */
-public final class Q10777_ReportsFromCrumaTowerPart2 extends Quest
+public class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 {
 	// NPCs
 	private static final int BELKADHI = 30485;

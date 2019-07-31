@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
  * Format (ch) dd
  * @author -Wooden-
  */
-public final class RequestWithdrawPartyRoom extends GameClientPacket
+public class RequestWithdrawPartyRoom extends GameClientPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")

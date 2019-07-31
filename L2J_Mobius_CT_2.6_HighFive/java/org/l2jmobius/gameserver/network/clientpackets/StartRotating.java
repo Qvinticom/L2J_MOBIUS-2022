@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StartRotation;
 /**
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class StartRotating implements IClientIncomingPacket
+public class StartRotating implements IClientIncomingPacket
 {
 	private int _degree;
 	private int _side;

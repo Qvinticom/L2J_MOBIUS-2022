@@ -30,7 +30,7 @@ import quests.Q00187_NikolasHeart.Q00187_NikolasHeart;
  * Seal Removal (188)
  * @author ivantotov
  */
-public final class Q00188_SealRemoval extends Quest
+public class Q00188_SealRemoval extends Quest
 {
 	// NPCs
 	private static final int MAESTRO_NIKOLA = 30621;

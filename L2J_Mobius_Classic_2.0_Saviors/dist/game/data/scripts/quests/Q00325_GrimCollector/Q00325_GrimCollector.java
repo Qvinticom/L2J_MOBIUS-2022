@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Grim Collector (325)
  * @author ivantotov
  */
-public final class Q00325_GrimCollector extends Quest
+public class Q00325_GrimCollector extends Quest
 {
 	// NPCs
 	private static final int GUARD_CURTIZ = 30336;

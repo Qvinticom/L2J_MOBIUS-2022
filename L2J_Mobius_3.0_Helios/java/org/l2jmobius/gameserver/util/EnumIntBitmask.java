@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.util;
  * @author HorridoJoho
  * @param <E> The enum type
  */
-public final class EnumIntBitmask<E extends Enum<E>> implements Cloneable
+public class EnumIntBitmask<E extends Enum<E>> implements Cloneable
 {
 	public static <E extends Enum<E>> int getAllBitmask(Class<E> enumClass)
 	{

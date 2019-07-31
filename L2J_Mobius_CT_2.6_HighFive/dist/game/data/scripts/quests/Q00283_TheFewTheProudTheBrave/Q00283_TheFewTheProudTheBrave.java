@@ -28,7 +28,7 @@ import quests.Q00261_CollectorsDream.Q00261_CollectorsDream;
  * The Few, The Proud, The Brave (283)
  * @author xban1x
  */
-public final class Q00283_TheFewTheProudTheBrave extends Quest
+public class Q00283_TheFewTheProudTheBrave extends Quest
 {
 	// NPC
 	private static final int PERWAN = 32133;

@@ -30,7 +30,7 @@ import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
  * To the Ruins of Ye Sagira (10330)
  * @author Gladicek
  */
-public final class Q10330_ToTheRuinsOfYeSagira extends Quest
+public class Q10330_ToTheRuinsOfYeSagira extends Quest
 {
 	// NPCs
 	private static final int ATRAN = 33448;

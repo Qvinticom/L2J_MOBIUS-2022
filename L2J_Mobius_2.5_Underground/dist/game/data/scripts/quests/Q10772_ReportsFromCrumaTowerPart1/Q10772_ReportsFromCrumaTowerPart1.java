@@ -35,7 +35,7 @@ import quests.Q10771_VolatilePower.Q10771_VolatilePower;
  * Reports from Cruma Tower, Part 1 (10772)
  * @author malyelfik
  */
-public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
+public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 {
 	// NPCs
 	private static final int JANSSEN = 30484;

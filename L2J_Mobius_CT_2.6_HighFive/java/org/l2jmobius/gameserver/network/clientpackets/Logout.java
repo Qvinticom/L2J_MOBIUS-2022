@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.OfflineTradeUtil;
 /**
  * @version $Revision: 1.9.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class Logout implements IClientIncomingPacket
+public class Logout implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	

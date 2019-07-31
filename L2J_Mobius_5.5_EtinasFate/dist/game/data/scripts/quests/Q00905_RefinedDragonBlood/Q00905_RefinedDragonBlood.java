@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Refined Dragon Blood (905)
  * @author Zoey76
  */
-public final class Q00905_RefinedDragonBlood extends Quest
+public class Q00905_RefinedDragonBlood extends Quest
 {
 	// NPCs
 	private static final int[] SEPARATED_SOULS =

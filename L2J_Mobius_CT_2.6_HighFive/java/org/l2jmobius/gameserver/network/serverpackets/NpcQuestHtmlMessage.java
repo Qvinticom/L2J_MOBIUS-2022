@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * NpcQuestHtmlMessage server packet implementation.
  * @author HorridoJoho
  */
-public final class NpcQuestHtmlMessage extends AbstractHtmlPacket
+public class NpcQuestHtmlMessage extends AbstractHtmlPacket
 {
 	private final int _questId;
 	

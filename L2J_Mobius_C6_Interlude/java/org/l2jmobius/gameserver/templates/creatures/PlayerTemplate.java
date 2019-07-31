@@ -31,24 +31,24 @@ import org.l2jmobius.gameserver.templates.item.Item;
 public class PlayerTemplate extends CreatureTemplate
 {
 	/** The Class object of the PlayerInstance */
-	public final Race race;
-	public final ClassId classId;
+	public Race race;
+	public ClassId classId;
 	
-	public final int _currentCollisionRadius;
-	public final int _currentCollisionHeight;
-	public final String className;
+	public int _currentCollisionRadius;
+	public int _currentCollisionHeight;
+	public String className;
 	
-	public final int spawnX;
-	public final int spawnY;
-	public final int spawnZ;
+	public int spawnX;
+	public int spawnY;
+	public int spawnZ;
 	
-	public final int classBaseLevel;
-	public final float lvlHpAdd;
-	public final float lvlHpMod;
-	public final float lvlCpAdd;
-	public final float lvlCpMod;
-	public final float lvlMpAdd;
-	public final float lvlMpMod;
+	public int classBaseLevel;
+	public float lvlHpAdd;
+	public float lvlHpMod;
+	public float lvlCpAdd;
+	public float lvlCpMod;
+	public float lvlMpAdd;
+	public float lvlMpMod;
 	
 	private final List<Item> _items = new ArrayList<>();
 	
@@ -133,7 +133,7 @@ public class PlayerTemplate extends CreatureTemplate
 		return 400;
 	}
 	
-	public final int getFallHeight()
+	public int getFallHeight()
 	{
 		return 333; // TODO: unhardcode it
 	}

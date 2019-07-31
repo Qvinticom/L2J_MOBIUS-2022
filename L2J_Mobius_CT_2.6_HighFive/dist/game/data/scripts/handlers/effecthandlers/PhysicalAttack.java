@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Physical Attack effect implementation.
  * @author Adry_85
  */
-public final class PhysicalAttack extends AbstractEffect
+public class PhysicalAttack extends AbstractEffect
 {
 	public PhysicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

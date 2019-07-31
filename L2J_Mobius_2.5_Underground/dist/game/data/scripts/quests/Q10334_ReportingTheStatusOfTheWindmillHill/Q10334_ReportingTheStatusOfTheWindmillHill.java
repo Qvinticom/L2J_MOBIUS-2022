@@ -29,7 +29,7 @@ import quests.Q10333_DisappearedSakum.Q10333_DisappearedSakum;
  * Reporting The Status Of The Windmill Hill (10334)
  * @author St3eT
  */
-public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
+public class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 {
 	// NPCs
 	private static final int SCHUNAIN = 33508;

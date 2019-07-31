@@ -41,7 +41,7 @@ import java.util.function.ToIntFunction;
 
 import org.l2jmobius.Config;
 
-public final class CommonUtil
+public class CommonUtil
 {
 	private static final char[] ILLEGAL_CHARACTERS =
 	{
@@ -594,17 +594,17 @@ public final class CommonUtil
 		return formatter.format(val);
 	}
 	
-	public static boolean isNullOrEmpty(final CharSequence value)
+	public static boolean isNullOrEmpty(CharSequence value)
 	{
 		return isNull(value) || (value.length() == 0);
 	}
 	
-	public static boolean isNotEmpty(final String value)
+	public static boolean isNotEmpty(String value)
 	{
 		return nonNull(value) && !value.isEmpty();
 	}
 	
-	public static boolean isNullOrEmpty(final Collection<?> collection)
+	public static boolean isNullOrEmpty(Collection<?> collection)
 	{
 		return isNull(collection) || collection.isEmpty();
 	}

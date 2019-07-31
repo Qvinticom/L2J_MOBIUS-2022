@@ -36,7 +36,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Quarry AI.
  * @author DS, GKR
  */
-public final class Quarry extends AbstractNpcAI
+public class Quarry extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SLAVE = 32299;
@@ -66,7 +66,7 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -131,7 +131,7 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setAutoAttackable(false);
 		if (npc instanceof QuestGuardInstance)
@@ -142,7 +142,7 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (HellboundEngine.getInstance().getLevel() != 5)
 		{
@@ -152,14 +152,14 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		npc.setAutoAttackable(false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public final String onEnterZone(Creature creature, ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (creature.isAttackable())
 		{

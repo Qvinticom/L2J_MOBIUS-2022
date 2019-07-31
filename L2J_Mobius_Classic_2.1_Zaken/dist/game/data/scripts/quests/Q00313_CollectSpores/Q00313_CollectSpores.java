@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Collect Spores (313)
  * @author ivantotov
  */
-public final class Q00313_CollectSpores extends Quest
+public class Q00313_CollectSpores extends Quest
 {
 	// NPC
 	private static final int HERBIEL = 30150;

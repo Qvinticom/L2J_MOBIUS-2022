@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Coin Of Magic (336)
  * @author Zealar
  */
-public final class Q00336_CoinsOfMagic extends Quest
+public class Q00336_CoinsOfMagic extends Quest
 {
 	// NPCs
 	private static final int PANO = 30078;

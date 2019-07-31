@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 
-public final class StartRotating extends GameClientPacket
+public class StartRotating extends GameClientPacket
 {
 	private int _degree;
 	private int _side;

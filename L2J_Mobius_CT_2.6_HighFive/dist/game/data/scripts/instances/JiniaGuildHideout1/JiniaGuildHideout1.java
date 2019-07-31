@@ -29,7 +29,7 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  * Jinia Guild Hideout instance zone.
  * @author Adry_85
  */
-public final class JiniaGuildHideout1 extends AbstractInstance
+public class JiniaGuildHideout1 extends AbstractInstance
 {
 	// NPC
 	private static final int RAFFORTY = 32020;

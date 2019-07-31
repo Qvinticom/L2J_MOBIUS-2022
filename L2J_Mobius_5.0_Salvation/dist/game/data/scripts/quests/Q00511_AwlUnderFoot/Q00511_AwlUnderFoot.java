@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Awl Under Foot (511)
  * @author malyelfik
  */
-public final class Q00511_AwlUnderFoot extends Quest
+public class Q00511_AwlUnderFoot extends Quest
 {
 	// NPCs
 	private static final int[] NPCS =

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public final class EnchantItemGroupsData implements IXmlReader
+public class EnchantItemGroupsData implements IXmlReader
 {
 	private final Map<String, EnchantItemGroup> _itemGroups = new HashMap<>();
 	private final Map<Integer, EnchantScrollGroup> _scrollGroups = new HashMap<>();

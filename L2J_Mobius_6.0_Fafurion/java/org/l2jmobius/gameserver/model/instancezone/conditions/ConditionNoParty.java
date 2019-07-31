@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
  * Instance no party condition
  * @author St3eT
  */
-public final class ConditionNoParty extends Condition
+public class ConditionNoParty extends Condition
 {
 	public ConditionNoParty(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

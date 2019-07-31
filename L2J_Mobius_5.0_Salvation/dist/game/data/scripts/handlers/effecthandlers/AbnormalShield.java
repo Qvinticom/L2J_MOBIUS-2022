@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that blocks a debuff. Acts like DOTA's Linken Sphere.
  * @author Nik
  */
-public final class AbnormalShield extends AbstractEffect
+public class AbnormalShield extends AbstractEffect
 {
 	private final int _times;
 	

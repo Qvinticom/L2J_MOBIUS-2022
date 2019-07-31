@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgePowerGradeList;
  * Format: (ch)
  * @author -Wooden-
  */
-public final class RequestPledgePowerGradeList implements IClientIncomingPacket
+public class RequestPledgePowerGradeList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

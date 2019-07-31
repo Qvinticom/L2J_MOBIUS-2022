@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariatio
  * Format:(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmTargetItem extends AbstractRefinePacket
+public class RequestConfirmTargetItem extends AbstractRefinePacket
 {
 	private int _itemObjId;
 	

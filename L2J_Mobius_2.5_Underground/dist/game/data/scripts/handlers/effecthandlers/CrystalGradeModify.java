@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Crystal Grade Modify effect implementation.
  * @author Zoey76
  */
-public final class CrystalGradeModify extends AbstractEffect
+public class CrystalGradeModify extends AbstractEffect
 {
 	private final int _grade;
 	

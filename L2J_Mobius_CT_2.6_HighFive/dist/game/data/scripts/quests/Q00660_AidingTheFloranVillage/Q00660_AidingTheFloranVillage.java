@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Aiding the Floran Village (660)
  * @author Zoey76
  */
-public final class Q00660_AidingTheFloranVillage extends Quest
+public class Q00660_AidingTheFloranVillage extends Quest
 {
 	// NPC
 	private static final int ALEX = 30291;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.ArmorSet;
 /**
  * @author ProGramMoS
  */
-public final class CustomArmorSetsTable
+public class CustomArmorSetsTable
 {
 	private static final Logger LOGGER = Logger.getLogger(CustomArmorSetsTable.class.getName());
 	private static CustomArmorSetsTable _instance;

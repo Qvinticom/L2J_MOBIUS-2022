@@ -31,18 +31,18 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Fort;
 
-public final class FortManager implements InstanceListManager
+public class FortManager implements InstanceListManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
 	private static final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 	
-	public final Fort findNearestFort(WorldObject obj)
+	public Fort findNearestFort(WorldObject obj)
 	{
 		return findNearestFort(obj, Long.MAX_VALUE);
 	}
 	
-	public final Fort findNearestFort(WorldObject obj, long maxDistance)
+	public Fort findNearestFort(WorldObject obj, long maxDistance)
 	{
 		Fort nearestFort = getFort(obj);
 		if (nearestFort == null)
@@ -60,7 +60,7 @@ public final class FortManager implements InstanceListManager
 		return nearestFort;
 	}
 	
-	public final Fort getFortById(int fortId)
+	public Fort getFortById(int fortId)
 	{
 		for (Fort f : _forts.values())
 		{
@@ -72,7 +72,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFortByOwner(Clan clan)
+	public Fort getFortByOwner(Clan clan)
 	{
 		for (Fort f : _forts.values())
 		{
@@ -84,7 +84,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(String name)
+	public Fort getFort(String name)
 	{
 		for (Fort f : _forts.values())
 		{
@@ -96,7 +96,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(int x, int y, int z)
+	public Fort getFort(int x, int y, int z)
 	{
 		for (Fort f : _forts.values())
 		{
@@ -108,12 +108,12 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(WorldObject activeObject)
+	public Fort getFort(WorldObject activeObject)
 	{
 		return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final Collection<Fort> getForts()
+	public Collection<Fort> getForts()
 	{
 		return _forts.values();
 	}

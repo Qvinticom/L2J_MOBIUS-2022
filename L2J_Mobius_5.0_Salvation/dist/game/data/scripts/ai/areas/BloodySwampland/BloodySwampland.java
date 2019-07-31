@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Bloody Swampland AI.
  * @author St3eT
  */
-public final class BloodySwampland extends AbstractNpcAI
+public class BloodySwampland extends AbstractNpcAI
 {
 	// NPCs
 	private static final int COLLECTOR = 23171; // Corpse Collector

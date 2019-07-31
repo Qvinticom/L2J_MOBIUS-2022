@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
-public final class ChangeWaitType2 extends GameClientPacket
+public class ChangeWaitType2 extends GameClientPacket
 {
 	private boolean _typeStand;
 	

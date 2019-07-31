@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * I'd Rather Be Collecting Fairy Breath (659)
  * @author Adry_85
  */
-public final class Q00659_IdRatherBeCollectingFairyBreath extends Quest
+public class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 {
 	// NPC
 	private static final int GALATEA = 30634;

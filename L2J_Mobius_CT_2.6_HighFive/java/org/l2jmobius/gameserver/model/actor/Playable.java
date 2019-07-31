@@ -256,7 +256,7 @@ public abstract class Playable extends Creature
 	}
 	
 	// Support for Noblesse Blessing skill, where buffs are retained after resurrect
-	public final boolean isNoblesseBlessedAffected()
+	public boolean isNoblesseBlessedAffected()
 	{
 		return isAffected(EffectFlag.NOBLESS_BLESSING);
 	}
@@ -264,7 +264,7 @@ public abstract class Playable extends Creature
 	/**
 	 * @return {@code true} if char can resurrect by himself, {@code false} otherwise
 	 */
-	public final boolean isResurrectSpecialAffected()
+	public boolean isResurrectSpecialAffected()
 	{
 		return isAffected(EffectFlag.RESURRECTION_SPECIAL);
 	}
@@ -281,7 +281,7 @@ public abstract class Playable extends Creature
 	 * For Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you.
 	 * @return
 	 */
-	public final boolean isProtectionBlessingAffected()
+	public boolean isProtectionBlessingAffected()
 	{
 		return isAffected(EffectFlag.PROTECTION_BLESSING);
 	}

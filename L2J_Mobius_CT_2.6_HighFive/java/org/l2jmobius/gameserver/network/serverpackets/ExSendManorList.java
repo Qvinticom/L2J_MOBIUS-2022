@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author l3x
  */
-public final class ExSendManorList implements IClientOutgoingPacket
+public class ExSendManorList implements IClientOutgoingPacket
 {
 	@Override
 	public boolean write(PacketWriter packet)

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.1.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class CannotMoveAnymore implements IClientIncomingPacket
+public class CannotMoveAnymore implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;

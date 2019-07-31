@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * The classical custom L2J implementation of the old //gmspeed GM command.
  * @author lord_rex (No, it wasn't me at all. Eclipse added my name there.)
  */
-public final class AdminSuperHaste implements IAdminCommandHandler
+public class AdminSuperHaste implements IAdminCommandHandler
 {
 	public static final String[] ADMIN_COMMANDS =
 	{

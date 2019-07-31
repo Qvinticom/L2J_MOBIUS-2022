@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg extends GameClientPacket
+public class RequestShortCutReg extends GameClientPacket
 {
 	private int _type;
 	private int _id;

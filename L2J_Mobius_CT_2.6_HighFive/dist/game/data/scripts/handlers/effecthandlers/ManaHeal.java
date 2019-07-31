@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Mana Heal effect implementation.
  * @author UnAfraid
  */
-public final class ManaHeal extends AbstractEffect
+public class ManaHeal extends AbstractEffect
 {
 	private final double _power;
 	

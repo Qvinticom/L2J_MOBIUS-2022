@@ -40,17 +40,17 @@ public class SkillHolder
 		_skillLvl = skill.getLevel();
 	}
 	
-	public final int getSkillId()
+	public int getSkillId()
 	{
 		return _skillId;
 	}
 	
-	public final int getSkillLevel()
+	public int getSkillLevel()
 	{
 		return _skillLvl;
 	}
 	
-	public final Skill getSkill()
+	public Skill getSkill()
 	{
 		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLvl, 1));
 	}

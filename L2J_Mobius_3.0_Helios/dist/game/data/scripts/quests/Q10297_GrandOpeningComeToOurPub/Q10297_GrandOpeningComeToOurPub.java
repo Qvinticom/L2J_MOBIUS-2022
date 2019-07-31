@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Grand Opening! Come to Our Pub! (10297)
  * @author Gladicek
  */
-public final class Q10297_GrandOpeningComeToOurPub extends Quest
+public class Q10297_GrandOpeningComeToOurPub extends Quest
 {
 	// NPCs
 	private static final int SETTLEN = 34180;

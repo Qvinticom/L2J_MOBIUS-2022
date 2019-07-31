@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Testimony Of Life (218)
  * @author ivantotov
  */
-public final class Q00218_TestimonyOfLife extends Quest
+public class Q00218_TestimonyOfLife extends Quest
 {
 	// NPCs
 	private static final int HIERARCH_ASTERIOS = 30154;

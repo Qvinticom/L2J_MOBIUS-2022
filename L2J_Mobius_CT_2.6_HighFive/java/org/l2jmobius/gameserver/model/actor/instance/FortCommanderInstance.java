@@ -114,7 +114,7 @@ public class FortCommanderInstance extends DefenderInstance
 	}
 	
 	@Override
-	public final void addDamage(Creature attacker, int damage, Skill skill)
+	public void addDamage(Creature attacker, int damage, Skill skill)
 	{
 		final Spawn spawn = getSpawn();
 		if ((spawn != null) && canTalk())

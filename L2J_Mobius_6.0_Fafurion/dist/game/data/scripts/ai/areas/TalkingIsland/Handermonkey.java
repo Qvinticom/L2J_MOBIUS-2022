@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Handermonkey AI.
  * @author Gladicek
  */
-public final class Handermonkey extends AbstractNpcAI
+public class Handermonkey extends AbstractNpcAI
 {
 	// NPC
 	private static final int HANDERMONKEY = 33203;

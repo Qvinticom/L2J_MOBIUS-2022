@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class BuyList implements IClientOutgoingPacket
+public class BuyList implements IClientOutgoingPacket
 {
 	private final int _listId;
 	private final Collection<Product> _list;

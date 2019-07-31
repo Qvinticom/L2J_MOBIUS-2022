@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Removes minions after master's death.
  * @author GKR
  */
-public final class NaiaLock extends AbstractNpcAI
+public class NaiaLock extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LOCK = 18491;

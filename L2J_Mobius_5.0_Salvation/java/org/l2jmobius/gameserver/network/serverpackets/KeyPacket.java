@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class KeyPacket implements IClientOutgoingPacket
+public class KeyPacket implements IClientOutgoingPacket
 {
 	private final byte[] _key;
 	private final int _result;

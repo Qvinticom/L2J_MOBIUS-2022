@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.thread.LoginServerThread;
 import org.l2jmobius.gameserver.thread.LoginServerThread.SessionKey;
 
-public final class AuthLogin extends GameClientPacket
+public class AuthLogin extends GameClientPacket
 {
 	// loginName + keys must match what the loginserver used.
 	private String _loginName;

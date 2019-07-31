@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Mutual Benefit (10394)
  * @author St3eT
  */
-public final class Q10394_MutualBenefit extends Quest
+public class Q10394_MutualBenefit extends Quest
 {
 	// NPCs
 	private static final int KELIOS = 33862;

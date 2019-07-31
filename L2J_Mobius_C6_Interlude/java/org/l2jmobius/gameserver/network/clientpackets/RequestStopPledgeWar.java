@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestStopPledgeWar extends GameClientPacket
+public class RequestStopPledgeWar extends GameClientPacket
 {
 	private String _pledgeName;
 	

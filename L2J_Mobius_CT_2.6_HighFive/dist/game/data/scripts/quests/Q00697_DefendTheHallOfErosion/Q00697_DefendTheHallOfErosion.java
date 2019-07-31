@@ -37,7 +37,7 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
 		
@@ -55,7 +55,7 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

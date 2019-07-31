@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * The Wishing Potion (334)
  * @author Zealar
  */
-public final class Q00334_TheWishingPotion extends Quest
+public class Q00334_TheWishingPotion extends Quest
 {
 	// NPCs
 	private static final int TORAI = 30557;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Suspicious Vagabond in the Swamp (10409)
  * @author St3eT
  */
-public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
+public class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 {
 	// NPCs
 	private static final int DOKARA = 33847;

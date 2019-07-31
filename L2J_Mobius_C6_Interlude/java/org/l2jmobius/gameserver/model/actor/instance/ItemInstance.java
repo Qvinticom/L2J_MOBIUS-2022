@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * This class manages items.
  */
-public final class ItemInstance extends WorldObject
+public class ItemInstance extends WorldObject
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemInstance.class.getName());
 	private static final Logger _logItems = Logger.getLogger("item");
@@ -472,7 +472,7 @@ public final class ItemInstance extends WorldObject
 	 * Returns the quantity of crystals for crystallization.
 	 * @return int
 	 */
-	public final int getCrystalCount()
+	public int getCrystalCount()
 	{
 		return _item.getCrystalCount(_enchantLevel);
 	}
@@ -1155,7 +1155,7 @@ public final class ItemInstance extends WorldObject
 	 * @param y the y
 	 * @param z the z
 	 */
-	public final void dropMe(Creature dropper, int x, int y, int z)
+	public void dropMe(Creature dropper, int x, int y, int z)
 	{
 		if (Config.PATHFINDING && (dropper != null))
 		{
@@ -1452,7 +1452,7 @@ public final class ItemInstance extends WorldObject
 	 * Gets the drop protection.
 	 * @return the drop protection
 	 */
-	public final DropProtection getDropProtection()
+	public DropProtection getDropProtection()
 	{
 		return _dropProtection;
 	}

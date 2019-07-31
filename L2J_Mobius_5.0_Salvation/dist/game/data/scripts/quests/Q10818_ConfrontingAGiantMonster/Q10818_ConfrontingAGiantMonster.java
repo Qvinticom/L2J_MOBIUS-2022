@@ -31,7 +31,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
  * @URL https://l2wiki.com/Confronting_a_Giant_Monster
  * @author Mobius
  */
-public final class Q10818_ConfrontingAGiantMonster extends Quest
+public class Q10818_ConfrontingAGiantMonster extends Quest
 {
 	// NPC
 	private static final int DAICHIR = 30537;

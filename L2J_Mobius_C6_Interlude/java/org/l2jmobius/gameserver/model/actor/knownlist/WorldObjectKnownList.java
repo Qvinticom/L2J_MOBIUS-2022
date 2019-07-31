@@ -69,7 +69,7 @@ public class WorldObjectKnownList
 		return getKnownObjects().put(object.getObjectId(), object) == null;
 	}
 	
-	public final boolean knowsObject(WorldObject object)
+	public boolean knowsObject(WorldObject object)
 	{
 		if (object == null)
 		{
@@ -105,7 +105,7 @@ public class WorldObjectKnownList
 	 * <li>Add Creature to _knowObject and if necessary to _knownPlayers of WorldObject alreday known by the Creature</li><BR>
 	 * <BR>
 	 */
-	public final synchronized void updateKnownObjects()
+	public synchronized void updateKnownObjects()
 	{
 		// Only bother updating knownobjects for Creature; don't for WorldObject
 		if (_activeObject instanceof Creature)
@@ -173,7 +173,7 @@ public class WorldObjectKnownList
 		}
 	}
 	
-	public final void forgetObjects()
+	public void forgetObjects()
 	{
 		// Go through knownObjects
 		Collection<WorldObject> knownObjects = getKnownObjects().values();
@@ -242,7 +242,7 @@ public class WorldObjectKnownList
 	/**
 	 * @return the _knownObjects containing all WorldObject known by the Creature.
 	 */
-	public final Map<Integer, WorldObject> getKnownObjects()
+	public Map<Integer, WorldObject> getKnownObjects()
 	{
 		if (_knownObjects == null)
 		{

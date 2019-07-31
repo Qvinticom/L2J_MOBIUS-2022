@@ -36,42 +36,42 @@ public class PlayerAppearance
 		_sex = Sex;
 	}
 	
-	public final byte getFace()
+	public byte getFace()
 	{
 		return _face;
 	}
 	
-	public final void setFace(int value)
+	public void setFace(int value)
 	{
 		_face = (byte) value;
 	}
 	
-	public final byte getHairColor()
+	public byte getHairColor()
 	{
 		return _hairColor;
 	}
 	
-	public final void setHairColor(int value)
+	public void setHairColor(int value)
 	{
 		_hairColor = (byte) value;
 	}
 	
-	public final byte getHairStyle()
+	public byte getHairStyle()
 	{
 		return _hairStyle;
 	}
 	
-	public final void setHairStyle(int value)
+	public void setHairStyle(int value)
 	{
 		_hairStyle = (byte) value;
 	}
 	
-	public final boolean getSex()
+	public boolean getSex()
 	{
 		return _sex;
 	}
 	
-	public final void setSex(boolean isfemale)
+	public void setSex(boolean isfemale)
 	{
 		_sex = isfemale;
 	}

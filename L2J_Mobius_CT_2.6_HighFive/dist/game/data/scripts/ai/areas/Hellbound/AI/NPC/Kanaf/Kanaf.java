@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Kanaf AI.
  * @author GKR
  */
-public final class Kanaf extends AbstractNpcAI
+public class Kanaf extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KANAF = 32346;
@@ -38,7 +38,7 @@ public final class Kanaf extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("info"))
 		{

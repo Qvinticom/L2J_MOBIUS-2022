@@ -30,7 +30,7 @@ import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
  * For the Searchdog King (10365)
  * @author Stayway
  */
-public final class Q10365_ForTheSearchdogKing extends Quest
+public class Q10365_ForTheSearchdogKing extends Quest
 {
 	// NPCs
 	private static final int DEP = 33453;

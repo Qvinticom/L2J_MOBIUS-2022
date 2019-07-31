@@ -55,7 +55,7 @@ public class ObjectPosition
 	 * @param y the y
 	 * @param z the z
 	 */
-	public final void setXYZ(int x, int y, int z)
+	public void setXYZ(int x, int y, int z)
 	{
 		setWorldPosition(x, y, z);
 		
@@ -102,7 +102,7 @@ public class ObjectPosition
 	 * @param y the y
 	 * @param z the z
 	 */
-	public final void setXYZInvisible(int x, int y, int z)
+	public void setXYZInvisible(int x, int y, int z)
 	{
 		if (x > World.MAP_MAX_X)
 		{
@@ -154,7 +154,7 @@ public class ObjectPosition
 	 * Gets the active object.
 	 * @return the active object
 	 */
-	public final WorldObject getActiveObject()
+	public WorldObject getActiveObject()
 	{
 		return _activeObject;
 	}
@@ -163,7 +163,7 @@ public class ObjectPosition
 	 * Gets the heading.
 	 * @return the heading
 	 */
-	public final int getHeading()
+	public int getHeading()
 	{
 		return _heading;
 	}
@@ -172,7 +172,7 @@ public class ObjectPosition
 	 * Sets the heading.
 	 * @param value the new heading
 	 */
-	public final void setHeading(int value)
+	public void setHeading(int value)
 	{
 		_heading = value;
 	}
@@ -181,7 +181,7 @@ public class ObjectPosition
 	 * Return the x position of the WorldObject.
 	 * @return the x
 	 */
-	public final int getX()
+	public int getX()
 	{
 		return getWorldPosition().getX();
 	}
@@ -190,7 +190,7 @@ public class ObjectPosition
 	 * Sets the x.
 	 * @param value the new x
 	 */
-	public final void setX(int value)
+	public void setX(int value)
 	{
 		getWorldPosition().setX(value);
 	}
@@ -199,7 +199,7 @@ public class ObjectPosition
 	 * Return the y position of the WorldObject.
 	 * @return the y
 	 */
-	public final int getY()
+	public int getY()
 	{
 		return getWorldPosition().getY();
 	}
@@ -208,7 +208,7 @@ public class ObjectPosition
 	 * Sets the y.
 	 * @param value the new y
 	 */
-	public final void setY(int value)
+	public void setY(int value)
 	{
 		getWorldPosition().setY(value);
 	}
@@ -217,7 +217,7 @@ public class ObjectPosition
 	 * Return the z position of the WorldObject.
 	 * @return the z
 	 */
-	public final int getZ()
+	public int getZ()
 	{
 		return getWorldPosition().getZ();
 	}
@@ -226,7 +226,7 @@ public class ObjectPosition
 	 * Sets the z.
 	 * @param value the new z
 	 */
-	public final void setZ(int value)
+	public void setZ(int value)
 	{
 		getWorldPosition().setZ(value);
 	}
@@ -235,7 +235,7 @@ public class ObjectPosition
 	 * Gets the world position.
 	 * @return the world position
 	 */
-	public final Location getWorldPosition()
+	public Location getWorldPosition()
 	{
 		if (_worldPosition == null)
 		{
@@ -251,7 +251,7 @@ public class ObjectPosition
 	 * @param y the y
 	 * @param z the z
 	 */
-	public final void setWorldPosition(int x, int y, int z)
+	public void setWorldPosition(int x, int y, int z)
 	{
 		getWorldPosition().setXYZ(x, y, z);
 	}
@@ -260,7 +260,7 @@ public class ObjectPosition
 	 * Sets the world position.
 	 * @param location the new world position
 	 */
-	public final void setWorldPosition(Location location)
+	public void setWorldPosition(Location location)
 	{
 		setWorldPosition(location.getX(), location.getY(), location.getZ());
 	}
@@ -269,7 +269,7 @@ public class ObjectPosition
 	 * Gets the world region.
 	 * @return the world region
 	 */
-	public final WorldRegion getWorldRegion()
+	public WorldRegion getWorldRegion()
 	{
 		synchronized (_changingRegion)
 		{
@@ -282,7 +282,7 @@ public class ObjectPosition
 	 * Sets the world region.
 	 * @param value the new world region
 	 */
-	public final void setWorldRegion(WorldRegion value)
+	public void setWorldRegion(WorldRegion value)
 	{
 		synchronized (_changingRegion)
 		{

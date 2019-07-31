@@ -46,7 +46,7 @@ import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
  * Harnak Underground Ruins Instance Zone.
  * @author Sdw
  */
-public final class HarnakUndergroundRuins extends AbstractInstance
+public class HarnakUndergroundRuins extends AbstractInstance
 {
 	// NPCs
 	private static final int HADEL = 33344;

@@ -43,7 +43,7 @@ import instances.AbstractInstance;
  * Octavis Warzone instance zone.
  * @author St3eT
  */
-public final class OctavisWarzone extends AbstractInstance
+public class OctavisWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int[] OCTAVIS_STAGE_1 =

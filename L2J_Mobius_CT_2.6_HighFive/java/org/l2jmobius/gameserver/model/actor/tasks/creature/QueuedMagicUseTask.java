@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Task dedicated to qued magic use of character
  * @author xban1x
  */
-public final class QueuedMagicUseTask implements Runnable
+public class QueuedMagicUseTask implements Runnable
 {
 	private final PlayerInstance _currPlayer;
 	private final Skill _queuedSkill;

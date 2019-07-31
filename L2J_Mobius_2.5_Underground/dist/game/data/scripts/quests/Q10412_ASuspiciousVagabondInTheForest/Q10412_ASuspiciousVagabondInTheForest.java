@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * A Suspicious Vagabond in the Forest (10412)
  * @author St3eT
  */
-public final class Q10412_ASuspiciousVagabondInTheForest extends Quest
+public class Q10412_ASuspiciousVagabondInTheForest extends Quest
 {
 	// NPCs
 	private static final int HATUBA = 33849;

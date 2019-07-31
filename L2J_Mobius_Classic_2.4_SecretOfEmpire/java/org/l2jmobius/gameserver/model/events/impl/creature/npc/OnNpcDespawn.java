@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author malyelfik
  */
-public final class OnNpcDespawn implements IBaseEvent
+public class OnNpcDespawn implements IBaseEvent
 {
 	private final Npc _npc;
 	

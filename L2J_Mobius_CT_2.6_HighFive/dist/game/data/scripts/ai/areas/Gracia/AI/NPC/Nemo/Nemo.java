@@ -30,7 +30,7 @@ import ai.areas.Gracia.AI.Maguen;
  * Nemo AI.
  * @author St3eT
  */
-public final class Nemo extends AbstractNpcAI
+public class Nemo extends AbstractNpcAI
 {
 	// NPC
 	private static final int NEMO = 32735; // Nemo

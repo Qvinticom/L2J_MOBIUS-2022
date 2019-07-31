@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 /**
  * A container used for schemes buffer.
  */
-public final class BuffSkillHolder
+public class BuffSkillHolder
 {
 	private final int _id;
 	private final int _price;
@@ -44,12 +44,12 @@ public final class BuffSkillHolder
 		return _price;
 	}
 	
-	public final String getType()
+	public String getType()
 	{
 		return _type;
 	}
 	
-	public final String getDescription()
+	public String getDescription()
 	{
 		return _description;
 	}

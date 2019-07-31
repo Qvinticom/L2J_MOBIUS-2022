@@ -36,7 +36,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  * For Glory (10813)
  * @author Gladicek
  */
-public final class Q10813_ForGlory extends Quest
+public class Q10813_ForGlory extends Quest
 {
 	// Npc
 	private static final int MYSTERIOUS_BUTLER = 33685;

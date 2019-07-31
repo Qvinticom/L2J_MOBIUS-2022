@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.holders.RangeAbilityPointsHolder;
 /**
  * @author UnAfraid
  */
-public final class AbilityPointsData implements IXmlReader
+public class AbilityPointsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AbilityPointsData.class.getName());
 	private final List<RangeAbilityPointsHolder> _points = new ArrayList<>();

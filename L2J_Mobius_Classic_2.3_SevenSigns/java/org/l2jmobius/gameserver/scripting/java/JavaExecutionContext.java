@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 /**
  * @author HorridoJoho
  */
-public final class JavaExecutionContext extends JavaScriptingEngine
+public class JavaExecutionContext extends JavaScriptingEngine
 {
 	private static final Logger LOGGER = Logger.getLogger(JavaExecutionContext.class.getName());
 	
@@ -247,7 +247,7 @@ public final class JavaExecutionContext extends JavaScriptingEngine
 		return null;
 	}
 	
-	public final Path getCurrentExecutingScript()
+	public Path getCurrentExecutingScript()
 	{
 		return _currentExecutingScript;
 	}

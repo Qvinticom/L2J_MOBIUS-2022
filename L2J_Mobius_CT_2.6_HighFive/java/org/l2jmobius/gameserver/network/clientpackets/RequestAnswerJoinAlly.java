@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestAnswerJoinAlly implements IClientIncomingPacket
+public class RequestAnswerJoinAlly implements IClientIncomingPacket
 {
 	private int _response;
 	

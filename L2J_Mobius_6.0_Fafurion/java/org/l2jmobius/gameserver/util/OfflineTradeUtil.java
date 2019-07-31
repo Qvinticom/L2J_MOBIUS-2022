@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author lord_rex
  */
-public final class OfflineTradeUtil
+public class OfflineTradeUtil
 {
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	

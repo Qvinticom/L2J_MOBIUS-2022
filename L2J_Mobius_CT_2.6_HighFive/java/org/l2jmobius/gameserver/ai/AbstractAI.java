@@ -233,7 +233,7 @@ public abstract class AbstractAI implements Ctrl
 	 * @param intention The new Intention to set to the AI
 	 */
 	@Override
-	public final void setIntention(CtrlIntention intention)
+	public void setIntention(CtrlIntention intention)
 	{
 		setIntention(intention, null, null);
 	}
@@ -245,13 +245,13 @@ public abstract class AbstractAI implements Ctrl
 	 * @param arg0 The first parameter of the Intention (optional target)
 	 */
 	@Override
-	public final void setIntention(CtrlIntention intention, Object arg0)
+	public void setIntention(CtrlIntention intention, Object arg0)
 	{
 		setIntention(intention, arg0, null);
 	}
 	
 	@Override
-	public final void setIntention(CtrlIntention intention, Object arg0, Object arg1)
+	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
 		// Stop the follow mode if necessary
 		if ((intention != AI_INTENTION_FOLLOW) && (intention != AI_INTENTION_ATTACK))
@@ -322,7 +322,7 @@ public abstract class AbstractAI implements Ctrl
 	 * @param evt The event whose the AI must be notified
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt)
+	public void notifyEvent(CtrlEvent evt)
 	{
 		notifyEvent(evt, null, null);
 	}
@@ -333,7 +333,7 @@ public abstract class AbstractAI implements Ctrl
 	 * @param arg0 The first parameter of the Event (optional target)
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt, Object arg0)
+	public void notifyEvent(CtrlEvent evt, Object arg0)
 	{
 		notifyEvent(evt, arg0, null);
 	}
@@ -343,7 +343,7 @@ public abstract class AbstractAI implements Ctrl
 	 * @param evt The event whose the AI must be notified
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt, Object... args)
+	public void notifyEvent(CtrlEvent evt, Object... args)
 	{
 		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
 		{

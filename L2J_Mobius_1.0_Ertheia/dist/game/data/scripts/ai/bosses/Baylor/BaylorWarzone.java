@@ -37,7 +37,7 @@ import instances.AbstractInstance;
  * Baylor Warzone instance zone.
  * @author St3eT
  */
-public final class BaylorWarzone extends AbstractInstance
+public class BaylorWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int BAYLOR = 29213;

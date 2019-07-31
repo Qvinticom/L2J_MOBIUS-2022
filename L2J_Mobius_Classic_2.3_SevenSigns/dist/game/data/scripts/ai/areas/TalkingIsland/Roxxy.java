@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Roxxy AI.
  * @author Mobius
  */
-public final class Roxxy extends AbstractNpcAI
+public class Roxxy extends AbstractNpcAI
 {
 	// NPC
 	private static final int ROXXY = 30006;

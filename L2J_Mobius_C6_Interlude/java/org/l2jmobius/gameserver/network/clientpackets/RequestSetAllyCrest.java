@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 
-public final class RequestSetAllyCrest extends GameClientPacket
+public class RequestSetAllyCrest extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestSetAllyCrest.class.getName());
 	

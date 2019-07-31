@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Matras' Curiosity (132)
  * @author GKR, Gladicek
  */
-public final class Q00132_MatrasCuriosity extends Quest
+public class Q00132_MatrasCuriosity extends Quest
 {
 	// NPCs
 	private static final int MATRAS = 32245;
@@ -91,7 +91,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		PlayerInstance pl = null;
 		switch (npc.getId())
@@ -139,7 +139,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Migi, DS
  */
-public final class RequestSendPost implements IClientIncomingPacket
+public class RequestSendPost implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	

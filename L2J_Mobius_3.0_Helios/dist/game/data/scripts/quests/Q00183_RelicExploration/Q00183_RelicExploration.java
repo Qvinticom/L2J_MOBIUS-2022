@@ -29,7 +29,7 @@ import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
  * Relic Exploration (183)
  * @author ivantotov
  */
-public final class Q00183_RelicExploration extends Quest
+public class Q00183_RelicExploration extends Quest
 {
 	// NPCs
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;

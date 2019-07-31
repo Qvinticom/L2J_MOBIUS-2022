@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Zealar
  */
-public final class MaxCp extends AbstractEffect
+public class MaxCp extends AbstractEffect
 {
 	private final double _power;
 	private final EffectCalculationType _type;

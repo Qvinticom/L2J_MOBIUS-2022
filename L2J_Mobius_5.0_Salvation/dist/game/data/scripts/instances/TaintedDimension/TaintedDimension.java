@@ -32,7 +32,7 @@ import instances.AbstractInstance;
  * Tainted Dimension instance zone.
  * @author St3eT
  */
-public final class TaintedDimension extends AbstractInstance
+public class TaintedDimension extends AbstractInstance
 {
 	// NPCs
 	private static final int MYSTERIOUS_PRIEST = 33361;

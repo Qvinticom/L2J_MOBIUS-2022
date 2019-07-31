@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
-public final class RequestWithDrawalParty extends GameClientPacket
+public class RequestWithDrawalParty extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that sets the current hp to the given amount.
  * @author Nik
  */
-public final class SetHp extends AbstractEffect
+public class SetHp extends AbstractEffect
 {
 	private final double _amount;
 	private final StatModifierType _mode;

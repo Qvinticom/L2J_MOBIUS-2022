@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
  * This class loads and holds all static object data.
  * @author UnAfraid
  */
-public final class StaticObjectData implements IXmlReader
+public class StaticObjectData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(StaticObjectData.class.getName());
 	

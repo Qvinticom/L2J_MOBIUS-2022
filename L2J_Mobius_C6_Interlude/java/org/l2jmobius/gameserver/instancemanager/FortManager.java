@@ -44,7 +44,7 @@ public class FortManager
 		load();
 	}
 	
-	public final int findNearestFortIndex(WorldObject obj)
+	public int findNearestFortIndex(WorldObject obj)
 	{
 		int index = getFortIndex(obj);
 		if (index < 0)
@@ -97,7 +97,7 @@ public class FortManager
 		}
 	}
 	
-	public final Fort getFortById(int fortId)
+	public Fort getFortById(int fortId)
 	{
 		for (Fort f : _forts)
 		{
@@ -109,7 +109,7 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFortByOwner(Clan clan)
+	public Fort getFortByOwner(Clan clan)
 	{
 		for (Fort f : _forts)
 		{
@@ -121,7 +121,7 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFort(String name)
+	public Fort getFort(String name)
 	{
 		for (Fort f : _forts)
 		{
@@ -133,7 +133,7 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFort(int x, int y, int z)
+	public Fort getFort(int x, int y, int z)
 	{
 		for (Fort f : _forts)
 		{
@@ -145,12 +145,12 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFort(WorldObject activeObject)
+	public Fort getFort(WorldObject activeObject)
 	{
 		return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getFortIndex(int fortId)
+	public int getFortIndex(int fortId)
 	{
 		Fort fort;
 		for (int i = 0; i < _forts.size(); i++)
@@ -164,12 +164,12 @@ public class FortManager
 		return -1;
 	}
 	
-	public final int getFortIndex(WorldObject activeObject)
+	public int getFortIndex(WorldObject activeObject)
 	{
 		return getFortIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final int getFortIndex(int x, int y, int z)
+	public int getFortIndex(int x, int y, int z)
 	{
 		Fort fort;
 		for (int i = 0; i < _forts.size(); i++)
@@ -183,7 +183,7 @@ public class FortManager
 		return -1;
 	}
 	
-	public final List<Fort> getForts()
+	public List<Fort> getForts()
 	{
 		return _forts;
 	}

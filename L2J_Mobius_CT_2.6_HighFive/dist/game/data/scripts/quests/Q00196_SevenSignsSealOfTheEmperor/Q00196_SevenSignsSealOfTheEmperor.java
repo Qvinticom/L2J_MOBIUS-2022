@@ -32,7 +32,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  * Seven Signs, Seal of the Emperor (196)
  * @author Adry_85
  */
-public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
+public class Q00196_SevenSignsSealOfTheEmperor extends Quest
 {
 	// NPCs
 	private static final int IASON_HEINE = 30969;

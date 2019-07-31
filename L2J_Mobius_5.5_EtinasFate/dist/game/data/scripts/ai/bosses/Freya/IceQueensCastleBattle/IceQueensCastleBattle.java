@@ -57,7 +57,7 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  * Ice Queen's Castle (Normal Battle) instance zone.
  * @author St3eT
  */
-public final class IceQueensCastleBattle extends AbstractInstance
+public class IceQueensCastleBattle extends AbstractInstance
 {
 	// Npcs
 	private static final int FREYA_THRONE = 29177; // First freya

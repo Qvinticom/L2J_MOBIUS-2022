@@ -30,7 +30,7 @@ import quests.Q00236_SeedsOfChaos.Q00236_SeedsOfChaos;
  * Nornil's Garden Quest instant zone.
  * @author Zoey76
  */
-public final class NornilsGardenQuest extends AbstractInstance
+public class NornilsGardenQuest extends AbstractInstance
 {
 	// NPCs
 	private static final int RODENPICULA = 32237;

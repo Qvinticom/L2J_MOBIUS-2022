@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestPetUseItem extends GameClientPacket
+public class RequestPetUseItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestPetUseItem.class.getName());
 	private int _objectId;

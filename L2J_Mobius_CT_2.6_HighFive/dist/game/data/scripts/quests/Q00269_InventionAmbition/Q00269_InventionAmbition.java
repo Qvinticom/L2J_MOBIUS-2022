@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Invention Ambition (269)
  * @author xban1x
  */
-public final class Q00269_InventionAmbition extends Quest
+public class Q00269_InventionAmbition extends Quest
 {
 	// NPC
 	private static final int INVENTOR_MARU = 32486;

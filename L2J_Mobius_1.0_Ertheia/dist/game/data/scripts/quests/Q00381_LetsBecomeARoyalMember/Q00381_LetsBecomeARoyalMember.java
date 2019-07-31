@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Let's Become a Royal Member! (381)
  * @author Pandragon
  */
-public final class Q00381_LetsBecomeARoyalMember extends Quest
+public class Q00381_LetsBecomeARoyalMember extends Quest
 {
 	// NPCs
 	private static final int SANDRA = 30090;

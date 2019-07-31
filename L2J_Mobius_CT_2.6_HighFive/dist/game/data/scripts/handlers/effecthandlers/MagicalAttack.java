@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Magical Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalAttack extends AbstractEffect
+public class MagicalAttack extends AbstractEffect
 {
 	public MagicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

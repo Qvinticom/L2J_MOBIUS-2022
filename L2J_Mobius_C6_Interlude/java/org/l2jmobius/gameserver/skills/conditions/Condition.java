@@ -27,12 +27,12 @@ public abstract class Condition implements ConditionListener
 	private String _msg;
 	private boolean _result;
 	
-	public final void setMessage(String msg)
+	public void setMessage(String msg)
 	{
 		_msg = msg;
 	}
 	
-	public final String getMessage()
+	public String getMessage()
 	{
 		return _msg;
 	}
@@ -48,7 +48,7 @@ public abstract class Condition implements ConditionListener
 		return _listener;
 	}
 	
-	public final boolean test(Env env)
+	public boolean test(Env env)
 	{
 		final boolean res = testImpl(env);
 		if ((_listener != null) && (res != _result))

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format: (ch) Sd
  * @author -Wooden-
  */
-public final class RequestPledgeSetMemberPowerGrade implements IClientIncomingPacket
+public class RequestPledgeSetMemberPowerGrade implements IClientIncomingPacket
 {
 	private String _member;
 	private int _powerGrade;

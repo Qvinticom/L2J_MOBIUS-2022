@@ -51,27 +51,27 @@ public class MapRegion
 		_bbs = bbs;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final String getTown()
+	public String getTown()
 	{
 		return _town;
 	}
 	
-	public final int getLocId()
+	public int getLocId()
 	{
 		return _locId;
 	}
 	
-	public final int getBbs()
+	public int getBbs()
 	{
 		return _bbs;
 	}
 	
-	public final void addMap(int x, int y)
+	public void addMap(int x, int y)
 	{
 		if (_maps == null)
 		{
@@ -85,12 +85,12 @@ public class MapRegion
 		});
 	}
 	
-	public final List<int[]> getMaps()
+	public List<int[]> getMaps()
 	{
 		return _maps;
 	}
 	
-	public final boolean isZoneInRegion(int x, int y)
+	public boolean isZoneInRegion(int x, int y)
 	{
 		if (_maps == null)
 		{
@@ -108,7 +108,7 @@ public class MapRegion
 	}
 	
 	// Respawn
-	public final void addSpawn(int x, int y, int z)
+	public void addSpawn(int x, int y, int z)
 	{
 		if (_spawnLocs == null)
 		{
@@ -118,7 +118,7 @@ public class MapRegion
 		_spawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addOtherSpawn(int x, int y, int z)
+	public void addOtherSpawn(int x, int y, int z)
 	{
 		if (_otherSpawnLocs == null)
 		{
@@ -128,7 +128,7 @@ public class MapRegion
 		_otherSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addChaoticSpawn(int x, int y, int z)
+	public void addChaoticSpawn(int x, int y, int z)
 	{
 		if (_chaoticSpawnLocs == null)
 		{
@@ -138,7 +138,7 @@ public class MapRegion
 		_chaoticSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addBanishSpawn(int x, int y, int z)
+	public void addBanishSpawn(int x, int y, int z)
 	{
 		if (_banishSpawnLocs == null)
 		{
@@ -148,12 +148,12 @@ public class MapRegion
 		_banishSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final List<Location> getSpawns()
+	public List<Location> getSpawns()
 	{
 		return _spawnLocs;
 	}
 	
-	public final Location getSpawnLoc()
+	public Location getSpawnLoc()
 	{
 		if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
 		{
@@ -162,7 +162,7 @@ public class MapRegion
 		return _spawnLocs.get(0);
 	}
 	
-	public final Location getOtherSpawnLoc()
+	public Location getOtherSpawnLoc()
 	{
 		if (_otherSpawnLocs != null)
 		{
@@ -175,7 +175,7 @@ public class MapRegion
 		return getSpawnLoc();
 	}
 	
-	public final Location getChaoticSpawnLoc()
+	public Location getChaoticSpawnLoc()
 	{
 		if (_chaoticSpawnLocs != null)
 		{
@@ -188,7 +188,7 @@ public class MapRegion
 		return getSpawnLoc();
 	}
 	
-	public final Location getBanishSpawnLoc()
+	public Location getBanishSpawnLoc()
 	{
 		if (_banishSpawnLocs != null)
 		{
@@ -201,12 +201,12 @@ public class MapRegion
 		return getSpawnLoc();
 	}
 	
-	public final void addBannedRace(String race, String point)
+	public void addBannedRace(String race, String point)
 	{
 		_bannedRace.put(Race.valueOf(race), point);
 	}
 	
-	public final Map<Race, String> getBannedRace()
+	public Map<Race, String> getBannedRace()
 	{
 		return _bannedRace;
 	}

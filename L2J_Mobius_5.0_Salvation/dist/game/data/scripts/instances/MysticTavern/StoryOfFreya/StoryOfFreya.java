@@ -256,7 +256,7 @@ public class StoryOfFreya extends AbstractInstance
 			}
 			case "startAttack":
 			{
-				for (final Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
+				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
 				{
 					if (nearby.getId() == KNIGHT)
 					{

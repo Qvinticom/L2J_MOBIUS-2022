@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.Spawn;
  * Hellbound Spawns parser.
  * @author Zoey76
  */
-public final class HellboundSpawns implements IXmlReader
+public class HellboundSpawns implements IXmlReader
 {
 	private final List<Spawn> _spawns = new ArrayList<>();
 	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();

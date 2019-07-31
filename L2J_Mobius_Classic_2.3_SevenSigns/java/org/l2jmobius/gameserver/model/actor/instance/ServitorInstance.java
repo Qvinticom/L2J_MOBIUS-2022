@@ -90,7 +90,7 @@ public class ServitorInstance extends Summon implements Runnable
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return (getTemplate() != null ? getTemplate().getLevel() : 0);
 	}
@@ -232,7 +232,7 @@ public class ServitorInstance extends Summon implements Runnable
 	}
 	
 	@Override
-	public final void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(boolean removed, int skillId)
 	{
 		super.stopSkillEffects(removed, skillId);
 		final Map<Integer, List<SummonEffect>> servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 /**
  * @version $Revision: 1.7.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestMagicSkillUse extends GameClientPacket
+public class RequestMagicSkillUse extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	

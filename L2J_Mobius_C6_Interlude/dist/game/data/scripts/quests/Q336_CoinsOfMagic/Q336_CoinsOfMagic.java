@@ -136,7 +136,7 @@ public class Q336_CoinsOfMagic extends Quest
 		super(336, qn, "Coins of Magic");
 		addStartNpc(SORINT);
 		addTalkId(SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN);
-		for (final int[] mob : DROPLIST)
+		for (int[] mob : DROPLIST)
 		{
 			addKillId(mob[0]);
 		}
@@ -202,7 +202,7 @@ public class Q336_CoinsOfMagic extends Quest
 		return htmltext;
 	}
 	
-	private String promote(final QuestState st)
+	private String promote(QuestState st)
 	{
 		final int grade = st.getInt("grade");
 		String html;
@@ -213,7 +213,7 @@ public class Q336_CoinsOfMagic extends Quest
 		else
 		{
 			int h = 0;
-			for (final int i : PROMOTE[grade])
+			for (int i : PROMOTE[grade])
 			{
 				if (st.getQuestItemsCount(i) > 0)
 				{
@@ -222,7 +222,7 @@ public class Q336_CoinsOfMagic extends Quest
 			}
 			if (h == 6)
 			{
-				for (final int i : PROMOTE[grade])
+				for (int i : PROMOTE[grade])
 				{
 					st.takeItems(i, 1);
 				}
@@ -330,7 +330,7 @@ public class Q336_CoinsOfMagic extends Quest
 			}
 			default:
 			{
-				for (final int[] e : EXCHANGE_LEVEL)
+				for (int[] e : EXCHANGE_LEVEL)
 				{
 					if ((npcId == e[0]) && (grade <= e[1]))
 					{
@@ -365,7 +365,7 @@ public class Q336_CoinsOfMagic extends Quest
 			}
 			return null;
 		}
-		for (final int[] e : DROPLIST)
+		for (int[] e : DROPLIST)
 		{
 			if (e[0] == npcId)
 			{
@@ -376,7 +376,7 @@ public class Q336_CoinsOfMagic extends Quest
 				return null;
 			}
 		}
-		for (final int u : MONSTERS)
+		for (int u : MONSTERS)
 		{
 			if (u == npcId)
 			{

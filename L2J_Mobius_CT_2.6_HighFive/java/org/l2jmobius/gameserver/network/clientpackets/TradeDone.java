@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * This packet manages the trade response.
  */
-public final class TradeDone implements IClientIncomingPacket
+public class TradeDone implements IClientIncomingPacket
 {
 	private int _response;
 	

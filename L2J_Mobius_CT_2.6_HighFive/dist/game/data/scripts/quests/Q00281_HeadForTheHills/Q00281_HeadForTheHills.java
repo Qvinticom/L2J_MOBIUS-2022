@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * Head for the Hills! (281)
  * @author xban1x
  */
-public final class Q00281_HeadForTheHills extends Quest
+public class Q00281_HeadForTheHills extends Quest
 {
 	// Item
 	private static final int CLAWS = 9796;

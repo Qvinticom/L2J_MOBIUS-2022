@@ -29,7 +29,7 @@ import instances.AbstractInstance;
  * Nightmare Kamaloka instance zone.
  * @author St3eT
  */
-public final class NightmareKamaloka extends AbstractInstance
+public class NightmareKamaloka extends AbstractInstance
 {
 	// NPCs
 	private static final int KURTIZ = 30870;

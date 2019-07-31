@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.2.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class SetPrivateStoreMsgBuy implements IClientIncomingPacket
+public class SetPrivateStoreMsgBuy implements IClientIncomingPacket
 {
 	private static final int MAX_MSG_LENGTH = 29;
 	

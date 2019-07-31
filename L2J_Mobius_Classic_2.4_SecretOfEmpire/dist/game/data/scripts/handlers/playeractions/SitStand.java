@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
  * Sit/Stand player action handler.
  * @author UnAfraid
  */
-public final class SitStand implements IPlayerActionHandler
+public class SitStand implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

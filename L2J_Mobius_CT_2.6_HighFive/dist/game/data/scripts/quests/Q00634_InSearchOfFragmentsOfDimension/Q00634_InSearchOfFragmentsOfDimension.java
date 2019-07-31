@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * In Search of Fragments of Dimension (634)
  * @author Adry_85
  */
-public final class Q00634_InSearchOfFragmentsOfDimension extends Quest
+public class Q00634_InSearchOfFragmentsOfDimension extends Quest
 {
 	// NPCs
 	private static final int[] DIMENSIONAL_GATE_KEEPER =

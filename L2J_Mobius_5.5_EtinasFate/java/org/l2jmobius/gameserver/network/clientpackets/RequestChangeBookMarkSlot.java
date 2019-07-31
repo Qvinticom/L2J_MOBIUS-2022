@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestChangeBookMarkSlot implements IClientIncomingPacket
+public class RequestChangeBookMarkSlot implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

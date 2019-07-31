@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 
-public final class RequestRecipeShopManageList implements IClientIncomingPacket
+public class RequestRecipeShopManageList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

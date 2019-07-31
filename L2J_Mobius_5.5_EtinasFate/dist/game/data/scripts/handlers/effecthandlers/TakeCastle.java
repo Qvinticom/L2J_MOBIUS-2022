@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Take Castle effect implementation.
  * @author Adry_85, St3eT
  */
-public final class TakeCastle extends AbstractEffect
+public class TakeCastle extends AbstractEffect
 {
 	private final CastleSide _side;
 	

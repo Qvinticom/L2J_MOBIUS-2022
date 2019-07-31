@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger Skill By Avoid effect implementation.
  * @author Zealar
  */
-public final class TriggerSkillByAvoid extends AbstractEffect
+public class TriggerSkillByAvoid extends AbstractEffect
 {
 	private final int _chance;
 	private final SkillHolder _skill;

@@ -35,7 +35,7 @@ import quests.Q10377_TheInvadedExecutionGrounds.Q10377_TheInvadedExecutionGround
  * @URL https://l2wiki.com/An_Uninvited_Guest
  * @author Gigi
  */
-public final class Q10379_AnUninvitedGuest extends Quest
+public class Q10379_AnUninvitedGuest extends Quest
 {
 	// NPCs
 	private static final int ENDRIGO = 30632;

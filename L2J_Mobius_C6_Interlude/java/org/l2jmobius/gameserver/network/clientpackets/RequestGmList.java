@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.datatables.GmListTable;
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
  */
-public final class RequestGmList extends GameClientPacket
+public class RequestGmList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

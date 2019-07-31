@@ -33,13 +33,13 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 	private static final int IRIS = 31776;
 	private static final int ROSAMMY = 31777;
 	// Monsters
-	public final int MERTT = 21644;
-	public final int DUHT = 21645;
-	public final int PRIZT = 21646;
-	public final int KOVART = 21647;
+	public int MERTT = 21644;
+	public int DUHT = 21645;
+	public int PRIZT = 21646;
+	public int KOVART = 21647;
 	// Items
-	public final ItemHolder OSKZLA = new ItemHolder(90009, 1);
-	public final ItemHolder POD = new ItemHolder(90136, 1);
+	public ItemHolder OSKZLA = new ItemHolder(90009, 1);
+	public ItemHolder POD = new ItemHolder(90136, 1);
 	
 	public Q00935_ExploringTheEastWingOfTheDungeonOfAbyss()
 	{

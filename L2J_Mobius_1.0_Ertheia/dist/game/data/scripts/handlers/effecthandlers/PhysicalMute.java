@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Physical Mute effect implementation.
  * @author -Nemesiss-
  */
-public final class PhysicalMute extends AbstractEffect
+public class PhysicalMute extends AbstractEffect
 {
 	public PhysicalMute(StatsSet params)
 	{

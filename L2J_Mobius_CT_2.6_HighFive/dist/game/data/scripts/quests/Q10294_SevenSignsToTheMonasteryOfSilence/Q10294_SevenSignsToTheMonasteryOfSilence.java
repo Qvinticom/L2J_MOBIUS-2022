@@ -29,7 +29,7 @@ import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenS
  * Seven Signs, To the Monastery of Silence (10294)
  * @author Adry_85
  */
-public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
+public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 {
 	// NPCs
 	private static final int ELCADIA = 32784;

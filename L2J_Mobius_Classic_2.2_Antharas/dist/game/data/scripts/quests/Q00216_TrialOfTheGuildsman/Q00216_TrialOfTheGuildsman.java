@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial Of The Guildsman (216)
  * @author ivantotov
  */
-public final class Q00216_TrialOfTheGuildsman extends Quest
+public class Q00216_TrialOfTheGuildsman extends Quest
 {
 	private static final int WAREHOUSE_KEEPER_VALKON = 30103;
 	private static final int WAREHOUSE_KEEPER_NORMAN = 30210;

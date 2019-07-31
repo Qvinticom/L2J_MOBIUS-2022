@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestChangePartyLeader extends GameClientPacket
+public class RequestChangePartyLeader extends GameClientPacket
 {
 	private String _name;
 	

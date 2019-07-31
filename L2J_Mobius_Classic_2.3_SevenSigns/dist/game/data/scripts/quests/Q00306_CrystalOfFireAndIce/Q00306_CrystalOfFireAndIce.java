@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Crystals of Fire and Ice (306)
  * @author ivantotov
  */
-public final class Q00306_CrystalOfFireAndIce extends Quest
+public class Q00306_CrystalOfFireAndIce extends Quest
 {
 	// NPC
 	private static final int KATERINA = 30004;

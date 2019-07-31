@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Help The Uncle! (42)
  * @author malyelfik
  */
-public final class Q00042_HelpTheUncle extends Quest
+public class Q00042_HelpTheUncle extends Quest
 {
 	// NPCs
 	private static final int WATERS = 30828;

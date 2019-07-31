@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Airship Action player action handler.
  * @author Nik
  */
-public final class AirshipAction implements IPlayerActionHandler
+public class AirshipAction implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

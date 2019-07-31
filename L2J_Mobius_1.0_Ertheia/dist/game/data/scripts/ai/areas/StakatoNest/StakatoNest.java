@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Stakato Nest AI.
  * @author Gnacik
  */
-public final class StakatoNest extends AbstractNpcAI
+public class StakatoNest extends AbstractNpcAI
 {
 	// @formatter:off
 	// List of all mobs just for register
@@ -201,7 +201,7 @@ public final class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc == null) || (player == null) || npc.isDead())
 		{

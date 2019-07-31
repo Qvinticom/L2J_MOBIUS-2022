@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Death Link effect implementation.
  * @author Adry_85
  */
-public final class DeathLink extends AbstractEffect
+public class DeathLink extends AbstractEffect
 {
 	public DeathLink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

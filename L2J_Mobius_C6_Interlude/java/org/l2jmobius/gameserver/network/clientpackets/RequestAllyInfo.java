@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.network.serverpackets.AllyInfo;
 
-public final class RequestAllyInfo extends GameClientPacket
+public class RequestAllyInfo extends GameClientPacket
 {
 	@Override
 	public void readImpl()

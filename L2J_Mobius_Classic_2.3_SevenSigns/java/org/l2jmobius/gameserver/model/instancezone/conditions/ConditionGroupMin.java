@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance enter group min size
  * @author malyelfik
  */
-public final class ConditionGroupMin extends Condition
+public class ConditionGroupMin extends Condition
 {
 	public ConditionGroupMin(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
  * Format: (ch) dd
  * @author -Wooden-
  */
-public final class RequestPledgeWarList extends GameClientPacket
+public class RequestPledgeWarList extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

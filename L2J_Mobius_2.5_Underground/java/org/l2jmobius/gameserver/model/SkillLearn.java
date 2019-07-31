@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author Zoey76
  */
-public final class SkillLearn
+public class SkillLearn
 {
 	private final String _skillName;
 	private final int _skillId;

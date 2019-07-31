@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * @URL https://l2wiki.com/The_Reason_For_Not_Being_Able_to_Get_Out
  * @author Gigi
  */
-public final class Q10838_TheReasonForNotBeingAbleToGetOut extends Quest
+public class Q10838_TheReasonForNotBeingAbleToGetOut extends Quest
 {
 	// NPC
 	private static final int HURAK = 34064;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ListPartyWaiting;
 
-public final class RequestPartyMatchConfig implements IClientIncomingPacket
+public class RequestPartyMatchConfig implements IClientIncomingPacket
 {
 	private int _page;
 	private int _location;

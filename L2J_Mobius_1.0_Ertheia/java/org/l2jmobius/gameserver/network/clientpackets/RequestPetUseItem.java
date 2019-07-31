@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestPetUseItem implements IClientIncomingPacket
+public class RequestPetUseItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	

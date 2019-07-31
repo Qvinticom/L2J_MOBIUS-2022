@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * UnAfraid: TODO: Rewrite with DocumentParser
  * @author Micht
  */
-public final class CursedWeaponsManager
+public class CursedWeaponsManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
 	
@@ -82,7 +82,7 @@ public final class CursedWeaponsManager
 		LOGGER.info(getClass().getSimpleName() + ": Loaded : " + _cursedWeapons.size() + " cursed weapon(s).");
 	}
 	
-	public final void reload()
+	public void reload()
 	{
 		init();
 	}

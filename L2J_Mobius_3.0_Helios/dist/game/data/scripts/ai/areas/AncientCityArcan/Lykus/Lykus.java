@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Lykus AI.
  * @author St3eT
  */
-public final class Lykus extends AbstractNpcAI
+public class Lykus extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LYKUS = 33521;

@@ -37,7 +37,7 @@ import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
  * Fearon Training Grounds Instance Zone.
  * @author Sdw, malyelfik
  */
-public final class FaeronTrainingGrounds1 extends AbstractInstance
+public class FaeronTrainingGrounds1 extends AbstractInstance
 {
 	// NPCs
 	private static final int AYANTHE = 33942;

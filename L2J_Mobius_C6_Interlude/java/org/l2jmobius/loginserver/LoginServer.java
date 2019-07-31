@@ -40,7 +40,7 @@ import org.l2jmobius.status.Status;
 
 public class LoginServer
 {
-	public final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	public Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0102;
 	private static LoginServer INSTANCE;

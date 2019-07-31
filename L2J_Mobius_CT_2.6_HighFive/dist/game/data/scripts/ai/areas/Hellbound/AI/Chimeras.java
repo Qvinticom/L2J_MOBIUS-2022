@@ -31,7 +31,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Chimeras AI.
  * @author DS
  */
-public final class Chimeras extends AbstractNpcAI
+public class Chimeras extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
@@ -67,7 +67,7 @@ public final class Chimeras extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (HellboundEngine.getInstance().getLevel() == 7) // Have random spawn points only in 7 lvl
 		{
@@ -82,7 +82,7 @@ public final class Chimeras extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if ((skill.getId() == BOTTLE) && !npc.isDead())
 		{

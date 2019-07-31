@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Instance quest condition
  * @author malyelfik
  */
-public final class ConditionQuest extends Condition
+public class ConditionQuest extends Condition
 {
 	public ConditionQuest(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{

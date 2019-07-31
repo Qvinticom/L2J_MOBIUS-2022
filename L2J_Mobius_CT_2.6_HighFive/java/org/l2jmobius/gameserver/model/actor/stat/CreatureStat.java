@@ -56,7 +56,7 @@ public class CreatureStat
 		Arrays.fill(_defenceTraits, 1.0f);
 	}
 	
-	public final double calcStat(Stats stat, double init)
+	public double calcStat(Stats stat, double init)
 	{
 		return calcStat(stat, init, null, null);
 	}
@@ -74,7 +74,7 @@ public class CreatureStat
 	 * @param skill The Skill whose properties will be used in the calculation (ex : Level...)
 	 * @return
 	 */
-	public final double calcStat(Stats stat, double initVal, Creature target, Skill skill)
+	public double calcStat(Stats stat, double initVal, Creature target, Skill skill)
 	{
 		double value = initVal;
 		if (stat == null)
@@ -150,7 +150,7 @@ public class CreatureStat
 	/**
 	 * @return the Attack Speed multiplier (base+modifier) of the Creature to get proper animations.
 	 */
-	public final float getAttackSpeedMultiplier()
+	public float getAttackSpeedMultiplier()
 	{
 		return (float) ((1.1 * getPAtkSpd()) / _creature.getTemplate().getBasePAtkSpd());
 	}
@@ -160,7 +160,7 @@ public class CreatureStat
 	 * @param init
 	 * @return the Critical Damage rate (base+modifier) of the Creature.
 	 */
-	public final double getCriticalDmg(Creature target, double init)
+	public double getCriticalDmg(Creature target, double init)
 	{
 		return calcStat(Stats.CRITICAL_DAMAGE, init, target, null);
 	}
@@ -229,7 +229,7 @@ public class CreatureStat
 	 * @param skill
 	 * @return the Magical Attack range (base+modifier) of the Creature.
 	 */
-	public final int getMagicalAttackRange(Skill skill)
+	public int getMagicalAttackRange(Skill skill)
 	{
 		if (skill != null)
 		{
@@ -318,7 +318,7 @@ public class CreatureStat
 	 * @param skill
 	 * @return the Magic Critical Hit rate (base+modifier) of the Creature.
 	 */
-	public final int getMCriticalHit(Creature target, Skill skill)
+	public int getMCriticalHit(Creature target, Skill skill)
 	{
 		int val = (int) calcStat(Stats.MCRITICAL_RATE, 1, target, skill) * 10;
 		
@@ -354,7 +354,7 @@ public class CreatureStat
 	/**
 	 * @return the CON of the Creature (base+modifier).
 	 */
-	public final int getCON()
+	public int getCON()
 	{
 		return (int) calcStat(Stats.STAT_CON, _creature.getTemplate().getBaseCON());
 	}
@@ -362,7 +362,7 @@ public class CreatureStat
 	/**
 	 * @return the DEX of the Creature (base+modifier).
 	 */
-	public final int getDEX()
+	public int getDEX()
 	{
 		return (int) calcStat(Stats.STAT_DEX, _creature.getTemplate().getBaseDEX());
 	}
@@ -378,7 +378,7 @@ public class CreatureStat
 	/**
 	 * @return the MEN of the Creature (base+modifier).
 	 */
-	public final int getMEN()
+	public int getMEN()
 	{
 		return (int) calcStat(Stats.STAT_MEN, _creature.getTemplate().getBaseMEN());
 	}
@@ -386,7 +386,7 @@ public class CreatureStat
 	/**
 	 * @return the STR of the Creature (base+modifier).
 	 */
-	public final int getSTR()
+	public int getSTR()
 	{
 		return (int) calcStat(Stats.STAT_STR, _creature.getTemplate().getBaseSTR());
 	}
@@ -394,7 +394,7 @@ public class CreatureStat
 	/**
 	 * @return the WIT of the Creature (base+modifier).
 	 */
-	public final int getWIT()
+	public int getWIT()
 	{
 		return (int) calcStat(Stats.STAT_WIT, _creature.getTemplate().getBaseWIT());
 	}
@@ -499,7 +499,7 @@ public class CreatureStat
 	 * @param skill
 	 * @return the MReuse rate (base+modifier) of the Creature.
 	 */
-	public final double getMReuseRate(Skill skill)
+	public double getMReuseRate(Skill skill)
 	{
 		return calcStat(Stats.MAGIC_REUSE_RATE, 1, null, skill);
 	}
@@ -547,7 +547,7 @@ public class CreatureStat
 	/**
 	 * @return the Physical Attack range (base+modifier) of the Creature.
 	 */
-	public final int getPhysicalAttackRange()
+	public int getPhysicalAttackRange()
 	{
 		final Weapon weapon = _creature.getActiveWeaponItem();
 		int baseAttackRange;
@@ -576,7 +576,7 @@ public class CreatureStat
 	 * @param target
 	 * @return the weapon reuse modifier.
 	 */
-	public final double getWeaponReuseModifier(Creature target)
+	public double getWeaponReuseModifier(Creature target)
 	{
 		return calcStat(Stats.ATK_REUSE, 1, target, null);
 	}
@@ -584,7 +584,7 @@ public class CreatureStat
 	/**
 	 * @return the ShieldDef rate (base+modifier) of the Creature.
 	 */
-	public final int getShldDef()
+	public int getShldDef()
 	{
 		return (int) calcStat(Stats.SHIELD_DEFENCE, 0);
 	}
@@ -603,7 +603,7 @@ public class CreatureStat
 	 * @param skill
 	 * @return the mpConsume.
 	 */
-	public final int getMpConsume(Skill skill)
+	public int getMpConsume(Skill skill)
 	{
 		if (skill == null)
 		{
@@ -633,7 +633,7 @@ public class CreatureStat
 	 * @param skill
 	 * @return the mpInitialConsume.
 	 */
-	public final int getMpInitialConsume(Skill skill)
+	public int getMpInitialConsume(Skill skill)
 	{
 		return skill == null ? 1 : (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}

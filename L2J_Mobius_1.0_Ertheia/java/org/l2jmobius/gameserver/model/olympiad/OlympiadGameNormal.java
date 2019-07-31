@@ -123,20 +123,20 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final boolean containsParticipant(int playerId)
+	public boolean containsParticipant(int playerId)
 	{
 		return ((_playerOne != null) && (_playerOne.getObjectId() == playerId)) || ((_playerTwo != null) && (_playerTwo.getObjectId() == playerId));
 	}
 	
 	@Override
-	public final void sendOlympiadInfo(Creature creature)
+	public void sendOlympiadInfo(Creature creature)
 	{
 		creature.sendPacket(new ExOlympiadUserInfo(_playerOne));
 		creature.sendPacket(new ExOlympiadUserInfo(_playerTwo));
 	}
 	
 	@Override
-	public final void broadcastOlympiadInfo(OlympiadStadium stadium)
+	public void broadcastOlympiadInfo(OlympiadStadium stadium)
 	{
 		stadium.broadcastPacket(new ExOlympiadUserInfo(_playerOne));
 		stadium.broadcastPacket(new ExOlympiadUserInfo(_playerTwo));
@@ -695,7 +695,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final String[] getPlayerNames()
+	public String[] getPlayerNames()
 	{
 		return new String[]
 		{
@@ -735,7 +735,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void resetDamage()
+	public void resetDamage()
 	{
 		_damageP1 = 0;
 		_damageP2 = 0;
@@ -799,7 +799,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void makePlayersInvul()
+	public void makePlayersInvul()
 	{
 		if (_playerOne.getPlayer() != null)
 		{
@@ -812,7 +812,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void removePlayersInvul()
+	public void removePlayersInvul()
 	{
 		if (_playerOne.getPlayer() != null)
 		{

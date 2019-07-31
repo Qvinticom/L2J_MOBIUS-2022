@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Bring Out the Flavor of Ingredients! (380)
  * @author Pandragon
  */
-public final class Q00380_BringOutTheFlavorOfIngredients extends Quest
+public class Q00380_BringOutTheFlavorOfIngredients extends Quest
 {
 	// NPC
 	private static final int ROLLAND = 30069;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 /**
  * @version $Revision: 1.15.2.10.2.16 $ $Date: 2005/04/06 16:13:40 $
  */
-public final class BabyPetInstance extends PetInstance
+public class BabyPetInstance extends PetInstance
 {
 	protected Skill _weakHeal;
 	protected Skill _strongHeal;

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Schuttgart (725)
  * @author Gigiikun
  */
-public final class Q00725_ForTheSakeOfTheTerritorySchuttgart extends TerritoryWarSuperClass
+public class Q00725_ForTheSakeOfTheTerritorySchuttgart extends TerritoryWarSuperClass
 {
 	public Q00725_ForTheSakeOfTheTerritorySchuttgart()
 	{

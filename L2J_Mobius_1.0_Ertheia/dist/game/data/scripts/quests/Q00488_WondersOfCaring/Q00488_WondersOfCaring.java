@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Wonders of Caring (488)
  * @author St3eT
  */
-public final class Q00488_WondersOfCaring extends Quest
+public class Q00488_WondersOfCaring extends Quest
 {
 	// NPCs
 	private static final int ADVENTURER = 32327;

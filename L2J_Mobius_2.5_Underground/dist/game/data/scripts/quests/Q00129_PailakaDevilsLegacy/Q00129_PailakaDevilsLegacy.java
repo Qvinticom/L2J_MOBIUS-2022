@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Pailaka - Devil's Legacy (129)
  * @author Gnacik, St3eT
  */
-public final class Q00129_PailakaDevilsLegacy extends Quest
+public class Q00129_PailakaDevilsLegacy extends Quest
 {
 	// NPCs
 	private static final int KAMS = 18629; // Kams (Panuka)
@@ -68,7 +68,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -117,7 +117,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((npc.getId() != ADVENTURER2) || (qs == null) || !qs.isCompleted())
@@ -128,7 +128,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -253,7 +253,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		

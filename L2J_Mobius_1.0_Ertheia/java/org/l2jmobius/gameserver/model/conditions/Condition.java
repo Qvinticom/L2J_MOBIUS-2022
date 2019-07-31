@@ -36,7 +36,7 @@ public abstract class Condition implements ConditionListener
 	 * Sets the message.
 	 * @param msg the new message
 	 */
-	public final void setMessage(String msg)
+	public void setMessage(String msg)
 	{
 		_msg = msg;
 	}
@@ -45,7 +45,7 @@ public abstract class Condition implements ConditionListener
 	 * Gets the message.
 	 * @return the message
 	 */
-	public final String getMessage()
+	public String getMessage()
 	{
 		return _msg;
 	}
@@ -54,7 +54,7 @@ public abstract class Condition implements ConditionListener
 	 * Sets the message id.
 	 * @param msgId the new message id
 	 */
-	public final void setMessageId(int msgId)
+	public void setMessageId(int msgId)
 	{
 		_msgId = msgId;
 	}
@@ -63,7 +63,7 @@ public abstract class Condition implements ConditionListener
 	 * Gets the message id.
 	 * @return the message id
 	 */
-	public final int getMessageId()
+	public int getMessageId()
 	{
 		return _msgId;
 	}
@@ -71,7 +71,7 @@ public abstract class Condition implements ConditionListener
 	/**
 	 * Adds the name.
 	 */
-	public final void addName()
+	public void addName()
 	{
 		_addName = true;
 	}
@@ -80,7 +80,7 @@ public abstract class Condition implements ConditionListener
 	 * Checks if is adds the name.
 	 * @return true, if is adds the name
 	 */
-	public final boolean isAddName()
+	public boolean isAddName()
 	{
 		return _addName;
 	}
@@ -104,17 +104,17 @@ public abstract class Condition implements ConditionListener
 		return _listener;
 	}
 	
-	public final boolean test(Creature caster, Creature target, Skill skill)
+	public boolean test(Creature caster, Creature target, Skill skill)
 	{
 		return test(caster, target, skill, null);
 	}
 	
-	public final boolean test(Creature caster, Creature target, Item item)
+	public boolean test(Creature caster, Creature target, Item item)
 	{
 		return test(caster, target, null, null);
 	}
 	
-	public final boolean test(Creature caster, Creature target, Skill skill, Item item)
+	public boolean test(Creature caster, Creature target, Skill skill, Item item)
 	{
 		final boolean res = testImpl(caster, target, skill, item);
 		if ((_listener != null) && (res != _result))

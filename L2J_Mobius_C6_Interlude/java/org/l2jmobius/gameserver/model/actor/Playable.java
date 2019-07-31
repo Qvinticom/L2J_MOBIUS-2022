@@ -202,7 +202,7 @@ public abstract class Playable extends Creature
 	 * Checks if is noblesse blessed.
 	 * @return true, if is noblesse blessed
 	 */
-	public final boolean isNoblesseBlessed()
+	public boolean isNoblesseBlessed()
 	{
 		return _isNoblesseBlessed;
 	}
@@ -211,7 +211,7 @@ public abstract class Playable extends Creature
 	 * Sets the checks if is noblesse blessed.
 	 * @param value the new checks if is noblesse blessed
 	 */
-	public final void setIsNoblesseBlessed(boolean value)
+	public void setIsNoblesseBlessed(boolean value)
 	{
 		_isNoblesseBlessed = value;
 	}
@@ -220,7 +220,7 @@ public abstract class Playable extends Creature
 	 * Start noblesse blessing.
 	 * @param effect
 	 */
-	public final void startNoblesseBlessing(Effect effect)
+	public void startNoblesseBlessing(Effect effect)
 	{
 		_lastNoblessEffect = effect;
 		setIsNoblesseBlessed(true);
@@ -231,7 +231,7 @@ public abstract class Playable extends Creature
 	 * Stop noblesse blessing.
 	 * @param effect the effect
 	 */
-	public final void stopNoblesseBlessing(Effect effect)
+	public void stopNoblesseBlessing(Effect effect)
 	{
 		// to avoid multiple buffs effects removal
 		if ((effect != null) && (_lastNoblessEffect != effect))
@@ -261,7 +261,7 @@ public abstract class Playable extends Creature
 	 * Gets the protection blessing.
 	 * @return the protection blessing
 	 */
-	public final boolean getProtectionBlessing()
+	public boolean getProtectionBlessing()
 	{
 		return _ProtectionBlessing;
 	}
@@ -270,7 +270,7 @@ public abstract class Playable extends Creature
 	 * Sets the protection blessing.
 	 * @param value the new protection blessing
 	 */
-	public final void setProtectionBlessing(boolean value)
+	public void setProtectionBlessing(boolean value)
 	{
 		_ProtectionBlessing = value;
 	}
@@ -318,7 +318,7 @@ public abstract class Playable extends Creature
 	 * Checks if is phoenix blessed.
 	 * @return true, if is phoenix blessed
 	 */
-	public final boolean isPhoenixBlessed()
+	public boolean isPhoenixBlessed()
 	{
 		return _isPhoenixBlessed;
 	}
@@ -327,7 +327,7 @@ public abstract class Playable extends Creature
 	 * Sets the checks if is phoenix blessed.
 	 * @param value the new checks if is phoenix blessed
 	 */
-	public final void setIsPhoenixBlessed(boolean value)
+	public void setIsPhoenixBlessed(boolean value)
 	{
 		_isPhoenixBlessed = value;
 	}
@@ -336,7 +336,7 @@ public abstract class Playable extends Creature
 	 * Start phoenix blessing.
 	 * @param effect
 	 */
-	public final void startPhoenixBlessing(Effect effect)
+	public void startPhoenixBlessing(Effect effect)
 	{
 		_lastPhoenixBlessedEffect = effect;
 		setIsPhoenixBlessed(true);
@@ -347,7 +347,7 @@ public abstract class Playable extends Creature
 	 * Stop phoenix blessing.
 	 * @param effect the effect
 	 */
-	public final void stopPhoenixBlessing(Effect effect)
+	public void stopPhoenixBlessing(Effect effect)
 	{
 		if ((effect != null) && (_lastPhoenixBlessedEffect != effect))
 		{
@@ -397,7 +397,7 @@ public abstract class Playable extends Creature
 	 * Gets the charm of luck.
 	 * @return the charm of luck
 	 */
-	public final boolean getCharmOfLuck()
+	public boolean getCharmOfLuck()
 	{
 		return _getCharmOfLuck;
 	}
@@ -406,7 +406,7 @@ public abstract class Playable extends Creature
 	 * Sets the charm of luck.
 	 * @param value the new charm of luck
 	 */
-	public final void setCharmOfLuck(boolean value)
+	public void setCharmOfLuck(boolean value)
 	{
 		_getCharmOfLuck = value;
 	}
@@ -415,7 +415,7 @@ public abstract class Playable extends Creature
 	 * Start charm of luck.
 	 * @param effect
 	 */
-	public final void startCharmOfLuck(Effect effect)
+	public void startCharmOfLuck(Effect effect)
 	{
 		setCharmOfLuck(true);
 		updateAbnormalEffect();
@@ -426,7 +426,7 @@ public abstract class Playable extends Creature
 	 * Stop charm of luck.
 	 * @param effect the effect
 	 */
-	public final void stopCharmOfLuck(Effect effect)
+	public void stopCharmOfLuck(Effect effect)
 	{
 		if ((effect != null) && (_lastCharmOfLuckEffect != effect))
 		{

@@ -44,7 +44,7 @@ import io.netty.channel.ChannelHandlerContext;
  * Represents a client connected into the LoginServer
  * @author KenM
  */
-public final class LoginClient extends ChannelInboundHandler<LoginClient>
+public class LoginClient extends ChannelInboundHandler<LoginClient>
 {
 	private static final Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
 	

@@ -61,7 +61,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * @VIDEO https://www.youtube.com/watch?v=ysCNSVHRcoo
  * @author Gigi
  */
-public final class Q10753_WindsOfFateChoices extends Quest
+public class Q10753_WindsOfFateChoices extends Quest
 {
 	// NPCs
 	private static final int KATALIN = 33943;

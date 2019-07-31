@@ -167,17 +167,17 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	/* ********************** */
 	
-	public final boolean registerPlayer(PlayerInstance player)
+	public boolean registerPlayer(PlayerInstance player)
 	{
 		return canRegister(player, true) && _registeredPlayers.offer(player);
 	}
 	
-	public final boolean unregisterPlayer(PlayerInstance player)
+	public boolean unregisterPlayer(PlayerInstance player)
 	{
 		return _registeredPlayers.remove(player);
 	}
 	
-	public final boolean isRegistered(PlayerInstance player)
+	public boolean isRegistered(PlayerInstance player)
 	{
 		return _registeredPlayers.contains(player);
 	}
@@ -187,7 +187,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 		return !_registeredPlayers.contains(player);
 	}
 	
-	public final Queue<PlayerInstance> getRegisteredPlayers()
+	public Queue<PlayerInstance> getRegisteredPlayers()
 	{
 		return _registeredPlayers;
 	}

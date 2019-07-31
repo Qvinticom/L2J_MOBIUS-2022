@@ -36,7 +36,7 @@ import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
  * @URL https://l2wiki.com/Investigate_the_Forest
  * @author Gigi
  */
-public final class Q10794_InvestigateTheForest extends Quest
+public class Q10794_InvestigateTheForest extends Quest
 {
 	// NPCs
 	private static final int HATUBA = 33849;

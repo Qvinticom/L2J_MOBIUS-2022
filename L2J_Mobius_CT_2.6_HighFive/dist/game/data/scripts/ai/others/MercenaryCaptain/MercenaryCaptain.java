@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * Mercenary Captain AI.
  * @author malyelfik
  */
-public final class MercenaryCaptain extends AbstractNpcAI
+public class MercenaryCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Relax effect implementation.
  */
-public final class Relax extends AbstractEffect
+public class Relax extends AbstractEffect
 {
 	private final double _power;
 	

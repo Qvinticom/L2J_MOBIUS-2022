@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class GourdInstance extends MonsterInstance
+public class GourdInstance extends MonsterInstance
 {
 	private String _name;
 	private byte _nectar = 0;

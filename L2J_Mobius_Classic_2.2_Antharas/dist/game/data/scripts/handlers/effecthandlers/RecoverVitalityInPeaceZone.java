@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
  * Recover Vitality in Peace Zone effect implementation.
  * @author Mobius
  */
-public final class RecoverVitalityInPeaceZone extends AbstractEffect
+public class RecoverVitalityInPeaceZone extends AbstractEffect
 {
 	private final double _amount;
 	private final int _ticks;

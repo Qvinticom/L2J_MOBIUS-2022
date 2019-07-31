@@ -38,7 +38,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Anomic Foundry.
  * @author GKR
  */
-public final class AnomicFoundry extends AbstractNpcAI
+public class AnomicFoundry extends AbstractNpcAI
 {
 	// NPCs
 	private static int LABORER = 22396;
@@ -83,7 +83,7 @@ public final class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("make_spawn_1"))
 		{
@@ -196,7 +196,7 @@ public final class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		SpawnTable.getInstance().addNewSpawn(npc.getSpawn(), false);
 		if (getSpawnGroup(npc) >= 0)

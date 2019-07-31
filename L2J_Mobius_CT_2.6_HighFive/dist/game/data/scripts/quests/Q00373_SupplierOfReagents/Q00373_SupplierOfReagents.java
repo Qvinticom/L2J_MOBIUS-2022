@@ -31,7 +31,7 @@ import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
  * Supplier of Reagents (373)
  * @author Joxit
  */
-public final class Q00373_SupplierOfReagents extends Quest
+public class Q00373_SupplierOfReagents extends Quest
 {
 	// NPCs
 	private static final int WESLEY = 30166;

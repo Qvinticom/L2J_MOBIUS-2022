@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
  * Path of the Orc Shaman (416)
  * @author Adry_85
  */
-public final class Q00416_PathOfTheOrcShaman extends Quest
+public class Q00416_PathOfTheOrcShaman extends Quest
 {
 	// NPCs
 	private static final int UMOS = 30502;

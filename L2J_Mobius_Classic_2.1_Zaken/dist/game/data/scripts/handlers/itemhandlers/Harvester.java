@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author l3x
  */
-public final class Harvester implements IItemHandler
+public class Harvester implements IItemHandler
 {
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)

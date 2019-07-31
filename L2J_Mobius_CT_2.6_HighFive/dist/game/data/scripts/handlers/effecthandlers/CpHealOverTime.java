@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 /**
  * Cp Heal Over Time effect implementation.
  */
-public final class CpHealOverTime extends AbstractEffect
+public class CpHealOverTime extends AbstractEffect
 {
 	private final double _power;
 	

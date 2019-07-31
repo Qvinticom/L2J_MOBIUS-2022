@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 
-public final class Elementals
+public class Elementals
 {
 	private static final Map<Integer, ElementalItems> TABLE = new HashMap<>();
 	static

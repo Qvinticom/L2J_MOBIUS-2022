@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Disarm effect implementation.
  * @author nBd
  */
-public final class Disarm extends AbstractEffect
+public class Disarm extends AbstractEffect
 {
 	public Disarm(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Giran (719)
  * @author Gigiikun
  */
-public final class Q00719_ForTheSakeOfTheTerritoryGiran extends TerritoryWarSuperClass
+public class Q00719_ForTheSakeOfTheTerritoryGiran extends TerritoryWarSuperClass
 {
 	public Q00719_ForTheSakeOfTheTerritoryGiran()
 	{

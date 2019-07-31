@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that removes equipment grade penalty. Its the base effect for the grade penalty mechanics.
  * @author Nik
  */
-public final class RemoveEquipPenalty extends AbstractEffect
+public class RemoveEquipPenalty extends AbstractEffect
 {
 	private final CrystalType _grade;
 	

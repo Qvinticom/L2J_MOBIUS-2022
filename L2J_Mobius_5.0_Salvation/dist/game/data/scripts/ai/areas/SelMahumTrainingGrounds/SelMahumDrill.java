@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Sel Mahum Training Ground AI for drill groups.
  * @author GKR
  */
-public final class SelMahumDrill extends AbstractNpcAI
+public class SelMahumDrill extends AbstractNpcAI
 {
 	private static final int[] MAHUM_CHIEFS =
 	{

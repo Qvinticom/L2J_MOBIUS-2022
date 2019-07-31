@@ -29,7 +29,7 @@ import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class Kier extends AbstractNpcAI
+public class Kier extends AbstractNpcAI
 {
 	// NPC
 	private static final int KIER = 32022;

@@ -26,7 +26,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Buron AI.
  * @author DS
  */
-public final class Buron extends AbstractNpcAI
+public class Buron extends AbstractNpcAI
 {
 	private static final int BURON = 32345;
 	private static final int HELMET = 9669;
@@ -42,7 +42,7 @@ public final class Buron extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		if ("Rumor".equalsIgnoreCase(event))
@@ -84,7 +84,7 @@ public final class Buron extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		getQuestState(player, true);
 		switch (HellboundEngine.getInstance().getLevel())

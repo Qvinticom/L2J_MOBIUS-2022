@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Certified Arbalester (66)
  * @author ivantotov
  */
-public final class Q00066_CertifiedArbalester extends Quest
+public class Q00066_CertifiedArbalester extends Quest
 {
 	// NPCs
 	private static final int WAREHOUSE_KEEPER_HOLVAS = 30058;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that allows the player to create common recipe items up to a certain level.
  * @author Nik
  */
-public final class CreateCommonItem extends AbstractEffect
+public class CreateCommonItem extends AbstractEffect
 {
 	private final int _recipeLevel;
 	

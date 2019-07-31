@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Gnacik
  */
-public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
+public class RequestWithdrawPartyRoom implements IClientIncomingPacket
 {
 	private int _roomId;
 	

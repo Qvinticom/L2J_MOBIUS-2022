@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 /**
  * @author NB4L1
  */
-public final class Disconnection
+public class Disconnection
 {
 	private static final Logger LOGGER = Logger.getLogger(Disconnection.class.getName());
 	

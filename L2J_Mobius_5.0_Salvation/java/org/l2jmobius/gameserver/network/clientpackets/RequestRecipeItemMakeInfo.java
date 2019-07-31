@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
-public final class RequestRecipeItemMakeInfo implements IClientIncomingPacket
+public class RequestRecipeItemMakeInfo implements IClientIncomingPacket
 {
 	private int _id;
 	

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Take_Up_Arms
  * @author NightBR
  */
-public final class Q10562_TakeUpArms extends Quest
+public class Q10562_TakeUpArms extends Quest
 {
 	// NPCs
 	private static final int HERPHAH = 34362;

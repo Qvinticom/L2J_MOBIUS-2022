@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author malyelfik
  */
-public final class AdminManor implements IAdminCommandHandler
+public class AdminManor implements IAdminCommandHandler
 {
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Take Fort Start effect implementation.
  * @author UnAfraid
  */
-public final class TakeFortStart extends AbstractEffect
+public class TakeFortStart extends AbstractEffect
 {
 	public TakeFortStart(StatsSet params)
 	{

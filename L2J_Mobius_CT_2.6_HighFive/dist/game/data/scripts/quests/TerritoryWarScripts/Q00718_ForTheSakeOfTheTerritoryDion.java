@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * For the Sake of the Territory - Dion (718)
  * @author Gigiikun
  */
-public final class Q00718_ForTheSakeOfTheTerritoryDion extends TerritoryWarSuperClass
+public class Q00718_ForTheSakeOfTheTerritoryDion extends TerritoryWarSuperClass
 {
 	public Q00718_ForTheSakeOfTheTerritoryDion()
 	{

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-public final class Broadcast
+public class Broadcast
 {
 	private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
 	

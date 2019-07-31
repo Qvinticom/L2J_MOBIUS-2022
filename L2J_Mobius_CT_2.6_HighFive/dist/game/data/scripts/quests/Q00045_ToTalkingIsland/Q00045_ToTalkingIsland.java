@@ -32,7 +32,7 @@ import quests.Q00006_StepIntoTheFuture.Q00006_StepIntoTheFuture;
  * To Talking Island (45)
  * @author janiko
  */
-public final class Q00045_ToTalkingIsland extends Quest
+public class Q00045_ToTalkingIsland extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;

@@ -39,7 +39,7 @@ import instances.AbstractInstance;
  * @author Adry_85
  * @since 2.6.0.0
  */
-public final class CastleDungeon extends AbstractInstance
+public class CastleDungeon extends AbstractInstance
 {
 	// Locations
 	private static final Location[] ENTER_LOC =

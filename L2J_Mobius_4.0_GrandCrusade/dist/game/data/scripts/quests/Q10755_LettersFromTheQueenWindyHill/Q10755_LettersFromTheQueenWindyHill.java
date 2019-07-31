@@ -29,7 +29,7 @@ import quests.LetterQuest;
  * Letters from the Queen: Windy Hill (10755)
  * @author malyelfik
  */
-public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
+public class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 {
 	// NPCs
 	private static final int LEVIAN = 30037;

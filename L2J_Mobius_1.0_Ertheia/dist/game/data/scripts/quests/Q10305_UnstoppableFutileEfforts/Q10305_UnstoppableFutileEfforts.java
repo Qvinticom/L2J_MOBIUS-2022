@@ -33,7 +33,7 @@ import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
  * Unstoppable Futile Efforts (10305)
  * @author Gladicek
  */
-public final class Q10305_UnstoppableFutileEfforts extends Quest
+public class Q10305_UnstoppableFutileEfforts extends Quest
 {
 	// NPCs
 	private static final int NOETI_MIMILEAD = 32895;

@@ -33,7 +33,7 @@ import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
  * @URL https://l2wiki.com/Shedding_Weight
  * @author Gigi
  */
-public final class Q10543_SheddingWeight extends Quest
+public class Q10543_SheddingWeight extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;

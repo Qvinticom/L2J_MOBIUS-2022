@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Simple AI for Bloody Succubus.
  * @author Gigi
  */
-public final class BloodySuccubus extends AbstractNpcAI
+public class BloodySuccubus extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BLOODY_SUCCUBUS = 23185;

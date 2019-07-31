@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Get A Pet (419)
  * @author ivantotov
  */
-public final class Q00419_GetAPet extends Quest
+public class Q00419_GetAPet extends Quest
 {
 	// NPCs
 	private static final int GUARD_METTY = 30072;

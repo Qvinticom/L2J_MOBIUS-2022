@@ -37,7 +37,7 @@ import quests.Q10409_ASuspiciousVagabondInTheSwamp.Q10409_ASuspiciousVagabondInT
  * Embryo in the Swamp of Screams (10410)
  * @author St3eT
  */
-public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
+public class Q10410_EmbryoInTheSwampOfScreams extends Quest
 {
 	// NPCs
 	private static final int DOKARA = 33847;

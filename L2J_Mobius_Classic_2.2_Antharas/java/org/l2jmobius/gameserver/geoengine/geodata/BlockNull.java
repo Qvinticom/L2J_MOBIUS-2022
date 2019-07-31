@@ -31,120 +31,120 @@ public class BlockNull extends ABlock
 	}
 	
 	@Override
-	public final boolean hasGeoPos()
+	public boolean hasGeoPos()
 	{
 		return false;
 	}
 	
 	@Override
-	public final short getHeightNearest(int geoX, int geoY, int worldZ)
+	public short getHeightNearest(int geoX, int geoY, int worldZ)
 	{
 		return (short) worldZ;
 	}
 	
 	@Override
-	public final short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
+	public short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
 	{
 		return (short) worldZ;
 	}
 	
 	@Override
-	public final short getHeightAbove(int geoX, int geoY, int worldZ)
+	public short getHeightAbove(int geoX, int geoY, int worldZ)
 	{
 		return (short) worldZ;
 	}
 	
 	@Override
-	public final short getHeightBelow(int geoX, int geoY, int worldZ)
+	public short getHeightBelow(int geoX, int geoY, int worldZ)
 	{
 		return (short) worldZ;
 	}
 	
 	@Override
-	public final byte getNsweNearest(int geoX, int geoY, int worldZ)
+	public byte getNsweNearest(int geoX, int geoY, int worldZ)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
+	public byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final byte getNsweAbove(int geoX, int geoY, int worldZ)
+	public byte getNsweAbove(int geoX, int geoY, int worldZ)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final byte getNsweBelow(int geoX, int geoY, int worldZ)
+	public byte getNsweBelow(int geoX, int geoY, int worldZ)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final int getIndexNearest(int geoX, int geoY, int worldZ)
+	public int getIndexNearest(int geoX, int geoY, int worldZ)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final int getIndexAbove(int geoX, int geoY, int worldZ)
+	public int getIndexAbove(int geoX, int geoY, int worldZ)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final int getIndexAboveOriginal(int geoX, int geoY, int worldZ)
+	public int getIndexAboveOriginal(int geoX, int geoY, int worldZ)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final int getIndexBelow(int geoX, int geoY, int worldZ)
+	public int getIndexBelow(int geoX, int geoY, int worldZ)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final int getIndexBelowOriginal(int geoX, int geoY, int worldZ)
+	public int getIndexBelowOriginal(int geoX, int geoY, int worldZ)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final short getHeight(int index)
+	public short getHeight(int index)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final short getHeightOriginal(int index)
+	public short getHeightOriginal(int index)
 	{
 		return 0;
 	}
 	
 	@Override
-	public final byte getNswe(int index)
+	public byte getNswe(int index)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final byte getNsweOriginal(int index)
+	public byte getNsweOriginal(int index)
 	{
 		return _nswe;
 	}
 	
 	@Override
-	public final void setNswe(int index, byte nswe)
+	public void setNswe(int index, byte nswe)
 	{
 	}
 	
 	@Override
-	public final void saveBlock(BufferedOutputStream stream)
+	public void saveBlock(BufferedOutputStream stream)
 	{
 	}
 }

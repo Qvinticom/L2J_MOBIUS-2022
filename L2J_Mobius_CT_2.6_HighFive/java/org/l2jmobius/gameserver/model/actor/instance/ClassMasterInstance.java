@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 /**
  * @version $Revision: 1.4.2.1.2.7 $ $Date: 2005/03/27 15:29:32 $
  */
-public final class ClassMasterInstance extends MerchantInstance
+public class ClassMasterInstance extends MerchantInstance
 {
 	/**
 	 * Creates a class master.

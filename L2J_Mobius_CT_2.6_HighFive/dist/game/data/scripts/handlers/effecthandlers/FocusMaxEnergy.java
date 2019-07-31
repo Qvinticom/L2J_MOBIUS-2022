@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Focus Max Energy effect implementation.
  * @author Adry_85
  */
-public final class FocusMaxEnergy extends AbstractEffect
+public class FocusMaxEnergy extends AbstractEffect
 {
 	public FocusMaxEnergy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

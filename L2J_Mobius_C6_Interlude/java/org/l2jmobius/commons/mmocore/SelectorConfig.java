@@ -20,7 +20,7 @@ package org.l2jmobius.commons.mmocore;
  * @author KenM
  */
 
-public final class SelectorConfig
+public class SelectorConfig
 {
 	private int readBufferSize = 64 * 1024;
 	

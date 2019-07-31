@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Magical Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalAttackRange extends AbstractEffect
+public class MagicalAttackRange extends AbstractEffect
 {
 	private final double _power;
 	private final double _shieldDefPercent;

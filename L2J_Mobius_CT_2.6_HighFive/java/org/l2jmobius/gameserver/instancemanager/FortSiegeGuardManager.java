@@ -30,7 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.entity.Fort;
 
-public final class FortSiegeGuardManager
+public class FortSiegeGuardManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
@@ -132,12 +132,12 @@ public final class FortSiegeGuardManager
 		}
 	}
 	
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		return _fort;
 	}
 	
-	public final Map<Integer, List<Spawn>> getSiegeGuardSpawn()
+	public Map<Integer, List<Spawn>> getSiegeGuardSpawn()
 	{
 		return _siegeGuards;
 	}

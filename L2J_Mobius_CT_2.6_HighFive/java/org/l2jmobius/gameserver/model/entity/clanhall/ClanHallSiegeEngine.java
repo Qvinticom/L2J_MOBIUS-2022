@@ -112,7 +112,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		}
 	}
 	
-	public final void saveAttackers()
+	public void saveAttackers()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_siege_attackers WHERE clanhall_id = ?"))
@@ -141,7 +141,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		}
 	}
 	
-	public final void loadGuards()
+	public void loadGuards()
 	{
 		if (_guards != null)
 		{
@@ -208,7 +208,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		return result;
 	}
 	
-	public final Map<Integer, SiegeClan> getAttackers()
+	public Map<Integer, SiegeClan> getAttackers()
 	{
 		return _attackers;
 	}
@@ -448,7 +448,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		return Config.CHS_FAME_FREQUENCY;
 	}
 	
-	public final void broadcastNpcSay(Npc npc, ChatType type, NpcStringId messageId)
+	public void broadcastNpcSay(Npc npc, ChatType type, NpcStringId messageId)
 	{
 		final NpcSay npcSay = new NpcSay(npc.getObjectId(), type, npc.getId(), messageId);
 		final int sourceRegion = MapRegionManager.getInstance().getMapRegionLocId(npc);

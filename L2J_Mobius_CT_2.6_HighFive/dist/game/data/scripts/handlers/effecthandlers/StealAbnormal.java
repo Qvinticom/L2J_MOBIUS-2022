@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Steal Abnormal effect implementation.
  * @author Adry_85, Zoey76
  */
-public final class StealAbnormal extends AbstractEffect
+public class StealAbnormal extends AbstractEffect
 {
 	private final String _slot;
 	private final int _rate;

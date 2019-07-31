@@ -24,77 +24,77 @@ import org.l2jmobius.gameserver.templates.StatsSet;
 public class CreatureTemplate
 {
 	// BaseStats
-	public final int baseSTR;
-	public final int baseCON;
-	public final int baseDEX;
-	public final int baseINT;
-	public final int baseWIT;
-	public final int baseMEN;
-	public final float baseHpMax;
-	public final float baseCpMax;
-	public final float baseMpMax;
+	public int baseSTR;
+	public int baseCON;
+	public int baseDEX;
+	public int baseINT;
+	public int baseWIT;
+	public int baseMEN;
+	public float baseHpMax;
+	public float baseCpMax;
+	public float baseMpMax;
 	
 	/** HP Regen base */
-	public final float baseHpReg;
+	public float baseHpReg;
 	
 	/** MP Regen base */
-	public final float baseMpReg;
+	public float baseMpReg;
 	
-	public final int basePAtk;
-	public final int baseMAtk;
-	public final int basePDef;
-	public final int baseMDef;
-	public final int basePAtkSpd;
-	public final int baseMAtkSpd;
-	public final float baseMReuseRate;
-	public final int baseShldDef;
-	public final int baseAtkRange;
-	public final int baseShldRate;
-	public final int baseCritRate;
-	public final int baseMCritRate;
-	public final int baseWalkSpd;
-	public final int baseRunSpd;
+	public int basePAtk;
+	public int baseMAtk;
+	public int basePDef;
+	public int baseMDef;
+	public int basePAtkSpd;
+	public int baseMAtkSpd;
+	public float baseMReuseRate;
+	public int baseShldDef;
+	public int baseAtkRange;
+	public int baseShldRate;
+	public int baseCritRate;
+	public int baseMCritRate;
+	public int baseWalkSpd;
+	public int baseRunSpd;
 	
 	// SpecialStats
-	public final int baseBreath;
-	public final int baseAggression;
-	public final int baseBleed;
-	public final int basePoison;
-	public final int baseStun;
-	public final int baseRoot;
-	public final int baseMovement;
-	public final int baseConfusion;
-	public final int baseSleep;
-	public final int baseFire;
-	public final int baseWind;
-	public final int baseWater;
-	public final int baseEarth;
-	public final int baseHoly;
-	public final int baseDark;
-	public final double baseAggressionVuln;
-	public final double baseBleedVuln;
-	public final double basePoisonVuln;
-	public final double baseStunVuln;
-	public final double baseRootVuln;
-	public final double baseMovementVuln;
-	public final double baseConfusionVuln;
-	public final double baseSleepVuln;
-	public final double baseFireVuln;
-	public final double baseWindVuln;
-	public final double baseWaterVuln;
-	public final double baseEarthVuln;
-	public final double baseHolyVuln;
-	public final double baseDarkVuln;
-	public final double baseCritVuln;
+	public int baseBreath;
+	public int baseAggression;
+	public int baseBleed;
+	public int basePoison;
+	public int baseStun;
+	public int baseRoot;
+	public int baseMovement;
+	public int baseConfusion;
+	public int baseSleep;
+	public int baseFire;
+	public int baseWind;
+	public int baseWater;
+	public int baseEarth;
+	public int baseHoly;
+	public int baseDark;
+	public double baseAggressionVuln;
+	public double baseBleedVuln;
+	public double basePoisonVuln;
+	public double baseStunVuln;
+	public double baseRootVuln;
+	public double baseMovementVuln;
+	public double baseConfusionVuln;
+	public double baseSleepVuln;
+	public double baseFireVuln;
+	public double baseWindVuln;
+	public double baseWaterVuln;
+	public double baseEarthVuln;
+	public double baseHolyVuln;
+	public double baseDarkVuln;
+	public double baseCritVuln;
 	
-	public final boolean isUndead;
+	public boolean isUndead;
 	
 	// C4 Stats
-	public final int baseMpConsumeRate;
-	public final int baseHpConsumeRate;
+	public int baseMpConsumeRate;
+	public int baseHpConsumeRate;
 	
-	public final int collisionRadius;
-	public final int collisionHeight;
+	public int collisionRadius;
+	public int collisionHeight;
 	
 	public CreatureTemplate(StatsSet set)
 	{

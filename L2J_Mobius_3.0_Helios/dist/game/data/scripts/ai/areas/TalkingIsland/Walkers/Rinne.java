@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Rinne AI.
  * @author Gladicek
  */
-public final class Rinne extends AbstractNpcAI
+public class Rinne extends AbstractNpcAI
 {
 	// NPC
 	private static final int RINNE = 33234;

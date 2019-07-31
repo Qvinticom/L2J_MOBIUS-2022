@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Block Buff Slot effect implementation.
  * @author Zoey76
  */
-public final class BlockBuffSlot extends AbstractEffect
+public class BlockBuffSlot extends AbstractEffect
 {
 	private final Set<AbnormalType> _blockBuffSlots;
 	

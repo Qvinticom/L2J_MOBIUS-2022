@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (c) Sd (S: content - d: type)
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetition extends GameClientPacket
+public class RequestPetition extends GameClientPacket
 {
 	private String _content;
 	private int _type; // 1 = on : 0 = off;

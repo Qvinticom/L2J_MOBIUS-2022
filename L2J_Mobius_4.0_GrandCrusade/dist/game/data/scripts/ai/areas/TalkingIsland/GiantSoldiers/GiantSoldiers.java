@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Giant's Soldiers AI.
  * @author Gladicek
  */
-public final class GiantSoldiers extends AbstractNpcAI
+public class GiantSoldiers extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LAKSIAN = 33486;

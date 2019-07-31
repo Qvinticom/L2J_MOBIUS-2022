@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
  * @URL https://l2wiki.com/The_Invaded_Execution_Grounds
  * @author Gigi
  */
-public final class Q10377_TheInvadedExecutionGrounds extends Quest
+public class Q10377_TheInvadedExecutionGrounds extends Quest
 {
 	// NPCs
 	private static final int SYLVAIN = 30070;

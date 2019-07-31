@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/In_Search_of_the_Cause
  * @author Gigi
  */
-public final class Q10829_InSearchOfTheCause extends Quest
+public class Q10829_InSearchOfTheCause extends Quest
 {
 	// NPC
 	private static final int SERESIN = 30657;

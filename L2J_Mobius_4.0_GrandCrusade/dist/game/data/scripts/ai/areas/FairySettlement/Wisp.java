@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Wisp AI.
  * @author St3eT
  */
-public final class Wisp extends AbstractNpcAI
+public class Wisp extends AbstractNpcAI
 {
 	// NPCs
 	private static final int WISP = 32915;

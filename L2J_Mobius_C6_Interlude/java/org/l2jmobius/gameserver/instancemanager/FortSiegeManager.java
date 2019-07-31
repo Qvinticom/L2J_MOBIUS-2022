@@ -73,7 +73,7 @@ public class FortSiegeManager
 	private int _siegeLength = 120; // Time in minute. Changeable in siege.config
 	private List<FortSiege> _sieges;
 	
-	public final void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
 		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
@@ -86,7 +86,7 @@ public class FortSiegeManager
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public final boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
+	public boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
 		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
@@ -129,7 +129,7 @@ public class FortSiegeManager
 	 * @param fortid
 	 * @return
 	 */
-	public final boolean checkIsRegistered(Clan clan, int fortid)
+	public boolean checkIsRegistered(Clan clan, int fortid)
 	{
 		if (clan == null)
 		{
@@ -165,7 +165,7 @@ public class FortSiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(SkillTable.getInstance().getInfo(246, 1));
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
@@ -278,7 +278,7 @@ public class FortSiegeManager
 		}
 	}
 	
-	public final List<SiegeSpawn> getCommanderSpawnList(int _fortId)
+	public List<SiegeSpawn> getCommanderSpawnList(int _fortId)
 	{
 		if (_commanderSpawnList.containsKey(_fortId))
 		{
@@ -287,7 +287,7 @@ public class FortSiegeManager
 		return null;
 	}
 	
-	public final List<SiegeSpawn> getFlagList(int _fortId)
+	public List<SiegeSpawn> getFlagList(int _fortId)
 	{
 		if (_flagList.containsKey(_fortId))
 		{
@@ -296,42 +296,42 @@ public class FortSiegeManager
 		return null;
 	}
 	
-	public final int getAttackerMaxClans()
+	public int getAttackerMaxClans()
 	{
 		return _attackerMaxClans;
 	}
 	
-	public final int getAttackerRespawnDelay()
+	public int getAttackerRespawnDelay()
 	{
 		return _attackerRespawnDelay;
 	}
 	
-	public final int getControlTowerLosePenalty()
+	public int getControlTowerLosePenalty()
 	{
 		return _controlTowerLosePenalty;
 	}
 	
-	public final int getDefenderMaxClans()
+	public int getDefenderMaxClans()
 	{
 		return _defenderMaxClans;
 	}
 	
-	public final int getDefenderRespawnDelay()
+	public int getDefenderRespawnDelay()
 	{
 		return _defenderRespawnDelay;
 	}
 	
-	public final int getFlagMaxCount()
+	public int getFlagMaxCount()
 	{
 		return _flagMaxCount;
 	}
 	
-	public final FortSiege getSiege(WorldObject activeObject)
+	public FortSiege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final FortSiege getSiege(int x, int y, int z)
+	public FortSiege getSiege(int x, int y, int z)
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
@@ -343,17 +343,17 @@ public class FortSiegeManager
 		return null;
 	}
 	
-	public final int getSiegeClanMinLevel()
+	public int getSiegeClanMinLevel()
 	{
 		return _siegeClanMinLevel;
 	}
 	
-	public final int getSiegeLength()
+	public int getSiegeLength()
 	{
 		return _siegeLength;
 	}
 	
-	public final List<FortSiege> getSieges()
+	public List<FortSiege> getSieges()
 	{
 		if (_sieges == null)
 		{
@@ -362,7 +362,7 @@ public class FortSiegeManager
 		return _sieges;
 	}
 	
-	public final void addSiege(FortSiege fortSiege)
+	public void addSiege(FortSiege fortSiege)
 	{
 		if (_sieges == null)
 		{
@@ -371,7 +371,7 @@ public class FortSiegeManager
 		_sieges.add(fortSiege);
 	}
 	
-	public final void removeSiege(FortSiege fortSiege)
+	public void removeSiege(FortSiege fortSiege)
 	{
 		if (_sieges == null)
 		{
@@ -436,7 +436,7 @@ public class FortSiegeManager
 		}
 	}
 	
-	public final boolean checkIsRegisteredInSiege(Clan clan)
+	public boolean checkIsRegisteredInSiege(Clan clan)
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{

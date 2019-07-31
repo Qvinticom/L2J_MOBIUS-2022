@@ -46,7 +46,7 @@ public abstract class ExclusiveTask
 		return _future != null;
 	}
 	
-	public final synchronized void cancel()
+	public synchronized void cancel()
 	{
 		if (_future != null)
 		{
@@ -55,19 +55,19 @@ public abstract class ExclusiveTask
 		}
 	}
 	
-	public final synchronized void schedule(long delay)
+	public synchronized void schedule(long delay)
 	{
 		cancel();
 		
 		_future = ThreadPool.schedule(_runnable, delay);
 	}
 	
-	public final synchronized void execute()
+	public synchronized void execute()
 	{
 		ThreadPool.execute(_runnable);
 	}
 	
-	public final synchronized void scheduleAtFixedRate(long delay, long period)
+	public synchronized void scheduleAtFixedRate(long delay, long period)
 	{
 		cancel();
 		

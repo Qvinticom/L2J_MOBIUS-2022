@@ -37,7 +37,7 @@ import quests.Q10412_ASuspiciousVagabondInTheForest.Q10412_ASuspiciousVagabondIn
  * Embryo in the Forest of the Dead (10413)
  * @author St3eT
  */
-public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
+public class Q10413_EmbryoInTheForestOfTheDead extends Quest
 {
 	// NPCs
 	private static final int HATUBA = 33849;

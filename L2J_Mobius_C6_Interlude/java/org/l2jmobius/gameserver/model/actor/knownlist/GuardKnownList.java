@@ -107,7 +107,7 @@ public class GuardKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final GuardInstance getActiveChar()
+	public GuardInstance getActiveChar()
 	{
 		return (GuardInstance) super.getActiveChar();
 	}

@@ -78,7 +78,7 @@ public class CursedWeaponsManager
 		LOGGER.info("Loaded: " + _cursedWeapons.size() + " cursed weapon(s).");
 	}
 	
-	public final void reload()
+	public void reload()
 	{
 		if (!Config.ALLOW_CURSED_WEAPONS)
 		{

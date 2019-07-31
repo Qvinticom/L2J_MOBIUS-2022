@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * MP change effect. It is mostly used for potions and static damage.
  * @author Nik
  */
-public final class Mp extends AbstractEffect
+public class Mp extends AbstractEffect
 {
 	private final int _amount;
 	private final StatModifierType _mode;

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestJoinAlly implements IClientIncomingPacket
+public class RequestJoinAlly implements IClientIncomingPacket
 {
 	private int _objectId;
 	

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Split of Destiny (177)
  * @author Sdw
  */
-public final class Q00177_SplitDestiny extends Quest
+public class Q00177_SplitDestiny extends Quest
 {
 	// NPCs
 	private static final int HADEL = 33344;

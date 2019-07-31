@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Rebellion of Monsters (10368)
  * @author St3eT
  */
-public final class Q10368_RebellionOfMonsters extends Quest
+public class Q10368_RebellionOfMonsters extends Quest
 {
 	// NPCs
 	private static final int FRED = 33179;

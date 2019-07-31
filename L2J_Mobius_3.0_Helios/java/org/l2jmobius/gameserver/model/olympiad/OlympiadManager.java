@@ -48,12 +48,12 @@ public class OlympiadManager
 		return SingletonHolder.INSTANCE;
 	}
 	
-	public final Set<Integer> getRegisteredNonClassBased()
+	public Set<Integer> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
 	}
 	
-	public final Map<Integer, Set<Integer>> getRegisteredClassBased()
+	public Map<Integer, Set<Integer>> getRegisteredClassBased()
 	{
 		return _classBasedRegisters;
 	}
@@ -88,7 +88,7 @@ public class OlympiadManager
 		AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
 	}
 	
-	public final boolean isRegistered(PlayerInstance noble)
+	public boolean isRegistered(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false);
 	}
@@ -122,7 +122,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean isRegisteredInComp(PlayerInstance noble)
+	public boolean isRegisteredInComp(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false) || isInCompetition(noble, noble, false);
 	}
@@ -173,7 +173,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean registerNoble(PlayerInstance player, CompetitionType type)
+	public boolean registerNoble(PlayerInstance player, CompetitionType type)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -254,7 +254,7 @@ public class OlympiadManager
 		return true;
 	}
 	
-	public final boolean unRegisterNoble(PlayerInstance noble)
+	public boolean unRegisterNoble(PlayerInstance noble)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -308,7 +308,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final void removeDisconnectedCompetitor(PlayerInstance player)
+	public void removeDisconnectedCompetitor(PlayerInstance player)
 	{
 		final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
 		if ((task != null) && task.isGameStarted())

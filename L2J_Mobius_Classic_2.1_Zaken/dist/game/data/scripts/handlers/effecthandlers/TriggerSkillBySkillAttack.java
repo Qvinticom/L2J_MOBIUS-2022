@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  * Trigger Skill By Skill Attack effect implementation.
  * @author Nik
  */
-public final class TriggerSkillBySkillAttack extends AbstractEffect
+public class TriggerSkillBySkillAttack extends AbstractEffect
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;

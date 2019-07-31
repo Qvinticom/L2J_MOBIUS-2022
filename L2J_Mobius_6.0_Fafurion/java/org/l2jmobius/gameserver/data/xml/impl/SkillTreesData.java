@@ -78,7 +78,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * For XML schema please refer to skillTrees.xsd in datapack in xsd folder and for parameters documentation refer to documentation.txt in skillTrees folder.<br>
  * @author Zoey76
  */
-public final class SkillTreesData implements IXmlReader
+public class SkillTreesData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillTreesData.class.getName());
 	

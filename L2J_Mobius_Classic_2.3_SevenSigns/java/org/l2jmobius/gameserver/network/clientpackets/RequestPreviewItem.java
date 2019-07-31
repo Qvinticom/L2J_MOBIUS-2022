@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  ** @author Gnacik
  */
-public final class RequestPreviewItem implements IClientIncomingPacket
+public class RequestPreviewItem implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk;

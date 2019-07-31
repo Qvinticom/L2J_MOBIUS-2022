@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 /**
  * @author malyelfik
  */
-public final class CropProcure extends SeedProduction
+public class CropProcure extends SeedProduction
 {
 	private final int _rewardType;
 	
@@ -29,7 +29,7 @@ public final class CropProcure extends SeedProduction
 		_rewardType = type;
 	}
 	
-	public final int getReward()
+	public int getReward()
 	{
 		return _rewardType;
 	}

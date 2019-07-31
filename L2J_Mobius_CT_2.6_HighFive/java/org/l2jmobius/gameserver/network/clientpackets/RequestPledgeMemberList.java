@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 /**
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPledgeMemberList implements IClientIncomingPacket
+public class RequestPledgeMemberList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

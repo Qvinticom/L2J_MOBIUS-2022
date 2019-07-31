@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class GetItem implements IClientOutgoingPacket
+public class GetItem implements IClientOutgoingPacket
 {
 	private final ItemInstance _item;
 	private final int _playerId;

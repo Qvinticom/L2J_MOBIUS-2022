@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
  * Pailaka - Song of Ice and Fire (128)
  * @author Gnacik, St3eT
  */
-public final class Q00128_PailakaSongOfIceAndFire extends Quest
+public class Q00128_PailakaSongOfIceAndFire extends Quest
 {
 	// NPCs
 	private static final int ADLER1 = 32497;
@@ -82,7 +82,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -186,7 +186,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -280,7 +280,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted())

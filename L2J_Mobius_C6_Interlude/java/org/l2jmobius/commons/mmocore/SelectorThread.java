@@ -34,7 +34,7 @@ import java.util.LinkedList;
  * @param <T>
  * @author KenM
  */
-public final class SelectorThread<T extends MMOClient<?>>extends Thread
+public class SelectorThread<T extends MMOClient<?>>extends Thread
 {
 	// default BYTE_ORDER
 	private static final ByteOrder BYTE_ORDER = ByteOrder.LITTLE_ENDIAN;
@@ -98,7 +98,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		_selector = Selector.open();
 	}
 	
-	public final void openServerSocket(InetAddress address, int tcpPort) throws IOException
+	public void openServerSocket(InetAddress address, int tcpPort) throws IOException
 	{
 		final ServerSocketChannel selectable = ServerSocketChannel.open();
 		selectable.configureBlocking(false);
@@ -138,7 +138,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public final void run()
+	public void run()
 	{
 		int selectedKeysCount = 0;
 		
@@ -693,7 +693,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	public final void shutdown()
+	public void shutdown()
 	{
 		_shutdown = true;
 	}

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 /**
  * Skill Turning effect implementation.
  */
-public final class SkillTurning extends AbstractEffect
+public class SkillTurning extends AbstractEffect
 {
 	private final int _chance;
 	

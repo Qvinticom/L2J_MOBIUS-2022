@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Dragon Trophy - Antharas (904)
  * @author Zoey76
  */
-public final class Q00904_DragonTrophyAntharas extends Quest
+public class Q00904_DragonTrophyAntharas extends Quest
 {
 	// NPC
 	private static final int THEODRIC = 30755;

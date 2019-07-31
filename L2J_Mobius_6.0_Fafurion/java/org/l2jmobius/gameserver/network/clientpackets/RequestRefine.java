@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
  * Format:(ch) dddd
  * @author -Wooden-
  */
-public final class RequestRefine extends AbstractRefinePacket
+public class RequestRefine extends AbstractRefinePacket
 {
 	private int _targetItemObjId;
 	private int _mineralItemObjId;

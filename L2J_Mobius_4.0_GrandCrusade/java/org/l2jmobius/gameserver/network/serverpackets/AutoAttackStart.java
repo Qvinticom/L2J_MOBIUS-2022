@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class AutoAttackStart implements IClientOutgoingPacket
+public class AutoAttackStart implements IClientOutgoingPacket
 {
 	private final int _targetObjId;
 	

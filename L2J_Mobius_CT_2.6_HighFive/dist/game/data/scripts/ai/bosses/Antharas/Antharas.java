@@ -52,7 +52,7 @@ import ai.AbstractNpcAI;
  * Antharas AI.
  * @author St3eT
  */
-public final class Antharas extends AbstractNpcAI
+public class Antharas extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ANTHARAS = 29068; // Antharas

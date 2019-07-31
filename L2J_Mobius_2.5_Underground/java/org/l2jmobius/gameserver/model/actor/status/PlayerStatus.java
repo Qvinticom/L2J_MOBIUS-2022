@@ -45,7 +45,7 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public final void reduceCp(int value)
+	public void reduceCp(int value)
 	{
 		if (_currentCp > value)
 		{
@@ -58,18 +58,18 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false, false);
 	}
 	
 	@Override
-	public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
 		reduceHp(value, attacker, awake, isDOT, isHPConsumption, false);
 	}
 	
-	public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP)
 	{
 		if (getActiveChar().isDead())
 		{
@@ -331,19 +331,19 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public final double getCurrentCp()
+	public double getCurrentCp()
 	{
 		return _currentCp;
 	}
 	
 	@Override
-	public final void setCurrentCp(double newCp)
+	public void setCurrentCp(double newCp)
 	{
 		setCurrentCp(newCp, true);
 	}
 	
 	@Override
-	public final void setCurrentCp(double newCp, boolean broadcastPacket)
+	public void setCurrentCp(double newCp, boolean broadcastPacket)
 	{
 		// Get the Max CP of the Creature
 		final int currentCp = (int) _currentCp;

@@ -62,7 +62,7 @@ public class PlayerAppearance
 	/**
 	 * @param visibleName The visibleName to set.
 	 */
-	public final void setVisibleName(String visibleName)
+	public void setVisibleName(String visibleName)
 	{
 		_visibleName = visibleName;
 	}
@@ -70,7 +70,7 @@ public class PlayerAppearance
 	/**
 	 * @return Returns the visibleName.
 	 */
-	public final String getVisibleName()
+	public String getVisibleName()
 	{
 		if (_visibleName == null)
 		{
@@ -82,7 +82,7 @@ public class PlayerAppearance
 	/**
 	 * @param visibleTitle The visibleTitle to set.
 	 */
-	public final void setVisibleTitle(String visibleTitle)
+	public void setVisibleTitle(String visibleTitle)
 	{
 		_visibleTitle = visibleTitle;
 	}
@@ -90,7 +90,7 @@ public class PlayerAppearance
 	/**
 	 * @return Returns the visibleTitle.
 	 */
-	public final String getVisibleTitle()
+	public String getVisibleTitle()
 	{
 		if (_visibleTitle == null)
 		{
@@ -99,7 +99,7 @@ public class PlayerAppearance
 		return _visibleTitle;
 	}
 	
-	public final byte getFace()
+	public byte getFace()
 	{
 		return _face;
 	}
@@ -107,12 +107,12 @@ public class PlayerAppearance
 	/**
 	 * @param value
 	 */
-	public final void setFace(int value)
+	public void setFace(int value)
 	{
 		_face = (byte) value;
 	}
 	
-	public final byte getHairColor()
+	public byte getHairColor()
 	{
 		return _hairColor;
 	}
@@ -120,12 +120,12 @@ public class PlayerAppearance
 	/**
 	 * @param value
 	 */
-	public final void setHairColor(int value)
+	public void setHairColor(int value)
 	{
 		_hairColor = (byte) value;
 	}
 	
-	public final byte getHairStyle()
+	public byte getHairStyle()
 	{
 		return _hairStyle;
 	}
@@ -133,7 +133,7 @@ public class PlayerAppearance
 	/**
 	 * @param value
 	 */
-	public final void setHairStyle(int value)
+	public void setHairStyle(int value)
 	{
 		_hairStyle = (byte) value;
 	}
@@ -141,7 +141,7 @@ public class PlayerAppearance
 	/**
 	 * @return true if char is female
 	 */
-	public final boolean getSex()
+	public boolean getSex()
 	{
 		return _sex;
 	}
@@ -157,7 +157,7 @@ public class PlayerAppearance
 	/**
 	 * @param isfemale
 	 */
-	public final void setSex(boolean isfemale)
+	public void setSex(boolean isfemale)
 	{
 		_sex = isfemale;
 	}

@@ -30,7 +30,7 @@ import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheFore
  * Dorian (Raid Fighter) - Quest AI
  * @author malyelfik
  */
-public final class Dorian extends AbstractNpcAI
+public class Dorian extends AbstractNpcAI
 {
 	// NPC
 	private static final int DORIAN = 25332;

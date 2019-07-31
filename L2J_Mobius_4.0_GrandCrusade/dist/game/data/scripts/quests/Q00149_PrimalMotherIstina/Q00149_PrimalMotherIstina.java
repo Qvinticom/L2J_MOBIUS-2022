@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * @URL https://l2wiki.com/Primal_Mother,_Istina
  * @author Gigi
  */
-public final class Q00149_PrimalMotherIstina extends Quest
+public class Q00149_PrimalMotherIstina extends Quest
 {
 	// NPCs
 	private static final int RUMIESE = 33293;

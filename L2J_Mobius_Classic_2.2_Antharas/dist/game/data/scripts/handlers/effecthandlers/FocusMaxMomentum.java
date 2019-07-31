@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Focus Max Energy effect implementation.
  * @author Adry_85
  */
-public final class FocusMaxMomentum extends AbstractEffect
+public class FocusMaxMomentum extends AbstractEffect
 {
 	public FocusMaxMomentum(StatsSet params)
 	{

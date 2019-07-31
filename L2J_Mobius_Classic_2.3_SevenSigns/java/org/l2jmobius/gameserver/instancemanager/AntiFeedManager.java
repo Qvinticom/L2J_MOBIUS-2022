@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 
-public final class AntiFeedManager
+public class AntiFeedManager
 {
 	public static final int GAME_ID = 0;
 	public static final int OLYMPIAD_ID = 1;

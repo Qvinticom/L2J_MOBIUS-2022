@@ -59,7 +59,7 @@ public enum BaseStats
 	
 	private final BaseStat _stat;
 	
-	public final String getValue()
+	public String getValue()
 	{
 		return _stat.getClass().getSimpleName();
 	}
@@ -69,7 +69,7 @@ public enum BaseStats
 		_stat = s;
 	}
 	
-	public final double calcBonus(Creature actor)
+	public double calcBonus(Creature actor)
 	{
 		if (actor != null)
 		{
@@ -101,7 +101,7 @@ public enum BaseStats
 	protected static final class STR implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -130,7 +130,7 @@ public enum BaseStats
 	protected static final class INT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -159,7 +159,7 @@ public enum BaseStats
 	protected static final class DEX implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -188,7 +188,7 @@ public enum BaseStats
 	protected static final class WIT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -217,7 +217,7 @@ public enum BaseStats
 	protected static final class CON implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -246,7 +246,7 @@ public enum BaseStats
 	protected static final class MEN implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
@@ -275,7 +275,7 @@ public enum BaseStats
 	protected static final class NULL implements BaseStat
 	{
 		@Override
-		public final double calcBonus(Creature actor)
+		public double calcBonus(Creature actor)
 		{
 			return 1f;
 		}

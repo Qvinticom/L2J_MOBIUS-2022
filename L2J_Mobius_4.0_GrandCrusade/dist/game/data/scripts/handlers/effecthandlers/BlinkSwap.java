@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * Assume that geodata checks are done on the skill cast and not needed to repeat here.
  * @author Nik
  */
-public final class BlinkSwap extends AbstractEffect
+public class BlinkSwap extends AbstractEffect
 {
 	public BlinkSwap(StatsSet params)
 	{

@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
  * Monastery Minigame AI.
  * @author nonom
  */
-public final class Minigame extends AbstractNpcAI
+public class Minigame extends AbstractNpcAI
 {
 	private static final int SUMIEL = 32758;
 	private static final int BURNER = 18913;

@@ -32,18 +32,18 @@ import org.l2jmobius.gameserver.skills.conditions.Condition;
 public abstract class Func
 {
 	/** Statistics, that is affected by this function (See Creature.CALCULATOR_XXX constants) */
-	public final Stats stat;
+	public Stats stat;
 	
 	/**
 	 * Order of functions calculation. Functions with lower order are executed first. Functions with the same order are executed in unspecified order. Usually add/subtract functions has lowest order, then bonus/penalty functions (Multiply/divide) are applied, then functions that do more complex
 	 * calculations (non-linear functions).
 	 */
-	public final int order;
+	public int order;
 	
 	/**
 	 * Owner can be an armor, weapon, skill, system event, quest, etc Used to remove all functions added by this owner.
 	 */
-	public final Object funcOwner;
+	public Object funcOwner;
 	
 	/** Function may be disabled by attached condition. */
 	public Condition cond;

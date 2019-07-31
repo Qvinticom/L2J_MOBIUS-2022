@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Pierce through a Shield! (734)
  * @author Gigiikun
  */
-public final class Q00734_PierceThroughAShield extends TerritoryWarSuperClass
+public class Q00734_PierceThroughAShield extends TerritoryWarSuperClass
 {
 	public Q00734_PierceThroughAShield()
 	{

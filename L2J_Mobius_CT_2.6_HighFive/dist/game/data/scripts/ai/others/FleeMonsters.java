@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Flee Monsters AI.
  * @author Pandragon, NosBit
  */
-public final class FleeMonsters extends AbstractNpcAI
+public class FleeMonsters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MOBS =

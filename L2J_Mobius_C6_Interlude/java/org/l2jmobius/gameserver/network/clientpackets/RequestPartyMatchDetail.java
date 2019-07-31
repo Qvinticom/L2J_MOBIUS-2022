@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * @author Gnacik
  */
 
-public final class RequestPartyMatchDetail extends GameClientPacket
+public class RequestPartyMatchDetail extends GameClientPacket
 {
 	private int _roomid;
 	

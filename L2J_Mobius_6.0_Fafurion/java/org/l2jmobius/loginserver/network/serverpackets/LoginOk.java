@@ -34,7 +34,7 @@ import org.l2jmobius.loginserver.network.OutgoingPackets;
  * b: 16 bytes - unknown
  * </pre>
  */
-public final class LoginOk implements IOutgoingPacket
+public class LoginOk implements IOutgoingPacket
 {
 	private final int _loginOk1;
 	private final int _loginOk2;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Silver Haired Shaman (366)
  * @author Adry_85, jurchiks
  */
-public final class Q00366_SilverHairedShaman extends Quest
+public class Q00366_SilverHairedShaman extends Quest
 {
 	// NPC
 	private static final int DIETER = 30111;

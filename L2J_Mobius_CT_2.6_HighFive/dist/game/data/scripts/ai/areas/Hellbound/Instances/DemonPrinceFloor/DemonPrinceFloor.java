@@ -34,7 +34,7 @@ import instances.AbstractInstance;
  * Demon Prince Floor instance zone.
  * @author GKR
  */
-public final class DemonPrinceFloor extends AbstractInstance
+public class DemonPrinceFloor extends AbstractInstance
 {
 	// NPCs
 	private static final int GK_4 = 32748;

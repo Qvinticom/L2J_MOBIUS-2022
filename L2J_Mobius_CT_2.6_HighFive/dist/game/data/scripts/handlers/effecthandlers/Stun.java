@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Stun effect implementation.
  * @author mkizub
  */
-public final class Stun extends AbstractEffect
+public class Stun extends AbstractEffect
 {
 	public Stun(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

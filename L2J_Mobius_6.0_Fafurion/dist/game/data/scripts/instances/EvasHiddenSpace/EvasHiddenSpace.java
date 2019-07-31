@@ -28,7 +28,7 @@ import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
  * Eva's Hidden Space instance zone.
  * @author Gladicek, St3eT
  */
-public final class EvasHiddenSpace extends AbstractInstance
+public class EvasHiddenSpace extends AbstractInstance
 {
 	// NPCs
 	private static final int CERENAS = 31281;

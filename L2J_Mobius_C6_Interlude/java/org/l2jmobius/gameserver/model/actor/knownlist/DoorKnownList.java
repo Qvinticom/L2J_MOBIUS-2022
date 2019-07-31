@@ -30,7 +30,7 @@ public class DoorKnownList extends CreatureKnownList
 	}
 	
 	@Override
-	public final DoorInstance getActiveChar()
+	public DoorInstance getActiveChar()
 	{
 		return (DoorInstance) super.getActiveChar();
 	}

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial of Duty (212)
  * @author jurchiks
  */
-public final class Q00212_TrialOfDuty extends Quest
+public class Q00212_TrialOfDuty extends Quest
 {
 	// NPCs
 	private static final int HANNAVALT = 30109;

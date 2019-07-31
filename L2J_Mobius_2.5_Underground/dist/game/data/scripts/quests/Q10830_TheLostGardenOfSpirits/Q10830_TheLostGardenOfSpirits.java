@@ -29,7 +29,7 @@ import quests.Q10829_InSearchOfTheCause.Q10829_InSearchOfTheCause;
  * @URL https://l2wiki.com/The_Lost_Garden_of_Spirits
  * @author Gigi
  */
-public final class Q10830_TheLostGardenOfSpirits extends Quest
+public class Q10830_TheLostGardenOfSpirits extends Quest
 {
 	// NPC
 	private static final int CYPHONIA = 34055;

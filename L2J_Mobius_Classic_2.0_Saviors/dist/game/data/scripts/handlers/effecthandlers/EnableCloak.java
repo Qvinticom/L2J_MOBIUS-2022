@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Enable Cloak effect implementation.
  * @author Adry_85
  */
-public final class EnableCloak extends AbstractEffect
+public class EnableCloak extends AbstractEffect
 {
 	public EnableCloak(StatsSet params)
 	{

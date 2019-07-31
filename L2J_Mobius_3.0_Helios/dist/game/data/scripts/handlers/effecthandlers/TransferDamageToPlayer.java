@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  * Transfer Damage effect implementation.
  * @author UnAfraid
  */
-public final class TransferDamageToPlayer extends AbstractStatAddEffect
+public class TransferDamageToPlayer extends AbstractStatAddEffect
 {
 	public TransferDamageToPlayer(StatsSet params)
 	{

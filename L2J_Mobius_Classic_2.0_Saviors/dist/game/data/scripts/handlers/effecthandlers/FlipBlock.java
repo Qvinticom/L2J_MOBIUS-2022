@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Flip Block effect implementation.
  * @author Mobius
  */
-public final class FlipBlock extends AbstractEffect
+public class FlipBlock extends AbstractEffect
 {
 	public FlipBlock(StatsSet params)
 	{

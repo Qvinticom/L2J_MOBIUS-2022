@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Cubic Mastery effect implementation.
  * @author Zoey76
  */
-public final class CubicMastery extends AbstractEffect
+public class CubicMastery extends AbstractEffect
 {
 	private final int _cubicCount;
 	

@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
  * Summon Pet effect implementation.
  * @author UnAfraid
  */
-public final class SummonPet extends AbstractEffect
+public class SummonPet extends AbstractEffect
 {
 	public SummonPet(StatsSet params)
 	{

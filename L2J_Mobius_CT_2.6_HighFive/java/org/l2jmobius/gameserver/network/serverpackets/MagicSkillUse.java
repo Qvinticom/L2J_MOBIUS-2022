@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * MagicSkillUse server packet implementation.
  * @author UnAfraid, NosBit
  */
-public final class MagicSkillUse implements IClientOutgoingPacket
+public class MagicSkillUse implements IClientOutgoingPacket
 {
 	private final int _skillId;
 	private final int _skillLevel;

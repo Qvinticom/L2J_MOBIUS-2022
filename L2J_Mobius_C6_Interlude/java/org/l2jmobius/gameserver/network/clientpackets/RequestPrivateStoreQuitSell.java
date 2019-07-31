@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestPrivateStoreQuitSell extends GameClientPacket
+public class RequestPrivateStoreQuitSell extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

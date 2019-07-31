@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * Catch The Wind (317)
  * @author ivantotov
  */
-public final class Q00317_CatchTheWind extends Quest
+public class Q00317_CatchTheWind extends Quest
 {
 	// NPC
 	private static final int RIZRAELL = 30361;

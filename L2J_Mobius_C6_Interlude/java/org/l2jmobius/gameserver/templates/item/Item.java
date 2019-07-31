@@ -351,7 +351,7 @@ public abstract class Item
 	 * Returns the duration of the item
 	 * @return int
 	 */
-	public final int getDuration()
+	public int getDuration()
 	{
 		return _duration;
 	}
@@ -360,7 +360,7 @@ public abstract class Item
 	 * Returns the ID of the iden
 	 * @return int
 	 */
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
@@ -371,7 +371,7 @@ public abstract class Item
 	 * Returns the type 2 of the item
 	 * @return int
 	 */
-	public final int getType2()
+	public int getType2()
 	{
 		return _type2;
 	}
@@ -380,7 +380,7 @@ public abstract class Item
 	 * Returns the weight of the item
 	 * @return int
 	 */
-	public final int getWeight()
+	public int getWeight()
 	{
 		return _weight;
 	}
@@ -389,7 +389,7 @@ public abstract class Item
 	 * Returns if the item is crystallizable
 	 * @return boolean
 	 */
-	public final boolean isCrystallizable()
+	public boolean isCrystallizable()
 	{
 		return _crystallizable;
 	}
@@ -398,7 +398,7 @@ public abstract class Item
 	 * Return the type of crystal if item is crystallizable
 	 * @return int
 	 */
-	public final int getCrystalType()
+	public int getCrystalType()
 	{
 		return _crystalType;
 	}
@@ -407,7 +407,7 @@ public abstract class Item
 	 * Return the type of crystal if item is crystallizable
 	 * @return int
 	 */
-	public final int getCrystalItemId()
+	public int getCrystalItemId()
 	{
 		return crystalItemId[_crystalType];
 	}
@@ -419,7 +419,7 @@ public abstract class Item
 	 * In fact, this fucntion returns the type of crystal of the item.
 	 * @return int
 	 */
-	public final int getItemGrade()
+	public int getItemGrade()
 	{
 		return _crystalType;
 	}
@@ -428,7 +428,7 @@ public abstract class Item
 	 * Returns the quantity of crystals for crystallization
 	 * @return int
 	 */
-	public final int getCrystalCount()
+	public int getCrystalCount()
 	{
 		return _crystalCount;
 	}
@@ -438,7 +438,7 @@ public abstract class Item
 	 * @param enchantLevel
 	 * @return int
 	 */
-	public final int getCrystalCount(int enchantLevel)
+	public int getCrystalCount(int enchantLevel)
 	{
 		if (enchantLevel > 3)
 		{
@@ -488,7 +488,7 @@ public abstract class Item
 	 * Returns the name of the item
 	 * @return String
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
@@ -497,7 +497,7 @@ public abstract class Item
 	 * Return the part of the body used with the item.
 	 * @return int
 	 */
-	public final int getBodyPart()
+	public int getBodyPart()
 	{
 		return _bodyPart;
 	}
@@ -506,7 +506,7 @@ public abstract class Item
 	 * Returns the type 1 of the item
 	 * @return int
 	 */
-	public final int getType1()
+	public int getType1()
 	{
 		return _type1;
 	}
@@ -515,7 +515,7 @@ public abstract class Item
 	 * Returns if the item is stackable
 	 * @return boolean
 	 */
-	public final boolean isStackable()
+	public boolean isStackable()
 	{
 		return _stackable;
 	}
@@ -533,7 +533,7 @@ public abstract class Item
 	 * Returns the price of reference of the item
 	 * @return int
 	 */
-	public final int getReferencePrice()
+	public int getReferencePrice()
 	{
 		return isConsumable() ? (int) (_referencePrice * Config.RATE_CONSUMABLE_COST) : _referencePrice;
 	}
@@ -542,7 +542,7 @@ public abstract class Item
 	 * Returns if the item can be sold
 	 * @return boolean
 	 */
-	public final boolean isSellable()
+	public boolean isSellable()
 	{
 		return _sellable;
 	}
@@ -551,7 +551,7 @@ public abstract class Item
 	 * Returns if the item can dropped
 	 * @return boolean
 	 */
-	public final boolean isDropable()
+	public boolean isDropable()
 	{
 		return _dropable;
 	}
@@ -560,7 +560,7 @@ public abstract class Item
 	 * Returns if the item can destroy
 	 * @return boolean
 	 */
-	public final boolean isDestroyable()
+	public boolean isDestroyable()
 	{
 		return _destroyable;
 	}
@@ -569,7 +569,7 @@ public abstract class Item
 	 * Returns if the item can add to trade
 	 * @return boolean
 	 */
-	public final boolean isTradeable()
+	public boolean isTradeable()
 	{
 		return _tradeable;
 	}

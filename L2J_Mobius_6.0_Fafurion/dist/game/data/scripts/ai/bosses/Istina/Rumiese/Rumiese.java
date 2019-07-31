@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Rumiese AI.
  * @author St3eT
  */
-public final class Rumiese extends AbstractNpcAI
+public class Rumiese extends AbstractNpcAI
 {
 	// NPC
 	private static final int RUMIESE = 33151;

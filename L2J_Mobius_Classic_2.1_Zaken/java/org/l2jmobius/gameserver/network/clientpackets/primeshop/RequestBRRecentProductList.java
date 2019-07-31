@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRRecentProductList implements IClientIncomingPacket
+public class RequestBRRecentProductList implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Ominous News (122)
  * @author malyelfik
  */
-public final class Q00122_OminousNews extends Quest
+public class Q00122_OminousNews extends Quest
 {
 	// NPCs
 	private static final int MOIRA = 31979;

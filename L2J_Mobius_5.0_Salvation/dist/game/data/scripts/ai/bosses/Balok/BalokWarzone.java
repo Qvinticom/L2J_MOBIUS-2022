@@ -46,7 +46,7 @@ import instances.AbstractInstance;
  * @author LasTravel, Gigi
  * @Video https://www.youtube.com/watch?v=w_-SNNPoulo&t=204s
  */
-public final class BalokWarzone extends AbstractInstance
+public class BalokWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int BALOK = 29218;

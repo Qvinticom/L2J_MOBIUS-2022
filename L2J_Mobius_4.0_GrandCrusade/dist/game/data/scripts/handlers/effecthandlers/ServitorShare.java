@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * Servitor Share effect implementation.
  */
-public final class ServitorShare extends AbstractEffect
+public class ServitorShare extends AbstractEffect
 {
 	private final Map<Stats, Float> _sharedStats = new HashMap<>();
 	

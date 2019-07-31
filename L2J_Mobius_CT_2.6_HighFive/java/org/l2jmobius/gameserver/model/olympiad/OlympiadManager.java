@@ -54,17 +54,17 @@ public class OlympiadManager
 		return SingletonHolder.INSTANCE;
 	}
 	
-	public final List<Integer> getRegisteredNonClassBased()
+	public List<Integer> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
 	}
 	
-	public final Map<Integer, List<Integer>> getRegisteredClassBased()
+	public Map<Integer, List<Integer>> getRegisteredClassBased()
 	{
 		return _classBasedRegisters;
 	}
 	
-	public final List<List<Integer>> getRegisteredTeamsBased()
+	public List<List<Integer>> getRegisteredTeamsBased()
 	{
 		return _teamsBasedRegisters;
 	}
@@ -105,7 +105,7 @@ public class OlympiadManager
 		AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
 	}
 	
-	public final boolean isRegistered(PlayerInstance noble)
+	public boolean isRegistered(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false);
 	}
@@ -154,7 +154,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean isRegisteredInComp(PlayerInstance noble)
+	public boolean isRegisteredInComp(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false) || isInCompetition(noble, noble, false);
 	}
@@ -212,7 +212,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean registerNoble(PlayerInstance player, CompetitionType type)
+	public boolean registerNoble(PlayerInstance player, CompetitionType type)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -347,7 +347,7 @@ public class OlympiadManager
 		return true;
 	}
 	
-	public final boolean unRegisterNoble(PlayerInstance noble)
+	public boolean unRegisterNoble(PlayerInstance noble)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -412,7 +412,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final void removeDisconnectedCompetitor(PlayerInstance player)
+	public void removeDisconnectedCompetitor(PlayerInstance player)
 	{
 		final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
 		if ((task != null) && task.isGameStarted())
@@ -548,7 +548,7 @@ public class OlympiadManager
 		}
 		
 		@Override
-		public final void run()
+		public void run()
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_REMOVED_FROM_THE_GRAND_OLYMPIAD_WAITING_LIST);
 			for (int objectId : _team)

@@ -21,7 +21,7 @@ import java.util.Vector;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class SystemMessage extends GameServerPacket
+public class SystemMessage extends GameServerPacket
 {
 	// Packets d d (d S/d d/d dd) -> 0 - String 1-number 2-textref npcname (1000000-1002655) 3-textref itemname 4-textref skills 5-??
 	private static final int TYPE_ZONE_NAME = 7;

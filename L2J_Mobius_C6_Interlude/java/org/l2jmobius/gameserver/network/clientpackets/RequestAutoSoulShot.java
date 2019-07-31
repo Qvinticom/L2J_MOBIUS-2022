@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAutoSoulShot extends GameClientPacket
+public class RequestAutoSoulShot extends GameClientPacket
 {
 	// format cd
 	private int _itemId;

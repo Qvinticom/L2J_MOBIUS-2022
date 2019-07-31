@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
  * Static Object instance.
  * @author godson
  */
-public final class StaticObjectInstance extends Creature
+public class StaticObjectInstance extends Creature
 {
 	/** The interaction distance of the StaticObjectInstance */
 	public static final int INTERACTION_DISTANCE = 150;
@@ -71,7 +71,7 @@ public final class StaticObjectInstance extends Creature
 	}
 	
 	@Override
-	public final StaticObjectStat getStat()
+	public StaticObjectStat getStat()
 	{
 		return (StaticObjectStat) super.getStat();
 	}
@@ -83,7 +83,7 @@ public final class StaticObjectInstance extends Creature
 	}
 	
 	@Override
-	public final StaticObjectStatus getStatus()
+	public StaticObjectStatus getStatus()
 	{
 		return (StaticObjectStatus) super.getStatus();
 	}
@@ -115,7 +115,7 @@ public final class StaticObjectInstance extends Creature
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return 1;
 	}

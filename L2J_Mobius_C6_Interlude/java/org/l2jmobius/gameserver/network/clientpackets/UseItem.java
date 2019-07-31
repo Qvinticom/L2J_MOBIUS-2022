@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.templates.item.Weapon;
 import org.l2jmobius.gameserver.templates.item.WeaponType;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class UseItem extends GameClientPacket
+public class UseItem extends GameClientPacket
 {
 	private int _objectId;
 	

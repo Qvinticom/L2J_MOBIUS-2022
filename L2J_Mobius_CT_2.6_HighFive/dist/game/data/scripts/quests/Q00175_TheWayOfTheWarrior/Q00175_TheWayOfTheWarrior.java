@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
  * The Way of the Warrior (175)
  * @author ivantotov
  */
-public final class Q00175_TheWayOfTheWarrior extends Quest
+public class Q00175_TheWayOfTheWarrior extends Quest
 {
 	// NPCs
 	private static final int PERWAN = 32133;

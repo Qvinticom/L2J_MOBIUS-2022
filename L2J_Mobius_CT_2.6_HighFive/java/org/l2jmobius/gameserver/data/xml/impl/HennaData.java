@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.items.Henna;
  * Allowed classes to wear each henna.
  * @author Zoey76
  */
-public final class HennaData implements IXmlReader
+public class HennaData implements IXmlReader
 {
 	private final Map<Integer, Henna> _hennaList = new HashMap<>();
 	

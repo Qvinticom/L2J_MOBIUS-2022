@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-public final class NoRandomActivity extends AbstractNpcAI
+public class NoRandomActivity extends AbstractNpcAI
 {
 	private NoRandomActivity()
 	{

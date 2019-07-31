@@ -1287,7 +1287,7 @@ public class Clan implements IIdentifiable, INamable
 	/**
 	 * @return all the clan skills.
 	 */
-	public final Skill[] getAllSkills()
+	public Skill[] getAllSkills()
 	{
 		if (_skills == null)
 		{
@@ -1800,7 +1800,7 @@ public class Clan implements IIdentifiable, INamable
 	 * @param pledgeType
 	 * @return
 	 */
-	public final SubPledge getSubPledge(int pledgeType)
+	public SubPledge getSubPledge(int pledgeType)
 	{
 		return _subPledges == null ? null : _subPledges.get(pledgeType);
 	}
@@ -1810,7 +1810,7 @@ public class Clan implements IIdentifiable, INamable
 	 * @param pledgeName
 	 * @return
 	 */
-	public final SubPledge getSubPledge(String pledgeName)
+	public SubPledge getSubPledge(String pledgeName)
 	{
 		if (_subPledges == null)
 		{
@@ -1831,7 +1831,7 @@ public class Clan implements IIdentifiable, INamable
 	 * Used to retrieve all subPledges
 	 * @return
 	 */
-	public final SubPledge[] getAllSubPledges()
+	public SubPledge[] getAllSubPledges()
 	{
 		if (_subPledges == null)
 		{
@@ -2076,7 +2076,7 @@ public class Clan implements IIdentifiable, INamable
 	/**
 	 * @return all RankPrivs.
 	 */
-	public final RankPrivs[] getAllRankPrivs()
+	public RankPrivs[] getAllRankPrivs()
 	{
 		return _privs == null ? new RankPrivs[0] : _privs.values().toArray(new RankPrivs[_privs.values().size()]);
 	}

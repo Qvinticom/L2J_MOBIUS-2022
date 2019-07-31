@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle implements IClientIncomingPacket
+public class RequestGetOffVehicle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private int _x;

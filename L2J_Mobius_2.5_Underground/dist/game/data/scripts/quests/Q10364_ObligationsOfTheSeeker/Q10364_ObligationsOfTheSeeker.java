@@ -30,7 +30,7 @@ import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
  * Obligations of the Seeker (10364)
  * @author Gladicek
  */
-public final class Q10364_ObligationsOfTheSeeker extends Quest
+public class Q10364_ObligationsOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int CELIN = 33451;

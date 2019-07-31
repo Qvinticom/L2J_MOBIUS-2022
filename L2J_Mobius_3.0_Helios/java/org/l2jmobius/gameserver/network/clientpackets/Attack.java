@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 /**
  * TODO: This class is a copy of AttackRequest, we should get proper structure for both.
  */
-public final class Attack implements IClientIncomingPacket
+public class Attack implements IClientIncomingPacket
 {
 	// cddddc
 	private int _objectId;

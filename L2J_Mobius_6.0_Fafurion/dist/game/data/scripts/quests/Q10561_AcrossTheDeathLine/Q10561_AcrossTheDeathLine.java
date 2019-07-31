@@ -32,7 +32,7 @@ import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
  * @URL https://l2wiki.com/Across_the_Death_Line
  * @author NightBR
  */
-public final class Q10561_AcrossTheDeathLine extends Quest
+public class Q10561_AcrossTheDeathLine extends Quest
 {
 	// NPCs
 	private static final int HERPHAH = 34362;

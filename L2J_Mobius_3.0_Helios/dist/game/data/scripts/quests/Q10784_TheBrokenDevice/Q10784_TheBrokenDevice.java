@@ -30,7 +30,7 @@ import quests.Q10783_TracesOfAnAmbush.Q10783_TracesOfAnAmbush;
  * The Broken Device (10784)
  * @author malyelfik
  */
-public final class Q10784_TheBrokenDevice extends Quest
+public class Q10784_TheBrokenDevice extends Quest
 {
 	// NPC
 	private static final int NOVAIN = 33866;

@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  * UnAfraid: TODO: Rewrite with DocumentParser
  * @author Micht
  */
-public final class CursedWeaponsManager implements IXmlReader
+public class CursedWeaponsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
 	

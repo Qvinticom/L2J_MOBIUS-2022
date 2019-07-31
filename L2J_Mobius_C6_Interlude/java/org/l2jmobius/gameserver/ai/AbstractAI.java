@@ -190,7 +190,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param intention The new Intention to set to the AI
 	 */
 	@Override
-	public final void setIntention(CtrlIntention intention)
+	public void setIntention(CtrlIntention intention)
 	{
 		setIntention(intention, null, null);
 	}
@@ -204,7 +204,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param arg0 The first parameter of the Intention (optional target)
 	 */
 	@Override
-	public final void setIntention(CtrlIntention intention, Object arg0)
+	public void setIntention(CtrlIntention intention, Object arg0)
 	{
 		setIntention(intention, arg0, null);
 	}
@@ -219,7 +219,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param arg1 The second parameter of the Intention (optional target)
 	 */
 	@Override
-	public final void setIntention(CtrlIntention intention, Object arg0, Object arg1)
+	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
 		if (!_actor.isVisible() || !_actor.hasAI())
 		{
@@ -296,7 +296,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param evt The event whose the AI must be notified
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt)
+	public void notifyEvent(CtrlEvent evt)
 	{
 		notifyEvent(evt, null, null);
 	}
@@ -310,7 +310,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param arg0 The first parameter of the Event (optional target)
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt, Object arg0)
+	public void notifyEvent(CtrlEvent evt, Object arg0)
 	{
 		notifyEvent(evt, arg0, null);
 	}
@@ -325,7 +325,7 @@ abstract class AbstractAI implements Ctrl
 	 * @param arg1 The second parameter of the Event (optional target)
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
+	public void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
 	{
 		if (!_actor.isVisible() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).isOnline() == 0)) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
 		{

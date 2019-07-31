@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
  * TODO: load and use all pet parameters.
  * @author Zoey76 (rework)
  */
-public final class PetDataTable implements IXmlReader
+public class PetDataTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PetDataTable.class.getName());
 	

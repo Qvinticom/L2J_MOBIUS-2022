@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Acts Of Evil (171)
  * @author ivantotov
  */
-public final class Q00171_ActsOfEvil extends Quest
+public class Q00171_ActsOfEvil extends Quest
 {
 	// NPCs
 	private static final int TRADER_ARODIN = 30207;

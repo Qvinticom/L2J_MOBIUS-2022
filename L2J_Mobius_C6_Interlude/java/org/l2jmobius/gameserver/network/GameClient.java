@@ -63,7 +63,7 @@ import org.l2jmobius.gameserver.thread.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.util.EventData;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
-public final class GameClient extends MMOClient<MMOConnection<GameClient>> implements Runnable
+public class GameClient extends MMOClient<MMOConnection<GameClient>> implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Format: (ch) this is just a trigger : no data
  * @author -Wooden-
  */
-public final class RequestExitPartyMatchingWaitingRoom extends GameClientPacket
+public class RequestExitPartyMatchingWaitingRoom extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

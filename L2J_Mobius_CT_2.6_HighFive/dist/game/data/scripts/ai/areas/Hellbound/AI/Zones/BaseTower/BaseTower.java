@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Base Tower.
  * @author GKR
  */
-public final class BaseTower extends AbstractNpcAI
+public class BaseTower extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GUZEN = 22362;
@@ -51,7 +51,7 @@ public final class BaseTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final ClassId classId = player.getClassId();
 		if (classId.equalsOrChildOf(ClassId.HELL_KNIGHT) || classId.equalsOrChildOf(ClassId.SOULTAKER))

@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Fishing effect implementation.
  * @author UnAfraid
  */
-public final class Fishing extends AbstractEffect
+public class Fishing extends AbstractEffect
 {
 	private static final int MIN_BAIT_DISTANCE = 90;
 	private static final int MAX_BAIT_DISTANCE = 250;

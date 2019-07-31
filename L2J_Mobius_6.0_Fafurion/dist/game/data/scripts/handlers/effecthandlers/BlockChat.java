@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Block Chat effect implementation.
  * @author BiggBoss
  */
-public final class BlockChat extends AbstractEffect
+public class BlockChat extends AbstractEffect
 {
 	public BlockChat(StatsSet params)
 	{

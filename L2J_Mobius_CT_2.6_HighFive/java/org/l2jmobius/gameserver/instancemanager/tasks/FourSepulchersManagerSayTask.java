@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
  * Four Sepulchers manager say task.
  * @author xban1x
  */
-public final class FourSepulchersManagerSayTask implements Runnable
+public class FourSepulchersManagerSayTask implements Runnable
 {
 	@Override
 	public void run()

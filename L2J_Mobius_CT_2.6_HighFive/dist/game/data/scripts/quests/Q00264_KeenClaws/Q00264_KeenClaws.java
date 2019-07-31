@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Keen Claws (264)
  * @author xban1x
  */
-public final class Q00264_KeenClaws extends Quest
+public class Q00264_KeenClaws extends Quest
 {
 	// Npc
 	private static final int PAINT = 30136;

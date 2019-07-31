@@ -70,42 +70,42 @@ public class MultisellListHolder implements IIdentifiable
 	}
 	
 	@Override
-	public final int getId()
+	public int getId()
 	{
 		return _listId;
 	}
 	
-	public final boolean isChanceMultisell()
+	public boolean isChanceMultisell()
 	{
 		return _isChanceMultisell;
 	}
 	
-	public final boolean isApplyTaxes()
+	public boolean isApplyTaxes()
 	{
 		return _applyTaxes;
 	}
 	
-	public final boolean isMaintainEnchantment()
+	public boolean isMaintainEnchantment()
 	{
 		return _maintainEnchantment;
 	}
 	
-	public final double getIngredientMultiplier()
+	public double getIngredientMultiplier()
 	{
 		return _ingredientMultiplier;
 	}
 	
-	public final double getProductMultiplier()
+	public double getProductMultiplier()
 	{
 		return _productMultiplier;
 	}
 	
-	public final boolean isNpcAllowed(int npcId)
+	public boolean isNpcAllowed(int npcId)
 	{
 		return (_npcsAllowed == null) || _npcsAllowed.contains(npcId);
 	}
 	
-	public final boolean isNpcOnly()
+	public boolean isNpcOnly()
 	{
 		return _npcsAllowed != null;
 	}

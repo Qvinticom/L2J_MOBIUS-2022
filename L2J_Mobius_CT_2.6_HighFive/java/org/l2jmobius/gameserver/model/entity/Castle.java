@@ -59,7 +59,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class Castle extends AbstractResidence
+public class Castle extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
@@ -876,7 +876,7 @@ public final class Castle extends AbstractResidence
 		}
 	}
 	
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -893,22 +893,22 @@ public final class Castle extends AbstractResidence
 		return null;
 	}
 	
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
-	public final Clan getOwner()
+	public Clan getOwner()
 	{
 		return (_ownerId != 0) ? ClanTable.getInstance().getClan(_ownerId) : null;
 	}
 	
-	public final Siege getSiege()
+	public Siege getSiege()
 	{
 		if (_siege == null)
 		{
@@ -917,7 +917,7 @@ public final class Castle extends AbstractResidence
 		return _siege;
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
@@ -941,27 +941,27 @@ public final class Castle extends AbstractResidence
 		return _siegeTimeRegistrationEndDate;
 	}
 	
-	public final int getTaxPercent()
+	public int getTaxPercent()
 	{
 		return _taxPercent;
 	}
 	
-	public final double getTaxRate()
+	public double getTaxRate()
 	{
 		return _taxRate;
 	}
 	
-	public final long getTreasury()
+	public long getTreasury()
 	{
 		return _treasury;
 	}
 	
-	public final boolean getShowNpcCrest()
+	public boolean getShowNpcCrest()
 	{
 		return _showNpcCrest;
 	}
 	
-	public final void setShowNpcCrest(boolean showNpcCrest)
+	public void setShowNpcCrest(boolean showNpcCrest)
 	{
 		if (_showNpcCrest != showNpcCrest)
 		{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public final class Logout extends GameClientPacket
+public class Logout extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

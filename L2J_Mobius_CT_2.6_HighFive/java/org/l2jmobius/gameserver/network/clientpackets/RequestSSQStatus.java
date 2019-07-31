@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SSQStatus;
  * Seven Signs Record Update Request packet type id 0xc7 format: cc
  * @author Tempy
  */
-public final class RequestSSQStatus implements IClientIncomingPacket
+public class RequestSSQStatus implements IClientIncomingPacket
 {
 	private int _page;
 	

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Fatal Blow effect implementation.
  * @author Adry_85
  */
-public final class FatalBlow extends AbstractEffect
+public class FatalBlow extends AbstractEffect
 {
 	public FatalBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

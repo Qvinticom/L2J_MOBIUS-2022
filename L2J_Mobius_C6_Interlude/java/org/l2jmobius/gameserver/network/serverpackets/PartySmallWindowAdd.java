@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class PartySmallWindowAdd extends GameServerPacket
+public class PartySmallWindowAdd extends GameServerPacket
 {
 	private final PlayerInstance _member;
 	private final int _leaderId;

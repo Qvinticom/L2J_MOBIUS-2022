@@ -31,7 +31,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: Tracking The Evil (10430)
  * @author Stayway
  */
-public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
+public class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 {
 	// NPCs
 	private static final int VISHOTSKY = 31981;

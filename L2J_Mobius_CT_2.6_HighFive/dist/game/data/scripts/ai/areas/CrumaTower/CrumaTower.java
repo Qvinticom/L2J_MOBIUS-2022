@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Cruma Tower teleport AI.
  * @author Plim
  */
-public final class CrumaTower extends AbstractNpcAI
+public class CrumaTower extends AbstractNpcAI
 {
 	// NPC
 	private static final int MOZELLA = 30483;

@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  * Kartia Helper Eliyah's Guardian Spirit
  * @author flanagak *
  */
-public final class KartiaHelperGuardian extends AbstractNpcAI
+public class KartiaHelperGuardian extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] KARTIA_ELIYAH =

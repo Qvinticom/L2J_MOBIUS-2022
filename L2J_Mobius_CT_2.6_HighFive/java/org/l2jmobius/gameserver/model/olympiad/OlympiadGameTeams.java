@@ -209,7 +209,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final boolean containsParticipant(int playerId)
+	public boolean containsParticipant(int playerId)
 	{
 		for (int i = _teamOneSize; --i >= 0;)
 		{
@@ -230,7 +230,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void sendOlympiadInfo(Creature creature)
+	public void sendOlympiadInfo(Creature creature)
 	{
 		for (int i = 0; i < MAX_TEAM_SIZE; i++)
 		{
@@ -244,7 +244,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void broadcastOlympiadInfo(OlympiadStadiumZone stadium)
+	public void broadcastOlympiadInfo(OlympiadStadiumZone stadium)
 	{
 		for (int i = 0; i < MAX_TEAM_SIZE; i++)
 		{
@@ -993,7 +993,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final String[] getPlayerNames()
+	public String[] getPlayerNames()
 	{
 		return new String[]
 		{
@@ -1003,7 +1003,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final boolean checkDefaulted()
+	public boolean checkDefaulted()
 	{
 		try
 		{
@@ -1063,7 +1063,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void resetDamage()
+	public void resetDamage()
 	{
 		_damageT1 = 0;
 		_damageT2 = 0;

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * sample 5F 01 00 00 00 format cdd
  */
-public final class RequestAnswerFriendInvite extends GameClientPacket
+public class RequestAnswerFriendInvite extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestAnswerFriendInvite.class.getName());
 	

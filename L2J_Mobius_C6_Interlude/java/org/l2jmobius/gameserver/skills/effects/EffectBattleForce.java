@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.skills.Env;
 /**
  * @author kombat
  */
-public final class EffectBattleForce extends EffectForce
+public class EffectBattleForce extends EffectForce
 {
 	public EffectBattleForce(Env env, EffectTemplate template)
 	{

@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Allada AI.
  * @author Gladicek
  */
-public final class Allada extends AbstractNpcAI
+public class Allada extends AbstractNpcAI
 {
 	// NPC
 	private static final int RINNE = 33234;

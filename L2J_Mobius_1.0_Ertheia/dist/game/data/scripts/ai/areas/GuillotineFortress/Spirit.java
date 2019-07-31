@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Spirit AI.
  * @author Gladicek
  */
-public final class Spirit extends AbstractNpcAI
+public class Spirit extends AbstractNpcAI
 {
 	// NPCs
 	private static final int EXECUTED_MAIDEN_VENGEFUL_SPIRIT = 33682;

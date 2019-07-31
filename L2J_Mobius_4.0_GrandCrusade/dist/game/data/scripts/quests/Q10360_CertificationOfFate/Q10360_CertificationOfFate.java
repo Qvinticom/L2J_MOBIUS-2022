@@ -46,7 +46,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
  * Certification of Fate (10360)
  * @author St3eT
  */
-public final class Q10360_CertificationOfFate extends Quest
+public class Q10360_CertificationOfFate extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;

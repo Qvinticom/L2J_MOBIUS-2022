@@ -48,7 +48,7 @@ public class DeadLockDetector extends Thread
 	}
 	
 	@Override
-	public final void run()
+	public void run()
 	{
 		boolean deadlock = false;
 		while (!deadlock)

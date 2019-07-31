@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Manages Darion's Enforcer's and Darion's Executioner spawn/despawn
  * @author GKR
  */
-public final class Keltas extends AbstractNpcAI
+public class Keltas extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KELTAS = 22341;
@@ -176,7 +176,7 @@ public final class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		_spawnedKeltas = (MonsterInstance) npc;
 		_spawnedKeltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);

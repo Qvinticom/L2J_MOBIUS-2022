@@ -2645,7 +2645,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(PlayerInstance, Npc, boolean)} will be called with the player's command channel members
 	 * @see #actionForEachPlayer(PlayerInstance, Npc, boolean)
 	 */
-	public final void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
+	public void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
 	{
 		if ((includeParty || includeCommandChannel) && player.isInParty())
 		{

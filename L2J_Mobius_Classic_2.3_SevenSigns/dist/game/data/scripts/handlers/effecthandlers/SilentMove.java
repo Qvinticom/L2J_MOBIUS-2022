@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 /**
  * Silent Move effect implementation.
  */
-public final class SilentMove extends AbstractEffect
+public class SilentMove extends AbstractEffect
 {
 	public SilentMove(StatsSet params)
 	{

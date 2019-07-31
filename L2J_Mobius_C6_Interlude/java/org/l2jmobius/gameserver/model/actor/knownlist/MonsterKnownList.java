@@ -82,7 +82,7 @@ public class MonsterKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final MonsterInstance getActiveChar()
+	public MonsterInstance getActiveChar()
 	{
 		return (MonsterInstance) super.getActiveChar();
 	}

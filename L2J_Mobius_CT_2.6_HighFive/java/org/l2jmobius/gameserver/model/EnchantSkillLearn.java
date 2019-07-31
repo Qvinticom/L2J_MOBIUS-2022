@@ -22,7 +22,7 @@ import java.util.TreeMap;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 
-public final class EnchantSkillLearn
+public class EnchantSkillLearn
 {
 	private final int _id;
 	private final int _baseLvl;

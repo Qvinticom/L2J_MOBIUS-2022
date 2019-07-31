@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: The Forest of the Dead (10411)
  * @author St3eT
  */
-public final class Q10411_KekropusLetterTheForestOfTheDead extends LetterQuest
+public class Q10411_KekropusLetterTheForestOfTheDead extends LetterQuest
 {
 	// NPCs
 	private static final int MATHIAS = 31340;

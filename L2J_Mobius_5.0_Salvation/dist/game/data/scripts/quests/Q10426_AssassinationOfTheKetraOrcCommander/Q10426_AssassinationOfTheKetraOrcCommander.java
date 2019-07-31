@@ -30,7 +30,7 @@ import quests.Q10425_TheKetraOrcSupporters.Q10425_TheKetraOrcSupporters;
  * Assassination of the Ketra Orc Commander (10426)
  * @author Stayway
  */
-public final class Q10426_AssassinationOfTheKetraOrcCommander extends Quest
+public class Q10426_AssassinationOfTheKetraOrcCommander extends Quest
 {
 	// NPCs
 	private static final int LUGONNES = 33852;

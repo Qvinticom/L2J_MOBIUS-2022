@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Proof Of Justice implementation.
  * @author St3eT
  */
-public final class ProofOfJustice extends AbstractNpcAI
+public class ProofOfJustice extends AbstractNpcAI
 {
 	// Items
 	private static final int JUSTICE = 17822; // Proof of Justice

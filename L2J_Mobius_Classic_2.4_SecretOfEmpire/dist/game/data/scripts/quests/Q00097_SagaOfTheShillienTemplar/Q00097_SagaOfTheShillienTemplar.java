@@ -36,39 +36,39 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00097_SagaOfTheShillienTemplar extends Quest
 {
 	// NPCs
-	public final int GALADRID = 31580;
-	public final int OLTRAN = 30862;
-	public final int ROO_ROO = 34271;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31648;
-	public final int TABLET_OF_VISION_3 = 31651;
-	public final int TABLET_OF_VISION_4 = 31656;
-	public final int SHIKEN_GLOOMDRAKE = 31610;
+	private static final int GALADRID = 31580;
+	private static final int OLTRAN = 30862;
+	private static final int ROO_ROO = 34271;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31648;
+	private static final int TABLET_OF_VISION_3 = 31651;
+	private static final int TABLET_OF_VISION_4 = 31656;
+	private static final int SHIKEN_GLOOMDRAKE = 31610;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int KEEPER_OF_THE_HOLY_EDICT = 27215;
-	public final int CHIMERA_GOLEM = 27271;
-	public final int HALISHA_ARCHON = 27219;
-	public final int ASSASSIN_PEZEL = 27273;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int KEEPER_OF_THE_HOLY_EDICT = 27215;
+	private static final int CHIMERA_GOLEM = 27271;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int ASSASSIN_PEZEL = 27273;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49831;
-	public final int HALISHA_BADGE = 7512;
-	public final int RESONANCE_AMULET = 7295;
-	public final int RESONANCE_AMULET_2 = 7326;
-	public final int RESONANCE_AMULET_3 = 7357;
-	public final int RESONANCE_AMULET_4 = 7388;
-	public final int ANCIENT_LANGUAGE_DICTIONARY = 7526;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49831;
+	private static final int HALISHA_BADGE = 7512;
+	private static final int RESONANCE_AMULET = 7295;
+	private static final int RESONANCE_AMULET_2 = 7326;
+	private static final int RESONANCE_AMULET_3 = 7357;
+	private static final int RESONANCE_AMULET_4 = 7388;
+	private static final int ANCIENT_LANGUAGE_DICTIONARY = 7526;
 	// Reward
-	public final int BOOK_SABERTOOTH = 90040;
+	private static final int BOOK_SABERTOOTH = 90040;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

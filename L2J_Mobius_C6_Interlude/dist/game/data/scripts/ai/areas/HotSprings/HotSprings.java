@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
  * Hot Springs AI.
  * @author Mobius
  */
-public final class HotSprings extends Quest
+public class HotSprings extends Quest
 {
 	// NPCs
 	private static final int BANDERSNATCHLING = 21314;

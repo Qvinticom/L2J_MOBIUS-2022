@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Kerberos
  */
-public final class NpcSay implements IClientOutgoingPacket
+public class NpcSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final ChatType _textType;

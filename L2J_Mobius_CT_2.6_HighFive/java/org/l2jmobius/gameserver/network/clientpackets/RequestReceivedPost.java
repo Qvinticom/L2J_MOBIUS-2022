@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestReceivedPost implements IClientIncomingPacket
+public class RequestReceivedPost implements IClientIncomingPacket
 {
 	private int _msgId;
 	

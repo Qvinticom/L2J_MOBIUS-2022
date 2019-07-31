@@ -50,7 +50,7 @@ import ai.AbstractNpcAI;
  * Olympiad Manager AI.
  * @author St3eT
  */
-public final class OlyManager extends AbstractNpcAI implements IBypassHandler
+public class OlyManager extends AbstractNpcAI implements IBypassHandler
 {
 	// NPC
 	private static final int MANAGER = 31688;

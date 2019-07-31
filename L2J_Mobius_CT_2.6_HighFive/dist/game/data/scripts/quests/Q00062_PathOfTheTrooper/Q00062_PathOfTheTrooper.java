@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Trooper (62)
  * @author ivantotov
  */
-public final class Q00062_PathOfTheTrooper extends Quest
+public class Q00062_PathOfTheTrooper extends Quest
 {
 	// NPCs
 	private static final int MASTER_SHUBAIN = 32194;

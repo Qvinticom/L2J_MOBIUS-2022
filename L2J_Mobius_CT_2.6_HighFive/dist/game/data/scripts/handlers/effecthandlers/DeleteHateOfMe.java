@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Delete Hate Of Me effect implementation.
  * @author Adry_85
  */
-public final class DeleteHateOfMe extends AbstractEffect
+public class DeleteHateOfMe extends AbstractEffect
 {
 	private final int _chance;
 	

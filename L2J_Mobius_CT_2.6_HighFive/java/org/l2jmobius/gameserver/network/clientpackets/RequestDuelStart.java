@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format:(ch) Sd
  * @author -Wooden-
  */
-public final class RequestDuelStart implements IClientIncomingPacket
+public class RequestDuelStart implements IClientIncomingPacket
 {
 	private String _player;
 	private int _partyDuel;

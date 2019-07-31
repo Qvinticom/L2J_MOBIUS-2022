@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 /**
  * @author Forsaiken
  */
-public final class AuctionItem
+public class AuctionItem
 {
 	private final int _auctionItemId;
 	private final int _auctionLength;
@@ -45,37 +45,37 @@ public final class AuctionItem
 		_itemExtra = itemExtra;
 	}
 	
-	public final boolean checkItemExists()
+	public boolean checkItemExists()
 	{
 		return ItemTable.getInstance().getTemplate(_itemId) != null;
 	}
 	
-	public final int getAuctionItemId()
+	public int getAuctionItemId()
 	{
 		return _auctionItemId;
 	}
 	
-	public final int getAuctionLength()
+	public int getAuctionLength()
 	{
 		return _auctionLength;
 	}
 	
-	public final long getAuctionInitBid()
+	public long getAuctionInitBid()
 	{
 		return _auctionInitBid;
 	}
 	
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
 	
-	public final long getItemCount()
+	public long getItemCount()
 	{
 		return _itemCount;
 	}
 	
-	public final ItemInstance createNewItemInstance()
+	public ItemInstance createNewItemInstance()
 	{
 		final ItemInstance item = ItemTable.getInstance().createItem("ItemAuction", _itemId, _itemCount, null, null);
 		

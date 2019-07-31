@@ -41,7 +41,7 @@ import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
  * <b>Castle dungeon</b> instance for quest <b>BladeUnderFoot (512)</b>
  * @author Mobius
  */
-public final class CastleDungeon extends AbstractInstance
+public class CastleDungeon extends AbstractInstance
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();

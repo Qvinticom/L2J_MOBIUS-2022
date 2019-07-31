@@ -32,7 +32,7 @@ import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
  * Kamael class transfer AI.
  * @author Adry_85
  */
-public final class KamaelChange1 extends AbstractNpcAI
+public class KamaelChange1 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =

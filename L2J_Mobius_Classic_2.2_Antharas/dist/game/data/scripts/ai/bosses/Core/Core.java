@@ -41,7 +41,7 @@ import ai.AbstractNpcAI;
  * Core AI.
  * @author DrLecter, Emperorc, Mobius
  */
-public final class Core extends AbstractNpcAI
+public class Core extends AbstractNpcAI
 {
 	// NPCs
 	private static final int CORE = 29006;

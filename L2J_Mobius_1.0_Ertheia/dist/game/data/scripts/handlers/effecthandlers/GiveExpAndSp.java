@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Give XP and SP effect implementation.
  * @author quangnguyen
  */
-public final class GiveExpAndSp extends AbstractEffect
+public class GiveExpAndSp extends AbstractEffect
 {
 	private final int _xp;
 	private final int _sp;

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * An effect that allows the player to crystallize items up to a certain grade.
  * @author Nik
  */
-public final class Crystallize extends AbstractEffect
+public class Crystallize extends AbstractEffect
 {
 	private final ItemGrade _grade;
 	

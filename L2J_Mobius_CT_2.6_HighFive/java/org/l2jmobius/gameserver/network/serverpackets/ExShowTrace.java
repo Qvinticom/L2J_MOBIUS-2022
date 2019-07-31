@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * This packet shows the mouse click particle for 30 seconds on every location.
  * @author NosBit
  */
-public final class ExShowTrace implements IClientOutgoingPacket
+public class ExShowTrace implements IClientOutgoingPacket
 {
 	private final List<Location> _locations = new ArrayList<>();
 	

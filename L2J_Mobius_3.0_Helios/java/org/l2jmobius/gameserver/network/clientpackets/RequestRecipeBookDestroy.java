@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
-public final class RequestRecipeBookDestroy implements IClientIncomingPacket
+public class RequestRecipeBookDestroy implements IClientIncomingPacket
 {
 	private int _recipeID;
 	

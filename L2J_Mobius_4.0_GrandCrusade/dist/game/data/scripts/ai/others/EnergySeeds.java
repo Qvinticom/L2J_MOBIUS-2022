@@ -44,7 +44,7 @@ import ai.AbstractNpcAI;
  * Energy Seeds AI.
  * @author Gigiikun
  */
-public final class EnergySeeds extends AbstractNpcAI
+public class EnergySeeds extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TEMPORARY_TELEPORTER = 32602;

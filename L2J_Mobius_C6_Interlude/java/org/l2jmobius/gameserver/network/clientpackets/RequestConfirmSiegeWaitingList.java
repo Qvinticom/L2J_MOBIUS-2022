@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
-public final class RequestConfirmSiegeWaitingList extends GameClientPacket
+public class RequestConfirmSiegeWaitingList extends GameClientPacket
 {
 	private int _approved;
 	private int _castleId;

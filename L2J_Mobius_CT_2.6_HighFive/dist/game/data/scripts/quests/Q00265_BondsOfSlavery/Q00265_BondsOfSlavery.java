@@ -33,7 +33,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  * Bonds of Slavery (265)
  * @author xban1x
  */
-public final class Q00265_BondsOfSlavery extends Quest
+public class Q00265_BondsOfSlavery extends Quest
 {
 	// Item
 	private static final int IMP_SHACKLES = 1368;

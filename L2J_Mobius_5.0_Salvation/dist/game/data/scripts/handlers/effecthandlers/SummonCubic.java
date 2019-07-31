@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
  * Summon Cubic effect implementation.
  * @author Zoey76
  */
-public final class SummonCubic extends AbstractEffect
+public class SummonCubic extends AbstractEffect
 {
 	private static final Logger LOGGER = Logger.getLogger(SummonCubic.class.getName());
 	

@@ -37,7 +37,7 @@ import quests.Q00192_SevenSignsSeriesOfDoubt.Q00192_SevenSignsSeriesOfDoubt;
  * Seven Signs, Dying Message (193)
  * @author Adry_85
  */
-public final class Q00193_SevenSignsDyingMessage extends Quest
+public class Q00193_SevenSignsDyingMessage extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27343;

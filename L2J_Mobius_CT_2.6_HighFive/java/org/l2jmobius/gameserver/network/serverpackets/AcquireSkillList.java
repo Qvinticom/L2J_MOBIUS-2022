@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * Acquire Skill List server packet implementation.
  */
-public final class AcquireSkillList implements IClientOutgoingPacket
+public class AcquireSkillList implements IClientOutgoingPacket
 {
 	private final List<Skill> _skills;
 	private final AcquireSkillType _skillType;

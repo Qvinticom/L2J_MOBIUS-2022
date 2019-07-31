@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Cleric (405)
  * @author ivantotov
  */
-public final class Q00405_PathOfTheCleric extends Quest
+public class Q00405_PathOfTheCleric extends Quest
 {
 	// NPCs
 	private static final int GALLINT = 30017;

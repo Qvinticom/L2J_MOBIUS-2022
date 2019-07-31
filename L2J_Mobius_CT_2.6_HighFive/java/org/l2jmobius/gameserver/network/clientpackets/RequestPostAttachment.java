@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestPostAttachment implements IClientIncomingPacket
+public class RequestPostAttachment implements IClientIncomingPacket
 {
 	private int _msgId;
 	

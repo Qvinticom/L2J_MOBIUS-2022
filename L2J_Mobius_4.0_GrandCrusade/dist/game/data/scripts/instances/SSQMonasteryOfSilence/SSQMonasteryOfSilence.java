@@ -35,7 +35,7 @@ import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
  * Monastery of Silence instance zone.
  * @author Adry_85
  */
-public final class SSQMonasteryOfSilence extends AbstractInstance
+public class SSQMonasteryOfSilence extends AbstractInstance
 {
 	// NPCs
 	private static final int ELCADIA_INSTANCE = 32787;

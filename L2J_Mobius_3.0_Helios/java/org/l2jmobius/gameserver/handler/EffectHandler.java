@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 /**
  * @author BiggBoss, UnAfraid
  */
-public final class EffectHandler
+public class EffectHandler
 {
 	private final Map<String, Function<StatsSet, AbstractEffect>> _effectHandlerFactories = new HashMap<>();
 	

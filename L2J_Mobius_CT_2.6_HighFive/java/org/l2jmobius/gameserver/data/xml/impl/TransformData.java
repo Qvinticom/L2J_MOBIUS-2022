@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 /**
  * @author UnAfraid
  */
-public final class TransformData implements IXmlReader
+public class TransformData implements IXmlReader
 {
 	private final Map<Integer, Transform> _transformData = new ConcurrentHashMap<>();
 	

@@ -97,7 +97,7 @@ public class PetInstance extends Summon
 	private long _expBeforeDeath = 0;
 	private int _curWeightPenalty = 0;
 	
-	public final PetLevelData getPetLevelData()
+	public PetLevelData getPetLevelData()
 	{
 		if (_leveldata == null)
 		{
@@ -107,7 +107,7 @@ public class PetInstance extends Summon
 		return _leveldata;
 	}
 	
-	public final PetData getPetData()
+	public PetData getPetData()
 	{
 		if (_data == null)
 		{
@@ -117,7 +117,7 @@ public class PetInstance extends Summon
 		return _data;
 	}
 	
-	public final void setPetData(PetLevelData value)
+	public void setPetData(PetLevelData value)
 	{
 		_leveldata = value;
 	}
@@ -898,7 +898,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(boolean removed, int skillId)
 	{
 		super.stopSkillEffects(removed, skillId);
 		final List<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
@@ -1217,7 +1217,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getStat().getLevel();
 	}
@@ -1246,7 +1246,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getSkillLevel(int skillId)
+	public int getSkillLevel(int skillId)
 	{
 		if (getKnownSkill(skillId) == null)
 		{
@@ -1324,7 +1324,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final boolean isHungry()
+	public boolean isHungry()
 	{
 		return _curFed < ((getPetData().getHungryLimit() / 100f) * getPetLevelData().getPetMaxFeed());
 	}
@@ -1340,7 +1340,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getWeapon()
+	public int getWeapon()
 	{
 		final ItemInstance weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (weapon != null)
@@ -1351,7 +1351,7 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final int getArmor()
+	public int getArmor()
 	{
 		final ItemInstance weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		if (weapon != null)
@@ -1361,7 +1361,7 @@ public class PetInstance extends Summon
 		return 0;
 	}
 	
-	public final int getJewel()
+	public int getJewel()
 	{
 		final ItemInstance weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_NECK);
 		if (weapon != null)
@@ -1418,25 +1418,25 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public final double getRunSpeed()
+	public double getRunSpeed()
 	{
 		return super.getRunSpeed() * (isUncontrollable() ? 0.5d : 1.0d);
 	}
 	
 	@Override
-	public final double getWalkSpeed()
+	public double getWalkSpeed()
 	{
 		return super.getWalkSpeed() * (isUncontrollable() ? 0.5d : 1.0d);
 	}
 	
 	@Override
-	public final double getMovementSpeedMultiplier()
+	public double getMovementSpeedMultiplier()
 	{
 		return super.getMovementSpeedMultiplier() * (isUncontrollable() ? 0.5d : 1.0d);
 	}
 	
 	@Override
-	public final double getMoveSpeed()
+	public double getMoveSpeed()
 	{
 		if (isInsideZone(ZoneId.WATER))
 		{

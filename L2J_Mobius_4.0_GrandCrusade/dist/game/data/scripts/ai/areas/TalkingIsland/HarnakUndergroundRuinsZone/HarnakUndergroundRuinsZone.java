@@ -276,7 +276,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (getRandom(20) > 18)
 		{

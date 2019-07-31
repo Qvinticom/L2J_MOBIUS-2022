@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AuthLogin implements IClientIncomingPacket
+public class AuthLogin implements IClientIncomingPacket
 {
 	
 	// loginName + keys must match what the loginserver used.

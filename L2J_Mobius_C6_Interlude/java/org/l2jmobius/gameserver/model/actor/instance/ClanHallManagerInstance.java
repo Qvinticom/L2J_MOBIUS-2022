@@ -1003,7 +1003,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	 * Return the PledgeHall this NpcInstance belongs to.
 	 * @return the clan hall
 	 */
-	public final ClanHall getClanHall()
+	public ClanHall getClanHall()
 	{
 		if (_clanHallId < 0)
 		{

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * Punitive Operation on the Devil Isle (10866)
  * @author Stayway
  */
-public final class Q10866_PunitiveOperationOnTheDevilIsle extends Quest
+public class Q10866_PunitiveOperationOnTheDevilIsle extends Quest
 {
 	// NPCs
 	private static final int RODEMAI = 30756;

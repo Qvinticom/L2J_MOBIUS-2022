@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Jewel of Antharas (10504)
  * @author Zoey76
  */
-public final class Q10504_JewelOfAntharas extends Quest
+public class Q10504_JewelOfAntharas extends Quest
 {
 	// NPC
 	private static final int THEODRIC = 30755;

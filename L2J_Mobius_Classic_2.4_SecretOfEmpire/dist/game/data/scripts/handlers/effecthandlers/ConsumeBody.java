@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Consume Body effect implementation.
  * @author Mobius
  */
-public final class ConsumeBody extends AbstractEffect
+public class ConsumeBody extends AbstractEffect
 {
 	public ConsumeBody(StatsSet params)
 	{

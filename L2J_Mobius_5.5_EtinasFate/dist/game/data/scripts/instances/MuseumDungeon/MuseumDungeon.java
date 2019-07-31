@@ -49,7 +49,7 @@ import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
  * Museum Dungeon Instance Zone.
  * @author Gladicek
  */
-public final class MuseumDungeon extends AbstractInstance
+public class MuseumDungeon extends AbstractInstance
 {
 	// NPCs
 	private static final int SHANNON = 32974;

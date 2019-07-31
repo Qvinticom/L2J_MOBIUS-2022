@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 /**
  * Alliance Chat Handler.
  */
-public final class ChatAlliance implements IChatHandler
+public class ChatAlliance implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{

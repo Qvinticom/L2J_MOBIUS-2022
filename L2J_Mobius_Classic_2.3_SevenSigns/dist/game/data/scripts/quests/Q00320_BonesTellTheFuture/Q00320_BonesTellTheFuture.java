@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Bones Tell The Future (320)
  * @author ivantotov
  */
-public final class Q00320_BonesTellTheFuture extends Quest
+public class Q00320_BonesTellTheFuture extends Quest
 {
 	// NPC
 	private static final int TETRACH_KAITAR = 30359;

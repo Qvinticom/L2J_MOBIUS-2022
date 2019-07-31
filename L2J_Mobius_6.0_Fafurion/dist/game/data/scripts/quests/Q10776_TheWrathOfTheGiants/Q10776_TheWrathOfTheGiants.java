@@ -33,7 +33,7 @@ import quests.Q10775_InSearchOfAnAncientGiant.Q10775_InSearchOfAnAncientGiant;
  * The Wrath of the Giants (10776)
  * @author malyelfik
  */
-public final class Q10776_TheWrathOfTheGiants extends Quest
+public class Q10776_TheWrathOfTheGiants extends Quest
 {
 	// NPCs
 	private static final int BELKADHI = 30485;

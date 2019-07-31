@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Updated to H5 by Nyaran.
  * @author Gnacik
  */
-public final class CharacterBirthday extends AbstractNpcAI
+public class CharacterBirthday extends AbstractNpcAI
 {
 	private static final int ALEGRIA = 32600;
 	private static int SPAWNS = 0;

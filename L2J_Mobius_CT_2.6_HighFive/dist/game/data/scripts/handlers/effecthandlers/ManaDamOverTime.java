@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * Mana Damage Over Time effect implementation.
  */
-public final class ManaDamOverTime extends AbstractEffect
+public class ManaDamOverTime extends AbstractEffect
 {
 	private final double _power;
 	

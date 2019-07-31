@@ -108,12 +108,12 @@ public class SiegeClan
 		}
 	}
 	
-	public final int getClanId()
+	public int getClanId()
 	{
 		return _clanId;
 	}
 	
-	public final List<NpcInstance> getFlag()
+	public List<NpcInstance> getFlag()
 	{
 		if (_flag == null)
 		{

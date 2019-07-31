@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Test Of The Healer(226)
  * @author ivantotov
  */
-public final class Q00226_TestOfTheHealer extends Quest
+public class Q00226_TestOfTheHealer extends Quest
 {
 	// NPCs
 	private static final int MASTER_SORIUS = 30327;

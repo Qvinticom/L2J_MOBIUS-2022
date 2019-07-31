@@ -41,7 +41,7 @@ import instances.AbstractInstance;
 /**
  * Adapted from l2jserver script by Mobius
  */
-public final class Kamaloka extends AbstractInstance
+public class Kamaloka extends AbstractInstance
 {
 	/*
 	 * Reset time for all kamaloka Default: 6:30AM on server time
@@ -644,7 +644,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc != null)
 		{
@@ -664,7 +664,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Talk with captains and using of the escape teleporter
 	 */
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		
@@ -704,7 +704,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Only escape teleporters first talk handled
 	 */
 	@Override
-	public final String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == TELEPORTER)
 		{
@@ -718,7 +718,7 @@ public final class Kamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAnswerFriendInvite implements IClientIncomingPacket
+public class RequestAnswerFriendInvite implements IClientIncomingPacket
 {
 	private int _response;
 	

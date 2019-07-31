@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * In Search of the Eye of Argos (10416)
  * @author St3eT
  */
-public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
+public class Q10416_InSearchOfTheEyeOfArgos extends Quest
 {
 	// NPCs
 	private static final int JANITT = 33851;

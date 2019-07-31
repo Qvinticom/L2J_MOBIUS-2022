@@ -62,82 +62,82 @@ public class Ingredient
 		return new Ingredient(_itemId, _itemCount, _enchantmentLevel, _isTaxIngredient, _maintainIngredient);
 	}
 	
-	public final Item getTemplate()
+	public Item getTemplate()
 	{
 		return _template;
 	}
 	
-	public final void setItemInfo(ItemInstance item)
+	public void setItemInfo(ItemInstance item)
 	{
 		_itemInfo = new ItemInfo(item);
 	}
 	
-	public final void setItemInfo(ItemInfo info)
+	public void setItemInfo(ItemInfo info)
 	{
 		_itemInfo = info;
 	}
 	
-	public final ItemInfo getItemInfo()
+	public ItemInfo getItemInfo()
 	{
 		return _itemInfo;
 	}
 	
-	public final int getEnchantLevel()
+	public int getEnchantLevel()
 	{
 		return _itemInfo == null ? _enchantmentLevel : _itemInfo.getEnchantLevel();
 	}
 	
-	public final void setItemId(int itemId)
+	public void setItemId(int itemId)
 	{
 		_itemId = itemId;
 	}
 	
-	public final int getItemId()
+	public int getItemId()
 	{
 		return _itemId;
 	}
 	
-	public final void setItemCount(long itemCount)
+	public void setItemCount(long itemCount)
 	{
 		_itemCount = itemCount;
 	}
 	
-	public final long getItemCount()
+	public long getItemCount()
 	{
 		return _itemCount;
 	}
 	
-	public final void setIsTaxIngredient(boolean isTaxIngredient)
+	public void setIsTaxIngredient(boolean isTaxIngredient)
 	{
 		_isTaxIngredient = isTaxIngredient;
 	}
 	
-	public final boolean isTaxIngredient()
+	public boolean isTaxIngredient()
 	{
 		return _isTaxIngredient;
 	}
 	
-	public final void setMaintainIngredient(boolean maintainIngredient)
+	public void setMaintainIngredient(boolean maintainIngredient)
 	{
 		_maintainIngredient = maintainIngredient;
 	}
 	
-	public final boolean getMaintainIngredient()
+	public boolean getMaintainIngredient()
 	{
 		return _maintainIngredient;
 	}
 	
-	public final boolean isStackable()
+	public boolean isStackable()
 	{
 		return _template == null ? true : _template.isStackable();
 	}
 	
-	public final boolean isArmorOrWeapon()
+	public boolean isArmorOrWeapon()
 	{
 		return _template == null ? false : (_template instanceof Armor) || (_template instanceof Weapon);
 	}
 	
-	public final int getWeight()
+	public int getWeight()
 	{
 		return _template == null ? 0 : _template.getWeight();
 	}

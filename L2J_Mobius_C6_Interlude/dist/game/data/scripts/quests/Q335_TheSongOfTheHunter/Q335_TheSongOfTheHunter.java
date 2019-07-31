@@ -168,7 +168,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		addKillId(TARLK_RAIDER_KALATH);
 		addKillId(Q_BLOOD_CRYSTAL_LIZARDMEN);
 		final List<Integer> questItems = new ArrayList<>();
-		for (final int[][] ItemsCond : ITEMS_1ST_CIRCLE)
+		for (int[][] ItemsCond : ITEMS_1ST_CIRCLE)
 		{
 			for (int i : ItemsCond[0])
 			{
@@ -179,7 +179,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 				addKillId(ItemsCond[i][0]);
 			}
 		}
-		for (final int[][] ItemsCond : ITEMS_2ND_CIRCLE)
+		for (int[][] ItemsCond : ITEMS_2ND_CIRCLE)
 		{
 			for (int i : ItemsCond[0])
 			{
@@ -190,28 +190,28 @@ public class Q335_TheSongOfTheHunter extends Quest
 				addKillId(ItemsCond[i][0]);
 			}
 		}
-		for (final Request r : REQUESTS1)
+		for (Request r : REQUESTS1)
 		{
 			questItems.add(r.request_id);
 			questItems.add(r.request_item);
-			for (final int id : r.droplist.keySet())
+			for (int id : r.droplist.keySet())
 			{
 				addKillId(id);
 			}
-			for (final int id : r.spawnlist.keySet())
+			for (int id : r.spawnlist.keySet())
 			{
 				addKillId(id);
 			}
 		}
-		for (final Request r : REQUESTS2)
+		for (Request r : REQUESTS2)
 		{
 			questItems.add(r.request_id);
 			questItems.add(r.request_item);
-			for (final int id : r.droplist.keySet())
+			for (int id : r.droplist.keySet())
 			{
 				addKillId(id);
 			}
-			for (final int id : r.spawnlist.keySet())
+			for (int id : r.spawnlist.keySet())
 			{
 				addKillId(id);
 			}
@@ -231,10 +231,10 @@ public class Q335_TheSongOfTheHunter extends Quest
 		registerQuestItems(questItems.stream().mapToInt(i -> i).toArray());
 	}
 	
-	private static int CalcItemsConds(final QuestState st, final int[][][] ItemsConds)
+	private static int CalcItemsConds(QuestState st, int[][][] ItemsConds)
 	{
 		int result = 0;
-		for (final int[][] ItemsCond : ItemsConds)
+		for (int[][] ItemsCond : ItemsConds)
 		{
 			int count = 0;
 			for (int i : ItemsCond[0])
@@ -249,9 +249,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static void DelItemsConds(final QuestState st, final int[][][] ItemsConds)
+	private static void DelItemsConds(QuestState st, int[][][] ItemsConds)
 	{
-		for (final int[][] ItemsCond : ItemsConds)
+		for (int[][] ItemsCond : ItemsConds)
 		{
 			for (int i : ItemsCond[0])
 			{
@@ -260,7 +260,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 	}
 	
-	private static int Get_Blood_Crystal_Level(final QuestState st)
+	private static int Get_Blood_Crystal_Level(QuestState st)
 	{
 		for (int i = Q_BLOOD_CRYSTAL.length - 1; i >= 0; --i)
 		{
@@ -272,7 +272,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return -1;
 	}
 	
-	private static boolean Blood_Crystal2Adena(final QuestState st, final int Blood_Crystal_Level)
+	private static boolean Blood_Crystal2Adena(QuestState st, int Blood_Crystal_Level)
 	{
 		if (Blood_Crystal_Level < 2)
 		{
@@ -286,7 +286,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return true;
 	}
 	
-	private static void GenList(final QuestState st)
+	private static void GenList(QuestState st)
 	{
 		// final int grade_c = 12;
 		// final int grade_b = 6;
@@ -358,7 +358,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 	}
 	
-	private static String FormatList(final QuestState st, final Request[] requests)
+	private static String FormatList(QuestState st, Request[] requests)
 	{
 		String result = "<html><head><body>Guild Member Tor:<br>%reply%<br>%reply%<br>%reply%<br>%reply%<br>%reply%<br></body></html>";
 		final int[] listpacked = unpackInt(st.getInt("list"), 5);
@@ -370,9 +370,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static Request GetCurrentRequest(final QuestState st, final Request[] requests)
+	private static Request GetCurrentRequest(QuestState st, Request[] requests)
 	{
-		for (final Request r : requests)
+		for (Request r : requests)
 		{
 			if (st.getQuestItemsCount(r.request_id) > 0)
 			{
@@ -382,16 +382,16 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return null;
 	}
 	
-	private static boolean isValidRequest(final int id)
+	private static boolean isValidRequest(int id)
 	{
-		for (final Request r : REQUESTS1)
+		for (Request r : REQUESTS1)
 		{
 			if (r.request_id == id)
 			{
 				return true;
 			}
 		}
-		for (final Request r : REQUESTS2)
+		for (Request r : REQUESTS2)
 		{
 			if (r.request_id == id)
 			{
@@ -493,12 +493,12 @@ public class Q335_TheSongOfTheHunter extends Quest
 			{
 				st.takeItems(LAUREL_LEAF_PIN, 1);
 			}
-			for (final Request r : REQUESTS1)
+			for (Request r : REQUESTS1)
 			{
 				st.takeItems(r.request_id, -1);
 				st.takeItems(r.request_item, -1);
 			}
-			for (final Request r : REQUESTS2)
+			for (Request r : REQUESTS2)
 			{
 				st.takeItems(r.request_id, -1);
 				st.takeItems(r.request_item, -1);
@@ -704,7 +704,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 		if (Items_Circle != null)
 		{
-			for (final int[][] ItemsCond : Items_Circle)
+			for (int[][] ItemsCond : Items_Circle)
 			{
 				for (int i = 2; i < ItemsCond.length; ++i)
 				{
@@ -834,7 +834,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 				final int Blood_Crystal_Level = Get_Blood_Crystal_Level(st);
 				if ((Blood_Crystal_Level > 0) && (Blood_Crystal_Level < 10))
 				{
-					for (final int lizardmen_id : Q_BLOOD_CRYSTAL_LIZARDMEN)
+					for (int lizardmen_id : Q_BLOOD_CRYSTAL_LIZARDMEN)
 					{
 						if (npcId == lizardmen_id)
 						{
@@ -895,15 +895,15 @@ public class Q335_TheSongOfTheHunter extends Quest
 	
 	public static class Request
 	{
-		public final int request_id;
-		public final int request_item;
-		public final int request_count;
-		public final int reward_adena;
-		public final String text;
-		public final Map<Integer, Integer> droplist;
-		public final Map<Integer, int[]> spawnlist;
+		public int request_id;
+		public int request_item;
+		public int request_count;
+		public int reward_adena;
+		public String text;
+		public Map<Integer, Integer> droplist;
+		public Map<Integer, int[]> spawnlist;
 		
-		public Request(final int requestid, final int requestitem, final int requestcount, final int rewardadena, final String txt)
+		public Request(int requestid, int requestitem, int requestcount, int rewardadena, String txt)
 		{
 			droplist = new HashMap<>();
 			spawnlist = new HashMap<>();
@@ -914,13 +914,13 @@ public class Q335_TheSongOfTheHunter extends Quest
 			text = txt;
 		}
 		
-		public Request addDrop(final int kill_mob_id, final int chance)
+		public Request addDrop(int kill_mob_id, int chance)
 		{
 			droplist.put(kill_mob_id, chance);
 			return this;
 		}
 		
-		public Request addSpawn(final int kill_mob_id, final int spawn_mob_id, final int chance)
+		public Request addSpawn(int kill_mob_id, int spawn_mob_id, int chance)
 		{
 			try
 			{
@@ -937,7 +937,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 			return this;
 		}
 		
-		public boolean Complete(final QuestState st)
+		public boolean Complete(QuestState st)
 		{
 			if (st.getQuestItemsCount(request_item) < request_count)
 			{
@@ -953,7 +953,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 	}
 	
-	private static int packInt(final int[] a, final int bits) throws Exception
+	private static int packInt(int[] a, int bits) throws Exception
 	{
 		final int m = 32 / bits;
 		if (a.length > m)
@@ -983,7 +983,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static int[] unpackInt(int a, final int bits)
+	private static int[] unpackInt(int a, int bits)
 	{
 		final int m = 32 / bits;
 		final int mval = (int) Math.pow(2.0, bits);

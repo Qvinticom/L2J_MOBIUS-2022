@@ -31,7 +31,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: The Origins of a Rumor (10439)
  * @author Stayway
  */
-public final class Q10439_KekropusLetterTheOriginsOfARumor extends LetterQuest
+public class Q10439_KekropusLetterTheOriginsOfARumor extends LetterQuest
 {
 	// NPCs
 	private static final int GOSTA = 30916;

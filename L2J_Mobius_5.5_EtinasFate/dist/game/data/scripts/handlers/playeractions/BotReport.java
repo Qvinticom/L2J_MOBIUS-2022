@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * Bot Report button player action handler.
  * @author Nik
  */
-public final class BotReport implements IPlayerActionHandler
+public class BotReport implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class TeleportToLocation implements IClientOutgoingPacket
+public class TeleportToLocation implements IClientOutgoingPacket
 {
 	private final int _targetObjId;
 	private final int _x;

@@ -145,7 +145,7 @@ public class Party
 	 * returns all party members
 	 * @return
 	 */
-	public final List<PlayerInstance> getPartyMembers()
+	public List<PlayerInstance> getPartyMembers()
 	{
 		return _members;
 	}

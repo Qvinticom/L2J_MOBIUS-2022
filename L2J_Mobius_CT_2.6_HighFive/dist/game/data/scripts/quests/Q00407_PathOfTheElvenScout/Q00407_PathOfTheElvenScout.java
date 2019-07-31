@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path of the Elven Scout (407)
  * @author ivantotov
  */
-public final class Q00407_PathOfTheElvenScout extends Quest
+public class Q00407_PathOfTheElvenScout extends Quest
 {
 	// NPCs
 	private static final int MASTER_REORIA = 30328;

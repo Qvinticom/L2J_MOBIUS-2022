@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Dimensional Rift manager.
  * @author kombat
  */
-public final class DimensionalRiftManager
+public class DimensionalRiftManager
 {
 	private static Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
 	private final Map<Byte, Map<Byte, DimensionalRiftRoom>> _rooms = new HashMap<>(7);

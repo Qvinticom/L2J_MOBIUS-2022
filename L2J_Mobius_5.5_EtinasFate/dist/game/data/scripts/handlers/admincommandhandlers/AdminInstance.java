@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.util.BypassParser;
  * Instance admin commands.
  * @author St3eT
  */
-public final class AdminInstance implements IAdminCommandHandler
+public class AdminInstance implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

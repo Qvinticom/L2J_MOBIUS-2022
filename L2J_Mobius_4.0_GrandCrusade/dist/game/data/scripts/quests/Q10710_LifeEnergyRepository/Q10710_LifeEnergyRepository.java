@@ -31,7 +31,7 @@ import quests.Q10406_BeforeDarknessBearsFruit.Q10406_BeforeDarknessBearsFruit;
  * Life Energy Repository (10710)
  * @author St3eT
  */
-public final class Q10710_LifeEnergyRepository extends Quest
+public class Q10710_LifeEnergyRepository extends Quest
 {
 	// NPCs
 	private static final int SHUVANN = 33867;

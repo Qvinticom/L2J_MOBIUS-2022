@@ -111,7 +111,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public final SummonKnownList getKnownList()
+	public SummonKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof SummonKnownList))
 		{
@@ -267,22 +267,22 @@ public abstract class Summon extends Playable
 		return ExperienceData.getInstance().getExpForLevel(getLevel() + 1);
 	}
 	
-	public final int getKarma()
+	public int getKarma()
 	{
 		return _owner != null ? _owner.getKarma() : 0;
 	}
 	
-	public final byte getPvpFlag()
+	public byte getPvpFlag()
 	{
 		return _owner != null ? _owner.getPvpFlag() : 0;
 	}
 	
-	public final PlayerInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _owner;
 	}
 	
-	public final int getNpcId()
+	public int getNpcId()
 	{
 		return getTemplate().npcId;
 	}
@@ -317,22 +317,22 @@ public abstract class Summon extends Playable
 		_pkKills = pkKills;
 	}
 	
-	public final int getPkKills()
+	public int getPkKills()
 	{
 		return _pkKills;
 	}
 	
-	public final int getMaxLoad()
+	public int getMaxLoad()
 	{
 		return _maxLoad;
 	}
 	
-	public final int getSoulShotsPerHit()
+	public int getSoulShotsPerHit()
 	{
 		return _soulShotsPerHit;
 	}
 	
-	public final int getSpiritShotsPerHit()
+	public int getSpiritShotsPerHit()
 	{
 		return _spiritShotsPerHit;
 	}

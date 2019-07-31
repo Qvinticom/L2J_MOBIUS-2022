@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.JoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAnswerJoinParty implements IClientIncomingPacket
+public class RequestAnswerJoinParty implements IClientIncomingPacket
 {
 	private int _response;
 	

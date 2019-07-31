@@ -30,12 +30,12 @@ import org.l2jmobius.gameserver.util.Util;
  * Shrieks of Ghosts (371)
  * @author Adry_85
  */
-public final class Q00371_ShrieksOfGhosts extends Quest
+public class Q00371_ShrieksOfGhosts extends Quest
 {
 	private static final class DropInfo
 	{
-		public final int _firstChance;
-		public final int _secondChance;
+		public int _firstChance;
+		public int _secondChance;
 		
 		public DropInfo(int firstChance, int secondChance)
 		{

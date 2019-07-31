@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  * The Varka Silenos Supporters (10420)
  * @author St3eT
  */
-public final class Q10420_TheVarkaSilenosSupporters extends Quest
+public class Q10420_TheVarkaSilenosSupporters extends Quest
 {
 	// NPCs
 	private static final int HANSEN = 33853;

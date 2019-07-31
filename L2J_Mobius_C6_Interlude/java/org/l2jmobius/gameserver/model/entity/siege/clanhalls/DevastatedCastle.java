@@ -786,7 +786,7 @@ public class DevastatedCastle
 		}
 	}
 	
-	public final boolean Conditions(PlayerInstance player)
+	public boolean Conditions(PlayerInstance player)
 	{
 		if ((player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3))
 		{

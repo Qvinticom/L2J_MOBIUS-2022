@@ -35,7 +35,7 @@ import quests.Q10394_MutualBenefit.Q10394_MutualBenefit;
  * Not a Traitor (10395)
  * @author St3eT
  */
-public final class Q10395_NotATraitor extends Quest
+public class Q10395_NotATraitor extends Quest
 {
 	// NPCs
 	private static final int LEO = 33863;

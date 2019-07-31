@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Wind Vortex AI (Windy Hill)
  * @author malyelfik
  */
-public final class WindVortex extends AbstractNpcAI
+public class WindVortex extends AbstractNpcAI
 {
 	// NPC
 	private static final int VORTEX = 23417;

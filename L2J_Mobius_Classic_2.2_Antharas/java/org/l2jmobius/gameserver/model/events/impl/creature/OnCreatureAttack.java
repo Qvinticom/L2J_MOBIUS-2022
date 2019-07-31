@@ -38,17 +38,17 @@ public class OnCreatureAttack implements IBaseEvent
 		_skill = skill;
 	}
 	
-	public final Creature getAttacker()
+	public Creature getAttacker()
 	{
 		return _attacker;
 	}
 	
-	public final Creature getTarget()
+	public Creature getTarget()
 	{
 		return _target;
 	}
 	
-	public final Skill getSkill()
+	public Skill getSkill()
 	{
 		return _skill;
 	}

@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00074_SagaOfTheDreadnought extends Quest
 {
 	// NPCs
-	public final int AIKEN = 30850;
-	public final int JERONIN = 30121;
-	public final int RIFKEN = 34268;
-	public final int HARDIN = 30832;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31647;
-	public final int TABLET_OF_VISION_3 = 31652;
-	public final int TABLET_OF_VISION_4 = 31654;
-	public final int KAIN_VAN_HALTER = 31595;
+	private static final int AIKEN = 30850;
+	private static final int JERONIN = 30121;
+	private static final int RIFKEN = 34268;
+	private static final int HARDIN = 30832;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31647;
+	private static final int TABLET_OF_VISION_3 = 31652;
+	private static final int TABLET_OF_VISION_4 = 31654;
+	private static final int KAIN_VAN_HALTER = 31595;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214;
-	public final int WHITE_WING_COMMANDER = 27290;
-	public final int HALISHA_ARCHON = 27219;
-	public final int BELETH_SHADOW = 27282;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214;
+	private static final int WHITE_WING_COMMANDER = 27290;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int BELETH_SHADOW = 27282;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49808;
-	public final int HALISHA_BADGE = 7489;
-	public final int RESONANCE_AMULET = 7272;
-	public final int RESONANCE_AMULET_2 = 7303;
-	public final int RESONANCE_AMULET_3 = 7334;
-	public final int RESONANCE_AMULET_4 = 7365;
-	public final int DEAD_SOUL_FISH_SOUP = 7538;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49808;
+	private static final int HALISHA_BADGE = 7489;
+	private static final int RESONANCE_AMULET = 7272;
+	private static final int RESONANCE_AMULET_2 = 7303;
+	private static final int RESONANCE_AMULET_3 = 7334;
+	private static final int RESONANCE_AMULET_4 = 7365;
+	private static final int DEAD_SOUL_FISH_SOUP = 7538;
 	// Reward
-	public final int BOOK_GOLD_LION = 90038;
+	private static final int BOOK_GOLD_LION = 90038;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

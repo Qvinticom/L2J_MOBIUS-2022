@@ -75,7 +75,7 @@ public class SiegeManager
 		load();
 	}
 	
-	public final void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
 		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
@@ -88,7 +88,7 @@ public class SiegeManager
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public final boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
+	public boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
 		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
@@ -124,7 +124,7 @@ public class SiegeManager
 		return false;
 	}
 	
-	public final boolean checkIsRegisteredInSiege(Clan clan)
+	public boolean checkIsRegisteredInSiege(Clan clan)
 	{
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
@@ -144,7 +144,7 @@ public class SiegeManager
 	 * @param castleid
 	 * @return
 	 */
-	public final boolean checkIsRegistered(Clan clan, int castleid)
+	public boolean checkIsRegistered(Clan clan, int castleid)
 	{
 		if (clan == null)
 		{
@@ -182,7 +182,7 @@ public class SiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(SkillTable.getInstance().getInfo(246, 1));
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
@@ -303,7 +303,7 @@ public class SiegeManager
 		}
 	}
 	
-	public final List<SiegeSpawn> getArtefactSpawnList(int _castleId)
+	public List<SiegeSpawn> getArtefactSpawnList(int _castleId)
 	{
 		if (_artefactSpawnList.containsKey(_castleId))
 		{
@@ -312,7 +312,7 @@ public class SiegeManager
 		return null;
 	}
 	
-	public final List<SiegeSpawn> getControlTowerSpawnList(int _castleId)
+	public List<SiegeSpawn> getControlTowerSpawnList(int _castleId)
 	{
 		if (_controlTowerSpawnList.containsKey(_castleId))
 		{
@@ -321,42 +321,42 @@ public class SiegeManager
 		return null;
 	}
 	
-	public final int getAttackerMaxClans()
+	public int getAttackerMaxClans()
 	{
 		return _attackerMaxClans;
 	}
 	
-	public final int getAttackerRespawnDelay()
+	public int getAttackerRespawnDelay()
 	{
 		return _attackerRespawnDelay;
 	}
 	
-	public final int getControlTowerLosePenalty()
+	public int getControlTowerLosePenalty()
 	{
 		return _controlTowerLosePenalty;
 	}
 	
-	public final int getDefenderMaxClans()
+	public int getDefenderMaxClans()
 	{
 		return _defenderMaxClans;
 	}
 	
-	public final int getDefenderRespawnDelay()
+	public int getDefenderRespawnDelay()
 	{
 		return _defenderRespawnDelay;
 	}
 	
-	public final int getFlagMaxCount()
+	public int getFlagMaxCount()
 	{
 		return _flagMaxCount;
 	}
 	
-	public final Siege getSiege(WorldObject activeObject)
+	public Siege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
-	public final Siege getSiege(int x, int y, int z)
+	public Siege getSiege(int x, int y, int z)
 	{
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
@@ -368,17 +368,17 @@ public class SiegeManager
 		return null;
 	}
 	
-	public final int getSiegeClanMinLevel()
+	public int getSiegeClanMinLevel()
 	{
 		return _siegeClanMinLevel;
 	}
 	
-	public final int getSiegeLength()
+	public int getSiegeLength()
 	{
 		return _siegeLength;
 	}
 	
-	public final List<Siege> getSieges()
+	public List<Siege> getSieges()
 	{
 		final List<Siege> _sieges = new ArrayList<>();
 		for (Castle castle : CastleManager.getInstance().getCastles())

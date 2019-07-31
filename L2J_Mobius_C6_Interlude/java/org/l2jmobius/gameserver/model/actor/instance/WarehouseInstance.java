@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
-public final class WarehouseInstance extends FolkInstance
+public class WarehouseInstance extends FolkInstance
 {
 	/**
 	 * Instantiates a new l2 warehouse instance.

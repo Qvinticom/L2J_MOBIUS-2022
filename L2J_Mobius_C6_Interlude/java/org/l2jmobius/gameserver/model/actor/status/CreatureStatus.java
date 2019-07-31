@@ -73,7 +73,7 @@ public class CreatureStatus
 	 * <BR>
 	 * @param object Creature to add to the listener
 	 */
-	public final void addStatusListener(Creature object)
+	public void addStatusListener(Creature object)
 	{
 		if (object == _creature)
 		{
@@ -90,7 +90,7 @@ public class CreatureStatus
 	 * Reduce cp.
 	 * @param value the value
 	 */
-	public final void reduceCp(int value)
+	public void reduceCp(int value)
 	{
 		if (_currentCp > value)
 		{
@@ -265,7 +265,7 @@ public class CreatureStatus
 	 * Reduce mp.
 	 * @param value the value
 	 */
-	public final void reduceMp(double value)
+	public void reduceMp(double value)
 	{
 		value = _currentMp - value;
 		
@@ -291,7 +291,7 @@ public class CreatureStatus
 	 * <BR>
 	 * @param object Creature to add to the listener
 	 */
-	public final void removeStatusListener(Creature object)
+	public void removeStatusListener(Creature object)
 	{
 		synchronized (getStatusListener())
 		{
@@ -308,7 +308,7 @@ public class CreatureStatus
 	 * <li>Launch the HP/MP/CP Regeneration task with Medium priority</li><BR>
 	 * <BR>
 	 */
-	public final synchronized void startHpMpRegeneration()
+	public synchronized void startHpMpRegeneration()
 	{
 		if ((_regTask == null) && !_creature.isDead())
 		{
@@ -329,7 +329,7 @@ public class CreatureStatus
 	 * <li>Stop the HP/MP/CP Regeneration task</li><BR>
 	 * <BR>
 	 */
-	public final synchronized void stopHpMpRegeneration()
+	public synchronized void stopHpMpRegeneration()
 	{
 		if (_regTask != null)
 		{
@@ -355,7 +355,7 @@ public class CreatureStatus
 	 * Gets the current cp.
 	 * @return the current cp
 	 */
-	public final double getCurrentCp()
+	public double getCurrentCp()
 	{
 		return _currentCp;
 	}
@@ -364,7 +364,7 @@ public class CreatureStatus
 	 * Sets the current cp direct.
 	 * @param newCp the new current cp direct
 	 */
-	public final void setCurrentCpDirect(double newCp)
+	public void setCurrentCpDirect(double newCp)
 	{
 		setCurrentCp(newCp, true, true);
 	}
@@ -373,7 +373,7 @@ public class CreatureStatus
 	 * Sets the current cp.
 	 * @param newCp the new current cp
 	 */
-	public final void setCurrentCp(double newCp)
+	public void setCurrentCp(double newCp)
 	{
 		setCurrentCp(newCp, true, false);
 	}
@@ -383,7 +383,7 @@ public class CreatureStatus
 	 * @param newCp the new cp
 	 * @param broadcastPacket the broadcast packet
 	 */
-	public final void setCurrentCp(double newCp, boolean broadcastPacket)
+	public void setCurrentCp(double newCp, boolean broadcastPacket)
 	{
 		setCurrentCp(newCp, broadcastPacket, false);
 	}
@@ -394,7 +394,7 @@ public class CreatureStatus
 	 * @param broadcastPacket the broadcast packet
 	 * @param direct the direct
 	 */
-	public final void setCurrentCp(double newCp, boolean broadcastPacket, boolean direct)
+	public void setCurrentCp(double newCp, boolean broadcastPacket, boolean direct)
 	{
 		synchronized (this)
 		{
@@ -440,7 +440,7 @@ public class CreatureStatus
 	 * Gets the current hp.
 	 * @return the current hp
 	 */
-	public final double getCurrentHp()
+	public double getCurrentHp()
 	{
 		return _currentHp;
 	}
@@ -449,7 +449,7 @@ public class CreatureStatus
 	 * Sets the current hp.
 	 * @param newHp the new current hp
 	 */
-	public final void setCurrentHp(double newHp)
+	public void setCurrentHp(double newHp)
 	{
 		setCurrentHp(newHp, true);
 	}
@@ -458,7 +458,7 @@ public class CreatureStatus
 	 * Sets the current hp direct.
 	 * @param newHp the new current hp direct
 	 */
-	public final void setCurrentHpDirect(double newHp)
+	public void setCurrentHpDirect(double newHp)
 	{
 		setCurrentHp(newHp, true, true);
 	}
@@ -467,7 +467,7 @@ public class CreatureStatus
 	 * Sets the current mp direct.
 	 * @param newMp the new current mp direct
 	 */
-	public final void setCurrentMpDirect(double newMp)
+	public void setCurrentMpDirect(double newMp)
 	{
 		setCurrentMp(newMp, true, true);
 	}
@@ -477,7 +477,7 @@ public class CreatureStatus
 	 * @param newHp the new hp
 	 * @param broadcastPacket the broadcast packet
 	 */
-	public final void setCurrentHp(double newHp, boolean broadcastPacket)
+	public void setCurrentHp(double newHp, boolean broadcastPacket)
 	{
 		setCurrentHp(newHp, true, false);
 	}
@@ -488,7 +488,7 @@ public class CreatureStatus
 	 * @param broadcastPacket the broadcast packet
 	 * @param direct the direct
 	 */
-	public final void setCurrentHp(double newHp, boolean broadcastPacket, boolean direct)
+	public void setCurrentHp(double newHp, boolean broadcastPacket, boolean direct)
 	{
 		synchronized (this)
 		{
@@ -537,7 +537,7 @@ public class CreatureStatus
 	 * @param newHp the new hp
 	 * @param newMp the new mp
 	 */
-	public final void setCurrentHpMp(double newHp, double newMp)
+	public void setCurrentHpMp(double newHp, double newMp)
 	{
 		setCurrentHp(newHp, false, false);
 		setCurrentMp(newMp, true, false); // send the StatusUpdate only once
@@ -547,7 +547,7 @@ public class CreatureStatus
 	 * Gets the current mp.
 	 * @return the current mp
 	 */
-	public final double getCurrentMp()
+	public double getCurrentMp()
 	{
 		return _currentMp;
 	}
@@ -556,7 +556,7 @@ public class CreatureStatus
 	 * Sets the current mp.
 	 * @param newMp the new current mp
 	 */
-	public final void setCurrentMp(double newMp)
+	public void setCurrentMp(double newMp)
 	{
 		setCurrentMp(newMp, true);
 	}
@@ -566,7 +566,7 @@ public class CreatureStatus
 	 * @param newMp the new mp
 	 * @param broadcastPacket the broadcast packet
 	 */
-	public final void setCurrentMp(double newMp, boolean broadcastPacket)
+	public void setCurrentMp(double newMp, boolean broadcastPacket)
 	{
 		setCurrentMp(newMp, broadcastPacket, false);
 	}
@@ -577,7 +577,7 @@ public class CreatureStatus
 	 * @param broadcastPacket the broadcast packet
 	 * @param direct the direct
 	 */
-	public final void setCurrentMp(double newMp, boolean broadcastPacket, boolean direct)
+	public void setCurrentMp(double newMp, boolean broadcastPacket, boolean direct)
 	{
 		synchronized (this)
 		{
@@ -624,7 +624,7 @@ public class CreatureStatus
 	 * <BR>
 	 * @return The list of Creature to inform or null if empty
 	 */
-	public final Set<Creature> getStatusListener()
+	public Set<Creature> getStatusListener()
 	{
 		if (_StatusListener == null)
 		{

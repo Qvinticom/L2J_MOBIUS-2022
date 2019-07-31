@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author St3eT
  */
-public final class ExRequestAutoFish implements IClientIncomingPacket
+public class ExRequestAutoFish implements IClientIncomingPacket
 {
 	private boolean _start;
 	

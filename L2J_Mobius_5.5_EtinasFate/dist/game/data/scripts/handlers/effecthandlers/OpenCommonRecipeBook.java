@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
  * Open Common Recipe Book effect implementation.
  * @author Adry_85
  */
-public final class OpenCommonRecipeBook extends AbstractEffect
+public class OpenCommonRecipeBook extends AbstractEffect
 {
 	public OpenCommonRecipeBook(StatsSet params)
 	{

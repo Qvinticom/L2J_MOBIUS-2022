@@ -108,7 +108,7 @@ public abstract class ItemContainer
 	/**
 	 * @return true if player got item for self resurrection
 	 */
-	public final boolean haveItemForSelfResurrection()
+	public boolean haveItemForSelfResurrection()
 	{
 		for (ItemInstance item : _items)
 		{

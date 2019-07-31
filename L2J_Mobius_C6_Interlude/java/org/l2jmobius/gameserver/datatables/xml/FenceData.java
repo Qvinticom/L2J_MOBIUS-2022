@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData
+public class FenceData
 {
 	private static final Logger LOGGER = Logger.getLogger(FenceData.class.getSimpleName());
 	
@@ -116,7 +116,7 @@ public final class FenceData
 		spawnFence(x, y, z, name, width, length, height, state);
 	}
 	
-	public FenceInstance spawnFence(int x, int y, int z, final String name, int width, int length, int height, FenceState state)
+	public FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, FenceState state)
 	{
 		final FenceInstance fence = new FenceInstance(x, y, name, width, length, height, state);
 		fence.spawnMe(x, y, z);

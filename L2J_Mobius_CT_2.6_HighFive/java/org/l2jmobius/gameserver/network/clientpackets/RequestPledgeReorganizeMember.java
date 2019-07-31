@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember implements IClientIncomingPacket
+public class RequestPledgeReorganizeMember implements IClientIncomingPacket
 {
 	private int _isMemberSelected;
 	private String _memberName;

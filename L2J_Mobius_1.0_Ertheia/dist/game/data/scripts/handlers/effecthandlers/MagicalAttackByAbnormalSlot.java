@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  * Magical Attack By Abnormal Slot effect implementation.
  * @author Sdw
  */
-public final class MagicalAttackByAbnormalSlot extends AbstractEffect
+public class MagicalAttackByAbnormalSlot extends AbstractEffect
 {
 	private final double _power;
 	private final Set<AbnormalType> _abnormals;

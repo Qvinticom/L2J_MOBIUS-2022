@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
  * This class loads and holds all static object data.
  * @author UnAfraid
  */
-public final class StaticObjectData implements IXmlReader
+public class StaticObjectData implements IXmlReader
 {
 	private final Map<Integer, StaticObjectInstance> _staticObjects = new HashMap<>();
 	

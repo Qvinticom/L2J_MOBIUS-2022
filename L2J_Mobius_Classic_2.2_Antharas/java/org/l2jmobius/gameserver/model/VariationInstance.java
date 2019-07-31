@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.options.Options;
  * Used to store an augmentation and its bonuses.
  * @author durgus, UnAfraid, Pere
  */
-public final class VariationInstance
+public class VariationInstance
 {
 	private final int _mineralId;
 	private final Options _option1;

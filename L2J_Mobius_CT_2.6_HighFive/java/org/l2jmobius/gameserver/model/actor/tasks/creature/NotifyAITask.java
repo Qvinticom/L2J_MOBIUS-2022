@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  * Task dedicated to notify character's AI
  * @author xban1x
  */
-public final class NotifyAITask implements Runnable
+public class NotifyAITask implements Runnable
 {
 	private final Creature _creature;
 	private final CtrlEvent _event;

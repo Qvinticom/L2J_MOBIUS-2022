@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Summon Trap effect implementation.
  * @author Zoey76
  */
-public final class SummonTrap extends AbstractEffect
+public class SummonTrap extends AbstractEffect
 {
 	private final int _despawnTime;
 	private final int _npcId;

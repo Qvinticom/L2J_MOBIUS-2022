@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Magical Attack MP effect.
  * @author Adry_85
  */
-public final class MagicalAttackMp extends AbstractEffect
+public class MagicalAttackMp extends AbstractEffect
 {
 	public MagicalAttackMp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

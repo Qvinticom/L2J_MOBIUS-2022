@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
-public final class VillageMasterKamaelInstance extends VillageMasterInstance
+public class VillageMasterKamaelInstance extends VillageMasterInstance
 {
 	/**
 	 * Creates a village master.

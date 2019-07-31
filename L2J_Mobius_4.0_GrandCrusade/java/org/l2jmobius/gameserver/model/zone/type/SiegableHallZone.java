@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author BiggBoss
  */
-public final class SiegableHallZone extends ClanHallZone
+public class SiegableHallZone extends ClanHallZone
 {
 	private List<Location> _challengerLocations;
 	

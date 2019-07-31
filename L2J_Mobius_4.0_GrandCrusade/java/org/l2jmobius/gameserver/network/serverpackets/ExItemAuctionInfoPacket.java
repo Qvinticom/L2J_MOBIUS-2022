@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Forsaiken
  */
-public final class ExItemAuctionInfoPacket extends AbstractItemPacket
+public class ExItemAuctionInfoPacket extends AbstractItemPacket
 {
 	private final boolean _refresh;
 	private final int _timeRemaining;

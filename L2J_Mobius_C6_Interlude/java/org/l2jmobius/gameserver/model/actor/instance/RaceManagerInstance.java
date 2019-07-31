@@ -119,7 +119,7 @@ public class RaceManagerInstance extends NpcInstance
 	}
 	
 	@Override
-	public final RaceManagerKnownList getKnownList()
+	public RaceManagerKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof RaceManagerKnownList))
 		{

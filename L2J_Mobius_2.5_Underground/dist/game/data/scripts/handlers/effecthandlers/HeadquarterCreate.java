@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Headquarter Create effect implementation.
  * @author Adry_85
  */
-public final class HeadquarterCreate extends AbstractEffect
+public class HeadquarterCreate extends AbstractEffect
 {
 	private static final int HQ_NPC_ID = 35062;
 	private final boolean _isAdvanced;

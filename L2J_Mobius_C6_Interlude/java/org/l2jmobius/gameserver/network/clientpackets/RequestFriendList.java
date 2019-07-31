@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestFriendList extends GameClientPacket
+public class RequestFriendList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

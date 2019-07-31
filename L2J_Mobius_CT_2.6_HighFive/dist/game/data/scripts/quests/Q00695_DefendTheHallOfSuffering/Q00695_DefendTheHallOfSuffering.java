@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class Q00695_DefendTheHallOfSuffering extends Quest
+public class Q00695_DefendTheHallOfSuffering extends Quest
 {
 	private static final int TEPIOS = 32603;
 	private static final int TEPIOS2 = 32530;
@@ -46,7 +46,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
 		
@@ -66,7 +66,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public final String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

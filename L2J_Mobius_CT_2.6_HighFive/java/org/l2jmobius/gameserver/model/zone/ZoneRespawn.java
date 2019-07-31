@@ -72,7 +72,7 @@ public abstract class ZoneRespawn extends ZoneType
 		}
 	}
 	
-	public final void addSpawn(int x, int y, int z)
+	public void addSpawn(int x, int y, int z)
 	{
 		if (_spawnLocs == null)
 		{
@@ -82,7 +82,7 @@ public abstract class ZoneRespawn extends ZoneType
 		_spawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addOtherSpawn(int x, int y, int z)
+	public void addOtherSpawn(int x, int y, int z)
 	{
 		if (_otherSpawnLocs == null)
 		{
@@ -92,7 +92,7 @@ public abstract class ZoneRespawn extends ZoneType
 		_otherSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addChaoticSpawn(int x, int y, int z)
+	public void addChaoticSpawn(int x, int y, int z)
 	{
 		if (_chaoticSpawnLocs == null)
 		{
@@ -102,7 +102,7 @@ public abstract class ZoneRespawn extends ZoneType
 		_chaoticSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addBanishSpawn(int x, int y, int z)
+	public void addBanishSpawn(int x, int y, int z)
 	{
 		if (_banishSpawnLocs == null)
 		{
@@ -112,12 +112,12 @@ public abstract class ZoneRespawn extends ZoneType
 		_banishSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final List<Location> getSpawns()
+	public List<Location> getSpawns()
 	{
 		return _spawnLocs;
 	}
 	
-	public final Location getSpawnLoc()
+	public Location getSpawnLoc()
 	{
 		if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
 		{
@@ -126,7 +126,7 @@ public abstract class ZoneRespawn extends ZoneType
 		return _spawnLocs.get(0);
 	}
 	
-	public final Location getOtherSpawnLoc()
+	public Location getOtherSpawnLoc()
 	{
 		if (_otherSpawnLocs != null)
 		{
@@ -139,7 +139,7 @@ public abstract class ZoneRespawn extends ZoneType
 		return getSpawnLoc();
 	}
 	
-	public final Location getChaoticSpawnLoc()
+	public Location getChaoticSpawnLoc()
 	{
 		if (_chaoticSpawnLocs != null)
 		{

@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00081_SagaOfTheGhostHunter extends Quest
 {
 	// NPCs
-	public final int BLACK_CAT = 31603;
-	public final int GHEST = 30863;
-	public final int RIFKEN = 34268;
-	public final int HERMIT = 31616;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31647;
-	public final int TABLET_OF_VISION_3 = 31653;
-	public final int TABLET_OF_VISION_4 = 31656;
-	public final int ARIA_FRUSTMASTER = 31617;
+	private static final int BLACK_CAT = 31603;
+	private static final int GHEST = 30863;
+	private static final int RIFKEN = 34268;
+	private static final int HERMIT = 31616;
+	private static final int TABLET_OF_VISION_1 = 31646;
+	private static final int TABLET_OF_VISION_2 = 31647;
+	private static final int TABLET_OF_VISION_3 = 31653;
+	private static final int TABLET_OF_VISION_4 = 31656;
+	private static final int ARIA_FRUSTMASTER = 31617;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214;
-	public final int STONE_WATCHMAN_AZEKIEL = 27296;
-	public final int HALISHA_ARCHON = 27219;
-	public final int STONE_GUARDIAN_AZRAEL = 27302;
+	private static final int ICE_MONSTER = 27316;
+	private static final int SPIRIT_OF_A_DROWNED = 27317;
+	private static final int SOUL_OF_COLD = 27318;
+	private static final int GHOST_OF_SOLITUDE = 27319;
+	private static final int FIEND_OF_COLD = 27320;
+	private static final int SPIRIT_OF_COLD = 27321;
+	private static final int SPAMPLAND_WATCHMAN = 21650;
+	private static final int FLAME_DRAKE = 21651;
+	private static final int FIERY_IFRIT = 21652;
+	private static final int IKEDIT = 21653;
+	private static final int GUARDIAN_OF_FOBIDDEN_KNOWLEDGE = 27214;
+	private static final int STONE_WATCHMAN_AZEKIEL = 27296;
+	private static final int HALISHA_ARCHON = 27219;
+	private static final int STONE_GUARDIAN_AZRAEL = 27302;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49815;
-	public final int HALISHA_BADGE = 7496;
-	public final int RESONANCE_AMULET = 7279;
-	public final int RESONANCE_AMULET_2 = 7310;
-	public final int RESONANCE_AMULET_3 = 7341;
-	public final int RESONANCE_AMULET_4 = 7372;
-	public final int RIFKEN_RECIPE_BOOK = 49840;
+	private static final int ICE_CRYSTAL_FRAGMENT = 49815;
+	private static final int HALISHA_BADGE = 7496;
+	private static final int RESONANCE_AMULET = 7279;
+	private static final int RESONANCE_AMULET_2 = 7310;
+	private static final int RESONANCE_AMULET_3 = 7341;
+	private static final int RESONANCE_AMULET_4 = 7372;
+	private static final int RIFKEN_RECIPE_BOOK = 49840;
 	// Reward
-	public final int BOOK_SABERTOOTH = 90040;
+	private static final int BOOK_SABERTOOTH = 90040;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

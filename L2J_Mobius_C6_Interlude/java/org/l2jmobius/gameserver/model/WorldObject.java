@@ -97,27 +97,27 @@ public abstract class WorldObject
 	}
 	
 	// Position - Should remove to fully move to WorldObjectPosition
-	public final void setXYZ(int x, int y, int z)
+	public void setXYZ(int x, int y, int z)
 	{
 		getPosition().setXYZ(x, y, z);
 	}
 	
-	public final void setXYZInvisible(int x, int y, int z)
+	public void setXYZInvisible(int x, int y, int z)
 	{
 		getPosition().setXYZInvisible(x, y, z);
 	}
 	
-	public final int getX()
+	public int getX()
 	{
 		return getPosition().getX();
 	}
 	
-	public final int getY()
+	public int getY()
 	{
 		return getPosition().getY();
 	}
 	
-	public final int getZ()
+	public int getZ()
 	{
 		return getPosition().getZ();
 	}
@@ -141,7 +141,7 @@ public abstract class WorldObject
 	 * <li>Delete NPC/PC or Unsummon</li><BR>
 	 * <BR>
 	 */
-	public final void decayMe()
+	public void decayMe()
 	{
 		// Remove the WorldObject from the world
 		_visible = false;
@@ -176,7 +176,7 @@ public abstract class WorldObject
 	 * <BR>
 	 * @param creature Player that pick up the item
 	 */
-	public final void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
+	public void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
 	{
 		WorldRegion oldregion = getPosition().getWorldRegion();
 		
@@ -232,7 +232,7 @@ public abstract class WorldObject
 	 * <li>Create Door</li>
 	 * <li>Spawn : Monster, Minion, CTs, Summon...</li><BR>
 	 */
-	public final void spawnMe()
+	public void spawnMe()
 	{
 		synchronized (this)
 		{
@@ -254,7 +254,7 @@ public abstract class WorldObject
 		onSpawn();
 	}
 	
-	public final void spawnMe(int x, int y, int z)
+	public void spawnMe(int x, int y, int z)
 	{
 		synchronized (this)
 		{
@@ -350,27 +350,27 @@ public abstract class WorldObject
 		return _knownList;
 	}
 	
-	public final void setKnownList(WorldObjectKnownList value)
+	public void setKnownList(WorldObjectKnownList value)
 	{
 		_knownList = value;
 	}
 	
-	public final String getName()
+	public String getName()
 	{
 		return _name;
 	}
 	
-	public final void setName(String value)
+	public void setName(String value)
 	{
 		_name = value;
 	}
 	
-	public final int getObjectId()
+	public int getObjectId()
 	{
 		return _objectId;
 	}
 	
-	public final ObjectPoly getPoly()
+	public ObjectPoly getPoly()
 	{
 		if (_poly == null)
 		{
@@ -380,7 +380,7 @@ public abstract class WorldObject
 		return _poly;
 	}
 	
-	public final ObjectPosition getPosition()
+	public ObjectPosition getPosition()
 	{
 		if (_position == null)
 		{

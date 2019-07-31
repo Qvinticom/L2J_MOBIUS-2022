@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Call Pc effect implementation.
  * @author Adry_85
  */
-public final class CallPc extends AbstractEffect
+public class CallPc extends AbstractEffect
 {
 	private final int _itemId;
 	private final int _itemCount;

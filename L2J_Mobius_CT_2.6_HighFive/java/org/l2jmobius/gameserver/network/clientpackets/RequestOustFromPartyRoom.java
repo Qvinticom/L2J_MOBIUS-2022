@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ListPartyWating;
  * format (ch) d
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom implements IClientIncomingPacket
+public class RequestOustFromPartyRoom implements IClientIncomingPacket
 {
 	private int _charid;
 	

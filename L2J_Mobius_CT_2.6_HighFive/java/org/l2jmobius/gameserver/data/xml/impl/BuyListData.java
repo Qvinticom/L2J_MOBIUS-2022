@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.items.Item;
  * Loads buy lists for NPCs.
  * @author NosBit
  */
-public final class BuyListData implements IXmlReader
+public class BuyListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
 	

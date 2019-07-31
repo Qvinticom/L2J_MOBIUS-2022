@@ -74,17 +74,17 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			_level = level;
 		}
 		
-		public final int getLevel()
+		public int getLevel()
 		{
 			return _level;
 		}
 		
-		public final int getGrade()
+		public int getGrade()
 		{
 			return _grade;
 		}
 		
-		public final int getPlayerLevel()
+		public int getPlayerLevel()
 		{
 			return LEVELS[_level];
 		}

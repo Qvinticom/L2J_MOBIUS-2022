@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-public final class DuelManager
+public class DuelManager
 {
 	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
 	private final AtomicInteger _currentDuelId = new AtomicInteger();

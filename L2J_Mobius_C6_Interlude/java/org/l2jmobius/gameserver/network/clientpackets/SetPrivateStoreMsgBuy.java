@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 
-public final class SetPrivateStoreMsgBuy extends GameClientPacket
+public class SetPrivateStoreMsgBuy extends GameClientPacket
 {
 	private String _storeMsg;
 	

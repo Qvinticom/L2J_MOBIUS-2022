@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * CP change effect. It is mostly used for potions and static damage.
  * @author Nik
  */
-public final class Cp extends AbstractEffect
+public class Cp extends AbstractEffect
 {
 	private final int _amount;
 	private final StatModifierType _mode;

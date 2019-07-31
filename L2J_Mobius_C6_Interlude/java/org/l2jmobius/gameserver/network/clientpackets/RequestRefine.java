@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Format:(ch) dddd
  * @author -Wooden-
  */
-public final class RequestRefine extends GameClientPacket
+public class RequestRefine extends GameClientPacket
 {
 	private int _targetItemObjId;
 	private int _refinerItemObjId;

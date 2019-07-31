@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * For a Sleepless Deadman (359)
  * @author Adry_85
  */
-public final class Q00359_ForASleeplessDeadman extends Quest
+public class Q00359_ForASleeplessDeadman extends Quest
 {
 	// NPC
 	private static final int ORVEN = 30857;

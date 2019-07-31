@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Give SP effect implementation.
  * @author Adry_85
  */
-public final class GiveSp extends AbstractEffect
+public class GiveSp extends AbstractEffect
 {
 	private final int _sp;
 	

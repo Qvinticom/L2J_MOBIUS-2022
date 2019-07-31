@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrBroadcastEventState;
 
-public final class LoversJubilee extends LongTimeEvent
+public class LoversJubilee extends LongTimeEvent
 {
 	// NPC
 	private static final int ROSALIA = 4305;

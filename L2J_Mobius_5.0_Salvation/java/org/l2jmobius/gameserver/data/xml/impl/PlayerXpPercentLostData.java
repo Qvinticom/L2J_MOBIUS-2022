@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.IXmlReader;
  * This class holds the Player Xp Percent Lost Data for each level for players.
  * @author Zealar
  */
-public final class PlayerXpPercentLostData implements IXmlReader
+public class PlayerXpPercentLostData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PlayerXpPercentLostData.class.getName());
 	

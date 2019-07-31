@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * format: (ch) d
  * @author -Wooden-
  */
-public final class RequestExAcceptJoinMPCC implements IClientIncomingPacket
+public class RequestExAcceptJoinMPCC implements IClientIncomingPacket
 {
 	private int _response;
 	

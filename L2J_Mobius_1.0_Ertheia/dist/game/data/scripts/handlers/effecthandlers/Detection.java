@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Detection effect implementation.
  * @author UnAfraid
  */
-public final class Detection extends AbstractEffect
+public class Detection extends AbstractEffect
 {
 	public Detection(StatsSet params)
 	{

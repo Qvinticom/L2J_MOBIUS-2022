@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  * </ul>
  * @author xban1x
  */
-public final class HitTask implements Runnable
+public class HitTask implements Runnable
 {
 	private final Creature _creature;
 	private final Creature _hitTarget;

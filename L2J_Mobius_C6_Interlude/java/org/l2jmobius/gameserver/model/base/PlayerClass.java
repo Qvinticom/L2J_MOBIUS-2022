@@ -218,7 +218,7 @@ public enum PlayerClass
 		_type = pType;
 	}
 	
-	public final Set<PlayerClass> getAvailableSubclasses(PlayerInstance player)
+	public Set<PlayerClass> getAvailableSubclasses(PlayerInstance player)
 	{
 		Set<PlayerClass> subclasses = null;
 		
@@ -272,22 +272,22 @@ public enum PlayerClass
 		return allOf;
 	}
 	
-	public final boolean isOfRace(PlayerRace pRace)
+	public boolean isOfRace(PlayerRace pRace)
 	{
 		return _race == pRace;
 	}
 	
-	public final boolean isOfType(ClassType pType)
+	public boolean isOfType(ClassType pType)
 	{
 		return _type == pType;
 	}
 	
-	public final boolean isOfLevel(ClassLevel pLevel)
+	public boolean isOfLevel(ClassLevel pLevel)
 	{
 		return _level == pLevel;
 	}
 	
-	public final ClassLevel getLevel()
+	public ClassLevel getLevel()
 	{
 		return _level;
 	}

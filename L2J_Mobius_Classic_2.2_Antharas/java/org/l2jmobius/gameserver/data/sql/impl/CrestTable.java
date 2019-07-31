@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
  * Loads and saves crests from database.
  * @author NosBit
  */
-public final class CrestTable
+public class CrestTable
 {
 	private static final Logger LOGGER = Logger.getLogger(CrestTable.class.getName());
 	

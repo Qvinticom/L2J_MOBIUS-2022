@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.base.ClassInfo;
  * Loads the the list of classes and it's info.
  * @author Zoey76
  */
-public final class ClassListData implements IXmlReader
+public class ClassListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ClassListData.class.getName());
 	

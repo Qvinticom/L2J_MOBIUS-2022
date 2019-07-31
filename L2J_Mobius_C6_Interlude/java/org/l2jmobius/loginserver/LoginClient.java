@@ -39,7 +39,7 @@ import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
  * Represents a client connected into the LoginServer
  * @author KenM
  */
-public final class LoginClient extends MMOClient<MMOConnection<LoginClient>>
+public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 {
 	private static Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
 	

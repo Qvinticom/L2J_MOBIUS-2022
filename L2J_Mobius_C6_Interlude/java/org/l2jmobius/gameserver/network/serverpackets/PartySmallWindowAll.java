@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * sample 63 01 00 00 00 count c1 b2 e0 4a object id 54 00 75 00 65 00 73 00 64 00 61 00 79 00 00 00 name 5a 01 00 00 hp 5a 01 00 00 hp max 89 00 00 00 mp 89 00 00 00 mp max 0e 00 00 00 level 12 00 00 00 class 00 00 00 00 01 00 00 00 format d (dSdddddddd)
  * @version $Revision: 1.6.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class PartySmallWindowAll extends GameServerPacket
+public class PartySmallWindowAll extends GameServerPacket
 {
 	private final Party _party;
 	private final PlayerInstance _exclude;

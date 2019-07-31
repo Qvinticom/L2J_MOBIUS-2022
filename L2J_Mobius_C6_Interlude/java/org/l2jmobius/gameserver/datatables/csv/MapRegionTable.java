@@ -238,17 +238,17 @@ public class MapRegionTable
 		_pointsWithKarmas[18][2] = -3645;
 	}
 	
-	public final int getMapRegion(int posX, int posY)
+	public int getMapRegion(int posX, int posY)
 	{
 		return _regions[getMapRegionX(posX)][getMapRegionY(posY)];
 	}
 	
-	public final int getMapRegionX(int posX)
+	public int getMapRegionX(int posX)
 	{
 		return (posX >> 15) + 4;// + centerTileX;
 	}
 	
-	public final int getMapRegionY(int posY)
+	public int getMapRegionY(int posY)
 	{
 		return (posY >> 15) + 10;// + centerTileX;
 	}

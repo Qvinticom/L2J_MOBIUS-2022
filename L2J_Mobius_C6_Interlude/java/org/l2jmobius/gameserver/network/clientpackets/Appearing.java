@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 /**
  * Appearing Packet Handler
  */
-public final class Appearing extends GameClientPacket
+public class Appearing extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

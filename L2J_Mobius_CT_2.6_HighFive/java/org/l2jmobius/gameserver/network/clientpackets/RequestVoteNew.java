@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-public final class RequestVoteNew implements IClientIncomingPacket
+public class RequestVoteNew implements IClientIncomingPacket
 {
 	private int _targetId;
 	

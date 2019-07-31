@@ -30,7 +30,7 @@ import quests.LetterQuest;
  * Kekropus' Letter: The Swamp of Screams (10408)
  * @author St3eT
  */
-public final class Q10408_KekropusLetterTheSwampOfScreams extends LetterQuest
+public class Q10408_KekropusLetterTheSwampOfScreams extends LetterQuest
 {
 	// NPCs
 	private static final int MATHIAS = 31340;

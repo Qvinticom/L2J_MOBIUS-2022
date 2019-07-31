@@ -32,7 +32,7 @@ import instances.AbstractInstance;
  * Tauti Warzone instance zone.
  * @author Mobius
  */
-public final class TautiWarzone extends AbstractInstance
+public class TautiWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int FINARIA = 33675;

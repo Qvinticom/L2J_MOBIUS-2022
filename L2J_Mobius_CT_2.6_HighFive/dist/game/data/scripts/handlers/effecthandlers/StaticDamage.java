@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Static Damage effect implementation.
  * @author Adry_85
  */
-public final class StaticDamage extends AbstractEffect
+public class StaticDamage extends AbstractEffect
 {
 	private final int _power;
 	

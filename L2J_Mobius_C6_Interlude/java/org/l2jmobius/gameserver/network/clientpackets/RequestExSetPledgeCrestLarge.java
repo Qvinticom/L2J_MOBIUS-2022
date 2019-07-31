@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  * @author -Wooden-
  */
-public final class RequestExSetPledgeCrestLarge extends GameClientPacket
+public class RequestExSetPledgeCrestLarge extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestExSetPledgeCrestLarge.class.getName());
 	private int _size;

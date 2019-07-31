@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Exalted, One Who Faces the Limit (10811)
  * @author Gladicek
  */
-public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
+public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 {
 	// Npc
 	private static final int LIONEL = 33907;

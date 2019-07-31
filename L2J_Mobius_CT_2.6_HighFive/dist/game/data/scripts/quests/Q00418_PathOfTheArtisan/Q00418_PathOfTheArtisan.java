@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Artisan (418)
  * @author ivantotov
  */
-public final class Q00418_PathOfTheArtisan extends Quest
+public class Q00418_PathOfTheArtisan extends Quest
 {
 	// NPCs
 	private static final int BLACKSMITH_SILVERA = 30527;

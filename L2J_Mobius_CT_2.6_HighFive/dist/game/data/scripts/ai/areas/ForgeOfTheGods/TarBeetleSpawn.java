@@ -121,7 +121,7 @@ public class TarBeetleSpawn implements IXmlReader
 		}
 	}
 	
-	public final void unload()
+	public void unload()
 	{
 		if (spawnTask != null)
 		{
@@ -135,7 +135,7 @@ public class TarBeetleSpawn implements IXmlReader
 		zones.clear();
 	}
 	
-	public final void removeBeetle(Npc npc)
+	public void removeBeetle(Npc npc)
 	{
 		zones.get(npc.getVariables().getInt("zoneIndex", 0)).removeSpawn(npc);
 		npc.deleteMe();
@@ -161,7 +161,7 @@ public class TarBeetleSpawn implements IXmlReader
 			return location;
 		}
 		
-		public final void addBannedZone(Zone bZone)
+		public void addBannedZone(Zone bZone)
 		{
 			if (_bannedZones == null)
 			{
@@ -199,24 +199,24 @@ public class TarBeetleSpawn implements IXmlReader
 			_index = index;
 		}
 		
-		public final void addZone(Zone zone)
+		public void addZone(Zone zone)
 		{
 			_zones.add(zone);
 		}
 		
-		public final void removeSpawn(Npc obj)
+		public void removeSpawn(Npc obj)
 		{
 			_spawn.remove(obj);
 		}
 		
-		public final void unload()
+		public void unload()
 		{
 			_spawn.forEach(Npc::deleteMe);
 			_spawn.clear();
 			_zones.clear();
 		}
 		
-		public final void refreshSpawn()
+		public void refreshSpawn()
 		{
 			try
 			{
@@ -246,7 +246,7 @@ public class TarBeetleSpawn implements IXmlReader
 			}
 		}
 		
-		public final void refreshShots()
+		public void refreshShots()
 		{
 			if (_spawn.size() > 0)
 			{

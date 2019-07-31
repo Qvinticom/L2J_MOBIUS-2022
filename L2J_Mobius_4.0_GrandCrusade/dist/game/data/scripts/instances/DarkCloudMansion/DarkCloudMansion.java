@@ -33,7 +33,7 @@ import instances.AbstractInstance;
  * Dark Cloud Mansion instance.
  * @author malyelfik
  */
-public final class DarkCloudMansion extends AbstractInstance
+public class DarkCloudMansion extends AbstractInstance
 {
 	// NPCs
 	private static final int YIYEN = 32282;

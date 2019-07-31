@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 /**
  * @version $Revision: 1.4.2.1.2.2 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class CharacterRestore implements IClientIncomingPacket
+public class CharacterRestore implements IClientIncomingPacket
 {
 	// cd
 	private int _charSlot;

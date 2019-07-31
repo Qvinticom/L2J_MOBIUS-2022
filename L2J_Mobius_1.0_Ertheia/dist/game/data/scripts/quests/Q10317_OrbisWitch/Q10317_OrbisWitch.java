@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
  * @URL https://l2wiki.com/Orbis%27_Witch
  * @author Gigi
  */
-public final class Q10317_OrbisWitch extends Quest
+public class Q10317_OrbisWitch extends Quest
 {
 	// NPCs
 	private static final int OPERA = 32946;

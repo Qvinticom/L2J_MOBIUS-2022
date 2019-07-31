@@ -37,12 +37,12 @@ public class OnAttackableHate implements IBaseEvent
 		_isSummon = isSummon;
 	}
 	
-	public final Attackable getNpc()
+	public Attackable getNpc()
 	{
 		return _npc;
 	}
 	
-	public final PlayerInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
 		return _player;
 	}

@@ -56,7 +56,7 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
  * Four Selpuchers AI
  * @author Mobius
  */
-public final class FourSepulchers extends AbstractNpcAI implements IXmlReader
+public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
 	

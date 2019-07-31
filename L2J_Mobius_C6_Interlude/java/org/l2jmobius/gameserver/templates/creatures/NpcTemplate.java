@@ -49,29 +49,29 @@ import org.l2jmobius.gameserver.templates.StatsSet;
  * <BR>
  * @version $Revision: 1.1.2.4 $ $Date: 2005/04/02 15:57:51 $
  */
-public final class NpcTemplate extends CreatureTemplate
+public class NpcTemplate extends CreatureTemplate
 {
 	protected static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
 	
-	public final int npcId;
-	public final int idTemplate;
-	public final String type;
-	public final String name;
-	public final boolean serverSideName;
-	public final String title;
-	public final boolean serverSideTitle;
-	public final String sex;
-	public final byte level;
-	public final int rewardExp;
-	public final int rewardSp;
-	public final int aggroRange;
-	public final int rhand;
-	public final int lhand;
-	public final int armor;
-	public final String factionId;
-	public final int factionRange;
-	public final int absorbLevel;
-	public final AbsorbCrystalType absorbType;
+	public int npcId;
+	public int idTemplate;
+	public String type;
+	public String name;
+	public boolean serverSideName;
+	public String title;
+	public boolean serverSideTitle;
+	public String sex;
+	public byte level;
+	public int rewardExp;
+	public int rewardSp;
+	public int aggroRange;
+	public int rhand;
+	public int lhand;
+	public int armor;
+	public String factionId;
+	public int factionRange;
+	public int absorbLevel;
+	public AbsorbCrystalType absorbType;
 	public Race race;
 	
 	private final boolean _custom;
@@ -522,7 +522,7 @@ public final class NpcTemplate extends CreatureTemplate
 		return npcId;
 	}
 	
-	public final boolean isCustom()
+	public boolean isCustom()
 	{
 		return _custom;
 	}

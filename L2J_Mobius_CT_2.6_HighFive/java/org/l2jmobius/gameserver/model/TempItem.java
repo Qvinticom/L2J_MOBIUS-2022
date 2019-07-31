@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  * class contains itemId, quantity, ownerId, referencePrice, but not objectId<br>
  * is stored, this will be only "list" of items with it's owner
  */
-public final class TempItem
+public class TempItem
 {
 	private final int _itemId;
 	private int _quantity;

@@ -170,13 +170,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	@Override
-	public final void onTimerEvent(TimerHolder<String> holder)
+	public void onTimerEvent(TimerHolder<String> holder)
 	{
 		onTimerEvent(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
 	}
 	
 	@Override
-	public final void onTimerCancel(TimerHolder<String> holder)
+	public void onTimerCancel(TimerHolder<String> holder)
 	{
 		onTimerCancel(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
 	}
@@ -3051,7 +3051,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(PlayerInstance, Npc, boolean)} will be called with the player's command channel members
 	 * @see #actionForEachPlayer(PlayerInstance, Npc, boolean)
 	 */
-	public final void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
+	public void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
 	{
 		if (player.isSimulatingTalking())
 		{

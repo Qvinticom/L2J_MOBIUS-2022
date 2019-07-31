@@ -28,7 +28,7 @@ import handlers.effecthandlers.*;
  * Effect Master handler.
  * @author BiggBoss, Zoey76
  */
-public final class EffectMasterHandler
+public class EffectMasterHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectMasterHandler.class.getName());
 	

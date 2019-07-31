@@ -34,7 +34,7 @@ import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
  * Kamael class transfer AI.
  * @author Adry_85
  */
-public final class KamaelChange2 extends AbstractNpcAI
+public class KamaelChange2 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS_MALE =

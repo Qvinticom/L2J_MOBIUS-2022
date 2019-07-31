@@ -32,7 +32,7 @@ import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
  * Supply And Demand (10739)
  * @author Sdw
  */
-public final class Q10739_SupplyAndDemand extends Quest
+public class Q10739_SupplyAndDemand extends Quest
 {
 	// NPCs
 	private static final int EVNA = 33935;

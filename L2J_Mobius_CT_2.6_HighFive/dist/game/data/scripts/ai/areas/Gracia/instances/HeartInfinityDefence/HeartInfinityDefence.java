@@ -554,7 +554,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
@@ -740,7 +740,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onEnterZone(Creature creature, ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (creature.isAttackable())
 		{

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Path Of The Orc Raider (414)
  * @author ivantotov
  */
-public final class Q00414_PathOfTheOrcRaider extends Quest
+public class Q00414_PathOfTheOrcRaider extends Quest
 {
 	// NPCs
 	private static final int PREFECT_KARUKIA = 30570;

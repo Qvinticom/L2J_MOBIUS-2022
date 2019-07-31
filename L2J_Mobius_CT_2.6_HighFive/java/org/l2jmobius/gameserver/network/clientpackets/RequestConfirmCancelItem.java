@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Format(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmCancelItem implements IClientIncomingPacket
+public class RequestConfirmCancelItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Talisman Slot effect implementation.
  * @author Adry_85
  */
-public final class TalismanSlot extends AbstractEffect
+public class TalismanSlot extends AbstractEffect
 {
 	private final int _slots;
 	

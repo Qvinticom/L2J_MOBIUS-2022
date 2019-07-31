@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Guard Soldier AI.
  * @author Gladicek
  */
-public final class GuardSoldier extends AbstractNpcAI
+public class GuardSoldier extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GUARD_SOLDIER = 33286;

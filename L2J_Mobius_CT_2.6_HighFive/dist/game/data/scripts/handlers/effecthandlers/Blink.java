@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
  * If target is effector, put in XML self="1", this will make _actor = getEffector(). This, combined with target type, allows more complex actions like flying target's backwards or player's backwards.
  * @author DrHouse
  */
-public final class Blink extends AbstractEffect
+public class Blink extends AbstractEffect
 {
 	public Blink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

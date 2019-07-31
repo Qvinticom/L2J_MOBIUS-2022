@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author Forsaiken
  */
-public final class RequestBidItemAuction implements IClientIncomingPacket
+public class RequestBidItemAuction implements IClientIncomingPacket
 {
 	private int _instanceId;
 	private long _bid;

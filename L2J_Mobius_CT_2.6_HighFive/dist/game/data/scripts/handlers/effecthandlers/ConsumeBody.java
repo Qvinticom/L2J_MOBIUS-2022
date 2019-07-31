@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Consume Body effect implementation.
  * @author Zoey76
  */
-public final class ConsumeBody extends AbstractEffect
+public class ConsumeBody extends AbstractEffect
 {
 	public ConsumeBody(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

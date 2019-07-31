@@ -54,7 +54,7 @@ public class FlameTowerInstance extends Tower
 		return super.deleteMe();
 	}
 	
-	public final void enableZones(boolean state)
+	public void enableZones(boolean state)
 	{
 		if ((_zoneList != null) && (_upgradeLevel != 0))
 		{
@@ -70,12 +70,12 @@ public class FlameTowerInstance extends Tower
 		}
 	}
 	
-	public final void setUpgradeLevel(int level)
+	public void setUpgradeLevel(int level)
 	{
 		_upgradeLevel = level;
 	}
 	
-	public final void setZoneList(List<Integer> list)
+	public void setZoneList(List<Integer> list)
 	{
 		_zoneList = list;
 		enableZones(true);

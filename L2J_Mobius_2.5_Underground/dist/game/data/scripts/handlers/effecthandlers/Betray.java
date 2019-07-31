@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Betray effect implementation.
  * @author decad
  */
-public final class Betray extends AbstractEffect
+public class Betray extends AbstractEffect
 {
 	public Betray(StatsSet params)
 	{

@@ -38,7 +38,7 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  * Ice Queen's Castle instance zone.
  * @author Adry_85
  */
-public final class IceQueensCastle extends AbstractInstance
+public class IceQueensCastle extends AbstractInstance
 {
 	// NPCs
 	private static final int FREYA = 18847;
@@ -132,7 +132,7 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("TIMER_MOVING", 60000, npc, null);
 		startQuestTimer("TIMER_BLIZZARD", 180000, npc, null);

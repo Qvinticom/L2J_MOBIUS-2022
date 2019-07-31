@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author xban1x
  */
-public final class ArenaParticipantsHolder
+public class ArenaParticipantsHolder
 {
 	private final int _arena;
 	private final List<PlayerInstance> _redPlayers;

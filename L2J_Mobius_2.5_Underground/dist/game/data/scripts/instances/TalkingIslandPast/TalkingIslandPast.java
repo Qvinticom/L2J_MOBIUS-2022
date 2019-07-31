@@ -34,7 +34,7 @@ import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
  * Talking Island (Past) instance zone.
  * @author Gladicek
  */
-public final class TalkingIslandPast extends AbstractInstance
+public class TalkingIslandPast extends AbstractInstance
 {
 	// NPCs
 	private static final int DARIN = 33748;

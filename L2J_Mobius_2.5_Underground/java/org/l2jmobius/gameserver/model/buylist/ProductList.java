@@ -25,7 +25,7 @@ import java.util.Set;
 /**
  * @author NosBit
  */
-public final class ProductList
+public class ProductList
 {
 	private final int _listId;
 	private final Map<Integer, Product> _products = new LinkedHashMap<>();

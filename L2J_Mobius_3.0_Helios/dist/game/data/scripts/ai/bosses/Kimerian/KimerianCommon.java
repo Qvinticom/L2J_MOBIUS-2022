@@ -37,7 +37,7 @@ import instances.AbstractInstance;
  * Kimerian Common instance zone.
  * @author St3eT, Gladicek
  */
-public final class KimerianCommon extends AbstractInstance
+public class KimerianCommon extends AbstractInstance
 {
 	// NPCs
 	private static final int KIMERIAN = 25745;

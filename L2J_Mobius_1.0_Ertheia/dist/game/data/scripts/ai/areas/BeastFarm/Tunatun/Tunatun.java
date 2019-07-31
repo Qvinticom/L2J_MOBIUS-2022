@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Beast Herder Tunatun AI.
  * @author Adry_85
  */
-public final class Tunatun extends AbstractNpcAI
+public class Tunatun extends AbstractNpcAI
 {
 	// NPC
 	private static final int TUNATUN = 31537;

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class RequestCrystallizeItem extends GameClientPacket
+public class RequestCrystallizeItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestCrystallizeItem.class.getName());
 	

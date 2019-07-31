@@ -53,7 +53,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 /**
  * @author UnAfraid
  */
-public final class EventEngineData implements IXmlReader
+public class EventEngineData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EventEngineData.class.getName());
 	

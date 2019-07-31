@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.items.type.CrystalType;
 /**
  * @author UnAfraid
  */
-public final class ItemCrystallizationData implements IXmlReader
+public class ItemCrystallizationData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemCrystallizationData.class.getName());
 	

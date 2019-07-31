@@ -100,7 +100,7 @@ public abstract class Function
 		return chars;
 	}
 	
-	public static boolean isValidFunctionName(final String name)
+	public static boolean isValidFunctionName(String name)
 	{
 		if (name == null)
 		{

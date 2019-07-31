@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * The Class ConditionPlayerGrade.
  * @author Gigiikun
  */
-public final class ConditionPlayerGrade extends Condition
+public class ConditionPlayerGrade extends Condition
 {
 	protected static final Logger LOGGER = Logger.getLogger(ConditionPlayerGrade.class.getName());
 	// conditional values

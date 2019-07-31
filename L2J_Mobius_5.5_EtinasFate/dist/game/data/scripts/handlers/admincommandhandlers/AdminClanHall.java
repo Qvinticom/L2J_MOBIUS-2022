@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.BypassParser;
  * Clan Hall admin commands.
  * @author St3eT
  */
-public final class AdminClanHall implements IAdminCommandHandler
+public class AdminClanHall implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{

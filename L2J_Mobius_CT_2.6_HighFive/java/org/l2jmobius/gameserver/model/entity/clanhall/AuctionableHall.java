@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class AuctionableHall extends ClanHall
+public class AuctionableHall extends ClanHall
 {
 	protected long _paidUntil;
 	private final int _grade;
@@ -60,34 +60,34 @@ public final class AuctionableHall extends ClanHall
 	/**
 	 * @return if clanHall is paid or not
 	 */
-	public final boolean getPaid()
+	public boolean getPaid()
 	{
 		return _paid;
 	}
 	
 	/** Return lease */
 	@Override
-	public final int getLease()
+	public int getLease()
 	{
 		return _lease;
 	}
 	
 	/** Return PaidUntil */
 	@Override
-	public final long getPaidUntil()
+	public long getPaidUntil()
 	{
 		return _paidUntil;
 	}
 	
 	/** Return Grade */
 	@Override
-	public final int getGrade()
+	public int getGrade()
 	{
 		return _grade;
 	}
 	
 	@Override
-	public final void free()
+	public void free()
 	{
 		super.free();
 		_paidUntil = 0;
@@ -95,7 +95,7 @@ public final class AuctionableHall extends ClanHall
 	}
 	
 	@Override
-	public final void setOwner(Clan clan)
+	public void setOwner(Clan clan)
 	{
 		super.setOwner(clan);
 		_paidUntil = System.currentTimeMillis();
@@ -213,7 +213,7 @@ public final class AuctionableHall extends ClanHall
 	}
 	
 	@Override
-	public final void updateDb()
+	public void updateDb()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?"))

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76
  */
-public final class RestorationRandom extends AbstractEffect
+public class RestorationRandom extends AbstractEffect
 {
 	public RestorationRandom(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

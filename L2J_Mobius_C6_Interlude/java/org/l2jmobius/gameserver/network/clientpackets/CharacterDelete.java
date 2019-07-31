@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 /**
  * @author eX1steam
  */
-public final class CharacterDelete extends GameClientPacket
+public class CharacterDelete extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(CharacterDelete.class.getName());
 	private int _charSlot;

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * This class is dedicated to the management of weapons.
  */
-public final class Weapon extends Item
+public class Weapon extends Item
 {
 	private WeaponType _type;
 	private boolean _isMagicWeapon;

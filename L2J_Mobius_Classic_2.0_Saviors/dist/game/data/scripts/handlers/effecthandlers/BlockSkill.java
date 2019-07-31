@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Block Skills by isMagic type.
  * @author Nik
  */
-public final class BlockSkill extends AbstractEffect
+public class BlockSkill extends AbstractEffect
 {
 	private final int[] _magicTypes;
 	

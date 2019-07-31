@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Add Hate effect implementation.
  * @author Adry_85
  */
-public final class AddHate extends AbstractEffect
+public class AddHate extends AbstractEffect
 {
 	private final double _power;
 	private final boolean _affectSummoner;

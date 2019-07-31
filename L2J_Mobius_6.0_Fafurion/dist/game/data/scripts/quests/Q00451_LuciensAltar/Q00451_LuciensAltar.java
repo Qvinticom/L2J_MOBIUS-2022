@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Lucien's Altar (451)
  * @author malyelfik
  */
-public final class Q00451_LuciensAltar extends Quest
+public class Q00451_LuciensAltar extends Quest
 {
 	// NPCs
 	private static final int DAICHIR = 30537;

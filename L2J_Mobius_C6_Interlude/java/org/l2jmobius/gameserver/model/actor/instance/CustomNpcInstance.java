@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.templates.item.WeaponType;
  * This class manages Npc Polymorph into player instances, they look like regular players. This effect will show up on all clients.
  * @author Darki699
  */
-public final class CustomNpcInstance
+public class CustomNpcInstance
 {
 	private boolean _allowRandomWeapons = true; // Default value
 	private boolean _allowRandomClass = true; // Default value
@@ -105,7 +105,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the custom npc's name, or the original npc name if no custom name is provided
 	 */
-	public final String getName()
+	public String getName()
 	{
 		return _name == null ? _NpcInstance.getName() : _name;
 	}
@@ -113,7 +113,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the custom npc's title, or the original npc title if no custom title is provided
 	 */
-	public final String getTitle()
+	public String getTitle()
 	{
 		return _title == null ? _NpcInstance.getTitle() : _NpcInstance.isChampion() ? "The Champion" + _title : _title;
 	}
@@ -121,7 +121,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's karma or aggro range if he has any...
 	 */
-	public final int getKarma()
+	public int getKarma()
 	{
 		return _int[1] > 0 ? _int[1] : _NpcInstance.getAggroRange();
 	}
@@ -129,7 +129,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the clan Id
 	 */
-	public final int getClanId()
+	public int getClanId()
 	{
 		return _int[2];
 	}
@@ -137,7 +137,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the ally Id
 	 */
-	public final int getAllyId()
+	public int getAllyId()
 	{
 		return _int[3];
 	}
@@ -145,7 +145,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the clan crest Id
 	 */
-	public final int getClanCrestId()
+	public int getClanCrestId()
 	{
 		return _int[4];
 	}
@@ -153,7 +153,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the ally crest Id
 	 */
-	public final int getAllyCrestId()
+	public int getAllyCrestId()
 	{
 		return _int[5];
 	}
@@ -161,7 +161,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the Race ordinal
 	 */
-	public final int getRace()
+	public int getRace()
 	{
 		return _int[6];
 	}
@@ -169,7 +169,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the class id, e.g.: fighter, warrior, mystic muse...
 	 */
-	public final int getClassId()
+	public int getClassId()
 	{
 		return _int[7];
 	}
@@ -177,7 +177,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the enchant level of the equipped weapon, if one is equipped (max = 127)
 	 */
-	public final int getEnchantWeapon()
+	public int getEnchantWeapon()
 	{
 		return (PAPERDOLL_RHAND() == 0) || (getCursedWeaponLevel() != 0) ? 0 : _int[8] > 127 ? 127 : _int[8];
 	}
@@ -186,7 +186,7 @@ public final class CustomNpcInstance
 	 * @return the pledge class identifier, e.g. vagabond, baron, marquiz
 	 * @remark Champion mobs are always Marquiz
 	 */
-	public final int getPledgeClass()
+	public int getPledgeClass()
 	{
 		return _NpcInstance.isChampion() ? 8 : _int[9];
 	}
@@ -194,7 +194,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the cursed weapon level, if one is equipped
 	 */
-	public final int getCursedWeaponLevel()
+	public int getCursedWeaponLevel()
 	{
 		return (PAPERDOLL_RHAND() == 0) || (_int[8] > 0) ? 0 : _int[10];
 	}
@@ -202,7 +202,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the item in the right hand, if a custom item is not equipped the value returned is the original npc right-hand weapon id
 	 */
-	public final int PAPERDOLL_RHAND()
+	public int PAPERDOLL_RHAND()
 	{
 		return _int[11] != 0 ? _int[11] : _NpcInstance.getRightHandItem();
 	}
@@ -210,7 +210,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the item in the left hand, if a custom item is not equipped the value returned is the original npc left-hand weapon id. Setting this value _int[12] = -1 will not allow a npc to have anything in the left hand
 	 */
-	public final int PAPERDOLL_LHAND()
+	public int PAPERDOLL_LHAND()
 	{
 		return _int[12] > 0 ? _int[12] : _int[12] == 0 ? _NpcInstance.getLeftHandItem() : 0;
 	}
@@ -218,7 +218,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the gloves
 	 */
-	public final int PAPERDOLL_GLOVES()
+	public int PAPERDOLL_GLOVES()
 	{
 		return _int[13];
 	}
@@ -226,7 +226,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the chest armor
 	 */
-	public final int PAPERDOLL_CHEST()
+	public int PAPERDOLL_CHEST()
 	{
 		return _int[14];
 	}
@@ -234,7 +234,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the leg armor, or 0 if wearing a full armor
 	 */
-	public final int PAPERDOLL_LEGS()
+	public int PAPERDOLL_LEGS()
 	{
 		return _int[15];
 	}
@@ -242,7 +242,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for feet armor
 	 */
-	public final int PAPERDOLL_FEET()
+	public int PAPERDOLL_FEET()
 	{
 		return _int[16];
 	}
@@ -250,7 +250,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the 1st hair slot, or all hair
 	 */
-	public final int PAPERDOLL_HAIR()
+	public int PAPERDOLL_HAIR()
 	{
 		return _int[17];
 	}
@@ -258,7 +258,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the item id for the 2nd hair slot
 	 */
-	public final int PAPERDOLL_HAIR2()
+	public int PAPERDOLL_HAIR2()
 	{
 		return _int[18];
 	}
@@ -266,7 +266,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's hair style appearance
 	 */
-	public final int getHairStyle()
+	public int getHairStyle()
 	{
 		return _int[19];
 	}
@@ -274,7 +274,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's hair color appearance
 	 */
-	public final int getHairColor()
+	public int getHairColor()
 	{
 		return _int[20];
 	}
@@ -282,7 +282,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's face appearance
 	 */
-	public final int getFace()
+	public int getFace()
 	{
 		return _int[21];
 	}
@@ -290,7 +290,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's name color (in hexadecimal), 0xFFFFFF is the default value
 	 */
-	public final int nameColor()
+	public int nameColor()
 	{
 		return _int[22] == 0 ? 0xFFFFFF : _int[22];
 	}
@@ -298,7 +298,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return the npc's title color (in hexadecimal), 0xFFFF77 is the default value
 	 */
-	public final int titleColor()
+	public int titleColor()
 	{
 		return _int[23] == 0 ? 0xFFFF77 : _int[23];
 	}
@@ -306,7 +306,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return is npc in pvp mode?
 	 */
-	public final boolean getPvpFlag()
+	public boolean getPvpFlag()
 	{
 		return _boolean[0];
 	}
@@ -314,7 +314,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return is npc in pvp mode?
 	 */
-	public final int getHeading()
+	public int getHeading()
 	{
 		return _NpcInstance.getHeading();
 	}
@@ -322,7 +322,7 @@ public final class CustomNpcInstance
 	/**
 	 * @return true if npc is a noble
 	 */
-	public final boolean isNoble()
+	public boolean isNoble()
 	{
 		return _boolean[1];
 	}
@@ -331,7 +331,7 @@ public final class CustomNpcInstance
 	 * @return true if hero glow should show up
 	 * @remark A Champion mob will always have hero glow
 	 */
-	public final boolean isHero()
+	public boolean isHero()
 	{
 		return _NpcInstance.isChampion() ? true : _boolean[2];
 	}
@@ -343,7 +343,7 @@ public final class CustomNpcInstance
 	 * @FEMALE value=1
 	 * @MAYBE value=2 % chance for the <b>Entire Template</b> to become male or female (it's a maybe value) If female, all template will be female, if Male, all template will be male
 	 */
-	public final boolean isFemaleSex()
+	public boolean isFemaleSex()
 	{
 		return _boolean[3];
 	}

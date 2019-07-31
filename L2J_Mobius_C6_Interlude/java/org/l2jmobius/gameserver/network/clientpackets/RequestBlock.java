@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestBlock extends GameClientPacket
+public class RequestBlock extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
 	

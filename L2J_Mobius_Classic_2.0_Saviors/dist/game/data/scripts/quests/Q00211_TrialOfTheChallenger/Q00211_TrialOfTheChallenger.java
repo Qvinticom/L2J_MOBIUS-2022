@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Trial of the Challenger (211)
  * @author Pandragon
  */
-public final class Q00211_TrialOfTheChallenger extends Quest
+public class Q00211_TrialOfTheChallenger extends Quest
 {
 	// NPCs
 	private static final int FILAUR = 30535;

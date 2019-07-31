@@ -30,7 +30,7 @@ import quests.Q10315_ToThePrisonOfDarkness.Q10315_ToThePrisonOfDarkness;
  * @URL https://l2wiki.com/Undecaying_Memory_of_the_Past
  * @author Gigi
  */
-public final class Q10316_UndecayingMemoryOfThePast extends Quest
+public class Q10316_UndecayingMemoryOfThePast extends Quest
 {
 	// NPCs
 	private static final int OPERA = 32946;

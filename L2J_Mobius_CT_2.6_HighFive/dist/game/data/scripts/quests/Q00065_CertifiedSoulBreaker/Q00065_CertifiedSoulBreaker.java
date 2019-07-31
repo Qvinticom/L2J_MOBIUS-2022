@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Certified Soul Breaker (65)
  * @author ivantotov
  */
-public final class Q00065_CertifiedSoulBreaker extends Quest
+public class Q00065_CertifiedSoulBreaker extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_LUCAS = 30071;

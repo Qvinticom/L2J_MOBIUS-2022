@@ -316,7 +316,7 @@ public class Npc extends Creature
 	
 	/** Return the NpcTemplate of the NpcInstance. */
 	@Override
-	public final NpcTemplate getTemplate()
+	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) super.getTemplate();
 	}
@@ -341,7 +341,7 @@ public class Npc extends Creature
 	 * Return the Level of this NpcInstance contained in the NpcTemplate.
 	 */
 	@Override
-	public final int getLevel()
+	public int getLevel()
 	{
 		return getTemplate().getLevel();
 	}
@@ -449,7 +449,7 @@ public class Npc extends Creature
 	/**
 	 * @return the busy status of this NpcInstance.
 	 */
-	public final boolean isBusy()
+	public boolean isBusy()
 	{
 		return _isBusy;
 	}
@@ -465,7 +465,7 @@ public class Npc extends Creature
 	/**
 	 * @return the busy message of this NpcInstance.
 	 */
-	public final String getBusyMessage()
+	public String getBusyMessage()
 	{
 		return _busyMessage;
 	}
@@ -536,7 +536,7 @@ public class Npc extends Creature
 	/**
 	 * @return the Castle this NpcInstance belongs to.
 	 */
-	public final Castle getCastle()
+	public Castle getCastle()
 	{
 		// Get castle this NPC belongs to (excluding Attackable)
 		if (_castleIndex < 0)
@@ -582,7 +582,7 @@ public class Npc extends Creature
 		return false;
 	}
 	
-	public final SiegableHall getConquerableHall()
+	public SiegableHall getConquerableHall()
 	{
 		return CHSiegeManager.getInstance().getNearbyClanHall(getX(), getY(), 10000);
 	}
@@ -592,7 +592,7 @@ public class Npc extends Creature
 	 * @param maxDistance long
 	 * @return Castle
 	 */
-	public final Castle getCastle(long maxDistance)
+	public Castle getCastle(long maxDistance)
 	{
 		final int index = CastleManager.getInstance().findNearestCastleIndex(this, maxDistance);
 		
@@ -607,7 +607,7 @@ public class Npc extends Creature
 	/**
 	 * @return the Fort this NpcInstance belongs to.
 	 */
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		// Get Fort this NPC belongs to (excluding Attackable)
 		if (_fortIndex < 0)
@@ -637,7 +637,7 @@ public class Npc extends Creature
 	 * @param maxDistance long
 	 * @return Fort
 	 */
-	public final Fort getFort(long maxDistance)
+	public Fort getFort(long maxDistance)
 	{
 		final int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
 		
@@ -649,7 +649,7 @@ public class Npc extends Creature
 		return FortManager.getInstance().getForts().get(index);
 	}
 	
-	public final boolean getIsInTown()
+	public boolean getIsInTown()
 	{
 		if (_castleIndex < 0)
 		{
@@ -1854,7 +1854,7 @@ public class Npc extends Creature
 	}
 	
 	@Override
-	public final String getName()
+	public String getName()
 	{
 		return getTemplate().getName();
 	}
@@ -1927,7 +1927,7 @@ public class Npc extends Creature
 	 * Adds a summoned NPC.
 	 * @param npc the summoned NPC
 	 */
-	public final void addSummonedNpc(Npc npc)
+	public void addSummonedNpc(Npc npc)
 	{
 		if (_summonedNpcs == null)
 		{
@@ -1949,7 +1949,7 @@ public class Npc extends Creature
 	 * Removes a summoned NPC by object ID.
 	 * @param objectId the summoned NPC object ID
 	 */
-	public final void removeSummonedNpc(int objectId)
+	public void removeSummonedNpc(int objectId)
 	{
 		if (_summonedNpcs != null)
 		{
@@ -1961,7 +1961,7 @@ public class Npc extends Creature
 	 * Gets the summoned NPCs.
 	 * @return the summoned NPCs
 	 */
-	public final Collection<Npc> getSummonedNpcs()
+	public Collection<Npc> getSummonedNpcs()
 	{
 		return _summonedNpcs != null ? _summonedNpcs.values() : Collections.<Npc> emptyList();
 	}
@@ -1971,7 +1971,7 @@ public class Npc extends Creature
 	 * @param objectId the summoned NPC object ID
 	 * @return the summoned NPC
 	 */
-	public final Npc getSummonedNpc(int objectId)
+	public Npc getSummonedNpc(int objectId)
 	{
 		if (_summonedNpcs != null)
 		{
@@ -1984,7 +1984,7 @@ public class Npc extends Creature
 	 * Gets the summoned NPC count.
 	 * @return the summoned NPC count
 	 */
-	public final int getSummonedNpcCount()
+	public int getSummonedNpcCount()
 	{
 		return _summonedNpcs != null ? _summonedNpcs.size() : 0;
 	}
@@ -1992,7 +1992,7 @@ public class Npc extends Creature
 	/**
 	 * Resets the summoned NPCs list.
 	 */
-	public final void resetSummonedNpcs()
+	public void resetSummonedNpcs()
 	{
 		if (_summonedNpcs != null)
 		{

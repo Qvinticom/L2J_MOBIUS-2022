@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
-public final class RequestPartyMatchConfig extends GameClientPacket
+public class RequestPartyMatchConfig extends GameClientPacket
 {
 	private int _auto;
 	private int _loc;

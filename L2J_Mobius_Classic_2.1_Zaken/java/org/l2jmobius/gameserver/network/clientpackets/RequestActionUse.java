@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
  * This class manages the action use request packet.
  * @author Zoey76
  */
-public final class RequestActionUse implements IClientIncomingPacket
+public class RequestActionUse implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	

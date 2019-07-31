@@ -1146,13 +1146,13 @@ public class FortSiege implements Siegable
 	}
 	
 	@Override
-	public final SiegeClan getAttackerClan(Clan clan)
+	public SiegeClan getAttackerClan(Clan clan)
 	{
 		return clan == null ? null : getAttackerClan(clan.getId());
 	}
 	
 	@Override
-	public final SiegeClan getAttackerClan(int clanId)
+	public SiegeClan getAttackerClan(int clanId)
 	{
 		for (SiegeClan sc : _attackerClans)
 		{
@@ -1166,23 +1166,23 @@ public class FortSiege implements Siegable
 	}
 	
 	@Override
-	public final List<SiegeClan> getAttackerClans()
+	public List<SiegeClan> getAttackerClans()
 	{
 		return _attackerClans;
 	}
 	
-	public final Fort getFort()
+	public Fort getFort()
 	{
 		return _fort;
 	}
 	
-	public final boolean isInProgress()
+	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
 	@Override
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _fort.getSiegeDate();
 	}
@@ -1202,7 +1202,7 @@ public class FortSiege implements Siegable
 		return null;
 	}
 	
-	public final FortSiegeGuardManager getSiegeGuardManager()
+	public FortSiegeGuardManager getSiegeGuardManager()
 	{
 		if (_siegeGuardManager == null)
 		{

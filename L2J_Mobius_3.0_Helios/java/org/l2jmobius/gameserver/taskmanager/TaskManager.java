@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 /**
  * @author Layane
  */
-public final class TaskManager
+public class TaskManager
 {
 	static final Logger LOGGER = Logger.getLogger(TaskManager.class.getName());
 	

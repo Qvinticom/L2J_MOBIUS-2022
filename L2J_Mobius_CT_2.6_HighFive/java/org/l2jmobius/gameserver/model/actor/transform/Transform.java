@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 /**
  * @author UnAfraid
  */
-public final class Transform implements IIdentifiable
+public class Transform implements IIdentifiable
 {
 	private final int _id;
 	private final int _displayId;

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Target Me effect implementation.
  * @author -Nemesiss-
  */
-public final class TargetMe extends AbstractEffect
+public class TargetMe extends AbstractEffect
 {
 	public TargetMe(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

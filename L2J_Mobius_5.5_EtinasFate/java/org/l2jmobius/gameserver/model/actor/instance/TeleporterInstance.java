@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @author NightMarez
  */
-public final class TeleporterInstance extends Npc
+public class TeleporterInstance extends Npc
 {
 	private static final Logger LOGGER = Logger.getLogger(TeleporterInstance.class.getName());
 	

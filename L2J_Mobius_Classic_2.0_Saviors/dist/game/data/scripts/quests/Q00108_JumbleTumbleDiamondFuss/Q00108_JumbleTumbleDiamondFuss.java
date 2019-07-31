@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
  * Jumble, Tumble, Diamond Fuss (108)
  * @author Janiko
  */
-public final class Q00108_JumbleTumbleDiamondFuss extends Quest
+public class Q00108_JumbleTumbleDiamondFuss extends Quest
 {
 	// NPCs
 	private static final int COLLECTOR_GOUPH = 30523;

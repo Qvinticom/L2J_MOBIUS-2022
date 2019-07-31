@@ -184,7 +184,7 @@ public class TownZone extends ZoneType
 	 * Returns this zones spawn location
 	 * @return
 	 */
-	public final int[] getSpawnLoc()
+	public int[] getSpawnLoc()
 	{
 		int ai[] = new int[3];
 		
@@ -197,7 +197,7 @@ public class TownZone extends ZoneType
 	 * Returns this town zones castle id
 	 * @return
 	 */
-	public final int getTaxById()
+	public int getTaxById()
 	{
 		return _taxById;
 	}

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  * Open Chest effect implementation.
  * @author Adry_85
  */
-public final class OpenChest extends AbstractEffect
+public class OpenChest extends AbstractEffect
 {
 	public OpenChest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

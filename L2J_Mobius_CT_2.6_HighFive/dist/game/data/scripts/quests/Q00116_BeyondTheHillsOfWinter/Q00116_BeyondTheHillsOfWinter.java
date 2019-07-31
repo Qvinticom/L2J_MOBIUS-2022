@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Beyond the Hills of Winter (116)
  * @author Adry_85
  */
-public final class Q00116_BeyondTheHillsOfWinter extends Quest
+public class Q00116_BeyondTheHillsOfWinter extends Quest
 {
 	// NPCs
 	private static final int FILAUR = 30535;

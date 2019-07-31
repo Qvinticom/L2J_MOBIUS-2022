@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
  * Format chS c (id) 0xD0 h (subid) 0x0C S the hero's words :)
  * @author -Wooden-
  */
-public final class RequestWriteHeroWords extends GameClientPacket
+public class RequestWriteHeroWords extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private String _heroWords;

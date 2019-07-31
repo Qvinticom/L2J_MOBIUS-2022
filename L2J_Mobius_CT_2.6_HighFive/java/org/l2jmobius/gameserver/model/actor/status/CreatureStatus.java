@@ -64,7 +64,7 @@ public class CreatureStatus
 	 * <ul>
 	 * @param object Creature to add to the listener
 	 */
-	public final void addStatusListener(Creature object)
+	public void addStatusListener(Creature object)
 	{
 		if (object == _creature)
 		{
@@ -86,7 +86,7 @@ public class CreatureStatus
 	 * </ul>
 	 * @param object Creature to add to the listener
 	 */
-	public final void removeStatusListener(Creature object)
+	public void removeStatusListener(Creature object)
 	{
 		getStatusListener().remove(object);
 	}
@@ -99,7 +99,7 @@ public class CreatureStatus
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.
 	 * @return The list of Creature to inform or null if empty
 	 */
-	public final Set<Creature> getStatusListener()
+	public Set<Creature> getStatusListener()
 	{
 		if (_statusListener == null)
 		{
@@ -186,7 +186,7 @@ public class CreatureStatus
 	 * <li>Launch the HP/MP/CP Regeneration task with Medium priority</li>
 	 * </ul>
 	 */
-	public final synchronized void startHpMpRegeneration()
+	public synchronized void startHpMpRegeneration()
 	{
 		if ((_regTask == null) && !_creature.isDead())
 		{
@@ -206,7 +206,7 @@ public class CreatureStatus
 	 * <li>Stop the HP/MP/CP Regeneration task</li>
 	 * </ul>
 	 */
-	public final synchronized void stopHpMpRegeneration()
+	public synchronized void stopHpMpRegeneration()
 	{
 		if (_regTask != null)
 		{
@@ -230,12 +230,12 @@ public class CreatureStatus
 	{
 	}
 	
-	public final double getCurrentHp()
+	public double getCurrentHp()
 	{
 		return _currentHp;
 	}
 	
-	public final void setCurrentHp(double newHp)
+	public void setCurrentHp(double newHp)
 	{
 		setCurrentHp(newHp, true);
 	}
@@ -293,7 +293,7 @@ public class CreatureStatus
 		return hpWasChanged;
 	}
 	
-	public final void setCurrentHpMp(double newHp, double newMp)
+	public void setCurrentHpMp(double newHp, double newMp)
 	{
 		if (setCurrentHp(newHp, false) | setCurrentMp(newMp, false))
 		{
@@ -301,12 +301,12 @@ public class CreatureStatus
 		}
 	}
 	
-	public final double getCurrentMp()
+	public double getCurrentMp()
 	{
 		return _currentMp;
 	}
 	
-	public final void setCurrentMp(double newMp)
+	public void setCurrentMp(double newMp)
 	{
 		setCurrentMp(newMp, true);
 	}
@@ -317,7 +317,7 @@ public class CreatureStatus
 	 * @param broadcastPacket if true StatusUpdate packet will be broadcasted.
 	 * @return @{code true} if mp was changed, @{code false} otherwise.
 	 */
-	public final boolean setCurrentMp(double newMp, boolean broadcastPacket)
+	public boolean setCurrentMp(double newMp, boolean broadcastPacket)
 	{
 		// Get the Max MP of the Creature
 		final int currentMp = (int) _currentMp;

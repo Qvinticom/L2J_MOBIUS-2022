@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
-public final class RequestMoveToLocationInVehicle implements IClientIncomingPacket
+public class RequestMoveToLocationInVehicle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private int _targetX;

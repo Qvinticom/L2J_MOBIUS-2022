@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 /**
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
+public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 {
 	private SkillEnchantType _type;
 	private int _skillId;

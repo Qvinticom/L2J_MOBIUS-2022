@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
  * Format: (c)d d: char object id (?)
  * @author -Wooden-
  */
-public final class RequestPackageSendableItemList extends GameClientPacket
+public class RequestPackageSendableItemList extends GameClientPacket
 {
 	private int _objectID;
 	

@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
  * Help The Son! (44)
  * @author malyelfik
  */
-public final class Q00044_HelpTheSon extends Quest
+public class Q00044_HelpTheSon extends Quest
 {
 	// NPCs
 	private static final int LUNDY = 30827;

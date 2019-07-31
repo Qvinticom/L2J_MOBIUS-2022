@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeReceivePowerInfo;
  * Format: (ch) dS
  * @author -Wooden-
  */
-public final class RequestPledgeMemberPowerInfo extends GameClientPacket
+public class RequestPledgeMemberPowerInfo extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;

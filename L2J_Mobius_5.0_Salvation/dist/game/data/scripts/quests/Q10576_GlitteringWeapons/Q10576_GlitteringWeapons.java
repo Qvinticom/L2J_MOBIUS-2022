@@ -36,7 +36,7 @@ import quests.Q10566_BestChoice.Q10566_BestChoice;
  * @author NightBR
  * @html by Werum
  */
-public final class Q10576_GlitteringWeapons extends Quest
+public class Q10576_GlitteringWeapons extends Quest
 {
 	// NPCs
 	private static final int RUPIO = 30471;

@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
 /**
  * @author UnAfraid
  */
-public final class ShuttleData implements IXmlReader
+public class ShuttleData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ShuttleData.class.getName());
 	

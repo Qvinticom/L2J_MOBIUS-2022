@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  * Assisting the Golden Ram Army (761)
  * @author St3eT
  */
-public final class Q00761_AssistingTheGoldenRamArmy extends Quest
+public class Q00761_AssistingTheGoldenRamArmy extends Quest
 {
 	// NPCs
 	private static final int PIERCE = 31553;

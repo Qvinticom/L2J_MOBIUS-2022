@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Sdw
  */
-public final class PartyMatchingRoom extends MatchingRoom
+public class PartyMatchingRoom extends MatchingRoom
 {
 	public PartyMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance leader)
 	{

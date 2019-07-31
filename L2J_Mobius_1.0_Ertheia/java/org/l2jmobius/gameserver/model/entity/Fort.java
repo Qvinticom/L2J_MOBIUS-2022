@@ -61,7 +61,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class Fort extends AbstractResidence
+public class Fort extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
@@ -849,24 +849,24 @@ public final class Fort extends AbstractResidence
 	}
 	
 	@Override
-	public final int getOwnerId()
+	public int getOwnerId()
 	{
 		final Clan clan = _fortOwner;
 		return clan != null ? clan.getId() : -1;
 	}
 	
-	public final Clan getOwnerClan()
+	public Clan getOwnerClan()
 	{
 		return _fortOwner;
 	}
 	
-	public final void setOwnerClan(Clan clan)
+	public void setOwnerClan(Clan clan)
 	{
 		setVisibleFlag(clan != null);
 		_fortOwner = clan;
 	}
 	
-	public final DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -883,17 +883,17 @@ public final class Fort extends AbstractResidence
 		return null;
 	}
 	
-	public final List<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
-	public final StaticObjectInstance getFlagPole()
+	public StaticObjectInstance getFlagPole()
 	{
 		return _flagPole;
 	}
 	
-	public final FortSiege getSiege()
+	public FortSiege getSiege()
 	{
 		if (_siege == null)
 		{
@@ -908,27 +908,27 @@ public final class Fort extends AbstractResidence
 		return _siege;
 	}
 	
-	public final Calendar getSiegeDate()
+	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
 	
-	public final void setSiegeDate(Calendar siegeDate)
+	public void setSiegeDate(Calendar siegeDate)
 	{
 		_siegeDate = siegeDate;
 	}
 	
-	public final int getOwnedTime()
+	public int getOwnedTime()
 	{
 		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
 	}
 	
-	public final int getTimeTillRebelArmy()
+	public int getTimeTillRebelArmy()
 	{
 		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000)) - System.currentTimeMillis()) / 1000);
 	}
 	
-	public final long getTimeTillNextFortUpdate()
+	public long getTimeTillNextFortUpdate()
 	{
 		return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
 	}
@@ -980,7 +980,7 @@ public final class Fort extends AbstractResidence
 	 *         1 - independent<BR>
 	 *         2 - contracted with castle<BR>
 	 */
-	public final int getFortState()
+	public int getFortState()
 	{
 		return _state;
 	}
@@ -994,7 +994,7 @@ public final class Fort extends AbstractResidence
 	 *            </ul>
 	 * @param castleId the Id of the contracted castle (0 if no contract with any castle)
 	 */
-	public final void setFortState(int state, int castleId)
+	public void setFortState(int state, int castleId)
 	{
 		_state = state;
 		_castleId = castleId;
@@ -1015,7 +1015,7 @@ public final class Fort extends AbstractResidence
 	/**
 	 * @return the fortress type (0 - small (3 commanders), 1 - big (4 commanders + control room))
 	 */
-	public final int getFortType()
+	public int getFortType()
 	{
 		return _fortType;
 	}
@@ -1024,7 +1024,7 @@ public final class Fort extends AbstractResidence
 	 * @param npcId the Id of the ambassador NPC
 	 * @return the Id of the castle this ambassador represents
 	 */
-	public final int getCastleIdByAmbassador(int npcId)
+	public int getCastleIdByAmbassador(int npcId)
 	{
 		return _envoyCastles.get(npcId);
 	}
@@ -1033,7 +1033,7 @@ public final class Fort extends AbstractResidence
 	 * @param npcId the Id of the ambassador NPC
 	 * @return the castle this ambassador represents
 	 */
-	public final Castle getCastleByAmbassador(int npcId)
+	public Castle getCastleByAmbassador(int npcId)
 	{
 		return CastleManager.getInstance().getCastleById(getCastleIdByAmbassador(npcId));
 	}
@@ -1041,7 +1041,7 @@ public final class Fort extends AbstractResidence
 	/**
 	 * @return the Id of the castle contracted with this fortress
 	 */
-	public final int getContractedCastleId()
+	public int getContractedCastleId()
 	{
 		return _castleId;
 	}
@@ -1049,7 +1049,7 @@ public final class Fort extends AbstractResidence
 	/**
 	 * @return the castle contracted with this fortress ({@code null} if no contract with any castle)
 	 */
-	public final Castle getContractedCastle()
+	public Castle getContractedCastle()
 	{
 		return CastleManager.getInstance().getCastleById(getContractedCastleId());
 	}
@@ -1058,7 +1058,7 @@ public final class Fort extends AbstractResidence
 	 * Check if this is a border fortress (associated with multiple castles).
 	 * @return {@code true} if this is a border fortress (associated with more than one castle), {@code false} otherwise
 	 */
-	public final boolean isBorderFortress()
+	public boolean isBorderFortress()
 	{
 		return _availableCastles.size() > 1;
 	}
@@ -1066,7 +1066,7 @@ public final class Fort extends AbstractResidence
 	/**
 	 * @return the amount of barracks in this fortress
 	 */
-	public final int getFortSize()
+	public int getFortSize()
 	{
 		return _fortType == 0 ? 3 : 5;
 	}

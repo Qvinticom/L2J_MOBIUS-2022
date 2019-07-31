@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
  * L2 Day event AI.
  * @author Pandragon
  */
-public final class L2Day extends LongTimeEvent
+public class L2Day extends LongTimeEvent
 {
 	// NPCs
 	private static final Map<Integer, Integer> MANAGERS = new HashMap<>();

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public final class TradeRequest extends GameClientPacket
+public class TradeRequest extends GameClientPacket
 {
 	private int _objectId;
 	

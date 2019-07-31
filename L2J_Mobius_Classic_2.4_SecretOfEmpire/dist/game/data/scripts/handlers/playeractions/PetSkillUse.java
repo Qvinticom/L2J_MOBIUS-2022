@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Pet skill use player action handler.
  * @author Nik
  */
-public final class PetSkillUse implements IPlayerActionHandler
+public class PetSkillUse implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)

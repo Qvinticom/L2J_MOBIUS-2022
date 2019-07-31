@@ -33,7 +33,7 @@ import ai.areas.Hellbound.HellboundEngine;
  * Manages Amaskari's and minions' chat and some skill usage.
  * @author GKR
  */
-public final class Amaskari extends AbstractNpcAI
+public class Amaskari extends AbstractNpcAI
 {
 	// NPCs
 	private static final int AMASKARI = 22449;
@@ -71,7 +71,7 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("stop_toggle"))
 		{
@@ -169,7 +169,7 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("onspawn_msg", (getRandom(3) + 1) * 30000, npc, null);
 		return super.onSpawn(npc);

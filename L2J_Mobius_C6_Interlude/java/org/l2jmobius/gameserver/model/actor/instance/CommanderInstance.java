@@ -51,7 +51,7 @@ public class CommanderInstance extends Attackable
 	}
 	
 	@Override
-	public final CommanderKnownList getKnownList()
+	public CommanderKnownList getKnownList()
 	{
 		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof CommanderKnownList))
 		{
