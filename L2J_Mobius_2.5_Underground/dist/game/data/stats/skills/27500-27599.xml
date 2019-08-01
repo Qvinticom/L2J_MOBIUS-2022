@@ -2760,9 +2760,68 @@
 	</skill>
 	<skill id="27551" toLevel="1" name="Shadai's Jewelry Box">
 		<icon>icon.etc_bm_jewelbox_main_i00</icon>
+		<itemConsumeId>27660</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.66">
+						<item id="26475" count="1" /> <!-- Radiant Gemstone Fragment -->
+					</item>
+					<item chance="0.50">
+						<item id="26494" count="1" /> <!-- La Vie En Rose's Radiant Brooch Chest -->
+					</item>
+					<item chance="8.1">
+						<item id="38939" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+					</item>
+					<item chance="2.72">
+						<item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+					</item>
+					<item chance="7.85">
+						<item id="38937" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+					</item>
+					<item chance="8.07">
+						<item id="26492" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+					</item>
+					<item chance="8.37">
+						<item id="38940" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+					</item>
+					<item chance="7.74">
+						<item id="38938" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+					</item>
+					<item chance="7.99">
+						<item id="27483" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+					</item>
+					<item chance="8.04">
+						<item id="26507" count="1" /> <!-- La Vie En Rose's Cat's Eye Box -->
+					</item>
+					<item chance="8.01">
+						<item id="38936" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+					</item>
+					<item chance="8.13">
+						<item id="38935" count="1" /> <!-- La Vie En Rose's Opal Box -->
+					</item>
+					<item chance="8.23">
+						<item id="38932" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+					</item>
+					<item chance="8.08">
+						<item id="38933" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+					</item>
+					<item chance="7.51">
+						<item id="27479" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27556" toLevel="1" name="Maphr's Wind Scroll">
 		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. -->
