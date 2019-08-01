@@ -925,7 +925,113 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17839" toLevel="1" name="Crafting Ingredients Pack">
+		<itemConsumeId>39342</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.5">
+						<item id="36559" count="10" /> <!-- Accessory Gem (High-grade) -->
+					</item>
+					<item chance="5.8">
+						<item id="36558" count="10" /> <!-- Accessory Gem (Mid-grade) -->
+					</item>
+					<item chance="0.7">
+						<item id="36560" count="10" /> <!-- Accessory Gem (Top-grade) -->
+					</item>
+					<item chance="5.8">
+						<item id="36523" count="10" /> <!-- Adamantite -->
+					</item>
+					<item chance="5.8">
+						<item id="36543" count="10" /> <!-- Adamantite Wire -->
+					</item>
+					<item chance="3.5">
+						<item id="36554" count="10" /> <!-- Armor Fragment (High-grade) -->
+					</item>
+					<item chance="5.8">
+						<item id="36553" count="10" /> <!-- Armor Fragment (Mid-grade) -->
+					</item>
+					<item chance="0.7">
+						<item id="36555" count="10" /> <!-- Armor Fragment (Top-grade) -->
+					</item>
+					<item chance="3.5">
+						<item id="36534" count="10" /> <!-- Durable Braid -->
+					</item>
+					<item chance="5.8">
+						<item id="36518" count="10" /> <!-- Durable Leather -->
+					</item>
+					<item chance="5.8">
+						<item id="36538" count="10" /> <!-- Durable Leather Braid -->
+					</item>
+					<item chance="0.7">
+						<item id="36525" count="10" /> <!-- Durandil -->
+					</item>
+					<item chance="0.7">
+						<item id="36545" count="10" /> <!-- Durandil Wire -->
+					</item>
+					<item chance="0.7">
+						<item id="36530" count="10" /> <!-- Exquisite Fiber -->
+					</item>
+					<item chance="0.7">
+						<item id="36520" count="10" /> <!-- Exquisite Leather -->
+					</item>
+					<item chance="0.7">
+						<item id="36540" count="10" /> <!-- Exquisite Leather Braid -->
+					</item>
+					<item chance="0.7">
+						<item id="36565" count="10" /> <!-- Exquisite Synthetic Cokes -->
+					</item>
+					<item chance="3.5">
+						<item id="36564" count="10" /> <!-- Greater Synthetic Cokes -->
+					</item>
+					<item chance="5.8">
+						<item id="36528" count="10" /> <!-- Metallic Fiber -->
+					</item>
+					<item chance="3.5">
+						<item id="36524" count="10" /> <!-- Orichalcum -->
+					</item>
+					<item chance="3.5">
+						<item id="36544" count="10" /> <!-- Orichalcum Wire -->
+					</item>
+					<item chance="0.7">
+						<item id="36535" count="10" /> <!-- Quality Braid -->
+					</item>
+					<item chance="3.5">
+						<item id="36529" count="10" /> <!-- Quality Fiber -->
+					</item>
+					<item chance="3.5">
+						<item id="36519" count="10" /> <!-- Quality Leather -->
+					</item>
+					<item chance="3.5">
+						<item id="36539" count="10" /> <!-- Quality Leather Braid -->
+					</item>
+					<item chance="5.8">
+						<item id="36533" count="10" /> <!-- Synthetic Braid -->
+					</item>
+					<item chance="5.8">
+						<item id="36563" count="10" /> <!-- Synthetic Cokes -->
+					</item>
+					<item chance="3.5">
+						<item id="36549" count="10" /> <!-- Weapon Fragment (High-grade) -->
+					</item>
+					<item chance="5.8">
+						<item id="36548" count="10" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="0.7">
+						<item id="36550" count="10" /> <!-- Weapon Fragment (Top-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17840" toLevel="1" name="Eternal Crafting Pack">
 		<operateType>A1</operateType>

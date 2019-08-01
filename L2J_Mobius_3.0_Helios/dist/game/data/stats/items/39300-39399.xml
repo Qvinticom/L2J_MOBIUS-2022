@@ -455,6 +455,17 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17839" level="1" /> <!-- Crafting Ingredients Pack -->
+		</skills>
 	</item>
 	<item id="39343" name="Designer Amaranthine Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Amaranthine Weapon Pack, Amaranthine Weapon Crafting Pack, or Amaranthine Weapon Pack with an item enchanted to 4, 5, 6, 7, or 8. -->
