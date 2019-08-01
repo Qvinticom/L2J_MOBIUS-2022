@@ -444,7 +444,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	 * @param chance the reward chance
 	 * @param atLeastOne if {@code true} it will reward two items if the chance is meet and one if the chance is not meet, if {@code false} if the chance is not meet doesn't reward, otherwise reward one item
 	 */
-	private static void giveItem(PlayerInstance player, Npc npc, int chance, boolean atLeastOne)
+	private void giveItem(PlayerInstance player, Npc npc, int chance, boolean atLeastOne)
 	{
 		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{

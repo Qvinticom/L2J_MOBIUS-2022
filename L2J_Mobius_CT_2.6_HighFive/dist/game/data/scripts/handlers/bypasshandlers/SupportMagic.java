@@ -94,7 +94,7 @@ public class SupportMagic implements IBypassHandler
 		return true;
 	}
 	
-	private static void makeSupportMagic(PlayerInstance player, Npc npc, boolean isSummon)
+	private void makeSupportMagic(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitor())

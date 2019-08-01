@@ -154,7 +154,7 @@ public class Q00306_CrystalOfFireAndIce extends Quest
 		return htmltext;
 	}
 	
-	private static void giveKillReward(PlayerInstance player, Npc npc)
+	private void giveKillReward(PlayerInstance player, Npc npc)
 	{
 		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{

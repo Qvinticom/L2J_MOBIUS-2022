@@ -79,7 +79,7 @@ public class PrivateWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(PlayerInstance player)
+	private void showWithdrawWindow(PlayerInstance player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());

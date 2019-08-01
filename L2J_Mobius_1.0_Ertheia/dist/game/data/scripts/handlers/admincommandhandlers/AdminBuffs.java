@@ -276,7 +276,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 * @param gmchar the player to switch the Game Master skills.
 	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
 	 */
-	private static void switchSkills(PlayerInstance gmchar, boolean toAuraSkills)
+	private void switchSkills(PlayerInstance gmchar, boolean toAuraSkills)
 	{
 		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree() : SkillTreesData.getInstance().getGMAuraSkillTree();
 		for (Skill skill : skills)
@@ -292,7 +292,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void showBuffs(PlayerInstance activeChar, Creature target, int page, boolean passive)
+	private void showBuffs(PlayerInstance activeChar, Creature target, int page, boolean passive)
 	{
 		final List<BuffInfo> effects = new ArrayList<>();
 		if (!passive)
@@ -353,7 +353,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeBuff(PlayerInstance activeChar, int objId, int skillId)
+	private void removeBuff(PlayerInstance activeChar, int objId, int skillId)
 	{
 		Creature target = null;
 		try
@@ -380,7 +380,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeAllBuffs(PlayerInstance activeChar, int objId)
+	private void removeAllBuffs(PlayerInstance activeChar, int objId)
 	{
 		Creature target = null;
 		try
@@ -403,7 +403,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void viewBlockedEffects(PlayerInstance activeChar, int objId)
+	private void viewBlockedEffects(PlayerInstance activeChar, int objId)
 	{
 		Creature target = null;
 		try

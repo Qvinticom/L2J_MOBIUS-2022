@@ -504,7 +504,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	/**
 	 * TODO: Implement using DocumentParser.
 	 */
-	private static void load()
+	private void load()
 	{
 		try
 		{

@@ -124,7 +124,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * @param task
 	 * @param player
 	 */
-	private static void applyToPlayer(PunishmentTask task, PlayerInstance player)
+	private void applyToPlayer(PunishmentTask task, PlayerInstance player)
 	{
 		final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
 		if (delay > 0)
@@ -142,7 +142,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * Removes any punishment effects from the player.
 	 * @param player
 	 */
-	private static void removeFromPlayer(PlayerInstance player)
+	private void removeFromPlayer(PlayerInstance player)
 	{
 		player.sendMessage("Your Chat ban has been lifted");
 		player.sendPacket(new EtcStatusUpdate(player));

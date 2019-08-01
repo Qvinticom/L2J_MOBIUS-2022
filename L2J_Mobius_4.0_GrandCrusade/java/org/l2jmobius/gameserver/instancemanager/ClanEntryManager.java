@@ -395,7 +395,7 @@ public class ClanEntryManager
 		return _clanLocked.get(playerId) == null ? 0 : _clanLocked.get(playerId).getDelay(TimeUnit.MINUTES);
 	}
 	
-	private static void lockPlayer(int playerId)
+	private void lockPlayer(int playerId)
 	{
 		_playerLocked.put(playerId, ThreadPool.schedule(() ->
 		{
@@ -403,7 +403,7 @@ public class ClanEntryManager
 		}, LOCK_TIME));
 	}
 	
-	private static void lockClan(int clanId)
+	private void lockClan(int clanId)
 	{
 		_clanLocked.put(clanId, ThreadPool.schedule(() ->
 		{

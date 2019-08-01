@@ -27,7 +27,7 @@ public class OlympiadLogger
 {
 	private static final Logger LOGGER = Logger.getLogger(OlympiadLogger.class.getName());
 	
-	public static final void add(String text, String cat)
+	public static void add(String text, String cat)
 	{
 		String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
 		

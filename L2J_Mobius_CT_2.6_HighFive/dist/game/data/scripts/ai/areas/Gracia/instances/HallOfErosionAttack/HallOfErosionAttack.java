@@ -597,7 +597,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		return "";
 	}
 	
-	private static void finishInstance(InstanceWorld world)
+	private void finishInstance(InstanceWorld world)
 	{
 		if (world instanceof HEAWorld)
 		{

@@ -2628,7 +2628,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player
 	 * @param holder
 	 */
-	protected static void giveItems(PlayerInstance player, ItemHolder holder)
+	protected void giveItems(PlayerInstance player, ItemHolder holder)
 	{
 		giveItems(player, holder.getId(), holder.getCount());
 	}

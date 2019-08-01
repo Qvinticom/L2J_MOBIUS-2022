@@ -113,7 +113,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	 * @param player the online target
 	 * @param lvl the access level
 	 */
-	private static void onlineChange(PlayerInstance activeChar, PlayerInstance player, int lvl)
+	private void onlineChange(PlayerInstance activeChar, PlayerInstance player, int lvl)
 	{
 		if (lvl >= 0)
 		{

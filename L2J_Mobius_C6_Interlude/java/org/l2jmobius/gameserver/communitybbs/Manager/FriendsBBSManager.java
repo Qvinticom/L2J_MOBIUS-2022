@@ -226,7 +226,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private static void showFriendsList(PlayerInstance activeChar, boolean delMsg)
+	private void showFriendsList(PlayerInstance activeChar, boolean delMsg)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-list.htm");
 		if (content == null)
@@ -282,7 +282,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private static void showBlockList(PlayerInstance activeChar, boolean delMsg)
+	private void showBlockList(PlayerInstance activeChar, boolean delMsg)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-blocklist.htm");
 		if (content == null)
@@ -338,7 +338,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	public static final void showMailWrite(PlayerInstance activeChar)
+	public static void showMailWrite(PlayerInstance activeChar)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-mail.htm");
 		if (content == null)

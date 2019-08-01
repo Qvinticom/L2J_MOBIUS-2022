@@ -843,7 +843,7 @@ public class Q00420_LittleWing extends Quest
 	 * Gives the reward to the player.
 	 * @param player the player
 	 */
-	private static void giveReward(PlayerInstance player)
+	private void giveReward(PlayerInstance player)
 	{
 		final int random = getRandom(100);
 		for (int i : EGGS)

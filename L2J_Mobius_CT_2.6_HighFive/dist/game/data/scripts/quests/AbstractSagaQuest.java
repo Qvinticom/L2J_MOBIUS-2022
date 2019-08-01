@@ -1106,23 +1106,23 @@ public abstract class AbstractSagaQuest extends Quest
 		}
 	}
 	
-	private static void addSpawn(QuestState st, Npc mob)
+	private void addSpawn(QuestState st, Npc mob)
 	{
 		SPAWN_LIST.put(mob, st.getPlayer().getObjectId());
 	}
 	
-	private static void autoChat(Npc npc, String text)
+	private void autoChat(Npc npc, String text)
 	{
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text));
 	}
 	
-	private static void cast(Npc npc, Creature target, int skillId, int level)
+	private void cast(Npc npc, Creature target, int skillId, int level)
 	{
 		target.broadcastPacket(new MagicSkillUse(target, target, skillId, level, 6000, 1));
 		target.broadcastPacket(new MagicSkillUse(npc, npc, skillId, level, 6000, 1));
 	}
 	
-	private static void DeleteSpawn(QuestState st, Npc npc)
+	private void DeleteSpawn(QuestState st, Npc npc)
 	{
 		if (SPAWN_LIST.containsKey(npc))
 		{

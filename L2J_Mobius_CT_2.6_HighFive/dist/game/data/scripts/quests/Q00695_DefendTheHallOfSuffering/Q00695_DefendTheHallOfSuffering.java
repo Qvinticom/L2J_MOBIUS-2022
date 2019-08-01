@@ -245,7 +245,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 		return htmltext;
 	}
 	
-	private static void finishInstance(PlayerInstance player)
+	private void finishInstance(PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		

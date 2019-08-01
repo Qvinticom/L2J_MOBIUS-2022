@@ -324,7 +324,7 @@ public class Q10289_FadeToBlack extends Quest
 		return htmltext;
 	}
 	
-	private static void rewardPlayer(QuestState qs, boolean isLucky)
+	private void rewardPlayer(QuestState qs, boolean isLucky)
 	{
 		if ((qs != null) && qs.isCond(1))
 		{

@@ -122,7 +122,7 @@ public class ClanWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(PlayerInstance player, WarehouseListType itemtype, byte sortorder)
+	private void showWithdrawWindow(PlayerInstance player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		

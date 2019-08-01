@@ -89,7 +89,7 @@ public class BanHandler implements IPunishmentHandler
 	 * Applies all punishment effects from the player.
 	 * @param player
 	 */
-	private static void applyToPlayer(PlayerInstance player)
+	private void applyToPlayer(PlayerInstance player)
 	{
 		Disconnection.of(player).defaultSequence(false);
 	}

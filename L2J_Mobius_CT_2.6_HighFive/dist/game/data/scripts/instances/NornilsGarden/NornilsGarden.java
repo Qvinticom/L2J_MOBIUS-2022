@@ -167,7 +167,7 @@ public class NornilsGarden extends AbstractInstance
 	};
 	// @formatter:on
 	
-	private static void dropHerb(Npc mob, PlayerInstance player, int[][] drop)
+	private void dropHerb(Npc mob, PlayerInstance player, int[][] drop)
 	{
 		final int chance = getRandom(100);
 		for (int[] element : drop)
@@ -179,7 +179,7 @@ public class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static void giveBuffs(Creature ch)
+	private void giveBuffs(Creature ch)
 	{
 		if (skill1 != null)
 		{

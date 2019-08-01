@@ -572,7 +572,7 @@ public class MerrySquashmas extends LongTimeEvent
 		return npc.getId() + ".htm";
 	}
 	
-	private static final void dropItem(Npc mob, PlayerInstance player)
+	private void dropItem(Npc mob, PlayerInstance player)
 	{
 		final int npcId = mob.getId();
 		for (int[] drop : DROPLIST)

@@ -345,7 +345,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 		return htmltext;
 	}
 	
-	private static void tradeItems(PlayerInstance player, long required, long itemCount1, long itemCount2, long itemCount3)
+	private void tradeItems(PlayerInstance player, long required, long itemCount1, long itemCount2, long itemCount3)
 	{
 		if (itemCount1 < required)
 		{

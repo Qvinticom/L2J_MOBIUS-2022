@@ -703,7 +703,7 @@ public class Q420_LittleWing extends Quest
 		return false;
 	}
 	
-	private static void giveRandomPet(QuestState st, boolean hasFairyDust)
+	private void giveRandomPet(QuestState st, boolean hasFairyDust)
 	{
 		int pet = DRAGONFLUTE_OF_TWILIGHT;
 		int chance = Rnd.get(100);

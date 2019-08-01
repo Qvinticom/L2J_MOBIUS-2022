@@ -140,7 +140,7 @@ public class EventManager
 		}
 	}
 	
-	private static void registerTvT()
+	private void registerTvT()
 	{
 		TvT.loadData();
 		if (!TvT.checkStartJoinOk())
@@ -158,7 +158,7 @@ public class EventManager
 		}
 	}
 	
-	private static void registerCTF()
+	private void registerCTF()
 	{
 		CTF.loadData();
 		if (!CTF.checkStartJoinOk())
@@ -176,7 +176,7 @@ public class EventManager
 		}
 	}
 	
-	private static void registerDM()
+	private void registerDM()
 	{
 		DM.loadData();
 		if (!DM.checkStartJoinOk())

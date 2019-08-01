@@ -173,7 +173,7 @@ public class AdminFence implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void sendHtml(PlayerInstance activeChar, int page)
+	private void sendHtml(PlayerInstance activeChar, int page)
 	{
 		final PageResult result = HtmlUtil.createPage(FenceData.getInstance().getFences().values(), page, 10, currentPage ->
 		{

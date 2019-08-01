@@ -201,7 +201,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		return htmltext;
 	}
 	
-	private static void giveQuestItems(QuestState qs, int itemId)
+	private void giveQuestItems(QuestState qs, int itemId)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		if (getQuestItemsCount(player, itemId) < 10)

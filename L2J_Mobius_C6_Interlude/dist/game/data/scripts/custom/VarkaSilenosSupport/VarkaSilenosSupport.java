@@ -433,7 +433,7 @@ public class VarkaSilenosSupport extends Quest
 	 * If any Varka quest is in progress, it stops the quest (and drop all related qItems) :
 	 * @param player The player to check.
 	 */
-	private static void testVarkaDemote(PlayerInstance player)
+	private void testVarkaDemote(PlayerInstance player)
 	{
 		if (player.isAlliedWithVarka())
 		{

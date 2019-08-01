@@ -192,7 +192,7 @@ public abstract class AbstractOlympiadGame
 		return true;
 	}
 	
-	protected static void removals(PlayerInstance player, boolean removeParty)
+	protected void removals(PlayerInstance player, boolean removeParty)
 	{
 		try
 		{
@@ -291,7 +291,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void cleanEffects(PlayerInstance player)
+	protected void cleanEffects(PlayerInstance player)
 	{
 		try
 		{
@@ -344,7 +344,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void playerStatusBack(PlayerInstance player)
+	protected void playerStatusBack(PlayerInstance player)
 	{
 		try
 		{
@@ -391,7 +391,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void portPlayerBack(PlayerInstance player)
+	protected void portPlayerBack(PlayerInstance player)
 	{
 		if (player == null)
 		{

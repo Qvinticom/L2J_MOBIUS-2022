@@ -286,7 +286,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private static void comeHere(PlayerInstance player)
+	private void comeHere(PlayerInstance player)
 	{
 		final WorldObject obj = player.getTarget();
 		if (obj == null)

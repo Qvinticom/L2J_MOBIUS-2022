@@ -507,7 +507,7 @@ public class Kamaloka extends AbstractInstance
 	 * Removing all buffs from player and pet except BUFFS_WHITELIST
 	 * @param ch player
 	 */
-	private static void removeBuffs(Creature ch)
+	private void removeBuffs(Creature ch)
 	{
 		final Function<BuffInfo, Boolean> removeBuffs = info ->
 		{

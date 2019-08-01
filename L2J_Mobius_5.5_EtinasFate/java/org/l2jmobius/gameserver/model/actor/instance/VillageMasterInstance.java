@@ -238,7 +238,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 	}
 	
-	private static void dissolveClan(PlayerInstance player, int clanId)
+	private void dissolveClan(PlayerInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -299,7 +299,7 @@ public class VillageMasterInstance extends NpcInstance
 		ClanTable.getInstance().scheduleRemoveClan(clan.getId());
 	}
 	
-	private static void recoverClan(PlayerInstance player, int clanId)
+	private void recoverClan(PlayerInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{

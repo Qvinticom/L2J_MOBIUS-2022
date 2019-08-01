@@ -155,7 +155,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		return htmltext;
 	}
 	
-	private static void giveItem(PlayerInstance player, QuestState qs, int item, int... items)
+	private void giveItem(PlayerInstance player, QuestState qs, int item, int... items)
 	{
 		if (!hasQuestItems(player, item))
 		{

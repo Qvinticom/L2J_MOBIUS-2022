@@ -249,7 +249,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static void DelItemsConds(QuestState st, int[][][] ItemsConds)
+	private void DelItemsConds(QuestState st, int[][][] ItemsConds)
 	{
 		for (int[][] ItemsCond : ItemsConds)
 		{
@@ -286,7 +286,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return true;
 	}
 	
-	private static void GenList(QuestState st)
+	private void GenList(QuestState st)
 	{
 		// final int grade_c = 12;
 		// final int grade_b = 6;

@@ -430,7 +430,7 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	private static void handleBecomeMercenaryQuest(PlayerInstance player, boolean catapult)
+	private void handleBecomeMercenaryQuest(PlayerInstance player, boolean catapult)
 	{
 		int enemyCount = 10;
 		int catapultCount = 1;
@@ -469,7 +469,7 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	private static void handleStepsForHonor(PlayerInstance player)
+	private void handleStepsForHonor(PlayerInstance player)
 	{
 		final QuestState _sfh = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
 		if ((_sfh != null) && _sfh.isStarted())

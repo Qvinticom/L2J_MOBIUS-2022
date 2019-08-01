@@ -223,7 +223,7 @@ public class Elpies extends Event
 		}
 	}
 	
-	private static void dropItem(Npc mob, PlayerInstance player, int[][] droplist)
+	private void dropItem(Npc mob, PlayerInstance player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		

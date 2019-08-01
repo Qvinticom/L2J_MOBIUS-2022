@@ -42,7 +42,7 @@ public class RaidBossPointsManager
 	
 	private static final Comparator<Entry<Integer, Integer>> _comparator = (entry, entry1) -> entry.getValue().equals(entry1.getValue()) ? 0 : entry.getValue() < entry1.getValue() ? 1 : -1;
 	
-	public static final void init()
+	public static void init()
 	{
 		_list = new HashMap<>();
 		final List<Integer> _chars = new ArrayList<>();
@@ -81,7 +81,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public static final void updatePointsInDB(PlayerInstance player, int raidId, int points)
+	public static void updatePointsInDB(PlayerInstance player, int raidId, int points)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -99,7 +99,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public static final void addPoints(PlayerInstance player, int bossId, int points)
+	public static void addPoints(PlayerInstance player, int bossId, int points)
 	{
 		final int ownerId = player.getObjectId();
 		Map<Integer, Integer> tmpPoint = new HashMap<>();
@@ -152,7 +152,7 @@ public class RaidBossPointsManager
 		return _list.get(player.getObjectId());
 	}
 	
-	public static final void cleanUp()
+	public static void cleanUp()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

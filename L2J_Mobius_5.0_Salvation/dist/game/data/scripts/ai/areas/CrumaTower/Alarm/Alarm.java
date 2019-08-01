@@ -273,7 +273,7 @@ public class Alarm extends AbstractNpcAI
 	 * @param questId the quest ID
 	 * @param memoState the memo state
 	 */
-	private static void setMemoState(PlayerInstance player, int questId, int memoState)
+	private void setMemoState(PlayerInstance player, int questId, int memoState)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -328,7 +328,7 @@ public class Alarm extends AbstractNpcAI
 	 * @param slot the slot
 	 * @param memoStateEx the memo state ex
 	 */
-	private static void setMemoStateEx(PlayerInstance player, int questId, int slot, int memoStateEx)
+	private void setMemoStateEx(PlayerInstance player, int questId, int slot, int memoStateEx)
 	{
 		QuestState qs = null;
 		switch (questId)

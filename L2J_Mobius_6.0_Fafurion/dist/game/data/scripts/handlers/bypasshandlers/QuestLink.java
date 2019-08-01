@@ -84,7 +84,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the NpcInstance
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(PlayerInstance player, Npc npc, Collection<Quest> quests)
+	private void showQuestChooseWindow(PlayerInstance player, Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sbStarted = new StringBuilder(128);
 		final StringBuilder sbCanStart = new StringBuilder(128);
@@ -241,7 +241,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(PlayerInstance player, Npc npc, String questId)
+	private void showQuestWindow(PlayerInstance player, Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -296,7 +296,7 @@ public class QuestLink implements IBypassHandler
 	 * @param player the PlayerInstance that talk with the {@code npc}.
 	 * @param npc the NpcInstance that chats with the {@code player}.
 	 */
-	private static void showQuestWindow(PlayerInstance player, Npc npc)
+	private void showQuestWindow(PlayerInstance player, Npc npc)
 	{
 		//@formatter:off
 		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()

@@ -174,7 +174,7 @@ public class AdminFence implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void sendHtml(PlayerInstance activeChar, int page)
+	private void sendHtml(PlayerInstance activeChar, int page)
 	{
 		final PageResult result = PageBuilder.newBuilder(FenceData.getInstance().getFences().values(), 10, "bypass -h admin_listfence").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, fence, sb) ->
 		{

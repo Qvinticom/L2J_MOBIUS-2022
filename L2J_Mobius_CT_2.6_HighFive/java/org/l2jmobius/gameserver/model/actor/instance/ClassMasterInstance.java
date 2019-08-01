@@ -186,7 +186,7 @@ public class ClassMasterInstance extends MerchantInstance
 		player.sendPacket(new TutorialShowQuestionMark(1001));
 	}
 	
-	private static void showHtmlMenu(PlayerInstance player, int objectId, int level)
+	private void showHtmlMenu(PlayerInstance player, int objectId, int level)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(objectId);
 		

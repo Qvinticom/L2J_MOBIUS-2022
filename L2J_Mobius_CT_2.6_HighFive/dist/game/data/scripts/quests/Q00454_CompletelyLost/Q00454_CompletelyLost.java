@@ -781,7 +781,7 @@ public class Q00454_CompletelyLost extends Quest
 	 * @param npc the NPC
 	 * @param stringId the NPC String
 	 */
-	private static void broadcastNpcSay(Npc npc, NpcStringId stringId)
+	private void broadcastNpcSay(Npc npc, NpcStringId stringId)
 	{
 		Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, stringId));
 	}
@@ -792,7 +792,7 @@ public class Q00454_CompletelyLost extends Quest
 	 * @param player the player
 	 * @param stringId the NPC String
 	 */
-	private static void whisper(Npc npc, PlayerInstance player, NpcStringId stringId)
+	private void whisper(Npc npc, PlayerInstance player, NpcStringId stringId)
 	{
 		player.sendPacket(new NpcSay(npc.getObjectId(), ChatType.WHISPER, npc.getId(), stringId));
 	}

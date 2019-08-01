@@ -165,7 +165,7 @@ public class ClanBBSManager extends BaseBBSManager
 		return "clan/";
 	}
 	
-	private static void sendClanMail(PlayerInstance activeChar, int clanId)
+	private void sendClanMail(PlayerInstance activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
@@ -186,7 +186,7 @@ public class ClanBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private static void sendClanManagement(PlayerInstance activeChar, int clanId)
+	private void sendClanManagement(PlayerInstance activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
@@ -207,7 +207,7 @@ public class ClanBBSManager extends BaseBBSManager
 		send1002(activeChar, clan.getIntroduction(), "", "");
 	}
 	
-	private static void sendClanNotice(PlayerInstance activeChar, int clanId)
+	private void sendClanNotice(PlayerInstance activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if ((clan == null) || (activeChar.getClanId() != clanId))
@@ -230,7 +230,7 @@ public class ClanBBSManager extends BaseBBSManager
 		send1002(activeChar, clan.getNotice(), "", "");
 	}
 	
-	private static void sendClanList(PlayerInstance activeChar, int index)
+	private void sendClanList(PlayerInstance activeChar, int index)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanlist.htm");
 		
@@ -312,7 +312,7 @@ public class ClanBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private static void sendClanDetails(PlayerInstance activeChar, int clanId)
+	private void sendClanDetails(PlayerInstance activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)

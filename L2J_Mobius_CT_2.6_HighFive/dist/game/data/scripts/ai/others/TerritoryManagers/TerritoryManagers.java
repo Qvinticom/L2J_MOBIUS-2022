@@ -262,7 +262,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	 * @param questId the quest Id of the quest that will be processed
 	 * @param itemIds the item Ids should be deleted
 	 */
-	private static void processNoblesseQuest(PlayerInstance player, int questId, int[] itemIds)
+	private void processNoblesseQuest(PlayerInstance player, int questId, int[] itemIds)
 	{
 		final Quest q = QuestManager.getInstance().getQuest(questId);
 		if (q == null)
@@ -299,7 +299,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	 * @param event the event leading to this deletion
 	 * @param npc the npc referencing this deletion
 	 */
-	private static void deleteIfExist(PlayerInstance player, int itemId, String event, Npc npc)
+	private void deleteIfExist(PlayerInstance player, int itemId, String event, Npc npc)
 	{
 		final ItemInstance item = player.getInventory().getItemByItemId(itemId);
 		if (item != null)

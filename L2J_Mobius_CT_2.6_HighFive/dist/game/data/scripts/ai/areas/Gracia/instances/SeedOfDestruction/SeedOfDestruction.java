@@ -957,7 +957,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 	}
 	
-	private static void removeBuffs(Creature ch)
+	private void removeBuffs(Creature ch)
 	{
 		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
 		if (ch.hasSummon())

@@ -351,7 +351,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeBuff(PlayerInstance activeChar, int objId, int skillId)
+	private void removeBuff(PlayerInstance activeChar, int objId, int skillId)
 	{
 		Creature target = null;
 		try
@@ -378,7 +378,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeAllBuffs(PlayerInstance activeChar, int objId)
+	private void removeAllBuffs(PlayerInstance activeChar, int objId)
 	{
 		Creature target = null;
 		try

@@ -276,7 +276,7 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		return htmltext;
 	}
 	
-	private static void finishInstance(PlayerInstance player)
+	private void finishInstance(PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		

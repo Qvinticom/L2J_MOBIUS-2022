@@ -246,7 +246,7 @@ public class StakatoNest extends AbstractNpcAI
 		return null;
 	}
 	
-	private static void giveCocoon(PlayerInstance player, Npc npc)
+	private void giveCocoon(PlayerInstance player, Npc npc)
 	{
 		player.addItem("StakatoCocoon", ((getRandom(100) > 80) ? LARGE_COCOON : SMALL_COCOON), 1, npc, true);
 	}

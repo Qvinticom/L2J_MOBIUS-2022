@@ -71,7 +71,7 @@ public class RegionBBSManager extends BaseBBSManager
 		return "region/";
 	}
 	
-	private static void showRegionsList(PlayerInstance player)
+	private void showRegionsList(PlayerInstance player)
 	{
 		final String content = HtmCache.getInstance().getHtm(CB_PATH + "region/castlelist.htm");
 		
@@ -85,7 +85,7 @@ public class RegionBBSManager extends BaseBBSManager
 		separateAndSend(content.replace("%castleList%", sb.toString()), player);
 	}
 	
-	private static void showRegion(PlayerInstance player, int castleId)
+	private void showRegion(PlayerInstance player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		final Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());

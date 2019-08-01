@@ -434,7 +434,7 @@ public class KetraOrcSupport extends Quest
 	 * If any Varka quest is in progress, it stops the quest (and drop all related qItems) :
 	 * @param player The player to check.
 	 */
-	private static void testKetraDemote(PlayerInstance player)
+	private void testKetraDemote(PlayerInstance player)
 	{
 		if (player.isAlliedWithKetra())
 		{

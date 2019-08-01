@@ -200,7 +200,7 @@ public class FishermanInstance extends FolkInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	private static void sendHtml(PlayerInstance player, FishermanInstance npc, String htmlName)
+	private void sendHtml(PlayerInstance player, FishermanInstance npc, String htmlName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile("data/html/fisherman/championship/" + htmlName);

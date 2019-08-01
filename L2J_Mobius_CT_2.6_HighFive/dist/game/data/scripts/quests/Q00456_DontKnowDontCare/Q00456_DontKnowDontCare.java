@@ -318,7 +318,7 @@ public class Q00456_DontKnowDontCare extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private static void rewardPlayer(PlayerInstance player, Npc npc)
+	private void rewardPlayer(PlayerInstance player, Npc npc)
 	{
 		final int chance = getRandom(10000);
 		final int reward;

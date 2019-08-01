@@ -521,13 +521,13 @@ public class MailBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private static void showWriteView(PlayerInstance activeChar)
+	private void showWriteView(PlayerInstance activeChar)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-write.htm");
 		separateAndSend(content, activeChar);
 	}
 	
-	private static void showWriteView(PlayerInstance activeChar, String parcipientName, Mail letter)
+	private void showWriteView(PlayerInstance activeChar, String parcipientName, Mail letter)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-reply.htm");
 		

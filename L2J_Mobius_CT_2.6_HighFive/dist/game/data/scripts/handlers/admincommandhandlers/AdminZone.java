@@ -111,7 +111,7 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static void showHtml(PlayerInstance activeChar)
+	private void showHtml(PlayerInstance activeChar)
 	{
 		final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/zone.htm");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -162,7 +162,7 @@ public class AdminZone implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private static void getGeoRegionXY(PlayerInstance activeChar)
+	private void getGeoRegionXY(PlayerInstance activeChar)
 	{
 		final int worldX = activeChar.getX();
 		final int worldY = activeChar.getY();

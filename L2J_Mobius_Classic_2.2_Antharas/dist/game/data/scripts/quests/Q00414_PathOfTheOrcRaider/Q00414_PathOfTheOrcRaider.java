@@ -316,7 +316,7 @@ public class Q00414_PathOfTheOrcRaider extends Quest
 		return htmltext;
 	}
 	
-	private static void attackPlayer(Attackable npc, PlayerInstance player)
+	private void attackPlayer(Attackable npc, PlayerInstance player)
 	{
 		if ((npc != null) && (player != null))
 		{

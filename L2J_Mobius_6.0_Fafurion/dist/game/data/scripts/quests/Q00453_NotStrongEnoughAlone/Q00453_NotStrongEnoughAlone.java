@@ -363,7 +363,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		return htmltext;
 	}
 	
-	private static void checkProgress(QuestState qs, int count, int... mobs)
+	private void checkProgress(QuestState qs, int count, int... mobs)
 	{
 		for (int mob : mobs)
 		{

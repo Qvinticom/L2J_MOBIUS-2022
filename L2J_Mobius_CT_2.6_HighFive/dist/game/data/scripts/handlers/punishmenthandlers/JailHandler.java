@@ -154,7 +154,7 @@ public class JailHandler implements IPunishmentHandler
 	 * @param task
 	 * @param player
 	 */
-	private static void applyToPlayer(PunishmentTask task, PlayerInstance player)
+	private void applyToPlayer(PunishmentTask task, PlayerInstance player)
 	{
 		player.setInstanceId(0);
 		
@@ -202,7 +202,7 @@ public class JailHandler implements IPunishmentHandler
 	 * Removes any punishment effects from the player.
 	 * @param player
 	 */
-	private static void removeFromPlayer(PlayerInstance player)
+	private void removeFromPlayer(PlayerInstance player)
 	{
 		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationOut()), 2000);
 		

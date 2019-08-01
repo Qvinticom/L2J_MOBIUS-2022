@@ -569,7 +569,7 @@ public class WatermelonNinja extends LongTimeEvent
 		return npc.getId() + ".htm";
 	}
 	
-	private static final void dropItem(Npc mob, PlayerInstance player)
+	private void dropItem(Npc mob, PlayerInstance player)
 	{
 		final int npcId = mob.getId();
 		final int chance = Rnd.get(100);

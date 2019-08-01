@@ -240,7 +240,7 @@ public class Rabbits extends Event
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private static void dropItem(Npc npc, PlayerInstance player, int[][] droplist)
+	private void dropItem(Npc npc, PlayerInstance player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		for (int[] drop : droplist)
@@ -253,7 +253,7 @@ public class Rabbits extends Event
 		}
 	}
 	
-	private static void recordSpawn(List<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private void recordSpawn(List<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)

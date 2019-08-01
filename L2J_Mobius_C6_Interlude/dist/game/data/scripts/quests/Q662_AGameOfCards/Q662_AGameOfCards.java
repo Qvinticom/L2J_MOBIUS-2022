@@ -634,7 +634,7 @@ public class Q662_AGameOfCards extends Quest
 		return null;
 	}
 	
-	private static void giveReward(QuestState st, int item, int count)
+	private void giveReward(QuestState st, int item, int count)
 	{
 		final Item template = ItemTable.getInstance().getTemplate(item);
 		

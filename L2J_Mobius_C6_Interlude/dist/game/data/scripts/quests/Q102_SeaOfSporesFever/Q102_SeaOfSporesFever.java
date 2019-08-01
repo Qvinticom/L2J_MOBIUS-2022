@@ -268,7 +268,7 @@ public class Q102_SeaOfSporesFever extends Quest
 		return null;
 	}
 	
-	private static void checkItem(QuestState st, int itemId)
+	private void checkItem(QuestState st, int itemId)
 	{
 		if (st.hasQuestItems(itemId))
 		{

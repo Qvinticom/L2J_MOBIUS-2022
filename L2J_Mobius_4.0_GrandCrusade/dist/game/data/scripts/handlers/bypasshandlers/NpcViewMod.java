@@ -271,7 +271,7 @@ public class NpcViewMod implements IBypassHandler
 		player.sendPacket(html);
 	}
 	
-	private static void sendNpcSkillView(PlayerInstance player, Npc npc)
+	private void sendNpcSkillView(PlayerInstance player, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(player, "data/html/mods/NpcView/Skills.htm");
@@ -303,7 +303,7 @@ public class NpcViewMod implements IBypassHandler
 		player.sendPacket(html);
 	}
 	
-	private static void sendAggroListView(PlayerInstance player, Npc npc)
+	private void sendAggroListView(PlayerInstance player, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(player, "data/html/mods/NpcView/AggroList.htm");
@@ -358,7 +358,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private static void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int page)
+	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int page)
 	{
 		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
 		if (dropList == null)

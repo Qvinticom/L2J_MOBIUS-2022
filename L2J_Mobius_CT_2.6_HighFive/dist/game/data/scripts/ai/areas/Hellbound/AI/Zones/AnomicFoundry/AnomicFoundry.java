@@ -250,7 +250,7 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	// Zoey76: TODO: This should be done with onFactionCall(..)
-	private static void requestHelp(Npc requester, PlayerInstance agressor, int range, int helperId)
+	private void requestHelp(Npc requester, PlayerInstance agressor, int range, int helperId)
 	{
 		for (Spawn spawn : SpawnTable.getInstance().getSpawns(helperId))
 		{

@@ -741,7 +741,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	private static void moveGourds()
+	private void moveGourds()
 	{
 		final Spawn[] tempArray = _gourds;
 		final int iterator = _acceptedClans.size();
@@ -756,20 +756,20 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	private static void reduceGourdHp(int index, PlayerInstance player)
+	private void reduceGourdHp(int index, PlayerInstance player)
 	{
 		final Spawn gourd = _gourds[index];
 		gourd.getLastSpawn().reduceCurrentHp(1000, player, null);
 	}
 	
-	private static void increaseGourdHp(int index)
+	private void increaseGourdHp(int index)
 	{
 		final Spawn gourd = _gourds[index];
 		final Npc gourdNpc = gourd.getLastSpawn();
 		gourdNpc.setCurrentHp(gourdNpc.getCurrentHp() + 1000);
 	}
 	
-	private static void castDebuffsOnEnemies(int myArena)
+	private void castDebuffsOnEnemies(int myArena)
 	{
 		for (int id : ARENA_ZONES)
 		{
@@ -792,7 +792,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	private static void shoutRandomText(Npc npc)
+	private void shoutRandomText(Npc npc)
 	{
 		final int length = _textPassages.length;
 		
@@ -841,7 +841,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		return false;
 	}
 	
-	private static void updateAttacker(int clanId, long count, boolean remove)
+	private void updateAttacker(int clanId, long count, boolean remove)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

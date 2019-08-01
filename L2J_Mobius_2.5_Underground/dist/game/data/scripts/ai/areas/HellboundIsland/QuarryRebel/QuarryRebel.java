@@ -139,7 +139,7 @@ public class QuarryRebel extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private static void spawnNextMob(int npcId, Creature killer, Location loc)
+	private void spawnNextMob(int npcId, Creature killer, Location loc)
 	{
 		final Npc npc = addSpawn(npcId, loc.getX(), loc.getY(), loc.getZ(), killer.getHeading() + 32500, false, 300000);
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 1000);

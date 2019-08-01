@@ -193,7 +193,7 @@ public class Q00455_WingsOfSand extends Quest
 	 * Reward the player.
 	 * @param qs the quest state of the player to reward
 	 */
-	private static void giveItems(QuestState qs)
+	private void giveItems(QuestState qs)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		int chance;

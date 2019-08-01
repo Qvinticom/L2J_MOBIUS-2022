@@ -143,7 +143,7 @@ public class FishermanInstance extends MerchantInstance
 		}
 	}
 	
-	private static void sendHtml(PlayerInstance player, Npc npc, String htmlName)
+	private void sendHtml(PlayerInstance player, Npc npc, String htmlName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(player, "data/html/fisherman/championship/" + htmlName);

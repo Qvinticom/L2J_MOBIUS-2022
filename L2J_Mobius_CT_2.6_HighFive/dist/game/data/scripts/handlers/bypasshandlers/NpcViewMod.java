@@ -235,7 +235,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private static void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int page)
+	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int page)
 	{
 		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
 		if (dropList == null)

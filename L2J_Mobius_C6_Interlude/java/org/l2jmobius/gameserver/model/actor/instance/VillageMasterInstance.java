@@ -843,7 +843,7 @@ public class VillageMasterInstance extends FolkInstance
 	 * @param pledgeType the pledge type
 	 * @param pledgeName the pledge name
 	 */
-	private static final void renameSubPledge(PlayerInstance player, int pledgeType, String pledgeName)
+	private void renameSubPledge(PlayerInstance player, int pledgeType, String pledgeName)
 	{
 		if (!player.isClanLeader())
 		{

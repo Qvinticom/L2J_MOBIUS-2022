@@ -1087,7 +1087,7 @@ public class Quest extends ManagedScript
 	 * Add state of quests, drops and variables for quests in the HashMap _quest of PlayerInstance
 	 * @param player : Player who is entering the world
 	 */
-	public static final void playerEnter(PlayerInstance player)
+	public static void playerEnter(PlayerInstance player)
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
 		{

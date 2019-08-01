@@ -895,7 +895,7 @@ public class VillageMasterInstance extends NpcInstance
 		return player.getSubClasses().values().iterator();
 	}
 	
-	private static void dissolveClan(PlayerInstance player, int clanId)
+	private void dissolveClan(PlayerInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -956,7 +956,7 @@ public class VillageMasterInstance extends NpcInstance
 		ClanTable.getInstance().scheduleRemoveClan(clan.getId());
 	}
 	
-	private static void recoverClan(PlayerInstance player, int clanId)
+	private void recoverClan(PlayerInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -969,7 +969,7 @@ public class VillageMasterInstance extends NpcInstance
 		clan.updateClanInDB();
 	}
 	
-	private static void createSubPledge(PlayerInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
+	private void createSubPledge(PlayerInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
 	{
 		if (!player.isClanLeader())
 		{
@@ -1079,7 +1079,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 	}
 	
-	private static void renameSubPledge(PlayerInstance player, int pledgeType, String pledgeName)
+	private void renameSubPledge(PlayerInstance player, int pledgeType, String pledgeName)
 	{
 		if (!player.isClanLeader())
 		{
@@ -1112,7 +1112,7 @@ public class VillageMasterInstance extends NpcInstance
 		player.sendMessage("Pledge name changed.");
 	}
 	
-	private static void assignSubPledgeLeader(PlayerInstance player, String clanName, String leaderName)
+	private void assignSubPledgeLeader(PlayerInstance player, String clanName, String leaderName)
 	{
 		if (!player.isClanLeader())
 		{

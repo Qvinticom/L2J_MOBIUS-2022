@@ -68,7 +68,7 @@ public class Wear implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWearWindow(PlayerInstance player, int val)
+	private void showWearWindow(PlayerInstance player, int val)
 	{
 		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)
