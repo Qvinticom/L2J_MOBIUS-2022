@@ -39,7 +39,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_geomap_missing_htmls",
-		"admin_world_missing_htmls"
+		"admin_world_missing_htmls",
+		"admin_next_missing_html"
 	};
 	
 	@Override
@@ -107,6 +108,26 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "NPC " + id + " does not have a default html.");
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Found " + results.size() + " results.");
+				break;
+			}
+			case "admin_next_missing_html":
+			{
+				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				{
+					if (obj.isNpc() //
+						&& !obj.isMonster() //
+						&& !(obj instanceof ObservationInstance) //
+						&& !(obj instanceof ArtefactInstance))
+					{
+						final Npc npc = (Npc) obj;
+						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm"))
+						{
+							activeChar.teleToLocation(npc);
+							BuilderUtil.sendSysMessage(activeChar, "NPC " + npc.getId() + " does not have a default html.");
+							break;
+						}
+					}
+				}
 				break;
 			}
 		}
