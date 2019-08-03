@@ -1,6 +1,6 @@
 L2J-Mobius Classic Antharas
 
-Client: https://drive.google.com/uc?id=1BxapnPqFunwb3_ZXWuyB51b2HyI-KMrj&export=download
+Client: https://drive.google.com/uc?id=11qB1BNEz5Ahe1hMG7_2GprZM3MjGk6Yi&export=download
 Geodata: http://www.mediafire.com/file/urs2uvjnwltk7ub/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
