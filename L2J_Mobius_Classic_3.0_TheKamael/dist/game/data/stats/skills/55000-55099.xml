@@ -58,7 +58,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55003" toLevel="1" name="1st Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -112,7 +112,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="55004" toLevel="2" name="2nd Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -262,27 +262,27 @@
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55018" toLevel="2" name="Scroll of Escape: Elven Village">
+	<skill id="55018" toLevel="1" name="Scroll of Escape: Elven Village">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55019" toLevel="3" name="Scroll of Escape: Dark Elf Village">
+	<skill id="55019" toLevel="1" name="Scroll of Escape: Dark Elf Village">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55020" toLevel="4" name="Scroll of Escape: Orc Village">
+	<skill id="55020" toLevel="1" name="Scroll of Escape: Orc Village">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55021" toLevel="5" name="Scroll of Escape: Dwarven Village">
+	<skill id="55021" toLevel="1" name="Scroll of Escape: Dwarven Village">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55022" toLevel="6" name="Scroll of Escape: Gludin Village">
+	<skill id="55022" toLevel="1" name="Scroll of Escape: Gludin Village">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55023" toLevel="7" name="Scroll of Escape: Town of Gludio">
+	<skill id="55023" toLevel="1" name="Scroll of Escape: Town of Gludio">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
@@ -322,7 +322,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55031" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<!-- You are suspected to have used an illegal program, and your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -402,7 +402,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55035" toLevel="1" name="1st Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -456,7 +456,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="55036" toLevel="2" name="2nd Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -630,7 +630,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55043" toLevel="1" name="Rare Accessory Box">
+	<skill id="55043" toLevel="1" name="Rare Accessory Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29701</itemConsumeId>
@@ -1165,8 +1165,8 @@
 	<skill id="55050" toLevel="1" name="Chronic Noble Successor Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55051" toLevel="1" name="XP/SP Scroll">
-		<!-- For 20 min., Acquired XP/ SP +30%. Effect remains after death. -->
+	<skill id="55051" toLevel="4" name="XP/SP Scroll">
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1221,7 +1221,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55055" toLevel="1" name="1st Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -1275,7 +1275,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="55056" toLevel="2" name="2nd Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 min. -->
+		<!-- For 20 min., grants the following buffs: Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -1393,7 +1393,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55060" toLevel="1" name="Griffin's Benediction">
+	<skill id="55060" toLevel="1" name="Griffin�s Benediction">
 		<!-- STR +1, INT +1. -->
 		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1410,7 +1410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55061" toLevel="2" name="Castle XP/SP Scroll - Normal">
+	<skill id="55061" toLevel="2" name="Castle XP/ SP Scroll - Normal">
 		<!-- For 20 min., Acquired XP/ SP +35%. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
@@ -2175,7 +2175,7 @@
 		<mpConsume>20</mpConsume>
 	</skill>
 	<skill id="55077" toLevel="8" name="Concentration">
-		<!-- For 20 min., damage required to cancel magic -25. -->
+		<!-- For 20 min., Casting Interruption Rate -25%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2208,7 +2208,7 @@
 		<mpConsume>30</mpConsume>
 	</skill>
 	<skill id="55080" toLevel="3" name="Magic Barrier">
-		<!-- M. Def. +23% for 20 min. -->
+		<!-- For 20 min., M. Def. +23%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2275,7 +2275,7 @@
 		</effects>
 	</skill>
 	<skill id="55085" toLevel="1" name="1st Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 10 min. -->
+		<!-- For 10 min., grants the following buffs: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -2329,7 +2329,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="55086" toLevel="2" name="2nd Class Buff Scroll">
-		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 10 min. -->
+		<!-- For 10 min., grants the following buffs: Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -2417,7 +2417,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55089" toLevel="1" name="Rare Accessory Box">
+	<skill id="55089" toLevel="1" name="Rare Accessory Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49525</itemConsumeId>
@@ -2462,7 +2462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55091" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 1">
+	<skill id="55091" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 1">
 		<!-- P. Atk. +6. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
@@ -2503,7 +2503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55093" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 2">
+	<skill id="55093" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 2">
 		<!-- P. Atk. +6 and P. Critical Damage +38. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
@@ -2563,7 +2563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55095" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 3">
+	<skill id="55095" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 3">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
@@ -2642,7 +2642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55097" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 4">
+	<skill id="55097" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 4">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
@@ -2740,7 +2740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55099" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 5">
+	<skill id="55099" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 5">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%, P. Critical Damage +2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>

@@ -155,7 +155,7 @@
 	<class classId="179" name="Aeore Cardinal" parentClassId="97" />
 	<class classId="180" name="Aeore Eva's Saint" parentClassId="105" />
 	<class classId="181" name="Aeore Shillien Saint" parentClassId="112" />
-	<!-- Etheria -->
+	<!-- Ertheia -->
 	<class classId="182" name="Etheria Fighter" />
 	<class classId="183" name="Etheria Wizard" />
 	<class classId="184" name="Marauder" parentClassId="182" />
@@ -164,4 +164,15 @@
 	<class classId="187" name="Stratomancer" parentClassId="185" />
 	<class classId="188" name="Eviscerator" parentClassId="186" />
 	<class classId="189" name="Sayha's Seer" parentClassId="187" />
+	<!-- Kamael -->
+	<class classId="192" name="Kamael Soldier" />
+	<class classId="193" name="Trooper" parentClassId="192" /> <!-- TODO: -->
+	<class classId="194" name="Soul Finder" parentClassId="192" /> <!-- TODO: -->
+	<class classId="195" name="Warden" parentClassId="192" /> <!-- TODO: -->
+	<class classId="196" name="Beserker" parentClassId="193" /> <!-- TODO: -->
+	<class classId="197" name="Soul Breaker" parentClassId="194" /> <!-- TODO: -->
+	<class classId="198" name="Soul Ranger" parentClassId="195" /> <!-- TODO: -->
+	<class classId="199" name="Doombringer" parentClassId="196" /> <!-- TODO: -->
+	<class classId="200" name="Soul Hound" parentClassId="197" /> <!-- TODO: -->
+	<class classId="201" name="Trickster" parentClassId="198" /> <!-- TODO: -->
 </list>

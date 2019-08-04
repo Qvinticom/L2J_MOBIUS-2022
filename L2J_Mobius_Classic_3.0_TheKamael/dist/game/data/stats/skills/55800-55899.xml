@@ -31,12 +31,12 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55806" toLevel="10" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55807" toLevel="10" name="Empire Legendary Cloak Augmentation">
-		<!-- M. Atk. +$s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -51,7 +51,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55810" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Accuracy +$s1 -->
+		<!-- P. Accuracy +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -137,7 +137,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55827" toLevel="9" name="Empire Legendary Cloak Augmentation">
-		<!-- Stun Attack Success Rate +$s1 -->
+		<!-- Stun Atk. Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -188,7 +188,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55838" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- Max MP +$s1 -->
+		<!-- Max MP +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
@@ -200,12 +200,12 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55840" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55841" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Def. +$s1 -->
+		<!-- P. Def. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -220,7 +220,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55844" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- M. Atk. +$s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -322,7 +322,7 @@
 		<effectPoint>867</effectPoint>
 	</skill>
 	<skill id="55862" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- P./ M. Skill Power +$s1 -->
+		<!-- P./ M. Skill Power +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -502,15 +502,19 @@
 		<effect name="DefenceTrait">
 			<DERANGEMENT>
 				<value level="1">5</value>
+				<value level="2">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			</DERANGEMENT>
 			<SHOCK>
 				<value level="1">5</value>
+				<value level="2">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			</SHOCK>
 			<SLEEP>
 				<value level="1">5</value>
+				<value level="2">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			</SLEEP>
 			<PARALYZE>
 				<value level="1">5</value>
+				<value level="2">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			</PARALYZE>
 		</effect>
 		</effects>
@@ -521,7 +525,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55888" toLevel="4" name="Halloween Blessing">
-		<!-- Rico's Halloween buff. Acquired XP/ SP +$s1, P./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. You can receive a Halloween Gift once the Lv. 3 buff expires. -->
+		<!-- Rico's Halloween buff.  Acquired XP/ SP +$s1, P./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. You can receive a Halloween Gift once the Lv. 3 buff expires. -->
 		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -545,7 +549,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="55892" toLevel="1" name="Dragon's Miracle Potion">
-		<!-- For 20 min., acquired XP/ SP +50%, P./ M. Atk. +18%, P./ M. Def. +22%, Atk. Spd./ Casting Spd. +5%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%, HP/ MP/ CP +25%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Effect remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +50%, P./ M. Atk. +18%, P./ M. Def. +22%, Atk. Spd./ Casting Spd. +5%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%, HP/ MP/ CP +25%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Effect remains after death. -->
 		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -556,7 +560,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55894" toLevel="1" name="Transformation Into Teddy Bear">
+	<skill id="55894" toLevel="1" name="Transformation into Teddy Bear">
 		<!-- Transforms into teddy bear. During transformation HP/ MP +20%, P./ M. Def. +3%, acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
 		<operateType>A1</operateType>
@@ -564,7 +568,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55895" toLevel="1" name="Transformation Into Panda">
+	<skill id="55895" toLevel="1" name="Transformation into Panda">
 		<!-- Transforms into panda. During transformation HP/ MP +10%, P./ M. Def. +2%, acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.sayha2017_panda</icon>
 		<operateType>A1</operateType>
@@ -572,7 +576,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55896" toLevel="1" name="Transformation Into Cat">
+	<skill id="55896" toLevel="1" name="Transformation into Cat">
 		<!-- Transforms into cat. During transformation HP/ MP +10%, P./ M. Def. +1%, acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.sayha2017_cat</icon>
 		<operateType>A1</operateType>

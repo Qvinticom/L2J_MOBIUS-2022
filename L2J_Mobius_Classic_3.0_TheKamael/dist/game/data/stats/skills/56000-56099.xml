@@ -13,7 +13,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="56003" toLevel="1" name="XP and SP Rune - 50%">
+	<skill id="56003" toLevel="1" name="XP and SP Rune 50%">
 		<!-- Acquired XP/ SP +50%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -24,7 +24,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="56005" toLevel="1" name="Agathion Mermaid Enchant Scroll">
+	<skill id="56005" toLevel="1" name="Scroll: Enchant Agathion Mermaid">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -80,7 +80,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="56014" toLevel="1" name="Scroll: Castle Buff - Party">
-		<!-- Gives Might Lv. 2, Empower Lv. 2, Acumen Lv. 2, Haste Lv. 1 for all party members. -->
+		<!-- For 20 min., grants Might Lv. 2, Empower Lv. 2, Acumen Lv. 2, Haste Lv. 1 for all party members. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>700</hitTime>
@@ -250,7 +250,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="56045" toLevel="9" name="Seven Deadly Sins - Hawk">
-		<!-- Max HP/ MP/ CP and CON are increased when Agathion is upgraded. -->
+		<!-- Max  HP/ MP/ CP and CON are increased when Agathion is upgraded. -->
 		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -290,7 +290,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="56053" toLevel="9" name="Divine Family Power">
-		<!-- Damage received in PvE is decreased when Agathion is upgraded. -->
+		<!-- Received PvE DamageE is decreased when Agathion is upgraded. -->
 		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -335,7 +335,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="56062" toLevel="8" name="Tranquility Magic Power">
-		<!-- Damage received in PvP is decreased when Agathion is upgraded. -->
+		<!-- Received PvP Damage is decreased when Agathion is upgraded. -->
 		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -496,7 +496,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="56088" toLevel="1" name="Seven Deadly Sins: Magic Barrier">
-		<!-- Special buff of the Seven Deadly Sins squad. For 20 min, M. Def. +30%. -->
+		<!-- Special buff of the Seven Deadly Sins squad. For 20 min., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

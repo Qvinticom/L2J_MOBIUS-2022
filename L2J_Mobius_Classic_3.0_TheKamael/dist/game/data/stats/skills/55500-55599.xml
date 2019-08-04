@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="55500" toLevel="1" name="Sapphire Jewelry Box">
+	<skill id="55500" toLevel="1" name="Sapphire Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55501" toLevel="1" name="Diamond Jewelry Box">
+	<skill id="55501" toLevel="1" name="Diamond Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55502" toLevel="1" name="Pearl Jewelry Box">
+	<skill id="55502" toLevel="1" name="Pearl Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55503" toLevel="1" name="Vital Stone Jewelry Box">
+	<skill id="55503" toLevel="1" name="Vital Stone Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -87,7 +87,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55512" toLevel="1" name="Aquamarine Fortune Chest">
+	<skill id="55512" toLevel="1" name="Aquamarine Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -115,12 +115,12 @@
 		<icon>icon.etc_treasure_box_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55517" toLevel="1" name="Spear Chest">
+	<skill id="55517" toLevel="1" name="Spear Weapon Pack">
 		<!-- Double-click to acquire one of the following items: Tallum Glaive/ Halberd/ Lance/ Great Axe. -->
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55518" toLevel="1" name="Blunt Weapon Chest">
+	<skill id="55518" toLevel="1" name="Blunt Weapon Pack">
 		<!-- Double-click to acquire one of the following items: Elysian/ Meteor Shower/ Art of Battle Axe/ Heavy War Axe. -->
 		<icon>icon.etc_treasure_box_i05</icon>
 		<operateType>A1</operateType>
@@ -516,7 +516,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55557" toLevel="1" name="Babayaga's Courage">
-		<!-- Damage dealt in PvE +3% received PvE damage -3%. -->
+		<!-- PvE Damage +3% received PvE damage -3%. -->
 		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -599,7 +599,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="55569" toLevel="1" name="Expertise Rune (A-grade)">
-		<!-- When possessed, you get Expertise B skill -->
+		<!-- When in inventory, grants the Expertise B skill. -->
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -675,21 +675,21 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55581" toLevel="1" name="Blue Dynasty Transformation Scroll">
-		<!-- Makes you armor look like Blue Dynasty armor. Combat stats are improved. Effect remains after death. -->
+		<!-- Makes your armor look like Blue Dynasty armor. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55582" toLevel="1" name="Red Zubei Transformation Scroll">
-		<!-- Makes you armor look like Red Zubei armor. Combat stats are improved. Effect remains after death. -->
+		<!-- Makes your armor look like Red Zubei armor. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i04</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55583" toLevel="1" name="Formal Wear Appearance Scroll">
-		<!-- Makes you armor look like Formal Wear. Combat stats are improved. Effect remains after death. -->
+		<!-- Makes your armor look like Formal Wear. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i02</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -711,7 +711,7 @@
 		<reuseDelay>20000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55586" toLevel="1" name="Hero's XP/SP Scroll">
+	<skill id="55586" toLevel="1" name="Hero's XP/ SP Scroll">
 		<!-- For 20 min., acquired XP/ SP +50%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A1</operateType>
@@ -733,7 +733,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -747,7 +746,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55590" toLevel="1" name="Golden Mermaid's Scale">
-		<!-- For 3 hr, acquired XP/ SP during fishing +10%. -->
+		<!-- For 3 hr, acquired XP/ SP  during fishing +10%. -->
 		<icon>icon.etc_oren_fish_scale_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

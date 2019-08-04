@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="55200" toLevel="1" name="Sealed Rune Lvl 8">
+	<skill id="55200" toLevel="1" name="Sealed Rune Lv. 8">
 		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -50,7 +50,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55201" toLevel="1" name="Sealed Rune Lvl 9">
+	<skill id="55201" toLevel="1" name="Sealed Rune Lv. 9">
 		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -448,7 +448,7 @@
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55234" toLevel="1" name="XP and SP Rune - 100%">
+	<skill id="55234" toLevel="1" name="XP and SP Rune 100%">
 		<!-- Acquired XP/ SP +100%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -526,7 +526,7 @@
 		</effects>
 	</skill>
 	<skill id="55237" toLevel="1" name="Scroll: Vampiric Rage">
-		<!-- For 20 min., recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 20 min., with a certain chance, absorbs 6% of the inflicted melee damage as HP. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->
@@ -558,7 +558,7 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="55239" toLevel="1" name="Holiday Hat">
-		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
+		<!-- Resurrects a dead target restoring them 50% XP. Consumes 1 Spirit Ore. Cooldown: 30 min. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -672,7 +672,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>467</effectPoint>
 	</skill>
-	<skill id="55245" toLevel="8" name="Teleport: Town of Aden">
+	<skill id="55245" toLevel="8" name="Scroll of Escape: Town of Aden">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
@@ -733,7 +733,7 @@
 		</effects>
 	</skill>
 	<skill id="55248" toLevel="1" name="Bracelet of Duty - Lv. 1">
-		<!-- Opens up 1 Talisman slot. -->
+		<!-- Unlocks 1 talisman slot. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_01</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -745,7 +745,7 @@
 		</effects>
 	</skill>
 	<skill id="55249" toLevel="1" name="Bracelet of Duty - Lv. 2">
-		<!-- Opens up one Talisman slot. CON +1. -->
+		<!-- Activates 1 talisman slot. CON +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_02</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -761,7 +761,7 @@
 		</effects>
 	</skill>
 	<skill id="55250" toLevel="1" name="Bracelet of Duty - Lv. 3">
-		<!-- Opens up two Talisman slots. CON +1, MEN +1. -->
+		<!-- Activates 2 talisman slots. CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_03</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -781,7 +781,7 @@
 		</effects>
 	</skill>
 	<skill id="55251" toLevel="1" name="Bracelet of Duty - Lv. 4">
-		<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
+		<!-- Activates 2 talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_04</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -809,7 +809,7 @@
 		</effects>
 	</skill>
 	<skill id="55252" toLevel="1" name="Bracelet of Duty - Lv. 5">
-		<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
+		<!-- Activates 3 talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_05</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -845,7 +845,7 @@
 		</effects>
 	</skill>
 	<skill id="55253" toLevel="20" name="Sigel's Protection">
-		<!-- P. Def. +$s1, when equipped. -->
+		<!-- P. Def. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
 			<value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -1003,7 +1003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55256" toLevel="20" name="Tyrr Haste">
+	<skill id="55256" toLevel="20" name="Tyrr's Haste">
 		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
@@ -1216,7 +1216,7 @@
 		</effects>
 	</skill>
 	<skill id="55260" toLevel="20" name="Yul Guidance">
-		<!-- Accuracy +$s1. -->
+		<!-- P. Accuracy +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
 			<value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
@@ -1876,7 +1876,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55290" toLevel="1" name="Devi's Ring">
+	<skill id="55290" toLevel="1" name="Devi�s Ring">
 		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<magicLvl>55</magicLvl>
@@ -1902,12 +1902,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55291" toLevel="1" name="Devi's Ring">
+	<skill id="55291" toLevel="1" name="Devi�s Ring">
 		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55292" toLevel="1" name="Devi's Earring">
+	<skill id="55292" toLevel="1" name="Devi�s Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<magicLvl>55</magicLvl>
@@ -1929,12 +1929,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55293" toLevel="1" name="Devi's Earring">
+	<skill id="55293" toLevel="1" name="Devi�s Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55294" toLevel="1" name="Devi's Necklace">
+	<skill id="55294" toLevel="1" name="Devi�s Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
@@ -1962,7 +1962,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55295" toLevel="1" name="Devi's Necklace">
+	<skill id="55295" toLevel="1" name="Devi�s Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>P</operateType>

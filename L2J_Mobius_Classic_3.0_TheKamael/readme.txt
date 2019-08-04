@@ -1,6 +1,6 @@
-L2J-Mobius Secret of Empire
+L2J-Mobius The Kamael
 
-Client: https://drive.google.com/uc?id=1EpgkSzyd_RaQ3JfGksEI_eOTiI2oN8Pc&export=download
+Client: 
 Geodata: http://www.mediafire.com/file/urs2uvjnwltk7ub/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
@@ -92,6 +92,9 @@ Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
 -Imperial tomb area spawns
 -Retail gatekeeper teleports
 -Equipment upgrade system
+
+The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
+-Kamael creation support
 
 Customs:
 -Newbie Helper NPC location info

@@ -71,7 +71,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 		{
 			NpcStringId.PREPARE_TO_DIE,
 			NpcStringId.I_LL_DOUBLE_MY_STRENGTH,
-			NpcStringId.IT_S_STRONGER_THAN_EXPECTED_2
+			NpcStringId.IT_S_STRONGER_THAN_EXPECTED
 		}
 	};
 	

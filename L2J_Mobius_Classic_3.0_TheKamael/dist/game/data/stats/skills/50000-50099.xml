@@ -76,7 +76,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-52</effectPoint>
 	</skill>
-	<skill id="50009" toLevel="41" name="Raid Boss (Lv. 55)">
+	<skill id="50009" toLevel="43" name="Raid Boss (Lv. 55)">
 		<!-- A rift that had appeared after an earthquake and weakened the Maphr's Seal, now shifted to the material world and brought chaos and pain with it. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -128,7 +128,7 @@
 		<mpConsume>136</mpConsume>
 	</skill>
 	<skill id="50014" toLevel="1" name="Christmas Blessing">
-		<!-- For 1 h. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
+		<!-- For 1 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cannot be used with Scroll of Mood Melody. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
@@ -226,7 +226,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="50025" toLevel="1" name="Aggression">
-		<!-- Provokes target into attacking you by forcefully changing their target. -->
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -371,7 +371,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="50043" toLevel="2" name="Hurricane Bolt">
-		<!-- Bolt of lightning attacks with 138 Power addedt to M. Atk., paralyses for 5 sec. -->
+		<!-- Bolt of lightning attacks with 138 Power added to M. Atk., paralyses for 5 sec. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -395,7 +395,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50046" toLevel="4" name="Wind Ability - Lv. 1 Atk.">
-		<!-- P. Atk. +$s1. -->
+		<!-- P. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -403,7 +403,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="50047" toLevel="4" name="Wind Ability - Lv. 1 Def.">
-		<!-- P./ M. Def. +$s1. -->
+		<!-- P./ M. Def. +50%. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -411,7 +411,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="50048" toLevel="4" name="Wind Ability - Lv. 1 Magic">
-		<!-- M. Atk. +$s1. -->
+		<!-- M. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -585,7 +585,7 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="50066" toLevel="1" name="Earth Energy">
+	<skill id="50066" toLevel="1" name="Energy of Earth">
 		<icon>icon.skill1223</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -680,7 +680,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="50076" toLevel="1" name="Fatal Geyser">
-		<!-- For 5 min. due to raging energy of the hot spring P. Critical Rate +30, P. Accuracy +6. -->
+		<!-- For 5 min., P. Critical Rate +30, P. Accuracy +6. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -786,7 +786,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="50090" toLevel="2" name="Decrease Speed">
+	<skill id="50090" toLevel="2" name="Slow">
 		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A1</operateType>
@@ -828,7 +828,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50093" toLevel="2" name="Shock Attack">
+	<skill id="50093" toLevel="2" name="Stun Attack">
 		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. and inflicts Stun for 5 sec. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -850,8 +850,8 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<hitTime>2000</hitTime>
-		<reuseDelay>30000</reuseDelay>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
 		<effectPoint>
 			<value level="1">-1621</value>
 			<value level="2">-1831</value>

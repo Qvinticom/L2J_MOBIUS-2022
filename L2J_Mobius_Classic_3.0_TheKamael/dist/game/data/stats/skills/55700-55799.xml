@@ -7,7 +7,7 @@
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="55701" toLevel="1" name="Release Agathion's Seal - Sin Eater">
+	<skill id="55701" toLevel="1" name="Summon Agathion - Sin Eater">
 		<!-- Summon Sin Eater Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -86,13 +86,13 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55707" toLevel="1" name="Fortune Red Cat's Eye Chest">
+	<skill id="55707" toLevel="1" name="Fortune Red Cat's Eye Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55708" toLevel="1" name="Fortune Blue Cat's Eye Chest">
+	<skill id="55708" toLevel="1" name="Fortune Blue Cat's Eye Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -108,12 +108,14 @@
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<abnormalVisualEffect>AVE_BROOCH</abnormalVisualEffect>
 		<abnormalType>AVE_BROOCH</abnormalType>
 	</skill>
 	<skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>AVE_BROOCH,10</dispel>
@@ -209,7 +211,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55718" toLevel="1" name="XP and SP Rune - 50%">
+	<skill id="55718" toLevel="1" name="XP and SP Rune 50%">
 		<!-- Acquired XP/ SP +50%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -220,7 +222,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55720" toLevel="1" name="Irene's Hourglass - 1 Hour">
-		<!-- Acquired XP/ SP +50% for the duration of the effect -->
+		<!-- Acquired XP/ SP +50%  for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -303,7 +305,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55737" toLevel="20" name="Elmoreden Cloak Enchant Effect">
+	<skill id="55737" toLevel="20" name="Enchantment Effect: Elmoreden Cloak">
 		<!-- PvP Attack Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -371,7 +373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55739" toLevel="20" name="Aden Cloak Enchant Effect">
+	<skill id="55739" toLevel="20" name="Enchantment Effect: Aden Cloak">
 		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -418,7 +420,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55741" toLevel="20" name="Elmore Cloak Enchant Effect">
+	<skill id="55741" toLevel="20" name="Enchantment Effect: Elmore Cloak">
 		<!-- Physical PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -493,7 +495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55743" toLevel="20" name="Ferios Cloak Enchant Effect">
+	<skill id="55743" toLevel="20" name="Enchantment Effect: Ferios Cloak">
 		<!-- Damage Received -$s1. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -654,12 +656,12 @@
 		<effectPoint>689</effectPoint>
 	</skill>
 	<skill id="55755" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55756" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- M. Atk. +$s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -674,7 +676,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55759" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- P. Accuracy +$s1 -->
+		<!-- P. Accuracy +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -760,7 +762,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55776" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- Stun Attack Success Rate +$s1 -->
+		<!-- Stun Atk. Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -811,7 +813,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55787" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- Max MP +$s1 -->
+		<!-- Max MP +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
@@ -823,12 +825,12 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="55789" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55790" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- P. Def. +$s1 -->
+		<!-- P. Def. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -843,7 +845,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55793" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- M. Atk. +$s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>

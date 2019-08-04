@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="15601" name="Vorpal Boots" additionalName="Not used" type="Armor">
+		<!-- Appearance for Kamael Male -->
+		<set name="icon" val="icon.armor_t94_b_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="20900" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
 	<item id="15623" name="XP" type="EtcItem">
 		<!-- You acquire XP as a reward. -->
 		<set name="icon" val="icon.etc_exp_point_i00" />

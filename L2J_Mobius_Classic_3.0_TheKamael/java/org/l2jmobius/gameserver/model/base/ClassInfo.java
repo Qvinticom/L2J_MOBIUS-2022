@@ -87,6 +87,10 @@ public class ClassInfo
 		{
 			classClientId += 3121;
 		}
+		else if ((classClientId >= 192) && (classClientId <= 201))
+		{
+			classClientId += 12817; // TODO: Find proper ids.
+		}
 		
 		return classClientId;
 	}

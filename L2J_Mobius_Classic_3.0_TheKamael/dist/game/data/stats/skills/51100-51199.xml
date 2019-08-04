@@ -98,11 +98,11 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="51108" toLevel="1" name="Dandy's Golden Ball">
-		<!-- Restores Sayha Grace. For 1 h., Acquired XP/ SP +100%. Changes the appearance of your armor into that of a Lineage II Uniform. -->
-		<icon>icon.ev_dinos_baseball_gold</icon>
+		<!-- Sayha's Grace points +140,000. For 1 h., Acquired XP/ SP +100%. Cannot be stacked with Fish Stew - Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. The effect remains after death. -->
+		<icon>BranchIcon.icon.g_ev_goldenball</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51109" toLevel="1" name="Windstorm Box">
 		<operateType>A1</operateType>
@@ -172,7 +172,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="51120" toLevel="1" name="Weapon Pack (+15 A-grade)">
+	<skill id="51120" toLevel="1" name="+15 Weapon Pack (A-grade)">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -186,14 +186,14 @@
 	<skill id="51122" toLevel="1" name="Maphr Potion">
 		<!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. -->
 		<icon>icon.etc_instant_lucky_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="51123" toLevel="1" name="Maphr Potion">
 		<!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. -->
 		<icon>icon.etc_instant_lucky_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 	</skill>
@@ -202,13 +202,12 @@
 		<icon>icon.etc_scroll_of_memory_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="51125" toLevel="1" name="Quick MP Recovery Potion">
+	<skill id="51125" toLevel="1" name="MP Replenishing Potion">
 		<icon>icon.etc_potion_blue_i00</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<reuseDelay>0</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -224,6 +223,7 @@
 		<!-- For 20 min., Acquired attribute XP +30%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -241,6 +241,7 @@
 		<!-- For 20 min., Acquired attribute XP +50%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -262,10 +263,11 @@
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51130" toLevel="1" name="Fire Attribute Attack Potion">
-		<!-- Use to get Fire Attack Power +50 for 20 min. -->
+	<skill id="51130" toLevel="1" name="Fire Attack Potion">
+		<!-- For 20 min., use to get Fire Attack Power +50. Cooldown: 1 min. -->
 		<icon>icon.etc_fire_potion_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -280,10 +282,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51131" toLevel="1" name="Water Attribute Attack Potion">
-		<!-- Use to get Water Attack Power +50 for 20 min. -->
+	<skill id="51131" toLevel="1" name="Water Attack Potion">
+		<!-- For 20 min., Water Attack Power +50. Cooldown: 1 min. -->
 		<icon>icon.etc_water_potion_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -298,10 +301,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51132" toLevel="1" name="Wind Attribute Attack Potion">
-		<!-- Use to get Wind Attack Power +50 for 20 min. -->
+	<skill id="51132" toLevel="1" name="Wind Attack Potion">
+		<!-- For 20 min., Wind Attack Power +50. Cooldown: 1 min. -->
 		<icon>icon.etc_wind_potion_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -316,10 +320,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51133" toLevel="1" name="Earth Attribute Attack Potion">
-		<!-- Use to get Earth Attack Power +50 for 20 min. -->
+	<skill id="51133" toLevel="1" name="Earth Attack Potion">
+		<!-- For 20 min., Earth Attack Power +50. Cooldown: 1 min. -->
 		<icon>icon.etc_earth_potion_i00</icon>
 		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -383,7 +388,7 @@
 	<skill id="51144" toLevel="1" name="Shining Sayha's Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51145" toLevel="1" name="+16 Weapon Supply Box (B-grade)">
+	<skill id="51145" toLevel="1" name="+16 Weapon Pack (B-grade)">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -395,16 +400,16 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="51147" toLevel="1" name="Energy of Panda">
-		<!-- Transforms you into Panda. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
+	<skill id="51147" toLevel="1" name="Transformation into Panda">
+		<!-- Transforms you into Panda. Max HP/ MP +20%, Acquired XP/ SP (hunting) +20% when Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.sayha2017_panda</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51148" toLevel="1" name="Energy of Cat">
-		<!-- Transforms you into Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
+	<skill id="51148" toLevel="1" name="Transformation into Cat">
+		<!-- Transforms you into Cat. Max HP/ MP +20%, Acquired XP/ SP (hunting) +20% when Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.sayha2017_cat</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -473,11 +478,11 @@
 	<skill id="51160" toLevel="1" name="Radiant Dragon Varnish">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51161" toLevel="1" name="Major Quick Healing Potion">
+	<skill id="51161" toLevel="1" name="Highest-grade HP Recovery Potion">
 		<!-- Instantly recovers 800 HP. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51162" toLevel="1" name="Quality Quick MP Recovery Potion">
+	<skill id="51162" toLevel="1" name="High-grade MP Replenishing Potion">
 		<!-- Instantly recovers 300 MP. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -495,13 +500,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51163" toLevel="1" name="Sealed Rune Lvl 14">
+	<skill id="51163" toLevel="1" name="Sealed Rune Lv. 14">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51164" toLevel="1" name="Sealed Rune Lvl 15">
+	<skill id="51164" toLevel="1" name="Sealed Rune Lv. 15">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -672,122 +677,122 @@
 		<mpConsume>73</mpConsume>
 	</skill>
 	<skill id="51183" toLevel="1" name="Dragon Berserker">
-		<!-- Transforms into Dragon Berserker. For 15 min. Acquired XP +30%, P. Atk. +15%, M. Atk. +15%,P./ M. Critical Damage +10%. Cooldown: 2 h. Transformation effect remais after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
+		<!-- Transforms into Dragon Berserker. For 20 min., Acquired XP +30%, P. Atk. +15%, M. Atk. +15%,P./ M. Critical Damage +10%. Cooldown: 2 h. Transformation effect remais after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
 		<icon>icon.bm2018_dragon_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="51184" toLevel="1" name="Ninja Assassin">
-		<!-- Transforms into Ninja Assassin. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death.\n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100% chance. -->
+		<!-- Transforms into Ninja Assassin. For 20 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death.\n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100% chance. -->
 		<icon>icon.bm2018_ninja_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51185" toLevel="1" name="Blue Musketeer">
-		<!-- Transforms into Blue Musketeer. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
+		<!-- Transforms into Blue Musketeer. For 20 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
 		<icon>icon.bm2018_bluemusketeer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51186" toLevel="1" name="Valkyrie">
-		<!-- Transforms into Valkyrie. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance paralyses for 5 sec. -->
+		<!-- Transforms into Valkyrie. For 20 min., Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance paralyses for 5 sec. -->
 		<icon>icon.bm2018_valkyrie_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51187" toLevel="1" name="Wild Wolf">
-		<!-- Transforms into Wild Wolf. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%. -->
+		<!-- Transforms into Wild Wolf. For 20 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%. -->
 		<icon>icon.bm2018_barbarian_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51188" toLevel="1" name="Pirate">
-		<!-- Transforms into Pirate. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P./ M. Atk. +10%. -->
+		<!-- Transforms into Pirate. For 20 min., Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P./ M. Atk. +10%. -->
 		<icon>icon.bm2018_pirate_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51189" toLevel="1" name="Purple Cowboy">
-		<!-- Transforms into Purple Cowboy. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 3939 Power added to P. Atk. -->
+		<!-- Transforms into Purple Cowboy. For 20 min., Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 3939 Power added to P. Atk. -->
 		<icon>icon.bm2018_cowboy_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51190" toLevel="1" name="High Priest">
-		<!-- Transforms into High Priest. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
+		<!-- Transforms into High Priest. For 20 min., Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51191" toLevel="1" name="Blood Noblesse">
-		<!-- Transforms into Blood Noblesse. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
+		<!-- Transforms into Blood Noblesse. For 20 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
 		<icon>icon.bm2018_rednoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51192" toLevel="1" name="White Noblesse">
-		<!-- Transforms into White Noblesse. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
+		<!-- Transforms into White Noblesse. For 20 min., Acquired XP +20%, P. Atk. +10%, M. Atk. +10%, P./ M. Critical Damage +5%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
 		<icon>icon.bm2018_whitenoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10800000</reuseDelay>
 	</skill>
 	<skill id="51193" toLevel="1" name="Dragon Berserker Energy">
-		<!-- Grants the power of Dragon Berserker. For 15 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
+		<!-- Grants the power of Dragon Berserker. For 20 min. Acquired XP +20%, P. Atk. +10%, M. Atk. +10%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
 		<icon>icon.bm2018_dragon_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51194" toLevel="1" name="Ninja Assassin Energy">
-		<!-- Grants the power of Ninja Assassin. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100% chance. -->
+		<!-- Grants the power of Ninja Assassin. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100% chance. -->
 		<icon>icon.bm2018_ninja_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51195" toLevel="1" name="Blue Musketeer Energy">
-		<!-- Grants the power of Blue Musketeer. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
+		<!-- Grants the power of Blue Musketeer. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
 		<icon>icon.bm2018_bluemusketeer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51196" toLevel="1" name="Valkyrie Energy">
-		<!-- Grants the power of Valkyrie. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance paralyses for 5 sec. -->
+		<!-- Grants the power of Valkyrie. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance paralyses for 5 sec. -->
 		<icon>icon.bm2018_valkyrie_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51197" toLevel="1" name="Wild Wolf Energy">
-		<!-- Grants the power of Wild Wolf. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%. -->
+		<!-- Grants the power of Wild Wolf. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%. -->
 		<icon>icon.bm2018_barbarian_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51198" toLevel="1" name="Pirate Energy">
-		<!-- Grants the power of Pirate. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P./ M. Atk. +10%. -->
+		<!-- Grants the power of Pirate. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P./ M. Atk. +10%. -->
 		<icon>icon.bm2018_pirate_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51199" toLevel="1" name="Purple Cowboy Energy">
-		<!-- Grants the power of Purple Cowboy. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 3939 Power added to P. Atk. -->
+		<!-- Grants the power of Purple Cowboy. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 3939 Power added to P. Atk. -->
 		<icon>icon.bm2018_cowboy_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 </list>

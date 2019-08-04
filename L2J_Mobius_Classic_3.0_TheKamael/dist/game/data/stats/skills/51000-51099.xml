@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="51001" toLevel="1" name="Sayha's Storm">
-		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 10 min. Buff does not disappear after death. Cooldown: 10 min. -->
+	<skill id="51001" toLevel="1" name="Sayha's Storm Lv. 2 (Event)">
+		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +150%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="51002" toLevel="1" name="Sayha's Storm">
-		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 10 min. Buff does not disappear after death. Cooldown: 10 min. -->
+	<skill id="51002" toLevel="1" name="Sayha's Storm Lv. 2">
+		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +150%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51003" toLevel="1" name="Sayha Grace Box">
 		<icon>icon.bm_nebit_box</icon>
@@ -35,12 +35,12 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51006" toLevel="1" name="Sayha Grace Maintaining Potion">
-		<!-- For 10 min. activates Sayha Grace effect. Cooldown: 10 min. The effect does not disappear after death. -->
+	<skill id="51006" toLevel="1" name="Sayha's Grace Potion">
+		<!-- For 10 min., activates the Sayha's Grace effect. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_freya_potion</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51007" toLevel="1" name="Golden Treasure Chest">
 		<!-- Acquired XP/ SP +20%, Sayha Grace Consumption -10%. -->
@@ -69,14 +69,14 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51012" toLevel="1" name="Fire Dragon's Blessing Scroll">
+	<skill id="51012" toLevel="1" name="Refined Rare Accessory Pack">
 		<!-- Grants you Blessing Of Fire Dragon for 20 min.: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51013" toLevel="1" name="Shining Scroll of Mood Melody">
+	<skill id="51013" toLevel="1" name="Rare Accessory Pack">
 		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -92,8 +92,8 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51015" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
+	<skill id="51015" toLevel="1" name="Shining Mood Melody">
+		<!-- For 20 min., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -162,7 +162,12 @@
 	</skill>
 	<skill id="51025" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
 		<!-- Adds an additional primary and $s1 secondary Agathion slots. -->
-		<icon>icon.etc_bm_brooch_lavianrose_i04</icon>
+		<icon>
+			<value level="1">icon.agathion_magmeld_teleport</value>
+			<value level="2">icon.bracelet_tersi_agathion</value>
+			<value level="3">icon.high_agathion_bracelet_i01</value>
+			<value level="4">icon.pi_high_agathion_bracelet_i00</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AgathionSlot">
@@ -425,7 +430,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -444,7 +449,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -463,7 +468,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -526,13 +531,14 @@
 		<icon>icon.scrl_item_unlock</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51057" toLevel="1" name="Weapon Supply Box +8 (A-grade)">
+	<skill id="51057" toLevel="1" name="+8 Weapon Pack (A-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29745</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -679,7 +685,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="51070" toLevel="3" name="Dragon's Miracle Potion">
-		<!-- Restores Sayha Grace points. For 20 min., acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Effect remains after death. -->
+		<!-- Restores Sayha's Grace points. For 20 min., Acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Critical Rate +20, P./ M. Critical Damage +5%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%, Sayha's Grace Consumption -10%. With a certain chance, absorbs 5% of the inflicted damage as HP. Can be stacked up to 3 times. The effect remains after death. -->
 		<icon>
 			<value level="1">icon.bm_dragon_posion_brave_1</value>
 			<value level="2">icon.bm_dragon_posion_brave_2</value>
@@ -714,7 +720,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51075" toLevel="1" name="Weapon Supply Box (Best A-grade)">
+	<skill id="51075" toLevel="1" name="Weapon Pack (Best A-grade)">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -732,7 +738,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51078" toLevel="1" name="Rash's Supply Items - Zaken">
+	<skill id="51078" toLevel="1" name="Rash�s Supply Items - Zaken">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -762,7 +768,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51083" toLevel="1" name="High Grade Melissa's Recovery Potion">
+	<skill id="51083" toLevel="1" name="High-grade Maliss' HP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -881,16 +887,16 @@
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51098" toLevel="1" name="Energy of Blue Dynasty">
-		<!-- Armor is transformed into the Blue Dynasty. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
+	<skill id="51098" toLevel="1" name="Blue Dynasty Transformation">
+		<!-- Dresses the character in Blue Dynasty outfit. Max HP/ MP +20%, Acquired XP/ SP (hunting) +20% when Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.armor_t91_u_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51099" toLevel="1" name="Kat the Cat's Energy">
-		<!-- Transforms you into Kat the Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
+	<skill id="51099" toLevel="1" name="Transformation into Kat the Cat">
+		<!-- Transforms you into Kat the Cat. Max HP/ MP +20%, Acquired XP/ SP (hunting) +20% when Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.cat_the_cat_change_0</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

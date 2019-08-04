@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51200" toLevel="1" name="High Priest Energy">
-		<!-- Grants the power of High Priest. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
+		<!-- Grants the power of High Priest. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51201" toLevel="1" name="Blood Noblesse Energy">
-		<!-- Grants the power of Blood Noblesse. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
+		<!-- Grants the power of Blood Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
 		<icon>icon.bm2018_rednoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51202" toLevel="1" name="White Noblesse Energy">
-		<!-- Grants the power of White Noblesse. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
+		<!-- Grants the power of White Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
 		<icon>icon.bm2018_whitenoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51203" toLevel="1" name="Soul of Berserker">
 		<!-- Grants the power of ??????????. During Berserker effect P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%. Reflects 15% damage to enemy. -->
@@ -155,18 +155,18 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51224" toLevel="2" name="Fish Stew - Clarity">
-		<!-- For $s1, physical skill MP Consumption -$s2, magic skill MP Consumption -$s3, and song/ dance skill MP Consumption -$s4. -->
+		<!-- For $s1, P. Skill MP Consumption -$s2, M. Skill MP Consumption -$s3, song/ dance MP Consumption -$s4. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51225" toLevel="3" name="Fish Stew - Agility">
-		<!-- P. Evasion +$s2 for $s1. -->
+		<!-- P. Evasion +$s2 for $s1 -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51226" toLevel="1" name="Mysterious Transformation Sealbook Box">
 		<operateType>A1</operateType>
@@ -183,7 +183,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="51228" toLevel="1" name="Sayha's Spring Wind">
-		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 20 min. Buff does not disappear after death. Cooldown: 20 min. -->
+		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +150%. Cooldown: 20 min. The effect remains after death. -->
 		<icon>icon.ev_magic_flame_game_wind1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -196,7 +196,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51230" toLevel="1" name="Primavera's Blessing Regeneration">
+	<skill id="51230" toLevel="2" name="Grace Regeneration">
 		<!-- Primavera recovers Sayha's Grace. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -206,12 +206,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51232" toLevel="1" name="Greater Ruby">
-		<!-- Beast Soulshot Damage +20%. -->
+		<!-- Damage from Beast Soulshot +20%. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51233" toLevel="5" name="Greater Ruby">
-		<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +17%, P. Atk. +$s1. -->
+		<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +$s1, P. Atk. +$s2. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -226,7 +226,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51236" toLevel="5" name="Greater Sapphire">
-		<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17%, M. Atk. +$s1. -->
+		<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +$s1, M. Atk. +$s2. -->
 		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -265,74 +265,74 @@
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51241" toLevel="1" name="Manuscript - Disarm">
+	<skill id="51241" toLevel="1" name="Manuscript: Disarm">
 		<!-- Allows you to learn Disarm skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="51242" toLevel="1" name="Manuscript - Armor Break">
+	<skill id="51242" toLevel="1" name="Manuscript: Armor Break">
 		<!-- Allows you to learn Armor Break skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="51243" toLevel="1" name="Manuscript - Spell Break">
+	<skill id="51243" toLevel="1" name="Manuscript: Spell Break">
 		<!-- Allows you to learn Spell Break skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="51244" toLevel="1" name="Manuscript - Jump">
+	<skill id="51244" toLevel="1" name="Manuscript: Jump">
 		<!-- Allows you to learn Jump skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="51245" toLevel="1" name="Manuscript - Blaze">
+	<skill id="51245" toLevel="1" name="Manuscript: Blaze">
 		<!-- Allows you to learn Blaze skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="51246" toLevel="1" name="Manuscript - Berserker Mode">
+	<skill id="51246" toLevel="1" name="Manuscript: Berserker Mode">
 		<!-- Allows you to learn Berserker Mode skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51247" toLevel="1" name="Disarm">
-		<!-- For 5 sec. makes target's and nearby enemies' weapon useless, P./ M. Atk. -30%, Speed -10%. -->
+		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Atk. and Speed -30%, -1000 HP every sec. -->
 		<icon>icon.skill0485</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
+		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-341</effectPoint>
 		<mpConsume>205</mpConsume>
 	</skill>
 	<skill id="51248" toLevel="1" name="Armor Break">
-		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Def. -30%, Speed -10%. -->
+		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Def. and Speed -30%, -1000 HP every sec. -->
 		<icon>icon.skill10703</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
+		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-341</effectPoint>
 		<mpConsume>205</mpConsume>
 	</skill>
 	<skill id="51249" toLevel="1" name="Spell Break">
-		<!-- For 5 sec. makes target's and nearby enemies' Skills useless. -->
+		<!-- For 10 sec. makes target's and nearby enemies' Skills useless. -->
 		<icon>icon.skill1412</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
+		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-341</effectPoint>
 		<mpConsume>205</mpConsume>
 	</skill>
 	<skill id="51250" toLevel="1" name="Jump">
-		<!-- Cancels target of enemy and nearby enemies, moves forward. -->
+		<!-- Cancels target of nearby enemies, teleports forward. -->
 		<icon>icon.skill11057</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
@@ -342,7 +342,7 @@
 		<mpConsume>77</mpConsume>
 	</skill>
 	<skill id="51251" toLevel="1" name="Blaze">
-		<!-- Cancels target of enemy and nearby enemies, for 5 sec., you cannot be targeted. -->
+		<!-- Cancels target of nearby enemies, for 5 sec., you cannot be targeted. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -353,7 +353,7 @@
 		<mpConsume>77</mpConsume>
 	</skill>
 	<skill id="51252" toLevel="1" name="Berserker Mode">
-		<!-- For 20 sec. P./ M. Atk., and Atk./ Casting Spd. +50%. Cannot be stacked with Berserker Spirit that will be available after transformation into Dragon Berserker. -->
+		<!-- For 20 sec., P./ M. Atk. and Atk./ Casting Spd. +50%, reflects 15% of received damage. Cannot be stacked with Berserker Spirit that will be available after transformation into Dragon Berserker.\n\n<Auto-use> -->
 		<icon>icon.skill10274</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -365,13 +365,13 @@
 		<!-- 500,000 XP. -->
 		<icon>icon.bm_elmoaden_exp_scrl</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51254" toLevel="1" name="High Quality Elmoreden XP Scroll">
 		<!-- 20,000,000 XP. -->
 		<icon>icon.bm_elmoaden_exp_scrl</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51255" toLevel="1" name="Elmoreden Treasure Chest">
 		<icon>icon.bm_elmoaden_box</icon>
@@ -459,7 +459,7 @@
 	<skill id="51270" toLevel="1" name="High Quality Solid Scroll: Enchant Armor (A-grade)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51271" toLevel="5" name="Dye of War">
+	<skill id="51271" toLevel="5" name="Warpaint">
 		<!-- PvP Damage +$s1. -->
 		<icon>icon.skill50008</icon>
 		<operateType>A1</operateType>
@@ -479,7 +479,7 @@
 		<icon>icon.skill19308</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51275" toLevel="5" name="Sword Resist">
+	<skill id="51275" toLevel="5" name="Sword Resistance">
 		<!-- Resistance to sword attacks +$s1. -->
 		<icon>icon.skill4447</icon>
 		<operateType>A1</operateType>
@@ -489,7 +489,7 @@
 		<icon>icon.skill4443</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51277" toLevel="5" name="Spear Resistance">
+	<skill id="51277" toLevel="5" name="Spear Resist">
 		<!-- Resistance to spear attacks +$s1. -->
 		<icon>icon.skill4445</icon>
 		<operateType>A1</operateType>

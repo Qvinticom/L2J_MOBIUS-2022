@@ -65,6 +65,7 @@ public class Q00255_Tutorial extends Quest
 		NEWBIE_HELPERS.add(30131); // dark elf
 		NEWBIE_HELPERS.add(30575); // orc
 		NEWBIE_HELPERS.add(30530); // dwarf
+		NEWBIE_HELPERS.add(30530); // kamael // FIXME:
 	}
 	private static final List<Integer> SUPERVISORS = new ArrayList<>();
 	static
@@ -75,6 +76,7 @@ public class Q00255_Tutorial extends Quest
 		SUPERVISORS.add(30129); // dark elf
 		SUPERVISORS.add(30573); // orc
 		SUPERVISORS.add(30528); // dwarf
+		SUPERVISORS.add(30528); // kamael // FIXME:
 	}
 	// Monsters
 	private static final int[] GREMLINS =
@@ -99,6 +101,7 @@ public class Q00255_Tutorial extends Quest
 		STARTING_VOICE_HTML.put(44, new QuestSoundHtmlHolder("tutorial_voice_001g", "tutorial_orc_fighter001.html"));
 		STARTING_VOICE_HTML.put(49, new QuestSoundHtmlHolder("tutorial_voice_001h", "tutorial_orc_mage001.html"));
 		STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
+		STARTING_VOICE_HTML.put(192, new QuestSoundHtmlHolder("tutorial_voice_001k", "tutorial_kamael_male001.html"));
 	}
 	private static final Map<Integer, Location> HELPER_LOCATION = new HashMap<>();
 	static
@@ -112,6 +115,7 @@ public class Q00255_Tutorial extends Quest
 		HELPER_LOCATION.put(44, new Location(-56736, -113680, -672));
 		HELPER_LOCATION.put(49, new Location(-56736, -113680, -672));
 		HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
+		HELPER_LOCATION.put(192, new Location(-125872, 38016, 1251));
 	}
 	private static final Map<Integer, Location> COMPLETE_LOCATION = new HashMap<>();
 	static
@@ -125,6 +129,7 @@ public class Q00255_Tutorial extends Quest
 		COMPLETE_LOCATION.put(44, new Location(-45032, -113598, -192));
 		COMPLETE_LOCATION.put(49, new Location(-45032, -113598, -192));
 		COMPLETE_LOCATION.put(53, new Location(115632, -177996, -905));
+		COMPLETE_LOCATION.put(192, new Location(-125872, 38016, 1251)); // FIXME: PROPER LOCATION!
 	}
 	private static final String TUTORIAL_BUYPASS = "Quest Q00255_Tutorial ";
 	private static final int QUESTION_MARK_ID_1 = 1;
