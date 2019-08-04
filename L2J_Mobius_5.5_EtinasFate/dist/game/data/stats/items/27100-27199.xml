@@ -10,6 +10,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
+		</skills>
 	</item>
 	<item id="27101" name="Rabbit Ears" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
@@ -21,6 +25,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
+		</skills>
 	</item>
 	<item id="27102" name="Rabbit Ears" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC +3 and P. Def. +5% when equipped. -->
@@ -32,6 +40,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
+		</skills>
 	</item>
 	<item id="27103" name="Rabbit Ears" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA +3 and P. Def. +5% when equipped. -->
@@ -43,6 +55,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
+		</skills>
 	</item>
 	<item id="27104" name="Rabbit Ears" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC +3 and M. Def. +5% when equipped. -->
@@ -54,6 +70,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
+		</skills>
 	</item>
 	<item id="27105" name="Rabbit Ears" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA +3 and M. Def. +5% when equipped. -->
@@ -65,6 +85,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
+		</skills>
 	</item>
 	<item id="27106" name="Rabbit Ears" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC +3 and P. Evasion +5 when equipped. -->
@@ -76,6 +100,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
+		</skills>
 	</item>
 	<item id="27107" name="Rabbit Ears" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA +3 and P. Evasion +5 when equipped. -->
@@ -87,6 +115,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
+		</skills>
 	</item>
 	<item id="27108" name="Rabbit Ears" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC +3 and P. Atk. +5% when equipped. -->
@@ -98,6 +130,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
+		</skills>
 	</item>
 	<item id="27109" name="Rabbit Ears" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA +3 and P. Atk. +5% when equipped. -->
@@ -109,6 +145,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
+		</skills>
 	</item>
 	<item id="27110" name="Rabbit Ears" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC +3 and M. Atk. +10% when equipped. -->
@@ -120,6 +160,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
+		</skills>
 	</item>
 	<item id="27111" name="Rabbit Ears" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA +3 and M. Atk. +10% when equipped. -->
@@ -131,6 +175,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
+		</skills>
 	</item>
 	<item id="27112" name="Rabbit Ears" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC +3 and P. Accuracy +5 when equipped. -->
@@ -142,6 +190,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
+		</skills>
 	</item>
 	<item id="27113" name="Rabbit Ears" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA +3 and P. Accuracy +5 when equipped. -->
@@ -153,6 +205,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
+		</skills>
 	</item>
 	<item id="27114" name="Raccoon Ears" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC +3 and P. Critical Rate +50 when equipped. -->

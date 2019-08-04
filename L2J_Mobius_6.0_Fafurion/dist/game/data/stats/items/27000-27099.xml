@@ -1088,6 +1088,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
+			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
+		</skills>
 	</item>
 	<item id="27099" name="Rabbit Ears" additionalName="CHA +Critical Rate" type="Armor">
 		<!-- CHA +3 and P. Critical Rate +50 when equipped. -->
@@ -1099,5 +1103,9 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
+			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
+		</skills>
 	</item>
 </list>
