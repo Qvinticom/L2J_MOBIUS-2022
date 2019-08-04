@@ -668,7 +668,6 @@
 	<item id="91763" name="PA Coin" type="EtcItem">
 		<!-- Double-click to obtain 300 PA points. -->
 		<set name="icon" val="icon.etc_coins_blue_i00" />
-		<set name="default_action" val="action_add_item_with_point" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

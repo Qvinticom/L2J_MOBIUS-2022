@@ -370,7 +370,6 @@
 	<item id="91638" name="Chronicle Cube" type="EtcItem">
 		<!-- Double-click to obtain Chronicle Cube Gift (maximum 15 times). Can be used only once a day. -->
 		<set name="icon" val="icon.ev_15th_cube" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

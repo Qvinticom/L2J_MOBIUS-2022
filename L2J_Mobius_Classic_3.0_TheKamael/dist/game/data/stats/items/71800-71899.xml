@@ -157,7 +157,6 @@
 	<item id="71814" name="Chronicle Cube" type="EtcItem">
 		<!-- Double-click to obtain Chronicle Cube Gift (maximum 15 times). Can be used only once a day. -->
 		<set name="icon" val="icon.ev_15th_cube" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -202,7 +201,6 @@
 	<item id="71818" name="Talisman of Border +1" additionalName="Event" type="Armor">
 		<!-- Can be enhanced up to Lv. 5 by combining it with the talisman of the same level by Veruti in Giran. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
