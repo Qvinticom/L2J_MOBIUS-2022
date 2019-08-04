@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
+import org.l2jmobius.gameserver.model.actor.instance.FlyTerrainObjectInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ObservationInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -66,6 +67,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						&& !obj.isMonster() //
 						&& !(obj instanceof ObservationInstance) //
 						&& !(obj instanceof ArtefactInstance) //
+						&& !(obj instanceof FlyTerrainObjectInstance) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
@@ -93,6 +95,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						&& !obj.isMonster() //
 						&& !(obj instanceof ObservationInstance) //
 						&& !(obj instanceof ArtefactInstance) //
+						&& !(obj instanceof FlyTerrainObjectInstance) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
@@ -117,7 +120,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
 						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof ArtefactInstance))
+						&& !(obj instanceof ArtefactInstance) //
+						&& !(obj instanceof FlyTerrainObjectInstance))
 					{
 						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm"))
