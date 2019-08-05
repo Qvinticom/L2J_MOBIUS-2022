@@ -81,7 +81,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof MerchantInstance) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								results.add(npc.getId());
@@ -116,7 +116,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof MerchantInstance) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								results.add(npc.getId());
@@ -148,7 +148,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof MerchantInstance) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								activeChar.teleToLocation(npc);
