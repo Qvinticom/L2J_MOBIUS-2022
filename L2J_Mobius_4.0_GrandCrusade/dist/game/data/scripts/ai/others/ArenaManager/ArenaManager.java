@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -34,8 +35,8 @@ public class ArenaManager extends AbstractNpcAI
 	// NPCs
 	private static final int[] ARENA_MANAGER =
 	{
-		31226, // Arena Director (MDT)
-		31225, // Arena Manager (Coliseum)
+		31225, // Arena Director (MDT)
+		31226, // Arena Manager (Coliseum)
 	};
 	// Skills
 	private static final SkillHolder[] BUFFS =
@@ -97,10 +98,9 @@ public class ArenaManager extends AbstractNpcAI
 				if (player.getAdena() >= BUFF_COST)
 				{
 					takeItems(player, Inventory.ADENA_ID, BUFF_COST);
-					npc.setTarget(player);
 					for (SkillHolder skill : BUFFS)
 					{
-						npc.doCast(skill.getSkill());
+						SkillCaster.triggerCast(npc, player, skill.getSkill());
 					}
 				}
 				else
