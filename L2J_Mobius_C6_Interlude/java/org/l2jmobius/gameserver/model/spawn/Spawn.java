@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type. <B><U> Concept</U> :</B><BR>
@@ -504,7 +505,12 @@ public class Spawn
 		// Do not correct z of flying NPCs.
 		if (!npc.isFlying())
 		{
-			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+			// Do not correct Z distances greater than 300.
+			if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true) < 300)
+			{
+				newlocz = geoZ;
+			}
 		}
 		
 		npc.stopAllEffects();

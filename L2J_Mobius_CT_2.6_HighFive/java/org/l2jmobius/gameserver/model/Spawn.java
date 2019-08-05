@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type.<br>
@@ -395,7 +396,12 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		// Do not correct z of flying NPCs.
 		if (!npc.isFlying())
 		{
-			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+			// Do not correct Z distances greater than 300.
+			if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true, false) < 300)
+			{
+				newlocz = geoZ;
+			}
 		}
 		
 		npc.stopAllEffects();
