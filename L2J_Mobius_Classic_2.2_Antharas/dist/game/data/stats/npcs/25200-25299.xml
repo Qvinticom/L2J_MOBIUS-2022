@@ -46,7 +46,6 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="6370" /> <!-- Saint Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60562" hpRegen="297.117282634219" mp="1377" mpRegen="3" />
 			<attack physical="4437.51100167866" magical="3181.68179724353" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -260,7 +259,6 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="63589" hpRegen="308.04072385958" mp="1507" mpRegen="3" />
 			<attack physical="4902.4469608376" magical="3475.50410725631" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -296,7 +294,6 @@
 	<npc id="25207" level="75" type="Monster" name="Ashakiel's Rod" title="Raid Fighter">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="31794" hpRegen="308.04072385958" mp="1507" mpRegen="3" />
 			<attack physical="4902.4469608376" magical="3475.50410725631" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1435,7 +1432,6 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="74" lhand="657" /> <!-- Katana / Inferno Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="39349" hpRegen="66.0848830657008" mp="30954" mpRegen="2.4" />
 			<attack physical="2575.13922287136" magical="1602.60653438487" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
