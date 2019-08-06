@@ -53,6 +53,10 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 				packet.writeD(temp.getRecipeId());
 				packet.writeD(0x00); // unknown
 				packet.writeQ(temp.getCost());
+				
+				packet.writeQ(0x00); // Classic - 166
+				packet.writeQ(0x00); // Classic - 166
+				packet.writeC(0x00); // Classic - 166
 			}
 		}
 		return true;
