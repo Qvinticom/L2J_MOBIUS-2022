@@ -18,10 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.OptionalLong;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.CommonUtil;
@@ -119,7 +116,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_amount < 1) || (_amount > 999999)) // 999 999 is client max.
+		if ((_amount < 1) || (_amount > 10000)) // 999 999 is client max.
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
@@ -225,8 +222,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				
 				final long totalCount = Math.multiplyExact(list.getProductCount(product), _amount);
-				
-				if (!(totalCount >= 0) && (totalCount <= Integer.MAX_VALUE))
+				if ((totalCount < 1) || (totalCount > Integer.MAX_VALUE))
 				{
 					player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 					return;
@@ -268,47 +264,32 @@ public class MultiSellChoose implements IClientIncomingPacket
 				return;
 			}
 			
-			// Summarize all item counts into one map. That would include non-stackable items under 1 id and multiple count.
-			final Map<Integer, Long> itemIdCount = entry.getIngredients().stream().collect(Collectors.toMap(i -> i.getId(), i -> list.getIngredientCount(i), (k1, k2) -> Math.addExact(k1, k2)));
-			
-			// Check for enchanted level requirements.
+			// Check for enchanted level and ingredient count requirements.
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
-				if (ingredient.getEnchantmentLevel() == 0)
+				if (ingredient.getEnchantmentLevel() > 0)
 				{
-					continue;
-				}
-				int found = 0;
-				for (ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
-				{
-					if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel())
+					int found = 0;
+					for (ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
 					{
-						found++;
+						if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel())
+						{
+							found++;
+						}
+					}
+					
+					if (found < ingredient.getCount())
+					{
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+						sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
+						player.sendPacket(sm);
+						return;
 					}
 				}
-				
-				if (found < ingredient.getCount())
+				else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(ingredient.getCount(), _amount)))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
-					sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
-					player.sendPacket(sm);
 					return;
 				}
-				
-				itemIdCount.remove(ingredient.getId()); // Since we check now.
-			}
-			
-			// Now check if the player has sufficient items in the inventory to cover the ingredients' expences. Take care for non-stackable items like 2 swords to dual.
-			boolean allOk = true;
-			for (Entry<Integer, Long> idCount : itemIdCount.entrySet())
-			{
-				allOk &= checkIngredients(player, list, inventory, clan, idCount.getKey(), Math.multiplyExact(idCount.getValue(), _amount));
-			}
-			
-			// The above operation should not be short-circuited, in order to show all missing ingredients.
-			if (!allOk)
-			{
-				return;
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
