@@ -20,9 +20,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -224,10 +226,10 @@ public class FortSiege implements Siegable
 		}
 	}
 	
-	private final List<SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
+	private final Collection<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
 	
 	// Fort setting
-	protected List<Spawn> _commanders = new CopyOnWriteArrayList<>();
+	protected Collection<Spawn> _commanders = ConcurrentHashMap.newKeySet();
 	protected final Fort _fort;
 	boolean _isInProgress = false;
 	private FortSiegeGuardManager _siegeGuardManager;
@@ -1166,7 +1168,7 @@ public class FortSiege implements Siegable
 	}
 	
 	@Override
-	public List<SiegeClan> getAttackerClans()
+	public Collection<SiegeClan> getAttackerClans()
 	{
 		return _attackerClans;
 	}
@@ -1188,7 +1190,7 @@ public class FortSiege implements Siegable
 	}
 	
 	@Override
-	public List<Npc> getFlag(Clan clan)
+	public Set<Npc> getFlag(Clan clan)
 	{
 		if (clan != null)
 		{
@@ -1220,7 +1222,7 @@ public class FortSiege implements Siegable
 		_fort.resetDoors();
 	}
 	
-	public List<Spawn> getCommanders()
+	public Collection<Spawn> getCommanders()
 	{
 		return _commanders;
 	}

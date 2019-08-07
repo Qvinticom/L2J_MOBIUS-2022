@@ -17,13 +17,12 @@
 package ai.areas.Hellbound.AI.Zones.TowerOfNaia;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -158,7 +157,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	private int _winIndex;
 	
 	private final Map<Integer, Boolean> _activeRooms = new HashMap<>();
-	private final Map<Integer, List<Npc>> _spawns = new ConcurrentHashMap<>();
+	private final Map<Integer, Collection<Npc>> _spawns = new ConcurrentHashMap<>();
 	private final Set<Npc> _sporeSpawn = ConcurrentHashMap.newKeySet();
 	static
 	{
@@ -625,7 +624,7 @@ public class TowerOfNaia extends AbstractNpcAI
 			
 			if ((managerId > 0) && _spawns.containsKey(managerId))
 			{
-				final List<Npc> spawned = _spawns.get(managerId);
+				final Collection<Npc> spawned = _spawns.get(managerId);
 				spawned.remove(npc);
 				if (spawned.isEmpty() && DOORS.containsKey(managerId))
 				{
@@ -876,7 +875,7 @@ public class TowerOfNaia extends AbstractNpcAI
 		if (SPAWNS.containsKey(managerId))
 		{
 			final int[][] spawnList = SPAWNS.get(managerId);
-			final List<Npc> spawned = new CopyOnWriteArrayList<>();
+			final Collection<Npc> spawned = ConcurrentHashMap.newKeySet();
 			for (int[] spawn : spawnList)
 			{
 				final Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);

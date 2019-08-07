@@ -17,7 +17,8 @@
 package ai.areas.FantasyIsle;
 
 import java.text.SimpleDateFormat;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -120,7 +121,7 @@ public class Parade extends AbstractNpcAI
 	// @formatter:on
 	
 	int npcIndex;
-	CopyOnWriteArrayList<Npc> spawns = new CopyOnWriteArrayList<>();
+	Collection<Npc> spawns = ConcurrentHashMap.newKeySet();
 	ScheduledFuture<?> spawnTask;
 	ScheduledFuture<?> deleteTask;
 	ScheduledFuture<?> cleanTask;

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -46,7 +46,7 @@ public class MercTicketManager
 {
 	private static final Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
-	private static final List<ItemInstance> DROPPED_TICKETS = new CopyOnWriteArrayList<>();
+	private static final Collection<ItemInstance> DROPPED_TICKETS = ConcurrentHashMap.newKeySet();
 	
 	// TODO: move all these values into siege.properties
 	// max tickets per merc type = 10 + (castleid * 2)?
@@ -406,7 +406,7 @@ public class MercTicketManager
 		return ITEM_IDS;
 	}
 	
-	public List<ItemInstance> getDroppedTickets()
+	public Collection<ItemInstance> getDroppedTickets()
 	{
 		return DROPPED_TICKETS;
 	}

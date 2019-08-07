@@ -18,10 +18,11 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 import java.util.logging.Level;
@@ -54,7 +55,7 @@ public class SpawnsData implements IXmlReader
 {
 	protected static final Logger LOGGER = Logger.getLogger(SpawnsData.class.getName());
 	
-	private final List<SpawnTemplate> _spawns = new CopyOnWriteArrayList<>();
+	private final Collection<SpawnTemplate> _spawns = ConcurrentHashMap.newKeySet();
 	
 	protected SpawnsData()
 	{
@@ -98,7 +99,7 @@ public class SpawnsData implements IXmlReader
 		
 		if (Config.THREADS_FOR_LOADING)
 		{
-			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
 			for (SpawnTemplate template : _spawns)
 			{
 				if (template.isSpawningByDefault())
@@ -146,7 +147,7 @@ public class SpawnsData implements IXmlReader
 		LOGGER.info(getClass().getSimpleName() + ": All spawns has been removed!");
 	}
 	
-	public List<SpawnTemplate> getSpawns()
+	public Collection<SpawnTemplate> getSpawns()
 	{
 		return _spawns;
 	}
@@ -166,7 +167,7 @@ public class SpawnsData implements IXmlReader
 		return _spawns.stream().flatMap(template -> template.getGroups().stream()).flatMap(group -> group.getSpawns().stream()).filter(condition).collect(Collectors.toList());
 	}
 	
-	public void parseSpawn(Node spawnsNode, File file, List<SpawnTemplate> spawns)
+	public void parseSpawn(Node spawnsNode, File file, Collection<SpawnTemplate> spawns)
 	{
 		final SpawnTemplate spawnTemplate = new SpawnTemplate(new StatsSet(parseAttributes(spawnsNode)), file);
 		SpawnGroup defaultGroup = null;

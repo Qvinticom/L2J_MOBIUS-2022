@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -45,7 +45,7 @@ public class RaceManagerInstance extends Npc
 	public static final int LANES = 8;
 	public static final int WINDOW_START = 0;
 	
-	private static List<RaceManagerInstance> _managers;
+	private static Collection<RaceManagerInstance> _managers;
 	protected static int _raceNumber = 4;
 	
 	// Time Constants
@@ -104,7 +104,7 @@ public class RaceManagerInstance extends Npc
 		{
 			_notInitialized = false;
 			
-			_managers = new CopyOnWriteArrayList<>();
+			_managers = ConcurrentHashMap.newKeySet();
 			
 			ThreadPool.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
 			ThreadPool.scheduleAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), 30 * SECOND, 10 * MINUTE);

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.entity;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -57,7 +58,7 @@ public class GameEvent
 	public static String _eventInfo = "";
 	public static int _teamsNumber = 0;
 	public static final Map<Integer, String> _teamNames = new ConcurrentHashMap<>();
-	public static final List<PlayerInstance> _registeredPlayers = new CopyOnWriteArrayList<>();
+	public static final Collection<PlayerInstance> _registeredPlayers = ConcurrentHashMap.newKeySet();
 	public static final Map<Integer, List<PlayerInstance>> _teams = new ConcurrentHashMap<>();
 	public static int _npcId = 0;
 	private static final Map<PlayerInstance, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();

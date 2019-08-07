@@ -16,8 +16,8 @@
  */
 package ai.bosses.Orfen;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -70,7 +70,7 @@ public class Orfen extends AbstractNpcAI
 	private static final int RIBA_IREN = 29018;
 	
 	private static boolean _IsTeleported;
-	private static final List<Attackable> MINIONS = new CopyOnWriteArrayList<>();
+	private static final Collection<Attackable> MINIONS = ConcurrentHashMap.newKeySet();
 	private static BossZone ZONE;
 	
 	private static final byte ALIVE = 0;

@@ -17,8 +17,9 @@
 package custom.events.Race;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
@@ -45,7 +46,7 @@ public class Race extends Event
 	// Npc
 	private Npc _npc;
 	// Player list
-	private List<PlayerInstance> _players;
+	private Collection<PlayerInstance> _players;
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
 	// Event state
@@ -127,7 +128,7 @@ public class Race extends Event
 		}
 		// Initialize list
 		_npclist = new ArrayList<>();
-		_players = new CopyOnWriteArrayList<>();
+		_players = ConcurrentHashMap.newKeySet();
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager

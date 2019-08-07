@@ -19,10 +19,12 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
@@ -304,7 +306,7 @@ public class ServitorInstance extends Summon implements Runnable
 			
 			int buff_index = 0;
 			
-			final List<Long> storedSkills = new CopyOnWriteArrayList<>();
+			final Collection<Long> storedSkills = ConcurrentHashMap.newKeySet();
 			
 			// Store all effect data along with calculated remaining
 			if (storeEffects)

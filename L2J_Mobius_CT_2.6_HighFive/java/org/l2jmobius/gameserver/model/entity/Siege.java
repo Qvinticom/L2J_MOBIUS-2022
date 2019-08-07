@@ -21,10 +21,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -219,9 +221,9 @@ public class Siege implements Siegable
 	}
 	
 	// must support Concurrent Modifications
-	private final List<SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
-	private final List<SiegeClan> _defenderClans = new CopyOnWriteArrayList<>();
-	private final List<SiegeClan> _defenderWaitingClans = new CopyOnWriteArrayList<>();
+	private final Collection<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
+	private final Collection<SiegeClan> _defenderClans = ConcurrentHashMap.newKeySet();
+	private final Collection<SiegeClan> _defenderWaitingClans = ConcurrentHashMap.newKeySet();
 	
 	// Castle setting
 	private final List<ControlTowerInstance> _controlTowers = new ArrayList<>();
@@ -1571,7 +1573,7 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public List<SiegeClan> getAttackerClans()
+	public Collection<SiegeClan> getAttackerClans()
 	{
 		return _isNormalSide ? _attackerClans : _defenderClans;
 	}
@@ -1606,7 +1608,7 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public List<SiegeClan> getDefenderClans()
+	public Collection<SiegeClan> getDefenderClans()
 	{
 		return _isNormalSide ? _defenderClans : _attackerClans;
 	}
@@ -1628,7 +1630,7 @@ public class Siege implements Siegable
 		return null;
 	}
 	
-	public List<SiegeClan> getDefenderWaitingClans()
+	public Collection<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}
@@ -1669,7 +1671,7 @@ public class Siege implements Siegable
 	}
 	
 	@Override
-	public List<Npc> getFlag(Clan clan)
+	public Set<Npc> getFlag(Clan clan)
 	{
 		if (clan != null)
 		{

@@ -16,15 +16,15 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 
 public class SiegeClan
 {
 	private int _clanId = 0;
-	private final List<Npc> _flag = new CopyOnWriteArrayList<>();
+	private final Set<Npc> _flag = ConcurrentHashMap.newKeySet();
 	private SiegeClanType _type;
 	
 	public enum SiegeClanType
@@ -69,7 +69,7 @@ public class SiegeClan
 		return _clanId;
 	}
 	
-	public List<Npc> getFlag()
+	public Set<Npc> getFlag()
 	{
 		return _flag;
 	}

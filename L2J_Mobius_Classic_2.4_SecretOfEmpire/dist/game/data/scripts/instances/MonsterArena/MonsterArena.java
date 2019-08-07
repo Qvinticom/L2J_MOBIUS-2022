@@ -16,8 +16,8 @@
  */
 package instances.MonsterArena;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -72,7 +72,7 @@ public class MonsterArena extends AbstractInstance
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
 	// Misc
-	private static final List<PlayerInstance> REWARDED_PLAYERS = new CopyOnWriteArrayList<>();
+	private static final Collection<PlayerInstance> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 	

@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import java.util.Calendar;
-import java.util.List;
+import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -132,7 +132,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 			// get,build & send current Wards list
 			if (TerritoryWarManager.getInstance().isTWInProgress())
 			{
-				final List<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
+				final Collection<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
 				for (TerritoryWard ward : territoryWardList)
 				{
 					if (ward.getNpc() != null)

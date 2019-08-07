@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.communitybbs.Manager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class ForumsBBSManager extends BaseBBSManager
 {
 	private static Logger LOGGER = Logger.getLogger(ForumsBBSManager.class.getName());
-	private final List<Forum> _table;
+	private final Collection<Forum> _table;
 	private int _lastid = 1;
 	
 	/**
@@ -39,7 +39,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	protected ForumsBBSManager()
 	{
-		_table = new CopyOnWriteArrayList<>();
+		_table = ConcurrentHashMap.newKeySet();
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))

@@ -27,7 +27,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
@@ -156,7 +155,7 @@ public class Clan implements IIdentifiable, INamable
 	private ClanRewardBonus _lastMembersOnlineBonus = null;
 	private ClanRewardBonus _lastHuntingBonus = null;
 	
-	private final List<ScheduledFuture<?>> masterySkillTasks = new CopyOnWriteArrayList<>();
+	private final Collection<ScheduledFuture<?>> masterySkillTasks = ConcurrentHashMap.newKeySet();
 	
 	private volatile ClanVariables _vars;
 	

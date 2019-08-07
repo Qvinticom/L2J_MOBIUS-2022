@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.model.Location;
@@ -48,7 +48,7 @@ public class PlayerEventHolder
 	private final int _pkKills;
 	private final int _karma;
 	
-	private final List<PlayerInstance> _kills = new CopyOnWriteArrayList<>();
+	private final Collection<PlayerInstance> _kills = ConcurrentHashMap.newKeySet();
 	private boolean _sitForced;
 	
 	public PlayerEventHolder(PlayerInstance player)
@@ -92,7 +92,7 @@ public class PlayerEventHolder
 		return _sitForced;
 	}
 	
-	public List<PlayerInstance> getKills()
+	public Collection<PlayerInstance> getKills()
 	{
 		return _kills;
 	}

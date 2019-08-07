@@ -17,10 +17,8 @@
 package ai.bosses;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -88,14 +86,14 @@ public class Antharas extends Quest
 		}
 	};
 	
-	protected List<Spawn> _teleportCubeSpawn = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _teleportCube = new CopyOnWriteArrayList<>();
+	protected Collection<Spawn> _teleportCubeSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _teleportCube = ConcurrentHashMap.newKeySet();
 	
 	// Spawn data of monsters.
 	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
 	
 	// Instance of monsters.
-	protected List<NpcInstance> _monsters = new CopyOnWriteArrayList<>();
+	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
 	protected GrandBossInstance _antharas = null;
 	
 	// monstersId

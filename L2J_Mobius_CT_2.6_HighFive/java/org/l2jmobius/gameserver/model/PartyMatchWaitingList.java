@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class PartyMatchWaitingList
 {
-	private final List<PlayerInstance> _members;
+	private final Collection<PlayerInstance> _members;
 	
 	protected PartyMatchWaitingList()
 	{
-		_members = new CopyOnWriteArrayList<>();
+		_members = ConcurrentHashMap.newKeySet();
 	}
 	
 	public void addPlayer(PlayerInstance player)
@@ -51,7 +51,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public List<PlayerInstance> getPlayers()
+	public Collection<PlayerInstance> getPlayers()
 	{
 		return _members;
 	}

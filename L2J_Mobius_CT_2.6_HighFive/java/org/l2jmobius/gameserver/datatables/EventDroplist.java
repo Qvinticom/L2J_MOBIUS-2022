@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.datatables;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.script.EventDrop;
@@ -35,7 +36,7 @@ public class EventDroplist
 	/**
 	 * The table containing all DataDrop object
 	 */
-	private static final List<DateDrop> ALL_NPC_DATE_DROPS = new CopyOnWriteArrayList<>();
+	private static final Collection<DateDrop> ALL_NPC_DATE_DROPS = ConcurrentHashMap.newKeySet();
 	
 	public static class DateDrop
 	{

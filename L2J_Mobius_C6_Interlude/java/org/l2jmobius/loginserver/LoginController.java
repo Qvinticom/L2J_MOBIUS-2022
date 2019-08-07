@@ -29,11 +29,9 @@ import java.sql.ResultSet;
 import java.util.Base64;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
@@ -99,7 +97,7 @@ public class LoginController
 	private static final int LOGIN_TIMEOUT = 60 * 1000;
 	
 	/** Clients that are on the LS but arent assocated with a account yet */
-	protected List<LoginClient> _clients = new CopyOnWriteArrayList<>();
+	protected Collection<LoginClient> _clients = ConcurrentHashMap.newKeySet();
 	
 	/** Authed Clients on LoginServer */
 	protected Map<String, LoginClient> _loginServerClients = new ConcurrentHashMap<>();

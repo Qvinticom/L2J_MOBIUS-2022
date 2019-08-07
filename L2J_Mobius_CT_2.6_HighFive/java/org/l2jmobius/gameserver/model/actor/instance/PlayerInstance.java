@@ -36,7 +36,6 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -407,7 +406,7 @@ public class PlayerInstance extends Playable
 	private static final int NEVIT_HOURGLASS_PAUSED = 1;
 	private static final int NEVIT_HOURGLASS_MAINTAIN = 10;
 	
-	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
+	private final Collection<IEventListener> _eventListeners = ConcurrentHashMap.newKeySet();
 	
 	private GameClient _client;
 	private String _ip = "N/A";
@@ -617,7 +616,7 @@ public class PlayerInstance extends Playable
 	private int _agathionId = 0;
 	// apparently, a PlayerInstance CAN have both a summon AND a tamed beast at the same time!!
 	// after Freya players can control more than one tamed beast
-	private List<TamedBeastInstance> _tamedBeast = null;
+	private Collection<TamedBeastInstance> _tamedBeast = null;
 	
 	private boolean _minimapAllowed = false;
 	
@@ -1486,7 +1485,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/** List of all QuestState instance that needs to be notified of this PlayerInstance's or its pet's death */
-	private volatile List<QuestState> _notifyQuestOfDeathList = new CopyOnWriteArrayList<>();
+	private volatile Collection<QuestState> _notifyQuestOfDeathList = ConcurrentHashMap.newKeySet();
 	
 	/**
 	 * Add QuestState instance that is to be notified of PlayerInstance's death.
@@ -1521,7 +1520,7 @@ public class PlayerInstance extends Playable
 	/**
 	 * @return a list of QuestStates which registered for notify of death of this PlayerInstance.
 	 */
-	public List<QuestState> getNotifyQuestOfDeath()
+	public Collection<QuestState> getNotifyQuestOfDeath()
 	{
 		return _notifyQuestOfDeathList;
 	}
@@ -5704,7 +5703,7 @@ public class PlayerInstance extends Playable
 	/**
 	 * @return the Summon of the PlayerInstance or null.
 	 */
-	public List<TamedBeastInstance> getTrainedBeasts()
+	public Collection<TamedBeastInstance> getTrainedBeasts()
 	{
 		return _tamedBeast;
 	}
@@ -5717,7 +5716,7 @@ public class PlayerInstance extends Playable
 	{
 		if (_tamedBeast == null)
 		{
-			_tamedBeast = new CopyOnWriteArrayList<>();
+			_tamedBeast = ConcurrentHashMap.newKeySet();
 		}
 		_tamedBeast.add(tamedBeast);
 	}
@@ -13389,9 +13388,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/** Friend list. */
-	private final List<Integer> _friendList = new CopyOnWriteArrayList<>();
+	private final Collection<Integer> _friendList = ConcurrentHashMap.newKeySet();
 	
-	public List<Integer> getFriendList()
+	public Collection<Integer> getFriendList()
 	{
 		return _friendList;
 	}

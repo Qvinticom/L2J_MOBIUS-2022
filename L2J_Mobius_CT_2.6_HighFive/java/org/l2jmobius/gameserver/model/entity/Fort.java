@@ -21,13 +21,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -81,9 +81,9 @@ public class Fort extends AbstractResidence
 	
 	// Spawn Data
 	private boolean _isSuspiciousMerchantSpawned = false;
-	private final List<Spawn> _siegeNpcs = new CopyOnWriteArrayList<>();
-	private final List<Spawn> _npcCommanders = new CopyOnWriteArrayList<>();
-	private final List<Spawn> _specialEnvoys = new CopyOnWriteArrayList<>();
+	private final Collection<Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
+	private final Collection<Spawn> _npcCommanders = ConcurrentHashMap.newKeySet();
+	private final Collection<Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
 	
 	private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
 	private final Set<Integer> _availableCastles = new HashSet<>(1);

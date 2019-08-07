@@ -17,8 +17,9 @@
 package org.l2jmobius.gameserver.instancemanager;
 
 import java.io.File;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.w3c.dom.Document;
@@ -326,11 +327,11 @@ public class MapRegionManager implements IXmlReader
 						if (castle.getSiege().isInProgress())
 						{
 							// Check if player's clan is attacker
-							final List<Npc> flags = castle.getSiege().getFlag(player.getClan());
+							final Collection<Npc> flags = castle.getSiege().getFlag(player.getClan());
 							if ((flags != null) && !flags.isEmpty())
 							{
 								// Spawn to flag - Need more work to get player to the nearest flag
-								return flags.get(0).getLocation();
+								return flags.stream().findFirst().get().getLocation();
 							}
 						}
 					}
@@ -339,21 +340,21 @@ public class MapRegionManager implements IXmlReader
 						if (fort.getSiege().isInProgress())
 						{
 							// Check if player's clan is attacker
-							final List<Npc> flags = fort.getSiege().getFlag(player.getClan());
+							final Set<Npc> flags = fort.getSiege().getFlag(player.getClan());
 							if ((flags != null) && !flags.isEmpty())
 							{
 								// Spawn to flag - Need more work to get player to the nearest flag
-								return flags.get(0).getLocation();
+								return flags.stream().findFirst().get().getLocation();
 							}
 						}
 					}
 					else if ((clanhall != null) && clanhall.isSiegableHall())
 					{
 						final SiegableHall sHall = (SiegableHall) clanhall;
-						final List<Npc> flags = sHall.getSiege().getFlag(player.getClan());
+						final Collection<Npc> flags = sHall.getSiege().getFlag(player.getClan());
 						if ((flags != null) && !flags.isEmpty())
 						{
-							return flags.get(0).getLocation();
+							return flags.stream().findFirst().get().getLocation();
 						}
 					}
 				}

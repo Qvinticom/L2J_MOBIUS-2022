@@ -62,7 +62,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				}
 				if (!inst.getEnterLocs().isEmpty())
 				{
-					teleportPlayer(player, inst.getEnterLocs().get(getRandom(inst.getEnterLocs().size())), world.getInstanceId(), false);
+					teleportPlayer(player, inst.getEnterLocs().stream().findAny().get(), world.getInstanceId(), false);
 				}
 				return;
 			}
@@ -88,7 +88,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			if (!inst.getEnterLocs().isEmpty())
 			{
-				teleportPlayer(player, inst.getEnterLocs().get(getRandom(inst.getEnterLocs().size())), instance.getInstanceId(), false);
+				teleportPlayer(player, inst.getEnterLocs().stream().findAny().get(), instance.getInstanceId(), false);
 			}
 		}
 	}

@@ -18,9 +18,10 @@ package org.l2jmobius.gameserver.engines;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -89,7 +90,7 @@ public class DocumentEngine
 	{
 		if (Config.THREADS_FOR_LOADING)
 		{
-			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
 			for (File file : _skillFiles)
 			{
 				jobs.add(ThreadPool.schedule(() ->
@@ -141,13 +142,13 @@ public class DocumentEngine
 	 * Return created items
 	 * @return List of {@link Item}
 	 */
-	public List<Item> loadItems()
+	public Collection<Item> loadItems()
 	{
-		final List<Item> list = new CopyOnWriteArrayList<>();
+		final Collection<Item> list = ConcurrentHashMap.newKeySet();
 		
 		if (Config.THREADS_FOR_LOADING)
 		{
-			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
 			for (File file : _itemFiles)
 			{
 				jobs.add(ThreadPool.schedule(() ->

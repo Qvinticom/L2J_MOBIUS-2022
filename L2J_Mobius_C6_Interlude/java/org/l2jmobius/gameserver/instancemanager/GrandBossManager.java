@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -70,7 +71,7 @@ public class GrandBossManager
 	
 	private Map<Integer, Integer> _bossStatus;
 	
-	private List<BossZone> _zones;
+	private Collection<BossZone> _zones;
 	
 	public static GrandBossManager getInstance()
 	{
@@ -89,7 +90,7 @@ public class GrandBossManager
 	
 	private void init()
 	{
-		_zones = new CopyOnWriteArrayList<>();
+		_zones = ConcurrentHashMap.newKeySet();
 		_bosses = new ConcurrentHashMap<>();
 		_storedInfo = new ConcurrentHashMap<>();
 		_bossStatus = new ConcurrentHashMap<>();

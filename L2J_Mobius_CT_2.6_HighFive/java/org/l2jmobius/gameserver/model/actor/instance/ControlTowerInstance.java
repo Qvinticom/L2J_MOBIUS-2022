@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  */
 public class ControlTowerInstance extends Tower
 {
-	private volatile List<Spawn> _guards;
+	private volatile Collection<Spawn> _guards;
 	
 	/**
 	 * Creates a control tower.
@@ -75,7 +75,7 @@ public class ControlTowerInstance extends Tower
 		getGuards().add(guard);
 	}
 	
-	private final List<Spawn> getGuards()
+	private final Collection<Spawn> getGuards()
 	{
 		if (_guards == null)
 		{
@@ -83,7 +83,7 @@ public class ControlTowerInstance extends Tower
 			{
 				if (_guards == null)
 				{
-					_guards = new CopyOnWriteArrayList<>();
+					_guards = ConcurrentHashMap.newKeySet();
 				}
 			}
 		}

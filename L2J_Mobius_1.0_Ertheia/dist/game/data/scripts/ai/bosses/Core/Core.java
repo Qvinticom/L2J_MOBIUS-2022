@@ -16,11 +16,11 @@
  */
 package ai.bosses.Core;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -78,7 +78,7 @@ public class Core extends AbstractNpcAI
 	
 	private static boolean _firstAttacked;
 	
-	private static final List<Attackable> _minions = new CopyOnWriteArrayList<>();
+	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	private Core()
 	{

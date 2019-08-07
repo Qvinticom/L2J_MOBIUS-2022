@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.instancezone;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -157,7 +158,7 @@ public class InstanceWorld
 	 * Get spawned NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public List<Npc> getNpcs()
+	public Collection<Npc> getNpcs()
 	{
 		return _instance.getNpcs();
 	}

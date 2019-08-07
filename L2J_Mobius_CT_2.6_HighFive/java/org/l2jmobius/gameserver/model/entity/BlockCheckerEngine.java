@@ -16,11 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.entity;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -67,7 +66,7 @@ public class BlockCheckerEngine
 	// Current used arena
 	protected int _arena = -1;
 	// All blocks
-	protected List<Spawn> _spawns = new CopyOnWriteArrayList<>();
+	protected Collection<Spawn> _spawns = ConcurrentHashMap.newKeySet();
 	// Sets if the red team won the event at the end of this (used for packets)
 	protected boolean _isRedWinner;
 	// Time when the event starts. Used on packet sending
@@ -116,7 +115,7 @@ public class BlockCheckerEngine
 	// Common z coordinate
 	private static final int _zCoord = -2405;
 	// List of dropped items in event (for later deletion)
-	protected List<ItemInstance> _drops = new CopyOnWriteArrayList<>();
+	protected Collection<ItemInstance> _drops = ConcurrentHashMap.newKeySet();
 	// Default arena
 	private static final byte DEFAULT_ARENA = -1;
 	// Event is started

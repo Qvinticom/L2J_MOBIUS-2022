@@ -18,8 +18,8 @@ package org.l2jmobius.loginserver;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 
@@ -28,7 +28,7 @@ import org.l2jmobius.Config;
  */
 public class GameServerListener extends FloodProtectedListener
 {
-	private static List<GameServerThread> _gameServers = new CopyOnWriteArrayList<>();
+	private static Collection<GameServerThread> _gameServers = ConcurrentHashMap.newKeySet();
 	
 	public GameServerListener() throws IOException
 	{

@@ -533,7 +533,7 @@ public class Formulas
 		}
 		
 		final SiegeClan siegeClan = siege.getAttackerClan(player.getClan().getId());
-		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, player, siegeClan.getFlag().get(0), true))
+		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, player, siegeClan.getFlag().stream().findFirst().get(), true))
 		{
 			return 0;
 		}

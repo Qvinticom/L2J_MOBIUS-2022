@@ -16,8 +16,8 @@
  */
 package ai.bosses;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.Config;
@@ -48,7 +48,7 @@ public class IceFairySirra extends Quest
 	private static final int SILVER_HEMOCYTE = 8057;
 	private static BossZone _freyasZone;
 	private static PlayerInstance _player = null;
-	protected List<NpcInstance> _allMobs = new CopyOnWriteArrayList<>();
+	protected Collection<NpcInstance> _allMobs = ConcurrentHashMap.newKeySet();
 	protected Future<?> _onDeadEventTask = null;
 	
 	public IceFairySirra(int id, String name, String descr)

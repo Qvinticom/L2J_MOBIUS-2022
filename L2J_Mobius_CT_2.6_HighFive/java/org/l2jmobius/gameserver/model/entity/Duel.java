@@ -614,7 +614,7 @@ public class Duel
 		}
 		
 		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(Rnd.get(147, 150)).getId(); // Random Olympiad arena.
-		final OlympiadStadiumZone zone = ZoneManager.getInstance().getZone(InstanceManager.getInstance().getInstance(_duelInstanceId).getNpcs().get(0), OlympiadStadiumZone.class);
+		final OlympiadStadiumZone zone = ZoneManager.getInstance().getZone(InstanceManager.getInstance().getInstance(_duelInstanceId).getNpcs().stream().findFirst().get(), OlympiadStadiumZone.class);
 		if (zone == null)
 		{
 			throw new RuntimeException("Unable to find a party duel arena!");

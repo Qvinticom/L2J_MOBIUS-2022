@@ -19,10 +19,9 @@ package org.l2jmobius.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -46,7 +45,7 @@ public class Forum
 	public static final int CLANMEMBERONLY = 2;
 	public static final int OWNERONLY = 3;
 	
-	private final List<Forum> _children;
+	private final Collection<Forum> _children;
 	private final Map<Integer, Topic> _topic = new ConcurrentHashMap<>();
 	private final int _forumId;
 	private String _forumName;
@@ -66,7 +65,7 @@ public class Forum
 	{
 		_forumId = Forumid;
 		_fParent = FParent;
-		_children = new CopyOnWriteArrayList<>();
+		_children = ConcurrentHashMap.newKeySet();
 	}
 	
 	/**
@@ -85,7 +84,7 @@ public class Forum
 		_forumPerm = perm;
 		_fParent = parent;
 		_ownerID = OwnerID;
-		_children = new CopyOnWriteArrayList<>();
+		_children = ConcurrentHashMap.newKeySet();
 		parent._children.add(this);
 		ForumsBBSManager.getInstance().addForum(this);
 		_loaded = true;

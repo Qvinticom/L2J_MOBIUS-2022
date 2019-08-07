@@ -18,8 +18,9 @@ package ai.areas.ForgeOfTheGods;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.w3c.dom.Document;
@@ -189,7 +190,7 @@ public class TarBeetleSpawn implements IXmlReader
 	private final class SpawnZone
 	{
 		private final List<Zone> _zones = new ArrayList<>();
-		private final List<Npc> _spawn = new CopyOnWriteArrayList<>();
+		private final Collection<Npc> _spawn = ConcurrentHashMap.newKeySet();
 		private final int _maxNpcCount;
 		private final int _index;
 		

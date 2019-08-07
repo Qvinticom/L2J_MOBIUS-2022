@@ -16,8 +16,8 @@
  */
 package ai.bosses;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,7 +35,7 @@ public class Nurka extends Quest
 	private static final int NURKA = 35368;
 	private static final int MESSENGER = 35382;
 	// Misc
-	private static final List<Clan> _clans = new CopyOnWriteArrayList<>();
+	private static final Collection<Clan> _clans = ConcurrentHashMap.newKeySet();
 	
 	private Nurka()
 	{

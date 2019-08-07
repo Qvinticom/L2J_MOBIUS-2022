@@ -19,11 +19,12 @@ package org.l2jmobius.commons.util;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -167,7 +168,7 @@ public interface IXmlReader
 		
 		if (Config.THREADS_FOR_LOADING)
 		{
-			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
 			final File[] listOfFiles = dir.listFiles();
 			for (File file : listOfFiles)
 			{

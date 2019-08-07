@@ -21,8 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,7 +41,7 @@ public class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final List<ItemInstance> _items = new CopyOnWriteArrayList<>();
+	private final Collection<ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsOnGroundManager()
 	{

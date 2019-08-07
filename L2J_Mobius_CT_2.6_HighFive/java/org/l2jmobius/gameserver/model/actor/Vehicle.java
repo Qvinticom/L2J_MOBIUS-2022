@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.util.Util;
 public abstract class Vehicle extends Creature
 {
 	protected int _dockId = 0;
-	protected final List<PlayerInstance> _passengers = new CopyOnWriteArrayList<>();
+	protected final Collection<PlayerInstance> _passengers = ConcurrentHashMap.newKeySet();
 	protected Location _oustLoc = null;
 	private Runnable _engine = null;
 	
@@ -256,7 +256,7 @@ public abstract class Vehicle extends Creature
 		return _passengers.isEmpty();
 	}
 	
-	public List<PlayerInstance> getPassengers()
+	public Collection<PlayerInstance> getPassengers()
 	{
 		return _passengers;
 	}

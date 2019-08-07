@@ -16,8 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,7 +30,7 @@ public class MovieHolder
 {
 	private final Movie _movie;
 	private final List<PlayerInstance> _players;
-	private final List<PlayerInstance> _votedPlayers = new CopyOnWriteArrayList<>();
+	private final Collection<PlayerInstance> _votedPlayers = ConcurrentHashMap.newKeySet();
 	
 	public MovieHolder(List<PlayerInstance> players, Movie movie)
 	{
@@ -64,7 +65,7 @@ public class MovieHolder
 		return _players;
 	}
 	
-	public List<PlayerInstance> getVotedPlayers()
+	public Collection<PlayerInstance> getVotedPlayers()
 	{
 		return _votedPlayers;
 	}

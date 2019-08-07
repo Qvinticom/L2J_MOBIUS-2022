@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -72,12 +71,12 @@ public class Instance
 	private int _ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
 	/** Allow random walk for NPCs, global parameter. */
 	private boolean _allowRandomWalk = true;
-	private final List<Integer> _players = new CopyOnWriteArrayList<>();
-	private final List<Npc> _npcs = new CopyOnWriteArrayList<>();
-	private final List<StatsSet> _doorTemplates = new CopyOnWriteArrayList<>();
+	private final Collection<Integer> _players = ConcurrentHashMap.newKeySet();
+	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
+	private final Collection<StatsSet> _doorTemplates = ConcurrentHashMap.newKeySet();
 	private final Map<Integer, DoorInstance> _doors = new ConcurrentHashMap<>();
-	private final List<StatsSet> _spawnTemplates = new CopyOnWriteArrayList<>();
-	private List<Location> _enterLocations = new CopyOnWriteArrayList<>();
+	private final Collection<StatsSet> _spawnTemplates = ConcurrentHashMap.newKeySet();
+	private Collection<Location> _enterLocations = ConcurrentHashMap.newKeySet();
 	private Location _exitLocation = null;
 	private boolean _allowSummon = true;
 	private long _emptyDestroyTime = -1;
@@ -277,12 +276,12 @@ public class Instance
 		}
 	}
 	
-	public List<Integer> getPlayers()
+	public Collection<Integer> getPlayers()
 	{
 		return _players;
 	}
 	
-	public List<Npc> getNpcs()
+	public Collection<Npc> getNpcs()
 	{
 		return _npcs;
 	}
@@ -325,7 +324,7 @@ public class Instance
 	/**
 	 * @return the spawn location for this instance to be used when enter in instance
 	 */
-	public List<Location> getEnterLocs()
+	public Collection<Location> getEnterLocs()
 	{
 		return _enterLocations;
 	}

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -62,7 +62,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 	private Future<?> _buffTask = null;
 	private Future<?> _durationCheckTask = null;
 	protected boolean _isFreyaBeast;
-	private List<Skill> _beastSkills = null;
+	private Collection<Skill> _beastSkills = null;
 	
 	public TamedBeastInstance(int npcTemplateId)
 	{
@@ -205,7 +205,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 	{
 		if (_beastSkills == null)
 		{
-			_beastSkills = new CopyOnWriteArrayList<>();
+			_beastSkills = ConcurrentHashMap.newKeySet();
 		}
 		_beastSkills.add(skill);
 	}

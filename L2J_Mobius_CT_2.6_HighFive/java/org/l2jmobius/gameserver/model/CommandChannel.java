@@ -16,9 +16,10 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 import org.l2jmobius.Config;
@@ -36,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CommandChannel extends AbstractPlayerGroup
 {
-	private final List<Party> _parties = new CopyOnWriteArrayList<>();
+	private final Collection<Party> _parties = ConcurrentHashMap.newKeySet();
 	private PlayerInstance _commandLeader;
 	private int _channelLvl;
 	
@@ -150,7 +151,7 @@ public class CommandChannel extends AbstractPlayerGroup
 	/**
 	 * @return a list of all parties in this command channel
 	 */
-	public List<Party> getPartys()
+	public Collection<Party> getParties()
 	{
 		return _parties;
 	}

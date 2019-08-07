@@ -18,12 +18,11 @@ package org.l2jmobius.gameserver.communitybbs.Manager;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.BB.Post;
@@ -34,7 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class TopicBBSManager extends BaseBBSManager
 {
-	private final List<Topic> _table = new CopyOnWriteArrayList<>();
+	private final Collection<Topic> _table = ConcurrentHashMap.newKeySet();
 	private final Map<Forum, Integer> _maxId = new ConcurrentHashMap<>();
 	
 	protected TopicBBSManager()

@@ -26,7 +26,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Level;
@@ -137,7 +136,7 @@ public abstract class AbstractScript extends ManagedScript
 {
 	public static final Logger LOGGER = Logger.getLogger(AbstractScript.class.getName());
 	private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
-	private final List<AbstractEventListener> _listeners = new CopyOnWriteArrayList<>();
+	private final Collection<AbstractEventListener> _listeners = ConcurrentHashMap.newKeySet();
 	
 	public AbstractScript()
 	{
@@ -1604,7 +1603,7 @@ public abstract class AbstractScript extends ManagedScript
 		return _registeredIds.containsKey(type) ? _registeredIds.get(type) : Collections.emptySet();
 	}
 	
-	public List<AbstractEventListener> getListeners()
+	public Collection<AbstractEventListener> getListeners()
 	{
 		return _listeners;
 	}
@@ -2901,7 +2900,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param players list with PlayerInstance
 	 * @param movie the movie
 	 */
-	public void playMovie(List<PlayerInstance> players, Movie movie)
+	public void playMovie(Collection<PlayerInstance> players, Movie movie)
 	{
 		new MovieHolder(players, movie);
 	}

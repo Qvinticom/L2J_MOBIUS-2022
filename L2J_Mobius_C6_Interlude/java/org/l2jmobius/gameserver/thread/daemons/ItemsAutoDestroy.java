@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.thread.daemons;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -31,12 +31,12 @@ public class ItemsAutoDestroy
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroy.class.getName());
 	private static ItemsAutoDestroy _instance;
-	protected List<ItemInstance> _items = null;
+	protected Collection<ItemInstance> _items = null;
 	protected static long _sleep;
 	
 	private ItemsAutoDestroy()
 	{
-		_items = new CopyOnWriteArrayList<>();
+		_items = ConcurrentHashMap.newKeySet();
 		_sleep = Config.AUTODESTROY_ITEM_AFTER * 1000;
 		if (_sleep == 0)
 		{

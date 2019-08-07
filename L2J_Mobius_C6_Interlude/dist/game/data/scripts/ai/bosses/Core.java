@@ -16,11 +16,11 @@
  */
 package ai.bosses;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -77,7 +77,7 @@ public class Core extends Quest
 	
 	private static boolean _firstAttacked;
 	
-	private static final List<Attackable> _minions = new CopyOnWriteArrayList<>();
+	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	public Core(int id, String name, String descr)
 	{
@@ -182,9 +182,8 @@ public class Core extends Quest
 		}
 		else if (event.equals("despawn_minions"))
 		{
-			for (int i = 0; i < _minions.size(); i++)
+			for (Attackable mob : _minions)
 			{
-				final Attackable mob = _minions.get(i);
 				if (mob != null)
 				{
 					mob.decayMe();

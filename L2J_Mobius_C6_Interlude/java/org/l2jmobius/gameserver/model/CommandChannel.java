@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -35,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CommandChannel
 {
-	private final List<Party> _parties;
+	private final Collection<Party> _parties;
 	private PlayerInstance _commandLeader = null;
 	private int _channelLvl;
 	
@@ -46,7 +48,7 @@ public class CommandChannel
 	public CommandChannel(PlayerInstance leader)
 	{
 		_commandLeader = leader;
-		_parties = new ArrayList<>();
+		_parties = ConcurrentHashMap.newKeySet();
 		_parties.add(leader.getParty());
 		_channelLvl = leader.getParty().getLevel();
 		leader.getParty().setCommandChannel(this);
@@ -179,7 +181,7 @@ public class CommandChannel
 	/**
 	 * @return list of Parties in Command Channel
 	 */
-	public List<Party> getPartys()
+	public Collection<Party> getParties()
 	{
 		return _parties;
 	}

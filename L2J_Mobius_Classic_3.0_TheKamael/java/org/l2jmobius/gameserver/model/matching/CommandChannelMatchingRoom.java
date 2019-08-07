@@ -127,7 +127,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 		if (leaderParty != null)
 		{
 			final CommandChannel cc = leaderParty.getCommandChannel();
-			if ((leaderParty == playerParty) || ((cc != null) && cc.getPartys().contains(playerParty)))
+			if ((leaderParty == playerParty) || ((cc != null) && cc.getParties().contains(playerParty)))
 			{
 				return MatchingMemberType.COMMAND_CHANNEL_PARTY_MEMBER;
 			}

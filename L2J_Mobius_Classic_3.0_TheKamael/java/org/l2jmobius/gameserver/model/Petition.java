@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.PetitionState;
 import org.l2jmobius.gameserver.enums.PetitionType;
@@ -41,7 +41,7 @@ public class Petition
 	private final PetitionType _type;
 	private PetitionState _state = PetitionState.PENDING;
 	private final String _content;
-	private final List<CreatureSay> _messageLog = new CopyOnWriteArrayList<>();
+	private final Collection<CreatureSay> _messageLog = ConcurrentHashMap.newKeySet();
 	private final PlayerInstance _petitioner;
 	private PlayerInstance _responder;
 	
@@ -58,7 +58,7 @@ public class Petition
 		return _messageLog.add(cs);
 	}
 	
-	public List<CreatureSay> getLogMessages()
+	public Collection<CreatureSay> getLogMessages()
 	{
 		return _messageLog;
 	}

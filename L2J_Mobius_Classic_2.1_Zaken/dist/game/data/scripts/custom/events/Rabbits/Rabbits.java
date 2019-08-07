@@ -17,8 +17,9 @@
 package custom.events.Rabbits;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
@@ -49,7 +50,7 @@ public class Rabbits extends Event
 	private static final int EVENT_TIME = 10;
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
-	private final List<Npc> _npcs = new CopyOnWriteArrayList<>();
+	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
 	private final List<PlayerInstance> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
@@ -253,7 +254,7 @@ public class Rabbits extends Event
 		}
 	}
 	
-	private void recordSpawn(List<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private void recordSpawn(Collection<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)

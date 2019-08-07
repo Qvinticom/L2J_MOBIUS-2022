@@ -16,8 +16,8 @@
  */
 package ai.others;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -63,7 +63,7 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
-	private static final List<Npc> SPAWNED_GUARDS = new CopyOnWriteArrayList<>();
+	private static final Collection<Npc> SPAWNED_GUARDS = ConcurrentHashMap.newKeySet();
 	
 	public SiegeGuards()
 	{

@@ -20,11 +20,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -64,27 +64,27 @@ public class VanHalter extends Quest
 	
 	// Spawn data of monsters.
 	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
-	protected List<Spawn> _royalGuardSpawn = new CopyOnWriteArrayList<>();
-	protected List<Spawn> _royalGuardCaptainSpawn = new CopyOnWriteArrayList<>();
-	protected List<Spawn> _royalGuardHelperSpawn = new CopyOnWriteArrayList<>();
-	protected List<Spawn> _triolRevelationSpawn = new CopyOnWriteArrayList<>();
-	protected List<Spawn> _triolRevelationAlive = new CopyOnWriteArrayList<>();
-	protected List<Spawn> _guardOfAltarSpawn = new CopyOnWriteArrayList<>();
+	protected Collection<Spawn> _royalGuardSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<Spawn> _royalGuardCaptainSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<Spawn> _royalGuardHelperSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<Spawn> _triolRevelationSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<Spawn> _triolRevelationAlive = ConcurrentHashMap.newKeySet();
+	protected Collection<Spawn> _guardOfAltarSpawn = ConcurrentHashMap.newKeySet();
 	protected Map<Integer, Spawn> _cameraMarkerSpawn = new ConcurrentHashMap<>();
 	protected Spawn _ritualOfferingSpawn = null;
 	protected Spawn _ritualSacrificeSpawn = null;
 	protected Spawn _vanHalterSpawn = null;
 	
 	// Instance of monsters.
-	protected List<NpcInstance> _monsters = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _royalGuard = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _royalGuardCaptain = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _royalGuardHepler = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _triolRevelation = new CopyOnWriteArrayList<>();
-	protected List<NpcInstance> _guardOfAltar = new CopyOnWriteArrayList<>();
+	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _royalGuard = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _royalGuardCaptain = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _royalGuardHepler = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _triolRevelation = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _guardOfAltar = ConcurrentHashMap.newKeySet();
 	protected Map<Integer, NpcInstance> _cameraMarker = new ConcurrentHashMap<>();
-	protected List<DoorInstance> _doorOfAltar = new CopyOnWriteArrayList<>();
-	protected List<DoorInstance> _doorOfSacrifice = new CopyOnWriteArrayList<>();
+	protected Collection<DoorInstance> _doorOfAltar = ConcurrentHashMap.newKeySet();
+	protected Collection<DoorInstance> _doorOfSacrifice = ConcurrentHashMap.newKeySet();
 	protected NpcInstance _ritualOffering = null;
 	protected NpcInstance _ritualSacrifice = null;
 	protected RaidBossInstance _vanHalter = null;

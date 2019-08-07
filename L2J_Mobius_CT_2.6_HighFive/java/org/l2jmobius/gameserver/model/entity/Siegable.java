@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.entity;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -48,11 +49,11 @@ public interface Siegable
 	
 	SiegeClan getDefenderClan(Clan clan);
 	
-	List<SiegeClan> getDefenderClans();
+	Collection<SiegeClan> getDefenderClans();
 	
 	boolean checkIsDefender(Clan clan);
 	
-	List<Npc> getFlag(Clan clan);
+	Set<Npc> getFlag(Clan clan);
 	
 	Calendar getSiegeDate();
 	

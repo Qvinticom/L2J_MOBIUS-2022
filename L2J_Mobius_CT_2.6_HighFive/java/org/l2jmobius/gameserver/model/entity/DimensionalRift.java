@@ -17,10 +17,11 @@
 package org.l2jmobius.gameserver.model.entity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.Config;
@@ -57,8 +58,8 @@ public class DimensionalRift
 	
 	protected byte _choosenRoom = -1;
 	private boolean _hasJumped = false;
-	protected List<PlayerInstance> _deadPlayers = new CopyOnWriteArrayList<>();
-	protected List<PlayerInstance> _revivedInWaitingRoom = new CopyOnWriteArrayList<>();
+	protected Collection<PlayerInstance> _deadPlayers = ConcurrentHashMap.newKeySet();
+	protected Collection<PlayerInstance> _revivedInWaitingRoom = ConcurrentHashMap.newKeySet();
 	private boolean isBossRoom = false;
 	
 	public DimensionalRift(Party party, byte type, byte room)
@@ -457,12 +458,12 @@ public class DimensionalRift
 		}
 	}
 	
-	public List<PlayerInstance> getDeadMemberList()
+	public Collection<PlayerInstance> getDeadMemberList()
 	{
 		return _deadPlayers;
 	}
 	
-	public List<PlayerInstance> getRevivedAtWaitingRoom()
+	public Collection<PlayerInstance> getRevivedAtWaitingRoom()
 	{
 		return _revivedInWaitingRoom;
 	}

@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.communitybbs.Manager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 
 public class ForumsBBSManager extends BaseBBSManager
 {
-	private final List<Forum> _table;
+	private final Collection<Forum> _table;
 	private int _lastid = 1;
 	
 	public static ForumsBBSManager getInstance()
@@ -37,7 +37,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	
 	protected ForumsBBSManager()
 	{
-		_table = new CopyOnWriteArrayList<>();
+		_table = ConcurrentHashMap.newKeySet();
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{

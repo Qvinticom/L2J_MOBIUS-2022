@@ -21,10 +21,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
@@ -100,8 +102,8 @@ public class TerritoryWarManager implements Siegable
 	private final Map<Integer, List<Clan>> _registeredClans = new ConcurrentHashMap<>();
 	private final Map<Integer, List<Integer>> _registeredMercenaries = new ConcurrentHashMap<>();
 	private final Map<Integer, Territory> _territoryList = new ConcurrentHashMap<>();
-	protected List<Integer> _disguisedPlayers = new CopyOnWriteArrayList<>();
-	private final List<TerritoryWard> _territoryWards = new CopyOnWriteArrayList<>();
+	protected Collection<Integer> _disguisedPlayers = ConcurrentHashMap.newKeySet();
+	private final Collection<TerritoryWard> _territoryWards = ConcurrentHashMap.newKeySet();
 	private final Map<Clan, SiegeFlagInstance> _clanFlags = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer[]> _participantPoints = new ConcurrentHashMap<>();
 	protected Calendar _startTWDate = Calendar.getInstance();
@@ -499,7 +501,7 @@ public class TerritoryWarManager implements Siegable
 		_clanFlags.remove(clan);
 	}
 	
-	public List<TerritoryWard> getAllTerritoryWards()
+	public Collection<TerritoryWard> getAllTerritoryWards()
 	{
 		return _territoryWards;
 	}
@@ -1750,7 +1752,7 @@ public class TerritoryWarManager implements Siegable
 	}
 	
 	@Override
-	public List<Npc> getFlag(Clan clan)
+	public Set<Npc> getFlag(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}

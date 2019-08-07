@@ -16,8 +16,8 @@
  */
 package ai.bosses;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -273,10 +273,10 @@ public class Frintezza extends Quest
 	private NpcInstance _portraitDummy1;
 	private NpcInstance _portraitDummy3;
 	private NpcInstance _scarletDummy;
-	private final List<PlayerInstance> _playersInside = new CopyOnWriteArrayList<>();
-	private final List<NpcInstance> _room1Monsters = new CopyOnWriteArrayList<>();
-	private final List<NpcInstance> _room2Monsters = new CopyOnWriteArrayList<>();
-	private final List<Attackable> _minions = new CopyOnWriteArrayList<>();
+	private final Collection<PlayerInstance> _playersInside = ConcurrentHashMap.newKeySet();
+	private final Collection<NpcInstance> _room1Monsters = ConcurrentHashMap.newKeySet();
+	private final Collection<NpcInstance> _room2Monsters = ConcurrentHashMap.newKeySet();
+	private final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	// Boss: Frintezza
 	public Frintezza(int id, String name, String descr)
@@ -1407,9 +1407,8 @@ public class Frintezza extends Quest
 		{
 			synchronized (_minions)
 			{
-				for (int i = 0; i < _minions.size(); i++)
+				for (Attackable mob : _minions)
 				{
-					final Attackable mob = _minions.get(i);
 					if (mob != null)
 					{
 						mob.decayMe();
@@ -1479,7 +1478,7 @@ public class Frintezza extends Quest
 					htmltext = "<html><body>No reaction. Contact must be initiated by the Command Channel Leader.</body></html>";
 					party_check_success = false;
 				}
-				else if ((player.getParty().getCommandChannel().getPartys().size() < Config.FRINTEZZA_MIN_PARTIES) || (player.getParty().getCommandChannel().getPartys().size() > Config.FRINTEZZA_MAX_PARTIES))
+				else if ((player.getParty().getCommandChannel().getParties().size() < Config.FRINTEZZA_MIN_PARTIES) || (player.getParty().getCommandChannel().getParties().size() > Config.FRINTEZZA_MAX_PARTIES))
 				{
 					htmltext = "<html><body>Your command channel needs to have at least " + Config.FRINTEZZA_MIN_PARTIES + " parties and a maximum of " + Config.FRINTEZZA_MAX_PARTIES + ".</body></html>";
 					party_check_success = false;
@@ -1513,7 +1512,7 @@ public class Frintezza extends Quest
 							if (CC != null)
 							{ // teleport all parties into CC
 								
-								for (Party party : CC.getPartys())
+								for (Party party : CC.getParties())
 								{
 									if (party == null)
 									{
@@ -1605,7 +1604,7 @@ public class Frintezza extends Quest
 					{
 						final CommandChannel CC = player.getParty().getCommandChannel();
 						
-						for (Party party : CC.getPartys())
+						for (Party party : CC.getParties())
 						{
 							if (party == null)
 							{

@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
@@ -27,7 +28,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -61,7 +61,7 @@ public class NpcData implements IXmlReader
 	
 	private final Map<Integer, NpcTemplate> _npcs = new ConcurrentHashMap<>();
 	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
-	private static final List<Integer> _masterMonsterIDs = new CopyOnWriteArrayList<>();
+	private static final Collection<Integer> _masterMonsterIDs = ConcurrentHashMap.newKeySet();
 	
 	protected NpcData()
 	{
@@ -793,7 +793,7 @@ public class NpcData implements IXmlReader
 	/**
 	 * @return the IDs of monsters that have minions.
 	 */
-	public static List<Integer> getMasterMonsterIDs()
+	public static Collection<Integer> getMasterMonsterIDs()
 	{
 		return _masterMonsterIDs;
 	}

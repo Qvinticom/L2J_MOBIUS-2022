@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
@@ -41,7 +41,7 @@ public class ExShowOwnthingPos implements IClientOutgoingPacket
 		
 		if (TerritoryWarManager.getInstance().isTWInProgress())
 		{
-			final List<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
+			final Collection<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
 			packet.writeD(territoryWardList.size());
 			for (TerritoryWard ward : territoryWardList)
 			{

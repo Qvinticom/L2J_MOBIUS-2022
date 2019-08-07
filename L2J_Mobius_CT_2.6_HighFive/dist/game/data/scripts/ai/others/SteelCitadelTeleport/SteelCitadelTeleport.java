@@ -71,7 +71,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 		{
 			GrandBossManager.getInstance().setBossStatus(BELETH, 1);
 			
-			for (Party party : channel.getPartys())
+			for (Party party : channel.getParties())
 			{
 				if (party == null)
 				{

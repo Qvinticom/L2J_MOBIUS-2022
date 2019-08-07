@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.model;
 
 import java.lang.reflect.Constructor;
+import java.util.Collection;
 import java.util.Deque;
-import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -73,7 +73,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	private Constructor<? extends Npc> _constructor;
 	/** If True a NpcInstance is respawned each time that another is killed */
 	private boolean _doRespawn = true;
-	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
+	private static Collection<SpawnListener> _spawnListeners = ConcurrentHashMap.newKeySet();
 	private final Deque<Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private boolean _randomWalk = false; // Is random walk
 	private int _spawnTemplateId = 0;
