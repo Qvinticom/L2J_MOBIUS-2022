@@ -46,8 +46,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 			packet.writeD(sc.getType().ordinal());
 			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
 			
-			packet.writeC(0x00); // 228
-			
 			switch (sc.getType())
 			{
 				case ITEM:
@@ -66,6 +64,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 					packet.writeD(sc.getId());
 					packet.writeH(sc.getLevel());
 					packet.writeH(sc.getSubLevel());
+					packet.writeC(0x00); // 228
 					packet.writeD(sc.getSharedReuseGroup());
 					packet.writeC(0x00); // C5
 					packet.writeD(0x01); // C6
@@ -76,6 +75,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 				case RECIPE:
 				case BOOKMARK:
 				{
+					packet.writeC(0x00); // 228
 					packet.writeD(sc.getId());
 					packet.writeD(0x01); // C6
 				}
