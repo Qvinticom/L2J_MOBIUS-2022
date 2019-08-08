@@ -1,6 +1,6 @@
 L2J-Mobius Etina's Fate
 
-Client: https://drive.google.com/uc?id=1qctEGMiiJaTgHeNcJ0li0hBjrUf8lBg_&export=download
+Client: https://drive.google.com/uc?id=1L4hcPsh5T3TOf_LcePonnMeQvcDm9DDV&export=download
 Geodata: https://www.mediafire.com/file/pgvz72a30t9rf7k/L2J_Mobius_5.5_EtinasFate_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
