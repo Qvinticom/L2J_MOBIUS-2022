@@ -119,10 +119,20 @@ public class MultiSellChoose implements IClientIncomingPacket
 		}
 		
 		final Npc npc = player.getLastFolkNPC();
-		if (((npc != null) && !list.isNpcAllowed(npc.getId())) || ((npc == null) && list.isNpcOnly()))
+		if (!list.isNpcAllowed(-1))
 		{
-			player.setMultiSell(null);
-			return;
+			if ((npc == null) || !list.isNpcAllowed(npc.getId()))
+			{
+				if (player.isGM())
+				{
+					player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+				}
+				else
+				{
+					player.setMultiSell(null);
+					return;
+				}
+			}
 		}
 		
 		if (!player.isGM() && (npc != null))

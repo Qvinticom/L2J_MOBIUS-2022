@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.OptionalLong;
@@ -113,13 +115,25 @@ public class MultiSellChoose implements IClientIncomingPacket
 		}
 		
 		final Npc npc = player.getLastFolkNPC();
-		if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list))
+		if (!list.isNpcAllowed(-1))
 		{
-			if (player.isGM())
+			if ((npc == null) || !list.isNpcAllowed(npc.getId()))
 			{
-				player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+				if (player.isGM())
+				{
+					player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+				}
+				else
+				{
+					player.setMultiSell(null);
+					return;
+				}
 			}
-			else
+		}
+		
+		if (!player.isGM() && (npc != null))
+		{
+			if (!player.isInsideRadius3D(npc, INTERACTION_DISTANCE) || (player.getInstanceId() != npc.getInstanceId()))
 			{
 				player.setMultiSell(null);
 				return;
@@ -604,32 +618,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return false;
 		}
 		
-		return true;
-	}
-	
-	/**
-	 * @param player
-	 * @param npc
-	 * @param list
-	 * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
-	 */
-	private boolean isAllowedToUse(PlayerInstance player, Npc npc, PreparedMultisellListHolder list)
-	{
-		if (npc != null)
-		{
-			if (!list.isNpcAllowed(npc.getId()))
-			{
-				return false;
-			}
-			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE)))
-			{
-				return false;
-			}
-		}
-		else if (list.isNpcOnly())
-		{
-			return false;
-		}
 		return true;
 	}
 }

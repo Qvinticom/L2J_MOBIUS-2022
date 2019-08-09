@@ -241,10 +241,20 @@ public class MultisellData implements IXmlReader
 			return;
 		}
 		
-		if (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))
+		if (!template.isNpcAllowed(-1))
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
-			return;
+			if ((npc == null) || !template.isNpcAllowed(npc.getId()))
+			{
+				if (player.isGM())
+				{
+					player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+				}
+				else
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
+					return;
+				}
+			}
 		}
 		
 		final PreparedListContainer list = new PreparedListContainer(template, inventoryOnly, player, npc);
