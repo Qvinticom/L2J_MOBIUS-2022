@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * Little Wing (420)
- * @author Pandragon
+ * @author Pandragon / Stayway (Rework Helios)
  */
 public class Q00420_LittleWing extends Quest
 {
@@ -72,30 +72,28 @@ public class Q00420_LittleWing extends Quest
 	private static final int SHAMHAI_SCALE = 3830;
 	private static final int SHAMHAI_EGG = 3831;
 	// Monsters
-	private static final int DEAD_SEEKER = 20202;
+	private static final int LESSER_BASILISK = 20070;
+	private static final int BASILISK = 20072;
 	private static final int TOAD_LORD = 20231;
 	private static final int MARSH_SPIDER = 20233;
-	private static final int BREKA_OVERLORD = 20270;
+	private static final int BREKA_PREFECT = 20270;
 	private static final int ROAD_SCAVENGER = 20551;
 	private static final int LETO_WARRIOR = 20580;
 	private static final int[] DELUXE_STONE_BREAKERS =
 	{
-		20589, // Fline
-		20590, // Liele
-		20591, // Valley Treant
-		20592, // Satyr
-		20593, // Unicorn
-		20594, // Forest Runner
-		20595, // Fline Elder
-		20596, // Liele Elder
-		20597, // Valley Treant Elder
-		20598, // Satyr Elder
-		20599, // Unicorn Elder
-		27185, // Fairy Tree of Wind (Quest Monster)
-		27186, // Fairy Tree of Star (Quest Monster)
-		27187, // Fairy Tree of Twilight (Quest Monster)
-		27188, // Fairy Tree of Abyss (Quest Monster)
-		27189, // Soul of Tree Guardian (Quest Monster)
+		23566, // Nymph Rose
+		23567, // Nymph Rose
+		23568, // Nymph Lily
+		23569, // Nymph Lily
+		23570, // Nymph Tulip
+		23571, // Nymph Tulip
+		23572, // Nymph Cosmos
+		23573, // Nymph Cosmos
+		23578, // Nymph Guardian
+		23579, // Buoyant Seed
+		23580, // Fluttering Seed
+		23581, // Apherus
+		23582, // Nymph Rose
 	};
 	// Rewards
 	private static final int DRAGONFLUTE_OF_WIND = 3500;
@@ -108,9 +106,10 @@ public class Q00420_LittleWing extends Quest
 	private static final Map<Integer, Integer> EGG_DROPS = new HashMap<>();
 	static
 	{
-		EGG_DROPS.put(DEAD_SEEKER, SHAMHAI_EGG);
+		EGG_DROPS.put(LESSER_BASILISK, SHAMHAI_EGG);
+		EGG_DROPS.put(BASILISK, SHAMHAI_EGG);
 		EGG_DROPS.put(MARSH_SPIDER, ZWOV_EGG);
-		EGG_DROPS.put(BREKA_OVERLORD, SUZET_EGG);
+		EGG_DROPS.put(BREKA_PREFECT, SUZET_EGG);
 		EGG_DROPS.put(ROAD_SCAVENGER, KALIBRAN_EGG);
 		EGG_DROPS.put(LETO_WARRIOR, EXARION_EGG);
 	}
@@ -123,7 +122,7 @@ public class Q00420_LittleWing extends Quest
 		addStartNpc(COOPER);
 		addTalkId(MARIA, CRONOS, BYRON, MIMYU, EXARION, ZWOV, KALIBRAN, SUZET, SHAMHAI, COOPER);
 		addAttackId(DELUXE_STONE_BREAKERS);
-		addKillId(TOAD_LORD, DEAD_SEEKER, MARSH_SPIDER, BREKA_OVERLORD, ROAD_SCAVENGER, LETO_WARRIOR);
+		addKillId(TOAD_LORD, BASILISK, LESSER_BASILISK, MARSH_SPIDER, BREKA_PREFECT, ROAD_SCAVENGER, LETO_WARRIOR);
 		registerQuestItems(FAIRY_DUST, FAIRY_STONE, DELUXE_FAIRY_STONE, FAIRY_STONE_LIST, DELUXE_STONE_LIST, TOAD_SKIN, MONKSHOOD_JUICE, EXARION_SCALE, EXARION_EGG, ZWOV_SCALE, ZWOV_EGG, KALIBRAN_SCALE, KALIBRAN_EGG, SUZET_SCALE, SUZET_EGG, SHAMHAI_SCALE, SHAMHAI_EGG);
 	}
 	
@@ -393,7 +392,7 @@ public class Q00420_LittleWing extends Quest
 					takeItems(player, MONKSHOOD_JUICE, -1);
 					giveItems(player, SUZET_SCALE, 1);
 					qs.setCond(6, true);
-					qs.set("drake_hunt", BREKA_OVERLORD);
+					qs.set("drake_hunt", BREKA_PREFECT);
 					htmltext = event;
 				}
 				break;
@@ -405,7 +404,7 @@ public class Q00420_LittleWing extends Quest
 					takeItems(player, MONKSHOOD_JUICE, -1);
 					giveItems(player, SHAMHAI_SCALE, 1);
 					qs.setCond(6, true);
-					qs.set("drake_hunt", DEAD_SEEKER);
+					qs.set("drake_hunt", LESSER_BASILISK);
 					htmltext = event;
 				}
 				break;
