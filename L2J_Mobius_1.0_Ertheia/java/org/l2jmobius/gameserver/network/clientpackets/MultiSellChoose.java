@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.OptionalLong;
@@ -117,7 +115,11 @@ public class MultiSellChoose implements IClientIncomingPacket
 		final Npc npc = player.getLastFolkNPC();
 		if (!list.isNpcAllowed(-1))
 		{
-			if ((npc == null) || !list.isNpcAllowed(npc.getId()))
+			if ((npc == null) //
+				|| !list.isNpcAllowed(npc.getId()) //
+				|| !list.checkNpcObjectId(npc.getObjectId()) //
+				|| (player.getInstanceId() != npc.getInstanceId()) //
+				|| !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE))
 			{
 				if (player.isGM())
 				{
@@ -128,15 +130,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 					player.setMultiSell(null);
 					return;
 				}
-			}
-		}
-		
-		if (!player.isGM() && (npc != null))
-		{
-			if (!player.isInsideRadius3D(npc, INTERACTION_DISTANCE) || (player.getInstanceId() != npc.getInstanceId()))
-			{
-				player.setMultiSell(null);
-				return;
 			}
 		}
 		
