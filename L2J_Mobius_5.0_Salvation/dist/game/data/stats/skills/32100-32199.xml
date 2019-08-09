@@ -286,7 +286,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1378</effectPoint>
 	</skill>
-	<skill id="32137" toLevel="1" name="Blathus Superior Aggression Aura">
+	<skill id="32137" toLevel="1" name="Balthus Superior Aggression Aura">
 		<!-- Provokes nearby enemies into attacking the caster. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -303,6 +303,9 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-3541</effectPoint>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 	</skill>
 	<skill id="32139" toLevel="1" name="Balthus Sonic Star">
 		<!-- Inflicts damage on nearby enemies and knocks them down. -->
@@ -421,6 +424,7 @@
 		<effectPoint>1734</effectPoint>
 		<effects>
 			<effect name="MagicalAttack">
+				<power>1191</power>
 			</effect>
 		</effects>
 	</skill>
@@ -617,6 +621,7 @@
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="32173" toLevel="1" name="Freya's Art of Seduction EXP - GM's Blessing">
 		<!-- The GM is always by your side. For 1 hour, Max HP/ MP/ CP +30%, P. Atk +10%, M. Atk +20%, P. Def/ M. Def +30%, Speed +20, and Skill MP Consumption -15%. Additionally, XP bonus +30% and Vitality bonus +12%. Buffs are retained even after death. -->
@@ -626,6 +631,7 @@
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="32174" toLevel="1" name="Pa'agrio's Blessing Might - GM's Blessing">
 		<!-- The GM is always by your side. For 1 hour, Max HP/ MP/ CP +10%, P. Atk +20%, M. Atk +30%, P. Def/ M. Def +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attack Attribute +1 hour0, and Skill MP Consumption -1 hour1. Additionally, Damage Dealt +1 hour2 and Skill Power +1 hour3. Buffs are retained even after death. -->

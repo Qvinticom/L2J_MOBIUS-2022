@@ -621,6 +621,7 @@
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="32173" toLevel="1" name="Freya's Art of Seduction EXP - GM's Blessing">
 		<!-- The GM is always by your side. For 1 hr., Max HP/ MP/ CP +30%, P. Atk +10%, M. Atk +20%, P. Def/ M. Def +30%, Speed +20, and Skill MP Consumption -15%. Additionally, XP bonus +30% and Vitality bonus +12%. Buffs are retained even after death. -->
@@ -630,6 +631,7 @@
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="32174" toLevel="1" name="Pa'agrio's Blessing Might- GM's Blessing">
 		<!-- The GM is always by your side. For 1 hr., Max HP/ MP/ CP +10%, P. Atk +20%, M. Atk +30%, P. Def/ M. Def +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Spd. +10, Atk. Attribute +1 hr.0, and Skill MP Consumption -1 hr.1. Additionally, Damage Dealt +1 hr.2 and Skill Power +1 hr.3. Buffs are retained even after death. -->

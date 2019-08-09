@@ -2193,6 +2193,9 @@
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseInBattlefield" />
+		</conditions>
 		<effects>
 			<effect name="HpCpHeal">
 				<power>2500</power>

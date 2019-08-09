@@ -261,6 +261,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="39351" toLevel="1" name="Merkios' Altar Entrance Pass">
 		<operateType>A1</operateType>
@@ -286,6 +287,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="39356" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
 		<!-- Increases Atk. Attribute by 70, Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->

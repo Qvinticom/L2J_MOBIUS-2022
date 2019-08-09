@@ -1098,6 +1098,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15</amount>
