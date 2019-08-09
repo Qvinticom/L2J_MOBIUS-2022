@@ -1012,6 +1012,10 @@
 		<!-- Hellbound's mysterious powers give you 10min of SP/XP gain + 50% through hunting. Entire party. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalTime>120</abnormalTime>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>EXP_HERB</abnormalType>
+		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1035,6 +1039,10 @@
 		<!-- Hellbound's mysterious powers give you 10min of SP/XP gain + 100% through hunting. Entire party. -->
 		<icon>BranchSys2.icon.g_dawn_gem</icon>
 		<abnormalTime>600</abnormalTime>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalType>EXP_HERB</abnormalType>
+		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1058,6 +1066,10 @@
 		<!-- Hellbound's mysterious powers give you 2min of SP/XP gain + 300% through hunting. Entire party. -->
 		<icon>icon.etc_str_symbol_i01</icon>
 		<abnormalTime>120</abnormalTime>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalType>EXP_HERB</abnormalType>
+		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
