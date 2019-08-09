@@ -463,6 +463,12 @@
 	<skill id="9945" toLevel="1" name="Scroll: Enchant Hair Accessory">
 		<!-- Enchants Hair Accessory. -->
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9946" toLevel="1" name="9th Anniversary Cube (30-day) (Event)">
 		<!-- 9th Anniversary Cube. 30-day. -->
@@ -573,13 +579,60 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<canBeDispelled>false</canBeDispelled>
+		<itemConsumeId>
+			<value level="1">34620</value> <!-- Heavenly Cocktail -->
+			<!-- TODO 2 LEVELS MORE -->
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">17</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">79</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9959" toLevel="1" name="Drum Melody (9th Anniversary)">
 		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon/bow/crossbow who receives more than a certain amount of damage. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
@@ -1059,23 +1112,59 @@
 	<skill id="9985" toLevel="7" name="High-grade Elixir of Life (R-grade)">
 		<itemConsumeId>37097</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9986" toLevel="7" name="High-grade Elixir of Mind (R-grade)">
 		<itemConsumeId>37098</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>20</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9987" toLevel="7" name="High-grade Elixir of CP (R-grade)">
 		<itemConsumeId>37099</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpHealPercent">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9988" toLevel="1" name="Elixir of Aggression">
 		<!-- For 30 min., selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, and Speed + 8. -->

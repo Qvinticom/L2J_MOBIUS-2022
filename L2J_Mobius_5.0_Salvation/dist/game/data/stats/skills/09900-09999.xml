@@ -1116,23 +1116,59 @@
 	<skill id="9985" toLevel="7" name="High-grade Elixir of Life (R-grade)">
 		<itemConsumeId>37097</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9986" toLevel="7" name="High-grade Elixir of Mind (R-grade)">
 		<itemConsumeId>37098</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>20</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9987" toLevel="7" name="High-grade Elixir of CP (R-grade)">
 		<itemConsumeId>37099</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpHealPercent">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9988" toLevel="1" name="Elixir of Aggression">
 		<!-- For 30 minutes, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. -->
