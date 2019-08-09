@@ -1972,7 +1972,7 @@ public class Clan implements IIdentifiable, INamable
 	private void restoreRankPrivs()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT privs,rank,party FROM clan_privs WHERE clan_id=?"))
+			PreparedStatement ps = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?"))
 		{
 			// Retrieve all skills of this PlayerInstance from the database
 			ps.setInt(1, _clanId);
@@ -2021,7 +2021,7 @@ public class Clan implements IIdentifiable, INamable
 			_privs.get(rank).setPrivs(privs);
 			
 			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)"))
+				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)"))
 			{
 				// Retrieve all skills of this PlayerInstance from the database
 				ps.setInt(1, _clanId);
@@ -2056,7 +2056,7 @@ public class Clan implements IIdentifiable, INamable
 			_privs.put(rank, new RankPrivs(rank, 0, privs));
 			
 			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)"))
+				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)"))
 			{
 				// Retrieve all skills of this PlayerInstance from the database
 				ps.setInt(1, _clanId);

@@ -1638,7 +1638,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT privs,rank,party FROM clan_privs WHERE clan_id=?");
+			PreparedStatement statement = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?");
 			statement.setInt(1, _clanId);
 			ResultSet rset = statement.executeQuery();
 			
@@ -1689,7 +1689,7 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)");
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
@@ -1724,7 +1724,7 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)");
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
