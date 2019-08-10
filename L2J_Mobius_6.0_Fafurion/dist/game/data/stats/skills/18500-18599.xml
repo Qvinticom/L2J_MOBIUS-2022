@@ -1131,6 +1131,9 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="TargetMyMentee" />
+		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>15</amount>
