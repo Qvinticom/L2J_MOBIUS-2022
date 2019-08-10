@@ -787,6 +787,11 @@
 
 	<!-- Blessed Giant's Scroll: Enchant Armor -->
 	<enchant id="36284" targetGrade="R" />
+	
+	<!-- Practice Weapon Enchant Scroll -->
+	<enchant id="48171" targetGrade="R" maxEnchant="7" bonusRate="100">
+		<item id="48170" /> <!-- Enhancement Practice Long Sword -->
+	</enchant>
 		
 	<!-- Lucky Enchant Stone: Weapon -->
 	<support id="12362" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />

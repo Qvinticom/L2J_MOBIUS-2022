@@ -845,5 +845,11 @@
 	</skill>
 	<skill id="35099" toLevel="1" name="Practice Weapon Enchant Scroll">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 </list>
