@@ -378,6 +378,8 @@
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Normal Fishing Bait. Fishing with this bait has a low chance of yielding a Blueish Box. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="4000" />

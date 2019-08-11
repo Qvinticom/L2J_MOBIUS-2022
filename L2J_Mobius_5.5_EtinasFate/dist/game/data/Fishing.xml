@@ -13,6 +13,12 @@
 			<catch itemId="47552" chance="3" multiplier="1" /> <!-- Powerful Fish -->
 			<catch itemId="47553" chance="2" multiplier="1" /> <!-- Blueish Box -->
 		</bait>
+		<bait itemId="48537" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait -->
+			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
+			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->
+			<catch itemId="47552" chance="3" multiplier="1" /> <!-- Powerful Fish -->
+			<catch itemId="47553" chance="2" multiplier="1" /> <!-- Blueish Box -->
+		</bait>
 		<bait itemId="47548" minPlayerLevel="99" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait(R99) -->
 			<catch itemId="47550" chance="70" multiplier="1476" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1804" /> <!-- Nimble Fish -->
