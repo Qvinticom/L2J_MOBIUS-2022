@@ -503,6 +503,7 @@
 			<effect name="SphericBarrier">
 				<amount>150</amount>
 			</effect>
+			<effect name="DebuffBlock" /> <!-- TODO: SphericBarrier should block debuffs-->
 			<effect name="PhysicalDefence">
 				<amount>50</amount>
 				<mode>PER</mode>

@@ -815,6 +815,10 @@
 				<amount>-100</amount>
 				<slot>ALL</slot>
 			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>10000</amount>
 				<mode>DIFF</mode>

@@ -2753,6 +2753,10 @@
 				<amount>-100</amount>
 				<slot>ALL</slot>
 			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="443" toLevel="1" name="Force Barrier">
@@ -2795,6 +2799,10 @@
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>

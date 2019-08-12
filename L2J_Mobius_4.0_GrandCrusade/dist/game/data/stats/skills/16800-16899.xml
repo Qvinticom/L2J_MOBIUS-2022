@@ -433,21 +433,88 @@
 	<skill id="16842" toLevel="1" name="Gravity Shock">
 		<!-- Attacks the enemies near you. The impact flings the damaged target over to the direction of the caster. -->
 		<icon>icon.skill30505</icon>
-		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<affectRange>400</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
-		<hitTime>2000</hitTime>
+		<magicLvl>107</magicLvl>
+		<mpConsume>165</mpConsume>
+		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-687</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45015</power>
+				<overHit>true</overHit>
+				<chance>90</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16843" toLevel="1" name="Spallation">
 		<!-- Forms a circular area which nullifies attack flown from afar and debuff attacks for 30 seconds. -->
 		<icon>icon.skill30515</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">30</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<abnormalType>NONE</abnormalType>
+		<abnormalVisualEffect>SPACEREF</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>31</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>300000</reuseDelay>
 		<effectPoint>379</effectPoint>
+		<reuseDelay>300000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SphericBarrier">
+				<amount>150</amount>
+			</effect>
+			<effect name="DebuffBlock" /> <!-- TODO: SphericBarrier should block debuffs-->
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16844" toLevel="1" name="Mind of Steel">
 		<!-- Increases Attack by 15%, P. Critical Damage by 10%, P. Skill Critical Damage by 10%, Speed by 50, Knock Back/Knock Down/Pull/Danger Zone/Aerial Yoke/Aggression defense success rate by 90%. Inflicts additional damage 5 times stronger than the general attack. HP stays as low as 1 and recovers by 30% when the effect expires. -->
