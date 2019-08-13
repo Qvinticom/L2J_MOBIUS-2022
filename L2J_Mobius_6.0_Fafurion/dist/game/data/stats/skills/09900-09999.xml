@@ -214,6 +214,15 @@
 		<coolTime>300</coolTime>
 		<effectPoint>669</effectPoint>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9926" toLevel="1" name="Mentor's Encouragement: Prophecy of Fire">
 		<!-- For 2 h., selected mentee's Max MP +20%, HP Recovery Bonus +20%, the chance of prominent magic damage +2, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Decreases Speed -20%. -->
@@ -226,6 +235,15 @@
 		<coolTime>300</coolTime>
 		<effectPoint>669</effectPoint>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9927" toLevel="1" name="Mentor's Encouragement: Prophecy of Wind">
 		<!-- For 2 h., selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
@@ -238,6 +256,15 @@
 		<coolTime>300</coolTime>
 		<effectPoint>669</effectPoint>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9928" toLevel="1" name="Scroll of Escape: Heine">
 		<!-- Return to Heine. -->
