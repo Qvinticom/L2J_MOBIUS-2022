@@ -235,8 +235,8 @@ public class Q00640_TheZeroHour extends Quest
 			{
 				if (talker.getLevel() >= MIN_LEVEL)
 				{
-					final QuestState questState2 = qs.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class.getSimpleName());
-					if ((questState2 != null) && (questState2.getState() == State.COMPLETED))
+					final QuestState qs2 = qs.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class.getSimpleName());
+					if ((qs2 != null) && (qs2.getState() == State.COMPLETED))
 					{
 						htmlText = "31554-01.htm";
 					}

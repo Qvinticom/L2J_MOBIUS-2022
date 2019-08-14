@@ -28,58 +28,56 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
-public class Q00715_PathToBecomingALordGoddard extends Quest
+/**
+ * Path to Becoming a Lord - Goddard (715)
+ * @author Sacrifice
+ */
+public final class Q00715_PathToBecomingALordGoddard extends Quest
 {
-	private static final int Alfred = 35363;
+	private static final int ALFRED = 35363;
 	
-	private static final int WaterSpiritAshutar = 25316;
-	private static final int FireSpiritNastron = 25306;
+	private static final int WATER_SPIRIT_ASHUTAR = 25316;
+	private static final int FIRE_SPIRIT_NASTRON = 25306;
 	
-	private static final int GoddardCastle = 7;
+	private static final int GODDARD_CASTLE = 7;
 	
 	public Q00715_PathToBecomingALordGoddard()
 	{
 		super(715);
-		addStartNpc(Alfred);
-		addTalkId(Alfred);
-		addKillId(WaterSpiritAshutar);
-		addKillId(FireSpiritNastron);
+		addStartNpc(ALFRED);
+		addKillId(WATER_SPIRIT_ASHUTAR, FIRE_SPIRIT_NASTRON);
+		addTalkId(ALFRED);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
-		final Castle castle = CastleManager.getInstance().getCastleById(GoddardCastle);
+		final Castle castle = CastleManager.getInstance().getCastleById(GODDARD_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
 		
-		if (event.equals("alfred_q715_03.htm"))
+		if (event.equals("35363-03.html"))
 		{
 			qs.startQuest();
 		}
-		else if (event.equals("alfred_q715_04a.htm"))
+		else if (event.equals("35363-04a.html"))
 		{
 			qs.setCond(3);
 		}
-		else if (event.equals("alfred_q715_04b.htm"))
+		else if (event.equals("35363-04b.html"))
 		{
 			qs.setCond(2);
 		}
-		else if (event.equals("alfred_q715_08.htm"))
+		else if (event.equals("35363-08.html"))
 		{
 			if (castle.getOwner().getLeader().getPlayerInstance() != null)
 			{
 				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GODDARD_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GODDARD);
 				packet.addStringParameter(player.getName());
 				npc.broadcastPacket(packet);
-				
-				/**
-				 * Territory terr = TerritoryWarManager.getInstance().getTerritory(castle.getId()); terr.setLordId(castleOwner.getObjectId()); terr.updateDataInDB(); terr.updateState();
-				 */
-				
 				qs.exitQuest(true, true);
 			}
 		}
@@ -87,15 +85,45 @@ public class Q00715_PathToBecomingALordGoddard extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		final Castle castle = CastleManager.getInstance().getCastleById(GoddardCastle);
+		final QuestState qs = killer.getQuestState(getName());
+		if (qs == null)
+		{
+			return super.onKill(npc, killer, isSummon);
+		}
+		
+		if (qs.isCond(2) && (npc.getId() == FIRE_SPIRIT_NASTRON))
+		{
+			qs.setCond(4);
+		}
+		else if (qs.isCond(3) && (npc.getId() == WATER_SPIRIT_ASHUTAR))
+		{
+			qs.setCond(5);
+		}
+		
+		if (qs.isCond(6) && (npc.getId() == WATER_SPIRIT_ASHUTAR))
+		{
+			qs.setCond(9);
+		}
+		else if (qs.isCond(7) && (npc.getId() == FIRE_SPIRIT_NASTRON))
+		{
+			qs.setCond(8);
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onTalk(Npc npc, PlayerInstance talker)
+	{
+		final QuestState qs = getQuestState(talker, true);
+		String htmltext = getNoQuestMsg(talker);
+		final Castle castle = CastleManager.getInstance().getCastleById(GODDARD_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
+		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		
 		if (qs.isCond(0))
@@ -104,90 +132,62 @@ public class Q00715_PathToBecomingALordGoddard extends Quest
 			{
 				if (!hasFort())
 				{
-					htmltext = "alfred_q715_01.htm";
+					htmltext = "35363-01.html";
 				}
 				else
 				{
-					htmltext = "alfred_q715_00.htm";
+					htmltext = "35363-00.html";
 					qs.exitQuest(true);
 				}
 			}
 			else
 			{
-				htmltext = "alfred_q715_00a.htm";
+				htmltext = "35363-00a.html";
 				qs.exitQuest(true);
 			}
 		}
 		else if (qs.isCond(1))
 		{
-			htmltext = "alfred_q715_03.htm";
+			htmltext = "35363-03.html";
 		}
 		else if (qs.isCond(2))
 		{
-			htmltext = "alfred_q715_05b.htm";
+			htmltext = "35363-05b.html";
 		}
 		else if (qs.isCond(3))
 		{
-			htmltext = "alfred_q715_05a.htm";
+			htmltext = "35363-05a.html";
 		}
 		else if (qs.isCond(4))
 		{
 			qs.setCond(6);
-			htmltext = "alfred_q715_06b.htm";
+			htmltext = "35363-06b.html";
 		}
 		else if (qs.isCond(5))
 		{
 			qs.setCond(7);
-			htmltext = "alfred_q715_06a.htm";
+			htmltext = "35363-06a.html";
 		}
 		else if (qs.isCond(6))
 		{
-			htmltext = "alfred_q715_06b.htm";
+			htmltext = "35363-06b.html";
 		}
 		else if (qs.isCond(7))
 		{
-			htmltext = "alfred_q715_06a.htm";
+			htmltext = "35363-06a.html";
 		}
 		else if (qs.isCond(8) || qs.isCond(9))
 		{
-			htmltext = "alfred_q715_07.htm";
+			htmltext = "35363-07.html";
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
-	{
-		final QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
-			return null;
-		}
-		if (qs.isCond(2) && (npc.getId() == FireSpiritNastron))
-		{
-			qs.setCond(4);
-		}
-		else if (qs.isCond(3) && (npc.getId() == WaterSpiritAshutar))
-		{
-			qs.setCond(5);
-		}
-		
-		if (qs.isCond(6) && (npc.getId() == WaterSpiritAshutar))
-		{
-			qs.setCond(9);
-		}
-		else if (qs.isCond(7) && (npc.getId() == FireSpiritNastron))
-		{
-			qs.setCond(8);
-		}
-		return null;
 	}
 	
 	private boolean hasFort()
 	{
 		for (Fort fortress : FortManager.getInstance().getForts())
 		{
-			if (fortress.getContractedCastleId() == GoddardCastle)
+			if (fortress.getContractedCastleId() == GODDARD_CASTLE)
 			{
 				return true;
 			}

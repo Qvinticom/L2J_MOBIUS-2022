@@ -32,29 +32,44 @@ import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManage
 import quests.Q00120_PavelsLastResearch.Q00120_PavelsLastResearch;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 
-public class Q00714_PathToBecomingALordSchuttgart extends Quest
+/**
+ * Path to Becoming a Lord - Schuttgart (714)
+ * @author Sacrifice
+ */
+public final class Q00714_PathToBecomingALordSchuttgart extends Quest
 {
-	private static final int August = 35555;
-	private static final int Newyear = 31961;
-	private static final int Yasheni = 31958;
-	private static final int GolemShard = 17162;
+	private static final int AUGUST = 35555;
+	private static final int NEWYEAR = 31961;
+	private static final int YASHENI = 31958;
 	
-	private static final int ShuttgartCastle = 9;
+	private static final int GOLEM_SHARD_PIECE = 17162;
+	
+	private static final int[] MOBS =
+	{
+		22801, // Cruel Pincer Golem
+		22802, // Cruel Pincer Golem
+		22803, // Cruel Pincer Golem
+		22804, // Horrifying Jackhammer Golem
+		22805, // Horrifying Jackhammer Golem
+		22806, // Horrifying Jackhammer Golem
+		22807, // Scout-type Golem No. 28
+		22808, // Scout-type Golem No. 2
+		22809, // Guard Golem
+		22810, // Micro Scout Golem
+		22811 // Great Chaos Golem
+	};
+	
+	private static final int SCHUTTGART_CASTLE = 9;
 	
 	public Q00714_PathToBecomingALordSchuttgart()
 	{
 		super(714);
-		addStartNpc(August);
-		addTalkId(August);
-		addTalkId(Newyear);
-		addTalkId(Yasheni);
-		for (int i = 22801; i < 22812; i++)
-		{
-			addKillId(i);
-		}
+		addStartNpc(AUGUST);
+		addTalkId(AUGUST, NEWYEAR, YASHENI);
+		addKillId(MOBS);
 		_questItemIds = new int[]
 		{
-			GolemShard
+			GOLEM_SHARD_PIECE
 		};
 	}
 	
@@ -62,40 +77,35 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
-		final Castle castle = CastleManager.getInstance().getCastleById(ShuttgartCastle);
+		final Castle castle = CastleManager.getInstance().getCastleById(SCHUTTGART_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
 		
-		if (event.equals("august_q714_03.htm"))
+		if (event.equals("35555-03.html"))
 		{
 			qs.startQuest();
 		}
-		else if (event.equals("august_q714_05.htm"))
+		else if (event.equals("35555-05.html"))
 		{
 			qs.setCond(2);
 		}
-		else if (event.equals("newyear_q714_03.htm"))
+		else if (event.equals("31961-03.html"))
 		{
 			qs.setCond(3);
 		}
-		else if (event.equals("yasheni_q714_02.htm"))
+		else if (event.equals("31958-02.html"))
 		{
 			qs.setCond(5);
 		}
-		else if (event.equals("august_q714_08.htm"))
+		else if (event.equals("35555-08.html"))
 		{
 			if (castle.getOwner().getLeader().getPlayerInstance() != null)
 			{
 				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_SCHUTTGART_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_SCHUTTGART);
 				packet.addStringParameter(player.getName());
 				npc.broadcastPacket(packet);
-				
-				/**
-				 * Territory terr = TerritoryWarManager.getInstance().getTerritory(castle.getId()); terr.setLordId(castleOwner.getObjectId()); terr.updateDataInDB(); terr.updateState();
-				 */
-				
 				qs.exitQuest(true, true);
 			}
 		}
@@ -103,20 +113,40 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 	}
 	
 	@Override
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	{
+		final QuestState qs = killer.getQuestState(getName());
+		if ((qs != null) && qs.isCond(5))
+		{
+			if (getQuestItemsCount(killer, GOLEM_SHARD_PIECE) < 300)
+			{
+				giveItems(killer, GOLEM_SHARD_PIECE, 1);
+			}
+			
+			if (getQuestItemsCount(killer, GOLEM_SHARD_PIECE) >= 300)
+			{
+				qs.setCond(6);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final Castle castle = CastleManager.getInstance().getCastleById(ShuttgartCastle);
+		final Castle castle = CastleManager.getInstance().getCastleById(SCHUTTGART_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
+		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		
 		switch (npc.getId())
 		{
-			case August:
+			case AUGUST:
 			{
 				if (qs.isCond(0))
 				{
@@ -124,39 +154,39 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 					{
 						if (!hasFort())
 						{
-							htmltext = "august_q714_01.htm";
+							htmltext = "35555-01.html";
 						}
 						else
 						{
-							htmltext = "august_q714_00.htm";
+							htmltext = "35555-00.html";
 							qs.exitQuest(true);
 						}
 					}
 					else
 					{
-						htmltext = "august_q714_00a.htm";
+						htmltext = "35555-00a.html";
 						qs.exitQuest(true);
 					}
 				}
 				else if (qs.isCond(1))
 				{
-					htmltext = "august_q714_04.htm";
+					htmltext = "35555-04.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "august_q714_06.htm";
+					htmltext = "35555-06.html";
 				}
 				else if (qs.isCond(7))
 				{
-					htmltext = "august_q714_07.htm";
+					htmltext = "35555-07.html";
 				}
 				break;
 			}
-			case Newyear:
+			case NEWYEAR:
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "newyear_q714_01.htm";
+					htmltext = "31961-01.html";
 				}
 				else if (qs.isCond(3))
 				{
@@ -170,40 +200,40 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 							if ((q2 != null) && q2.isCompleted())
 							{
 								qs.setCond(4);
-								htmltext = "newyear_q714_04.htm";
+								htmltext = "31961-04.html";
 							}
 							else
 							{
-								htmltext = "newyear_q714_04a.htm";
+								htmltext = "31961-04a.html";
 							}
 						}
 						else
 						{
-							htmltext = "newyear_q714_04b.htm";
+							htmltext = "31961-04b.html";
 						}
 					}
 					else
 					{
-						htmltext = "newyear_q714_04c.htm";
+						htmltext = "31961-04c.html";
 					}
 				}
 				break;
 			}
-			case Yasheni:
+			case YASHENI:
 			{
 				if (qs.isCond(4))
 				{
-					htmltext = "yasheni_q714_01.htm";
+					htmltext = "31958-01.html";
 				}
 				else if (qs.isCond(5))
 				{
-					htmltext = "yasheni_q714_03.htm";
+					htmltext = "31958-03.html";
 				}
 				else if (qs.isCond(6))
 				{
-					takeItems(player, GolemShard, -1);
+					takeItems(player, GOLEM_SHARD_PIECE, -1);
 					qs.setCond(7);
-					htmltext = "yasheni_q714_04.htm";
+					htmltext = "31958-04.html";
 				}
 				break;
 			}
@@ -211,29 +241,11 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
-	{
-		final QuestState qs = killer.getQuestState(getName());
-		if ((qs != null) && qs.isCond(5))
-		{
-			if (getQuestItemsCount(killer, GolemShard) < 300)
-			{
-				giveItems(killer, GolemShard, 1);
-			}
-			if (getQuestItemsCount(killer, GolemShard) >= 300)
-			{
-				qs.setCond(6);
-			}
-		}
-		return null;
-	}
-	
 	private boolean hasFort()
 	{
 		for (Fort fortress : FortManager.getInstance().getForts())
 		{
-			if (fortress.getContractedCastleId() == ShuttgartCastle)
+			if (fortress.getContractedCastleId() == SCHUTTGART_CASTLE)
 			{
 				return true;
 			}

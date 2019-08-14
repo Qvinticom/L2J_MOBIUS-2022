@@ -13,7 +13,8 @@
  * 
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */package quests.Q00712_PathToBecomingALordOren;
+ */
+package quests.Q00712_PathToBecomingALordOren;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -29,61 +30,59 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
-public class Q00712_PathToBecomingALordOren extends Quest
+/**
+ * Path to Becoming a Lord - Oren (712)
+ * @author Sacrifice
+ */
+public final class Q00712_PathToBecomingALordOren extends Quest
 {
-	private static final int Brasseur = 35226;
-	private static final int Croop = 30676;
-	private static final int Marty = 30169;
-	private static final int Valleria = 30176;
+	private static final int BRASSEUR = 35226;
+	private static final int CROOP = 30676;
+	private static final int MARTY = 30169;
+	private static final int VALLERIA = 30176;
 	
-	private static final int NebuliteOrb = 13851;
+	private static final int NEBULITE_ORB = 13851;
 	
-	private static final int[] OelMahims =
+	private static final int[] OEL_MAHUMS =
 	{
-		20575,
-		20576
+		20575, // Oel Mahum Warrior
+		20576 // Oel Mahum Witch Doctor
 	};
 	
-	private static final int OrenCastle = 4;
+	private static final int OREN_CASTLE = 4;
 	
 	public Q00712_PathToBecomingALordOren()
 	{
 		super(712);
-		addStartNpc(new int[]
-		{
-			Brasseur,
-			Marty
-		});
-		addTalkId(Brasseur);
-		addTalkId(Croop);
-		addTalkId(Marty);
-		addTalkId(Valleria);
+		addStartNpc(BRASSEUR, MARTY);
+		addKillId(OEL_MAHUMS);
+		addTalkId(BRASSEUR, CROOP, MARTY, VALLERIA);
 		_questItemIds = new int[]
 		{
-			NebuliteOrb
+			NEBULITE_ORB
 		};
-		addKillId(OelMahims);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
-		final Castle castle = CastleManager.getInstance().getCastleById(OrenCastle);
+		final Castle castle = CastleManager.getInstance().getCastleById(OREN_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
+		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (event.equals("brasseur_q712_03.htm"))
+		if (event.equals("35226-03.html"))
 		{
 			qs.startQuest();
 		}
-		else if (event.equals("croop_q712_03.htm"))
+		else if (event.equals("30676-03.html"))
 		{
 			qs.setCond(3);
 		}
-		else if (event.equals("marty_q712_02.htm"))
+		else if (event.equals("30169-02.html"))
 		{
 			if (isLordAvailable(3, qs))
 			{
@@ -91,7 +90,7 @@ public class Q00712_PathToBecomingALordOren extends Quest
 				qs.setState(State.STARTED);
 			}
 		}
-		else if (event.equals("valleria_q712_02.htm"))
+		else if (event.equals("30176-02.html"))
 		{
 			if (isLordAvailable(4, qs))
 			{
@@ -99,27 +98,22 @@ public class Q00712_PathToBecomingALordOren extends Quest
 				qs.exitQuest(true);
 			}
 		}
-		else if (event.equals("croop_q712_05.htm"))
+		else if (event.equals("30676-05.html"))
 		{
 			qs.setCond(6);
 		}
-		else if (event.equals("croop_q712_07.htm"))
+		else if (event.equals("30676-07.html"))
 		{
-			takeItems(player, NebuliteOrb, -1);
+			takeItems(player, NEBULITE_ORB, -1);
 			qs.setCond(8);
 		}
-		else if (event.equals("brasseur_q712_06.htm"))
+		else if (event.equals("35226-06.html"))
 		{
 			if (castleOwner != null)
 			{
 				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_OREN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_OREN);
 				packet.addStringParameter(player.getName());
 				npc.broadcastPacket(packet);
-				
-				/**
-				 * Territory terr = TerritoryWarManager.getInstance().getTerritory(castle.getId()); terr.setLordId(castleOwner.getObjectId()); terr.updateDataInDB(); terr.updateState();
-				 */
-				
 				qs.exitQuest(true, true);
 			}
 		}
@@ -127,20 +121,39 @@ public class Q00712_PathToBecomingALordOren extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		final Castle castle = CastleManager.getInstance().getCastleById(OrenCastle);
+		final QuestState qs = killer.getQuestState(getName());
+		if ((qs != null) && qs.isCond(6))
+		{
+			if (getQuestItemsCount(killer, NEBULITE_ORB) < 300)
+			{
+				giveItems(killer, NEBULITE_ORB, 1);
+			}
+			if (getQuestItemsCount(killer, NEBULITE_ORB) >= 300)
+			{
+				qs.setCond(7);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onTalk(Npc npc, PlayerInstance talker)
+	{
+		final QuestState qs = getQuestState(talker, true);
+		String htmltext = getNoQuestMsg(talker);
+		final Castle castle = CastleManager.getInstance().getCastleById(OREN_CASTLE);
 		if (castle.getOwner() == null)
 		{
-			return "Castle has no lord";
+			return "Castle has no lord.";
 		}
+		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		
 		switch (npc.getId())
 		{
-			case Brasseur:
+			case BRASSEUR:
 			{
 				if (qs.isCond(0))
 				{
@@ -148,117 +161,95 @@ public class Q00712_PathToBecomingALordOren extends Quest
 					{
 						if (!hasFort())
 						{
-							htmltext = "brasseur_q712_01.htm";
+							htmltext = "35226-01.html";
 						}
 						else
 						{
-							htmltext = "brasseur_q712_00.htm";
+							htmltext = "35226-00.html";
 							qs.exitQuest(true);
 						}
 					}
 					else
 					{
-						htmltext = "brasseur_q712_00a.htm";
+						htmltext = "35226-00a.html";
 						qs.exitQuest(true);
 					}
 				}
 				else if (qs.isCond(1))
 				{
 					qs.setCond(2);
-					htmltext = "brasseur_q712_04.htm";
+					htmltext = "35226-04.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "brasseur_q712_04.htm";
+					htmltext = "35226-04.html";
 				}
 				else if (qs.isCond(8))
 				{
-					htmltext = "brasseur_q712_05.htm";
+					htmltext = "35226-05.html";
 				}
 				break;
 			}
-			case Croop:
+			case CROOP:
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "croop_q712_01.htm";
+					htmltext = "30676-01.html";
 				}
 				else if (qs.isCond(3) || qs.isCond(4))
 				{
-					htmltext = "croop_q712_03.htm";
+					htmltext = "30676-03.html";
 				}
 				else if (qs.isCond(5))
 				{
-					htmltext = "croop_q712_04.htm";
+					htmltext = "30676-04.html";
 				}
 				else if (qs.isCond(6))
 				{
-					htmltext = "croop_q712_05.htm";
+					htmltext = "30676-05.html";
 				}
 				else if (qs.isCond(7))
 				{
-					htmltext = "croop_q712_06.htm";
+					htmltext = "30676-06.html";
 				}
 				else if (qs.isCond(8))
 				{
-					htmltext = "croop_q712_08.htm";
+					htmltext = "30676-08.html";
 				}
 				break;
 			}
-			case Marty:
+			case MARTY:
 			{
 				if (qs.isCond(0))
 				{
 					if (isLordAvailable(3, qs))
 					{
-						htmltext = "marty_q712_01.htm";
+						htmltext = "30169-01.html";
 					}
 					else
 					{
-						htmltext = "marty_q712_00.htm";
+						htmltext = "30169-00.html";
 					}
 				}
 				break;
 			}
-			case Valleria:
+			case VALLERIA:
 			{
 				if ((qs.getState() == State.STARTED) && isLordAvailable(4, qs))
 				{
-					htmltext = "valleria_q712_01.htm";
+					htmltext = "30176-01.html";
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	private boolean hasFort()
 	{
-		final QuestState qs = killer.getQuestState(getName());
-		if ((qs != null) && qs.isCond(6))
+		for (Fort fortress : FortManager.getInstance().getForts())
 		{
-			if (getQuestItemsCount(killer, NebuliteOrb) < 300)
-			{
-				giveItems(killer, NebuliteOrb, 1);
-			}
-			if (getQuestItemsCount(killer, NebuliteOrb) >= 300)
-			{
-				qs.setCond(7);
-			}
-		}
-		return null;
-	}
-	
-	private boolean isLordAvailable(int cond, QuestState qs)
-	{
-		final Castle castle = CastleManager.getInstance().getCastleById(OrenCastle);
-		final Clan owner = castle.getOwner();
-		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (owner != null)
-		{
-			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond)))
+			if (fortress.getContractedCastleId() == OREN_CASTLE)
 			{
 				return true;
 			}
@@ -266,11 +257,14 @@ public class Q00712_PathToBecomingALordOren extends Quest
 		return false;
 	}
 	
-	private boolean hasFort()
+	private boolean isLordAvailable(int cond, QuestState qs)
 	{
-		for (Fort fortress : FortManager.getInstance().getForts())
+		final Castle castle = CastleManager.getInstance().getCastleById(OREN_CASTLE);
+		final Clan owner = castle.getOwner();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		if (owner != null)
 		{
-			if (fortress.getContractedCastleId() == OrenCastle)
+			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond)))
 			{
 				return true;
 			}
