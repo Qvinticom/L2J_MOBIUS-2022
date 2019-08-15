@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q074_SagaOfTheDreadnought extends SagasSuperClass
 {
-	public static String qn1 = "Q074_SagaOfTheDreadnought";
-	public static int qnu = 74;
-	public static String qna = "Saga of the Dreadnought";
-	
 	public Q074_SagaOfTheDreadnought()
 	{
-		super(qnu, qn1, qna);
+		super(74, "Saga of the Dreadnought");
 		NPC = new int[]
 		{
 			30850,
@@ -66,7 +62,6 @@ public class Q074_SagaOfTheDreadnought extends SagasSuperClass
 			27223,
 			27282
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			89

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q620_FourGoblets extends Quest
 {
-	private static final String qn = "Q620_FourGoblets";
-	
 	// NPCs
 	private static final int GHOST_OF_WIGOTH_1 = 31452;
 	private static final int NAMELESS_SPIRIT = 31453;
@@ -71,7 +69,7 @@ public class Q620_FourGoblets extends Quest
 	
 	public Q620_FourGoblets()
 	{
-		super(620, qn, "Four Goblets");
+		super(620, "Four Goblets");
 		
 		registerQuestItems(SEALED_BOX, USED_GRAVE_PASS, GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL);
 		
@@ -88,7 +86,7 @@ public class Q620_FourGoblets extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -228,7 +226,7 @@ public class Q620_FourGoblets extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -315,7 +313,7 @@ public class Q620_FourGoblets extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(SEALED_BOX, 1, 0, 300000);
+		partyMember.getQuestState(getName()).dropItems(SEALED_BOX, 1, 0, 300000);
 		return null;
 	}
 	

@@ -39,7 +39,7 @@ public class Nurka extends Quest
 	
 	private Nurka()
 	{
-		super(-1, "Nurka", "ai/bosses");
+		super(-1, "ai/bosses");
 		
 		addTalkId(MESSENGER);
 		addStartNpc(MESSENGER);

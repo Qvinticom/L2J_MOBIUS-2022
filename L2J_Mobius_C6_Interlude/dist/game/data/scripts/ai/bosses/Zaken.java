@@ -125,9 +125,9 @@ public class Zaken extends Quest
 	
 	private static BossZone _Zone;
 	
-	public Zaken(int questId, String name, String descr)
+	public Zaken()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		// Zaken doors handling
 		ThreadPool.scheduleAtFixedRate(() ->
@@ -997,6 +997,6 @@ public class Zaken extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Zaken(-1, "Zaken", "ai");
+		new Zaken();
 	}
 }

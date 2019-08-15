@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q117_TheOceanOfDistantStars extends Quest
 {
-	private static final String qn = "Q117_TheOceanOfDistantStars";
-	
 	// NPCs
 	private static final int ABEY = 32053;
 	private static final int GHOST = 32054;
@@ -43,7 +41,7 @@ public class Q117_TheOceanOfDistantStars extends Quest
 	
 	public Q117_TheOceanOfDistantStars()
 	{
-		super(117, qn, "The Ocean of Distant Stars");
+		super(117, "The Ocean of Distant Stars");
 		
 		registerQuestItems(GREY_STAR, ENGRAVED_HAMMER);
 		
@@ -56,7 +54,7 @@ public class Q117_TheOceanOfDistantStars extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -124,7 +122,7 @@ public class Q117_TheOceanOfDistantStars extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

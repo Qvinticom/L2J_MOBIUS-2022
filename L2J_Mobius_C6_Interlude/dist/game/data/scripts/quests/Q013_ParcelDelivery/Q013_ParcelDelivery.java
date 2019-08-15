@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q013_ParcelDelivery extends Quest
 {
-	private static final String qn = "Q013_ParcelDelivery";
-	
 	// NPCs
 	private static final int FUNDIN = 31274;
 	private static final int VULCAN = 31539;
@@ -35,7 +33,7 @@ public class Q013_ParcelDelivery extends Quest
 	
 	public Q013_ParcelDelivery()
 	{
-		super(13, qn, "Parcel Delivery");
+		super(13, "Parcel Delivery");
 		
 		registerQuestItems(PACKAGE);
 		
@@ -47,7 +45,7 @@ public class Q013_ParcelDelivery extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q013_ParcelDelivery extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

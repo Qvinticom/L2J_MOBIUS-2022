@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.templates.item.Item;
 
 public class Q662_AGameOfCards extends Quest
 {
-	private static final String qn = "Q662_AGameOfCards";
-	
 	// NPC
 	private static final int KLUMP = 30845;
 	
@@ -116,7 +114,7 @@ public class Q662_AGameOfCards extends Quest
 	
 	public Q662_AGameOfCards()
 	{
-		super(662, qn, "A Game of Cards");
+		super(662, "A Game of Cards");
 		
 		registerQuestItems(RED_GEM);
 		
@@ -133,7 +131,7 @@ public class Q662_AGameOfCards extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -569,7 +567,7 @@ public class Q662_AGameOfCards extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -630,7 +628,7 @@ public class Q662_AGameOfCards extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(RED_GEM, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(RED_GEM, 1, 0, CHANCES.get(npc.getNpcId()));
 		return null;
 	}
 	

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q103_SpiritOfCraftsman extends Quest
 {
-	private static final String qn = "Q103_SpiritOfCraftsman";
-	
 	// Items
 	private static final int KARROD_LETTER = 968;
 	private static final int CECKTINON_VOUCHER_1 = 969;
@@ -58,7 +56,7 @@ public class Q103_SpiritOfCraftsman extends Quest
 	
 	public Q103_SpiritOfCraftsman()
 	{
-		super(103, qn, "Spirit of Craftsman");
+		super(103, "Spirit of Craftsman");
 		
 		registerQuestItems(KARROD_LETTER, CECKTINON_VOUCHER_1, CECKTINON_VOUCHER_2, BONE_FRAGMENT, SOUL_CATCHER, PRESERVING_OIL, ZOMBIE_HEAD, STEELBENDER_HEAD);
 		
@@ -72,7 +70,7 @@ public class Q103_SpiritOfCraftsman extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -93,7 +91,7 @@ public class Q103_SpiritOfCraftsman extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

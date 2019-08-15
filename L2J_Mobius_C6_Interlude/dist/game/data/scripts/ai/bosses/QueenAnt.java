@@ -70,9 +70,9 @@ public class QueenAnt extends Quest
 		HEAL
 	}
 	
-	public QueenAnt(int questId, String name, String descr)
+	public QueenAnt()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		final int[] mobs =
 		{
@@ -434,6 +434,6 @@ public class QueenAnt extends Quest
 	
 	public static void main(String[] args)
 	{
-		new QueenAnt(-1, "queen_ant", "ai");
+		new QueenAnt();
 	}
 }

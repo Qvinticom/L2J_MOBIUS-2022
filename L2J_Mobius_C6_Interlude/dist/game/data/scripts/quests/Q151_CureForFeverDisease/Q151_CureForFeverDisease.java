@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q151_CureForFeverDisease extends Quest
 {
-	private static final String qn = "Q151_CureForFeverDisease";
-	
 	// Items
 	private static final int POISON_SAC = 703;
 	private static final int FEVER_MEDICINE = 704;
@@ -36,7 +34,7 @@ public class Q151_CureForFeverDisease extends Quest
 	
 	public Q151_CureForFeverDisease()
 	{
-		super(151, qn, "Cure for Fever Disease");
+		super(151, "Cure for Fever Disease");
 		
 		registerQuestItems(FEVER_MEDICINE, POISON_SAC);
 		
@@ -50,7 +48,7 @@ public class Q151_CureForFeverDisease extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +68,7 @@ public class Q151_CureForFeverDisease extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

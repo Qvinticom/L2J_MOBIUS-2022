@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 {
-	private static final String qn = "Q012_SecretMeetingWithVarkaSilenos";
-	
 	// NPCs
 	private static final int CADMON = 31296;
 	private static final int HELMUT = 31258;
@@ -36,7 +34,7 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 	
 	public Q012_SecretMeetingWithVarkaSilenos()
 	{
-		super(12, qn, "Secret Meeting With Varka Silenos");
+		super(12, "Secret Meeting With Varka Silenos");
 		
 		registerQuestItems(MUNITIONS_BOX);
 		
@@ -48,7 +46,7 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -80,7 +78,7 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

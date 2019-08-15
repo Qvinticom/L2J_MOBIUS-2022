@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q018_MeetingWithTheGoldenRam extends Quest
 {
-	private static final String qn = "Q018_MeetingWithTheGoldenRam";
-	
 	// Items
 	private static final int SUPPLY_BOX = 7245;
 	
@@ -36,7 +34,7 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 	
 	public Q018_MeetingWithTheGoldenRam()
 	{
-		super(18, qn, "Meeting with the Golden Ram");
+		super(18, "Meeting with the Golden Ram");
 		
 		registerQuestItems(SUPPLY_BOX);
 		
@@ -48,7 +46,7 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +80,7 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

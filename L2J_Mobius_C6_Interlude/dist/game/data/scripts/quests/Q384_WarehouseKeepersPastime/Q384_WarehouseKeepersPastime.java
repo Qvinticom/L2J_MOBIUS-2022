@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q384_WarehouseKeepersPastime extends Quest
 {
-	private static final String qn = "Q384_WarehouseKeepersPastime";
-	
 	// NPCs
 	private static final int CLIFF = 30182;
 	private static final int BAXT = 30685;
@@ -212,7 +210,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	
 	public Q384_WarehouseKeepersPastime()
 	{
-		super(384, qn, "Warehouse Keeper's Pastime");
+		super(384, "Warehouse Keeper's Pastime");
 		
 		registerQuestItems(MEDAL);
 		
@@ -229,7 +227,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -395,7 +393,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -433,7 +431,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(MEDAL, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(MEDAL, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

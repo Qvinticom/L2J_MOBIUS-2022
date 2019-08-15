@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q154_SacrificeToTheSea extends Quest
 {
-	private static final String qn = "Q154_SacrificeToTheSea";
-	
 	// NPCs
 	private static final int ROCKSWELL = 30312;
 	private static final int CRISTEL = 30051;
@@ -41,7 +39,7 @@ public class Q154_SacrificeToTheSea extends Quest
 	
 	public Q154_SacrificeToTheSea()
 	{
-		super(154, qn, "Sacrifice to the Sea");
+		super(154, "Sacrifice to the Sea");
 		
 		registerQuestItems(FOX_FUR, FOX_FUR_YARN, MAIDEN_DOLL);
 		
@@ -55,7 +53,7 @@ public class Q154_SacrificeToTheSea extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q154_SacrificeToTheSea extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

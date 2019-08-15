@@ -23,10 +23,10 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.util.Util;
 
+import quests.Q109_InSearchOfTheNest.Q109_InSearchOfTheNest;
+
 public class Q640_TheZeroHour extends Quest
 {
-	private static final String qn = "Q640_TheZeroHour";
-	
 	// NPC
 	private static final int KAHMAN = 31554;
 	
@@ -84,7 +84,7 @@ public class Q640_TheZeroHour extends Quest
 	
 	public Q640_TheZeroHour()
 	{
-		super(640, qn, "The Zero Hour");
+		super(640, "The Zero Hour");
 		
 		registerQuestItems(FANG_OF_STAKATO);
 		
@@ -99,7 +99,7 @@ public class Q640_TheZeroHour extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -145,7 +145,7 @@ public class Q640_TheZeroHour extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -161,7 +161,7 @@ public class Q640_TheZeroHour extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState("Q109_InSearchOfTheNest");
+					QuestState st2 = player.getQuestState(Q109_InSearchOfTheNest.class.getSimpleName());
 					htmltext = ((st2 != null) && st2.isCompleted()) ? "31554-01.htm" : "31554-10.htm";
 				}
 				break;
@@ -183,7 +183,7 @@ public class Q640_TheZeroHour extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItemsAlways(FANG_OF_STAKATO, 1, 0);
+		partyMember.getQuestState(getName()).dropItemsAlways(FANG_OF_STAKATO, 1, 0);
 		
 		return null;
 	}

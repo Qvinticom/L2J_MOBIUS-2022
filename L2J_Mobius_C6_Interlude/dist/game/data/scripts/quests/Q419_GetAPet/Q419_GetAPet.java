@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q419_GetAPet extends Quest
 {
-	private static final String qn = "Q419_GetAPet";
-	
 	// Items
 	private static final int ANIMAL_LOVER_LIST = 3417;
 	private static final int ANIMAL_SLAYER_LIST_1 = 3418;
@@ -131,7 +129,7 @@ public class Q419_GetAPet extends Quest
 	
 	public Q419_GetAPet()
 	{
-		super(419, qn, "Get a Pet");
+		super(419, "Get a Pet");
 		
 		registerQuestItems(ANIMAL_LOVER_LIST, ANIMAL_SLAYER_LIST_1, ANIMAL_SLAYER_LIST_2, ANIMAL_SLAYER_LIST_3, ANIMAL_SLAYER_LIST_4, ANIMAL_SLAYER_LIST_5, BLOODY_FANG, BLOODY_CLAW, BLOODY_NAIL, BLOODY_KASHA_FANG, BLOODY_TARANTULA_NAIL);
 		
@@ -148,7 +146,7 @@ public class Q419_GetAPet extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -227,7 +225,7 @@ public class Q419_GetAPet extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

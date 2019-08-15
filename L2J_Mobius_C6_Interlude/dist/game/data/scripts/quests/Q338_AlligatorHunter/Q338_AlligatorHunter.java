@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q338_AlligatorHunter extends Quest
 {
-	private static final String qn = "Q338_AlligatorHunter";
-	
 	// Item
 	private static final int ALLIGATOR_PELT = 4337;
 	
 	public Q338_AlligatorHunter()
 	{
-		super(338, qn, "Alligator Hunter");
+		super(338, "Alligator Hunter");
 		
 		registerQuestItems(ALLIGATOR_PELT);
 		
@@ -45,7 +43,7 @@ public class Q338_AlligatorHunter extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -83,7 +81,7 @@ public class Q338_AlligatorHunter extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

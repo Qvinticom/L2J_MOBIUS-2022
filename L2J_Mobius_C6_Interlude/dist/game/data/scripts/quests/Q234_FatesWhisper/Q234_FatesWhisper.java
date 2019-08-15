@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q234_FatesWhisper extends Quest
 {
-	private static final String qn = "Q234_FatesWhisper";
-	
 	// Items
 	private static final int REIRIA_SOUL_ORB = 4666;
 	private static final int KERMON_INFERNIUM_SCEPTER = 4667;
@@ -80,7 +78,7 @@ public class Q234_FatesWhisper extends Quest
 	
 	public Q234_FatesWhisper()
 	{
-		super(234, qn, "Fate's Whisper");
+		super(234, "Fate's Whisper");
 		
 		registerQuestItems(PIPETTE_KNIFE, RED_PIPETTE_KNIFE);
 		
@@ -98,7 +96,7 @@ public class Q234_FatesWhisper extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -176,7 +174,7 @@ public class Q234_FatesWhisper extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

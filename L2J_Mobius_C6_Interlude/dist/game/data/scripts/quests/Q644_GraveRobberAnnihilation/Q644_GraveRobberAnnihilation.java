@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q644_GraveRobberAnnihilation extends Quest
 {
-	private static final String qn = "Q644_GraveRobberAnnihilation";
-	
 	// Item
 	private static final int ORC_GRAVE_GOODS = 8088;
 	
@@ -64,7 +62,7 @@ public class Q644_GraveRobberAnnihilation extends Quest
 	
 	public Q644_GraveRobberAnnihilation()
 	{
-		super(644, qn, "Grave Robber Annihilation");
+		super(644, "Grave Robber Annihilation");
 		
 		registerQuestItems(ORC_GRAVE_GOODS);
 		
@@ -78,7 +76,7 @@ public class Q644_GraveRobberAnnihilation extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +107,7 @@ public class Q644_GraveRobberAnnihilation extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -146,7 +144,7 @@ public class Q644_GraveRobberAnnihilation extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

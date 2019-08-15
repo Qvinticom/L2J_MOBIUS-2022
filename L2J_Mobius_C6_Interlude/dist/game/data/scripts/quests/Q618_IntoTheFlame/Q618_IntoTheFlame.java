@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q618_IntoTheFlame extends Quest
 {
-	private static final String qn = "Q618_IntoTheFlame";
-	
 	// NPCs
 	private static final int KLEIN = 31540;
 	private static final int HILDA = 31271;
@@ -39,7 +37,7 @@ public class Q618_IntoTheFlame extends Quest
 	
 	public Q618_IntoTheFlame()
 	{
-		super(618, qn, "Into the Flame");
+		super(618, "Into the Flame");
 		
 		registerQuestItems(VACUALITE_ORE, VACUALITE);
 		
@@ -54,7 +52,7 @@ public class Q618_IntoTheFlame extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -93,7 +91,7 @@ public class Q618_IntoTheFlame extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,7 +145,7 @@ public class Q618_IntoTheFlame extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q617_GatherTheFlames extends Quest
 {
-	private static final String qn = "Q617_GatherTheFlames";
-	
 	// NPCs
 	private static final int HILDA = 31271;
 	private static final int VULCAN = 31539;
@@ -88,7 +86,7 @@ public class Q617_GatherTheFlames extends Quest
 	
 	public Q617_GatherTheFlames()
 	{
-		super(617, qn, "Gather the Flames");
+		super(617, "Gather the Flames");
 		
 		registerQuestItems(TORCH);
 		
@@ -105,7 +103,7 @@ public class Q617_GatherTheFlames extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -152,7 +150,7 @@ public class Q617_GatherTheFlames extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -194,7 +192,7 @@ public class Q617_GatherTheFlames extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(TORCH, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(TORCH, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q110_ToThePrimevalIsle extends Quest
 {
-	private static final String qn = "Q110_ToThePrimevalIsle";
-	
 	// NPCs
 	private static final int ANTON = 31338;
 	private static final int MARQUEZ = 32113;
@@ -35,7 +33,7 @@ public class Q110_ToThePrimevalIsle extends Quest
 	
 	public Q110_ToThePrimevalIsle()
 	{
-		super(110, qn, "To the Primeval Isle");
+		super(110, "To the Primeval Isle");
 		
 		registerQuestItems(ANCIENT_BOOK);
 		
@@ -47,7 +45,7 @@ public class Q110_ToThePrimevalIsle extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q110_ToThePrimevalIsle extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

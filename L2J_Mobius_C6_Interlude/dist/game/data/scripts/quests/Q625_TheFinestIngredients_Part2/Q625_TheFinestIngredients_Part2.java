@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q625_TheFinestIngredients_Part2 extends Quest
 {
-	private static final String qn = "Q625_TheFinestIngredients_Part2";
-	
 	// Monster
 	private static final int ICICLE_EMPEROR_BUMBALUMP = 25296;
 	
@@ -62,7 +60,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 	
 	public Q625_TheFinestIngredients_Part2()
 	{
-		super(625, qn, "The Finest Ingredients - Part 2");
+		super(625, "The Finest Ingredients - Part 2");
 		
 		registerQuestItems(FOOD_FOR_BUMBALUMP, SPECIAL_YETI_MEAT);
 		
@@ -75,7 +73,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(ICICLE_EMPEROR_BUMBALUMP))
 		{
 			case UNDEFINED:
-				LOGGER.log(Level.WARNING, qn + ": can not find spawned RaidBoss id=" + ICICLE_EMPEROR_BUMBALUMP);
+				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + ICICLE_EMPEROR_BUMBALUMP);
 				break;
 			
 			case ALIVE:
@@ -107,7 +105,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		}
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -175,7 +173,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -235,7 +233,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 	{
 		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				continue;

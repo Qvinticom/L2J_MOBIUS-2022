@@ -129,11 +129,9 @@ public class Q336_CoinsOfMagic extends Quest
 	};
 	// @formatter:on
 	
-	private static final String qn = "Q336_CoinsOfMagic";
-	
 	public Q336_CoinsOfMagic()
 	{
-		super(336, qn, "Coins of Magic");
+		super(336, "Coins of Magic");
 		addStartNpc(SORINT);
 		addTalkId(SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN);
 		for (int[] mob : DROPLIST)
@@ -150,7 +148,7 @@ public class Q336_CoinsOfMagic extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -259,7 +257,7 @@ public class Q336_CoinsOfMagic extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

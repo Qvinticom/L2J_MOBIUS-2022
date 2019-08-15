@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 public class Q415_PathToAMonk extends Quest
 {
-	private static final String qn = "Q415_PathToAMonk";
-	
 	// Items
 	private static final int POMEGRANATE = 1593;
 	private static final int LEATHER_POUCH_1 = 1594;
@@ -67,7 +65,7 @@ public class Q415_PathToAMonk extends Quest
 	
 	public Q415_PathToAMonk()
 	{
-		super(415, qn, "Path to a Monk");
+		super(415, "Path to a Monk");
 		
 		registerQuestItems(POMEGRANATE, LEATHER_POUCH_1, LEATHER_POUCH_2, LEATHER_POUCH_3, LEATHER_POUCH_FULL_1, LEATHER_POUCH_FULL_2, LEATHER_POUCH_FULL_3, KASHA_BEAR_CLAW, KASHA_BLADE_SPIDER_TALON, SCARLET_SALAMANDER_SCALE, FIERY_SPIRIT_SCROLL, ROSHEEK_LETTER, GANTAKI_LETTER_OF_RECOMMENDATION, FIG, LEATHER_POUCH_4, LEATHER_POUCH_FULL_4, VUKU_ORC_TUSK, RATMAN_FANG, LANG_KLIZARDMAN_TOOTH, FELIM_LIZARDMAN_TOOTH, IRON_WILL_SCROLL, TORUKU_LETTER, KASHA_SPIDER_TOOTH, HORN_OF_BAAR_DRE_VANUL);
 		
@@ -81,7 +79,7 @@ public class Q415_PathToAMonk extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -149,7 +147,7 @@ public class Q415_PathToAMonk extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

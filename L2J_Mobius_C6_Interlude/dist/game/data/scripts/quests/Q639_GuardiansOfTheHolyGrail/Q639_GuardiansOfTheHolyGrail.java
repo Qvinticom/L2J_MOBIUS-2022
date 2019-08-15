@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q639_GuardiansOfTheHolyGrail extends Quest
 {
-	private static final String qn = "Q639_GuardiansOfTheHolyGrail";
-	
 	// NPCs
 	private static final int DOMINIC = 31350;
 	private static final int GREMORY = 32008;
@@ -60,7 +58,7 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 	
 	public Q639_GuardiansOfTheHolyGrail()
 	{
-		super(639, qn, "Guardians of the Holy Grail");
+		super(639, "Guardians of the Holy Grail");
 		
 		registerQuestItems(SCRIPTURE, WATER_BOTTLE, HOLY_WATER_BOTTLE);
 		
@@ -77,7 +75,7 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -148,7 +146,7 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -214,7 +212,7 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(SCRIPTURE, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(SCRIPTURE, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

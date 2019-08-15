@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q246_PossessorOfAPreciousSoul extends Quest
 {
-	private static final String qn = "Q246_PossessorOfAPreciousSoul";
-	
 	// NPCs
 	private static final int CARADINE = 31740;
 	private static final int OSSIAN = 31741;
@@ -48,7 +46,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	
 	public Q246_PossessorOfAPreciousSoul()
 	{
-		super(246, qn, "Possessor of a Precious Soul - 3");
+		super(246, "Possessor of a Precious Soul - 3");
 		
 		registerQuestItems(WATERBINDER, EVERGREEN, RAIN_SONG, RELIC_BOX);
 		
@@ -62,7 +60,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -135,7 +133,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -228,7 +226,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 					continue;
 				}
 				
-				QuestState st = plr.getQuestState(qn);
+				QuestState st = plr.getQuestState(getName());
 				if (!st.hasQuestItems(RAIN_SONG))
 				{
 					st.set("cond", "5");

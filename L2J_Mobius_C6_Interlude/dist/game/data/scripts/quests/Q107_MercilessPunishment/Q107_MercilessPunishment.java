@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q107_MercilessPunishment extends Quest
 {
-	private static final String qn = "Q107_MercilessPunishment";
-	
 	// NPCs
 	private static final int HATOS = 30568;
 	private static final int PARUGON = 30580;
@@ -53,7 +51,7 @@ public class Q107_MercilessPunishment extends Quest
 	
 	public Q107_MercilessPunishment()
 	{
-		super(107, qn, "Merciless Punishment");
+		super(107, "Merciless Punishment");
 		
 		registerQuestItems(HATOS_ORDER_1, HATOS_ORDER_2, HATOS_ORDER_3, LETTER_TO_HUMAN, LETTER_TO_DARKELF, LETTER_TO_ELF);
 		
@@ -66,7 +64,7 @@ public class Q107_MercilessPunishment extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = event;
 		if (st == null)
 		{
@@ -106,7 +104,7 @@ public class Q107_MercilessPunishment extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

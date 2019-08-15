@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q262_TradeWithTheIvoryTower extends Quest
 {
-	private static final String qn = "Q262_TradeWithTheIvoryTower";
-	
 	// Item
 	private static final int FUNGUS_SAC = 707;
 	
 	public Q262_TradeWithTheIvoryTower()
 	{
-		super(262, qn, "Trade with the Ivory Tower");
+		super(262, "Trade with the Ivory Tower");
 		
 		registerQuestItems(FUNGUS_SAC);
 		
@@ -45,7 +43,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -65,7 +63,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

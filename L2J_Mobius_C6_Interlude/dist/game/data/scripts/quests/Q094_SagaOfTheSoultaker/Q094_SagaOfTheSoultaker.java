@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q094_SagaOfTheSoultaker extends SagasSuperClass
 {
-	public static String qn1 = "Q094_SagaOfTheSoultaker";
-	public static int qnu = 94;
-	public static String qna = "Saga of the Soultaker";
-	
 	public Q094_SagaOfTheSoultaker()
 	{
-		super(qnu, qn1, qna);
+		super(94, "Saga of the Soultaker");
 		NPC = new int[]
 		{
 			30832,
@@ -67,7 +63,6 @@ public class Q094_SagaOfTheSoultaker extends SagasSuperClass
 			27243,
 			27265
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			95

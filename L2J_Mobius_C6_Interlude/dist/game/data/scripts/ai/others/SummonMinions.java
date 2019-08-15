@@ -113,9 +113,9 @@ public class SummonMinions extends Quest
 		}); // Pythia
 	}
 	
-	public SummonMinions(int questId, String name, String descr)
+	public SummonMinions()
 	{
-		super(questId, name, descr);
+		super(-1, "ai");
 		final int[] mobs =
 		{
 			20767,
@@ -269,6 +269,6 @@ public class SummonMinions extends Quest
 	
 	public static void main(String[] args)
 	{
-		new SummonMinions(-1, "SummonMinions", "ai");
+		new SummonMinions();
 	}
 }

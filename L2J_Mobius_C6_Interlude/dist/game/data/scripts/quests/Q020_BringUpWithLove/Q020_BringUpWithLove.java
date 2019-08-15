@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q020_BringUpWithLove extends Quest
 {
-	public static final String qn = "Q020_BringUpWithLove";
-	
 	// Item
 	private static final int JEWEL_OF_INNOCENCE = 7185;
 	
 	public Q020_BringUpWithLove()
 	{
-		super(20, qn, "Bring Up With Love");
+		super(20, "Bring Up With Love");
 		
 		registerQuestItems(JEWEL_OF_INNOCENCE);
 		
@@ -43,7 +41,7 @@ public class Q020_BringUpWithLove extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +68,7 @@ public class Q020_BringUpWithLove extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

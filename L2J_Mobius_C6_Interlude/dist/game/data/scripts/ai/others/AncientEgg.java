@@ -32,9 +32,9 @@ public class AncientEgg extends Quest
 	// Skill
 	private static final int SIGNAL = 5088; // Signal
 	
-	private AncientEgg(int questId, String name, String descr)
+	private AncientEgg()
 	{
-		super(questId, name, descr);
+		super(-1, "ai");
 		addAttackId(EGG);
 	}
 	
@@ -48,6 +48,6 @@ public class AncientEgg extends Quest
 	
 	public static void main(String[] args)
 	{
-		new AncientEgg(-1, "AncientEgg", "ai");
+		new AncientEgg();
 	}
 }

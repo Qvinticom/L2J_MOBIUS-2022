@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 {
-	public static String qn1 = "Q093_SagaOfTheSpectralMaster";
-	public static int qnu = 93;
-	public static String qna = "Saga of the Spectral Master";
-	
 	public Q093_SagaOfTheSpectralMaster()
 	{
-		super(qnu, qn1, qna);
+		super(93, "Saga of the Spectral Master");
 		NPC = new int[]
 		{
 			30175,
@@ -67,7 +63,6 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 			27242,
 			27312
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			111

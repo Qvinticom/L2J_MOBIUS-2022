@@ -1810,7 +1810,7 @@ public class NpcInstance extends Creature
 			sb.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_Quest ").append(q.getName()).append("\">[");
 			
 			state = "";
-			final QuestState qs = player.getQuestState(q.getScriptName());
+			final QuestState qs = player.getQuestState(q.getName());
 			if (qs != null)
 			{
 				if (qs.isStarted() && (qs.getInt("cond") > 0))

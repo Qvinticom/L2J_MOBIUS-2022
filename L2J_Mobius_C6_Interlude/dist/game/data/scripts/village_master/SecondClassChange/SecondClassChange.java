@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
  */
 public class SecondClassChange extends Quest
 {
-	private static final String qn = "SecondClassChange";
-	
 	// 2nd class change items
 	private static final int MARK_OF_CHALLENGER = 2627;
 	private static final int MARK_OF_DUTY = 2633;
@@ -121,7 +119,7 @@ public class SecondClassChange extends Quest
 	
 	public SecondClassChange()
 	{
-		super(-1, qn, "village_master");
+		super(-1, "village_master");
 		
 		addStartNpc(SECONDCLASSNPCS);
 		addTalkId(SECONDCLASSNPCS);
@@ -131,7 +129,7 @@ public class SecondClassChange extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -184,7 +182,7 @@ public class SecondClassChange extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

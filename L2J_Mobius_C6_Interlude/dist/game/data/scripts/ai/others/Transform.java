@@ -77,9 +77,9 @@ public class Transform extends Quest
 		"This time at the last! The end!"
 	};
 	
-	public Transform(int questId, String name, String descr)
+	public Transform()
 	{
-		super(questId, name, descr);
+		super(-1, "ai");
 		
 		_mobs.add(new Transformer(21261, 21262, 1, 5)); // 1st mutation Ol Mahum Transcender
 		_mobs.add(new Transformer(21262, 21263, 1, 5)); // 2st mutation Ol Mahum Transcender
@@ -228,6 +228,6 @@ public class Transform extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Transform(-1, "transform", "ai");
+		new Transform();
 	}
 }

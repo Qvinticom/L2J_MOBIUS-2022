@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q112_WalkOfFate extends Quest
 {
-	private static final String qn = "Q112_WalkOfFate";
-	
 	// NPCs
 	private static final int LIVINA = 30572;
 	private static final int KARUDA = 32017;
@@ -35,7 +33,7 @@ public class Q112_WalkOfFate extends Quest
 	
 	public Q112_WalkOfFate()
 	{
-		super(112, qn, "Walk of Fate");
+		super(112, "Walk of Fate");
 		
 		addStartNpc(LIVINA);
 		addTalkId(LIVINA, KARUDA);
@@ -45,7 +43,7 @@ public class Q112_WalkOfFate extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -71,7 +69,7 @@ public class Q112_WalkOfFate extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q504_CompetitionForTheBanditStronghold extends Quest
 {
-	private static final String qn = "Q504_CompetitionForTheBanditStronghold";
-	
 	// NPCs
 	private static final int MESSENGER = 35437;
 	private static final int TARLK_BUGBEAR = 20570;
@@ -45,7 +43,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 	
 	public Q504_CompetitionForTheBanditStronghold()
 	{
-		super(504, qn, "Competition for the Bandit Stronghold");
+		super(504, "Competition for the Bandit Stronghold");
 		
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
@@ -56,7 +54,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -90,7 +88,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -137,7 +135,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || (qs.getState() != State.STARTED))
 		{
 			return null;

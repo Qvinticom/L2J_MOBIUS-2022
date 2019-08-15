@@ -50,14 +50,9 @@ public class Orfen extends Quest
 		ORFEN_RETURN
 	}
 	
-	/**
-	 * @param questId
-	 * @param name
-	 * @param descr
-	 */
-	public Orfen(int questId, String name, String descr)
+	public Orfen()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ORFEN);
@@ -264,6 +259,6 @@ public class Orfen extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Orfen(-1, "Orfen", "ai");
+		new Orfen();
 	}
 }

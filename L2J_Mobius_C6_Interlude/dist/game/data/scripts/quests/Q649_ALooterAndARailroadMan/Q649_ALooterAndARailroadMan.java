@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q649_ALooterAndARailroadMan extends Quest
 {
-	private static final String qn = "Q649_ALooterAndARailroadMan";
-	
 	// Item
 	private static final int THIEF_GUILD_MARK = 8099;
 	
@@ -34,7 +32,7 @@ public class Q649_ALooterAndARailroadMan extends Quest
 	
 	public Q649_ALooterAndARailroadMan()
 	{
-		super(649, qn, "A Looter and a Railroad Man");
+		super(649, "A Looter and a Railroad Man");
 		
 		registerQuestItems(THIEF_GUILD_MARK);
 		
@@ -48,7 +46,7 @@ public class Q649_ALooterAndARailroadMan extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +80,7 @@ public class Q649_ALooterAndARailroadMan extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

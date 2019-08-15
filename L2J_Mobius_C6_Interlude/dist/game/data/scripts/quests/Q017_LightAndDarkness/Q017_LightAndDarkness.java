@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q017_LightAndDarkness extends Quest
 {
-	private static final String qn = "Q017_LightAndDarkness";
-	
 	// Items
 	private static final int BLOOD_OF_SAINT = 7168;
 	
@@ -38,7 +36,7 @@ public class Q017_LightAndDarkness extends Quest
 	
 	public Q017_LightAndDarkness()
 	{
-		super(17, qn, "Light and Darkness");
+		super(17, "Light and Darkness");
 		
 		registerQuestItems(BLOOD_OF_SAINT);
 		
@@ -50,7 +48,7 @@ public class Q017_LightAndDarkness extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,7 +121,7 @@ public class Q017_LightAndDarkness extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

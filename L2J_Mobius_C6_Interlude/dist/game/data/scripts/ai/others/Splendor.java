@@ -52,7 +52,7 @@ public class Splendor extends Quest
 	
 	private Splendor()
 	{
-		super(-1, "Splendor", "ai/others");
+		super(-1, "ai/others");
 		
 		for (int npcId : NPCS.keySet())
 		{

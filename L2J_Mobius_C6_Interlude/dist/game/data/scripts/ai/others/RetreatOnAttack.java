@@ -43,7 +43,7 @@ public class RetreatOnAttack extends Quest
 	
 	private RetreatOnAttack()
 	{
-		super(-1, "RetreatOnAttack", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(EPLY, OL_MAHUM_GUARD);
 	}

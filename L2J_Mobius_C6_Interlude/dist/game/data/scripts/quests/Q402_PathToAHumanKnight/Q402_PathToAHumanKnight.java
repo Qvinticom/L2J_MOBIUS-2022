@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q402_PathToAHumanKnight extends Quest
 {
-	private static final String qn = "Q402_PathToAHumanKnight";
-	
 	// Items
 	private static final int SWORD_OF_RITUAL = 1161;
 	private static final int COIN_OF_LORDS_1 = 1162;
@@ -63,7 +61,7 @@ public class Q402_PathToAHumanKnight extends Quest
 	
 	public Q402_PathToAHumanKnight()
 	{
-		super(402, qn, "Path to a Human Knight");
+		super(402, "Path to a Human Knight");
 		
 		registerQuestItems(MARK_OF_ESQUIRE, COIN_OF_LORDS_1, COIN_OF_LORDS_2, COIN_OF_LORDS_3, COIN_OF_LORDS_4, COIN_OF_LORDS_5, COIN_OF_LORDS_6, GLUDIO_GUARD_MARK_1, BUGBEAR_NECKLACE, EINHASAD_CHURCH_MARK_1, EINHASAD_CRUCIFIX, GLUDIO_GUARD_MARK_2, SPIDER_LEG, EINHASAD_CHURCH_MARK_2, LIZARDMAN_TOTEM, GLUDIO_GUARD_MARK_3, GIANT_SPIDER_HUSK, EINHASAD_CHURCH_MARK_3, LIZARDMAN_TOTEM, GLUDIO_GUARD_MARK_3, GIANT_SPIDER_HUSK, EINHASAD_CHURCH_MARK_3, HORRIBLE_SKULL);
 		
@@ -77,7 +75,7 @@ public class Q402_PathToAHumanKnight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -160,7 +158,7 @@ public class Q402_PathToAHumanKnight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

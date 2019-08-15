@@ -26,9 +26,9 @@ public class Golkonda extends Quest
 	// Golkonda NpcID
 	private static final int GOLKONDA = 25126;
 	
-	public Golkonda(int questId, String name, String descr)
+	public Golkonda()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		addEventId(GOLKONDA, Quest.QuestEventType.ON_ATTACK);
 	}
@@ -37,6 +37,6 @@ public class Golkonda extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Golkonda(-1, "Golkonda", "ai");
+		new Golkonda();
 	}
 }

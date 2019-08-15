@@ -48,7 +48,7 @@ public class HotSprings extends Quest
 	
 	private HotSprings()
 	{
-		super(-1, "HotSprings", "ai/areas");
+		super(-1, "ai/areas");
 		
 		addAttackId(BANDERSNATCHLING, FLAVA, ATROXSPAWN, NEPENTHES, ATROX, BANDERSNATCH);
 	}

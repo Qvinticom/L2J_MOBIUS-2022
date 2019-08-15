@@ -36,8 +36,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q501_ProofOfClanAlliance extends Quest
 {
-	private static final String qn = "Q501_ProofOfClanAlliance";
-	
 	// Items
 	private static final int ADENA = 57;
 	private static final int POTION_OF_RECOVERY = 3889;
@@ -119,7 +117,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	
 	public Q501_ProofOfClanAlliance()
 	{
-		super(501, qn, "Proof of Clan Alliance");
+		super(501, "Proof of Clan Alliance");
 		
 		registerQuestItems(HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA, ATHREAS_COIN, SYMBOL_OF_LOYALTY, VOUCHER_OF_FAITH, ANTIDOTE_RECIPE_LIST);
 		
@@ -141,7 +139,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState st2 = getClanLeaderQuestState(player, npc);
 		
 		if (st == null)
@@ -265,7 +263,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState cl = getClanLeaderQuestState(player, npc);
 		
 		if (st == null)
@@ -452,7 +450,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState cl = getClanLeaderQuestState(player, npc);
 		
 		if ((st == null) || (cl == null))
@@ -577,6 +575,6 @@ public class Q501_ProofOfClanAlliance extends Quest
 	{
 		final Clan clan = player.getClan();
 		final PlayerInstance leader = clan.getLeader().getPlayerInstance();
-		return leader.getQuestState(qn);
+		return leader.getQuestState(getName());
 	}
 }

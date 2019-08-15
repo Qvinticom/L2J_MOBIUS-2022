@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q408_PathToAnElvenWizard extends Quest
 {
-	private static final String qn = "Q408_PathToAnElvenWizard";
-	
 	// Items
 	private static final int ROSELLA_LETTER = 1218;
 	private static final int RED_DOWN = 1219;
@@ -52,7 +50,7 @@ public class Q408_PathToAnElvenWizard extends Quest
 	
 	public Q408_PathToAnElvenWizard()
 	{
-		super(408, qn, "Path to an Elven Wizard");
+		super(408, "Path to an Elven Wizard");
 		
 		registerQuestItems(ROSELLA_LETTER, RED_DOWN, MAGICAL_POWERS_RUBY, PURE_AQUAMARINE, APPETIZING_APPLE, GOLD_LEAVES, IMMORTAL_LOVE, AMETHYST, NOBILITY_AMETHYST, FERTILITY_PERIDOT, CHARM_OF_GRAIN, SAP_OF_THE_MOTHER_TREE, LUCKY_POTPOURRI);
 		
@@ -66,7 +64,7 @@ public class Q408_PathToAnElvenWizard extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -150,7 +148,7 @@ public class Q408_PathToAnElvenWizard extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

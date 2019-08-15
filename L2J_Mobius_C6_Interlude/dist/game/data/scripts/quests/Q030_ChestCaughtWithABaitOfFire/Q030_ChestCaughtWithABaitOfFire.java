@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q053_LinnaeusSpecialBait.Q053_LinnaeusSpecialBait;
+
 public class Q030_ChestCaughtWithABaitOfFire extends Quest
 {
-	private static final String qn = "Q030_ChestCaughtWithABaitOfFire";
-	
 	// NPCs
 	private static final int LINNAEUS = 31577;
 	private static final int RUKAL = 30629;
@@ -37,7 +37,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 	
 	public Q030_ChestCaughtWithABaitOfFire()
 	{
-		super(30, qn, "Chest caught with a bait of fire");
+		super(30, "Chest caught with a bait of fire");
 		
 		registerQuestItems(MUSICAL_SCORE);
 		
@@ -49,7 +49,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +96,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -112,7 +112,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState("Q053_LinnaeusSpecialBait");
+					QuestState st2 = player.getQuestState(Q053_LinnaeusSpecialBait.class.getSimpleName());
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = "31577-01.htm";

@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 {
-	public static String qn1 = "Q090_SagaOfTheStormScreamer";
-	public static int qnu = 90;
-	public static String qna = "Saga of the Storm Screamer";
-	
 	public Q090_SagaOfTheStormScreamer()
 	{
-		super(qnu, qn1, qna);
+		super(90, "Saga of the Storm Screamer");
 		NPC = new int[]
 		{
 			30175,
@@ -66,7 +62,6 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 			27239,
 			27256
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			110

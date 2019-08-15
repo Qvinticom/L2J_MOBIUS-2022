@@ -34,8 +34,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q230_TestOfTheSummoner extends Quest
 {
-	public static final String qn = "Q230_TestOfTheSummoner";
-	
 	// Items
 	private static final int LETO_LIZARDMAN_AMULET = 3337;
 	private static final int SAC_OF_REDSPORES = 3338;
@@ -169,7 +167,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	
 	public Q230_TestOfTheSummoner()
 	{
-		super(230, qn, "Test of the Summoner");
+		super(230, "Test of the Summoner");
 		
 		registerQuestItems(LETO_LIZARDMAN_AMULET, SAC_OF_REDSPORES, KARUL_BUGBEAR_TOTEM, SHARDS_OF_MANASHEN, BREKA_ORC_TOTEM, CRIMSON_BLOODSTONE, TALONS_OF_TYRANT, WINGS_OF_DRONEANT, TUSK_OF_WINDSUS, FANGS_OF_WYRM, LARA_LIST_1, LARA_LIST_2, LARA_LIST_3, LARA_LIST_4, LARA_LIST_5, GALATEA_LETTER, BEGINNER_ARCANA, ALMORS_ARCANA, CAMONIELL_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA, CRYSTAL_OF_PROGRESS_1, CRYSTAL_OF_INPROGRESS_1, CRYSTAL_OF_FOUL_1, CRYSTAL_OF_DEFEAT_1, CRYSTAL_OF_VICTORY_1, CRYSTAL_OF_PROGRESS_2, CRYSTAL_OF_INPROGRESS_2, CRYSTAL_OF_FOUL_2, CRYSTAL_OF_DEFEAT_2, CRYSTAL_OF_VICTORY_2, CRYSTAL_OF_PROGRESS_3, CRYSTAL_OF_INPROGRESS_3, CRYSTAL_OF_FOUL_3, CRYSTAL_OF_DEFEAT_3, CRYSTAL_OF_VICTORY_3, CRYSTAL_OF_PROGRESS_4, CRYSTAL_OF_INPROGRESS_4, CRYSTAL_OF_FOUL_4, CRYSTAL_OF_DEFEAT_4, CRYSTAL_OF_VICTORY_4, CRYSTAL_OF_PROGRESS_5, CRYSTAL_OF_INPROGRESS_5, CRYSTAL_OF_FOUL_5, CRYSTAL_OF_DEFEAT_5, CRYSTAL_OF_VICTORY_5, CRYSTAL_OF_PROGRESS_6, CRYSTAL_OF_INPROGRESS_6, CRYSTAL_OF_FOUL_6, CRYSTAL_OF_DEFEAT_6, CRYSTAL_OF_VICTORY_6);
 		
@@ -184,7 +182,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -359,7 +357,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -1034,7 +1032,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Almors", "5");
@@ -1068,7 +1066,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Camoniell", "5");
@@ -1102,7 +1100,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Belthus", "5");
@@ -1136,7 +1134,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Basilla", "5");
@@ -1170,7 +1168,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Celestiel", "5");
@@ -1204,7 +1202,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
-							st = foulPlayer.getQuestState(qn);
+							st = foulPlayer.getQuestState(getName());
 							if (st != null)
 							{
 								st.set("Brynthea", "5");

@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q071_SagaOfEvasTemplar extends SagasSuperClass
 {
-	public static String qn1 = "Q071_SagaOfEvasTemplar";
-	public static int qnu = 71;
-	public static String qna = "Saga of Eva's Templar";
-	
 	public Q071_SagaOfEvasTemplar()
 	{
-		super(qnu, qn1, qna);
+		super(71, "Saga of Eva's Templar");
 		NPC = new int[]
 		{
 			30852,
@@ -66,7 +62,6 @@ public class Q071_SagaOfEvasTemplar extends SagasSuperClass
 			27220,
 			27279
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			99

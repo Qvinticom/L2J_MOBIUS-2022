@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q385_YokeOfThePast extends Quest
 {
-	private static final String qn = "Q385_YokeOfThePast";
-	
 	// NPCs
 	private static final int GATEKEEPER_ZIGGURAT[] =
 	{
@@ -118,7 +116,7 @@ public class Q385_YokeOfThePast extends Quest
 	
 	public Q385_YokeOfThePast()
 	{
-		super(385, qn, "Yoke of the Past");
+		super(385, "Yoke of the Past");
 		
 		registerQuestItems(ANCIENT_SCROLL);
 		
@@ -135,7 +133,7 @@ public class Q385_YokeOfThePast extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -159,7 +157,7 @@ public class Q385_YokeOfThePast extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -199,7 +197,7 @@ public class Q385_YokeOfThePast extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(ANCIENT_SCROLL, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(ANCIENT_SCROLL, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q347_GoGetTheCalculator extends Quest
 {
-	private static final String qn = "Q347_GoGetTheCalculator";
-	
 	// NPCs
 	private static final int BRUNON = 30526;
 	private static final int SILVERA = 30527;
@@ -39,7 +37,7 @@ public class Q347_GoGetTheCalculator extends Quest
 	
 	public Q347_GoGetTheCalculator()
 	{
-		super(347, qn, "Go Get the Calculator");
+		super(347, "Go Get the Calculator");
 		
 		registerQuestItems(GEMSTONE_BEAST_CRYSTAL, CALCULATOR_QUEST);
 		
@@ -53,7 +51,7 @@ public class Q347_GoGetTheCalculator extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -118,7 +116,7 @@ public class Q347_GoGetTheCalculator extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

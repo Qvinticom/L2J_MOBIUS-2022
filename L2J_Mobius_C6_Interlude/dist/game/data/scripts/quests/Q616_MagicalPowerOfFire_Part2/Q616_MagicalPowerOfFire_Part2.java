@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q616_MagicalPowerOfFire_Part2 extends Quest
 {
-	private static final String qn = "Q616_MagicalPowerOfFire_Part2";
-	
 	// Monster
 	private static final int SOUL_OF_FIRE_NASTRON = 25306;
 	
@@ -52,7 +50,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	
 	public Q616_MagicalPowerOfFire_Part2()
 	{
-		super(616, qn, "Magical Power of Fire - Part 2");
+		super(616, "Magical Power of Fire - Part 2");
 		
 		registerQuestItems(FIRE_HEART_OF_NASTRON);
 		
@@ -65,7 +63,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(SOUL_OF_FIRE_NASTRON))
 		{
 			case UNDEFINED:
-				LOGGER.log(Level.WARNING, qn + ": can not find spawned RaidBoss id=" + SOUL_OF_FIRE_NASTRON);
+				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + SOUL_OF_FIRE_NASTRON);
 				break;
 			
 			case ALIVE:
@@ -97,7 +95,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		}
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -163,7 +161,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -234,7 +232,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	{
 		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				continue;

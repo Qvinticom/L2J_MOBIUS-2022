@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q124_MeetingTheElroki extends Quest
 {
-	public static final String qn = "Q124_MeetingTheElroki";
-	
 	// NPCs
 	private static final int MARQUEZ = 32113;
 	private static final int MUSHIKA = 32114;
@@ -35,7 +33,7 @@ public class Q124_MeetingTheElroki extends Quest
 	
 	public Q124_MeetingTheElroki()
 	{
-		super(124, qn, "Meeting the Elroki");
+		super(124, "Meeting the Elroki");
 		
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
@@ -45,7 +43,7 @@ public class Q124_MeetingTheElroki extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,7 +95,7 @@ public class Q124_MeetingTheElroki extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

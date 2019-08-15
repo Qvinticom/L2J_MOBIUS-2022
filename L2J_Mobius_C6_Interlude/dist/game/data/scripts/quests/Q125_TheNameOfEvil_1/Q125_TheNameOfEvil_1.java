@@ -28,8 +28,6 @@ import quests.Q124_MeetingTheElroki.Q124_MeetingTheElroki;
 
 public class Q125_TheNameOfEvil_1 extends Quest
 {
-	public static final String qn = "Q125_TheNameOfEvil_1";
-	
 	private static final int MUSHIKA = 32114;
 	private static final int KARAKAWEI = 32117;
 	private static final int ULU_KAIMU = 32119;
@@ -66,7 +64,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	
 	public Q125_TheNameOfEvil_1()
 	{
-		super(125, qn, "The Name of Evil - 1");
+		super(125, "The Name of Evil - 1");
 		
 		registerQuestItems(ORNITHOMIMUS_CLAW, DEINONYCHUS_BONE, EPITAPH_OF_WISDOM, GAZKH_FRAGMENT);
 		
@@ -88,7 +86,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -140,7 +138,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -150,7 +148,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState first = player.getQuestState(Q124_MeetingTheElroki.qn);
+				QuestState first = player.getQuestState(Q124_MeetingTheElroki.class.getSimpleName());
 				if ((first != null) && first.isCompleted() && (player.getLevel() >= 76))
 				{
 					htmltext = "32114-01.htm";

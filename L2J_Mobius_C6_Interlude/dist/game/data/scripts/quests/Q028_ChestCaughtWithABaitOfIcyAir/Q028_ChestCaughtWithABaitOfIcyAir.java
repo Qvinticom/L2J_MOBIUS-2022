@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q051_OFullesSpecialBait.Q051_OFullesSpecialBait;
+
 public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 {
-	private static final String qn = "Q028_ChestCaughtWithABaitOfIcyAir";
-	
 	// NPCs
 	private static final int OFULLE = 31572;
 	private static final int KIKI = 31442;
@@ -37,7 +37,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 	
 	public Q028_ChestCaughtWithABaitOfIcyAir()
 	{
-		super(28, qn, "Chest caught with a bait of icy air");
+		super(28, "Chest caught with a bait of icy air");
 		
 		registerQuestItems(KIKI_LETTER);
 		
@@ -49,7 +49,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +96,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -112,7 +112,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState("Q051_OFullesSpecialBait");
+					QuestState st2 = player.getQuestState(Q051_OFullesSpecialBait.class.getSimpleName());
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = "31572-01.htm";

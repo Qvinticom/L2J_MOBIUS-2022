@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q623_TheFinestFood extends Quest
 {
-	private static final String qn = "Q623_TheFinestFood";
-	
 	// Items
 	private static final int LEAF_OF_FLAVA = 7199;
 	private static final int BUFFALO_MEAT = 7200;
@@ -42,7 +40,7 @@ public class Q623_TheFinestFood extends Quest
 	
 	public Q623_TheFinestFood()
 	{
-		super(623, qn, "The Finest Food");
+		super(623, "The Finest Food");
 		
 		registerQuestItems(LEAF_OF_FLAVA, BUFFALO_MEAT, ANTELOPE_HORN);
 		
@@ -56,7 +54,7 @@ public class Q623_TheFinestFood extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -114,7 +112,7 @@ public class Q623_TheFinestFood extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -158,7 +156,7 @@ public class Q623_TheFinestFood extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

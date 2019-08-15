@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q610_MagicalPowerOfWater_Part2 extends Quest
 {
-	private static final String qn = "Q610_MagicalPowerOfWater_Part2";
-	
 	// Monster
 	private static final int SOUL_OF_WATER_ASHUTAR = 25316;
 	
@@ -52,7 +50,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	
 	public Q610_MagicalPowerOfWater_Part2()
 	{
-		super(610, qn, "Magical Power of Water - Part 2");
+		super(610, "Magical Power of Water - Part 2");
 		
 		registerQuestItems(ICE_HEART_OF_ASHUTAR);
 		
@@ -65,7 +63,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(SOUL_OF_WATER_ASHUTAR))
 		{
 			case UNDEFINED:
-				LOGGER.log(Level.WARNING, qn + ": can not find spawned RaidBoss id=" + SOUL_OF_WATER_ASHUTAR);
+				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + SOUL_OF_WATER_ASHUTAR);
 				break;
 			
 			case ALIVE:
@@ -97,7 +95,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		}
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -163,7 +161,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -223,7 +221,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	{
 		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				continue;

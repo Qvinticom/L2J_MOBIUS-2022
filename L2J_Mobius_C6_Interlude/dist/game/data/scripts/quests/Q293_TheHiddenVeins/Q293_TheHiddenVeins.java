@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q293_TheHiddenVeins extends Quest
 {
-	private static final String qn = "Q293_TheHiddenVeins";
-	
 	// Items
 	private static final int CHRYSOLITE_ORE = 1488;
 	private static final int TORN_MAP_FRAGMENT = 1489;
@@ -47,7 +45,7 @@ public class Q293_TheHiddenVeins extends Quest
 	
 	public Q293_TheHiddenVeins()
 	{
-		super(293, qn, "The Hidden Veins");
+		super(293, "The Hidden Veins");
 		
 		registerQuestItems(CHRYSOLITE_ORE, TORN_MAP_FRAGMENT, HIDDEN_VEIN_MAP);
 		
@@ -61,7 +59,7 @@ public class Q293_TheHiddenVeins extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +94,7 @@ public class Q293_TheHiddenVeins extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

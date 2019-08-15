@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q378_MagnificentFeast extends Quest
 {
-	private static final String qn = "Q378_MagnificentFeast";
-	
 	// NPC
 	private static final int RANSPO = 30594;
 	
@@ -104,7 +102,7 @@ public class Q378_MagnificentFeast extends Quest
 	
 	public Q378_MagnificentFeast()
 	{
-		super(378, qn, "Magnificent Feast");
+		super(378, "Magnificent Feast");
 		
 		addStartNpc(RANSPO);
 		addTalkId(RANSPO);
@@ -114,7 +112,7 @@ public class Q378_MagnificentFeast extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -234,7 +232,7 @@ public class Q378_MagnificentFeast extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

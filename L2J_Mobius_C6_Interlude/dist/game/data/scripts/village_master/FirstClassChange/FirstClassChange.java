@@ -107,7 +107,7 @@ public class FirstClassChange extends Quest
 	
 	public FirstClassChange()
 	{
-		super(-1, "FirstClassChange", "village_master");
+		super(-1, "village_master");
 		
 		addStartNpc(FIRSTCLASSNPCS);
 		addTalkId(FIRSTCLASSNPCS);
@@ -117,7 +117,7 @@ public class FirstClassChange extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState("FirstClassChange");
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -175,7 +175,7 @@ public class FirstClassChange extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState("FirstClassChange");
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

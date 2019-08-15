@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q109_InSearchOfTheNest extends Quest
 {
-	private static final String qn = "Q109_InSearchOfTheNest";
-	
 	// NPCs
 	private static final int PIERCE = 31553;
 	private static final int KAHMAN = 31554;
@@ -38,7 +36,7 @@ public class Q109_InSearchOfTheNest extends Quest
 	
 	public Q109_InSearchOfTheNest()
 	{
-		super(109, qn, "In Search of the Nest");
+		super(109, "In Search of the Nest");
 		
 		registerQuestItems(SCOUT_MEMO);
 		
@@ -50,7 +48,7 @@ public class Q109_InSearchOfTheNest extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -87,7 +85,7 @@ public class Q109_InSearchOfTheNest extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

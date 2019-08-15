@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q005_MinersFavor extends Quest
 {
-	private static final String qn = "Q005_MinersFavor";
-	
 	// NPCs
 	private static final int BOLTER = 30554;
 	private static final int SHARI = 30517;
@@ -46,7 +44,7 @@ public class Q005_MinersFavor extends Quest
 	
 	public Q005_MinersFavor()
 	{
-		super(5, qn, "Miner's Favor");
+		super(5, "Miner's Favor");
 		
 		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
 		
@@ -58,7 +56,7 @@ public class Q005_MinersFavor extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -94,7 +92,7 @@ public class Q005_MinersFavor extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

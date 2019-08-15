@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q229_TestOfWitchcraft extends Quest
 {
-	private static final String qn = "Q229_TestOfWitchcraft";
-	
 	// Items
 	private static final int ORIM_DIAGRAM = 3308;
 	private static final int ALEXANDRIA_BOOK = 3309;
@@ -98,7 +96,7 @@ public class Q229_TestOfWitchcraft extends Quest
 	
 	public Q229_TestOfWitchcraft()
 	{
-		super(229, qn, "Test of Witchcraft");
+		super(229, "Test of Witchcraft");
 		
 		registerQuestItems(ORIM_DIAGRAM, ALEXANDRIA_BOOK, IKER_LIST, DIRE_WYRM_FANG, LETO_LIZARDMAN_CHARM, EN_GOLEM_HEARTSTONE, LARA_MEMO, NESTLE_MEMO, LEOPOLD_JOURNAL, AKLANTOTH_GEM_1, AKLANTOTH_GEM_2, AKLANTOTH_GEM_3, AKLANTOTH_GEM_4, AKLANTOTH_GEM_5, AKLANTOTH_GEM_6, BRIMSTONE_1, ORIM_INSTRUCTIONS, ORIM_LETTER_1, ORIM_LETTER_2, SIR_VASPER_LETTER, VADIN_CRUCIFIX, TAMLIN_ORC_AMULET, VADIN_SANCTIONS, IKER_AMULET, SOULTRAP_CRYSTAL, PURGATORY_KEY, ZERUEL_BIND_CRYSTAL, BRIMSTONE_2, SWORD_OF_BINDING);
 		
@@ -113,7 +111,7 @@ public class Q229_TestOfWitchcraft extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -282,7 +280,7 @@ public class Q229_TestOfWitchcraft extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

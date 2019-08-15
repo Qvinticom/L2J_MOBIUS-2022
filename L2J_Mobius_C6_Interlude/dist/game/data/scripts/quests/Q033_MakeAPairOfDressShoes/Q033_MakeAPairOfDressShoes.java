@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q037_MakeFormalWear.Q037_MakeFormalWear;
+
 public class Q033_MakeAPairOfDressShoes extends Quest
 {
-	private static final String qn = "Q033_MakeAPairOfDressShoes";
-	
 	// NPCs
 	private static final int WOODLEY = 30838;
 	private static final int IAN = 30164;
@@ -41,7 +41,7 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 	
 	public Q033_MakeAPairOfDressShoes()
 	{
-		super(33, qn, "Make a Pair of Dress Shoes");
+		super(33, "Make a Pair of Dress Shoes");
 		
 		addStartNpc(WOODLEY);
 		addTalkId(WOODLEY, IAN, LEIKAR);
@@ -51,7 +51,7 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -114,7 +114,7 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -126,7 +126,7 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 			case State.CREATED:
 				if (player.getLevel() >= 60)
 				{
-					QuestState fwear = player.getQuestState("Q037_MakeFormalWear");
+					QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
 					if ((fwear != null) && (fwear.getInt("cond") == 7))
 					{
 						htmltext = "30838-0.htm";

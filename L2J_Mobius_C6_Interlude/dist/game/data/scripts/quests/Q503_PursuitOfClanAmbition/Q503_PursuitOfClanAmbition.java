@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q503_PursuitOfClanAmbition extends Quest
 {
-	private static final String qn = "Q503_PursuitOfClanAmbition";
-	
 	// Items
 	// First
 	private static final int G_LET_MARTIEN = 3866;
@@ -104,7 +102,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	
 	public Q503_PursuitOfClanAmbition()
 	{
-		super(503, qn, "Pursuit of Clan Ambition!");
+		super(503, "Pursuit of Clan Ambition!");
 		
 		registerQuestItems(MI_DRAKE_EGGS, BL_WYRM_EGGS, DRAKE_EGGS, TH_WYRM_EGGS, BROOCH, NEBULITE_CRYSTALS, BROKE_POWER_STONE, POWER_STONE, IMP_KEYS, G_LET_MARTIEN, G_LET_BALTHAZAR, G_LET_RODEMAI, SCEPTER_JUDGEMENT);
 		
@@ -119,7 +117,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -264,7 +262,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

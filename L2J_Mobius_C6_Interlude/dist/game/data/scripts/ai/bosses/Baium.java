@@ -93,9 +93,9 @@ public class Baium extends Quest
 	private final List<NpcInstance> _minions = new CopyOnWriteArrayList<>();
 	protected BossZone _zone;
 	
-	public Baium(int questId, String name, String descr)
+	public Baium()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		final int[] mob =
 		{
@@ -344,9 +344,9 @@ public class Baium extends Quest
 				return "<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>";
 			}
 			
-			if ((status == ASLEEP) && (player.getQuestState("baium").getQuestItemsCount(4295) > 0)) // bloody fabric
+			if ((status == ASLEEP) && (player.getQuestState(getName()).getQuestItemsCount(4295) > 0)) // bloody fabric
 			{
-				player.getQuestState("baium").takeItems(4295, 1);
+				player.getQuestState(getName()).takeItems(4295, 1);
 				// allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
 				// Note: this just means 30secs to get in, no limits on how long it takes before we get out.
 				_zone.allowPlayerEntry(player, 30);
@@ -687,6 +687,6 @@ public class Baium extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Baium(-1, "baium", "ai");
+		new Baium();
 	}
 }

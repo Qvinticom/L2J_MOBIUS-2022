@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q259_RanchersPlea extends Quest
 {
-	private static final String qn = "Q259_RanchersPlea";
-	
 	// NPCs
 	private static final int EDMOND = 30497;
 	private static final int MARIUS = 30405;
@@ -45,7 +43,7 @@ public class Q259_RanchersPlea extends Quest
 	
 	public Q259_RanchersPlea()
 	{
-		super(259, qn, "Rancher's Plea");
+		super(259, "Rancher's Plea");
 		
 		registerQuestItems(GIANT_SPIDER_SKIN);
 		
@@ -59,7 +57,7 @@ public class Q259_RanchersPlea extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -114,7 +112,7 @@ public class Q259_RanchersPlea extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

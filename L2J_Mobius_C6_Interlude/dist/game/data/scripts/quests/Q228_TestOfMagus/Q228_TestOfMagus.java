@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q228_TestOfMagus extends Quest
 {
-	private static final String qn = "Q228_TestOfMagus";
-	
 	// Items
 	private static final int RUKAL_LETTER = 2841;
 	private static final int PARINA_LETTER = 2842;
@@ -85,7 +83,7 @@ public class Q228_TestOfMagus extends Quest
 	
 	public Q228_TestOfMagus()
 	{
-		super(228, qn, "Test of Magus");
+		super(228, "Test of Magus");
 		
 		registerQuestItems(RUKAL_LETTER, PARINA_LETTER, LILAC_CHARM, GOLDEN_SEED_1, GOLDEN_SEED_2, GOLDEN_SEED_3, SCORE_OF_ELEMENTS, DAZZLING_DROP, FLAME_CRYSTAL, HARPY_FEATHER, WYRM_WINGBONE, WINDSUS_MANE, EN_MONSTEREYE_SHELL, EN_STONEGOLEM_POWDER, EN_IRONGOLEM_SCRAP, TONE_OF_WATER, TONE_OF_FIRE, TONE_OF_WIND, TONE_OF_EARTH, SALAMANDER_CHARM, SYLPH_CHARM, UNDINE_CHARM, SERPENT_CHARM);
 		
@@ -99,7 +97,7 @@ public class Q228_TestOfMagus extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -166,7 +164,7 @@ public class Q228_TestOfMagus extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

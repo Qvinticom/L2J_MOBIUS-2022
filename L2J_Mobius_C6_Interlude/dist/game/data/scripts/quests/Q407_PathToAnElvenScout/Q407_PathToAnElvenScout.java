@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q407_PathToAnElvenScout extends Quest
 {
-	private static final String qn = "Q407_PathToAnElvenScout";
-	
 	// Items
 	private static final int REISA_LETTER = 1207;
 	private static final int PRIAS_TORN_LETTER_1 = 1208;
@@ -49,7 +47,7 @@ public class Q407_PathToAnElvenScout extends Quest
 	
 	public Q407_PathToAnElvenScout()
 	{
-		super(407, qn, "Path to an Elven Scout");
+		super(407, "Path to an Elven Scout");
 		
 		registerQuestItems(REISA_LETTER, PRIAS_TORN_LETTER_1, PRIAS_TORN_LETTER_2, PRIAS_TORN_LETTER_3, PRIAS_TORN_LETTER_4, MORETTI_HERB, MORETTI_LETTER, PRIAS_LETTER, HONORARY_GUARD, RUSTED_KEY);
 		
@@ -63,7 +61,7 @@ public class Q407_PathToAnElvenScout extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -105,7 +103,7 @@ public class Q407_PathToAnElvenScout extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

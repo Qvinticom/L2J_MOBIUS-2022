@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q340_SubjugationOfLizardmen extends Quest
 {
-	private static final String qn = "Q340_SubjugationOfLizardmen";
-	
 	// NPCs
 	private static final int WEISZ = 30385;
 	private static final int ADONIUS = 30375;
@@ -40,7 +38,7 @@ public class Q340_SubjugationOfLizardmen extends Quest
 	
 	public Q340_SubjugationOfLizardmen()
 	{
-		super(340, qn, "Subjugation of Lizardmen");
+		super(340, "Subjugation of Lizardmen");
 		
 		registerQuestItems(CARGO, HOLY, ROSARY, TOTEM);
 		
@@ -54,7 +52,7 @@ public class Q340_SubjugationOfLizardmen extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -107,7 +105,7 @@ public class Q340_SubjugationOfLizardmen extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

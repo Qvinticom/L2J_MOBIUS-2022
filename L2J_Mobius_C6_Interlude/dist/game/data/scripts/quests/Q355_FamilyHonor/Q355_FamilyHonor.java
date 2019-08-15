@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q355_FamilyHonor extends Quest
 {
-	private static final String qn = "Q355_FamilyHonor";
-	
 	// NPCs
 	private static final int GALIBREDO = 30181;
 	private static final int PATRIN = 30929;
@@ -76,7 +74,7 @@ public class Q355_FamilyHonor extends Quest
 	
 	public Q355_FamilyHonor()
 	{
-		super(355, qn, "Family Honor");
+		super(355, "Family Honor");
 		
 		registerQuestItems(GALIBREDO_BUST);
 		
@@ -90,7 +88,7 @@ public class Q355_FamilyHonor extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -165,7 +163,7 @@ public class Q355_FamilyHonor extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -204,7 +202,7 @@ public class Q355_FamilyHonor extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

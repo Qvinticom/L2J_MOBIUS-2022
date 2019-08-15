@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q165_ShilensHunt extends Quest
 {
-	private static final String qn = "Q165_ShilensHunt";
-	
 	// Monsters
 	private static final int ASHEN_WOLF = 20456;
 	private static final int YOUNG_BROWN_KELTIR = 20529;
@@ -52,7 +50,7 @@ public class Q165_ShilensHunt extends Quest
 	
 	public Q165_ShilensHunt()
 	{
-		super(165, qn, "Shilen's Hunt");
+		super(165, "Shilen's Hunt");
 		
 		registerQuestItems(DARK_BEZOAR);
 		
@@ -66,7 +64,7 @@ public class Q165_ShilensHunt extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -86,7 +84,7 @@ public class Q165_ShilensHunt extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

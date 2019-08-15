@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q159_ProtectTheWaterSource extends Quest
 {
-	private static final String qn = "Q159_ProtectTheWaterSource";
-	
 	// Items
 	private static final int PLAGUE_DUST = 1035;
 	private static final int HYACINTH_CHARM_1 = 1071;
@@ -34,7 +32,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 	
 	public Q159_ProtectTheWaterSource()
 	{
-		super(159, qn, "Protect the Water Source");
+		super(159, "Protect the Water Source");
 		
 		registerQuestItems(PLAGUE_DUST, HYACINTH_CHARM_1, HYACINTH_CHARM_2);
 		
@@ -48,7 +46,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -68,7 +66,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

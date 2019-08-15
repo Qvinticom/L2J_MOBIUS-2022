@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 {
-	private static final String qn = "Q655_AGrandPlanForTamingWildBeasts";
-	
 	// NPCs
 	private static final int MESSENGER = 35627;
 	// Items
@@ -39,7 +37,7 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 	
 	public Q655_AGrandPlanForTamingWildBeasts()
 	{
-		super(655, qn, "A Grand Plan for Taming Wild Beasts");
+		super(655, "A Grand Plan for Taming Wild Beasts");
 		
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
@@ -49,7 +47,7 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -81,7 +79,7 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;

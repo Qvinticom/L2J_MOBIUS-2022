@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q050_LanoscosSpecialBait.Q050_LanoscosSpecialBait;
+
 public class Q027_ChestCaughtWithABaitOfWind extends Quest
 {
-	private static final String qn = "Q027_ChestCaughtWithABaitOfWind";
-	
 	// NPCs
 	private static final int LANOSCO = 31570;
 	private static final int SHALING = 31442;
@@ -37,7 +37,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 	
 	public Q027_ChestCaughtWithABaitOfWind()
 	{
-		super(27, qn, "Chest caught with a bait of wind");
+		super(27, "Chest caught with a bait of wind");
 		
 		registerQuestItems(STRANGE_BLUEPRINT);
 		
@@ -49,7 +49,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +96,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -112,7 +112,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState("Q050_LanoscosSpecialBait");
+					QuestState st2 = player.getQuestState(Q050_LanoscosSpecialBait.class.getSimpleName());
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = "31570-01.htm";

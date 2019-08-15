@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q092_SagaOfTheElementalMaster extends SagasSuperClass
 {
-	public static String qn1 = "Q092_SagaOfTheElementalMaster";
-	public static int qnu = 92;
-	public static String qna = "Saga of the Elemental Master";
-	
 	public Q092_SagaOfTheElementalMaster()
 	{
-		super(qnu, qn1, qna);
+		super(92, "Saga of the Elemental Master");
 		NPC = new int[]
 		{
 			30174,
@@ -67,7 +63,6 @@ public class Q092_SagaOfTheElementalMaster extends SagasSuperClass
 			27241,
 			27311
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			104

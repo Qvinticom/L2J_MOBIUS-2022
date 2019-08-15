@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q632_NecromancersRequest extends Quest
 {
-	private static final String qn = "Q632_NecromancersRequest";
-	
 	// Monsters
 	private static final int[] VAMPIRES =
 	{
@@ -67,7 +65,7 @@ public class Q632_NecromancersRequest extends Quest
 	
 	public Q632_NecromancersRequest()
 	{
-		super(632, qn, "Necromancer's Request");
+		super(632, "Necromancer's Request");
 		
 		registerQuestItems(VAMPIRE_HEART, ZOMBIE_BRAIN);
 		
@@ -82,7 +80,7 @@ public class Q632_NecromancersRequest extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -121,7 +119,7 @@ public class Q632_NecromancersRequest extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -150,7 +148,7 @@ public class Q632_NecromancersRequest extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

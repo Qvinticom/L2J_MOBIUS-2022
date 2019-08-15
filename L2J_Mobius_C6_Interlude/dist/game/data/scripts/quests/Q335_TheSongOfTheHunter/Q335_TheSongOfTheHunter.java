@@ -150,11 +150,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 		new Request(3768, 3810, 10, 41200, "A: 10 Swords of Cadmus").addDrop(20676, 64)
 	};
 	
-	private static final String qn = "Q335_TheSongOfTheHunter";
-	
 	public Q335_TheSongOfTheHunter()
 	{
-		super(335, qn, "Song of the Hunter");
+		super(335, "Song of the Hunter");
 		
 		addStartNpc(GREY);
 		addTalkId(GREY, CYBELLIN, TOR);
@@ -404,7 +402,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
@@ -542,7 +540,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

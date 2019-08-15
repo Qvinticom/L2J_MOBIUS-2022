@@ -39,7 +39,7 @@ public class Gustav extends Quest
 	
 	private Gustav()
 	{
-		super(-1, "Gustav", "ai/bosses");
+		super(-1, "ai/bosses");
 		
 		addTalkId(MESSENGER);
 		addStartNpc(MESSENGER);

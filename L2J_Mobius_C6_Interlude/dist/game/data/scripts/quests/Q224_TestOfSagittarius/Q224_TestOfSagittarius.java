@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q224_TestOfSagittarius extends Quest
 {
-	private static final String qn = "Q224_TestOfSagittarius";
-	
 	// Items
 	private static final int BERNARD_INTRODUCTION = 3294;
 	private static final int HAMIL_LETTER_1 = 3295;
@@ -86,7 +84,7 @@ public class Q224_TestOfSagittarius extends Quest
 	
 	public Q224_TestOfSagittarius()
 	{
-		super(224, qn, "Test of Sagittarius");
+		super(224, "Test of Sagittarius");
 		
 		registerQuestItems(BERNARD_INTRODUCTION, HAMIL_LETTER_1, HAMIL_LETTER_2, HAMIL_LETTER_3, HUNTER_RUNE_1, HUNTER_RUNE_2, TALISMAN_OF_KADESH, TALISMAN_OF_SNAKE, MITHRIL_CLIP, STAKATO_CHITIN, REINFORCED_BOWSTRING, MANASHEN_HORN, BLOOD_OF_LIZARDMAN, CRESCENT_MOON_BOW);
 		
@@ -100,7 +98,7 @@ public class Q224_TestOfSagittarius extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -158,7 +156,7 @@ public class Q224_TestOfSagittarius extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

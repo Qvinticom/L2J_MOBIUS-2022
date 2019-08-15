@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q257_TheGuardIsBusy extends Quest
 {
-	private static final String qn = "Q257_TheGuardIsBusy";
-	
 	// Items
 	private static final int GLUDIO_LORD_MARK = 1084;
 	private static final int ORC_AMULET = 752;
@@ -38,7 +36,7 @@ public class Q257_TheGuardIsBusy extends Quest
 	
 	public Q257_TheGuardIsBusy()
 	{
-		super(257, qn, "The Guard is Busy");
+		super(257, "The Guard is Busy");
 		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG, GLUDIO_LORD_MARK);
 		
@@ -52,7 +50,7 @@ public class Q257_TheGuardIsBusy extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -79,7 +77,7 @@ public class Q257_TheGuardIsBusy extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

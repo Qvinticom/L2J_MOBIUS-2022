@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q226_TestOfTheHealer extends Quest
 {
-	private static final String qn = "Q226_TestOfTheHealer";
-	
 	// Items
 	private static final int REPORT_OF_PERRIN = 2810;
 	private static final int KRISTINA_LETTER = 2811;
@@ -73,7 +71,7 @@ public class Q226_TestOfTheHealer extends Quest
 	
 	public Q226_TestOfTheHealer()
 	{
-		super(226, qn, "Test of the Healer");
+		super(226, "Test of the Healer");
 		
 		registerQuestItems(REPORT_OF_PERRIN, KRISTINA_LETTER, PICTURE_OF_WINDY, GOLDEN_STATUE, WINDY_PEBBLES, ORDER_OF_SORIUS, SECRET_LETTER_1, SECRET_LETTER_2, SECRET_LETTER_3, SECRET_LETTER_4);
 		
@@ -87,7 +85,7 @@ public class Q226_TestOfTheHealer extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -205,7 +203,7 @@ public class Q226_TestOfTheHealer extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

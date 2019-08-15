@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q647_InfluxOfMachines extends Quest
 {
-	private static final String qn = "Q647_InfluxOfMachines";
-	
 	// Item
 	private static final int DESTROYED_GOLEM_SHARD = 8100;
 	
@@ -35,7 +33,7 @@ public class Q647_InfluxOfMachines extends Quest
 	
 	public Q647_InfluxOfMachines()
 	{
-		super(647, qn, "Influx of Machines");
+		super(647, "Influx of Machines");
 		
 		registerQuestItems(DESTROYED_GOLEM_SHARD);
 		
@@ -52,7 +50,7 @@ public class Q647_InfluxOfMachines extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -79,7 +77,7 @@ public class Q647_InfluxOfMachines extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -116,7 +114,7 @@ public class Q647_InfluxOfMachines extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

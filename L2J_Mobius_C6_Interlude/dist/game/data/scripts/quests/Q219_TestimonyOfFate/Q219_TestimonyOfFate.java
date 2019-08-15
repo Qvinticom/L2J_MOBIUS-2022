@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q219_TestimonyOfFate extends Quest
 {
-	private static final String qn = "Q219_TestimonyOfFate";
-	
 	// NPCs
 	private static final int KAIRA = 30476;
 	private static final int METHEUS = 30614;
@@ -113,7 +111,7 @@ public class Q219_TestimonyOfFate extends Quest
 	
 	public Q219_TestimonyOfFate()
 	{
-		super(219, qn, "Testimony of Fate");
+		super(219, "Testimony of Fate");
 		
 		registerQuestItems(KAIRA_LETTER, METHEUS_FUNERAL_JAR, KASANDRA_REMAINS, HERBALISM_TEXTBOOK, IXIA_LIST, MEDUSA_ICHOR, MARSH_SPIDER_FLUIDS, DEAD_SEEKER_DUNG, TYRANT_BLOOD, NIGHTSHADE_ROOT, BELLADONNA, ALDER_SKULL_1, ALDER_SKULL_2, ALDER_RECEIPT, REVELATIONS_MANUSCRIPT, KAIRA_RECOMMENDATION, KAIRA_INSTRUCTIONS, PALUS_CHARM, THIFIELL_LETTER, ARKENIA_NOTE, PIXY_GARNET, GRANDIS_SKULL, KARUL_BUGBEAR_SKULL, BREKA_OVERLORD_SKULL, LETO_OVERLORD_SKULL, RED_FAIRY_DUST, BLIGHT_TREANT_SEED, BLACK_WILLOW_LEAF, BLIGHT_TREANT_SAP, ARKENIA_LETTER);
 		
@@ -127,7 +125,7 @@ public class Q219_TestimonyOfFate extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -204,7 +202,7 @@ public class Q219_TestimonyOfFate extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

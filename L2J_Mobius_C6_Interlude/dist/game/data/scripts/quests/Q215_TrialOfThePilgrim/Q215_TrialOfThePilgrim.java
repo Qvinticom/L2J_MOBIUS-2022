@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q215_TrialOfThePilgrim extends Quest
 {
-	private static final String qn = "Q215_TrialOfThePilgrim";
-	
 	// Items
 	private static final int BOOK_OF_SAGE = 2722;
 	private static final int VOUCHER_OF_TRIAL = 2723;
@@ -67,7 +65,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 	
 	public Q215_TrialOfThePilgrim()
 	{
-		super(215, qn, "Trial of the Pilgrim");
+		super(215, "Trial of the Pilgrim");
 		
 		registerQuestItems(BOOK_OF_SAGE, VOUCHER_OF_TRIAL, SPIRIT_OF_FLAME, ESSENCE_OF_FLAME, BOOK_OF_GERALD, GRAY_BADGE, PICTURE_OF_NAHIR, HAIR_OF_NAHIR, STATUE_OF_EINHASAD, BOOK_OF_DARKNESS, DEBRIS_OF_WILLOW, TAG_OF_RUMOR);
 		
@@ -82,7 +80,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 	{
 		String htmltext = event;
 		
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -148,7 +146,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

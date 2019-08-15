@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q330_AdeptOfTaste extends Quest
 {
-	private static final String qn = "Q330_AdeptOfTaste";
-	
 	// NPCs
 	private static final int SONIA = 30062;
 	private static final int GLYVKA = 30067;
@@ -116,7 +114,7 @@ public class Q330_AdeptOfTaste extends Quest
 	
 	public Q330_AdeptOfTaste()
 	{
-		super(330, qn, "Adept of Taste");
+		super(330, "Adept of Taste");
 		
 		registerQuestItems(INGREDIENT_LIST, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP, HONEY, GOLDEN_HONEY, DIONIAN_POTATO, GREEN_MOSS_BUNDLE, BROWN_MOSS_BUNDLE, MONSTER_EYE_MEAT, MIRIEN_REVIEW_1, MIRIEN_REVIEW_2, MIRIEN_REVIEW_3, MIRIEN_REVIEW_4, MIRIEN_REVIEW_5, JONAS_STEAK_DISH_1, JONAS_STEAK_DISH_2, JONAS_STEAK_DISH_3, JONAS_STEAK_DISH_4, JONAS_STEAK_DISH_5, SONIA_BOTANY_BOOK, RED_MANDRAGORA_ROOT, WHITE_MANDRAGORA_ROOT, JACOB_INSECT_BOOK, NECTAR, ROYAL_JELLY, PANO_CONTRACT, HOBGOBLIN_AMULET, GLYVKA_BOTANY_BOOK, GREEN_MARSH_MOSS, BROWN_MARSH_MOSS, ROLANT_CREATURE_BOOK, MONSTER_EYE_BODY);
 		
@@ -130,7 +128,7 @@ public class Q330_AdeptOfTaste extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -176,7 +174,7 @@ public class Q330_AdeptOfTaste extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

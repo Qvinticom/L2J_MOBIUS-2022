@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q111_ElrokianHuntersProof extends Quest
 {
-	private static final String qn = "Q111_ElrokianHuntersProof";
-	
 	// NPCs
 	private static final int MARQUEZ = 32113;
 	private static final int MUSHIKA = 32114;
@@ -42,7 +40,7 @@ public class Q111_ElrokianHuntersProof extends Quest
 	
 	public Q111_ElrokianHuntersProof()
 	{
-		super(111, qn, "Elrokian Hunter's Proof");
+		super(111, "Elrokian Hunter's Proof");
 		
 		registerQuestItems(FRAGMENT, EXPEDITION_LETTER, CLAW, BONE, SKIN, PRACTICE_TRAP);
 		
@@ -56,7 +54,7 @@ public class Q111_ElrokianHuntersProof extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -122,7 +120,7 @@ public class Q111_ElrokianHuntersProof extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -238,7 +236,7 @@ public class Q111_ElrokianHuntersProof extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

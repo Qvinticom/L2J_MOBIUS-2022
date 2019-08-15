@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q363_SorrowfulSoundOfFlute extends Quest
 {
-	private static final String qn = "Q363_SorrowfulSoundOfFlute";
-	
 	// NPCs
 	private static final int NANARIN = 30956;
 	private static final int OPIX = 30595;
@@ -45,7 +43,7 @@ public class Q363_SorrowfulSoundOfFlute extends Quest
 	
 	public Q363_SorrowfulSoundOfFlute()
 	{
-		super(363, qn, "Sorrowful Sound of Flute");
+		super(363, "Sorrowful Sound of Flute");
 		
 		registerQuestItems(NANARIN_FLUTE, BLACK_BEER, CLOTHES);
 		
@@ -57,7 +55,7 @@ public class Q363_SorrowfulSoundOfFlute extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -95,7 +93,7 @@ public class Q363_SorrowfulSoundOfFlute extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -24,14 +24,14 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.util.Util;
 
+import quests.Q635_InTheDimensionalRift.Q635_InTheDimensionalRift;
+
 /**
  * @author Mobius
  * @note Based on python script
  */
 public class Q505_BloodOffering extends Quest
 {
-	private static final String qn = "Q505_BloodOffering";
-	
 	// NPCs
 	// @formatter:off
 	private static final int[] TOWN_DAWN = {31078, 31079, 31080, 31081, 31083, 31084, 31082, 31692, 31694, 31997, 31168};
@@ -45,7 +45,7 @@ public class Q505_BloodOffering extends Quest
 	
 	public Q505_BloodOffering()
 	{
-		super(505, qn, "Blood Offering");
+		super(505, "Blood Offering");
 		
 		addStartNpc(TOWN_DAWN);
 		addTalkId(TOWN_DAWN);
@@ -67,13 +67,13 @@ public class Q505_BloodOffering extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		final QuestState qs2 = player.getQuestState("Q635_InTheDimensionalRift");
+		final QuestState qs2 = player.getQuestState(Q635_InTheDimensionalRift.class.getSimpleName());
 		final int npcId = npc.getNpcId();
 		if (Util.contains(FESTIVALGUIDE, npcId))
 		{

@@ -24,15 +24,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q121_PavelTheGiant extends Quest
 {
-	private static final String qn = "Q121_PavelTheGiant";
-	
 	// NPCs
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
 	
 	public Q121_PavelTheGiant()
 	{
-		super(121, qn, "Pavel the Giant");
+		super(121, "Pavel the Giant");
 		
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR, YUMI);
@@ -42,7 +40,7 @@ public class Q121_PavelTheGiant extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -68,7 +66,7 @@ public class Q121_PavelTheGiant extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

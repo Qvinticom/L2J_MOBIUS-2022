@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q037_MakeFormalWear extends Quest
 {
-	private static final String qn = "Q037_MakeFormalWear";
-	
 	// NPCs
 	private static final int ALEXIS = 30842;
 	private static final int LEIKAR = 31520;
@@ -46,7 +44,7 @@ public class Q037_MakeFormalWear extends Quest
 	
 	public Q037_MakeFormalWear()
 	{
-		super(37, qn, "Make Formal Wear");
+		super(37, "Make Formal Wear");
 		
 		registerQuestItems(SIGNET_RING, ICE_WINE, BOX_OF_COOKIES);
 		
@@ -58,7 +56,7 @@ public class Q037_MakeFormalWear extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,7 +121,7 @@ public class Q037_MakeFormalWear extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -33,7 +33,7 @@ public class TurekOrcFootman extends Quest
 	
 	private TurekOrcFootman()
 	{
-		super(-1, "TurekOrcFootman", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(TUREK_ORC_FOOTMAN);
 	}

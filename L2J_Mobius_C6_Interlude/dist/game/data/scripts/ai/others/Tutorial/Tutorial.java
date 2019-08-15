@@ -152,17 +152,15 @@ public class Tutorial extends Quest
 		TCLc.put(50, "tutorial_22kb.htm");
 	}
 	
-	private static final String qn = "Tutorial";
-	
 	public Tutorial()
 	{
-		super(-1, qn, "ai/others");
+		super(-1, "ai/others");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || Config.DISABLE_TUTORIAL)
 		{
 			return null;

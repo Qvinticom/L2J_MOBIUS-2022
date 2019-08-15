@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q609_MagicalPowerOfWater_Part1 extends Quest
 {
-	private static final String qn = "Q609_MagicalPowerOfWater_Part1";
-	
 	// NPCs
 	private static final int WAHKAN = 31371;
 	private static final int ASEFA = 31372;
@@ -40,7 +38,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	
 	public Q609_MagicalPowerOfWater_Part1()
 	{
-		super(609, qn, "Magical Power of Water - Part 1");
+		super(609, "Magical Power of Water - Part 1");
 		
 		registerQuestItems(STOLEN_GREEN_TOTEM);
 		
@@ -55,7 +53,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -99,7 +97,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -174,7 +172,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	@Override
 	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q015_SweetWhispers extends Quest
 {
-	private static final String qn = "Q015_SweetWhispers";
-	
 	// NPCs
 	private static final int VLADIMIR = 31302;
 	private static final int HIERARCH = 31517;
@@ -33,7 +31,7 @@ public class Q015_SweetWhispers extends Quest
 	
 	public Q015_SweetWhispers()
 	{
-		super(15, qn, "Sweet Whispers");
+		super(15, "Sweet Whispers");
 		
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, MYSTERIOUS_NECRO);
@@ -43,7 +41,7 @@ public class Q015_SweetWhispers extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q015_SweetWhispers extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -125,9 +125,9 @@ public class Antharas extends Quest
 	protected static BossZone _Zone;
 	
 	// Boss: Antharas
-	public Antharas(int id, String name, String descr)
+	public Antharas()
 	{
-		super(id, name, descr);
+		super(-1, "ai/bosses");
 		final int[] mob =
 		{
 			ANTHARASOLDID,
@@ -1007,6 +1007,6 @@ public class Antharas extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Antharas(-1, "antharas", "ai");
+		new Antharas();
 	}
 }

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q357_WarehouseKeepersAmbition extends Quest
 {
-	private static final String qn = "Q357_WarehouseKeepersAmbition";
-	
 	// Item
 	private static final int JADE_CRYSTAL = 5867;
 	
@@ -50,7 +48,7 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 	
 	public Q357_WarehouseKeepersAmbition()
 	{
-		super(357, qn, "Warehouse Keeper's Ambition");
+		super(357, "Warehouse Keeper's Ambition");
 		
 		registerQuestItems(JADE_CRYSTAL);
 		
@@ -64,7 +62,7 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -107,7 +105,7 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -137,7 +135,7 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(JADE_CRYSTAL, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(JADE_CRYSTAL, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

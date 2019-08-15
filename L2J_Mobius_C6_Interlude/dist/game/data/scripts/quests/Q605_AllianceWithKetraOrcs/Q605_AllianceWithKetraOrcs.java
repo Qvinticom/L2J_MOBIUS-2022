@@ -26,14 +26,13 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q606_WarWithVarkaSilenos.Q606_WarWithVarkaSilenos;
+
 /**
  * This quest supports both Q605 && Q606 onKill sections.
  */
 public class Q605_AllianceWithKetraOrcs extends Quest
 {
-	private static final String qn = "Q605_AllianceWithKetraOrcs";
-	private static final String qn2 = "Q606_WarWithVarkaSilenos";
-	
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
 	{
@@ -98,7 +97,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 	
 	public Q605_AllianceWithKetraOrcs()
 	{
-		super(605, qn, "Alliance with Ketra Orcs");
+		super(605, "Alliance with Ketra Orcs");
 		
 		registerQuestItems(VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN);
 		
@@ -115,7 +114,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -237,7 +236,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -346,14 +345,14 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 		final int npcId = npc.getNpcId();
 		
 		// Support for Q606.
-		QuestState st = partyMember.getQuestState(qn2);
+		QuestState st = partyMember.getQuestState(Q606_WarWithVarkaSilenos.class.getSimpleName());
 		if ((st != null) && Rnd.nextBoolean() && CHANCES_MANE.containsKey(npcId))
 		{
 			st.dropItems(VARKA_MANE, 1, 0, CHANCES_MANE.get(npcId));
 			return null;
 		}
 		
-		st = partyMember.getQuestState(qn);
+		st = partyMember.getQuestState(getName());
 		
 		int cond = st.getInt("cond");
 		if (cond == 6)

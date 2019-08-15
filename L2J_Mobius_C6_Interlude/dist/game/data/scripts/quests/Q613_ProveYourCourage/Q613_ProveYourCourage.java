@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q613_ProveYourCourage extends Quest
 {
-	private static final String qn = "Q613_ProveYourCourage";
-	
 	// Items
 	private static final int HEAD_OF_HEKATON = 7240;
 	private static final int FEATHER_OF_VALOR = 7229;
@@ -33,7 +31,7 @@ public class Q613_ProveYourCourage extends Quest
 	
 	public Q613_ProveYourCourage()
 	{
-		super(613, qn, "Prove your courage!");
+		super(613, "Prove your courage!");
 		
 		registerQuestItems(HEAD_OF_HEKATON);
 		
@@ -47,7 +45,7 @@ public class Q613_ProveYourCourage extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +82,7 @@ public class Q613_ProveYourCourage extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -122,7 +120,7 @@ public class Q613_ProveYourCourage extends Quest
 		{
 			if (partyMember.getAllianceWithVarkaKetra() <= -3)
 			{
-				QuestState st = partyMember.getQuestState(qn);
+				QuestState st = partyMember.getQuestState(getName());
 				if (st == null)
 				{
 					continue;

@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 {
-	public static String qn1 = "Q084_SagaOfTheGhostSentinel";
-	public static int qnu = 84;
-	public static String qna = "Saga of the Ghost Sentinel";
-	
 	public Q084_SagaOfTheGhostSentinel()
 	{
-		super(qnu, qn1, qna);
+		super(84, "Saga of the Ghost Sentinel");
 		NPC = new int[]
 		{
 			30702,
@@ -67,7 +63,6 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 			27233,
 			27307
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			109

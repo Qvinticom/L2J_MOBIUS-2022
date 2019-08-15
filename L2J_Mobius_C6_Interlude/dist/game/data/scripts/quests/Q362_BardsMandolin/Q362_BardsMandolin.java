@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q362_BardsMandolin extends Quest
 {
-	private static final String qn = "Q362_BardsMandolin";
-	
 	// Items
 	private static final int SWAN_FLUTE = 4316;
 	private static final int SWAN_LETTER = 4317;
@@ -38,7 +36,7 @@ public class Q362_BardsMandolin extends Quest
 	
 	public Q362_BardsMandolin()
 	{
-		super(362, qn, "Bard's Mandolin");
+		super(362, "Bard's Mandolin");
 		
 		registerQuestItems(SWAN_FLUTE, SWAN_LETTER);
 		
@@ -50,7 +48,7 @@ public class Q362_BardsMandolin extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -77,7 +75,7 @@ public class Q362_BardsMandolin extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q276_TotemOfTheHestui extends Quest
 {
-	private static final String qn = "Q276_TotemOfTheHestui";
-	
 	// Items
 	private static final int KASHA_PARASITE = 1480;
 	private static final int KASHA_CRYSTAL = 1481;
@@ -38,7 +36,7 @@ public class Q276_TotemOfTheHestui extends Quest
 	
 	public Q276_TotemOfTheHestui()
 	{
-		super(276, qn, "Totem of the Hestui");
+		super(276, "Totem of the Hestui");
 		
 		registerQuestItems(KASHA_PARASITE, KASHA_CRYSTAL);
 		
@@ -52,7 +50,7 @@ public class Q276_TotemOfTheHestui extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -71,7 +69,7 @@ public class Q276_TotemOfTheHestui extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

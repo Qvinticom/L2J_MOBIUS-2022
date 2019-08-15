@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q277_GatekeepersOffering extends Quest
 {
-	private static final String qn = "Q277_GatekeepersOffering";
-	
 	// Item
 	private static final int STARSTONE = 1572;
 	
@@ -34,7 +32,7 @@ public class Q277_GatekeepersOffering extends Quest
 	
 	public Q277_GatekeepersOffering()
 	{
-		super(277, qn, "Gatekeeper's Offering");
+		super(277, "Gatekeeper's Offering");
 		
 		addStartNpc(30576); // Tamil
 		addTalkId(30576);
@@ -46,7 +44,7 @@ public class Q277_GatekeepersOffering extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -65,7 +63,7 @@ public class Q277_GatekeepersOffering extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q260_HuntTheOrcs extends Quest
 {
-	private static final String qn = "Q260_HuntTheOrcs";
-	
 	// NPC
 	private static final int RAYEN = 30221;
 	
@@ -44,7 +42,7 @@ public class Q260_HuntTheOrcs extends Quest
 	
 	public Q260_HuntTheOrcs()
 	{
-		super(260, qn, "Hunt the Orcs");
+		super(260, "Hunt the Orcs");
 		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
 		
@@ -58,7 +56,7 @@ public class Q260_HuntTheOrcs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +80,7 @@ public class Q260_HuntTheOrcs extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q426_QuestForFishingShot extends Quest
 {
-	private static final String qn = "Q426_QuestForFishingShot";
-	
 	private static final int SWEET_FLUID = 7586;
 	
 	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
@@ -328,7 +326,7 @@ public class Q426_QuestForFishingShot extends Quest
 	
 	public Q426_QuestForFishingShot()
 	{
-		super(426, qn, "Quest for Fishing Shot");
+		super(426, "Quest for Fishing Shot");
 		
 		registerQuestItems(SWEET_FLUID);
 		
@@ -365,7 +363,7 @@ public class Q426_QuestForFishingShot extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -389,7 +387,7 @@ public class Q426_QuestForFishingShot extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -419,7 +417,7 @@ public class Q426_QuestForFishingShot extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q008_AnAdventureBegins extends Quest
 {
-	private static final String qn = "Q008_AnAdventureBegins";
-	
 	// NPCs
 	private static final int JASMINE = 30134;
 	private static final int ROSELYN = 30355;
@@ -41,7 +39,7 @@ public class Q008_AnAdventureBegins extends Quest
 	
 	public Q008_AnAdventureBegins()
 	{
-		super(8, qn, "An Adventure Begins");
+		super(8, "An Adventure Begins");
 		
 		registerQuestItems(ROSELYN_NOTE);
 		
@@ -53,7 +51,7 @@ public class Q008_AnAdventureBegins extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -91,7 +89,7 @@ public class Q008_AnAdventureBegins extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

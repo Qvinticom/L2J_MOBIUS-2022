@@ -164,7 +164,7 @@ public class FeedableBeasts extends Quest
 	
 	private FeedableBeasts()
 	{
-		super(-1, "FeedableBeasts", "ai/others");
+		super(-1, "ai/others");
 		
 		addKillId(FEEDABLE_BEASTS);
 		addSkillUseId(FEEDABLE_BEASTS);
@@ -404,7 +404,7 @@ public class FeedableBeasts extends Quest
 			nextNpc.setRunning();
 			
 			// If player has Q020 going, give quest item
-			QuestState st = player.getQuestState(Q020_BringUpWithLove.qn);
+			QuestState st = player.getQuestState(Q020_BringUpWithLove.class.getSimpleName());
 			if ((st != null) && (Rnd.get(100) < 5) && !st.hasQuestItems(7185))
 			{
 				st.giveItems(7185, 1);

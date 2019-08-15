@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q158_SeedOfEvil extends Quest
 {
-	private static final String qn = "Q158_SeedOfEvil";
-	
 	// Item
 	private static final int CLAY_TABLET = 1025;
 	
@@ -34,7 +32,7 @@ public class Q158_SeedOfEvil extends Quest
 	
 	public Q158_SeedOfEvil()
 	{
-		super(158, qn, "Seed of Evil");
+		super(158, "Seed of Evil");
 		
 		registerQuestItems(CLAY_TABLET);
 		
@@ -48,7 +46,7 @@ public class Q158_SeedOfEvil extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -67,7 +65,7 @@ public class Q158_SeedOfEvil extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q333_HuntOfTheBlackLion extends Quest
 {
-	private static final String qn = "Q333_HuntOfTheBlackLion";
-	
 	// NPCs
 	private static final int SOPHYA = 30735;
 	private static final int REDFOOT = 30736;
@@ -246,7 +244,7 @@ public class Q333_HuntOfTheBlackLion extends Quest
 	
 	public Q333_HuntOfTheBlackLion()
 	{
-		super(333, qn, "Hunt of the Black Lion");
+		super(333, "Hunt of the Black Lion");
 		
 		registerQuestItems(LION_CLAW, LION_EYE, GUILD_COIN, UNDEAD_ASH, BLOODY_AXE_INSIGNIA, DELU_FANG, STAKATO_TALON, SOPHYA_LETTER_1, SOPHYA_LETTER_2, SOPHYA_LETTER_3, SOPHYA_LETTER_4);
 		
@@ -263,7 +261,7 @@ public class Q333_HuntOfTheBlackLion extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -766,7 +764,7 @@ public class Q333_HuntOfTheBlackLion extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

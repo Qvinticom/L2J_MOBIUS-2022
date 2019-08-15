@@ -60,9 +60,9 @@ public class Monastery extends Quest
 		"name! How dare you defy the will of Einhasad!"
 	};
 	
-	public Monastery(int questId, String name, String descr)
+	public Monastery()
 	{
-		super(questId, name, descr);
+		super(-1, "ai");
 		registerMobs(mobs1, QuestEventType.ON_AGGRO_RANGE_ENTER, QuestEventType.ON_SPAWN, QuestEventType.ON_SPELL_FINISHED);
 		registerMobs(mobs2, QuestEventType.ON_SPELL_FINISHED);
 	}
@@ -187,6 +187,6 @@ public class Monastery extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Monastery(-1, "monastery", "ai");
+		new Monastery();
 	}
 }

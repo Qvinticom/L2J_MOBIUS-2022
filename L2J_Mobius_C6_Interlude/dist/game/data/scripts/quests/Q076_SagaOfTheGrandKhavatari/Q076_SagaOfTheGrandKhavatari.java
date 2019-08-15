@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q076_SagaOfTheGrandKhavatari extends SagasSuperClass
 {
-	public static String qn1 = "Q076_SagaOfTheGrandKhavatari";
-	public static int qnu = 76;
-	public static String qna = "Saga of the Grand Khavatari";
-	
 	public Q076_SagaOfTheGrandKhavatari()
 	{
-		super(qnu, qn1, qna);
+		super(76, "Saga of the Grand Khavatari");
 		NPC = new int[]
 		{
 			31339,
@@ -66,7 +62,6 @@ public class Q076_SagaOfTheGrandKhavatari extends SagasSuperClass
 			27226,
 			27284
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			114

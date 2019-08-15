@@ -26,9 +26,9 @@ public class Barakiel extends Quest
 	// Barakiel NpcID
 	private static final int BARAKIEL = 25325;
 	
-	public Barakiel(int questId, String name, String descr)
+	public Barakiel()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		addEventId(BARAKIEL, Quest.QuestEventType.ON_ATTACK);
 	}
@@ -37,6 +37,6 @@ public class Barakiel extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Barakiel(-1, "Barakiel", "ai");
+		new Barakiel();
 	}
 }

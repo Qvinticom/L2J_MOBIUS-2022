@@ -53,7 +53,7 @@ public class Tyrannosaurus extends Quest
 	
 	public Tyrannosaurus()
 	{
-		super(-1, "Tyrannosaurus", "ai/bosses");
+		super(-1, "ai/bosses");
 		addKillId(TREX);
 		addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0);
 	}

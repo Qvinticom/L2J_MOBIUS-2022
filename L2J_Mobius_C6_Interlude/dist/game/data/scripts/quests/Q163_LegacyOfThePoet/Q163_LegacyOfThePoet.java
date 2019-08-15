@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q163_LegacyOfThePoet extends Quest
 {
-	private static final String qn = "Q163_LegacyOfThePoet";
-	
 	// NPC
 	private static final int STARDEN = 30220;
 	
@@ -70,7 +68,7 @@ public class Q163_LegacyOfThePoet extends Quest
 	
 	public Q163_LegacyOfThePoet()
 	{
-		super(163, qn, "Legacy of the Poet");
+		super(163, "Legacy of the Poet");
 		
 		registerQuestItems(RUMIELS_POEMS);
 		
@@ -84,7 +82,7 @@ public class Q163_LegacyOfThePoet extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -103,7 +101,7 @@ public class Q163_LegacyOfThePoet extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

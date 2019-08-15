@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 {
-	private static final String qn = "Q643_RiseAndFallOfTheElrokiTribe";
-	
 	// NPCs
 	private static final int SINGSING = 32106;
 	private static final int KARAKAWEI = 32117;
@@ -36,7 +34,7 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 	
 	public Q643_RiseAndFallOfTheElrokiTribe()
 	{
-		super(643, qn, "Rise and Fall of the Elroki Tribe");
+		super(643, "Rise and Fall of the Elroki Tribe");
 		
 		registerQuestItems(BONES);
 		
@@ -50,7 +48,7 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -94,7 +92,7 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -133,7 +131,7 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(BONES, 1, 0, 750000);
+		partyMember.getQuestState(getName()).dropItems(BONES, 1, 0, 750000);
 		
 		return null;
 	}

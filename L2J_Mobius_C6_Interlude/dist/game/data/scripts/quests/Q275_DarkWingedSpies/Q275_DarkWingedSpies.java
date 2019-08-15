@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q275_DarkWingedSpies extends Quest
 {
-	private static final String qn = "Q275_DarkWingedSpies";
-	
 	// Monsters
 	private static final int DARKWING_BAT = 20316;
 	private static final int VARANGKA_TRACKER = 27043;
@@ -38,7 +36,7 @@ public class Q275_DarkWingedSpies extends Quest
 	
 	public Q275_DarkWingedSpies()
 	{
-		super(275, qn, "Dark Winged Spies");
+		super(275, "Dark Winged Spies");
 		
 		registerQuestItems(DARKWING_BAT_FANG, VARANGKA_PARASITE);
 		
@@ -52,7 +50,7 @@ public class Q275_DarkWingedSpies extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -71,7 +69,7 @@ public class Q275_DarkWingedSpies extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

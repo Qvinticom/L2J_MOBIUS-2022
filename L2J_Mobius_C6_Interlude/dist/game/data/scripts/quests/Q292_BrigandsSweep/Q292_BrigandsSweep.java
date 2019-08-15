@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q292_BrigandsSweep extends Quest
 {
-	private static final String qn = "Q292_BrigandsSweep";
-	
 	// NPCs
 	private static final int SPIRON = 30532;
 	private static final int BALANKI = 30533;
@@ -48,7 +46,7 @@ public class Q292_BrigandsSweep extends Quest
 	
 	public Q292_BrigandsSweep()
 	{
-		super(292, qn, "Brigands Sweep");
+		super(292, "Brigands Sweep");
 		
 		registerQuestItems(GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT, SUSPICIOUS_MEMO, SUSPICIOUS_CONTRACT);
 		
@@ -62,7 +60,7 @@ public class Q292_BrigandsSweep extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -86,7 +84,7 @@ public class Q292_BrigandsSweep extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

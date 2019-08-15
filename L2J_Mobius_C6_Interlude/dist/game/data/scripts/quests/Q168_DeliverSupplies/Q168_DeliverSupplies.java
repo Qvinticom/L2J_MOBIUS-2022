@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q168_DeliverSupplies extends Quest
 {
-	private static final String qn = "Q168_DeliverSupplies";
-	
 	// Items
 	private static final int JENNA_LETTER = 1153;
 	private static final int SENTRY_BLADE_1 = 1154;
@@ -42,7 +40,7 @@ public class Q168_DeliverSupplies extends Quest
 	
 	public Q168_DeliverSupplies()
 	{
-		super(168, qn, "Deliver Supplies");
+		super(168, "Deliver Supplies");
 		
 		registerQuestItems(JENNA_LETTER, SENTRY_BLADE_1, SENTRY_BLADE_2, SENTRY_BLADE_3, OLD_BRONZE_SWORD);
 		
@@ -54,7 +52,7 @@ public class Q168_DeliverSupplies extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q168_DeliverSupplies extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -25,15 +25,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q329_CuriosityOfADwarf extends Quest
 {
-	private static final String qn = "Q329_CuriosityOfADwarf";
-	
 	// Items
 	private static final int GOLEM_HEARTSTONE = 1346;
 	private static final int BROKEN_HEARTSTONE = 1365;
 	
 	public Q329_CuriosityOfADwarf()
 	{
-		super(329, qn, "Curiosity of a Dwarf");
+		super(329, "Curiosity of a Dwarf");
 		
 		addStartNpc(30437); // Rolento
 		addTalkId(30437);
@@ -45,7 +43,7 @@ public class Q329_CuriosityOfADwarf extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -69,7 +67,7 @@ public class Q329_CuriosityOfADwarf extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

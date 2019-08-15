@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q265_ChainsOfSlavery extends Quest
 {
-	private static final String qn = "Q265_ChainsOfSlavery";
-	
 	// Item
 	private static final int SHACKLE = 1368;
 	
@@ -36,7 +34,7 @@ public class Q265_ChainsOfSlavery extends Quest
 	
 	public Q265_ChainsOfSlavery()
 	{
-		super(265, qn, "Chains of Slavery");
+		super(265, "Chains of Slavery");
 		
 		registerQuestItems(SHACKLE);
 		
@@ -50,7 +48,7 @@ public class Q265_ChainsOfSlavery extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q265_ChainsOfSlavery extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

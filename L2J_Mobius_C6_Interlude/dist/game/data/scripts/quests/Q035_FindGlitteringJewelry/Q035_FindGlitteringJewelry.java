@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q037_MakeFormalWear.Q037_MakeFormalWear;
+
 public class Q035_FindGlitteringJewelry extends Quest
 {
-	private static final String qn = "Q035_FindGlitteringJewelry";
-	
 	// NPCs
 	private static final int ELLIE = 30091;
 	private static final int FELTON = 30879;
@@ -41,7 +41,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 	
 	public Q035_FindGlitteringJewelry()
 	{
-		super(35, qn, "Find Glittering Jewelry");
+		super(35, "Find Glittering Jewelry");
 		
 		registerQuestItems(ROUGH_JEWEL);
 		
@@ -55,7 +55,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -101,7 +101,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -113,7 +113,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 			case State.CREATED:
 				if (player.getLevel() >= 60)
 				{
-					QuestState fwear = player.getQuestState("Q037_MakeFormalWear");
+					QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
 					if ((fwear != null) && (fwear.getInt("cond") == 6))
 					{
 						htmltext = "30091-0.htm";

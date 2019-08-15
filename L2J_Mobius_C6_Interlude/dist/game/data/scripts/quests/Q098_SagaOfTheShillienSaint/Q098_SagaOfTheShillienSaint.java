@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q098_SagaOfTheShillienSaint extends SagasSuperClass
 {
-	public static String qn1 = "Q098_SagaOfTheShillienSaint";
-	public static int qnu = 98;
-	public static String qna = "Saga of the Shillien Saint";
-	
 	public Q098_SagaOfTheShillienSaint()
 	{
-		super(qnu, qn1, qna);
+		super(98, "Saga of the Shillien Saint");
 		NPC = new int[]
 		{
 			31581,
@@ -67,7 +63,6 @@ public class Q098_SagaOfTheShillienSaint extends SagasSuperClass
 			27247,
 			27277
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			112

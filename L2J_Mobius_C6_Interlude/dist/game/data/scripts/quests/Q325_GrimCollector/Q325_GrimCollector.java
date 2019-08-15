@@ -31,8 +31,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q325_GrimCollector extends Quest
 {
-	private static final String qn = "Q325_GrimCollector";
-	
 	// Items
 	private static final int ANATOMY_DIAGRAM = 1349;
 	private static final int ZOMBIE_HEAD = 1350;
@@ -67,7 +65,7 @@ public class Q325_GrimCollector extends Quest
 	
 	public Q325_GrimCollector()
 	{
-		super(325, qn, "Grim Collector");
+		super(325, "Grim Collector");
 		
 		registerQuestItems(ZOMBIE_HEAD, ZOMBIE_HEART, ZOMBIE_LIVER, SKULL, RIB_BONE, SPINE, ARM_BONE, THIGH_BONE, COMPLETE_SKELETON, ANATOMY_DIAGRAM);
 		
@@ -119,7 +117,7 @@ public class Q325_GrimCollector extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -188,7 +186,7 @@ public class Q325_GrimCollector extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

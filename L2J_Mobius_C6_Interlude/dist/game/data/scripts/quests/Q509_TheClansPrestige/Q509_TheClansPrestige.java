@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q509_TheClansPrestige extends Quest
 {
-	private static final String qn = "Q509_TheClansPrestige";
-	
 	// NPCs
 	private static final int VALDIS = 31331;
 	
@@ -116,7 +114,7 @@ public class Q509_TheClansPrestige extends Quest
 	
 	public Q509_TheClansPrestige()
 	{
-		super(509, qn, "The Clan's Prestige");
+		super(509, "The Clan's Prestige");
 		
 		registerQuestItems(DAIMONS_EYES, HESTIAS_FAIRY_STONE, NUCLEUS_OF_LESSER_GOLEM, FALSTON_FANG, SHAIDS_TALON);
 		
@@ -130,7 +128,7 @@ public class Q509_TheClansPrestige extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -167,7 +165,7 @@ public class Q509_TheClansPrestige extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

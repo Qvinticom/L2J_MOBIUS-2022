@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q080_SagaOfTheWindRider extends SagasSuperClass
 {
-	public static String qn1 = "Q080_SagaOfTheWindRider";
-	public static int qnu = 80;
-	public static String qna = "Saga of the Wind Rider";
-	
 	public Q080_SagaOfTheWindRider()
 	{
-		super(qnu, qn1, qna);
+		super(80, "Saga of the Wind Rider");
 		NPC = new int[]
 		{
 			31603,
@@ -66,7 +62,6 @@ public class Q080_SagaOfTheWindRider extends SagasSuperClass
 			27229,
 			27303
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			101

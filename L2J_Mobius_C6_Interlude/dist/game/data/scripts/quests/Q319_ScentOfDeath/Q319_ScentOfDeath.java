@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q319_ScentOfDeath extends Quest
 {
-	private static final String qn = "Q319_ScentOfDeath";
-	
 	// Item
 	private static final int ZOMBIE_SKIN = 1045;
 	
 	public Q319_ScentOfDeath()
 	{
-		super(319, qn, "Scent of Death");
+		super(319, "Scent of Death");
 		
 		registerQuestItems(ZOMBIE_SKIN);
 		
@@ -45,7 +43,7 @@ public class Q319_ScentOfDeath extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -64,7 +62,7 @@ public class Q319_ScentOfDeath extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q633_InTheForgottenVillage extends Quest
 {
-	private static final String qn = "Q633_InTheForgottenVillage";
-	
 	// NPCS
 	private static final int MINA = 31388;
 	
@@ -75,7 +73,7 @@ public class Q633_InTheForgottenVillage extends Quest
 	
 	public Q633_InTheForgottenVillage()
 	{
-		super(633, qn, "In the Forgotten Village");
+		super(633, "In the Forgotten Village");
 		
 		registerQuestItems(RIB_BONE, ZOMBIE_LIVER);
 		
@@ -97,7 +95,7 @@ public class Q633_InTheForgottenVillage extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -134,7 +132,7 @@ public class Q633_InTheForgottenVillage extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -176,7 +174,7 @@ public class Q633_InTheForgottenVillage extends Quest
 				return null;
 			}
 			
-			partyMember.getQuestState(qn).dropItems(ZOMBIE_LIVER, 1, 0, UNDEADS.get(npcId));
+			partyMember.getQuestState(getName()).dropItems(ZOMBIE_LIVER, 1, 0, UNDEADS.get(npcId));
 		}
 		else if (MOBS.containsKey(npcId))
 		{
@@ -186,12 +184,12 @@ public class Q633_InTheForgottenVillage extends Quest
 				return null;
 			}
 			
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				return null;
 			}
-		
+			
 			if (st.dropItems(RIB_BONE, 1, 200, MOBS.get(npcId)))
 			{
 				st.set("cond", "2");

@@ -80,11 +80,9 @@ public class Q386_StolenDignity extends Quest
 	};
 	// @formatter:on
 	
-	private static final String qn = "Q386_StolenDignity";
-	
 	public Q386_StolenDignity()
 	{
-		super(386, qn, "Stolen Dignity");
+		super(386, "Stolen Dignity");
 		
 		addStartNpc(ROMP);
 		addTalkId(ROMP);
@@ -97,7 +95,7 @@ public class Q386_StolenDignity extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
@@ -147,7 +145,7 @@ public class Q386_StolenDignity extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -168,7 +166,7 @@ public class Q386_StolenDignity extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

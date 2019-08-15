@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q688_DefeatTheElrokianRaiders extends Quest
 {
-	private static final String qn = "Q688_DefeatTheElrokianRaiders";
-	
 	// Item
 	private static final int DINOSAUR_FANG_NECKLACE = 8785;
 	
@@ -37,7 +35,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	
 	public Q688_DefeatTheElrokianRaiders()
 	{
-		super(688, qn, "Defeat the Elrokian Raiders!");
+		super(688, "Defeat the Elrokian Raiders!");
 		
 		registerQuestItems(DINOSAUR_FANG_NECKLACE);
 		
@@ -51,7 +49,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -102,7 +100,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -131,7 +129,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

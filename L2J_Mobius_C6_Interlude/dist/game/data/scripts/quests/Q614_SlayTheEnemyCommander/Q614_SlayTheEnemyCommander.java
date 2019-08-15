@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q614_SlayTheEnemyCommander extends Quest
 {
-	private static final String qn = "Q614_SlayTheEnemyCommander";
-	
 	// Quest Items
 	private static final int HEAD_OF_TAYR = 7241;
 	private static final int FEATHER_OF_WISDOM = 7230;
@@ -33,7 +31,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 	
 	public Q614_SlayTheEnemyCommander()
 	{
-		super(614, qn, "Slay the enemy commander!");
+		super(614, "Slay the enemy commander!");
 		
 		registerQuestItems(HEAD_OF_TAYR);
 		
@@ -47,7 +45,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +82,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -125,7 +123,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 		{
 			if (partyMember.getAllianceWithVarkaKetra() <= -4)
 			{
-				QuestState st = partyMember.getQuestState(qn);
+				QuestState st = partyMember.getQuestState(getName());
 				if (st == null)
 				{
 					continue;

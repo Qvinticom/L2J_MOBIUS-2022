@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q010_IntoTheWorld extends Quest
 {
-	private static final String qn = "Q010_IntoTheWorld";
-	
 	// Items
 	private static final int VERY_EXPENSIVE_NECKLACE = 7574;
 	
@@ -41,7 +39,7 @@ public class Q010_IntoTheWorld extends Quest
 	
 	public Q010_IntoTheWorld()
 	{
-		super(10, qn, "Into the World");
+		super(10, "Into the World");
 		
 		registerQuestItems(VERY_EXPENSIVE_NECKLACE);
 		
@@ -53,7 +51,7 @@ public class Q010_IntoTheWorld extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,7 +95,7 @@ public class Q010_IntoTheWorld extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

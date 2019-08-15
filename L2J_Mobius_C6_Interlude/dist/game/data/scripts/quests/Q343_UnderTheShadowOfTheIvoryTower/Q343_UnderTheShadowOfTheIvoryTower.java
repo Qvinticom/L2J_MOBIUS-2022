@@ -50,11 +50,9 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 		41
 	};
 	
-	private static final String qn = "Q343_UnderTheShadowOfTheIvoryTower";
-	
 	public Q343_UnderTheShadowOfTheIvoryTower()
 	{
-		super(343, qn, "Under the Shadow of the Ivory Tower");
+		super(343, "Under the Shadow of the Ivory Tower");
 		MOBS = new int[]
 		{
 			20563,
@@ -76,7 +74,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -167,16 +165,22 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 				switch (random1)
 				{
 					case 0:
+					{
 						htmltext = "30934-04.htm";
 						st.giveItems(4364, 20);
 						break;
+					}
 					case 1:
+					{
 						htmltext = "30934-05.htm";
 						st.giveItems(4364, 10);
 						break;
+					}
 					default:
+					{
 						htmltext = "30934-06.htm";
 						break;
+					}
 				}
 				st.unset("playing");
 			}
@@ -194,16 +198,22 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 				switch (random1)
 				{
 					case 0:
+					{
 						htmltext = "30934-04.htm";
 						st.giveItems(4364, 20);
 						break;
+					}
 					case 1:
+					{
 						htmltext = "30934-06.htm";
 						break;
+					}
 					default:
+					{
 						htmltext = "30934-05.htm";
 						st.giveItems(4364, 10);
 						break;
+					}
 				}
 				st.unset("playing");
 			}
@@ -261,17 +271,25 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 				switch (toss)
 				{
 					case 1:
+					{
 						st.giveItems(4364, 10);
 						break;
+					}
 					case 2:
+					{
 						st.giveItems(4364, 30);
 						break;
+					}
 					case 3:
+					{
 						st.giveItems(4364, 70);
 						break;
+					}
 					case 4:
+					{
 						st.giveItems(4364, 150);
 						break;
+					}
 				}
 			}
 			else
@@ -341,7 +359,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q039_RedEyedInvaders extends Quest
 {
-	private static final String qn = "Q039_RedEyedInvaders";
-	
 	// NPCs
 	private static final int BABENCO = 30334;
 	private static final int BATHIS = 30332;
@@ -97,7 +95,7 @@ public class Q039_RedEyedInvaders extends Quest
 	
 	public Q039_RedEyedInvaders()
 	{
-		super(39, qn, "Red-Eyed Invaders");
+		super(39, "Red-Eyed Invaders");
 		
 		registerQuestItems(BLACK_BONE_NECKLACE, RED_BONE_NECKLACE, INCENSE_POUCH, GEM_OF_MAILLE);
 		
@@ -111,7 +109,7 @@ public class Q039_RedEyedInvaders extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -153,7 +151,7 @@ public class Q039_RedEyedInvaders extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -214,7 +212,7 @@ public class Q039_RedEyedInvaders extends Quest
 		PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
 		if ((partyMember != null) && (npcId != ARANEID))
 		{
-			final QuestState st = partyMember.getQuestState(qn);
+			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				return null;
@@ -231,7 +229,7 @@ public class Q039_RedEyedInvaders extends Quest
 			partyMember = getRandomPartyMember(player, npc, "4");
 			if ((partyMember != null) && (npcId != MAILLE_LIZARDMAN))
 			{
-				final QuestState st = partyMember.getQuestState(qn);
+				final QuestState st = partyMember.getQuestState(getName());
 				final int[] list = SECOND_DP.get(npcId);
 				
 				if (st.dropItems(list[0], 1, 30, list[2]) && (st.getQuestItemsCount(list[1]) == 30))

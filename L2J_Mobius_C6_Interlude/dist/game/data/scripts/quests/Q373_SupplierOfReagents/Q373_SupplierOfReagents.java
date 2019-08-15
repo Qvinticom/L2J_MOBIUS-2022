@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q373_SupplierOfReagents extends Quest
 {
-	private static final String qn = "Q373_SupplierOfReagents";
-	
 	// Variables
 	private static final String _ingredient = "ingredient";
 	private static final String _catalyst = "catalyst";
@@ -265,7 +263,7 @@ public class Q373_SupplierOfReagents extends Quest
 	
 	public Q373_SupplierOfReagents()
 	{
-		super(373, qn, "Supplier of Reagents");
+		super(373, "Supplier of Reagents");
 		
 		registerQuestItems(MIXING_STONE, MIXING_MANUAL);
 		
@@ -279,7 +277,7 @@ public class Q373_SupplierOfReagents extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -393,7 +391,7 @@ public class Q373_SupplierOfReagents extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -428,7 +426,7 @@ public class Q373_SupplierOfReagents extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q626_ADarkTwilight extends Quest
 {
-	private static final String qn = "Q626_ADarkTwilight";
-	
 	// Items
 	private static final int BLOOD_OF_SAINT = 7169;
 	
@@ -57,7 +55,7 @@ public class Q626_ADarkTwilight extends Quest
 	
 	public Q626_ADarkTwilight()
 	{
-		super(626, qn, "A Dark Twilight");
+		super(626, "A Dark Twilight");
 		
 		registerQuestItems(BLOOD_OF_SAINT);
 		
@@ -74,7 +72,7 @@ public class Q626_ADarkTwilight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,7 +121,7 @@ public class Q626_ADarkTwilight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

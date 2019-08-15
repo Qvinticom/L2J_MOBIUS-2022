@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q117_TheOceanOfDistantStars.Q117_TheOceanOfDistantStars;
+
 public class Q650_ABrokenDream extends Quest
 {
-	private static final String qn = "Q650_ABrokenDream";
-	
 	// NPC
 	private static final int GHOST = 32054;
 	
@@ -38,7 +38,7 @@ public class Q650_ABrokenDream extends Quest
 	
 	public Q650_ABrokenDream()
 	{
-		super(650, qn, "A Broken Dream");
+		super(650, "A Broken Dream");
 		
 		registerQuestItems(DREAM_FRAGMENT);
 		
@@ -51,7 +51,7 @@ public class Q650_ABrokenDream extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +82,7 @@ public class Q650_ABrokenDream extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -92,7 +92,7 @@ public class Q650_ABrokenDream extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState st2 = player.getQuestState("Q117_TheOceanOfDistantStars");
+				QuestState st2 = player.getQuestState(Q117_TheOceanOfDistantStars.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 39))
 				{
 					htmltext = "32054-01.htm";

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q624_TheFinestIngredients_Part1 extends Quest
 {
-	private static final String qn = "Q624_TheFinestIngredients_Part1";
-	
 	// Mobs
 	private static final int NEPENTHES = 21319;
 	private static final int ATROX = 21321;
@@ -43,7 +41,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 	
 	public Q624_TheFinestIngredients_Part1()
 	{
-		super(624, qn, "The Finest Ingredients - Part 1");
+		super(624, "The Finest Ingredients - Part 1");
 		
 		registerQuestItems(TRUNK_OF_NEPENTHES, FOOT_OF_BANDERSNATCHLING, SECRET_SPICE);
 		
@@ -57,7 +55,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -95,7 +93,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -139,7 +137,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

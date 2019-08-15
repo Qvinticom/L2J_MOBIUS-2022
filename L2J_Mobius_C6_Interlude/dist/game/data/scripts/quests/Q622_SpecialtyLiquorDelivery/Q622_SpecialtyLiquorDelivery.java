@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q622_SpecialtyLiquorDelivery extends Quest
 {
-	private static final String qn = "Q622_SpecialtyLiquorDelivery";
-	
 	// Items
 	private static final int SPECIAL_DRINK = 7197;
 	private static final int FEE_OF_SPECIAL_DRINK = 7198;
@@ -52,7 +50,7 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 	
 	public Q622_SpecialtyLiquorDelivery()
 	{
-		super(622, qn, "Specialty Liquor Delivery");
+		super(622, "Specialty Liquor Delivery");
 		
 		registerQuestItems(SPECIAL_DRINK, FEE_OF_SPECIAL_DRINK);
 		
@@ -64,7 +62,7 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -140,7 +138,7 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

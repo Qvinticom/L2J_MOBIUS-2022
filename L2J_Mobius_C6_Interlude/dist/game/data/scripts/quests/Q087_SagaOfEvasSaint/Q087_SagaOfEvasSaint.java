@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q087_SagaOfEvasSaint extends SagasSuperClass
 {
-	public static String qn1 = "Q087_SagaOfEvasSaint";
-	public static int qnu = 87;
-	public static String qna = "Saga of Eva's Saint";
-	
 	public Q087_SagaOfEvasSaint()
 	{
-		super(qnu, qn1, qna);
+		super(87, "Saga of Eva's Saint");
 		NPC = new int[]
 		{
 			30191,
@@ -66,7 +62,6 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 			27236,
 			27276
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			105

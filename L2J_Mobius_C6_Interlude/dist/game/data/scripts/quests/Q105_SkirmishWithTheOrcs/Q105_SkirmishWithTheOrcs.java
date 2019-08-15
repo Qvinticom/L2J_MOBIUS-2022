@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q105_SkirmishWithTheOrcs extends Quest
 {
-	private static final String qn = "Q105_SkirmishWithTheOrcs";
-	
 	// Item
 	private static final int KENDELL_ORDER_1 = 1836;
 	private static final int KENDELL_ORDER_2 = 1837;
@@ -64,7 +62,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	
 	public Q105_SkirmishWithTheOrcs()
 	{
-		super(105, qn, "Skirmish with the Orcs");
+		super(105, "Skirmish with the Orcs");
 		
 		registerQuestItems(KENDELL_ORDER_1, KENDELL_ORDER_2, KENDELL_ORDER_3, KENDELL_ORDER_4, KENDELL_ORDER_5, KENDELL_ORDER_6, KENDELL_ORDER_7, KENDELL_ORDER_8, KABOO_CHIEF_TORC_1, KABOO_CHIEF_TORC_2);
 		
@@ -78,7 +76,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,7 +95,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

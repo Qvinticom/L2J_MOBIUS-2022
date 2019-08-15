@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q121_PavelTheGiant.Q121_PavelTheGiant;
+
 public class Q114_ResurrectionOfAnOldManager extends Quest
 {
-	private static final String qn = "Q114_ResurrectionOfAnOldManager";
-	
 	// NPCs
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
@@ -48,7 +48,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	
 	public Q114_ResurrectionOfAnOldManager()
 	{
-		super(114, qn, "Resurrection of an Old Manager");
+		super(114, "Resurrection of an Old Manager");
 		
 		registerQuestItems(LETTER, DETECTOR, DETECTOR_2, STARSTONE, STARSTONE_2);
 		
@@ -62,7 +62,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -334,7 +334,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -344,7 +344,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState pavelReq = player.getQuestState("Q121_PavelTheGiant");
+				QuestState pavelReq = player.getQuestState(Q121_PavelTheGiant.class.getSimpleName());
 				htmltext = ((pavelReq == null) || !pavelReq.isCompleted() || (player.getLevel() < 49)) ? "32041-00.htm" : "32041-01.htm";
 				break;
 			

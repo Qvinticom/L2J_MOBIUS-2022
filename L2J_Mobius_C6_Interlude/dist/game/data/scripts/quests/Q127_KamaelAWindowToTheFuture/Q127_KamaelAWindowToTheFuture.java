@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowSlideshowKamael;
 
 public class Q127_KamaelAWindowToTheFuture extends Quest
 {
-	private static final String qn = "Q127_KamaelAWindowToTheFuture";
-	
 	// NPCs
 	private static final int DOMINIC = 31350;
 	private static final int KLAUS = 30187;
@@ -46,7 +44,7 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 	
 	public Q127_KamaelAWindowToTheFuture()
 	{
-		super(127, qn, "Kamael: A Window to the Future");
+		super(127, "Kamael: A Window to the Future");
 		
 		registerQuestItems(MARK_DOMINIC, MARK_HUMAN, MARK_DWARF, MARK_ORC, MARK_DELF, MARK_ELF);
 		
@@ -58,7 +56,7 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -137,7 +135,7 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

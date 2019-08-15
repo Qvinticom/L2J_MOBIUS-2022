@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q169_OffspringOfNightmares extends Quest
 {
-	private static final String qn = "Q169_OffspringOfNightmares";
-	
 	// Items
 	private static final int CRACKED_SKULL = 1030;
 	private static final int PERFECT_SKULL = 1031;
@@ -34,7 +32,7 @@ public class Q169_OffspringOfNightmares extends Quest
 	
 	public Q169_OffspringOfNightmares()
 	{
-		super(169, qn, "Offspring of Nightmares");
+		super(169, "Offspring of Nightmares");
 		
 		registerQuestItems(CRACKED_SKULL, PERFECT_SKULL);
 		
@@ -48,7 +46,7 @@ public class Q169_OffspringOfNightmares extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -78,7 +76,7 @@ public class Q169_OffspringOfNightmares extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

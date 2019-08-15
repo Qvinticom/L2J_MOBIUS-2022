@@ -33,7 +33,7 @@ public class DeluLizardmanSpecialCommander extends Quest
 	
 	private DeluLizardmanSpecialCommander()
 	{
-		super(-1, "DeluLizardmanSpecialCommander", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(DELU_LIZARDMAN_SPECIAL_COMMANDER);
 	}

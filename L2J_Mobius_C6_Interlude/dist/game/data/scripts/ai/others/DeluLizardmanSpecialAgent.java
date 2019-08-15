@@ -33,7 +33,7 @@ public class DeluLizardmanSpecialAgent extends Quest
 	
 	private DeluLizardmanSpecialAgent()
 	{
-		super(-1, "DeluLizardmanSpecialAgent", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(DELU_LIZARDMAN_SPECIAL_AGENT);
 	}

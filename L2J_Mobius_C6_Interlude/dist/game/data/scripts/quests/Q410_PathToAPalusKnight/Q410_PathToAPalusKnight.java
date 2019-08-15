@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q410_PathToAPalusKnight extends Quest
 {
-	private static final String qn = "Q410_PathToAPalusKnight";
-	
 	// Items
 	private static final int PALUS_TALISMAN = 1237;
 	private static final int LYCANTHROPE_SKULL = 1238;
@@ -49,7 +47,7 @@ public class Q410_PathToAPalusKnight extends Quest
 	
 	public Q410_PathToAPalusKnight()
 	{
-		super(410, qn, "Path to a Palus Knight");
+		super(410, "Path to a Palus Knight");
 		
 		registerQuestItems(PALUS_TALISMAN, LYCANTHROPE_SKULL, VIRGIL_LETTER, MORTE_TALISMAN, PREDATOR_CARAPACE, ARACHNID_TRACKER_SILK, COFFIN_OF_ETERNAL_REST);
 		
@@ -63,7 +61,7 @@ public class Q410_PathToAPalusKnight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,7 +121,7 @@ public class Q410_PathToAPalusKnight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

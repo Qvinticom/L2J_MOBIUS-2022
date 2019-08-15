@@ -24,7 +24,7 @@ public class ElrokiTeleporters extends Quest
 {
 	public ElrokiTeleporters()
 	{
-		super(-1, "ElrokiTeleporters", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(32111, 32112);
 		addTalkId(32111, 32112);

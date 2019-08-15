@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q003_WillTheSealBeBroken extends Quest
 {
-	private static final String qn = "Q003_WillTheSealBeBroken";
-	
 	// Items
 	private static final int ONYX_BEAST_EYE = 1081;
 	private static final int TAINT_STONE = 1082;
@@ -37,7 +35,7 @@ public class Q003_WillTheSealBeBroken extends Quest
 	
 	public Q003_WillTheSealBeBroken()
 	{
-		super(3, qn, "Will the Seal be Broken?");
+		super(3, "Will the Seal be Broken?");
 		
 		registerQuestItems(ONYX_BEAST_EYE, TAINT_STONE, SUCCUBUS_BLOOD);
 		
@@ -51,7 +49,7 @@ public class Q003_WillTheSealBeBroken extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +68,7 @@ public class Q003_WillTheSealBeBroken extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

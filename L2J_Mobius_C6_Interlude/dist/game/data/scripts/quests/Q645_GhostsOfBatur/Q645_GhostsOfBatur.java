@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q645_GhostsOfBatur extends Quest
 {
-	private static final String qn = "Q645_GhostsOfBatur";
-	
 	// NPC
 	private static final int KARUDA = 32017;
 	
@@ -64,7 +62,7 @@ public class Q645_GhostsOfBatur extends Quest
 	
 	public Q645_GhostsOfBatur()
 	{
-		super(645, qn, "Ghosts of Batur");
+		super(645, "Ghosts of Batur");
 		
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
@@ -76,7 +74,7 @@ public class Q645_GhostsOfBatur extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -107,7 +105,7 @@ public class Q645_GhostsOfBatur extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -144,7 +142,7 @@ public class Q645_GhostsOfBatur extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q038_DragonFangs extends Quest
 {
-	private static final String qn = "Q038_DragonFangs";
-	
 	// Items
 	private static final int FEATHER_ORNAMENT = 7173;
 	private static final int TOOTH_OF_TOTEM = 7174;
@@ -99,7 +97,7 @@ public class Q038_DragonFangs extends Quest
 	
 	public Q038_DragonFangs()
 	{
-		super(38, qn, "Dragon Fangs");
+		super(38, "Dragon Fangs");
 		
 		registerQuestItems(FEATHER_ORNAMENT, TOOTH_OF_TOTEM, TOOTH_OF_DRAGON, LETTER_OF_IRIS, LETTER_OF_ROHMER);
 		
@@ -116,7 +114,7 @@ public class Q038_DragonFangs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -189,7 +187,7 @@ public class Q038_DragonFangs extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

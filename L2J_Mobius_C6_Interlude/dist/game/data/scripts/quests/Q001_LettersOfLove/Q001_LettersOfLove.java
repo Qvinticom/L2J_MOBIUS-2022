@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q001_LettersOfLove extends Quest
 {
-	private static final String qn = "Q001_LettersOfLove";
-	
 	// Npcs
 	private static final int DARIN = 30048;
 	private static final int ROXXY = 30006;
@@ -42,7 +40,7 @@ public class Q001_LettersOfLove extends Quest
 	
 	public Q001_LettersOfLove()
 	{
-		super(1, qn, "Letters of Love");
+		super(1, "Letters of Love");
 		
 		registerQuestItems(DARIN_LETTER, ROXXY_KERCHIEF, DARIN_RECEIPT, BAULRO_POTION);
 		
@@ -54,7 +52,7 @@ public class Q001_LettersOfLove extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q001_LettersOfLove extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

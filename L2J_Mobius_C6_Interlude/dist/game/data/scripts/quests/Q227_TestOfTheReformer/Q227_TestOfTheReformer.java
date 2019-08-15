@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q227_TestOfTheReformer extends Quest
 {
-	private static final String qn = "Q227_TestOfTheReformer";
-	
 	// Items
 	private static final int BOOK_OF_REFORM = 2822;
 	private static final int LETTER_OF_INTRODUCTION = 2823;
@@ -95,7 +93,7 @@ public class Q227_TestOfTheReformer extends Quest
 	
 	public Q227_TestOfTheReformer()
 	{
-		super(227, qn, "Test of the Reformer");
+		super(227, "Test of the Reformer");
 		
 		registerQuestItems(BOOK_OF_REFORM, LETTER_OF_INTRODUCTION, SLA_LETTER, GREETINGS, OL_MAHUM_MONEY, KATARI_LETTER, NYAKURI_LETTER, UNDEAD_LIST, RAMUS_LETTER, RIPPED_DIARY, HUGE_NAIL, LETTER_OF_BETRAYER, BONE_FRAGMENT_4, BONE_FRAGMENT_5, BONE_FRAGMENT_6, BONE_FRAGMENT_7, BONE_FRAGMENT_8, BONE_FRAGMENT_9, KAKAN_LETTER);
 		
@@ -110,7 +108,7 @@ public class Q227_TestOfTheReformer extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -242,7 +240,7 @@ public class Q227_TestOfTheReformer extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

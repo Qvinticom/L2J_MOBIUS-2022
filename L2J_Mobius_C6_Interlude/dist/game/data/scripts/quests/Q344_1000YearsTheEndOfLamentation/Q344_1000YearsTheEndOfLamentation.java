@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q344_1000YearsTheEndOfLamentation extends Quest
 {
-	private static final String qn = "Q344_1000YearsTheEndOfLamentation";
-	
 	// NPCs
 	private static final int GILMORE = 30754;
 	private static final int RODEMAI = 30756;
@@ -62,7 +60,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	
 	public Q344_1000YearsTheEndOfLamentation()
 	{
-		super(344, qn, "1000 years, the End of Lamentation");
+		super(344, "1000 years, the End of Lamentation");
 		
 		registerQuestItems(ARTICLE_DEAD_HERO, OLD_KEY, OLD_HILT, OLD_TOTEM, CRUCIFIX);
 		
@@ -76,7 +74,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -155,7 +153,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

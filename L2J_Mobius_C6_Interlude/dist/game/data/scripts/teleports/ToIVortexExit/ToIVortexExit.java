@@ -27,14 +27,12 @@ import org.l2jmobius.gameserver.model.quest.Quest;
  */
 public class ToIVortexExit extends Quest
 {
-	private static final String qn = "ToIVortexExit";
-	
 	// NPC
 	private static final int TELE_CUBE = 29055;
 	
 	private ToIVortexExit()
 	{
-		super(-1, qn, "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(TELE_CUBE);
 		addTalkId(TELE_CUBE);

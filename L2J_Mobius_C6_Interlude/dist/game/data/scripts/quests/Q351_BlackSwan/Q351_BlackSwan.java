@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q351_BlackSwan extends Quest
 {
-	private static final String qn = "Q351_BlackSwan";
-	
 	// NPCs
 	private static final int GOSTA = 30916;
 	private static final int IASON_HEINE = 30969;
@@ -40,7 +38,7 @@ public class Q351_BlackSwan extends Quest
 	
 	public Q351_BlackSwan()
 	{
-		super(351, qn, "Black Swan");
+		super(351, "Black Swan");
 		
 		registerQuestItems(ORDER_OF_GOSTA, BARREL_OF_LEAGUE, LIZARD_FANG);
 		
@@ -54,7 +52,7 @@ public class Q351_BlackSwan extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -114,7 +112,7 @@ public class Q351_BlackSwan extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

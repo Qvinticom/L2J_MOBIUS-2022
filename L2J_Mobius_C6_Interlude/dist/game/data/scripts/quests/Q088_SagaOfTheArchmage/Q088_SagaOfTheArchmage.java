@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q088_SagaOfTheArchmage extends SagasSuperClass
 {
-	public static String qn1 = "Q088_SagaOfTheArchmage";
-	public static int qnu = 88;
-	public static String qna = "Saga of the Archmage";
-	
 	public Q088_SagaOfTheArchmage()
 	{
-		super(qnu, qn1, qna);
+		super(88, "Saga of the Archmage");
 		NPC = new int[]
 		{
 			30176,
@@ -66,7 +62,6 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 			27237,
 			27254
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			94

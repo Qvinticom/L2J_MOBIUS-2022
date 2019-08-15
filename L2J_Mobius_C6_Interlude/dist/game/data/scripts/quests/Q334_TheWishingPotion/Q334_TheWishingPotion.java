@@ -96,11 +96,9 @@ public class Q334_TheWishingPotion extends Quest
 		{3, 0, TURAK_BUGBEAR_WARRIOR, 0, BUGBEAR_BLOOD_ID, 1, 25, 1}
 	};// @formatter:on
 	
-	private static final String qn = "Q334_TheWishingPotion";
-	
 	public Q334_TheWishingPotion()
 	{
-		super(334, qn, "The Wishing Potion");
+		super(334, "The Wishing Potion");
 		
 		addStartNpc(ALCHEMIST_MATILD);
 		addTalkId(ALCHEMIST_MATILD, TORAI, WISDOM_CHEST, RUPINA);
@@ -126,7 +124,7 @@ public class Q334_TheWishingPotion extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -311,7 +309,7 @@ public class Q334_TheWishingPotion extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -439,7 +437,7 @@ public class Q334_TheWishingPotion extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q053_LinnaeusSpecialBait extends Quest
 {
-	private static final String qn = "Q053_LinnaeusSpecialBait";
-	
 	// Item
 	private static final int CRIMSON_DRAKE_HEART = 7624;
 	
@@ -34,7 +32,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 	
 	public Q053_LinnaeusSpecialBait()
 	{
-		super(53, qn, "Linnaeus' Special Bait");
+		super(53, "Linnaeus' Special Bait");
 		
 		registerQuestItems(CRIMSON_DRAKE_HEART);
 		
@@ -48,7 +46,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

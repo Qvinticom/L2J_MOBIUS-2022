@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q217_TestimonyOfTrust extends Quest
 {
-	private static final String qn = "Q217_TestimonyOfTrust";
-	
 	// Items
 	private static final int LETTER_TO_ELF = 2735;
 	private static final int LETTER_TO_DARK_ELF = 2736;
@@ -96,7 +94,7 @@ public class Q217_TestimonyOfTrust extends Quest
 	
 	public Q217_TestimonyOfTrust()
 	{
-		super(217, qn, "Testimony of Trust");
+		super(217, "Testimony of Trust");
 		
 		registerQuestItems(LETTER_TO_ELF, LETTER_TO_DARK_ELF, LETTER_TO_DWARF, LETTER_TO_ORC, LETTER_TO_SERESIN, SCROLL_OF_DARK_ELF_TRUST, SCROLL_OF_ELF_TRUST, SCROLL_OF_DWARF_TRUST, SCROLL_OF_ORC_TRUST, RECOMMENDATION_OF_HOLLINT, ORDER_OF_ASTERIOS, BREATH_OF_WINDS, SEED_OF_VERDURE, LETTER_FROM_THIFIELL, BLOOD_GUARDIAN_BASILIK, GIANT_APHID, STAKATO_FLUIDS, BASILIK_PLASMA, HONEY_DEW, STAKATO_ICHOR, ORDER_OF_CLAYTON, PARASITE_OF_LOTA, LETTER_TO_MANAKIA, LETTER_OF_MANAKIA, LETTER_TO_NIKOLA, ORDER_OF_NIKOLA, HEARTSTONE_OF_PORTA);
 		
@@ -111,7 +109,7 @@ public class Q217_TestimonyOfTrust extends Quest
 	{
 		String htmltext = event;
 		
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -201,7 +199,7 @@ public class Q217_TestimonyOfTrust extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

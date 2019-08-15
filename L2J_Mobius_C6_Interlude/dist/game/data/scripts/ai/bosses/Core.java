@@ -79,9 +79,9 @@ public class Core extends Quest
 	
 	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
-	public Core(int id, String name, String descr)
+	public Core()
 	{
-		super(id, name, descr);
+		super(-1, "ai/bosses");
 		
 		final int[] mobs =
 		{
@@ -256,6 +256,6 @@ public class Core extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Core(-1, "core", "ai");
+		new Core();
 	}
 }

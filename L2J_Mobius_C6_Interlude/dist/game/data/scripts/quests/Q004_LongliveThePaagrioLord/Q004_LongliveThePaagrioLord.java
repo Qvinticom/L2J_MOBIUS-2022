@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q004_LongliveThePaagrioLord extends Quest
 {
-	private static final String qn = "Q004_LongliveThePaagrioLord";
-	
 	private static final Map<Integer, Integer> NPC_GIFTS = new HashMap<>();
 	static
 	{
@@ -43,7 +41,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	
 	public Q004_LongliveThePaagrioLord()
 	{
-		super(4, qn, "Long live the Pa'agrio Lord!");
+		super(4, "Long live the Pa'agrio Lord!");
 		
 		registerQuestItems(1541, 1542, 1543, 1544, 1545, 1546);
 		
@@ -55,7 +53,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 {
-	public static String qn1 = "Q091_SagaOfTheArcanaLord";
-	public static int qnu = 91;
-	public static String qna = "Saga of the Arcana Lord";
-	
 	public Q091_SagaOfTheArcanaLord()
 	{
-		super(qnu, qn1, qna);
+		super(91, "Saga of the Arcana Lord");
 		NPC = new int[]
 		{
 			31605,
@@ -66,7 +62,6 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 			27240,
 			27310
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			96

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q052_WilliesSpecialBait extends Quest
 {
-	private static final String qn = "Q052_WilliesSpecialBait";
-	
 	// Item
 	private static final int TARLK_EYE = 7623;
 	
@@ -34,7 +32,7 @@ public class Q052_WilliesSpecialBait extends Quest
 	
 	public Q052_WilliesSpecialBait()
 	{
-		super(52, qn, "Willie's Special Bait");
+		super(52, "Willie's Special Bait");
 		
 		registerQuestItems(TARLK_EYE);
 		
@@ -48,7 +46,7 @@ public class Q052_WilliesSpecialBait extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q052_WilliesSpecialBait extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

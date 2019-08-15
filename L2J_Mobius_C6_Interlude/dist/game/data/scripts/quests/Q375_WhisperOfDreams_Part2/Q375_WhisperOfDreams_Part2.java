@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q375_WhisperOfDreams_Part2 extends Quest
 {
-	private static final String qn = "Q375_WhisperOfDreams_Part2";
-	
 	// NPCs
 	private static final int MANAKIA = 30515;
 	
@@ -49,7 +47,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 	
 	public Q375_WhisperOfDreams_Part2()
 	{
-		super(375, qn, "Whisper of Dreams, Part 2");
+		super(375, "Whisper of Dreams, Part 2");
 		
 		registerQuestItems(KARIK_HORN, CAVE_HOWLER_SKULL);
 		
@@ -63,7 +61,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -90,7 +88,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -130,7 +128,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

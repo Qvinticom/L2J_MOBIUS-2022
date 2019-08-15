@@ -25,7 +25,7 @@ public class HeroCirclet extends Quest
 {
 	public HeroCirclet()
 	{
-		super(-1, "HeroCirclet", "custom");
+		super(-1, "custom");
 		
 		addStartNpc(31690, 31769, 31770, 31771, 31772);
 		addTalkId(31690, 31769, 31770, 31771, 31772);

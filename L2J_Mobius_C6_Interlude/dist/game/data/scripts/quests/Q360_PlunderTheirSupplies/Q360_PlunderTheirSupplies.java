@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q360_PlunderTheirSupplies extends Quest
 {
-	private static final String qn = "Q360_PlunderTheirSupplies";
-	
 	// Items
 	private static final int SUPPLY_ITEM = 5872;
 	private static final int SUSPICIOUS_DOCUMENT = 5871;
@@ -65,7 +63,7 @@ public class Q360_PlunderTheirSupplies extends Quest
 	
 	public Q360_PlunderTheirSupplies()
 	{
-		super(360, qn, "Plunder Their Supplies");
+		super(360, "Plunder Their Supplies");
 		
 		registerQuestItems(RECIPE_OF_SUPPLY, SUPPLY_ITEM, SUSPICIOUS_DOCUMENT);
 		
@@ -79,7 +77,7 @@ public class Q360_PlunderTheirSupplies extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -107,7 +105,7 @@ public class Q360_PlunderTheirSupplies extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

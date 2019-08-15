@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q042_HelpTheUncle extends Quest
 {
-	private static final String qn = "Q042_HelpTheUncle";
-	
 	// NPCs
 	private static final int WATERS = 30828;
 	private static final int SOPHYA = 30735;
@@ -42,7 +40,7 @@ public class Q042_HelpTheUncle extends Quest
 	
 	public Q042_HelpTheUncle()
 	{
-		super(42, qn, "Help the Uncle!");
+		super(42, "Help the Uncle!");
 		
 		registerQuestItems(MAP_PIECE, MAP);
 		
@@ -56,7 +54,7 @@ public class Q042_HelpTheUncle extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -100,7 +98,7 @@ public class Q042_HelpTheUncle extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -34,8 +34,6 @@ import org.l2jmobius.gameserver.model.zone.type.BossZone;
  */
 public class GrandBossTeleporters extends Quest
 {
-	private static final String qn = "GrandBossTeleporters";
-	
 	// NPCs
 	private static final int[] NPCs =
 	{
@@ -53,7 +51,7 @@ public class GrandBossTeleporters extends Quest
 	
 	private GrandBossTeleporters()
 	{
-		super(-1, qn, "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(NPCs);
 		addTalkId(NPCs);
@@ -63,7 +61,7 @@ public class GrandBossTeleporters extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -111,7 +109,7 @@ public class GrandBossTeleporters extends Quest
 				}
 				else if ((status == 0) || (status == 1)) // If entrance to see Antharas is unlocked (he is Dormant or Waiting)
 				{
-					final QuestState st = player.getQuestState(qn);
+					final QuestState st = player.getQuestState(getName());
 					if (st.getQuestItemsCount(3865) > 0)
 					{
 						st.takeItems(3865, 1);
@@ -149,7 +147,7 @@ public class GrandBossTeleporters extends Quest
 				final int status = GrandBossManager.getInstance().getBossStatus(29028);
 				if ((status == 0) || (status == 1)) // If entrance to see Valakas is unlocked (he is Dormant or Waiting)
 				{
-					final QuestState st = player.getQuestState(qn);
+					final QuestState st = player.getQuestState(getName());
 					if (playerCount >= 200)
 					{
 						htmltext = "31385-03.htm";
@@ -239,12 +237,12 @@ public class GrandBossTeleporters extends Quest
 	
 	private Quest antharasAI()
 	{
-		return QuestManager.getInstance().getQuest("antharas");
+		return QuestManager.getInstance().getQuest("Antharas");
 	}
 	
 	private Quest valakasAI()
 	{
-		return QuestManager.getInstance().getQuest("valakas");
+		return QuestManager.getInstance().getQuest("Valakas");
 	}
 	
 	public static void main(String[] args)

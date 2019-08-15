@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q274_SkirmishWithTheWerewolves extends Quest
 {
-	private static final String qn = "Q274_SkirmishWithTheWerewolves";
-	
 	// Needed items
 	private static final int NECKLACE_OF_VALOR = 1507;
 	private static final int NECKLACE_OF_COURAGE = 1506;
@@ -38,7 +36,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	
 	public Q274_SkirmishWithTheWerewolves()
 	{
-		super(274, qn, "Skirmish with the Werewolves");
+		super(274, "Skirmish with the Werewolves");
 		
 		registerQuestItems(MARAKU_WEREWOLF_HEAD, MARAKU_WOLFMEN_TOTEM);
 		
@@ -51,7 +49,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = event;
 		if (st == null)
 		{
@@ -72,7 +70,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

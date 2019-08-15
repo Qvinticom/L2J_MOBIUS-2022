@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q409_PathToAnElvenOracle extends Quest
 {
-	private static final String qn = "Q409_PathToAnElvenOracle";
-	
 	// Items
 	private static final int CRYSTAL_MEDALLION = 1231;
 	private static final int SWINDLER_MONEY = 1232;
@@ -44,7 +42,7 @@ public class Q409_PathToAnElvenOracle extends Quest
 	
 	public Q409_PathToAnElvenOracle()
 	{
-		super(409, qn, "Path to an Elven Oracle");
+		super(409, "Path to an Elven Oracle");
 		
 		registerQuestItems(CRYSTAL_MEDALLION, SWINDLER_MONEY, ALLANA_DIARY, LIZARD_CAPTAIN_ORDER, HALF_OF_DIARY, TAMIL_NECKLACE);
 		
@@ -58,7 +56,7 @@ public class Q409_PathToAnElvenOracle extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -92,7 +90,7 @@ public class Q409_PathToAnElvenOracle extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

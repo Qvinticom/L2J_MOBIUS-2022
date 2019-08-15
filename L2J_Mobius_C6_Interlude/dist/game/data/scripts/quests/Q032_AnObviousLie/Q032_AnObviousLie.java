@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q032_AnObviousLie extends Quest
 {
-	private static final String qn = "Q032_AnObviousLie";
-	
 	// Items
 	private static final int SUEDE = 1866;
 	private static final int THREAD = 1868;
@@ -45,7 +43,7 @@ public class Q032_AnObviousLie extends Quest
 	
 	public Q032_AnObviousLie()
 	{
-		super(32, qn, "An Obvious Lie");
+		super(32, "An Obvious Lie");
 		
 		registerQuestItems(MAP, MEDICINAL_HERB);
 		
@@ -59,7 +57,7 @@ public class Q032_AnObviousLie extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -171,7 +169,7 @@ public class Q032_AnObviousLie extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

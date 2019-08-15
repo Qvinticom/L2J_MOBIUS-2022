@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q324_SweetestVenom extends Quest
 {
-	private static final String qn = "Q324_SweetestVenom";
-	
 	// Item
 	private static final int VENOM_SAC = 1077;
 	
@@ -43,7 +41,7 @@ public class Q324_SweetestVenom extends Quest
 	
 	public Q324_SweetestVenom()
 	{
-		super(324, qn, "Sweetest Venom");
+		super(324, "Sweetest Venom");
 		
 		registerQuestItems(VENOM_SAC);
 		
@@ -57,7 +55,7 @@ public class Q324_SweetestVenom extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -76,7 +74,7 @@ public class Q324_SweetestVenom extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

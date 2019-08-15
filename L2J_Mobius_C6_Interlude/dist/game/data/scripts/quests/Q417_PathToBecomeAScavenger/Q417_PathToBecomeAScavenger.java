@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q417_PathToBecomeAScavenger extends Quest
 {
-	private static final String qn = "Q417_PathToBecomeAScavenger";
-	
 	// Items
 	private static final int RING_OF_RAVEN = 1642;
 	private static final int PIPPI_LETTER = 1643;
@@ -67,7 +65,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	
 	public Q417_PathToBecomeAScavenger()
 	{
-		super(417, qn, "Path to become a Scavenger");
+		super(417, "Path to become a Scavenger");
 		
 		registerQuestItems(PIPPI_LETTER, RAUT_TELEPORT_SCROLL, SUCCUBUS_UNDIES, MION_LETTER, BRONK_INGOT, SHARI_AXE, ZIMENF_POTION, BRONK_PAY, SHARI_PAY, ZIMENF_PAY, BEAR_PICTURE, TARANTULA_PICTURE, HONEY_JAR, BEAD, BEAD_PARCEL_1, BEAD_PARCEL_2);
 		
@@ -81,7 +79,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -212,7 +210,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

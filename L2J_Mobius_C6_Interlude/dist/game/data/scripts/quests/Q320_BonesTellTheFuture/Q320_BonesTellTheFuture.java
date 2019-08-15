@@ -25,14 +25,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q320_BonesTellTheFuture extends Quest
 {
-	private static final String qn = "Q320_BonesTellTheFuture";
-	
 	// Quest item
 	private final int BONE_FRAGMENT = 809;
 	
 	public Q320_BonesTellTheFuture()
 	{
-		super(320, qn, "Bones Tell the Future");
+		super(320, "Bones Tell the Future");
 		
 		registerQuestItems(BONE_FRAGMENT);
 		
@@ -46,7 +44,7 @@ public class Q320_BonesTellTheFuture extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -65,7 +63,7 @@ public class Q320_BonesTellTheFuture extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

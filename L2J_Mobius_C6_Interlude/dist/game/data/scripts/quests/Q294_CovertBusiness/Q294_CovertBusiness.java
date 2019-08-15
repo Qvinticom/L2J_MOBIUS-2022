@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q294_CovertBusiness extends Quest
 {
-	private static final String qn = "Q294_CovertBusiness";
-	
 	// Item
 	private static final int BAT_FANG = 1491;
 	
@@ -36,7 +34,7 @@ public class Q294_CovertBusiness extends Quest
 	
 	public Q294_CovertBusiness()
 	{
-		super(294, qn, "Covert Business");
+		super(294, "Covert Business");
 		
 		registerQuestItems(BAT_FANG);
 		
@@ -50,7 +48,7 @@ public class Q294_CovertBusiness extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +68,7 @@ public class Q294_CovertBusiness extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q306_CrystalsOfFireAndIce extends Quest
 {
-	private static final String qn = "Q306_CrystalsOfFireAndIce";
-	
 	// Items
 	private static final int FLAME_SHARD = 1020;
 	private static final int ICE_SHARD = 1021;
@@ -67,7 +65,7 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 	
 	public Q306_CrystalsOfFireAndIce()
 	{
-		super(306, qn, "Crystals of Fire and Ice");
+		super(306, "Crystals of Fire and Ice");
 		
 		registerQuestItems(FLAME_SHARD, ICE_SHARD);
 		
@@ -81,7 +79,7 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -106,7 +104,7 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

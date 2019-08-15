@@ -52,7 +52,7 @@ public class Chests extends Quest
 	
 	private Chests()
 	{
-		super(-1, "Chests", "ai/others");
+		super(-1, "ai/others");
 		
 		addSkillUseId(CHESTS);
 		addAttackId(CHESTS);

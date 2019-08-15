@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q261_CollectorsDream extends Quest
 {
-	private static final String qn = "Q261_CollectorsDream";
-	
 	// Items
 	private static final int GIANT_SPIDER_LEG = 1087;
 	
 	public Q261_CollectorsDream()
 	{
-		super(261, qn, "Collector's Dream");
+		super(261, "Collector's Dream");
 		
 		registerQuestItems(GIANT_SPIDER_LEG);
 		
@@ -45,7 +43,7 @@ public class Q261_CollectorsDream extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -64,7 +62,7 @@ public class Q261_CollectorsDream extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

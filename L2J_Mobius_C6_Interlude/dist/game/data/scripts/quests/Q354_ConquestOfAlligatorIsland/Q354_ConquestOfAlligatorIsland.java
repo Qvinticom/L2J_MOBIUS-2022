@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q354_ConquestOfAlligatorIsland extends Quest
 {
-	private static final String qn = "Q354_ConquestOfAlligatorIsland";
-	
 	// Items
 	private static final int ALLIGATOR_TOOTH = 5863;
 	private static final int TORN_MAP_FRAGMENT = 5864;
@@ -131,7 +129,7 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 	
 	public Q354_ConquestOfAlligatorIsland()
 	{
-		super(354, qn, "Conquest of Alligator Island");
+		super(354, "Conquest of Alligator Island");
 		
 		registerQuestItems(ALLIGATOR_TOOTH, TORN_MAP_FRAGMENT);
 		
@@ -145,7 +143,7 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -207,7 +205,7 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -236,7 +234,7 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropMultipleItems(DROPLIST.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropMultipleItems(DROPLIST.get(npc.getNpcId()));
 		
 		return null;
 	}

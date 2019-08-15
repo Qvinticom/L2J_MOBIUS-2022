@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q381_LetsBecomeARoyalMember extends Quest
 {
-	private static final String qn = "Q381_LetsBecomeARoyalMember";
-	
 	// NPCs
 	private static final int SORINT = 30232;
 	private static final int SANDRA = 30090;
@@ -41,7 +39,7 @@ public class Q381_LetsBecomeARoyalMember extends Quest
 	
 	public Q381_LetsBecomeARoyalMember()
 	{
-		super(381, qn, "Let's Become a Royal Member!");
+		super(381, "Let's Become a Royal Member!");
 		
 		registerQuestItems(KAIL_COIN, GOLDEN_CLOVER_COIN);
 		
@@ -55,7 +53,7 @@ public class Q381_LetsBecomeARoyalMember extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -78,7 +76,7 @@ public class Q381_LetsBecomeARoyalMember extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

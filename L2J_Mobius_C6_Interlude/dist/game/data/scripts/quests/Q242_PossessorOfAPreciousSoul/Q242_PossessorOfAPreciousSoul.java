@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q242_PossessorOfAPreciousSoul extends Quest
 {
-	private static final String qn = "Q242_PossessorOfAPreciousSoul";
-	
 	// NPCs
 	private static final int VIRGIL = 31742;
 	private static final int KASSANDRA = 31743;
@@ -53,7 +51,7 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 	
 	public Q242_PossessorOfAPreciousSoul()
 	{
-		super(242, qn, "Possessor of a Precious Soul - 2");
+		super(242, "Possessor of a Precious Soul - 2");
 		
 		registerQuestItems(GOLDEN_HAIR, SORCERY_INGREDIENT, ORB_OF_BINDING);
 		
@@ -67,7 +65,7 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -178,7 +176,7 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q161_FruitOfTheMotherTree extends Quest
 {
-	private static final String qn = "Q161_FruitOfTheMotherTree";
-	
 	// NPCs
 	private static final int ANDELLIA = 30362;
 	private static final int THALIA = 30371;
@@ -37,7 +35,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	
 	public Q161_FruitOfTheMotherTree()
 	{
-		super(161, qn, "Fruit of the Mothertree");
+		super(161, "Fruit of the Mothertree");
 		
 		registerQuestItems(ANDELLIA_LETTER, MOTHERTREE_FRUIT);
 		
@@ -49,7 +47,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -69,7 +67,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

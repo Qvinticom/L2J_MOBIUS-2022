@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 {
-	private static final String qn = "Q628_HuntOfTheGoldenRamMercenaryForce";
-	
 	// NPCs
 	private static final int KAHMAN = 31554;
 	
@@ -56,7 +54,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 	
 	public Q628_HuntOfTheGoldenRamMercenaryForce()
 	{
-		super(628, qn, "Hunt of the Golden Ram Mercenary Force");
+		super(628, "Hunt of the Golden Ram Mercenary Force");
 		
 		registerQuestItems(SPLINTER_STAKATO_CHITIN, NEEDLE_STAKATO_CHITIN, GOLDEN_RAM_BADGE_RECRUIT, GOLDEN_RAM_BADGE_SOLDIER);
 		
@@ -73,7 +71,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -108,7 +106,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -174,7 +172,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -70,7 +70,6 @@ public class Quest extends ManagedScript
 	private final Map<String, ArrayList<QuestTimer>> _allEventTimers = new HashMap<>();
 	
 	private final int _questId;
-	private final String _name;
 	private final String _prefixPath; // used only for admin_quest_reload
 	private final String _descr;
 	private final byte _initialState = State.CREATED;
@@ -150,13 +149,11 @@ public class Quest extends ManagedScript
 	/**
 	 * (Constructor)Add values to class variables and put the quest in HashMaps.
 	 * @param questId : int pointing out the ID of the quest
-	 * @param name : String corresponding to the name of the quest
 	 * @param descr : String for the description of the quest
 	 */
-	public Quest(int questId, String name, String descr)
+	public Quest(int questId, String descr)
 	{
 		_questId = questId;
-		_name = name;
 		_descr = descr;
 		
 		// Given the quest instance, create a string representing the path and questName like a simplified version of a canonical class name.
@@ -174,7 +171,7 @@ public class Quest extends ManagedScript
 		}
 		else
 		{
-			_allEventsS.put(name, this);
+			_allEventsS.put(getName(), this);
 		}
 		
 		init_LoadGlobalData();
@@ -279,7 +276,7 @@ public class Quest extends ManagedScript
 	 */
 	public String getName()
 	{
-		return _name;
+		return getClass().getSimpleName();
 	}
 	
 	/**
@@ -742,7 +739,7 @@ public class Quest extends ManagedScript
 		
 		// if not overriden by a subclass, then default to the returned value of the simpler (and older) onEvent override
 		// if the player has a state, use it as parameter in the next call, else return null
-		final QuestState qs = player.getQuestState(_name);
+		final QuestState qs = player.getQuestState(getName());
 		
 		if (qs != null)
 		{
@@ -1194,7 +1191,7 @@ public class Quest extends ManagedScript
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("REPLACE INTO quest_global_data (quest_name,var,value) VALUES (?,?,?)");
-			statement.setString(1, _name);
+			statement.setString(1, getName());
 			statement.setString(2, var);
 			statement.setString(3, value);
 			statement.executeUpdate();
@@ -1219,7 +1216,7 @@ public class Quest extends ManagedScript
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("SELECT value FROM quest_global_data WHERE quest_name = ? AND var = ?");
-			statement.setString(1, _name);
+			statement.setString(1, getName());
 			statement.setString(2, var);
 			ResultSet rs = statement.executeQuery();
 			
@@ -1248,7 +1245,7 @@ public class Quest extends ManagedScript
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ? AND var = ?");
-			statement.setString(1, _name);
+			statement.setString(1, getName());
 			statement.setString(2, var);
 			statement.executeUpdate();
 			statement.close();
@@ -1268,7 +1265,7 @@ public class Quest extends ManagedScript
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ?");
-			statement.setString(1, _name);
+			statement.setString(1, getName());
 			statement.executeUpdate();
 			statement.close();
 		}
@@ -1432,7 +1429,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Check player's quest conditions.
-		final QuestState qs = player.getQuestState(_name);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return null;
@@ -1469,7 +1466,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Check player's quest conditions.
-		final QuestState qs = player.getQuestState(_name);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return null;
@@ -1612,7 +1609,7 @@ public class Quest extends ManagedScript
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getPartyMembers().size() == 0))
 		{
-			temp = player.getQuestState(_name);
+			temp = player.getQuestState(getName());
 			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value))
 			{
 				return player; // match
@@ -1633,7 +1630,7 @@ public class Quest extends ManagedScript
 		
 		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
-			temp = partyMember.getQuestState(_name);
+			temp = partyMember.getQuestState(getName());
 			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
 			{
 				candidates.add(partyMember);
@@ -1717,7 +1714,7 @@ public class Quest extends ManagedScript
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getPartyMembers().size() == 0))
 		{
-			temp = player.getQuestState(_name);
+			temp = player.getQuestState(getName());
 			if ((temp != null) && (temp.getState() == state))
 			{
 				return player; // match
@@ -1738,7 +1735,7 @@ public class Quest extends ManagedScript
 		
 		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
-			temp = partyMember.getQuestState(_name);
+			temp = partyMember.getQuestState(getName());
 			
 			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
 			{
@@ -1764,15 +1761,12 @@ public class Quest extends ManagedScript
 	 */
 	public String showHtmlFile(PlayerInstance player, String fileName)
 	{
-		final String questId = _name;
-		
 		// Create handler to file linked to the quest
 		final String directory = _descr.toLowerCase();
-		String content = HtmCache.getInstance().getHtm("data/scripts/" + directory + "/" + questId + "/" + fileName);
-		
+		String content = HtmCache.getInstance().getHtm("data/scripts/" + directory + "/" + getName() + "/" + fileName);
 		if (content == null)
 		{
-			content = HtmCache.getInstance().getHtmForce("data/scripts/quests/" + questId + "/" + fileName);
+			content = HtmCache.getInstance().getHtmForce("data/scripts/quests/" + getName() + "/" + fileName);
 		}
 		
 		if (player != null)
@@ -1875,12 +1869,6 @@ public class Quest extends ManagedScript
 	{
 		unload();
 		return super.reload();
-	}
-	
-	@Override
-	public String getScriptName()
-	{
-		return _name;
 	}
 	
 	/**

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q157_RecoverSmuggledGoods extends Quest
 {
-	private static final String qn = "Q157_RecoverSmuggledGoods";
-	
 	// Item
 	private static final int ADAMANTITE_ORE = 1024;
 	
@@ -34,7 +32,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 	
 	public Q157_RecoverSmuggledGoods()
 	{
-		super(157, qn, "Recover Smuggled Goods");
+		super(157, "Recover Smuggled Goods");
 		
 		registerQuestItems(ADAMANTITE_ORE);
 		
@@ -48,7 +46,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -67,7 +65,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

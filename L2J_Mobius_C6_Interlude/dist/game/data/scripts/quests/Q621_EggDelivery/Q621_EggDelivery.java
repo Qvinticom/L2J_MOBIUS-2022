@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q621_EggDelivery extends Quest
 {
-	private static final String qn = "Q621_EggDelivery";
-	
 	// Items
 	private static final int BOILED_EGGS = 7195;
 	private static final int FEE_OF_BOILED_EGG = 7196;
@@ -51,7 +49,7 @@ public class Q621_EggDelivery extends Quest
 	
 	public Q621_EggDelivery()
 	{
-		super(621, qn, "Egg Delivery");
+		super(621, "Egg Delivery");
 		
 		registerQuestItems(BOILED_EGGS, FEE_OF_BOILED_EGG);
 		
@@ -63,7 +61,7 @@ public class Q621_EggDelivery extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -149,7 +147,7 @@ public class Q621_EggDelivery extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

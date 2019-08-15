@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q116_BeyondTheHillsOfWinter extends Quest
 {
-	private static final String qn = "Q116_BeyondTheHillsOfWinter";
-	
 	// NPCs
 	private static final int FILAUR = 30535;
 	private static final int OBI = 32052;
@@ -42,7 +40,7 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 	
 	public Q116_BeyondTheHillsOfWinter()
 	{
-		super(116, qn, "Beyond the Hills of Winter");
+		super(116, "Beyond the Hills of Winter");
 		
 		registerQuestItems(GOODS);
 		
@@ -54,7 +52,7 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -95,7 +93,7 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

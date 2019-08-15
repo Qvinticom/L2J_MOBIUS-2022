@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q401_PathToAWarrior extends Quest
 {
-	private static final String qn = "Q401_PathToAWarrior";
-	
 	// Items
 	private static final int AURON_LETTER = 1138;
 	private static final int WARRIOR_GUILD_MARK = 1139;
@@ -45,7 +43,7 @@ public class Q401_PathToAWarrior extends Quest
 	
 	public Q401_PathToAWarrior()
 	{
-		super(401, qn, "Path to a Warrior");
+		super(401, "Path to a Warrior");
 		
 		registerQuestItems(AURON_LETTER, WARRIOR_GUILD_MARK, RUSTED_BRONZE_SWORD_1, RUSTED_BRONZE_SWORD_2, RUSTED_BRONZE_SWORD_3, SIMPLON_LETTER, POISON_SPIDER_LEG);
 		
@@ -59,7 +57,7 @@ public class Q401_PathToAWarrior extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -110,7 +108,7 @@ public class Q401_PathToAWarrior extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

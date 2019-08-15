@@ -26,9 +26,9 @@ public class Hallate extends Quest
 	// Hallate NpcID
 	private static final int HALLATE = 25220;
 	
-	public Hallate(int questId, String name, String descr)
+	public Hallate()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		addEventId(HALLATE, Quest.QuestEventType.ON_ATTACK);
 	}
@@ -37,6 +37,6 @@ public class Hallate extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Hallate(-1, "Hallate", "ai");
+		new Hallate();
 	}
 }

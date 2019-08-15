@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q370_AnElderSowsSeeds extends Quest
 {
-	private static final String qn = "Q370_AnElderSowsSeeds";
-	
 	// NPC
 	private static final int CASIAN = 30612;
 	
@@ -52,7 +50,7 @@ public class Q370_AnElderSowsSeeds extends Quest
 	
 	public Q370_AnElderSowsSeeds()
 	{
-		super(370, qn, "An Elder Sows Seeds");
+		super(370, "An Elder Sows Seeds");
 		
 		registerQuestItems(SPELLBOOK_PAGE, CHAPTER_OF_FIRE, CHAPTER_OF_WATER, CHAPTER_OF_WIND, CHAPTER_OF_EARTH);
 		
@@ -66,7 +64,7 @@ public class Q370_AnElderSowsSeeds extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -103,7 +101,7 @@ public class Q370_AnElderSowsSeeds extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -132,7 +130,7 @@ public class Q370_AnElderSowsSeeds extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(SPELLBOOK_PAGE, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(SPELLBOOK_PAGE, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

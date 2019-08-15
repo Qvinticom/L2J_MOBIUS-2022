@@ -67,7 +67,7 @@ public class HuntingGroundsTeleport extends Quest
 	
 	public HuntingGroundsTeleport()
 	{
-		super(-1, "HuntingGroundsTeleport", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(PRIESTS);
 		addTalkId(PRIESTS);

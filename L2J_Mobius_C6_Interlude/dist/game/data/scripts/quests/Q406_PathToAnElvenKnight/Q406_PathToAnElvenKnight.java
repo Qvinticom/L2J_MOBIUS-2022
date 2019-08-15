@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q406_PathToAnElvenKnight extends Quest
 {
-	private static final String qn = "Q406_PathToAnElvenKnight";
-	
 	// Items
 	private static final int SORIUS_LETTER = 1202;
 	private static final int KLUTO_BOX = 1203;
@@ -42,7 +40,7 @@ public class Q406_PathToAnElvenKnight extends Quest
 	
 	public Q406_PathToAnElvenKnight()
 	{
-		super(406, qn, "Path to an Elven Knight");
+		super(406, "Path to an Elven Knight");
 		
 		registerQuestItems(SORIUS_LETTER, KLUTO_BOX, TOPAZ_PIECE, EMERALD_PIECE, KLUTO_MEMO);
 		
@@ -56,7 +54,7 @@ public class Q406_PathToAnElvenKnight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -98,7 +96,7 @@ public class Q406_PathToAnElvenKnight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

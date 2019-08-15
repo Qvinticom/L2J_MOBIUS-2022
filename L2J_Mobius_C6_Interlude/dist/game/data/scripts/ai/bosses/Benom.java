@@ -131,7 +131,7 @@ public class Benom extends Quest
 	
 	public Benom()
 	{
-		super(-1, "Benom", "ai/bosses");
+		super(-1, "ai/bosses");
 		
 		addStartNpc(BENOM_TELEPORT);
 		addTalkId(BENOM_TELEPORT);

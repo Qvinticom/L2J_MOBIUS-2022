@@ -26,9 +26,9 @@ public class Kernon extends Quest
 	// Kernon NpcID
 	private static final int KERNON = 25054;
 	
-	public Kernon(int questId, String name, String descr)
+	public Kernon()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		addEventId(KERNON, Quest.QuestEventType.ON_ATTACK);
 	}
@@ -37,6 +37,6 @@ public class Kernon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Kernon(-1, "Kernon", "ai");
+		new Kernon();
 	}
 }

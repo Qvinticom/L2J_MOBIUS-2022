@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q508_AClansReputation extends Quest
 {
-	private static final String qn = "Q508_AClansReputation";
-	
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;
 	
@@ -129,7 +127,7 @@ public class Q508_AClansReputation extends Quest
 	
 	public Q508_AClansReputation()
 	{
-		super(508, qn, "A Clan's Reputation");
+		super(508, "A Clan's Reputation");
 		
 		registerQuestItems(THEMIS_SCALE, NUCLEUS_OF_HEKATON_PRIME, TIPHON_SHARD, GLAKIS_NUCLEUS, RAHHAS_FANG, NUCLEUS_OF_FLAMESTONE_GIANT);
 		
@@ -143,7 +141,7 @@ public class Q508_AClansReputation extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -180,7 +178,7 @@ public class Q508_AClansReputation extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

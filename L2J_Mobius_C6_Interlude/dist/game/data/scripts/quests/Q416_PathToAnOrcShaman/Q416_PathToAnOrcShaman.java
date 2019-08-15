@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q416_PathToAnOrcShaman extends Quest
 {
-	private static final String qn = "Q416_PathToAnOrcShaman";
-	
 	// Items
 	private static final int FIRE_CHARM = 1616;
 	private static final int KASHA_BEAR_PELT = 1617;
@@ -68,7 +66,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 	
 	public Q416_PathToAnOrcShaman()
 	{
-		super(416, qn, "Path to an Orc Shaman");
+		super(416, "Path to an Orc Shaman");
 		
 		registerQuestItems(FIRE_CHARM, KASHA_BEAR_PELT, KASHA_BLADE_SPIDER_HUSK, FIERY_EGG_1, HESTUI_MASK, FIERY_EGG_2, TOTEM_SPIRIT_CLAW, TATARU_LETTER, FLAME_CHARM, GRIZZLY_BLOOD, BLOOD_CAULDRON, SPIRIT_NET, BOUND_DURKA_SPIRIT, DURKA_PARASITE, TOTEM_SPIRIT_BLOOD);
 		
@@ -82,7 +80,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -176,7 +174,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

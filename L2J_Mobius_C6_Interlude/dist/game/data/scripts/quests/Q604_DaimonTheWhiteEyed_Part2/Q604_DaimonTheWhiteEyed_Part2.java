@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 {
-	private static final String qn = "Q604_DaimonTheWhiteEyed_Part2";
-	
 	// Monster
 	private static final int DAIMON_THE_WHITE_EYED = 25290;
 	
@@ -62,7 +60,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	
 	public Q604_DaimonTheWhiteEyed_Part2()
 	{
-		super(604, qn, "Daimon the White-Eyed - Part 2");
+		super(604, "Daimon the White-Eyed - Part 2");
 		
 		registerQuestItems(SUMMON_CRYSTAL, ESSENCE_OF_DAIMON);
 		
@@ -75,7 +73,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DAIMON_THE_WHITE_EYED))
 		{
 			case UNDEFINED:
-				LOGGER.log(Level.WARNING, qn + ": can not find spawned RaidBoss id=" + DAIMON_THE_WHITE_EYED);
+				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + DAIMON_THE_WHITE_EYED);
 				break;
 			
 			case ALIVE:
@@ -107,7 +105,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		}
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -175,7 +173,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -243,7 +241,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	{
 		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				continue;

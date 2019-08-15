@@ -25,14 +25,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q170_DangerousSeduction extends Quest
 {
-	private static final String qn = "Q170_DangerousSeduction";
-	
 	// Item
 	private static final int NIGHTMARE_CRYSTAL = 1046;
 	
 	public Q170_DangerousSeduction()
 	{
-		super(170, qn, "Dangerous Seduction");
+		super(170, "Dangerous Seduction");
 		
 		registerQuestItems(NIGHTMARE_CRYSTAL);
 		
@@ -46,7 +44,7 @@ public class Q170_DangerousSeduction extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -66,7 +64,7 @@ public class Q170_DangerousSeduction extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q331_ArrowOfVengeance extends Quest
 {
-	private static final String qn = "Q331_ArrowOfVengeance";
-	
 	// Items
 	private static final int HARPY_FEATHER = 1452;
 	private static final int MEDUSA_VENOM = 1453;
@@ -33,7 +31,7 @@ public class Q331_ArrowOfVengeance extends Quest
 	
 	public Q331_ArrowOfVengeance()
 	{
-		super(331, qn, "Arrow of Vengeance");
+		super(331, "Arrow of Vengeance");
 		
 		registerQuestItems(HARPY_FEATHER, MEDUSA_VENOM, WYRM_TOOTH);
 		
@@ -47,7 +45,7 @@ public class Q331_ArrowOfVengeance extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -72,7 +70,7 @@ public class Q331_ArrowOfVengeance extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

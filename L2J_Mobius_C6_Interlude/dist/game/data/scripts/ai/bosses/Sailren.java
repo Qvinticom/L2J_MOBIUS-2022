@@ -46,7 +46,7 @@ public class Sailren extends Quest
 	
 	private Sailren()
 	{
-		super(-1, "Sailren", "ai/bosses");
+		super(-1, "ai/bosses");
 		
 		addStartNpc(STATUE);
 		addTalkId(STATUE);

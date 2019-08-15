@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q096_SagaOfTheSpectralDancer extends SagasSuperClass
 {
-	public static String qn1 = "Q096_SagaOfTheSpectralDancer";
-	public static int qnu = 96;
-	public static String qna = "Saga of the Spectral Dancer";
-	
 	public Q096_SagaOfTheSpectralDancer()
 	{
-		super(qnu, qn1, qna);
+		super(96, "Saga of the Spectral Dancer");
 		NPC = new int[]
 		{
 			31582,
@@ -67,7 +63,6 @@ public class Q096_SagaOfTheSpectralDancer extends SagasSuperClass
 			27245,
 			27264
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			107

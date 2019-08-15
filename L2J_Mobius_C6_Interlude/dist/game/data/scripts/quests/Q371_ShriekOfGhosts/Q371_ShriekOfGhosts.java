@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q371_ShriekOfGhosts extends Quest
 {
-	private static final String qn = "Q371_ShriekOfGhosts";
-	
 	// NPCs
 	private static final int REVA = 30867;
 	private static final int PATRIN = 30929;
@@ -61,7 +59,7 @@ public class Q371_ShriekOfGhosts extends Quest
 	
 	public Q371_ShriekOfGhosts()
 	{
-		super(371, qn, "Shriek of Ghosts");
+		super(371, "Shriek of Ghosts");
 		
 		registerQuestItems(URN, PORCELAIN);
 		
@@ -75,7 +73,7 @@ public class Q371_ShriekOfGhosts extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -156,7 +154,7 @@ public class Q371_ShriekOfGhosts extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -201,7 +199,7 @@ public class Q371_ShriekOfGhosts extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -51,9 +51,9 @@ public class IceFairySirra extends Quest
 	protected Collection<NpcInstance> _allMobs = ConcurrentHashMap.newKeySet();
 	protected Future<?> _onDeadEventTask = null;
 	
-	public IceFairySirra(int id, String name, String descr)
+	public IceFairySirra()
 	{
-		super(id, name, descr);
+		super(-1, "ai/bosses");
 		final int[] mobs =
 		{
 			STEWARD,
@@ -76,7 +76,7 @@ public class IceFairySirra extends Quest
 	@Override
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
-		if (player.getQuestState("IceFairySirra") == null)
+		if (player.getQuestState(getName()) == null)
 		{
 			newQuestState(player);
 		}
@@ -449,6 +449,6 @@ public class IceFairySirra extends Quest
 	
 	public static void main(String[] args)
 	{
-		new IceFairySirra(-1, "IceFairySirra", "ai");
+		new IceFairySirra();
 	}
 }

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q411_PathToAnAssassin extends Quest
 {
-	private static final String qn = "Q411_PathToAnAssassin";
-	
 	// Items
 	private static final int SHILEN_CALL = 1245;
 	private static final int ARKENIA_LETTER = 1246;
@@ -44,7 +42,7 @@ public class Q411_PathToAnAssassin extends Quest
 	
 	public Q411_PathToAnAssassin()
 	{
-		super(411, qn, "Path to an Assassin");
+		super(411, "Path to an Assassin");
 		
 		registerQuestItems(SHILEN_CALL, ARKENIA_LETTER, LEIKAN_NOTE, MOONSTONE_BEAST_MOLAR, SHILEN_TEARS, ARKENIA_RECOMMENDATION);
 		
@@ -58,7 +56,7 @@ public class Q411_PathToAnAssassin extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -108,7 +106,7 @@ public class Q411_PathToAnAssassin extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

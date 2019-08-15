@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q021_HiddenTruth extends Quest
 {
-	private static final String qn = "Q021_HiddenTruth";
-	
 	// NPCs
 	private static final int MYSTERIOUS_WIZARD = 31522;
 	private static final int TOMBSTONE = 31523;
@@ -55,7 +53,7 @@ public class Q021_HiddenTruth extends Quest
 	
 	public Q021_HiddenTruth()
 	{
-		super(21, qn, "Hidden Truth");
+		super(21, "Hidden Truth");
 		
 		registerQuestItems(CROSS_OF_EINHASAD);
 		
@@ -67,7 +65,7 @@ public class Q021_HiddenTruth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -170,7 +168,7 @@ public class Q021_HiddenTruth extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

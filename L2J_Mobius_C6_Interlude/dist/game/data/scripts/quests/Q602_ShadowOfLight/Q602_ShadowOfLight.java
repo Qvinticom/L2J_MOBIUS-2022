@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q602_ShadowOfLight extends Quest
 {
-	private static final String qn = "Q602_ShadowOfLight";
-	
 	private static final int EYE_OF_DARKNESS = 7189;
 	
 	private static final int[][] REWARDS =
@@ -63,7 +61,7 @@ public class Q602_ShadowOfLight extends Quest
 	
 	public Q602_ShadowOfLight()
 	{
-		super(602, qn, "Shadow of Light");
+		super(602, "Shadow of Light");
 		
 		registerQuestItems(EYE_OF_DARKNESS);
 		
@@ -77,7 +75,7 @@ public class Q602_ShadowOfLight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -127,7 +125,7 @@ public class Q602_ShadowOfLight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -164,7 +162,7 @@ public class Q602_ShadowOfLight extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

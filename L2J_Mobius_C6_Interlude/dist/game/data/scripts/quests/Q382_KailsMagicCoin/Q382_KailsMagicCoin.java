@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q382_KailsMagicCoin extends Quest
 {
-	private static final String qn = "Q382_KailsMagicCoin";
-	
 	// Monsters
 	private static final int FALLEN_ORC = 21017;
 	private static final int FALLEN_ORC_ARCHER = 21019;
@@ -41,7 +39,7 @@ public class Q382_KailsMagicCoin extends Quest
 	
 	public Q382_KailsMagicCoin()
 	{
-		super(382, qn, "Kail's Magic Coin");
+		super(382, "Kail's Magic Coin");
 		
 		registerQuestItems(SILVER_BASILISK, GOLD_GOLEM, BLOOD_DRAGON);
 		
@@ -55,7 +53,7 @@ public class Q382_KailsMagicCoin extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q382_KailsMagicCoin extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

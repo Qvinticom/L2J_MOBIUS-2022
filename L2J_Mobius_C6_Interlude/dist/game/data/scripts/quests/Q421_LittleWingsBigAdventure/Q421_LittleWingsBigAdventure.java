@@ -42,8 +42,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q421_LittleWingsBigAdventure extends Quest
 {
-	private static final String qn = "Q421_LittleWingsBigAdventure";
-	
 	// NPCs
 	private static final int CRONOS = 30610;
 	private static final int MIMYU = 30747;
@@ -53,7 +51,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	
 	public Q421_LittleWingsBigAdventure()
 	{
-		super(421, qn, "Little Wing's Big Adventure");
+		super(421, "Little Wing's Big Adventure");
 		
 		registerQuestItems(FAIRY_LEAF);
 		
@@ -68,7 +66,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -128,7 +126,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

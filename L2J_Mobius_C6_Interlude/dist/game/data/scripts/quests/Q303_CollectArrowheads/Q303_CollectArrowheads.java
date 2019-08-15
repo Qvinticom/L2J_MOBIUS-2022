@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q303_CollectArrowheads extends Quest
 {
-	private static final String qn = "Q303_CollectArrowheads";
-	
 	// Item
 	private static final int ORCISH_ARROWHEAD = 963;
 	
 	public Q303_CollectArrowheads()
 	{
-		super(303, qn, "Collect Arrowheads");
+		super(303, "Collect Arrowheads");
 		
 		registerQuestItems(ORCISH_ARROWHEAD);
 		
@@ -45,7 +43,7 @@ public class Q303_CollectArrowheads extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -64,7 +62,7 @@ public class Q303_CollectArrowheads extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

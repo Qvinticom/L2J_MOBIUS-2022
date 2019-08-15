@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 {
-	private static final String qn = "Q046_OnceMoreInTheArmsOfTheMotherTree";
-	
 	// NPCs
 	private static final int GALLADUCCI = 30097;
 	private static final int GENTLER = 30094;
@@ -45,7 +43,7 @@ public class Q046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 	
 	public Q046_OnceMoreInTheArmsOfTheMotherTree()
 	{
-		super(46, qn, "Once More In the Arms of the Mother Tree");
+		super(46, "Once More In the Arms of the Mother Tree");
 		
 		registerQuestItems(ORDER_DOCUMENT_1, ORDER_DOCUMENT_2, ORDER_DOCUMENT_3, MAGIC_SWORD_HILT, GEMSTONE_POWDER, PURIFIED_MAGIC_NECKLACE);
 		
@@ -57,7 +55,7 @@ public class Q046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -120,7 +118,7 @@ public class Q046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

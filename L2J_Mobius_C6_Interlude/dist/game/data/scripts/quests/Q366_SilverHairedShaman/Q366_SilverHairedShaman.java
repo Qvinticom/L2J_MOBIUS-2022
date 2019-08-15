@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q366_SilverHairedShaman extends Quest
 {
-	private static final String qn = "Q366_SilverHairedShaman";
-	
 	// NPC
 	private static final int DIETER = 30111;
 	
@@ -46,7 +44,7 @@ public class Q366_SilverHairedShaman extends Quest
 	
 	public Q366_SilverHairedShaman()
 	{
-		super(366, qn, "Silver Haired Shaman");
+		super(366, "Silver Haired Shaman");
 		
 		registerQuestItems(HAIR);
 		
@@ -60,7 +58,7 @@ public class Q366_SilverHairedShaman extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +82,7 @@ public class Q366_SilverHairedShaman extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -124,7 +122,7 @@ public class Q366_SilverHairedShaman extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(HAIR, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(HAIR, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q337_AudienceWithTheLandDragon extends Quest
 {
-	private static final String qn = "Q337_AudienceWithTheLandDragon";
-	
 	// Variables
 	private static boolean _jewel1 = false;
 	private static boolean _jewel2 = false;
@@ -171,7 +169,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	
 	public Q337_AudienceWithTheLandDragon()
 	{
-		super(337, qn, "Audience with the Land Dragon");
+		super(337, "Audience with the Land Dragon");
 		
 		registerQuestItems(FEATHER_OF_GABRIELLE, MARK_OF_WATCHMAN, REMAINS_OF_SACRIFIED, TOTEM_OF_LAND_DRAGON, KRANROT_SKIN, HAMRUT_LEG, MARSH_DRAKE_TALONS, MARSH_STALKER_HORN, FIRST_FRAGMENT_OF_ABYSS_JEWEL, MARA_FANG, SECOND_FRAGMENT_OF_ABYSS_JEWEL, MUSFEL_FANG, HERALD_OF_SLAYER, THIRD_FRAGMENT_OF_ABYSS_JEWEL);
 		
@@ -186,7 +184,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -243,7 +241,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

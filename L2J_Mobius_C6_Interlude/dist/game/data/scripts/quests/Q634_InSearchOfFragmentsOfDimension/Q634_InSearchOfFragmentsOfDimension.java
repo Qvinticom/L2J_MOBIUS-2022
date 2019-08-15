@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q634_InSearchOfFragmentsOfDimension extends Quest
 {
-	private static final String qn = "Q634_InSearchOfFragmentsOfDimension";
-	
 	// Items
 	private static final int DIMENSION_FRAGMENT = 7079;
 	
 	public Q634_InSearchOfFragmentsOfDimension()
 	{
-		super(634, qn, "In Search of Fragments of Dimension");
+		super(634, "In Search of Fragments of Dimension");
 		
 		// Dimensional Gate Keepers.
 		for (int i = 31494; i < 31508; i++)
@@ -51,7 +49,7 @@ public class Q634_InSearchOfFragmentsOfDimension extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q634_InSearchOfFragmentsOfDimension extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -105,7 +103,7 @@ public class Q634_InSearchOfFragmentsOfDimension extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(DIMENSION_FRAGMENT, (int) ((npc.getLevel() * 0.15) + 2.6), -1, 80000);
+		partyMember.getQuestState(getName()).dropItems(DIMENSION_FRAGMENT, (int) ((npc.getLevel() * 0.15) + 2.6), -1, 80000);
 		
 		return null;
 	}

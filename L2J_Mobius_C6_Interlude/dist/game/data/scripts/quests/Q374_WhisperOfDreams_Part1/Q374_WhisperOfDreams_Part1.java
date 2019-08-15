@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q374_WhisperOfDreams_Part1 extends Quest
 {
-	private static final String qn = "Q374_WhisperOfDreams_Part1";
-	
 	// NPCs
 	private static final int MANAKIA = 30515;
 	private static final int TORAI = 30557;
@@ -73,7 +71,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 	
 	public Q374_WhisperOfDreams_Part1()
 	{
-		super(374, qn, "Whisper of Dreams, Part 1");
+		super(374, "Whisper of Dreams, Part 1");
 		
 		registerQuestItems(DEATH_WAVE_LIGHT, CAVE_BEAST_TOOTH, SEALED_MYSTERIOUS_STONE, MYSTERIOUS_STONE);
 		
@@ -87,7 +85,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -148,7 +146,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -214,7 +212,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -229,7 +227,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 			return null;
 		}
 		
-		st = partyMember.getQuestState(qn);
+		st = partyMember.getQuestState(getName());
 		
 		if (st.dropItems(SEALED_MYSTERIOUS_STONE, 1, 1, 1000))
 		{

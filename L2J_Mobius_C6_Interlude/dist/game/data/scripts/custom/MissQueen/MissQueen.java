@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class MissQueen extends Quest
 {
-	private static final String qn = "MissQueen";
-	
 	// Rewards
 	private static final int COUPON_ONE = 7832;
 	private static final int COUPON_TWO = 7833;
@@ -49,7 +47,7 @@ public class MissQueen extends Quest
 	
 	public MissQueen()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		// Spawn the 11 NPCs.
 		for (Location loc : LOCATIONS)
@@ -66,7 +64,7 @@ public class MissQueen extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (event.equals("newbie_coupon"))
 		{
@@ -117,7 +115,7 @@ public class MissQueen extends Quest
 	@Override
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);

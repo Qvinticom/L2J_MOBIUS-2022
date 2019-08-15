@@ -23,14 +23,14 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
+import quests.Q023_LidiasHeart.Q023_LidiasHeart;
+
 /**
  * @author Mobius
  * @note Based on python script
  */
 public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 {
-	private static final String qn = "Q024_InhabitantsOfTheForrestOfTheDead";
-	
 	// NPCs
 	private static final int DORIAN = 31389;
 	private static final int WIZARD = 31522;
@@ -47,7 +47,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 	
 	public Q024_InhabitantsOfTheForrestOfTheDead()
 	{
-		super(24, qn, "Inhabitants of the Forest of the Dead");
+		super(24, "Inhabitants of the Forest of the Dead");
 		
 		addStartNpc(DORIAN);
 		addTalkId(DORIAN, TOMBSTONE, MAID_OF_LIDIA, WIZARD);
@@ -59,7 +59,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -146,7 +146,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -170,7 +170,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 		{
 			if (state == State.CREATED)
 			{
-				final QuestState qs2 = player.getQuestState("Q023_LidiasHeart");
+				final QuestState qs2 = player.getQuestState(Q023_LidiasHeart.class.getSimpleName());
 				if (qs2 != null)
 				{
 					if ((qs2.getState() == State.COMPLETED) && (player.getLevel() >= 65))
@@ -266,7 +266,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 		else
 		{
 			npc.getAttackByList().remove(player);
-			final QuestState qs = player.getQuestState(qn);
+			final QuestState qs = player.getQuestState(getName());
 			if ((qs != null) && (qs.getQuestItemsCount(SILVER_CROSS) > 0))
 			{
 				qs.takeItems(SILVER_CROSS, -1);

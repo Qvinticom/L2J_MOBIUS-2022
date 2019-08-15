@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q414_PathToAnOrcRaider extends Quest
 {
-	private static final String qn = "Q414_PathToAnOrcRaider";
-	
 	// Items
 	private static final int GREEN_BLOOD = 1578;
 	private static final int GOBLIN_DWELLING_MAP = 1579;
@@ -52,7 +50,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 	
 	public Q414_PathToAnOrcRaider()
 	{
-		super(414, qn, "Path to an Orc Raider");
+		super(414, "Path to an Orc Raider");
 		
 		registerQuestItems(GREEN_BLOOD, GOBLIN_DWELLING_MAP, KURUKA_RATMAN_TOOTH, BETRAYER_REPORT_1, BETRAYER_REPORT_2, HEAD_OF_BETRAYER, TIMORA_ORC_HEAD);
 		
@@ -66,7 +64,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -125,7 +123,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q368_TrespassingIntoTheSacredArea extends Quest
 {
-	private static final String qn = "Q368_TrespassingIntoTheSacredArea";
-	
 	// NPC
 	private static final int RESTINA = 30926;
 	
@@ -47,7 +45,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 	
 	public Q368_TrespassingIntoTheSacredArea()
 	{
-		super(368, qn, "Trespassing into the Sacred Area");
+		super(368, "Trespassing into the Sacred Area");
 		
 		registerQuestItems(FANG);
 		
@@ -61,7 +59,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +83,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -127,7 +125,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(FANG, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(FANG, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

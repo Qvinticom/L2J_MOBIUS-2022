@@ -28,8 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q218_TestimonyOfLife extends Quest
 {
-	private static final String qn = "Q218_TestimonyOfLife";
-	
+	// NPCs
 	private static final int ASTERIOS = 30154;
 	private static final int PUSHKIN = 30300;
 	private static final int THALIA = 30371;
@@ -82,7 +81,7 @@ public class Q218_TestimonyOfLife extends Quest
 	
 	public Q218_TestimonyOfLife()
 	{
-		super(218, qn, "Testimony of Life");
+		super(218, "Testimony of Life");
 		
 		registerQuestItems(TALINS_SPEAR, CARDIEN_LETTER, CAMOMILE_CHARM, HIERARCH_LETTER, MOONFLOWER_CHARM, GRAIL_DIAGRAM, THALIA_LETTER_1, THALIA_LETTER_2, THALIA_INSTRUCTIONS, PUSHKIN_LIST, PURE_MITHRIL_CUP, ARKENIA_CONTRACT, ARKENIA_INSTRUCTIONS, ADONIUS_LIST, ANDARIEL_SCRIPTURE_COPY, STARDUST, ISAEL_INSTRUCTIONS, ISAEL_LETTER, GRAIL_OF_PURITY, TEARS_OF_UNICORN, WATER_OF_LIFE, PURE_MITHRIL_ORE, ANT_SOLDIER_ACID, WYRM_TALON, SPIDER_ICHOR, HARPY_DOWN, 3166, 3167, 3168, 3169, 3170, 3171);
 		
@@ -96,7 +95,7 @@ public class Q218_TestimonyOfLife extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -194,7 +193,7 @@ public class Q218_TestimonyOfLife extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

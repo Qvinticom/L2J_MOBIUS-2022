@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 {
-	private static final String qn = "Q014_WhereaboutsOfTheArchaeologist";
-	
 	// NPCs
 	private static final int LIESEL = 31263;
 	private static final int GHOST_OF_ADVENTURER = 31538;
@@ -35,7 +33,7 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 	
 	public Q014_WhereaboutsOfTheArchaeologist()
 	{
-		super(14, qn, "Whereabouts of the Archaeologist");
+		super(14, "Whereabouts of the Archaeologist");
 		
 		registerQuestItems(LETTER);
 		
@@ -47,7 +45,7 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

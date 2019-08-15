@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class Q422_RepentYourSins extends Quest
 {
-	private static final String qn = "Q422_RepentYourSins";
-	
 	// Items
 	private static final int RATMAN_SCAVENGER_SKULL = 4326;
 	private static final int TUREK_WAR_HOUND_TAIL = 4327;
@@ -56,7 +54,7 @@ public class Q422_RepentYourSins extends Quest
 	
 	public Q422_RepentYourSins()
 	{
-		super(422, qn, "Repent Your Sins");
+		super(422, "Repent Your Sins");
 		
 		registerQuestItems(RATMAN_SCAVENGER_SKULL, TUREK_WAR_HOUND_TAIL, TYRANT_KINGPIN_HEART, TRISALIM_TARANTULA_VENOM_SAC, MANUAL_OF_MANACLES, PENITENT_MANACLES, QITEM_PENITENT_MANACLES);
 		
@@ -70,7 +68,7 @@ public class Q422_RepentYourSins extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -198,7 +196,7 @@ public class Q422_RepentYourSins extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getAlreadyCompletedMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

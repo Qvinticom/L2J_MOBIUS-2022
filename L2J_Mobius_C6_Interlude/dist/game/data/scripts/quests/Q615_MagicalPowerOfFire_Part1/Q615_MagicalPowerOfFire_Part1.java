@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q615_MagicalPowerOfFire_Part1 extends Quest
 {
-	private static final String qn = "Q615_MagicalPowerOfFire_Part1";
-	
 	// NPCs
 	private static final int NARAN = 31378;
 	private static final int UDAN = 31379;
@@ -40,7 +38,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	
 	public Q615_MagicalPowerOfFire_Part1()
 	{
-		super(615, qn, "Magical Power of Fire - Part 1");
+		super(615, "Magical Power of Fire - Part 1");
 		
 		registerQuestItems(STOLEN_RED_TOTEM);
 		
@@ -55,7 +53,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -99,7 +97,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -174,7 +172,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	@Override
 	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

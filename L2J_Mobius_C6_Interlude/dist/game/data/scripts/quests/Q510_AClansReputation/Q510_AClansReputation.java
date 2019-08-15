@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Q510_AClansReputation extends Quest
 {
-	private static final String qn = "Q510_AClansReputation";
-	
 	// NPC
 	private static final int Valdis = 31331;
 	
@@ -41,7 +39,7 @@ public class Q510_AClansReputation extends Quest
 	
 	public Q510_AClansReputation()
 	{
-		super(510, qn, "A Clan's Reputation");
+		super(510, "A Clan's Reputation");
 		
 		registerQuestItems(Claw);
 		
@@ -55,7 +53,7 @@ public class Q510_AClansReputation extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -79,7 +77,7 @@ public class Q510_AClansReputation extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

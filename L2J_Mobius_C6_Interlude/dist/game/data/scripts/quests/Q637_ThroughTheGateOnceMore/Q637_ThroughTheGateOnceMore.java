@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q637_ThroughTheGateOnceMore extends Quest
 {
-	private static final String qn = "Q637_ThroughTheGateOnceMore";
-	
 	// NPC
 	private static final int FLAURON = 32010;
 	
@@ -38,7 +36,7 @@ public class Q637_ThroughTheGateOnceMore extends Quest
 	
 	public Q637_ThroughTheGateOnceMore()
 	{
-		super(637, qn, "Through the Gate Once More");
+		super(637, "Through the Gate Once More");
 		
 		registerQuestItems(NECROMANCER_HEART);
 		
@@ -52,7 +50,7 @@ public class Q637_ThroughTheGateOnceMore extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q637_ThroughTheGateOnceMore extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -136,7 +134,7 @@ public class Q637_ThroughTheGateOnceMore extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

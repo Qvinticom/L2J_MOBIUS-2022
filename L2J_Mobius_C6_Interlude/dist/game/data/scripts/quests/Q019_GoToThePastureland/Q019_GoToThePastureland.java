@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q019_GoToThePastureland extends Quest
 {
-	private static final String qn = "Q019_GoToThePastureland";
-	
 	// Items
 	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
@@ -35,7 +33,7 @@ public class Q019_GoToThePastureland extends Quest
 	
 	public Q019_GoToThePastureland()
 	{
-		super(19, qn, "Go to the Pastureland!");
+		super(19, "Go to the Pastureland!");
 		
 		registerQuestItems(YOUNG_WILD_BEAST_MEAT);
 		
@@ -47,7 +45,7 @@ public class Q019_GoToThePastureland extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +80,7 @@ public class Q019_GoToThePastureland extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

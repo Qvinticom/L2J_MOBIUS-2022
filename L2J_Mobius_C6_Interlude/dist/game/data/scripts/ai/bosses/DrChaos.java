@@ -43,7 +43,7 @@ public class DrChaos extends Quest
 	
 	private DrChaos()
 	{
-		super(-1, "DrChaos", "ai/bosses");
+		super(-1, "ai/bosses");
 		
 		addFirstTalkId(DR_CHAOS);
 	}

@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q350_EnhanceYourWeapon extends Quest
 {
-	private static final String qn = "Q350_EnhanceYourWeapon";
-	
 	// NPCs
 	private static final int[] NPCS =
 	{
@@ -44,7 +42,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	
 	public Q350_EnhanceYourWeapon()
 	{
-		super(350, qn, "Enhance Your Weapon");
+		super(350, "Enhance Your Weapon");
 		
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
@@ -54,7 +52,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -106,7 +104,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;

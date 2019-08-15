@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q050_LanoscosSpecialBait extends Quest
 {
-	private static final String qn = "Q050_LanoscosSpecialBait";
-	
 	// Item
 	private static final int ESSENCE_OF_WIND = 7621;
 	
@@ -34,7 +32,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 	
 	public Q050_LanoscosSpecialBait()
 	{
-		super(50, qn, "Lanosco's Special Bait");
+		super(50, "Lanosco's Special Bait");
 		
 		registerQuestItems(ESSENCE_OF_WIND);
 		
@@ -48,7 +46,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

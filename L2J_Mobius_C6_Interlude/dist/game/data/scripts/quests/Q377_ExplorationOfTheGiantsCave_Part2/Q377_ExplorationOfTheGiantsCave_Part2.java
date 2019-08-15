@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 {
-	private static final String qn = "Q377_ExplorationOfTheGiantsCave_Part2";
-	
 	// Items
 	private static final int ANCIENT_BOOK = 5955;
 	private static final int DICTIONARY_INTERMEDIATE = 5892;
@@ -68,7 +66,7 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 	
 	public Q377_ExplorationOfTheGiantsCave_Part2()
 	{
-		super(377, qn, "Exploration of Giants Cave, Part 2");
+		super(377, "Exploration of Giants Cave, Part 2");
 		
 		addStartNpc(31147); // Sobling
 		addTalkId(31147);
@@ -80,7 +78,7 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +107,7 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -138,7 +136,7 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(ANCIENT_BOOK, 1, 0, 18000);
+		partyMember.getQuestState(getName()).dropItems(ANCIENT_BOOK, 1, 0, 18000);
 		
 		return null;
 	}

@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q231_TestOfTheMaestro extends Quest
 {
-	private static final String qn = "Q231_TestOfTheMaestro";
-	
 	private static final int RECOMMENDATION_OF_BALANKI = 2864;
 	private static final int RECOMMENDATION_OF_FILAUR = 2865;
 	private static final int RECOMMENDATION_OF_ARIN = 2866;
@@ -71,7 +69,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	
 	public Q231_TestOfTheMaestro()
 	{
-		super(231, qn, "Test of the Maestro");
+		super(231, "Test of the Maestro");
 		
 		registerQuestItems(RECOMMENDATION_OF_BALANKI, RECOMMENDATION_OF_FILAUR, RECOMMENDATION_OF_ARIN, LETTER_OF_SOLDER_DETACHMENT, PAINT_OF_KAMURU, NECKLACE_OF_KAMURU, PAINT_OF_TELEPORT_DEVICE, TELEPORT_DEVICE, ARCHITECTURE_OF_KRUMA, REPORT_OF_KRUMA, INGREDIENTS_OF_ANTIDOTE, STINGER_WASP_NEEDLE, MARSH_SPIDER_WEB, BLOOD_OF_LEECH, BROKEN_TELEPORT_DEVICE);
 		
@@ -85,7 +83,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -160,7 +158,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

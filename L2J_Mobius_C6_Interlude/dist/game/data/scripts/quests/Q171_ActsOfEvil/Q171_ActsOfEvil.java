@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q171_ActsOfEvil extends Quest
 {
-	private static final String qn = "Q171_ActsOfEvil";
-	
 	// Items
 	private static final int BLADE_MOLD = 4239;
 	private static final int TYRA_BILL = 4240;
@@ -63,7 +61,7 @@ public class Q171_ActsOfEvil extends Quest
 	
 	public Q171_ActsOfEvil()
 	{
-		super(171, qn, "Acts of Evil");
+		super(171, "Acts of Evil");
 		
 		registerQuestItems(BLADE_MOLD, TYRA_BILL, RANGER_REPORT_1, RANGER_REPORT_2, RANGER_REPORT_3, RANGER_REPORT_4, WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES, CERTIFICATE, CARGO_BOX, OL_MAHUM_HEAD);
 		
@@ -77,7 +75,7 @@ public class Q171_ActsOfEvil extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -127,7 +125,7 @@ public class Q171_ActsOfEvil extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

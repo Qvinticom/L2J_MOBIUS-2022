@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q211_TrialOfTheChallenger extends Quest
 {
-	private static final String qn = "Q211_TrialOfTheChallenger";
-	
 	// Items
 	private static final int LETTER_OF_KASH = 2628;
 	private static final int WATCHER_EYE_1 = 2629;
@@ -64,7 +62,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	
 	public Q211_TrialOfTheChallenger()
 	{
-		super(211, qn, "Trial of the Challenger");
+		super(211, "Trial of the Challenger");
 		
 		registerQuestItems(LETTER_OF_KASH, WATCHER_EYE_1, WATCHER_EYE_2, SCROLL_OF_SHYSLASSYS, BROKEN_KEY);
 		
@@ -78,7 +76,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -161,7 +159,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

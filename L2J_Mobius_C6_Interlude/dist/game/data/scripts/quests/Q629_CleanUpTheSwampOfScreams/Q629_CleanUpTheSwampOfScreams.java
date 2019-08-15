@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q629_CleanUpTheSwampOfScreams extends Quest
 {
-	private static final String qn = "Q629_CleanUpTheSwampOfScreams";
-	
 	// NPC
 	private static final int PIERCE = 31553;
 	
@@ -54,7 +52,7 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 	
 	public Q629_CleanUpTheSwampOfScreams()
 	{
-		super(629, qn, "Clean up the Swamp of Screams");
+		super(629, "Clean up the Swamp of Screams");
 		
 		registerQuestItems(TALON_OF_STAKATO, GOLDEN_RAM_COIN);
 		
@@ -71,7 +69,7 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -116,7 +114,7 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -150,7 +148,7 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(TALON_OF_STAKATO, 1, 100, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(TALON_OF_STAKATO, 1, 100, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

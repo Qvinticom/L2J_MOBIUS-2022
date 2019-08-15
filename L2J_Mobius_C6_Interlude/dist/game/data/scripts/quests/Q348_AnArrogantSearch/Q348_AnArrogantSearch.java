@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q348_AnArrogantSearch extends Quest
 {
-	private static final String qn = "Q348_AnArrogantSearch";
-	
 	// Items
 	private static final int TITAN_POWERSTONE = 4287;
 	private static final int HANELLIN_FIRST_LETTER = 4288;
@@ -78,7 +76,7 @@ public class Q348_AnArrogantSearch extends Quest
 	
 	public Q348_AnArrogantSearch()
 	{
-		super(348, qn, "An Arrogant Search");
+		super(348, "An Arrogant Search");
 		
 		registerQuestItems(TITAN_POWERSTONE, HANELLIN_FIRST_LETTER, HANELLIN_SECOND_LETTER, HANELLIN_THIRD_LETTER, FIRST_KEY_OF_ARK, SECOND_KEY_OF_ARK, THIRD_KEY_OF_ARK, BOOK_OF_SAINT, BLOOD_OF_SAINT, BOUGH_OF_SAINT, WHITE_FABRIC_TRIBE, WHITE_FABRIC_ANGELS);
 		
@@ -95,7 +93,7 @@ public class Q348_AnArrogantSearch extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -166,7 +164,7 @@ public class Q348_AnArrogantSearch extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

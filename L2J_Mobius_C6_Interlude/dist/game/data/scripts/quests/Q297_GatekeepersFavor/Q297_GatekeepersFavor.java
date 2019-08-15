@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q297_GatekeepersFavor extends Quest
 {
-	private static final String qn = "Q297_GatekeepersFavor";
-	
 	// Item
 	private static final int STARSTONE = 1573;
 	
@@ -34,7 +32,7 @@ public class Q297_GatekeepersFavor extends Quest
 	
 	public Q297_GatekeepersFavor()
 	{
-		super(297, qn, "Gatekeeper's Favor");
+		super(297, "Gatekeeper's Favor");
 		
 		registerQuestItems(STARSTONE);
 		
@@ -48,7 +46,7 @@ public class Q297_GatekeepersFavor extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -67,7 +65,7 @@ public class Q297_GatekeepersFavor extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -33,7 +33,7 @@ public class CatsEyeBandit extends Quest
 	
 	private CatsEyeBandit()
 	{
-		super(-1, "CatsEyeBandit", "ai/others");
+		super(-1, "ai/others");
 		
 		addKillId(CATS_EYE_BANDIT);
 		addAttackId(CATS_EYE_BANDIT);

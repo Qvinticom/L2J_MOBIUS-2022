@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 {
-	public static String qn1 = "Q095_SagaOfTheHellKnight";
-	public static int qnu = 95;
-	public static String qna = "Saga of the Hell Knight";
-	
 	public Q095_SagaOfTheHellKnight()
 	{
-		super(qnu, qn1, qna);
+		super(95, "Saga of the Hell Knight");
 		NPC = new int[]
 		{
 			31582,
@@ -67,7 +63,6 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 			27244,
 			27263
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			91

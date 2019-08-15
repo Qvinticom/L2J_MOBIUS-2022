@@ -28,11 +28,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import ai.others.Tutorial.Tutorial;
+
 public class NewbieHelper extends Quest
 {
-	private final static String qn = "NewbieHelper";
-	private final static String qnTutorial = "Tutorial";
-	
 	// Quest Items
 	// Human
 	private final static int RECOMMENDATION_01 = 1067;
@@ -91,7 +90,7 @@ public class NewbieHelper extends Quest
 	
 	public NewbieHelper()
 	{
-		super(-1, qn, "ai/others");
+		super(-1, "ai/others");
 		
 		addStartNpc(30009, 30019, 30131, 30400, 30530, 30575);
 		
@@ -172,8 +171,8 @@ public class NewbieHelper extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		final QuestState qs1 = player.getQuestState(qn);
-		final QuestState qs2 = player.getQuestState(qnTutorial);
+		final QuestState qs1 = player.getQuestState(getName());
+		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if ((qs1 == null) || (qs2 == null))
 		{
 			return null;
@@ -253,8 +252,8 @@ public class NewbieHelper extends Quest
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState qs1 = player.getQuestState(qn);
-		QuestState qs2 = player.getQuestState(qnTutorial);
+		QuestState qs1 = player.getQuestState(getName());
+		QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if (qs1 == null)
 		{
 			qs1 = newQuestState(player);
@@ -398,8 +397,8 @@ public class NewbieHelper extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState qs1 = player.getQuestState(qn);
-		final QuestState qs2 = player.getQuestState(qnTutorial);
+		final QuestState qs1 = player.getQuestState(getName());
+		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if ((qs1 == null) || (qs2 == null))
 		{
 			return null;

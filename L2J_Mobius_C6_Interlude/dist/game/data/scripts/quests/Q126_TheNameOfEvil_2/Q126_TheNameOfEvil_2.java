@@ -26,8 +26,6 @@ import quests.Q125_TheNameOfEvil_1.Q125_TheNameOfEvil_1;
 
 public class Q126_TheNameOfEvil_2 extends Quest
 {
-	public static final String qn = "Q126_TheNameOfEvil_2";
-	
 	private static final int MUSHIKA = 32114;
 	private static final int ASAMANAH = 32115;
 	private static final int ULU_KAIMU = 32119;
@@ -41,7 +39,7 @@ public class Q126_TheNameOfEvil_2 extends Quest
 	
 	public Q126_TheNameOfEvil_2()
 	{
-		super(126, qn, "The Name of Evil - 2");
+		super(126, "The Name of Evil - 2");
 		
 		addStartNpc(ASAMANAH);
 		addTalkId(ASAMANAH, MUSHIKA, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIOR_GRAVE, SHILEN_STONE_STATUE);
@@ -51,7 +49,7 @@ public class Q126_TheNameOfEvil_2 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -296,7 +294,7 @@ public class Q126_TheNameOfEvil_2 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -312,7 +310,7 @@ public class Q126_TheNameOfEvil_2 extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState(Q125_TheNameOfEvil_1.qn);
+					QuestState st2 = player.getQuestState(Q125_TheNameOfEvil_1.class.getSimpleName());
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = "32115-01.htm";

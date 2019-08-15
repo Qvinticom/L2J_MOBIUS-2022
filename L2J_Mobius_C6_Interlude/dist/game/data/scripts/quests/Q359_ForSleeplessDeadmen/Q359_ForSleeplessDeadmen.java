@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q359_ForSleeplessDeadmen extends Quest
 {
-	private static final String qn = "Q359_ForSleeplessDeadmen";
-	
 	// Item
 	private static final int REMAINS = 5869;
 	
@@ -62,7 +60,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 	
 	public Q359_ForSleeplessDeadmen()
 	{
-		super(359, qn, "For Sleepless Deadmen");
+		super(359, "For Sleepless Deadmen");
 		
 		registerQuestItems(REMAINS);
 		
@@ -76,7 +74,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -102,7 +100,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

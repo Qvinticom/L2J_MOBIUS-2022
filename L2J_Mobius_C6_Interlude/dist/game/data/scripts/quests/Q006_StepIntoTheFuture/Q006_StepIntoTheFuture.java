@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q006_StepIntoTheFuture extends Quest
 {
-	private static final String qn = "Q006_StepIntoTheFuture";
-	
 	// NPCs
 	private static final int ROXXY = 30006;
 	private static final int BAULRO = 30033;
@@ -41,7 +39,7 @@ public class Q006_StepIntoTheFuture extends Quest
 	
 	public Q006_StepIntoTheFuture()
 	{
-		super(6, qn, "Step into the Future");
+		super(6, "Step into the Future");
 		
 		registerQuestItems(BAULRO_LETTER);
 		
@@ -53,7 +51,7 @@ public class Q006_StepIntoTheFuture extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -98,7 +96,7 @@ public class Q006_StepIntoTheFuture extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

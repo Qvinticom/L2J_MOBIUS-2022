@@ -26,8 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q222_TestOfTheDuelist extends Quest
 {
-	private static final String qn = "Q222_TestOfTheDuelist";
-	
+	// NPC
 	private static final int KAIEN = 30623;
 	
 	// Items
@@ -76,7 +75,7 @@ public class Q222_TestOfTheDuelist extends Quest
 	
 	public Q222_TestOfTheDuelist()
 	{
-		super(222, qn, "Test of the Duelist");
+		super(222, "Test of the Duelist");
 		
 		registerQuestItems(ORDER_GLUDIO, ORDER_DION, ORDER_GIRAN, ORDER_OREN, ORDER_ADEN, FINAL_ORDER, PUNCHER_SHARD, NOBLE_ANT_FEELER, DRONE_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOUL_CHAIN, CHIEF_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORC_RING, TAMRIN_ORC_ARROW, EXCURO_SKIN, KRATOR_SHARD, GRANDIS_SKIN, TIMAK_ORC_BELT, LAKIN_MACE);
 		
@@ -90,7 +89,7 @@ public class Q222_TestOfTheDuelist extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -157,7 +156,7 @@ public class Q222_TestOfTheDuelist extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

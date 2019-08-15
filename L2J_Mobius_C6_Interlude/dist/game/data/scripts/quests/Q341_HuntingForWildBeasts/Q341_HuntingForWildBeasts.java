@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q341_HuntingForWildBeasts extends Quest
 {
-	private static final String qn = "Q341_HuntingForWildBeasts";
-	
 	// Item
 	private static final int BEAR_SKIN = 4259;
 	
@@ -44,7 +42,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 	
 	public Q341_HuntingForWildBeasts()
 	{
-		super(341, qn, "Hunting for Wild Beasts");
+		super(341, "Hunting for Wild Beasts");
 		
 		registerQuestItems(BEAR_SKIN);
 		
@@ -58,7 +56,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -77,7 +75,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

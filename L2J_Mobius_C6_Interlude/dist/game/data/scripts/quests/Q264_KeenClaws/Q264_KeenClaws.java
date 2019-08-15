@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q264_KeenClaws extends Quest
 {
-	private static final String qn = "Q264_KeenClaws";
-	
 	// Item
 	private static final int WOLF_CLAW = 1367;
 	
@@ -40,7 +38,7 @@ public class Q264_KeenClaws extends Quest
 	
 	public Q264_KeenClaws()
 	{
-		super(264, qn, "Keen Claws");
+		super(264, "Keen Claws");
 		
 		registerQuestItems(WOLF_CLAW);
 		
@@ -54,7 +52,7 @@ public class Q264_KeenClaws extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q264_KeenClaws extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

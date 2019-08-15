@@ -25,14 +25,14 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
+import quests.Q024_InhabitantsOfTheForrestOfTheDead.Q024_InhabitantsOfTheForrestOfTheDead;
+
 /**
  * @author Mobius
  * @note Based on python script
  */
 public class Q025_HidingBehindTheTruth extends Quest
 {
-	private static final String qn = "Q025_HidingBehindTheTruth";
-	
 	// NPCs
 	private static final int AGRIPEL = 31348;
 	private static final int BENEDICT = 31349;
@@ -53,7 +53,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	
 	public Q025_HidingBehindTheTruth()
 	{
-		super(25, qn, "Hiding Behind the Truth");
+		super(25, "Hiding Behind the Truth");
 		
 		addStartNpc(BENEDICT);
 		addTalkId(AGRIPEL, BENEDICT, BOOKSHELF, BOOKSHELF2, BOOKSHELF3, WIZARD, LIDIA, TOMBSTONE, COFFIN);
@@ -65,7 +65,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -222,7 +222,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -239,7 +239,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 		{
 			if (npcId == BENEDICT)
 			{
-				final QuestState qs2 = player.getQuestState("Q024_InhabitantsOfTheForrestOfTheDead");
+				final QuestState qs2 = player.getQuestState(Q024_InhabitantsOfTheForrestOfTheDead.class.getSimpleName());
 				if (qs2 != null)
 				{
 					if ((qs2.getState() == State.COMPLETED) && (player.getLevel() >= 66))
@@ -428,7 +428,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return null;

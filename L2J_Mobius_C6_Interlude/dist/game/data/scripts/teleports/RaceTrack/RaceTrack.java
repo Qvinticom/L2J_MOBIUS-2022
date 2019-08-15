@@ -49,7 +49,7 @@ public class RaceTrack extends Quest
 	
 	public RaceTrack()
 	{
-		super(-1, "RaceTrack", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(30320, 30256, 30059, 30080, 30899, 30177, 30848, 30233, 31320, 31275, 31964, 31210);
 		addTalkId(RACE_MANAGER, 30320, 30256, 30059, 30080, 30899, 30177, 30848, 30233, 31320, 31275, 31964, 31210);

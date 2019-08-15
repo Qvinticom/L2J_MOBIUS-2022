@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q221_TestimonyOfProsperity extends Quest
 {
-	private static final String qn = "Q221_TestimonyOfProsperity";
-	
 	// Items
 	private static final int ADENA = 57;
 	private static final int ANIMAL_SKIN = 1867;
@@ -114,7 +112,7 @@ public class Q221_TestimonyOfProsperity extends Quest
 	
 	public Q221_TestimonyOfProsperity()
 	{
-		super(221, qn, "Testimony of Prosperity");
+		super(221, "Testimony of Prosperity");
 		
 		registerQuestItems(RING_OF_TESTIMONY_1, RING_OF_TESTIMONY_2, OLD_ACCOUNT_BOOK, BLESSED_SEED, EMILY_RECIPE, LILITH_ELVEN_WAFER, MAPHR_TABLET_FRAGMENT, COLLECTION_LICENSE, LOCKIRIN_NOTICE_1, LOCKIRIN_NOTICE_2, LOCKIRIN_NOTICE_3, LOCKIRIN_NOTICE_4, LOCKIRIN_NOTICE_5, CONTRIBUTION_OF_SHARI, CONTRIBUTION_OF_MION, CONTRIBUTION_OF_MARYSE, MARYSE_REQUEST, CONTRIBUTION_OF_TOMA, RECEIPT_OF_BOLTER, RECEIPT_OF_CONTRIBUTION_1, RECEIPT_OF_CONTRIBUTION_2, RECEIPT_OF_CONTRIBUTION_3, RECEIPT_OF_CONTRIBUTION_4, RECEIPT_OF_CONTRIBUTION_5, PROCURATION_OF_TOROCCO, BRIGHT_LIST, MANDRAGORA_PETAL, CRIMSON_MOSS, MANDRAGORA_BOUQUET, PARMAN_INSTRUCTIONS, PARMAN_LETTER, CLAY_DOUGH, PATTERN_OF_KEYHOLE, NIKOLAS_LIST, STAKATO_SHELL, TOAD_LORD_SAC, SPIDER_THORN, CRYSTAL_BROOCH);
 		
@@ -128,7 +126,7 @@ public class Q221_TestimonyOfProsperity extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -294,7 +292,7 @@ public class Q221_TestimonyOfProsperity extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

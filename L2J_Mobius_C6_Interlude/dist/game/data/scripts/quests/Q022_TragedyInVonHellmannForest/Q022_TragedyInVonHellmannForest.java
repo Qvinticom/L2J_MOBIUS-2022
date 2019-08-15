@@ -24,10 +24,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q021_HiddenTruth.Q021_HiddenTruth;
+
 public class Q022_TragedyInVonHellmannForest extends Quest
 {
-	private static final String qn = "Q022_TragedyInVonHellmannForest";
-	
 	// NPCs
 	private static final int WELL = 31527;
 	private static final int TIFAREN = 31334;
@@ -52,7 +52,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	
 	public Q022_TragedyInVonHellmannForest()
 	{
-		super(22, qn, "Tragedy in von Hellmann Forest");
+		super(22, "Tragedy in von Hellmann Forest");
 		
 		registerQuestItems(LOST_SKULL_OF_ELF, REPORT_BOX, SEALED_REPORT_BOX, LETTER_OF_INNOCENTIN, RED_JEWEL_OF_ADVENTURER, GREEN_JEWEL_OF_ADVENTURER);
 		
@@ -67,7 +67,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +75,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 		
 		if (event.equals("31334-03.htm"))
 		{
-			QuestState st2 = player.getQuestState("Q021_HiddenTruth");
+			QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
 			if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 63))
 			{
 				htmltext = "31334-02.htm";
@@ -198,7 +198,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -210,7 +210,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				switch (npc.getNpcId())
 				{
 					case INNOCENTIN:
-						QuestState st2 = player.getQuestState("Q021_HiddenTruth");
+						QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
 						if ((st2 != null) && st2.isCompleted())
 						{
 							if (!st.hasQuestItems(CROSS_OF_EINHASAD))
@@ -421,7 +421,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		QuestState st = attacker.getQuestState(qn);
+		QuestState st = attacker.getQuestState(getName());
 		if ((st == null) || !st.isStarted() || isPet)
 		{
 			return null;

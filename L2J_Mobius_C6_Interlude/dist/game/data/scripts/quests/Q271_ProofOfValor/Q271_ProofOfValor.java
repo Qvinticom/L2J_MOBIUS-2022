@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q271_ProofOfValor extends Quest
 {
-	private static final String qn = "Q271_ProofOfValor";
-	
 	// Item
 	private static final int KASHA_WOLF_FANG = 1473;
 	
@@ -37,7 +35,7 @@ public class Q271_ProofOfValor extends Quest
 	
 	public Q271_ProofOfValor()
 	{
-		super(271, qn, "Proof of Valor");
+		super(271, "Proof of Valor");
 		
 		registerQuestItems(KASHA_WOLF_FANG);
 		
@@ -51,7 +49,7 @@ public class Q271_ProofOfValor extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -76,7 +74,7 @@ public class Q271_ProofOfValor extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

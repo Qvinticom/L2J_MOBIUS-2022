@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q155_FindSirWindawood extends Quest
 {
-	private static final String qn = "Q155_FindSirWindawood";
-	
 	// Items
 	private static final int OFFICIAL_LETTER = 1019;
 	private static final int HASTE_POTION = 734;
@@ -36,7 +34,7 @@ public class Q155_FindSirWindawood extends Quest
 	
 	public Q155_FindSirWindawood()
 	{
-		super(155, qn, "Find Sir Windawood");
+		super(155, "Find Sir Windawood");
 		
 		registerQuestItems(OFFICIAL_LETTER);
 		
@@ -48,7 +46,7 @@ public class Q155_FindSirWindawood extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -68,7 +66,7 @@ public class Q155_FindSirWindawood extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

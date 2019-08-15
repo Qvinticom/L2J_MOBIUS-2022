@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q642_APowerfulPrimevalCreature extends Quest
 {
-	private static final String qn = "Q642_APowerfulPrimevalCreature";
-	
 	// Items
 	private static final int DINOSAUR_TISSUE = 8774;
 	private static final int DINOSAUR_EGG = 8775;
@@ -51,7 +49,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 	
 	public Q642_APowerfulPrimevalCreature()
 	{
-		super(642, qn, "A Powerful Primeval Creature");
+		super(642, "A Powerful Primeval Creature");
 		
 		registerQuestItems(DINOSAUR_TISSUE, DINOSAUR_EGG);
 		
@@ -66,7 +64,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -122,7 +120,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

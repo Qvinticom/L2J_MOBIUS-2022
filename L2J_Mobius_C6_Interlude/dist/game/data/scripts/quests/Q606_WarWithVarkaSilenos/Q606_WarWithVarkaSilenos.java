@@ -27,15 +27,13 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q606_WarWithVarkaSilenos extends Quest
 {
-	private static final String qn = "Q606_WarWithVarkaSilenos";
-	
 	// Items
 	private static final int HORN_OF_BUFFALO = 7186;
 	private static final int VARKA_MANE = 7233;
 	
 	public Q606_WarWithVarkaSilenos()
 	{
-		super(606, qn, "War with Varka Silenos");
+		super(606, "War with Varka Silenos");
 		
 		registerQuestItems(VARKA_MANE);
 		
@@ -47,7 +45,7 @@ public class Q606_WarWithVarkaSilenos extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +83,7 @@ public class Q606_WarWithVarkaSilenos extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q031_SecretBuriedInTheSwamp extends Quest
 {
-	private static final String qn = "Q031_SecretBuriedInTheSwamp";
-	
 	// Item
 	private static final int KRORIN_JOURNAL = 7252;
 	
@@ -39,7 +37,7 @@ public class Q031_SecretBuriedInTheSwamp extends Quest
 	
 	public Q031_SecretBuriedInTheSwamp()
 	{
-		super(31, qn, "Secret Buried in the Swamp");
+		super(31, "Secret Buried in the Swamp");
 		
 		registerQuestItems(KRORIN_JOURNAL);
 		
@@ -51,7 +49,7 @@ public class Q031_SecretBuriedInTheSwamp extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +107,7 @@ public class Q031_SecretBuriedInTheSwamp extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

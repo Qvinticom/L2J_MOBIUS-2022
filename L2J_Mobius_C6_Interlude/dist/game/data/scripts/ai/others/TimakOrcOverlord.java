@@ -33,7 +33,7 @@ public class TimakOrcOverlord extends Quest
 	
 	private TimakOrcOverlord()
 	{
-		super(-1, "TimakOrcOverlord", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(TIMAK_ORC_OVERLORD);
 	}

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q101_SwordOfSolidarity extends Quest
 {
-	private static final String qn = "Q101_SwordOfSolidarity";
-	
 	// NPCs
 	private static final int ROIEN = 30008;
 	private static final int ALTRAN = 30283;
@@ -52,7 +50,7 @@ public class Q101_SwordOfSolidarity extends Quest
 	
 	public Q101_SwordOfSolidarity()
 	{
-		super(101, qn, "Sword of Solidarity");
+		super(101, "Sword of Solidarity");
 		
 		registerQuestItems(BROKEN_SWORD_HANDLE, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP);
 		
@@ -66,7 +64,7 @@ public class Q101_SwordOfSolidarity extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -124,7 +122,7 @@ public class Q101_SwordOfSolidarity extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

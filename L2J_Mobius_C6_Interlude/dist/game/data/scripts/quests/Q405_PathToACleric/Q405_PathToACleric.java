@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q405_PathToACleric extends Quest
 {
-	private static final String qn = "Q405_PathToACleric";
-	
 	// Items
 	private static final int LETTER_OF_ORDER_1 = 1191;
 	private static final int LETTER_OF_ORDER_2 = 1192;
@@ -53,7 +51,7 @@ public class Q405_PathToACleric extends Quest
 	
 	public Q405_PathToACleric()
 	{
-		super(405, qn, "Path to a Cleric");
+		super(405, "Path to a Cleric");
 		
 		registerQuestItems(LETTER_OF_ORDER_1, BOOK_OF_SIMPLON, BOOK_OF_PRAGA, BOOK_OF_VIVYAN, NECKLACE_OF_MOTHER, PENDANT_OF_MOTHER, LETTER_OF_ORDER_2, LIONEL_BOOK, CERTIFICATE_OF_GALLINT, LIONEL_COVENANT);
 		
@@ -67,7 +65,7 @@ public class Q405_PathToACleric extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -88,7 +86,7 @@ public class Q405_PathToACleric extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

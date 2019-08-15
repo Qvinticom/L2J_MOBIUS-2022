@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q635_InTheDimensionalRift extends Quest
 {
-	private static final String qn = "Q635_InTheDimensionalRift";
-	
 	// Item
 	private static final int DIMENSION_FRAGMENT = 7079;
 	// Locations
@@ -56,7 +54,7 @@ public class Q635_InTheDimensionalRift extends Quest
 	
 	public Q635_InTheDimensionalRift()
 	{
-		super(635, qn, "In the Dimensional Rift");
+		super(635, "In the Dimensional Rift");
 		
 		for (int i = 31494; i <= 31508; i++)
 		{
@@ -73,7 +71,7 @@ public class Q635_InTheDimensionalRift extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -112,7 +110,7 @@ public class Q635_InTheDimensionalRift extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q412_PathToADarkWizard extends Quest
 {
-	private static final String qn = "Q412_PathToADarkWizard";
-	
 	// Items
 	private static final int SEED_OF_ANGER = 1253;
 	private static final int SEED_OF_DESPAIR = 1254;
@@ -50,7 +48,7 @@ public class Q412_PathToADarkWizard extends Quest
 	
 	public Q412_PathToADarkWizard()
 	{
-		super(412, qn, "Path to a Dark Wizard");
+		super(412, "Path to a Dark Wizard");
 		
 		registerQuestItems(SEED_OF_ANGER, SEED_OF_DESPAIR, SEED_OF_HORROR, SEED_OF_LUNACY, FAMILY_REMAINS, VARIKA_LIQUOR, KNEE_BONE, HEART_OF_LUNACY, LUCKY_KEY, CANDLE, HUB_SCENT);
 		
@@ -64,7 +62,7 @@ public class Q412_PathToADarkWizard extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -143,7 +141,7 @@ public class Q412_PathToADarkWizard extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

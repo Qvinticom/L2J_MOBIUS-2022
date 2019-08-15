@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q086_SagaOfTheHierophant extends SagasSuperClass
 {
-	public static String qn1 = "Q086_SagaOfTheHierophant";
-	public static int qnu = 86;
-	public static String qna = "Saga of the Hierophant";
-	
 	public Q086_SagaOfTheHierophant()
 	{
-		super(qnu, qn1, qna);
+		super(86, "Saga of the Hierophant");
 		NPC = new int[]
 		{
 			30191,
@@ -66,7 +62,6 @@ public class Q086_SagaOfTheHierophant extends SagasSuperClass
 			27235,
 			27275
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			98

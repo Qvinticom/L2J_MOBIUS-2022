@@ -30,7 +30,7 @@ public class PaganTeleporters extends Quest
 	
 	public PaganTeleporters()
 	{
-		super(-1, "PaganTeleporters", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(32034, 32035, 32036, 32037, 32039, 32040);
 		addTalkId(32034, 32035, 32036, 32037, 32039, 32040);

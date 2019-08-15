@@ -39,7 +39,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 public class SagasSuperClass extends Quest
 {
-	public String qn = "SagasSuperClass";
 	public int qnu;
 	public int[] NPC = {};
 	public int[] Items = {};
@@ -62,9 +61,9 @@ public class SagasSuperClass extends Quest
 	};
 	// @formatter:on
 	
-	public SagasSuperClass(int id, String name, String descr)
+	public SagasSuperClass(int id, String descr)
 	{
-		super(id, name, descr);
+		super(id, descr);
 		qnu = id;
 	}
 	
@@ -147,7 +146,7 @@ public class SagasSuperClass extends Quest
 			player = (PlayerInstance) World.getInstance().findObject(_SpawnList.get(npc));
 			if (player != null)
 			{
-				st = player.getQuestState(qn);
+				st = player.getQuestState(getName());
 			}
 		}
 		return st;
@@ -180,7 +179,7 @@ public class SagasSuperClass extends Quest
 	
 	public QuestState findQuest(PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
 			if (qnu != 68)
@@ -229,7 +228,7 @@ public class SagasSuperClass extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = "";
 		if (st != null)
 		{
@@ -570,7 +569,7 @@ public class SagasSuperClass extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance talker)
 	{
 		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPCs minimum quest requirements.</body></html>";
-		QuestState st = talker.getQuestState(qn);
+		QuestState st = talker.getQuestState(getName());
 		if (st != null)
 		{
 			int npcId = npc.getNpcId();
@@ -819,7 +818,7 @@ public class SagasSuperClass extends Quest
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		int npcId = npc.getNpcId();
 		if (st != null)
 		{
@@ -902,7 +901,7 @@ public class SagasSuperClass extends Quest
 			return super.onAttack(npc, player, damage, isPet);
 		}
 		int cond = st2.getInt("cond");
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		int npcId = npc.getNpcId();
 		if ((npcId == Mob[2]) && (st == st2) && (cond == 17))
 		{
@@ -966,7 +965,7 @@ public class SagasSuperClass extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 		{
 			if (npcId == Archon_Minion)

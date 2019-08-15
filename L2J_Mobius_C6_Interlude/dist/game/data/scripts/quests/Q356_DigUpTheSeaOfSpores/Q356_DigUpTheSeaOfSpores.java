@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q356_DigUpTheSeaOfSpores extends Quest
 {
-	private static final String qn = "Q356_DigUpTheSeaOfSpores";
-	
 	// Items
 	private static final int HERB_SPORE = 5866;
 	private static final int CARN_SPORE = 5865;
@@ -36,7 +34,7 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 	
 	public Q356_DigUpTheSeaOfSpores()
 	{
-		super(356, qn, "Dig Up the Sea of Spores!");
+		super(356, "Dig Up the Sea of Spores!");
 		
 		registerQuestItems(HERB_SPORE, CARN_SPORE);
 		
@@ -50,7 +48,7 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +94,7 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

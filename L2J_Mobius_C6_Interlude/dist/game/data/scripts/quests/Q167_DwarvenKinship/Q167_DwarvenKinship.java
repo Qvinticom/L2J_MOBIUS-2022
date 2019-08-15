@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q167_DwarvenKinship extends Quest
 {
-	private static final String qn = "Q167_DwarvenKinship";
-	
 	// Items
 	private static final int CARLON_LETTER = 1076;
 	private static final int NORMAN_LETTER = 1106;
@@ -37,7 +35,7 @@ public class Q167_DwarvenKinship extends Quest
 	
 	public Q167_DwarvenKinship()
 	{
-		super(167, qn, "Dwarven Kinship");
+		super(167, "Dwarven Kinship");
 		
 		registerQuestItems(CARLON_LETTER, NORMAN_LETTER);
 		
@@ -49,7 +47,7 @@ public class Q167_DwarvenKinship extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -91,7 +89,7 @@ public class Q167_DwarvenKinship extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

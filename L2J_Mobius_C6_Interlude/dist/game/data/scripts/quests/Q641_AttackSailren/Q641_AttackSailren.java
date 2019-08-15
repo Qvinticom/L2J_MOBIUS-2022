@@ -27,8 +27,6 @@ import quests.Q126_TheNameOfEvil_2.Q126_TheNameOfEvil_2;
 
 public class Q641_AttackSailren extends Quest
 {
-	private static final String qn = "Q641_AttackSailren";
-	
 	// NPCs
 	private static final int STATUE = 32109;
 	
@@ -38,7 +36,7 @@ public class Q641_AttackSailren extends Quest
 	
 	public Q641_AttackSailren()
 	{
-		super(641, qn, "Attack Sailren!");
+		super(641, "Attack Sailren!");
 		
 		registerQuestItems(GAZKH_FRAGMENT);
 		
@@ -52,7 +50,7 @@ public class Q641_AttackSailren extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -88,7 +86,7 @@ public class Q641_AttackSailren extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -103,7 +101,7 @@ public class Q641_AttackSailren extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState(Q126_TheNameOfEvil_2.qn);
+					QuestState st2 = player.getQuestState(Q126_TheNameOfEvil_2.class.getSimpleName());
 					htmltext = ((st2 != null) && st2.isCompleted()) ? "32109-1.htm" : "32109-2.htm";
 				}
 				break;
@@ -133,7 +131,7 @@ public class Q641_AttackSailren extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 public class Q653_WildMaiden extends Quest
 {
-	private static final String qn = "Q653_WildMaiden";
-	
 	// NPCs
 	private static final int SUKI = 32013;
 	private static final int GALIBREDO = 30181;
@@ -50,7 +48,7 @@ public class Q653_WildMaiden extends Quest
 	
 	public Q653_WildMaiden()
 	{
-		super(653, qn, "Wild Maiden");
+		super(653, "Wild Maiden");
 		
 		addStartNpc(SUKI);
 		addTalkId(SUKI, GALIBREDO);
@@ -62,7 +60,7 @@ public class Q653_WildMaiden extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -110,7 +108,7 @@ public class Q653_WildMaiden extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q075_SagaOfTheTitan extends SagasSuperClass
 {
-	public static String qn1 = "Q075_SagaOfTheTitan";
-	public static int qnu = 75;
-	public static String qna = "Saga of the Titan";
-	
 	public Q075_SagaOfTheTitan()
 	{
-		super(qnu, qn1, qna);
+		super(75, "Saga of the Titan");
 		NPC = new int[]
 		{
 			31327,
@@ -66,7 +62,6 @@ public class Q075_SagaOfTheTitan extends SagasSuperClass
 			27224,
 			27283
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			113

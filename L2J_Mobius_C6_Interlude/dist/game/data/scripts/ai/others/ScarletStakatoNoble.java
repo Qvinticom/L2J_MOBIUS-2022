@@ -33,7 +33,7 @@ public class ScarletStakatoNoble extends Quest
 	
 	private ScarletStakatoNoble()
 	{
-		super(-1, "ScarletStakatoNoble", "ai/others");
+		super(-1, "ai/others");
 		
 		addKillId(SCARLET_STAKATO_NOBLE);
 	}

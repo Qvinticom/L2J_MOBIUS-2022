@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q365_DevilsLegacy extends Quest
 {
-	private static final String qn = "Q365_DevilsLegacy";
-	
 	// NPCs
 	private static final int RANDOLF = 30095;
 	private static final int COLLOB = 30092;
@@ -38,7 +36,7 @@ public class Q365_DevilsLegacy extends Quest
 	
 	public Q365_DevilsLegacy()
 	{
-		super(365, qn, "Devil's Legacy");
+		super(365, "Devil's Legacy");
 		
 		registerQuestItems(PIRATE_TREASURE_CHEST);
 		
@@ -52,7 +50,7 @@ public class Q365_DevilsLegacy extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -166,7 +164,7 @@ public class Q365_DevilsLegacy extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -215,7 +213,7 @@ public class Q365_DevilsLegacy extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(PIRATE_TREASURE_CHEST, 1, 0, (npc.getNpcId() == 20836) ? 360000 : 520000);
+		partyMember.getQuestState(getName()).dropItems(PIRATE_TREASURE_CHEST, 1, 0, (npc.getNpcId() == 20836) ? 360000 : 520000);
 		
 		return null;
 	}

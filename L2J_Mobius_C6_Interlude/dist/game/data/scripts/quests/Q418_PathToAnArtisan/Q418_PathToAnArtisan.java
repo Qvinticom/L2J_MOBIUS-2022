@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q418_PathToAnArtisan extends Quest
 {
-	private static final String qn = "Q418_PathToAnArtisan";
-	
 	// Items
 	private static final int SILVERA_RING = 1632;
 	private static final int FIRST_PASS_CERTIFICATE = 1633;
@@ -51,7 +49,7 @@ public class Q418_PathToAnArtisan extends Quest
 	
 	public Q418_PathToAnArtisan()
 	{
-		super(418, qn, "Path to an Artisan");
+		super(418, "Path to an Artisan");
 		
 		registerQuestItems(SILVERA_RING, FIRST_PASS_CERTIFICATE, SECOND_PASS_CERTIFICATE, BOOGLE_RATMAN_TOOTH, BOOGLE_RATMAN_LEADER_TOOTH, KLUTO_LETTER, FOOTPRINT_OF_THIEF, STOLEN_SECRET_BOX, SECRET_BOX);
 		
@@ -65,7 +63,7 @@ public class Q418_PathToAnArtisan extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -182,7 +180,7 @@ public class Q418_PathToAnArtisan extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

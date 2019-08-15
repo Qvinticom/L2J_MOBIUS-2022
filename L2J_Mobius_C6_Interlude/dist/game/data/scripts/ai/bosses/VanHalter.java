@@ -113,9 +113,9 @@ public class VanHalter extends Quest
 	private static final byte ALIVE = 2;
 	
 	// Initialize
-	public VanHalter(int questId, String name, String descr)
+	public VanHalter()
 	{
-		super(questId, name, descr);
+		super(-1, "ai/bosses");
 		
 		final int[] mobs =
 		{
@@ -1759,6 +1759,6 @@ public class VanHalter extends Quest
 	
 	public static void main(String[] args)
 	{
-		new VanHalter(-1, "vanhalter", "ai");
+		new VanHalter();
 	}
 }

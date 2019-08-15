@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q160_NerupasRequest extends Quest
 {
-	private static final String qn = "Q160_NerupasRequest";
-	
 	// Items
 	private static final int SILVERY_SPIDERSILK = 1026;
 	private static final int UNOREN_RECEIPT = 1027;
@@ -44,7 +42,7 @@ public class Q160_NerupasRequest extends Quest
 	
 	public Q160_NerupasRequest()
 	{
-		super(160, qn, "Nerupa's Request");
+		super(160, "Nerupa's Request");
 		
 		registerQuestItems(SILVERY_SPIDERSILK, UNOREN_RECEIPT, CREAMEES_TICKET, NIGHTSHADE_LEAF);
 		
@@ -56,7 +54,7 @@ public class Q160_NerupasRequest extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -76,7 +74,7 @@ public class Q160_NerupasRequest extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

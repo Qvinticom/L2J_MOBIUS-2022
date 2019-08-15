@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q153_DeliverGoods extends Quest
 {
-	private static final String qn = "Q153_DeliverGoods";
-	
 	// NPCs
 	private static final int JACKSON = 30002;
 	private static final int SILVIA = 30003;
@@ -47,7 +45,7 @@ public class Q153_DeliverGoods extends Quest
 	
 	public Q153_DeliverGoods()
 	{
-		super(153, qn, "Deliver Goods");
+		super(153, "Deliver Goods");
 		
 		registerQuestItems(DELIVERY_LIST, HEAVY_WOOD_BOX, CLOTH_BUNDLE, CLAY_POT, JACKSON_RECEIPT, SILVIA_RECEIPT, RANT_RECEIPT);
 		
@@ -59,7 +57,7 @@ public class Q153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +80,7 @@ public class Q153_DeliverGoods extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

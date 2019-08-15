@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class NpcLocationInfo extends Quest
 {
-	private static final String qn = "NpcLocationInfo";
-	
 	private static final int[] RADARS =
 	{
 		// Talking Island
@@ -208,7 +206,7 @@ public class NpcLocationInfo extends Quest
 	
 	public NpcLocationInfo()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		addStartNpc(30598, 30599, 30600, 30601, 30602);
 		addTalkId(30598, 30599, 30600, 30601, 30602);
@@ -218,7 +216,7 @@ public class NpcLocationInfo extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

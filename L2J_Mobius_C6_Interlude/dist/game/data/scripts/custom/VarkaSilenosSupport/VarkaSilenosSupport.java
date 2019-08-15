@@ -42,8 +42,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class VarkaSilenosSupport extends Quest
 {
-	private static final String qn = "VarkaSilenosSupport";
-	
 	private static final int ASHAS = 31377; // Hierarch
 	private static final int NARAN = 31378; // Messenger
 	private static final int UDAN = 31379; // Buffer
@@ -133,7 +131,7 @@ public class VarkaSilenosSupport extends Quest
 	
 	public VarkaSilenosSupport()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		addFirstTalkId(ASHAS, NARAN, UDAN, DIYABU, HAGOS, SHIKON, TERANU);
 		addTalkId(UDAN, HAGOS, TERANU);
@@ -201,7 +199,7 @@ public class VarkaSilenosSupport extends Quest
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);

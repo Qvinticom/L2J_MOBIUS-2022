@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q432_BirthdayPartySong extends Quest
 {
-	private static final String qn = "Q432_BirthdayPartySong";
-	
 	// NPC
 	private static final int OCTAVIA = 31043;
 	
@@ -34,7 +32,7 @@ public class Q432_BirthdayPartySong extends Quest
 	
 	public Q432_BirthdayPartySong()
 	{
-		super(432, qn, "Birthday Party Song");
+		super(432, "Birthday Party Song");
 		
 		registerQuestItems(RED_CRYSTAL);
 		
@@ -48,7 +46,7 @@ public class Q432_BirthdayPartySong extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -78,7 +76,7 @@ public class Q432_BirthdayPartySong extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -108,7 +106,7 @@ public class Q432_BirthdayPartySong extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

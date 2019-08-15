@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q108_JumbleTumbleDiamondFuss extends Quest
 {
-	private static final String qn = "Q108_JumbleTumbleDiamondFuss";
-	
 	// NPCs
 	private static final int GOUPH = 30523;
 	private static final int REEP = 30516;
@@ -103,7 +101,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 	
 	public Q108_JumbleTumbleDiamondFuss()
 	{
-		super(108, qn, "Jumble, Tumble, Diamond Fuss");
+		super(108, "Jumble, Tumble, Diamond Fuss");
 		
 		registerQuestItems(GOUPH_CONTRACT, REEP_CONTRACT, ELVEN_WINE, BRUNON_DICE, BRUNON_CONTRACT, AQUAMARINE, CHRYSOBERYL, GEM_BOX, COAL_PIECE, BRUNON_LETTER, BERRY_TART, BAT_DIAGRAM, STAR_DIAMOND);
 		
@@ -116,7 +114,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = event;
 		if (st == null)
 		{
@@ -151,7 +149,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

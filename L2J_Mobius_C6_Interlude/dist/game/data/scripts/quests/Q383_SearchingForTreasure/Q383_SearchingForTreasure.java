@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q383_SearchingForTreasure extends Quest
 {
-	private static final String qn = "Q383_SearchingForTreasure";
-	
 	// NPCs
 	private static final int ESPEN = 30890;
 	private static final int PIRATE_CHEST = 31148;
@@ -37,7 +35,7 @@ public class Q383_SearchingForTreasure extends Quest
 	
 	public Q383_SearchingForTreasure()
 	{
-		super(383, qn, "Searching for Treasure");
+		super(383, "Searching for Treasure");
 		
 		addStartNpc(ESPEN);
 		addTalkId(ESPEN, PIRATE_CHEST);
@@ -47,7 +45,7 @@ public class Q383_SearchingForTreasure extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -253,7 +251,7 @@ public class Q383_SearchingForTreasure extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

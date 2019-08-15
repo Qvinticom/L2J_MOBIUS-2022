@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q299_GatherIngredientsForPie extends Quest
 {
-	private static final String qn = "Q299_GatherIngredientsForPie";
-	
 	// NPCs
 	private static final int LARA = 30063;
 	private static final int BRIGHT = 30466;
@@ -38,7 +36,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	
 	public Q299_GatherIngredientsForPie()
 	{
-		super(299, qn, "Gather Ingredients for Pie");
+		super(299, "Gather Ingredients for Pie");
 		
 		registerQuestItems(FRUIT_BASKET, AVELLAN_SPICE, HONEY_POUCH);
 		
@@ -52,7 +50,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -110,7 +108,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -207,7 +205,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

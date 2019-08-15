@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q379_FantasyWine extends Quest
 {
-	private static final String qn = "Q379_FantasyWine";
-	
 	// NPCs
 	private static final int HARLAN = 30074;
 	
@@ -40,7 +38,7 @@ public class Q379_FantasyWine extends Quest
 	
 	public Q379_FantasyWine()
 	{
-		super(379, qn, "Fantasy Wine");
+		super(379, "Fantasy Wine");
 		
 		registerQuestItems(LEAF, STONE);
 		
@@ -54,7 +52,7 @@ public class Q379_FantasyWine extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -102,7 +100,7 @@ public class Q379_FantasyWine extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

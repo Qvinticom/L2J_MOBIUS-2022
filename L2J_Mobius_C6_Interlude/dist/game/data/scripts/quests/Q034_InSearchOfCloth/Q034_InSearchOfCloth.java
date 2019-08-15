@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q037_MakeFormalWear.Q037_MakeFormalWear;
+
 public class Q034_InSearchOfCloth extends Quest
 {
-	private static final String qn = "Q034_InSearchOfCloth";
-	
 	// NPCs
 	private static final int RADIA = 30088;
 	private static final int RALFORD = 30165;
@@ -46,7 +46,7 @@ public class Q034_InSearchOfCloth extends Quest
 	
 	public Q034_InSearchOfCloth()
 	{
-		super(34, qn, "In Search of Cloth");
+		super(34, "In Search of Cloth");
 		
 		registerQuestItems(SPINNERET, SPIDERSILK);
 		
@@ -60,7 +60,7 @@ public class Q034_InSearchOfCloth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -117,7 +117,7 @@ public class Q034_InSearchOfCloth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -129,7 +129,7 @@ public class Q034_InSearchOfCloth extends Quest
 			case State.CREATED:
 				if (player.getLevel() >= 60)
 				{
-					QuestState fwear = player.getQuestState("Q037_MakeFormalWear");
+					QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
 					if ((fwear != null) && (fwear.getInt("cond") == 6))
 					{
 						htmltext = "30088-0.htm";

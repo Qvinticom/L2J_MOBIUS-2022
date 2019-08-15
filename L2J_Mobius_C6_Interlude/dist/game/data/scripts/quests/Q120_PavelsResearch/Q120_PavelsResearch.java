@@ -23,14 +23,14 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
+import quests.Q114_ResurrectionOfAnOldManager.Q114_ResurrectionOfAnOldManager;
+
 /**
  * @author Mobius
  * @note Based on python script
  */
 public class Q120_PavelsResearch extends Quest
 {
-	private static final String qn = "Q120_PavelsResearch";
-	
 	// NPCs
 	private static final int YUMI = 32041;
 	private static final int WEATHER1 = 32042; // north
@@ -50,7 +50,7 @@ public class Q120_PavelsResearch extends Quest
 	
 	public Q120_PavelsResearch()
 	{
-		super(120, qn, "Pavel's Research");
+		super(120, "Pavel's Research");
 		
 		addStartNpc(STONES);
 		addTalkId(BOOKSHELF, STONES, WEATHER1, WEATHER2, WEATHER3, WENDY, YUMI);
@@ -61,7 +61,7 @@ public class Q120_PavelsResearch extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -421,7 +421,7 @@ public class Q120_PavelsResearch extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -438,7 +438,7 @@ public class Q120_PavelsResearch extends Quest
 		{
 			if (state == State.CREATED)
 			{
-				final QuestState qs2 = player.getQuestState("Q114_ResurrectionOfAnOldManager");
+				final QuestState qs2 = player.getQuestState(Q114_ResurrectionOfAnOldManager.class.getSimpleName());
 				if (qs2 != null)
 				{
 					if ((player.getLevel() >= 49) && (qs2.getState() == State.COMPLETED))

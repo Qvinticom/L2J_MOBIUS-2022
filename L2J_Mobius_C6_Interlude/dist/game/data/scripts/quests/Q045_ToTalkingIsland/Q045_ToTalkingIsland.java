@@ -21,8 +21,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q045_ToTalkingIsland extends Quest
 {
-	private static final String qn = "Q045_ToTalkingIsland";
-	
 	// Npcs
 	private static final int GALLADUCCI = 30097;
 	private static final int GENTLER = 30094;
@@ -41,7 +39,7 @@ public class Q045_ToTalkingIsland extends Quest
 	
 	public Q045_ToTalkingIsland()
 	{
-		super(45, qn, "To Talking Island");
+		super(45, "To Talking Island");
 		
 		registerQuestItems(ORDER_DOCUMENT_1, ORDER_DOCUMENT_2, ORDER_DOCUMENT_3, MAGIC_SWORD_HILT, GEMSTONE_POWDER, PURIFIED_MAGIC_NECKLACE);
 		
@@ -53,7 +51,7 @@ public class Q045_ToTalkingIsland extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -116,7 +114,7 @@ public class Q045_ToTalkingIsland extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

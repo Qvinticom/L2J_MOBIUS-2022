@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q372_LegacyOfInsolence extends Quest
 {
-	private static final String qn = "Q372_LegacyOfInsolence";
-	
 	// NPCs
 	private static final int WALDERAL = 30844;
 	private static final int PATRIN = 30929;
@@ -37,16 +35,14 @@ public class Q372_LegacyOfInsolence extends Quest
 	// Monsters
 	private static final int[][] MONSTERS_DROPS =
 	{
-		// npcId
-		{
+		{ // npcId
 			20817,
 			20821,
 			20825,
 			20829,
 			21069,
 			21063
-		},
-		// parchment (red, blue, black, white)
+		}, // parchment (red, blue, black, white)
 		{
 			5966,
 			5966,
@@ -54,8 +50,7 @@ public class Q372_LegacyOfInsolence extends Quest
 			5967,
 			5968,
 			5969
-		},
-		// rate
+		}, // rate
 		{
 			300000,
 			400000,
@@ -287,7 +282,7 @@ public class Q372_LegacyOfInsolence extends Quest
 	
 	public Q372_LegacyOfInsolence()
 	{
-		super(372, qn, "Legacy of Insolence");
+		super(372, "Legacy of Insolence");
 		
 		addStartNpc(WALDERAL);
 		addTalkId(WALDERAL, PATRIN, HOLLY, CLAUDIA, DESMOND);
@@ -299,7 +294,7 @@ public class Q372_LegacyOfInsolence extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -347,7 +342,7 @@ public class Q372_LegacyOfInsolence extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -403,7 +398,7 @@ public class Q372_LegacyOfInsolence extends Quest
 		{
 			if (MONSTERS_DROPS[0][i] == npcId)
 			{
-				partyMember.getQuestState(qn).dropItems(MONSTERS_DROPS[1][i], 1, 0, MONSTERS_DROPS[2][i]);
+				partyMember.getQuestState(getName()).dropItems(MONSTERS_DROPS[1][i], 1, 0, MONSTERS_DROPS[2][i]);
 				break;
 			}
 		}

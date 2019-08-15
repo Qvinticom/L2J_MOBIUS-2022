@@ -27,15 +27,13 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q612_WarWithKetraOrcs extends Quest
 {
-	private static final String qn = "Q612_WarWithKetraOrcs";
-	
 	// Items
 	private static final int NEPENTHES_SEED = 7187;
 	private static final int MOLAR_OF_KETRA_ORC = 7234;
 	
 	public Q612_WarWithKetraOrcs()
 	{
-		super(612, qn, "War with Ketra Orcs");
+		super(612, "War with Ketra Orcs");
 		
 		registerQuestItems(MOLAR_OF_KETRA_ORC);
 		
@@ -47,7 +45,7 @@ public class Q612_WarWithKetraOrcs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +83,7 @@ public class Q612_WarWithKetraOrcs extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

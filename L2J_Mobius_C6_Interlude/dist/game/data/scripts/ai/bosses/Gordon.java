@@ -107,9 +107,9 @@ public class Gordon extends Quest
 	private static boolean _isAttacked = false;
 	private static boolean _isSpawned = false;
 	
-	public Gordon(int id, String name, String descr)
+	public Gordon()
 	{
-		super(id, name, descr);
+		super(-1, "ai/bosses");
 		
 		addEventId(GORDON, Quest.QuestEventType.ON_KILL);
 		addEventId(GORDON, Quest.QuestEventType.ON_ATTACK);
@@ -292,6 +292,6 @@ public class Gordon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Gordon(-1, "Gordon", "ai");
+		new Gordon();
 	}
 }

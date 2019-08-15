@@ -52,7 +52,7 @@ public class EvaBox extends Quest
 	
 	private EvaBox()
 	{
-		super(-1, "EvaBox", "ai/others");
+		super(-1, "ai/others");
 		
 		addKillId(BOX);
 	}

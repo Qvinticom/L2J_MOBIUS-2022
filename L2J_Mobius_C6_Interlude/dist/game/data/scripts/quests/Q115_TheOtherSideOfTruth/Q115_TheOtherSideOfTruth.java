@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  */
 public class Q115_TheOtherSideOfTruth extends Quest
 {
-	private static final String qn = "Q115_TheOtherSideOfTruth";
-	
 	// NPCs
 	private static final int MISA = 32018;
 	private static final int SUSPICIOUS = 32019;
@@ -48,7 +46,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	
 	public Q115_TheOtherSideOfTruth()
 	{
-		super(115, qn, "The Other Side of Truth");
+		super(115, "The Other Side of Truth");
 		
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, MISA, SCULPTURE1, SCULPTURE2, SCULPTURE3, SCULPTURE4, KIERRE);
@@ -59,7 +57,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -192,7 +190,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState qs = player.getQuestState(qn);
+		QuestState qs = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (qs == null)
 		{

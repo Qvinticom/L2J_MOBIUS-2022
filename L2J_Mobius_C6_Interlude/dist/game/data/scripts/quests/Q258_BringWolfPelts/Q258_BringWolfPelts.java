@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q258_BringWolfPelts extends Quest
 {
-	private static final String qn = "Q258_BringWolfPelts";
-	
 	// Item
 	private static final int WOLF_PELT = 702;
 	
@@ -39,7 +37,7 @@ public class Q258_BringWolfPelts extends Quest
 	
 	public Q258_BringWolfPelts()
 	{
-		super(258, qn, "Bring Wolf Pelts");
+		super(258, "Bring Wolf Pelts");
 		
 		registerQuestItems(WOLF_PELT);
 		
@@ -53,7 +51,7 @@ public class Q258_BringWolfPelts extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -72,7 +70,7 @@ public class Q258_BringWolfPelts extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

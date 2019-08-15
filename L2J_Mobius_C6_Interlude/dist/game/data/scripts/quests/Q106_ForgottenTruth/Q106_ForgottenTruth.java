@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q106_ForgottenTruth extends Quest
 {
-	private static final String qn = "Q106_ForgottenTruth";
-	
 	// NPCs
 	private static final int THIFIELL = 30358;
 	private static final int KARTIA = 30133;
@@ -54,7 +52,7 @@ public class Q106_ForgottenTruth extends Quest
 	
 	public Q106_ForgottenTruth()
 	{
-		super(106, qn, "Forgotten Truth");
+		super(106, "Forgotten Truth");
 		
 		registerQuestItems(ONYX_TALISMAN_1, ONYX_TALISMAN_2, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET, KARTIA_TRANSLATION);
 		
@@ -67,7 +65,7 @@ public class Q106_ForgottenTruth extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = event;
 		if (st == null)
 		{
@@ -87,7 +85,7 @@ public class Q106_ForgottenTruth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

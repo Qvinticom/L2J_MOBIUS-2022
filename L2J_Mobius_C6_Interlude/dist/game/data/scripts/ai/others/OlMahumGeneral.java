@@ -33,7 +33,7 @@ public class OlMahumGeneral extends Quest
 	
 	private OlMahumGeneral()
 	{
-		super(-1, "OlMahumGeneral", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(OL_MAHUM_GENERAL);
 	}

@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q037_MakeFormalWear.Q037_MakeFormalWear;
+
 public class Q036_MakeASewingKit extends Quest
 {
-	private static final String qn = "Q036_MakeASewingKit";
-	
 	// Items
 	private static final int REINFORCED_STEEL = 7163;
 	private static final int ARTISANS_FRAME = 1891;
@@ -36,7 +36,7 @@ public class Q036_MakeASewingKit extends Quest
 	
 	public Q036_MakeASewingKit()
 	{
-		super(36, qn, "Make a Sewing Kit");
+		super(36, "Make a Sewing Kit");
 		
 		registerQuestItems(REINFORCED_STEEL);
 		
@@ -50,7 +50,7 @@ public class Q036_MakeASewingKit extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -90,7 +90,7 @@ public class Q036_MakeASewingKit extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -102,7 +102,7 @@ public class Q036_MakeASewingKit extends Quest
 			case State.CREATED:
 				if (player.getLevel() >= 60)
 				{
-					QuestState fwear = player.getQuestState("Q037_MakeFormalWear");
+					QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
 					if ((fwear != null) && (fwear.getInt("cond") == 6))
 					{
 						htmltext = "30847-0.htm";

@@ -31,7 +31,7 @@ public class TeleportWithCharm extends Quest
 	
 	public TeleportWithCharm()
 	{
-		super(-1, "TeleportWithCharm", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(WHIRPY, TAMIL);
 		addTalkId(WHIRPY, TAMIL);

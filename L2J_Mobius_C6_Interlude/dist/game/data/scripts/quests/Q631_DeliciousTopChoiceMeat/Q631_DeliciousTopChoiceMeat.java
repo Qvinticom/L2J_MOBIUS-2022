@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q631_DeliciousTopChoiceMeat extends Quest
 {
-	private static final String qn = "Q631_DeliciousTopChoiceMeat";
-	
 	// NPC
 	private static final int TUNATUN = 31537;
 	
@@ -97,7 +95,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	
 	public Q631_DeliciousTopChoiceMeat()
 	{
-		super(631, qn, "Delicious Top Choice Meat");
+		super(631, "Delicious Top Choice Meat");
 		
 		registerQuestItems(TOP_QUALITY_MEAT);
 		
@@ -114,7 +112,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -161,7 +159,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -206,7 +204,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q022_TragedyInVonHellmannForest.Q022_TragedyInVonHellmannForest;
+
 public class Q023_LidiasHeart extends Quest
 {
-	private static final String qn = "Q023_LidiasHeart";
-	
 	// NPCs
 	private static final int INNOCENTIN = 31328;
 	private static final int BROKEN_BOOKSHELF = 31526;
@@ -46,7 +46,7 @@ public class Q023_LidiasHeart extends Quest
 	
 	public Q023_LidiasHeart()
 	{
-		super(23, qn, "Lidia's Heart");
+		super(23, "Lidia's Heart");
 		
 		registerQuestItems(FOREST_OF_DEADMAN_MAP, SILVER_KEY, LIDIA_DIARY, SILVER_SPEAR);
 		
@@ -58,7 +58,7 @@ public class Q023_LidiasHeart extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -171,7 +171,7 @@ public class Q023_LidiasHeart extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -180,7 +180,7 @@ public class Q023_LidiasHeart extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState st2 = player.getQuestState("Q022_TragedyInVonHellmannForest");
+				QuestState st2 = player.getQuestState(Q022_TragedyInVonHellmannForest.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted())
 				{
 					if (player.getLevel() >= 64)

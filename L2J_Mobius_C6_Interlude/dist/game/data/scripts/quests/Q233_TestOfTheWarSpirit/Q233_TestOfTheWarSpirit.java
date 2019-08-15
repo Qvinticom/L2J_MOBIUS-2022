@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q233_TestOfTheWarSpirit extends Quest
 {
-	private static final String qn = "Q233_TestOfTheWarSpirit";
-	
 	// Items
 	private static final int VENDETTA_TOTEM = 2880;
 	private static final int TAMLIN_ORC_HEAD = 2881;
@@ -96,7 +94,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	
 	public Q233_TestOfTheWarSpirit()
 	{
-		super(233, qn, "Test of the War Spirit");
+		super(233, "Test of the War Spirit");
 		
 		registerQuestItems(VENDETTA_TOTEM, TAMLIN_ORC_HEAD, WARSPIRIT_TOTEM, ORIM_CONTRACT, PORTA_EYE, EXCURO_SCALE, MORDEO_TALON, BRAKI_REMAINS_1, PEKIRON_TOTEM, TONAR_SKULL, TONAR_RIBBONE, TONAR_SPINE, TONAR_ARMBONE, TONAR_THIGHBONE, TONAR_REMAINS_1, MANAKIA_TOTEM, HERMODT_SKULL, HERMODT_RIBBONE, HERMODT_SPINE, HERMODT_ARMBONE, HERMODT_THIGHBONE, HERMODT_REMAINS_1, RACOY_TOTEM, VIVYAN_LETTER, INSECT_DIAGRAM_BOOK, KIRUNA_SKULL, KIRUNA_RIBBONE, KIRUNA_SPINE, KIRUNA_ARMBONE, KIRUNA_THIGHBONE, KIRUNA_REMAINS_1, BRAKI_REMAINS_2, TONAR_REMAINS_2, HERMODT_REMAINS_2, KIRUNA_REMAINS_2);
 		
@@ -109,7 +107,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -181,7 +179,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

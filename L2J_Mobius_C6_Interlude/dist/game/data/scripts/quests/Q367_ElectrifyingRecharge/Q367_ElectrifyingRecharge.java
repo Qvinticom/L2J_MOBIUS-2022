@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q367_ElectrifyingRecharge extends Quest
 {
-	private static final String qn = "Q367_ElectrifyingRecharge";
-	
 	// NPCs
 	private static final int LORAIN = 30673;
 	
@@ -61,7 +59,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	
 	public Q367_ElectrifyingRecharge()
 	{
-		super(367, qn, "Electrifying Recharge!");
+		super(367, "Electrifying Recharge!");
 		
 		registerQuestItems(LORAIN_LAMP, TITAN_LAMP_1, TITAN_LAMP_2, TITAN_LAMP_3, TITAN_LAMP_4, TITAN_LAMP_5);
 		
@@ -75,7 +73,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -111,7 +109,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

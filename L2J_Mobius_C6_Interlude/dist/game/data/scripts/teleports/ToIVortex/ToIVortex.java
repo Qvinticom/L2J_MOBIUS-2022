@@ -29,7 +29,7 @@ public class ToIVortex extends Quest
 	
 	public ToIVortex()
 	{
-		super(-1, "ToIVortex", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(30952, 30953, 30954);
 		addTalkId(30952, 30953, 30954);

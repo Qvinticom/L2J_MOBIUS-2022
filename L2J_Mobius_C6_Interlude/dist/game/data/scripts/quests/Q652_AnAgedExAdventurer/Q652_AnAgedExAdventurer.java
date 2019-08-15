@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q652_AnAgedExAdventurer extends Quest
 {
-	private static final String qn = "Q652_AnAgedExAdventurer";
-	
 	// NPCs
 	private static final int TANTAN = 32012;
 	private static final int SARA = 30180;
@@ -54,7 +52,7 @@ public class Q652_AnAgedExAdventurer extends Quest
 	
 	public Q652_AnAgedExAdventurer()
 	{
-		super(652, qn, "An Aged Ex-Adventurer");
+		super(652, "An Aged Ex-Adventurer");
 		
 		addStartNpc(TANTAN);
 		addTalkId(TANTAN, SARA);
@@ -66,7 +64,7 @@ public class Q652_AnAgedExAdventurer extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -114,7 +112,7 @@ public class Q652_AnAgedExAdventurer extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

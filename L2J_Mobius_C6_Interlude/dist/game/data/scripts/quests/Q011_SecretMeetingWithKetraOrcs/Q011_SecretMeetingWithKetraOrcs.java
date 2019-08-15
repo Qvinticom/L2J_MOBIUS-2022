@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q011_SecretMeetingWithKetraOrcs extends Quest
 {
-	private static final String qn = "Q011_SecretMeetingWithKetraOrcs";
-	
 	// Npcs
 	private static final int CADMON = 31296;
 	private static final int LEON = 31256;
@@ -36,7 +34,7 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 	
 	public Q011_SecretMeetingWithKetraOrcs()
 	{
-		super(11, qn, "Secret Meeting With Ketra Orcs");
+		super(11, "Secret Meeting With Ketra Orcs");
 		
 		registerQuestItems(MUNITIONS_BOX);
 		
@@ -48,7 +46,7 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -80,7 +78,7 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

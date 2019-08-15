@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q661_MakingTheHarvestGroundsSafe extends Quest
 {
-	private static final String qn = "Q661_MakingTheHarvestGroundsSafe";
-	
 	// NPC
 	private static final int NORMAN = 30210;
 	
@@ -44,7 +42,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	
 	public Q661_MakingTheHarvestGroundsSafe()
 	{
-		super(661, qn, "Making the Harvest Grounds Safe");
+		super(661, "Making the Harvest Grounds Safe");
 		
 		registerQuestItems(STING_OF_GIANT_POISON_BEE, CLOUDY_GEM, TALON_OF_YOUNG_ARANEID);
 		
@@ -58,7 +56,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -100,7 +98,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

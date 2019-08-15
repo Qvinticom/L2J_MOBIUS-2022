@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q007_ATripBegins extends Quest
 {
-	private static final String qn = "Q007_ATripBegins";
-	
 	// NPCs
 	private static final int MIRABEL = 30146;
 	private static final int ARIEL = 30148;
@@ -41,7 +39,7 @@ public class Q007_ATripBegins extends Quest
 	
 	public Q007_ATripBegins()
 	{
-		super(7, qn, "A Trip Begins");
+		super(7, "A Trip Begins");
 		
 		registerQuestItems(ARIEL_RECO);
 		
@@ -53,7 +51,7 @@ public class Q007_ATripBegins extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -91,7 +89,7 @@ public class Q007_ATripBegins extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

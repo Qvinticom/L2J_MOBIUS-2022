@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q638_SeekersOfTheHolyGrail extends Quest
 {
-	private static final String qn = "Q638_SeekersOfTheHolyGrail";
-	
 	// NPC
 	private static final int INNOCENTIN = 31328;
 	
@@ -35,7 +33,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 	
 	public Q638_SeekersOfTheHolyGrail()
 	{
-		super(638, qn, "Seekers of the Holy Grail");
+		super(638, "Seekers of the Holy Grail");
 		
 		registerQuestItems(PAGAN_TOTEM);
 		
@@ -52,7 +50,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -76,7 +74,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -129,7 +127,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItemsAlways(PAGAN_TOTEM, 1, 0);
+		partyMember.getQuestState(getName()).dropItemsAlways(PAGAN_TOTEM, 1, 0);
 		
 		return null;
 	}

@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 {
-	public static String qn1 = "Q072_SagaOfTheSwordMuse";
-	public static int qnu = 72;
-	public static String qna = "Saga of the Sword Muse";
-	
 	public Q072_SagaOfTheSwordMuse()
 	{
-		super(qnu, qn1, qna);
+		super(72, "Saga of the Sword Muse");
 		NPC = new int[]
 		{
 			30853,
@@ -66,7 +62,6 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 			27221,
 			27280
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			100

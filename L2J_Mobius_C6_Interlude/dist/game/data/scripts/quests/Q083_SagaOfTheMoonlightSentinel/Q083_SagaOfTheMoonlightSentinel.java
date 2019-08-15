@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 {
-	public static String qn1 = "Q083_SagaOfTheMoonlightSentinel";
-	public static int qnu = 83;
-	public static String qna = "Saga of the Moonlight Sentinel";
-	
 	public Q083_SagaOfTheMoonlightSentinel()
 	{
-		super(qnu, qn1, qna);
+		super(83, "Saga of the Moonlight Sentinel");
 		NPC = new int[]
 		{
 			30702,
@@ -66,7 +62,6 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 			27232,
 			27306
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			102

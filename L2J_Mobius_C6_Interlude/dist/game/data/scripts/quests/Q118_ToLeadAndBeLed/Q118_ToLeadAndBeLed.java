@@ -22,11 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q123_TheLeaderAndTheFollower.Q123_TheLeaderAndTheFollower;
+
 public class Q118_ToLeadAndBeLed extends Quest
 {
-	private static final String qn = "Q118_ToLeadAndBeLed";
-	private static final String qn2 = "Q123_TheLeaderAndTheFollower";
-	
 	// Npc
 	private static final int PINTER = 30298;
 	
@@ -55,7 +54,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	
 	public Q118_ToLeadAndBeLed()
 	{
-		super(118, qn, "To Lead and Be Led");
+		super(118, "To Lead and Be Led");
 		
 		registerQuestItems(BLOOD_OF_MAILLE_LIZARDMAN, LEG_OF_KING_ARANEID);
 		
@@ -69,7 +68,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -120,7 +119,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 			final PlayerInstance academic = getApprentice(player);
 			if (academic != null)
 			{
-				final QuestState st2 = academic.getQuestState(qn);
+				final QuestState st2 = academic.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
 				if ((st2 != null) && (st2.getInt("state") == 2))
 				{
 					final int stateEx = st2.getInt("stateEx");
@@ -163,7 +162,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -174,7 +173,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 			case State.CREATED:
 				if (player.getSponsor() > 0)
 				{
-					QuestState st2 = player.getQuestState(qn2);
+					QuestState st2 = player.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
 					if (st2 != null)
 					{
 						htmltext = (st2.isCompleted()) ? "30298-02a.htm" : "30298-02b.htm";
@@ -189,7 +188,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 					final PlayerInstance academic = getApprentice(player);
 					if (academic != null)
 					{
-						final QuestState st3 = academic.getQuestState(qn);
+						final QuestState st3 = academic.getQuestState(getName());
 						if (st3 != null)
 						{
 							final int state = st3.getInt("state");

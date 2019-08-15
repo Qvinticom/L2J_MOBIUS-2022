@@ -33,7 +33,7 @@ public class KarulBugbear extends Quest
 	
 	private KarulBugbear()
 	{
-		super(-1, "KarulBugbear", "ai/others");
+		super(-1, "ai/others");
 		
 		addAttackId(KARUL_BUGBEAR);
 	}

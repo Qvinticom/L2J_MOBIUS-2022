@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q113_StatusOfTheBeaconTower extends Quest
 {
-	private static final String qn = "Q113_StatusOfTheBeaconTower";
-	
 	// NPCs
 	private static final int MOIRA = 31979;
 	private static final int TORRANT = 32016;
@@ -35,7 +33,7 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 	
 	public Q113_StatusOfTheBeaconTower()
 	{
-		super(113, qn, "Status of the Beacon Tower");
+		super(113, "Status of the Beacon Tower");
 		
 		registerQuestItems(BOX);
 		
@@ -47,7 +45,7 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

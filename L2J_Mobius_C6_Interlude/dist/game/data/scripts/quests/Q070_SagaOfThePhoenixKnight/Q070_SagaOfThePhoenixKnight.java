@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 {
-	public static String qn1 = "Q070_SagaOfThePhoenixKnight";
-	public static int qnu = 70;
-	public static String qna = "Saga of the Phoenix Knight";
-	
 	public Q070_SagaOfThePhoenixKnight()
 	{
-		super(qnu, qn1, qna);
+		super(70, "Saga of the Phoenix Knight");
 		NPC = new int[]
 		{
 			30849,
@@ -66,7 +62,6 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 			27219,
 			27278
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			90

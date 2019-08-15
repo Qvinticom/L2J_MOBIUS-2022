@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q235_MimirsElixir extends Quest
 {
-	private static final String qn = "Q235_MimirsElixir";
-	
 	// Items
 	private static final int STAR_OF_DESTINY = 5011;
 	private static final int PURE_SILVER = 6320;
@@ -47,7 +45,7 @@ public class Q235_MimirsElixir extends Quest
 	
 	public Q235_MimirsElixir()
 	{
-		super(235, qn, "Mimir's Elixir");
+		super(235, "Mimir's Elixir");
 		
 		registerQuestItems(PURE_SILVER, TRUE_GOLD, SAGE_STONE, BLOOD_FIRE, MAGISTER_MIXING_STONE, MIMIR_ELIXIR);
 		
@@ -61,7 +59,7 @@ public class Q235_MimirsElixir extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,7 +145,7 @@ public class Q235_MimirsElixir extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q636_TheTruthBeyondTheGate extends Quest
 {
-	private static final String qn = "Q636_TheTruthBeyondTheGate";
-	
 	// NPCs
 	private static final int ELIYAH = 31329;
 	private static final int FLAURON = 32010;
@@ -38,7 +36,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 	
 	public Q636_TheTruthBeyondTheGate()
 	{
-		super(636, qn, "Truth Beyond the Gate");
+		super(636, "Truth Beyond the Gate");
 		
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);
@@ -48,7 +46,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;

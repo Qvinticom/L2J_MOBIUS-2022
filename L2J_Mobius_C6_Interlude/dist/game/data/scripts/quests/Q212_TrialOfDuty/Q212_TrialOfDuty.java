@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q212_TrialOfDuty extends Quest
 {
-	private static final String qn = "Q212_TrialOfDuty";
-	
 	// Items
 	private static final int LETTER_OF_DUSTIN = 2634;
 	private static final int KNIGHTS_TEAR = 2635;
@@ -61,7 +59,7 @@ public class Q212_TrialOfDuty extends Quest
 	
 	public Q212_TrialOfDuty()
 	{
-		super(212, qn, "Trial of Duty");
+		super(212, "Trial of Duty");
 		
 		registerQuestItems(LETTER_OF_DUSTIN, KNIGHTS_TEAR, MIRROR_OF_ORPIC, TEAR_OF_CONFESSION, REPORT_PIECE_1, REPORT_PIECE_2, TEAR_OF_LOYALTY, MILITAS_ARTICLE, SAINTS_ASHES_URN, ATHEBALDT_SKULL, ATHEBALDT_RIBS, ATHEBALDT_SHIN, LETTER_OF_WINDAWOOD, OLD_KNIGHT_SWORD);
 		
@@ -75,7 +73,7 @@ public class Q212_TrialOfDuty extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -108,7 +106,7 @@ public class Q212_TrialOfDuty extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q166_MassOfDarkness extends Quest
 {
-	private static final String qn = "Q166_MassOfDarkness";
-	
 	// NPCs
 	private static final int UNDRIAS = 30130;
 	private static final int IRIA = 30135;
@@ -41,7 +39,7 @@ public class Q166_MassOfDarkness extends Quest
 	
 	public Q166_MassOfDarkness()
 	{
-		super(166, qn, "Mass of Darkness");
+		super(166, "Mass of Darkness");
 		
 		registerQuestItems(UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIEL_SCRIPTURE);
 		
@@ -53,7 +51,7 @@ public class Q166_MassOfDarkness extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -73,7 +71,7 @@ public class Q166_MassOfDarkness extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

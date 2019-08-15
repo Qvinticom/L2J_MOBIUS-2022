@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q152_ShardsOfGolem extends Quest
 {
-	private static final String qn = "Q152_ShardsOfGolem";
-	
 	// Items
 	private static final int HARRIS_RECEIPT_1 = 1008;
 	private static final int HARRIS_RECEIPT_2 = 1009;
@@ -44,7 +42,7 @@ public class Q152_ShardsOfGolem extends Quest
 	
 	public Q152_ShardsOfGolem()
 	{
-		super(152, qn, "Shards of Golem");
+		super(152, "Shards of Golem");
 		
 		registerQuestItems(HARRIS_RECEIPT_1, HARRIS_RECEIPT_2, GOLEM_SHARD, TOOL_BOX);
 		
@@ -58,7 +56,7 @@ public class Q152_ShardsOfGolem extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -86,7 +84,7 @@ public class Q152_ShardsOfGolem extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

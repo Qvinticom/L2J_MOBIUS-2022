@@ -43,8 +43,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class KetraOrcSupport extends Quest
 {
-	private static final String qn = "KetraOrcSupport";
-	
 	private static final int KADUN = 31370; // Hierarch
 	private static final int WAHKAN = 31371; // Messenger
 	private static final int ASEFA = 31372; // Soul Guide
@@ -134,7 +132,7 @@ public class KetraOrcSupport extends Quest
 	
 	public KetraOrcSupport()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		addFirstTalkId(KADUN, WAHKAN, ASEFA, ATAN, JAFF, JUMARA, KURFA);
 		addTalkId(ASEFA, JAFF, KURFA);
@@ -202,7 +200,7 @@ public class KetraOrcSupport extends Quest
 	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);

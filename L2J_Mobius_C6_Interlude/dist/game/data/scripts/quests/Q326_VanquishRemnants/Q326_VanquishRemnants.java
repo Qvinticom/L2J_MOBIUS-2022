@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q326_VanquishRemnants extends Quest
 {
-	private static final String qn = "Q326_VanquishRemnants";
-	
 	// Items
 	private static final int RED_CROSS_BADGE = 1359;
 	private static final int BLUE_CROSS_BADGE = 1360;
@@ -36,7 +34,7 @@ public class Q326_VanquishRemnants extends Quest
 	
 	public Q326_VanquishRemnants()
 	{
-		super(326, qn, "Vanquish Remnants");
+		super(326, "Vanquish Remnants");
 		
 		registerQuestItems(RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE);
 		
@@ -50,7 +48,7 @@ public class Q326_VanquishRemnants extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q326_VanquishRemnants extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

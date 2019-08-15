@@ -24,14 +24,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q313_CollectSpores extends Quest
 {
-	private static final String qn = "Q313_CollectSpores";
-	
 	// Item
 	private static final int SPORE_SAC = 1118;
 	
 	public Q313_CollectSpores()
 	{
-		super(313, qn, "Collect Spores");
+		super(313, "Collect Spores");
 		
 		registerQuestItems(SPORE_SAC);
 		
@@ -45,7 +43,7 @@ public class Q313_CollectSpores extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -64,7 +62,7 @@ public class Q313_CollectSpores extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

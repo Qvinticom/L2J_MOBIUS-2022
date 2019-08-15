@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q328_SenseForBusiness extends Quest
 {
-	private static final String qn = "Q328_SenseForBusiness";
-	
 	// Items
 	private static final int MONSTER_EYE_LENS = 1366;
 	private static final int MONSTER_EYE_CARCASS = 1347;
@@ -49,7 +47,7 @@ public class Q328_SenseForBusiness extends Quest
 	
 	public Q328_SenseForBusiness()
 	{
-		super(328, qn, "Sense for Business");
+		super(328, "Sense for Business");
 		
 		registerQuestItems(MONSTER_EYE_LENS, MONSTER_EYE_CARCASS, BASILISK_GIZZARD);
 		
@@ -63,7 +61,7 @@ public class Q328_SenseForBusiness extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -87,7 +85,7 @@ public class Q328_SenseForBusiness extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

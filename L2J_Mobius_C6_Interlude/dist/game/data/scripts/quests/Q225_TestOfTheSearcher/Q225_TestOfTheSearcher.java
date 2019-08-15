@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q225_TestOfTheSearcher extends Quest
 {
-	private static final String qn = "Q225_TestOfTheSearcher";
-	
 	// Items
 	private static final int LUTHER_LETTER = 2784;
 	private static final int ALEX_WARRANT = 2785;
@@ -81,7 +79,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	
 	public Q225_TestOfTheSearcher()
 	{
-		super(225, qn, "Test of the Searcher");
+		super(225, "Test of the Searcher");
 		
 		registerQuestItems(LUTHER_LETTER, ALEX_WARRANT, LEIRYNN_ORDER_1, DELU_TOTEM, LEIRYNN_ORDER_2, CHIEF_KALKI_FANG, LEIRYNN_REPORT, STRANGE_MAP, LAMBERT_MAP, ALEX_LETTER, ALEX_ORDER, WINE_CATALOG, TYRA_CONTRACT, RED_SPORE_DUST, MALRUKIAN_WINE, OLD_ORDER, JAX_DIARY, TORN_MAP_PIECE_1, TORN_MAP_PIECE_2, SOLT_MAP, MAKEL_MAP, COMBINED_MAP, RUSTED_KEY, GOLD_BAR, ALEX_RECOMMEND);
 		
@@ -96,7 +94,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -194,7 +192,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

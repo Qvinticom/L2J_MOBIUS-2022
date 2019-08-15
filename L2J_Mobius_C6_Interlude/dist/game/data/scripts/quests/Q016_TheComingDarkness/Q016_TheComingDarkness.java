@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q016_TheComingDarkness extends Quest
 {
-	private static final String qn = "Q016_TheComingDarkness";
-	
 	// NPCs
 	private static final int HIERARCH = 31517;
 	private static final int EVIL_ALTAR_1 = 31512;
@@ -39,7 +37,7 @@ public class Q016_TheComingDarkness extends Quest
 	
 	public Q016_TheComingDarkness()
 	{
-		super(16, qn, "The Coming Darkness");
+		super(16, "The Coming Darkness");
 		
 		registerQuestItems(CRYSTAL_OF_SEAL);
 		
@@ -51,7 +49,7 @@ public class Q016_TheComingDarkness extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -102,7 +100,7 @@ public class Q016_TheComingDarkness extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q078_SagaOfTheDoomcryer extends SagasSuperClass
 {
-	public static String qn1 = "Q078_SagaOfTheDoomcryer";
-	public static int qnu = 78;
-	public static String qna = "Saga of the Doomcryer";
-	
 	public Q078_SagaOfTheDoomcryer()
 	{
-		super(qnu, qn1, qna);
+		super(78, "Saga of the Doomcryer");
 		NPC = new int[]
 		{
 			31336,
@@ -67,7 +63,6 @@ public class Q078_SagaOfTheDoomcryer extends SagasSuperClass
 			27227,
 			27285
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			116

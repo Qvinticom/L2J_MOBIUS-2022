@@ -220,7 +220,7 @@ public class OracleTeleport extends Quest
 	
 	public OracleTeleport()
 	{
-		super(-1, "OracleTeleport", "teleports");
+		super(-1, "teleports");
 		
 		for (int posters : RIFT_POSTERS)
 		{

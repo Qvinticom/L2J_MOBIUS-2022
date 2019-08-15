@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q296_TarantulasSpiderSilk extends Quest
 {
-	private static final String qn = "Q296_TarantulasSpiderSilk";
-	
 	// NPCs
 	private static final int MION = 30519;
 	private static final int DEFENDER_NATHAN = 30548;
@@ -41,7 +39,7 @@ public class Q296_TarantulasSpiderSilk extends Quest
 	
 	public Q296_TarantulasSpiderSilk()
 	{
-		super(296, qn, "Tarantula's Spider Silk");
+		super(296, "Tarantula's Spider Silk");
 		
 		registerQuestItems(TARANTULA_SPIDER_SILK, TARANTULA_SPINNERETTE);
 		
@@ -55,7 +53,7 @@ public class Q296_TarantulasSpiderSilk extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -98,7 +96,7 @@ public class Q296_TarantulasSpiderSilk extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

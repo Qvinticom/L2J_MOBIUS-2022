@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q364_JovialAccordion extends Quest
 {
-	private static final String qn = "Q364_JovialAccordion";
-	
 	// NPCs
 	private static final int BARBADO = 30959;
 	private static final int SWAN = 30957;
@@ -44,7 +42,7 @@ public class Q364_JovialAccordion extends Quest
 	
 	public Q364_JovialAccordion()
 	{
-		super(364, qn, "Jovial Accordion");
+		super(364, "Jovial Accordion");
 		
 		registerQuestItems(KEY_1, KEY_2, STOLEN_BEER, STOLEN_CLOTHES);
 		
@@ -56,7 +54,7 @@ public class Q364_JovialAccordion extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +107,7 @@ public class Q364_JovialAccordion extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

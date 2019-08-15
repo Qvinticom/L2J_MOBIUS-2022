@@ -25,15 +25,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q352_HelpRoodRaiseANewPet extends Quest
 {
-	private static final String qn = "Q352_HelpRoodRaiseANewPet";
-	
 	// Items
 	private static final int LIENRIK_EGG_1 = 5860;
 	private static final int LIENRIK_EGG_2 = 5861;
 	
 	public Q352_HelpRoodRaiseANewPet()
 	{
-		super(352, qn, "Help Rood Raise A New Pet!");
+		super(352, "Help Rood Raise A New Pet!");
 		
 		registerQuestItems(LIENRIK_EGG_1, LIENRIK_EGG_2);
 		
@@ -47,7 +45,7 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -72,7 +70,7 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

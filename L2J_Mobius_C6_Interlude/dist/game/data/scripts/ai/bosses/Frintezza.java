@@ -279,9 +279,9 @@ public class Frintezza extends Quest
 	private final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	// Boss: Frintezza
-	public Frintezza(int id, String name, String descr)
+	public Frintezza()
 	{
-		super(id, name, descr);
+		super(-1, "ai/bosses");
 		final int[] mob =
 		{
 			SCARLET1,
@@ -1878,6 +1878,6 @@ public class Frintezza extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Frintezza(-1, "Frintezza", "ai");
+		new Frintezza();
 	}
 }

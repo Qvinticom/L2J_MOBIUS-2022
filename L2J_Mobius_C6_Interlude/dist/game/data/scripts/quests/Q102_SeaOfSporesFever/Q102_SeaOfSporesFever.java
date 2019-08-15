@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q102_SeaOfSporesFever extends Quest
 {
-	private static final String qn = "Q102_SeaOfSporesFever";
-	
 	// Items
 	private static final int ALBERIUS_LETTER = 964;
 	private static final int EVERGREEN_AMULET = 965;
@@ -61,7 +59,7 @@ public class Q102_SeaOfSporesFever extends Quest
 	
 	public Q102_SeaOfSporesFever()
 	{
-		super(102, qn, "Sea of Spores Fever");
+		super(102, "Sea of Spores Fever");
 		
 		registerQuestItems(ALBERIUS_LETTER, EVERGREEN_AMULET, DRYAD_TEARS, COBENDELL_MEDICINE_1, COBENDELL_MEDICINE_2, COBENDELL_MEDICINE_3, COBENDELL_MEDICINE_4, COBENDELL_MEDICINE_5, ALBERIUS_LIST);
 		
@@ -75,7 +73,7 @@ public class Q102_SeaOfSporesFever extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +94,7 @@ public class Q102_SeaOfSporesFever extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class EchoCrystals extends Quest
 {
-	private static final String qn = "EchoCrystals";
-	
 	private static final int ADENA = 57;
 	private static final int COST = 200;
 	
@@ -51,7 +49,7 @@ public class EchoCrystals extends Quest
 	
 	public EchoCrystals()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		addStartNpc(31042, 31043);
 		addTalkId(31042, 31043);
@@ -61,7 +59,7 @@ public class EchoCrystals extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if ((st != null) && Util.isDigit(event))
 		{

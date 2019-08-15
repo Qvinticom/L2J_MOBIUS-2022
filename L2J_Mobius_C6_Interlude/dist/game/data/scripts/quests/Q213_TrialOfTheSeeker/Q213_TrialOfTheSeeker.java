@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q213_TrialOfTheSeeker extends Quest
 {
-	private static final String qn = "Q213_TrialOfTheSeeker";
-	
 	// Items
 	private static final int DUFNER_LETTER = 2647;
 	private static final int TERRY_ORDER_1 = 2648;
@@ -81,7 +79,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 	
 	public Q213_TrialOfTheSeeker()
 	{
-		super(213, qn, "Trial of the Seeker");
+		super(213, "Trial of the Seeker");
 		
 		registerQuestItems(DUFNER_LETTER, TERRY_ORDER_1, TERRY_ORDER_2, TERRY_LETTER, VIKTOR_LETTER, HAWKEYE_LETTER, MYSTERIOUS_RUNESTONE, OL_MAHUM_RUNESTONE, TUREK_RUNESTONE, ANT_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TERRY_BOX, VIKTOR_REQUEST, MEDUSA_SCALES, SHILEN_RUNESTONE, ANALYSIS_REQUEST, MARINA_LETTER, EXPERIMENT_TOOLS, ANALYSIS_RESULT, TERRY_ORDER_3, LIST_OF_HOST, ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4, TERRY_REPORT);
 		
@@ -95,7 +93,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -212,7 +210,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

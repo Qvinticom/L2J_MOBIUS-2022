@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q295_DreamingOfTheSkies extends Quest
 {
-	private static final String qn = "Q295_DreamingOfTheSkies";
-	
 	// Item
 	private static final int FLOATING_STONE = 1492;
 	
@@ -35,7 +33,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 	
 	public Q295_DreamingOfTheSkies()
 	{
-		super(295, qn, "Dreaming of the Skies");
+		super(295, "Dreaming of the Skies");
 		
 		registerQuestItems(FLOATING_STONE);
 		
@@ -49,7 +47,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -68,7 +66,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -25,14 +25,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q272_WrathOfAncestors extends Quest
 {
-	private static final String qn = "Q272_WrathOfAncestors";
-	
 	// Item
 	private static final int GRAVE_ROBBERS_HEAD = 1474;
 	
 	public Q272_WrathOfAncestors()
 	{
-		super(272, qn, "Wrath of Ancestors");
+		super(272, "Wrath of Ancestors");
 		
 		registerQuestItems(GRAVE_ROBBERS_HEAD);
 		
@@ -46,7 +44,7 @@ public class Q272_WrathOfAncestors extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -66,7 +64,7 @@ public class Q272_WrathOfAncestors extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

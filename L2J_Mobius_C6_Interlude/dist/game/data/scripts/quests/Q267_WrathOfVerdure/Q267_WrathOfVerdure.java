@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q267_WrathOfVerdure extends Quest
 {
-	private static final String qn = "Q267_WrathOfVerdure";
-	
 	// Items
 	private static final int GOBLIN_CLUB = 1335;
 	
@@ -35,7 +33,7 @@ public class Q267_WrathOfVerdure extends Quest
 	
 	public Q267_WrathOfVerdure()
 	{
-		super(267, qn, "Wrath of Verdure");
+		super(267, "Wrath of Verdure");
 		
 		registerQuestItems(GOBLIN_CLUB);
 		
@@ -49,7 +47,7 @@ public class Q267_WrathOfVerdure extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +72,7 @@ public class Q267_WrathOfVerdure extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

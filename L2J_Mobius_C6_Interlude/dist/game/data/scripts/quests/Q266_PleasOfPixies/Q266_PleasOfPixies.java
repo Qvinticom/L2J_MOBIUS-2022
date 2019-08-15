@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q266_PleasOfPixies extends Quest
 {
-	private static final String qn = "Q266_PleasOfPixies";
-	
 	// Items
 	private static final int PREDATOR_FANG = 1334;
 	
@@ -39,7 +37,7 @@ public class Q266_PleasOfPixies extends Quest
 	
 	public Q266_PleasOfPixies()
 	{
-		super(266, qn, "Pleas of Pixies");
+		super(266, "Pleas of Pixies");
 		
 		registerQuestItems(PREDATOR_FANG);
 		
@@ -53,7 +51,7 @@ public class Q266_PleasOfPixies extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -73,7 +71,7 @@ public class Q266_PleasOfPixies extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

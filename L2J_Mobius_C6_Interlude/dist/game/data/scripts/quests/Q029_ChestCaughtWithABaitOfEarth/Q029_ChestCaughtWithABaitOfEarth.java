@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q052_WilliesSpecialBait.Q052_WilliesSpecialBait;
+
 public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 {
-	private static final String qn = "Q029_ChestCaughtWithABaitOfEarth";
-	
 	// NPCs
 	private static final int WILLIE = 31574;
 	private static final int ANABEL = 30909;
@@ -37,7 +37,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 	
 	public Q029_ChestCaughtWithABaitOfEarth()
 	{
-		super(29, qn, "Chest caught with a bait of earth");
+		super(29, "Chest caught with a bait of earth");
 		
 		registerQuestItems(SMALL_GLASS_BOX);
 		
@@ -49,7 +49,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -96,7 +96,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -112,7 +112,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState("Q052_WilliesSpecialBait");
+					QuestState st2 = player.getQuestState(Q052_WilliesSpecialBait.class.getSimpleName());
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = "31574-01.htm";

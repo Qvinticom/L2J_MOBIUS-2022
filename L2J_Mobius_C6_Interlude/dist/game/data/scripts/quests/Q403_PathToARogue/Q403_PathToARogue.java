@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q403_PathToARogue extends Quest
 {
-	private static final String qn = "Q403_PathToARogue";
-	
 	// Items
 	private static final int BEZIQUE_LETTER = 1180;
 	private static final int NETI_BOW = 1181;
@@ -49,7 +47,7 @@ public class Q403_PathToARogue extends Quest
 	
 	public Q403_PathToARogue()
 	{
-		super(403, qn, "Path to a Rogue");
+		super(403, "Path to a Rogue");
 		
 		registerQuestItems(BEZIQUE_LETTER, NETI_BOW, NETI_DAGGER, SPARTOI_BONES, HORSESHOE_OF_LIGHT, MOST_WANTED_LIST, STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE);
 		
@@ -63,7 +61,7 @@ public class Q403_PathToARogue extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -106,7 +104,7 @@ public class Q403_PathToARogue extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

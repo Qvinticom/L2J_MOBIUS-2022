@@ -65,7 +65,7 @@ public class NewbieTravelToken extends Quest
 	
 	public NewbieTravelToken()
 	{
-		super(-1, "NewbieTravelToken", "teleports");
+		super(-1, "teleports");
 		
 		addStartNpc(30598, 30599, 30600, 30601, 30602);
 		addTalkId(30598, 30599, 30600, 30601, 30602);

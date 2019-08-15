@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Q646_SignsOfRevolt extends Quest
 {
-	private static final String qn = "Q646_SignsOfRevolt";
-	
 	// NPC
 	private static final int TORRANT = 32016;
 	
@@ -56,7 +54,7 @@ public class Q646_SignsOfRevolt extends Quest
 	
 	public Q646_SignsOfRevolt()
 	{
-		super(646, qn, "Signs of Revolt");
+		super(646, "Signs of Revolt");
 		
 		registerQuestItems(CURSED_DOLL);
 		
@@ -70,7 +68,7 @@ public class Q646_SignsOfRevolt extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -101,7 +99,7 @@ public class Q646_SignsOfRevolt extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -138,7 +136,7 @@ public class Q646_SignsOfRevolt extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

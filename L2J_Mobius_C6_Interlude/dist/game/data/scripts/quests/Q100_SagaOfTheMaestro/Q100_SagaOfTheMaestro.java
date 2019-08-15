@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q100_SagaOfTheMaestro extends SagasSuperClass
 {
-	public static String qn1 = "Q100_SagaOfTheMaestro";
-	public static int qnu = 100;
-	public static String qna = "Saga of the Maestro";
-	
 	public Q100_SagaOfTheMaestro()
 	{
-		super(qnu, qn1, qna);
+		super(100, "Saga of the Maestro");
 		NPC = new int[]
 		{
 			31592,
@@ -67,7 +63,6 @@ public class Q100_SagaOfTheMaestro extends SagasSuperClass
 			27249,
 			27308
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			118

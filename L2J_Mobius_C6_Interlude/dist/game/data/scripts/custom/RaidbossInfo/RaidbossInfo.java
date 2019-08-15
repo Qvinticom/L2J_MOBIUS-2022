@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RaidbossInfo extends Quest
 {
-	private static final String qn = "RaidbossInfo";
 	private static final String BOSS_CLASS_TYPE = "RaidBoss";
 	
 	private static final Map<Integer, Location> RADARS = new HashMap<>();
@@ -120,7 +119,7 @@ public class RaidbossInfo extends Quest
 	
 	public RaidbossInfo()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		for (int npcId : NPCs)
 		{
@@ -142,7 +141,7 @@ public class RaidbossInfo extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;

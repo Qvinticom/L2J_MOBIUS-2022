@@ -29,15 +29,13 @@ import village_master.SecondClassChange.SecondClassChange;
  */
 public class ShadowWeapon extends Quest
 {
-	private static final String qn = "ShadowWeapon";
-	
 	// itemId for shadow weapon coupons, it's not used more than once but increases readability
 	private static final int D_COUPON = 8869;
 	private static final int C_COUPON = 8870;
 	
 	public ShadowWeapon()
 	{
-		super(-1, qn, "custom");
+		super(-1, "custom");
 		
 		addStartNpc(FirstClassChange.FIRSTCLASSNPCS);
 		addTalkId(FirstClassChange.FIRSTCLASSNPCS);
@@ -49,7 +47,7 @@ public class ShadowWeapon extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

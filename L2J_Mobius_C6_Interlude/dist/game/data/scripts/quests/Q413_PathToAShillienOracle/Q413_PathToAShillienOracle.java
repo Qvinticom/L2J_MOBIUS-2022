@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q413_PathToAShillienOracle extends Quest
 {
-	private static final String qn = "Q413_PathToAShillienOracle";
-	
 	// Items
 	private static final int SIDRA_LETTER = 1262;
 	private static final int BLANK_SHEET = 1263;
@@ -46,7 +44,7 @@ public class Q413_PathToAShillienOracle extends Quest
 	
 	public Q413_PathToAShillienOracle()
 	{
-		super(413, qn, "Path to a Shillien Oracle");
+		super(413, "Path to a Shillien Oracle");
 		
 		registerQuestItems(SIDRA_LETTER, BLANK_SHEET, BLOODY_RUNE, GARMIEL_BOOK, PRAYER_OF_ADONIUS, PENITENT_MARK, ASHEN_BONES, ANDARIEL_BOOK);
 		
@@ -60,7 +58,7 @@ public class Q413_PathToAShillienOracle extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -110,7 +108,7 @@ public class Q413_PathToAShillienOracle extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

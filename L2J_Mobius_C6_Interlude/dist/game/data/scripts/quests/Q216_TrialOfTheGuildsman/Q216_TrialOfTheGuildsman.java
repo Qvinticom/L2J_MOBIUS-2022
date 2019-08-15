@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q216_TrialOfTheGuildsman extends Quest
 {
-	private static final String qn = "Q216_TrialOfTheGuildsman";
-	
 	// Items
 	private static final int RECIPE_JOURNEYMAN_RING = 3024;
 	private static final int RECIPE_AMBER_BEAD = 3025;
@@ -81,7 +79,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 	
 	public Q216_TrialOfTheGuildsman()
 	{
-		super(216, qn, "Trial of the Guildsman");
+		super(216, "Trial of the Guildsman");
 		
 		registerQuestItems(RECIPE_JOURNEYMAN_RING, RECIPE_AMBER_BEAD, VALKON_RECOMMENDATION, MANDRAGORA_BERRY, ALTRAN_INSTRUCTIONS, ALTRAN_RECOMMENDATION_1, ALTRAN_RECOMMENDATION_2, NORMAN_INSTRUCTIONS, NORMAN_RECEIPT, DUNING_INSTRUCTIONS, DUNING_KEY, NORMAN_LIST, GRAY_BONE_POWDER, GRANITE_WHETSTONE, RED_PIGMENT, BRAIDED_YARN, JOURNEYMAN_GEM, PINTER_INSTRUCTIONS, AMBER_BEAD, AMBER_LUMP, JOURNEYMAN_DECO_BEADS, JOURNEYMAN_RING);
 		
@@ -96,7 +94,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 	{
 		String htmltext = event;
 		
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -192,7 +190,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

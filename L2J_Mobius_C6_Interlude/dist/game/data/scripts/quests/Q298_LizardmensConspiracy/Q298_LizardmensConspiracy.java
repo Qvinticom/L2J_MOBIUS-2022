@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q298_LizardmensConspiracy extends Quest
 {
-	private static final String qn = "Q298_LizardmensConspiracy";
-	
 	// NPCs
 	private static final int PRAGA = 30333;
 	private static final int ROHMER = 30344;
@@ -37,7 +35,7 @@ public class Q298_LizardmensConspiracy extends Quest
 	
 	public Q298_LizardmensConspiracy()
 	{
-		super(298, qn, "Lizardmen's Conspiracy");
+		super(298, "Lizardmen's Conspiracy");
 		
 		registerQuestItems(PATROL_REPORT, WHITE_GEM, RED_GEM);
 		
@@ -51,7 +49,7 @@ public class Q298_LizardmensConspiracy extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -89,7 +87,7 @@ public class Q298_LizardmensConspiracy extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -135,7 +133,7 @@ public class Q298_LizardmensConspiracy extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

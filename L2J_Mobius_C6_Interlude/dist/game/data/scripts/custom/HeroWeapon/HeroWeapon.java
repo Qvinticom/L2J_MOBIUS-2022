@@ -41,7 +41,7 @@ public class HeroWeapon extends Quest
 	
 	public HeroWeapon()
 	{
-		super(-1, "HeroWeapon", "custom");
+		super(-1, "custom");
 		
 		addStartNpc(31690, 31769, 31770, 31771, 31772, 31773);
 		addTalkId(31690, 31769, 31770, 31771, 31772, 31773);

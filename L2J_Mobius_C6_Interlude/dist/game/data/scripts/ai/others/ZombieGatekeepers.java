@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 
 public class ZombieGatekeepers extends Quest
 {
-	public ZombieGatekeepers(int questId, String name, String descr)
+	public ZombieGatekeepers()
 	{
-		super(questId, name, descr);
+		super(-1, "ai");
 		addAttackId(22136);
 		addAggroRangeEnterId(22136);
 	}
@@ -108,6 +108,6 @@ public class ZombieGatekeepers extends Quest
 	
 	public static void main(String[] args)
 	{
-		new ZombieGatekeepers(-1, "ZombieGatekeepers", "ai");
+		new ZombieGatekeepers();
 	}
 }

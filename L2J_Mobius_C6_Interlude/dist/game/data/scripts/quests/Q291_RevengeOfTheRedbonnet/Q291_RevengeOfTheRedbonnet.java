@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q291_RevengeOfTheRedbonnet extends Quest
 {
-	private static final String qn = "Q291_RevengeOfTheRedbonnet";
-	
 	// Quest items
 	private static final int BLACK_WOLF_PELT = 1482;
 	
@@ -39,7 +37,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	
 	public Q291_RevengeOfTheRedbonnet()
 	{
-		super(291, qn, "Revenge of the Redbonnet");
+		super(291, "Revenge of the Redbonnet");
 		
 		registerQuestItems(BLACK_WOLF_PELT);
 		
@@ -53,7 +51,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -72,7 +70,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

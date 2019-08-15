@@ -24,13 +24,9 @@ import quests.SagasSuperClass;
  */
 public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 {
-	public static String qn1 = "Q099_SagaOfTheFortuneSeeker";
-	public static int qnu = 99;
-	public static String qna = "Saga of the Fortune Seeker";
-	
 	public Q099_SagaOfTheFortuneSeeker()
 	{
-		super(qnu, qn1, qna);
+		super(99, "Saga of the Fortune Seeker");
 		NPC = new int[]
 		{
 			31594,
@@ -67,7 +63,6 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 			27248,
 			27309
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			117

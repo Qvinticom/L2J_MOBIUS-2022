@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q051_OFullesSpecialBait extends Quest
 {
-	private static final String qn = "Q051_OFullesSpecialBait";
-	
 	// Item
 	private static final int LOST_BAIT = 7622;
 	
@@ -34,7 +32,7 @@ public class Q051_OFullesSpecialBait extends Quest
 	
 	public Q051_OFullesSpecialBait()
 	{
-		super(51, qn, "O'Fulle's Special Bait");
+		super(51, "O'Fulle's Special Bait");
 		
 		registerQuestItems(LOST_BAIT);
 		
@@ -48,7 +46,7 @@ public class Q051_OFullesSpecialBait extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +73,7 @@ public class Q051_OFullesSpecialBait extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

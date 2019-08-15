@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q404_PathToAHumanWizard extends Quest
 {
-	private static final String qn = "Q404_PathToAHumanWizard";
-	
 	// Items
 	private static final int MAP_OF_LUSTER = 1280;
 	private static final int KEY_OF_FLAME = 1281;
@@ -53,7 +51,7 @@ public class Q404_PathToAHumanWizard extends Quest
 	
 	public Q404_PathToAHumanWizard()
 	{
-		super(404, qn, "Path to a Human Wizard");
+		super(404, "Path to a Human Wizard");
 		
 		registerQuestItems(MAP_OF_LUSTER, KEY_OF_FLAME, FLAME_EARING, BROKEN_BRONZE_MIRROR, WIND_FEATHER, WIND_BANGEL, RAMA_DIARY, SPARKLE_PEBBLE, WATER_NECKLACE, RUST_GOLD_COIN, RED_SOIL, EARTH_RING);
 		
@@ -67,7 +65,7 @@ public class Q404_PathToAHumanWizard extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -94,7 +92,7 @@ public class Q404_PathToAHumanWizard extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

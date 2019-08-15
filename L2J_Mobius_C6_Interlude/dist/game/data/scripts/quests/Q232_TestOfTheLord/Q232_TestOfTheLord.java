@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q232_TestOfTheLord extends Quest
 {
-	private static final String qn = "Q232_TestOfTheLord";
-	
 	// NPCs
 	private static final int SOMAK = 30510;
 	private static final int MANAKIA = 30515;
@@ -80,7 +78,7 @@ public class Q232_TestOfTheLord extends Quest
 	
 	public Q232_TestOfTheLord()
 	{
-		super(232, qn, "Test of the Lord");
+		super(232, "Test of the Lord");
 		
 		registerQuestItems(VARKEES_CHARM, TANTUS_CHARM, HATOS_CHARM, TAKUNA_CHARM, CHIANTA_CHARM, MANAKIAS_ORDERS, BREKA_ORC_FANG, MANAKIAS_AMULET, HUGE_ORC_FANG, SUMARIS_LETTER, URUTU_BLADE, TIMAK_ORC_SKULL, SWORD_INTO_SKULL, NERUGA_AXE_BLADE, AXE_OF_CEREMONY, MARSH_SPIDER_FEELER, MARSH_SPIDER_FEET, HANDIWORK_SPIDER_BROOCH, MONSTEREYE_CORNEA, MONSTEREYE_WOODCARVING, BEAR_FANG_NECKLACE, MARTANKUS_CHARM, RAGNA_ORC_HEAD, RAGNA_ORC_HEAD, IMMORTAL_FLAME);
 		
@@ -94,7 +92,7 @@ public class Q232_TestOfTheLord extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -192,7 +190,7 @@ public class Q232_TestOfTheLord extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

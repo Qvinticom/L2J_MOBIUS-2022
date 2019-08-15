@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q119_LastImperialPrince.Q119_LastImperialPrince;
+
 public class Q654_JourneyToASettlement extends Quest
 {
-	private static final String qn = "Q654_JourneyToASettlement";
-	
 	// Item
 	private static final int ANTELOPE_SKIN = 8072;
 	
@@ -34,7 +34,7 @@ public class Q654_JourneyToASettlement extends Quest
 	
 	public Q654_JourneyToASettlement()
 	{
-		super(654, qn, "Journey to a Settlement");
+		super(654, "Journey to a Settlement");
 		
 		registerQuestItems(ANTELOPE_SKIN);
 		
@@ -48,7 +48,7 @@ public class Q654_JourneyToASettlement extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -80,7 +80,7 @@ public class Q654_JourneyToASettlement extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -89,7 +89,7 @@ public class Q654_JourneyToASettlement extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState prevSt = player.getQuestState("Q119_LastImperialPrince");
+				QuestState prevSt = player.getQuestState(Q119_LastImperialPrince.class.getSimpleName());
 				htmltext = ((prevSt == null) || !prevSt.isCompleted() || (player.getLevel() < 74)) ? "31453-00.htm" : "31453-01.htm";
 				break;
 			

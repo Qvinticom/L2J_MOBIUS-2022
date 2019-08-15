@@ -23,14 +23,14 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q115_TheOtherSideOfTruth.Q115_TheOtherSideOfTruth;
+
 /**
  * @author Mobius
  * @note Based on python script
  */
 public class Q648_AnIceMerchantsDream extends Quest
 {
-	private static final String qn = "Q648_AnIceMerchantsDream";
-	
 	// NPCs
 	private static final int RAFFORTY = 32020;
 	private static final int ICE_SHELF = 32023;
@@ -64,7 +64,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 	
 	public Q648_AnIceMerchantsDream()
 	{
-		super(648, qn, "An Ice Merchant's Dream");
+		super(648, "An Ice Merchant's Dream");
 		
 		addStartNpc(RAFFORTY);
 		addStartNpc(ICE_SHELF);
@@ -76,7 +76,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -137,7 +137,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState qs = player.getQuestState(qn);
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -166,7 +166,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 			{
 				if ((silver > 0) || (black > 0))
 				{
-					final QuestState st2 = player.getQuestState("Q115_TheOtherSideOfTruth");
+					final QuestState st2 = player.getQuestState(Q115_TheOtherSideOfTruth.class.getSimpleName());
 					htmltext = "32020-05.htm";
 					if (st2 != null)
 					{
@@ -226,7 +226,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 			return null;
 		}
 		
-		final QuestState qs = partyMember.getQuestState(qn);
+		final QuestState qs = partyMember.getQuestState(getName());
 		if (qs != null)
 		{
 			int chance = (int) ((npc.getNpcId() - 22050) * Config.RATE_DROP_QUEST);

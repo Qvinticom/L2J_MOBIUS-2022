@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q162_CurseOfTheUndergroundFortress extends Quest
 {
-	private static final String qn = "Q162_CurseOfTheUndergroundFortress";
-	
 	// Monsters
 	private static final int SHADE_HORROR = 20033;
 	private static final int DARK_TERROR = 20345;
@@ -59,7 +57,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	
 	public Q162_CurseOfTheUndergroundFortress()
 	{
-		super(162, qn, "Curse of the Underground Fortress");
+		super(162, "Curse of the Underground Fortress");
 		
 		registerQuestItems(BONE_FRAGMENT, ELF_SKULL);
 		
@@ -73,7 +71,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -92,7 +90,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q223_TestOfTheChampion extends Quest
 {
-	private static final String qn = "Q223_TestOfTheChampion";
-	
 	// Items
 	private static final int ASCALON_LETTER_1 = 3277;
 	private static final int MASON_LETTER = 3278;
@@ -77,7 +75,7 @@ public class Q223_TestOfTheChampion extends Quest
 	
 	public Q223_TestOfTheChampion()
 	{
-		super(223, qn, "Test of the Champion");
+		super(223, "Test of the Champion");
 		
 		registerQuestItems(MASON_LETTER, MEDUSA_VENOM, WINDSUS_BILE, WHITE_ROSE_INSIGNIA, HARPY_EGG, GROOT_LETTER, MOUEN_LETTER, ASCALON_LETTER_1, IRON_ROSE_RING, BLOODY_AXE_HEAD, ASCALON_LETTER_2, ASCALON_LETTER_3, MOUEN_ORDER_1, ROAD_RATMAN_HEAD, MOUEN_ORDER_2, LETO_LIZARDMAN_FANG);
 		
@@ -92,7 +90,7 @@ public class Q223_TestOfTheChampion extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -163,7 +161,7 @@ public class Q223_TestOfTheChampion extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

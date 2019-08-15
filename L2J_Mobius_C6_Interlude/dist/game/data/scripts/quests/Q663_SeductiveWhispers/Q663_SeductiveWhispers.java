@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q663_SeductiveWhispers extends Quest
 {
-	private static final String qn = "Q663_SeductiveWhispers";
-	
 	// NPC
 	private static final int WILBERT = 30846;
 	
@@ -125,7 +123,7 @@ public class Q663_SeductiveWhispers extends Quest
 	
 	public Q663_SeductiveWhispers()
 	{
-		super(663, qn, "Seductive Whispers");
+		super(663, "Seductive Whispers");
 		
 		registerQuestItems(SPIRIT_BEAD);
 		
@@ -142,7 +140,7 @@ public class Q663_SeductiveWhispers extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -454,7 +452,7 @@ public class Q663_SeductiveWhispers extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -534,7 +532,7 @@ public class Q663_SeductiveWhispers extends Quest
 			return null;
 		}
 		
-		partyMember.getQuestState(qn).dropItems(SPIRIT_BEAD, 1, 0, CHANCES.get(npc.getNpcId()));
+		partyMember.getQuestState(getName()).dropItems(SPIRIT_BEAD, 1, 0, CHANCES.get(npc.getNpcId()));
 		
 		return null;
 	}

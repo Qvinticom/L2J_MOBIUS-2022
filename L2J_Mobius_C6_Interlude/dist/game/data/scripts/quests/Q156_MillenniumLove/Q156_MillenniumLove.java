@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q156_MillenniumLove extends Quest
 {
-	private static final String qn = "Q156_MillenniumLove";
-	
 	// Items
 	private static final int LILITH_LETTER = 1022;
 	private static final int THEON_DIARY = 1023;
@@ -36,7 +34,7 @@ public class Q156_MillenniumLove extends Quest
 	
 	public Q156_MillenniumLove()
 	{
-		super(156, qn, "Millennium Love");
+		super(156, "Millennium Love");
 		
 		registerQuestItems(LILITH_LETTER, THEON_DIARY);
 		
@@ -48,7 +46,7 @@ public class Q156_MillenniumLove extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -83,7 +81,7 @@ public class Q156_MillenniumLove extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

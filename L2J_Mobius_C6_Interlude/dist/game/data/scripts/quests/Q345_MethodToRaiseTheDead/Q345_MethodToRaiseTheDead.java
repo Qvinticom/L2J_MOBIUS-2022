@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q345_MethodToRaiseTheDead extends Quest
 {
-	private static final String qn = "Q345_MethodToRaiseTheDead";
-	
 	// Items
 	private static final int VICTIM_ARM_BONE = 4274;
 	private static final int VICTIM_THIGH_BONE = 4275;
@@ -48,7 +46,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	
 	public Q345_MethodToRaiseTheDead()
 	{
-		super(345, qn, "Method to Raise the Dead");
+		super(345, "Method to Raise the Dead");
 		
 		registerQuestItems(VICTIM_ARM_BONE, VICTIM_THIGH_BONE, VICTIM_SKULL, VICTIM_RIB_BONE, VICTIM_SPINE, POWDER_TO_SUMMON_DEAD_SOULS, USELESS_BONE_PIECES);
 		
@@ -62,7 +60,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -149,7 +147,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

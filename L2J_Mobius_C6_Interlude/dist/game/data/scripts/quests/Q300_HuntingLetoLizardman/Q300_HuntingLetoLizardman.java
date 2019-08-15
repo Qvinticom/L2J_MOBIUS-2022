@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q300_HuntingLetoLizardman extends Quest
 {
-	private static final String qn = "Q300_HuntingLetoLizardman";
-	
 	// Item
 	private static final int BRACELET = 7139;
 	
@@ -53,7 +51,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 	
 	public Q300_HuntingLetoLizardman()
 	{
-		super(300, qn, "Hunting Leto Lizardman");
+		super(300, "Hunting Leto Lizardman");
 		
 		registerQuestItems(BRACELET);
 		
@@ -67,7 +65,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -111,7 +109,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -141,7 +139,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

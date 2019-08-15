@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q327_RecoverTheFarmland extends Quest
 {
-	private static final String qn = "Q327_RecoverTheFarmland";
-	
 	// Items
 	private static final int LEIKAN_LETTER = 5012;
 	private static final int TUREK_DOGTAG = 1846;
@@ -121,7 +119,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	
 	public Q327_RecoverTheFarmland()
 	{
-		super(327, qn, "Recover the Farmland");
+		super(327, "Recover the Farmland");
 		
 		registerQuestItems(LEIKAN_LETTER);
 		
@@ -135,7 +133,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -375,7 +373,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

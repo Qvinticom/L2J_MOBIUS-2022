@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q601_WatchingEyes extends Quest
 {
-	private static final String qn = "Q601_WatchingEyes";
-	
 	// Items
 	private static final int PROOF_OF_AVENGER = 7188;
 	
@@ -57,7 +55,7 @@ public class Q601_WatchingEyes extends Quest
 	
 	public Q601_WatchingEyes()
 	{
-		super(601, qn, "Watching Eyes");
+		super(601, "Watching Eyes");
 		
 		registerQuestItems(PROOF_OF_AVENGER);
 		
@@ -71,7 +69,7 @@ public class Q601_WatchingEyes extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -120,7 +118,7 @@ public class Q601_WatchingEyes extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -157,7 +155,7 @@ public class Q601_WatchingEyes extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

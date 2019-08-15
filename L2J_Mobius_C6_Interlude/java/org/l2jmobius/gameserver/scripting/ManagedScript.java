@@ -94,6 +94,4 @@ public abstract class ManagedScript
 	{
 		return _lastLoadTime;
 	}
-	
-	public abstract String getScriptName();
 }

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q002_WhatWomenWant extends Quest
 {
-	private static final String qn = "Q002_WhatWomenWant";
-	
 	// NPCs
 	private static final int ARUJIEN = 30223;
 	private static final int MIRABEL = 30146;
@@ -45,7 +43,7 @@ public class Q002_WhatWomenWant extends Quest
 	
 	public Q002_WhatWomenWant()
 	{
-		super(2, qn, "What Women Want");
+		super(2, "What Women Want");
 		
 		registerQuestItems(ARUJIEN_LETTER_1, ARUJIEN_LETTER_2, ARUJIEN_LETTER_3, POETRY_BOOK, GREENIS_LETTER);
 		
@@ -57,7 +55,7 @@ public class Q002_WhatWomenWant extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -92,7 +90,7 @@ public class Q002_WhatWomenWant extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

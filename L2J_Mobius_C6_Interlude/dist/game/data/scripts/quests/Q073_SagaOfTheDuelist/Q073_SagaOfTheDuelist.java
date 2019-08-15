@@ -23,13 +23,9 @@ import quests.SagasSuperClass;
  */
 public class Q073_SagaOfTheDuelist extends SagasSuperClass
 {
-	public static String qn1 = "Q073_SagaOfTheDuelist";
-	public static int qnu = 73;
-	public static String qna = "Saga of the Duelist";
-	
 	public Q073_SagaOfTheDuelist()
 	{
-		super(qnu, qn1, qna);
+		super(73, "Saga of the Duelist");
 		NPC = new int[]
 		{
 			30849,
@@ -66,7 +62,6 @@ public class Q073_SagaOfTheDuelist extends SagasSuperClass
 			27222,
 			27281
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			88

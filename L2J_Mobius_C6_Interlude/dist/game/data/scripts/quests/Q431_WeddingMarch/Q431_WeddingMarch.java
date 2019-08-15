@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q431_WeddingMarch extends Quest
 {
-	private static final String qn = "Q431_WeddingMarch";
-	
 	// NPC
 	private static final int KANTABILON = 31042;
 	
@@ -37,7 +35,7 @@ public class Q431_WeddingMarch extends Quest
 	
 	public Q431_WeddingMarch()
 	{
-		super(431, qn, "Wedding March");
+		super(431, "Wedding March");
 		
 		registerQuestItems(SILVER_CRYSTAL);
 		
@@ -51,7 +49,7 @@ public class Q431_WeddingMarch extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +83,7 @@ public class Q431_WeddingMarch extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -122,7 +120,7 @@ public class Q431_WeddingMarch extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

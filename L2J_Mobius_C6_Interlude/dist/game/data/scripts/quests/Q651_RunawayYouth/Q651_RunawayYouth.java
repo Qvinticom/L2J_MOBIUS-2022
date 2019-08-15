@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 public class Q651_RunawayYouth extends Quest
 {
-	private static final String qn = "Q651_RunawayYouth";
-	
 	// NPCs
 	private static final int IVAN = 32014;
 	private static final int BATIDAE = 31989;
@@ -49,7 +47,7 @@ public class Q651_RunawayYouth extends Quest
 	
 	public Q651_RunawayYouth()
 	{
-		super(651, qn, "Runaway Youth");
+		super(651, "Runaway Youth");
 		
 		addStartNpc(IVAN);
 		addTalkId(IVAN, BATIDAE);
@@ -61,7 +59,7 @@ public class Q651_RunawayYouth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +107,7 @@ public class Q651_RunawayYouth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{

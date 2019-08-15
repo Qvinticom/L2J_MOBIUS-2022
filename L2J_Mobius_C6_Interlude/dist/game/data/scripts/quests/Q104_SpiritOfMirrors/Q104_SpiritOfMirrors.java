@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q104_SpiritOfMirrors extends Quest
 {
-	private static final String qn = "Q104_SpiritOfMirrors";
-	
 	// Items
 	private static final int GALLINS_OAK_WAND = 748;
 	private static final int WAND_SPIRITBOUND_1 = 1135;
@@ -56,7 +54,7 @@ public class Q104_SpiritOfMirrors extends Quest
 	
 	public Q104_SpiritOfMirrors()
 	{
-		super(104, qn, "Spirit of Mirrors");
+		super(104, "Spirit of Mirrors");
 		
 		registerQuestItems(GALLINS_OAK_WAND, WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_2, WAND_SPIRITBOUND_3);
 		
@@ -70,7 +68,7 @@ public class Q104_SpiritOfMirrors extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -93,7 +91,7 @@ public class Q104_SpiritOfMirrors extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

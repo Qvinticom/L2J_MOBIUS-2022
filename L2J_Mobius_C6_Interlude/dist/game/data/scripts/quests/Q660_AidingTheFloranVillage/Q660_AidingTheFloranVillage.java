@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q660_AidingTheFloranVillage extends Quest
 {
-	private static final String qn = "Q660_AidingTheFloranVillage";
-	
 	// NPCs
 	private static final int MARIA = 30608;
 	private static final int ALEX = 30291;
@@ -52,7 +50,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 	
 	public Q660_AidingTheFloranVillage()
 	{
-		super(660, qn, "Aiding the Floran Village");
+		super(660, "Aiding the Floran Village");
 		
 		registerQuestItems(WATCHING_EYES, LIZARDMEN_SCALE, GOLEM_SHARD);
 		
@@ -66,7 +64,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -194,7 +192,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -252,7 +250,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
