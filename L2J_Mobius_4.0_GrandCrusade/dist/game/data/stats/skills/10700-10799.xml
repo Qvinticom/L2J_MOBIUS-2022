@@ -606,7 +606,6 @@
 			<effect name="MagicMpCost">
 				<amount>-30</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
@@ -659,7 +658,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="WeightLimit">
-				<amount>51</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
@@ -668,7 +667,6 @@
 			</effect>
 			<effect name="AreaDamage">
 				<amount>-30</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -868,6 +866,7 @@
 		<effectPoint>687</effectPoint>
 		<toggleGroupId>2</toggleGroupId>
 		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -1109,6 +1108,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2197,7 +2197,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2415,9 +2414,9 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-706</effectPoint>
 		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<magicLvl>93</magicLvl>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>GROUND</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2466,7 +2465,6 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2515,8 +2513,6 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2567,7 +2563,6 @@
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
-		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>93</magicLvl>
 		<mpConsume>9</mpConsume>
@@ -2575,7 +2570,6 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2779,7 +2773,6 @@
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2808,7 +2801,6 @@
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2841,7 +2833,6 @@
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2879,7 +2870,6 @@
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
