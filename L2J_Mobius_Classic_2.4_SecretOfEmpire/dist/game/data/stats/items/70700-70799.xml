@@ -990,6 +990,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="180" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39269" level="1"/> <!-- Special Dragons Fruit -->
+		</skills>
 	</item>
 	<item id="70768" name="Vital Stone - Lv. 4" additionalName="7-day" type="Armor">
 		<!-- XP/SP +8%, and allows to use Lv. 2 Vital Wind skill, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->

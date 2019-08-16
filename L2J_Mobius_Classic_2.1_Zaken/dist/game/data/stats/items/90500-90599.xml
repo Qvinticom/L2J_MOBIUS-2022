@@ -85,6 +85,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55682" level="1"/> <!-- Special Dragons Fruit -->
+		</skills>
 	</item>
 	<item id="90509" name="Dragon’s Gold Key" type="EtcItem">
 		<!-- Take 1 Gold Key and 15 Melissa's Recovery Potions to the Dimensional Merchant to exchange them for Shining Dragon's Treasure Chest. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over on Jule 6, 2016. -->
