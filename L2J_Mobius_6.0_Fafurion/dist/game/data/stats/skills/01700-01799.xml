@@ -16,8 +16,8 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Heal">
-				<power>19700</power>
+			<effect name="HealPercent">
+				<power>15</power>
 			</effect>
 		</effects>
 	</skill>
@@ -37,8 +37,8 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="Heal">
-				<power>15750</power>
+			<effect name="HealPercent">
+				<power>15</power>
 			</effect>
 		</effects>
 	</skill>
