@@ -106,6 +106,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		switch (npc.getId())
 		{
 			case CLIFF:
+			{
 				if (qs.isCreated())
 				{
 					if (player.getLevel() >= 40)
@@ -119,7 +120,9 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 					return "30182-06.html";
 				}
 				return "30182-07.html";
+			}
 			case WAREHOUSE_CHIEF_BAXT:
+			{
 				if (qs.getMemoState() > 0)
 				{
 					if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) < 10)
@@ -128,6 +131,8 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 					}
 					return "30685-07.html";
 				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -143,7 +148,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 				return event;
 			}
 			
-			final int ask = Integer.parseInt(event);
 			switch (npc.getId())
 			{
 				case CLIFF:
@@ -157,25 +161,34 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30182-05.htm";
 					}
+					final int ask = Integer.parseInt(event);
 					switch (ask)
 					{
 						case 3:
+						{
 							return "30182-09a.htm";
+						}
 						case 4:
+						{
 							return "30182-02.htm";
+						}
 						case 5:
+						{
 							if (npc.getId() != CLIFF)
 							{
 								return getNoQuestMsg(player);
 							}
 							return "30182-03.htm";
+						}
 						case 6:
 						{
 							qs.exitQuest(true);
 							return "30182-08.html";
 						}
 						case 9:
+						{
 							return "30182-09.html";
+						}
 						case 7:
 						{
 							if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) >= 10)
@@ -239,16 +252,25 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 					break;
 				}
 				case WAREHOUSE_CHIEF_BAXT:
+				{
+					final int ask = Integer.parseInt(event);
 					switch (ask)
 					{
 						case 3:
+						{
 							return "30685-09a.html";
+						}
 						case 6:
+						{
 							qs.exitQuest(true);
 							return "30685-08.html";
+						}
 						case 9:
+						{
 							return "30685-09.html";
+						}
 						case 7:
+						{
 							if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) >= 10)
 							{
 								takeItems(player, Q_IRONGATE_MEDAL, 10);
@@ -257,7 +279,9 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 								return "30685-10.html";
 							}
 							return "30685-11.html";
+						}
 						case 8:
+						{
 							if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) >= 100)
 							{
 								takeItems(player, Q_IRONGATE_MEDAL, 100);
@@ -266,6 +290,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 								return "30685-12.html";
 							}
 							return "30685-11.html";
+						}
 						case 10:
 						case 11:
 						case 12:
@@ -304,6 +329,8 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 							return beforeReward(player, qs, (ask - 54), WAREHOUSE_CHIEF_BAXT);
 						}
 					}
+					break;
+				}
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -648,161 +675,213 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			switch (npc.getId())
 			{
 				case HUNTER_GARGOYLE:
+				{
 					if (getRandom(1000) < 328)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case DUST_WIND:
+				{
 					if (getRandom(100) < 35)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case THUNDER_WYRM:
+				{
 					if (getRandom(1000) < 312)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case DUST_WIND_HOLD:
+				{
 					if (getRandom(100) < 35)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case THUNDER_WYRM_HOLD:
+				{
 					if (getRandom(1000) < 312)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case HUNTER_GARGOYLE_HOLD:
+				{
 					if (getRandom(1000) < 328)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case GIANT_MONSTEREYE:
+				{
 					if (getRandom(1000) < 176)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case ROT_GOLEM:
+				{
 					if (getRandom(1000) < 226)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case WEIRD_DRAKE:
+				{
 					if (getRandom(1000) < 218)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case CARINKAIN:
+				{
 					if (getRandom(1000) < 216)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case GRAVE_GUARD:
+				{
 					if (getRandom(1000) < 312)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case TULBEN:
+				{
 					if (getRandom(1000) < 522)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case DRAGON_BEARER_CHIEF:
+				{
 					if (getRandom(100) < 38)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case DRAGON_BEARER_WARRIOR:
+				{
 					if (getRandom(100) < 39)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case DRAGON_BEARER_ARCHER:
+				{
 					if (getRandom(1000) < 372)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case CONGERER_LORD:
+				{
 					if (getRandom(1000) < 802)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case CONGERER:
+				{
 					if (getRandom(1000) < 844)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case NIGHTMARE_GUIDE:
+				{
 					if (getRandom(1000) < 118)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case NIGHTMARE_KEEPER:
+				{
 					if (getRandom(100) < 17)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case NIGHTMARE_LORD:
+				{
 					if (getRandom(1000) < 144)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case CADEINE:
+				{
 					if (getRandom(1000) < 162)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case SANHIDRO:
+				{
 					if (getRandom(100) < 25)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case CONNABI:
+				{
 					if (getRandom(1000) < 272)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case BARTAL:
+				{
 					if (getRandom(100) < 27)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case LUMINUN:
+				{
 					if (getRandom(100) < 32)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 				case INNERSEN:
+				{
 					if (getRandom(1000) < 346)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_IRONGATE_MEDAL, 1, 0, 1, true);
 					}
 					break;
+				}
 			}
 			
 		}
