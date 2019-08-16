@@ -88,7 +88,7 @@
 		<!-- Decreases target's Bow/ Crossbow Resistance by $s1 and M. Def. by $s2. -->
 		<icon>icon.skill10801</icon>
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
+		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
@@ -208,7 +208,7 @@
 		<!-- Decreases target's and nearby enemies' Bow/ Crossbow Resistance by $s1 and M. Def. by $s2. After a certain time, target explodes, suffering heavy damage. -->
 		<icon>icon.skill10782</icon>
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
+		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
