@@ -914,10 +914,19 @@
 	<item id="47761" name="+7 Shirt Chest (Sparkle/Attack/Magic)" type="EtcItem">
 		<!-- Double-click to obtain one of Shiny +7 Einhasad/ Reflect Attack/ Reflect Magic Shirt. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="0" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18651" level="1" /> <!-- +7 T-shirt Box (Shining/ Attack/ Magic) -->
+		</skills>
 	</item>
 	<item id="47762" name="Lindvior's Earring" additionalName="7-day" type="Armor">
 		<!-- MP+59, Petrification P. Atk. and Resistance +50%, Knock Back/ Knock Down P. Atk. and Resistance +40%, Pull Success Rate +40%, Pull/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Atk. Abnormal Status Reflection +10%, 10% chance to reflect M. Atk. Damage to an enemy performing a P. Atk. Speed 5, DEX +3, WIT +3, Wind/ Dark Attribute Def. +30. Can use a Knock Back/ Knock Down cancellation skill, and receive Knock Back/ Knock Down resistance for 5 seconds. Does not stack with identical earrings. -->

@@ -1363,11 +1363,41 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18651" toLevel="11" name="+7 T-shirt Box (Shining/ Attack/ Magic)">
+	<skill id="18651" toLevel="1" name="+7 T-shirt Box (Shining/ Attack/ Magic)">
 		<!-- Double-click to obtain one of Shiny Elemental enchanted by +7/ Reflect Attack/ Reflect Magic Shirt. -->
+		<icon>icon.event_six_party_box_i00</icon>
+		<itemConsumeId>47761</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="37718" count="1"  minEnchant="7" maxEnchant="7" /> <!-- Shiny Elemental Shirt -->
+					</item>
+					<item chance="40">
+						<item id="46193" count="1"  minEnchant="7" maxEnchant="7" /> <!-- Physical Reflect Shirt -->
+					</item>
+					<item chance="40">
+						<item id="46194" count="1"  minEnchant="7" maxEnchant="7" /> <!-- Eva's Shirt -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18652" toLevel="1" name="Shining Scroll: Enchant Elemental Shirt">
 		<operateType>A1</operateType>
