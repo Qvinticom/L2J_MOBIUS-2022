@@ -846,7 +846,7 @@ public class NpcInstance extends Creature
 			// Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
-			String className = getClass().getName().substring(46);
+			String className = getClass().getSimpleName();
 			html1.append("<br>");
 			
 			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().factionId + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
