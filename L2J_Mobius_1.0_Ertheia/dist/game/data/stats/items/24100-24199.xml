@@ -817,6 +817,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="24135" name="Dark Assassin Top" type="EtcItem">
 		<!-- Take 4 parts to the Assassin Suit (top, pants, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->
@@ -877,6 +878,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24142" name="Blessed Amaranthine Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Blessed Amaranthine weapon. -->
@@ -884,6 +886,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24143" name="Blessed Eternal Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Eternal Armor. -->
@@ -891,6 +894,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24144" name="Rare Soul Crystal Ingredient Pack (R99-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing all Gemstones required for rare soul crystal enchantment of an Amaranthine weapon. -->
@@ -904,6 +908,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="24145" name="Rare Soul Crystal Ingredient Pack (R95-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing all Gemstones required for rare soul crystal enchantment of a Specter weapon. -->
@@ -917,6 +922,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="24146" name="Top-grade Augmentation Pack (R99-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Top-grade Life Stone (R99-grade) and all fees required for augmentation and de-augmentation. -->
@@ -930,6 +936,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="24147" name="Top-grade Augmentation Pack (R95-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Top-grade Life Stone (R95-grade) and all fees required for augmentation and de-augmentation. -->
@@ -943,6 +950,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="24148" name="Luck Box 1" additionalName="Taurus" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade Augmentation Pack (R95-grade), Top-grade Augmentation Pack (R99-grade), or Agathion - Taurus. -->
@@ -950,6 +958,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24149" name="Luck Box 2" type="EtcItem">
 		<!-- Has a chance of obtaining either an Ancient Scroll: Enchant Weapon/Armor (R-grade), Blessed Giant's Lucky Enchant Stone: Weapon/Armor (R-grade), Giant's Scroll: Enchant Weapon/Armor (R-grade), Blessed Scroll: Enchant Weapo/Armor (R-grade), Blessed Lucky Enchant Stone: Weapon/Armor (R-grade), Blessed High-grade Lucky Enchant Stone: Weapon/Armor (R-grade), Lesser Giant's Lucky Enchant Stone: Weapon/Armor (R-grade), High-grade Lucky Enchant Stone: Weapon/Armor (R-grade), or Scroll: Enchant Weapon/Armor (R-grade). -->
@@ -957,6 +966,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24150" name="Luck Box 3" type="EtcItem">
 		<!-- Has a chance of obtaining either an XP Rune III (Lv. 1-99) 100% Pack (30-day), Prestige Rune 100% Pack, Kat the Cat's Box of Roses, Pa'agrio's Warm Breeze, Ghost Potion, Emperor's Growth Scroll, Feather of Blessing Pack, Letter Collector's Gift, Mysterious Healthy Juice (HP/CP), Gemstone (R-grade), or Heavenly Recovery Potion. -->
@@ -964,6 +974,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24151" name="Agathion - Virgo Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Virgo between Lv. 1 - 4. -->
@@ -971,6 +982,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24152" name="Agathion - Virgo Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Virgo between Lv. 5 - 6. -->
@@ -978,13 +990,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24153" name="Agathion - Virgo Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Virgo between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26140" level="1" /> <!-- Agathion - Virgo Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24154" name="Agathion - Capricorn Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Capricorn between Lv. 1 - 4. -->
@@ -992,6 +1012,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24155" name="Agathion - Capricorn Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Capricorn between Lv. 5 - 6. -->
@@ -999,13 +1020,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24156" name="Agathion - Capricorn Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Capricorn between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26143" level="1" /> <!-- Agathion - Capricorn Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24157" name="Agathion - Libra Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Libra between Lv. 1 - 4. -->
@@ -1013,6 +1042,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24158" name="Agathion - Libra Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Libra between Lv. 5 - 6. -->
@@ -1020,13 +1050,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24159" name="Agathion - Libra Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Libra between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26146" level="1" /> <!-- Agathion - Libra Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24160" name="Agathion - Aries Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aries between Lv. 1 - 4. -->
@@ -1034,6 +1072,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24161" name="Agathion - Aries Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aries between Lv. 5 - 6. -->
@@ -1041,13 +1080,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24162" name="Agathion - Aries Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aries between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26149" level="1" /> <!-- Agathion - Aries Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24163" name="Agathion - Taurus Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Taurus between Lv. 1 - 4. -->
@@ -1055,6 +1102,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24164" name="Agathion - Taurus Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Taurus between Lv. 5 - 6. -->
@@ -1062,13 +1110,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24165" name="Agathion - Taurus Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Taurus between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26152" level="1" /> <!-- Agathion - Taurus Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24166" name="Agathion - Leo Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Leo between Lv. 1 - 4. -->
@@ -1076,6 +1132,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24167" name="Agathion - Leo Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Leo between Lv. 5 - 6. -->
@@ -1083,13 +1140,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24168" name="Agathion - Leo Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Leo between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26155" level="1" /> <!-- Agathion - Leo Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24169" name="Agathion - Gemini Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Gemini between Lv. 1 - 4. -->
@@ -1097,6 +1162,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24170" name="Agathion - Gemini Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Gemini between Lv. 5 - 6. -->
@@ -1104,13 +1170,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24171" name="Agathion - Gemini Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Gemini between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26158" level="1" /> <!-- Agathion - Gemini Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24172" name="Agathion - Scorpio Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Scorpio between Lv. 1 - 4. -->
@@ -1118,6 +1192,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24173" name="Agathion - Scorpio Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Scorpio between Lv. 5 - 6. -->
@@ -1125,13 +1200,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24174" name="Agathion - Scorpio Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Scorpio between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26161" level="1" /> <!-- Agathion - Scorpio Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24175" name="Agathion - Aquarius Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aquarius between Lv. 1 - 4. -->
@@ -1139,6 +1222,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24176" name="Agathion - Aquarius Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aquarius between Lv. 5 - 6. -->
@@ -1146,13 +1230,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24177" name="Agathion - Aquarius Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aquarius between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26164" level="1" /> <!-- Agathion - Aquarius Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24178" name="Agathion - Pisces Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pisces between Lv. 1 - 4. -->
@@ -1160,6 +1252,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24179" name="Agathion - Pisces Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pisces between Lv. 5 - 6. -->
@@ -1167,13 +1260,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24180" name="Agathion - Pisces Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pisces between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26167" level="1" /> <!-- Agathion - Pisces Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24181" name="Agathion - Sagittarius Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Sagittarius between Lv. 1 - 4. -->
@@ -1181,6 +1282,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24182" name="Agathion - Sagittarius Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Sagittarius between Lv. 5 - 6. -->
@@ -1188,13 +1290,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24183" name="Agathion - Sagittarius Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Sagittarius between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26170" level="1" /> <!-- Agathion - Sagittarius Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24184" name="Agathion - Cancer Pack (Low-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Cancer between Lv. 1 - 4. -->
@@ -1202,6 +1312,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24185" name="Agathion - Cancer Pack (Mid-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Cancer between Lv. 5 - 6. -->
@@ -1209,13 +1320,21 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24186" name="Agathion - Cancer Pack (High-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Cancer between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26173" level="1" /> <!-- Agathion - Cancer Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24187" name="Easter Egg" additionalName="Event" type="EtcItem">
 		<!-- Gift for Easter. Double-click for a chance to obtain an event item. -->
@@ -1230,11 +1349,13 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="24188" name="Agathion - Twinkling Virgo" additionalName="Stage 1" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 2250 sec.). 2. Attribute Enchant: Attribute Resistance + 5. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="653" />
 		<set name="is_clan_depositable" val="false" />
@@ -1251,6 +1372,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 2100 sec.). 2. Balanced Power: MEN + 1. 2. Attribute Enchant: Attribute Resistance + 5. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="1254" />
 		<set name="is_clan_depositable" val="false" />
@@ -1267,6 +1389,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1950 sec.). 2. Balanced Power: MEN + 1. 2. Attribute Enchant: Attribute Resistance + 10. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="1929" />
 		<set name="is_clan_depositable" val="false" />
@@ -1283,6 +1406,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1800 sec.). 2. Balanced Power: CON/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 10. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="2564" />
 		<set name="is_clan_depositable" val="false" />
@@ -1299,6 +1423,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1650 sec.). 2. Balanced Power: CON/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 15. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="1825" />
 		<set name="is_clan_depositable" val="false" />
@@ -1315,6 +1440,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1500 sec.). 2. Balanced Power: CON/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 15. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="2553" />
 		<set name="is_clan_depositable" val="false" />
@@ -1331,6 +1457,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1350 sec.). 2. Balanced Power: CON/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 20. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="2974" />
 		<set name="is_clan_depositable" val="false" />
@@ -1347,6 +1474,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1200 sec.). 2. Balanced Power: CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 20. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="3692" />
 		<set name="is_clan_depositable" val="false" />
@@ -1363,6 +1491,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1050 sec.). 2. Balanced Power: CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 25. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="4598" />
 		<set name="is_clan_depositable" val="false" />
@@ -1379,6 +1508,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 900 sec.). 2. Balanced Power: INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 25. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="5478" />
 		<set name="is_clan_depositable" val="false" />
@@ -1395,6 +1525,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 750 sec.). 2. Balanced Power: INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 30. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="6432" />
 		<set name="is_clan_depositable" val="false" />
@@ -1411,6 +1542,7 @@
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 600 sec.). 2. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Resistance + 30. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="8947" />
 		<set name="is_clan_depositable" val="false" />

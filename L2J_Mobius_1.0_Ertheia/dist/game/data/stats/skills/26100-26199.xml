@@ -820,7 +820,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26140" toLevel="1" name="Agathion - Virgo Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24153</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="23995" count="1" /> <!-- Agathion - Virgo / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="23996" count="1" /> <!-- Agathion - Virgo / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26141" toLevel="1" name="Agathion - Capricorn Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -829,7 +858,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26143" toLevel="1" name="Agathion - Capricorn Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24156</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24007" count="1" /> <!-- Agathion - Capricorn / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24008" count="1" /> <!-- Agathion - Capricorn / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26144" toLevel="1" name="Agathion - Libra Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -838,7 +896,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26146" toLevel="1" name="Agathion - Libra Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24159</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24019" count="1" /> <!-- Agathion - Libra / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24020" count="1" /> <!-- Agathion - Libra / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26147" toLevel="1" name="Agathion - Aries Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -847,7 +934,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26149" toLevel="1" name="Agathion - Aries Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24162</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24031" count="1" /> <!-- Agathion - Aries / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24032" count="1" /> <!-- Agathion - Aries / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26150" toLevel="1" name="Agathion - Taurus Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -856,7 +972,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26152" toLevel="1" name="Agathion - Taurus Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24165</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24043" count="1" /> <!-- Agathion - Taurus / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24044" count="1" /> <!-- Agathion - Taurus / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26153" toLevel="1" name="Agathion - Leo Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -865,7 +1010,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26155" toLevel="1" name="Agathion - Leo Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24168</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24055" count="1" /> <!-- Agathion - Leo / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24056" count="1" /> <!-- Agathion - Leo / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26156" toLevel="1" name="Agathion - Gemini Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -874,7 +1048,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26158" toLevel="1" name="Agathion - Gemini Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24171</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24067" count="1" /> <!-- Agathion - Gemini / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24068" count="1" /> <!-- Agathion - Gemini / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26159" toLevel="1" name="Agathion - Scorpio Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -883,7 +1086,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26161" toLevel="1" name="Agathion - Scorpio Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24174</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24079" count="1" /> <!-- Agathion - Scorpio / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24080" count="1" /> <!-- Agathion - Scorpio / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26162" toLevel="1" name="Agathion - Aquarius Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -892,7 +1124,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26164" toLevel="1" name="Agathion - Aquarius Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24177</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24091" count="1" /> <!-- Agathion - Aquarius / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24092" count="1" /> <!-- Agathion - Aquarius / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26165" toLevel="1" name="Agathion - Pisces Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -901,7 +1162,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26167" toLevel="1" name="Agathion - Pisces Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24180</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24103" count="1" /> <!-- Agathion - Pisces / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24104" count="1" /> <!-- Agathion - Pisces / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26168" toLevel="1" name="Agathion - Sagittarius Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -910,7 +1200,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26170" toLevel="1" name="Agathion - Sagittarius Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24183</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24115" count="1" /> <!-- Agathion - Sagittarius / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24116" count="1" /> <!-- Agathion - Sagittarius / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26171" toLevel="1" name="Agathion - Cancer Pack (Low-grade)">
 		<operateType>A1</operateType>
@@ -919,7 +1238,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26173" toLevel="1" name="Agathion - Cancer Pack (High-grade)">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>24186</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="24127" count="1" /> <!-- Agathion - Cancer / Stage 7 -->
+					</item>
+					<item chance="10">
+						<item id="24128" count="1" /> <!-- Agathion - Cancer / Stage 8 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26174" toLevel="1" name="Easter Egg">
 		<operateType>A1</operateType>

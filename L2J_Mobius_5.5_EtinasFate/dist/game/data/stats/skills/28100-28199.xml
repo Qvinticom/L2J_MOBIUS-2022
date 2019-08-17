@@ -937,10 +937,66 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28171" toLevel="1" name="High-grade Zodiac Agathion">
+		<icon>icon.bm_dragon_present_4</icon>
+		<itemConsumeId>29152</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.33333333">
+						<item id="24171" count="1" /> <!-- Agathion - Gemini Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24159" count="1" /> <!-- Agathion - Libra Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24177" count="1" /> <!-- Agathion - Aquarius Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24153" count="1" /> <!-- Agathion - Virgo Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24156" count="1" /> <!-- Agathion - Capricorn Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24168" count="1" /> <!-- Agathion - Leo Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24162" count="1" /> <!-- Agathion - Aries Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24186" count="1" /> <!-- Agathion - Cancer Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24180" count="1" /> <!-- Agathion - Pisces Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24174" count="1" /> <!-- Agathion - Scorpio Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24183" count="1" /> <!-- Agathion - Sagittarius Pack (High-grade) -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24165" count="1" /> <!-- Agathion - Taurus Pack (High-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28172" toLevel="1" name="Prestige Rune">
 		<!-- Adena drop amount +300%, item drop rate and spoil acquisition rate +100%. -->

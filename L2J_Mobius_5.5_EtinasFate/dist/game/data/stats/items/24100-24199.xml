@@ -996,9 +996,15 @@
 		<!-- Double-click to obtain an Agathion - Virgo between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26140" level="1" /> <!-- Agathion - Virgo Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24154" name="Agathion - Capricorn Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Capricorn between Lv. 1 - 4. -->
@@ -1020,9 +1026,15 @@
 		<!-- Double-click to obtain an Agathion - Capricorn between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26143" level="1" /> <!-- Agathion - Capricorn Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24157" name="Agathion - Libra Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Libra between Lv. 1 - 4. -->
@@ -1044,9 +1056,15 @@
 		<!-- Double-click to obtain an Agathion - Libra between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26146" level="1" /> <!-- Agathion - Libra Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24160" name="Agathion - Aries Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Aries between Lv. 1 - 4. -->
@@ -1068,9 +1086,15 @@
 		<!-- Double-click to obtain an Agathion - Aries between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26149" level="1" /> <!-- Agathion - Aries Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24163" name="Agathion - Taurus Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Taurus between Lv. 1 - 4. -->
@@ -1092,9 +1116,15 @@
 		<!-- Double-click to obtain an Agathion - Taurus between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26152" level="1" /> <!-- Agathion - Taurus Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24166" name="Agathion - Leo Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Leo between Lv. 1 - 4. -->
@@ -1116,9 +1146,15 @@
 		<!-- Double-click to obtain an Agathion - Leo between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26155" level="1" /> <!-- Agathion - Leo Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24169" name="Agathion - Gemini Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Gemini between Lv. 1 - 4. -->
@@ -1140,9 +1176,15 @@
 		<!-- Double-click to obtain an Agathion - Gemini between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26158" level="1" /> <!-- Agathion - Gemini Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24172" name="Agathion - Scorpio Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Scorpio between Lv. 1 - 4. -->
@@ -1164,9 +1206,15 @@
 		<!-- Double-click to obtain an Agathion - Scorpio between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26161" level="1" /> <!-- Agathion - Scorpio Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24175" name="Agathion - Aquarius Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Aquarius between Lv. 1 - 4. -->
@@ -1188,9 +1236,15 @@
 		<!-- Double-click to obtain an Agathion - Aquarius between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26164" level="1" /> <!-- Agathion - Aquarius Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24178" name="Agathion - Pisces Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Pisces between Lv. 1 - 4. -->
@@ -1212,9 +1266,15 @@
 		<!-- Double-click to obtain an Agathion - Pisces between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26167" level="1" /> <!-- Agathion - Pisces Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24181" name="Agathion - Sagittarius Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Sagittarius between Lv. 1 - 4. -->
@@ -1236,9 +1296,15 @@
 		<!-- Double-click to obtain an Agathion - Sagittarius between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26170" level="1" /> <!-- Agathion - Sagittarius Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24184" name="Agathion - Cancer Pack (Low-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Cancer between Lv. 1 - 4. -->
@@ -1260,9 +1326,15 @@
 		<!-- Double-click to obtain an Agathion - Cancer between Lv. 7 - 8. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="26173" level="1" /> <!-- Agathion - Cancer Pack (High-grade) -->
+		</skills>
 	</item>
 	<item id="24187" name="Easter Egg" additionalName="Event" type="EtcItem">
 		<!-- Gift for Easter. Double-click for a chance to obtain an event item. -->

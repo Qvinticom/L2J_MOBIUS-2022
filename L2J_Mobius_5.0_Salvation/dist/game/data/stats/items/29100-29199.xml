@@ -497,10 +497,16 @@
 	<item id="29152" name="High-grade Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 High-grade Zodiac Agathions. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="0" />
+		<skills>
+			<skill id="28171" level="1" /> <!-- High-grade Zodiac Agathion -->
+		</skills>
 	</item>
 	<item id="29153" name="Prestige Rune 30%" additionalName="30-day" type="EtcItem">
 		<!-- When carried during a hunt, Adena +300%, item drop rate and item acquisition through Spoil + 100%. -->
