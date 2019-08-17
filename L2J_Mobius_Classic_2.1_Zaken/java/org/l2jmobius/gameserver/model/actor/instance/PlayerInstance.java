@@ -10401,6 +10401,15 @@ public class PlayerInstance extends Playable
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
 		}
+		
+		// send info to nearby players
+		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		{
+			if (isVisibleFor(player))
+			{
+				sendInfo(player);
+			}
+		});
 	}
 	
 	@Override

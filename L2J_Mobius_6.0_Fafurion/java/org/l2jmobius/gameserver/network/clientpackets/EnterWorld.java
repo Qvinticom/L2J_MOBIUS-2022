@@ -157,7 +157,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		client.setClientTracert(tracert);
 		
-		player.broadcastUserInfo();
+		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		
 		// Restore to instanced area if enabled
 		if (Config.RESTORE_PLAYER_INSTANCE)
@@ -171,55 +171,47 @@ public class EnterWorld implements IClientIncomingPacket
 			vars.remove("INSTANCE_RESTORE");
 		}
 		
-		// if (World.getInstance().findObject(player.getObjectId()) != null)
-		// {
-		// LOGGER.warning("User already exists in Object ID map! User " + player.getName() + " is a character clone.");
-		// }
-		
 		player.updatePvpTitleAndColor(false);
 		
 		// Apply special GM properties to the GM when entering
 		if (player.isGM())
 		{
-			ThreadPool.schedule(() -> // Needs a small delay.
+			gmStartupProcess:
 			{
-				gmStartupProcess:
+				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
-					if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
-					{
-						BuilderUtil.setHiding(player, true);
-						
-						BuilderUtil.sendSysMessage(player, "hide is default for builder.");
-						BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
-						BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
-						
-						// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-						break gmStartupProcess;
-					}
+					BuilderUtil.setHiding(player, true);
 					
-					if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
-					{
-						player.setIsInvul(true);
-					}
+					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
+					BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
+					BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
 					
-					if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
-					{
-						player.setInvisible(true);
-						player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
-					}
-					
-					if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
-					{
-						player.setSilenceMode(true);
-					}
-					
-					if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", player.getAccessLevel()))
-					{
-						player.setDietMode(true);
-						player.refreshOverloaded(true);
-					}
+					// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+					break gmStartupProcess;
 				}
-			}, 15);
+				
+				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
+				{
+					player.setIsInvul(true);
+				}
+				
+				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
+				{
+					player.setInvisible(true);
+					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+				}
+				
+				if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
+				{
+					player.setSilenceMode(true);
+				}
+				
+				if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", player.getAccessLevel()))
+				{
+					player.setDietMode(true);
+					player.refreshOverloaded(true);
+				}
+			}
 			
 			if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
 			{
@@ -426,7 +418,6 @@ public class EnterWorld implements IClientIncomingPacket
 			player.setSpawnProtection(true);
 		}
 		
-		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 		
 		player.getInventory().applyItemSkills();

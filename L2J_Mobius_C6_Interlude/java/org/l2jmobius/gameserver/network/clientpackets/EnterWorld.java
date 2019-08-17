@@ -586,49 +586,46 @@ public class EnterWorld extends GameClientPacket
 	{
 		if (player.isGM())
 		{
-			ThreadPool.schedule(() -> // Needs a small delay.
+			gmStartupProcess:
 			{
-				gmStartupProcess:
+				if (Config.GM_STARTUP_BUILDER_HIDE && AdminCommandAccessRights.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
-					if (Config.GM_STARTUP_BUILDER_HIDE && AdminCommandAccessRights.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
-					{
-						player.setInRefusalMode(true);
-						player.setIsInvul(true);
-						player.getAppearance().setInvisible();
-						
-						BuilderUtil.sendSysMessage(player, "hide is default for builder.");
-						BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
-						BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
-						
-						// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-						break gmStartupProcess;
-					}
+					player.setInRefusalMode(true);
+					player.setIsInvul(true);
+					player.getAppearance().setInvisible();
 					
-					if (Config.GM_STARTUP_INVULNERABLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
-					{
-						player.setIsInvul(true);
-					}
+					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
+					BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
+					BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
 					
-					if (Config.GM_STARTUP_INVISIBLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
-					{
-						player.getAppearance().setInvisible();
-					}
-					
-					if (Config.GM_STARTUP_SILENCE && AdminCommandAccessRights.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
-					{
-						player.setInRefusalMode(true);
-					}
-					
-					if (Config.GM_STARTUP_AUTO_LIST && AdminCommandAccessRights.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
-					{
-						GmListTable.getInstance().addGm(player, false);
-					}
-					else
-					{
-						GmListTable.getInstance().addGm(player, true);
-					}
+					// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+					break gmStartupProcess;
 				}
-			}, 15);
+				
+				if (Config.GM_STARTUP_INVULNERABLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
+				{
+					player.setIsInvul(true);
+				}
+				
+				if (Config.GM_STARTUP_INVISIBLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
+				{
+					player.getAppearance().setInvisible();
+				}
+				
+				if (Config.GM_STARTUP_SILENCE && AdminCommandAccessRights.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
+				{
+					player.setInRefusalMode(true);
+				}
+				
+				if (Config.GM_STARTUP_AUTO_LIST && AdminCommandAccessRights.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
+				{
+					GmListTable.getInstance().addGm(player, false);
+				}
+				else
+				{
+					GmListTable.getInstance().addGm(player, true);
+				}
+			}
 			
 			if (Config.GM_SPECIAL_EFFECT)
 			{
