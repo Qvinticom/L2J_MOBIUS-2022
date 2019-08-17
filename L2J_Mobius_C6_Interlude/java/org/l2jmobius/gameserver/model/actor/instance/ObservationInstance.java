@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -45,60 +45,48 @@ public class ObservationInstance extends FolkInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
+		if (player.isInOlympiadMode())
+		{
+			player.sendMessage("You already participated in Olympiad!");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (player._inEventTvT || player._inEventDM || player._inEventCTF)
+		{
+			player.sendMessage("You already participated in Event!");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (player.isInCombat() || (player.getPvpFlag() > 0))
+		{
+			player.sendMessage("You are in combat now!");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		if (command.startsWith("observeSiege"))
 		{
-			String val = command.substring(13);
-			StringTokenizer st = new StringTokenizer(val);
-			st.nextToken(); // Bypass cost
+			StringTokenizer st = new StringTokenizer(command);
+			st.nextToken(); // Command
 			
-			if (Olympiad.getInstance().isRegistered(player) || player.isInOlympiadMode())
-			{
-				player.sendMessage("You already participated in Olympiad!");
-				return;
-			}
+			int x = Integer.parseInt(st.nextToken()); // X location
+			int y = Integer.parseInt(st.nextToken()); // Y location
+			int z = Integer.parseInt(st.nextToken()); // Z location
 			
-			if (player._inEventTvT || player._inEventDM || player._inEventCTF)
+			if (SiegeManager.getInstance().getSiege(x, y, z) != null)
 			{
-				player.sendMessage("You already participated in Event!");
-				return;
-			}
-			
-			if (player.isInCombat() || (player.getPvpFlag() > 0))
-			{
-				player.sendMessage("You are in combat now!");
-				return;
-			}
-			
-			if (SiegeManager.getInstance().getSiege(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())) != null)
-			{
-				doObserve(player, val);
+				doObserve(player, command);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.ONLY_VIEW_SIEGE);
+				player.sendPacket(new SystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
 			}
 		}
 		else if (command.startsWith("observe"))
 		{
-			if (Olympiad.getInstance().isRegistered(player) || player.isInOlympiadMode())
-			{
-				player.sendMessage("You already participated in Olympiad!");
-				return;
-			}
-			
-			if (player._inEventTvT || player._inEventDM || player._inEventCTF)
-			{
-				player.sendMessage("You already participated in Event!");
-				return;
-			}
-			
-			if (player.isInCombat() || (player.getPvpFlag() > 0))
-			{
-				player.sendMessage("You are in combat now!");
-				return;
-			}
-			
-			doObserve(player, command.substring(8));
+			doObserve(player, command);
 		}
 		else
 		{
@@ -130,10 +118,12 @@ public class ObservationInstance extends FolkInstance
 	private void doObserve(PlayerInstance player, String val)
 	{
 		StringTokenizer st = new StringTokenizer(val);
-		final int cost = Integer.parseInt(st.nextToken());
-		final int x = Integer.parseInt(st.nextToken());
-		final int y = Integer.parseInt(st.nextToken());
-		final int z = Integer.parseInt(st.nextToken());
+		st.nextToken(); // Command
+		int x = Integer.parseInt(st.nextToken());
+		int y = Integer.parseInt(st.nextToken());
+		int z = Integer.parseInt(st.nextToken());
+		int cost = Integer.parseInt(st.nextToken());
+		
 		if (player.reduceAdena("Broadcast", cost, this, true))
 		{
 			// enter mode
@@ -141,6 +131,7 @@ public class ObservationInstance extends FolkInstance
 			final ItemList il = new ItemList(player, false);
 			player.sendPacket(il);
 		}
+		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }
