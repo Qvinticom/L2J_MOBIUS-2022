@@ -67,10 +67,7 @@ public class PeaceZone extends ZoneType
 		// Send player info to nearby players.
 		if (creature.isPlayer())
 		{
-			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, nearby ->
-			{
-				creature.sendInfo(nearby);
-			});
+			creature.broadcastInfo();
 		}
 	}
 	
@@ -90,10 +87,7 @@ public class PeaceZone extends ZoneType
 		// Send player info to nearby players.
 		if (creature.isPlayer())
 		{
-			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, nearby ->
-			{
-				creature.sendInfo(nearby);
-			});
+			creature.broadcastInfo();
 		}
 	}
 	

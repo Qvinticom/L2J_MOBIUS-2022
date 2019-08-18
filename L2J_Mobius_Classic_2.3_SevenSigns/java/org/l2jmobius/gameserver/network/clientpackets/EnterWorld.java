@@ -156,7 +156,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		client.setClientTracert(tracert);
 		
-		player.spawnMe(player.getX(), player.getY(), player.getZ());
+		player.broadcastUserInfo();
 		
 		// Restore to instanced area if enabled
 		if (Config.RESTORE_PLAYER_INSTANCE)
@@ -417,6 +417,7 @@ public class EnterWorld implements IClientIncomingPacket
 			player.setSpawnProtection(true);
 		}
 		
+		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 		
 		player.getInventory().applyItemSkills();

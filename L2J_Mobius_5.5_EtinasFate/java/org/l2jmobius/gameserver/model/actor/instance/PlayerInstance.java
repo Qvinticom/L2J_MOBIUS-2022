@@ -10450,13 +10450,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// send info to nearby players
-		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
-		{
-			if (isVisibleFor(player))
-			{
-				sendInfo(player);
-			}
-		});
+		broadcastInfo();
 	}
 	
 	@Override
