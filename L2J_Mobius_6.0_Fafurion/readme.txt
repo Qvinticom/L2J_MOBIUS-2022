@@ -1,6 +1,8 @@
 L2J-Mobius Fafurion
 
-Client: https://drive.google.com/uc?id=1EpgkSzyd_RaQ3JfGksEI_eOTiI2oN8Pc&export=download
+Client: https://mega.nz/#!AHA1EQgQ!cjt1DxvIh4CIFkuyqEGMLLmfOcZslfWfH-vWjCYhYrc
+Use mega downloader to download https://megadownloader.en.softonic.com/
+
 Geodata: https://www.mediafire.com/file/17gbt8jt1tyo5gi/L2J_Mobius_6.0_Fafurion_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
