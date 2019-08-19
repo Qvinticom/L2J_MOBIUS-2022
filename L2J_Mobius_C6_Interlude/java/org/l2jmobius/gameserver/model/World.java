@@ -18,18 +18,14 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.object.L2ObjectMap;
-import org.l2jmobius.commons.util.object.L2ObjectSet;
 import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -71,10 +67,10 @@ public class World
 	private static Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
 	
 	/** WorldObjectHashMap(WorldObject) containing all visible objects. */
-	private static L2ObjectMap<WorldObject> _allObjects;
+	private static final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	
 	/** List with the pets instances and their owner id. */
-	private final Map<Integer, PetInstance> _petsInstance;
+	private static final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
 	
 	/** The _instance. */
 	private static World _instance = null;
@@ -84,9 +80,6 @@ public class World
 	
 	private World()
 	{
-		_petsInstance = new ConcurrentHashMap<>();
-		_allObjects = L2ObjectMap.createL2ObjectMap();
-		
 		initRegions();
 	}
 	
@@ -114,25 +107,7 @@ public class World
 	 */
 	public void storeObject(WorldObject object)
 	{
-		if (_allObjects.get(object.getObjectId()) != null)
-		{
-			return;
-		}
-		_allObjects.put(object);
-	}
-	
-	/**
-	 * Time store object.
-	 * @param object the object
-	 * @return the long
-	 */
-	public long timeStoreObject(WorldObject object)
-	{
-		long time = System.currentTimeMillis();
-		_allObjects.put(object);
-		time -= System.currentTimeMillis();
-		
-		return time;
+		_allObjects.putIfAbsent(object.getObjectId(), object);
 	}
 	
 	/**
@@ -147,7 +122,7 @@ public class World
 	 */
 	public void removeObject(WorldObject object)
 	{
-		_allObjects.remove(object);
+		_allObjects.remove(object.getObjectId());
 	}
 	
 	/**
@@ -158,7 +133,7 @@ public class World
 	{
 		for (WorldObject o : list)
 		{
-			_allObjects.remove(o);
+			_allObjects.remove(o.getObjectId());
 		}
 	}
 	
@@ -170,22 +145,8 @@ public class World
 	{
 		for (WorldObject o : objects)
 		{
-			_allObjects.remove(o);
+			_allObjects.remove(o.getObjectId());
 		}
-	}
-	
-	/**
-	 * Time remove object.
-	 * @param object the object
-	 * @return the long
-	 */
-	public long timeRemoveObject(WorldObject object)
-	{
-		long time = System.currentTimeMillis();
-		_allObjects.remove(object);
-		time -= System.currentTimeMillis();
-		
-		return time;
 	}
 	
 	/**
@@ -203,26 +164,12 @@ public class World
 	}
 	
 	/**
-	 * Time find object.
-	 * @param objectID the object id
-	 * @return the long
-	 */
-	public long timeFindObject(int objectID)
-	{
-		long time = System.currentTimeMillis();
-		_allObjects.get(objectID);
-		time -= System.currentTimeMillis();
-		
-		return time;
-	}
-	
-	/**
 	 * Added by Tempy - 08 Aug 05 Allows easy retrevial of all visible objects in world. -- do not use that fucntion, its unsafe!
 	 * @return the all visible objects
 	 */
-	public L2ObjectMap<WorldObject> getAllVisibleObjects()
+	public Collection<WorldObject> getAllVisibleObjects()
 	{
-		return _allObjects;
+		return _allObjects.values();
 	}
 	
 	/**
@@ -402,15 +349,11 @@ public class World
 			{
 				return;
 			}
-			// Get all visible objects contained in the _visibleObjects of WorldRegions
-			// in a circular area of 2000 units
-			final List<WorldObject> visibles = getVisibleObjects(object, 2000);
 			
-			// tell the player about the surroundings
 			// Go through the visible objects contained in the circular area
-			for (WorldObject visible : visibles)
+			for (WorldObject wo : getVisibleObjects(object, 2000))
 			{
-				if (visible == null)
+				if (wo == null)
 				{
 					continue;
 				}
@@ -420,11 +363,11 @@ public class World
 				// - object is not already known
 				// - object is in the watch distance
 				// If WorldObject is a PlayerInstance, add WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the visible Creature
-				visible.getKnownList().addKnownObject(object);
+				wo.getKnownList().addKnownObject(object);
 				
 				// Add the visible WorldObject in WorldObjectHashSet(WorldObject) _knownObjects of the object according to conditions
 				// If visible WorldObject is a PlayerInstance, add visible WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the object
-				object.getKnownList().addKnownObject(visible);
+				object.getKnownList().addKnownObject(wo);
 			}
 			
 			if (!player.isTeleporting())
@@ -445,23 +388,19 @@ public class World
 			}
 		}
 		
-		// Get all visible objects contained in the _visibleObjects of WorldRegions in a circular area of 2000 units
-		List<WorldObject> visibles = getVisibleObjects(object, 2000);
-		
-		// tell the player about the surroundings
 		// Go through the visible objects contained in the circular area
-		for (WorldObject visible : visibles)
+		for (WorldObject wo : getVisibleObjects(object, 2000))
 		{
 			// Add the object in WorldObjectHashSet(WorldObject) _knownObjects of the visible Creature according to conditions :
 			// - Creature is visible
 			// - object is not already known
 			// - object is in the watch distance
 			// If WorldObject is a PlayerInstance, add WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the visible Creature
-			visible.getKnownList().addKnownObject(object, dropper);
+			wo.getKnownList().addKnownObject(object, dropper);
 			
 			// Add the visible WorldObject in WorldObjectHashSet(WorldObject) _knownObjects of the object according to conditions
 			// If visible WorldObject is a PlayerInstance, add visible WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the object
-			object.getKnownList().addKnownObject(visible, dropper);
+			object.getKnownList().addKnownObject(wo, dropper);
 		}
 	}
 	
@@ -521,58 +460,55 @@ public class World
 	 */
 	public void removeVisibleObject(WorldObject object, WorldRegion oldRegion)
 	{
-		if (object == null)
+		if ((object == null) || (oldRegion == null))
 		{
 			return;
 		}
 		
-		if (oldRegion != null)
+		// Remove the object from the WorldObjectHashSet(WorldObject) _visibleObjects of WorldRegion
+		// If object is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayers of this WorldRegion
+		oldRegion.removeVisibleObject(object);
+		
+		// Go through all surrounding WorldRegion Creatures
+		for (WorldRegion worldRegion : oldRegion.getSurroundingRegions())
 		{
-			// Remove the object from the WorldObjectHashSet(WorldObject) _visibleObjects of WorldRegion
-			// If object is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayers of this WorldRegion
-			oldRegion.removeVisibleObject(object);
-			
-			// Go through all surrounding WorldRegion Creatures
-			for (WorldRegion reg : oldRegion.getSurroundingRegions())
+			for (WorldObject wo : worldRegion.getVisibleObjects())
 			{
-				for (WorldObject obj : reg.getVisibleObjects())
+				// Remove the WorldObject from the WorldObjectHashSet(WorldObject) _knownObjects of the surrounding WorldRegion Creatures
+				// If object is a PlayerInstance, remove the WorldObject from the WorldObjectHashSet(PlayerInstance) _knownPlayer of the surrounding WorldRegion Creatures
+				// If object is targeted by one of the surrounding WorldRegion Creatures, cancel ATTACK and cast
+				if ((wo != null) && (wo.getKnownList() != null))
 				{
-					// Remove the WorldObject from the WorldObjectHashSet(WorldObject) _knownObjects of the surrounding WorldRegion Creatures
-					// If object is a PlayerInstance, remove the WorldObject from the WorldObjectHashSet(PlayerInstance) _knownPlayer of the surrounding WorldRegion Creatures
-					// If object is targeted by one of the surrounding WorldRegion Creatures, cancel ATTACK and cast
-					if ((obj != null) && (obj.getKnownList() != null))
-					{
-						obj.getKnownList().removeKnownObject(object);
-					}
-					
-					// Remove surrounding WorldRegion Creatures from the WorldObjectHashSet(WorldObject) _KnownObjects of object
-					// If surrounding WorldRegion Creatures is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _knownPlayer of object
-					//
-					if (object.getKnownList() != null)
-					{
-						object.getKnownList().removeKnownObject(obj);
-					}
-				}
-			}
-			
-			// If object is a Creature :
-			// Remove all WorldObject from WorldObjectHashSet(WorldObject) containing all WorldObject detected by the Creature
-			// Remove all PlayerInstance from WorldObjectHashSet(PlayerInstance) containing all player ingame detected by the Creature
-			object.getKnownList().removeAllKnownObjects();
-			
-			// If selected WorldObject is a NcIntance, remove it from WorldObjectHashSet(PlayerInstance) _allPlayers of World
-			if (object instanceof PlayerInstance)
-			{
-				PlayerCountManager.getInstance().decConnectedCount();
-				if (object.getActingPlayer().isInOfflineMode())
-				{
-					PlayerCountManager.getInstance().decOfflineTradeCount();
+					wo.getKnownList().removeKnownObject(object);
 				}
 				
-				if (!((PlayerInstance) object).isTeleporting())
+				// Remove surrounding WorldRegion Creatures from the WorldObjectHashSet(WorldObject) _KnownObjects of object
+				// If surrounding WorldRegion Creatures is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _knownPlayer of object
+				//
+				if (object.getKnownList() != null)
 				{
-					removeFromAllPlayers((PlayerInstance) object);
+					object.getKnownList().removeKnownObject(wo);
 				}
+			}
+		}
+		
+		// If object is a Creature :
+		// Remove all WorldObject from WorldObjectHashSet(WorldObject) containing all WorldObject detected by the Creature
+		// Remove all PlayerInstance from WorldObjectHashSet(PlayerInstance) containing all player ingame detected by the Creature
+		object.getKnownList().removeAllKnownObjects();
+		
+		// If selected WorldObject is a NcIntance, remove it from WorldObjectHashSet(PlayerInstance) _allPlayers of World
+		if (object instanceof PlayerInstance)
+		{
+			PlayerCountManager.getInstance().decConnectedCount();
+			if (object.getActingPlayer().isInOfflineMode())
+			{
+				PlayerCountManager.getInstance().decOfflineTradeCount();
+			}
+			
+			if (!((PlayerInstance) object).isTeleporting())
+			{
+				removeFromAllPlayers((PlayerInstance) object);
 			}
 		}
 	}
@@ -598,50 +534,36 @@ public class World
 			return null;
 		}
 		
-		final WorldRegion reg = object.getWorldRegion();
-		
-		if (reg == null)
+		final WorldRegion region = object.getWorldRegion();
+		if (region == null)
 		{
 			return null;
 		}
 		
-		// Create an FastList in order to contain all visible WorldObject
+		// Create a list in order to contain all visible WorldObject
 		final List<WorldObject> result = new ArrayList<>();
 		
-		// Create a FastList containing all regions around the current region
-		List<WorldRegion> regions = reg.getSurroundingRegions();
-		
-		// Go through the FastList of region
-		for (int i = 0; (regions != null) && (i < regions.size()); i++)
+		// Go through the list of region
+		for (WorldRegion worldRegion : region.getSurroundingRegions())
 		{
-			// Go through visible objects of the selected region
-			L2ObjectSet<WorldObject> actual_objectSet = null;
-			if (regions.get(i) != null)
+			for (WorldObject wo : worldRegion.getVisibleObjects())
 			{
-				actual_objectSet = regions.get(i).getVisibleObjects();
-			}
-			
-			if ((actual_objectSet != null) && (actual_objectSet.size() > 0))
-			{
-				for (WorldObject _object : actual_objectSet)
+				if (wo == null)
 				{
-					if (_object == null)
-					{
-						continue;
-					}
-					
-					if (_object.equals(object))
-					{
-						continue; // skip our own character
-					}
-					
-					if (!_object.isVisible())
-					{
-						continue; // skip dying objects
-					}
-					
-					result.add(_object);
+					continue;
 				}
+				
+				if (wo.equals(object))
+				{
+					continue; // skip our own character
+				}
+				
+				if (!wo.isVisible())
+				{
+					continue; // skip dying objects
+				}
+				
+				result.add(wo);
 			}
 		}
 		
@@ -673,7 +595,6 @@ public class World
 		}
 		
 		final WorldRegion region = object.getWorldRegion();
-		
 		if (region == null)
 		{
 			return new ArrayList<>();
@@ -683,38 +604,35 @@ public class World
 		final int y = object.getY();
 		final int sqRadius = radius * radius;
 		
-		// Create an FastList in order to contain all visible WorldObject
+		// Create a list in order to contain all visible WorldObject
 		final List<WorldObject> result = new ArrayList<>();
 		
-		// Create an FastList containing all regions around the current region
-		List<WorldRegion> regions = region.getSurroundingRegions();
-		
-		// Go through the FastList of region
-		for (int i = 0; (regions != null) && (i < regions.size()); i++)
+		// Go through the list of region
+		for (WorldRegion worldRegion : region.getSurroundingRegions())
 		{
 			// Go through visible objects of the selected region
-			for (WorldObject _object : regions.get(i).getVisibleObjects())
+			for (WorldObject wo : worldRegion.getVisibleObjects())
 			{
-				if (_object == null)
+				if (wo == null)
 				{
 					continue;
 				}
 				
-				if (_object.equals(object))
+				if (wo.equals(object))
 				{
 					continue; // skip our own character
 				}
 				
-				final int x1 = _object.getX();
-				final int y1 = _object.getY();
+				final int x1 = wo.getX();
+				final int y1 = wo.getY();
 				
 				final double dx = x1 - x;
 				final double dy = y1 - y;
 				
-				// If the visible object is inside the circular area add the object to the FastList result
+				// If the visible object is inside the circular area add the object to the list result
 				if (((dx * dx) + (dy * dy)) < sqRadius)
 				{
-					result.add(_object);
+					result.add(wo);
 				}
 			}
 		}
@@ -751,30 +669,27 @@ public class World
 		final int z = object.getZ();
 		final int sqRadius = radius * radius;
 		
-		// Create an FastList in order to contain all visible WorldObject
+		// Create a list in order to contain all visible WorldObject
 		final List<WorldObject> result = new ArrayList<>();
 		
-		// Create an FastList containing all regions around the current region
-		List<WorldRegion> regions = object.getWorldRegion().getSurroundingRegions();
-		
 		// Go through visible object of the selected region
-		for (WorldRegion region : regions)
+		for (WorldRegion worldRegion : object.getWorldRegion().getSurroundingRegions())
 		{
-			for (WorldObject _object : region.getVisibleObjects())
+			for (WorldObject wo : worldRegion.getVisibleObjects())
 			{
-				if (_object == null)
+				if (wo == null)
 				{
 					continue;
 				}
 				
-				if (_object.equals(object))
+				if (wo.equals(object))
 				{
 					continue; // skip our own character
 				}
 				
-				final int x1 = _object.getX();
-				final int y1 = _object.getY();
-				final int z1 = _object.getZ();
+				final int x1 = wo.getX();
+				final int y1 = wo.getY();
+				final int z1 = wo.getZ();
 				
 				final long dx = x1 - x;
 				final long dy = y1 - y;
@@ -782,7 +697,7 @@ public class World
 				
 				if (((dx * dx) + (dy * dy) + (dz * dz)) < sqRadius)
 				{
-					result.add(_object);
+					result.add(wo);
 				}
 			}
 		}
@@ -801,53 +716,44 @@ public class World
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>
 	 * <li>Find Close Objects for Creature</li><BR>
-	 * @param object L2object that determine the current WorldRegion
+	 * @param object WorldObject that determine the current WorldRegion
 	 * @return the visible playable
 	 */
-	public List<Playable> getVisiblePlayable(WorldObject object)
+	public List<PlayerInstance> getVisiblePlayers(WorldObject object)
 	{
-		WorldRegion reg = object.getWorldRegion();
-		
-		if (reg == null)
+		final WorldRegion region = object.getWorldRegion();
+		if (region == null)
 		{
 			return null;
 		}
 		
-		// Create an FastList in order to contain all visible WorldObject
-		final List<Playable> result = new ArrayList<>();
+		// Create a list in order to contain all visible WorldObject
+		final List<PlayerInstance> result = new ArrayList<>();
 		
-		// Create a FastList containing all regions around the current region
-		List<WorldRegion> regions = reg.getSurroundingRegions();
-		
-		// Go through the FastList of region
-		for (WorldRegion region : regions)
+		// Go through the list of region
+		for (WorldRegion worldRegion : region.getSurroundingRegions())
 		{
-			// Create an Iterator to go through the visible WorldObject of the WorldRegion
-			Iterator<Playable> playables = region.iterateAllPlayers();
-			
 			// Go through visible object of the selected region
-			while (playables.hasNext())
+			for (PlayerInstance playable : worldRegion.getAllPlayers())
 			{
-				Playable _object = playables.next();
-				
-				if (_object == null)
+				if (playable == null)
 				{
 					continue;
 				}
 				
-				if (_object.equals(object))
+				if (playable.equals(object))
 				{
 					continue; // skip our own character
 				}
 				
-				if (!_object.isVisible())
+				if (!playable.isVisible())
 				{
 					continue; // skip dying objects
 				}
 				
-				result.add(_object);
+				result.add(playable);
 				
-				_object = null;
+				playable = null;
 			}
 		}
 		
@@ -890,21 +796,6 @@ public class World
 	}
 	
 	/**
-	 * Check if the current WorldRegions of the object is valid according to its position (x,y).<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Init WorldRegions</li><BR>
-	 * @param x X position of the object
-	 * @param y Y position of the object
-	 * @return True if the WorldRegion is valid
-	 */
-	private boolean validRegion(int x, int y)
-	{
-		return (x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y);
-	}
-	
-	/**
 	 * Init each WorldRegion and their surrounding table.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>
@@ -921,30 +812,36 @@ public class World
 		
 		_worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 		
-		for (int i = 0; i <= REGIONS_X; i++)
-		{
-			for (int j = 0; j <= REGIONS_Y; j++)
-			{
-				_worldRegions[i][j] = new WorldRegion(i, j);
-			}
-		}
-		
 		for (int x = 0; x <= REGIONS_X; x++)
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
 			{
-				for (int a = -1; a <= 1; a++)
+				_worldRegions[x][y] = new WorldRegion(x, y);
+			}
+		}
+		
+		// Set surrounding regions.
+		for (int rx = 0; rx <= REGIONS_X; rx++)
+		{
+			for (int ry = 0; ry <= REGIONS_Y; ry++)
+			{
+				final List<WorldRegion> surroundingRegions = new ArrayList<>();
+				for (int sx = rx - 1; sx <= (rx + 1); sx++)
 				{
-					for (int b = -1; b <= 1; b++)
+					for (int sy = ry - 1; sy <= (ry + 1); sy++)
 					{
-						if (validRegion(x + a, y + b))
+						if (((sx >= 0) && (sx < REGIONS_X) && (sy >= 0) && (sy < REGIONS_Y)))
 						{
-							_worldRegions[x + a][y + b].addSurroundingRegion(_worldRegions[x][y]);
+							surroundingRegions.add(_worldRegions[sx][sy]);
 						}
 					}
 				}
+				WorldRegion[] regionArray = new WorldRegion[surroundingRegions.size()];
+				regionArray = surroundingRegions.toArray(regionArray);
+				_worldRegions[rx][ry].setSurroundingRegions(regionArray);
 			}
 		}
+		
 		LOGGER.info("World: (" + REGIONS_X + "x" + REGIONS_Y + ") World Region Grid set up.");
 	}
 	

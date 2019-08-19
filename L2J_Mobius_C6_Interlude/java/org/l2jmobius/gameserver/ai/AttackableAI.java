@@ -339,12 +339,6 @@ public class AttackableAI extends CreatureAI
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		// Prevent thinking in non active regions.
-		if (!_actor.isInActiveRegion())
-		{
-			return;
-		}
-		
 		if ((intention == AI_INTENTION_IDLE) || (intention == AI_INTENTION_ACTIVE))
 		{
 			// Check if actor is not dead
@@ -678,9 +672,9 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		/*
-		 * // Handle all WorldObject of its Faction inside the Faction Range if (_actor instanceof NpcInstance && ((NpcInstance) _actor).getFactionId() != null) { String faction_id = ((NpcInstance) _actor).getFactionId(); // Go through all WorldObject that belong to its faction Collection<WorldObject>
-		 * objs = _actor.getKnownList().getKnownObjects().values(); //synchronized (_actor.getKnownList().getKnownObjects()) try { for (WorldObject obj : objs) { if (obj instanceof NpcInstance) { NpcInstance npc = (NpcInstance) obj; //Handle SevenSigns mob Factions String npcfaction =
-		 * npc.getFactionId(); boolean sevenSignFaction = false; // TODO: Unhardcode this by AI scripts (DrHouse) //Catacomb mobs should assist lilim and nephilim other than dungeon if ("c_dungeon_clan".equals(faction_id) && ("c_dungeon_lilim".equals(npcfaction) ||
+		 * // Handle all WorldObject of its Faction inside the Faction Range if (_actor instanceof NpcInstance && ((NpcInstance) _actor).getFactionId() != null) { String faction_id = ((NpcInstance) _actor).getFactionId(); // Go through all WorldObject that belong to its faction
+		 * Collection<WorldObject> objs = _actor.getKnownList().getKnownObjects().values(); //synchronized (_actor.getKnownList().getKnownObjects()) try { for (WorldObject obj : objs) { if (obj instanceof NpcInstance) { NpcInstance npc = (NpcInstance) obj; //Handle SevenSigns mob Factions String
+		 * npcfaction = npc.getFactionId(); boolean sevenSignFaction = false; // TODO: Unhardcode this by AI scripts (DrHouse) //Catacomb mobs should assist lilim and nephilim other than dungeon if ("c_dungeon_clan".equals(faction_id) && ("c_dungeon_lilim".equals(npcfaction) ||
 		 * "c_dungeon_nephi".equals(npcfaction))) sevenSignFaction = true; //Lilim mobs should assist other Lilim and catacomb mobs else if ("c_dungeon_lilim".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; //Nephilim mobs should assist other Nephilim and catacomb
 		 * mobs else if ("c_dungeon_nephi".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; if (!faction_id.equals(npc.getFactionId()) && !sevenSignFaction) continue; // Check if the WorldObject is inside the Faction Range of // the actor if
 		 * (_actor.isInsideRadius(npc, npc.getFactionRange() + npc.getTemplate().collisionRadius, true, false) && npc.getAI() != null) { if (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600 && _actor.getAttackByList().contains(originalAttackTarget) && (npc.getAI()._intention ==

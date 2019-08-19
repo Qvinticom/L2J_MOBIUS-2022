@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.function.Predicate;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -35,40 +34,13 @@ public class WorldRegion
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
-	private boolean _active = false;
+	private boolean _active = Config.GRIDS_ALWAYS_ON;
 	private ScheduledFuture<?> _neighborsTask = null;
 	
 	public WorldRegion(int regionX, int regionY)
 	{
 		_regionX = regionX;
 		_regionY = regionY;
-		
-		// Default a newly initialized region to inactive, unless always on is specified.
-		_active = Config.GRIDS_ALWAYS_ON;
-	}
-	
-	/** Task of AI notification */
-	public class NeighborsTask implements Runnable
-	{
-		private final boolean _isActivating;
-		
-		public NeighborsTask(boolean isActivating)
-		{
-			_isActivating = isActivating;
-		}
-		
-		@Override
-		public void run()
-		{
-			forEachSurroundingRegion(w ->
-			{
-				if (_isActivating || w.areNeighborsEmpty())
-				{
-					w.setActive(_isActivating);
-				}
-				return true;
-			});
-		}
 	}
 	
 	private void switchAI(boolean isOn)
@@ -80,11 +52,11 @@ public class WorldRegion
 		
 		if (!isOn)
 		{
-			for (WorldObject o : _visibleObjects.values())
+			for (WorldObject wo : _visibleObjects.values())
 			{
-				if (o.isAttackable())
+				if (wo.isAttackable())
 				{
-					final Attackable mob = (Attackable) o;
+					final Attackable mob = (Attackable) wo;
 					
 					// Set target to null and cancel attack or cast.
 					mob.setTarget(null);
@@ -107,25 +79,25 @@ public class WorldRegion
 					
 					RandomAnimationTaskManager.getInstance().remove(mob);
 				}
-				else if (o instanceof Npc)
+				else if (wo instanceof Npc)
 				{
-					RandomAnimationTaskManager.getInstance().remove((Npc) o);
+					RandomAnimationTaskManager.getInstance().remove((Npc) wo);
 				}
 			}
 		}
 		else
 		{
-			for (WorldObject o : _visibleObjects.values())
+			for (WorldObject wo : _visibleObjects.values())
 			{
-				if (o.isAttackable())
+				if (wo.isAttackable())
 				{
 					// Start HP/MP/CP regeneration task.
-					((Attackable) o).getStatus().startHpMpRegeneration();
-					RandomAnimationTaskManager.getInstance().add((Npc) o);
+					((Attackable) wo).getStatus().startHpMpRegeneration();
+					RandomAnimationTaskManager.getInstance().add((Npc) wo);
 				}
-				else if (o instanceof Npc)
+				else if (wo instanceof Npc)
 				{
-					RandomAnimationTaskManager.getInstance().add((Npc) o);
+					RandomAnimationTaskManager.getInstance().add((Npc) wo);
 				}
 			}
 		}
@@ -138,7 +110,14 @@ public class WorldRegion
 	
 	public boolean areNeighborsEmpty()
 	{
-		return forEachSurroundingRegion(w -> !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(WorldObject::isPlayable)));
+		for (WorldRegion worldRegion : _surroundingRegions)
+		{
+			if (worldRegion.isActive() && worldRegion.getVisibleObjects().values().stream().anyMatch(WorldObject::isPlayable))
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	/**
@@ -176,7 +155,13 @@ public class WorldRegion
 			}
 			
 			// Then, set a timer to activate the neighbors.
-			_neighborsTask = ThreadPool.schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
+			_neighborsTask = ThreadPool.schedule(() ->
+			{
+				for (WorldRegion worldRegion : _surroundingRegions)
+				{
+					worldRegion.setActive(true);
+				}
+			}, 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
 		}
 	}
 	
@@ -196,7 +181,16 @@ public class WorldRegion
 			
 			// Start a timer to "suggest" a deactivate to self and neighbors.
 			// Suggest means: first check if a neighbor has PlayerInstances in it. If not, deactivate.
-			_neighborsTask = ThreadPool.schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
+			_neighborsTask = ThreadPool.schedule(() ->
+			{
+				for (WorldRegion worldRegion : _surroundingRegions)
+				{
+					if (worldRegion.areNeighborsEmpty())
+					{
+						worldRegion.setActive(false);
+					}
+				}
+			}, 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
 		}
 	}
 	
@@ -217,7 +211,7 @@ public class WorldRegion
 		if (object.isPlayable())
 		{
 			// If this is the first player to enter the region, activate self and neighbors.
-			if (!_active && (!Config.GRIDS_ALWAYS_ON))
+			if (!_active && !Config.GRIDS_ALWAYS_ON)
 			{
 				startActivation();
 			}
@@ -253,18 +247,6 @@ public class WorldRegion
 	public Map<Integer, WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
-	}
-	
-	public boolean forEachSurroundingRegion(Predicate<WorldRegion> p)
-	{
-		for (WorldRegion worldRegion : _surroundingRegions)
-		{
-			if (!p.test(worldRegion))
-			{
-				return false;
-			}
-		}
-		return true;
 	}
 	
 	public void setSurroundingRegions(WorldRegion[] regions)

@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.knownlist;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -117,19 +116,10 @@ public class WorldObjectKnownList
 	
 	private final void findCloseObjects()
 	{
-		final boolean isActiveObjectPlayable = _activeObject instanceof Playable;
-		
-		if (isActiveObjectPlayable)
+		if (_activeObject instanceof Playable)
 		{
-			Collection<WorldObject> objects = World.getInstance().getVisibleObjects(getActiveObject());
-			
-			if (objects == null)
-			{
-				return;
-			}
-			
 			// Go through all visible WorldObject near the Creature
-			for (WorldObject object : objects)
+			for (WorldObject object : World.getInstance().getVisibleObjects(_activeObject))
 			{
 				if (object == null)
 				{
@@ -150,15 +140,8 @@ public class WorldObjectKnownList
 		}
 		else
 		{
-			Collection<Playable> playables = World.getInstance().getVisiblePlayable(getActiveObject());
-			
-			if (playables == null)
-			{
-				return;
-			}
-			
 			// Go through all visible WorldObject near the Creature
-			for (WorldObject playable : playables)
+			for (WorldObject playable : World.getInstance().getVisiblePlayers(_activeObject))
 			{
 				if (playable == null)
 				{
@@ -176,14 +159,7 @@ public class WorldObjectKnownList
 	public void forgetObjects()
 	{
 		// Go through knownObjects
-		Collection<WorldObject> knownObjects = getKnownObjects().values();
-		
-		if ((knownObjects == null) || (knownObjects.size() == 0))
-		{
-			return;
-		}
-		
-		for (WorldObject object : knownObjects)
+		for (WorldObject object : getKnownObjects().values())
 		{
 			if (object == null)
 			{

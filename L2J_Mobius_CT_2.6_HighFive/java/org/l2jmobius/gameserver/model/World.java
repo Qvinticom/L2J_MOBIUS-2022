@@ -77,17 +77,17 @@ public class World
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
 	
 	/** Map containing all the players in game. */
-	private final Map<Integer, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Good players in game. */
 	private static final Map<Integer, PlayerInstance> _allGoodPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Evil players in game. */
 	private static final Map<Integer, PlayerInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
-	private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
+	private static final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
-	private final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
+	private static final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
 	
-	private final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
+	private static final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 	
 	/** Constructor of World. */
 	protected World()
@@ -399,67 +399,63 @@ public class World
 	 */
 	public void removeVisibleObject(WorldObject object, WorldRegion oldRegion)
 	{
-		if (object == null)
+		if ((object == null) || (oldRegion == null))
 		{
 			return;
 		}
 		
-		if (oldRegion != null)
+		oldRegion.removeVisibleObject(object);
+		
+		// Go through all surrounding WorldRegion Creatures
+		for (WorldRegion worldRegion : oldRegion.getSurroundingRegions())
 		{
-			oldRegion.removeVisibleObject(object);
-			
-			// Go through all surrounding WorldRegion Creatures
-			oldRegion.forEachSurroundingRegion(w ->
+			for (WorldObject wo : worldRegion.getVisibleObjects().values())
 			{
-				for (WorldObject wo : w.getVisibleObjects().values())
+				if (wo == object)
 				{
-					if (wo == object)
+					continue;
+				}
+				
+				if (object.isCreature())
+				{
+					final Creature objectCreature = (Creature) object;
+					final CreatureAI ai = objectCreature.getAI();
+					if (ai != null)
 					{
-						continue;
+						ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
 					}
 					
-					if (object.isCreature())
+					if (objectCreature.getTarget() == wo)
 					{
-						final Creature objectCreature = (Creature) object;
-						final CreatureAI ai = objectCreature.getAI();
-						if (ai != null)
-						{
-							ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
-						}
-						
-						if (objectCreature.getTarget() == wo)
-						{
-							objectCreature.setTarget(null);
-						}
-						
-						if (object.isPlayer())
-						{
-							object.sendPacket(new DeleteObject(wo));
-						}
+						objectCreature.setTarget(null);
 					}
 					
-					if (wo.isCreature())
+					if (object.isPlayer())
 					{
-						final Creature woCreature = (Creature) wo;
-						final CreatureAI ai = woCreature.getAI();
-						if (ai != null)
-						{
-							ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
-						}
-						
-						if (woCreature.getTarget() == object)
-						{
-							woCreature.setTarget(null);
-						}
-						
-						if (wo.isPlayer())
-						{
-							wo.sendPacket(new DeleteObject(object));
-						}
+						object.sendPacket(new DeleteObject(wo));
 					}
 				}
-				return true;
-			});
+				
+				if (wo.isCreature())
+				{
+					final Creature woCreature = (Creature) wo;
+					final CreatureAI ai = woCreature.getAI();
+					if (ai != null)
+					{
+						ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
+					}
+					
+					if (woCreature.getTarget() == object)
+					{
+						woCreature.setTarget(null);
+					}
+					
+					if (wo.isPlayer())
+					{
+						wo.sendPacket(new DeleteObject(object));
+					}
+				}
+			}
 		}
 	}
 	
@@ -471,125 +467,127 @@ public class World
 			return;
 		}
 		
-		oldRegion.forEachSurroundingRegion(w ->
+		for (WorldRegion worldRegion : oldRegion.getSurroundingRegions())
 		{
-			if (!newRegion.isSurroundingRegion(w))
+			if (newRegion.isSurroundingRegion(worldRegion))
 			{
-				for (WorldObject wo : w.getVisibleObjects().values())
+				continue;
+			}
+			
+			for (WorldObject wo : worldRegion.getVisibleObjects().values())
+			{
+				if (wo == object)
 				{
-					if (wo == object)
+					continue;
+				}
+				
+				if (object.isCreature())
+				{
+					final Creature objectCreature = (Creature) object;
+					final CreatureAI ai = objectCreature.getAI();
+					if (ai != null)
 					{
-						continue;
+						ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
 					}
 					
-					if (object.isCreature())
+					if (objectCreature.getTarget() == wo)
 					{
-						final Creature objectCreature = (Creature) object;
-						final CreatureAI ai = objectCreature.getAI();
-						if (ai != null)
-						{
-							ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
-						}
-						
-						if (objectCreature.getTarget() == wo)
-						{
-							objectCreature.setTarget(null);
-						}
-						
-						if (object.isPlayer())
-						{
-							object.sendPacket(new DeleteObject(wo));
-						}
+						objectCreature.setTarget(null);
 					}
 					
+					if (object.isPlayer())
+					{
+						object.sendPacket(new DeleteObject(wo));
+					}
+				}
+				
+				if (wo.isCreature())
+				{
+					final Creature woCreature = (Creature) wo;
+					final CreatureAI ai = woCreature.getAI();
+					if (ai != null)
+					{
+						ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
+					}
+					
+					if (woCreature.getTarget() == object)
+					{
+						woCreature.setTarget(null);
+					}
+					
+					if (wo.isPlayer())
+					{
+						wo.sendPacket(new DeleteObject(object));
+					}
+				}
+			}
+		}
+		
+		for (WorldRegion worldRegion : newRegion.getSurroundingRegions())
+		{
+			if (oldRegion.isSurroundingRegion(worldRegion))
+			{
+				continue;
+			}
+			
+			for (WorldObject wo : worldRegion.getVisibleObjects().values())
+			{
+				if ((wo == object) || (wo.getInstanceId() != object.getInstanceId()))
+				{
+					continue;
+				}
+				
+				if (object.isPlayer() && wo.isVisibleFor((PlayerInstance) object))
+				{
+					wo.sendInfo((PlayerInstance) object);
 					if (wo.isCreature())
 					{
-						final Creature woCreature = (Creature) wo;
-						final CreatureAI ai = woCreature.getAI();
+						final CreatureAI ai = ((Creature) wo).getAI();
 						if (ai != null)
 						{
-							ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
-						}
-						
-						if (woCreature.getTarget() == object)
-						{
-							woCreature.setTarget(null);
-						}
-						
-						if (wo.isPlayer())
-						{
-							wo.sendPacket(new DeleteObject(object));
+							ai.describeStateToPlayer((PlayerInstance) object);
+							if (wo.isMonster())
+							{
+								if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
+								{
+									ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+								}
+							}
 						}
 					}
 				}
-			}
-			return true;
-		});
-		
-		newRegion.forEachSurroundingRegion(w ->
-		{
-			if (!oldRegion.isSurroundingRegion(w))
-			{
-				for (WorldObject wo : w.getVisibleObjects().values())
+				
+				if (wo.isPlayer() && object.isVisibleFor((PlayerInstance) wo))
 				{
-					if ((wo == object) || (wo.getInstanceId() != object.getInstanceId()))
+					object.sendInfo((PlayerInstance) wo);
+					if (object.isCreature())
 					{
-						continue;
-					}
-					
-					if (object.isPlayer() && wo.isVisibleFor((PlayerInstance) object))
-					{
-						wo.sendInfo((PlayerInstance) object);
-						if (wo.isCreature())
+						final CreatureAI ai = ((Creature) object).getAI();
+						if (ai != null)
 						{
-							final CreatureAI ai = ((Creature) wo).getAI();
-							if (ai != null)
+							ai.describeStateToPlayer((PlayerInstance) wo);
+							if (object.isMonster())
 							{
-								ai.describeStateToPlayer((PlayerInstance) object);
-								if (wo.isMonster())
+								if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 								{
-									if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-									{
-										ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-									}
+									ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 								}
 							}
 						}
-					}
-					
-					if (wo.isPlayer() && object.isVisibleFor((PlayerInstance) wo))
-					{
-						object.sendInfo((PlayerInstance) wo);
-						if (object.isCreature())
-						{
-							final CreatureAI ai = ((Creature) object).getAI();
-							if (ai != null)
-							{
-								ai.describeStateToPlayer((PlayerInstance) wo);
-								if (object.isMonster())
-								{
-									if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-									{
-										ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-									}
-								}
-							}
-						}
-					}
-					
-					if (wo.isNpc() && object.isCreature())
-					{
-						EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
-					}
-					
-					if (object.isNpc() && wo.isCreature())
-					{
-						EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
 					}
 				}
+				
+				if (wo.isNpc() && object.isCreature())
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
+				}
+				
+				if (object.isNpc() && wo.isCreature())
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
+				}
 			}
-			return true;
-		});
+		}
 	}
 	
 	public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz)

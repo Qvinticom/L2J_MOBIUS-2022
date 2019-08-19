@@ -1174,12 +1174,6 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		// Prevent thinking in non active regions.
-		if (!_actor.isInActiveRegion())
-		{
-			return;
-		}
-		
 		// Start thinking action
 		_thinking = true;
 		

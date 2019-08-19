@@ -216,8 +216,6 @@ public class Config
 	
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
-	public static ObjectMapType MAP_TYPE;
-	public static ObjectSetType SET_TYPE;
 	
 	public static boolean JAIL_IS_PVP;
 	public static boolean JAIL_DISABLE_CHAT;
@@ -1312,8 +1310,6 @@ public class Config
 			idSettings.load(is);
 			is.close();
 			
-			MAP_TYPE = ObjectMapType.valueOf(idSettings.getProperty("Map", "WorldObjectMap"));
-			SET_TYPE = ObjectSetType.valueOf(idSettings.getProperty("Set", "WorldObjectSet"));
 			IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "Compaction"));
 			BAD_ID_CHECKING = Boolean.valueOf(idSettings.getProperty("BadIdChecking", "true"));
 		}
@@ -3716,20 +3712,6 @@ public class Config
 		Compaction,
 		BitSet,
 		Stack
-	}
-	
-	/** Enumeration for type of maps object */
-	public enum ObjectMapType
-	{
-		WorldObjectTree,
-		WorldObjectMap
-	}
-	
-	/** Enumeration for type of set object */
-	public enum ObjectSetType
-	{
-		L2ObjectHashSet,
-		WorldObjectSet
 	}
 	
 	public static void saveHexid(int serverId, String string)

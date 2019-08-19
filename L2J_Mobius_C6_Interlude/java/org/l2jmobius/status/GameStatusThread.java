@@ -46,7 +46,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.object.L2ObjectMap;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -1028,68 +1027,65 @@ public class GameStatusThread extends Thread
 		int summonCount = 0;
 		int AICount = 0;
 		
-		final L2ObjectMap<WorldObject> objs = World.getInstance().getAllVisibleObjects();
-		// synchronized (World.getInstance().getAllVisibleObjects())
+		for (WorldObject obj : World.getInstance().getAllVisibleObjects())
 		{
-			for (WorldObject obj : objs)
+			if (obj == null)
 			{
-				if (obj == null)
+				continue;
+			}
+			if (obj instanceof Creature)
+			{
+				if (((Creature) obj).hasAI())
 				{
-					continue;
-				}
-				if (obj instanceof Creature)
-				{
-					if (((Creature) obj).hasAI())
-					{
-						AICount++;
-					}
-				}
-				if (obj instanceof ItemInstance)
-				{
-					if (((ItemInstance) obj).getItemLocation() == ItemInstance.ItemLocation.VOID)
-					{
-						itemVoidCount++;
-					}
-					else
-					{
-						itemCount++;
-					}
-				}
-				else if (obj instanceof MonsterInstance)
-				{
-					monsterCount++;
-					if (((MonsterInstance) obj).hasMinions())
-					{
-						minionCount += ((MonsterInstance) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
-						// minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
-					}
-				}
-				else if (obj instanceof NpcInstance)
-				{
-					npcCount++;
-				}
-				else if (obj instanceof PlayerInstance)
-				{
-					pcCount++;
-					if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
-					{
-						detachedCount++;
-					}
-				}
-				else if (obj instanceof Summon)
-				{
-					summonCount++;
-				}
-				else if (obj instanceof DoorInstance)
-				{
-					doorCount++;
-				}
-				else if (obj instanceof Creature)
-				{
-					charCount++;
+					AICount++;
 				}
 			}
+			if (obj instanceof ItemInstance)
+			{
+				if (((ItemInstance) obj).getItemLocation() == ItemInstance.ItemLocation.VOID)
+				{
+					itemVoidCount++;
+				}
+				else
+				{
+					itemCount++;
+				}
+			}
+			else if (obj instanceof MonsterInstance)
+			{
+				monsterCount++;
+				if (((MonsterInstance) obj).hasMinions())
+				{
+					minionCount += ((MonsterInstance) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
+					// minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
+				}
+			}
+			else if (obj instanceof NpcInstance)
+			{
+				npcCount++;
+			}
+			else if (obj instanceof PlayerInstance)
+			{
+				pcCount++;
+				if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
+				{
+					detachedCount++;
+				}
+			}
+			else if (obj instanceof Summon)
+			{
+				summonCount++;
+			}
+			else if (obj instanceof DoorInstance)
+			{
+				doorCount++;
+			}
+			else if (obj instanceof Creature)
+			{
+				charCount++;
+			}
 		}
+		
 		final StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");
 		sb.append("\r\n  --->  Player Count: " + playerCount + "/" + max);
