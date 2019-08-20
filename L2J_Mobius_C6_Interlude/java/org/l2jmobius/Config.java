@@ -39,6 +39,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.L2Properties;
 import org.l2jmobius.commons.util.StringUtil;
+import org.l2jmobius.gameserver.enums.IdFactoryType;
 import org.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.loginserver.LoginController;
@@ -1310,7 +1311,7 @@ public class Config
 			idSettings.load(is);
 			is.close();
 			
-			IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "Compaction"));
+			IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "BITSET"));
 			BAD_ID_CHECKING = Boolean.valueOf(idSettings.getProperty("BadIdChecking", "true"));
 		}
 		catch (Exception e)
@@ -3704,14 +3705,6 @@ public class Config
 		{
 			LOGGER.info("IP Bans file (" + conf_file.getName() + ") is missing or is a directory, skipped.");
 		}
-	}
-	
-	/** Enumeration for type of ID Factory */
-	public enum IdFactoryType
-	{
-		Compaction,
-		BitSet,
-		Stack
 	}
 	
 	public static void saveHexid(int serverId, String string)

@@ -103,10 +103,8 @@ public class StackIDFactory extends IdFactory
 		final int hole = (id - _tempOID) > (N - idx) ? N - idx : id - _tempOID;
 		for (int i = 1; i <= hole; i++)
 		{
-			// log.info("Free ID added " + (_tempOID));
 			_freeOIDStack.push(_tempOID);
 			_tempOID++;
-			// _curOID++;
 		}
 		if (hole < (N - idx))
 		{

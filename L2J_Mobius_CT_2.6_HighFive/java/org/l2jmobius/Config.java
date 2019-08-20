@@ -57,6 +57,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.IdFactoryType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -925,12 +926,6 @@ public class Config
 	public static List<String> GAME_SERVER_HOSTS;
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
-	
-	public enum IdFactoryType
-	{
-		BitSet,
-		Stack
-	}
 	
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
@@ -1994,7 +1989,7 @@ public class Config
 			// Load IdFactory config file (if exists)
 			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
 			
-			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BitSet);
+			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BITSET);
 			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
 			
 			// Load General config file (if exists)

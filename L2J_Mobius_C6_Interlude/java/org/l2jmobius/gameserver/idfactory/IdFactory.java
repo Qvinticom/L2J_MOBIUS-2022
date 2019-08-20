@@ -20,47 +20,18 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 
 /**
- * @author Olympic
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/04/11 10:06:12 $
  */
 public abstract class IdFactory
 {
-	private static Logger LOGGER = Logger.getLogger(IdFactory.class.getName());
-	
-	protected static final String[] ID_UPDATES =
-	{
-		"UPDATE items                 SET owner_id = ?    WHERE owner_id = ?",
-		"UPDATE items                 SET object_id = ?   WHERE object_id = ?",
-		"UPDATE character_quests      SET char_id = ?     WHERE char_id = ?",
-		"UPDATE character_friends     SET char_id = ?     WHERE char_id = ?",
-		"UPDATE character_friends     SET friend_id = ?   WHERE friend_id = ?",
-		"UPDATE character_hennas      SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE character_recipebook  SET char_id = ?     WHERE char_id = ?",
-		"UPDATE character_shortcuts   SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE character_shortcuts   SET shortcut_id = ? WHERE shortcut_id = ? AND type = 1", // items
-		"UPDATE character_macroses    SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE character_skills      SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE character_skills_save SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE character_subclasses  SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE characters            SET obj_Id = ?      WHERE obj_Id = ?",
-		"UPDATE characters            SET clanid = ?      WHERE clanid = ?",
-		"UPDATE clan_data             SET clan_id = ?     WHERE clan_id = ?",
-		"UPDATE siege_clans           SET clan_id = ?     WHERE clan_id = ?",
-		"UPDATE clan_data             SET ally_id = ?     WHERE ally_id = ?",
-		"UPDATE clan_data             SET leader_id = ?   WHERE leader_id = ?",
-		"UPDATE pets                  SET item_obj_id = ? WHERE item_obj_id = ?",
-		"UPDATE character_hennas     SET char_obj_id = ? WHERE char_obj_id = ?",
-		"UPDATE itemsonground         SET object_id = ?   WHERE object_id = ?",
-		"UPDATE auction_bid          SET bidderId = ?      WHERE bidderId = ?",
-		"UPDATE auction_watch        SET charObjId = ?     WHERE charObjId = ?",
-		"UPDATE clanhall             SET ownerId = ?       WHERE ownerId = ?"
-	};
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	protected static final String[] ID_CHECKS =
 	{
@@ -92,7 +63,7 @@ public abstract class IdFactory
 	public static final int LAST_OID = 0x7FFFFFFF;
 	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
 	
-	protected static IdFactory _instance = null;
+	protected static final IdFactory _instance;
 	
 	protected IdFactory()
 	{
@@ -104,19 +75,19 @@ public abstract class IdFactory
 	{
 		switch (Config.IDFACTORY_TYPE)
 		{
-			case Compaction:
-			{
-				_instance = new CompactionIDFactory();
-				break;
-			}
-			case BitSet:
+			case BITSET:
 			{
 				_instance = new BitSetIDFactory();
 				break;
 			}
-			case Stack:
+			case STACK:
 			{
 				_instance = new StackIDFactory();
+				break;
+			}
+			default:
+			{
+				_instance = null;
 				break;
 			}
 		}
@@ -127,16 +98,15 @@ public abstract class IdFactory
 	 */
 	private void setAllCharacterOffline()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			Statement s = con.createStatement())
 		{
-			final Statement s2 = con.createStatement();
-			s2.executeUpdate("update characters set online=0");
+			s.executeUpdate("UPDATE characters SET online = 0");
 			LOGGER.info("Updated characters online status.");
-			
-			s2.close();
 		}
 		catch (SQLException e)
 		{
+			LOGGER.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
 		}
 	}
 	

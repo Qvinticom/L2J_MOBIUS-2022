@@ -18,32 +18,31 @@ package org.l2jmobius.gameserver.idfactory;
 
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.util.PrimeFinder;
+import org.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
  * This class ..
- * @author Olympic
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public class BitSetIDFactory extends IdFactory
 {
-	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
-	
 	private BitSet _freeIds;
 	private AtomicInteger _freeIdCount;
 	private AtomicInteger _nextFreeId;
 	
-	public class BitSetCapacityCheck implements Runnable
+	protected class BitSetCapacityCheck implements Runnable
 	{
 		@Override
 		public void run()
 		{
-			if (reachingBitSetCapacity())
+			synchronized (BitSetIDFactory.this)
 			{
-				increaseBitSetCapacity();
+				if (reachingBitSetCapacity())
+				{
+					increaseBitSetCapacity();
+				}
 			}
 		}
 	}
@@ -51,12 +50,16 @@ public class BitSetIDFactory extends IdFactory
 	protected BitSetIDFactory()
 	{
 		super();
-		ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
-		initialize();
-		LOGGER.info("IDFactory: " + _freeIds.size() + " id's available.");
+		
+		synchronized (BitSetIDFactory.class)
+		{
+			ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+			initialize();
+		}
+		LOGGER.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");
 	}
 	
-	public synchronized void initialize()
+	public void initialize()
 	{
 		try
 		{
@@ -69,6 +72,7 @@ public class BitSetIDFactory extends IdFactory
 				final int objectID = usedObjectId - FIRST_OID;
 				if (objectID < 0)
 				{
+					LOGGER.warning(getClass().getSimpleName() + ": Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
 					continue;
 				}
 				_freeIds.set(usedObjectId - FIRST_OID);
@@ -81,8 +85,7 @@ public class BitSetIDFactory extends IdFactory
 		catch (Exception e)
 		{
 			_initialized = false;
-			LOGGER.warning("BitSet ID Factory could not be initialized correctly " + e);
-			e.printStackTrace();
+			LOGGER.severe(getClass().getSimpleName() + ": Could not be initialized properly: " + e.getMessage());
 		}
 	}
 	
@@ -96,7 +99,7 @@ public class BitSetIDFactory extends IdFactory
 		}
 		else
 		{
-			LOGGER.warning("BitSet ID Factory: release objectID " + objectID + " failed (< " + FIRST_OID + ")");
+			LOGGER.warning(getClass().getSimpleName() + ": Release objectID " + objectID + " failed (< " + FIRST_OID + ")");
 		}
 	}
 	
@@ -107,22 +110,15 @@ public class BitSetIDFactory extends IdFactory
 		_freeIds.set(newID);
 		_freeIdCount.decrementAndGet();
 		
-		int nextFree = _freeIds.nextClearBit(newID);
+		final int nextFree = _freeIds.nextClearBit(newID) < 0 ? _freeIds.nextClearBit(0) : _freeIds.nextClearBit(newID);
 		
 		if (nextFree < 0)
 		{
-			nextFree = _freeIds.nextClearBit(0);
-		}
-		if (nextFree < 0)
-		{
-			if (_freeIds.size() < FREE_OBJECT_ID_SIZE)
-			{
-				increaseBitSetCapacity();
-			}
-			else
+			if (_freeIds.size() >= FREE_OBJECT_ID_SIZE)
 			{
 				throw new NullPointerException("Ran out of valid Id's.");
 			}
+			increaseBitSetCapacity();
 		}
 		
 		_nextFreeId.set(nextFree);
@@ -138,7 +134,7 @@ public class BitSetIDFactory extends IdFactory
 	
 	protected synchronized int usedIdCount()
 	{
-		return (_freeIdCount.get() - FIRST_OID);
+		return _freeIdCount.get() - FIRST_OID;
 	}
 	
 	protected synchronized boolean reachingBitSetCapacity()

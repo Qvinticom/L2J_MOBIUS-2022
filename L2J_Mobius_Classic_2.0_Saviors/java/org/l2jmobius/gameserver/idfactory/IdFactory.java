@@ -104,12 +104,12 @@ public abstract class IdFactory
 	{
 		switch (Config.IDFACTORY_TYPE)
 		{
-			case BitSet:
+			case BITSET:
 			{
 				_instance = new BitSetIDFactory();
 				break;
 			}
-			case Stack:
+			case STACK:
 			{
 				_instance = new StackIDFactory();
 				break;

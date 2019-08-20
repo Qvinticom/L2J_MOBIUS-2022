@@ -21,19 +21,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Stack;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 
 /**
- * @author Olympic
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/04/11 10:06:12 $
  */
 public class StackIDFactory extends IdFactory
 {
-	private static Logger LOGGER = Logger.getLogger(IdFactory.class.getName());
-	
 	private int _curOID;
 	private int _tempOID;
 	
@@ -47,6 +43,8 @@ public class StackIDFactory extends IdFactory
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
+			// con.createStatement().execute("drop table if exists tmp_obj_id");
+			
 			final int[] tmp_obj_ids = extractUsedObjectIDTable();
 			if (tmp_obj_ids.length > 0)
 			{
@@ -64,9 +62,9 @@ public class StackIDFactory extends IdFactory
 			LOGGER.info("IdFactory: Next usable Object ID is: " + _curOID);
 			_initialized = true;
 		}
-		catch (Exception e1)
+		catch (Exception e)
 		{
-			LOGGER.warning("ID Factory could not be initialized correctly " + e1);
+			LOGGER.severe(getClass().getSimpleName() + ": Could not be initialized properly:" + e.getMessage());
 		}
 	}
 	
@@ -83,26 +81,26 @@ public class StackIDFactory extends IdFactory
 		{
 			for (String check : ID_CHECKS)
 			{
-				final PreparedStatement ps = con.prepareStatement(check);
-				ps.setInt(1, _tempOID);
-				ps.setInt(2, id);
-				final ResultSet rs = ps.executeQuery();
-				while (rs.next())
+				try (PreparedStatement ps = con.prepareStatement(check))
 				{
-					final int badId = rs.getInt(1);
-					LOGGER.warning("Bad ID " + badId + " in DB found by: " + check);
-					throw new RuntimeException();
+					ps.setInt(1, _tempOID);
+					// ps.setInt(1, _curOID);
+					ps.setInt(2, id);
+					try (ResultSet rs = ps.executeQuery())
+					{
+						if (rs.next())
+						{
+							final int badId = rs.getInt(1);
+							LOGGER.severe("Bad ID " + badId + " in DB found by: " + check);
+							throw new RuntimeException();
+						}
+					}
 				}
-				rs.close();
-				ps.close();
 			}
 		}
 		
-		int hole = id - _tempOID;
-		if (hole > (N - idx))
-		{
-			hole = N - idx;
-		}
+		// int hole = id - _curOID;
+		final int hole = (id - _tempOID) > (N - idx) ? N - idx : id - _tempOID;
 		for (int i = 1; i <= hole; i++)
 		{
 			_freeOIDStack.push(_tempOID);

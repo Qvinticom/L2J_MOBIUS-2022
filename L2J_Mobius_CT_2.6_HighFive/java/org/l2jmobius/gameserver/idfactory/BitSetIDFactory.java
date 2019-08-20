@@ -132,17 +132,11 @@ public class BitSetIDFactory extends IdFactory
 		return _freeIdCount.get();
 	}
 	
-	/**
-	 * @return
-	 */
 	protected synchronized int usedIdCount()
 	{
 		return _freeIdCount.get() - FIRST_OID;
 	}
 	
-	/**
-	 * @return
-	 */
 	protected synchronized boolean reachingBitSetCapacity()
 	{
 		return PrimeFinder.nextPrime((usedIdCount() * 11) / 10) > _freeIds.size();
