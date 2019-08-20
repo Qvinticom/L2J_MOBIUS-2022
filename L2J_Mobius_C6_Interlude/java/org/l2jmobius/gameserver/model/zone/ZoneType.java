@@ -333,7 +333,6 @@ public abstract class ZoneType
 		}
 		
 		return false;
-		
 	}
 	
 	protected abstract void onEnter(Creature creature);
