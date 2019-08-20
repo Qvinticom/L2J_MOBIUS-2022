@@ -54,7 +54,7 @@ public class AdminZone implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This is NOT a PvP zone.");
 			}
 			
-			if (activeChar.isInsideZone(ZoneId.NOLANDING))
+			if (activeChar.isInsideZone(ZoneId.NO_LANDING))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This is a no landing zone.");
 			}
@@ -63,7 +63,7 @@ public class AdminZone implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This is NOT a no landing zone.");
 			}
 			
-			if (activeChar.isInsideZone(ZoneId.NOSTORE))
+			if (activeChar.isInsideZone(ZoneId.NO_STORE))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This is a no-store zone.");
 			}

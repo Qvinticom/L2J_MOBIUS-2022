@@ -485,7 +485,7 @@ public class MapRegionTable
 			final PlayerInstance player = (PlayerInstance) creature;
 			
 			// If in Monster Derby Track
-			if (player.isInsideZone(ZoneId.MONSTERTRACK))
+			if (player.isInsideZone(ZoneId.MONSTER_TRACK))
 			{
 				return new Location(12661, 181687, -3560);
 			}

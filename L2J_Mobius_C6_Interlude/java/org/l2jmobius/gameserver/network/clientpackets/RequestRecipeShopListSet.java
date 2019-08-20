@@ -74,7 +74,7 @@ public class RequestRecipeShopListSet extends GameClientPacket
 			return;
 		}
 		
-		if (player.isInsideZone(ZoneId.NOSTORE))
+		if (player.isInsideZone(ZoneId.NO_STORE))
 		{
 			// player.sendPacket(new RecipeShopManageList(player, player.isDwarven()));
 			player.sendMessage("Private manufacture are disable here. Try in another place.");

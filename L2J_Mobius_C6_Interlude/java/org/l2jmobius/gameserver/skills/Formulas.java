@@ -1029,7 +1029,7 @@ public class Formulas
 				}
 			}
 			
-			if (player.isInsideZone(ZoneId.CLANHALL) && (player.getClan() != null))
+			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null))
 			{
 				final int clanHallIndex = player.getClan().getHasHideout();
 				if (clanHallIndex > 0)
@@ -1108,7 +1108,7 @@ public class Formulas
 				mpRegenBonus += 1;
 			}
 			
-			if (player.isInsideZone(ZoneId.CLANHALL) && (player.getClan() != null))
+			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null))
 			{
 				final int clanHallIndex = player.getClan().getHasHideout();
 				if (clanHallIndex > 0)

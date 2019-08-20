@@ -55,7 +55,7 @@ public class EtcStatusUpdate extends GameServerPacket
 		writeD(_player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
 		writeD(_player.isInRefusalMode() || _player.isChatBanned() ? 1 : 0); // 1 = block all chat
 		// writeD(0x00); // 1 = danger area
-		writeD(_player.isInsideZone(ZoneId.DANGERAREA)/* || _player.isInDangerArea() */ ? 1 : 0); // 1 = danger area
+		writeD(_player.isInsideZone(ZoneId.DANGER_AREA)/* || _player.isInDangerArea() */ ? 1 : 0); // 1 = danger area
 		writeD(Math.min(_player.getExpertisePenalty() + _player.getMasteryPenalty() + _player.getMasteryWeapPenalty(), 1)); // 1 = grade penalty
 		writeD(_player.getCharmOfCourage() ? 1 : 0); // 1 = charm of courage (no xp loss in siege..)
 		writeD(_player.getDeathPenaltyBuffLevel()); // 1-15 death penalty, lvl (combat ability decreased due to death)

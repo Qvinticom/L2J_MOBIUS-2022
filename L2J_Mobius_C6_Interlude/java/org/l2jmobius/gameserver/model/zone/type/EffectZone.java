@@ -146,7 +146,7 @@ public class EffectZone extends ZoneType
 		
 		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
 		{
-			creature.setInsideZone(ZoneId.DANGERAREA, true);
+			creature.setInsideZone(ZoneId.DANGER_AREA, true);
 			creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
 		}
 	}
@@ -156,8 +156,8 @@ public class EffectZone extends ZoneType
 	{
 		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
 		{
-			creature.setInsideZone(ZoneId.DANGERAREA, false);
-			if (!creature.isInsideZone(ZoneId.DANGERAREA))
+			creature.setInsideZone(ZoneId.DANGER_AREA, false);
+			if (!creature.isInsideZone(ZoneId.DANGER_AREA))
 			{
 				creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
 			}

@@ -373,7 +373,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have a cursed weapon, you can't go to your partner.");
 			return false;
 		}
-		else if (activeChar.isInsideZone(ZoneId.NOSUMMONFRIEND))
+		else if (activeChar.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 		{
 			activeChar.sendMessage("You are in area which blocks summoning.");
 			return false;

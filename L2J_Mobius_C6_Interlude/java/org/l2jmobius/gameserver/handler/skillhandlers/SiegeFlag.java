@@ -168,7 +168,7 @@ public class SiegeFlag implements ISkillHandler
 		{
 			sm.addString("You have already placed the maximum number of flags possible");
 		}
-		else if (player.isInsideZone(ZoneId.NOHQ))
+		else if (player.isInsideZone(ZoneId.NO_HQ))
 		{
 			sm.addString("You cannot place flag here.");
 		}
@@ -214,7 +214,7 @@ public class SiegeFlag implements ISkillHandler
 		{
 			sm.addString("You have already placed the maximum number of flags possible");
 		}
-		else if (player.isInsideZone(ZoneId.NOHQ))
+		else if (player.isInsideZone(ZoneId.NO_HQ))
 		{
 			sm.addString("You cannot place flag here.");
 		}

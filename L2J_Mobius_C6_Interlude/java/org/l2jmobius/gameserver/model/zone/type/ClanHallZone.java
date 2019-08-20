@@ -85,7 +85,7 @@ public class ClanHallZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			// Set as in clan hall
-			creature.setInsideZone(ZoneId.CLANHALL, true);
+			creature.setInsideZone(ZoneId.CLAN_HALL, true);
 			
 			ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
 			
@@ -112,7 +112,7 @@ public class ClanHallZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			// Unset clanhall zone
-			creature.setInsideZone(ZoneId.CLANHALL, false);
+			creature.setInsideZone(ZoneId.CLAN_HALL, false);
 			
 			// Send a message
 			if ((((PlayerInstance) creature).getClanId() != 0) && (ClanHallManager.getInstance().getClanHallById(_clanHallId).getOwnerId() == ((PlayerInstance) creature).getClanId()))

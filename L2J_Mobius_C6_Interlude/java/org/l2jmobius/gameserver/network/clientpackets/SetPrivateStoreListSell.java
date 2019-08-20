@@ -96,7 +96,7 @@ public class SetPrivateStoreListSell extends GameClientPacket
 			return;
 		}
 		
-		if (player.isInsideZone(ZoneId.NOSTORE))
+		if (player.isInsideZone(ZoneId.NO_STORE))
 		{
 			player.sendPacket(new PrivateStoreManageListSell(player));
 			player.sendMessage("Trade are disable here. Try in another place.");

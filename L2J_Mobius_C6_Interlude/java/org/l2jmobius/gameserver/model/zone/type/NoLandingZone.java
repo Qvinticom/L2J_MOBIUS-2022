@@ -37,7 +37,7 @@ public class NoLandingZone extends ZoneType
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.NOLANDING, true);
+			creature.setInsideZone(ZoneId.NO_LANDING, true);
 		}
 	}
 	
@@ -46,7 +46,7 @@ public class NoLandingZone extends ZoneType
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.NOLANDING, false);
+			creature.setInsideZone(ZoneId.NO_LANDING, false);
 		}
 	}
 	

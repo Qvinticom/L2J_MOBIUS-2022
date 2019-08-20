@@ -11767,7 +11767,7 @@ public class PlayerInstance extends Playable
 	public boolean checkLandingState()
 	{
 		// Check if char is in a no landing zone
-		if (isInsideZone(ZoneId.NOLANDING))
+		if (isInsideZone(ZoneId.NO_LANDING))
 		{
 			return true;
 		}
@@ -14636,7 +14636,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (summonerChar.isInsideZone(ZoneId.NOSUMMONFRIEND) || summonerChar.isFlying() || summonerChar.isMounted())
+		if (summonerChar.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || summonerChar.isFlying() || summonerChar.isMounted())
 		{
 			summonerChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 			return false;
@@ -14697,7 +14697,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (targetChar.isInsideZone(ZoneId.NOSUMMONFRIEND))
+		if (targetChar.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 		{
 			return false;
 		}

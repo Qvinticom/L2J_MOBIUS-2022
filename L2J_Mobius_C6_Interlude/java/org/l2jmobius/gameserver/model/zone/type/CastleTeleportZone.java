@@ -89,13 +89,13 @@ public class CastleTeleportZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		creature.setInsideZone(ZoneId.OLY, true);
+		creature.setInsideZone(ZoneId.OLYMPIAD, true);
 	}
 	
 	@Override
 	protected void onExit(Creature creature)
 	{
-		creature.setInsideZone(ZoneId.OLY, false);
+		creature.setInsideZone(ZoneId.OLYMPIAD, false);
 	}
 	
 	@Override

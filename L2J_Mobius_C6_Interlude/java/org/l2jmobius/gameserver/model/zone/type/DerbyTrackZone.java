@@ -36,7 +36,7 @@ public class DerbyTrackZone extends PeaceZone
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.MONSTERTRACK, true);
+			creature.setInsideZone(ZoneId.MONSTER_TRACK, true);
 		}
 		super.onEnter(creature);
 	}
@@ -46,7 +46,7 @@ public class DerbyTrackZone extends PeaceZone
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.MONSTERTRACK, false);
+			creature.setInsideZone(ZoneId.MONSTER_TRACK, false);
 		}
 		super.onExit(creature);
 	}

@@ -37,7 +37,7 @@ public class NoHqZone extends ZoneType
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.NOHQ, true);
+			creature.setInsideZone(ZoneId.NO_HQ, true);
 		}
 	}
 	
@@ -46,7 +46,7 @@ public class NoHqZone extends ZoneType
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			creature.setInsideZone(ZoneId.NOHQ, false);
+			creature.setInsideZone(ZoneId.NO_HQ, false);
 		}
 	}
 	

@@ -41,7 +41,7 @@ public class JailZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			creature.setInsideZone(ZoneId.JAIL, true);
-			creature.setInsideZone(ZoneId.NOSUMMONFRIEND, true);
+			creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, true);
@@ -60,7 +60,7 @@ public class JailZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			creature.setInsideZone(ZoneId.JAIL, false);
-			creature.setInsideZone(ZoneId.NOSUMMONFRIEND, false);
+			creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, false);

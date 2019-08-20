@@ -154,7 +154,7 @@ public class CastleMagicianInstance extends NpcInstance
 	 */
 	private static final boolean validateGateCondition(PlayerInstance clanLeader, PlayerInstance player)
 	{
-		if (clanLeader.isAlikeDead() || clanLeader.isInStoreMode() || clanLeader.isRooted() || clanLeader.isInCombat() || clanLeader.isInOlympiadMode() || clanLeader.isFestivalParticipant() || clanLeader.inObserverMode() || clanLeader.isInsideZone(ZoneId.NOSUMMONFRIEND))
+		if (clanLeader.isAlikeDead() || clanLeader.isInStoreMode() || clanLeader.isRooted() || clanLeader.isInCombat() || clanLeader.isInOlympiadMode() || clanLeader.isFestivalParticipant() || clanLeader.inObserverMode() || clanLeader.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 		{
 			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
 			return false;
