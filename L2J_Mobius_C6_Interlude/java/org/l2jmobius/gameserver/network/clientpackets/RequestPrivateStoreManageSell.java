@@ -79,13 +79,6 @@ public class RequestPrivateStoreManageSell extends GameClientPacket
 			return;
 		}
 		
-		// You can't open store when the task is launched
-		if (player.isSittingTaskLaunched())
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		// Like L2OFF - You can't open buy/sell when you are sitting
 		if (player.isSitting() && (player.getPrivateStoreType() == 0))
 		{

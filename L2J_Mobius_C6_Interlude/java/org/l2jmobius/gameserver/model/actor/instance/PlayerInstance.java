@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_MOVE_TO;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -273,8 +271,6 @@ public class PlayerInstance extends Playable
 	public int _originalNameColourVIP;
 	public int _originalKarmaVIP;
 	private long _voteTimestamp = 0;
-	private boolean _posticipateSit;
-	protected boolean sittingTaskLaunched;
 	private PlayerStatsHolder saved_status = null;
 	private final long _instanceLoginTime;
 	private long _lastTeleportAction = 0;
@@ -522,8 +518,6 @@ public class PlayerInstance extends Playable
 	private boolean _dual_mastery = false;
 	private boolean _2hands_mastery = false;
 	private int _masteryWeapPenalty = 0;
-	protected MoveOnAttack launchedMovingTask = null;
-	protected Boolean _movingTaskDefined = false;
 	private boolean _learningSkill = false;
 	private ScheduledFuture<?> _taskWarnUserTakeBreak;
 	private boolean _wasInvisible = false;
@@ -3484,113 +3478,6 @@ public class PlayerInstance extends Playable
 		_shortCuts.deleteShortCutByObjectId(objectId);
 	}
 	
-	public class MoveOnAttack implements Runnable
-	{
-		final PlayerInstance _player;
-		Location _pos;
-		
-		public MoveOnAttack(PlayerInstance player, Location pos)
-		{
-			_player = player;
-			_pos = pos;
-		}
-		
-		@Override
-		public void run()
-		{
-			synchronized (_movingTaskDefined)
-			{
-				launchedMovingTask = null;
-				_movingTaskDefined = false;
-			}
-			// Set the Intention of this AbstractAI to AI_INTENTION_MOVE_TO
-			_player.getAI().changeIntention(AI_INTENTION_MOVE_TO, _pos, null);
-			
-			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-			_player.getAI().clientStopAutoAttack();
-			
-			// Abort the attack of the Creature and send Server->Client ActionFailed packet
-			_player.abortAttack();
-			
-			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-			_player.getAI().moveTo(_pos.getX(), _pos.getY(), _pos.getZ());
-		}
-		
-		/**
-		 * Sets the new position.
-		 * @param pos the new new position
-		 */
-		public void setNewPosition(Location pos)
-		{
-			_pos = pos;
-		}
-	}
-	
-	/**
-	 * Checks if is moving task defined.
-	 * @return true, if is moving task defined
-	 */
-	public boolean isMovingTaskDefined()
-	{
-		return _movingTaskDefined;
-	}
-	
-	public void setMovingTaskDefined(boolean value)
-	{
-		_movingTaskDefined = value;
-	}
-	
-	/**
-	 * Define new moving task.
-	 * @param pos the pos
-	 */
-	public void defineNewMovingTask(Location pos)
-	{
-		synchronized (_movingTaskDefined)
-		{
-			launchedMovingTask = new MoveOnAttack(this, pos);
-			_movingTaskDefined = true;
-		}
-	}
-	
-	/**
-	 * Modify moving task.
-	 * @param pos the pos
-	 */
-	public void modifyMovingTask(Location pos)
-	{
-		synchronized (_movingTaskDefined)
-		{
-			if (!_movingTaskDefined)
-			{
-				return;
-			}
-			
-			launchedMovingTask.setNewPosition(pos);
-		}
-	}
-	
-	/**
-	 * Start moving task.
-	 */
-	public void startMovingTask()
-	{
-		synchronized (_movingTaskDefined)
-		{
-			if (!_movingTaskDefined)
-			{
-				return;
-			}
-			
-			if ((isMoving() && isAttackingNow()))
-			{
-				return;
-			}
-			
-			ThreadPool.execute(launchedMovingTask);
-		}
-	}
-	
 	/**
 	 * Return True if the PlayerInstance is sitting.<BR>
 	 * <BR>
@@ -3598,17 +3485,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isSitting()
 	{
-		return _waitTypeSitting || sittingTaskLaunched;
-	}
-	
-	/**
-	 * Return True if the PlayerInstance is sitting task launched.<BR>
-	 * <BR>
-	 * @return true, if is sitting task launched
-	 */
-	public boolean isSittingTaskLaunched()
-	{
-		return sittingTaskLaunched;
+		return _waitTypeSitting;
 	}
 	
 	/**
@@ -3621,27 +3498,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Sets the posticipate sit.
-	 * @param act the new posticipate sit
-	 */
-	public void setPosticipateSit(boolean act)
-	{
-		_posticipateSit = act;
-	}
-	
-	/**
-	 * Gets the posticipate sit.
-	 * @return the posticipate sit
-	 */
-	public boolean getPosticipateSit()
-	{
-		return _posticipateSit;
-	}
-	
-	/**
 	 * Sit down the PlayerInstance, set the AI Intention to AI_INTENTION_REST and send a Server->Client ChangeWaitType packet (broadcast)<BR>
-	 * <BR>
-	 * .
 	 */
 	public void sitDown()
 	{
@@ -3650,23 +3507,8 @@ public class PlayerInstance extends Playable
 			stopFakeDeath(null);
 		}
 		
-		if (isMoving()) // since you are moving and want sit down the posticipate sitdown task will be always true
-		{
-			setPosticipateSit(true);
-			return;
-		}
-		
-		// we are going to sitdown, so posticipate is false
-		setPosticipateSit(false);
-		
 		if (isCastingNow() && !_relax)
 		{
-			return;
-		}
-		
-		if (sittingTaskLaunched)
-		{
-			// just return
 			return;
 		}
 		
@@ -3675,7 +3517,6 @@ public class PlayerInstance extends Playable
 			breakAttack();
 			setIsSitting(true);
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
-			sittingTaskLaunched = true;
 			// Schedule a sit down task to wait for the animation to finish
 			ThreadPool.schedule(new SitDownTask(this), 2500);
 			setIsParalyzed(true);
@@ -3696,7 +3537,6 @@ public class PlayerInstance extends Playable
 		{
 			setIsSitting(true);
 			_player.setIsParalyzed(false);
-			sittingTaskLaunched = false;
 			_player.getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
 	}
@@ -3733,11 +3573,6 @@ public class PlayerInstance extends Playable
 			stopFakeDeath(null);
 		}
 		
-		if (sittingTaskLaunched)
-		{
-			return;
-		}
-		
 		if (GameEvent.active && eventSitForced)
 		{
 			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up ...");
@@ -3766,7 +3601,6 @@ public class PlayerInstance extends Playable
 			// Schedule a stand up task to wait for the animation to finish
 			setIsImobilised(true);
 			ThreadPool.schedule(new StandUpTask(this), 2500);
-			
 		}
 	}
 	
@@ -6812,15 +6646,6 @@ public class PlayerInstance extends Playable
 		
 		// Refresh focus force like L2OFF
 		sendPacket(new EtcStatusUpdate(this));
-		
-		// After dead mob check if the killer got a moving task actived
-		if (killer instanceof PlayerInstance)
-		{
-			if (((PlayerInstance) killer).isMovingTaskDefined())
-			{
-				((PlayerInstance) killer).startMovingTask();
-			}
-		}
 		
 		return true;
 	}
@@ -13948,12 +13773,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isInWater()
 	{
-		if (_taskWater != null)
-		{
-			return true;
-		}
-		
-		return false;
+		return _taskWater != null;
 	}
 	
 	/**
@@ -13961,13 +13781,6 @@ public class PlayerInstance extends Playable
 	 */
 	public void checkWaterState()
 	{
-		// checking if char is over base level of water (sea, rivers)
-		if (getZ() > -3750)
-		{
-			stopWaterTask();
-			return;
-		}
-		
 		if (isInsideZone(ZoneId.WATER))
 		{
 			startWaterTask();
@@ -13975,7 +13788,6 @@ public class PlayerInstance extends Playable
 		else
 		{
 			stopWaterTask();
-			return;
 		}
 	}
 	

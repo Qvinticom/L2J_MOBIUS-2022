@@ -96,12 +96,6 @@ public class Action extends GameClientPacket
 			return;
 		}
 		
-		// reset old Moving task
-		if (player.isMovingTaskDefined())
-		{
-			player.setMovingTaskDefined(false);
-		}
-		
 		// Check if the target is valid, if the player haven't a shop or isn't the requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...)
 		if (player.getPrivateStoreType() == 0/* && activeChar.getActiveRequester() == null */)
 		{

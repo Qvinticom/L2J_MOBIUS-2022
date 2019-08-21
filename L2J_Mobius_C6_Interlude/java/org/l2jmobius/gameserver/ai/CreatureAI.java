@@ -330,18 +330,6 @@ public class CreatureAI extends AbstractAI
 		
 		if ((_actor instanceof PlayerInstance) && (_actor.isAttackingNow() || _actor.isCastingNow()) && !_actor.isMoving())
 		{
-			final PlayerInstance player = (PlayerInstance) _actor;
-			// start MoveOnAttack Task
-			// Schedule a move task
-			if (!player.isMovingTaskDefined())
-			{ // if not already started the task
-				player.defineNewMovingTask(pos);
-			}
-			else
-			{
-				player.modifyMovingTask(pos);
-			}
-			
 			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
 			clientActionFailed();
 			return;

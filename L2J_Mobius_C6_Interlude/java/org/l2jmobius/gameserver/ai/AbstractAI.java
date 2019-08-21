@@ -550,7 +550,7 @@ abstract class AbstractAI implements Ctrl
 			setTarget(pawn);
 			
 			_moveToPawnTimeout = GameTimeController.getGameTicks();
-			_moveToPawnTimeout += /* 1000 */200 / GameTimeController.MILLIS_IN_TICK;
+			_moveToPawnTimeout += /* 1000 */ 200 / GameTimeController.MILLIS_IN_TICK;
 			
 			if ((pawn == null) || (_accessor == null))
 			{
@@ -559,6 +559,10 @@ abstract class AbstractAI implements Ctrl
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
 			_accessor.moveTo(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+			
+			// Mobius: Solves moving to wrong Z when not using geodata,
+			// but probably is not accurate and you should use geodata.
+			// _accessor.moveTo(pawn.getX(), pawn.getY(), _actor.getZ(), offset);
 			
 			if (!_actor.isMoving())
 			{
@@ -651,10 +655,6 @@ abstract class AbstractAI implements Ctrl
 	 */
 	protected void clientStopMoving(Location pos)
 	{
-		/*
-		 * if (true && _actor instanceof PlayerInstance){ LOGGER.warning("clientStopMoving();"); Thread.dumpStack(); }
-		 */
-		
 		// Stop movement of the Creature
 		if (_actor.isMoving())
 		{
@@ -696,27 +696,6 @@ abstract class AbstractAI implements Ctrl
 		_clientMoving = false;
 	}
 	
-	/**
-	 * Start the actor Auto Attack client side by sending Server->Client packet AutoAttackStart <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
-	 */
-	/*
-	 * public void clientStartAutoAttack() { if(!isAutoAttacking()) { // Send a Server->Client packet AutoAttackStart to the actor and all PlayerInstance in its _knownPlayers _actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId())); setAutoAttacking(true); }
-	 * AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor); }
-	 */
-	
-	/**
-	 * Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
-	 */
-	/*
-	 * public void clientStopAutoAttack() { if(_actor instanceof PlayerInstance) { if(!AttackStanceTaskManager.getInstance().getAttackStanceTask(_actor) && isAutoAttacking()) { AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor); } } else if(isAutoAttacking()) {
-	 * _actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId())); } setAutoAttacking(false); }
-	 */
 	/**
 	 * Start the actor Auto Attack client side by sending Server->Client packet AutoAttackStart <I>(broadcast)</I>.<BR>
 	 * <BR>

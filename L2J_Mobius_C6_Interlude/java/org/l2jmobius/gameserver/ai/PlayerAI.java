@@ -27,7 +27,6 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -175,17 +174,6 @@ public class PlayerAI extends CreatureAI
 			}
 			
 			clientStopMoving(null);
-		}
-	}
-	
-	@Override
-	protected void clientStopMoving(Location pos)
-	{
-		super.clientStopMoving(pos);
-		final PlayerInstance _player = (PlayerInstance) _actor;
-		if (_player.getPosticipateSit())
-		{
-			_player.sitDown();
 		}
 	}
 	

@@ -836,17 +836,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		// Like L2OFF wait that the hit task finish and then player can move
-		if ((this instanceof PlayerInstance) && ((PlayerInstance) this).isMovingTaskDefined() && !((PlayerInstance) this).isAttackingNow())
-		{
-			final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if (((rhand != null) && (rhand.getItemType() != WeaponType.BOW)) || (rhand == null))
-			{
-				((PlayerInstance) this).startMovingTask();
-				return;
-			}
-		}
-		
 		if (isAlikeDead())
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
@@ -1087,6 +1076,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else
 		{
 			wasSSCharged = (weaponInst != null) && (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE);
+		}
+		
+		// Mobius: Do not move when attack is launched.
+		if (isMoving())
+		{
+			stopMove(getPosition().getWorldPosition());
 		}
 		
 		// Get the Attack Speed of the Creature (delay (in milliseconds) before next attack)
@@ -1794,7 +1789,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Like L2OFF after a skill the player must stop the movement, unless it is toggle or potion.
 		if (!skill.isToggle() && !skill.isPotion() && (this instanceof PlayerInstance))
 		{
-			((PlayerInstance) this).stopMove(null);
+			stopMove(null);
 		}
 		
 		// Start the effect as long as the player is casting.
@@ -2134,15 +2129,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
 		updateEffectIcons();
-		
-		// After dead mob check if the killer got a moving task actived
-		if (killer instanceof PlayerInstance)
-		{
-			if (((PlayerInstance) killer).isMovingTaskDefined())
-			{
-				((PlayerInstance) killer).startMovingTask();
-			}
-		}
 		
 		return true;
 	}
@@ -5688,7 +5674,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// All data are contained in a CharPosition object
 		if (pos != null)
 		{
-			getPosition().setXYZ(pos.getX(), pos.getY(), GeoEngine.getInstance().getHeight(pos.getX(), pos.getY(), pos.getZ()));
+			getPosition().setXYZ(pos.getX(), pos.getY(), pos.getZ());
 			setHeading(pos.getHeading());
 			
 			if (this instanceof PlayerInstance)
@@ -5851,12 +5837,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				((PlayerInstance) this).sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-		}
-		
-		// when start to move again, it has to stop sitdown task
-		if (this instanceof PlayerInstance)
-		{
-			((PlayerInstance) this).setPosticipateSit(false);
 		}
 		
 		// Fix archer bug with movement/hittask
@@ -6807,25 +6787,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				activeWeapon.getSkillEffects(this, target, crit);
 			}
-			
-			if ((this instanceof PlayerInstance) && ((PlayerInstance) this).isMovingTaskDefined())
-			{
-				final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-				if ((rhand != null) && (rhand.getItemType() == WeaponType.BOW))
-				{
-					((PlayerInstance) this).startMovingTask();
-				}
-			}
 			return;
-		}
-		
-		if ((this instanceof PlayerInstance) && ((PlayerInstance) this).isMovingTaskDefined())
-		{
-			final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if ((rhand != null) && (rhand.getItemType() == WeaponType.BOW))
-			{
-				((PlayerInstance) this).startMovingTask();
-			}
 		}
 		
 		getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
@@ -8775,11 +8737,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		catch (Exception e)
 		{
 			LOGGER.warning(e.getMessage());
-		}
-		
-		if ((this instanceof PlayerInstance) && ((PlayerInstance) this).isMovingTaskDefined() && !skill.isPotion())
-		{
-			((PlayerInstance) this).startMovingTask();
 		}
 	}
 	

@@ -376,12 +376,6 @@ public class RequestActionUse extends GameClientPacket
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				// You can't open Manufacture when the task is launched
-				if (player.isSittingTaskLaunched())
-				{
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
 				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
 				{
 					player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
@@ -460,12 +454,6 @@ public class RequestActionUse extends GameClientPacket
 				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				// You can't open Manufacture when the task is launched
-				if (player.isSittingTaskLaunched())
-				{
-					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)

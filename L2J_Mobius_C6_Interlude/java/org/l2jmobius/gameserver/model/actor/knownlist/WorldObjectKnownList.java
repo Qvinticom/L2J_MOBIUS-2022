@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class WorldObjectKnownList
 {
 	private final WorldObject _activeObject;
-	private Map<Integer, WorldObject> _knownObjects;
+	private final Map<Integer, WorldObject> _knownObjects = new ConcurrentHashMap<>();
 	
 	public WorldObjectKnownList(WorldObject activeObject)
 	{
@@ -220,11 +220,6 @@ public class WorldObjectKnownList
 	 */
 	public Map<Integer, WorldObject> getKnownObjects()
 	{
-		if (_knownObjects == null)
-		{
-			_knownObjects = new ConcurrentHashMap<>();
-		}
-		
 		return _knownObjects;
 	}
 	

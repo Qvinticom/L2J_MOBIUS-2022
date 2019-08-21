@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 0000: 01 7a 73 10 4c b2 0b 00 00 a3 fc 00 00 e8 f1 ff .zs.L........... 0010: ff bd 0b 00 00 b3 fc 00 00 e8 f1 ff ff ............. ddddddd
@@ -47,14 +46,6 @@ public class CharMoveToLocation extends GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final PlayerInstance player = getClient().getPlayer();
-		
-		// reset old Moving task
-		if ((player != null) && player.isMovingTaskDefined())
-		{
-			player.setMovingTaskDefined(false);
-		}
-		
 		writeC(0x01);
 		
 		writeD(_objectId);
