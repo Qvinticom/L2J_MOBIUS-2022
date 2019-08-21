@@ -521,7 +521,8 @@ public enum AbnormalType
 	CHERRY_FRUIT(-1),
 	HERB_EXP(-1),
 	HERB_SPEED(-1),
-	HERB_ACCURANCY(-1);
+	HERB_ACCURANCY(-1),
+	DRAGON_FRUIT(-1);
 	
 	private int _clientId;
 	

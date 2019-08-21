@@ -523,7 +523,8 @@ public enum AbnormalType
 	HERB_SPEED(-1),
 	HERB_ACCURANCY(-1),
 	WARRIOR_BANE(-1),
-	MAGE_BANE(-1);
+	MAGE_BANE(-1),
+	DRAGON_FRUIT(-1);
 	
 	private int _clientId;
 	
