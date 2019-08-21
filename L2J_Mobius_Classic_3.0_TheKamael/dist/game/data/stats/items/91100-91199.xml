@@ -489,10 +489,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="120" />
 		<skills>
-			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
+			<skill id="3558" level="13" /> <!-- Antharas' Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">84</stat>
+			<stat type="maxMp">34</stat>
 		</stats>
 	</item>
 	<item id="91139" name="Enhanced Antharas' Earring" type="Armor">
@@ -503,6 +504,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="3558" level="14" /> <!-- Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">94</stat>
 			<stat type="maxMp">40</stat>

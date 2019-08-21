@@ -1028,10 +1028,11 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<skills>
-			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
+			<skill id="3558" level="12" /> <!-- Antharas' Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">74</stat>
+			<stat type="maxMp">28</stat>
 		</stats>
 	</item>
 	<item id="90993" name="Damaged Antharas' Earring" type="Armor">
