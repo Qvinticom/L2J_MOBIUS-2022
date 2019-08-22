@@ -55,11 +55,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import org.l2jmobius.commons.enums.IdFactoryType;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.IdFactoryType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.base.ClassId;

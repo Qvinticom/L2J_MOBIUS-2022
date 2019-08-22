@@ -36,10 +36,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.enums.IdFactoryType;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.L2Properties;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.enums.IdFactoryType;
 import org.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.loginserver.LoginController;
