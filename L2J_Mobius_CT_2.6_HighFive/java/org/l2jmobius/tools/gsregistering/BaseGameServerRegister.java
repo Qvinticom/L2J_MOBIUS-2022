@@ -30,8 +30,8 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.loginserver.GameServerTable;
 
@@ -65,9 +65,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public void load()
 	{
-		Server.serverMode = Server.MODE_LOGINSERVER;
-		
-		Config.load();
+		Config.load(ServerMode.LOGIN);
 		DatabaseFactory.init();
 		GameServerTable.getInstance();
 		

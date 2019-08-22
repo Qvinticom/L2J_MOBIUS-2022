@@ -29,9 +29,9 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
@@ -180,7 +180,6 @@ public class GameServer
 	public GameServer() throws Exception
 	{
 		final long serverLoadStart = System.currentTimeMillis();
-		Server.serverMode = Server.MODE_GAMESERVER;
 		
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
@@ -188,6 +187,9 @@ public class GameServer
 			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
 		}
+		
+		// Initialize config
+		Config.load(ServerMode.GAME);
 		
 		// Create log folder
 		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
@@ -199,8 +201,6 @@ public class GameServer
 			LogManager.getLogManager().readConfiguration(is);
 		}
 		
-		// Initialize config
-		Config.load();
 		printSection("Database");
 		DatabaseFactory.init();
 		

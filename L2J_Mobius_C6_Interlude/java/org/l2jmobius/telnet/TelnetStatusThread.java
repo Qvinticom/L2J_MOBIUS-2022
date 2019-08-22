@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.status;
+package org.l2jmobius.telnet;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,20 +28,19 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.Rnd;
 
-public class Status extends Thread
+public class TelnetStatusThread extends Thread
 {
-	protected static final Logger LOGGER = Logger.getLogger(Status.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(TelnetStatusThread.class.getName());
 	
 	private final ServerSocket statusServerSocket;
 	
 	private final int _uptime;
 	private final int _statusPort;
 	private String _statusPw;
-	private final int _mode;
 	private final List<LoginStatusThread> _loginStatus;
 	
 	@Override
@@ -55,7 +54,7 @@ public class Status extends Thread
 			{
 				final Socket connection = statusServerSocket.accept();
 				
-				if (_mode == Server.MODE_GAMESERVER)
+				if (Config.SERVER_MODE == ServerMode.GAME)
 				{
 					final GameStatusThread gst = new GameStatusThread(connection, _uptime, _statusPw);
 					if (!connection.isClosed())
@@ -63,7 +62,7 @@ public class Status extends Thread
 						ThreadPool.execute(gst);
 					}
 				}
-				else if (_mode == Server.MODE_LOGINSERVER)
+				else if (Config.SERVER_MODE == ServerMode.LOGIN)
 				{
 					final LoginStatusThread lst = new LoginStatusThread(connection, _uptime, _statusPw);
 					if (!connection.isClosed())
@@ -103,10 +102,9 @@ public class Status extends Thread
 		}
 	}
 	
-	public Status(int mode) throws IOException
+	public TelnetStatusThread() throws IOException
 	{
 		super("Status");
-		_mode = mode;
 		final Properties telnetSettings = new Properties();
 		final InputStream is = new FileInputStream(new File(Config.TELNET_CONFIG_FILE));
 		telnetSettings.load(is);
@@ -115,7 +113,7 @@ public class Status extends Thread
 		_statusPort = Integer.parseInt(telnetSettings.getProperty("StatusPort", "12345"));
 		_statusPw = telnetSettings.getProperty("StatusPW");
 		
-		if ((_mode == Server.MODE_GAMESERVER) || (_mode == Server.MODE_LOGINSERVER))
+		if ((Config.SERVER_MODE == ServerMode.GAME) || (Config.SERVER_MODE == ServerMode.LOGIN))
 		{
 			if (_statusPw == null)
 			{
@@ -126,6 +124,7 @@ public class Status extends Thread
 			}
 			LOGGER.info("Telnet StatusServer started successfully, listening on Port: " + _statusPort);
 		}
+		
 		statusServerSocket = new ServerSocket(_statusPort);
 		_uptime = (int) System.currentTimeMillis();
 		_loginStatus = new ArrayList<>();

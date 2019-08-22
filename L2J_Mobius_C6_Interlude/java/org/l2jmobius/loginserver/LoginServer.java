@@ -28,15 +28,15 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.ui.Gui;
-import org.l2jmobius.status.Status;
+import org.l2jmobius.telnet.TelnetStatusThread;
 
 public class LoginServer
 {
@@ -46,7 +46,7 @@ public class LoginServer
 	private static LoginServer INSTANCE;
 	private GameServerListener _gameServerListener;
 	private SelectorThread<LoginClient> _selectorThread;
-	private Status _statusServer;
+	private TelnetStatusThread _statusServer;
 	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
 	public static void main(String[] args)
@@ -61,14 +61,15 @@ public class LoginServer
 	
 	public LoginServer()
 	{
-		Server.serverMode = Server.MODE_LOGINSERVER;
-		
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
 		{
 			System.out.println("LoginServer: Running in GUI mode.");
 			new Gui();
 		}
+		
+		// Load LoginServer Configs
+		Config.load(ServerMode.LOGIN);
 		
 		// Create log folder
 		final File logFolder = new File(".", "log");
@@ -84,9 +85,6 @@ public class LoginServer
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		
-		// Load LoginServer Configs
-		Config.load();
 		
 		// Prepare Database
 		DatabaseFactory.init();
@@ -133,7 +131,7 @@ public class LoginServer
 		{
 			try
 			{
-				_statusServer = new Status(Server.serverMode);
+				_statusServer = new TelnetStatusThread();
 				_statusServer.start();
 			}
 			catch (IOException e)

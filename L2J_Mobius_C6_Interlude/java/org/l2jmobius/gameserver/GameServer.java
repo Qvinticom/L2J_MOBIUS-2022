@@ -28,10 +28,10 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
@@ -140,7 +140,7 @@ import org.l2jmobius.gameserver.thread.daemons.DeadlockDetector;
 import org.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.thread.daemons.PcPoint;
 import org.l2jmobius.gameserver.ui.Gui;
-import org.l2jmobius.status.Status;
+import org.l2jmobius.telnet.TelnetStatusThread;
 
 public class GameServer
 {
@@ -149,20 +149,21 @@ public class GameServer
 	private static SelectorThread<GameClient> _selectorThread;
 	private static LoginServerThread _loginThread;
 	private static GamePacketHandler _gamePacketHandler;
-	private static Status _statusServer;
+	private static TelnetStatusThread _statusServer;
 	
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
 	public static void main(String[] args) throws Exception
 	{
-		Server.serverMode = Server.MODE_GAMESERVER;
-		
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
 		{
 			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
 		}
+		
+		// Load GameServer Configs
+		Config.load(ServerMode.GAME);
 		
 		// Create log folder
 		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
@@ -175,9 +176,6 @@ public class GameServer
 		}
 		
 		final long serverLoadStart = System.currentTimeMillis();
-		
-		// Load GameServer Configs
-		Config.load();
 		
 		Util.printSection("Database");
 		DatabaseFactory.init();
@@ -565,7 +563,7 @@ public class GameServer
 		Util.printSection("Telnet");
 		if (Config.IS_TELNET_ENABLED)
 		{
-			_statusServer = new Status(Server.serverMode);
+			_statusServer = new TelnetStatusThread();
 			_statusServer.start();
 		}
 		else

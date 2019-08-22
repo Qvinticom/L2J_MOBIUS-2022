@@ -37,6 +37,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.enums.IdFactoryType;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.L2Properties;
 import org.l2jmobius.commons.util.StringUtil;
@@ -107,6 +108,8 @@ public class Config
 	// Constants
 	// --------------------------------------------------
 	public static final String EOL = System.lineSeparator();
+	
+	public static ServerMode SERVER_MODE = ServerMode.NONE;
 	
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
 	public static int MASTERACCESS_LEVEL;
@@ -3787,9 +3790,10 @@ public class Config
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_POTION, "Potion", "4");
 	}
 	
-	public static void load()
+	public static void load(ServerMode serverMode)
 	{
-		if (Server.serverMode == Server.MODE_GAMESERVER)
+		SERVER_MODE = serverMode;
+		if (SERVER_MODE == ServerMode.GAME)
 		{
 			loadHexed();
 			
@@ -3850,7 +3854,7 @@ public class Config
 			
 			loadTelnetConfig();
 		}
-		else if (Server.serverMode == Server.MODE_LOGINSERVER)
+		else if (SERVER_MODE == ServerMode.LOGIN)
 		{
 			loadLoginStartConfig();
 			

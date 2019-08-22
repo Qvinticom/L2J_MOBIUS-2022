@@ -25,8 +25,8 @@ import java.util.Base64;
 import java.util.Scanner;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.Server;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.enums.ServerMode;
 
 /**
  * This class SQL Account Manager
@@ -41,8 +41,7 @@ public class SQLAccountManager
 	
 	public static void main(String[] args)
 	{
-		Server.serverMode = Server.MODE_LOGINSERVER;
-		Config.load();
+		Config.load(ServerMode.LOGIN);
 		DatabaseFactory.init();
 		
 		try (Scanner _scn = new Scanner(System.in))

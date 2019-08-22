@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.datatables.SkillTable;
@@ -126,7 +127,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				else if (type.equals("configs"))
 				{
-					Config.load();
+					Config.load(ServerMode.GAME);
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Server Config Reloaded.");
 				}

@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
@@ -80,7 +81,7 @@ public class Reload implements ITelnetCommand
 		{
 			case "config":
 			{
-				Config.load();
+				Config.load(ServerMode.GAME);
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded Configs.");
 			}
 			case "access":

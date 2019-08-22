@@ -14,17 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius;
+package org.l2jmobius.commons.enums;
 
 /**
- * This class used to be the starter class, since LS/GS split, it only retains server mode
+ * @author Mobius
  */
-public class Server
+public enum ServerMode
 {
-	// constants for the server mode
-	private static final int MODE_NONE = 0;
-	public static final int MODE_GAMESERVER = 1;
-	public static final int MODE_LOGINSERVER = 2;
-	
-	public static int serverMode = MODE_NONE;
+	NONE,
+	GAME,
+	LOGIN;
 }

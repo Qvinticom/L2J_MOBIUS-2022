@@ -56,6 +56,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.enums.IdFactoryType;
+import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
@@ -146,6 +147,8 @@ public class Config
 	// --------------------------------------------------
 	// Variable Definitions
 	// --------------------------------------------------
+	public static ServerMode SERVER_MODE = ServerMode.NONE;
+	
 	public static boolean ENABLE_ATTENDANCE_REWARDS;
 	public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
 	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
@@ -1290,10 +1293,12 @@ public class Config
 	/**
 	 * This class initializes all global variables for configuration.<br>
 	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
+	 * @param serverMode
 	 */
-	public static void load()
+	public static void load(ServerMode serverMode)
 	{
-		if (Server.serverMode == Server.MODE_GAMESERVER)
+		SERVER_MODE = serverMode;
+		if (SERVER_MODE == ServerMode.GAME)
 		{
 			FLOOD_PROTECTOR_USE_ITEM = new FloodProtectorConfig("UseItemFloodProtector");
 			FLOOD_PROTECTOR_ROLL_DICE = new FloodProtectorConfig("RollDiceFloodProtector");
@@ -3454,7 +3459,7 @@ public class Config
 			
 			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
 		}
-		else if (Server.serverMode == Server.MODE_LOGINSERVER)
+		else if (SERVER_MODE == ServerMode.LOGIN)
 		{
 			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIG_FILE);
 			

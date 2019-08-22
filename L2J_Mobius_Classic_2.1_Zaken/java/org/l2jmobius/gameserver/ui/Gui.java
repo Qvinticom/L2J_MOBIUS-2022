@@ -168,7 +168,7 @@ public class Gui
 		{
 			if (JOptionPane.showOptionDialog(null, "Reload configs?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, confirmOptions, confirmOptions[1]) == 0)
 			{
-				Config.load();
+				Config.load(Config.SERVER_MODE);
 			}
 		});
 		mnReload.add(mntmConfigs);
