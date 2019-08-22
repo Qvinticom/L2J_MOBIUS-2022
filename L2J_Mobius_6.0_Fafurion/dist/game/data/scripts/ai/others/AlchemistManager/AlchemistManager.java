@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import ai.AbstractNpcAI;
 
@@ -42,8 +42,6 @@ public class AlchemistManager extends AbstractNpcAI
 		33978, // Zephyra
 		33977, // Veruti
 	};
-	// Misc
-	private static final String TUTORIAL_LINK = "..\\L2text\\QT_026_alchemy_01.htm";
 	
 	private AlchemistManager()
 	{
@@ -66,7 +64,7 @@ public class AlchemistManager extends AbstractNpcAI
 			}
 			case "open_tutorial":
 			{
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), TUTORIAL_LINK, TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(26));
 				htmltext = npc.getId() + "-1.html";
 				break;
 			}

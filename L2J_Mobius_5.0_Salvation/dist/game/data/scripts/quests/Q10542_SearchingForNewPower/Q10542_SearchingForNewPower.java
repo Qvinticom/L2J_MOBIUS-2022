@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 
@@ -169,7 +169,7 @@ public class Q10542_SearchingForNewPower extends Quest
 					{
 						htmltext = "33004-01.html";
 						qs.setCond(3, true);
-						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+						player.sendPacket(new ExTutorialShowId(15));
 						htmltext = "33004-01.html";
 						
 						NpcStringId npcStringId = null;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 /**
  * Let's Go To The Central Square (10320)
@@ -74,7 +74,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 				qs.startQuest();
 				qs.setCond(2); // arrow hack
 				qs.setCond(1);
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(9));
 				htmltext = event;
 				break;
 			}
@@ -87,7 +87,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 			{
 				if (qs.isStarted())
 				{
-					addExpAndSp(player, 70, 5);
+					addExpAndSp(player, 84, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

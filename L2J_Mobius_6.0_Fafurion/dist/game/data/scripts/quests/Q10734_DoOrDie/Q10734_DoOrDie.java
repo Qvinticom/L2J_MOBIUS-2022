@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 
@@ -94,7 +94,7 @@ public class Q10734_DoOrDie extends Quest
 			{
 				castBuffs(npc, player, "33950-06.html", "33950-04.html");
 				htmltext = (player.isMageClass()) ? "33950-03.html" : "33950-05.html";
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(25));
 				break;
 			}
 			case "buffs":
@@ -159,7 +159,7 @@ public class Q10734_DoOrDie extends Quest
 								}
 								case 8:
 								{
-									addExpAndSp(player, 805, 2);
+									addExpAndSp(player, 966, 2);
 									qs.exitQuest(false, true);
 									htmltext = "33943-07.html";
 									break;
@@ -212,7 +212,7 @@ public class Q10734_DoOrDie extends Quest
 								}
 								case 7:
 								{
-									addExpAndSp(player, 805, 2);
+									addExpAndSp(player, 966, 2);
 									qs.exitQuest(false, true);
 									htmltext = "33942-07.html";
 									break;

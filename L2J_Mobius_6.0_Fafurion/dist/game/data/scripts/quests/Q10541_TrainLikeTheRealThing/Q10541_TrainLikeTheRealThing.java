@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 
@@ -96,7 +96,7 @@ public class Q10541_TrainLikeTheRealThing extends Quest
 			}
 			case "32981-03.html":
 			{
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(25));
 				htmltext = event;
 				break;
 			}

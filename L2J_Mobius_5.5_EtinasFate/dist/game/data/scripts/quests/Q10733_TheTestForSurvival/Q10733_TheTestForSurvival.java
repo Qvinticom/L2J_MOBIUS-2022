@@ -20,12 +20,13 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 
 /**
  * The Test For Survival (10733)
+ * @URL https://l2wiki.com/The_Test_for_Survival
  * @author Sdw
  */
 public class Q10733_TheTestForSurvival extends Quest
@@ -69,7 +70,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			case "33932-02.htm":
 			{
 				qs.startQuest();
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(11));
 				giveItems(player, GERETH_RECOMMENDATION, 1);
 				break;
 			}

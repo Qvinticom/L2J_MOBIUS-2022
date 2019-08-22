@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import instances.AbstractInstance;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
@@ -161,14 +161,14 @@ public class FaeronTrainingGrounds2 extends AbstractInstance
 						qs.set("ss", 1);
 						giveItems(player, SOULSHOTS_TRAINING);
 						showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_003_bullet_01.htm", TutorialShowHtml.LARGE_WINDOW));
+						player.sendPacket(new ExTutorialShowId(14));
 						htmltext = "33945-04.html";
 					}
 					break;
 				}
 				case 5:
 				{
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+					player.sendPacket(new ExTutorialShowId(15));
 					htmltext = "33945-06.html";
 					break;
 				}

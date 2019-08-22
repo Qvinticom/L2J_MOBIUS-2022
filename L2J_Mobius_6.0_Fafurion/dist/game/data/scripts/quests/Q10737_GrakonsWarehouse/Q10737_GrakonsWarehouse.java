@@ -24,13 +24,14 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
 
 /**
  * Grakons Warehouse (10737)
+ * @URL https://l2wiki.com/Grakon%27s_Warehouse
  * @author Sdw
  */
 public class Q10737_GrakonsWarehouse extends Quest
@@ -89,7 +90,7 @@ public class Q10737_GrakonsWarehouse extends Quest
 			{
 				if (qs.isStarted())
 				{
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_007_post_01.htm", TutorialShowHtml.LARGE_WINDOW));
+					player.sendPacket(new ExTutorialShowId(24));
 					showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					if (player.isMageClass())
 					{

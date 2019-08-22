@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
@@ -63,7 +63,7 @@ public class Q10321_QualificationsOfTheSeeker extends Quest
 				qs.startQuest();
 				qs.setCond(2); // arrow hack
 				qs.setCond(1);
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(11));
 				htmltext = event;
 				break;
 			}
@@ -76,7 +76,7 @@ public class Q10321_QualificationsOfTheSeeker extends Quest
 			{
 				if (qs.isStarted())
 				{
-					addExpAndSp(player, 300, 6);
+					addExpAndSp(player, 360, 6);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

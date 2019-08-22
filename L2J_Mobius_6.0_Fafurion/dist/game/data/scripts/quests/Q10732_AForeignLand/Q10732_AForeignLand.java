@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 /**
  * A Foreign Land (10732)
@@ -73,8 +73,8 @@ public class Q10732_AForeignLand extends Quest
 			{
 				if (qs.isStarted())
 				{
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
-					addExpAndSp(player, 75, 2);
+					player.sendPacket(new ExTutorialShowId(9));
+					addExpAndSp(player, 90, 2);
 					qs.exitQuest(false, true);
 				}
 				break;

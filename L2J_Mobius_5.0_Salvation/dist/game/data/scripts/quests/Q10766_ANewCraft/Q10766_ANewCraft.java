@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 /**
  * A New Craft (10766)
@@ -98,7 +98,7 @@ public class Q10766_ANewCraft extends Quest
 			case "33978-03.html":
 			{
 				qs.setCond(2, true);
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_026_alchemy_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(26));
 				htmltext = event;
 				break;
 			}

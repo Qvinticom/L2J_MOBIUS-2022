@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 
@@ -39,7 +39,7 @@ public class Q10543_SheddingWeight extends Quest
 	private static final int SHANNON = 32974;
 	private static final int WILFORD = 30005;
 	// Items
-	// private static final int NOVICE_TRAINING_LOG = 1835; // TODO Find item ID
+	private static final int NOVICE_TRAINING_LOG = 47601;
 	private static final int APPRENTICE_ADVENTURERS_STAFF = 7816;
 	private static final int APPRENTICE_ADVENTURERS_BONE_CLUB = 7817;
 	private static final int APPRENTICE_ADVENTURERS_KNIFE = 7818;
@@ -54,7 +54,7 @@ public class Q10543_SheddingWeight extends Quest
 		super(10543);
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, WILFORD);
-		// registerQuestItems(NOVICE_TRAINING_LOG);
+		registerQuestItems(NOVICE_TRAINING_LOG);
 		addCondNotRace(Race.ERTHEIA, "noRace.html");
 		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
 		addCondCompletedQuest(Q10542_SearchingForNewPower.class.getSimpleName(), "noLevel.html");
@@ -83,7 +83,7 @@ public class Q10543_SheddingWeight extends Quest
 				qs.startQuest();
 				qs.setCond(2); // arrow hack
 				qs.setCond(1);
-				// giveItems(player, NOVICE_TRAINING_LOG, 1);
+				giveItems(player, NOVICE_TRAINING_LOG, 1);
 				htmltext = event;
 				break;
 			}
@@ -95,9 +95,9 @@ public class Q10543_SheddingWeight extends Quest
 				giveItems(player, APPRENTICE_ADVENTURERS_CESTUS, 1);
 				giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
 				giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_007_post_01.htm", TutorialShowHtml.LARGE_WINDOW));
+				player.sendPacket(new ExTutorialShowId(24));
 				showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
-				addExpAndSp(player, 2630, 9);
+				addExpAndSp(player, 3156, 9);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
