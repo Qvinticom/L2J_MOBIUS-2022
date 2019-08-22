@@ -34,6 +34,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -53,13 +54,6 @@ public class RaidBossSpawnManager
 	protected static final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
 	protected static final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
 	protected static final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
-	
-	public enum StatusEnum
-	{
-		ALIVE,
-		DEAD,
-		UNDEFINED
-	}
 	
 	/**
 	 * Instantiates a new raid boss spawn manager.
@@ -147,7 +141,7 @@ public class RaidBossSpawnManager
 			
 			if (raidboss != null)
 			{
-				raidboss.setRaidStatus(StatusEnum.ALIVE);
+				raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 				
 				final StatsSet info = new StatsSet();
 				info.set("currentHP", raidboss.getCurrentHp());
@@ -189,7 +183,7 @@ public class RaidBossSpawnManager
 		
 		if (isBossDead)
 		{
-			boss.setRaidStatus(StatusEnum.DEAD);
+			boss.setRaidStatus(RaidBossStatus.DEAD);
 			
 			final int RespawnMinDelay = boss.getSpawn().getRespawnMinDelay();
 			final int RespawnMaxDelay = boss.getSpawn().getRespawnMaxDelay();
@@ -213,7 +207,7 @@ public class RaidBossSpawnManager
 		}
 		else
 		{
-			boss.setRaidStatus(StatusEnum.ALIVE);
+			boss.setRaidStatus(RaidBossStatus.ALIVE);
 			
 			info.set("currentHP", boss.getCurrentHp());
 			info.set("currentMP", boss.getCurrentMp());
@@ -257,7 +251,7 @@ public class RaidBossSpawnManager
 				
 				raidboss.setCurrentHp(currentHP);
 				raidboss.setCurrentMp(currentMP);
-				raidboss.setRaidStatus(StatusEnum.ALIVE);
+				raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 				
 				_bosses.put(bossId, raidboss);
 				
@@ -379,7 +373,7 @@ public class RaidBossSpawnManager
 					continue;
 				}
 				
-				if (boss.getRaidStatus().equals(StatusEnum.ALIVE))
+				if (boss.getRaidStatus().equals(RaidBossStatus.ALIVE))
 				{
 					updateStatus(boss, false);
 				}
@@ -468,7 +462,7 @@ public class RaidBossSpawnManager
 	 * @param bossId the boss id
 	 * @return the raid boss status id
 	 */
-	public StatusEnum getRaidBossStatusId(int bossId)
+	public RaidBossStatus getRaidBossStatusId(int bossId)
 	{
 		if (_bosses.containsKey(bossId))
 		{
@@ -476,11 +470,11 @@ public class RaidBossSpawnManager
 		}
 		else if (_schedules.containsKey(bossId))
 		{
-			return StatusEnum.DEAD;
+			return RaidBossStatus.DEAD;
 		}
 		else
 		{
-			return StatusEnum.UNDEFINED;
+			return RaidBossStatus.UNDEFINED;
 		}
 	}
 	
@@ -511,7 +505,7 @@ public class RaidBossSpawnManager
 		info.set("currentMP", raidboss.getCurrentMp());
 		info.set("respawnTime", 0);
 		
-		raidboss.setRaidStatus(StatusEnum.ALIVE);
+		raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 		
 		_storedInfo.put(raidboss.getNpcId(), info);
 		

@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -1332,7 +1332,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				{
 					nextServantIdx = 0;
 					initDeathCounter(roomData[0]);
-					if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == StatusEnum.ALIVE)
+					if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == RaidBossStatus.ALIVE)
 					{
 						allowAgentSpawn = false;
 						allowServantSpawn = false;
@@ -1420,7 +1420,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (npc.getId() == PILLAR)
 		{
-			npc.setIsInvul(RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == StatusEnum.ALIVE);
+			npc.setIsInvul(RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == RaidBossStatus.ALIVE);
 		}
 		return super.onSpawn(npc);
 	}
@@ -1541,7 +1541,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	private void doOnLoadSpawn()
 	{
 		// Ghost of Tully and Spooky Tombstone should be spawned, if Tully isn't alive
-		if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(TULLY) != StatusEnum.ALIVE)
+		if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(TULLY) != RaidBossStatus.ALIVE)
 		{
 			for (int i = 12; i <= 13; i++)
 			{
@@ -1558,7 +1558,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		pillarSpawn.startRespawn();
 		
 		// Doors related
-		if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) != StatusEnum.ALIVE)
+		if (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) != RaidBossStatus.ALIVE)
 		{
 			handleDoorsOnDeath();
 		}

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -33,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class RaidBossInstance extends MonsterInstance
 {
-	private RaidBossSpawnManager.StatusEnum _raidStatus;
+	private RaidBossStatus _raidStatus;
 	private boolean _useRaidCurse = true;
 	
 	/**
@@ -92,12 +93,12 @@ public class RaidBossInstance extends MonsterInstance
 		return true;
 	}
 	
-	public void setRaidStatus(RaidBossSpawnManager.StatusEnum status)
+	public void setRaidStatus(RaidBossStatus status)
 	{
 		_raidStatus = status;
 	}
 	
-	public RaidBossSpawnManager.StatusEnum getRaidStatus()
+	public RaidBossStatus getRaidStatus()
 	{
 		return _raidStatus;
 	}

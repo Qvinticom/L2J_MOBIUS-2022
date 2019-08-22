@@ -35,6 +35,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -54,13 +55,6 @@ public class DBSpawnManager
 	protected final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
 	protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
 	protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
-	
-	public enum DBStatusType
-	{
-		ALIVE,
-		DEAD,
-		UNDEFINED
-	}
 	
 	/**
 	 * Instantiates a new raid npc spawn manager.
@@ -164,7 +158,7 @@ public class DBSpawnManager
 		final Npc npc = _spawns.get(npcId).doSpawn();
 		if (npc != null)
 		{
-			npc.setDBStatus(DBStatusType.ALIVE);
+			npc.setDBStatus(RaidBossStatus.ALIVE);
 			
 			final StatsSet info = new StatsSet();
 			info.set("currentHP", npc.getCurrentHp());
@@ -194,7 +188,7 @@ public class DBSpawnManager
 		
 		if (isNpcDead)
 		{
-			npc.setDBStatus(DBStatusType.DEAD);
+			npc.setDBStatus(RaidBossStatus.DEAD);
 			
 			final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
 			final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
@@ -215,7 +209,7 @@ public class DBSpawnManager
 		}
 		else
 		{
-			npc.setDBStatus(DBStatusType.ALIVE);
+			npc.setDBStatus(RaidBossStatus.ALIVE);
 			
 			info.set("currentHP", npc.getCurrentHp());
 			info.set("currentMP", npc.getCurrentMp());
@@ -255,7 +249,7 @@ public class DBSpawnManager
 			{
 				npc.setCurrentHp(currentHP);
 				npc.setCurrentMp(currentMP);
-				npc.setDBStatus(DBStatusType.ALIVE);
+				npc.setDBStatus(RaidBossStatus.ALIVE);
 				
 				_npcs.put(npcId, npc);
 				
@@ -319,7 +313,7 @@ public class DBSpawnManager
 		{
 			throw new NullPointerException();
 		}
-		npc.setDBStatus(DBStatusType.ALIVE);
+		npc.setDBStatus(RaidBossStatus.ALIVE);
 		
 		final StatsSet info = new StatsSet();
 		info.set("currentHP", npc.getMaxHp());
@@ -419,7 +413,7 @@ public class DBSpawnManager
 					continue;
 				}
 				
-				if (npc.getDBStatus() == DBStatusType.ALIVE)
+				if (npc.getDBStatus() == RaidBossStatus.ALIVE)
 				{
 					updateStatus(npc, false);
 				}
@@ -506,7 +500,7 @@ public class DBSpawnManager
 	 * @param npcId the npc id
 	 * @return the raid npc status id
 	 */
-	public DBStatusType getNpcStatusId(int npcId)
+	public RaidBossStatus getNpcStatusId(int npcId)
 	{
 		if (_npcs.containsKey(npcId))
 		{
@@ -514,11 +508,11 @@ public class DBSpawnManager
 		}
 		else if (_schedules.containsKey(npcId))
 		{
-			return DBStatusType.DEAD;
+			return RaidBossStatus.DEAD;
 		}
 		else
 		{
-			return DBStatusType.UNDEFINED;
+			return RaidBossStatus.UNDEFINED;
 		}
 	}
 	
@@ -543,7 +537,7 @@ public class DBSpawnManager
 		info.set("currentMP", npc.getCurrentMp());
 		info.set("respawnTime", 0);
 		
-		npc.setDBStatus(DBStatusType.ALIVE);
+		npc.setDBStatus(RaidBossStatus.ALIVE);
 		
 		_storedInfo.put(npc.getId(), info);
 		_npcs.put(npc.getId(), npc);

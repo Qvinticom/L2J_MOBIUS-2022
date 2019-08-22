@@ -19,8 +19,8 @@ package quests.Q604_DaimonTheWhiteEyed_Part2;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
@@ -91,7 +91,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		if (event.equals("check"))
 		{
 			RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(DAIMON_THE_WHITE_EYED);
-			if ((raid != null) && (raid.getRaidStatus() == StatusEnum.ALIVE))
+			if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 			{
 				if ((_status >= 0) && (_status-- == 0))
 				{
@@ -277,7 +277,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	private boolean spawnRaid()
 	{
 		RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(DAIMON_THE_WHITE_EYED);
-		if ((raid != null) && (raid.getRaidStatus() == StatusEnum.ALIVE))
+		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
 			raid.getSpawn().setLoc(185900, -44000, -3160, Rnd.get(65536));

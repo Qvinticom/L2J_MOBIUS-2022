@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
@@ -205,7 +206,7 @@ public class DayNightSpawnManager
 					continue;
 				}
 				
-				if ((boss != null) && (boss.getId() == 25328) && boss.getRaidStatus() == RaidBossSpawnManager.StatusEnum.ALIVE)
+				if ((boss != null) && (boss.getId() == 25328) && (boss.getRaidStatus() == RaidBossStatus.ALIVE))
 				{
 					handleHellmans(boss, mode);
 				}

@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.enums.Team;
@@ -42,7 +43,6 @@ import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.DBSpawnManager.DBStatusType;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -151,7 +151,7 @@ public class Npc extends Creature
 	private NpcStringId _nameString;
 	
 	private StatsSet _params;
-	private DBStatusType _raidStatus;
+	private RaidBossStatus _raidStatus;
 	
 	/** Contains information about local tax payments. */
 	private TaxZone _taxZone = null;
@@ -1863,12 +1863,12 @@ public class Npc extends Creature
 		broadcastPacket(new ExShowChannelingEffect(this, target, state));
 	}
 	
-	public void setDBStatus(DBStatusType status)
+	public void setDBStatus(RaidBossStatus status)
 	{
 		_raidStatus = status;
 	}
 	
-	public DBStatusType getDBStatus()
+	public RaidBossStatus getDBStatus()
 	{
 		return _raidStatus;
 	}
