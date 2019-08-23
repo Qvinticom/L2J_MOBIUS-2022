@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -53,12 +53,12 @@ public class AdminGm implements IAdminCommandHandler
 	{
 		if (activeChar.isGM())
 		{
-			GmListTable.getInstance().deleteGm(activeChar);
+			AdminData.getInstance().deleteGm(activeChar);
 			BuilderUtil.sendSysMessage(activeChar, "You no longer have GM status.");
 		}
 		else
 		{
-			GmListTable.getInstance().addGm(activeChar, false);
+			AdminData.getInstance().addGm(activeChar, false);
 			BuilderUtil.sendSysMessage(activeChar, "You now have GM status.");
 		}
 	}

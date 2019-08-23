@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
@@ -100,14 +100,14 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			case admin_gmliston:
 			{
-				GmListTable.getInstance().showGm(activeChar);
-				BuilderUtil.sendSysMessage(activeChar, "Registerd into gm list");
+				AdminData.getInstance().showGm(activeChar);
+				BuilderUtil.sendSysMessage(activeChar, "Registerd into gm list.");
 				return true;
 			}
 			case admin_gmlistoff:
 			{
-				GmListTable.getInstance().hideGm(activeChar);
-				BuilderUtil.sendSysMessage(activeChar, "Removed from gm list");
+				AdminData.getInstance().hideGm(activeChar);
+				BuilderUtil.sendSysMessage(activeChar, "Removed from gm list.");
 				return true;
 			}
 			case admin_silence:

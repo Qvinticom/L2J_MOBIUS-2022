@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -193,7 +193,7 @@ public class AdminAio implements IAdminCommandHandler
 				_player.broadcastUserInfo();
 				_player.sendPacket(new EtcStatusUpdate(_player));
 				_player.sendSkillList();
-				GmListTable.broadcastMessageToGMs("GM " + activeChar.getName() + " set Aio stat for player " + _playername + " for " + _time + " day(s)");
+				AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " set Aio stat for player " + _playername + " for " + _time + " day(s)");
 				_player.sendMessage("You are now an Aio, Congratulations!");
 				_player.broadcastUserInfo();
 			}
@@ -226,7 +226,7 @@ public class AdminAio implements IAdminCommandHandler
 			_player.broadcastUserInfo();
 			_player.sendPacket(new EtcStatusUpdate(_player));
 			_player.sendSkillList();
-			GmListTable.broadcastMessageToGMs("GM " + activeChar.getName() + " remove Aio stat of player " + _playername);
+			AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " remove Aio stat of player " + _playername);
 			_player.sendMessage("Now You are not an Aio..");
 			_player.broadcastUserInfo();
 		}

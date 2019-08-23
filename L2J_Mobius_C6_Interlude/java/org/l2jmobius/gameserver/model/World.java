@@ -23,7 +23,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
@@ -180,16 +179,6 @@ public class World
 	public int getAllVisibleObjectsCount()
 	{
 		return _allObjects.size();
-	}
-	
-	/**
-	 * Return a table containing all GMs.<BR>
-	 * <BR>
-	 * @return the all g ms
-	 */
-	public List<PlayerInstance> getAllGMs()
-	{
-		return GmListTable.getInstance().getAllGms(true);
 	}
 	
 	/**

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -93,7 +93,7 @@ public class AdminZone implements IAdminCommandHandler
 		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))
 		{
 			// TODO: ZONETODO ZoneManager.getInstance().reload();
-			GmListTable.broadcastMessageToGMs("Zones can not be reloaded in this version.");
+			AdminData.broadcastMessageToGMs("Zones can not be reloaded in this version.");
 		}
 		
 		return true;

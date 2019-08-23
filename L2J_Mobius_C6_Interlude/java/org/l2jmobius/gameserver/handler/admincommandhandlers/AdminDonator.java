@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -98,7 +98,7 @@ public class AdminDonator implements IAdminCommandHandler
 			
 			if (notifyGmList)
 			{
-				GmListTable.broadcastMessageToGMs("Warn: " + gm.getName() + " has set " + player.getName() + " as Donator !");
+				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has set " + player.getName() + " as Donator !");
 			}
 		}
 		else
@@ -113,7 +113,7 @@ public class AdminDonator implements IAdminCommandHandler
 			
 			if (notifyGmList)
 			{
-				GmListTable.broadcastMessageToGMs("Warn: " + gm.getName() + " has removed Donator Status of player" + player.getName());
+				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has removed Donator Status of player" + player.getName());
 			}
 		}
 	}

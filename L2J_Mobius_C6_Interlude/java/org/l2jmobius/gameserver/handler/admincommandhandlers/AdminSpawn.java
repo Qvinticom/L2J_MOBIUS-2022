@@ -24,10 +24,10 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -178,7 +178,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			World.getInstance().deleteVisibleNpcSpawns();
-			GmListTable.broadcastMessageToGMs("NPC Unspawn completed!");
+			AdminData.broadcastMessageToGMs("NPC Unspawn completed!");
 		}
 		else if (command.startsWith("admin_spawnday"))
 		{
@@ -199,12 +199,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			SpawnTable.getInstance().reloadAll();
 			RaidBossSpawnManager.getInstance().load();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
-			GmListTable.broadcastMessageToGMs("NPC Respawn completed!");
+			AdminData.broadcastMessageToGMs("NPC Respawn completed!");
 		}
 		else if (command.startsWith("admin_teleport_reload"))
 		{
 			TeleportLocationTable.getInstance().reloadAll();
-			GmListTable.broadcastMessageToGMs("Teleport List Table reloaded.");
+			AdminData.broadcastMessageToGMs("Teleport List Table reloaded.");
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
 		{

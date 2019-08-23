@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -117,7 +117,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			
 			text = command.substring(offset);
 			CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
-			GmListTable.broadcastToGMs(cs);
+			AdminData.broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{

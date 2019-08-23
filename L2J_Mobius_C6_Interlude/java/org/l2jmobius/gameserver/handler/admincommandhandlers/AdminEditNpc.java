@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.BoxInstance;
@@ -45,7 +46,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -1186,7 +1186,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			LOGGER.warning("Error saving new npc value: " + e);
 		}
 		
-		final int npcId = newNpcData.getInteger("npcId");
+		final int npcId = newNpcData.getInt("npcId");
 		final NpcTemplate old = NpcTable.getInstance().getTemplate(npcId);
 		
 		if (old.isCustom())
