@@ -66,14 +66,19 @@ public class PlayerAppearance
 		_hairStyle = (byte) value;
 	}
 	
-	public boolean getSex()
+	public boolean isFemale()
 	{
 		return _sex;
 	}
 	
-	public void setSex(boolean isfemale)
+	public void setFemale()
 	{
-		_sex = isfemale;
+		_sex = true;
+	}
+	
+	public void setMale()
+	{
+		_sex = false;
 	}
 	
 	public void setInvisible()

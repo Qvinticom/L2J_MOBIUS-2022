@@ -100,7 +100,7 @@ public class ClanMember
 		_title = player.getTitle();
 		_sponsor = 0;
 		_apprentice = 0;
-		_sex = player.getAppearance().getSex();
+		_sex = player.getAppearance().isFemale();
 		_raceOrdinal = player.getRace().ordinal();
 	}
 	
@@ -122,7 +122,7 @@ public class ClanMember
 			_title = _player.getTitle();
 			_apprentice = _player.getApprentice();
 			_sponsor = _player.getSponsor();
-			_sex = _player.getAppearance().getSex();
+			_sex = _player.getAppearance().isFemale();
 			_raceOrdinal = _player.getRace().ordinal();
 		}
 		
@@ -328,7 +328,7 @@ public class ClanMember
 	 */
 	public boolean getSex()
 	{
-		return _player != null ? _player.getAppearance().getSex() : _sex;
+		return _player != null ? _player.getAppearance().isFemale() : _sex;
 	}
 	
 	/**

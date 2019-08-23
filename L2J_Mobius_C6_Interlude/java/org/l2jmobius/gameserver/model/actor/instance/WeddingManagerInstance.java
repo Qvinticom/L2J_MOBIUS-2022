@@ -138,13 +138,13 @@ public class WeddingManagerInstance extends NpcInstance
 			player.setMarryAccepted(true);
 			
 			int type;
-			if (player.getAppearance().getSex() && ptarget.getAppearance().getSex())
+			if (player.getAppearance().isFemale() && ptarget.getAppearance().isFemale())
 			{
 				player.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_LESBO);
 				ptarget.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_LESBO);
 				type = 1;
 			}
-			else if (!player.getAppearance().getSex() && !ptarget.getAppearance().getSex())
+			else if (!player.getAppearance().isFemale() && !ptarget.getAppearance().isFemale())
 			{
 				player.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_GEY);
 				ptarget.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_GEY);

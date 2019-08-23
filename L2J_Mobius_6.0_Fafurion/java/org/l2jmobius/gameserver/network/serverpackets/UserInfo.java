@@ -147,7 +147,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeString(_player.getName());
 			packet.writeC(_player.isGM() ? 0x01 : 0x00);
 			packet.writeC(_player.getRace().ordinal());
-			packet.writeC(_player.getAppearance().getSex() ? 0x01 : 0x00);
+			packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00);
 			packet.writeD(ClassId.getClassId(_player.getBaseTemplate().getClassId().getId()).getRootClassId().getId());
 			packet.writeD(_player.getClassId().getId());
 			packet.writeC(_player.getLevel());

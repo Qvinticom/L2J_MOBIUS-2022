@@ -839,7 +839,7 @@ public class Raina extends AbstractNpcAI
 			
 			if (player.getRace() == Race.KAMAEL)
 			{
-				if (player.getAppearance().getSex())
+				if (player.getAppearance().isFemale())
 				{
 					subclasses.remove(PlayerClass.femaleSoulbreaker);
 				}

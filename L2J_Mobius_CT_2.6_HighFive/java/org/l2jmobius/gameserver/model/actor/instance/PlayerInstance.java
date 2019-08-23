@@ -6730,7 +6730,7 @@ public class PlayerInstance extends Playable
 			ps.setInt(11, _appearance.getFace());
 			ps.setInt(12, _appearance.getHairStyle());
 			ps.setInt(13, _appearance.getHairColor());
-			ps.setInt(14, _appearance.getSex() ? 1 : 0);
+			ps.setInt(14, _appearance.isFemale() ? 1 : 0);
 			ps.setLong(15, getExp());
 			ps.setLong(16, getSp());
 			ps.setInt(17, getKarma());
@@ -7349,7 +7349,7 @@ public class PlayerInstance extends Playable
 			ps.setInt(8, _appearance.getFace());
 			ps.setInt(9, _appearance.getHairStyle());
 			ps.setInt(10, _appearance.getHairColor());
-			ps.setInt(11, _appearance.getSex() ? 1 : 0);
+			ps.setInt(11, _appearance.isFemale() ? 1 : 0);
 			ps.setInt(12, getHeading());
 			ps.setInt(13, _observerMode ? _lastLoc.getX() : getX());
 			ps.setInt(14, _observerMode ? _lastLoc.getY() : getY());
@@ -13556,7 +13556,7 @@ public class PlayerInstance extends Playable
 		{
 			return _transformation.getCollisionRadius(this);
 		}
-		return _appearance.getSex() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
 	}
 	
 	public double getCollisionHeight()
@@ -13569,7 +13569,7 @@ public class PlayerInstance extends Playable
 		{
 			return _transformation.getCollisionHeight(this);
 		}
-		return _appearance.getSex() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
 	}
 	
 	public int getClientX()

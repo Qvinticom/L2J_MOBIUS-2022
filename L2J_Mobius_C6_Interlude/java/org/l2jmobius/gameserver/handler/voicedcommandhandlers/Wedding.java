@@ -208,7 +208,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if ((ptarget.getAppearance().getSex() == activeChar.getAppearance().getSex()) && !Config.L2JMOD_WEDDING_SAMESEX)
+		if ((ptarget.getAppearance().isFemale() == activeChar.getAppearance().isFemale()) && !Config.L2JMOD_WEDDING_SAMESEX)
 		{
 			activeChar.sendMessage("Gay marriage is not allowed on this server!");
 			return false;

@@ -395,10 +395,10 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 131: // Doombringer
 							case 132: // Soul Hound (Male)
 							{
-								if (player.getAppearance().getSex())
+								if (player.getAppearance().isFemale())
 								{
 									sexChange = true;
-									player.getAppearance().setSex(false);
+									player.getAppearance().setMale();
 								}
 								break;
 							}
@@ -409,10 +409,10 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 133: // Soul Hound (Female)
 							case 134: // Trickster
 							{
-								if (!player.getAppearance().getSex())
+								if (!player.getAppearance().isFemale())
 								{
 									sexChange = true;
-									player.getAppearance().setSex(true);
+									player.getAppearance().setFemale();
 								}
 								break;
 							}
@@ -532,7 +532,14 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
+			if (player.getAppearance().isFemale())
+			{
+				player.getAppearance().setMale();
+			}
+			else
+			{
+				player.getAppearance().setFemale();
+			}
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 			// Transform-untransorm player quickly to force the client to reload the character textures

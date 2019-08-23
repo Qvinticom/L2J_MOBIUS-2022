@@ -396,9 +396,9 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 132: // Soul Hound (Male)
 							case 157: // Tyrr Doombringer
 							{
-								if (player.getAppearance().getSex())
+								if (player.getAppearance().isFemale())
 								{
-									player.getAppearance().setSex(false);
+									player.getAppearance().setMale();
 								}
 								break;
 							}
@@ -410,9 +410,9 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 134: // Trickster
 							case 165: // Yul Trickster
 							{
-								if (!player.getAppearance().getSex())
+								if (!player.getAppearance().isFemale())
 								{
-									player.getAppearance().setSex(true);
+									player.getAppearance().setFemale();
 								}
 								break;
 							}
@@ -420,7 +420,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					if (player.getRace() == Race.ERTHEIA)
 					{
-						player.getAppearance().setSex(true);
+						player.getAppearance().setFemale();
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
@@ -544,7 +544,14 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
+			if (player.getAppearance().isFemale())
+			{
+				player.getAppearance().setMale();
+			}
+			else
+			{
+				player.getAppearance().setFemale();
+			}
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 		}

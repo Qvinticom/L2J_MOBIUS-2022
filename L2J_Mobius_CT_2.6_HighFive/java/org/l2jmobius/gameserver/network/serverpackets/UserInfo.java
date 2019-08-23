@@ -94,7 +94,7 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getAppearance().getVisibleName());
 		packet.writeD(_player.getRace().ordinal());
-		packet.writeD(_player.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		
 		packet.writeD(_player.getBaseClass());
 		

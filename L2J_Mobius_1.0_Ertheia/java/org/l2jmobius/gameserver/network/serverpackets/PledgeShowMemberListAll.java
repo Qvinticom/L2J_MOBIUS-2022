@@ -102,7 +102,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			final PlayerInstance player = m.getPlayerInstance();
 			if (player != null)
 			{
-				packet.writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect
+				packet.writeD(player.getAppearance().isFemale() ? 1 : 0); // no visible effect
 				packet.writeD(player.getRace().ordinal()); // packet.writeD(1);
 			}
 			else

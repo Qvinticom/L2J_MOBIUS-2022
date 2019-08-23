@@ -6464,7 +6464,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(11, _appearance.getFace());
 			statement.setInt(12, _appearance.getHairStyle());
 			statement.setInt(13, _appearance.getHairColor());
-			statement.setInt(14, _appearance.getSex() ? 1 : 0);
+			statement.setInt(14, _appearance.isFemale() ? 1 : 0);
 			statement.setLong(15, getExp());
 			statement.setLong(16, getSp());
 			statement.setInt(17, getReputation());
@@ -7139,7 +7139,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(8, _appearance.getFace());
 			statement.setInt(9, _appearance.getHairStyle());
 			statement.setInt(10, _appearance.getHairColor());
-			statement.setInt(11, _appearance.getSex() ? 1 : 0);
+			statement.setInt(11, _appearance.isFemale() ? 1 : 0);
 			statement.setInt(12, getHeading());
 			statement.setInt(13, _lastLoc != null ? _lastLoc.getX() : getX());
 			statement.setInt(14, _lastLoc != null ? _lastLoc.getY() : getY());
@@ -12516,7 +12516,7 @@ public class PlayerInstance extends Playable
 			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionRadius();
 		}
 		
-		final double defaultCollisionRadius = _appearance.getSex() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
+		final double defaultCollisionRadius = _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
 		return getTransformation().map(transform -> transform.getCollisionRadius(this, defaultCollisionRadius)).orElse(defaultCollisionRadius);
 	}
 	
@@ -12528,7 +12528,7 @@ public class PlayerInstance extends Playable
 			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionHeight();
 		}
 		
-		final double defaultCollisionHeight = _appearance.getSex() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
+		final double defaultCollisionHeight = _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
 		return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
 	}
 	

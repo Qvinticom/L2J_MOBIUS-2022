@@ -8906,7 +8906,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(28, getAppearance().getFace());
 			statement.setInt(29, getAppearance().getHairStyle());
 			statement.setInt(30, getAppearance().getHairColor());
-			statement.setInt(31, getAppearance().getSex() ? 1 : 0);
+			statement.setInt(31, getAppearance().isFemale() ? 1 : 0);
 			statement.setDouble(32, 1/* getMovementMultiplier() */);
 			statement.setDouble(33, 1/* getAttackSpeedMultiplier() */);
 			statement.setDouble(34, getTemplate().collisionRadius/* getCollisionRadius() */);
@@ -17795,7 +17795,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET sex=? WHERE obj_Id=?");
-			statement.setInt(1, player.getAppearance().getSex() ? 1 : 0);
+			statement.setInt(1, player.getAppearance().isFemale() ? 1 : 0);
 			statement.setInt(2, player.getObjectId());
 			statement.execute();
 			statement.close();

@@ -112,7 +112,7 @@ public class Transform implements IIdentifiable
 	
 	public TransformTemplate getTemplate(PlayerInstance player)
 	{
-		return player != null ? (player.getAppearance().getSex() ? _femaleTemplate : _maleTemplate) : null;
+		return player != null ? (player.getAppearance().isFemale() ? _femaleTemplate : _maleTemplate) : null;
 	}
 	
 	public void setTemplate(boolean male, TransformTemplate template)

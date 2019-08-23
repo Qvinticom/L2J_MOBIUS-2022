@@ -217,7 +217,7 @@ public class CharInfo extends GameServerPacket
 			writeD(_player.getObjectId());
 			writeS(_player.getName());
 			writeD(_player.getRace().ordinal());
-			writeD(_player.getAppearance().getSex() ? 1 : 0);
+			writeD(_player.getAppearance().isFemale() ? 1 : 0);
 			
 			if (_player.getClassIndex() == 0)
 			{

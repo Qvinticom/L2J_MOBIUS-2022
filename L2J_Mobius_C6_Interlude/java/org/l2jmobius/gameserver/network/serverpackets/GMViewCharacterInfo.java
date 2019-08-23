@@ -58,7 +58,7 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeD(_player.getObjectId());
 		writeS(_player.getName());
 		writeD(_player.getRace().ordinal());
-		writeD(_player.getAppearance().getSex() ? 1 : 0);
+		writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		writeD(_player.getClassId().getId());
 		writeD(_player.getLevel());
 		writeQ(_player.getExp());

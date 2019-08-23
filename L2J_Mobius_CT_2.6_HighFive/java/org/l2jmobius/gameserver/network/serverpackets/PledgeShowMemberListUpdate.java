@@ -52,7 +52,7 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		_level = player.getLevel();
 		_classId = player.getClassId().getId();
 		_race = player.getRace().ordinal();
-		_sex = player.getAppearance().getSex() ? 1 : 0;
+		_sex = player.getAppearance().isFemale() ? 1 : 0;
 		_objectId = player.getObjectId();
 		_isOnline = player.isOnline();
 	}

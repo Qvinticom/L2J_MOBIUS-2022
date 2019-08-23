@@ -48,7 +48,7 @@ public class CharSelected extends GameServerPacket
 		writeD(_sessionId);
 		writeD(_player.getClanId());
 		writeD(0x00); // ??
-		writeD(_player.getAppearance().getSex() ? 1 : 0);
+		writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		writeD(_player.getRace().ordinal());
 		writeD(_player.getClassId().getId());
 		writeD(0x01); // active ??

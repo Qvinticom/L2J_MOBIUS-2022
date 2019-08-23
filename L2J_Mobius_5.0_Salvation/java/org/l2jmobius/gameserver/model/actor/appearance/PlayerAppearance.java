@@ -141,9 +141,19 @@ public class PlayerAppearance
 	/**
 	 * @return true if char is female
 	 */
-	public boolean getSex()
+	public boolean isFemale()
 	{
 		return _sex;
+	}
+	
+	public void setFemale()
+	{
+		_sex = true;
+	}
+	
+	public void setMale()
+	{
+		_sex = false;
 	}
 	
 	/**
@@ -152,14 +162,6 @@ public class PlayerAppearance
 	public Sex getSexType()
 	{
 		return _sex ? Sex.FEMALE : Sex.MALE;
-	}
-	
-	/**
-	 * @param isfemale
-	 */
-	public void setSex(boolean isfemale)
-	{
-		_sex = isfemale;
 	}
 	
 	public int getNameColor()

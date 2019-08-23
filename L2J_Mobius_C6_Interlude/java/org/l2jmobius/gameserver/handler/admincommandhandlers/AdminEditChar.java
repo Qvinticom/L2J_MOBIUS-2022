@@ -587,7 +587,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Select player before command");
 					return false;
 				}
-				player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
+				if (player.getAppearance().isFemale())
+				{
+					player.getAppearance().setMale();
+				}
+				else
+				{
+					player.getAppearance().setFemale();
+				}
 				PlayerInstance.setSexDB(player, 1);
 				player.sendMessage("Your gender has been changed by a GM");
 				player.decayMe();

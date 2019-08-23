@@ -124,7 +124,7 @@ public class Transform implements IIdentifiable
 	{
 		if (creature.isPlayer())
 		{
-			return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
+			return (creature.getActingPlayer().getAppearance().isFemale() ? _femaleTemplate : _maleTemplate);
 		}
 		else if (creature.isNpc())
 		{

@@ -47,7 +47,7 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(_sessionId);
 		packet.writeD(_player.getClanId());
 		packet.writeD(0x00); // ??
-		packet.writeD(_player.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		packet.writeD(_player.getRace().ordinal());
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(0x01); // active ??

@@ -284,7 +284,7 @@ public enum PlayerClass
 				// So, in that situation we must skip sex check
 				if (Config.MAX_SUBCLASS <= 3)
 				{
-					if (player.getAppearance().getSex())
+					if (player.getAppearance().isFemale())
 					{
 						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
 					}

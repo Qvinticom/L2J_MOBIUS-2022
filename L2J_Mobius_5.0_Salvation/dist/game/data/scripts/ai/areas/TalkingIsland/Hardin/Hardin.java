@@ -136,9 +136,9 @@ public class Hardin extends AbstractNpcAI
 			}
 			// Ertheias can only be female
 			final ClassId newClass = ClassId.getClassId(Integer.parseInt(event.replace("try_", "")));
-			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().getSex())
+			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().isFemale())
 			{
-				player.getAppearance().setSex(true);
+				player.getAppearance().setFemale();
 			}
 			// Change class
 			player.setClassId(newClass.getId());
