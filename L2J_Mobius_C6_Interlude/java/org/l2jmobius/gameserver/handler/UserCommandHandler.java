@@ -41,19 +41,7 @@ public class UserCommandHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static UserCommandHandler _instance;
-	
 	private final Map<Integer, IUserCommandHandler> _datatable;
-	
-	public static UserCommandHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new UserCommandHandler();
-		}
-		
-		return _instance;
-	}
 	
 	private UserCommandHandler()
 	{
@@ -94,5 +82,15 @@ public class UserCommandHandler
 	public int size()
 	{
 		return _datatable.size();
+	}
+	
+	public static UserCommandHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final UserCommandHandler INSTANCE = new UserCommandHandler();
 	}
 }

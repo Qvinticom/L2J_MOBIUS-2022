@@ -35,28 +35,17 @@ public class HelperBuffTable
 {
 	private static final Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
 	
-	private static HelperBuffTable _instance;
-	public List<HelperBuffHolder> helperBuff;
+	public List<HelperBuffHolder> helperBuff = new ArrayList<>();
 	private final boolean _initialized = true;
 	private int _magicClassLowestLevel = 100;
 	private int _physicClassLowestLevel = 100;
 	private int _magicClassHighestLevel = 1;
 	private int _physicClassHighestLevel = 1;
 	
-	public static HelperBuffTable getInstance()
+	public void load()
 	{
-		if (_instance == null)
-		{
-			_instance = new HelperBuffTable();
-		}
-		
-		return _instance;
-	}
-	
-	public static void reload()
-	{
-		_instance = null;
-		getInstance();
+		helperBuff.clear();
+		restoreHelperBuffData();
 	}
 	
 	/**
@@ -64,8 +53,7 @@ public class HelperBuffTable
 	 */
 	private HelperBuffTable()
 	{
-		helperBuff = new ArrayList<>();
-		restoreHelperBuffData();
+		load();
 	}
 	
 	/**
@@ -221,5 +209,15 @@ public class HelperBuffTable
 	public void setPhysicClassLowestLevel(int physicClassLowestLevel)
 	{
 		_physicClassLowestLevel = physicClassLowestLevel;
+	}
+	
+	public static HelperBuffTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HelperBuffTable INSTANCE = new HelperBuffTable();
 	}
 }

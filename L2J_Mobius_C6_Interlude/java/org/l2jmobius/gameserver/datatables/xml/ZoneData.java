@@ -68,42 +68,19 @@ import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 
 /**
- * This class manages the augmentation data and can also create new augmentations.
  * @author durgus
  */
 public class ZoneData
 {
 	private static final Logger LOGGER = Logger.getLogger(ZoneData.class.getName());
 	
-	private static ZoneData _instance;
-	
-	public static final ZoneData getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new ZoneData();
-		}
-		
-		return _instance;
-	}
-	
 	public ZoneData()
 	{
 		LOGGER.info("Loading zones...");
-		
 		load();
 	}
 	
-	public void reload()
-	{
-		synchronized (_instance)
-		{
-			_instance = null;
-			_instance = new ZoneData();
-		}
-	}
-	
-	private final void load()
+	public void load()
 	{
 		int zoneCount = 0;
 		
@@ -558,5 +535,15 @@ public class ZoneData
 		}
 		
 		LOGGER.info("Done: loaded " + zoneCount + " zones.");
+	}
+	
+	public static ZoneData getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ZoneData INSTANCE = new ZoneData();
 	}
 }

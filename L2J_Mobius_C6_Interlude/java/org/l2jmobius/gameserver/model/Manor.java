@@ -39,30 +39,18 @@ import org.l2jmobius.gameserver.model.items.Item;
 public class Manor
 {
 	private static Logger LOGGER = Logger.getLogger(Manor.class.getName());
-	private static Manor _instance;
 	
-	private static Map<Integer, SeedData> _seeds;
+	private static Map<Integer, SeedData> _seeds = new ConcurrentHashMap<>();
 	
 	public Manor()
 	{
-		_seeds = new ConcurrentHashMap<>();
+		_seeds.clear();
 		parseData();
-	}
-	
-	public static Manor getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Manor();
-		}
-		
-		return _instance;
 	}
 	
 	public List<Integer> getAllCrops()
 	{
 		final List<Integer> crops = new ArrayList<>();
-		
 		for (SeedData seed : _seeds.values())
 		{
 			if (!crops.contains(seed.getCrop()) && (seed.getCrop() != 0) && !crops.contains(seed.getCrop()))
@@ -70,7 +58,6 @@ public class Manor
 				crops.add(seed.getCrop());
 			}
 		}
-		
 		return crops;
 	}
 	
@@ -94,14 +81,12 @@ public class Manor
 				return getSeedBasicPrice(seed.getId());
 			}
 		}
-		
 		return 0;
 	}
 	
 	public int getCropBasicPrice(int cropId)
 	{
 		final Item cropItem = ItemTable.getInstance().getTemplate(cropId);
-		
 		if (cropItem != null)
 		{
 			return cropItem.getReferencePrice();
@@ -129,14 +114,12 @@ public class Manor
 	public int getSeedBuyPrice(int seedId)
 	{
 		final int buyPrice = getSeedBasicPrice(seedId) / 10;
-		
 		return buyPrice > 0 ? buyPrice : 1;
 	}
 	
 	public int getSeedMinLevel(int seedId)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getLevel() - 5;
@@ -147,7 +130,6 @@ public class Manor
 	public int getSeedMaxLevel(int seedId)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getLevel() + 5;
@@ -170,7 +152,6 @@ public class Manor
 	public int getSeedLevel(int seedId)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getLevel();
@@ -193,7 +174,6 @@ public class Manor
 	public int getCropType(int seedId)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getCrop();
@@ -216,7 +196,6 @@ public class Manor
 	public synchronized int getRewardItemBySeed(int seedId, int type)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getReward(type);
@@ -232,7 +211,6 @@ public class Manor
 	public List<Integer> getCropsForCastle(int castleId)
 	{
 		final List<Integer> crops = new ArrayList<>();
-		
 		for (SeedData seed : _seeds.values())
 		{
 			if ((seed.getManorId() == castleId) && !crops.contains(seed.getCrop()))
@@ -240,7 +218,6 @@ public class Manor
 				crops.add(seed.getCrop());
 			}
 		}
-		
 		return crops;
 	}
 	
@@ -252,7 +229,6 @@ public class Manor
 	public List<Integer> getSeedsForCastle(int castleId)
 	{
 		final List<Integer> seedsID = new ArrayList<>();
-		
 		for (SeedData seed : _seeds.values())
 		{
 			if ((seed.getManorId() == castleId) && !seedsID.contains(seed.getId()))
@@ -260,7 +236,6 @@ public class Manor
 				seedsID.add(seed.getId());
 			}
 		}
-		
 		return seedsID;
 	}
 	
@@ -282,7 +257,6 @@ public class Manor
 	public int getSeedSaleLimit(int seedId)
 	{
 		final SeedData seed = _seeds.get(seedId);
-		
 		if (seed != null)
 		{
 			return seed.getSeedLimit();
@@ -476,5 +450,15 @@ public class Manor
 		seed.setData(seedId, type1R, type2R, manorId, isAlt, limitSeeds, limitCrops);
 		
 		return seed;
+	}
+	
+	public static Manor getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Manor INSTANCE = new Manor();
 	}
 }

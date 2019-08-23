@@ -27,7 +27,6 @@ public class Manager
 		if (!Config.ALT_DEV_NO_QUESTS)
 		{
 			QuestManager.getInstance();
-			QuestManager.reload();
 		}
 	}
 }

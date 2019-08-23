@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 public class MonsterRace
 {
 	private final NpcInstance[] _monsters;
-	private static MonsterRace _instance;
 	private Constructor<?> _constructor;
 	private int[][] _speeds;
 	private final int[] _first;
@@ -39,16 +38,6 @@ public class MonsterRace
 		_speeds = new int[8][20];
 		_first = new int[2];
 		_second = new int[2];
-	}
-	
-	public static MonsterRace getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new MonsterRace();
-		}
-		
-		return _instance;
 	}
 	
 	public void newRace()
@@ -147,5 +136,15 @@ public class MonsterRace
 	public int getSecondPlace()
 	{
 		return _second[0];
+	}
+	
+	public static MonsterRace getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final MonsterRace INSTANCE = new MonsterRace();
 	}
 }

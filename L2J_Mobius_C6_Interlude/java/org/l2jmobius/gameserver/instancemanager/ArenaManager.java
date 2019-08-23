@@ -18,29 +18,15 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
 
 public class ArenaManager
 {
-	private static ArenaManager _instance;
-	private static final Logger LOGGER = Logger.getLogger(ArenaManager.class.getName());
-	
-	public static final ArenaManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing ArenaManager");
-			_instance = new ArenaManager();
-		}
-		return _instance;
-	}
-	
 	private List<ArenaZone> _arenas;
 	
-	public ArenaManager()
+	private ArenaManager()
 	{
 	}
 	
@@ -84,5 +70,15 @@ public class ArenaManager
 		}
 		
 		return null;
+	}
+	
+	public static ArenaManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ArenaManager INSTANCE = new ArenaManager();
 	}
 }

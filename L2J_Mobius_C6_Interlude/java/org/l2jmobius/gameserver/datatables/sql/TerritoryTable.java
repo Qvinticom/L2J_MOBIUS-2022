@@ -32,11 +32,6 @@ public class TerritoryTable
 	private static final Logger LOGGER = Logger.getLogger(TradeController.class.getName());
 	private static Map<Integer, Territory> _territory = new HashMap<>();
 	
-	public static TerritoryTable getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
 	public TerritoryTable()
 	{
 		_territory.clear();
@@ -82,6 +77,11 @@ public class TerritoryTable
 		}
 		
 		LOGGER.info("TerritoryTable: Loaded " + _territory.size() + " locations.");
+	}
+	
+	public static TerritoryTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder

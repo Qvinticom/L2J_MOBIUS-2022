@@ -25,31 +25,18 @@ import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 public class SkillTable
 {
-	// private static Logger LOGGER = Logger.getLogger(SkillTable.class);
-	private static SkillTable _instance;
-	
-	private final Map<Integer, Skill> _skills;
+	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final boolean _initialized = true;
-	
-	public static SkillTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SkillTable();
-		}
-		
-		return _instance;
-	}
 	
 	private SkillTable()
 	{
-		_skills = new HashMap<>();
-		DocumentEngine.getInstance().loadAllSkills(_skills);
+		reload();
 	}
 	
 	public void reload()
 	{
-		_instance = new SkillTable();
+		_skills.clear();
+		DocumentEngine.getInstance().loadAllSkills(_skills);
 	}
 	
 	public boolean isInitialized()
@@ -134,5 +121,15 @@ public class SkillTable
 		}
 		
 		return weaponsAllowed;
+	}
+	
+	public static SkillTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SkillTable INSTANCE = new SkillTable();
 	}
 }

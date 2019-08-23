@@ -43,7 +43,6 @@ public class Multisell
 {
 	private static Logger LOGGER = Logger.getLogger(Multisell.class.getName());
 	private final List<MultiSellListContainer> _entries = new ArrayList<>();
-	private static Multisell _instance;
 	
 	public MultiSellListContainer getList(int id)
 	{
@@ -70,15 +69,6 @@ public class Multisell
 	public void reload()
 	{
 		parseData();
-	}
-	
-	public static Multisell getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Multisell();
-		}
-		return _instance;
 	}
 	
 	private void parseData()
@@ -475,5 +465,15 @@ public class Multisell
 				}
 			}
 		}
+	}
+	
+	public static Multisell getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Multisell INSTANCE = new Multisell();
 	}
 }

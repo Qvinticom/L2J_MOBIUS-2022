@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.taskmanager.ExclusiveTask;
 public class WildBeastFarmSiege extends ClanHallSiege
 {
 	protected static Logger LOGGER = Logger.getLogger(WildBeastFarmSiege.class.getName());
-	private static WildBeastFarmSiege _instance;
+	
 	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
 	protected Map<Integer, clanPlayersInfo> _clansInfo = new HashMap<>();
@@ -56,15 +56,6 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
 	private ClanHallZone zone;
-	
-	public static final WildBeastFarmSiege getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new WildBeastFarmSiege();
-		}
-		return _instance;
-	}
 	
 	private WildBeastFarmSiege()
 	{
@@ -675,5 +666,15 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		public DecoInstance _flag = null;
 		public MonsterInstance _mob = null;
 		public List<String> _players = new ArrayList<>();
+	}
+	
+	public static WildBeastFarmSiege getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final WildBeastFarmSiege INSTANCE = new WildBeastFarmSiege();
 	}
 }

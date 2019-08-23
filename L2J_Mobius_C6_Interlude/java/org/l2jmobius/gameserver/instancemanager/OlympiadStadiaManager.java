@@ -25,19 +25,7 @@ import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 
 public class OlympiadStadiaManager
 {
-	protected static Logger LOGGER = Logger.getLogger(OlympiadStadiaManager.class.getName());
-	
-	private static OlympiadStadiaManager _instance;
-	
-	public static final OlympiadStadiaManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing OlympiadStadiaManager");
-			_instance = new OlympiadStadiaManager();
-		}
-		return _instance;
-	}
+	protected static final Logger LOGGER = Logger.getLogger(OlympiadStadiaManager.class.getName());
 	
 	private List<OlympiadStadiumZone> _olympiadStadias;
 	
@@ -82,5 +70,15 @@ public class OlympiadStadiaManager
 		}
 		
 		return null;
+	}
+	
+	public static OlympiadStadiaManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final OlympiadStadiaManager INSTANCE = new OlympiadStadiaManager();
 	}
 }

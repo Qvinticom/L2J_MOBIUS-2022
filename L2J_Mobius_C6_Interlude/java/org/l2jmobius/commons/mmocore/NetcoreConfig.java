@@ -42,18 +42,6 @@ public class NetcoreConfig
 	public int CLIENT_PACKET_QUEUE_MAX_UNDERFLOWS_PER_MIN; // default 1
 	public int CLIENT_PACKET_QUEUE_MAX_UNKNOWN_PER_MIN; // default 5
 	
-	// ============================================================
-	private static NetcoreConfig _instance;
-	
-	public static NetcoreConfig getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new NetcoreConfig();
-		}
-		return _instance;
-	}
-	
 	private NetcoreConfig()
 	{
 		final String MMO_CONFIG = "./config/protected/MmoCore.ini";
@@ -83,5 +71,15 @@ public class NetcoreConfig
 			e.printStackTrace();
 			throw new Error("Failed to Load " + MMO_CONFIG + " File.");
 		}
+	}
+	
+	public static NetcoreConfig getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final NetcoreConfig INSTANCE = new NetcoreConfig();
 	}
 }

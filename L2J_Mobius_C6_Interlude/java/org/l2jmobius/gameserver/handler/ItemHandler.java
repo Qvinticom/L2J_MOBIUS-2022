@@ -68,23 +68,7 @@ public class ItemHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static ItemHandler _instance;
-	
 	private final Map<Integer, IItemHandler> _datatable;
-	
-	/**
-	 * Create ItemHandler if doesn't exist and returns ItemHandler
-	 * @return ItemHandler
-	 */
-	public static ItemHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new ItemHandler();
-		}
-		
-		return _instance;
-	}
 	
 	/**
 	 * Returns the number of elements contained in datatable
@@ -173,5 +157,15 @@ public class ItemHandler
 	public IItemHandler getItemHandler(int itemId)
 	{
 		return _datatable.get(itemId);
+	}
+	
+	public static ItemHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ItemHandler INSTANCE = new ItemHandler();
 	}
 }

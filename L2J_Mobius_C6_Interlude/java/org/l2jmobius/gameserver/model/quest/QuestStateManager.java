@@ -40,7 +40,6 @@ public class QuestStateManager
 		}
 	}
 	
-	private static QuestStateManager _instance;
 	private List<QuestState> _questStates = new ArrayList<>();
 	
 	public QuestStateManager()
@@ -87,15 +86,6 @@ public class QuestStateManager
 		qs = null;
 	}
 	
-	public static final QuestStateManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new QuestStateManager();
-		}
-		return _instance;
-	}
-	
 	/**
 	 * Return QuestState for specified player instance
 	 * @param player
@@ -109,9 +99,7 @@ public class QuestStateManager
 			{
 				return getQuestStates().get(i);
 			}
-			
 		}
-		
 		return null;
 	}
 	
@@ -125,7 +113,16 @@ public class QuestStateManager
 		{
 			_questStates = new ArrayList<>();
 		}
-		
 		return _questStates;
+	}
+	
+	public static QuestStateManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final QuestStateManager INSTANCE = new QuestStateManager();
 	}
 }

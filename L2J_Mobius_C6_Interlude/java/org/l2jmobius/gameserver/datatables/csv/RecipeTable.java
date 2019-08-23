@@ -38,19 +38,8 @@ import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 public class RecipeTable extends RecipeController
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeTable.class.getName());
+	
 	private final Map<Integer, RecipeList> _lists;
-	
-	private static RecipeTable instance;
-	
-	public static RecipeTable getInstance()
-	{
-		if (instance == null)
-		{
-			instance = new RecipeTable();
-		}
-		
-		return instance;
-	}
 	
 	private RecipeTable()
 	{
@@ -231,5 +220,15 @@ public class RecipeTable extends RecipeController
 			}
 		}
 		return null;
+	}
+	
+	public static RecipeTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final RecipeTable INSTANCE = new RecipeTable();
 	}
 }

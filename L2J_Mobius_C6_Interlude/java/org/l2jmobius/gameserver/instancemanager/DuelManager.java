@@ -29,17 +29,6 @@ public class DuelManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DuelManager.class.getName());
 	
-	private static DuelManager _instance;
-	
-	public static final DuelManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new DuelManager();
-		}
-		return _instance;
-	}
-	
 	private final List<Duel> _duels;
 	private int _currentDuelId = 0x90;
 	
@@ -237,5 +226,15 @@ public class DuelManager
 				duel.broadcastToTeam1(packet);
 			}
 		}
+	}
+	
+	public static DuelManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final DuelManager INSTANCE = new DuelManager();
 	}
 }

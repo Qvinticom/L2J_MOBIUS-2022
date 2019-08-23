@@ -55,20 +55,10 @@ import org.l2jmobius.gameserver.util.Util;
 public class DimensionalRiftManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
-	private static DimensionalRiftManager _instance;
+	
 	private final Map<Byte, Map<Byte, DimensionalRiftRoom>> _rooms = new HashMap<>();
 	private final short DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
 	private static final int MAX_PARTY_PER_AREA = 3;
-	
-	public static DimensionalRiftManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new DimensionalRiftManager();
-		}
-		
-		return _instance;
-	}
 	
 	private DimensionalRiftManager()
 	{
@@ -600,5 +590,15 @@ public class DimensionalRiftManager
 			LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") was cheating in dimension rift area!");
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to cheat in dimensional rift.", Config.DEFAULT_PUNISH);
 		}
+	}
+	
+	public static DimensionalRiftManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final DimensionalRiftManager INSTANCE = new DimensionalRiftManager();
 	}
 }

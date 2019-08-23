@@ -28,17 +28,6 @@ public class CharNameTable
 {
 	private static final Logger LOGGER = Logger.getLogger(CharNameTable.class.getName());
 	
-	private static CharNameTable _instance;
-	
-	public static CharNameTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CharNameTable();
-		}
-		return _instance;
-	}
-	
 	public synchronized boolean doesCharNameExist(String name)
 	{
 		boolean result = true;
@@ -165,5 +154,15 @@ public class CharNameTable
 		}
 		
 		return number;
+	}
+	
+	public static CharNameTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CharNameTable INSTANCE = new CharNameTable();
 	}
 }

@@ -54,7 +54,6 @@ import org.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 public class TaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(TaskManager.class.getName());
-	private static TaskManager _instance;
 	
 	protected static final String[] SQL_STATEMENTS =
 	{
@@ -169,15 +168,6 @@ public class TaskManager
 			_currentTasks.remove(this);
 		}
 		
-	}
-	
-	public static TaskManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new TaskManager();
-		}
-		return _instance;
 	}
 	
 	private TaskManager()
@@ -407,5 +397,15 @@ public class TaskManager
 		}
 		
 		return output;
+	}
+	
+	public static TaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final TaskManager INSTANCE = new TaskManager();
 	}
 }

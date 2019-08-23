@@ -25,23 +25,12 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 public class QuestManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
-	private Map<String, Quest> _quests = new HashMap<>();
-	private static QuestManager _instance;
-	private int _questCount;
 	
-	public static QuestManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new QuestManager();
-		}
-		return _instance;
-	}
+	private static Map<String, Quest> _quests = new HashMap<>();
+	private static int _questCount = 0;
 	
-	public QuestManager()
+	private QuestManager()
 	{
-		LOGGER.info("Initializing QuestManager.");
-		_questCount = 0;
 	}
 	
 	public boolean reload(String questFolder)
@@ -142,14 +131,6 @@ public class QuestManager
 		return _quests;
 	}
 	
-	/**
-	 * This will reload quests
-	 */
-	public static void reload()
-	{
-		_instance = new QuestManager();
-	}
-	
 	public Iterable<Quest> getAllManagedScripts()
 	{
 		return _quests.values();
@@ -183,5 +164,15 @@ public class QuestManager
 			}
 		}
 		getInstance().report();
+	}
+	
+	public static QuestManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final QuestManager INSTANCE = new QuestManager();
 	}
 }

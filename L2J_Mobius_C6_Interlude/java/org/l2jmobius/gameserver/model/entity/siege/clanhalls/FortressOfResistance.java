@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 public class FortressOfResistance
 {
 	private static final Logger LOGGER = Logger.getLogger(FortressOfResistance.class.getName());
-	private static FortressOfResistance _instance;
+	
 	private final Map<Integer, DamageInfo> _clansDamageInfo;
 	
 	private static int START_DAY = 1;
@@ -55,15 +55,6 @@ public class FortressOfResistance
 	private ScheduledFuture<?> _announce;
 	
 	private final Calendar _capturetime = Calendar.getInstance();
-	
-	public static FortressOfResistance getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new FortressOfResistance();
-		}
-		return _instance;
-	}
 	
 	protected class DamageInfo
 	{
@@ -374,5 +365,15 @@ public class FortressOfResistance
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public static FortressOfResistance getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final FortressOfResistance INSTANCE = new FortressOfResistance();
 	}
 }

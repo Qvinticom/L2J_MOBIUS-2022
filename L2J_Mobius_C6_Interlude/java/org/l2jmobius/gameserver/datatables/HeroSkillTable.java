@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class HeroSkillTable
 {
-	private static HeroSkillTable _instance;
 	private static Skill[] _heroSkills;
 	
 	private HeroSkillTable()
@@ -34,16 +33,6 @@ public class HeroSkillTable
 		_heroSkills[2] = SkillTable.getInstance().getInfo(1374, 1);
 		_heroSkills[3] = SkillTable.getInstance().getInfo(1375, 1);
 		_heroSkills[4] = SkillTable.getInstance().getInfo(1376, 1);
-	}
-	
-	public static HeroSkillTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new HeroSkillTable();
-		}
-		
-		return _instance;
 	}
 	
 	public static Skill[] getHeroSkills()
@@ -71,5 +60,15 @@ public class HeroSkillTable
 		}
 		
 		return false;
+	}
+	
+	public static HeroSkillTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HeroSkillTable INSTANCE = new HeroSkillTable();
 	}
 }

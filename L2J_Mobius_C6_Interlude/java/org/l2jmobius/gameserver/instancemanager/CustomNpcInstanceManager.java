@@ -34,7 +34,7 @@ import org.l2jmobius.commons.util.Rnd;
 public class CustomNpcInstanceManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CustomNpcInstanceManager.class.getName());
-	private static CustomNpcInstanceManager _instance;
+	
 	private Map<Integer, customInfo> spawns; // <Object id , info>
 	private Map<Integer, customInfo> templates; // <Npc Template Id , info>
 	
@@ -55,19 +55,6 @@ public class CustomNpcInstanceManager
 	CustomNpcInstanceManager()
 	{
 		load();
-	}
-	
-	/**
-	 * Initiates the manager (if not initiated yet) and/or returns <b>this</b> manager instance
-	 * @return CustomNpcInstanceManager _instance
-	 */
-	public static final CustomNpcInstanceManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CustomNpcInstanceManager();
-		}
-		return _instance;
 	}
 	
 	/**
@@ -305,5 +292,15 @@ public class CustomNpcInstanceManager
 		{
 			LOGGER.warning("Could not add Npc Morph info into the DB: ");
 		}
+	}
+	
+	public static CustomNpcInstanceManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CustomNpcInstanceManager INSTANCE = new CustomNpcInstanceManager();
 	}
 }

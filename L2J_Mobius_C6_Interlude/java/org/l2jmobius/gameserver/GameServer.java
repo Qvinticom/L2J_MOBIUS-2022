@@ -341,7 +341,7 @@ public class GameServer
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();
 		TaskManager.getInstance();
-		PetDataTable.getInstance().loadPetsData();
+		PetDataTable.getInstance();
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance();

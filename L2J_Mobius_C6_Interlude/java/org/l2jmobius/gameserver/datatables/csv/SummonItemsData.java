@@ -31,18 +31,6 @@ public class SummonItemsData
 	
 	private final Map<Integer, SummonItem> _summonitems;
 	
-	private static SummonItemsData _instance;
-	
-	public static SummonItemsData getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SummonItemsData();
-		}
-		
-		return _instance;
-	}
-	
 	public SummonItemsData()
 	{
 		_summonitems = new HashMap<>();
@@ -131,5 +119,15 @@ public class SummonItemsData
 			i++;
 		}
 		return result;
+	}
+	
+	public static SummonItemsData getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SummonItemsData INSTANCE = new SummonItemsData();
 	}
 }

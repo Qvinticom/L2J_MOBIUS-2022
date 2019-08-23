@@ -97,18 +97,7 @@ public class AdminCommandHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(AdminCommandHandler.class.getName());
 	
-	private static AdminCommandHandler _instance;
-	
 	private final Map<String, IAdminCommandHandler> _datatable;
-	
-	public static AdminCommandHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new AdminCommandHandler();
-		}
-		return _instance;
-	}
 	
 	private AdminCommandHandler()
 	{
@@ -212,5 +201,15 @@ public class AdminCommandHandler
 		}
 		
 		return _datatable.get(command);
+	}
+	
+	public static AdminCommandHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AdminCommandHandler INSTANCE = new AdminCommandHandler();
 	}
 }

@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.taskmanager.ExclusiveTask;
 public class BanditStrongholdSiege extends ClanHallSiege
 {
 	protected static Logger LOGGER = Logger.getLogger(BanditStrongholdSiege.class.getName());
-	private static BanditStrongholdSiege _instance;
+	
 	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
 	protected Map<Integer, clanPlayersInfo> _clansInfo = new HashMap<>();
@@ -59,15 +59,6 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	protected clanPlayersInfo _ownerClanInfo = new clanPlayersInfo();
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
-	
-	public static final BanditStrongholdSiege getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new BanditStrongholdSiege();
-		}
-		return _instance;
-	}
 	
 	private BanditStrongholdSiege()
 	{
@@ -689,5 +680,15 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		public DecoInstance _flag = null;
 		public MonsterInstance _mob = null;
 		public List<String> _players = new ArrayList<>();
+	}
+	
+	public static BanditStrongholdSiege getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final BanditStrongholdSiege INSTANCE = new BanditStrongholdSiege();
 	}
 }

@@ -104,12 +104,7 @@ public class LoginServer
 		
 		try
 		{
-			GameServerTable.load();
-		}
-		catch (GeneralSecurityException e)
-		{
-			LOGGER.severe("Failed to load GameServerTable" + e);
-			System.exit(1);
+			GameServerTable.getInstance();
 		}
 		catch (Exception e)
 		{

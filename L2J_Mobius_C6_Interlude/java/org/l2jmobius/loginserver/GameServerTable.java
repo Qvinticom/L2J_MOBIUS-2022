@@ -18,11 +18,8 @@ package org.l2jmobius.loginserver;
 
 import java.io.File;
 import java.math.BigInteger;
-import java.security.GeneralSecurityException;
-import java.security.InvalidAlgorithmParameterException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
 import java.security.spec.RSAKeyGenParameterSpec;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -52,7 +49,6 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 public class GameServerTable
 {
 	private static Logger LOGGER = Logger.getLogger(GameServerTable.class.getName());
-	private static GameServerTable _instance;
 	
 	// Server Names Config
 	private static Map<Integer, String> _serverNames = new HashMap<>();
@@ -64,24 +60,10 @@ public class GameServerTable
 	private static final int KEYS_SIZE = 10;
 	private KeyPair[] _keyPairs;
 	
-	public static void load() throws GeneralSecurityException
-	{
-		if (_instance == null)
-		{
-			_instance = new GameServerTable();
-		}
-		else
-		{
-			throw new IllegalStateException("Load can only be invoked a single time.");
-		}
-	}
-	
-	public static GameServerTable getInstance()
-	{
-		return _instance;
-	}
-	
-	public GameServerTable() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException
+	/**
+	 * Instantiates a new game server table.
+	 */
+	public GameServerTable()
 	{
 		loadServerNames();
 		LOGGER.info("Loaded " + _serverNames.size() + " server names");
@@ -93,16 +75,23 @@ public class GameServerTable
 		LOGGER.info("Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
 	}
 	
-	private void loadRSAKeys() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException
+	private void loadRSAKeys()
 	{
-		KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
-		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
-		keyGen.initialize(spec);
-		
-		_keyPairs = new KeyPair[KEYS_SIZE];
-		for (int i = 0; i < KEYS_SIZE; i++)
+		try
 		{
-			_keyPairs[i] = keyGen.genKeyPair();
+			KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+			RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
+			keyGen.initialize(spec);
+			
+			_keyPairs = new KeyPair[KEYS_SIZE];
+			for (int i = 0; i < KEYS_SIZE; i++)
+			{
+				_keyPairs[i] = keyGen.genKeyPair();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.severe("Error loading RSA keys for Game Server communication!");
 		}
 	}
 	
@@ -458,5 +447,22 @@ public class GameServerTable
 			setGameServerThread(null);
 			setStatus(ServerStatus.STATUS_DOWN);
 		}
+	}
+	
+	/**
+	 * Gets the single instance of GameServerTable.
+	 * @return single instance of GameServerTable
+	 */
+	public static GameServerTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	/**
+	 * The Class SingletonHolder.
+	 */
+	private static class SingletonHolder
+	{
+		protected static final GameServerTable INSTANCE = new GameServerTable();
 	}
 }

@@ -32,18 +32,6 @@ public class PetNameTable
 {
 	private static final Logger LOGGER = Logger.getLogger(PetNameTable.class.getName());
 	
-	private static PetNameTable _instance;
-	
-	public static PetNameTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new PetNameTable();
-		}
-		
-		return _instance;
-	}
-	
 	public boolean doesPetNameExist(String name, int petNpcId)
 	{
 		boolean result = true;
@@ -119,5 +107,15 @@ public class PetNameTable
 		}
 		
 		return result;
+	}
+	
+	public static PetNameTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final PetNameTable INSTANCE = new PetNameTable();
 	}
 }

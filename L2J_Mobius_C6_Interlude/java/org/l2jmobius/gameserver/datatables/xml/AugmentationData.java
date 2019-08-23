@@ -46,18 +46,6 @@ public class AugmentationData
 {
 	private static final Logger LOGGER = Logger.getLogger(AugmentationData.class.getName());
 	
-	private static AugmentationData _instance;
-	
-	public static final AugmentationData getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new AugmentationData();
-		}
-		
-		return _instance;
-	}
-	
 	// stats
 	private static final int STAT_START = 1;
 	private static final int STAT_END = 14560;
@@ -74,13 +62,18 @@ public class AugmentationData
 	private static final int BASESTAT_INT = 16343;
 	private static final int BASESTAT_MEN = 16344;
 	
-	private final List<augmentationStat> _augmentationStats[];
-	private final Map<Integer, ArrayList<augmentationSkill>> _blueSkills;
-	private final Map<Integer, ArrayList<augmentationSkill>> _purpleSkills;
-	private final Map<Integer, ArrayList<augmentationSkill>> _redSkills;
+	private static List<augmentationStat> _augmentationStats[] = null;
+	private static Map<Integer, ArrayList<augmentationSkill>> _blueSkills = null;
+	private static Map<Integer, ArrayList<augmentationSkill>> _purpleSkills = null;
+	private static Map<Integer, ArrayList<augmentationSkill>> _redSkills = null;
+	
+	private AugmentationData()
+	{
+		load();
+	}
 	
 	@SuppressWarnings("unchecked")
-	private AugmentationData()
+	public void load()
 	{
 		LOGGER.info("Initializing AugmentationData.");
 		
@@ -100,102 +93,6 @@ public class AugmentationData
 			_redSkills.put(i, new ArrayList<augmentationSkill>());
 		}
 		
-		load();
-		
-		// Use size*4: since theres 4 blocks of stat-data with equivalent size
-		LOGGER.info("AugmentationData: Loaded " + (_augmentationStats[0].size() * 4) + " augmentation stats.");
-	}
-	
-	public static void reload()
-	{
-		_instance = null;
-		getInstance();
-	}
-	
-	public class augmentationSkill
-	{
-		private final int _skillId;
-		private final int _maxSkillLevel;
-		private final int _augmentationSkillId;
-		
-		public augmentationSkill(int skillId, int maxSkillLevel, int augmentationSkillId)
-		{
-			_skillId = skillId;
-			_maxSkillLevel = maxSkillLevel;
-			_augmentationSkillId = augmentationSkillId;
-		}
-		
-		public Skill getSkill(int level)
-		{
-			if (level > _maxSkillLevel)
-			{
-				return SkillTable.getInstance().getInfo(_skillId, _maxSkillLevel);
-			}
-			
-			return SkillTable.getInstance().getInfo(_skillId, level);
-		}
-		
-		public int getAugmentationSkillId()
-		{
-			return _augmentationSkillId;
-		}
-	}
-	
-	public class augmentationStat
-	{
-		private final Stats _stat;
-		private final int _singleSize;
-		private final int _combinedSize;
-		private final float _singleValues[];
-		private final float _combinedValues[];
-		
-		public augmentationStat(Stats stat, float sValues[], float cValues[])
-		{
-			_stat = stat;
-			_singleSize = sValues.length;
-			_singleValues = sValues;
-			_combinedSize = cValues.length;
-			_combinedValues = cValues;
-		}
-		
-		public int getSingleStatSize()
-		{
-			return _singleSize;
-		}
-		
-		public int getCombinedStatSize()
-		{
-			return _combinedSize;
-		}
-		
-		public float getSingleStatValue(int i)
-		{
-			if ((i >= _singleSize) || (i < 0))
-			{
-				return _singleValues[_singleSize - 1];
-			}
-			
-			return _singleValues[i];
-		}
-		
-		public float getCombinedStatValue(int i)
-		{
-			if ((i >= _combinedSize) || (i < 0))
-			{
-				return _combinedValues[_combinedSize - 1];
-			}
-			
-			return _combinedValues[i];
-		}
-		
-		public Stats getStat()
-		{
-			return _stat;
-		}
-	}
-	
-	private final void load()
-	{
 		// Load the skillmap
 		// Note: the skillmap data is only used when generating new augmentations the client expects a different id in order to display the skill in the items description.
 		try
@@ -375,6 +272,9 @@ public class AugmentationData
 				return;
 			}
 		}
+		
+		// Use size*4: since theres 4 blocks of stat-data with equivalent size
+		LOGGER.info("AugmentationData: Loaded " + (_augmentationStats[0].size() * 4) + " augmentation stats.");
 	}
 	
 	/**
@@ -686,5 +586,97 @@ public class AugmentationData
 		}
 		
 		return temp;
+	}
+	
+	public class augmentationSkill
+	{
+		private final int _skillId;
+		private final int _maxSkillLevel;
+		private final int _augmentationSkillId;
+		
+		public augmentationSkill(int skillId, int maxSkillLevel, int augmentationSkillId)
+		{
+			_skillId = skillId;
+			_maxSkillLevel = maxSkillLevel;
+			_augmentationSkillId = augmentationSkillId;
+		}
+		
+		public Skill getSkill(int level)
+		{
+			if (level > _maxSkillLevel)
+			{
+				return SkillTable.getInstance().getInfo(_skillId, _maxSkillLevel);
+			}
+			
+			return SkillTable.getInstance().getInfo(_skillId, level);
+		}
+		
+		public int getAugmentationSkillId()
+		{
+			return _augmentationSkillId;
+		}
+	}
+	
+	public class augmentationStat
+	{
+		private final Stats _stat;
+		private final int _singleSize;
+		private final int _combinedSize;
+		private final float _singleValues[];
+		private final float _combinedValues[];
+		
+		public augmentationStat(Stats stat, float sValues[], float cValues[])
+		{
+			_stat = stat;
+			_singleSize = sValues.length;
+			_singleValues = sValues;
+			_combinedSize = cValues.length;
+			_combinedValues = cValues;
+		}
+		
+		public int getSingleStatSize()
+		{
+			return _singleSize;
+		}
+		
+		public int getCombinedStatSize()
+		{
+			return _combinedSize;
+		}
+		
+		public float getSingleStatValue(int i)
+		{
+			if ((i >= _singleSize) || (i < 0))
+			{
+				return _singleValues[_singleSize - 1];
+			}
+			
+			return _singleValues[i];
+		}
+		
+		public float getCombinedStatValue(int i)
+		{
+			if ((i >= _combinedSize) || (i < 0))
+			{
+				return _combinedValues[_combinedSize - 1];
+			}
+			
+			return _combinedValues[i];
+		}
+		
+		public Stats getStat()
+		{
+			return _stat;
+		}
+	}
+	
+	public static AugmentationData getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AugmentationData INSTANCE = new AugmentationData();
 	}
 }

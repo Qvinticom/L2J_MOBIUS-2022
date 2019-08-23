@@ -51,8 +51,6 @@ public class AutoSpawn
 {
 	protected static final Logger LOGGER = Logger.getLogger(AutoSpawn.class.getName());
 	
-	private static AutoSpawn _instance;
-	
 	private static final int DEFAULT_INITIAL_SPAWN = 30000; // 30 seconds after registration
 	private static final int DEFAULT_RESPAWN = 3600000; // 1 hour in millisecs
 	private static final int DEFAULT_DESPAWN = 3600000; // 1 hour in millisecs
@@ -68,16 +66,6 @@ public class AutoSpawn
 		_runningSpawns = new HashMap<>();
 		
 		restoreSpawnData();
-	}
-	
-	public static AutoSpawn getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new AutoSpawn();
-		}
-		
-		return _instance;
 	}
 	
 	public int size()
@@ -812,5 +800,15 @@ public class AutoSpawn
 				return null;
 			}
 		}
+	}
+	
+	public static AutoSpawn getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AutoSpawn INSTANCE = new AutoSpawn();
 	}
 }

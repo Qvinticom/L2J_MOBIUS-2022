@@ -46,10 +46,8 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 public class AutoChatHandler implements SpawnListener
 {
 	protected static final Logger LOGGER = Logger.getLogger(AutoChatHandler.class.getName());
-	private static AutoChatHandler _instance;
 	
 	private static final long DEFAULT_CHAT_DELAY = 30000; // 30 secs by default
-	
 	protected Map<Integer, AutoChatInstance> _registeredChats;
 	
 	protected AutoChatHandler()
@@ -98,16 +96,6 @@ public class AutoChatHandler implements SpawnListener
 		{
 			LOGGER.warning("AutoSpawnHandler: Could not restore chat data: " + e);
 		}
-	}
-	
-	public static AutoChatHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new AutoChatHandler();
-		}
-		
-		return _instance;
 	}
 	
 	public int size()
@@ -824,5 +812,15 @@ public class AutoChatHandler implements SpawnListener
 				}
 			}
 		}
+	}
+	
+	public static AutoChatHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AutoChatHandler INSTANCE = new AutoChatHandler();
 	}
 }

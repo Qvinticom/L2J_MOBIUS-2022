@@ -52,8 +52,6 @@ public class Lottery
 	protected boolean _isStarted;
 	protected long _enddate;
 	
-	private static Lottery _instance;
-	
 	private Lottery()
 	{
 		_number = 1;
@@ -66,16 +64,6 @@ public class Lottery
 		{
 			new startLottery().run();
 		}
-	}
-	
-	public static Lottery getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Lottery();
-		}
-		
-		return _instance;
 	}
 	
 	public int getId()
@@ -553,5 +541,15 @@ public class Lottery
 		}
 		
 		return res;
+	}
+	
+	public static Lottery getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Lottery INSTANCE = new Lottery();
 	}
 }

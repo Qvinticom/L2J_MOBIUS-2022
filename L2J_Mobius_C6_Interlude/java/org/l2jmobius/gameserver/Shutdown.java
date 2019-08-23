@@ -72,7 +72,6 @@ public class Shutdown extends Thread
 	
 	protected static final Logger LOGGER = Logger.getLogger(Shutdown.class.getName());
 	
-	private static Shutdown _instance;
 	private static Shutdown _counterInstance = null;
 	
 	private int _secondsShut;
@@ -81,13 +80,9 @@ public class Shutdown extends Thread
 	
 	private boolean _shutdownStarted;
 	
-	/** 0 */
 	public static final int SIGTERM = 0;
-	/** 1 */
 	public static final int GM_SHUTDOWN = 1;
-	/** 2 */
 	public static final int GM_RESTART = 2;
-	/** 3 */
 	public static final int ABORT = 3;
 	
 	private static final String[] MODE_TEXT =
@@ -132,19 +127,6 @@ public class Shutdown extends Thread
 		_shutdownStarted = false;
 	}
 	
-	/**
-	 * get the shutdown-hook instance the shutdown-hook instance is created by the first call of this function, but it has to be registered externally.
-	 * @return instance of Shutdown, to be used as shutdown hook
-	 */
-	public static Shutdown getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Shutdown();
-		}
-		return _instance;
-	}
-	
 	public boolean isShutdownStarted()
 	{
 		boolean output = _shutdownStarted;
@@ -165,7 +147,7 @@ public class Shutdown extends Thread
 	@Override
 	public void run()
 	{
-		if (this == _instance)
+		if (this == getInstance())
 		{
 			closeServer();
 		}
@@ -373,7 +355,7 @@ public class Shutdown extends Thread
 		
 		LOGGER.info("[STATUS] Server shutdown successfully.");
 		
-		if (_instance._shutdownMode == GM_RESTART)
+		if (getInstance()._shutdownMode == GM_RESTART)
 		{
 			Runtime.getRuntime().halt(2);
 		}
@@ -556,5 +538,19 @@ public class Shutdown extends Thread
 			{
 			}
 		}
+	}
+	
+	/**
+	 * Get the shutdown-hook instance the shutdown-hook instance is created by the first call of this function, but it has to be registered externally.<br>
+	 * @return instance of Shutdown, to be used as shutdown hook
+	 */
+	public static Shutdown getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Shutdown INSTANCE = new Shutdown();
 	}
 }

@@ -38,18 +38,6 @@ public class ExtractableItemsData
 	// Map<itemid, ExtractableItem>
 	private Map<Integer, ExtractableItem> _items;
 	
-	private static ExtractableItemsData _instance = null;
-	
-	public static ExtractableItemsData getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new ExtractableItemsData();
-		}
-		
-		return _instance;
-	}
-	
 	public ExtractableItemsData()
 	{
 		_items = new HashMap<>();
@@ -175,5 +163,15 @@ public class ExtractableItemsData
 			i++;
 		}
 		return result;
+	}
+	
+	public static ExtractableItemsData getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ExtractableItemsData INSTANCE = new ExtractableItemsData();
 	}
 }

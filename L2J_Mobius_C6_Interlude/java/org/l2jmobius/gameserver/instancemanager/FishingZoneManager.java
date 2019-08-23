@@ -18,30 +18,16 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.zone.type.FishingZone;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 
 public class FishingZoneManager
 {
-	private static FishingZoneManager _instance;
-	private static final Logger LOGGER = Logger.getLogger(FishingZoneManager.class.getName());
-	
-	public static final FishingZoneManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing FishingZoneManager");
-			_instance = new FishingZoneManager();
-		}
-		return _instance;
-	}
-	
 	private List<FishingZone> _fishingZones;
 	private List<WaterZone> _waterZones;
 	
-	public FishingZoneManager()
+	private FishingZoneManager()
 	{
 	}
 	
@@ -91,5 +77,15 @@ public class FishingZoneManager
 			}
 		}
 		return null;
+	}
+	
+	public static FishingZoneManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final FishingZoneManager INSTANCE = new FishingZoneManager();
 	}
 }

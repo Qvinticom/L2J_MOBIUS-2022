@@ -37,31 +37,27 @@ public class ClanHallManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ClanHallManager.class.getName());
 	
-	private final Map<String, List<ClanHall>> _allClanHalls;
-	private final Map<Integer, ClanHall> _clanHall;
-	private final Map<Integer, ClanHall> _freeClanHall;
+	private final Map<String, List<ClanHall>> _allClanHalls = new HashMap<>();
+	private final Map<Integer, ClanHall> _clanHall = new HashMap<>();
+	private final Map<Integer, ClanHall> _freeClanHall = new HashMap<>();
 	private boolean _loaded = false;
-	
-	public static ClanHallManager getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
 	
 	public boolean loaded()
 	{
 		return _loaded;
 	}
 	
-	protected ClanHallManager()
+	private ClanHallManager()
 	{
-		_allClanHalls = new HashMap<>();
-		_clanHall = new HashMap<>();
-		_freeClanHall = new HashMap<>();
 		load();
 	}
 	
-	private final void load()
+	private void load()
 	{
+		_allClanHalls.clear();
+		_clanHall.clear();
+		_freeClanHall.clear();
+		
 		LOGGER.info("Initializing ClanHallManager");
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -252,6 +248,11 @@ public class ClanHallManager
 			}
 		}
 		return null;
+	}
+	
+	public static ClanHallManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder

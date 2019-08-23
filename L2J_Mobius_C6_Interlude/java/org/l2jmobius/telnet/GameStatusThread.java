@@ -765,13 +765,13 @@ public class GameStatusThread extends Thread
 						else if (type.equals("zone"))
 						{
 							_print.print("Reloading zone tables... ");
-							ZoneData.getInstance().reload();
+							ZoneData.getInstance().load();
 							_print.println("done");
 						}
 						else if (type.equals("teleports"))
 						{
 							_print.print("Reloading telport location table... ");
-							TeleportLocationTable.getInstance().reloadAll();
+							TeleportLocationTable.getInstance().load();
 							_print.println("done");
 						}
 						else if (type.equals("spawns"))

@@ -72,7 +72,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				else if (type.startsWith("teleport"))
 				{
-					TeleportLocationTable.getInstance().reloadAll();
+					TeleportLocationTable.getInstance().load();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Teleport location table reloaded.");
 				}
@@ -133,7 +133,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				else if (type.equals("tradelist"))
 				{
-					TradeController.reload();
+					TradeController.getInstance();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "TradeList Table reloaded.");
 				}

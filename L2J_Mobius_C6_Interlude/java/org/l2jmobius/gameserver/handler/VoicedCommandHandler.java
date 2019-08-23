@@ -38,19 +38,7 @@ public class VoicedCommandHandler
 {
 	private static Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static VoicedCommandHandler _instance;
-	
 	private final Map<String, IVoicedCommandHandler> _datatable;
-	
-	public static VoicedCommandHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new VoicedCommandHandler();
-		}
-		
-		return _instance;
-	}
 	
 	private VoicedCommandHandler()
 	{
@@ -130,5 +118,15 @@ public class VoicedCommandHandler
 	public int size()
 	{
 		return _datatable.size();
+	}
+	
+	public static VoicedCommandHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final VoicedCommandHandler INSTANCE = new VoicedCommandHandler();
 	}
 }

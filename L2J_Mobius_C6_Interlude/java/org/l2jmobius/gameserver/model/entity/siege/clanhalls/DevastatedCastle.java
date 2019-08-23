@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 public class DevastatedCastle
 {
 	private static final Logger LOGGER = Logger.getLogger(DevastatedCastle.class.getName());
-	private static DevastatedCastle _instance;
+	
 	private final Map<Integer, DamageInfo> _clansDamageInfo;
 	
 	private static int START_DAY = 1;
@@ -69,15 +69,6 @@ public class DevastatedCastle
 	private final Calendar _siegetime = Calendar.getInstance();
 	
 	public boolean _progress = false;
-	
-	public static DevastatedCastle getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new DevastatedCastle();
-		}
-		return _instance;
-	}
 	
 	protected class DamageInfo
 	{
@@ -882,5 +873,15 @@ public class DevastatedCastle
 			LOGGER.info("Exception: updateOwnerInDB(Pledge clan): " + e.getMessage());
 			e.printStackTrace();
 		}
+	}
+	
+	public static DevastatedCastle getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final DevastatedCastle INSTANCE = new DevastatedCastle();
 	}
 }

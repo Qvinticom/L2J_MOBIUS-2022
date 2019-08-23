@@ -27,25 +27,14 @@ import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
  */
 public class MobGroupTable
 {
-	private static MobGroupTable _instance;
 	private final Map<Integer, MobGroup> _groupMap;
 	
 	public static final int FOLLOW_RANGE = 300;
 	public static final int RANDOM_RANGE = 300;
 	
-	public MobGroupTable()
+	private MobGroupTable()
 	{
 		_groupMap = new HashMap<>();
-	}
-	
-	public static MobGroupTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new MobGroupTable();
-		}
-		
-		return _instance;
 	}
 	
 	public void addGroup(int groupKey, MobGroup group)
@@ -84,5 +73,15 @@ public class MobGroupTable
 	public boolean removeGroup(int groupKey)
 	{
 		return _groupMap.remove(groupKey) != null;
+	}
+	
+	public static MobGroupTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final MobGroupTable INSTANCE = new MobGroupTable();
 	}
 }

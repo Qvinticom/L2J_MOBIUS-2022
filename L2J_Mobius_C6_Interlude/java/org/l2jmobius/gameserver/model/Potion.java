@@ -37,11 +37,11 @@ public class Potion extends WorldObject
 	
 	class PotionHpHealing implements Runnable
 	{
-		Creature _instance;
+		Creature _creature;
 		
-		public PotionHpHealing(Creature instance)
+		public PotionHpHealing(Creature creature)
 		{
-			_instance = instance;
+			_creature = creature;
 		}
 		
 		@Override
@@ -51,7 +51,7 @@ public class Potion extends WorldObject
 			{
 				synchronized (_hpLock)
 				{
-					double nowHp = _instance.getCurrentHp();
+					double nowHp = _creature.getCurrentHp();
 					
 					if (_duration == 0)
 					{
@@ -60,7 +60,7 @@ public class Potion extends WorldObject
 					if (_duration != 0)
 					{
 						nowHp += _effect;
-						_instance.setCurrentHp(nowHp);
+						_creature.setCurrentHp(nowHp);
 						_duration = _duration - (_milliseconds / 1000);
 						setCurrentHpPotion2();
 					}

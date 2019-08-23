@@ -48,7 +48,6 @@ public class Hero
 {
 	private static final Logger LOGGER = Logger.getLogger(Hero.class.getName());
 	
-	private static Hero _instance;
 	private static final String GET_HEROES = "SELECT * FROM heroes WHERE played = 1";
 	private static final String GET_ALL_HEROES = "SELECT * FROM heroes";
 	private static final String UPDATE_ALL = "UPDATE heroes SET played = 0";
@@ -67,15 +66,6 @@ public class Hero
 	public static final String CLAN_CREST = "clan_crest";
 	public static final String ALLY_NAME = "ally_name";
 	public static final String ALLY_CREST = "ally_crest";
-	
-	public static Hero getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Hero();
-		}
-		return _instance;
-	}
 	
 	public Hero()
 	{
@@ -495,5 +485,15 @@ public class Hero
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public static Hero getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Hero INSTANCE = new Hero();
 	}
 }

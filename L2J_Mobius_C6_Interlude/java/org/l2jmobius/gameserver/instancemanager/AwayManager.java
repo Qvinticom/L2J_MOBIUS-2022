@@ -34,17 +34,12 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 public class AwayManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AwayManager.class.getName());
-	private static AwayManager _instance;
+	
 	protected Map<PlayerInstance, RestoreData> _awayPlayers;
 	
-	public static final AwayManager getInstance()
+	private AwayManager()
 	{
-		if (_instance == null)
-		{
-			_instance = new AwayManager();
-			LOGGER.info("AwayManager: initialized.");
-		}
-		return _instance;
+		_awayPlayers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RestoreData>());
 	}
 	
 	private final class RestoreData
@@ -70,11 +65,6 @@ public class AwayManager
 			player.getAppearance().setTitleColor(_originalTitleColor);
 			player.setTitle(_originalTitle);
 		}
-	}
-	
-	private AwayManager()
-	{
-		_awayPlayers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RestoreData>());
 	}
 	
 	public void setAway(PlayerInstance player, String text)
@@ -211,5 +201,15 @@ public class AwayManager
 			_player.broadcastUserInfo();
 			_player.sendMessage("You are Back now!");
 		}
+	}
+	
+	public static AwayManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AwayManager INSTANCE = new AwayManager();
 	}
 }

@@ -57,7 +57,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class Olympiad
 {
 	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
-	private static Olympiad _instance;
 	
 	private static Map<Integer, StatsSet> _nobles;
 	private static Map<Integer, StatsSet> _oldnobles;
@@ -159,15 +158,6 @@ public class Olympiad
 	{
 		CLASSED,
 		NON_CLASSED
-	}
-	
-	public static Olympiad getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Olympiad();
-		}
-		return _instance;
 	}
 	
 	public Olympiad()
@@ -1773,5 +1763,15 @@ public class Olympiad
 			final Calendar nextChange = Calendar.getInstance();
 			_nextWeeklyChange = nextChange.getTimeInMillis() + restoreTime;
 		}
+	}
+	
+	public static Olympiad getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Olympiad INSTANCE = new Olympiad();
 	}
 }

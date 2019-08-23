@@ -41,29 +41,13 @@ public class CrestCache
 {
 	private static Logger LOGGER = Logger.getLogger(CrestCache.class.getName());
 	
-	private static CrestCache _instance;
-	
 	private final Map<Integer, byte[]> _cachePledge = new HashMap<>();
-	
 	private final Map<Integer, byte[]> _cachePledgeLarge = new HashMap<>();
-	
 	private final Map<Integer, byte[]> _cacheAlly = new HashMap<>();
-	
 	private int _loadedFiles;
-	
 	private long _bytesBuffLen;
 	
-	public static CrestCache getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CrestCache();
-		}
-		
-		return _instance;
-	}
-	
-	public CrestCache()
+	private CrestCache()
 	{
 		convertOldPedgeFiles();
 		reload();
@@ -393,5 +377,15 @@ public class CrestCache
 		{
 			return file.getName().startsWith("Pledge_");
 		}
+	}
+	
+	public static CrestCache getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CrestCache INSTANCE = new CrestCache();
 	}
 }

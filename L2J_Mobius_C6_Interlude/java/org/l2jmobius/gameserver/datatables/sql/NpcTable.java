@@ -46,30 +46,18 @@ public class NpcTable
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcTable.class.getName());
 	
-	private static NpcTable _instance;
-	
-	private final Map<Integer, NpcTemplate> npcs;
+	private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
 	private boolean _initialized = false;
-	
-	public static NpcTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new NpcTable();
-		}
-		
-		return _instance;
-	}
 	
 	private NpcTable()
 	{
-		npcs = new HashMap<>();
-		
-		restoreNpcData();
+		load();
 	}
 	
-	private void restoreNpcData()
+	private void load()
 	{
+		_npcs.clear();
+		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM npc");
@@ -109,7 +97,7 @@ public class NpcTable
 			while (npcskills.next())
 			{
 				final int mobId = npcskills.getInt("npcid");
-				npcDat = npcs.get(mobId);
+				npcDat = _npcs.get(mobId);
 				
 				if (npcDat == null)
 				{
@@ -156,7 +144,7 @@ public class NpcTable
 				{
 					final int mobId = dropData.getInt("mobId");
 					
-					final NpcTemplate npcDat = npcs.get(mobId);
+					final NpcTemplate npcDat = _npcs.get(mobId);
 					
 					if (npcDat == null)
 					{
@@ -196,7 +184,7 @@ public class NpcTable
 			{
 				final int mobId = dropData.getInt("mobId");
 				
-				npcDat = npcs.get(mobId);
+				npcDat = _npcs.get(mobId);
 				
 				if (npcDat == null)
 				{
@@ -270,7 +258,7 @@ public class NpcTable
 			{
 				final int raidId = minionData.getInt("boss_id");
 				
-				npcDat = npcs.get(raidId);
+				npcDat = _npcs.get(raidId);
 				minionDat = new MinionData();
 				minionDat.setMinionId(minionData.getInt("minion_id"));
 				minionDat.setAmountMin(minionData.getInt("amount_min"));
@@ -535,10 +523,10 @@ public class NpcTable
 			template.addVulnerability(Stats.BLUNT_WPN_VULN, 1);
 			template.addVulnerability(Stats.DAGGER_WPN_VULN, 1);
 			
-			npcs.put(id, template);
+			_npcs.put(id, template);
 		}
 		
-		LOGGER.info("NpcTable: Loaded " + npcs.size() + " Npc Templates.");
+		LOGGER.info("NpcTable: Loaded " + _npcs.size() + " Npc Templates.");
 	}
 	
 	public void reloadNpc(int id)
@@ -611,7 +599,7 @@ public class NpcTable
 	
 	public void reloadAllNpc()
 	{
-		restoreNpcData();
+		load();
 	}
 	
 	public void saveNpc(StatsSet npc)
@@ -666,17 +654,17 @@ public class NpcTable
 	
 	public void replaceTemplate(NpcTemplate npc)
 	{
-		npcs.put(npc.npcId, npc);
+		_npcs.put(npc.npcId, npc);
 	}
 	
 	public NpcTemplate getTemplate(int id)
 	{
-		return npcs.get(id);
+		return _npcs.get(id);
 	}
 	
 	public NpcTemplate getTemplateByName(String name)
 	{
-		for (NpcTemplate npcTemplate : npcs.values())
+		for (NpcTemplate npcTemplate : _npcs.values())
 		{
 			if (npcTemplate.name.equalsIgnoreCase(name))
 			{
@@ -691,7 +679,7 @@ public class NpcTable
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (NpcTemplate t : npcs.values())
+		for (NpcTemplate t : _npcs.values())
 		{
 			if (t.level == lvl)
 			{
@@ -706,7 +694,7 @@ public class NpcTable
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (NpcTemplate t : npcs.values())
+		for (NpcTemplate t : _npcs.values())
 		{
 			if ((t.level == lvl) && "Monster".equals(t.type))
 			{
@@ -721,7 +709,7 @@ public class NpcTable
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (NpcTemplate t : npcs.values())
+		for (NpcTemplate t : _npcs.values())
 		{
 			if (t.name.startsWith(letter) && "Npc".equals(t.type))
 			{
@@ -761,6 +749,16 @@ public class NpcTable
 	
 	public Map<Integer, NpcTemplate> getAllTemplates()
 	{
-		return npcs;
+		return _npcs;
+	}
+	
+	public static NpcTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final NpcTable INSTANCE = new NpcTable();
 	}
 }

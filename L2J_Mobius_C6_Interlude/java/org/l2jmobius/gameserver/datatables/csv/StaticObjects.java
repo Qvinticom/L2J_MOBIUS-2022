@@ -34,18 +34,7 @@ public class StaticObjects
 {
 	private static Logger LOGGER = Logger.getLogger(StaticObjects.class.getName());
 	
-	private static StaticObjects _instance;
 	private final Map<Integer, StaticObjectInstance> _staticObjects;
-	
-	public static StaticObjects getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new StaticObjects();
-		}
-		
-		return _instance;
-	}
 	
 	public StaticObjects()
 	{
@@ -151,5 +140,15 @@ public class StaticObjects
 		obj.spawnMe();
 		
 		return obj;
+	}
+	
+	public static StaticObjects getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final StaticObjects INSTANCE = new StaticObjects();
 	}
 }

@@ -38,48 +38,38 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 public class TradeListTable
 {
 	private static final Logger LOGGER = Logger.getLogger(TradeListTable.class.getName());
-	private static TradeListTable _instance;
 	
 	private int _nextListId;
-	private final Map<Integer, StoreTradeList> _lists;
+	private final Map<Integer, StoreTradeList> _lists = new HashMap<>();
 	
 	/** Task launching the function for restore count of Item (Clan Hall) */
 	private class RestoreCount implements Runnable
 	{
-		private final int timer;
+		private final int _timer;
 		
 		public RestoreCount(int time)
 		{
-			timer = time;
+			_timer = time;
 		}
 		
 		@Override
 		public void run()
 		{
-			restoreCount(timer);
-			dataTimerSave(timer);
-			ThreadPool.schedule(new RestoreCount(timer), timer * 60 * 60 * 1000);
+			restoreCount(_timer);
+			dataTimerSave(_timer);
+			ThreadPool.schedule(new RestoreCount(_timer), _timer * 60 * 60 * 1000);
 		}
-	}
-	
-	public static TradeListTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new TradeListTable();
-		}
-		
-		return _instance;
 	}
 	
 	private TradeListTable()
 	{
-		_lists = new HashMap<>();
 		load();
 	}
 	
 	private void load(boolean custom)
 	{
+		_lists.clear();
+		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement1 = con.prepareStatement("SELECT shop_id,npc_id FROM " + (custom ? "custom_merchant_shopids" : "merchant_shopids"));
@@ -317,5 +307,15 @@ public class TradeListTable
 		{
 			LOGGER.warning("TradeController: Could not store Count Item. " + e);
 		}
+	}
+	
+	public static TradeListTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final TradeListTable INSTANCE = new TradeListTable();
 	}
 }

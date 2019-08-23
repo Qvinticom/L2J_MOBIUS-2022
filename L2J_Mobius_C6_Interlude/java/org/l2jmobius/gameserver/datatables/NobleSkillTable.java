@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class NobleSkillTable
 {
-	private static NobleSkillTable _instance;
 	private static Skill[] _nobleSkills;
 	
 	private NobleSkillTable()
@@ -39,18 +38,18 @@ public class NobleSkillTable
 		_nobleSkills[7] = SkillTable.getInstance().getInfo(1327, 1);
 	}
 	
-	public static NobleSkillTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new NobleSkillTable();
-		}
-		
-		return _instance;
-	}
-	
 	public Skill[] GetNobleSkills()
 	{
 		return _nobleSkills;
+	}
+	
+	public static NobleSkillTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final NobleSkillTable INSTANCE = new NobleSkillTable();
 	}
 }

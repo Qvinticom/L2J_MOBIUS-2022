@@ -71,28 +71,12 @@ public class World
 	/** List with the pets instances and their owner id. */
 	private static final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
 	
-	/** The _instance. */
-	private static World _instance = null;
-	
 	/** The _world regions. */
 	private WorldRegion[][] _worldRegions;
 	
 	private World()
 	{
 		initRegions();
-	}
-	
-	/**
-	 * Gets the single instance of World.
-	 * @return the current instance of World.
-	 */
-	public static World getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new World();
-		}
-		return _instance;
 	}
 	
 	/**
@@ -853,19 +837,29 @@ public class World
 	
 	/**
 	 * Gets the account players.
-	 * @param account_name the account_name
+	 * @param account the account_name
 	 * @return the account players
 	 */
-	public List<PlayerInstance> getAccountPlayers(String account_name)
+	public List<PlayerInstance> getAccountPlayers(String account)
 	{
-		final List<PlayerInstance> players_for_account = new ArrayList<>();
+		final List<PlayerInstance> result = new ArrayList<>();
 		for (PlayerInstance actual : _allPlayers.values())
 		{
-			if (actual.getAccountName().equals(account_name))
+			if (actual.getAccountName().equals(account))
 			{
-				players_for_account.add(actual);
+				result.add(actual);
 			}
 		}
-		return players_for_account;
+		return result;
+	}
+	
+	public static World getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final World INSTANCE = new World();
 	}
 }

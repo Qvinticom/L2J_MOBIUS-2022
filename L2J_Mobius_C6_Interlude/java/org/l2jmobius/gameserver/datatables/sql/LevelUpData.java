@@ -48,23 +48,11 @@ public class LevelUpData
 	
 	private static final Logger LOGGER = Logger.getLogger(LevelUpData.class.getName());
 	
-	private static LevelUpData _instance;
-	
-	private final Map<Integer, LvlupData> lvlTable;
-	
-	public static LevelUpData getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new LevelUpData();
-		}
-		
-		return _instance;
-	}
+	private final Map<Integer, LvlupData> _lvlTable;
 	
 	private LevelUpData()
 	{
-		lvlTable = new HashMap<>();
+		_lvlTable = new HashMap<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SELECT_ALL);
@@ -86,13 +74,13 @@ public class LevelUpData
 				lvlDat.setClassMpAdd(rset.getFloat(MP_ADD));
 				lvlDat.setClassMpModifier(rset.getFloat(MP_MOD));
 				
-				lvlTable.put(lvlDat.getClassid(), lvlDat);
+				_lvlTable.put(lvlDat.getClassid(), lvlDat);
 			}
 			
 			statement.close();
 			rset.close();
 			
-			LOGGER.info("LevelUpData: Loaded " + lvlTable.size() + " Character Level Up Templates.");
+			LOGGER.info("LevelUpData: Loaded " + _lvlTable.size() + " Character Level Up Templates.");
 		}
 		catch (Exception e)
 		{
@@ -106,11 +94,21 @@ public class LevelUpData
 	 */
 	public LvlupData getTemplate(int classId)
 	{
-		return lvlTable.get(classId);
+		return _lvlTable.get(classId);
 	}
 	
 	public LvlupData getTemplate(ClassId classId)
 	{
-		return lvlTable.get(classId.getId());
+		return _lvlTable.get(classId.getId());
+	}
+	
+	public static LevelUpData getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final LevelUpData INSTANCE = new LevelUpData();
 	}
 }

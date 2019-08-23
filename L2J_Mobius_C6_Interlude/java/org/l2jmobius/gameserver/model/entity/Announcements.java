@@ -46,23 +46,12 @@ public class Announcements
 {
 	private static Logger LOGGER = Logger.getLogger(Announcements.class.getName());
 	
-	private static Announcements _instance;
 	private final List<String> _announcements = new ArrayList<>();
 	private final List<List<Object>> _eventAnnouncements = new ArrayList<>();
 	
 	public Announcements()
 	{
 		loadAnnouncements();
-	}
-	
-	public static Announcements getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Announcements();
-		}
-		
-		return _instance;
 	}
 	
 	public void loadAnnouncements()
@@ -286,5 +275,15 @@ public class Announcements
 		catch (StringIndexOutOfBoundsException e)
 		{
 		}
+	}
+	
+	public static Announcements getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Announcements INSTANCE = new Announcements();
 	}
 }

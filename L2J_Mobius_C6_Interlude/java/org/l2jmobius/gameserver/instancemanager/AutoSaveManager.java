@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * <b>AutoSave</b> only
  * @author Shyla
  */
 public class AutoSaveManager

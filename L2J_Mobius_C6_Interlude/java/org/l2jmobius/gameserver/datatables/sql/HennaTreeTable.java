@@ -34,14 +34,9 @@ import org.l2jmobius.gameserver.model.items.Henna;
 public class HennaTreeTable
 {
 	private static Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
-	private static final HennaTreeTable INSTANCE = new HennaTreeTable();
+	
 	private final Map<ClassId, List<HennaInstance>> _hennaTrees;
 	private final boolean _initialized = true;
-	
-	public static HennaTreeTable getInstance()
-	{
-		return INSTANCE;
-	}
 	
 	private HennaTreeTable()
 	{
@@ -127,5 +122,15 @@ public class HennaTreeTable
 	public boolean isInitialized()
 	{
 		return _initialized;
+	}
+	
+	public static HennaTreeTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HennaTreeTable INSTANCE = new HennaTreeTable();
 	}
 }

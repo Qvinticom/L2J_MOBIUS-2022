@@ -32,19 +32,8 @@ import org.l2jmobius.gameserver.model.Skill;
 public class SkillSpellbookTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
-	private static SkillSpellbookTable _instance;
 	
 	private static Map<Integer, Integer> skillSpellbooks;
-	
-	public static SkillSpellbookTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SkillSpellbookTable();
-		}
-		
-		return _instance;
-	}
 	
 	private SkillSpellbookTable()
 	{
@@ -115,5 +104,15 @@ public class SkillSpellbookTable
 	public int getBookForSkill(Skill skill, int level)
 	{
 		return getBookForSkill(skill.getId(), level);
+	}
+	
+	public static SkillSpellbookTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SkillSpellbookTable INSTANCE = new SkillSpellbookTable();
 	}
 }

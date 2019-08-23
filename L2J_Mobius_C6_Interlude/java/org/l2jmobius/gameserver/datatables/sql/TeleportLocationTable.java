@@ -34,28 +34,16 @@ public class TeleportLocationTable
 {
 	private static final Logger LOGGER = Logger.getLogger(TeleportLocationTable.class.getName());
 	
-	private static TeleportLocationTable _instance;
-	
-	private Map<Integer, TeleportLocation> teleports;
-	
-	public static TeleportLocationTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new TeleportLocationTable();
-		}
-		
-		return _instance;
-	}
+	private final Map<Integer, TeleportLocation> _teleports = new HashMap<>();
 	
 	private TeleportLocationTable()
 	{
-		reloadAll();
+		load();
 	}
 	
-	public void reloadAll()
+	public void load()
 	{
-		teleports = new HashMap<>();
+		_teleports.clear();
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -74,13 +62,13 @@ public class TeleportLocationTable
 				teleport.setPrice(rset.getInt("price"));
 				teleport.setIsForNoble(rset.getInt("fornoble") == 1);
 				
-				teleports.put(teleport.getTeleId(), teleport);
+				_teleports.put(teleport.getTeleId(), teleport);
 			}
 			
 			statement.close();
 			rset.close();
 			
-			LOGGER.info("TeleportLocationTable: Loaded " + teleports.size() + " Teleport Location Templates");
+			LOGGER.info("TeleportLocationTable: Loaded " + _teleports.size() + " Teleport Location Templates");
 		}
 		catch (Exception e)
 		{
@@ -95,7 +83,7 @@ public class TeleportLocationTable
 				final ResultSet rset = statement.executeQuery();
 				TeleportLocation teleport;
 				
-				int _cTeleCount = teleports.size();
+				int _cTeleCount = _teleports.size();
 				
 				while (rset.next())
 				{
@@ -106,13 +94,13 @@ public class TeleportLocationTable
 					teleport.setZ(rset.getInt("loc_z"));
 					teleport.setPrice(rset.getInt("price"));
 					teleport.setIsForNoble(rset.getInt("fornoble") == 1);
-					teleports.put(teleport.getTeleId(), teleport);
+					_teleports.put(teleport.getTeleId(), teleport);
 				}
 				
 				statement.close();
 				rset.close();
 				
-				_cTeleCount = teleports.size() - _cTeleCount;
+				_cTeleCount = _teleports.size() - _cTeleCount;
 				
 				if (_cTeleCount > 0)
 				{
@@ -126,12 +114,18 @@ public class TeleportLocationTable
 		}
 	}
 	
-	/**
-	 * @param id
-	 * @return
-	 */
 	public TeleportLocation getTemplate(int id)
 	{
-		return teleports.get(id);
+		return _teleports.get(id);
+	}
+	
+	public static TeleportLocationTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final TeleportLocationTable INSTANCE = new TeleportLocationTable();
 	}
 }

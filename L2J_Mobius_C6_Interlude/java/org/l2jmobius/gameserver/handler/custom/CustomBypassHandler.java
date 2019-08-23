@@ -37,34 +37,18 @@ public class CustomBypassHandler
 {
 	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
 	
-	private static CustomBypassHandler _instance = null;
 	private final Map<String, ICustomByPassHandler> _handlers;
 	
 	private CustomBypassHandler()
 	{
 		_handlers = new HashMap<>();
-		
 		registerCustomBypassHandler(new ExtractableByPassHandler());
-	}
-	
-	/**
-	 * Receives the non-static instance of the RebirthManager.
-	 * @return
-	 */
-	public static CustomBypassHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CustomBypassHandler();
-		}
-		
-		return _instance;
 	}
 	
 	/**
 	 * @param handler as ICustomByPassHandler
 	 */
-	public void registerCustomBypassHandler(ICustomByPassHandler handler)
+	private void registerCustomBypassHandler(ICustomByPassHandler handler)
 	{
 		for (String s : handler.getByPassCommands())
 		{
@@ -109,5 +93,15 @@ public class CustomBypassHandler
 			
 			Rebirth.getInstance().handleCommand(player, command);
 		}
+	}
+	
+	public static CustomBypassHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CustomBypassHandler INSTANCE = new CustomBypassHandler();
 	}
 }

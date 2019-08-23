@@ -39,18 +39,10 @@ public class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	
-	private static final SpawnTable INSTANCE = new SpawnTable();
-	
-	private final Map<Integer, Spawn> spawntable = new ConcurrentHashMap<>();
-	private int npcSpawnCount;
-	private int customSpawnCount;
-	
+	private final Map<Integer, Spawn> _spawntable = new ConcurrentHashMap<>();
+	private int _npcSpawnCount;
+	private int _customSpawnCount;
 	private int _highestId;
-	
-	public static SpawnTable getInstance()
-	{
-		return INSTANCE;
-	}
 	
 	private SpawnTable()
 	{
@@ -62,7 +54,7 @@ public class SpawnTable
 	
 	public Map<Integer, Spawn> getSpawnTable()
 	{
-		return spawntable;
+		return _spawntable;
 	}
 	
 	private void fillSpawnTable()
@@ -125,24 +117,24 @@ public class SpawnTable
 						{
 							case 0: // default
 							{
-								npcSpawnCount += spawnDat.init();
+								_npcSpawnCount += spawnDat.init();
 								break;
 							}
 							case 1: // Day
 							{
 								DayNightSpawnManager.getInstance().addDayCreature(spawnDat);
-								npcSpawnCount++;
+								_npcSpawnCount++;
 								break;
 							}
 							case 2: // Night
 							{
 								DayNightSpawnManager.getInstance().addNightCreature(spawnDat);
-								npcSpawnCount++;
+								_npcSpawnCount++;
 								break;
 							}
 						}
 						
-						spawntable.put(spawnDat.getId(), spawnDat);
+						_spawntable.put(spawnDat.getId(), spawnDat);
 						if (spawnDat.getId() > _highestId)
 						{
 							_highestId = spawnDat.getId();
@@ -166,8 +158,8 @@ public class SpawnTable
 			LOGGER.warning("SpawnTable: Spawn could not be initialized. " + e);
 		}
 		
-		LOGGER.info("SpawnTable: Loaded " + spawntable.size() + " Npc Spawn Locations. ");
-		LOGGER.info("SpawnTable: Total number of NPCs in the world: " + npcSpawnCount);
+		LOGGER.info("SpawnTable: Loaded " + _spawntable.size() + " Npc Spawn Locations. ");
+		LOGGER.info("SpawnTable: Total number of NPCs in the world: " + _npcSpawnCount);
 		
 		// -------------------------------Custom Spawnlist----------------------------//
 		if (Config.CUSTOM_SPAWNLIST_TABLE)
@@ -227,24 +219,24 @@ public class SpawnTable
 							{
 								case 0: // default
 								{
-									customSpawnCount += spawnDat.init();
+									_customSpawnCount += spawnDat.init();
 									break;
 								}
 								case 1: // Day
 								{
 									DayNightSpawnManager.getInstance().addDayCreature(spawnDat);
-									customSpawnCount++;
+									_customSpawnCount++;
 									break;
 								}
 								case 2: // Night
 								{
 									DayNightSpawnManager.getInstance().addNightCreature(spawnDat);
-									customSpawnCount++;
+									_customSpawnCount++;
 									break;
 								}
 							}
 							
-							spawntable.put(spawnDat.getId(), spawnDat);
+							_spawntable.put(spawnDat.getId(), spawnDat);
 							if (spawnDat.getId() > _highestId)
 							{
 								_highestId = spawnDat.getId();
@@ -264,21 +256,21 @@ public class SpawnTable
 				LOGGER.warning("CustomSpawnTable: Spawn could not be initialized. " + e);
 			}
 			
-			LOGGER.info("CustomSpawnTable: Loaded " + customSpawnCount + " Npc Spawn Locations. ");
-			LOGGER.info("CustomSpawnTable: Total number of NPCs in the world: " + customSpawnCount);
+			LOGGER.info("CustomSpawnTable: Loaded " + _customSpawnCount + " Npc Spawn Locations. ");
+			LOGGER.info("CustomSpawnTable: Total number of NPCs in the world: " + _customSpawnCount);
 		}
 	}
 	
 	public Spawn getTemplate(int id)
 	{
-		return spawntable.get(id);
+		return _spawntable.get(id);
 	}
 	
 	public void addNewSpawn(Spawn spawn, boolean storeInDb)
 	{
 		_highestId++;
 		spawn.setId(_highestId);
-		spawntable.put(_highestId, spawn);
+		_spawntable.put(_highestId, spawn);
 		
 		if (storeInDb)
 		{
@@ -306,7 +298,7 @@ public class SpawnTable
 	
 	public void deleteSpawn(Spawn spawn, boolean updateDb)
 	{
-		if (spawntable.remove(spawn.getId()) == null)
+		if (_spawntable.remove(spawn.getId()) == null)
 		{
 			return;
 		}
@@ -361,7 +353,7 @@ public class SpawnTable
 	public void findNPCInstances(PlayerInstance player, int npcId, int teleportIndex)
 	{
 		int index = 0;
-		for (Spawn spawn : spawntable.values())
+		for (Spawn spawn : _spawntable.values())
 		{
 			if (npcId == spawn.getNpcId())
 			{
@@ -389,6 +381,16 @@ public class SpawnTable
 	
 	public Map<Integer, Spawn> getAllTemplates()
 	{
-		return spawntable;
+		return _spawntable;
+	}
+	
+	public static SpawnTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SpawnTable INSTANCE = new SpawnTable();
 	}
 }

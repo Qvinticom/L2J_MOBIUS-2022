@@ -64,7 +64,6 @@ public class SevenSignsFestival implements SpawnListener
 {
 	protected static final Logger LOGGER = Logger.getLogger(SevenSignsFestival.class.getName());
 	
-	private static SevenSignsFestival _instance;
 	private static final String GET_CLAN_NAME = "SELECT clan_name FROM clan_data WHERE clan_id = (SELECT clanid FROM characters WHERE char_name = ?)";
 	public static final long FESTIVAL_SIGNUP_TIME = Config.ALT_FESTIVAL_CYCLE_LENGTH - Config.ALT_FESTIVAL_LENGTH - 60000;
 	private static final int FESTIVAL_MAX_OFFSET_X = 230;
@@ -3170,20 +3169,6 @@ public class SevenSignsFestival implements SpawnListener
 	}
 	
 	/**
-	 * Gets the single instance of SevenSignsFestival.
-	 * @return single instance of SevenSignsFestival
-	 */
-	public static SevenSignsFestival getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SevenSignsFestival();
-		}
-		
-		return _instance;
-	}
-	
-	/**
 	 * Returns the associated name (level range) to a given festival ID.
 	 * @param festivalID the festival id
 	 * @return String festivalName
@@ -4919,5 +4904,15 @@ public class SevenSignsFestival implements SpawnListener
 				_npcId = -1;
 			}
 		}
+	}
+	
+	public static SevenSignsFestival getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SevenSignsFestival INSTANCE = new SevenSignsFestival();
 	}
 }

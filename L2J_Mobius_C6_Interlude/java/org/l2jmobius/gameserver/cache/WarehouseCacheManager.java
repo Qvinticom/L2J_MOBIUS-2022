@@ -28,19 +28,8 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class WarehouseCacheManager
 {
-	private static WarehouseCacheManager _instance;
 	protected final Map<PlayerInstance, Long> _cachedWh;
 	protected final long _cacheTime;
-	
-	public static WarehouseCacheManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new WarehouseCacheManager();
-		}
-		
-		return _instance;
-	}
 	
 	private WarehouseCacheManager()
 	{
@@ -74,5 +63,15 @@ public class WarehouseCacheManager
 				}
 			}
 		}
+	}
+	
+	public static WarehouseCacheManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final WarehouseCacheManager INSTANCE = new WarehouseCacheManager();
 	}
 }

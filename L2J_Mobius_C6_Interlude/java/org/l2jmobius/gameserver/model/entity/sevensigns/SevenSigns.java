@@ -48,7 +48,6 @@ public class SevenSigns
 {
 	protected static final Logger LOGGER = Logger.getLogger(SevenSigns.class.getName());
 	
-	private static SevenSigns _instance;
 	public static final String SEVEN_SIGNS_DATA_FILE = "config/main/sevensigns.ini";
 	public static final String SEVEN_SIGNS_HTML_PATH = "data/html/seven_signs/";
 	public static final int CABAL_NULL = 0;
@@ -347,20 +346,6 @@ public class SevenSigns
 			
 			AutoChatHandler.getInstance().setAutoChatActive(false);
 		}
-	}
-	
-	/**
-	 * Gets the single instance of SevenSigns.
-	 * @return single instance of SevenSigns
-	 */
-	public static SevenSigns getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SevenSigns();
-		}
-		
-		return _instance;
 	}
 	
 	/**
@@ -1651,5 +1636,15 @@ public class SevenSigns
 			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
 			ThreadPool.schedule(sspc, getMilliToPeriodChange());
 		}
+	}
+	
+	public static SevenSigns getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SevenSigns INSTANCE = new SevenSigns();
 	}
 }

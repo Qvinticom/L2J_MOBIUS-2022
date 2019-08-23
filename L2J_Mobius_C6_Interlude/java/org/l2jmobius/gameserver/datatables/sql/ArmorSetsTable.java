@@ -29,20 +29,9 @@ import org.l2jmobius.gameserver.model.ArmorSet;
 public class ArmorSetsTable
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetsTable.class.getName());
-	private static ArmorSetsTable _instance;
 	
 	public Map<Integer, ArmorSet> armorSets;
 	private final Map<Integer, ArmorDummy> cusArmorSets;
-	
-	public static ArmorSetsTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new ArmorSetsTable();
-		}
-		
-		return _instance;
-	}
 	
 	private ArmorSetsTable()
 	{
@@ -161,5 +150,15 @@ public class ArmorSetsTable
 		{
 			return _shield;
 		}
+	}
+	
+	public static ArmorSetsTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ArmorSetsTable INSTANCE = new ArmorSetsTable();
 	}
 }

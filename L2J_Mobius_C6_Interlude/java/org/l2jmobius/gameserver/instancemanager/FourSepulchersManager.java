@@ -55,7 +55,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class FourSepulchersManager extends GrandBossManager
 {
-	private static final String QUEST_ID = "620_FourGoblets";
+	private static final String QUEST_ID = "Q620_FourGoblets";
 	
 	private static final int ENTRANCE_PASS = 7075;
 	private static final int USED_PASS = 7261;
@@ -1544,7 +1544,7 @@ public class FourSepulchersManager extends GrandBossManager
 				}
 				else
 				{
-					LOGGER.warning("Ahenbek ashelbek! Shaitanama!! " + doorId);
+					LOGGER.warning("Could not find door with id " + doorId);
 				}
 			}
 			catch (Exception e)

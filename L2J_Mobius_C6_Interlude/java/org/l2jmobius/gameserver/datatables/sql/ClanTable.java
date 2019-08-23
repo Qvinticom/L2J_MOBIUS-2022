@@ -54,62 +54,16 @@ public class ClanTable
 {
 	private static Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
 	
-	private static ClanTable _instance;
-	
-	private final Map<Integer, Clan> _clans;
-	
-	public static ClanTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new ClanTable();
-		}
-		
-		return _instance;
-	}
-	
-	public static void reload()
-	{
-		_instance = null;
-		getInstance();
-	}
-	
-	public Clan[] getClans()
-	{
-		return _clans.values().toArray(new Clan[_clans.size()]);
-	}
-	
-	public int getTopRate(int clan_id)
-	{
-		Clan clan = getClan(clan_id);
-		if (clan.getLevel() < 3)
-		{
-			return 0;
-		}
-		int i = 1;
-		for (Clan clans : getClans())
-		{
-			if (clan != clans)
-			{
-				if (clan.getLevel() < clans.getLevel())
-				{
-					i++;
-				}
-				else if (clan.getLevel() == clans.getLevel())
-				{
-					if (clan.getReputationScore() <= clans.getReputationScore())
-					{
-						i++;
-					}
-				}
-			}
-		}
-		return i;
-	}
+	private final Map<Integer, Clan> _clans = new HashMap<>();
 	
 	private ClanTable()
 	{
-		_clans = new HashMap<>();
+		load();
+	}
+	
+	public void load()
+	{
+		_clans.clear();
 		Clan clan;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -152,6 +106,39 @@ public class ClanTable
 		}
 		
 		restoreClanWars();
+	}
+	
+	public Clan[] getClans()
+	{
+		return _clans.values().toArray(new Clan[_clans.size()]);
+	}
+	
+	public int getTopRate(int clan_id)
+	{
+		Clan clan = getClan(clan_id);
+		if (clan.getLevel() < 3)
+		{
+			return 0;
+		}
+		int i = 1;
+		for (Clan clans : getClans())
+		{
+			if (clan != clans)
+			{
+				if (clan.getLevel() < clans.getLevel())
+				{
+					i++;
+				}
+				else if (clan.getLevel() == clans.getLevel())
+				{
+					if (clan.getReputationScore() <= clans.getReputationScore())
+					{
+						i++;
+					}
+				}
+			}
+		}
+		return i;
 	}
 	
 	/**
@@ -557,5 +544,15 @@ public class ClanTable
 			LOGGER.warning("Could not restore clan wars data:");
 			e.printStackTrace();
 		}
+	}
+	
+	public static ClanTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ClanTable INSTANCE = new ClanTable();
 	}
 }

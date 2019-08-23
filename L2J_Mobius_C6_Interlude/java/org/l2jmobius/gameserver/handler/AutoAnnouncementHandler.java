@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 public class AutoAnnouncementHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(AutoAnnouncementHandler.class.getName());
-	private static AutoAnnouncementHandler _instance;
+	
 	private static final long DEFAULT_ANNOUNCEMENT_DELAY = 180000; // 3 mins by default
 	protected Map<Integer, AutoAnnouncementInstance> _registeredAnnouncements;
 	
@@ -115,19 +115,6 @@ public class AutoAnnouncementHandler
 		
 		adminReply.setHtml(replyMSG.toString());
 		player.sendPacket(adminReply);
-	}
-	
-	/**
-	 * @return
-	 */
-	public static AutoAnnouncementHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new AutoAnnouncementHandler();
-		}
-		
-		return _instance;
 	}
 	
 	/**
@@ -466,5 +453,15 @@ public class AutoAnnouncementHandler
 				Announcements.getInstance().announceToAll(text);
 			}
 		}
+	}
+	
+	public static AutoAnnouncementHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final AutoAnnouncementHandler INSTANCE = new AutoAnnouncementHandler();
 	}
 }

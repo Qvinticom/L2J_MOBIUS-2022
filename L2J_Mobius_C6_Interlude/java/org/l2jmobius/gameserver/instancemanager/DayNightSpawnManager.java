@@ -42,24 +42,12 @@ public class DayNightSpawnManager
 {
 	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
-	private static DayNightSpawnManager _instance;
 	private final List<Spawn> _dayCreatures = new ArrayList<>();
 	private final List<Spawn> _nightCreatures = new ArrayList<>();
 	private final Map<Spawn, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	
-	public static DayNightSpawnManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new DayNightSpawnManager();
-		}
-		
-		return _instance;
-	}
-	
 	private DayNightSpawnManager()
 	{
-		LOGGER.info("DayNightSpawnManager: Day/Night handler initialised");
 	}
 	
 	public void addDayCreature(Spawn spawnDat)
@@ -299,5 +287,15 @@ public class DayNightSpawnManager
 			return raidboss;
 		}
 		return null;
+	}
+	
+	public static DayNightSpawnManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final DayNightSpawnManager INSTANCE = new DayNightSpawnManager();
 	}
 }

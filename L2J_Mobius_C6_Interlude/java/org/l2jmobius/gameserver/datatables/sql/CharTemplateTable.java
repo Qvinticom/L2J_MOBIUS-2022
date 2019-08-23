@@ -36,8 +36,6 @@ public class CharTemplateTable
 {
 	private static Logger LOGGER = Logger.getLogger(CharTemplateTable.class.getName());
 	
-	private static CharTemplateTable _instance;
-	
 	private static final String[] CHAR_CLASSES =
 	{
 		"Human Fighter",
@@ -163,16 +161,6 @@ public class CharTemplateTable
 	
 	private final Map<Integer, PlayerTemplate> _templates;
 	
-	public static CharTemplateTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CharTemplateTable();
-		}
-		
-		return _instance;
-	}
-	
 	private CharTemplateTable()
 	{
 		_templates = new HashMap<>();
@@ -269,7 +257,6 @@ public class CharTemplateTable
 	public static final int getClassIdByName(String className)
 	{
 		int currId = 1;
-		
 		for (String name : CHAR_CLASSES)
 		{
 			if (name.equalsIgnoreCase(className))
@@ -279,7 +266,16 @@ public class CharTemplateTable
 			
 			currId++;
 		}
-		
 		return currId;
+	}
+	
+	public static CharTemplateTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CharTemplateTable INSTANCE = new CharTemplateTable();
 	}
 }

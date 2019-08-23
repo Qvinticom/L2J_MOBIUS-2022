@@ -29,21 +29,9 @@ public class KnownListUpdateTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
 	
-	private static KnownListUpdateTaskManager _instance;
-	
 	public KnownListUpdateTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(new KnownListUpdate(), 1000, 750);
-	}
-	
-	public static KnownListUpdateTaskManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new KnownListUpdateTaskManager();
-		}
-		
-		return _instance;
 	}
 	
 	private class KnownListUpdate implements Runnable
@@ -135,5 +123,15 @@ public class KnownListUpdateTaskManager
 			}
 			
 		}
+	}
+	
+	public static KnownListUpdateTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final KnownListUpdateTaskManager INSTANCE = new KnownListUpdateTaskManager();
 	}
 }

@@ -39,24 +39,10 @@ public class NpcWalkerRoutesTable
 {
 	protected static final Logger LOGGER = Logger.getLogger(NpcWalkerRoutesTable.class.getName());
 	
-	private static NpcWalkerRoutesTable _instance;
-	
 	private List<NpcWalkerNode> _routes;
-	
-	public static NpcWalkerRoutesTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new NpcWalkerRoutesTable();
-			LOGGER.info("Initializing Walkers Routes Table.");
-		}
-		
-		return _instance;
-	}
 	
 	private NpcWalkerRoutesTable()
 	{
-		// not here
 	}
 	
 	public void load()
@@ -166,7 +152,6 @@ public class NpcWalkerRoutesTable
 	public List<NpcWalkerNode> getRouteForNpc(int id)
 	{
 		final List<NpcWalkerNode> _return = new ArrayList<>();
-		
 		for (NpcWalkerNode node : _routes)
 		{
 			if (node.getNpcId() == id)
@@ -174,7 +159,16 @@ public class NpcWalkerRoutesTable
 				_return.add(node);
 			}
 		}
-		
 		return _return;
+	}
+	
+	public static NpcWalkerRoutesTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final NpcWalkerRoutesTable INSTANCE = new NpcWalkerRoutesTable();
 	}
 }

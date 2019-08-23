@@ -203,7 +203,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_teleport_reload"))
 		{
-			TeleportLocationTable.getInstance().reloadAll();
+			TeleportLocationTable.getInstance().load();
 			AdminData.broadcastMessageToGMs("Teleport List Table reloaded.");
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))

@@ -31,27 +31,12 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.items.Henna;
 
-/**
- * @version $Revision$ $Date$
- */
 public class HennaTable
 {
 	private static Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
 	
-	private static HennaTable _instance;
-	
 	private final Map<Integer, Henna> _henna;
 	private final boolean _initialized = true;
-	
-	public static HennaTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new HennaTable();
-		}
-		
-		return _instance;
-	}
 	
 	private HennaTable()
 	{
@@ -163,4 +148,13 @@ public class HennaTable
 		return _henna.get(id);
 	}
 	
+	public static HennaTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HennaTable INSTANCE = new HennaTable();
+	}
 }

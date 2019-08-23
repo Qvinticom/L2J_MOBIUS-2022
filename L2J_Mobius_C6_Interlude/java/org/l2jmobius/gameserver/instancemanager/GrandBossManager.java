@@ -63,25 +63,10 @@ public class GrandBossManager
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
-	private static GrandBossManager _instance;
-	
 	protected static Map<Integer, GrandBossInstance> _bosses;
-	
 	protected static Map<Integer, StatsSet> _storedInfo;
-	
 	private Map<Integer, Integer> _bossStatus;
-	
 	private Collection<BossZone> _zones;
-	
-	public static GrandBossManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing GrandBossManager");
-			_instance = new GrandBossManager();
-		}
-		return _instance;
-	}
 	
 	public GrandBossManager()
 	{
@@ -471,5 +456,15 @@ public class GrandBossManager
 	public boolean isDefined(int bossId) // into database
 	{
 		return _bossStatus.get(bossId) != null;
+	}
+	
+	public static GrandBossManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final GrandBossManager INSTANCE = new GrandBossManager();
 	}
 }

@@ -61,19 +61,7 @@ public class SkillHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static SkillHandler _instance;
-	
 	private final Map<SkillType, ISkillHandler> _datatable;
-	
-	public static SkillHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SkillHandler();
-		}
-		
-		return _instance;
-	}
 	
 	private SkillHandler()
 	{
@@ -133,5 +121,15 @@ public class SkillHandler
 	public int size()
 	{
 		return _datatable.size();
+	}
+	
+	public static SkillHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SkillHandler INSTANCE = new SkillHandler();
 	}
 }

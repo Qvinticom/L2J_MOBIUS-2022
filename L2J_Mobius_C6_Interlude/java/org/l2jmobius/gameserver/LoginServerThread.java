@@ -62,8 +62,6 @@ public class LoginServerThread extends Thread
 	protected static final Logger LOGGER = Logger.getLogger(LoginServerThread.class.getName());
 	
 	/** The LoginServerThread singleton */
-	private static LoginServerThread _instance;
-	
 	private static final int REVISION = 0x0102;
 	private RSAPublicKey _publicKey;
 	private final String _hostname;
@@ -120,15 +118,6 @@ public class LoginServerThread extends Thread
 		_waitingClients = new ArrayList<>();
 		_accountsInGameServer = new ConcurrentHashMap<>();
 		_maxPlayer = Config.MAXIMUM_ONLINE_USERS;
-	}
-	
-	public static LoginServerThread getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new LoginServerThread();
-		}
-		return _instance;
 	}
 	
 	@Override
@@ -207,7 +196,7 @@ public class LoginServerThread extends Thread
 					final int packetType = decrypt[0] & 0xff;
 					switch (packetType)
 					{
-						case 00:
+						case 0x00:
 						{
 							final InitLS init = new InitLS(decrypt);
 							if (init.getRevision() != REVISION)
@@ -225,7 +214,7 @@ public class LoginServerThread extends Thread
 							}
 							catch (GeneralSecurityException e)
 							{
-								LOGGER.warning("Troubles while init the public key send by login");
+								LOGGER.warning("Trouble while init the public key send by login");
 								break;
 							}
 							// send the blowfish key through the rsa encryption
@@ -239,14 +228,14 @@ public class LoginServerThread extends Thread
 							sendPacket(ar);
 							break;
 						}
-						case 01:
+						case 0x01:
 						{
 							final LoginServerFail lsf = new LoginServerFail(decrypt);
 							LOGGER.info("Damn! Registeration Failed: " + lsf.getReasonString());
 							// login will close the connection here
 							break;
 						}
-						case 02:
+						case 0x02:
 						{
 							final AuthResponse aresp = new AuthResponse(decrypt);
 							_serverID = aresp.getServerId();
@@ -299,7 +288,7 @@ public class LoginServerThread extends Thread
 							}
 							break;
 						}
-						case 03:
+						case 0x03:
 						{
 							final PlayerAuthResponse par = new PlayerAuthResponse(decrypt);
 							final String account = par.getAccount();
@@ -345,7 +334,7 @@ public class LoginServerThread extends Thread
 							}
 							break;
 						}
-						case 04:
+						case 0x04:
 						{
 							KickPlayer kp = new KickPlayer(decrypt);
 							doKickPlayer(kp.getAccount());
@@ -707,5 +696,19 @@ public class LoginServerThread extends Thread
 	public boolean isInterrupted()
 	{
 		return _interrupted;
+	}
+	
+	/**
+	 * Gets the single instance of LoginServerThread.
+	 * @return single instance of LoginServerThread
+	 */
+	public static LoginServerThread getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final LoginServerThread INSTANCE = new LoginServerThread();
 	}
 }

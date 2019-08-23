@@ -49,10 +49,7 @@ public class MapRegionTable
 {
 	private static Logger LOGGER = Logger.getLogger(MapRegionTable.class.getName());
 	
-	private static MapRegionTable _instance;
-	
 	private final int[][] _regions = new int[19][21];
-	
 	private final int[][] _pointsWithKarmas;
 	
 	public enum TeleportWhereType
@@ -62,16 +59,6 @@ public class MapRegionTable
 		SiegeFlag,
 		Town,
 		Fortress
-	}
-	
-	public static MapRegionTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new MapRegionTable();
-		}
-		
-		return _instance;
 	}
 	
 	private MapRegionTable()
@@ -619,5 +606,15 @@ public class MapRegionTable
 		local_zone = TownManager.getInstance().getTown(9); // giran
 		coord = local_zone.getSpawnLoc();
 		return new Location(coord[0], coord[1], coord[2]);
+	}
+	
+	public static MapRegionTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final MapRegionTable INSTANCE = new MapRegionTable();
 	}
 }

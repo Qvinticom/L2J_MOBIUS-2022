@@ -31,17 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class PcPoint implements Runnable
 {
 	Logger LOGGER = Logger.getLogger(PcPoint.class.getName());
-	private static PcPoint _instance;
-	
-	public static PcPoint getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new PcPoint();
-		}
-		
-		return _instance;
-	}
 	
 	private PcPoint()
 	{
@@ -82,5 +71,15 @@ public class PcPoint implements Runnable
 				}
 			}
 		}
+	}
+	
+	public static PcPoint getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final PcPoint INSTANCE = new PcPoint();
 	}
 }

@@ -31,23 +31,12 @@ import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 public class DecayTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
+	
 	protected Map<Creature, Long> _decayTasks = new ConcurrentHashMap<>();
 	
-	private static DecayTaskManager _instance;
-	
-	public DecayTaskManager()
+	private DecayTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(new DecayScheduler(), 10000, 5000);
-	}
-	
-	public static DecayTaskManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new DecayTaskManager();
-		}
-		
-		return _instance;
 	}
 	
 	public void addDecayTask(Creature actor)
@@ -126,5 +115,15 @@ public class DecayTaskManager
 		}
 		
 		return ret;
+	}
+	
+	public static DecayTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final DecayTaskManager INSTANCE = new DecayTaskManager();
 	}
 }

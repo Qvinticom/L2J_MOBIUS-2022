@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 public class TradeController
 {
 	private static Logger LOGGER = Logger.getLogger(TradeController.class.getName());
-	private static TradeController _instance;
 	
 	private int _nextListId;
 	private final Map<Integer, StoreTradeList> _lists;
@@ -71,15 +70,6 @@ public class TradeController
 			{
 			}
 		}
-	}
-	
-	public static TradeController getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new TradeController();
-		}
-		return _instance;
 	}
 	
 	private TradeController()
@@ -625,11 +615,13 @@ public class TradeController
 		return _nextListId++;
 	}
 	
-	/**
-	 * This will reload buylists info from DataBase
-	 */
-	public static void reload()
+	public static TradeController getInstance()
 	{
-		_instance = new TradeController();
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final TradeController INSTANCE = new TradeController();
 	}
 }

@@ -27,9 +27,9 @@ public class DatatablesManager
 	public static void reloadAll()
 	{
 		AdminData.getInstance().load();
-		AugmentationData.reload();
-		ClanTable.reload();
-		HelperBuffTable.reload();
-		ExperienceData.getInstance();
+		AugmentationData.getInstance().load();
+		ClanTable.getInstance().load();
+		HelperBuffTable.getInstance().load();
+		ExperienceData.getInstance().load();
 	}
 }

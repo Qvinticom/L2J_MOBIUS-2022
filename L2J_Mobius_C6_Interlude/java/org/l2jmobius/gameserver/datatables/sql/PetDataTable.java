@@ -30,26 +30,18 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 public class PetDataTable
 {
 	private static final Logger LOGGER = Logger.getLogger(PetInstance.class.getName());
-	private static PetDataTable _instance;
-	private static Map<Integer, Map<Integer, PetData>> _petTable;
 	
-	public static PetDataTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new PetDataTable();
-		}
-		
-		return _instance;
-	}
+	private static Map<Integer, Map<Integer, PetData>> _petTable = new HashMap<>();
 	
 	private PetDataTable()
 	{
-		_petTable = new HashMap<>();
+		load();
 	}
 	
-	public void loadPetsData()
+	private void load()
 	{
+		_petTable.clear();
+		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT typeID, level, expMax, hpMax, mpMax, patk, pdef, matk, mdef, acc, evasion, crit, speed, atk_speed, cast_speed, feedMax, feedbattle, feednormal, loadMax, hpregen, mpregen, owner_exp_taken FROM pets_stats");
@@ -446,5 +438,15 @@ public class PetDataTable
 			|| (npcId == 12527) // star strider
 			|| (npcId == 12528) // twilight strider
 			|| (npcId == 12621); // wyvern
+	}
+	
+	public static PetDataTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final PetDataTable INSTANCE = new PetDataTable();
 	}
 }

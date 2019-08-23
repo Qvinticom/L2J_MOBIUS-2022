@@ -26,20 +26,8 @@ import java.util.List;
  */
 public class EventDroplist
 {
-	private static EventDroplist _instance;
-	
 	/** The table containing all DataDrop object */
 	private final List<DateDrop> _allNpcDateDrops;
-	
-	public static EventDroplist getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new EventDroplist();
-		}
-		
-		return _instance;
-	}
 	
 	public class DateDrop
 	{
@@ -104,5 +92,15 @@ public class EventDroplist
 			}
 		}
 		return list;
+	}
+	
+	public static EventDroplist getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final EventDroplist INSTANCE = new EventDroplist();
 	}
 }

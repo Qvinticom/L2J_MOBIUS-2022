@@ -81,18 +81,8 @@ public class nProtect
 	protected Method _sendRequest = null;
 	protected Method _closeSession = null;
 	protected Method _sendGGQuery = null;
-	private static nProtect _instance = null;
 	
 	private static boolean enabled = false;
-	
-	public static nProtect getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new nProtect();
-		}
-		return _instance;
-	}
 	
 	private nProtect()
 	{
@@ -219,5 +209,15 @@ public class nProtect
 	public static boolean isEnabled()
 	{
 		return enabled;
+	}
+	
+	public static nProtect getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final nProtect INSTANCE = new nProtect();
 	}
 }

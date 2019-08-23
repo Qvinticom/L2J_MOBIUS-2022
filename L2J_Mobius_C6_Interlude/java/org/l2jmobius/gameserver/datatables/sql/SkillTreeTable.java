@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.skills.holders.PlayerSkillHolder;
 public class SkillTreeTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
-	private static SkillTreeTable _instance;
+	
 	private Map<ClassId, Map<Integer, SkillLearn>> _skillTrees;
 	private List<SkillLearn> _fishingSkillTrees; // all common skills (teached by Fisherman)
 	private List<SkillLearn> _expandDwarfCraftSkillTrees; // list of special skill for dwarf (expand dwarf craft) learned by class teacher
@@ -254,16 +254,6 @@ public class SkillTreeTable
 		LOGGER.info("FishingSkillTreeTable: Loaded " + count3 + " dwarven skills.");
 		LOGGER.info("EnchantSkillTreeTable: Loaded " + count4 + " enchant skills.");
 		LOGGER.info("PledgeSkillTreeTable: Loaded " + count5 + " pledge skills.");
-	}
-	
-	public static SkillTreeTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new SkillTreeTable();
-		}
-		
-		return _instance;
 	}
 	
 	/**
@@ -711,5 +701,15 @@ public class SkillTreeTable
 			learnable = getAvailableSkills(player, classId, holder);
 		}
 		return holder.getSkills().values();
+	}
+	
+	public static SkillTreeTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SkillTreeTable INSTANCE = new SkillTreeTable();
 	}
 }

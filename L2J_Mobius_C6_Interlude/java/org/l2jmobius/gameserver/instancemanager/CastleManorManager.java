@@ -46,8 +46,6 @@ public class CastleManorManager
 {
 	protected static Logger LOGGER = Logger.getLogger(CastleManorManager.class.getName());
 	
-	private static CastleManorManager _instance;
-	
 	public static final int PERIOD_CURRENT = 0;
 	public static final int PERIOD_NEXT = 1;
 	public static int APPROVE = -1;
@@ -63,16 +61,6 @@ public class CastleManorManager
 	
 	boolean _underMaintenance;
 	boolean _disabled;
-	
-	public static CastleManorManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing CastleManorManager");
-			_instance = new CastleManorManager();
-		}
-		return _instance;
-	}
 	
 	public class CropProcure
 	{
@@ -554,5 +542,15 @@ public class CastleManorManager
 				approveNextPeriod();
 			}
 		}
+	}
+	
+	public static CastleManorManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CastleManorManager INSTANCE = new CastleManorManager();
 	}
 }

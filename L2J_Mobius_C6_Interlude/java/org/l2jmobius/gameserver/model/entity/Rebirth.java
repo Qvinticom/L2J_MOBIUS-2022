@@ -47,25 +47,11 @@ public class Rebirth
 {
 	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
 	
-	private static Rebirth _instance = null;
 	private final HashMap<Integer, Integer> _playersRebirthInfo = new HashMap<>();
 	
 	private Rebirth()
 	{
 		// Do Nothing ^_-
-	}
-	
-	/**
-	 * Receives the non-static instance of the RebirthManager.
-	 * @return single instance of Rebirth
-	 */
-	public static Rebirth getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new Rebirth();
-		}
-		return _instance;
 	}
 	
 	/**
@@ -477,5 +463,15 @@ public class Rebirth
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public static Rebirth getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final Rebirth INSTANCE = new Rebirth();
 	}
 }

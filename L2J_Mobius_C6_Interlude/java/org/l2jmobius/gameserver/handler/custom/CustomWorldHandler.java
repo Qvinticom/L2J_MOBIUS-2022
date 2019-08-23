@@ -26,25 +26,9 @@ import org.l2jmobius.gameserver.model.entity.Rebirth;
  */
 public class CustomWorldHandler
 {
-	private static CustomWorldHandler _instance = null;
-	
 	private CustomWorldHandler()
 	{
 		// Do Nothing ^_-
-	}
-	
-	/**
-	 * Receives the non-static instance of the RebirthManager.
-	 * @return
-	 */
-	public static CustomWorldHandler getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CustomWorldHandler();
-		}
-		
-		return _instance;
 	}
 	
 	/**
@@ -67,5 +51,15 @@ public class CustomWorldHandler
 	public void exitWorld(PlayerInstance player)
 	{
 		// TODO: Remove the rebirth engine's bonus skills from player?
+	}
+	
+	public static CustomWorldHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CustomWorldHandler INSTANCE = new CustomWorldHandler();
 	}
 }

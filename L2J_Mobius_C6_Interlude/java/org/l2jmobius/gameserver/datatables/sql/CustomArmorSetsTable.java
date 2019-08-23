@@ -30,16 +30,6 @@ import org.l2jmobius.gameserver.model.ArmorSet;
 public class CustomArmorSetsTable
 {
 	private static final Logger LOGGER = Logger.getLogger(CustomArmorSetsTable.class.getName());
-	private static CustomArmorSetsTable _instance;
-	
-	public static CustomArmorSetsTable getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CustomArmorSetsTable();
-		}
-		return _instance;
-	}
 	
 	public CustomArmorSetsTable()
 	{
@@ -70,5 +60,15 @@ public class CustomArmorSetsTable
 		{
 			LOGGER.warning("ArmorSetsTable: Error reading Custom ArmorSets table " + e);
 		}
+	}
+	
+	public static CustomArmorSetsTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CustomArmorSetsTable INSTANCE = new CustomArmorSetsTable();
 	}
 }

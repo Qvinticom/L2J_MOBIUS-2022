@@ -30,29 +30,12 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 public class ItemsAutoDestroy
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroy.class.getName());
-	private static ItemsAutoDestroy _instance;
-	protected Collection<ItemInstance> _items = null;
-	protected static long _sleep;
 	
-	private ItemsAutoDestroy()
-	{
-		_items = ConcurrentHashMap.newKeySet();
-		_sleep = Config.AUTODESTROY_ITEM_AFTER * 1000;
-		if (_sleep == 0)
-		{
-			_sleep = 3600000;
-		}
-		ThreadPool.scheduleAtFixedRate(new CheckItemsForDestroy(), 5000, 5000);
-	}
+	private final Collection<ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
-	public static ItemsAutoDestroy getInstance()
+	protected ItemsAutoDestroy()
 	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing ItemsAutoDestroy.");
-			_instance = new ItemsAutoDestroy();
-		}
-		return _instance;
+		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
 	}
 	
 	public synchronized void addItem(ItemInstance item)
@@ -61,7 +44,7 @@ public class ItemsAutoDestroy
 		_items.add(item);
 	}
 	
-	public synchronized void removeItems()
+	private synchronized void removeItems()
 	{
 		if (_items.isEmpty())
 		{
@@ -90,7 +73,7 @@ public class ItemsAutoDestroy
 					}
 				}
 			}
-			else if ((curtime - item.getDropTime()) > _sleep)
+			else if ((curtime - item.getDropTime()) > (Config.AUTODESTROY_ITEM_AFTER * 1000))
 			{
 				World.getInstance().removeVisibleObject(item, item.getWorldRegion());
 				World.getInstance().removeObject(item);
@@ -104,12 +87,13 @@ public class ItemsAutoDestroy
 		}
 	}
 	
-	protected class CheckItemsForDestroy extends Thread
+	public static ItemsAutoDestroy getInstance()
 	{
-		@Override
-		public void run()
-		{
-			removeItems();
-		}
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
 	}
 }

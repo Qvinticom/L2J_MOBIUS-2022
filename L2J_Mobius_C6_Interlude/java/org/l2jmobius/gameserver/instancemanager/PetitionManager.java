@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class PetitionManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(PetitionManager.class.getName());
-	private static PetitionManager _instance;
 	
 	final Map<Integer, Petition> _pendingPetitions;
 	final Map<Integer, Petition> _completedPetitions;
@@ -71,17 +70,6 @@ public class PetitionManager
 		Game_Tip,
 		Operation_Related,
 		Other
-	}
-	
-	public static PetitionManager getInstance()
-	{
-		if (_instance == null)
-		{
-			LOGGER.info("Initializing PetitionManager");
-			_instance = new PetitionManager();
-		}
-		
-		return _instance;
 	}
 	
 	private class Petition
@@ -626,5 +614,15 @@ public class PetitionManager
 		NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
 		htmlMsg.setHtml(htmlContent.toString());
 		player.sendPacket(htmlMsg);
+	}
+	
+	public static PetitionManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final PetitionManager INSTANCE = new PetitionManager();
 	}
 }

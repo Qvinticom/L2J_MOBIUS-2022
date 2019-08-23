@@ -33,24 +33,12 @@ import org.l2jmobius.gameserver.util.Util;
 public class HtmCache
 {
 	private static Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
-	private static HtmCache _instance;
 	
 	private final Map<Integer, String> _cache;
-	
 	private int _loadedFiles;
 	private long _bytesBuffLen;
 	
-	public static HtmCache getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new HtmCache();
-		}
-		
-		return _instance;
-	}
-	
-	public HtmCache()
+	private HtmCache()
 	{
 		_cache = new HashMap<>();
 		reload();
@@ -247,5 +235,15 @@ public class HtmCache
 		}
 		
 		return false;
+	}
+	
+	public static HtmCache getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HtmCache INSTANCE = new HtmCache();
 	}
 }

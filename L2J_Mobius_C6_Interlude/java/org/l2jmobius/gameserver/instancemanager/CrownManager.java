@@ -31,20 +31,9 @@ import org.l2jmobius.gameserver.model.entity.siege.Castle;
 public class CrownManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(CrownManager.class.getName());
-	private static CrownManager _instance;
-	
-	public static final CrownManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new CrownManager();
-		}
-		return _instance;
-	}
 	
 	public CrownManager()
 	{
-		LOGGER.info("CrownManager: initialized");
 	}
 	
 	public void checkCrowns(Clan clan)
@@ -146,5 +135,15 @@ public class CrownManager
 				player.getInventory().updateDatabase();
 			}
 		}
+	}
+	
+	public static CrownManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CrownManager INSTANCE = new CrownManager();
 	}
 }

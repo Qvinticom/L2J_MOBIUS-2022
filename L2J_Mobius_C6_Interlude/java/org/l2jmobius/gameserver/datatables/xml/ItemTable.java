@@ -71,15 +71,6 @@ public class ItemTable
 	}
 	
 	/**
-	 * Returns instance of ItemTable
-	 * @return ItemTable
-	 */
-	public static ItemTable getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	/**
 	 * Returns a new object Item
 	 * @return
 	 */
@@ -363,6 +354,15 @@ public class ItemTable
 	public int getArraySize()
 	{
 		return _allTemplates.length;
+	}
+	
+	/**
+	 * Returns instance of ItemTable
+	 * @return ItemTable
+	 */
+	public static ItemTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder

@@ -21,7 +21,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.math.BigInteger;
-import java.security.GeneralSecurityException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -69,16 +68,6 @@ public abstract class BaseGameServerRegister
 		Config.load(ServerMode.LOGIN);
 		DatabaseFactory.init();
 		GameServerTable.getInstance();
-		
-		try
-		{
-			GameServerTable.load();
-		}
-		catch (GeneralSecurityException e)
-		{
-			e.printStackTrace();
-		}
-		
 		_loaded = true;
 	}
 	

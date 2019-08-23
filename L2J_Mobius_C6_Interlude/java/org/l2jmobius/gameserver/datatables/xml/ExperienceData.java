@@ -44,10 +44,10 @@ public class ExperienceData
 	
 	private ExperienceData()
 	{
-		loadData();
+		load();
 	}
 	
-	private void loadData()
+	public void load()
 	{
 		final File xml = new File(Config.DATAPACK_ROOT, "data/stats/experience.xml");
 		if (!xml.exists())
