@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 import org.l2jmobius.gameserver.thread.TaskPriority;
 
 public class RequestMoveToLocationInVehicle extends GameClientPacket

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.skills.conditions;
 
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.skills.Env;
-import org.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * @author mkizub

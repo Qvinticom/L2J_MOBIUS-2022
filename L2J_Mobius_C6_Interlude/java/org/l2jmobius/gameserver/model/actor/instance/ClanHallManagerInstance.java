@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.TeleportLocation;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,7 +41,6 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * The Class PledgeHallManagerInstance.

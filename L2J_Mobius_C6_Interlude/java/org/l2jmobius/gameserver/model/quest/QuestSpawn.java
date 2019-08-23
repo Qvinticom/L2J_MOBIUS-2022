@@ -23,8 +23,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author programmos

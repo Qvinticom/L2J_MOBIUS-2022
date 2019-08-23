@@ -22,11 +22,11 @@ import org.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
 import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.item.Henna;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestHennaEquip extends GameClientPacket

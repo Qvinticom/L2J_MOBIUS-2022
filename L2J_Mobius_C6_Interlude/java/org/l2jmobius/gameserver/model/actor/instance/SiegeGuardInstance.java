@@ -24,13 +24,13 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.SiegeGuardKnownList;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * This class represents all guards in the world. It inherits all methods from Attackable and adds some more such as tracking PK's or custom interactions.

@@ -86,6 +86,8 @@ import org.l2jmobius.gameserver.model.actor.knownlist.CreatureKnownList;
 import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList.KnownListAsynchronousUpdateTask;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
@@ -93,6 +95,8 @@ import org.l2jmobius.gameserver.model.entity.event.GameEvent;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.event.VIP;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -132,10 +136,6 @@ import org.l2jmobius.gameserver.skills.Stats;
 import org.l2jmobius.gameserver.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.skills.funcs.Func;
 import org.l2jmobius.gameserver.skills.holders.ISkillsHolder;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
-import org.l2jmobius.gameserver.templates.item.Weapon;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

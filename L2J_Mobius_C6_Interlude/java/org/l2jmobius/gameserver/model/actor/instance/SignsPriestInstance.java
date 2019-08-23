@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -28,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * Dawn/Dusk Seven Signs Priest Instance

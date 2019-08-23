@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.templates.item.EtcItemType;
-import org.l2jmobius.gameserver.templates.item.Item;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 public class PlayerInventory extends Inventory
 {

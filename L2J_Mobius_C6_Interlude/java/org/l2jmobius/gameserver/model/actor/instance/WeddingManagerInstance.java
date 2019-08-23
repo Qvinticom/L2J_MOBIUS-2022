@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.entity.Wedding;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -30,7 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class WeddingManagerInstance extends NpcInstance
 {

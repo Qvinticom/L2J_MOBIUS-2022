@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.FriendlyMobKnownList;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * This class represents Friendly Mobs lying over the world. These friendly mobs should only attack players with karma > 0 and it is always aggro, since it just attacks players with karma

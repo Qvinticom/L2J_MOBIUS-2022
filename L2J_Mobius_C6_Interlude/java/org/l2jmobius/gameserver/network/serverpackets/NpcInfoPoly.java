@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @version $Revision: 1.7.2.4.2.9 $ $Date: 2005/04/11 10:05:54 $

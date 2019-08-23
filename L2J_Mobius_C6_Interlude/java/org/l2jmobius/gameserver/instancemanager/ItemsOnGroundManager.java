@@ -30,7 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.item.EtcItemType;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 
 /**

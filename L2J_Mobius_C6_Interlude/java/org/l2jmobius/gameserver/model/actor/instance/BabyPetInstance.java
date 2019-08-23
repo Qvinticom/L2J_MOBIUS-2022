@@ -22,7 +22,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @version $Revision: 1.15.2.10.2.16 $ $Date: 2005/04/06 16:13:40 $

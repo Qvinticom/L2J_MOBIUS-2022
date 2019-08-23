@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.skills.conditions;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.skills.Env;
-import org.l2jmobius.gameserver.templates.item.ArmorType;
-import org.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * The Class ConditionUsingItemType.

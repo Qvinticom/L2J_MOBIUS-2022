@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
+import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.serverpackets.CharTemplates;
-import org.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
 public class NewCharacter extends GameClientPacket
 {

@@ -32,6 +32,8 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.BoatKnownList;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,8 +41,6 @@ import org.l2jmobius.gameserver.network.serverpackets.OnVehicleCheckLocation;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
-import org.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * @author Maktakien

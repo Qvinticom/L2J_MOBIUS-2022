@@ -22,6 +22,7 @@ import java.util.List;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.actor.knownlist.RaceManagerKnownList;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.MonsterRace;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -32,7 +33,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MonRaceInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 public class RaceManagerInstance extends NpcInstance

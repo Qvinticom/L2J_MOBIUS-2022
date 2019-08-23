@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
@@ -40,7 +41,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class SummonItems implements IItemHandler
 {

@@ -38,10 +38,10 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * This class manages AI of Creature.<BR>

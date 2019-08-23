@@ -20,10 +20,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class PenaltyMonsterInstance extends MonsterInstance
 {

@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.GroupSpawn;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author littlecrow

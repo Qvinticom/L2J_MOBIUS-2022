@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.skills.conditions;
 
 import org.l2jmobius.gameserver.model.Inventory;
+import org.l2jmobius.gameserver.model.items.Armor;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.skills.Env;
-import org.l2jmobius.gameserver.templates.item.Armor;
-import org.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * @author mkizub

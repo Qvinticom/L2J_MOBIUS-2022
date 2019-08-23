@@ -23,10 +23,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.templates.item.Item;
 
 public class Q662_AGameOfCards extends Quest
 {

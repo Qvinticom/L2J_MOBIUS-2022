@@ -17,12 +17,12 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author eX1steam

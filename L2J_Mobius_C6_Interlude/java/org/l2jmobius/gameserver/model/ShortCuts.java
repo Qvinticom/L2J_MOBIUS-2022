@@ -26,9 +26,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
-import org.l2jmobius.gameserver.templates.item.EtcItemType;
 
 /**
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:33 $

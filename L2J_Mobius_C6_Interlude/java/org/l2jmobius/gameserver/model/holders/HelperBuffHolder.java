@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.templates;
+package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * This class represents a Newbie Helper Buff Author: Ayor
  */
-public class HelperBuff
+public class HelperBuffHolder
 {
 	/** Min level that the player must achieve to obtain this buff from Newbie Helper */
 	private int _lowerLevel;
@@ -46,7 +46,7 @@ public class HelperBuff
 	 * <BR>
 	 * @param set
 	 */
-	public HelperBuff(StatsSet set)
+	public HelperBuffHolder(StatsSet set)
 	{
 		_lowerLevel = set.getInt("lowerLevel");
 		_upperLevel = set.getInt("upperLevel");

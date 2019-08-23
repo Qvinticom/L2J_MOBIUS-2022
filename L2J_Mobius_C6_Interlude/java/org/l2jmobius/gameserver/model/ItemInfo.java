@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.item.Item;
+import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * Get all information from ItemInstance to generate ItemInfo.<BR>

@@ -14,54 +14,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.templates.item;
+package org.l2jmobius.gameserver.model.items.type;
 
 /**
- * @author mkizub <BR>
- *         Description of Weapon Type
+ * Description of Armor Type
  */
-public enum WeaponType
+public enum ArmorType
 {
-	NONE(1, "Shield"), // Shields!!!
-	SWORD(2, "Sword"),
-	BLUNT(3, "Blunt"),
-	DAGGER(4, "Dagger"),
-	BOW(5, "Bow"),
-	POLE(6, "Pole"),
-	ETC(7, "Etc"),
-	FIST(8, "Fist"),
-	DUAL(9, "Dual Sword"),
-	DUALFIST(10, "Dual Fist"),
-	BIGSWORD(11, "Big Sword"), // Two Handed Swords
-	PET(12, "Pet"),
-	ROD(13, "Rod"),
-	BIGBLUNT(14, "Big Blunt"); // Two handed blunt
+	NONE(1, "None"),
+	LIGHT(2, "Light"),
+	HEAVY(3, "Heavy"),
+	MAGIC(4, "Magic"),
+	PET(5, "Pet");
 	
-	private final int _id;
-	private final String _name;
+	final int _id;
+	final String _name;
 	
 	/**
-	 * Constructor of the WeaponType.
-	 * @param id : int designating the ID of the WeaponType
-	 * @param name : String designating the name of the WeaponType
+	 * Constructor of the ArmorType.
+	 * @param id : int designating the ID of the ArmorType
+	 * @param name : String designating the name of the ArmorType
 	 */
-	private WeaponType(int id, String name)
+	ArmorType(int id, String name)
 	{
 		_id = id;
 		_name = name;
 	}
 	
 	/**
-	 * Returns the ID of the item after applying the mask.
-	 * @return int : ID of the item
+	 * Returns the ID of the ArmorType after applying a mask.
+	 * @return int : ID of the ArmorType after mask
 	 */
 	public int mask()
 	{
-		return 1 << _id;
+		return 1 << (_id + 16);
 	}
 	
 	/**
-	 * Returns the name of the WeaponType
+	 * Returns the name of the ArmorType
 	 * @return String
 	 */
 	@Override

@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
 
 public class DoorTable
 {

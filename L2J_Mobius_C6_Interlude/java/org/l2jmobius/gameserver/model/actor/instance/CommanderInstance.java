@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.CommanderKnownList;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @author programmos

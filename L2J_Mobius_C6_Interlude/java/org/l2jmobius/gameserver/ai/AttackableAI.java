@@ -50,9 +50,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PenaltyMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
+import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.templates.item.Weapon;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * This class manages AI of Attackable.<BR>

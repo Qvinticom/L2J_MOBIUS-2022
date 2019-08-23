@@ -37,6 +37,10 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.base.Race;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.Stats;
 import org.l2jmobius.gameserver.skills.conditions.Condition;
@@ -72,10 +76,6 @@ import org.l2jmobius.gameserver.skills.funcs.Lambda;
 import org.l2jmobius.gameserver.skills.funcs.LambdaCalc;
 import org.l2jmobius.gameserver.skills.funcs.LambdaConst;
 import org.l2jmobius.gameserver.skills.funcs.LambdaStats;
-import org.l2jmobius.gameserver.templates.item.ArmorType;
-import org.l2jmobius.gameserver.templates.item.Item;
-import org.l2jmobius.gameserver.templates.item.Weapon;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * @author mkizub

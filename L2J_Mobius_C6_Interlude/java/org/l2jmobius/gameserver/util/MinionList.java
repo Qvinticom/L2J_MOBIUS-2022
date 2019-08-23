@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $

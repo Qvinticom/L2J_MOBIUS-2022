@@ -30,10 +30,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Armor;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
-import org.l2jmobius.gameserver.templates.item.Armor;
-import org.l2jmobius.gameserver.templates.item.Item;
-import org.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * Multisell list manager

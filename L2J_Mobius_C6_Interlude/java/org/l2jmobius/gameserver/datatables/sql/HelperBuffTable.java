@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.HelperBuff;
+import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
 
 /**
  * This class represents the Newbie Helper Buff list. Author: Ayor
@@ -36,7 +36,7 @@ public class HelperBuffTable
 	private static final Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
 	
 	private static HelperBuffTable _instance;
-	public List<HelperBuff> helperBuff;
+	public List<HelperBuffHolder> helperBuff;
 	private final boolean _initialized = true;
 	private int _magicClassLowestLevel = 100;
 	private int _physicClassLowestLevel = 100;
@@ -134,7 +134,7 @@ public class HelperBuffTable
 			}
 			
 			// Add this Helper Buff to the Helper Buff List
-			final HelperBuff template = new HelperBuff(helperBuffDat);
+			final HelperBuffHolder template = new HelperBuffHolder(helperBuffDat);
 			helperBuff.add(template);
 		}
 		
@@ -146,7 +146,7 @@ public class HelperBuffTable
 		return _initialized;
 	}
 	
-	public HelperBuff getHelperBuffTableItem(int id)
+	public HelperBuffHolder getHelperBuffTableItem(int id)
 	{
 		return helperBuff.get(id);
 	}
@@ -154,7 +154,7 @@ public class HelperBuffTable
 	/**
 	 * @return the Helper Buff List
 	 */
-	public List<HelperBuff> getHelperBuffTable()
+	public List<HelperBuffHolder> getHelperBuffTable()
 	{
 		return helperBuff;
 	}

@@ -26,9 +26,9 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.MonsterKnownList;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.util.MinionList;
 
 /**

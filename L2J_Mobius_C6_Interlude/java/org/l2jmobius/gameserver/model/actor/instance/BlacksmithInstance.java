@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author zabbix Lets drink to code!

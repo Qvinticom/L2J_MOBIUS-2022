@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -29,7 +30,6 @@ import org.l2jmobius.gameserver.network.serverpackets.AquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * The Class FolkInstance.

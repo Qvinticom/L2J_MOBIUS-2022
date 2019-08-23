@@ -41,10 +41,10 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
-import org.l2jmobius.gameserver.templates.item.Armor;
-import org.l2jmobius.gameserver.templates.item.EtcItem;
-import org.l2jmobius.gameserver.templates.item.Item;
-import org.l2jmobius.gameserver.templates.item.Weapon;
+import org.l2jmobius.gameserver.model.items.Armor;
+import org.l2jmobius.gameserver.model.items.EtcItem;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
 
 /**
  * @version $Revision: 1.9.2.6.2.9 $ $Date: 2005/04/02 15:57:34 $

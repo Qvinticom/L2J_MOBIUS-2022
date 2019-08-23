@@ -14,9 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.templates.item;
+package org.l2jmobius.gameserver.model.items;
 
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 /**
  * This class is dedicated to the management of EtcItem.

@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.skills.BaseStats;
 import org.l2jmobius.gameserver.skills.Stats;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @version $Revision: 1.8.2.6.2.9 $ $Date: 2005/04/06 16:13:25 $

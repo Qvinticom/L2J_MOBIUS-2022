@@ -20,6 +20,7 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.PlayerFreight;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -27,7 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class WarehouseInstance extends FolkInstance
 {

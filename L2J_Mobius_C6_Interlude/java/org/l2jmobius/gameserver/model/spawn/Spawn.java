@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

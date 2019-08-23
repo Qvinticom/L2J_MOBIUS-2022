@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.templates.item.Henna;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 /**
  * This class represents a Non-Player-Creature in the world. it can be a monster or a friendly creature. it also uses a template to fetch some static values. the templates are hardcoded in the client, so we can rely on them.

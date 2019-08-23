@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestInfo;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @version $Revision: $ $Date: $

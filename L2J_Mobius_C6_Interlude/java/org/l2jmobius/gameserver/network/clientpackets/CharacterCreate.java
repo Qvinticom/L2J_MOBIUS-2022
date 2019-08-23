@@ -36,14 +36,14 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
-import org.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
-import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")

@@ -31,11 +31,11 @@ import org.l2jmobius.gameserver.model.actor.instance.MercManagerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.templates.item.Item;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestWearItem extends GameClientPacket

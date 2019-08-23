@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.engines.DocumentEngine;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 public class SkillTable
 {

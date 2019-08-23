@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * FestivalMonsterInstance This class manages all attackable festival NPCs, spawned during the Festival of Darkness.

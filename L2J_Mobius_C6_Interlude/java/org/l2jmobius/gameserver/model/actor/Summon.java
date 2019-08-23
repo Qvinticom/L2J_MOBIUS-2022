@@ -39,6 +39,8 @@ import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.SummonKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import org.l2jmobius.gameserver.model.actor.status.SummonStatus;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -49,8 +51,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PetStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
-import org.l2jmobius.gameserver.templates.item.Weapon;
 
 public abstract class Summon extends Playable
 {

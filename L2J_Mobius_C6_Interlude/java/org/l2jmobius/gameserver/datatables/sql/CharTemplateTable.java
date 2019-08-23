@@ -26,8 +26,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
 /**
  * @version $Revision: 1.6.2.1.2.10 $ $Date: 2005/03/29 14:00:54 $

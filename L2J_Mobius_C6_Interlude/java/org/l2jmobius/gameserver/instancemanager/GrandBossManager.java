@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * This class handles all Grand Bosses:

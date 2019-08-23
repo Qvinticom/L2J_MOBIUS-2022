@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
-import org.l2jmobius.gameserver.templates.item.Item;
+import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * Service class for manor

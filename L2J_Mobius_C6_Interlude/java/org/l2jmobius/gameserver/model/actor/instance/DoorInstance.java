@@ -37,11 +37,13 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.knownlist.DoorKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.DoorStat;
 import org.l2jmobius.gameserver.model.actor.status.DoorStatus;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -50,8 +52,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
-import org.l2jmobius.gameserver.templates.item.Weapon;
 
 public class DoorInstance extends Creature
 {

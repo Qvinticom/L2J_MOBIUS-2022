@@ -29,7 +29,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.templates.item.Henna;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 public class HennaTreeTable
 {

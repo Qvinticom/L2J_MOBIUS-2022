@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.script.EngineInterface;
 import org.l2jmobius.gameserver.script.EventDroplist;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author Luis Arias

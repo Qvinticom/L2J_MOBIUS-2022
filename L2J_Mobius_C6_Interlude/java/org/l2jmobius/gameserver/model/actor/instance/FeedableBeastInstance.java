@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 // This class is here mostly for convinience and for avoidance of hardcoded IDs.
 // It refers to Beast (mobs) that can be attacked but can also be fed. For example, the Beast Farm's Alpen Buffalo.

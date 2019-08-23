@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.network.serverpackets.HennaItemInfo;
-import org.l2jmobius.gameserver.templates.item.Henna;
 
 public class RequestHennaItemInfo extends GameClientPacket
 {

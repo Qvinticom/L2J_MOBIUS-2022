@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.templates.item;
+package org.l2jmobius.gameserver.model.items;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.funcs.Func;
 import org.l2jmobius.gameserver.skills.funcs.FuncTemplate;

@@ -27,13 +27,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.item.Armor;
-import org.l2jmobius.gameserver.templates.item.ArmorType;
-import org.l2jmobius.gameserver.templates.item.EtcItem;
-import org.l2jmobius.gameserver.templates.item.EtcItemType;
-import org.l2jmobius.gameserver.templates.item.Item;
-import org.l2jmobius.gameserver.templates.item.Weapon;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
+import org.l2jmobius.gameserver.model.items.Armor;
+import org.l2jmobius.gameserver.model.items.EtcItem;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
  * @author mkizub, JIV

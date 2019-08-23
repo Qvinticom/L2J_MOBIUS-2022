@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.knownlist.NpcKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.NpcStat;
 import org.l2jmobius.gameserver.model.actor.status.NpcStatus;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
@@ -62,6 +63,10 @@ import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
+import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -88,11 +93,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.skills.Stats;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
-import org.l2jmobius.gameserver.templates.HelperBuff;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
-import org.l2jmobius.gameserver.templates.item.Item;
-import org.l2jmobius.gameserver.templates.item.Weapon;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * This class represents a Non-Player-Creature in the world. It can be a monster or a friendly creature. It also uses a template to fetch some static values. The templates are hardcoded in the client, so we can rely on them.<BR>
@@ -2353,7 +2353,7 @@ public class NpcInstance extends Creature
 		
 		Skill skill = null;
 		// Go through the Helper Buff list define in sql table helper_buff_list and cast skill
-		for (HelperBuff helperBuffItem : HelperBuffTable.getInstance().getHelperBuffTable())
+		for (HelperBuffHolder helperBuffItem : HelperBuffTable.getInstance().getHelperBuffTable())
 		{
 			if (helperBuffItem.isMagicClassBuff() == player.isMageClass())
 			{

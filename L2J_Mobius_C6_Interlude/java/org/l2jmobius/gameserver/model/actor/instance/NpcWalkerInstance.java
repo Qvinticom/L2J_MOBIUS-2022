@@ -21,8 +21,8 @@ import java.util.Map;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.NpcWalkerAI;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * This class manages some npcs can walk in the city. <br>

@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -55,7 +56,6 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * The Class Siege.

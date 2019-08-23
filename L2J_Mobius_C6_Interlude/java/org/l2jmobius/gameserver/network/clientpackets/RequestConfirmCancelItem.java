@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmCancelItem;
-import org.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * Format(ch) d

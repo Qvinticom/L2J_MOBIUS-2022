@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.templates.item.Item;
+import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author Advi

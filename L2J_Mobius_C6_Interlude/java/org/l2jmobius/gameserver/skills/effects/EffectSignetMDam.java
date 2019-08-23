@@ -32,12 +32,12 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.Formulas;
 import org.l2jmobius.gameserver.skills.handlers.SkillSignetCasttime;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author Shyla

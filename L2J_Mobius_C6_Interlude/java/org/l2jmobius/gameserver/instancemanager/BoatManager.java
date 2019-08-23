@@ -30,7 +30,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
 public class BoatManager
 {

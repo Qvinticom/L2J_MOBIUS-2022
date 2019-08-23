@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 public class DecoInstance extends NpcInstance
 {

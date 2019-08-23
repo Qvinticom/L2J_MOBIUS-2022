@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author yellowperil & Fulminus This class is similar to the SiegeGuardManager, except it handles the loading of the mercenary tickets that are dropped on castle floors by the castle lords. These tickets (aka badges) need to be readded after each server reboot except when the server crashed in the

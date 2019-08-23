@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * While a tamed beast behaves a lot like a pet (ingame) and does have an owner, in all other aspects, it acts like a mob. In addition, it can be fed in order to increase its duration.<br>

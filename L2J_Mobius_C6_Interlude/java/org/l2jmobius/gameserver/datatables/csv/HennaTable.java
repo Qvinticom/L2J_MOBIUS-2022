@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.item.Henna;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 /**
  * @version $Revision$ $Date$

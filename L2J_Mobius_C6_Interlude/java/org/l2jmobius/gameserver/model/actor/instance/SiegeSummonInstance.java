@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class SiegeSummonInstance extends SummonInstance
 {

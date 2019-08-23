@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 
 /**
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/03/27 15:29:39 $

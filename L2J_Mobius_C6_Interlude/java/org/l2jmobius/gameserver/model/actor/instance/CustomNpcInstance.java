@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.Race;
-import org.l2jmobius.gameserver.templates.item.WeaponType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
  * This class manages Npc Polymorph into player instances, they look like regular players. This effect will show up on all clients.

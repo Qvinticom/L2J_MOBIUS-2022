@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
-import org.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
 /**
  * This class represents all Playable characters in the world.<BR>

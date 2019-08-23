@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.engines;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.item.Item;
+import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author luisantonioa
