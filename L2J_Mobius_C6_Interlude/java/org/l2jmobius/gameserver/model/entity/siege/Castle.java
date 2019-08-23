@@ -47,7 +47,6 @@ import org.l2jmobius.gameserver.model.zone.type.CastleTeleportZone;
 import org.l2jmobius.gameserver.model.zone.type.CastleZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
-import org.l2jmobius.gameserver.updaters.CastleUpdater;
 
 public class Castle
 {

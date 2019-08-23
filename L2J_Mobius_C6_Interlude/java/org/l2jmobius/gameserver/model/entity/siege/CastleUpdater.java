@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.updaters;
+package org.l2jmobius.gameserver.model.entity.siege;
 
 import java.util.logging.Logger;
 
@@ -23,7 +23,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.ItemContainer;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
  * Thorgrim - 2005 Class managing periodical events with castle
