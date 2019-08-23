@@ -14,58 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.datatables;
+package org.l2jmobius.gameserver.model;
 
 /**
- * @author FBIagent<br>
+ * @author FBIagent
  */
 public class AccessLevel
 {
-	/**
-	 * The logger<br>
-	 */
-	// private final static Log LOGGER = LogFactory.getLog(AccessLevel.class);
-	/**
-	 * The access level<br>
-	 */
 	private int _accessLevel = 0;
-	/**
-	 * The access level name<br>
-	 */
 	private String _name = null;
-	/**
-	 * The name color for the access level<br>
-	 */
 	private int _nameColor = 0;
-	/**
-	 * The title color for the access level<br>
-	 */
 	private int _titleColor = 0;
-	/**
-	 * Flag to determine if the access level has gm access<br>
-	 */
 	private boolean _isGm = false;
-	/** Flag for peace zone attack */
 	private boolean _allowPeaceAttack = false;
-	/** Flag for fixed res */
 	private boolean _allowFixedRes = false;
-	/** Flag for transactions */
 	private boolean _allowTransaction = false;
-	/** Flag for AltG commands */
 	private boolean _allowAltG = false;
-	/** Flag to give damage */
 	private boolean _giveDamage = false;
-	/** Flag to take aggro */
 	private boolean _takeAggro = false;
-	/** Flag to gain exp in party */
 	private boolean _gainExp = false;
-	
-	// L2EMU_ ADD - Rayan
 	private boolean _useNameColor = true;
 	private boolean _useTitleColor = false;
 	private boolean _canDisableGmStatus = false;
 	
-	// L2EMU_ ADD
 	/**
 	 * Initializes members<br>
 	 * <br>
@@ -99,12 +70,9 @@ public class AccessLevel
 		_giveDamage = giveDamage;
 		_takeAggro = takeAggro;
 		_gainExp = gainExp;
-		
-		// L2EMU_ ADD - Rayan
 		_useNameColor = useNameColor;
 		_useTitleColor = useTitleColor;
 		_canDisableGmStatus = canDisableGmStatus;
-		// L2EMU_ ADD
 	}
 	
 	/**
@@ -225,7 +193,6 @@ public class AccessLevel
 		return _gainExp;
 	}
 	
-	// L2EMU_ADD - Rayan
 	public boolean useNameColor()
 	{
 		return _useNameColor;
