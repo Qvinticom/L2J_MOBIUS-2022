@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -40,7 +41,6 @@ import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -122,8 +122,8 @@ public class Valakas extends Quest
 			final int loc_z = -1595;
 			final int heading = 0;
 			
-			final int hp = info.getInteger("currentHP");
-			final int mp = info.getInteger("currentMP");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
 			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			final NpcInstance _valakas = valakas;

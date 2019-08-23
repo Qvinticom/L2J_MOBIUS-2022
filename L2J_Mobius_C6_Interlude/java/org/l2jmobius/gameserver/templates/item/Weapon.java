@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -35,7 +36,6 @@ import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.conditions.ConditionGameChance;
 import org.l2jmobius.gameserver.skills.funcs.Func;
 import org.l2jmobius.gameserver.skills.funcs.FuncTemplate;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * This class is dedicated to the management of weapons.
@@ -82,37 +82,37 @@ public class Weapon extends Item
 	public Weapon(WeaponType type, StatsSet set)
 	{
 		super(type, set);
-		_soulShotCount = set.getInteger("soulshots");
-		_spiritShotCount = set.getInteger("spiritshots");
-		_pDam = set.getInteger("p_dam");
-		_rndDam = set.getInteger("rnd_dam");
-		_critical = set.getInteger("critical");
+		_soulShotCount = set.getInt("soulshots");
+		_spiritShotCount = set.getInt("spiritshots");
+		_pDam = set.getInt("p_dam");
+		_rndDam = set.getInt("rnd_dam");
+		_critical = set.getInt("critical");
 		_hitModifier = set.getDouble("hit_modify");
-		_avoidModifier = set.getInteger("avoid_modify");
-		_shieldDef = set.getInteger("shield_def");
+		_avoidModifier = set.getInt("avoid_modify");
+		_shieldDef = set.getInt("shield_def");
 		_shieldDefRate = set.getDouble("shield_def_rate");
-		_atkSpeed = set.getInteger("atk_speed");
-		_atkReuse = set.getInteger("atk_reuse", type == WeaponType.BOW ? 1500 : 0);
-		_mpConsume = set.getInteger("mp_consume");
-		_mDam = set.getInteger("m_dam");
+		_atkSpeed = set.getInt("atk_speed");
+		_atkReuse = set.getInt("atk_reuse", type == WeaponType.BOW ? 1500 : 0);
+		_mpConsume = set.getInt("mp_consume");
+		_mDam = set.getInt("m_dam");
 		
-		int sId = set.getInteger("item_skill_id");
-		int sLv = set.getInteger("item_skill_lvl");
+		int sId = set.getInt("item_skill_id");
+		int sLv = set.getInt("item_skill_lvl");
 		if ((sId > 0) && (sLv > 0))
 		{
 			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);
 		}
 		
-		sId = set.getInteger("enchant4_skill_id");
-		sLv = set.getInteger("enchant4_skill_lvl");
+		sId = set.getInt("enchant4_skill_id");
+		sLv = set.getInt("enchant4_skill_lvl");
 		if ((sId > 0) && (sLv > 0))
 		{
 			_enchant4Skill = SkillTable.getInstance().getInfo(sId, sLv);
 		}
 		
-		sId = set.getInteger("onCast_skill_id");
-		sLv = set.getInteger("onCast_skill_lvl");
-		int sCh = set.getInteger("onCast_skill_chance");
+		sId = set.getInt("onCast_skill_id");
+		sLv = set.getInt("onCast_skill_lvl");
+		int sCh = set.getInt("onCast_skill_chance");
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);
@@ -120,9 +120,9 @@ public class Weapon extends Item
 			attachOnCast(skill);
 		}
 		
-		sId = set.getInteger("onCrit_skill_id");
-		sLv = set.getInteger("onCrit_skill_lvl");
-		sCh = set.getInteger("onCrit_skill_chance");
+		sId = set.getInt("onCrit_skill_id");
+		sLv = set.getInt("onCrit_skill_lvl");
+		sCh = set.getInt("onCrit_skill_chance");
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);

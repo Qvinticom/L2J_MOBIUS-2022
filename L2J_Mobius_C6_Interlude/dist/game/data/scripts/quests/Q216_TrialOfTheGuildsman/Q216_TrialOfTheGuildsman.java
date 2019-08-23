@@ -110,7 +110,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 				st.takeItems(57, 2000);
 				st.giveItems(VALKON_RECOMMENDATION, 1);
 				
-				if (!player.getVariables().getBool("secondClassChange35", false))
+				if (!player.getVariables().getBoolean("secondClassChange35", false))
 				{
 					htmltext = "30103-06d.htm";
 					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));

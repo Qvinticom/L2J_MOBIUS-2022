@@ -50,7 +50,6 @@ import org.l2jmobius.gameserver.cache.WarehouseCacheManager;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.datatables.AccessLevel;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
@@ -58,12 +57,11 @@ import org.l2jmobius.gameserver.datatables.csv.FishTable;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
-import org.l2jmobius.gameserver.datatables.sql.AccessLevels;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -8614,11 +8612,11 @@ public class PlayerInstance extends Playable
 		if (level == Config.MASTERACCESS_LEVEL)
 		{
 			LOGGER.warning("Access level " + level + " set for character " + getName() + "! Just a warning ;)");
-			_accessLevel = AccessLevels.getInstance()._masterAccessLevel;
+			_accessLevel = AdminData.getInstance()._masterAccessLevel;
 		}
 		else if (level == Config.USERACCESS_LEVEL)
 		{
-			_accessLevel = AccessLevels.getInstance()._userAccessLevel;
+			_accessLevel = AdminData.getInstance()._userAccessLevel;
 		}
 		else
 		{
@@ -8626,19 +8624,19 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.warning("Access level " + level + " set for character " + getName() + "! Just a warning ;)");
 			}
-			AccessLevel accessLevel = AccessLevels.getInstance().getAccessLevel(level);
+			AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 			
 			if (accessLevel == null)
 			{
 				if (level < 0)
 				{
-					AccessLevels.getInstance().addBanAccessLevel(level);
-					_accessLevel = AccessLevels.getInstance().getAccessLevel(level);
+					AdminData.getInstance().addBanAccessLevel(level);
+					_accessLevel = AdminData.getInstance().getAccessLevel(level);
 				}
 				else
 				{
 					LOGGER.warning("Tried to set unregistered access level " + level + " to character " + getName() + ". Setting access level without privileges!");
-					_accessLevel = AccessLevels.getInstance()._userAccessLevel;
+					_accessLevel = AdminData.getInstance()._userAccessLevel;
 				}
 			}
 			else
@@ -8647,7 +8645,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if (_accessLevel != AccessLevels.getInstance()._userAccessLevel)
+		if (_accessLevel != AdminData.getInstance()._userAccessLevel)
 		{
 			if (getAccessLevel().useNameColor())
 			{
@@ -8679,7 +8677,7 @@ public class PlayerInstance extends Playable
 	{
 		if (Config.EVERYBODY_HAS_ADMIN_RIGHTS)
 		{
-			return AccessLevels.getInstance()._masterAccessLevel;
+			return AdminData.getInstance()._masterAccessLevel;
 		}
 		else if (_accessLevel == null)
 		{
@@ -15050,7 +15048,7 @@ public class PlayerInstance extends Playable
 		{
 			try
 			{
-				GmListTable.getInstance().deleteGm(this);
+				AdminData.getInstance().deleteGm(this);
 			}
 			catch (Throwable t)
 			{
@@ -17920,11 +17918,11 @@ public class PlayerInstance extends Playable
 		setTarget(null);
 		sendPacket(new ExOlympiadMode(0, this));
 		teleToLocation(_obsX, _obsY, _obsZ, true);
-		if (!AdminCommandAccessRights.getInstance().hasAccess("admin_invis", getAccessLevel()))
+		if (!AdminData.getInstance().hasAccess("admin_invis", getAccessLevel()))
 		{
 			getAppearance().setVisible();
 		}
-		if (!AdminCommandAccessRights.getInstance().hasAccess("admin_invul", getAccessLevel()))
+		if (!AdminData.getInstance().hasAccess("admin_invul", getAccessLevel()))
 		{
 			setIsInvul(false);
 		}

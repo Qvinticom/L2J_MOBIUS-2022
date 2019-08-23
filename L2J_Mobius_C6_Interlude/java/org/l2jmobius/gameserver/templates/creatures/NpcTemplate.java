@@ -26,10 +26,10 @@ import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.skills.Stats;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * This cl contains all generic data of a Spawn object.<BR>
@@ -134,21 +134,21 @@ public class NpcTemplate extends CreatureTemplate
 	public NpcTemplate(StatsSet set, boolean custom)
 	{
 		super(set);
-		npcId = set.getInteger("npcId");
-		idTemplate = set.getInteger("idTemplate");
+		npcId = set.getInt("npcId");
+		idTemplate = set.getInt("idTemplate");
 		type = set.getString("type");
 		name = set.getString("name");
-		serverSideName = set.getBool("serverSideName");
+		serverSideName = set.getBoolean("serverSideName");
 		title = set.getString("title");
-		serverSideTitle = set.getBool("serverSideTitle");
+		serverSideTitle = set.getBoolean("serverSideTitle");
 		sex = set.getString("sex");
 		level = set.getByte("level");
-		rewardExp = set.getInteger("rewardExp");
-		rewardSp = set.getInteger("rewardSp");
-		aggroRange = set.getInteger("aggroRange");
-		rhand = set.getInteger("rhand");
-		lhand = set.getInteger("lhand");
-		armor = set.getInteger("armor");
+		rewardExp = set.getInt("rewardExp");
+		rewardSp = set.getInt("rewardSp");
+		aggroRange = set.getInt("aggroRange");
+		rhand = set.getInt("rhand");
+		lhand = set.getInt("lhand");
+		armor = set.getInt("armor");
 		final String f = set.getString("factionId", null);
 		if (f == null)
 		{
@@ -158,8 +158,8 @@ public class NpcTemplate extends CreatureTemplate
 		{
 			factionId = f.intern();
 		}
-		factionRange = set.getInteger("factionRange", 0);
-		absorbLevel = set.getInteger("absorb_level", 0);
+		factionRange = set.getInt("factionRange", 0);
+		absorbLevel = set.getInt("absorb_level", 0);
 		absorbType = AbsorbCrystalType.valueOf(set.getString("absorb_type"));
 		_npcStatsSet = set;
 		_custom = custom;

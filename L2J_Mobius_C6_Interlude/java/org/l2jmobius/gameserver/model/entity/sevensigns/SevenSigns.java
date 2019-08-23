@@ -31,6 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
@@ -38,7 +39,6 @@ import org.l2jmobius.gameserver.model.spawn.AutoSpawn.AutoSpawnInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SignsSky;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * Seven Signs Engine TODO: - Implementation of the Seal of Strife for sieges.
@@ -796,9 +796,9 @@ public class SevenSigns
 		
 		StatsSet currPlayer = getPlayerData(player);
 		
-		stoneCount += currPlayer.getInteger("red_stones");
-		stoneCount += currPlayer.getInteger("green_stones");
-		stoneCount += currPlayer.getInteger("blue_stones");
+		stoneCount += currPlayer.getInt("red_stones");
+		stoneCount += currPlayer.getInt("green_stones");
+		stoneCount += currPlayer.getInt("blue_stones");
 		
 		return stoneCount;
 	}
@@ -817,7 +817,7 @@ public class SevenSigns
 		
 		final StatsSet currPlayer = getPlayerData(player);
 		
-		return currPlayer.getInteger("contribution_score");
+		return currPlayer.getInt("contribution_score");
 	}
 	
 	/**
@@ -832,7 +832,7 @@ public class SevenSigns
 			return 0;
 		}
 		
-		return _signsPlayerData.get(player.getObjectId()).getInteger("ancient_adena_amount");
+		return _signsPlayerData.get(player.getObjectId()).getInt("ancient_adena_amount");
 	}
 	
 	/**
@@ -847,7 +847,7 @@ public class SevenSigns
 			return SEAL_NULL;
 		}
 		
-		return getPlayerData(player).getInteger("seal");
+		return getPlayerData(player).getInt("seal");
 	}
 	
 	/**
@@ -968,7 +968,7 @@ public class SevenSigns
 			{
 				if (player != null)
 				{
-					if (sevenDat.getInteger("char_obj_id") != player.getObjectId())
+					if (sevenDat.getInt("char_obj_id") != player.getObjectId())
 					{
 						continue;
 					}
@@ -976,13 +976,13 @@ public class SevenSigns
 				
 				statement = con.prepareStatement("UPDATE seven_signs SET cabal=?, seal=?, red_stones=?, green_stones=?, blue_stones=?, ancient_adena_amount=?, contribution_score=? WHERE char_obj_id=?");
 				statement.setString(1, sevenDat.getString("cabal"));
-				statement.setInt(2, sevenDat.getInteger("seal"));
-				statement.setInt(3, sevenDat.getInteger("red_stones"));
-				statement.setInt(4, sevenDat.getInteger("green_stones"));
-				statement.setInt(5, sevenDat.getInteger("blue_stones"));
+				statement.setInt(2, sevenDat.getInt("seal"));
+				statement.setInt(3, sevenDat.getInt("red_stones"));
+				statement.setInt(4, sevenDat.getInt("green_stones"));
+				statement.setInt(5, sevenDat.getInt("blue_stones"));
 				statement.setDouble(6, sevenDat.getDouble("ancient_adena_amount"));
 				statement.setDouble(7, sevenDat.getDouble("contribution_score"));
-				statement.setInt(8, sevenDat.getInteger("char_obj_id"));
+				statement.setInt(8, sevenDat.getInt("char_obj_id"));
 				statement.execute();
 				
 				statement.close();
@@ -1044,7 +1044,7 @@ public class SevenSigns
 		// Reset each player's contribution data as well as seal and cabal.
 		for (StatsSet sevenDat : _signsPlayerData.values())
 		{
-			final int charObjId = sevenDat.getInteger("char_obj_id");
+			final int charObjId = sevenDat.getInt("char_obj_id");
 			
 			// Reset the player's cabal and seal information
 			sevenDat.set("cabal", "");
@@ -1142,7 +1142,7 @@ public class SevenSigns
 	public int getAncientAdenaReward(PlayerInstance player, boolean removeReward)
 	{
 		StatsSet currPlayer = getPlayerData(player);
-		final int rewardAmount = currPlayer.getInteger("ancient_adena_amount");
+		final int rewardAmount = currPlayer.getInt("ancient_adena_amount");
 		
 		currPlayer.set("red_stones", 0);
 		currPlayer.set("green_stones", 0);
@@ -1171,17 +1171,17 @@ public class SevenSigns
 		StatsSet currPlayer = getPlayerData(player);
 		
 		final int contribScore = calcContributionScore(blueCount, greenCount, redCount);
-		final int totalAncientAdena = currPlayer.getInteger("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
-		final int totalContribScore = currPlayer.getInteger("contribution_score") + contribScore;
+		final int totalAncientAdena = currPlayer.getInt("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
+		final int totalContribScore = currPlayer.getInt("contribution_score") + contribScore;
 		
 		if (totalContribScore > Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 		{
 			return -1;
 		}
 		
-		currPlayer.set("red_stones", currPlayer.getInteger("red_stones") + redCount);
-		currPlayer.set("green_stones", currPlayer.getInteger("green_stones") + greenCount);
-		currPlayer.set("blue_stones", currPlayer.getInteger("blue_stones") + blueCount);
+		currPlayer.set("red_stones", currPlayer.getInt("red_stones") + redCount);
+		currPlayer.set("green_stones", currPlayer.getInt("green_stones") + greenCount);
+		currPlayer.set("blue_stones", currPlayer.getInt("blue_stones") + blueCount);
 		currPlayer.set("ancient_adena_amount", totalAncientAdena);
 		currPlayer.set("contribution_score", totalContribScore);
 		_signsPlayerData.put(player.getObjectId(), currPlayer);

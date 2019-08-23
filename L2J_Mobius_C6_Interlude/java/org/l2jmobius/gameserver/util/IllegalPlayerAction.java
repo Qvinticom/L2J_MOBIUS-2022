@@ -21,7 +21,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -81,7 +81,7 @@ public class IllegalPlayerAction implements Runnable
 		});
 		_logAudit.log(record);
 		
-		GmListTable.broadcastMessageToGMs(_message);
+		AdminData.broadcastMessageToGMs(_message);
 		
 		switch (_punishment)
 		{

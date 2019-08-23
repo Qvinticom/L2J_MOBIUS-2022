@@ -135,7 +135,7 @@ public class Q214_TrialOfTheScholar extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(MIRIEN_SIGIL_1, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange35", false))
+			if (!player.getVariables().getBoolean("secondClassChange35", false))
 			{
 				htmltext = "30461-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));

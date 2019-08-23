@@ -31,15 +31,15 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.skills.Stats;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -150,7 +150,7 @@ public class RaidBossSpawnManager
 				
 				_storedInfo.put(bossId, info);
 				
-				GmListTable.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName() + ".");
+				AdminData.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName() + ".");
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + raidboss.getName() + " spawned in world.");
@@ -509,7 +509,7 @@ public class RaidBossSpawnManager
 		
 		_storedInfo.put(raidboss.getNpcId(), info);
 		
-		GmListTable.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName());
+		AdminData.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName());
 		
 		_bosses.put(raidboss.getNpcId(), raidboss);
 	}

@@ -16,9 +16,12 @@
  */
 package org.l2jmobius.gameserver.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -26,23 +29,22 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author Nemesiss
  */
 public class SkillCreateItem extends Skill
 {
-	private final int[] _createItemId;
+	private final List<Integer> _createItemId;
 	private final int _createItemCount;
 	private final int _randomCount;
 	
 	public SkillCreateItem(StatsSet set)
 	{
 		super(set);
-		_createItemId = set.getIntegerArray("create_item_id");
-		_createItemCount = set.getInteger("create_item_count", 0);
-		_randomCount = set.getInteger("random_count", 1);
+		_createItemId = set.getList("create_item_id", Integer.class);
+		_createItemCount = set.getInt("create_item_count", 0);
+		_randomCount = set.getInt("random_count", 1);
 	}
 	
 	@Override
@@ -61,8 +63,8 @@ public class SkillCreateItem extends Skill
 		if (creature instanceof PlayerInstance)
 		{
 			final int count = _createItemCount * (Rnd.get(_randomCount) + 1);
-			final int rndid = Rnd.get(_createItemId.length);
-			giveItems(player, _createItemId[rndid], count);
+			final int rndId = Rnd.get(_createItemId.size());
+			giveItems(player, _createItemId.get(rndId), count);
 		}
 	}
 	

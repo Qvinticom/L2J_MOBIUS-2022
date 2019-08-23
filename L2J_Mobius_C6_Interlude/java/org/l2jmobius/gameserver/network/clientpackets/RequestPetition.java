@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,7 +48,7 @@ public class RequestPetition extends GameClientPacket
 			return;
 		}
 		
-		if (!GmListTable.getInstance().isGmOnline(false))
+		if (!AdminData.getInstance().isGmOnline(false))
 		{
 			player.sendPacket(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW);
 			return;

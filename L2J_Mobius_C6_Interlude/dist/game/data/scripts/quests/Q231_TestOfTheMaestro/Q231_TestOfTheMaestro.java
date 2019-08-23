@@ -96,7 +96,7 @@ public class Q231_TestOfTheMaestro extends Quest
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30531-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

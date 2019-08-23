@@ -108,7 +108,7 @@ public class Q218_TestimonyOfLife extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(CARDIEN_LETTER, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange37", false))
+			if (!player.getVariables().getBoolean("secondClassChange37", false))
 			{
 				htmltext = "30460-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));

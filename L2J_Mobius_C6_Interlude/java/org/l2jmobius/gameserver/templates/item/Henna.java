@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.templates.item;
 
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 
 public class Henna
 {
@@ -34,17 +34,17 @@ public class Henna
 	
 	public Henna(StatsSet set)
 	{
-		symbolId = set.getInteger("symbol_id");
+		symbolId = set.getInt("symbol_id");
 		symbolName = ""; // set.getString("symbol_name");
-		dye = set.getInteger("dye");
-		price = set.getInteger("price");
-		amount = set.getInteger("amount");
-		statINT = set.getInteger("stat_INT");
-		statSTR = set.getInteger("stat_STR");
-		statCON = set.getInteger("stat_CON");
-		statMEM = set.getInteger("stat_MEM");
-		statDEX = set.getInteger("stat_DEX");
-		statWIT = set.getInteger("stat_WIT");
+		dye = set.getInt("dye");
+		price = set.getInt("price");
+		amount = set.getInt("amount");
+		statINT = set.getInt("stat_INT");
+		statSTR = set.getInt("stat_STR");
+		statCON = set.getInt("stat_CON");
+		statMEM = set.getInt("stat_MEM");
+		statDEX = set.getInt("stat_DEX");
+		statWIT = set.getInt("stat_WIT");
 	}
 	
 	public int getSymbolId()

@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -48,7 +49,6 @@ import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -139,12 +139,12 @@ public class Baium extends Quest
 		}
 		else if (status == AWAKE)
 		{
-			final int loc_x = info.getInteger("loc_x");
-			final int loc_y = info.getInteger("loc_y");
-			final int loc_z = info.getInteger("loc_z");
-			final int heading = info.getInteger("heading");
-			final int hp = info.getInteger("currentHP");
-			final int mp = info.getInteger("currentMP");
+			final int loc_x = info.getInt("loc_x");
+			final int loc_y = info.getInt("loc_y");
+			final int loc_z = info.getInt("loc_z");
+			final int heading = info.getInt("heading");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
 			final GrandBossInstance baium = (GrandBossInstance) addSpawn(LIVE_BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{

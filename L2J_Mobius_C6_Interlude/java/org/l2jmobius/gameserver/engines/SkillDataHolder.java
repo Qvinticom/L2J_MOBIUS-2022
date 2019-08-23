@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * @author Mobius

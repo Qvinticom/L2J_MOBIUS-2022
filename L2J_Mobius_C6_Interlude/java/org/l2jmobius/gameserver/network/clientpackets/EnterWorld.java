@@ -31,10 +31,9 @@ import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.crypt.nProtect.RestrictionType;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.custom.CustomWorldHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -588,7 +587,7 @@ public class EnterWorld extends GameClientPacket
 		{
 			gmStartupProcess:
 			{
-				if (Config.GM_STARTUP_BUILDER_HIDE && AdminCommandAccessRights.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
+				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
 					player.setInRefusalMode(true);
 					player.setIsInvul(true);
@@ -602,28 +601,28 @@ public class EnterWorld extends GameClientPacket
 					break gmStartupProcess;
 				}
 				
-				if (Config.GM_STARTUP_INVULNERABLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
+				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
 				{
 					player.setIsInvul(true);
 				}
 				
-				if (Config.GM_STARTUP_INVISIBLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
+				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
 				{
 					player.getAppearance().setInvisible();
 				}
 				
-				if (Config.GM_STARTUP_SILENCE && AdminCommandAccessRights.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
+				if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", player.getAccessLevel()))
 				{
 					player.setInRefusalMode(true);
 				}
 				
-				if (Config.GM_STARTUP_AUTO_LIST && AdminCommandAccessRights.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
+				if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
 				{
-					GmListTable.getInstance().addGm(player, false);
+					AdminData.getInstance().addGm(player, false);
 				}
 				else
 				{
-					GmListTable.getInstance().addGm(player, true);
+					AdminData.getInstance().addGm(player, true);
 				}
 			}
 			

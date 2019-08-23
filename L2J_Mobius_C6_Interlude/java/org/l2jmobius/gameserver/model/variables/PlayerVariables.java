@@ -119,6 +119,29 @@ public class PlayerVariables extends AbstractVariables
 		return true;
 	}
 	
+	@Override
+	public boolean deleteMe()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			// Clear previous entries.
+			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
+			{
+				st.setInt(1, _objectId);
+				st.execute();
+			}
+			
+			// Clear all entries
+			getSet().clear();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
+			return false;
+		}
+		return true;
+	}
+	
 	public PlayerInstance getPlayer()
 	{
 		return World.getInstance().getPlayer(_objectId);

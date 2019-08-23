@@ -136,7 +136,7 @@ public class Q220_TestimonyOfGlory extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(VOKIAN_ORDER_1, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange37", false))
+			if (!player.getVariables().getBoolean("secondClassChange37", false))
 			{
 				htmltext = "30514-05a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));

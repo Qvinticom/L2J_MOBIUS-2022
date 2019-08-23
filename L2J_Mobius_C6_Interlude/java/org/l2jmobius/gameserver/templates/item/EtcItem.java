@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.templates.item;
 
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * This class is dedicated to the management of EtcItem.

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author kombat
@@ -95,7 +94,7 @@ public class ChanceCondition
 		try
 		{
 			final TriggerType trigger = set.getEnum("chanceType", TriggerType.class);
-			final int chance = set.getInteger("activationChance", 0);
+			final int chance = set.getInt("activationChance", 0);
 			if ((trigger != null) && (chance > 0))
 			{
 				return new ChanceCondition(trigger, chance);

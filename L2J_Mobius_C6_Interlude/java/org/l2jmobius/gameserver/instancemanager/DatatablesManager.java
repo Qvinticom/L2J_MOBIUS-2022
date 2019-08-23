@@ -16,11 +16,9 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
-import org.l2jmobius.gameserver.datatables.sql.AccessLevels;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 
@@ -28,9 +26,7 @@ public class DatatablesManager
 {
 	public static void reloadAll()
 	{
-		AccessLevels.reload();
-		AdminCommandAccessRights.reload();
-		GmListTable.reload();
+		AdminData.getInstance().load();
 		AugmentationData.reload();
 		ClanTable.reload();
 		HelperBuffTable.reload();

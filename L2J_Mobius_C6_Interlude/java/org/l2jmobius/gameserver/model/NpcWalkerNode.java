@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.templates.StatsSet;
-
 /**
  * @author Rayan RPG
  * @since 927
@@ -139,12 +137,12 @@ public class NpcWalkerNode
 	 */
 	public NpcWalkerNode(StatsSet set)
 	{
-		_npcId = set.getInteger("npc_id");
+		_npcId = set.getInt("npc_id");
 		_movePoint = set.getString("move_point");
 		_chatText = set.getString("chatText");
-		_moveX = set.getInteger("move_x");
-		_moveX = set.getInteger("move_y");
-		_moveX = set.getInteger("move_z");
-		_delay = set.getInteger("delay");
+		_moveX = set.getInt("move_x");
+		_moveX = set.getInt("move_y");
+		_moveX = set.getInt("move_z");
+		_delay = set.getInt("delay");
 	}
 }

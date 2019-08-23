@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.datatables.AccessLevel;
-import org.l2jmobius.gameserver.datatables.sql.AccessLevels;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.SiegeClan;
@@ -40,7 +40,7 @@ public class Die extends GameServerPacket
 	private final boolean _fake;
 	private boolean _sweepable;
 	private boolean _canTeleport;
-	private AccessLevel _access = AccessLevels.getInstance()._userAccessLevel;
+	private AccessLevel _access = AdminData.getInstance()._userAccessLevel;
 	private org.l2jmobius.gameserver.model.clan.Clan _clan;
 	Creature _creature;
 	

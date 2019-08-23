@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -38,7 +39,6 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.item.Item;
 
 /**
@@ -320,11 +320,11 @@ public class Hero
 		final Map<Integer, StatsSet> heroes = new HashMap<>();
 		for (StatsSet hero : newHeroes)
 		{
-			final int charId = hero.getInteger(Olympiad.CHAR_ID);
+			final int charId = hero.getInt(Olympiad.CHAR_ID);
 			if ((_completeHeroes != null) && _completeHeroes.containsKey(charId))
 			{
 				final StatsSet oldHero = _completeHeroes.get(charId);
-				final int count = oldHero.getInteger(COUNT);
+				final int count = oldHero.getInt(COUNT);
 				oldHero.set(COUNT, count + 1);
 				oldHero.set(PLAYED, 1);
 				heroes.put(charId, oldHero);
@@ -333,7 +333,7 @@ public class Hero
 			{
 				final StatsSet newHero = new StatsSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
-				newHero.set(Olympiad.CLASS_ID, hero.getInteger(Olympiad.CLASS_ID));
+				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
 				newHero.set(COUNT, 1);
 				newHero.set(PLAYED, 1);
 				heroes.put(charId, newHero);
@@ -424,9 +424,9 @@ public class Hero
 						statement = con.prepareStatement(INSERT_HERO);
 						statement.setInt(1, heroId);
 						statement.setString(2, hero.getString(Olympiad.CHAR_NAME));
-						statement.setInt(3, hero.getInteger(Olympiad.CLASS_ID));
-						statement.setInt(4, hero.getInteger(COUNT));
-						statement.setInt(5, hero.getInteger(PLAYED));
+						statement.setInt(3, hero.getInt(Olympiad.CLASS_ID));
+						statement.setInt(4, hero.getInt(COUNT));
+						statement.setInt(5, hero.getInt(PLAYED));
 						statement.execute();
 						statement2 = con.prepareStatement(GET_CLAN_ALLY);
 						statement2.setInt(1, heroId);
@@ -463,8 +463,8 @@ public class Hero
 					else
 					{
 						statement = con.prepareStatement(UPDATE_HERO);
-						statement.setInt(1, hero.getInteger(COUNT));
-						statement.setInt(2, hero.getInteger(PLAYED));
+						statement.setInt(1, hero.getInt(COUNT));
+						statement.setInt(2, hero.getInt(PLAYED));
 						statement.setInt(3, heroId);
 						statement.execute();
 					}

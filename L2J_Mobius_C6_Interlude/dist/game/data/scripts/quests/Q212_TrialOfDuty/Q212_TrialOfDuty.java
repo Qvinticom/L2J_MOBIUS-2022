@@ -85,7 +85,7 @@ public class Q212_TrialOfDuty extends Quest
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
 			
-			if (!player.getVariables().getBool("secondClassChange35", false))
+			if (!player.getVariables().getBoolean("secondClassChange35", false))
 			{
 				htmltext = "30109-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));

@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -46,7 +47,6 @@ import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -259,12 +259,12 @@ public class Antharas extends Quest
 			}
 			else if (status == FIGHTING)
 			{
-				final int loc_x = info.getInteger("loc_x");
-				final int loc_y = info.getInteger("loc_y");
-				final int loc_z = info.getInteger("loc_z");
-				final int heading = info.getInteger("heading");
-				final int hp = info.getInteger("currentHP");
-				final int mp = info.getInteger("currentMP");
+				final int loc_x = info.getInt("loc_x");
+				final int loc_y = info.getInt("loc_y");
+				final int loc_z = info.getInt("loc_z");
+				final int heading = info.getInt("heading");
+				final int hp = info.getInt("currentHP");
+				final int mp = info.getInt("currentMP");
 				_antharas = (GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
@@ -312,12 +312,12 @@ public class Antharas extends Quest
 			if ((antharasId != 0) && (status == FIGHTING))
 			{
 				final StatsSet info = GrandBossManager.getInstance().getStatsSet(antharasId);
-				final int loc_x = info.getInteger("loc_x");
-				final int loc_y = info.getInteger("loc_y");
-				final int loc_z = info.getInteger("loc_z");
-				final int heading = info.getInteger("heading");
-				final int hp = info.getInteger("currentHP");
-				final int mp = info.getInteger("currentMP");
+				final int loc_x = info.getInt("loc_x");
+				final int loc_y = info.getInt("loc_y");
+				final int loc_z = info.getInt("loc_z");
+				final int heading = info.getInt("heading");
+				final int hp = info.getInt("currentHP");
+				final int mp = info.getInt("currentMP");
 				_antharas = (GrandBossInstance) addSpawn(antharasId, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);

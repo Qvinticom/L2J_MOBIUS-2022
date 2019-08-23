@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -32,7 +33,6 @@ import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class SkillSummon extends Skill
@@ -56,21 +56,21 @@ public class SkillSummon extends Skill
 	{
 		super(set);
 		
-		_npcId = set.getInteger("npcId", 0); // default for undescribed skills
+		_npcId = set.getInt("npcId", 0); // default for undescribed skills
 		_expPenalty = set.getFloat("expPenalty", 0.f);
-		_isCubic = set.getBool("isCubic", false);
+		_isCubic = set.getBoolean("isCubic", false);
 		
-		_activationtime = set.getInteger("activationtime", 8);
-		_activationchance = set.getInteger("activationchance", 30);
+		_activationtime = set.getInt("activationtime", 8);
+		_activationchance = set.getInt("activationchance", 30);
 		
-		_summonTotalLifeTime = set.getInteger("summonTotalLifeTime", 1200000); // 20 minutes default
-		_summonTimeLostIdle = set.getInteger("summonTimeLostIdle", 0);
-		_summonTimeLostActive = set.getInteger("summonTimeLostActive", 0);
+		_summonTotalLifeTime = set.getInt("summonTotalLifeTime", 1200000); // 20 minutes default
+		_summonTimeLostIdle = set.getInt("summonTimeLostIdle", 0);
+		_summonTimeLostActive = set.getInt("summonTimeLostActive", 0);
 		
-		_itemConsumeOT = set.getInteger("itemConsumeCountOT", 0);
-		_itemConsumeIdOT = set.getInteger("itemConsumeIdOT", 0);
-		_itemConsumeTime = set.getInteger("itemConsumeTime", 0);
-		_itemConsumeSteps = set.getInteger("itemConsumeSteps", 0);
+		_itemConsumeOT = set.getInt("itemConsumeCountOT", 0);
+		_itemConsumeIdOT = set.getInt("itemConsumeIdOT", 0);
+		_itemConsumeTime = set.getInt("itemConsumeTime", 0);
+		_itemConsumeSteps = set.getInt("itemConsumeSteps", 0);
 	}
 	
 	public boolean checkCondition(Creature creature)

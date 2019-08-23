@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -45,7 +46,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author GodKratos
@@ -652,17 +652,17 @@ class OlympiadGame
 		final StatsSet playerOneStat = Olympiad.getNobleStats(_playerOne.getObjectId());
 		final StatsSet playerTwoStat = Olympiad.getNobleStats(_playerTwo.getObjectId());
 		
-		final int playerOnePlayed = playerOneStat.getInteger(COMP_DONE);
-		final int playerTwoPlayed = playerTwoStat.getInteger(COMP_DONE);
-		final int playerOneWon = playerOneStat.getInteger(COMP_WON);
-		final int playerTwoWon = playerTwoStat.getInteger(COMP_WON);
-		final int playerOneLost = playerOneStat.getInteger(COMP_LOST);
-		final int playerTwoLost = playerTwoStat.getInteger(COMP_LOST);
-		final int playerOneDrawn = playerOneStat.getInteger(COMP_DRAWN);
-		final int playerTwoDrawn = playerTwoStat.getInteger(COMP_DRAWN);
+		final int playerOnePlayed = playerOneStat.getInt(COMP_DONE);
+		final int playerTwoPlayed = playerTwoStat.getInt(COMP_DONE);
+		final int playerOneWon = playerOneStat.getInt(COMP_WON);
+		final int playerTwoWon = playerTwoStat.getInt(COMP_WON);
+		final int playerOneLost = playerOneStat.getInt(COMP_LOST);
+		final int playerTwoLost = playerTwoStat.getInt(COMP_LOST);
+		final int playerOneDrawn = playerOneStat.getInt(COMP_DRAWN);
+		final int playerTwoDrawn = playerTwoStat.getInt(COMP_DRAWN);
 		
-		final int playerOnePoints = playerOneStat.getInteger(POINTS);
-		final int playerTwoPoints = playerTwoStat.getInteger(POINTS);
+		final int playerOnePoints = playerOneStat.getInt(POINTS);
+		final int playerTwoPoints = playerTwoStat.getInt(POINTS);
 		final int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / _div;
 		
 		// Check for if a player defaulted before battle started

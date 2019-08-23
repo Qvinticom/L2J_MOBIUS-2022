@@ -24,6 +24,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -34,7 +35,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class QueenAnt extends Quest
 {
@@ -121,8 +121,8 @@ public class QueenAnt extends Quest
 				/*
 				 * int loc_x = info.getInteger("loc_x"); int loc_y = info.getInteger("loc_y"); int loc_z = info.getInteger("loc_z"); int heading = info.getInteger("heading");
 				 */
-				final int hp = info.getInteger("currentHP");
-				final int mp = info.getInteger("currentMP");
+				final int hp = info.getInt("currentHP");
+				final int mp = info.getInt("currentMP");
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{

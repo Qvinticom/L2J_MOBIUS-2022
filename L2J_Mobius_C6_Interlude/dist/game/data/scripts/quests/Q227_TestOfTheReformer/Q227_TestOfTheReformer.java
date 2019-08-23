@@ -122,7 +122,7 @@ public class Q227_TestOfTheReformer extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(BOOK_OF_REFORM, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30118-04b.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

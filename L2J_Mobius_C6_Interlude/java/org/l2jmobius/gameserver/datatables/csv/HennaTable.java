@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.templates.item.Henna;
 
 /**

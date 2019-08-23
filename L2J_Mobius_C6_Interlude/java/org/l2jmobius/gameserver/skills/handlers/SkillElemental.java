@@ -18,12 +18,12 @@ package org.l2jmobius.gameserver.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.skills.Formulas;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class SkillElemental extends Skill
 {
@@ -35,11 +35,11 @@ public class SkillElemental extends Skill
 		super(set);
 		
 		_seeds = new int[3];
-		_seeds[0] = set.getInteger("seed1", 0);
-		_seeds[1] = set.getInteger("seed2", 0);
-		_seeds[2] = set.getInteger("seed3", 0);
+		_seeds[0] = set.getInt("seed1", 0);
+		_seeds[1] = set.getInt("seed2", 0);
+		_seeds[2] = set.getInt("seed3", 0);
 		
-		if (set.getInteger("seed_any", 0) == 1)
+		if (set.getInt("seed_any", 0) == 1)
 		{
 			_seedAny = true;
 		}

@@ -105,7 +105,7 @@ public class Q232_TestOfTheLord extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(ORDEAL_NECKLACE, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30565-05b.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class SkillSignetCasttime extends Skill
 {
@@ -29,8 +29,8 @@ public class SkillSignetCasttime extends Skill
 	public SkillSignetCasttime(StatsSet set)
 	{
 		super(set);
-		_effectNpcId = set.getInteger("effectNpcId", -1);
-		effectId = set.getInteger("effectId", -1);
+		_effectNpcId = set.getInt("effectNpcId", -1);
+		effectId = set.getInt("effectId", -1);
 	}
 	
 	@Override

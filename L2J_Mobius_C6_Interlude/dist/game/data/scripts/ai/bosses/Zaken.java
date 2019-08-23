@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -36,7 +37,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * Zaken AI
@@ -185,12 +185,12 @@ public class Zaken extends Quest
 		}
 		else
 		{
-			final int loc_x = info.getInteger("loc_x");
-			final int loc_y = info.getInteger("loc_y");
-			final int loc_z = info.getInteger("loc_z");
-			final int heading = info.getInteger("heading");
-			final int hp = info.getInteger("currentHP");
-			final int mp = info.getInteger("currentMP");
+			final int loc_x = info.getInt("loc_x");
+			final int loc_y = info.getInt("loc_y");
+			final int loc_z = info.getInt("loc_z");
+			final int heading = info.getInt("heading");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
 			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, loc_x, loc_y, loc_z, heading, false, 0);
 			zaken.setCurrentHpMp(hp, mp);
 			spawnBoss(zaken);

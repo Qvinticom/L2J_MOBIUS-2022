@@ -108,7 +108,7 @@ public class Q225_TestOfTheSearcher extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(LUTHER_LETTER, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30690-05a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

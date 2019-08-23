@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
@@ -27,7 +28,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.skills.Formulas;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class SkillDrain extends Skill
 {
@@ -40,7 +40,7 @@ public class SkillDrain extends Skill
 		super(set);
 		
 		_absorbPart = set.getFloat("absorbPart", 0.f);
-		_absorbAbs = set.getInteger("absorbAbs", 0);
+		_absorbAbs = set.getInt("absorbAbs", 0);
 	}
 	
 	@Override

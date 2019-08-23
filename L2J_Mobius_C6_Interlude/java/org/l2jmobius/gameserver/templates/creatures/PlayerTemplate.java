@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.Race;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.item.Item;
 
 /**
@@ -55,17 +55,17 @@ public class PlayerTemplate extends CreatureTemplate
 	public PlayerTemplate(StatsSet set)
 	{
 		super(set);
-		classId = ClassId.values()[set.getInteger("classId")];
-		race = Race.values()[set.getInteger("raceId")];
+		classId = ClassId.values()[set.getInt("classId")];
+		race = Race.values()[set.getInt("raceId")];
 		className = set.getString("className");
-		_currentCollisionRadius = set.getInteger("collision_radius");
-		_currentCollisionHeight = set.getInteger("collision_height");
+		_currentCollisionRadius = set.getInt("collision_radius");
+		_currentCollisionHeight = set.getInt("collision_height");
 		
-		spawnX = set.getInteger("spawnX");
-		spawnY = set.getInteger("spawnY");
-		spawnZ = set.getInteger("spawnZ");
+		spawnX = set.getInt("spawnX");
+		spawnY = set.getInt("spawnY");
+		spawnZ = set.getInt("spawnZ");
 		
-		classBaseLevel = set.getInteger("classBaseLevel");
+		classBaseLevel = set.getInt("classBaseLevel");
 		lvlHpAdd = set.getFloat("lvlHpAdd");
 		lvlHpMod = set.getFloat("lvlHpMod");
 		lvlCpAdd = set.getFloat("lvlCpAdd");

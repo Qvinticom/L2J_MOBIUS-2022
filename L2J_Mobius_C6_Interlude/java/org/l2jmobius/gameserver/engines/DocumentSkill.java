@@ -26,8 +26,8 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.skills.conditions.Condition;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author mkizub

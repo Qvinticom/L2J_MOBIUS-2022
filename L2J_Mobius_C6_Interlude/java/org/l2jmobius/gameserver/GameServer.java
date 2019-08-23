@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.datatables.BufferTable;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
@@ -55,8 +54,6 @@ import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import org.l2jmobius.gameserver.datatables.csv.StaticObjects;
 import org.l2jmobius.gameserver.datatables.csv.SummonItemsData;
-import org.l2jmobius.gameserver.datatables.sql.AccessLevels;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
 import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
@@ -71,6 +68,7 @@ import org.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
@@ -387,9 +385,7 @@ public class GameServer
 		Hero.getInstance();
 		
 		Util.printSection("Access Levels");
-		AccessLevels.getInstance();
-		AdminCommandAccessRights.getInstance();
-		GmListTable.getInstance();
+		AdminData.getInstance();
 		
 		Util.printSection("Handlers");
 		ItemHandler.getInstance();

@@ -14,21 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.engines;
-
-import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.item.Item;
+package org.l2jmobius.gameserver.model.interfaces;
 
 /**
- * @author luisantonioa
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
+ * @author UnAfraid
  */
-public class ItemDataHolder
+public interface IDeletable
 {
-	public int id;
-	public Enum<?> type;
-	public String name;
-	public StatsSet set;
-	public int currentLevel;
-	public Item item;
+	boolean deleteMe();
 }

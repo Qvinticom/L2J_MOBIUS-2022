@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -52,7 +53,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -3404,14 +3404,14 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				for (StatsSet festivalDat : currCycleData.values())
 				{
-					final int festivalCycle = festivalDat.getInteger("cycle");
-					final int festivalId = festivalDat.getInteger("festivalId");
+					final int festivalCycle = festivalDat.getInt("cycle");
+					final int festivalId = festivalDat.getInt("festivalId");
 					String cabal = festivalDat.getString("cabal");
 					
 					// Try to update an existing record.
 					statement = con.prepareStatement("UPDATE seven_signs_festival SET date=?, score=?, members=? WHERE cycle=? AND cabal=? AND festivalId=?");
 					statement.setLong(1, Long.valueOf(festivalDat.getString("date")));
-					statement.setInt(2, festivalDat.getInteger("score"));
+					statement.setInt(2, festivalDat.getInt("score"));
 					statement.setString(3, festivalDat.getString("members"));
 					statement.setInt(4, festivalCycle);
 					statement.setString(5, cabal);
@@ -3431,7 +3431,7 @@ public class SevenSignsFestival implements SpawnListener
 					statement.setString(2, cabal);
 					statement.setInt(3, festivalCycle);
 					statement.setLong(4, Long.valueOf(festivalDat.getString("date")));
-					statement.setInt(5, festivalDat.getInteger("score"));
+					statement.setInt(5, festivalDat.getInt("score"));
 					statement.setString(6, festivalDat.getString("members"));
 					statement.execute();
 					statement.close();
@@ -3929,7 +3929,7 @@ public class SevenSignsFestival implements SpawnListener
 	 */
 	public int getHighestScore(int oracle, int festivalId)
 	{
-		return getHighestScoreData(oracle, festivalId).getInteger("score");
+		return getHighestScoreData(oracle, festivalId).getInt("score");
 	}
 	
 	/**
@@ -3978,8 +3978,8 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			for (StatsSet currFestData : currCycleData.values())
 			{
-				final int currFestID = currFestData.getInteger("festivalId");
-				final int festivalScore = currFestData.getInteger("score");
+				final int currFestID = currFestData.getInt("festivalId");
+				final int festivalScore = currFestData.getInt("score");
 				
 				if (currFestID != festivalId)
 				{
@@ -4161,7 +4161,7 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				if (festivalData.getString("members").contains(playerName))
 				{
-					final int festivalId = festivalData.getInteger("festivalId");
+					final int festivalId = festivalData.getInt("festivalId");
 					final int numPartyMembers = festivalData.getString("members").split(",").length;
 					final int totalAccumBonus = _accumulatedBonuses.get(festivalId);
 					

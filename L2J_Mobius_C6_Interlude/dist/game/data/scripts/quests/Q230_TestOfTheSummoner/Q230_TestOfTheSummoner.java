@@ -202,7 +202,7 @@ public class Q230_TestOfTheSummoner extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(GALATEA_LETTER, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30634-08a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

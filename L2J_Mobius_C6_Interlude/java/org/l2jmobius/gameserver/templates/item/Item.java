@@ -22,13 +22,13 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.effects.EffectTemplate;
 import org.l2jmobius.gameserver.skills.funcs.Func;
 import org.l2jmobius.gameserver.skills.funcs.FuncTemplate;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
@@ -163,13 +163,13 @@ public abstract class Item
 	protected Item(Enum<?> type, StatsSet set)
 	{
 		_type = type;
-		_itemId = set.getInteger("item_id");
+		_itemId = set.getInt("item_id");
 		_name = set.getString("name");
-		_type1 = set.getInteger("type1"); // needed for item list (inventory)
-		_type2 = set.getInteger("type2"); // different lists for armor, weapon, etc
-		_weight = set.getInteger("weight");
-		_crystallizable = set.getBool("crystallizable");
-		_stackable = set.getBool("stackable", false);
+		_type1 = set.getInt("type1"); // needed for item list (inventory)
+		_type2 = set.getInt("type2"); // different lists for armor, weapon, etc
+		_weight = set.getInt("weight");
+		_crystallizable = set.getBoolean("crystallizable");
+		_stackable = set.getBoolean("stackable", false);
 		switch (set.getString("crystal_type", ""))
 		{
 			case "d":
@@ -203,7 +203,7 @@ public abstract class Item
 				break;
 			}
 		}
-		_duration = set.getInteger("duration");
+		_duration = set.getInt("duration");
 		switch (set.getString("bodypart", ""))
 		{
 			case "chest":
@@ -330,12 +330,12 @@ public abstract class Item
 			}
 		}
 		
-		_referencePrice = set.getInteger("price");
-		_crystalCount = set.getInteger("crystal_count", 0);
-		_sellable = set.getBool("sellable", true);
-		_dropable = set.getBool("dropable", true);
-		_destroyable = set.getBool("destroyable", true);
-		_tradeable = set.getBool("tradeable", true);
+		_referencePrice = set.getInt("price");
+		_crystalCount = set.getInt("crystal_count", 0);
+		_sellable = set.getBoolean("sellable", true);
+		_dropable = set.getBoolean("dropable", true);
+		_destroyable = set.getBoolean("destroyable", true);
+		_tradeable = set.getBoolean("tradeable", true);
 	}
 	
 	/**

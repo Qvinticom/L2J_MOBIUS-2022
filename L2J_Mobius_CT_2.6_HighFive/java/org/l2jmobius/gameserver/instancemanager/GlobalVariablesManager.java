@@ -61,14 +61,14 @@ public class GlobalVariablesManager extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore global variables");
+			LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables.");
 			return false;
 		}
 		finally
 		{
 			compareAndSetChanges(true, false);
 		}
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
 		return true;
 	}
 	
@@ -106,7 +106,23 @@ public class GlobalVariablesManager extends AbstractVariables
 		{
 			compareAndSetChanges(true, false);
 		}
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
+		LOGGER.info(getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
+		return true;
+	}
+	
+	@Override
+	public boolean deleteMe()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			Statement del = con.createStatement())
+		{
+			del.execute(DELETE_QUERY);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
+			return false;
+		}
 		return true;
 	}
 	

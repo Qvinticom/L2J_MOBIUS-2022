@@ -43,6 +43,12 @@ public class NpcVariables extends AbstractVariables
 		return true;
 	}
 	
+	@Override
+	public boolean deleteMe()
+	{
+		return true;
+	}
+	
 	/**
 	 * Gets the stored player.
 	 * @param name the name of the variable

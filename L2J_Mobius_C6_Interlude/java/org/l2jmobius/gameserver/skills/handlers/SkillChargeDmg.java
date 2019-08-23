@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -28,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.skills.BaseStats;
 import org.l2jmobius.gameserver.skills.Formulas;
 import org.l2jmobius.gameserver.skills.effects.EffectCharge;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.item.WeaponType;
 
 public class SkillChargeDmg extends Skill
@@ -39,7 +39,7 @@ public class SkillChargeDmg extends Skill
 	public SkillChargeDmg(StatsSet set)
 	{
 		super(set);
-		chargeSkillId = set.getInteger("charge_skill_id");
+		chargeSkillId = set.getInt("charge_skill_id");
 	}
 	
 	@Override

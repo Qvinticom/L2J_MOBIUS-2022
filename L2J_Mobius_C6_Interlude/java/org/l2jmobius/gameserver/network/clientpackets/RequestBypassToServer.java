@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.handler.custom.CustomBypassHandler;
@@ -97,7 +97,7 @@ public class RequestBypassToServer extends GameClientPacket
 					return;
 				}
 				
-				if (!AdminCommandAccessRights.getInstance().hasAccess(command, player.getAccessLevel()))
+				if (!AdminData.getInstance().hasAccess(command, player.getAccessLevel()))
 				{
 					player.sendMessage("You don't have the access right to use this command!");
 					return;

@@ -16,63 +16,70 @@
  */
 package org.l2jmobius.gameserver.model.variables;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.interfaces.IDeletable;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
 import org.l2jmobius.gameserver.model.interfaces.IStorable;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author UnAfraid
  */
-public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable
+public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable, IDeletable
 {
 	private final AtomicBoolean _hasChanges = new AtomicBoolean(false);
+	
+	public AbstractVariables()
+	{
+		super(new ConcurrentHashMap<>());
+	}
 	
 	/**
 	 * Overriding following methods to prevent from doing useless database operations if there is no changes since player's login.
 	 */
 	
 	@Override
-	public void set(String name, boolean value)
+	public StatsSet set(String name, boolean value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, double value)
+	public StatsSet set(String name, double value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, Enum<?> value)
+	public StatsSet set(String name, Enum<?> value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, int value)
+	public StatsSet set(String name, int value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, long value)
+	public StatsSet set(String name, long value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, String value)
+	public StatsSet set(String name, String value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		super.set(name, value);
+		return super.set(name, value);
 	}
 	
 	/**
@@ -108,6 +115,7 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	 * Removes variable
 	 * @param name
 	 */
+	@Override
 	public void remove(String name)
 	{
 		_hasChanges.compareAndSet(false, true);

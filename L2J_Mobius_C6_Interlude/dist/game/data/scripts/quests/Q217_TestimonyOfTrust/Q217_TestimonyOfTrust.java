@@ -123,7 +123,7 @@ public class Q217_TestimonyOfTrust extends Quest
 			st.giveItems(LETTER_TO_ELF, 1);
 			st.giveItems(LETTER_TO_DARK_ELF, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange37", false))
+			if (!player.getVariables().getBoolean("secondClassChange37", false))
 			{
 				htmltext = "30191-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));

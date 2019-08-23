@@ -21,13 +21,13 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * @author Shyla
@@ -94,8 +94,8 @@ public class Orfen extends Quest
 				final int loc_y = 17368;
 				final int loc_z = -5412;
 				final int heading = 0;
-				final int hp = info.getInteger("currentHP");
-				final int mp = info.getInteger("currentMP");
+				final int hp = info.getInt("currentHP");
+				final int mp = info.getInt("currentMP");
 				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{

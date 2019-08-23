@@ -14,21 +14,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.engines;
+package org.l2jmobius.gameserver.model.interfaces;
 
-import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.templates.item.Item;
+import java.time.Duration;
 
 /**
- * @author luisantonioa
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
+ * More advanced interface for parsers.<br>
+ * Allows usage of get methods without fall back value.<br>
+ * @author xban1x
  */
-public class ItemDataHolder
+public interface IParserAdvUtils extends IParserUtils
 {
-	public int id;
-	public Enum<?> type;
-	public String name;
-	public StatsSet set;
-	public int currentLevel;
-	public Item item;
+	
+	boolean getBoolean(String key);
+	
+	byte getByte(String key);
+	
+	short getShort(String key);
+	
+	int getInt(String key);
+	
+	long getLong(String key);
+	
+	float getFloat(String key);
+	
+	double getDouble(String key);
+	
+	String getString(String key);
+	
+	Duration getDuration(String key);
+	
+	<T extends Enum<T>> T getEnum(String key, Class<T> clazz);
 }

@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.templates.item.Armor;
 import org.l2jmobius.gameserver.templates.item.ArmorType;
 import org.l2jmobius.gameserver.templates.item.EtcItem;
@@ -408,7 +408,7 @@ final class DocumentItem extends DocumentBase
 		}
 		else
 		{
-			throw new Error("Unknown item type for " + _currentItem.set.getInteger("item_id") + " " + _currentItem.type);
+			throw new Error("Unknown item type for " + _currentItem.set.getInt("item_id") + " " + _currentItem.type);
 		}
 	}
 	

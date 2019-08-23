@@ -140,7 +140,7 @@ public class Q221_TestimonyOfProsperity extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(RING_OF_TESTIMONY_1, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange37", false))
+			if (!player.getVariables().getBoolean("secondClassChange37", false))
 			{
 				htmltext = "30104-04e.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));

@@ -33,10 +33,10 @@ import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.skills.BaseStats;
 import org.l2jmobius.gameserver.skills.Stats;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -623,7 +623,7 @@ public class NpcTable
 			String name = "";
 			String values = "";
 			
-			final NpcTemplate old = getTemplate(npc.getInteger("npcId"));
+			final NpcTemplate old = getTemplate(npc.getInt("npcId"));
 			
 			for (Object obj : set.keySet())
 			{
@@ -649,7 +649,7 @@ public class NpcTable
 			{
 				statement = con.prepareStatement("UPDATE npc SET " + values + " WHERE id = ?");
 			}
-			statement.setInt(1, npc.getInteger("npcId"));
+			statement.setInt(1, npc.getInt("npcId"));
 			statement.execute();
 			statement.close();
 		}

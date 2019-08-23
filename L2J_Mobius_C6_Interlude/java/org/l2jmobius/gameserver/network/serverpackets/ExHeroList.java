@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
 
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * Format: (ch) d [SdSdSdd] d: size [ S: hero name d: hero class ID S: hero clan name d: hero clan crest id S: hero ally name d: hero Ally id d: count ]
@@ -50,12 +50,12 @@ public class ExHeroList extends GameServerPacket
 		{
 			final StatsSet hero = _heroList.get(heroId);
 			writeS(hero.getString(Olympiad.CHAR_NAME));
-			writeD(hero.getInteger(Olympiad.CLASS_ID));
+			writeD(hero.getInt(Olympiad.CLASS_ID));
 			writeS(hero.getString(Hero.CLAN_NAME, ""));
-			writeD(hero.getInteger(Hero.CLAN_CREST, 0));
+			writeD(hero.getInt(Hero.CLAN_CREST, 0));
 			writeS(hero.getString(Hero.ALLY_NAME, ""));
-			writeD(hero.getInteger(Hero.ALLY_CREST, 0));
-			writeD(hero.getInteger(Hero.COUNT));
+			writeD(hero.getInt(Hero.ALLY_CREST, 0));
+			writeD(hero.getInt(Hero.COUNT));
 		}
 	}
 }

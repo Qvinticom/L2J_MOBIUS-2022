@@ -21,12 +21,12 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.funcs.Func;
 import org.l2jmobius.gameserver.skills.funcs.FuncTemplate;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * This class is dedicated to the management of armors.
@@ -55,14 +55,14 @@ public class Armor extends Item
 	public Armor(ArmorType type, StatsSet set)
 	{
 		super(type, set);
-		_avoidModifier = set.getInteger("avoid_modify");
-		_pDef = set.getInteger("p_def");
-		_mDef = set.getInteger("m_def");
-		_mpBonus = set.getInteger("mp_bonus", 0);
-		_hpBonus = set.getInteger("hp_bonus", 0);
+		_avoidModifier = set.getInt("avoid_modify");
+		_pDef = set.getInt("p_def");
+		_mDef = set.getInt("m_def");
+		_mpBonus = set.getInt("mp_bonus", 0);
+		_hpBonus = set.getInt("hp_bonus", 0);
 		
-		final int sId = set.getInteger("item_skill_id");
-		final int sLv = set.getInteger("item_skill_lvl");
+		final int sId = set.getInt("item_skill_id");
+		final int sLv = set.getInt("item_skill_lvl");
 		if ((sId > 0) && (sLv > 0))
 		{
 			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);

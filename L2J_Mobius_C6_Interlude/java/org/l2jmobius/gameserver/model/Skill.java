@@ -72,7 +72,6 @@ import org.l2jmobius.gameserver.skills.handlers.SkillSeed;
 import org.l2jmobius.gameserver.skills.handlers.SkillSignet;
 import org.l2jmobius.gameserver.skills.handlers.SkillSignetCasttime;
 import org.l2jmobius.gameserver.skills.handlers.SkillSummon;
-import org.l2jmobius.gameserver.templates.StatsSet;
 import org.l2jmobius.gameserver.util.Util;
 
 public abstract class Skill
@@ -515,84 +514,84 @@ public abstract class Skill
 	
 	protected Skill(StatsSet set)
 	{
-		_id = set.getInteger("skill_id", 0);
-		_level = set.getInteger("level", 1);
+		_id = set.getInt("skill_id", 0);
+		_level = set.getInt("level", 1);
 		
-		_advancedFlag = set.getBool("advancedFlag", false);
-		_advancedMultiplier = set.getInteger("advancedMultiplier", 1);
+		_advancedFlag = set.getBoolean("advancedFlag", false);
+		_advancedMultiplier = set.getInt("advancedMultiplier", 1);
 		
-		_displayId = set.getInteger("displayId", _id);
+		_displayId = set.getInt("displayId", _id);
 		_name = set.getString("name");
 		_operateType = set.getEnum("operateType", SkillOpType.class);
-		_magic = set.getBool("isMagic", false);
-		_staticReuse = set.getBool("staticReuse", false);
-		_staticHitTime = set.getBool("staticHitTime", false);
-		_ispotion = set.getBool("isPotion", false);
-		_mpConsume = set.getInteger("mpConsume", 0);
-		_mpInitialConsume = set.getInteger("mpInitialConsume", 0);
-		_hpConsume = set.getInteger("hpConsume", 0);
-		_itemConsume = set.getInteger("itemConsumeCount", 0);
-		_itemConsumeId = set.getInteger("itemConsumeId", 0);
-		_itemConsumeOT = set.getInteger("itemConsumeCountOT", 0);
-		_itemConsumeIdOT = set.getInteger("itemConsumeIdOT", 0);
-		_itemConsumeTime = set.getInteger("itemConsumeTime", 0);
-		_itemConsumeSteps = set.getInteger("itemConsumeSteps", 0);
-		_summonTotalLifeTime = set.getInteger("summonTotalLifeTime", 1200000); // 20 minutes default
-		_summonTimeLostIdle = set.getInteger("summonTimeLostIdle", 0);
-		_summonTimeLostActive = set.getInteger("summonTimeLostActive", 0);
+		_magic = set.getBoolean("isMagic", false);
+		_staticReuse = set.getBoolean("staticReuse", false);
+		_staticHitTime = set.getBoolean("staticHitTime", false);
+		_ispotion = set.getBoolean("isPotion", false);
+		_mpConsume = set.getInt("mpConsume", 0);
+		_mpInitialConsume = set.getInt("mpInitialConsume", 0);
+		_hpConsume = set.getInt("hpConsume", 0);
+		_itemConsume = set.getInt("itemConsumeCount", 0);
+		_itemConsumeId = set.getInt("itemConsumeId", 0);
+		_itemConsumeOT = set.getInt("itemConsumeCountOT", 0);
+		_itemConsumeIdOT = set.getInt("itemConsumeIdOT", 0);
+		_itemConsumeTime = set.getInt("itemConsumeTime", 0);
+		_itemConsumeSteps = set.getInt("itemConsumeSteps", 0);
+		_summonTotalLifeTime = set.getInt("summonTotalLifeTime", 1200000); // 20 minutes default
+		_summonTimeLostIdle = set.getInt("summonTimeLostIdle", 0);
+		_summonTimeLostActive = set.getInt("summonTimeLostActive", 0);
 		
-		_castRange = set.getInteger("castRange", 0);
-		_effectRange = set.getInteger("effectRange", -1);
+		_castRange = set.getInt("castRange", 0);
+		_effectRange = set.getInt("effectRange", -1);
 		
-		_hitTime = set.getInteger("hitTime", 0);
-		_coolTime = set.getInteger("coolTime", 0);
+		_hitTime = set.getInt("hitTime", 0);
+		_coolTime = set.getInt("coolTime", 0);
 		// _skillInterruptTime = set.getInteger("hitTime", _hitTime / 2);
-		_reuseDelay = set.getInteger("reuseDelay", 0);
-		_buffDuration = set.getInteger("buffDuration", 0);
+		_reuseDelay = set.getInt("reuseDelay", 0);
+		_buffDuration = set.getInt("buffDuration", 0);
 		
-		_skillRadius = set.getInteger("skillRadius", 80);
+		_skillRadius = set.getInt("skillRadius", 80);
 		
 		_targetType = set.getEnum("target", SkillTargetType.class);
 		_power = set.getFloat("power", 0.f);
-		_effectPoints = set.getInteger("effectPoints", 0);
+		_effectPoints = set.getInt("effectPoints", 0);
 		_negateSkillTypes = set.getString("negateSkillTypes", "").split(" ");
 		_negateEffectTypes = set.getString("negateEffectTypes", "").split(" ");
 		_negatePower = set.getFloat("negatePower", 0.f);
-		_negateId = set.getInteger("negateId", 0);
-		_magicLevel = set.getInteger("magicLvl", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
-		_levelDepend = set.getInteger("lvlDepend", 0);
+		_negateId = set.getInt("negateId", 0);
+		_magicLevel = set.getInt("magicLvl", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
+		_levelDepend = set.getInt("lvlDepend", 0);
 		_stat = set.getEnum("stat", Stats.class, null);
 		
 		_skillType = set.getEnum("skillType", SkillType.class);
 		_effectType = set.getEnum("effectType", SkillType.class, null);
-		_effectPower = set.getInteger("effectPower", 0);
-		_effectId = set.getInteger("effectId", 0);
-		_effectLvl = set.getInteger("effectLevel", 0);
+		_effectPower = set.getInt("effectPower", 0);
+		_effectId = set.getInt("effectId", 0);
+		_effectLvl = set.getInt("effectLevel", 0);
 		
-		_element = set.getInteger("element", 0);
+		_element = set.getInt("element", 0);
 		_saveVs = set.getEnum("saveVs", BaseStats.class, null);
 		
-		_condition = set.getInteger("condition", 0);
-		_conditionValue = set.getInteger("conditionValue", 0);
-		_overhit = set.getBool("overHit", false);
-		_isSuicideAttack = set.getBool("isSuicideAttack", false);
-		_weaponsAllowed = set.getInteger("weaponsAllowed", 0);
-		_armorsAllowed = set.getInteger("armorsAllowed", 0);
+		_condition = set.getInt("condition", 0);
+		_conditionValue = set.getInt("conditionValue", 0);
+		_overhit = set.getBoolean("overHit", false);
+		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
+		_weaponsAllowed = set.getInt("weaponsAllowed", 0);
+		_armorsAllowed = set.getInt("armorsAllowed", 0);
 		
-		_addCrossLearn = set.getInteger("addCrossLearn", 1000);
+		_addCrossLearn = set.getInt("addCrossLearn", 1000);
 		_mulCrossLearn = set.getFloat("mulCrossLearn", 2.f);
 		_mulCrossLearnRace = set.getFloat("mulCrossLearnRace", 2.f);
 		_mulCrossLearnProf = set.getFloat("mulCrossLearnProf", 3.f);
-		_minPledgeClass = set.getInteger("minPledgeClass", 0);
-		_isOffensive = set.getBool("offensive", isSkillTypeOffensive());
-		_numCharges = set.getInteger("num_charges", 0);
-		_triggeredId = set.getInteger("triggeredId", 0);
-		_triggeredLevel = set.getInteger("triggeredLevel", 0);
+		_minPledgeClass = set.getInt("minPledgeClass", 0);
+		_isOffensive = set.getBoolean("offensive", isSkillTypeOffensive());
+		_numCharges = set.getInt("num_charges", 0);
+		_triggeredId = set.getInt("triggeredId", 0);
+		_triggeredLevel = set.getInt("triggeredLevel", 0);
 		
-		_bestowed = set.getBool("bestowed", false);
+		_bestowed = set.getBoolean("bestowed", false);
 		
-		_targetConsume = set.getInteger("targetConsumeCount", 0);
-		_targetConsumeId = set.getInteger("targetConsumeId", 0);
+		_targetConsume = set.getInt("targetConsumeCount", 0);
+		_targetConsumeId = set.getInt("targetConsumeId", 0);
 		
 		if (_operateType == SkillOpType.OP_CHANCE)
 		{
@@ -601,22 +600,22 @@ public abstract class Skill
 		
 		_isHeroSkill = HeroSkillTable.isHeroSkill(_id);
 		
-		_baseCritRate = set.getInteger("baseCritRate", (_skillType == SkillType.PDAM) || (_skillType == SkillType.BLOW) ? 0 : -1);
-		_lethalEffect1 = set.getInteger("lethal1", 0);
-		_lethalEffect2 = set.getInteger("lethal2", 0);
+		_baseCritRate = set.getInt("baseCritRate", (_skillType == SkillType.PDAM) || (_skillType == SkillType.BLOW) ? 0 : -1);
+		_lethalEffect1 = set.getInt("lethal1", 0);
+		_lethalEffect2 = set.getInt("lethal2", 0);
 		
-		_directHpDmg = set.getBool("dmgDirectlyToHp", false);
-		_isDance = set.getBool("isDance", false);
-		_nextDanceCost = set.getInteger("nextDanceCost", 0);
+		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
+		_isDance = set.getBoolean("isDance", false);
+		_nextDanceCost = set.getInt("nextDanceCost", 0);
 		_sSBoost = set.getFloat("SSBoost", 0.f);
-		_aggroPoints = set.getInteger("aggroPoints", 0);
+		_aggroPoints = set.getInt("aggroPoints", 0);
 		
 		_pvpMulti = set.getFloat("pvpMulti", 1.f);
 		
-		_nextActionIsAttack = set.getBool("nextActionAttack", false);
+		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
 		
-		_minChance = set.getInteger("minChance", 1);
-		_maxChance = set.getInteger("maxChance", 99);
+		_minChance = set.getInt("minChance", 1);
+		_maxChance = set.getInt("maxChance", 99);
 		
 		String canLearn = set.getString("canLearn", null);
 		if (canLearn == null)
@@ -665,9 +664,9 @@ public abstract class Skill
 			}
 		}
 		
-		_singleEffect = set.getBool("singleEffect", false);
+		_singleEffect = set.getBoolean("singleEffect", false);
 		
-		_isDebuff = set.getBool("isDebuff", false);
+		_isDebuff = set.getBoolean("isDebuff", false);
 	}
 	
 	public abstract void useSkill(Creature caster, WorldObject[] targets);

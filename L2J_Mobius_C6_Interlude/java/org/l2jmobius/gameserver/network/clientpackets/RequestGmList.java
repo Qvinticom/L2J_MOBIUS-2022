@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.GmListTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
@@ -36,6 +36,6 @@ public class RequestGmList extends GameClientPacket
 			return;
 		}
 		
-		GmListTable.getInstance().sendListToPlayer(getClient().getPlayer());
+		AdminData.getInstance().sendListToPlayer(getClient().getPlayer());
 	}
 }

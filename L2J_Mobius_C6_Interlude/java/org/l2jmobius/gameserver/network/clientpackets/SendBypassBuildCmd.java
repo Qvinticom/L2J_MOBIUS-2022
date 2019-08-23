@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -52,7 +52,7 @@ public class SendBypassBuildCmd extends GameClientPacket
 		}
 		
 		// Checks The Access and notify requester if requester access it not allowed for that command
-		if (!AdminCommandAccessRights.getInstance().hasAccess(_command, player.getAccessLevel()))
+		if (!AdminData.getInstance().hasAccess(_command, player.getAccessLevel()))
 		{
 			player.sendMessage("You don't have the access right to use this command!");
 			LOGGER.warning("Character " + player.getName() + " tried to use admin command " + _command + ", but doesn't have access to it!");

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.templates.creatures;
 
-import org.l2jmobius.gameserver.templates.StatsSet;
+import org.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * @version $Revision: 1.2.4.6 $ $Date: 2005/04/02 15:57:51 $
@@ -99,72 +99,72 @@ public class CreatureTemplate
 	public CreatureTemplate(StatsSet set)
 	{
 		// Base stats
-		baseSTR = set.getInteger("baseSTR");
-		baseCON = set.getInteger("baseCON");
-		baseDEX = set.getInteger("baseDEX");
-		baseINT = set.getInteger("baseINT");
-		baseWIT = set.getInteger("baseWIT");
-		baseMEN = set.getInteger("baseMEN");
+		baseSTR = set.getInt("baseSTR");
+		baseCON = set.getInt("baseCON");
+		baseDEX = set.getInt("baseDEX");
+		baseINT = set.getInt("baseINT");
+		baseWIT = set.getInt("baseWIT");
+		baseMEN = set.getInt("baseMEN");
 		baseHpMax = set.getFloat("baseHpMax");
 		baseCpMax = set.getFloat("baseCpMax");
 		baseMpMax = set.getFloat("baseMpMax");
 		baseHpReg = set.getFloat("baseHpReg");
 		baseMpReg = set.getFloat("baseMpReg");
-		basePAtk = set.getInteger("basePAtk");
-		baseMAtk = set.getInteger("baseMAtk");
-		basePDef = set.getInteger("basePDef");
-		baseMDef = set.getInteger("baseMDef");
-		basePAtkSpd = set.getInteger("basePAtkSpd");
-		baseMAtkSpd = set.getInteger("baseMAtkSpd");
+		basePAtk = set.getInt("basePAtk");
+		baseMAtk = set.getInt("baseMAtk");
+		basePDef = set.getInt("basePDef");
+		baseMDef = set.getInt("baseMDef");
+		basePAtkSpd = set.getInt("basePAtkSpd");
+		baseMAtkSpd = set.getInt("baseMAtkSpd");
 		baseMReuseRate = set.getFloat("baseMReuseDelay", 1.f);
-		baseShldDef = set.getInteger("baseShldDef");
-		baseAtkRange = set.getInteger("baseAtkRange");
-		baseShldRate = set.getInteger("baseShldRate");
-		baseCritRate = set.getInteger("baseCritRate");
-		baseMCritRate = set.getInteger("baseMCritRate", 5);
-		baseWalkSpd = set.getInteger("baseWalkSpd");
-		baseRunSpd = set.getInteger("baseRunSpd");
+		baseShldDef = set.getInt("baseShldDef");
+		baseAtkRange = set.getInt("baseAtkRange");
+		baseShldRate = set.getInt("baseShldRate");
+		baseCritRate = set.getInt("baseCritRate");
+		baseMCritRate = set.getInt("baseMCritRate", 5);
+		baseWalkSpd = set.getInt("baseWalkSpd");
+		baseRunSpd = set.getInt("baseRunSpd");
 		
 		// SpecialStats
-		baseBreath = set.getInteger("baseBreath", 100);
-		baseAggression = set.getInteger("baseAggression", 0);
-		baseBleed = set.getInteger("baseBleed", 0);
-		basePoison = set.getInteger("basePoison", 0);
-		baseStun = set.getInteger("baseStun", 0);
-		baseRoot = set.getInteger("baseRoot", 0);
-		baseMovement = set.getInteger("baseMovement", 0);
-		baseConfusion = set.getInteger("baseConfusion", 0);
-		baseSleep = set.getInteger("baseSleep", 0);
-		baseFire = set.getInteger("baseFire", 0);
-		baseWind = set.getInteger("baseWind", 0);
-		baseWater = set.getInteger("baseWater", 0);
-		baseEarth = set.getInteger("baseEarth", 0);
-		baseHoly = set.getInteger("baseHoly", 0);
-		baseDark = set.getInteger("baseDark", 0);
-		baseAggressionVuln = set.getInteger("baseAaggressionVuln", 1);
-		baseBleedVuln = set.getInteger("baseBleedVuln", 1);
-		basePoisonVuln = set.getInteger("basePoisonVuln", 1);
-		baseStunVuln = set.getInteger("baseStunVuln", 1);
-		baseRootVuln = set.getInteger("baseRootVuln", 1);
-		baseMovementVuln = set.getInteger("baseMovementVuln", 1);
-		baseConfusionVuln = set.getInteger("baseConfusionVuln", 1);
-		baseSleepVuln = set.getInteger("baseSleepVuln", 1);
-		baseFireVuln = set.getInteger("baseFireVuln", 1);
-		baseWindVuln = set.getInteger("baseWindVuln", 1);
-		baseWaterVuln = set.getInteger("baseWaterVuln", 1);
-		baseEarthVuln = set.getInteger("baseEarthVuln", 1);
-		baseHolyVuln = set.getInteger("baseHolyVuln", 1);
-		baseDarkVuln = set.getInteger("baseDarkVuln", 1);
-		baseCritVuln = set.getInteger("baseCritVuln", 1);
+		baseBreath = set.getInt("baseBreath", 100);
+		baseAggression = set.getInt("baseAggression", 0);
+		baseBleed = set.getInt("baseBleed", 0);
+		basePoison = set.getInt("basePoison", 0);
+		baseStun = set.getInt("baseStun", 0);
+		baseRoot = set.getInt("baseRoot", 0);
+		baseMovement = set.getInt("baseMovement", 0);
+		baseConfusion = set.getInt("baseConfusion", 0);
+		baseSleep = set.getInt("baseSleep", 0);
+		baseFire = set.getInt("baseFire", 0);
+		baseWind = set.getInt("baseWind", 0);
+		baseWater = set.getInt("baseWater", 0);
+		baseEarth = set.getInt("baseEarth", 0);
+		baseHoly = set.getInt("baseHoly", 0);
+		baseDark = set.getInt("baseDark", 0);
+		baseAggressionVuln = set.getInt("baseAaggressionVuln", 1);
+		baseBleedVuln = set.getInt("baseBleedVuln", 1);
+		basePoisonVuln = set.getInt("basePoisonVuln", 1);
+		baseStunVuln = set.getInt("baseStunVuln", 1);
+		baseRootVuln = set.getInt("baseRootVuln", 1);
+		baseMovementVuln = set.getInt("baseMovementVuln", 1);
+		baseConfusionVuln = set.getInt("baseConfusionVuln", 1);
+		baseSleepVuln = set.getInt("baseSleepVuln", 1);
+		baseFireVuln = set.getInt("baseFireVuln", 1);
+		baseWindVuln = set.getInt("baseWindVuln", 1);
+		baseWaterVuln = set.getInt("baseWaterVuln", 1);
+		baseEarthVuln = set.getInt("baseEarthVuln", 1);
+		baseHolyVuln = set.getInt("baseHolyVuln", 1);
+		baseDarkVuln = set.getInt("baseDarkVuln", 1);
+		baseCritVuln = set.getInt("baseCritVuln", 1);
 		
-		isUndead = set.getInteger("isUndead", 0) == 1;
+		isUndead = set.getInt("isUndead", 0) == 1;
 		
 		// C4 Stats
-		baseMpConsumeRate = set.getInteger("baseMpConsumeRate", 0);
-		baseHpConsumeRate = set.getInteger("baseHpConsumeRate", 0);
+		baseMpConsumeRate = set.getInt("baseMpConsumeRate", 0);
+		baseHpConsumeRate = set.getInt("baseHpConsumeRate", 0);
 		
 		// Geometry
-		collisionRadius = set.getInteger("collision_radius");
-		collisionHeight = set.getInteger("collision_height");
+		collisionRadius = set.getInt("collision_radius");
+		collisionHeight = set.getInt("collision_height");
 	}
 }

@@ -25,8 +25,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.templates.HelperBuff;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * This class represents the Newbie Helper Buff list. Author: Ayor

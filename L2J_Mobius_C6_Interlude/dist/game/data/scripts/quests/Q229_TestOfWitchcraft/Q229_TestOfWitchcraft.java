@@ -125,7 +125,7 @@ public class Q229_TestOfWitchcraft extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(ORIM_DIAGRAM, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange39", false))
+			if (!player.getVariables().getBoolean("secondClassChange39", false))
 			{
 				htmltext = "30630-08a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));

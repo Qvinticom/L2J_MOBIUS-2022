@@ -93,7 +93,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(VOUCHER_OF_TRIAL, 1);
 			
-			if (!player.getVariables().getBool("secondClassChange35", false))
+			if (!player.getVariables().getBoolean("secondClassChange35", false))
 			{
 				htmltext = "30648-04a.htm";
 				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));

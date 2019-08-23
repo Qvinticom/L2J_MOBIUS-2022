@@ -44,6 +44,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
@@ -52,7 +53,6 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class Olympiad
 {
@@ -1006,7 +1006,7 @@ public class Olympiad
 		for (Integer nobleId : _nobles.keySet())
 		{
 			final StatsSet nobleInfo = _nobles.get(nobleId);
-			int currentPoints = nobleInfo.getInteger(POINTS);
+			int currentPoints = nobleInfo.getInt(POINTS);
 			currentPoints += WEEKLY_POINTS;
 			nobleInfo.set(POINTS, currentPoints);
 			
@@ -1138,14 +1138,14 @@ public class Olympiad
 				}
 				
 				final int charId = nobleId;
-				final int classId = nobleInfo.getInteger(CLASS_ID);
+				final int classId = nobleInfo.getInt(CLASS_ID);
 				final String charName = nobleInfo.getString(CHAR_NAME);
-				final int points = nobleInfo.getInteger(POINTS);
-				final int compDone = nobleInfo.getInteger(COMP_DONE);
-				final int compWon = nobleInfo.getInteger(COMP_WON);
-				final int compLost = nobleInfo.getInteger(COMP_LOST);
-				final int compDrawn = nobleInfo.getInteger(COMP_DRAWN);
-				final boolean toSave = nobleInfo.getBool("to_save");
+				final int points = nobleInfo.getInt(POINTS);
+				final int compDone = nobleInfo.getInt(COMP_DONE);
+				final int compWon = nobleInfo.getInt(COMP_WON);
+				final int compLost = nobleInfo.getInt(COMP_LOST);
+				final int compDrawn = nobleInfo.getInt(COMP_DRAWN);
+				final boolean toSave = nobleInfo.getBoolean("to_save");
 				
 				if (toSave)
 				{
@@ -1200,11 +1200,11 @@ public class Olympiad
 			}
 			
 			final int charId = nobleId;
-			final int points = nobleInfo.getInteger(POINTS);
-			final int compDone = nobleInfo.getInteger(COMP_DONE);
-			final int compWon = nobleInfo.getInteger(COMP_WON);
-			final int compLost = nobleInfo.getInteger(COMP_LOST);
-			final int compDrawn = nobleInfo.getInteger(COMP_DRAWN);
+			final int points = nobleInfo.getInt(POINTS);
+			final int compDone = nobleInfo.getInt(COMP_DONE);
+			final int compWon = nobleInfo.getInt(COMP_WON);
+			final int compLost = nobleInfo.getInt(COMP_LOST);
+			final int compDrawn = nobleInfo.getInt(COMP_DRAWN);
 			
 			statement = con.prepareStatement(OLYMPIAD_UPDATE_OLD_NOBLES);
 			statement.setInt(1, points);
@@ -1310,10 +1310,10 @@ public class Olympiad
 				}
 				
 				final int charId = nobleId;
-				final int classId = nobleInfo.getInteger(CLASS_ID);
+				final int classId = nobleInfo.getInt(CLASS_ID);
 				final String charName = nobleInfo.getString(CHAR_NAME);
-				final int points = nobleInfo.getInteger(POINTS);
-				final int compDone = nobleInfo.getInteger(COMP_DONE);
+				final int points = nobleInfo.getInt(POINTS);
+				final int compDone = nobleInfo.getInt(COMP_DONE);
 				
 				logResult(charName, "", Double.valueOf(charId), Double.valueOf(classId), compDone, points, "noble-charId-classId-compdone-points", 0, "");
 			}
@@ -1395,10 +1395,10 @@ public class Olympiad
 		
 		for (StatsSet hero : _heroesToBe)
 		{
-			final int charId = hero.getInteger(CHAR_ID);
+			final int charId = hero.getInt(CHAR_ID);
 			
 			final StatsSet noble = _nobles.get(charId);
-			int currentPoints = noble.getInteger(POINTS);
+			int currentPoints = noble.getInt(POINTS);
 			currentPoints += Config.ALT_OLY_HERO_POINTS;
 			noble.set(POINTS, currentPoints);
 			
@@ -1420,7 +1420,7 @@ public class Olympiad
 			{
 				return 0;
 			}
-			int points = noble.getInteger(POINTS);
+			int points = noble.getInt(POINTS);
 			if (points <= Config.ALT_OLY_MIN_POINT_FOR_EXCH)
 			{
 				return 0;
@@ -1444,7 +1444,7 @@ public class Olympiad
 		{
 			return 0;
 		}
-		int points = noble.getInteger(POINTS);
+		int points = noble.getInt(POINTS);
 		if (points <= Config.ALT_OLY_MIN_POINT_FOR_EXCH)
 		{
 			return 0;
@@ -1489,7 +1489,7 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInteger(POINTS);
+		final int points = noble.getInt(POINTS);
 		
 		return points;
 	}
@@ -1506,7 +1506,7 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInteger(COMP_DONE);
+		final int points = noble.getInt(COMP_DONE);
 		
 		return points;
 	}
@@ -1523,7 +1523,7 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInteger(COMP_WON);
+		final int points = noble.getInt(COMP_WON);
 		
 		return points;
 	}
@@ -1540,7 +1540,7 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInteger(COMP_LOST);
+		final int points = noble.getInt(COMP_LOST);
 		
 		return points;
 	}

@@ -49,11 +49,11 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.GmListTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
@@ -358,8 +358,8 @@ public class GameStatusThread extends Thread
 					{
 						_usrCommand = _usrCommand.substring(7);
 						final CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, "Telnet GM Broadcast from " + _cSocket.getInetAddress().getHostAddress(), _usrCommand);
-						GmListTable.broadcastToGMs(cs);
-						_print.println("Your Message Has Been Sent To " + getOnlineGMS() + " GM(s).");
+						AdminData.broadcastToGMs(cs);
+						_print.println("Your Message Has Been Sent To " + getOnlineGMs() + " GM(s).");
 					}
 					catch (StringIndexOutOfBoundsException e)
 					{
@@ -371,7 +371,7 @@ public class GameStatusThread extends Thread
 					int igm = 0;
 					String gmList = "";
 					
-					for (String player : GmListTable.getInstance().getAllGmNames(true))
+					for (String player : AdminData.getInstance().getAllGmNames(true))
 					{
 						gmList = gmList + ", " + player;
 						igm++;
@@ -382,10 +382,6 @@ public class GameStatusThread extends Thread
 						_print.println(gmList);
 					}
 				}
-				/*
-				 * else if (_usrCommand.startsWith("unblock")) { try { _usrCommand = _usrCommand.substring(8); if (LoginServer.getInstance().unblockIp(_usrCommand)) { LOGGER.warning("IP removed via TELNET by host: " + _csocket.getInetAddress().getHostAddress()); _print.println("The IP " +
-				 * _usrCommand + " has been removed from the hack protection list!"); } else { _print.println("IP not found in hack protection list..."); } //TODO: with packet } catch (StringIndexOutOfBoundsException e) { _print.println("Please Enter the IP to Unblock!"); } }
-				 */
 				else if (_usrCommand.startsWith("kick"))
 				{
 					try
@@ -446,7 +442,8 @@ public class GameStatusThread extends Thread
 					_print.println("OK! - Shutdown/Restart Aborted.");
 				}
 				else if (_usrCommand.equals("quit"))
-				{ /* Do Nothing :p - Just here to save us from the "Command Not Understood" Text */
+				{
+					/* Do Nothing :p - Just here to save us from the "Command Not Understood" Text */
 				}
 				else if (_usrCommand.startsWith("give"))
 				{
@@ -978,9 +975,9 @@ public class GameStatusThread extends Thread
 		}
 	}
 	
-	private int getOnlineGMS()
+	private int getOnlineGMs()
 	{
-		return GmListTable.getInstance().getAllGms(true).size();
+		return AdminData.getInstance().getAllGms(true).size();
 	}
 	
 	private String getUptime(int time)
@@ -1104,7 +1101,7 @@ public class GameStatusThread extends Thread
 		sb.append("\r\n  +.......... Creature: " + charCount);
 		sb.append("\r\n  --->   Ingame Time: " + gameTime());
 		sb.append("\r\n  ---> Server Uptime: " + getUptime(_uptime));
-		sb.append("\r\n  --->      GM Count: " + getOnlineGMS());
+		sb.append("\r\n  --->      GM Count: " + getOnlineGMs());
 		sb.append("\r\n  --->       Threads: " + Thread.activeCount());
 		sb.append("\r\n  RAM Used: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576)); // 1024 * 1024 = 1048576
 		sb.append("\r\n");

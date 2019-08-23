@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.skills.effects.EffectSeed;
-import org.l2jmobius.gameserver.templates.StatsSet;
 
 public class SkillSeed extends Skill
 {

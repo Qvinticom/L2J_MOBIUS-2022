@@ -166,8 +166,8 @@ public class Util
 	// Micht: Removed this because UNUSED
 	/*
 	 * public static boolean checkIfInRange(int range, int x1, int y1, int x2, int y2) { return checkIfInRange(range, x1, y1, 0, x2, y2, 0, false); } public static boolean checkIfInRange(int range, int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis) { if (includeZAxis) { return
-	 * ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2) + (z1 - z2)*(z1 - z2)) <= range * range; } else { return ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)) <= range * range; } } public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) { if (obj1 == null || obj2
-	 * == null) return false; return checkIfInRange(range, obj1.getPosition().getX(), obj1.getPosition().getY(), obj1.getPosition().getZ(), obj2.getPosition().getX(), obj2.getPosition().getY(), obj2.getPosition().getZ(), includeZAxis); }
+	 * ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2) + (z1 - z2)*(z1 - z2)) <= range * range; } else { return ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)) <= range * range; } } public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) { if (obj1 == null ||
+	 * obj2 == null) return false; return checkIfInRange(range, obj1.getPosition().getX(), obj1.getPosition().getY(), obj1.getPosition().getZ(), obj2.getPosition().getX(), obj2.getPosition().getY(), obj2.getPosition().getZ(), includeZAxis); }
 	 */
 	public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis)
 	{
@@ -272,21 +272,6 @@ public class Util
 		final float exponent = (float) Math.pow(10, numPlaces);
 		
 		return Math.round(val * exponent) / exponent;
-	}
-	
-	public static boolean isAlphaNumeric(String text)
-	{
-		boolean result = true;
-		final char[] chars = text.toCharArray();
-		for (char aChar : chars)
-		{
-			if (!Character.isLetterOrDigit(aChar))
-			{
-				result = false;
-				break;
-			}
-		}
-		return result;
 	}
 	
 	/**
@@ -501,6 +486,48 @@ public class Util
 		{
 			return false;
 		}
+	}
+	
+	/**
+	 * @param <T>
+	 * @param name - the text to check
+	 * @param enumType
+	 * @return {@code true} if {@code text} is enum, {@code false} otherwise
+	 */
+	public static <T extends Enum<T>> boolean isEnum(String name, Class<T> enumType)
+	{
+		if ((name == null) || name.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			return Enum.valueOf(enumType, name) != null;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} contains only letters and/or numbers, {@code false} otherwise
+	 */
+	public static boolean isAlphaNumeric(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		for (char c : text.toCharArray())
+		{
+			if (!Character.isLetterOrDigit(c))
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	/**
