@@ -63,7 +63,7 @@ public class Unlock implements ISkillHandler
 					return;
 				}
 				
-				if (success && (!door.getOpen()))
+				if (success && (!door.isOpen()))
 				{
 					door.openMe();
 					door.onOpen();

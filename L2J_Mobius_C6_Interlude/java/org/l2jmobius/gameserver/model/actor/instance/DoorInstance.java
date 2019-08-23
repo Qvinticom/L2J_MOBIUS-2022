@@ -262,17 +262,15 @@ public class DoorInstance extends Creature
 	}
 	
 	/**
-	 * Gets the open.
-	 * @return Returns the open.
+	 * @return Returns if the door is open.
 	 */
-	public boolean getOpen()
+	public boolean isOpen()
 	{
 		return _open;
 	}
 	
 	/**
-	 * Sets the open.
-	 * @param open The open to set.
+	 * @param open The door open status.
 	 */
 	public void setOpen(boolean open)
 	{

@@ -36,7 +36,7 @@ public class DoorStatusUpdate extends GameServerPacket
 	{
 		writeC(0x4d);
 		writeD(_door.getObjectId());
-		writeD(_door.getOpen() ? 0 : 1);
+		writeD(_door.isOpen() ? 0 : 1);
 		writeD(_door.getDamage());
 		writeD(_door.isEnemyOf(getClient().getPlayer()) ? 1 : 0);
 		writeD(_door.getDoorId());

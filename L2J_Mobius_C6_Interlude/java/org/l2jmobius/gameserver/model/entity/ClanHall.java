@@ -535,7 +535,7 @@ public class ClanHall
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				getDoors().set(i, door);
 			}
-			else if (door.getOpen())
+			else if (door.isOpen())
 			{
 				door.closeMe();
 			}
