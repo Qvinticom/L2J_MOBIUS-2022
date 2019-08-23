@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets;
 
-import org.l2jmobius.gameserver.thread.TaskPriority;
-
 /**
  * @author -Wooden-
  */
@@ -92,10 +90,5 @@ public abstract class LoginServerBasePacket
 		}
 		_off += length;
 		return result;
-	}
-	
-	public TaskPriority getPriority()
-	{
-		return TaskPriority.PR_HIGH;
 	}
 }

@@ -95,7 +95,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SignsSky;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.thread.TaskPriority;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -109,11 +108,6 @@ public class EnterWorld extends GameClientPacket
 	private final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
 	private long _daysleft;
 	SimpleDateFormat df = new SimpleDateFormat("dd MM yyyy");
-	
-	public TaskPriority getPriority()
-	{
-		return TaskPriority.PR_URGENT;
-	}
 	
 	@Override
 	protected void readImpl()

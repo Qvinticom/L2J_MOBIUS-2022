@@ -23,18 +23,12 @@ import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.thread.TaskPriority;
 
 public class RequestMoveToLocationInVehicle extends GameClientPacket
 {
 	private final Location _pos = new Location(0, 0, 0);
 	private final Location _origin_pos = new Location(0, 0, 0);
 	private int _boatId;
-	
-	public TaskPriority getPriority()
-	{
-		return TaskPriority.PR_HIGH;
-	}
 	
 	@Override
 	protected void readImpl()

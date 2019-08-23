@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.thread.LoginServerThread;
 
 /**
  * This class provides the functions for shutting down and restarting the server.<br>

@@ -39,19 +39,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SpawnItemPoly;
 import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
-import org.l2jmobius.gameserver.thread.TaskPriority;
 
 public class RequestRecordInfo extends GameClientPacket
 {
-	/**
-	 * urgent messages, execute immediately
-	 * @return
-	 */
-	public TaskPriority getPriority()
-	{
-		return TaskPriority.PR_NORMAL;
-	}
-	
 	@Override
 	protected void readImpl()
 	{

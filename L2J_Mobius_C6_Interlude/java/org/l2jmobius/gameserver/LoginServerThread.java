@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.thread;
+package org.l2jmobius.gameserver;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -37,7 +37,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.crypt.NewCrypt;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;

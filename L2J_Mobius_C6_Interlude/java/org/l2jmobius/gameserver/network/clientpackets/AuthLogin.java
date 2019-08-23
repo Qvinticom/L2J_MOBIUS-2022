@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.LoginServerThread;
+import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.thread.LoginServerThread;
-import org.l2jmobius.gameserver.thread.LoginServerThread.SessionKey;
 
 public class AuthLogin extends GameClientPacket
 {

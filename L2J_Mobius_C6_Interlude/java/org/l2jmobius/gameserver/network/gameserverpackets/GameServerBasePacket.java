@@ -19,8 +19,6 @@ package org.l2jmobius.gameserver.network.gameserverpackets;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.thread.TaskPriority;
-
 /**
  * @author -Wooden-
  */
@@ -115,11 +113,6 @@ public abstract class GameServerBasePacket
 		}
 		
 		return _bao.toByteArray();
-	}
-	
-	public TaskPriority getPriority()
-	{
-		return TaskPriority.PR_HIGH;
 	}
 	
 	public abstract byte[] getContent() throws IOException;

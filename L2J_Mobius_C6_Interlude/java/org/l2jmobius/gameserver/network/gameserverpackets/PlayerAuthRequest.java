@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.gameserverpackets;
 
-import org.l2jmobius.gameserver.thread.LoginServerThread.SessionKey;
+import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 
 /**
  * @author -Wooden-

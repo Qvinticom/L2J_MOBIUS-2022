@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.thread.daemons;
+package org.l2jmobius.commons.util;
 
 import java.lang.management.ManagementFactory;
 import java.util.ArrayList;
@@ -22,8 +22,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
-
-import org.l2jmobius.commons.util.Util;
 
 /**
  * @author ProGramMoS
