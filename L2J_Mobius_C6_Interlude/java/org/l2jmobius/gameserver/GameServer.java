@@ -366,7 +366,7 @@ public class GameServer
 		BoatManager.getInstance();
 		
 		Util.printSection("Doors");
-		DoorTable.getInstance().parseData();
+		DoorTable.getInstance().load();
 		FenceData.getInstance();
 		
 		Util.printSection("Four Sepulchers");

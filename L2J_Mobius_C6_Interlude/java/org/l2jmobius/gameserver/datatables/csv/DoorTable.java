@@ -22,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -40,7 +41,7 @@ public class DoorTable
 {
 	private static Logger LOGGER = Logger.getLogger(DoorTable.class.getName());
 	
-	private Map<Integer, DoorInstance> _staticItems;
+	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
 	
 	private static DoorTable _instance;
 	
@@ -56,23 +57,11 @@ public class DoorTable
 	
 	public DoorTable()
 	{
-		_staticItems = new HashMap<>();
-		// parseData();
+		_doors.clear();
+		// load();
 	}
 	
-	public void reloadAll()
-	{
-		respawn();
-	}
-	
-	public void respawn()
-	{
-		// DoorInstance[] currentDoors = getDoors();
-		_staticItems = null;
-		_instance = new DoorTable();
-	}
-	
-	public void parseData()
+	public void load()
 	{
 		FileReader reader = null;
 		BufferedReader buff = null;
@@ -97,7 +86,7 @@ public class DoorTable
 				}
 				
 				final DoorInstance door = parseList(line);
-				_staticItems.put(door.getDoorId(), door);
+				_doors.put(door.getDoorId(), door);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				final ClanHall clanhall = ClanHallManager.getInstance().getNearbyClanHall(door.getX(), door.getY(), 500);
 				if (clanhall != null)
@@ -107,7 +96,7 @@ public class DoorTable
 				}
 			}
 			
-			LOGGER.info("DoorTable: Loaded " + _staticItems.size() + " Door Templates.");
+			LOGGER.info("DoorTable: Loaded " + _doors.size() + " Door Templates.");
 		}
 		catch (FileNotFoundException e)
 		{
@@ -289,18 +278,17 @@ public class DoorTable
 	
 	public DoorInstance getDoor(Integer id)
 	{
-		return _staticItems.get(id);
+		return _doors.get(id);
 	}
 	
 	public void putDoor(DoorInstance door)
 	{
-		_staticItems.put(door.getDoorId(), door);
+		_doors.put(door.getDoorId(), door);
 	}
 	
-	public DoorInstance[] getDoors()
+	public Collection<DoorInstance> getDoors()
 	{
-		final DoorInstance[] _allTemplates = _staticItems.values().toArray(new DoorInstance[_staticItems.size()]);
-		return _allTemplates;
+		return _doors.values();
 	}
 	
 	/**
@@ -308,7 +296,7 @@ public class DoorTable
 	 */
 	public void checkAutoOpen()
 	{
-		for (DoorInstance doorInst : getDoors())
+		for (DoorInstance doorInst : _doors.values())
 		{
 			// Garden of Eva (every 7 minutes)
 			if (doorInst.getDoorName().startsWith("goe"))
@@ -345,7 +333,7 @@ public class DoorTable
 			return false;
 		}
 		
-		for (DoorInstance doorInst : getDoors())
+		for (DoorInstance doorInst : _doors.values())
 		{
 			if (doorInst.getMapRegion() != region)
 			{
