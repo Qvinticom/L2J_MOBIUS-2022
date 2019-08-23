@@ -69,9 +69,6 @@ public class LoginServer
 			new Gui();
 		}
 		
-		// Load Config
-		Config.load(ServerMode.LOGIN);
-		
 		// Create log folder
 		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
@@ -86,6 +83,9 @@ public class LoginServer
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
+		
+		// Load Config
+		Config.load(ServerMode.LOGIN);
 		
 		// Prepare Database
 		DatabaseFactory.init();

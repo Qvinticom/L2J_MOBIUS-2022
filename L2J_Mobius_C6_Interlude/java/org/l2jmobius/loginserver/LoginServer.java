@@ -38,6 +38,9 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.ui.Gui;
 import org.l2jmobius.telnet.TelnetStatusThread;
 
+/**
+ * @author KenM
+ */
 public class LoginServer
 {
 	public Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
@@ -68,9 +71,6 @@ public class LoginServer
 			new Gui();
 		}
 		
-		// Load LoginServer Configs
-		Config.load(ServerMode.LOGIN);
-		
 		// Create log folder
 		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
@@ -86,6 +86,9 @@ public class LoginServer
 			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
+		// Load Config
+		Config.load(ServerMode.LOGIN);
+		
 		// Prepare Database
 		DatabaseFactory.init();
 		
@@ -95,7 +98,7 @@ public class LoginServer
 		}
 		catch (GeneralSecurityException e)
 		{
-			LOGGER.severe("Failed initializing LoginController " + e);
+			LOGGER.severe("FATAL: Failed initializing LoginController. Reason: " + e);
 			System.exit(1);
 		}
 		

@@ -153,6 +153,8 @@ public class GameServer
 	
 	public static void main(String[] args) throws Exception
 	{
+		final long serverLoadStart = System.currentTimeMillis();
+		
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
 		{
@@ -160,11 +162,8 @@ public class GameServer
 			new Gui();
 		}
 		
-		// Load GameServer Configs
-		Config.load(ServerMode.GAME);
-		
 		// Create log folder
-		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
+		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory
@@ -173,7 +172,8 @@ public class GameServer
 			LogManager.getLogManager().readConfiguration(is);
 		}
 		
-		final long serverLoadStart = System.currentTimeMillis();
+		// Initialize config
+		Config.load(ServerMode.GAME);
 		
 		Util.printSection("Database");
 		DatabaseFactory.init();
@@ -188,8 +188,8 @@ public class GameServer
 		Util.printSection("IdFactory");
 		if (!IdFactory.getInstance().isInitialized())
 		{
-			LOGGER.info("Could not read object IDs from DB. Please Check Your Data.");
-			throw new Exception("Could not initialize the ID factory");
+			LOGGER.severe("IdFactory: Could not read object IDs from database. Please check your configuration.");
+			throw new Exception("Could not initialize the ID factory!");
 		}
 		
 		new File(Config.DATAPACK_ROOT, "data/clans").mkdirs();

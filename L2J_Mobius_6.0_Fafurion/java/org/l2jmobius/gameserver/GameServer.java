@@ -191,11 +191,8 @@ public class GameServer
 			new Gui();
 		}
 		
-		// Initialize config
-		Config.load(ServerMode.GAME);
-		
 		// Create log folder
-		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
+		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory
@@ -203,6 +200,9 @@ public class GameServer
 		{
 			LogManager.getLogManager().readConfiguration(is);
 		}
+		
+		// Initialize config
+		Config.load(ServerMode.GAME);
 		
 		printSection("Database");
 		DatabaseFactory.init();
