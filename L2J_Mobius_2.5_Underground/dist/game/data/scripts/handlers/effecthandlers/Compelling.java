@@ -48,6 +48,12 @@ public class Compelling extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
+		// Prevent compelling raids and town NPCs.
+		if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+		{
+			return;
+		}
+		
 		effected.setRunning();
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effector.getLocation());
 	}
