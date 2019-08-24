@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.skills.Stats;
-import org.l2jmobius.gameserver.skills.funcs.FuncAdd;
-import org.l2jmobius.gameserver.skills.funcs.LambdaConst;
+import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.funcs.FuncAdd;
+import org.l2jmobius.gameserver.model.skills.funcs.LambdaConst;
 
 /**
  * Used to store an augmentation and its bonus

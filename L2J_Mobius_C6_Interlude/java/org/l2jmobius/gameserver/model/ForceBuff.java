@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.skills.effects.EffectForce;
+import org.l2jmobius.gameserver.model.skills.effects.EffectForce;
 
 /**
  * @author kombat

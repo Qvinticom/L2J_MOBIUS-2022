@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.skills.Calculator;
+import org.l2jmobius.gameserver.model.skills.Env;
+import org.l2jmobius.gameserver.model.skills.Stats;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.skills.Calculator;
-import org.l2jmobius.gameserver.skills.Env;
-import org.l2jmobius.gameserver.skills.Stats;
 
 public class CreatureStat
 {

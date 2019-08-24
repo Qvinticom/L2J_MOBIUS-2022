@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.stat;
 
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stats;
 
 public class NpcStat extends CreatureStat
 {

@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.TimeUtil;
 import org.l2jmobius.gameserver.model.interfaces.IParserAdvUtils;
-import org.l2jmobius.gameserver.skills.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.skills.holders.SkillHolder;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stats;
 
 /**
  * This cl contains all generic data of a Spawn object.<BR>
