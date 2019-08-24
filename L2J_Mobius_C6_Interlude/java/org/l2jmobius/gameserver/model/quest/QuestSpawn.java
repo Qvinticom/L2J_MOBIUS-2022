@@ -32,19 +32,8 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 public class QuestSpawn
 {
 	private final Logger LOGGER = Quest.LOGGER;
-	private static QuestSpawn instance;
 	
-	public static QuestSpawn getInstance()
-	{
-		if (instance == null)
-		{
-			instance = new QuestSpawn();
-		}
-		
-		return instance;
-	}
-	
-	public class DeSpawnScheduleTimerTask implements Runnable
+	private class DeSpawnScheduleTimerTask implements Runnable
 	{
 		NpcInstance _npc = null;
 		
@@ -148,5 +137,15 @@ public class QuestSpawn
 		}
 		
 		return null;
+	}
+	
+	public static QuestSpawn getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final QuestSpawn INSTANCE = new QuestSpawn();
 	}
 }

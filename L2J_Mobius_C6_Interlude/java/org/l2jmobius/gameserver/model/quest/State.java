@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.quest;
 
 /**
- * @author Luis Arias Functions in this class are used in python files
+ * @author Luis Arias
  */
 public class State
 {

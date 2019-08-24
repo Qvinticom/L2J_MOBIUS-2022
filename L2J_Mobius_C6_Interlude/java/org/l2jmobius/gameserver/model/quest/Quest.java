@@ -73,10 +73,7 @@ public class Quest extends ManagedScript
 	private final String _prefixPath; // used only for admin_quest_reload
 	private final String _descr;
 	private final byte _initialState = State.CREATED;
-	// NOTE: questItemIds will be overriden by child classes. Ideally, it should be protected instead of public.
-	// However, quest scripts written in Jython will have trouble with protected, as Jython only knows private and public...
-	// In fact, protected will typically be considered private thus breaking the scripts. Leave this as public as a workaround.
-	public int[] questItemIds = null;
+	protected int[] questItemIds = null;
 	
 	// Dimensional Diamond Rewards by Class for 2nd class transfer quest (35)
 	protected static final Map<Integer, Integer> DF_REWARD_35 = new HashMap<>();
