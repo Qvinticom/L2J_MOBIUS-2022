@@ -28,12 +28,12 @@ public class PlayerAppearance
 	/** The hexadecimal Color of players name (white is 0xFFFFFF) */
 	private int _titleColor = 0xFFFF77;
 	
-	public PlayerAppearance(byte Face, byte HColor, byte HStyle, boolean Sex)
+	public PlayerAppearance(byte face, byte hColor, byte hStyle, boolean sex)
 	{
-		_face = Face;
-		_hairColor = HColor;
-		_hairStyle = HStyle;
-		_sex = Sex;
+		_face = face;
+		_hairColor = hColor;
+		_hairStyle = hStyle;
+		_sex = sex;
 	}
 	
 	public byte getFace()
