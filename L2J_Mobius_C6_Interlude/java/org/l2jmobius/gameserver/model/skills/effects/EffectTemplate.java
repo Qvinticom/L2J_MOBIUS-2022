@@ -67,7 +67,7 @@ public class EffectTemplate
 		
 		try
 		{
-			_func = Class.forName("org.l2jmobius.gameserver.skills.effects.Effect" + func);
+			_func = Class.forName("org.l2jmobius.gameserver.model.skills.effects.Effect" + func);
 		}
 		catch (ClassNotFoundException e)
 		{

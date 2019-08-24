@@ -45,7 +45,7 @@ public class FuncTemplate
 		lambda = pLambda;
 		try
 		{
-			func = Class.forName("org.l2jmobius.gameserver.skills.funcs.Func" + pFunc);
+			func = Class.forName("org.l2jmobius.gameserver.model.skills.funcs.Func" + pFunc);
 		}
 		catch (ClassNotFoundException e)
 		{
