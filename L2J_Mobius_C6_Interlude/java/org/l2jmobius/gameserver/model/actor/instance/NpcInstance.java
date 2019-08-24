@@ -71,7 +71,6 @@ import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.scripts.RaidBossTeleportManager;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -1560,52 +1559,6 @@ public class NpcInstance extends Creature
 			else
 			{
 				DimensionalRiftManager.getInstance().handleCheat(player, this);
-			}
-		}
-		else if (command.startsWith("RaidbossLvl_"))
-		{
-			final int endOfId = command.indexOf('_', 5);
-			if (endOfId > 0)
-			{
-				command.substring(4, endOfId);
-			}
-			else
-			{
-				command.substring(4);
-			}
-			try
-			{
-				if (command.substring(endOfId + 1).startsWith("40"))
-				{
-					RaidBossTeleportManager.RaidbossLevel40(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("45"))
-				{
-					RaidBossTeleportManager.RaidbossLevel45(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("50"))
-				{
-					RaidBossTeleportManager.RaidbossLevel50(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("55"))
-				{
-					RaidBossTeleportManager.RaidbossLevel55(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("60"))
-				{
-					RaidBossTeleportManager.RaidbossLevel60(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("65"))
-				{
-					RaidBossTeleportManager.RaidbossLevel65(player);
-				}
-				else if (command.substring(endOfId + 1).startsWith("70"))
-				{
-					RaidBossTeleportManager.RaidbossLevel70(player);
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
 			}
 		}
 	}
