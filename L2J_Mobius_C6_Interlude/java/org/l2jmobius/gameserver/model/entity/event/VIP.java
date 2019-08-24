@@ -29,10 +29,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.PlayerInventory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -830,7 +830,7 @@ public class VIP
 				else
 				{
 					replyMSG.append("You want to participate in the event?<br><br>");
-					if ((eventPlayer.getRace() == Race.human) && (_team == 1))
+					if ((eventPlayer.getRace() == Race.HUMAN) && (_team == 1))
 					{
 						replyMSG.append("It seems you are on the VIP race! Be prepared to protect the VIP when it is decided<br1>");
 						replyMSG.append("The VIP will be decided on when the event starts. It's completely random.<br>");
@@ -838,7 +838,7 @@ public class VIP
 						replyMSG.append("<button value=\"Join\" action=\"bypass -h npc_" + objectId + "_vip_joinVIPTeam\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 						replyMSG.append("</center>");
 					}
-					else if ((eventPlayer.getRace() == Race.elf) && (_team == 2))
+					else if ((eventPlayer.getRace() == Race.ELF) && (_team == 2))
 					{
 						replyMSG.append("It seems you are on the VIP race! Be prepared to protect the VIP when it is decided<br1>");
 						replyMSG.append("The VIP will be decided on when the event starts. It's completely random.<br>");
@@ -846,7 +846,7 @@ public class VIP
 						replyMSG.append("<button value=\"Join\" action=\"bypass -h npc_" + objectId + "_vip_joinVIPTeam\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 						replyMSG.append("</center>");
 					}
-					else if ((eventPlayer.getRace() == Race.darkelf) && (_team == 3))
+					else if ((eventPlayer.getRace() == Race.DARK_ELF) && (_team == 3))
 					{
 						replyMSG.append("It seems you are on the VIP race! Be prepared to protect the VIP when it is decided<br1>");
 						replyMSG.append("The VIP will be decided on when the event starts. It's completely random.<br>");
@@ -854,7 +854,7 @@ public class VIP
 						replyMSG.append("<button value=\"Join\" action=\"bypass -h npc_" + objectId + "_vip_joinVIPTeam\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 						replyMSG.append("</center>");
 					}
-					else if ((eventPlayer.getRace() == Race.orc) && (_team == 4))
+					else if ((eventPlayer.getRace() == Race.ORC) && (_team == 4))
 					{
 						replyMSG.append("It seems you are on the VIP race! Be prepared to protect the VIP when it is decided<br1>");
 						replyMSG.append("The VIP will be decided on when the event starts. It's completely random.<br>");
@@ -862,7 +862,7 @@ public class VIP
 						replyMSG.append("<button value=\"Join\" action=\"bypass -h npc_" + objectId + "_vip_joinVIPTeam\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 						replyMSG.append("</center>");
 					}
-					else if ((eventPlayer.getRace() == Race.dwarf) && (_team == 5))
+					else if ((eventPlayer.getRace() == Race.DWARF) && (_team == 5))
 					{
 						replyMSG.append("It seems you are on the VIP race! Be prepared to protect the VIP when it is decided<br1>");
 						replyMSG.append("The VIP will be decided on when the event starts. It's completely random.<br>");

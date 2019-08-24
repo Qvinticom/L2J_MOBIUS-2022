@@ -99,9 +99,9 @@ public class Q409_PathToAnElvenOracle extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getClassId() != ClassId.elvenMage)
+				if (player.getClassId() != ClassId.ELVEN_MAGE)
 				{
-					htmltext = (player.getClassId() == ClassId.oracle) ? "30293-02a.htm" : "30293-02.htm";
+					htmltext = (player.getClassId() == ClassId.ORACLE) ? "30293-02a.htm" : "30293-02.htm";
 				}
 				else if (player.getLevel() < 19)
 				{

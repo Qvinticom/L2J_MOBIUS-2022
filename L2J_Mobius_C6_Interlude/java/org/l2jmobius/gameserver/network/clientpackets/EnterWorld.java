@@ -481,15 +481,15 @@ public class EnterWorld extends GameClientPacket
 			{
 				final ClassLevel lvlnow = PlayerClass.values()[player.getClassId().getId()].getLevel();
 				
-				if ((player.getLevel() >= 20) && (lvlnow == ClassLevel.First))
+				if ((player.getLevel() >= 20) && (lvlnow == ClassLevel.FIRST))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}
-				else if ((player.getLevel() >= 40) && (lvlnow == ClassLevel.Second))
+				else if ((player.getLevel() >= 40) && (lvlnow == ClassLevel.SECOND))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}
-				else if ((player.getLevel() >= 76) && (lvlnow == ClassLevel.Third))
+				else if ((player.getLevel() >= 76) && (lvlnow == ClassLevel.THIRD))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}

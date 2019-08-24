@@ -168,7 +168,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.warrior) && (player.getClassId() != ClassId.elvenKnight) && (player.getClassId() != ClassId.palusKnight) && (player.getClassId() != ClassId.orcRaider) && (player.getClassId() != ClassId.orcMonk))
+				if ((player.getClassId() != ClassId.WARRIOR) && (player.getClassId() != ClassId.ELVEN_KNIGHT) && (player.getClassId() != ClassId.PALUS_KNIGHT) && (player.getClassId() != ClassId.ORC_RAIDER) && (player.getClassId() != ClassId.ORC_MONK))
 				{
 					htmltext = "30644-02.htm";
 				}

@@ -16,9 +16,9 @@
  */
 package quests.Q116_BeyondTheHillsOfWinter;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -103,7 +103,7 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = ((player.getLevel() < 30) || (player.getRace() != Race.dwarf)) ? "30535-00.htm" : "30535-01.htm";
+				htmltext = ((player.getLevel() < 30) || (player.getRace() != Race.DWARF)) ? "30535-00.htm" : "30535-01.htm";
 				break;
 			
 			case State.STARTED:

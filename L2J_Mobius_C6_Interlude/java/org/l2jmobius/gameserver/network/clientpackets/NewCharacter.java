@@ -36,31 +36,31 @@ public class NewCharacter extends GameClientPacket
 		PlayerTemplate template = CharTemplateTable.getInstance().getTemplate(0);
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.fighter); // Human Fighter
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.FIGHTER); // Human Fighter
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.mage); // Human Mage
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.MAGE); // Human Mage
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.elvenFighter); // Elf Fighter
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.ELVEN_FIGHTER); // Elf Fighter
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.elvenMage); // Elf Mage
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.ELVEN_MAGE); // Elf Mage
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.darkFighter); // DE Fighter
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.DARK_FIGHTER); // DE Fighter
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.darkMage); // DE Mage
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.DARK_MAGE); // DE Mage
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.orcFighter); // Orc Fighter
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.ORC_FIGHTER); // Orc Fighter
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.orcMage); // Orc Mage
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.ORC_MAGE); // Orc Mage
 		ct.addChar(template);
 		
-		template = CharTemplateTable.getInstance().getTemplate(ClassId.dwarvenFighter); // Dwarf Fighter
+		template = CharTemplateTable.getInstance().getTemplate(ClassId.DWARVEN_FIGHTER); // Dwarf Fighter
 		ct.addChar(template);
 		
 		// Finally

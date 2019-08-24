@@ -1439,7 +1439,7 @@ public class DM implements EventTask
 			}
 		}
 		
-		if (!Config.DM_ALLOW_HEALER_CLASSES && ((eventPlayer.getClassId() == ClassId.cardinal) || (eventPlayer.getClassId() == ClassId.evaSaint) || (eventPlayer.getClassId() == ClassId.shillienSaint)))
+		if (!Config.DM_ALLOW_HEALER_CLASSES && ((eventPlayer.getClassId() == ClassId.CARDINAL) || (eventPlayer.getClassId() == ClassId.EVA_SAINT) || (eventPlayer.getClassId() == ClassId.SHILLIEN_SAINT)))
 		{
 			eventPlayer.sendMessage("You cant join with Healer Class!");
 			return false;

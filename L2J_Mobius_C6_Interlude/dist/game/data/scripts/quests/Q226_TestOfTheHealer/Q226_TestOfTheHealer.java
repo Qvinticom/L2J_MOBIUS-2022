@@ -213,7 +213,7 @@ public class Q226_TestOfTheHealer extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.knight) && (player.getClassId() != ClassId.elvenKnight) && (player.getClassId() != ClassId.cleric) && (player.getClassId() != ClassId.oracle))
+				if ((player.getClassId() != ClassId.KNIGHT) && (player.getClassId() != ClassId.ELVEN_KNIGHT) && (player.getClassId() != ClassId.CLERIC) && (player.getClassId() != ClassId.ORACLE))
 				{
 					htmltext = "30473-01.htm";
 				}

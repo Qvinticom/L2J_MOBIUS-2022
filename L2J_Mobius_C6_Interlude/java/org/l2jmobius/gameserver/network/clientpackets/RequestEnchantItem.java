@@ -20,10 +20,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -612,7 +612,7 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		int rndValue = Rnd.get(100);
 		
-		if (Config.ENABLE_DWARF_ENCHANT_BONUS && (player.getRace() == Race.dwarf))
+		if (Config.ENABLE_DWARF_ENCHANT_BONUS && (player.getRace() == Race.DWARF))
 		{
 			if (player.getLevel() >= Config.DWARF_ENCHANT_MIN_LEVEL)
 			{

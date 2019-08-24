@@ -16,9 +16,9 @@
  */
 package quests.Q009_IntoTheCityOfHumans;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -87,7 +87,7 @@ public class Q009_IntoTheCityOfHumans extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getLevel() >= 3) && (player.getRace() == Race.orc))
+				if ((player.getLevel() >= 3) && (player.getRace() == Race.ORC))
 				{
 					htmltext = "30583-00.htm";
 				}

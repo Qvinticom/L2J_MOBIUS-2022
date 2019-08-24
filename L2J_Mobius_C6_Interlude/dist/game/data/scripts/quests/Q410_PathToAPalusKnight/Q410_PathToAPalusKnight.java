@@ -69,9 +69,9 @@ public class Q410_PathToAPalusKnight extends Quest
 		
 		if (event.equals("30329-05.htm"))
 		{
-			if (player.getClassId() != ClassId.darkFighter)
+			if (player.getClassId() != ClassId.DARK_FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.palusKnight) ? "30329-02a.htm" : "30329-03.htm";
+				htmltext = (player.getClassId() == ClassId.PALUS_KNIGHT) ? "30329-02a.htm" : "30329-03.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

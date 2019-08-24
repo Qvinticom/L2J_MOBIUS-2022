@@ -17,9 +17,9 @@
 package quests.Q108_JumbleTumbleDiamondFuss;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -159,7 +159,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.dwarf)
+				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30523-00.htm";
 				}

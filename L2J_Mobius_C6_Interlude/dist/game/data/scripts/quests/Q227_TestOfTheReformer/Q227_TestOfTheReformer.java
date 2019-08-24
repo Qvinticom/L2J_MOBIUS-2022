@@ -249,7 +249,7 @@ public class Q227_TestOfTheReformer extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() == ClassId.cleric) || (player.getClassId() == ClassId.shillienOracle))
+				if ((player.getClassId() == ClassId.CLERIC) || (player.getClassId() == ClassId.SHILLIEN_ORACLE))
 				{
 					htmltext = (player.getLevel() < 39) ? "30118-01.htm" : "30118-03.htm";
 				}

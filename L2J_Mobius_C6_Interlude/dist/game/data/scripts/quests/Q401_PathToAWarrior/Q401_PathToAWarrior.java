@@ -65,9 +65,9 @@ public class Q401_PathToAWarrior extends Quest
 		
 		if (event.equals("30010-05.htm"))
 		{
-			if (player.getClassId() != ClassId.fighter)
+			if (player.getClassId() != ClassId.FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.warrior) ? "30010-03.htm" : "30010-02b.htm";
+				htmltext = (player.getClassId() == ClassId.WARRIOR) ? "30010-03.htm" : "30010-02b.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

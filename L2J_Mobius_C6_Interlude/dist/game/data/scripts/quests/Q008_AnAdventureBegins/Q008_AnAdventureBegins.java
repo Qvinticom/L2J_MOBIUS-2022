@@ -16,9 +16,9 @@
  */
 package quests.Q008_AnAdventureBegins;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -99,7 +99,7 @@ public class Q008_AnAdventureBegins extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getLevel() >= 3) && (player.getRace() == Race.darkelf))
+				if ((player.getLevel() >= 3) && (player.getRace() == Race.DARK_ELF))
 				{
 					htmltext = "30134-02.htm";
 				}

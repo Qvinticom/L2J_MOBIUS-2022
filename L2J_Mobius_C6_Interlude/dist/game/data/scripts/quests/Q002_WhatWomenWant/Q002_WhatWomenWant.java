@@ -16,9 +16,9 @@
  */
 package quests.Q002_WhatWomenWant;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -99,7 +99,7 @@ public class Q002_WhatWomenWant extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getRace() != Race.elf) && (player.getRace() != Race.human))
+				if ((player.getRace() != Race.ELF) && (player.getRace() != Race.HUMAN))
 				{
 					htmltext = "30223-00.htm";
 				}

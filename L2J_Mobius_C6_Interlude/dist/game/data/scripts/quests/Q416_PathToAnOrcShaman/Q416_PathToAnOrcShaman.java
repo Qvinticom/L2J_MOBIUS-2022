@@ -89,9 +89,9 @@ public class Q416_PathToAnOrcShaman extends Quest
 		// TATARU ZU HESTUI
 		if (event.equals("30585-05.htm"))
 		{
-			if (player.getClassId() != ClassId.orcMage)
+			if (player.getClassId() != ClassId.ORC_MAGE)
 			{
-				htmltext = (player.getClassId() == ClassId.orcShaman) ? "30585-02a.htm" : "30585-02.htm";
+				htmltext = (player.getClassId() == ClassId.ORC_SHAMAN) ? "30585-02a.htm" : "30585-02.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

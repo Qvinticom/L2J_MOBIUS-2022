@@ -17,9 +17,9 @@
 package quests.Q293_TheHiddenVeins;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -103,7 +103,7 @@ public class Q293_TheHiddenVeins extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.dwarf)
+				if (player.getRace() != Race.DWARF)
 				{
 					htmltext = "30535-00.htm";
 				}

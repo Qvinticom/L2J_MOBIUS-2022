@@ -177,21 +177,21 @@ public class PlayerStat extends PlayableStat
 		
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
-			final ClassMasterInstance master_instance = ClassMasterInstance.getInstance();
+			final ClassMasterInstance masterInstance = ClassMasterInstance.getInstance();
 			
-			if (master_instance != null)
+			if (masterInstance != null)
 			{
 				
-				final ClassLevel lvlnow = PlayerClass.values()[getActiveChar().getClassId().getId()].getLevel();
-				if ((getLevel() >= 20) && (lvlnow == ClassLevel.First))
+				final ClassLevel curLevel = PlayerClass.values()[getActiveChar().getClassId().getId()].getLevel();
+				if ((getLevel() >= 20) && (curLevel == ClassLevel.FIRST))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 40) && (lvlnow == ClassLevel.Second))
+				else if ((getLevel() >= 40) && (curLevel == ClassLevel.SECOND))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 76) && (lvlnow == ClassLevel.Third))
+				else if ((getLevel() >= 76) && (curLevel == ClassLevel.THIRD))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}

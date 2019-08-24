@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
@@ -372,7 +372,7 @@ public class CustomNpcInstance
 				{
 					continue;
 				}
-				else if (_classId.getRace() == Race.human)
+				else if (_classId.getRace() == Race.HUMAN)
 				{
 				}
 				break;

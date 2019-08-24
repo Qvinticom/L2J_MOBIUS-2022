@@ -87,17 +87,17 @@ public class ClassMasterInstance extends FolkInstance
 			ClassLevel lvl = PlayerClass.values()[classId.getId()].getLevel();
 			switch (lvl)
 			{
-				case First:
+				case FIRST:
 				{
 					jobLevel = 1;
 					break;
 				}
-				case Second:
+				case SECOND:
 				{
 					jobLevel = 2;
 					break;
 				}
-				case Third:
+				case THIRD:
 				{
 					jobLevel = 3;
 					break;
@@ -272,17 +272,17 @@ public class ClassMasterInstance extends FolkInstance
 			}
 			switch (lvlnow)
 			{
-				case First:
+				case FIRST:
 				{
 					jobLevel = 1;
 					break;
 				}
-				case Second:
+				case SECOND:
 				{
 					jobLevel = 2;
 					break;
 				}
-				case Third:
+				case THIRD:
 				{
 					jobLevel = 3;
 					break;
@@ -301,17 +301,17 @@ public class ClassMasterInstance extends FolkInstance
 			ClassLevel lvlnext = PlayerClass.values()[val].getLevel();
 			switch (lvlnext)
 			{
-				case First:
+				case FIRST:
 				{
 					newJobLevel = 1;
 					break;
 				}
-				case Second:
+				case SECOND:
 				{
 					newJobLevel = 2;
 					break;
 				}
-				case Third:
+				case THIRD:
 				{
 					newJobLevel = 3;
 					break;
@@ -689,7 +689,7 @@ public class ClassMasterInstance extends FolkInstance
 		}
 		else
 		{
-			ClassId classId = ClassId.getClassIdByOrdinal(player.getActiveClass());
+			ClassId classId = ClassId.getClassId(player.getActiveClass());
 			
 			if (classId.getParent() != null)
 			{

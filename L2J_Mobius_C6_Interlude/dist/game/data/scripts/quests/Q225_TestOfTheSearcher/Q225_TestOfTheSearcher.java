@@ -201,7 +201,7 @@ public class Q225_TestOfTheSearcher extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.rogue) && (player.getClassId() != ClassId.elvenScout) && (player.getClassId() != ClassId.assassin) && (player.getClassId() != ClassId.scavenger))
+				if ((player.getClassId() != ClassId.ROGUE) && (player.getClassId() != ClassId.ELVEN_SCOUT) && (player.getClassId() != ClassId.ASSASSIN) && (player.getClassId() != ClassId.SCAVENGER))
 				{
 					htmltext = "30690-01.htm";
 				}
@@ -211,7 +211,7 @@ public class Q225_TestOfTheSearcher extends Quest
 				}
 				else
 				{
-					htmltext = (player.getClassId() == ClassId.scavenger) ? "30690-04.htm" : "30690-03.htm";
+					htmltext = (player.getClassId() == ClassId.SCAVENGER) ? "30690-04.htm" : "30690-03.htm";
 				}
 				break;
 			

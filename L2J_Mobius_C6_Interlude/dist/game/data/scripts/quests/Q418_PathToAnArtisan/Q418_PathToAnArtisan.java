@@ -71,9 +71,9 @@ public class Q418_PathToAnArtisan extends Quest
 		
 		if (event.equals("30527-05.htm"))
 		{
-			if (player.getClassId() != ClassId.dwarvenFighter)
+			if (player.getClassId() != ClassId.DWARVEN_FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.artisan) ? "30527-02a.htm" : "30527-02.htm";
+				htmltext = (player.getClassId() == ClassId.ARTISAN) ? "30527-02a.htm" : "30527-02.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

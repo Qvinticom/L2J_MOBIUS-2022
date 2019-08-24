@@ -16,9 +16,9 @@
  */
 package quests.Q107_MercilessPunishment;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -114,7 +114,7 @@ public class Q107_MercilessPunishment extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.orc)
+				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30568-00.htm";
 				}

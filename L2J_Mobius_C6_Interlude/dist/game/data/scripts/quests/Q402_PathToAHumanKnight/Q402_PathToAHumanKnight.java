@@ -83,9 +83,9 @@ public class Q402_PathToAHumanKnight extends Quest
 		
 		if (event.equals("30417-05.htm"))
 		{
-			if (player.getClassId() != ClassId.fighter)
+			if (player.getClassId() != ClassId.FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.knight) ? "30417-02a.htm" : "30417-03.htm";
+				htmltext = (player.getClassId() == ClassId.KNIGHT) ? "30417-02a.htm" : "30417-03.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

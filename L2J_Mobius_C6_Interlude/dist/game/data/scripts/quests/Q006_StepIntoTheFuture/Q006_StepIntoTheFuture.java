@@ -16,9 +16,9 @@
  */
 package quests.Q006_StepIntoTheFuture;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -106,7 +106,7 @@ public class Q006_StepIntoTheFuture extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getRace() != Race.human) || (player.getLevel() < 3))
+				if ((player.getRace() != Race.HUMAN) || (player.getLevel() < 3))
 				{
 					htmltext = "30006-01.htm";
 				}

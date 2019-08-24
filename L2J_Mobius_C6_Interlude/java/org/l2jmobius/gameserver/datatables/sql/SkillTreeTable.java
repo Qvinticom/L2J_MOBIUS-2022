@@ -270,7 +270,7 @@ public class SkillTreeTable
 		}
 		
 		// since expertise comes at same level for all classes we use paladin for now
-		final Map<Integer, SkillLearn> learnMap = getSkillTrees().get(ClassId.paladin);
+		final Map<Integer, SkillLearn> learnMap = getSkillTrees().get(ClassId.PALADIN);
 		
 		final int skillHashCode = SkillTable.getSkillHashCode(239, grade);
 		

@@ -17,9 +17,9 @@
 package quests.Q275_DarkWingedSpies;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -79,7 +79,7 @@ public class Q275_DarkWingedSpies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.orc)
+				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30567-00.htm";
 				}

@@ -289,7 +289,7 @@ public class Q229_TestOfWitchcraft extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.knight) && (player.getClassId() != ClassId.wizard) && (player.getClassId() != ClassId.palusKnight))
+				if ((player.getClassId() != ClassId.KNIGHT) && (player.getClassId() != ClassId.WIZARD) && (player.getClassId() != ClassId.PALUS_KNIGHT))
 				{
 					htmltext = "30630-01.htm";
 				}
@@ -299,7 +299,7 @@ public class Q229_TestOfWitchcraft extends Quest
 				}
 				else
 				{
-					htmltext = (player.getClassId() == ClassId.wizard) ? "30630-03.htm" : "30630-05.htm";
+					htmltext = (player.getClassId() == ClassId.WIZARD) ? "30630-03.htm" : "30630-05.htm";
 				}
 				break;
 			

@@ -87,9 +87,9 @@ public class Q415_PathToAMonk extends Quest
 		
 		if (event.equals("30587-05.htm"))
 		{
-			if (player.getClassId() != ClassId.orcFighter)
+			if (player.getClassId() != ClassId.ORC_FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.orcMonk) ? "30587-02a.htm" : "30587-02.htm";
+				htmltext = (player.getClassId() == ClassId.ORC_MONK) ? "30587-02a.htm" : "30587-02.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

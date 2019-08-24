@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
@@ -113,19 +113,19 @@ public class PlayerTemplate extends CreatureTemplate
 	
 	public int getBaseFallSafeHeight(boolean female)
 	{
-		if ((classId.getRace() == Race.darkelf) || (classId.getRace() == Race.elf))
+		if ((classId.getRace() == Race.DARK_ELF) || (classId.getRace() == Race.ELF))
 		{
 			return classId.isMage() ? (female ? 330 : 300) : female ? 380 : 350;
 		}
-		else if (classId.getRace() == Race.dwarf)
+		else if (classId.getRace() == Race.DWARF)
 		{
 			return female ? 200 : 180;
 		}
-		else if (classId.getRace() == Race.human)
+		else if (classId.getRace() == Race.HUMAN)
 		{
 			return classId.isMage() ? (female ? 220 : 200) : female ? 270 : 250;
 		}
-		else if (classId.getRace() == Race.orc)
+		else if (classId.getRace() == Race.ORC)
 		{
 			return classId.isMage() ? (female ? 280 : 250) : female ? 220 : 200;
 		}

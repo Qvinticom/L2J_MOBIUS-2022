@@ -17,10 +17,10 @@
 package quests.Q233_TestOfTheWarSpirit;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -189,13 +189,13 @@ public class Q233_TestOfTheWarSpirit extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getClassId() == ClassId.orcShaman)
+				if (player.getClassId() == ClassId.ORC_SHAMAN)
 				{
 					htmltext = (player.getLevel() < 39) ? "30510-03.htm" : "30510-04.htm";
 				}
 				else
 				{
-					htmltext = (player.getRace() == Race.orc) ? "30510-02.htm" : "30510-01.htm";
+					htmltext = (player.getRace() == Race.ORC) ? "30510-02.htm" : "30510-01.htm";
 				}
 				break;
 			

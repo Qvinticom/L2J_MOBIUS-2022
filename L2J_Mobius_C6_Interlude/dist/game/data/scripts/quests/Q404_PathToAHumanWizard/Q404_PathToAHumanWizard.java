@@ -102,9 +102,9 @@ public class Q404_PathToAHumanWizard extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getClassId() != ClassId.mage)
+				if (player.getClassId() != ClassId.MAGE)
 				{
-					htmltext = (player.getClassId() == ClassId.wizard) ? "30391-02a.htm" : "30391-01.htm";
+					htmltext = (player.getClassId() == ClassId.WIZARD) ? "30391-02a.htm" : "30391-01.htm";
 				}
 				else if (player.getLevel() < 19)
 				{

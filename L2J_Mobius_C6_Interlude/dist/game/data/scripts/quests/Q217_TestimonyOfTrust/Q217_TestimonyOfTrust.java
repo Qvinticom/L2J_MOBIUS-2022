@@ -17,9 +17,9 @@
 package quests.Q217_TestimonyOfTrust;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -212,7 +212,7 @@ public class Q217_TestimonyOfTrust extends Quest
 				{
 					htmltext = "30191-01a.htm";
 				}
-				else if (player.getRace() != Race.human)
+				else if (player.getRace() != Race.HUMAN)
 				{
 					htmltext = "30191-02.htm";
 				}

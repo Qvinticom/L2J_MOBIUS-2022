@@ -65,6 +65,7 @@ import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -127,7 +128,6 @@ import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.base.PlayerClass;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -2972,7 +2972,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setClassId(int Id)
 	{
-		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.Third))
+		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD))
 		{
 			if (getLvlJoinedAcademy() <= 16)
 			{
@@ -3170,7 +3170,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Active skill dwarven craft
-		if ((getSkillLevel(1321) < 1) && (getRace() == Race.dwarf))
+		if ((getSkillLevel(1321) < 1) && (getRace() == Race.DWARF))
 		{
 			Skill skill = SkillTable.getInstance().getInfo(1321, 1);
 			addSkill(skill, !restore);
@@ -3313,9 +3313,7 @@ public class PlayerInstance extends Playable
 		{
 			return getTemplate().race;
 		}
-		
-		final PlayerTemplate charTemp = CharTemplateTable.getInstance().getTemplate(_baseClass);
-		return charTemp.race;
+		return CharTemplateTable.getInstance().getTemplate(_baseClass).race;
 	}
 	
 	/**
@@ -15811,7 +15809,7 @@ public class PlayerInstance extends Playable
 		{
 			ivlim = Config.INVENTORY_MAXIMUM_GM;
 		}
-		else if (getRace() == Race.dwarf)
+		else if (getRace() == Race.DWARF)
 		{
 			ivlim = Config.INVENTORY_MAXIMUM_DWARF;
 		}
@@ -15831,7 +15829,7 @@ public class PlayerInstance extends Playable
 	public int GetWareHouseLimit()
 	{
 		int whlim;
-		if (getRace() == Race.dwarf)
+		if (getRace() == Race.DWARF)
 		{
 			whlim = Config.WAREHOUSE_SLOTS_DWARF;
 		}
@@ -15851,7 +15849,7 @@ public class PlayerInstance extends Playable
 	public int GetPrivateSellStoreLimit()
 	{
 		int pslim;
-		if (getRace() == Race.dwarf)
+		if (getRace() == Race.DWARF)
 		{
 			pslim = Config.MAX_PVTSTORE_SLOTS_DWARF;
 		}
@@ -15872,7 +15870,7 @@ public class PlayerInstance extends Playable
 	public int GetPrivateBuyStoreLimit()
 	{
 		int pblim;
-		if (getRace() == Race.dwarf)
+		if (getRace() == Race.DWARF)
 		{
 			pblim = Config.MAX_PVTSTORE_SLOTS_DWARF;
 		}

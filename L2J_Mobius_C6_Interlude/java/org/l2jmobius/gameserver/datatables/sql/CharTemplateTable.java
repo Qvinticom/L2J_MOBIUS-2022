@@ -244,9 +244,7 @@ public class CharTemplateTable
 	
 	public PlayerTemplate getTemplate(int classId)
 	{
-		final int key = classId;
-		
-		return _templates.get(key);
+		return _templates.get(classId);
 	}
 	
 	public static final String getClassNameById(int classId)

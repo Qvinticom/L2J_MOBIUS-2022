@@ -23,6 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -32,7 +33,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.ClassType;
 import org.l2jmobius.gameserver.model.base.PlayerClass;
-import org.l2jmobius.gameserver.model.base.PlayerRace;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
@@ -959,7 +959,7 @@ public class VillageMasterInstance extends FolkInstance
 			charClassId = player.getClassId().getParent().ordinal();
 		}
 		
-		final PlayerRace npcRace = getVillageMasterRace();
+		final Race npcRace = getVillageMasterRace();
 		final ClassType npcTeachType = getVillageMasterTeachType();
 		
 		PlayerClass currClass = PlayerClass.values()[charClassId];
@@ -998,19 +998,19 @@ public class VillageMasterInstance extends FolkInstance
 					}
 				}
 				
-				if ((npcRace == PlayerRace.Human) || (npcRace == PlayerRace.LightElf))
+				if ((npcRace == Race.HUMAN) || (npcRace == Race.ELF))
 				{
 					// If the master is human or light elf, ensure that fighter-type masters only teach fighter classes, and priest-type masters only teach priest classes etc.
 					if (!availSub.isOfType(npcTeachType))
 					{
 						availSubs.remove(availSub);
 					}
-					else if (!availSub.isOfRace(PlayerRace.Human) && !availSub.isOfRace(PlayerRace.LightElf))
+					else if (!availSub.isOfRace(Race.HUMAN) && !availSub.isOfRace(Race.ELF))
 					{
 						availSubs.remove(availSub);
 					}
 				}
-				else if ((npcRace != PlayerRace.Human) && (npcRace != PlayerRace.LightElf) && !availSub.isOfRace(npcRace)) // If the master is not human and not light elf, then remove any classes not of the same race as the master.
+				else if ((npcRace != Race.HUMAN) && (npcRace != Race.ELF) && !availSub.isOfRace(npcRace)) // If the master is not human and not light elf, then remove any classes not of the same race as the master.
 				{
 					availSubs.remove(availSub);
 				}
@@ -1095,31 +1095,31 @@ public class VillageMasterInstance extends FolkInstance
 	 * Gets the village master race.
 	 * @return the village master race
 	 */
-	private final PlayerRace getVillageMasterRace()
+	private final Race getVillageMasterRace()
 	{
 		final String npcClass = getTemplate().getStatsSet().getString("jClass").toLowerCase();
 		
 		if (npcClass.contains("human"))
 		{
-			return PlayerRace.Human;
+			return Race.HUMAN;
 		}
 		
 		if (npcClass.contains("darkelf"))
 		{
-			return PlayerRace.DarkElf;
+			return Race.DARK_ELF;
 		}
 		
 		if (npcClass.contains("elf"))
 		{
-			return PlayerRace.LightElf;
+			return Race.ELF;
 		}
 		
 		if (npcClass.contains("orc"))
 		{
-			return PlayerRace.Orc;
+			return Race.ORC;
 		}
 		
-		return PlayerRace.Dwarf;
+		return Race.DWARF;
 	}
 	
 	/**

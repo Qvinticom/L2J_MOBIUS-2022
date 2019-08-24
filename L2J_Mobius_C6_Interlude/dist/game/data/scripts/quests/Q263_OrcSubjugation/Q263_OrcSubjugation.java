@@ -16,9 +16,9 @@
  */
 package quests.Q263_OrcSubjugation;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -79,7 +79,7 @@ public class Q263_OrcSubjugation extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.darkelf)
+				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30346-00.htm";
 				}

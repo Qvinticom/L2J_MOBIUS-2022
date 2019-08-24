@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -45,7 +45,7 @@ public class MotherTreeZone extends ZoneType
 			{
 				for (PlayerInstance member : player.getParty().getPartyMembers())
 				{
-					if (member.getRace() != Race.elf)
+					if (member.getRace() != Race.ELF)
 					{
 						return;
 					}

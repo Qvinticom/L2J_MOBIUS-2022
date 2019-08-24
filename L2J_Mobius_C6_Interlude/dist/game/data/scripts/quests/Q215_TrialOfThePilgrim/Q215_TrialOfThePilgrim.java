@@ -155,7 +155,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.cleric) && (player.getClassId() != ClassId.oracle) && (player.getClassId() != ClassId.shillienOracle) && (player.getClassId() != ClassId.orcShaman))
+				if ((player.getClassId() != ClassId.CLERIC) && (player.getClassId() != ClassId.ORACLE) && (player.getClassId() != ClassId.SHILLIEN_ORACLE) && (player.getClassId() != ClassId.ORC_SHAMAN))
 				{
 					htmltext = "30648-02.htm";
 				}

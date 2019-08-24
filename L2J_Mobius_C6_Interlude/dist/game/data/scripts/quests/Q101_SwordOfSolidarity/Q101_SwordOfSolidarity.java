@@ -16,9 +16,9 @@
  */
 package quests.Q101_SwordOfSolidarity;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -131,7 +131,7 @@ public class Q101_SwordOfSolidarity extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.human)
+				if (player.getRace() != Race.HUMAN)
 				{
 					htmltext = "30008-01a.htm";
 				}

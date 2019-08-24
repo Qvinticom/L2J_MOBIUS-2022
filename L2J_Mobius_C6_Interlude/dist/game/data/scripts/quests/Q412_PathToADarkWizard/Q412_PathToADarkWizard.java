@@ -70,9 +70,9 @@ public class Q412_PathToADarkWizard extends Quest
 		
 		if (event.equals("30421-05.htm"))
 		{
-			if (player.getClassId() != ClassId.darkMage)
+			if (player.getClassId() != ClassId.DARK_MAGE)
 			{
-				htmltext = (player.getClassId() == ClassId.darkWizard) ? "30421-02a.htm" : "30421-03.htm";
+				htmltext = (player.getClassId() == ClassId.DARK_WIZARD) ? "30421-02a.htm" : "30421-03.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

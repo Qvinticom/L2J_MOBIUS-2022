@@ -369,7 +369,7 @@ public class Q230_TestOfTheSummoner extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.wizard) && (player.getClassId() != ClassId.elvenWizard) && (player.getClassId() != ClassId.darkWizard))
+				if ((player.getClassId() != ClassId.WIZARD) && (player.getClassId() != ClassId.ELVEN_WIZARD) && (player.getClassId() != ClassId.DARK_WIZARD))
 				{
 					htmltext = "30634-01.htm";
 				}

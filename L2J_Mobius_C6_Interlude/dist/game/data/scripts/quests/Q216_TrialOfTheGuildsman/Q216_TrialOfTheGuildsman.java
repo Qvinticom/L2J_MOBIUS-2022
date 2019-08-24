@@ -170,7 +170,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 			st.giveItems(PINTER_INSTRUCTIONS, 1);
 			
 			// Artisan receives a recipe to craft Amber Beads, while spoiler case is handled in onKill section.
-			if (player.getClassId() == ClassId.artisan)
+			if (player.getClassId() == ClassId.ARTISAN)
 			{
 				htmltext = "30298-05.htm";
 				st.giveItems(RECIPE_AMBER_BEAD, 1);
@@ -199,7 +199,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getClassId() != ClassId.scavenger) && (player.getClassId() != ClassId.artisan))
+				if ((player.getClassId() != ClassId.SCAVENGER) && (player.getClassId() != ClassId.ARTISAN))
 				{
 					htmltext = "30103-01.htm";
 				}
@@ -446,9 +446,9 @@ public class Q216_TrialOfTheGuildsman extends Quest
 				if (st.hasQuestItems(PINTER_INSTRUCTIONS))
 				{
 					// Different cases if player is a wannabe BH or WS.
-					if (st.dropItemsAlways(AMBER_BEAD, ((player.getClassId() == ClassId.scavenger) && (npc.getIsSpoiledBy() == player.getObjectId())) ? 10 : 5, 70))
+					if (st.dropItemsAlways(AMBER_BEAD, ((player.getClassId() == ClassId.SCAVENGER) && (npc.getIsSpoiledBy() == player.getObjectId())) ? 10 : 5, 70))
 					{
-						if ((player.getClassId() == ClassId.artisan) && Rnd.nextBoolean())
+						if ((player.getClassId() == ClassId.ARTISAN) && Rnd.nextBoolean())
 						{
 							st.giveItems(AMBER_LUMP, 1);
 						}

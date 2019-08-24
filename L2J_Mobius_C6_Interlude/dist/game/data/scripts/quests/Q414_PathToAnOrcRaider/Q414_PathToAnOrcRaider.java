@@ -73,9 +73,9 @@ public class Q414_PathToAnOrcRaider extends Quest
 		// KARUKIA
 		if (event.equals("30570-05.htm"))
 		{
-			if (player.getClassId() != ClassId.orcFighter)
+			if (player.getClassId() != ClassId.ORC_FIGHTER)
 			{
-				htmltext = (player.getClassId() == ClassId.orcRaider) ? "30570-02a.htm" : "30570-03.htm";
+				htmltext = (player.getClassId() == ClassId.ORC_RAIDER) ? "30570-02a.htm" : "30570-03.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**

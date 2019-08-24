@@ -66,9 +66,9 @@ public class Q413_PathToAShillienOracle extends Quest
 		
 		if (event.equals("30330-05.htm"))
 		{
-			if (player.getClassId() != ClassId.darkMage)
+			if (player.getClassId() != ClassId.DARK_MAGE)
 			{
-				htmltext = (player.getClassId() == ClassId.shillienOracle) ? "30330-02a.htm" : "30330-03.htm";
+				htmltext = (player.getClassId() == ClassId.SHILLIEN_ORACLE) ? "30330-02a.htm" : "30330-03.htm";
 			}
 			else if (player.getLevel() < 19)
 			{

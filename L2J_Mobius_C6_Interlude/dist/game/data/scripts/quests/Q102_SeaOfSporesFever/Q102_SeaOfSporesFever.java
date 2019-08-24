@@ -16,9 +16,9 @@
  */
 package quests.Q102_SeaOfSporesFever;
 
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.Race;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -103,7 +103,7 @@ public class Q102_SeaOfSporesFever extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.elf)
+				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30284-00.htm";
 				}
