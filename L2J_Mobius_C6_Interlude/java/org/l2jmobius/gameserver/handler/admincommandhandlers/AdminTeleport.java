@@ -184,7 +184,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			case admin_recall_party:
 			{
-				if (activeChar.isGM() && (activeChar.getAccessLevel().getLevel() != 1))
+				if (activeChar.isGM() && (activeChar.getAccessLevel().getLevel() != 100))
 				{
 					return false;
 				}

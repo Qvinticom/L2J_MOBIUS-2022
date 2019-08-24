@@ -446,7 +446,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (target instanceof PlayerInstance)
 		{
-			if ((target == activeChar) || ((target != activeChar) && (activeChar.getAccessLevel().getLevel() < 3)))
+			if ((target == activeChar) || ((target != activeChar) && (activeChar.getAccessLevel().getLevel() > 70)))
 			{
 				player = (PlayerInstance) target;
 			}

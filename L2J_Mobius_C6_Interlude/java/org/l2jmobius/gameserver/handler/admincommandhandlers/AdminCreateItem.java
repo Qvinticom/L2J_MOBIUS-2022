@@ -220,7 +220,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof PlayerInstance)
 			{
-				if ((activeChar.getAccessLevel().getLevel() > 0) && (activeChar.getAccessLevel().getLevel() < 3))
+				if ((activeChar.getAccessLevel().getLevel() > 0) && (activeChar.getAccessLevel().getLevel() > 70))
 				{
 					Player = (PlayerInstance) activeChar.getTarget();
 				}

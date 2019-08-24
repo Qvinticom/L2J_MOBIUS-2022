@@ -63,9 +63,9 @@ public class RequestDropItem extends GameClientPacket
 			return;
 		}
 		
-		if (player.isGM() && (player.getAccessLevel().getLevel() > 2))
+		if (player.isGM() && (player.getAccessLevel().getLevel() < 80))
 		{ // just head gm and admin can drop items on the ground
-			sendPacket(SystemMessage.sendString("You have not right to discard anything from inventory"));
+			sendPacket(SystemMessage.sendString("You have not right to discard anything from inventory."));
 			return;
 		}
 		
