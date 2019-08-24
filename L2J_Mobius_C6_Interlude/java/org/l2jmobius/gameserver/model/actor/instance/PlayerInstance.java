@@ -34,6 +34,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -10375,36 +10376,26 @@ public class PlayerInstance extends Playable
 		
 		slot--;
 		
-		if (_henna[slot] == null)
+		final HennaInstance henna = _henna[slot];
+		if (henna == null)
 		{
 			return false;
 		}
 		
-		HennaInstance henna = _henna[slot];
+		_henna[slot] = null;
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement(DELETE_CHAR_HENNA))
 		{
-			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA);
-			statement.setInt(1, getObjectId());
-			statement.setInt(2, slot + 1);
-			statement.setInt(3, getClassIndex());
-			statement.execute();
-			statement.close();
+			ps.setInt(1, getObjectId());
+			ps.setInt(2, slot + 1);
+			ps.setInt(3, _classIndex);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not remove char henna: " + e);
+			LOGGER.log(Level.SEVERE, "Failed removing character henna.", e);
 		}
-		
-		// Add the recovered dyes to the player's inventory and notify them.
-		getInventory().addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
-		
-		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-		sm.addItemName(henna.getItemIdDye());
-		sm.addNumber(henna.getAmountDyeRequire() / 2);
-		sendPacket(sm);
-		
-		_henna[slot] = null;
 		
 		// Calculate Henna modifiers of this PlayerInstance
 		recalcHennaStats();
@@ -10414,6 +10405,14 @@ public class PlayerInstance extends Playable
 		
 		// Send Server->Client UserInfo packet to this PlayerInstance
 		sendPacket(new UserInfo(this));
+		
+		// Add the recovered dyes to the player's inventory and notify them.
+		_inventory.addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
+		
+		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+		sm.addItemName(henna.getItemIdDye());
+		sm.addNumber(henna.getAmountDyeRequire() / 2);
+		sendPacket(sm);
 		
 		return true;
 	}
