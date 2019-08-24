@@ -10396,6 +10396,16 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("could not remove char henna: " + e);
 		}
 		
+		// Add the recovered dyes to the player's inventory and notify them.
+		getInventory().addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
+		
+		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+		sm.addItemName(henna.getItemIdDye());
+		sm.addNumber(henna.getAmountDyeRequire() / 2);
+		sendPacket(sm);
+		
+		_henna[slot] = null;
+		
 		// Calculate Henna modifiers of this PlayerInstance
 		recalcHennaStats();
 		
@@ -10404,14 +10414,6 @@ public class PlayerInstance extends Playable
 		
 		// Send Server->Client UserInfo packet to this PlayerInstance
 		sendPacket(new UserInfo(this));
-		
-		// Add the recovered dyes to the player's inventory and notify them.
-		getInventory().addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
-		
-		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-		sm.addItemName(henna.getItemIdDye());
-		sm.addNumber(henna.getAmountDyeRequire() / 2);
-		sendPacket(sm);
 		
 		return true;
 	}
