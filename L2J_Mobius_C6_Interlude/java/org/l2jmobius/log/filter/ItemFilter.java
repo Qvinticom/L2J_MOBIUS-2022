@@ -19,7 +19,7 @@ package org.l2jmobius.log.filter;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author Advi

@@ -66,6 +66,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.model.quest.Quest;

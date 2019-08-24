@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.skills.funcs;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.skills.Env;
 import org.l2jmobius.gameserver.skills.Stats;

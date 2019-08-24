@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.skills;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author ProGramMoS, eX1steam, An Env object is just a class to pass parameters to a calculator such as PlayerInstance, ItemInstance, Initial value.

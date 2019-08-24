@@ -19,7 +19,7 @@ package org.l2jmobius.log.formatter;
 import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author Advi

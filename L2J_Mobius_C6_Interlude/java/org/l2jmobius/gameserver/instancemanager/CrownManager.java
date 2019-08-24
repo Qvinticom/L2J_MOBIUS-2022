@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.datatables.CrownTable;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author evill33t Reworked by NB4L1
