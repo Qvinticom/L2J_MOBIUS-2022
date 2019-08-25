@@ -190,7 +190,7 @@ public class CustomNpcInstanceManager
 	 * @param npcId - NpcInstance's npc template id
 	 * @return
 	 */
-	public boolean isThisL2CustomNpcInstance(int spwnId, int npcId)
+	public boolean isCustomNpcInstance(int spwnId, int npcId)
 	{
 		if ((spwnId == 0) || (npcId == 0))
 		{

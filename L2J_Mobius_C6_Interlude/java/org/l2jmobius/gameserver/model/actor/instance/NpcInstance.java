@@ -2989,7 +2989,7 @@ public class NpcInstance extends Creature
 		// Does this Npc morph into a PcInstance?
 		if (_spawn != null)
 		{
-			if (CustomNpcInstanceManager.getInstance().isThisL2CustomNpcInstance(_spawn.getId(), getNpcId()))
+			if (CustomNpcInstanceManager.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
 			{
 				new CustomNpcInstance(this);
 			}
