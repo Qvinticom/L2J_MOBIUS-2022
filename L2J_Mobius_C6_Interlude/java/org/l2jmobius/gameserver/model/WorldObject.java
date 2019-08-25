@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GetItem;
  * <BR>
  * <li>Creature</li>
  * <li>ItemInstance</li>
- * <li>L2Potion</li>
+ * <li>Potion</li>
  */
 public abstract class WorldObject
 {

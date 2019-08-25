@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * This class manages AI of Playable.<br>
  * PlayableAI :
  * <li>SummonAI</li>
- * <li>L2PlayerAI</li>
+ * <li>PlayerAI</li>
  * @author JIV
  */
 public abstract class PlayableAI extends CreatureAI

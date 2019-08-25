@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.MinionList;
 /**
  * This class manages all Monsters. MonsterInstance:
  * <ul>
- * <li>L2MinionInstance</li>
+ * <li>MinionInstance</li>
  * <li>RaidBossInstance</li>
  * <li>GrandBossInstance</li>
  * </ul>

@@ -100,7 +100,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  * Creature :<BR>
  * <BR>
  * <li>Attackable</li>
- * <li>L2BoxInstance</li>
+ * <li>BoxInstance</li>
  * <li>FolkInstance</li>
  * @version $Revision: 1.32.2.7.2.24 $ $Date: 2009/04/13 09:17:09 $
  * @author programmos, scoria dev
@@ -646,7 +646,7 @@ public class NpcInstance extends Creature
 	 * <BR>
 	 * <B><U> Overriden in </U> :</B><BR>
 	 * <BR>
-	 * <li>L2ArtefactInstance : Manage only fisrt click to select Artefact</li><BR>
+	 * <li>ArtefactInstance : Manage only fisrt click to select Artefact</li><BR>
 	 * <BR>
 	 * <li>GuardInstance :</li><BR>
 	 * <BR>

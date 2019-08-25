@@ -164,9 +164,9 @@ import org.l2jmobius.gameserver.util.Util;
  * <li>DoorInstance</li>
  * <li>Playable</li>
  * <li>Npc</li>
- * <li>L2StaticObjectInstance</li>
- * <li>L2Trap</li>
- * <li>L2Vehicle</li>
+ * <li>StaticObjectInstance</li>
+ * <li>Trap</li>
+ * <li>Vehicle</li>
  * </ul>
  * <br>
  * <b>Concept of CreatureTemplate:</b><br>

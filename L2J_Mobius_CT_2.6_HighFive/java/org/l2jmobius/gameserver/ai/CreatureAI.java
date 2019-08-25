@@ -65,7 +65,7 @@ import org.l2jmobius.gameserver.util.Util;
  * <ul>
  * <li>AttackableAI</li>
  * <li>DoorAI</li>
- * <li>L2PlayerAI</li>
+ * <li>PlayerAI</li>
  * <li>SummonAI</li>
  * </ul>
  */
@@ -972,7 +972,7 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 * <B><U> Example of use </U> :</B>
 	 * <ul>
-	 * <li>L2PLayerAI, SummonAI</li>
+	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>
 	 * @param target The targeted WorldObject
 	 * @param offset The Interact area radius
@@ -1079,7 +1079,7 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 * <B><U> Example of use </U> :</B>
 	 * <ul>
-	 * <li>L2PLayerAI, SummonAI</li>
+	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>
 	 * @param target The targeted WorldObject
 	 * @return True if the target is lost or dead (false if fakedeath)
@@ -1112,7 +1112,7 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 * <B><U> Example of use </U> :</B>
 	 * <ul>
-	 * <li>L2PLayerAI, SummonAI</li>
+	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>
 	 * @param target The targeted WorldObject
 	 * @return True if the target is lost

@@ -4179,7 +4179,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <BR>
 	 * <B><U> Overridden in</U> :</B><BR>
 	 * <BR>
-	 * <li>L2NPCInstance</li>
+	 * <li>NPCInstance</li>
 	 * <li>PlayerInstance</li>
 	 * <li>Summon</li>
 	 * <li>DoorInstance</li><BR>

@@ -72,10 +72,10 @@ import org.l2jmobius.gameserver.util.Util;
  * <BR>
  * Attackable :<BR>
  * <BR>
- * <li>L2ArtefactInstance</li>
+ * <li>ArtefactInstance</li>
  * <li>FriendlyMobInstance</li>
  * <li>MonsterInstance</li>
- * <li>L2SiegeGuardInstance</li>
+ * <li>SiegeGuardInstance</li>
  * @version $Revision: 1.24.2.3.2.16 $ $Date: 2009/04/13 02:11:03 $
  * @author scoria dev
  */
