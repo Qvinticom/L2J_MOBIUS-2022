@@ -167,10 +167,124 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39428" toLevel="5" name="Artifact Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80420</value> <!-- Attack Artifact Box -->
+			<value level="2">80421</value> <!-- Protection Artifact Box -->
+			<value level="3">80422</value> <!-- Support Artifact Box -->
+			<value level="4">80423</value> <!-- Balance Artifact Box -->
+			<value level="5">80419</value> <!-- Artifact Box -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="25">
+							<item id="48959" count="1" /> <!-- Artifact - Atk. Spd. / Attack -->
+						</item>
+						<item chance="25">
+							<item id="48960" count="1" /> <!-- Artifact - Casting Spd. / Attack -->
+						</item>
+						<item chance="25">
+							<item id="48958" count="1" /> <!-- Artifact - M. Atk. / Attack -->
+						</item>
+						<item chance="25">
+							<item id="48957" count="1" /> <!-- Artifact - P. Atk. / Attack -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="25">
+							<item id="48962" count="1" /> <!-- Artifact - M. Def. / Protection -->
+						</item>
+						<item chance="25">
+							<item id="48963" count="1" /> <!-- Artifact - Max HP / Protection -->
+						</item>
+						<item chance="25">
+							<item id="48964" count="1" /> <!-- Artifact - Max MP / Protection -->
+						</item>
+						<item chance="25">
+							<item id="48961" count="1" /> <!-- Artifact - P. Def. / Protection -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="25">
+							<item id="48968" count="1" /> <!-- Artifact - Received Healing / Support -->
+						</item>
+						<item chance="25">
+							<item id="48967" count="1" /> <!-- Artifact - Speed / Support -->
+						</item>
+						<item chance="25">
+							<item id="48966" count="1" /> <!-- Artifact - Vampiric Rage / Support -->
+						</item>
+						<item chance="25">
+							<item id="48965" count="1" /> <!-- Artifact - XP / Support -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="10">
+							<item id="48985" count="1" /> <!-- Artifact - Fixed Damage Resistance / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48972" count="1" /> <!-- Artifact - M. Accuracy / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48970" count="1" /> <!-- 	Artifact - M. Atk. / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48975" count="1" /> <!-- Artifact - M. Critical Rate / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48971" count="1" /> <!-- Artifact - P. Accuracy / Balanc -->
+						</item>
+						<item chance="10">
+							<item id="48969" count="1" /> <!-- Artifact - P. Atk. Balance -->
+						</item>
+						<item chance="10">
+							<item id="48973" count="1" /> <!-- Artifact - P. Critical Rate / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48974" count="1" /> <!-- Artifact - P. Skill Critical Rate / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48977" count="1" /> <!-- Artifact - Received Damage When Immobilized / Balance -->
+						</item>
+						<item chance="10">
+							<item id="48976" count="1" /> <!-- Artifact - Recovery Potions' Effect / Balance -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="25">
+							<item id="80420" count="1" /> <!-- Attack Artifact Box -->
+						</item>
+						<item chance="25">
+							<item id="80421" count="1" /> <!-- Protection Artifact Box -->
+						</item>
+						<item chance="25">
+							<item id="80422" count="1" /> <!-- Support Artifact Box -->
+						</item>
+						<item chance="25">
+							<item id="80423" count="1" /> <!-- Balance Artifact Box -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39429" toLevel="2" name="+1 Fight Artifact Box">
 		<operateType>A1</operateType>

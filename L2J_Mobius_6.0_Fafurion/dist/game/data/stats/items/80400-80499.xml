@@ -283,42 +283,67 @@
 	<item id="80419" name="Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one Fighting Spirit Artifact Box, Protection Artifact Box, Support Artifact Box, or Balance Artifact Box. -->
 		<set name="icon" val="icon.bm_artifact_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39428" level="5" /> <!-- Artifact Box -->
+		</skills>
 	</item>
-	<item id="80420" name="Fighting Spirit Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one of the Fighting Spirit Artifacts. -->
+	<item id="80420" name="Attack Artifact Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following attack artifacts: Artifact - P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39428" level="1" /> <!-- Artifact Box -->
+		</skills>
 	</item>
 	<item id="80421" name="Protection Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one of the Protection Artifacts. -->
+		<!-- Double-click to obtain one of the following protection artifacts: Artifact - P. Def./ M. Def./ Max HP/ Max MP. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39428" level="2" /> <!-- Artifact Box -->
+		</skills>
 	</item>
 	<item id="80422" name="Support Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one Support Artifact. -->
+		<!-- Double-click to obtain one of the following support artifacts: Artifact - Acquired XP/ Vampiric Rage/ Speed/ Received Healing. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39428" level="3" /> <!-- Artifact Box -->
+		</skills>
 	</item>
 	<item id="80423" name="Balance Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one of the Balance Artifacts. -->
+		<!-- Double-click to obtain one of the following balance artifacts: Artifact - P. Atk./ M. Atk./ P. Accuracy/ M. Accuracy/ P. Critical Rate/ P. Skill Critical Rate/ M. Skill Critical Rate/ M. Critical Rate/ Recovery Potions' Effect/ Received Damage When Immobilized/ Fixed Damage Resistance. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39428" level="4" /> <!-- Artifact Box -->
+		</skills>
 	</item>
 	<item id="80424" name="Cool Summer Hunting Herb Chest" type="EtcItem">
 		<set name="icon" val="icon.general_fuel_i00" />

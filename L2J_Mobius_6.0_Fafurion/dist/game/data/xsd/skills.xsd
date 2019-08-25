@@ -2113,7 +2113,7 @@
 											<xs:element maxOccurs="unbounded" name="value">
 												<xs:complexType>
 													<xs:simpleContent>
-														<xs:extension base="xs:unsignedShort">
+														<xs:extension base="xs:unsignedInt">
 															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 														</xs:extension>
 													</xs:simpleContent>
