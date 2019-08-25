@@ -537,6 +537,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11077</skillId> <!-- Fire Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -635,6 +639,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11078</skillId> <!-- Water Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -733,6 +741,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11079</skillId> <!-- Wind Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -831,6 +843,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11080</skillId> <!-- Earth Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -929,6 +945,10 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11081</skillId> <!-- Holy Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>

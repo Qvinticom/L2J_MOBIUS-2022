@@ -449,6 +449,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -468,6 +469,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11077</skillId> <!-- Fire Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -506,7 +511,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -549,6 +553,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -568,6 +573,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11078</skillId> <!-- Water Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -606,7 +615,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -649,6 +657,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -668,6 +677,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11079</skillId> <!-- Wind Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -706,7 +719,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -749,6 +761,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -768,6 +781,10 @@
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11080</skillId> <!-- Earth Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -806,7 +823,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -845,6 +861,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -862,11 +879,16 @@
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
-		<canDoubleCast>true</canDoubleCast>
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>11081</skillId> <!-- Holy Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">133</value>
@@ -905,7 +927,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
