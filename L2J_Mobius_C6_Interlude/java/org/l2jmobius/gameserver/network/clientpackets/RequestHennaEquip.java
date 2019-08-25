@@ -33,9 +33,6 @@ public class RequestHennaEquip extends GameClientPacket
 {
 	private int _symbolId;
 	
-	/**
-	 * packet type id 0xbb format: cd
-	 */
 	@Override
 	protected void readImpl()
 	{
@@ -65,13 +62,13 @@ public class RequestHennaEquip extends GameClientPacket
 		}
 		
 		final HennaInstance temp = new HennaInstance(template);
-		int _count = 0;
 		
-		/*
-		 * Prevents henna drawing exploit: 1) talk to SymbolMakerInstance 2) RequestHennaList 3) Don't close the window and go to a GrandMaster and change your subclass 4) Get SymbolMaker range again and press draw You could draw any kind of henna just having the required subclass...
-		 */
+		// Prevents henna drawing exploit:
+		// 1) talk to SymbolMakerInstance
+		// 2) RequestHennaList
+		// 3) Don't close the window and go to a GrandMaster and change your subclass
+		// 4) Get SymbolMaker range again and press draw You could draw any kind of henna just having the required subclass...
 		boolean cheater = true;
-		
 		for (HennaInstance h : HennaTreeTable.getInstance().getAvailableHenna(player.getClassId()))
 		{
 			if (h.getSymbolId() == temp.getSymbolId())
@@ -81,20 +78,18 @@ public class RequestHennaEquip extends GameClientPacket
 			}
 		}
 		
+		int count = 0;
 		if ((player.getInventory() != null) && (player.getInventory().getItemByItemId(temp.getItemIdDye()) != null))
 		{
-			_count = player.getInventory().getItemByItemId(temp.getItemIdDye()).getCount();
+			count = player.getInventory().getItemByItemId(temp.getItemIdDye()).getCount();
 		}
 		
-		if (!cheater && (_count >= temp.getAmountDyeRequire()) && (player.getAdena() >= temp.getPrice()) && player.addHenna(temp))
+		if (!cheater && (count >= temp.getAmountDyeRequire()) && (player.getAdena() >= temp.getPrice()) && player.addHenna(temp))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-			sm.addNumber(temp.getItemIdDye());
+			sm.addItemName(temp.getItemIdDye());
 			player.sendPacket(sm);
 			player.sendPacket(SystemMessageId.SYMBOL_ADDED);
-			
-			// HennaInfo hi = new HennaInfo(temp,activeChar);
-			// player.sendPacket(hi);
 			
 			player.getInventory().reduceAdena("Henna", temp.getPrice(), player, player.getLastFolkNPC());
 			final ItemInstance dyeToUpdate = player.getInventory().destroyItemByItemId("Henna", temp.getItemIdDye(), temp.getAmountDyeRequire(), player, player.getLastFolkNPC());
