@@ -115,7 +115,7 @@ public class CustomNpcInstance
 	 */
 	public String getTitle()
 	{
-		return _title == null ? _NpcInstance.getTitle() : _NpcInstance.isChampion() ? "The Champion" + _title : _title;
+		return _title == null ? _NpcInstance.getTitle() : _NpcInstance.isChampion() ? "The Champion " + _title : _title;
 	}
 	
 	/**

@@ -1479,9 +1479,9 @@ public class Attackable extends NpcInstance
 			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 			dropChance -= DropData.MAX_CHANCE;
 		}
-		if (Config.L2JMOD_CHAMPION_ENABLE)
+		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 		{
-			if (((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))) && isChampion())
+			if ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362)))
 			{
 				itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
 			}
@@ -1778,9 +1778,9 @@ public class Attackable extends NpcInstance
 				// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 				dropChance -= DropData.MAX_CHANCE;
 			}
-			if (Config.L2JMOD_CHAMPION_ENABLE)
+			if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 			{
-				if (((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))) && isChampion())
+				if ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362)))
 				{
 					itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
 				}
