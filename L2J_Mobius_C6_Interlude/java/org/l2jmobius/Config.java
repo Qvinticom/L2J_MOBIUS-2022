@@ -287,13 +287,13 @@ public class Config
 	public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 	public static float ADENA_BOSS;
 	public static float ADENA_RAID;
-	public static float ADENA_MINON;
+	public static float ADENA_MINION;
 	public static float ITEMS_BOSS;
 	public static float ITEMS_RAID;
-	public static float ITEMS_MINON;
+	public static float ITEMS_MINION;
 	public static float SPOIL_BOSS;
 	public static float SPOIL_RAID;
-	public static float SPOIL_MINON;
+	public static float SPOIL_MINION;
 	
 	public static boolean REMOVE_CASTLE_CIRCLETS;
 	public static float ALT_GAME_SKILL_HIT_RATE;
@@ -1372,13 +1372,13 @@ public class Config
 			/** RB rate **/
 			ADENA_BOSS = Float.parseFloat(ratesSettings.getProperty("AdenaBoss", "1.00"));
 			ADENA_RAID = Float.parseFloat(ratesSettings.getProperty("AdenaRaid", "1.00"));
-			ADENA_MINON = Float.parseFloat(ratesSettings.getProperty("AdenaMinon", "1.00"));
+			ADENA_MINION = Float.parseFloat(ratesSettings.getProperty("AdenaMinion", "1.00"));
 			ITEMS_BOSS = Float.parseFloat(ratesSettings.getProperty("ItemsBoss", "1.00"));
 			ITEMS_RAID = Float.parseFloat(ratesSettings.getProperty("ItemsRaid", "1.00"));
-			ITEMS_MINON = Float.parseFloat(ratesSettings.getProperty("ItemsMinon", "1.00"));
+			ITEMS_MINION = Float.parseFloat(ratesSettings.getProperty("ItemsMinion", "1.00"));
 			SPOIL_BOSS = Float.parseFloat(ratesSettings.getProperty("SpoilBoss", "1.00"));
 			SPOIL_RAID = Float.parseFloat(ratesSettings.getProperty("SpoilRaid", "1.00"));
-			SPOIL_MINON = Float.parseFloat(ratesSettings.getProperty("SpoilMinon", "1.00"));
+			SPOIL_MINION = Float.parseFloat(ratesSettings.getProperty("SpoilMinion", "1.00"));
 		}
 		catch (Exception e)
 		{

@@ -1358,7 +1358,7 @@ public class Attackable extends NpcInstance
 			}
 			else if (this instanceof MinionInstance)
 			{
-				dropChance *= Config.ADENA_MINON;
+				dropChance *= Config.ADENA_MINION;
 			}
 			else
 			{
@@ -1383,7 +1383,7 @@ public class Attackable extends NpcInstance
 			}
 			else if (this instanceof MinionInstance)
 			{
-				dropChance *= Config.SPOIL_MINON;
+				dropChance *= Config.SPOIL_MINION;
 			}
 			else
 			{
@@ -1405,7 +1405,7 @@ public class Attackable extends NpcInstance
 		}
 		else if (this instanceof MinionInstance)
 		{
-			dropChance *= Config.ITEMS_MINON;
+			dropChance *= Config.ITEMS_MINION;
 		}
 		else
 		{
@@ -1576,7 +1576,7 @@ public class Attackable extends NpcInstance
 		}
 		else if (this instanceof MinionInstance)
 		{
-			categoryDropChance *= Config.ITEMS_MINON;
+			categoryDropChance *= Config.ITEMS_MINION;
 		}
 		else
 		{
@@ -1686,7 +1686,7 @@ public class Attackable extends NpcInstance
 				}
 				else if (this instanceof MinionInstance)
 				{
-					dropChance *= Config.ADENA_MINON;
+					dropChance *= Config.ADENA_MINION;
 				}
 				else
 				{
@@ -1707,7 +1707,7 @@ public class Attackable extends NpcInstance
 			}
 			else if (this instanceof MinionInstance)
 			{
-				dropChance *= Config.ITEMS_MINON;
+				dropChance *= Config.ITEMS_MINION;
 			}
 			else
 			{
