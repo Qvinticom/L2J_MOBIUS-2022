@@ -1616,7 +1616,7 @@ public class Attackable extends NpcInstance
 			// At least 1 item will be dropped for sure. So the chance will be adjusted to 100%
 			// if smaller.
 			
-			int dropChance = 0;
+			long dropChance = 0;
 			
 			switch (drop.getItemId())
 			{
@@ -1738,7 +1738,7 @@ public class Attackable extends NpcInstance
 			// Count and chance adjustment for high rate servers
 			if ((dropChance > DropData.MAX_CHANCE) && !Config.PRECISE_DROP_CALCULATION)
 			{
-				final int multiplier = (dropChance) / DropData.MAX_CHANCE;
+				final long multiplier = dropChance / DropData.MAX_CHANCE;
 				
 				if (min < max)
 				{
