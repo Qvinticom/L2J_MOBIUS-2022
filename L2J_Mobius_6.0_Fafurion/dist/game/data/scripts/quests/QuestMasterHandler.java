@@ -26,6 +26,7 @@ import quests.Q00017_LightAndDarkness.Q00017_LightAndDarkness;
 import quests.Q00031_SecretBuriedInTheSwamp.Q00031_SecretBuriedInTheSwamp;
 import quests.Q00032_AnObviousLie.Q00032_AnObviousLie;
 import quests.Q00033_MakeAPairOfDressShoes.Q00033_MakeAPairOfDressShoes;
+import quests.Q00034_InSearchOfCloth.Q00034_InSearchOfCloth;
 import quests.Q00035_FindGlitteringJewelry.Q00035_FindGlitteringJewelry;
 import quests.Q00036_MakeASewingKit.Q00036_MakeASewingKit;
 import quests.Q00037_MakeFormalWear.Q00037_MakeFormalWear;
@@ -442,6 +443,7 @@ public class QuestMasterHandler
 		Q00031_SecretBuriedInTheSwamp.class,
 		Q00032_AnObviousLie.class,
 		Q00033_MakeAPairOfDressShoes.class,
+		Q00034_InSearchOfCloth.class,
 		Q00035_FindGlitteringJewelry.class,
 		Q00036_MakeASewingKit.class,
 		Q00037_MakeFormalWear.class,
