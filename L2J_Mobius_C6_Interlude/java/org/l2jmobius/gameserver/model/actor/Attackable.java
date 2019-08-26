@@ -374,7 +374,6 @@ public class Attackable extends NpcInstance
 		{
 			setKnownList(new AttackableKnownList(this));
 		}
-		
 		return (AttackableKnownList) super.getKnownList();
 	}
 	
@@ -485,7 +484,6 @@ public class Attackable extends NpcInstance
 			if (this instanceof MinionInstance)
 			{
 				master = ((MinionInstance) this).getLeader();
-				
 				if (!master.isInCombat() && !master.isDead())
 				{
 					master.addDamage(attacker, 1);
@@ -570,8 +568,7 @@ public class Attackable extends NpcInstance
 		if (Config.L2JMOD_CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn.
-			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance)
-			/* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL))
+			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL))
 			{
 				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
 				{
@@ -820,7 +817,6 @@ public class Attackable extends NpcInstance
 						
 						// Go through all PlayerInstance in the party
 						List<PlayerInstance> groupMembers;
-						
 						if (attackerParty.isInCommandChannel())
 						{
 							groupMembers = attackerParty.getCommandChannel().getMembers();
@@ -938,7 +934,6 @@ public class Attackable extends NpcInstance
 						if (attacker instanceof PlayerInstance)
 						{
 							final PlayerInstance player = (PlayerInstance) attacker;
-							
 							if (_overhit && (attacker == _overhitAttacker))
 							{
 								player.sendPacket(SystemMessageId.OVER_HIT);
@@ -1214,21 +1209,18 @@ public class Attackable extends NpcInstance
 		{
 			// Remove Object Should Use This Method and Can be Blocked While iterating
 			_aggroList.remove(target);
-			
 			return 0;
 		}
 		
 		if (!ai._attacker.isVisible())
 		{
 			_aggroList.remove(target);
-			
 			return 0;
 		}
 		
 		if (ai._attacker.isAlikeDead())
 		{
 			ai._hate = 0;
-			
 			return 0;
 		}
 		
@@ -1516,9 +1508,9 @@ public class Attackable extends NpcInstance
 		}
 		
 		if ((Config.HIGH_RATE_SERVER_DROPS && (categoryDrops.getCategoryType() != 0)))
-		{ // it's not adena-->check if drop is quest or is an epic jewel
-			
-			boolean to_drop = false;
+		{
+			// it's not adena-->check if drop is quest or is an epic jewel
+			boolean doDrop = false;
 			
 			for (DropData dd : categoryDrops.getAllDrops())
 			{
@@ -1526,11 +1518,11 @@ public class Attackable extends NpcInstance
 				if (dd.isQuestDrop() || (dd.getItemId() == 6660) || (dd.getItemId() == 6661) || (dd.getItemId() == 6662) || (dd.getItemId() == 8191) || (dd.getItemId() == 6658) || (dd.getItemId() == 6656) || (dd.getItemId() == 6657) || (dd.getItemId() == 6659) || ((dd.getItemId() >= 6360) && (dd.getItemId() <= 6362)) || ((dd.getItemId() >= 8723) && (dd.getItemId() <= 8762)))
 				{
 					// if epic jewel, return just 1 from raid
-					to_drop = true;
+					doDrop = true;
 				}
 			}
 			
-			if (!to_drop)
+			if (!doDrop)
 			{
 				return null;
 			}
@@ -1870,7 +1862,7 @@ public class Attackable extends NpcInstance
 			player = ((Summon) lastAttacker).getOwner();
 		}
 		
-		// Don't drop anything if the last attacker or ownere isn't PlayerInstance
+		// Don't drop anything if the last attacker or owner isn't PlayerInstance
 		if (player == null)
 		{
 			return;
@@ -1894,11 +1886,9 @@ public class Attackable extends NpcInstance
 				if (isSpoil()/* && !_seeded */)
 				{
 					List<RewardItem> sweepList = new ArrayList<>();
-					
 					for (DropData drop : cat.getAllDrops())
 					{
 						item = calculateRewardItem(player, drop, levelModifier, true);
-						
 						if (item == null)
 						{
 							continue;
@@ -1919,7 +1909,6 @@ public class Attackable extends NpcInstance
 				if (_seeded)
 				{
 					DropData drop = cat.dropSeedAllowedDropsOnly();
-					
 					if (drop == null)
 					{
 						continue;
@@ -1937,13 +1926,12 @@ public class Attackable extends NpcInstance
 					// Check if the autoLoot mode is active
 					if (Config.AUTO_LOOT)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (item_templ == null)
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (itemTemplate == null)
 						{
 							LOGGER.info("ERROR: Item id to autoloot " + item.getItemId() + " has not template into items/armor/weapon tables.. It cannot be dropped..");
 						}
-						else if (!player.getInventory().validateCapacity(item_templ) || (!Config.AUTO_LOOT_BOSS && (this instanceof RaidBossInstance)) || (!Config.AUTO_LOOT_BOSS && (this instanceof GrandBossInstance)))
+						else if (!player.getInventory().validateCapacity(itemTemplate) || (!Config.AUTO_LOOT_BOSS && (this instanceof RaidBossInstance)) || (!Config.AUTO_LOOT_BOSS && (this instanceof GrandBossInstance)))
 						{
 							DropItem(player, item);
 						}
@@ -1951,7 +1939,6 @@ public class Attackable extends NpcInstance
 						{
 							player.doAutoLoot(this, item); // Give this or these Item(s) to the PlayerInstance that has killed the Attackable
 						}
-						
 					}
 					else
 					{
@@ -1978,14 +1965,12 @@ public class Attackable extends NpcInstance
 			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
 			champqty++; // quantity should actually vary between 1 and whatever admin specified as max, inclusive.
 			
-			RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, champqty);
-			
 			// Give this or these Item(s) to the PlayerInstance that has killed the Attackable
+			RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, champqty);
 			if (Config.AUTO_LOOT)
 			{
-				final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-				
-				if (!player.getInventory().validateCapacity(item_templ))
+				final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+				if (!player.getInventory().validateCapacity(itemTemplate))
 				{
 					DropItem(player, item);
 				}
@@ -2002,46 +1987,40 @@ public class Attackable extends NpcInstance
 		
 		// Instant Item Drop :>
 		final double rateHp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
-		
 		if ((rateHp < 2) && npcTemplate.type.contentEquals("Monster")) // only Monster with <= 1x HP can drop herbs
 		{
-			boolean _hp = false;
-			boolean _mp = false;
-			boolean _spec = false;
+			boolean hp = false;
+			boolean mp = false;
+			boolean spec = false;
 			
 			// ptk - patk type enhance
 			int random = Rnd.get(1000); // note *10
-			
-			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !_spec) // && !_spec useless yet
+			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec) // && !_spec useless yet
 			{
 				RewardItem item = new RewardItem(8612, 1); // Herb of Warrior
-				
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
-					final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-					
-					if (!player.getInventory().validateCapacity(item_templ))
+					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
 					}
 					else
 					{
-						player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+						player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 					}
 				}
 				else
 				{
 					DropItem(player, item);
 				}
-				
-				_spec = true;
+				spec = true;
 			}
 			else
 			{
 				for (int i = 0; i < 3; i++)
 				{
 					random = Rnd.get(100);
-					
 					if (random < Config.RATE_DROP_COMMON_HERBS)
 					{
 						RewardItem item = null;
@@ -2065,15 +2044,14 @@ public class Attackable extends NpcInstance
 						
 						if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 						{
-							final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-							
-							if (!player.getInventory().validateCapacity(item_templ))
+							final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+							if (!player.getInventory().validateCapacity(itemTemplate))
 							{
 								DropItem(player, item);
 							}
 							else
 							{
-								player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+								player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 							}
 						}
 						else
@@ -2087,37 +2065,32 @@ public class Attackable extends NpcInstance
 			
 			// mtk - matk type enhance
 			random = Rnd.get(1000); // note *10
-			
-			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !_spec)
+			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec)
 			{
 				RewardItem item = new RewardItem(8613, 1); // Herb of Mystic
-				
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
-					final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-					
-					if (!player.getInventory().validateCapacity(item_templ))
+					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
 					}
 					else
 					{
-						player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+						player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 					}
 				}
 				else
 				{
 					DropItem(player, item);
 				}
-				
-				_spec = true;
+				spec = true;
 			}
 			else
 			{
 				for (int i = 0; i < 2; i++)
 				{
 					random = Rnd.get(100);
-					
 					if (random < Config.RATE_DROP_COMMON_HERBS)
 					{
 						RewardItem item = null;
@@ -2135,15 +2108,14 @@ public class Attackable extends NpcInstance
 						}
 						if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 						{
-							final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-							
-							if (!player.getInventory().validateCapacity(item_templ))
+							final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+							if (!player.getInventory().validateCapacity(itemTemplate))
 							{
 								DropItem(player, item);
 							}
 							else
 							{
-								player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+								player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 							}
 						}
 						else
@@ -2155,24 +2127,21 @@ public class Attackable extends NpcInstance
 				}
 			}
 			
-			// hp+mp type
+			// hp + mp type
 			random = Rnd.get(1000); // note *10
-			
-			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !_spec)
+			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec)
 			{
 				RewardItem item = new RewardItem(8614, 1); // Herb of Recovery
-				
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
-					final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-					
-					if (!player.getInventory().validateCapacity(item_templ))
+					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
 					}
 					else
 					{
-						player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+						player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 					}
 				}
 				else
@@ -2180,88 +2149,78 @@ public class Attackable extends NpcInstance
 					DropItem(player, item);
 				}
 				
-				_mp = true;
-				_hp = true;
-				_spec = true;
+				mp = true;
+				hp = true;
+				spec = true;
 			}
 			
 			// hp - restore hp type
-			if (!_hp)
+			if (!hp)
 			{
 				random = Rnd.get(100);
 				if (random < Config.RATE_DROP_MP_HP_HERBS)
 				{
 					RewardItem item = new RewardItem(8600, 1); // Herb of Life
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
 					{
 						DropItem(player, item);
 					}
-					
-					_hp = true;
+					hp = true;
 				}
 			}
-			if (!_hp)
+			if (!hp)
 			{
 				random = Rnd.get(100);
-				
 				if (random < Config.RATE_DROP_GREATER_HERBS)
 				{
 					RewardItem item = new RewardItem(8601, 1); // Greater Herb of Life
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
 					{
 						DropItem(player, item);
 					}
-					
-					_hp = true;
+					hp = true;
 				}
 			}
-			if (!_hp)
+			if (!hp)
 			{
 				random = Rnd.get(1000); // note *10
-				
 				if (random < Config.RATE_DROP_SUPERIOR_HERBS)
 				{
 					RewardItem item = new RewardItem(8602, 1); // Superior Herb of Life
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
@@ -2270,84 +2229,74 @@ public class Attackable extends NpcInstance
 					}
 				}
 			}
+			
 			// mp - restore mp type
-			if (!_mp)
+			if (!mp)
 			{
 				random = Rnd.get(100);
-				
 				if (random < Config.RATE_DROP_MP_HP_HERBS)
 				{
 					RewardItem item = new RewardItem(8603, 1); // Herb of Mana
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
 					{
 						DropItem(player, item);
 					}
-					
-					_mp = true;
+					mp = true;
 				}
 			}
-			if (!_mp)
+			if (!mp)
 			{
 				random = Rnd.get(100);
-				
 				if (random < Config.RATE_DROP_GREATER_HERBS)
 				{
 					RewardItem item = new RewardItem(8604, 1); // Greater Herb of Mana
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
 					{
 						DropItem(player, item);
 					}
-					
-					_mp = true;
+					mp = true;
 				}
 			}
-			if (!_mp)
+			if (!mp)
 			{
 				random = Rnd.get(1000); // note *10
-				
 				if (random < Config.RATE_DROP_SUPERIOR_HERBS)
 				{
 					RewardItem item = new RewardItem(8605, 1); // Superior Herb of Mana
-					
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
-						final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-						
-						if (!player.getInventory().validateCapacity(item_templ))
+						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
 							DropItem(player, item);
 						}
 						else
 						{
-							player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+							player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 						}
 					}
 					else
@@ -2356,24 +2305,22 @@ public class Attackable extends NpcInstance
 					}
 				}
 			}
+			
 			// speed enhance type
 			random = Rnd.get(100);
-			
 			if (random < Config.RATE_DROP_COMMON_HERBS)
 			{
 				RewardItem item = new RewardItem(8611, 1); // Herb of Speed
-				
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
-					final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
-					
-					if (!player.getInventory().validateCapacity(item_templ))
+					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
+					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
 					}
 					else
 					{
-						player.addItem("Loot", item.getItemId(), item.getCount(), this, true);
+						player.addItem("AutoLoot", item.getItemId(), item.getCount(), this, true);
 					}
 				}
 				else
@@ -2416,7 +2363,7 @@ public class Attackable extends NpcInstance
 		
 		if (player == null)
 		{
-			return; // Don't drop anything if the last attacker or ownere isn't PlayerInstance
+			return; // Don't drop anything if the last attacker or owner isn't PlayerInstance
 		}
 		
 		if ((player.getLevel() - getLevel()) > 9)
@@ -2433,9 +2380,9 @@ public class Attackable extends NpcInstance
 				
 				if (Config.AUTO_LOOT)
 				{
-					final Item item_templ = ItemTable.getInstance().getTemplate(item.getItemId());
+					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					
-					if (!player.getInventory().validateCapacity(item_templ))
+					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
 					}
