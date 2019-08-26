@@ -354,66 +354,106 @@
 	<item id="80425" name="+1 Fighting Spirit Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +1 Enchanted Fighting Spirit Artifact. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39429" level="1" /> <!-- +1 Fight Artifact Box -->
+		</skills>
 	</item>
 	<item id="80426" name="+3 Fighting Spirit Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +3 Enchanted Fighting Spirit Artifact. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39429" level="2" /> <!-- +1 Fight Artifact Box -->
+		</skills>
 	</item>
 	<item id="80427" name="+1 Protection Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +1 Enchanted Protection Artifact. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39430" level="1" /> <!-- +1 Protection Artifact Box -->
+		</skills>
 	</item>
 	<item id="80428" name="+3 Protection Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +3 Enchanted Protection Artifact. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39430" level="2" /> <!-- +1 Protection Artifact Box -->
+		</skills>
 	</item>
 	<item id="80429" name="+1 Support Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +1 Enchanted Support Artifact. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39431" level="1" /> <!-- +1 Support Artifact Box -->
+		</skills>
 	</item>
 	<item id="80430" name="+3 Support Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +3 Enchanted Support Artifact. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39431" level="2" /> <!-- +1 Support Artifact Box -->
+		</skills>
 	</item>
 	<item id="80431" name="+1 Balance Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +1 Enchanted Balance Artifact. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39432" level="1" /> <!-- +1 Balance Artifact Box -->
+		</skills>
 	</item>
 	<item id="80432" name="+3 Balance Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one +3 Enchanted Balance Artifact. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39432" level="2" /> <!-- +1 Balance Artifact Box -->
+		</skills>
 	</item>
 	<item id="80433" name="Infinite Orichalcum Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of Orichalcum. Used with an R-grade Bow. -->

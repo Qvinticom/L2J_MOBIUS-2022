@@ -287,28 +287,268 @@
 		</effects>
 	</skill>
 	<skill id="39429" toLevel="2" name="+1 Fight Artifact Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80425</value> <!-- +1 Fighting Spirit Artifact Box -->
+			<value level="2">80426</value> <!-- +3 Fighting Spirit Artifact Box -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="25">
+						<item id="48959" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Atk. Spd. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48960" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Casting Spd. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48958" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - M. Atk. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48957" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Atk. / Attack -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="25">
+						<item id="48959" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Atk. Spd. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48960" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Casting Spd. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48958" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - M. Atk. / Attack -->
+					</item>
+					<item chance="25">
+						<item id="48957" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Atk. / Attack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39430" toLevel="2" name="+1 Protection Artifact Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80427</value> <!-- +1 Protection Artifact Box -->
+			<value level="2">80428</value> <!-- +3 Protection Artifact Box -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="25">
+						<item id="48962" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - M. Def. / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48963" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Max HP / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48964" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Max MP / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48961" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Def. / Protection -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="25">
+						<item id="48962" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - M. Def. / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48963" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Max HP / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48964" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Max MP / Protection -->
+					</item>
+					<item chance="25">
+						<item id="48961" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Def. / Protection -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39431" toLevel="2" name="+1 Support Artifact Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80429</value> <!-- +1 Support Artifact Box -->
+			<value level="2">80430</value> <!-- +3 Support Artifact Box -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="25">
+						<item id="48968" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Received Healing / Support -->
+					</item>
+					<item chance="25">
+						<item id="48967" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Speed / Support -->
+					</item>
+					<item chance="25">
+						<item id="48966" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Vampiric Rage / Support -->
+					</item>
+					<item chance="25">
+						<item id="48965" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - XP / Support -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="25">
+						<item id="48968" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Received Healing / Support -->
+					</item>
+					<item chance="25">
+						<item id="48967" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Speed / Support -->
+					</item>
+					<item chance="25">
+						<item id="48966" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Vampiric Rage / Support -->
+					</item>
+					<item chance="25">
+						<item id="48965" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - XP / Support -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39432" toLevel="2" name="+1 Balance Artifact Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80431</value> <!-- +1 Balance Artifact Box -->
+			<value level="2">80432</value> <!-- +3 Balance Artifact Box -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="10">
+						<item id="48985" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Fixed Damage Resistance / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48972" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - M. Accuracy / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48970" count="1" minEnchant="1" maxEnchant="1" /> <!-- 	Artifact - M. Atk. / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48975" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - M. Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48971" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Accuracy / Balanc -->
+					</item>
+					<item chance="10">
+						<item id="48969" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Atk. Balance -->
+					</item>
+					<item chance="10">
+						<item id="48973" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48974" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - P. Skill Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48977" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Received Damage When Immobilized / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48976" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Recovery Potions' Effect / Balance -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="10">
+						<item id="48985" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Fixed Damage Resistance / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48972" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - M. Accuracy / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48970" count="1" minEnchant="3" maxEnchant="3" /> <!-- 	Artifact - M. Atk. / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48975" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - M. Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48971" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Accuracy / Balanc -->
+					</item>
+					<item chance="10">
+						<item id="48969" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Atk. Balance -->
+					</item>
+					<item chance="10">
+						<item id="48973" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48974" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - P. Skill Critical Rate / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48977" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Received Damage When Immobilized / Balance -->
+					</item>
+					<item chance="10">
+						<item id="48976" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Recovery Potions' Effect / Balance -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39433" toLevel="2" name="Stage 4 Soul Crystal Box">
 		<!-- Double-click to obtain a reward with a certain chance. -->
