@@ -309,6 +309,7 @@ import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
 import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
+import quests.Q10571_StrategicReconciliation.Q10571_StrategicReconciliation;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
 import quests.Q10577_TemperARustingBlade.Q10577_TemperARustingBlade;
@@ -825,7 +826,7 @@ public class QuestMasterHandler
 		Q10568_KamaelsTechnologicalAdvancement.class, // TODO: Not done.
 		Q10569_DeclarationOfWar.class, // TODO: Not done.
 		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
-		Q10571_StrategicReconciliation.class, // TODO: Not done.
+		Q10571_StrategicReconciliation.class,
 		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
 		Q10574_SpecialMissionFortuna.class, // TODO: Not done.
 		Q10575_LetsGoFishing.class,

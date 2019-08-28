@@ -833,6 +833,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48163" name="Dimensional Energy Fragment" type="EtcItem">
 		<!-- Fragments of the dimensional energy obtained in the Dimensional Rift and Dimensional Crack after receiving Tarti's advice. Gather them and take them to Tarti. -->
@@ -844,6 +845,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48164" name="Dimensional Exploration Report" type="EtcItem">
 		<!-- A report by Tarti on the status of the dimensional exploration. -->
@@ -855,6 +857,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48165" name="Proof of Freedom" type="EtcItem">
 		<!-- Proof obtained after defeating a giant who, under the orders of Mimir, came to find the Giant Trackers who planned to betray the giants. -->
