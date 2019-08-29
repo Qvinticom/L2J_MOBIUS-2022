@@ -146,10 +146,11 @@ public class GameServer
 	private static LoginServerThread _loginThread;
 	private static GamePacketHandler _gamePacketHandler;
 	private static TelnetStatusThread _statusServer;
+	private static GameServer INSTANCE;
 	
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
-	public static void main(String[] args) throws Exception
+	public GameServer() throws Exception
 	{
 		final long serverLoadStart = System.currentTimeMillis();
 		
@@ -607,5 +608,15 @@ public class GameServer
 	public static SelectorThread<GameClient> getSelectorThread()
 	{
 		return _selectorThread;
+	}
+	
+	public static void main(String[] args) throws Exception
+	{
+		INSTANCE = new GameServer();
+	}
+	
+	public static GameServer getInstance()
+	{
+		return INSTANCE;
 	}
 }

@@ -52,17 +52,7 @@ public class LoginServer
 	private TelnetStatusThread _statusServer;
 	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
-	public static void main(String[] args)
-	{
-		INSTANCE = new LoginServer();
-	}
-	
-	public static LoginServer getInstance()
-	{
-		return INSTANCE;
-	}
-	
-	public LoginServer()
+	private LoginServer() throws Exception
 	{
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
@@ -210,5 +200,15 @@ public class LoginServer
 	public void setStatus(int status)
 	{
 		_loginStatus = status;
+	}
+	
+	public static void main(String[] args) throws Exception
+	{
+		INSTANCE = new LoginServer();
+	}
+	
+	public static LoginServer getInstance()
+	{
+		return INSTANCE;
 	}
 }
