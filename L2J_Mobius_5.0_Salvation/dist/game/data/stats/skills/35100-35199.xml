@@ -8,11 +8,47 @@
 		<!-- Max HP/ MP/ CP +30% and Atk. Spd. +30%. -->
 		<icon>icon.skill5860</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35102" toLevel="1" name="Dragon Mage - Balthus">
 		<!-- Max HP/ MP/ CP +30% and Casting Spd. +30%. -->
 		<icon>icon.skill5860</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35103" toLevel="1" name="Blessed Circlet Enchant Scroll">
 		<!-- Enchant scroll for Circlets of Authority/ Foresight/ Grace. Can be enchanted up to $s1. If enchantment fails, the circlet's enchantment level is reset. -->
@@ -1241,6 +1277,35 @@
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1 and allows for 5 Talismans to be equipped. -->
 		<icon>icon.octavis_bracelet_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35152" toLevel="1" name="Clan Cloak Enchant Scroll">
 		<icon>icon.star_scrl_of_ench_ag</icon>
@@ -1323,7 +1388,7 @@
 	<skill id="35166" toLevel="1" name="Reporter Ability">
 		<!-- Blend in with monsters to avoid their notice and gather news safely and quietly. If either you or your party member attacks in this state, the entire party will become exposed. -->
 		<icon>icon.skill_transform_etc</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
@@ -1333,123 +1398,860 @@
 		<!-- Equipping this Talisman increases XP/ SP bonus to be gained in the Vitality state +10. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35168" toLevel="1" name="Fortress Talisman - P. Skill Power">
 		<!-- Equipping this Talisman increases P. Skill Power by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35169" toLevel="1" name="Fortress Talisman - M. Skill Power">
 		<!-- Equipping this Talisman increases M. Skill Power by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35170" toLevel="1" name="Fortress Talisman - P. Atk.">
 		<!-- Equipping this Talisman increases P. Atk. by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35171" toLevel="1" name="Fortress Talisman - M. Atk.">
 		<!-- Equipping this Talisman increases M. Atk. by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35172" toLevel="1" name="Fortress Talisman - P. Def">
 		<!-- Equipping this Talisman increases P. Def by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35173" toLevel="1" name="Fortress Talisman - M. Def">
 		<!-- Equipping this Talisman increases M. Def by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35174" toLevel="1" name="Fortress Talisman - Atk. Spd.">
 		<!-- Equipping this Talisman increases Atk. Spd. by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35175" toLevel="1" name="Fortress Talisman - Casting Spd.">
 		<!-- Equipping this Talisman increases Casting Spd. by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35176" toLevel="1" name="Fortress Talisman - P. Accuracy">
 		<!-- Equipping this Talisman increases P. Accuracy by 16. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Accuracy">
+				<amount>16</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35177" toLevel="1" name="Fortress Talisman - M. Accuracy">
 		<!-- Equipping this Talisman increases M. Accuracy by 16. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicAccuracy">
+				<amount>16</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35178" toLevel="1" name="Fortress Talisman - Shield Def.">
 		<!-- Equipping this Talisman increases Shield Def. by 50%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35179" toLevel="1" name="Fortress Talisman - Max HP">
 		<!-- Equipping this Talisman increases Max HP by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35180" toLevel="1" name="Fortress Talisman - Max MP">
 		<!-- Equipping this Talisman increases Max MP by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35181" toLevel="1" name="Fortress Talisman - Speed">
 		<!-- Equipping this Talisman increases Speed by 15. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35182" toLevel="1" name="Dragon Shirt">
 		<!-- XP/ SP bonus +3%, P. Def./ M. Def +5%, Speed +7, Physical and Magic Critical Damage Received -5%. -->
 		<icon>icon.bm_dragon_shirt</icon>
+		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35183" toLevel="1" name="Dragon Leather Shirt">
 		<!-- XP/ SP bonus +6%, P. Def./ M. Def +10%, Speed +7, Physical and Magic Critical Damage Received -10%, cooldown of all skills -3%. -->
 		<icon>icon.bm_dragon_leather_shirt</icon>
+		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>6</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>6</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35184" toLevel="1" name="Dragon Rind Leather Shirt">
 		<!-- XP/ SP bonus +10%, P. Def./ M. Def +15%, Speed +7, Physical and Magic Critical Damage Received -15%, cooldown of all skills -3%. -->
 		<icon>icon.bm_dragon_rind_leather_shirt</icon>
 		<operateType>P</operateType>
+		<magicLvl>105</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35185" toLevel="6" name="Dragon Shirt Enchantment Effect">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, and CHA $s8. -->
 		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35186" toLevel="6" name="Dragon Leather Shirt Enchantment Effect">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, and CHA $s8. -->
 		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35187" toLevel="6" name="Dragon Rind Leather Shirt Enchantment Effect">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, and CHA $s8. -->
 		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35188" toLevel="18" name="Dragon Rage">
 		<!-- For $s1, P. Atk./ M. Atk,/ Atk. Spd./ Casting Spd. +$s2 and P. Def/ M. Def -$s3. -->
 		<icon>icon.skill35188</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalTime>60</abnormalTime>
+		<abnormalLevel>1</abnormalLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>1800000</reuseDelay>
+		<reuseDelay>
+			<value level="1">3000000</value>
+			<value level="2">2900000</value>
+			<value level="3">2800000</value>
+			<value level="4">2700000</value>
+			<value level="5">2600000</value>
+			<value level="6">2500000</value>
+			<value level="7">2500000</value>
+			<value level="8">2400000</value>
+			<value level="9">2300000</value>
+			<value level="10">2200000</value>
+			<value level="11">2100000</value>
+			<value level="12">2000000</value>
+			<value level="13">2000000</value>
+			<value level="14">1900000</value>
+			<value level="15">1800000</value>
+			<value level="16">1700000</value>
+			<value level="17">1600000</value>
+			<value level="18">1500000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectPoint>673</effectPoint>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="9">10</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">15</value>
+					<value level="13">20</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">22</value>
+					<value level="17">22</value>
+					<value level="18">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="9">10</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">15</value>
+					<value level="13">20</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">22</value>
+					<value level="17">22</value>
+					<value level="18">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value fromLevel="1" toLevel="9">10</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">15</value>
+					<value level="13">20</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">22</value>
+					<value level="17">22</value>
+					<value level="18">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value fromLevel="1" toLevel="6">10</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">15</value>
+					<value level="13">20</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">22</value>
+					<value level="17">22</value>
+					<value level="18">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">-10</value>
+					<value fromLevel="7" toLevel="18">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">-10</value>
+					<value fromLevel="7" toLevel="18">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35189" toLevel="18" name="Dragon Scale">
 		<!-- Makes you invincible for $s1. -->
 		<icon>icon.skill35189</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>1800000</reuseDelay>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="12">5</value>
+			<value fromLevel="13" toLevel="17">6</value>
+			<value level="18">7</value>
+		</abnormalTime>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<reuseDelay>
+			<value level="1">3000000</value>
+			<value level="2">2900000</value>
+			<value level="3">2800000</value>
+			<value level="4">2700000</value>
+			<value level="5">2600000</value>
+			<value level="6">2500000</value>
+			<value level="7">2500000</value>
+			<value level="8">2400000</value>
+			<value level="9">2300000</value>
+			<value level="10">2200000</value>
+			<value level="11">2100000</value>
+			<value level="12">2000000</value>
+			<value level="13">2000000</value>
+			<value level="14">1900000</value>
+			<value level="15">1800000</value>
+			<value level="16">1700000</value>
+			<value level="17">1600000</value>
+			<value level="18">1500000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="AbsorbDamage"> <!-- TODO: Need Real Damage Resist Effect -->
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35190" toLevel="18" name="Dragon Rise">
 		<!-- Removes all debuffs from you and excludes you from enemy's target for $s1. -->
 		<icon>icon.skill35190</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>1800000</reuseDelay>
+		<abnormalLvl>85</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="12">5</value>
+			<value fromLevel="13" toLevel="17">6</value>
+			<value level="18">7</value>
+		</abnormalTime>
+		<reuseDelay>
+			<value level="1">3000000</value>
+			<value level="2">2900000</value>
+			<value level="3">2800000</value>
+			<value level="4">2700000</value>
+			<value level="5">2600000</value>
+			<value level="6">2500000</value>
+			<value level="7">2500000</value>
+			<value level="8">2400000</value>
+			<value level="9">2300000</value>
+			<value level="10">2200000</value>
+			<value level="11">2100000</value>
+			<value level="12">2000000</value>
+			<value level="13">2000000</value>
+			<value level="14">1900000</value>
+			<value level="15">1800000</value>
+			<value level="16">1700000</value>
+			<value level="17">1600000</value>
+			<value level="18">1500000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpHealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
+			<effect name="HealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
+			<effect name="Untargetable" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+		</effects>
 	</skill>
 </list>
