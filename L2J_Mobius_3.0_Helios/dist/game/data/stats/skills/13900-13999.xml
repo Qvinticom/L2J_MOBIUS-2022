@@ -928,6 +928,22 @@
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
+		<passiveConditions>
+			<condition name="OpCheckClassList">
+				<classIds>
+					<item>YUL_SAGITTARIUS</item>
+					<item>YUL_MOONLIGHT_SENTINEL</item>
+					<item>YUL_GHOST_SENTINEL</item>
+					<item>YUL_TRICKSTER</item>
+					<item>OTHELL_ADVENTURER</item>
+					<item>OTHELL_GHOST_HUNTER</item>
+					<item>OTHELL_WIND_RIDER</item>
+					<item>OTHELL_FORTUNE_SEEKER</item>
+				</classIds>
+				<affectType>CASTER</affectType>
+				<isWithin>false</isWithin>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
