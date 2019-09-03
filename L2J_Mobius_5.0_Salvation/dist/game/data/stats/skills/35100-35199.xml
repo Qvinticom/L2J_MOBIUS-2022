@@ -388,6 +388,10 @@
 		<icon>icon.bm_mattack_circlet_03</icon>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="MAtk">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicCriticalDamage">
 				<amount>
 					<value level="1">1</value>
