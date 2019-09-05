@@ -912,7 +912,7 @@
 		</conditions>
 		<effects>
 			<effect name="TargetCancel">
-				<chance>90</chance>
+				<chance>100</chance>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -925,6 +925,10 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>30533</skillId> <!-- Backside Purge -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1815,8 +1819,21 @@
 	</skill>
 	<skill id="30533" toLevel="1" name="Backside Purge">
 		<icon>icon.skill30509</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="DebuffBlock"/>
+		</effects>
 	</skill>
 	<skill id="30534" toLevel="1" name="Transform Puppy 1">
 		<!-- Transforms into a Test - Puppy. -->
