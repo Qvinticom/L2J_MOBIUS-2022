@@ -85,7 +85,7 @@ public class PeaceZone extends ZoneType
 		}
 		
 		// Send player info to nearby players.
-		if (creature.isPlayer())
+		if (creature.isPlayer() && !creature.isTeleporting())
 		{
 			creature.broadcastInfo();
 		}
