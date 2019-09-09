@@ -24,7 +24,7 @@ public class ElementalSpiritDataHolder
 	private int _charId;
 	private byte _type;
 	private byte _level = 1;
-	private byte _stage;
+	private byte _stage = 1;
 	private long _experience;
 	private byte _attackPoints;
 	private byte _defensePoints;
