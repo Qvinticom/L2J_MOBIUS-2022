@@ -57,22 +57,34 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			return;
 		}
 		
-		int totalEmptySlots = player.getHennaEmptySlots();
-		if ((Config.PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL || player.hasPremiumStatus()) && Config.PREMIUM_HENNA_SLOT_ENABLED && (player.getClassId().level() > 1) && (player.getHenna(4) == null))
-		{
-			totalEmptySlots++;
-		}
-		if (totalEmptySlots == 0)
-		{
-			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		final Henna henna = HennaData.getInstance().getHenna(_symbolId);
 		if (henna == null)
 		{
 			LOGGER.warning("Invalid Henna Id: " + _symbolId + " from player " + player);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (henna.isPremium())
+		{
+			if ((Config.PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL || player.hasPremiumStatus()) && Config.PREMIUM_HENNA_SLOT_ENABLED && (player.getClassId().level() > 1))
+			{
+				if (player.getHenna(4) != null)
+				{
+					player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+					client.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+			}
+			else
+			{
+				client.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+		}
+		else if (player.getHennaEmptySlots() == 0)
+		{
+			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
