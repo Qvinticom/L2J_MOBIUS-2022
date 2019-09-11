@@ -62,21 +62,57 @@
 	</option>
 	<option id="33229" name="gc_opt">
 		<!-- Fire Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33230" name="gc_opt">
 		<!-- Water Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33231" name="gc_opt">
 		<!-- Wind Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33232" name="gc_opt">
 		<!-- Earth Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33233" name="gc_opt">
 		<!-- Holy Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33234" name="gc_opt">
 		<!-- Darkness Resistance + 10 -->
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</option>
 	<option id="33235" name="gc_opt">
 		<!-- STR + 1 -->
