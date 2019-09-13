@@ -93,6 +93,8 @@ public class PreparedListContainer extends ListContainer
 				_entries.add(new PreparedEntry(ent, null, getApplyTaxes(), false, taxRate));
 			}
 		}
+		
+		_npcsAllowed = template._npcsAllowed;
 	}
 	
 	public boolean checkNpcObjectId(int npcObjectId)

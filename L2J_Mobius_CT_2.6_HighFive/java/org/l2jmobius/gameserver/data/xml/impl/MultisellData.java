@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.util.Util;
 
 public class MultisellData implements IXmlReader
 {
@@ -141,10 +140,7 @@ public class MultisellData implements IXmlReader
 							{
 								if ("npc".equalsIgnoreCase(b.getNodeName()))
 								{
-									if (Util.isDigit(b.getTextContent()))
-									{
-										list.allowNpc(Integer.parseInt(b.getTextContent()));
-									}
+									list.allowNpc(Integer.parseInt(b.getTextContent()));
 								}
 							}
 						}
