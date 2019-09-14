@@ -147,7 +147,7 @@
 	<skill id="30501" toLevel="29" name="Backspin Impact">
 		<!-- Turns and deals a strong punch, creating wind. The energy of the wind hits the target, dealing $s1 damage and stunning it for $s2. Requires a fist weapon. -->
 		<icon>icon.skill30501</icon>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
@@ -641,8 +641,8 @@
 		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="16">80</value>
 			<value fromLevel="10" toLevel="16" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
@@ -697,7 +697,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
-		<trait>KNOCKBACK</trait>
+		<trait>KNOCKDOWN</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -729,9 +729,9 @@
 				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
 			<effect name="KnockBack">
-				<type>THROW_UP</type>
+				<speed>400</speed>
 				<distance>100</distance>
-				<animationSpeed>0</animationSpeed>
+				<knockDown>true</knockDown>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="10" toLevel="16" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -1790,6 +1790,14 @@
 				</skillLevel>
 				<castSkillId>30508</castSkillId> <!-- Right Sidestep -->
 				<targetType>SELF</targetType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>

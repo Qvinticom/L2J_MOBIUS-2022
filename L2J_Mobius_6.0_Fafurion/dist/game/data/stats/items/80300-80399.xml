@@ -444,6 +444,7 @@
 	<item id="80333" name="Dragon Necklace" type="Armor">
 		<!-- A dragon s necklace. Enchantment adds abilities to increase Stun/ Paralysis/ Poison/ Bleed attack success rates and resistance, decrease Skill Cooldown, and increase CHA/ LUC, Damage Reflection, Movement Speed, Skill Power, P. Atk./ M. Atk./ P. Def./ M. Def, and all Attribute Resistance. Can be enchanted by the Angel Accessory Scroll. -->
 		<set name="icon" val="icon.dragon_accessary_necklace" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -457,6 +458,7 @@
 	<item id="80334" name="Dragon Earring" type="Armor">
 		<!-- A dragon s earring. Enchantment adds abilities to increase Stun/ Faint/ Sleep/ Pull attack success rates and resistance, decrease MP Consumption, and increase CHA/ LUC, P./ M. Critical Damage Received, and increase Heal Received, Vampiric Rage, Movement Speed, Skill Power, and all Attribute Resistance. These effects do not stack with identical earrings. Can be enchanted by the Angel Accessory Scroll. -->
 		<set name="icon" val="icon.dragon_accessary_earring" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -470,6 +472,7 @@
 	<item id="80335" name="Dragon Ring" type="Armor">
 		<!-- A dragon s ring. Enchantment adds abilities to increase Stun/ MEN/ Knock Back/ Knock Down/ Aerial Yoke Resistance, Attack Success, CHA/ LUC, Atk./ Casting Spd., Physical/ Magic Accuracy, Movement Speed, Skill Power, Normal Attack/ P. Skill/ M. Skill Critical Damage, additional damage to immobilized targets, and all Attribute Resistance, depending on the enchantment level. These effects do not stack with identical rings. Can be enchanted by the Angel Accessory Scroll. -->
 		<set name="icon" val="icon.dragon_accessary_ring" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />

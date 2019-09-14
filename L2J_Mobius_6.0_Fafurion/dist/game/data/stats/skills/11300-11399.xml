@@ -390,7 +390,7 @@
 		<icon>icon.skill11310</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="2">60</value>
+			<value fromLevel="1" toLevel="2">30</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
@@ -412,17 +412,17 @@
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">4212</value>
-					<value level="2">8424</value>
+					<value level="1">7020</value>
+					<value level="2">14040</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">4680</value>
-					<value level="2">9360</value>
+					<value level="1">6318</value>
+					<value level="2">12636</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
