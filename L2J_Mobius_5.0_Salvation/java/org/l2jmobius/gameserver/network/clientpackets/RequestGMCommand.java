@@ -103,12 +103,14 @@ public class RequestGMCommand implements IClientIncomingPacket
 				// gm warehouse view to be implemented
 				if (player != null)
 				{
-					client.sendPacket(new GMViewWarehouseWithdrawList(player));
+					client.sendPacket(new GMViewWarehouseWithdrawList(1, player));
+					client.sendPacket(new GMViewWarehouseWithdrawList(2, player));
 					// clan warehouse
 				}
 				else
 				{
-					client.sendPacket(new GMViewWarehouseWithdrawList(clan));
+					client.sendPacket(new GMViewWarehouseWithdrawList(1, clan));
+					client.sendPacket(new GMViewWarehouseWithdrawList(2, clan));
 				}
 				break;
 			}
