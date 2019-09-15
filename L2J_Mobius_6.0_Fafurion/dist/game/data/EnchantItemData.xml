@@ -792,7 +792,13 @@
 	<enchant id="48171" targetGrade="R" maxEnchant="7" bonusRate="100">
 		<item id="48170" /> <!-- Enhancement Practice Long Sword -->
 	</enchant>
-		
+
+	<!-- Scroll: Enchant Lady's Ornamental Silver Knife -->
+	<enchant id="48932" targetGrade="R" >
+		<item id="45645" /> <!-- Lady's Ornamental Silver Knife -->
+		<item id="48931" /> <!-- Lady's Ornamental Silver Knife -->
+	</enchant>
+
 	<!-- Lucky Enchant Stone: Weapon -->
 	<support id="12362" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="12363" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
@@ -960,4 +966,5 @@
 	<support id="23778" targetGrade="A" minEnchant="10" maxEnchant="15" bonusRate="18" />
 	<support id="23779" targetGrade="S" minEnchant="10" maxEnchant="15" bonusRate="15" />
 	<support id="23780" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="10" />
+
 </list>

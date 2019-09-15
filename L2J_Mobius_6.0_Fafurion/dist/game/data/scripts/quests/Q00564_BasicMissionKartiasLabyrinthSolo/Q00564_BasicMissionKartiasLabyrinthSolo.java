@@ -41,7 +41,7 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 	private static final int SCROLL_OF_ESCAPE_KARTIAS_LABYRINTH = 39497;
 	// Misc
 	private static final int MIN_LEVEL = 85;
-	private static final int MAX_LEVEL = 97;
+	private static final int MAX_LEVEL = 99;
 	
 	public Q00564_BasicMissionKartiasLabyrinthSolo()
 	{

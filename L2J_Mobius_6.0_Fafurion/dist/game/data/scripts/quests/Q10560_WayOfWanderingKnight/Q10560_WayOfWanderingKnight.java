@@ -68,7 +68,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 	private static final int ELEMENTARY_SEED_BRACELET = 48072;
 	// Misc
 	private static final int MIN_LEVEL = 85;
-	private static final int MAX_LEVEL = 97;
+	private static final int MAX_LEVEL = 99;
 	
 	public Q10560_WayOfWanderingKnight()
 	{

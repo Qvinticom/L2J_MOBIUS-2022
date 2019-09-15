@@ -44,7 +44,7 @@ public class Q10562_TakeUpArms extends Quest
 	private static final int EMERALD = 38880;
 	// Misc
 	private static final int MIN_LEVEL = 85;
-	private static final int MAX_LEVEL = 97;
+	private static final int MAX_LEVEL = 99;
 	
 	public Q10562_TakeUpArms()
 	{

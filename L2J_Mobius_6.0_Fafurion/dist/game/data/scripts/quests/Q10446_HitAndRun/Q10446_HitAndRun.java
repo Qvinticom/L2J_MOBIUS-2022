@@ -41,8 +41,8 @@ public class Q10446_HitAndRun extends Quest
 	// Monster
 	private static final int NARVA_ORC_PREFECT = 23322;
 	// Item
-	private static final int ETERNAL_ENHANCEMENT_STONE = 35569;
-	private static final int ELMORE_SUPPORT_BOX = 37020;
+	private static final int SUPERIOR_GIANTS_CODEX = 30297;
+	private static final int ELMORE_RARE_BOX = 48940;
 	// Misc
 	private static final int MIN_LEVEL = 99;
 	private static final String KILL_COUNT_VAR = "KillCounts";
@@ -84,8 +84,8 @@ public class Q10446_HitAndRun extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ETERNAL_ENHANCEMENT_STONE, 1);
-					giveItems(player, ELMORE_SUPPORT_BOX, 1);
+					giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
+					giveItems(player, ELMORE_RARE_BOX, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

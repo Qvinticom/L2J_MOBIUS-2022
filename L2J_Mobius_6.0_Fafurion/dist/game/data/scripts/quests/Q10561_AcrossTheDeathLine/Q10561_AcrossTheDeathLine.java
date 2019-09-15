@@ -46,7 +46,7 @@ public class Q10561_AcrossTheDeathLine extends Quest
 	private static final int TALISMAN_DESTRUCTION = 34985;
 	// Misc
 	private static final int MIN_LEVEL = 85;
-	private static final int MAX_LEVEL = 97;
+	private static final int MAX_LEVEL = 99;
 	
 	public Q10561_AcrossTheDeathLine()
 	{

@@ -319,7 +319,18 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="30297" min="1" max="1" chance="20" /> <!-- Superior Giant's Codex -->
+			<item id="30298" min="1" max="1" chance="20" /> <!-- Superior Giant's Codex - Discipline-->
+			<item id="30299" min="1" max="1" chance="20" /> <!-- Superior Giant's Codex - Mastery -->
+			<item id="17527" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="37021" name="Elmore's Mysterious Box" type="EtcItem">
 		<!-- Mysterious box from Elmore. Double-click to receive an item at a certain probability. -->
@@ -334,7 +345,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="36554" min="1" max="1" chance="25" /> <!-- Armor Fragment (High-grade) -->
+			<item id="37023" min="1" max="1" chance="25" /> <!-- Eternal Ingredient Pouch -->
+			<item id="37024" min="1" max="1" chance="25" /> <!-- Eternal Recipe Pouch -->
+			<item id="36549" min="1" max="1" chance="25" /> <!-- Weapon Fragment (High-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="37022" name="Elmore's Noble Box" type="EtcItem">
 		<!-- Noble box from Elmore. Double-click to receive an item at a certain probability. -->
@@ -349,6 +370,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
