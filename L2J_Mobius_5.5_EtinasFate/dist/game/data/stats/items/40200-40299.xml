@@ -52,11 +52,33 @@
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="crystal_type" val="R" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18120" level="1" /> <!-- Supply Box (R-grade) -->
+		</skills>
 	</item>
 	<item id="40203" name="Supply Box (R95-grade)" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R95-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="crystal_type" val="R" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18121" level="1" /> <!-- Supply Box (R95-grade) -->
+		</skills>
 	</item>
 	<item id="40204" name="Supply Box (R99-grade)" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R99-grade). -->
