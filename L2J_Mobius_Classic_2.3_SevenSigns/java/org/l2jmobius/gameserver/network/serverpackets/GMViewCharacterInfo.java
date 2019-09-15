@@ -90,7 +90,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot));
 		}
 		
-		for (int slot : getPaperdollOrder())
+		for (int slot = 0; slot < 11; slot++)
 		{
 			final VariationInstance augment = _player.getInventory().getPaperdollAugmentation(slot);
 			packet.writeD(augment != null ? augment.getOption1Id() : 0); // Confirmed
