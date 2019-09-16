@@ -66,7 +66,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	/** Y coordinate */
 	private volatile int _y = 0;
 	/** Z coordinate */
-	private volatile int _z = 0;
+	private volatile int _z = -10000;
 	/** Orientation */
 	private volatile int _heading = 0;
 	/** Instance id of object. 0 - Global */
