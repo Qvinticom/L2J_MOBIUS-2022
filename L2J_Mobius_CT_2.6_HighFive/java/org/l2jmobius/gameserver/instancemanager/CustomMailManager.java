@@ -63,7 +63,7 @@ public class CustomMailManager
 					{
 						// Create message.
 						final String items = rs.getString("items");
-						final Message msg = new Message(playerId, rs.getString("subject"), rs.getString("message"), Message.SendBySystem.NEWS);
+						final Message msg = new Message(playerId, rs.getString("subject"), rs.getString("message"), Message.SendBySystem.PLAYER);
 						final List<ItemHolder> itemHolders = new ArrayList<>();
 						for (String str : items.split(";"))
 						{
