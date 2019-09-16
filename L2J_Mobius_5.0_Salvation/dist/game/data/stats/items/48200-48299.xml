@@ -520,14 +520,20 @@
 		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="85" />
+		</cond>
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">50</stat>
@@ -537,14 +543,20 @@
 		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="99" />
+		</cond>
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">60</stat>
@@ -554,14 +566,20 @@
 		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="105" />
+		</cond>
 		<stats>
 			<stat type="mDef">50</stat>
 			<stat type="pDef">70</stat>
@@ -571,14 +589,20 @@
 		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
 		<set name="icon" val="icon.alliance_cloak_pvp04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="110" />
+		</cond>
 		<stats>
 			<stat type="mDef">60</stat>
 			<stat type="pDef">80</stat>
@@ -588,10 +612,10 @@
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -605,10 +629,10 @@
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -622,10 +646,10 @@
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -639,10 +663,10 @@
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -656,14 +680,20 @@
 		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pve01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="85" />
+		</cond>
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">50</stat>
@@ -673,14 +703,20 @@
 		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pve02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="99" />
+		</cond>
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">60</stat>
@@ -690,14 +726,20 @@
 		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pve03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="105" />
+		</cond>
 		<stats>
 			<stat type="mDef">50</stat>
 			<stat type="pDef">70</stat>
@@ -707,14 +749,20 @@
 		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
 		<set name="icon" val="icon.alliance_cloak_pve04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="110" />
+		</cond>
 		<stats>
 			<stat type="mDef">60</stat>
 			<stat type="pDef">80</stat>
