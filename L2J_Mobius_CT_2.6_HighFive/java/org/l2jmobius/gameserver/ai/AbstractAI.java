@@ -872,7 +872,7 @@ public abstract class AbstractAI implements Ctrl
 		_followTarget = null;
 	}
 	
-	protected Creature getFollowTarget()
+	public Creature getFollowTarget()
 	{
 		return _followTarget;
 	}

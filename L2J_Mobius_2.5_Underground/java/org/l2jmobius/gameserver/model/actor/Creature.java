@@ -3413,9 +3413,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				if (isSummon())
 				{
-					((Summon) this).setFollowStatus(false);
+					// Do not break following owner.
+					if (getAI().getTarget() != getActingPlayer())
+					{
+						((Summon) this).setFollowStatus(false);
+						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					}
 				}
-				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				else
+				{
+					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				}
 				return;
 			}
 		}
