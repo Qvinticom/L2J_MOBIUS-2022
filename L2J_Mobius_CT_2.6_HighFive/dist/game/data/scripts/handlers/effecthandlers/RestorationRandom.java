@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -28,6 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -35,7 +37,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * Restoration Random effect implementation.<br>
  * This effect is present in item skills that "extract" new items upon usage.<br>
  * This effect has been unhardcoded in order to work on targets as well.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public class RestorationRandom extends AbstractEffect
 {
@@ -108,7 +110,20 @@ public class RestorationRandom extends AbstractEffect
 			{
 				continue;
 			}
-			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), info.getEffector(), true);
+			
+			long itemCount = (long) (item.getCount() * Config.RATE_EXTRACTABLE);
+			final Item template = ItemTable.getInstance().getTemplate(item.getId());
+			if (template.isStackable())
+			{
+				player.addItem("Extract", item.getId(), itemCount, info.getEffector(), true);
+			}
+			else
+			{
+				for (int i = 0; i < itemCount; i++)
+				{
+					player.addItem("Extract", item.getId(), 1, info.getEffector(), true);
+				}
+			}
 		}
 	}
 }
