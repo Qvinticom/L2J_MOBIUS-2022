@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `item_mall_transactions` (
+CREATE TABLE IF NOT EXISTS `prime_shop_transactions` (
   `charId` INT UNSIGNED NOT NULL DEFAULT 0,
   `productId` INT NOT NULL DEFAULT 0,
   `quantity` INT NOT NULL DEFAULT 1,

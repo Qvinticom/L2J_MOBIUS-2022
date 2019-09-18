@@ -121,9 +121,9 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		player.sendPacket(new ExBrBuyProduct(ExBrBuyProduct.RESULT_OK));
 		player.broadcastUserInfo();
 		
-		// Save transaction info at SQL table item_mall_transactions
+		// Save transaction info at SQL table prime_shop_transactions
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO item_mall_transactions (charId, productId, quantity) values (?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO prime_shop_transactions (charId, productId, quantity) values (?,?,?)"))
 		{
 			statement.setLong(1, player.getObjectId());
 			statement.setInt(2, product.getProductId());

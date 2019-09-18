@@ -42,7 +42,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 		final int playerObj = player.getObjectId();
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT productId FROM item_mall_transactions WHERE charId=? ORDER BY transactionTime DESC"))
+			PreparedStatement statement = con.prepareStatement("SELECT productId FROM prime_shop_transactions WHERE charId=? ORDER BY transactionTime DESC"))
 		{
 			statement.setInt(1, playerObj);
 			try (ResultSet rset = statement.executeQuery())
