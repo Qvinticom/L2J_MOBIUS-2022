@@ -773,6 +773,227 @@
 	<skill id="18122" toLevel="1" name="Supply Box (R99-grade)">
 		<!-- Double-click to obtain a random normal/blessed weapon/armor/accessory (R99-grade). -->
 		<operateType>A1</operateType>
+		<itemConsumeId>40204</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.55147059">
+						<item id="18094" count="1" /> <!-- Blessed Eternal Circlet -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18084" count="1" /> <!-- Blessed Eternal Breastplate -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18101" count="1" /> <!-- Blessed Eternal Earring -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18095" count="1" /> <!-- Blessed Eternal Tunic -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18079" count="1" /> <!-- Blessed Amaranthine Retributer -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18102" count="1" /> <!-- Blessed Eternal Ring -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18100" count="1" /> <!-- Blessed Eternal Necklace -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18069" count="1" /> <!-- Blessed Amaranthine Shaper -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18098" count="1" /> <!-- Blessed Eternal Shoes -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18091" count="1" /> <!-- Blessed Eternal Leather Leggings -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18092" count="1" /> <!-- Blessed Eternal Leather Gloves -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18093" count="1" /> <!-- Blessed Eternal Leather Boots -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18082" count="1" /> <!-- Blessed Amaranthine Dual Blunt Weapon -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18081" count="1" /> <!-- Blessed Amaranthine Dual Dagger -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18080" count="1" /> <!-- Blessed Amaranthine Dual Sword -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18097" count="1" /> <!-- Blessed Eternal Gloves -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18086" count="1" /> <!-- Blessed Eternal Gauntlets -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18087" count="1" /> <!-- Blessed Eternal Boots -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18096" count="1" /> <!-- Blessed Eternal Stockings -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18075" count="1" /> <!-- Blessed Amaranthine Thrower -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18074" count="1" /> <!-- Blessed Amaranthine Stormer -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18073" count="1" /> <!-- Blessed Amaranthine Fighter -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18078" count="1" /> <!-- Blessed Amaranthine Caster -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18090" count="1" /> <!-- Blessed Eternal Leather Armor -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18089" count="1" /> <!-- Blessed Eternal Leather Helmet -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18072" count="1" /> <!-- Blessed Amaranthine Avenger -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18077" count="1" /> <!-- Blessed Amaranthine Buster -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18070" count="1" /> <!-- Blessed Amaranthine Cutter -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18099" count="1" /> <!-- Blessed Eternal Sigil -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18076" count="1" /> <!-- Blessed Amaranthine Shooter -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18083" count="1" /> <!-- Blessed Eternal Helmet -->
+					</item>
+					<item chance="0.55147059">
+						<item id="18088" count="1" /> <!-- Blessed Eternal Shield -->
+					</item>
+					<item chance="0.36764706">
+						<item id="18071" count="1" /> <!-- Blessed Amaranthine Slasher -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17445" count="1" /> <!-- Eternal Shoes -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17422" count="1" /> <!-- Amaranthine Thrower -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17421" count="1" /> <!-- Amaranthine Stormer -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17426" count="1" /> <!-- Amaranthine Retributer -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17420" count="1" /> <!-- Amaranthine Fighter -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17441" count="1" /> <!-- Eternal Circlet -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17425" count="1" /> <!-- Amaranthine Caster -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17431" count="1" /> <!-- Eternal Breastplate -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17438" count="1" /> <!-- Eternal Leather Leggings -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17439" count="1" /> <!-- Eternal Leather Gloves -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17440" count="1" /> <!-- Eternal Leather Boots -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17437" count="1" /> <!-- Eternal Leather Armor -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17436" count="1" /> <!-- Eternal Leather Helmet -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17449" count="1" /> <!-- Eternal Ring -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17419" count="1" /> <!-- Amaranthine Avenger -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17432" count="1" /> <!-- Eternal Gaiters -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17447" count="1" /> <!-- Eternal Necklace -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17416" count="1" /> <!-- Amaranthine Shaper -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17429" count="1" /> <!-- Amaranthine Dual Blunt Weapon -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17428" count="1" /> <!-- Amaranthine Dual Dagger -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17427" count="1" /> <!-- Amaranthine Dual Sword -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17444" count="1" /> <!-- Eternal Gloves -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17424" count="1" /> <!-- Amaranthine Buster -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17417" count="1" /> <!-- Amaranthine Cutter -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17433" count="1" /> <!-- Eternal Gauntlets -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17434" count="1" /> <!-- Eternal Boots -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17448" count="1" /> <!-- Eternal Earring -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17446" count="1" /> <!-- Eternal Sigil -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17423" count="1" /> <!-- Amaranthine Shooter -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17442" count="1" /> <!-- Eternal Tunic -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17430" count="1" /> <!-- Eternal Helmet -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17443" count="1" /> <!-- Eternal Stockings -->
+					</item>
+					<item chance="3.41911763">
+						<item id="17435" count="1" /> <!-- Eternal Shield -->
+					</item>
+					<item chance="1.10294118">
+						<item id="17418" count="1" /> <!-- Amaranthine Slasher -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18123" toLevel="1" name="Scroll of Escape: Aden Castle">
 		<operateType>A1</operateType>
