@@ -17850,3 +17850,5 @@ VALUES
 (7011,29000,335605,40,1,-1,0,1),
 (7012,29000,335605,41,1,-1,0,1),
 (7013,29000,335605,42,1,-1,0,1);
+
+ALTER TABLE `merchant_buylists` ADD INDEX `save_time_idx` (`savetimer` ASC);
