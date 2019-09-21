@@ -251,6 +251,8 @@
 		<!-- Santa's warm cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<stats>
