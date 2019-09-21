@@ -96,6 +96,7 @@ import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import org.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleportListData;
 import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.data.xml.impl.VariationData;
@@ -339,6 +340,7 @@ public class GameServer
 		printSection("Cache");
 		HtmCache.getInstance();
 		CrestTable.getInstance();
+		TeleportListData.getInstance();
 		TeleportersData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();

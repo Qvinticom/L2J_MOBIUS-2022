@@ -456,7 +456,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_OPEN_HTML(0x164, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_CLASS_CHANGE(0x165, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_TELEPORT(0x167, null, ConnectionState.IN_GAME), // 228
+	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME), // 228
 	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME), // 228
 	REQUEST_AUTO_USE_POTION(0x171, null, ConnectionState.IN_GAME), // 228
 	REQUEST_AUTO_USE(0x177, null, ConnectionState.IN_GAME), // 228
