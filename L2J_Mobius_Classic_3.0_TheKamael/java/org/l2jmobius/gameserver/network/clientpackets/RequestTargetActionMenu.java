@@ -28,13 +28,12 @@ import org.l2jmobius.gameserver.network.GameClient;
 public class RequestTargetActionMenu implements IClientIncomingPacket
 {
 	private int _objectId;
-	private int _type;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_type = packet.readH(); // action?
+		packet.readH(); // action?
 		return true;
 	}
 	
@@ -47,15 +46,12 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_type == 1)
+		for (WorldObject object : World.getInstance().getVisibleObjects(player, WorldObject.class))
 		{
-			for (WorldObject object : World.getInstance().getVisibleObjects(player, WorldObject.class))
+			if (_objectId == object.getObjectId())
 			{
-				if (_objectId == object.getObjectId())
-				{
-					player.setTarget(object);
-					break;
-				}
+				player.setTarget(object);
+				break;
 			}
 		}
 	}
