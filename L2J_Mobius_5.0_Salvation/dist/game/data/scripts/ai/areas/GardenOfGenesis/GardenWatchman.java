@@ -54,7 +54,7 @@ public class GardenWatchman extends AbstractNpcAI
 		{
 			case "SPAWN_TRAP":
 			{
-				if (!npc.isInCombat())
+				if ((npc != null) && npc.isSpawned() && !npc.isInCombat())
 				{
 					npc.doCast(TRAP_SETUP.getSkill());
 					final Npc trap = addSpawn((getRandom(10) < 5) ? GENESIS_TRAP_1 : GENESIS_TRAP_2, npc, true, 90000, false);
