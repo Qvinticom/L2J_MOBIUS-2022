@@ -594,25 +594,46 @@
 		<!-- Double-click to obtain a Cat's Eye Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_catseye_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26499" min="1" max="1" chance="100" /> <!-- Cat's Eye Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28361" name="Cat's Eye Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Cat's Eye Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_catseye_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26500" min="1" max="1" chance="100" /> <!-- Cat's Eye Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28362" name="Amethyst Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Amethyst Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26504" min="1" max="1" chance="100" /> <!-- Amethyst Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28363" name="Amethyst Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Amethyst Lv. 4. -->
@@ -621,6 +642,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26505" min="1" max="1" chance="100" /> <!-- Amethyst Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28364" name="Jewel Grinder" type="EtcItem">
 		<!-- A grinder used for refining La Vie En Rose's jewels. Ask Shadai to grind jewels. -->
@@ -649,49 +681,91 @@
 		<!-- Double-click to obtain a Vital Stone Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3  -->
+		</capsuled_items>
 	</item>
 	<item id="28367" name="Tanzanite Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26488" min="1" max="1" chance="100" /> <!--Tanzanite Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28368" name="Vital Stone Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26479" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4  -->
+		</capsuled_items>
 	</item>
 	<item id="28369" name="Tanzanite Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26489" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28370" name="Garnet Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26483" min="1" max="1" chance="100" /> <!--Garnet Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28371" name="Garnet Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26484" min="1" max="1" chance="100" /> <!--Garnet Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28372" name="Vital Stone Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 3. -->
@@ -735,6 +809,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27440" level="6"/> <!-- Cat's Eye -->
+			<skill id="27441" level="1"/> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" type="Armor">
@@ -747,6 +822,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27442" level="6"/> <!-- Amethyst -->
+			<skill id="27443" level="1"/> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" type="Armor">
@@ -759,6 +835,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="18568" level="6"/> <!-- Vital Stone -->
+			<skill id="27439" level="3"/> <!-- Vital Wind -->
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" type="Armor">
@@ -797,10 +874,14 @@
 	<item id="28382" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain (1) of the following items:. Radiant Gemstone Fragment. Radiant Brooch Chest. Lv. 1 Vital Stone Chest. Lv. 1 Garnet Chest. Lv. 1 Tanzanite Chest. Lv. 1 Cat's Eye Chest. Lv. 1 Amethyst Chest. Lv. 1 Ruby Chest. Lv. 1 Sapphire Chest. Lv. 1 Topaz Chest. Lv. 1 Opal Chest. Lv. 1 Obsidian Chest. Lv. 1 Diamond Chest. Lv. 1 Emerald Chest. Lv. 1 Aquamarine Chest. Lv. 1 Pearl Chest. Lv. 1 Red Cat's Eye Chest. Lv. 1 Blue Cat's Eye Chest. Each time you open a box, you get a Jewel Grinder 100% of the time. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27720" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="28383" name="Greater Garnet" type="Armor">
 		<!-- Resistance to Debuffs + 30%, and when receiving damage from a PC, Stun/Silence effects are canceled. Adds the Purge skill to remove debuffs and protect you from receiving debuffs for 7 seconds. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -845,7 +926,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28386" min="1" max="1" chance="100" /> <!-- Race Change Ticket -->
+		</capsuled_items>
 	</item>
 	<item id="28386" name="Race Change Ticket" type="EtcItem">
 		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of "Character Race Change". \Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change. Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/Elf/Dark Elf/Orc/Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/Dominator/Iss Dominator as a Mainclass/Dualclass/Sublcass cannot change to a different race. 4.) Dwarven Warsmith/Maestro/Tyrr Maestro as a Mainclass/Dualclass/Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/Elf/Dark Elf/Orc, the character will lose the Dwarven inventory/warehouse/private shop bonus slots. -->
@@ -858,6 +944,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28387" name="Agathion - Unlimited Vitality Pack" type="EtcItem">
 		<!-- Wrapped pack containing Agathion - Unlimited Vitality. -->
@@ -870,6 +957,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28388" name="Agathion - Unlimited Vitality" type="Armor">
@@ -884,6 +972,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28389" name="Heine Exclusive Bait (85-89)" type="EtcItem">
@@ -896,6 +985,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28390" name="Heine Exclusive Bait (90-94)" type="EtcItem">
@@ -908,6 +998,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28391" name="Heine Exclusive Bait (95-98)" type="EtcItem">
@@ -920,6 +1011,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
@@ -932,6 +1024,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28393" name="Heine Exclusive Bait Coupon" type="EtcItem">
@@ -968,6 +1061,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28393" min="3000" max="3000" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
+			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shots -->
+			<item id="45493" min="1" max="1" chance="100" /> <!-- Fishing Rod Pack (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28397" name="2016 World Olympiad Hero XXX's Accessory" type="Armor">
 		<!-- Special hair accessory crafted for the winner of the 2016 World Olympiad, XXX. STR/INT/DEX/WIT/CON/MEN +5 when equipped. -->
@@ -982,6 +1081,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28398" name="Today''s To-do Soulshot Box" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Grade C-R Soulshots. -->
@@ -993,6 +1093,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) - Event -->
 			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) - Event -->
@@ -1011,6 +1112,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) - Event -->
 			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) - Event -->
