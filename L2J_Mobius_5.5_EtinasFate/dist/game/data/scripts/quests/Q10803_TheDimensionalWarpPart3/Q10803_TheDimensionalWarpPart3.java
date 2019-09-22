@@ -43,7 +43,7 @@ public class Q10803_TheDimensionalWarpPart3 extends Quest
 	private static final int UNWORDLY_ETIN = 23471;
 	// Others
 	private static final int MIN_LEVEL = 99;
-	private static final int BLOODY_ETERNAL_ENHANCEMENT_STONE = 3556;
+	private static final int BLOODY_ETERNAL_ENHANCEMENT_STONE = 35569;
 	private static final int WARP_CRYSTAL = 39597;
 	
 	public Q10803_TheDimensionalWarpPart3()
