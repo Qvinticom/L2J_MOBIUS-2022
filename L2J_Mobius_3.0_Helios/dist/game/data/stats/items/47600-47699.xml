@@ -132,17 +132,31 @@
 		<!-- Double-click to obtain a Ruby Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38857" min="1" max="1" chance="100" /> <!-- Ruby Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47627" name="Sapphire Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Sapphire Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38929" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47628" name="Topaz Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Topaz Lv. 3. -->
@@ -156,49 +170,91 @@
 		<!-- Double-click to obtain an Opal Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38877" min="1" max="1" chance="100" /> <!-- Opal Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47630" name="Obsidian Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Obsidian Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38872" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47631" name="Diamond Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Diamond Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38892" min="1" max="1" chance="100" /> <!-- Diamond Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47632" name="Emerald Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Emerald Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38882" min="1" max="1" chance="100" /> <!-- Emerald Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47633" name="Aquamarine Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Aquamarine Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38887" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47634" name="Pearl Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Pearl Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38897" min="1" max="1" chance="100" /> <!-- Pearl Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47635" name="Vital Stone Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 3. -->
@@ -228,17 +284,31 @@
 		<!-- Double-click to obtain a Ruby Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38858" min="1" max="1" chance="100" /> <!-- Ruby Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47639" name="Sapphire Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Sapphire Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38930" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47640" name="Topaz Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Topaz Lv. 4. -->
@@ -252,49 +322,91 @@
 		<!-- Double-click to obtain an Opal Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38878" min="1" max="1" chance="100" /> <!-- Opal Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47642" name="Obsidian Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Obsidian Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38873" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47643" name="Diamond Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Diamond Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38893" min="1" max="1" chance="100" /> <!-- Diamond Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47644" name="Emerald Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Emerald Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38883" min="1" max="1" chance="100" /> <!-- Emerald Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47645" name="Aquamarine Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Aquamarine Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38888" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47646" name="Pearl Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Pearl Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38898" min="1" max="1" chance="100" /> <!-- Pearl Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47647" name="Vital Stone Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 4. -->
