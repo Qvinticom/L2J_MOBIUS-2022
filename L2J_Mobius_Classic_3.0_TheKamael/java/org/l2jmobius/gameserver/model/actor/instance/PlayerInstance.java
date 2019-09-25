@@ -691,12 +691,6 @@ public class PlayerInstance extends Playable
 	
 	private final Map<Integer, String> _chars = new ConcurrentSkipListMap<>();
 	
-	// private byte _updateKnownCounter = 0;
-	
-	private int _expertiseArmorPenalty = 0;
-	private int _expertiseWeaponPenalty = 0;
-	private int _expertisePenaltyBonus = 0;
-	
 	private final Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
 	
 	protected boolean _inventoryDisable = false;
@@ -1996,26 +1990,6 @@ public class PlayerInstance extends Playable
 		broadcastReputation();
 	}
 	
-	public int getExpertiseArmorPenalty()
-	{
-		return _expertiseArmorPenalty;
-	}
-	
-	public int getExpertiseWeaponPenalty()
-	{
-		return _expertiseWeaponPenalty;
-	}
-	
-	public int getExpertisePenaltyBonus()
-	{
-		return _expertisePenaltyBonus;
-	}
-	
-	public void setExpertisePenaltyBonus(int bonus)
-	{
-		_expertisePenaltyBonus = bonus;
-	}
-	
 	public int getWeightPenalty()
 	{
 		return _dietMode ? 0 : _curWeightPenalty;
@@ -2072,83 +2046,6 @@ public class PlayerInstance extends Playable
 					broadcastUserInfo();
 				}
 			}
-		}
-	}
-	
-	public void refreshExpertisePenalty()
-	{
-		if (!Config.EXPERTISE_PENALTY)
-		{
-			return;
-		}
-		
-		final int expertiseLevel = getExpertiseLevel();
-		
-		int armorPenalty = 0;
-		int weaponPenalty = 0;
-		int crystaltype;
-		
-		for (ItemInstance item : getInventory().getItems())
-		{
-			if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)))
-			{
-				crystaltype = item.getItem().getCrystalType().getId();
-				if (crystaltype > expertiseLevel)
-				{
-					if (item.isWeapon() && (crystaltype > weaponPenalty))
-					{
-						weaponPenalty = crystaltype;
-					}
-					else if (crystaltype > armorPenalty)
-					{
-						armorPenalty = crystaltype;
-					}
-				}
-			}
-		}
-		
-		boolean changed = false;
-		final int bonus = getExpertisePenaltyBonus();
-		
-		// calc weapon penalty
-		weaponPenalty = weaponPenalty - expertiseLevel - bonus;
-		weaponPenalty = Math.min(Math.max(weaponPenalty, 0), 4);
-		
-		if ((_expertiseWeaponPenalty != weaponPenalty) || (getSkillLevel(CommonSkill.WEAPON_GRADE_PENALTY.getId()) != weaponPenalty))
-		{
-			_expertiseWeaponPenalty = weaponPenalty;
-			if (_expertiseWeaponPenalty > 0)
-			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), _expertiseWeaponPenalty));
-			}
-			else
-			{
-				removeSkill(getKnownSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId()), false, true);
-			}
-			changed = true;
-		}
-		
-		// calc armor penalty
-		armorPenalty = armorPenalty - expertiseLevel - bonus;
-		armorPenalty = Math.min(Math.max(armorPenalty, 0), 4);
-		
-		if ((_expertiseArmorPenalty != armorPenalty) || (getSkillLevel(CommonSkill.ARMOR_GRADE_PENALTY.getId()) != armorPenalty))
-		{
-			_expertiseArmorPenalty = armorPenalty;
-			if (_expertiseArmorPenalty > 0)
-			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), _expertiseArmorPenalty));
-			}
-			else
-			{
-				removeSkill(getKnownSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId()), false, true);
-			}
-			changed = true;
-		}
-		
-		if (changed)
-		{
-			sendPacket(new EtcStatusUpdate(this));
 		}
 	}
 	
@@ -2218,8 +2115,6 @@ public class PlayerInstance extends Playable
 				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
-		
-		refreshExpertisePenalty();
 		
 		broadcastUserInfo();
 		
@@ -6355,7 +6250,6 @@ public class PlayerInstance extends Playable
 	public void updateAndBroadcastStatus(int broadcastType)
 	{
 		refreshOverloaded(true);
-		refreshExpertisePenalty();
 		// Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers (broadcast)
 		if (broadcastType == 1)
 		{
@@ -6796,9 +6690,6 @@ public class PlayerInstance extends Playable
 			
 			// Update the overloaded status of the PlayerInstance
 			player.refreshOverloaded(false);
-			
-			// Update the expertise status of the PlayerInstance
-			player.refreshExpertisePenalty();
 			
 			player.restoreFriendList();
 			
@@ -9957,7 +9848,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			refreshOverloaded(true);
-			refreshExpertisePenalty();
 			broadcastUserInfo();
 			
 			// Clear resurrect xp calculation
@@ -10325,20 +10215,6 @@ public class PlayerInstance extends Playable
 				sendMessage("Teleport spawn protection ended.");
 			}
 		}
-	}
-	
-	/**
-	 * Expertise of the PlayerInstance (None=0, D=1, C=2, B=3, A=4, S=5, S80=6, S84=7)
-	 * @return int Expertise skill level.
-	 */
-	public int getExpertiseLevel()
-	{
-		int level = getSkillLevel(239);
-		if (level < 0)
-		{
-			level = 0;
-		}
-		return level;
 	}
 	
 	@Override

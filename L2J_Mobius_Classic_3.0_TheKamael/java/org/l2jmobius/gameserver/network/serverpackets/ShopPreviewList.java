@@ -30,14 +30,12 @@ public class ShopPreviewList implements IClientOutgoingPacket
 	private final int _listId;
 	private final Collection<Product> _list;
 	private final long _money;
-	private int _expertise;
 	
-	public ShopPreviewList(ProductList list, long currentMoney, int expertiseIndex)
+	public ShopPreviewList(ProductList list, long currentMoney)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();
 		_money = currentMoney;
-		_expertise = expertiseIndex;
 	}
 	
 	public ShopPreviewList(Collection<Product> lst, int listId, long currentMoney)
@@ -59,7 +57,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		int newlength = 0;
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if (product.getItem().isEquipable())
 			{
 				newlength++;
 			}
@@ -68,7 +66,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if (product.getItem().isEquipable())
 			{
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2

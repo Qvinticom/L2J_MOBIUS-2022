@@ -462,13 +462,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
-			
-			// Any items equipped that result in expertise penalty do not give any skills at all.
-			if (item.getItem().getCrystalType().getId() > player.getExpertiseLevel())
-			{
-				return;
-			}
-			
 			final AtomicBoolean update = new AtomicBoolean();
 			final AtomicBoolean updateTimestamp = new AtomicBoolean();
 			
@@ -1549,10 +1542,6 @@ public abstract class Inventory extends ItemContainer
 		try
 		{
 			unEquipItemInSlot(slot);
-			if (getOwner().isPlayer())
-			{
-				((PlayerInstance) getOwner()).refreshExpertisePenalty();
-			}
 		}
 		finally
 		{
@@ -1682,15 +1671,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		if (pdollSlot >= 0)
 		{
-			final ItemInstance old = setPaperdollItem(pdollSlot, null);
-			if (old != null)
-			{
-				if (getOwner().isPlayer())
-				{
-					((PlayerInstance) getOwner()).refreshExpertisePenalty();
-				}
-			}
-			return old;
+			return setPaperdollItem(pdollSlot, null);
 		}
 		return null;
 	}

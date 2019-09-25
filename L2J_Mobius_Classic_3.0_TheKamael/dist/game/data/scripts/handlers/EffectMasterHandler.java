@@ -99,7 +99,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CriticalDamagePosition", CriticalDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("CriticalRate", CriticalRate::new);
 		EffectHandler.getInstance().registerHandler("CriticalRatePositionBonus", CriticalRatePositionBonus::new);
-		EffectHandler.getInstance().registerHandler("CrystalGradeModify", CrystalGradeModify::new);
 		EffectHandler.getInstance().registerHandler("CubicMastery", CubicMastery::new);
 		EffectHandler.getInstance().registerHandler("DamageBlock", DamageBlock::new);
 		EffectHandler.getInstance().registerHandler("DamageByAttack", DamageByAttack::new);
@@ -144,7 +143,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("FatalBlowRate", FatalBlowRate::new);
 		EffectHandler.getInstance().registerHandler("Fear", Fear::new);
 		EffectHandler.getInstance().registerHandler("Feed", Feed::new);
-        EffectHandler.getInstance().registerHandler("FishingExpSpBonus", FishingExpSpBonus::new);
+		EffectHandler.getInstance().registerHandler("FishingExpSpBonus", FishingExpSpBonus::new);
 		EffectHandler.getInstance().registerHandler("Flag", Flag::new);
 		EffectHandler.getInstance().registerHandler("FlipBlock", FlipBlock::new);
 		EffectHandler.getInstance().registerHandler("FocusEnergy", FocusEnergy::new);
