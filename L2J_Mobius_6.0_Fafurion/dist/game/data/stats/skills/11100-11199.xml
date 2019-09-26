@@ -384,40 +384,40 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>7</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="8" toLevel="8">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>8</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="9" toLevel="9">
-				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
-				<skillLevel>8</skillLevel>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
+				<skillLevel>9</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1874,7 +1874,7 @@
 			<effect name="DispelBySlotProbability">
 				<!-- Detonates Elemental Destruction -->
 				<dispel>BODY_DESTRUCTION</dispel>
-				<rate>100</rate>
+				<rate>40</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
 				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
@@ -2377,23 +2377,32 @@
 	<skill id="11134" toLevel="1" name="Meteor">
 		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11134</icon>
-		<affectRange>250</affectRange>
-		<channelingSkillId>11134</channelingSkillId> <!-- Meteor -->
+		<affectLimit>15-25</affectLimit>
+		<affectRange>200</affectRange>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>900</castRange>
+		<channelingStart>1</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
+		<effectPoint>-676</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
+		<hitTime>15000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLvl>80</magicLvl>
+		<mpConsume>52</mpConsume>
+		<mpInitialConsume>52</mpInitialConsume>
+		<mpPerChanneling>80</mpPerChanneling>
 		<operateType>CA1</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>4</hitCancelTime>
+		<effectRange>1000</effectRange>
 		<targetType>GROUND</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<mpConsume>52</mpConsume>
-		<castRange>900</castRange>
-		<hitTime>12000</hitTime>
-		<reuseDelay>120000</reuseDelay>
-		<effectPoint>-676</effectPoint>
-		<isMagic>2</isMagic>
 		<channelingEffects>
 			<effect name="MagicalAttack">
 				<power>
