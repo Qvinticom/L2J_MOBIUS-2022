@@ -350,6 +350,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91928" name="Spiritshot" type="EtcItem">
 		<!-- Increases weapon's magic power. -->
@@ -363,6 +371,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91929" name="Blessed Soulshot" type="EtcItem">
 		<!-- Increases weapon's physical power. -->
@@ -375,6 +391,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="8920" level="1" /> <!-- Blessed Soulshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91930" name="Blessed Spiritshot" type="EtcItem">
 		<!-- Increases weapon's magic power. -->
@@ -388,6 +412,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91931" name="Adventurer's Mark Lv. 5" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
