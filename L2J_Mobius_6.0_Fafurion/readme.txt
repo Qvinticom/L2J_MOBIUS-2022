@@ -109,6 +109,7 @@ Events:
 -Freya Celebration
 -Gift of Vitality
 -Halloween
+-Happy Hours
 -Heavy Medal
 -Hungry Horse
 -Hunt for Santa
@@ -117,6 +118,7 @@ Events:
 -Love your Gatekeeper
 -Master of Enchanting
 -The Power of Love
+-Training with Dandy
 -Custom Elpies Event
 -Custom Rabbits Event
 -Custom Race Event
