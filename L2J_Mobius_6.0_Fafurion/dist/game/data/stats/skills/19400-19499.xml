@@ -519,10 +519,10 @@
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>60</activateRate> <!-- Guessed -->
+		<activateRate>18</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -539,7 +539,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>200</affectRange>
+		<affectRange>60</affectRange>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -607,7 +607,7 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockControl" />
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="19420" toLevel="6" name="Quadruple Elemental Blast">
@@ -774,7 +774,7 @@
 	<skill id="19426" toLevel="13" name="Shadow Blade">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P./ M. Def. by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11510</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -1228,19 +1228,19 @@
 		<reuseDelay>8000</reuseDelay>
 		<effects>
 			<effect name="PAtk">
-				<amount>150</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>150</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>150</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>150</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1248,10 +1248,31 @@
 	<skill id="19433" toLevel="13" name="Alluring Conduct">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P./ M. Def. by $s3 for $s2 Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19433</icon>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+		</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="13">99</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+		</activateRate>
+		<castRange>100</castRange>
+		<coolTime>300</coolTime>
+		<effectRange>400</effectRange>
+		<hitTime>910</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1268,70 +1289,77 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">146</value>
-			<value level="2">150</value>
-			<value level="3">156</value>
-			<value level="4">160</value>
-			<value level="5">166</value>
-			<value level="6">172</value>
-			<value level="7">176</value>
-			<value level="8">182</value>
-			<value level="9">188</value>
-			<value level="10">194</value>
-			<value level="11">200</value>
-			<value level="12">206</value>
-			<value level="13">212</value>
+			<value level="1">50</value>
+			<value level="2">51</value>
+			<value level="3">53</value>
+			<value level="4">55</value>
+			<value level="5">57</value>
+			<value level="6">59</value>
+			<value level="7">60</value>
+			<value level="8">62</value>
+			<value level="9">64</value>
+			<value level="10">66</value>
+			<value level="11">68</value>
+			<value level="12">70</value>
+			<value level="13">72</value>
 		</mpConsume>
+		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
-		<castRange>80</castRange>
-		<effectRange>1000</effectRange>
-		<hitTime>2000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-707</effectPoint>
-		<reuseDelay>15000</reuseDelay>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>99</activateRate>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-694</value>
+			<value level="3">-700</value>
+			<value level="4">-705</value>
+			<value level="5">-709</value>
+			<value level="6">-712</value>
+			<value level="7">-712</value>
+			<value level="8">-712</value>
+			<value level="9">-712</value>
+			<value level="10">-712</value>
+			<value level="11">-712</value>
+			<value level="12">-712</value>
+			<value level="13">-712</value>
+		</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
+					<item>DUALBLUNT</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
-			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>TRIAD</type>
-				<level>3</level>
-				<hasAbnormal>true</hasAbnormal>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">23178</value>
-					<value level="2">24105</value>
-					<value level="3">25959</value>
-					<value level="4">27813</value>
-					<value level="5">29667</value>
-					<value level="6">31521</value>
-					<value level="7">33375</value>
-					<value level="8">35229</value>
-					<value level="9">38010</value>
-					<value level="10">39864</value>
-					<value level="11">41718</value>
-					<value level="12">43683</value>
-					<value level="13">45648</value>
+					<value level="1">14608</value>
+					<value level="2">15776</value>
+					<value level="3">16944</value>
+					<value level="4">18112</value>
+					<value level="5">19280</value>
+					<value level="6">20448</value>
+					<value level="7">21616</value>
+					<value level="8">22784</value>
+					<value level="9">28162</value>
+					<value level="10">29386</value>
+					<value level="11">30610</value>
+					<value level="12">31907</value>
+					<value level="13">33204</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<BLUNT>0.9</BLUNT>
-				<SWORD>0.9</SWORD>
+				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -1382,13 +1410,13 @@
 			<value level="12">12</value>
 			<value level="13">13</value>
 		</abnormalLvl>
-		<abnormalTime>8</abnormalTime>
+		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
-		<castRange>200</castRange>
-		<coolTime>1000</coolTime>
+		<castRange>100</castRange>
+		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>700</hitTime>
+		<hitTime>910</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1405,29 +1433,43 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">130</value>
-			<value level="2">132</value>
-			<value level="3">136</value>
-			<value level="4">142</value>
-			<value level="5">146</value>
-			<value level="6">150</value>
-			<value level="7">156</value>
-			<value level="8">160</value>
-			<value level="9">164</value>
-			<value level="10">168</value>
-			<value level="11">172</value>
-			<value level="12">176</value>
-			<value level="13">180</value>
+			<value level="1">50</value>
+			<value level="2">51</value>
+			<value level="3">53</value>
+			<value level="4">55</value>
+			<value level="5">57</value>
+			<value level="6">59</value>
+			<value level="7">60</value>
+			<value level="8">62</value>
+			<value level="9">64</value>
+			<value level="10">66</value>
+			<value level="11">68</value>
+			<value level="12">70</value>
+			<value level="13">72</value>
 		</mpConsume>
-		<operateType>DA3</operateType>
-		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-702</effectPoint>
+		<operateType>A2</operateType>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-694</value>
+			<value level="3">-700</value>
+			<value level="4">-705</value>
+			<value level="5">-709</value>
+			<value level="6">-712</value>
+			<value level="7">-712</value>
+			<value level="8">-712</value>
+			<value level="9">-712</value>
+			<value level="10">-712</value>
+			<value level="11">-712</value>
+			<value level="12">-712</value>
+			<value level="13">-712</value>
+		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1437,46 +1479,57 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>TRIAD</type>
-				<level>3</level>
-				<hasAbnormal>true</hasAbnormal>
-				<affectType>CASTER</affectType>
-			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">20668</value>
-					<value level="2">21494</value>
-					<value level="3">23146</value>
-					<value level="4">24798</value>
-					<value level="5">26450</value>
-					<value level="6">28102</value>
-					<value level="7">29754</value>
-					<value level="8">31406</value>
-					<value level="9">33884</value>
-					<value level="10">35536</value>
-					<value level="11">37188</value>
-					<value level="12">38939</value>
-					<value level="13">40690</value>
+					<value level="1">14608</value>
+					<value level="2">15776</value>
+					<value level="3">16944</value>
+					<value level="4">18112</value>
+					<value level="5">19280</value>
+					<value level="6">20448</value>
+					<value level="7">21616</value>
+					<value level="8">22784</value>
+					<value level="9">28162</value>
+					<value level="10">29386</value>
+					<value level="11">30610</value>
+					<value level="12">31907</value>
+					<value level="13">33204</value>
 				</power>
 				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>-20</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>-20</amount>
+				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>-150</amount>
+			<effect name="MagicalDefence">
+				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 		<selfEffects>
+			<effect name="Reuse">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19432</skillId> <!-- Swift Praise -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="DispelBySlotMyself">
 				<dispel>TRIAD</dispel>
 			</effect>
@@ -1507,9 +1560,7 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<abnormalTime>10</abnormalTime>
-		<activateRate>
-			<value fromLevel="1" toLevel="5">5</value>
-		</activateRate>
+		<activateRate>100</activateRate>
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>100</power>
@@ -1850,19 +1901,20 @@
 		<icon>icon.skill11761</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<abnormalType>MP_RECOVER</abnormalType>
 		<mpConsume>
-			<value level="1">38</value>
-			<value level="2">39</value>
-			<value level="3">41</value>
-			<value level="4">43</value>
-			<value level="5">45</value>
-			<value level="6">47</value>
-			<value level="7">49</value>
-			<value level="8">51</value>
-			<value level="9">53</value>
+			<value level="1">50</value>
+			<value level="2">100</value>
+			<value level="3">150</value>
+			<value level="4">200</value>
+			<value level="5">250</value>
+			<value level="6">300</value>
+			<value level="7">350</value>
+			<value level="8">375</value>
+			<value level="9">400</value>
 		</mpConsume>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
 		<hitTime>2000</hitTime>
@@ -1870,6 +1922,14 @@
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>15000</reuseDelay>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>5</power>
+			</effect>
+			<effect name="DispelBySlotMyself">
+				<dispel>TRIAD</dispel>
+			</effect>
+		</effects>
 		<effectPoint>
 			<value level="1">1798</value>
 			<value level="2">1811</value>
@@ -1889,24 +1949,6 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="ManaHealByLevel">
-				<power>
-					<value level="1">700</value>
-					<value level="2">715</value>
-					<value level="3">725</value>
-					<value level="4">740</value>
-					<value level="5">755</value>
-					<value level="6">768</value>
-					<value level="7">786</value>
-					<value level="8">806</value>
-					<value level="9">826</value>
-				</power>
-			</effect>
-			<effect name="DispelBySlotMyself">
-				<dispel>TRIAD</dispel>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
 		<!-- For 150 sec., party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
@@ -2075,10 +2117,9 @@
 		<specialLevel>-1</specialLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<affectRange>2000</affectRange>
-		<isMagic>2</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
 				<amount>15</amount>
