@@ -20,7 +20,6 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -60,19 +59,11 @@ public class GrandBossInstance extends MonsterInstance
 		{
 			return false;
 		}
-		PlayerInstance player = null;
 		
-		if (killer.isPlayer())
+		if ((killer != null) && (killer.getActingPlayer() != null))
 		{
-			player = (PlayerInstance) killer;
-		}
-		else if (killer.isSummon())
-		{
-			player = ((Summon) killer).getOwner();
-		}
-		
-		if (player != null)
-		{
+			final PlayerInstance player = killer.getActingPlayer();
+			
 			broadcastPacket(new SystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			if (player.getParty() != null)
 			{
