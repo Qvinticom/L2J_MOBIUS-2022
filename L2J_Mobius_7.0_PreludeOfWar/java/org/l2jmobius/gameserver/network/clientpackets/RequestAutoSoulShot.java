@@ -92,7 +92,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (soulshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
 								return;
 							}
 						}
@@ -110,7 +110,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (spiritshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
 								return;
 							}
 						}

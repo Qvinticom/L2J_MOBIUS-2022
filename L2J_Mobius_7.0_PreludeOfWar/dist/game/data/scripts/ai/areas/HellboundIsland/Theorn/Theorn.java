@@ -126,7 +126,7 @@ public class Theorn extends AbstractNpcAI
 				if ((player != null) && !player.isDead() && (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X2) != null))
 				{
 					addExpAndSp(player, 0, 1000000);
-					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X_2, ExShowScreenMessage.TOP_CENTER, 5000);
+					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X2, ExShowScreenMessage.TOP_CENTER, 5000);
 					player.getEffectList().stopEffects(AbnormalType.STAR_AGATHION_EXP_SP_BUFF1);
 				}
 				break;
@@ -136,7 +136,7 @@ public class Theorn extends AbstractNpcAI
 				if ((player != null) && !player.isDead() && (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X4) != null))
 				{
 					addExpAndSp(player, 0, 2000000);
-					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X_4, ExShowScreenMessage.TOP_CENTER, 5000);
+					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X4, ExShowScreenMessage.TOP_CENTER, 5000);
 					player.getEffectList().stopEffects(AbnormalType.STAR_AGATHION_EXP_SP_BUFF1);
 				}
 				break;
@@ -146,7 +146,7 @@ public class Theorn extends AbstractNpcAI
 				if ((player != null) && !player.isDead() && (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X8) != null))
 				{
 					addExpAndSp(player, 0, 4000000);
-					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X_8, ExShowScreenMessage.TOP_CENTER, 5000);
+					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X8, ExShowScreenMessage.TOP_CENTER, 5000);
 					player.getEffectList().stopEffects(AbnormalType.STAR_AGATHION_EXP_SP_BUFF1);
 				}
 				break;
@@ -156,7 +156,7 @@ public class Theorn extends AbstractNpcAI
 				if ((player != null) && !player.isDead() && (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X16) != null))
 				{
 					addExpAndSp(player, 0, 8000000);
-					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X_16, ExShowScreenMessage.TOP_CENTER, 5000);
+					showOnScreenMsg(player, NpcStringId.YOU_HAVE_ACQUIRED_SP_X16, ExShowScreenMessage.TOP_CENTER, 5000);
 					player.getEffectList().stopEffects(AbnormalType.STAR_AGATHION_EXP_SP_BUFF1);
 				}
 				break;

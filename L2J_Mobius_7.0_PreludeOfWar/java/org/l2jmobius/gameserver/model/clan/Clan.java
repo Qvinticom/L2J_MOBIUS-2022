@@ -2131,7 +2131,7 @@ public class Clan implements IIdentifiable, INamable
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
-			player.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS);
+			player.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FOR_BOTH_MAIN_AND_SUBCLASS);
 			return false;
 		}
 		if (getSubPledgeMembersCount(pledgeType) >= (pledgeType == 0 ? ClanLevelData.getCommonMemberLimit(_level) : ClanLevelData.getEliteMemberLimit(_level)))

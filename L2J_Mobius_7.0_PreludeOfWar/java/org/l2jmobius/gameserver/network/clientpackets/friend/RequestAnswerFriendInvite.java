@@ -91,7 +91,7 @@ public class RequestAnswerFriendInvite implements IClientIncomingPacket
 				requestor.getFriendList().add(player.getObjectId());
 				
 				// has joined as friend.
-				msg = new SystemMessage(SystemMessageId.S1_HAS_JOINED_AS_A_FRIEND);
+				msg = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
 				msg.addString(requestor.getName());
 				player.sendPacket(msg);
 				player.getFriendList().add(requestor.getObjectId());

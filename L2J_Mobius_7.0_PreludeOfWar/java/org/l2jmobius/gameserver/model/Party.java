@@ -328,7 +328,7 @@ public class Party extends AbstractPlayerGroup
 			}
 		}
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
+		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_A_PARTY);
 		msg.addString(getLeader().getName());
 		player.sendPacket(msg);
 		

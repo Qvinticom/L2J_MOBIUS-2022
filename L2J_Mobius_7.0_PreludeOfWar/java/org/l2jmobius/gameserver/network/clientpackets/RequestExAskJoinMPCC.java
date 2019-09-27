@@ -156,7 +156,7 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 		
 		if (!hasRight)
 		{
-			requestor.sendPacket(SystemMessageId.COMMAND_CHANNELS_CAN_ONLY_BE_FORMED_BY_A_PARTY_LEADER_WHO_IS_ALSO_THE_LEADER_OF_A_LEVEL_5_CLAN);
+			requestor.sendPacket(SystemMessageId.NO_CLANS_DECLARED_A_WAR_ON_YOU);
 			return;
 		}
 		

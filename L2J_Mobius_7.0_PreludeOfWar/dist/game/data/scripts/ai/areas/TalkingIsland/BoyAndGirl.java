@@ -63,7 +63,7 @@ public class BoyAndGirl extends AbstractNpcAI
 		}
 		else if (event.equals("NPC_SHOUT"))
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, npc.getId() == BOY ? NpcStringId.WEEE : NpcStringId.BOYS_ARE_SO_ANNOYING);
+			npc.broadcastSay(ChatType.NPC_GENERAL, npc.getId() == BOY ? NpcStringId.WOW_2 : NpcStringId.BOYS_ARE_SO_ANNOYING);
 			startQuestTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);

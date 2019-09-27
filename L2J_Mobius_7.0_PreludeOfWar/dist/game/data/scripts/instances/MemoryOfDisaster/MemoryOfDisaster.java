@@ -170,14 +170,14 @@ public class MemoryOfDisaster extends AbstractInstance
 		NpcStringId.DWARVES_FOREVER,
 		NpcStringId.SAVE_THE_DWARVEN_VILLAGE,
 		NpcStringId.WHOAAAAAA,
-		NpcStringId.FIGHT
+		NpcStringId.COME_ONE_2
 	};
 	private static final NpcStringId[] SHOUT_SILVERA_DEATH =
 	{
 		NpcStringId.SILVERA,
 		NpcStringId.WE_CAN_T_TAKE_ANY_MORE_LOSSES,
 		NpcStringId.TOO_LATE_3,
-		NpcStringId.NO_WAY_4,
+		NpcStringId.INCREDIBLE,
 		NpcStringId.ANOTHER_ONE_OVER_THERE
 	};
 	private static final NpcStringId[] SACRIFICED_DARK_ELF_SUICIDE_MESSAGES =
@@ -870,7 +870,7 @@ public class MemoryOfDisaster extends AbstractInstance
 					}
 					case SILVERA:
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_GOD);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHOAAAAAA);
 						npc.doDie(null);
 						world.getNpc(SIEGE_GOLEM).doAutoAttack(attacker);
 						break;

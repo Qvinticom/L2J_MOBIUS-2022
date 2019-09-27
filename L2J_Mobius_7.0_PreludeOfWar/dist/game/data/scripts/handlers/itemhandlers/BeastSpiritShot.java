@@ -49,7 +49,7 @@ public class BeastSpiritShot implements IItemHandler
 		final PlayerInstance activeOwner = playable.getActingPlayer();
 		if (!activeOwner.hasSummon())
 		{
-			activeOwner.sendPacket(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+			activeOwner.sendPacket(SystemMessageId.SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
 		

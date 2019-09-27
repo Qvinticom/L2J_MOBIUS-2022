@@ -153,7 +153,7 @@ public class ConvertItem extends AbstractEffect
 		}
 		else
 		{
-			msg = new SystemMessage(SystemMessageId.EQUIPPED_S1);
+			msg = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 			msg.addItemName(newItem);
 		}
 		player.sendPacket(msg);

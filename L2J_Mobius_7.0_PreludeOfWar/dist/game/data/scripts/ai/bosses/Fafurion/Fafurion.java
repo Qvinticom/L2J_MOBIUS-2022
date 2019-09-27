@@ -96,10 +96,10 @@ public class Fafurion extends AbstractNpcAI
 			{
 				if (player.calculateDistance2D(FAFURION_SPAWN_LOC) < 5000)
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(player, PlayerInstance.class, 5000))
 					{
-						plr.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+						plr.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
 				}
 				break;

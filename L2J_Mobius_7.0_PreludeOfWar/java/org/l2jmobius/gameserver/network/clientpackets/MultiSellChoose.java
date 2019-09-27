@@ -615,7 +615,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				{
 					if (player.getFame() < totalCount)
 					{
-						player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_CLAN_REPUTATION_POINTS_TO_DO_THAT);
+						player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 						return false;
 					}
 					return true;

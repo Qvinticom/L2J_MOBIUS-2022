@@ -181,7 +181,9 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		}
 		else
 		{
-			client.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
+			player.sendMessage("Crystallization cannot be proceeded because there are no items registered.");
+			// CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED changed to ANGEL_NEVIT_S_DESCENT_BONUS_TIME_S1
+			// client.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
 		}
 	}
 }

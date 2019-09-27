@@ -84,7 +84,7 @@ public class RequestFriendDel implements IClientIncomingPacket
 			statement.execute();
 			
 			// Player deleted from your friend list
-			sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST_2);
 			sm.addString(_name);
 			player.sendPacket(sm);
 			

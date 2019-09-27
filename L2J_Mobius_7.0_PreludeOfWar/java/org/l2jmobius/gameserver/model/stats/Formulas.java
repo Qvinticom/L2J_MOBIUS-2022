@@ -164,7 +164,7 @@ public class Formulas
 				{
 					if (skill.hasEffectType(EffectType.HP_DRAIN))
 					{
-						attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_PERCENT_SUCCESSFUL);
+						attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_SUCCESSFUL);
 					}
 					else
 					{

@@ -108,7 +108,7 @@ public class ClanWarsList implements IUserCommandHandler
 						else
 						{
 							// Target Without Ally
-							sm = new SystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
+							sm = new SystemMessage(SystemMessageId.S1_S2_ALLIANCE_2);
 							sm.addString(clanName);
 						}
 						player.sendPacket(sm);

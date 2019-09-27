@@ -130,9 +130,9 @@ public class LastImperialTomb extends AbstractInstance
 	static
 	{
 		SKILL_MSG.put(1, NpcStringId.REQUIEM_OF_HATRED);
-		SKILL_MSG.put(2, NpcStringId.RONDO_OF_LONELINESS);
-		SKILL_MSG.put(3, NpcStringId.GALLOPING_TOCCATA);
-		SKILL_MSG.put(4, NpcStringId.FUGUE_OF_RAPTURE);
+		SKILL_MSG.put(2, NpcStringId.RONDO_OF_SOLITUDE);
+		SKILL_MSG.put(3, NpcStringId.FRENETIC_TOCCATA);
+		SKILL_MSG.put(4, NpcStringId.FUGUE_OF_JUBILATION);
 		SKILL_MSG.put(5, NpcStringId.HYPNOTIC_MAZURKA);
 	}
 	// Spawns

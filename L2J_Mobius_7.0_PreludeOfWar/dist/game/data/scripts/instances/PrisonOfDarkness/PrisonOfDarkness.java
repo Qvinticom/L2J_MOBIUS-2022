@@ -367,7 +367,7 @@ public class PrisonOfDarkness extends AbstractInstance
 				case 0:
 					takeItems(creature.getActingPlayer(), GIANT_CANNONBALL, -1);
 					creature.teleToLocation(PLAYERS_RANDOM_LOCS[getRandom(PLAYERS_RANDOM_LOCS.length)]);
-					showOnScreenMsg(creature.getActingPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANT_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
+					showOnScreenMsg(creature.getActingPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANCE_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
 					instance.getParameters().increaseInt("PLAYERS_COUNT", 0, 1);
 					break;
 				case 1:

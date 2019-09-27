@@ -183,7 +183,7 @@ public class OlympiadManager
 		
 		if (Olympiad.getInstance().getMillisToCompEnd() < 1200000)
 		{
-			player.sendPacket(SystemMessageId.PARTICIPATION_REQUESTS_ARE_NO_LONGER_BEING_ACCEPTED);
+			player.sendPacket(SystemMessageId.GAME_PARTICIPATION_REQUEST_MUST_BE_FILED_NOT_EARLIER_THAN_10_MINUTES_AFTER_THE_GAME_ENDS);
 			return false;
 		}
 		

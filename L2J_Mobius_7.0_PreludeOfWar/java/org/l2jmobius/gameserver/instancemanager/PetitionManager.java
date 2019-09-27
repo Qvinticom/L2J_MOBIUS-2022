@@ -84,7 +84,7 @@ public class PetitionManager
 		currPetition.setState(PetitionState.IN_PROCESS);
 		
 		// Petition application accepted. (Send to Petitioner)
-		currPetition.sendPetitionerPacket(new SystemMessage(SystemMessageId.PETITION_APPLICATION_ACCEPTED));
+		currPetition.sendPetitionerPacket(new SystemMessage(SystemMessageId.PETITION_ACCEPTED));
 		
 		// Petition application accepted. Reciept No. is <ID>
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1);

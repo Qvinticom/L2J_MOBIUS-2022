@@ -198,7 +198,7 @@ public class RequestSendPost implements IClientIncomingPacket
 		
 		if (FakePlayerData.getInstance().isTalkable(_receiver))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_THIS_CHARACTER);
 			sm.addString(FakePlayerData.getInstance().getProperName(_receiver));
 			player.sendPacket(sm);
 			return;
@@ -236,7 +236,7 @@ public class RequestSendPost implements IClientIncomingPacket
 		
 		if (BlockList.isInBlockList(receiverId, player.getObjectId()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_THIS_CHARACTER);
 			sm.addString(_receiver);
 			player.sendPacket(sm);
 			return;
@@ -256,7 +256,7 @@ public class RequestSendPost implements IClientIncomingPacket
 		
 		if (!client.getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
 		{
-			player.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED);
+			player.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_10_SEC_AGO_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
 		}
 		

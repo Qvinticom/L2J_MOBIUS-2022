@@ -2130,7 +2130,7 @@ public class PlayerInstance extends Playable
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.EQUIPPED_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 					sm.addItemName(item);
 				}
 				sendPacket(sm);
@@ -2268,7 +2268,7 @@ public class PlayerInstance extends Playable
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISMISSED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
 				msg.addPcName(this);
 				_clan.broadcastToOnlineMembers(msg);
 				_clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -3142,7 +3142,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 					sendPacket(sm);
@@ -5979,14 +5979,14 @@ public class PlayerInstance extends Playable
 			{
 				// A strider cannot be ridden while in battle
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_WHILE_IN_BATTLE);
+				sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 				return false;
 			}
 			else if (_waitTypeSitting)
 			{
 				// A strider can be ridden only when standing
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_MUST_BE_STANDING_TO_USE_A_MOUNT);
+				sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
 				return false;
 			}
 			else if (isFishing())
@@ -6012,7 +6012,7 @@ public class PlayerInstance extends Playable
 			else if (pet.isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CAN_NEITHER_MOUNT_NOR_DISMOUNT_WHILE_HUNGRY);
+				sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
 				return false;
 			}
 			else if (!Util.checkIfInRange(200, this, pet, true))
@@ -6041,7 +6041,7 @@ public class PlayerInstance extends Playable
 			else if (isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CAN_NEITHER_MOUNT_NOR_DISMOUNT_WHILE_HUNGRY);
+				sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
 				return false;
 			}
 			else
@@ -9340,12 +9340,12 @@ public class PlayerInstance extends Playable
 	{
 		if (isInCombat() || isJailed())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_ENGAGED_IN_BATTLE;
 			return false;
 		}
 		if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2)) || (getCurrentMp() < (getMaxMp() / 2))))
 		{
-			_noDuelReason = SystemMessageId.CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
+			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HER_OR_HIS_HP_OR_MP_IS_BELOW_50;
 			return false;
 		}
 		if (_isInDuel || _startingDuel)
@@ -9360,7 +9360,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isOnEvent()) // custom event message
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_ENGAGED_IN_BATTLE;
 			return false;
 		}
 		if (isCursedWeaponEquipped())
@@ -9370,7 +9370,7 @@ public class PlayerInstance extends Playable
 		}
 		if (_privateStoreType != PrivateStoreType.NONE)
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
+			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
 			return false;
 		}
 		if (isMounted() || isInBoat())
@@ -9380,7 +9380,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isFishing())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
+			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_FISHING;
 			return false;
 		}
 		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE))
@@ -10184,7 +10184,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			final long restoreExp = Math.round(((_expBeforeDeath - getExp()) * _revivePower) / 100);
-			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_RESURRECT_YOU_AND_RESTORE_XP_S2_S3_ACCEPT.getId());
+			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId());
 			dlg.getSystemMessage().addPcName(reviver);
 			dlg.getSystemMessage().addLong(restoreExp);
 			dlg.getSystemMessage().addInt(power);
@@ -13871,7 +13871,7 @@ public class PlayerInstance extends Playable
 		if ((currentPoints + count) < faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
 			getVariables().set(faction.toString(), currentPoints + count);
-			sendPacket(new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_FACTION_POINTS_FOR_S2).addInt(count).addFactionName(faction.getId()));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_AMITY_POINTS_FOR_S2).addInt(count).addFactionName(faction.getId()));
 		}
 		else
 		{

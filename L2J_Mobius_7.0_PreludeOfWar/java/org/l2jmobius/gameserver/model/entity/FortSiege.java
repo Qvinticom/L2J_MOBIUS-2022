@@ -338,7 +338,7 @@ public class FortSiege implements Siegable
 			// Schedule a task to prepare auto siege end
 			_siegeEnd = ThreadPool.schedule(new ScheduleEndSiegeTask(), FortSiegeManager.getInstance().getSiegeLength() * 60 * 1000); // Prepare auto end task
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_S1_HAS_BEGUN);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_HAS_BEGUN);
 			sm.addCastleId(_fort.getResidenceId());
 			announceToPlayer(sm);
 			saveFortSiege();

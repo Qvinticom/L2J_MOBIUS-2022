@@ -129,7 +129,7 @@ public class Disarmor extends AbstractEffect
 					}
 					else
 					{
-						sm = new SystemMessage(SystemMessageId.EQUIPPED_S1);
+						sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 						sm.addItemName(item);
 					}
 					player.sendPacket(sm);

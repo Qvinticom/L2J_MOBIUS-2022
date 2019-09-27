@@ -197,7 +197,7 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 				{
 					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_3);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THOSE_WHO_ARE_IN_FRONT_OF_MY_EYES_WILL_BE_DESTROYED_3);
 						npc.doCast(skill_02.getSkill(), null, true, false);
 					}
 					break;

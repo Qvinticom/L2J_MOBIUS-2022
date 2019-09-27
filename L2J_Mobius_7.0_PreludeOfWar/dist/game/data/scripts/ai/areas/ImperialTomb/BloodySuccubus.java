@@ -71,7 +71,7 @@ public class BloodySuccubus extends AbstractNpcAI
 	{
 		NpcStringId.FOR_THE_GODDESS,
 		NpcStringId.YOU_WILL_DIE,
-		NpcStringId.DIE_2,
+		NpcStringId.DIE,
 		NpcStringId.YOU_WILL_BE_DESTROYED,
 		NpcStringId.OOOOH,
 		NpcStringId.DO_NOT_INTERFERE

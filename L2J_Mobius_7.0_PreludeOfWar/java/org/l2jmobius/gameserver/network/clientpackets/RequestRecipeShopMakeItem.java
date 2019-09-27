@@ -170,7 +170,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		
 		if (manufacturer.isCrafting())
 		{
-			player.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
+			player.sendPacket(SystemMessageId.THE_ITEM_CREATION_IS_IN_PROGRESS_PLEASE_WAIT);
 			return;
 		}
 		

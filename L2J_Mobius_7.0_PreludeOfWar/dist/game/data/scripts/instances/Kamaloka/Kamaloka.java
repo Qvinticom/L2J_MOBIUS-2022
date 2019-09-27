@@ -518,7 +518,7 @@ public class Kamaloka extends AbstractInstance
 			// but not in kamaloka
 			if ((player.getInstanceId() == 0) || (world.getTemplateId() != templateId))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
+				player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
 				return;
 			}
 			// check for level difference again on reenter
@@ -836,7 +836,7 @@ public class Kamaloka extends AbstractInstance
 				}
 				reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANCE_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(world.getTemplateId());
 				
 				// set instance reenter time for all allowed players

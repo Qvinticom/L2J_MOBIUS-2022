@@ -700,7 +700,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_C1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				sponsor.sendPacket(msg);
 			}

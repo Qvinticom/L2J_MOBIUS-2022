@@ -274,7 +274,7 @@ public class Baium extends AbstractNpcAI
 				{
 					if (players.isHero())
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_DARE_CHALLENGE_ME_AND_MY_DARK_POWERS_S1_HOW_FOOLISH, 2, 4000, players.getName()));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL, 2, 4000, players.getName()));
 						break;
 					}
 				}

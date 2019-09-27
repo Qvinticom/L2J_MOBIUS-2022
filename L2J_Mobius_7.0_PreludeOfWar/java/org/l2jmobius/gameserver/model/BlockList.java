@@ -194,7 +194,7 @@ public class BlockList
 		
 		if (player != null)
 		{
-			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(listOwner.getName());
 			player.sendPacket(sm);
 		}

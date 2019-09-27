@@ -475,7 +475,7 @@ public class PrimevalIsle extends AbstractNpcAI
 			}
 			else
 			{
-				showOnScreenMsg(player, NpcStringId.THE_DEINONYCHUS_MESOZOIC_STONE_CANNOT_BE_OBTAINED_WHEN_INVENTORY_WEIGHT_VOLUME_IS_AT_80_OR_MORE, 2, 6000);
+				showOnScreenMsg(player, NpcStringId.WHEN_INVENTORY_WEIGHT_NUMBER_ARE_MORE_THAN_80_THE_LIFE_STONE_FROM_THE_BEGINNING_CANNOT_BE_ACQUIRED, 2, 6000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

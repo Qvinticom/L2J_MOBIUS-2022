@@ -319,7 +319,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		else if ((clan == null) || (clan.getLevel() < 6))
 		{
-			sm = SystemMessageId.ONLY_CHARACTERS_WHO_ARE_A_PART_OF_A_CLAN_OF_LEVEL_6_OR_ABOVE_MAY_PARTICIPATE;
+			sm = SystemMessageId.ONLY_CHARACTERS_WHO_ARE_A_PART_OF_A_CLAN_OF_LEVEL_3_OR_ABOVE_MAY_PARTICIPATE;
 			canRegister = false;
 		}
 		else if (getRegisteredPlayers().size() >= (getVariables().getInt(MAX_ARENAS_KEY, 5) * getMaxPlayersInArena()))
@@ -349,7 +349,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		else if (player.isInInstance())
 		{
-			sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANT_ZONE;
+			sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANCE_ZONE;
 			canRegister = false;
 		}
 		else if (player.isInSiege())

@@ -73,7 +73,7 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 		
 		if (player.getAdena() < targets.size())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);
 			return;
 		}
 		

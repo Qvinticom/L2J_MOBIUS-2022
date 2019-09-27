@@ -69,7 +69,7 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final NpcStringId msg = getRandomBoolean() ? NpcStringId.UGH_A_CURSE_UPON_YOU : NpcStringId.I_REALLY_DIDN_T_WANT_TO_FIGHT;
+		final NpcStringId msg = getRandomBoolean() ? NpcStringId.A_CURSE_UPON_YOU_2 : NpcStringId.I_REALLY_DIDN_T_WANT_TO_FIGHT;
 		npc.broadcastSay(ChatType.NPC_GENERAL, msg);
 		cancelQuestTimer("say", npc, null);
 		cancelQuestTimer("reward", npc, player);

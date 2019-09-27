@@ -162,7 +162,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 				iu.addItem(item);
 				if (reward.getKey() == LuckyGameItemType.UNIQUE)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_X_S3_IN_THE_STANDARD_LUCKY_GAME);
 					sm.addPcName(player);
 					sm.addLong(r.getCount());
 					sm.addItemName(item);

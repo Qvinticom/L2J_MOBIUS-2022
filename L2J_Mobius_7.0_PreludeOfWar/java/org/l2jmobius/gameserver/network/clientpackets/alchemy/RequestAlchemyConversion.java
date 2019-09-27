@@ -163,7 +163,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < (ingredient.getCount() * _craftTimes))
 			{
 				player.sendPacket(new ExAlchemyConversion(0, 0));
-				player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION_2);
 				return;
 			}
 		}

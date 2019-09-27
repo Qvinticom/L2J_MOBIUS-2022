@@ -439,7 +439,7 @@ public class Olympiad extends ListenersContainer
 		@Override
 		public void run()
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_NOW_ENDED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_HAS_NOW_ENDED);
 			sm.addInt(_currentCycle);
 			
 			Broadcast.toAllOnlinePlayers(sm);
@@ -520,7 +520,7 @@ public class Olympiad extends ListenersContainer
 			
 			_inCompPeriod = true;
 			
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
+			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_OLYMPIAD_HAS_BEGAN));
 			LOGGER.info("Olympiad System: Olympiad Games have started.");
 			LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
@@ -543,7 +543,7 @@ public class Olympiad extends ListenersContainer
 					return;
 				}
 				_inCompPeriod = false;
-				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_OVER));
+				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_OVER));
 				LOGGER.info("Olympiad System: Olympiad games have ended.");
 				
 				while (OlympiadGameManager.getInstance().isBattleStarted()) // cleared in game manager

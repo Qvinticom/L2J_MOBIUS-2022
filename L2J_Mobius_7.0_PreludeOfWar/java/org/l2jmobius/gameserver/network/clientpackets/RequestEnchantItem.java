@@ -270,7 +270,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					if (scrollTemplate.isSafe())
 					{
 						// safe enchant - remain old value
-						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_VALUE_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
+						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
 						client.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
 						
 						if (Config.LOG_ITEM_ENCHANTS)

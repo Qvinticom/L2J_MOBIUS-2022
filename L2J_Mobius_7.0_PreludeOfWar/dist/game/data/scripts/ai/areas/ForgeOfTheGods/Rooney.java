@@ -93,7 +93,7 @@ public class Rooney extends AbstractNpcAI
 			{
 				case 1:
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HURRY_HURRY);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HURRY);
 					break;
 				}
 				case 2:

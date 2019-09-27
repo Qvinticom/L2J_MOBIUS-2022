@@ -355,7 +355,7 @@ public class SkillCaster implements Runnable
 			{
 				if (player.getFame() < _skill.getFamePointConsume())
 				{
-					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_CLAN_REPUTATION_POINTS_TO_DO_THAT);
+					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 					return false;
 				}
 				player.setFame(player.getFame() - _skill.getFamePointConsume());
@@ -1064,7 +1064,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.getFame() < skill.getFamePointConsume())
 			{
-				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_CLAN_REPUTATION_POINTS_TO_DO_THAT);
+				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 				return false;
 			}
 			

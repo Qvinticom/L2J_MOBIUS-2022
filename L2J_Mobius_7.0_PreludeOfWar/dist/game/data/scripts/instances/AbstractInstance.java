@@ -112,7 +112,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		{
 			if (instance.getTemplateId() != templateId)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
+				player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
 				return;
 			}
 			onEnter(player, instance, false);
@@ -146,7 +146,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			// Check if maximum world count limit is exceeded
 			if ((template.getMaxWorlds() != -1) && (manager.getWorldCount(templateId) >= template.getMaxWorlds()))
 			{
-				player.sendPacket(SystemMessageId.THE_NUMBER_OF_INSTANT_ZONES_THAT_CAN_BE_CREATED_HAS_BEEN_EXCEEDED_PLEASE_TRY_AGAIN_LATER);
+				player.sendPacket(SystemMessageId.THE_NUMBER_OF_INSTANCE_ZONES_THAT_CAN_BE_CREATED_HAS_BEEN_EXCEEDED_PLEASE_TRY_AGAIN_LATER);
 				return;
 			}
 			
@@ -155,7 +155,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				if (getPlayerInstance(member) != null)
 				{
-					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(p.getName())));
+					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(p.getName())));
 					return;
 				}
 				
