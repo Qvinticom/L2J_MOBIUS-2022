@@ -287,8 +287,6 @@ public class PlayerStat extends PlayableStat
 		getActiveChar().broadcastStatusUpdate();
 		// Update the overloaded status of the PlayerInstance
 		getActiveChar().refreshOverloaded(true);
-		// Update the expertise status of the PlayerInstance
-		getActiveChar().refreshExpertisePenalty();
 		// Send a Server->Client packet UserInfo to the PlayerInstance
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		// Send acquirable skill list

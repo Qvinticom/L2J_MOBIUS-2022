@@ -55,6 +55,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	{
 		(byte) 0x00,
 		(byte) 0x00,
+		(byte) 0x00,
 		(byte) 0x00
 	};
 	
@@ -133,7 +134,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(24);
+		packet.writeH(25); // 196
 		packet.writeB(_masks);
 		
 		if (containsMask(UserInfoType.RELATION))
@@ -301,7 +302,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.SOCIAL))
 		{
-			packet.writeH(22);
+			packet.writeH(30); // 228
 			packet.writeC(_player.getPvpFlag());
 			packet.writeD(_player.getReputation()); // Reputation
 			packet.writeC(_player.getNobleLevel());
@@ -311,15 +312,21 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getPvpKills());
 			packet.writeH(_player.getRecomLeft());
 			packet.writeH(_player.getRecomHave());
+			packet.writeD(0x00); // 196
+			packet.writeD(0x00); // 228
 		}
 		
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
-			packet.writeH(15);
+			packet.writeH(19); // 196
 			packet.writeD(_player.getVitalityPoints());
 			packet.writeC(0x00); // Vita Bonus
 			packet.writeD(_player.getFame());
 			packet.writeD(_player.getRaidbossPoints());
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
 		}
 		
 		if (containsMask(UserInfoType.SLOTS))
@@ -360,11 +367,17 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
-			packet.writeH(9);
+			packet.writeH(13);
 			packet.writeH(0x00);
 			packet.writeH(0x00);
 			packet.writeH(_player.getInventoryLimit());
+			
 			packet.writeC(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
+			
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
+			packet.writeC(0x00); // 196
 		}
 		
 		if (containsMask(UserInfoType.TRUE_HERO))
@@ -384,6 +397,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(0x00);
 			packet.writeD(0x00);
 			packet.writeD(0x00);
+		}
+		
+		if (containsMask(UserInfoType.UNKNOWN_196)) // 196
+		{
+			packet.writeH(6); // 196
+			packet.writeD(0x00); // 196
 		}
 		
 		return true;

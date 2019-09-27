@@ -1,9 +1,6 @@
-L2J-Mobius Fafurion
+L2J-Mobius Prelude of War
 
-Client mirror 1: https://mega.nz/#!AHA1EQgQ!cjt1DxvIh4CIFkuyqEGMLLmfOcZslfWfH-vWjCYhYrc
-Use mega downloader to download https://megadownloader.en.softonic.com/
-
-Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0V&export=download
+Client: 
 
 Geodata: https://www.mediafire.com/file/17gbt8jt1tyo5gi/L2J_Mobius_6.0_Fafurion_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
@@ -96,11 +93,15 @@ Etina's Fate:
 -Parsed new items from client
 -Artifact item support
 
-Fafurion:
+Fafurion: https://eu.4game.com/patchnotes/lineage2/132/
 -Support for R110 items
 -Spawned new areas
 -Retail gatekeeper teleports
 -Equipment upgrade system
+
+Prelude of War: https://eu.4game.com/patchnotes/lineage2/176/
+-Teleport list system.
+-Removed item grade penalty.
 
 Events:
 -Birth of Draco

@@ -46,7 +46,6 @@ import java.util.stream.Collectors;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
@@ -238,7 +237,6 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
@@ -696,10 +694,6 @@ public class PlayerInstance extends Playable
 	private int _createItemLevel;
 	private int _createCommonItemLevel;
 	private ItemGrade _crystallizeGrade = ItemGrade.NONE;
-	private CrystalType _expertiseLevel = CrystalType.NONE;
-	private int _expertiseArmorPenalty = 0;
-	private int _expertiseWeaponPenalty = 0;
-	private int _expertisePenaltyBonus = 0;
 	
 	private final Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
 	
@@ -2029,26 +2023,6 @@ public class PlayerInstance extends Playable
 		broadcastReputation();
 	}
 	
-	public int getExpertiseArmorPenalty()
-	{
-		return _expertiseArmorPenalty;
-	}
-	
-	public int getExpertiseWeaponPenalty()
-	{
-		return _expertiseWeaponPenalty;
-	}
-	
-	public int getExpertisePenaltyBonus()
-	{
-		return _expertisePenaltyBonus;
-	}
-	
-	public void setExpertisePenaltyBonus(int bonus)
-	{
-		_expertisePenaltyBonus = bonus;
-	}
-	
 	public int getWeightPenalty()
 	{
 		return _dietMode ? 0 : _curWeightPenalty;
@@ -2105,69 +2079,6 @@ public class PlayerInstance extends Playable
 					broadcastUserInfo();
 				}
 			}
-		}
-	}
-	
-	public void refreshExpertisePenalty()
-	{
-		if (!Config.EXPERTISE_PENALTY)
-		{
-			return;
-		}
-		
-		final CrystalType expertiseLevel = _expertiseLevel.plusLevel(_expertisePenaltyBonus);
-		
-		int armorPenalty = 0;
-		int weaponPenalty = 0;
-		
-		for (ItemInstance item : _inventory.getPaperdollItems(item -> (item != null) && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)) && item.getItem().getCrystalType().isGreater(expertiseLevel)))
-		{
-			if (item.isArmor())
-			{
-				// Armor penalty level increases depending on amount of penalty armors equipped, not grade level difference.
-				armorPenalty = CommonUtil.constrain(armorPenalty + 1, 0, 4);
-			}
-			else
-			{
-				// Weapon penalty level increases based on grade difference.
-				weaponPenalty = CommonUtil.constrain(item.getItem().getCrystalType().getLevel() - expertiseLevel.getLevel(), 0, 4);
-			}
-		}
-		
-		boolean changed = false;
-		
-		if ((_expertiseWeaponPenalty != weaponPenalty) || (getSkillLevel(CommonSkill.WEAPON_GRADE_PENALTY.getId()) != weaponPenalty))
-		{
-			_expertiseWeaponPenalty = weaponPenalty;
-			if (_expertiseWeaponPenalty > 0)
-			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), _expertiseWeaponPenalty));
-			}
-			else
-			{
-				removeSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), true);
-			}
-			changed = true;
-		}
-		
-		if ((_expertiseArmorPenalty != armorPenalty) || (getSkillLevel(CommonSkill.ARMOR_GRADE_PENALTY.getId()) != armorPenalty))
-		{
-			_expertiseArmorPenalty = armorPenalty;
-			if (_expertiseArmorPenalty > 0)
-			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), _expertiseArmorPenalty));
-			}
-			else
-			{
-				removeSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), true);
-			}
-			changed = true;
-		}
-		
-		if (changed)
-		{
-			sendSkillList(); // Update expertise penalty icon in skill list.
-			sendPacket(new EtcStatusUpdate(this));
 		}
 	}
 	
@@ -2237,8 +2148,6 @@ public class PlayerInstance extends Playable
 				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
-		
-		refreshExpertisePenalty();
 		
 		broadcastUserInfo();
 		
@@ -6372,7 +6281,6 @@ public class PlayerInstance extends Playable
 	public void updateAndBroadcastStatus(int broadcastType)
 	{
 		refreshOverloaded(true);
-		refreshExpertisePenalty();
 		// Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers (broadcast)
 		if (broadcastType == 1)
 		{
@@ -6809,9 +6717,6 @@ public class PlayerInstance extends Playable
 			
 			// Update the overloaded status of the PlayerInstance
 			player.refreshOverloaded(false);
-			
-			// Update the expertise status of the PlayerInstance
-			player.refreshExpertisePenalty();
 			
 			player.restoreFriendList();
 			
@@ -9998,7 +9903,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			refreshOverloaded(true);
-			refreshExpertisePenalty();
 			broadcastUserInfo();
 			
 			// Clear resurrect xp calculation
@@ -10366,20 +10270,6 @@ public class PlayerInstance extends Playable
 				sendMessage("Teleport spawn protection ended.");
 			}
 		}
-	}
-	
-	/**
-	 * Expertise of the PlayerInstance (None=0, D=1, C=2, B=3, A=4, S=5, S80=6, S84=7, R=8, R95=9, R99=10)
-	 * @return CrystalTyperepresenting expertise level..
-	 */
-	public CrystalType getExpertiseLevel()
-	{
-		return _expertiseLevel;
-	}
-	
-	public void setExpertiseLevel(CrystalType crystalType)
-	{
-		_expertiseLevel = crystalType != null ? crystalType : CrystalType.NONE;
 	}
 	
 	@Override

@@ -2700,7 +2700,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				final PlayerInstance player = getActingPlayer();
 				player.refreshOverloaded(true);
-				player.refreshExpertisePenalty();
 				sendPacket(info);
 				
 				if (broadcastFull)

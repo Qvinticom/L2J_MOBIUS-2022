@@ -1241,14 +1241,6 @@
 		<passiveConditions>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
-		<effects>
-			<effect name="CrystalGradeModify">
-				<amount>
-					<value level="1">3</value>
-					<value level="2">5</value>
-				</amount>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="22042" toLevel="1" name="Greater CP Potion">
 		<blockedInOlympiad>true</blockedInOlympiad>

@@ -40,6 +40,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		final int slot = packet.readD();
 		_slot = slot % 12;
 		_page = slot / 12;
+		packet.readC(); // 228
 		_id = packet.readD();
 		_lvl = packet.readH();
 		_subLvl = packet.readH(); // Sublevel
@@ -50,7 +51,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((client.getPlayer() == null) || (_page > 19) || (_page < 0))
+		if ((client.getPlayer() == null) || (_page > 23) || (_page < 0))
 		{
 			return;
 		}

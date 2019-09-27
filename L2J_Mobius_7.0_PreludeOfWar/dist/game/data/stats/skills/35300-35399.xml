@@ -28,6 +28,13 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="HitNumber">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35302" toLevel="1" name="Special Ability Krishna Dual Sword">
@@ -74,6 +81,10 @@
 			<effect name="PAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>2</amount>
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -172,12 +183,9 @@
 			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -193,12 +201,9 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -214,12 +219,9 @@
 			<effect name="CriticalRate">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -235,12 +237,9 @@
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -256,12 +255,9 @@
 			<effect name="Speed">
 				<amount>
 					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="1">5</value>
-					<value level="2">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -277,12 +273,9 @@
 			<effect name="MAtk">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -298,12 +291,9 @@
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -319,12 +309,9 @@
 			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -340,12 +327,9 @@
 			<effect name="MagicalAttackSpeed">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -361,12 +345,9 @@
 			<effect name="MaxHp">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -382,12 +363,9 @@
 			<effect name="MaxMp">
 				<amount>
 					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">3</value>
-					<value level="1">4</value>
-					<value level="2">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="3">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1410,7 +1388,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</POISON>
 				<SHOCK>
 					<value level="1">0</value>
@@ -1464,7 +1442,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</POISON>
 				<SHOCK>
 					<value level="1">0</value>
@@ -1785,7 +1763,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</PULL>
 				<SHOCK>
 					<value level="1">0</value>
@@ -1839,7 +1817,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</PULL>
 				<SHOCK>
 					<value level="1">0</value>
@@ -2126,7 +2104,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</KNOCKBACK>
 				<SHOCK>
 					<value level="1">0</value>
@@ -2193,7 +2171,7 @@
 					<value level="8">25</value>
 					<value level="9">25</value>
 					<value level="10">25</value>
-					<value level="11">25</value>
+					<value level="11">25</value>				
 				</KNOCKBACK>
 				<SHOCK>
 					<value level="1">0</value>
@@ -2266,9 +2244,477 @@
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
-		<castRange>40</castRange>
-		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="35363" toLevel="1" name="Anakim's Protection Rune">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35364" toLevel="11" name="Artifact - P. Critical Damage">
+		<!-- Enchanting increases Normal Attack Critical Damage -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35365" toLevel="11" name="Artifact - P. Skill Critical Damage">
+		<!-- When enchanting, increases P. Skill Critical Damage. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35366" toLevel="11" name="Artifact - M. Skill Critical Damage">
+		<!-- Enchanting increases M. Skill Critical Damage -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35367" toLevel="11" name="Artifact - Attribute Attack Power">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35368" toLevel="11" name="Artifact - P. Skill Power">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35369" toLevel="11" name="Artifact - M. Skill Power">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35370" toLevel="11" name="Artifact - Bow Resistance">
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</CROSSBOW>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35371" toLevel="11" name="Artifact - Dagger Resistance">
+		<!-- Enchanting increases Dagger/Dual Dagger Resistance -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<DAGGER>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</DAGGER>
+			</effect>
+			<effect name="DefenceTrait">
+				<DUALDAGGER>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</DUALDAGGER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35372" toLevel="11" name="Artifact - Sword Resistance">
+		<!-- Increases one-handed/ two-handed/ dual/ magic sword resistance when enchanted. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<DUAL>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</DUAL>
+			</effect>
+			<effect name="DefenceTrait">
+				<SWORD>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</SWORD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35373" toLevel="11" name="Artifact - Attribute Resistance">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35374" toLevel="11" name="Artifact - Received Damage When Immobilized">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35375" toLevel="11" name="Artifact - Debuff Resistance">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35376" toLevel="11" name="Artifact - Vitality Bonus">
+		<!-- Enchanting increases Vitality bonus -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">14</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35377" toLevel="11" name="Artifact - Vitality Consumption">
+		<!-- Enchanting reduces Vitality Consumption Rate -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-7</value>
+					<value level="7">-9</value>
+					<value level="8">-11</value>
+					<value level="9">-14</value>
+					<value level="10">-17</value>
+					<value level="11">-20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35378" toLevel="11" name="Artifact - MP Consumption">
+		<!-- Enchanting reduces Skill MP Consumption -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-7</value>
+					<value level="7">-9</value>
+					<value level="8">-11</value>
+					<value level="9">-14</value>
+					<value level="10">-17</value>
+					<value level="11">-20</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-7</value>
+					<value level="7">-9</value>
+					<value level="8">-11</value>
+					<value level="9">-14</value>
+					<value level="10">-17</value>
+					<value level="11">-20</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35379" toLevel="11" name="Artifact - Skill Cooldown">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35380" toLevel="11" name="Artifact - Recovery Potions' Effect">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35381" toLevel="11" name="Artifact - Fixed Damage Resistance">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35382" toLevel="11" name="Artifact - P. Def.">
+		<!-- P. Def. increased when upgraded. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35383" toLevel="11" name="Artifact - M. Def.">
+		<!-- M. Def. increased when upgraded. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35384" toLevel="11" name="Artifact - P. Critical Damage">
+		<!-- Enchanting increases Normal Attack Critical Damage -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35385" toLevel="11" name="Artifact - P. Skill Critical Damage">
+		<!-- When enchanting, increases P. Skill Critical Damage. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35386" toLevel="11" name="Artifact - M. Skill Critical Damage">
+		<!-- Enchanting increases M. Skill Critical Damage -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35387" toLevel="11" name="Artifact - Atk. Spd.">
+		<!-- Enchanting increases Atk. Spd. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35388" toLevel="11" name="Artifact - Casting Spd.">
+		<!-- Casting Spd. increased when upgraded -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35389" toLevel="11" name="Artifact - Speed">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35390" toLevel="11" name="Artifact - Acquired XP/ SP">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35391" toLevel="11" name="Artifact - Vitality Bonus">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35392" toLevel="11" name="Artifact - Vitality Consumption">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35393" toLevel="11" name="Artifact - Debuff Resistance">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35394" toLevel="11" name="Artifact - Received Healing">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35395" toLevel="11" name="Artifact - MP Consumption">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35396" toLevel="11" name="Artifact - Fishing XP">
+		<operateType>P</operateType>
+	</skill>
+	<skill id="35397" toLevel="10" name="Talisman of Protection">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35398" toLevel="1" name="Soul of Sword - Zariche">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35399" toLevel="1" name="Soul of Sword - Akamanah">
+		<operateType>A1</operateType>
 	</skill>
 </list>

@@ -103,7 +103,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CriticalDamagePosition", CriticalDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("CriticalRate", CriticalRate::new);
 		EffectHandler.getInstance().registerHandler("CriticalRatePositionBonus", CriticalRatePositionBonus::new);
-		EffectHandler.getInstance().registerHandler("CrystalGradeModify", CrystalGradeModify::new);
 		EffectHandler.getInstance().registerHandler("Crystallize", Crystallize::new);
 		EffectHandler.getInstance().registerHandler("CubicMastery", CubicMastery::new);
 		EffectHandler.getInstance().registerHandler("DamageBlock", DamageBlock::new);
@@ -286,7 +285,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ReflectSkill", ReflectSkill::new);
 		EffectHandler.getInstance().registerHandler("RefuelAirship", RefuelAirship::new);
 		EffectHandler.getInstance().registerHandler("Relax", Relax::new);
-		EffectHandler.getInstance().registerHandler("RemoveEquipPenalty", RemoveEquipPenalty::new);
 		EffectHandler.getInstance().registerHandler("ReplaceSkillBySkill", ReplaceSkillBySkill::new);
 		EffectHandler.getInstance().registerHandler("ResetInstanceEntry", ResetInstanceEntry::new);
 		EffectHandler.getInstance().registerHandler("ResistAbnormalByCategory", ResistAbnormalByCategory::new);

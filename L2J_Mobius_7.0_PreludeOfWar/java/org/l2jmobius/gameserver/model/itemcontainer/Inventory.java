@@ -462,13 +462,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
-			
-			// Any items equipped that result in expertise penalty do not give any skills at all.
-			if (item.getItem().getCrystalType().isGreater(player.getExpertiseLevel()))
-			{
-				return;
-			}
-			
 			final AtomicBoolean update = new AtomicBoolean();
 			final AtomicBoolean updateTimestamp = new AtomicBoolean();
 			
@@ -1549,10 +1542,6 @@ public abstract class Inventory extends ItemContainer
 		try
 		{
 			unEquipItemInSlot(slot);
-			if (getOwner().isPlayer())
-			{
-				((PlayerInstance) getOwner()).refreshExpertisePenalty();
-			}
 		}
 		finally
 		{
@@ -1682,15 +1671,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		if (pdollSlot >= 0)
 		{
-			final ItemInstance old = setPaperdollItem(pdollSlot, null);
-			if (old != null)
-			{
-				if (getOwner().isPlayer())
-				{
-					((PlayerInstance) getOwner()).refreshExpertisePenalty();
-				}
-			}
-			return old;
+			return setPaperdollItem(pdollSlot, null);
 		}
 		return null;
 	}
@@ -2123,7 +2104,7 @@ public abstract class Inventory extends ItemContainer
 			case 1:
 			{
 				// 4 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				if (((item.getId() >= 48969) && (item.getId() <= 48985)) || ((item.getId() >= 80656) && (item.getId() <= 80662)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 4); i++)
 					{
@@ -2136,7 +2117,7 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				// 1 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
+				if (((item.getId() >= 48957) && (item.getId() <= 48960)) || ((item.getId() >= 80647) && (item.getId() <= 80649)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 1); i++)
 					{
@@ -2149,7 +2130,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 1 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
+				if (((item.getId() >= 48961) && (item.getId() <= 48964)) || ((item.getId() >= 80650) && (item.getId() <= 80652)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 1); i++)
 					{
@@ -2162,7 +2143,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 1 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
+				if (((item.getId() >= 48965) && (item.getId() <= 48968)) || ((item.getId() >= 80653) && (item.getId() <= 80655)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 1); i++)
 					{
@@ -2179,7 +2160,7 @@ public abstract class Inventory extends ItemContainer
 			case 2:
 			{
 				// 8 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				if (((item.getId() >= 48969) && (item.getId() <= 48985)) || ((item.getId() >= 80656) && (item.getId() <= 80662)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 8); i++)
 					{
@@ -2192,7 +2173,7 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				// 2 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
+				if (((item.getId() >= 48957) && (item.getId() <= 48960)) || ((item.getId() >= 80647) && (item.getId() <= 80649)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 2); i++)
 					{
@@ -2205,7 +2186,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 2 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
+				if (((item.getId() >= 48961) && (item.getId() <= 48964)) || ((item.getId() >= 80650) && (item.getId() <= 80652)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 2); i++)
 					{
@@ -2218,7 +2199,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 2 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
+				if (((item.getId() >= 48965) && (item.getId() <= 48968)) || ((item.getId() >= 80653) && (item.getId() <= 80655)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 2); i++)
 					{
@@ -2235,7 +2216,7 @@ public abstract class Inventory extends ItemContainer
 			case 3:
 			{
 				// 12 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				if (((item.getId() >= 48969) && (item.getId() <= 48985)) || ((item.getId() >= 80656) && (item.getId() <= 80662)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 12); i++)
 					{
@@ -2248,7 +2229,7 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				// 3 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
+				if (((item.getId() >= 48957) && (item.getId() <= 48960)) || ((item.getId() >= 80647) && (item.getId() <= 80649)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 3); i++)
 					{
@@ -2261,7 +2242,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 3 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
+				if (((item.getId() >= 48961) && (item.getId() <= 48964)) || ((item.getId() >= 80650) && (item.getId() <= 80652)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 3); i++)
 					{
@@ -2274,7 +2255,7 @@ public abstract class Inventory extends ItemContainer
 					
 				}
 				// 3 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
+				if (((item.getId() >= 48965) && (item.getId() <= 48968)) || ((item.getId() >= 80653) && (item.getId() <= 80655)))
 				{
 					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 3); i++)
 					{
