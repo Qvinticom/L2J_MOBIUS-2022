@@ -768,15 +768,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return true;
 		}
-		final Weapon weaponItem = getActiveWeaponItem();
 		
-		if ((weaponItem == null) || !weaponItem.isRange())
-		{
-			return false;
-		}
 		// Check for arrows and MP
 		if (isPlayer())
 		{
+			final Weapon weaponItem = getActiveWeaponItem();
+			if ((weaponItem == null) || !weaponItem.isRange())
+			{
+				return false;
+			}
+			
 			// Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True
 			if (!checkAndEquipArrows())
 			{
