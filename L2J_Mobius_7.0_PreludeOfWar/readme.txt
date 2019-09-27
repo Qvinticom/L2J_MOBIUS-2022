@@ -1,7 +1,7 @@
 L2J-Mobius Prelude of War
 
-Client: 
-
+Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ8&export=download
+Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
 Geodata: https://www.mediafire.com/file/17gbt8jt1tyo5gi/L2J_Mobius_6.0_Fafurion_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
