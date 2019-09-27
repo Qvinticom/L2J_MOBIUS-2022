@@ -393,7 +393,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(_summon.getPvpFlag());
 			packet.writeD(_summon.getKarma());
 			
-			packet.writeD(_gmSeeInvis ? _summon.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _summon.getAbnormalVisualEffects());
+			packet.writeD(_gmSeeInvis && _summon.isInvisible() ? _summon.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _summon.getAbnormalVisualEffects());
 			
 			packet.writeD(0x00); // clan id
 			packet.writeD(0x00); // crest id
