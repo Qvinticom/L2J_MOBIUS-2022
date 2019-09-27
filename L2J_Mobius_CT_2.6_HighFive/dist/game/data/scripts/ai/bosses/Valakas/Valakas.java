@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -52,8 +53,8 @@ public class Valakas extends AbstractNpcAI
 	// NPC
 	private static final int VALAKAS = 29028;
 	// Skills
-	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
 	private static final int VALAKAS_REGENERATION = 4691;
+	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
 	
 	private static final SkillHolder[] VALAKAS_REGULAR_SKILLS =
 	{
@@ -157,7 +158,6 @@ public class Valakas extends AbstractNpcAI
 			final double mp = info.getDouble("currentMP");
 			
 			final Npc valakas = addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
-			valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
 			GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
 			
 			valakas.setCurrentHpMp(hp, mp);
@@ -174,6 +174,7 @@ public class Valakas extends AbstractNpcAI
 			}
 			else
 			{
+				valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
 				valakas.setIsInvul(true);
 				valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				
@@ -200,11 +201,7 @@ public class Valakas extends AbstractNpcAI
 				npc.teleToLocation(VALAKAS_LAIR);
 				
 				// Sound + socialAction.
-				for (PlayerInstance plyr : ZONE.getPlayersInside())
-				{
-					plyr.sendPacket(new PlaySound(1, "B03_A", 0, 0, 0, 0, 0));
-					plyr.sendPacket(new SocialAction(npc.getObjectId(), 3));
-				}
+				startQuestTimer("broadcast_spawn", 100, npc, null);
 				
 				// Launch the cinematic, and tasks (regen + skill).
 				startQuestTimer("spawn_1", 1700, npc, null); // 1700
@@ -266,6 +263,14 @@ public class Valakas extends AbstractNpcAI
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 1));
+				}
+			}
+			else if (event.equalsIgnoreCase("broadcast_spawn"))
+			{
+				for (PlayerInstance plyr : ZONE.getPlayersInside())
+				{
+					plyr.sendPacket(new PlaySound(1, "BS03_A", 0, 0, 0, 0, 0));
+					plyr.sendPacket(new SocialAction(npc.getObjectId(), 3));
 				}
 			}
 			// Spawn cinematic, regen_task and choose of skill.
@@ -358,19 +363,19 @@ public class Valakas extends AbstractNpcAI
 				callSkillAI(npc);
 			}
 		}
-		else
+		else if (event.equalsIgnoreCase("valakas_unlock"))
 		{
-			if (event.equalsIgnoreCase("valakas_unlock"))
-			{
-				final Npc valakas = addSpawn(VALAKAS, VALAKAS_REGENERATION_LOC, false, 0);
-				valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
-				GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
-				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-			}
-			else if (event.equalsIgnoreCase("remove_players"))
-			{
-				ZONE.oustAllPlayers();
-			}
+			final Npc valakas = addSpawn(VALAKAS, VALAKAS_REGENERATION_LOC, false, 0);
+			valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
+			valakas.setIsInvul(true);
+			valakas.setRunning();
+			valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
+			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+		}
+		else if (event.equalsIgnoreCase("remove_players"))
+		{
+			ZONE.oustAllPlayers();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -378,6 +383,8 @@ public class Valakas extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
+		((Attackable) npc).setCanReturnToSpawnPoint(false);
+		npc.setRandomWalking(false);
 		npc.disableCoreAI(true);
 		return super.onSpawn(npc);
 	}
