@@ -30,14 +30,12 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
-import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 
 /**
  * Hardin (Agent of Chaos) AI.
@@ -188,11 +186,11 @@ public class Hardin extends AbstractNpcAI
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{
-			final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-			if ((qs != null) && (qs.getCond() >= 7) && (qs.getCond() <= 17))
-			{
-				return "33870-03.html";
-			}
+			// final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
+			// if ((qs != null) && (qs.getCond() >= 7) && (qs.getCond() <= 17))
+			// {
+			// return "33870-03.html";
+			// }
 			if (!Config.HARDIN_ENABLE_ERTHEIAS)
 			{
 				return "33870-02.html";

@@ -20,12 +20,9 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import ai.AbstractNpcAI;
-import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
 /**
  * Pantheon AI.
@@ -78,17 +75,6 @@ public class Pantheon extends AbstractNpcAI
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
-	{
-		final QuestState qs = player.getQuestState(Q10320_LetsGoToTheCentralSquare.class.getSimpleName());
-		if (qs == null)
-		{
-			showOnScreenMsg(player, NpcStringId.BEGIN_TUTORIAL_QUESTS, ExShowScreenMessage.TOP_CENTER, 4500);
-		}
-		return super.onFirstTalk(npc, player);
 	}
 	
 	@Override

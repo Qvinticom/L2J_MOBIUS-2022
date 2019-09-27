@@ -21,7 +21,6 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
@@ -39,12 +38,6 @@ import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import instances.AbstractInstance;
-import quests.Q10341_DayOfDestinyHumansFate.Q10341_DayOfDestinyHumansFate;
-import quests.Q10342_DayOfDestinyElvenFate.Q10342_DayOfDestinyElvenFate;
-import quests.Q10343_DayOfDestinyDarkElfsFate.Q10343_DayOfDestinyDarkElfsFate;
-import quests.Q10344_DayOfDestinyOrcsFate.Q10344_DayOfDestinyOrcsFate;
-import quests.Q10345_DayOfDestinyDwarfsFate.Q10345_DayOfDestinyDwarfsFate;
-import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
 
 /**
  * Evil Incubator instance zone.
@@ -95,16 +88,16 @@ public class EvilIncubator extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 185;
 	//@formatter:off
-	private static final EnumMap<Race, String> RACE_QUESTS = new EnumMap<>(Race.class);
-	static
-	{
-		RACE_QUESTS.put(Race.HUMAN, Q10341_DayOfDestinyHumansFate.class.getSimpleName());
-		RACE_QUESTS.put(Race.ELF, Q10342_DayOfDestinyElvenFate.class.getSimpleName());
-		RACE_QUESTS.put(Race.DARK_ELF, Q10343_DayOfDestinyDarkElfsFate.class.getSimpleName());
-		RACE_QUESTS.put(Race.ORC, Q10344_DayOfDestinyOrcsFate.class.getSimpleName());
-		RACE_QUESTS.put(Race.DWARF, Q10345_DayOfDestinyDwarfsFate.class.getSimpleName());
-		RACE_QUESTS.put(Race.KAMAEL, Q10346_DayOfDestinyKamaelsFate.class.getSimpleName());
-	}
+	//private static final EnumMap<Race, String> RACE_QUESTS = new EnumMap<>(Race.class);
+	//static
+	//{
+	//	RACE_QUESTS.put(Race.HUMAN, Q10341_DayOfDestinyHumansFate.class.getSimpleName());
+	//	RACE_QUESTS.put(Race.ELF, Q10342_DayOfDestinyElvenFate.class.getSimpleName());
+	//	RACE_QUESTS.put(Race.DARK_ELF, Q10343_DayOfDestinyDarkElfsFate.class.getSimpleName());
+	//	RACE_QUESTS.put(Race.ORC, Q10344_DayOfDestinyOrcsFate.class.getSimpleName());
+	//	RACE_QUESTS.put(Race.DWARF, Q10345_DayOfDestinyDwarfsFate.class.getSimpleName());
+	//	RACE_QUESTS.put(Race.KAMAEL, Q10346_DayOfDestinyKamaelsFate.class.getSimpleName());
+	//}
 	private static final EnumMap<ClassId, Integer> CLASS_BOSS = new EnumMap<>(ClassId.class);
 	static
 	{
@@ -557,7 +550,8 @@ public class EvilIncubator extends AbstractInstance
 		{
 			return null;
 		}
-		return RACE_QUESTS.containsKey(player.getRace()) ? player.getQuestState(RACE_QUESTS.get(player.getRace())) : null;
+		// return RACE_QUESTS.containsKey(player.getRace()) ? player.getQuestState(RACE_QUESTS.get(player.getRace())) : null;
+		return null;
 	}
 	
 	public static void main(String[] args)

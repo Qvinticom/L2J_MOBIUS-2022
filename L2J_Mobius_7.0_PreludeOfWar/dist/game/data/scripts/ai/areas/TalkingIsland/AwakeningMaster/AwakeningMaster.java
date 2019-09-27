@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChangeToAwakenedClass;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -46,7 +45,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 import ai.AbstractNpcAI;
-import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 
 /**
  * AwakeningMaster AI.
@@ -81,14 +79,14 @@ public class AwakeningMaster extends AbstractNpcAI
 	}
 	
 	// Skills
-	private static final SkillHolder WYNN_POWER = new SkillHolder(16390, 1);
-	private static final SkillHolder FEOH_POWER = new SkillHolder(16391, 1);
-	private static final SkillHolder TYRR_POWER = new SkillHolder(16392, 1);
-	private static final SkillHolder OTHELL_POWER = new SkillHolder(16393, 1);
-	private static final SkillHolder ISS_POWER = new SkillHolder(16394, 1);
-	private static final SkillHolder YUL_POWER = new SkillHolder(16395, 1);
-	private static final SkillHolder SIGEL_POWER = new SkillHolder(16396, 1);
-	private static final SkillHolder AEORE_POWER = new SkillHolder(16397, 1);
+	// private static final SkillHolder WYNN_POWER = new SkillHolder(16390, 1);
+	// private static final SkillHolder FEOH_POWER = new SkillHolder(16391, 1);
+	// private static final SkillHolder TYRR_POWER = new SkillHolder(16392, 1);
+	// private static final SkillHolder OTHELL_POWER = new SkillHolder(16393, 1);
+	// private static final SkillHolder ISS_POWER = new SkillHolder(16394, 1);
+	// private static final SkillHolder YUL_POWER = new SkillHolder(16395, 1);
+	// private static final SkillHolder SIGEL_POWER = new SkillHolder(16396, 1);
+	// private static final SkillHolder AEORE_POWER = new SkillHolder(16397, 1);
 	
 	private AwakeningMaster()
 	{
@@ -209,54 +207,21 @@ public class AwakeningMaster extends AbstractNpcAI
 		if (player.getRace() == Race.ERTHEIA)
 		{
 			// Ertheia dual class quest
-			final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-			if (qs != null)
-			{
-				if ((npc.getId() == WYNN_MASTER) && qs.isCond(8))
-				{
-					return setNextErtheiaQuestState(npc, qs, WYNN_MASTER, 9, WYNN_POWER);
-				}
-				else if ((npc.getId() == FEOH_MASTER) && qs.isCond(9))
-				{
-					return setNextErtheiaQuestState(npc, qs, FEOH_MASTER, 10, FEOH_POWER);
-				}
-				else if ((npc.getId() == TYRR_MASTER) && qs.isCond(10))
-				{
-					return setNextErtheiaQuestState(npc, qs, TYRR_MASTER, 11, TYRR_POWER);
-				}
-				else if ((npc.getId() == OTHELL_MASTER) && qs.isCond(11))
-				{
-					return setNextErtheiaQuestState(npc, qs, OTHELL_MASTER, 12, OTHELL_POWER);
-				}
-				else if ((npc.getId() == ISS_MASTER) && qs.isCond(12))
-				{
-					return setNextErtheiaQuestState(npc, qs, ISS_MASTER, 13, ISS_POWER);
-				}
-				else if ((npc.getId() == YUL_MASTER) && qs.isCond(13))
-				{
-					return setNextErtheiaQuestState(npc, qs, YUL_MASTER, 14, YUL_POWER);
-				}
-				else if ((npc.getId() == SIGEL_MASTER) && qs.isCond(14))
-				{
-					return setNextErtheiaQuestState(npc, qs, SIGEL_MASTER, 15, SIGEL_POWER);
-				}
-				else if ((npc.getId() == AEORE_MASTER) && qs.isCond(15))
-				{
-					return setNextErtheiaQuestState(npc, qs, AEORE_MASTER, 16, AEORE_POWER);
-				}
-			}
+			/*
+			 * final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName()); if (qs != null) { if ((npc.getId() == WYNN_MASTER) && qs.isCond(8)) { return setNextErtheiaQuestState(npc, qs, WYNN_MASTER, 9, WYNN_POWER); } else if ((npc.getId() == FEOH_MASTER)
+			 * && qs.isCond(9)) { return setNextErtheiaQuestState(npc, qs, FEOH_MASTER, 10, FEOH_POWER); } else if ((npc.getId() == TYRR_MASTER) && qs.isCond(10)) { return setNextErtheiaQuestState(npc, qs, TYRR_MASTER, 11, TYRR_POWER); } else if ((npc.getId() == OTHELL_MASTER) && qs.isCond(11)) {
+			 * return setNextErtheiaQuestState(npc, qs, OTHELL_MASTER, 12, OTHELL_POWER); } else if ((npc.getId() == ISS_MASTER) && qs.isCond(12)) { return setNextErtheiaQuestState(npc, qs, ISS_MASTER, 13, ISS_POWER); } else if ((npc.getId() == YUL_MASTER) && qs.isCond(13)) { return
+			 * setNextErtheiaQuestState(npc, qs, YUL_MASTER, 14, YUL_POWER); } else if ((npc.getId() == SIGEL_MASTER) && qs.isCond(14)) { return setNextErtheiaQuestState(npc, qs, SIGEL_MASTER, 15, SIGEL_POWER); } else if ((npc.getId() == AEORE_MASTER) && qs.isCond(15)) { return
+			 * setNextErtheiaQuestState(npc, qs, AEORE_MASTER, 16, AEORE_POWER); } }
+			 */
 			return "ertheia.html";
 		}
 		return npc.getId() + ".html";
 	}
 	
-	private String setNextErtheiaQuestState(Npc npc, QuestState qs, int npcId, int cond, SkillHolder skill)
-	{
-		npc.setTarget(qs.getPlayer());
-		npc.doCast(skill.getSkill());
-		qs.setCond(cond, true);
-		return npcId + "-01.html";
-	}
+	/*
+	 * private String setNextErtheiaQuestState(Npc npc, QuestState qs, int npcId, int cond, SkillHolder skill) { npc.setTarget(qs.getPlayer()); npc.doCast(skill.getSkill()); qs.setCond(cond, true); return npcId + "-01.html"; }
+	 */
 	
 	@RegisterEvent(EventType.ON_PLAYER_CHANGE_TO_AWAKENED_CLASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)

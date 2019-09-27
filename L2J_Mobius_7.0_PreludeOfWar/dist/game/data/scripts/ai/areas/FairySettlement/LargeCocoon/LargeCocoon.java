@@ -16,15 +16,12 @@
  */
 package ai.areas.FairySettlement.LargeCocoon;
 
-import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.quest.Quest;
 
 import ai.AbstractNpcAI;
-import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
 
 /**
  * Large Cocoon AI.
@@ -72,11 +69,11 @@ public class LargeCocoon extends AbstractNpcAI
 			case "attackPowerful":
 			{
 				// TODO: Quest 466 stuffs
-				final Quest qs10305 = QuestManager.getInstance().getQuest(Q10305_UnstoppableFutileEfforts.class.getSimpleName());
-				if (qs10305 != null)
-				{
-					qs10305.notifyEvent("NOTIFY_Q10305", npc, player);
-				}
+				// final Quest qs10305 = QuestManager.getInstance().getQuest(Q10305_UnstoppableFutileEfforts.class.getSimpleName());
+				// if (qs10305 != null)
+				// {
+				// qs10305.notifyEvent("NOTIFY_Q10305", npc, player);
+				// }
 				
 				if (getRandom(3) < 1)
 				{
@@ -274,11 +271,11 @@ public class LargeCocoon extends AbstractNpcAI
 		final Playable playable = (Playable) event.getAttacker();
 		
 		// TODO: Quest 466 stuffs
-		final Quest qs10305 = QuestManager.getInstance().getQuest(Q10305_UnstoppableFutileEfforts.class.getSimpleName());
-		if (qs10305 != null)
-		{
-			qs10305.notifyEvent("NOTIFY_Q10305", npc, playable.getActingPlayer());
-		}
+		// final Quest qs10305 = QuestManager.getInstance().getQuest(Q10305_UnstoppableFutileEfforts.class.getSimpleName());
+		// if (qs10305 != null)
+		// {
+		// qs10305.notifyEvent("NOTIFY_Q10305", npc, playable.getActingPlayer());
+		// }
 		
 		if (getRandom(3) < 1)
 		{

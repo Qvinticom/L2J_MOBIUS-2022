@@ -46,7 +46,6 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -55,8 +54,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import ai.AbstractNpcAI;
-import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
-import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 
 /**
  * Raina AI.
@@ -631,8 +628,12 @@ public class Raina extends AbstractNpcAI
 					break;
 				}
 				
-				final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-				if (((qs == null) || !qs.isCompleted()) && !Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
+				// final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
+				// if (((qs == null) || !qs.isCompleted()) && !Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
+				// {
+				// break;
+				// }
+				if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
 				{
 					break;
 				}
@@ -733,8 +734,9 @@ public class Raina extends AbstractNpcAI
 	
 	private boolean haveDoneQuest(PlayerInstance player, boolean isErtheia)
 	{
-		final QuestState qs = isErtheia ? player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName()) : player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
-		return (((qs != null) && qs.isCompleted()) || Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
+		// final QuestState qs = isErtheia ? player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName()) : player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
+		// return (((qs != null) && qs.isCompleted()) || Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
+		return (Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
 	}
 	
 	/**

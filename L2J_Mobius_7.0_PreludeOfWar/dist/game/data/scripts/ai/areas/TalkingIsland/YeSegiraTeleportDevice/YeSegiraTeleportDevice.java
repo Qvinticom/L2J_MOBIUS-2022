@@ -21,7 +21,6 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -30,11 +29,8 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
-import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
-import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
 
 /**
  * Ye Segira Teleport Device AI.
@@ -101,15 +97,15 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 			}
 			else if (event.equals("5_exploration_zone"))
 			{
-				final QuestState qs = player.getQuestState(Q10365_ForTheSearchdogKing.class.getSimpleName());
-				if ((qs != null) && qs.isStarted() && qs.isCond(1))
-				{
-					final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_ForTheSearchdogKing.class.getSimpleName());
-					if (quest_10365 != null)
-					{
-						quest_10365.notifyEvent("TELEPORT_TO_NEXT_STAGE", null, player);
-					}
-				}
+				// final QuestState qs = player.getQuestState(Q10365_ForTheSearchdogKing.class.getSimpleName());
+				// if ((qs != null) && qs.isStarted() && qs.isCond(1))
+				// {
+				// final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_ForTheSearchdogKing.class.getSimpleName());
+				// if (quest_10365 != null)
+				// {
+				// quest_10365.notifyEvent("TELEPORT_TO_NEXT_STAGE", null, player);
+				// }
+				// }
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

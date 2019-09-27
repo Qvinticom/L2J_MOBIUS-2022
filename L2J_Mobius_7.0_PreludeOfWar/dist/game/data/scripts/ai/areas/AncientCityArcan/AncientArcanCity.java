@@ -20,14 +20,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.Movie;
-import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -38,8 +35,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import ai.AbstractNpcAI;
-import instances.TaintedDimension.TaintedDimension;
-import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishRedFog;
 
 /**
  * Ancient Arcan City AI.
@@ -111,19 +106,19 @@ public class AncientArcanCity extends AbstractNpcAI
 			
 			if (zone.getId() == TELEPORT_ZONE.getId())
 			{
-				final QuestState qs = creature.getActingPlayer().getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class.getSimpleName());
-				if ((qs != null) && qs.isCond(3))
-				{
-					final Quest instance = QuestManager.getInstance().getQuest(TaintedDimension.class.getSimpleName());
-					if (instance != null)
-					{
-						instance.notifyEvent("enterInstance", null, player);
-					}
-				}
-				else
-				{
-					player.teleToLocation(ANCIENT_ARCAN_CITY);
-				}
+				// final QuestState qs = creature.getActingPlayer().getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class.getSimpleName());
+				// if ((qs != null) && qs.isCond(3))
+				// {
+				// final Quest instance = QuestManager.getInstance().getQuest(TaintedDimension.class.getSimpleName());
+				// if (instance != null)
+				// {
+				// instance.notifyEvent("enterInstance", null, player);
+				// }
+				// }
+				// else
+				// {
+				player.teleToLocation(ANCIENT_ARCAN_CITY);
+				// }
 			}
 			else
 			{
