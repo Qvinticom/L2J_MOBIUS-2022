@@ -5542,18 +5542,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_skillCast = null;
 		_castInterruptTime = 0;
 		
+		// On each repeat recharge shots before cast.
+		if (mut.getCount() > 0)
+		{
+			rechargeShots(mut.getSkill().useSoulShot(), mut.getSkill().useSpiritShot());
+		}
+		
 		// Stop casting
 		setIsCastingNow(false);
 		setIsCastingSimultaneouslyNow(false);
 		
 		final Skill skill = mut.getSkill();
 		final WorldObject target = mut.getTargets().length > 0 ? mut.getTargets()[0] : null;
-		
-		// On each repeat recharge shots before cast.
-		if (mut.getCount() > 0)
-		{
-			rechargeShots(mut.getSkill().useSoulShot(), mut.getSkill().useSpiritShot());
-		}
 		
 		// Attack target after skill use
 		if ((skill.nextActionIsAttack()) && (_target != this) && (target != null) && (_target == target) && _target.isCreature() && target.canBeAttacked())
