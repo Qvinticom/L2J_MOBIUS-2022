@@ -383,7 +383,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(0x01); // always running 1=running 0=walking
 			packet.writeC(_summon.isInCombat() ? 1 : 0);
 			packet.writeC(_summon.isAlikeDead() ? 1 : 0);
-			packet.writeC(_val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
+			packet.writeC(_isSummoned ? 2 : _val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_name);
 			packet.writeD(-1); // High Five NPCString ID
