@@ -659,28 +659,6 @@ public class EffectList
 	}
 	
 	/**
-	 * Exits all effects in this effect list without excluding anything.<br>
-	 * Stops all the effects, clear the effect lists and updates the effect flags and icons.
-	 * @param update set to true to update the effect flags and icons.
-	 * @param broadcast {@code true} to broadcast update packets, {@code false} otherwise.
-	 */
-	public void stopAllEffectsWithoutExclusions(boolean update, boolean broadcast)
-	{
-		_buffs.stream().forEach(this::stopAndRemove);
-		_triggered.stream().forEach(this::stopAndRemove);
-		_dances.stream().forEach(this::stopAndRemove);
-		_toggles.stream().forEach(this::stopAndRemove);
-		_debuffs.stream().forEach(this::stopAndRemove);
-		_passives.stream().forEach(this::stopAndRemove);
-		
-		// Update stats, effect flags and icons.
-		if (update)
-		{
-			updateEffectList(broadcast);
-		}
-	}
-	
-	/**
 	 * Stop all effects that doesn't stay on sub-class change.
 	 */
 	public void stopAllEffectsNotStayOnSubclassChange()
