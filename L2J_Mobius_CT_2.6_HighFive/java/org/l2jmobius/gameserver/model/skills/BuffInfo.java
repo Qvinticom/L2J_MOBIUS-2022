@@ -220,14 +220,15 @@ public class BuffInfo
 	 * Removes effects stats.<br>
 	 * <b>It will not remove the buff info from the effect list</b>.<br>
 	 * Instead call {@link EffectList#stopSkillEffects(boolean, Skill)}
+	 * @param broadcast if {@code true} broadcast abnormal visual effects
 	 * @param removed if {@code true} the skill will be handled as removed
 	 */
-	public void stopAllEffects(boolean removed)
+	public void stopAllEffects(boolean broadcast, boolean removed)
 	{
 		setRemoved(removed);
 		// Remove this buff info from BuffFinishTask.
 		_effected.removeBuffInfoTime(this);
-		finishEffects();
+		finishEffects(broadcast);
 	}
 	
 	public void initializeEffects()
@@ -314,7 +315,7 @@ public class BuffInfo
 		}
 	}
 	
-	public void finishEffects()
+	public void finishEffects(boolean broadcast)
 	{
 		// Cancels the ticking task.
 		for (EffectTaskInfo effectTask : _tasks.values())
@@ -337,7 +338,7 @@ public class BuffInfo
 			}
 		}
 		// Remove abnormal visual effects.
-		removeAbnormalVisualEffects();
+		removeAbnormalVisualEffects(broadcast);
 		// Set the proper system message.
 		if (!(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()))
 		{
@@ -397,8 +398,9 @@ public class BuffInfo
 	/**
 	 * Removes all the abnormal visual effects from the effected.<br>
 	 * Prevents multiple updates.
+	 * @param broadcast if {@code true} broadcast abnormal visual effects
 	 */
-	private void removeAbnormalVisualEffects()
+	private void removeAbnormalVisualEffects(boolean broadcast)
 	{
 		if ((_effected == null) || (_skill == null))
 		{
@@ -420,7 +422,10 @@ public class BuffInfo
 			_effected.stopAbnormalVisualEffect(false, _skill.getAbnormalVisualEffectsSpecial());
 		}
 		
-		_effected.updateAbnormalEffect();
+		if (broadcast)
+		{
+			_effected.updateAbnormalEffect();
+		}
 	}
 	
 	/**

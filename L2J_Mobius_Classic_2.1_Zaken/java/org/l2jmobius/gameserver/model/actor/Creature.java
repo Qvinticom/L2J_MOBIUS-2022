@@ -74,6 +74,7 @@ import org.l2jmobius.gameserver.model.Hit;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
+import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.TimeStamp;
 import org.l2jmobius.gameserver.model.World;
@@ -1649,7 +1650,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (isMonster())
 		{
-			stopAllEffects();
+			final Spawn spawn = ((Npc) this).getSpawn();
+			if ((spawn != null) && spawn.isRespawnEnabled())
+			{
+				stopAllEffects();
+			}
+			else
+			{
+				_effectList.stopAllEffectsWithoutExclusions(true, true);
+			}
 		}
 		else
 		{
@@ -1700,8 +1709,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			_summoner.removeSummonedNpc(getObjectId());
 		}
 		
-		// Remove all effects, do not broadcast changes.
-		_effectList.stopAllEffects(false);
+		// Remove all active, passive and option effects, do not broadcast changes.
+		_effectList.stopAllEffectsWithoutExclusions(false, false);
 		
 		// Cancel all timers related to this Creature
 		TimersManager.getInstance().cancelTimers(getObjectId());
