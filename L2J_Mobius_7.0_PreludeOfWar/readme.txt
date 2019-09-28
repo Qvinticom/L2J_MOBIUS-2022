@@ -100,8 +100,8 @@ Fafurion: https://eu.4game.com/patchnotes/lineage2/132/
 -Equipment upgrade system
 
 Prelude of War: https://eu.4game.com/patchnotes/lineage2/176/
--Teleport list system.
--Removed item grade penalty.
+-Teleport list system
+-Removed item grade penalty
 
 Events:
 -Birth of Draco
