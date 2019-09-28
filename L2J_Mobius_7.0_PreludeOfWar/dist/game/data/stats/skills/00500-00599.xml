@@ -50,7 +50,7 @@
 		</effects>
 	</skill>
 	<skill id="501" toLevel="12" name="Violent Temper">
-		<!-- Decreases the enemy's P. Def. by $s2 and Casting Spd. by $s3 for $s1. -->
+		<!-- For $s1, enemy's P. Def. -$s2, Casting Spd. -$s3. -->
 		<icon>icon.skill0501</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -193,7 +193,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="504" toLevel="37" name="Triple Thrust">
-		<!-- Rapidly jabs the enemy three times with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
+		<!-- Rapidly jabs the enemy three times with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
 		<icon>icon.skill0504</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="505" toLevel="28" name="Shining Edge">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
 		<icon>icon.skill0505</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -524,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="506" toLevel="4" name="Checkmate">
-		<!-- Attacks the enemy bearing a Death Mark with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Ignores Shield Defense. Critical hit is possible. -->
+		<!-- Attacks the enemy bearing a Death Mark with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0506</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -929,7 +929,7 @@
 		</effects>
 	</skill>
 	<skill id="509" toLevel="34" name="Bleeding Shot">
-		<!-- Fires a specially crafted bolt at the enemy with $s1 Power added to P. Atk., causing $s3 HP of bleeding damage per second for up to $s2. Increases Power upon the consumption of up to $s4 souls. Requires a crossbow. Consumes $s5 Special Bolt. Over-hit is possible. -->
+		<!-- Fires a special bolt with $s1 power. Inflicts bleed on the enemy for $s2, making them lose $s3 HP per sec. Consumes up to $s4 souls to increase power. Requires a crossbow. Consumes $s5 Special Bolt(s). Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1206,7 +1206,7 @@
 		</effects>
 	</skill>
 	<skill id="511" toLevel="1" name="Temptation">
-		<!-- Quietly lures the enemy. -->
+		<!-- Quietly lures the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0511</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -1799,7 +1799,7 @@
 		</effects>
 	</skill>
 	<skill id="522" toLevel="4" name="Real Target">
-		<!-- Decreases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1. -->
+		<!-- Decreases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1 -->
 		<icon>icon.skill0522</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1866,7 +1866,7 @@
 		</effects>
 	</skill>
 	<skill id="523" toLevel="7" name="Imbue Dark Seed">
-		<!-- Plants a Seed of Darkness in the enemy's body. For $s1, $s2 HP is consumed per second. Once fully grown, the seed paralyzes the host body. -->
+		<!-- Plants a Dark Seed in the enemy's body, making them lose $s2 HP per sec. for $s1 Once fully grown, the seed paralyzes the host body. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0523</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2065,7 +2065,7 @@
 		</effects>
 	</skill>
 	<skill id="528" toLevel="1" name="Shield of Faith">
-		<!-- For 15 sec., party members' P. Def. +3600 and M. Def. +2700. For the duration, absorbs 90% of any damage received by a party member. -->
+		<!-- For 15 sec., party members' P. Def. +3600, M. Def. +2700. For the duration, absorbs 90% of any damage received by a party member. -->
 		<icon>icon.skill0528</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2468,7 +2468,7 @@
 		</effects>
 	</skill>
 	<skill id="539" toLevel="2" name="Nail Attack">
-		<!-- A demonic clawed combo attack. Power $s1. -->
+		<!-- A demonic clawed combo attack. Power $s1 -->
 		<icon>icon.skill0539</icon>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -2498,7 +2498,7 @@
 		</effects>
 	</skill>
 	<skill id="540" toLevel="2" name="Wing Assault">
-		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1. -->
+		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1 -->
 		<icon>icon.skill0540</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2535,7 +2535,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="541" toLevel="1" name="Transform Grail Apostle">
+	<skill id="541" toLevel="1" name="Grail Apostle Transformation">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2568,7 +2568,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="542" toLevel="1" name="Transform Grail Apostle">
+	<skill id="542" toLevel="1" name="Grail Apostle Transformation">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2601,7 +2601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="543" toLevel="1" name="Transform Grail Apostle">
+	<skill id="543" toLevel="1" name="Grail Apostle Transformation">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2634,7 +2634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="544" toLevel="1" name="Transform Unicorn">
+	<skill id="544" toLevel="1" name="Unicorn Transformation">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2667,7 +2667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="545" toLevel="1" name="Transform Unicorn">
+	<skill id="545" toLevel="1" name="Unicorn Transformation">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2700,7 +2700,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="546" toLevel="1" name="Transform Unicorn">
+	<skill id="546" toLevel="1" name="Unicorn Transformation">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2733,7 +2733,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="547" toLevel="1" name="Transform Lilim Knight">
+	<skill id="547" toLevel="1" name="Lilim Knight Transformation">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2766,7 +2766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="548" toLevel="1" name="Transform Lilim Knight">
+	<skill id="548" toLevel="1" name="Lilim Knight Transformation">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2799,7 +2799,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="549" toLevel="1" name="Transform Lilim Knight">
+	<skill id="549" toLevel="1" name="Lilim Knight Transformation">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2832,7 +2832,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="550" toLevel="1" name="Transform Golem Guardian">
+	<skill id="550" toLevel="1" name="Golem Guardian Transformation">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2865,7 +2865,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="551" toLevel="1" name="Transform Golem Guardian">
+	<skill id="551" toLevel="1" name="Golem Guardian Transformation">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2898,7 +2898,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="552" toLevel="1" name="Transform Golem Guardian">
+	<skill id="552" toLevel="1" name="Golem Guardian Transformation">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2931,7 +2931,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="553" toLevel="1" name="Transform Inferno Drake">
+	<skill id="553" toLevel="1" name="Inferno Drake Transformation">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2964,7 +2964,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="554" toLevel="1" name="Transform Inferno Drake">
+	<skill id="554" toLevel="1" name="Inferno Drake Transformation">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2997,7 +2997,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="555" toLevel="1" name="Transform Inferno Drake">
+	<skill id="555" toLevel="1" name="Inferno Drake Transformation">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3030,7 +3030,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="556" toLevel="1" name="Transform Dragon Bomber">
+	<skill id="556" toLevel="1" name="Dragon Bomber Transformation">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3063,7 +3063,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="557" toLevel="1" name="Transform Dragon Bomber">
+	<skill id="557" toLevel="1" name="Dragon Bomber Transformation">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform2</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3096,7 +3096,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="558" toLevel="1" name="Transform Dragon Bomber">
+	<skill id="558" toLevel="1" name="Dragon Bomber Transformation">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3130,7 +3130,7 @@
 		</effects>
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
-		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
+		<!-- Strikes the enemy with a spear, making them bleed with a certain chance. Power $s1 Effect $s2 Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -3192,7 +3192,7 @@
 		</effects>
 	</skill>
 	<skill id="560" toLevel="4" name="Power Slash">
-		<!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit is possible. Power $s1. -->
+		<!-- Powerful frontal attack that involves swinging a polearm to assault enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -3317,7 +3317,7 @@
 		</effects>
 	</skill>
 	<skill id="563" toLevel="4" name="Horn of Doom">
-		<!-- Uses a horn to charge the enemy with a powerful ram attack. Over-hit is possible. Power $s1. -->
+		<!-- Uses a horn to charge at the enemy with a powerful ram attack. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3418,7 +3418,7 @@
 		</effects>
 	</skill>
 	<skill id="565" toLevel="4" name="Horn Assault">
-		<!-- Releases the energy of a horn to attack a distant enemy. Over-hit is possible. Power $s1. -->
+		<!-- Releases the energy of a horn to attack a distant enemy. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<coolTime>200</coolTime>
@@ -3460,7 +3460,7 @@
 		</effects>
 	</skill>
 	<skill id="567" toLevel="4" name="Light Heal">
-		<!-- Draws from the force of light to bestow the ability of recovery. Power $s1. -->
+		<!-- Calls upon holy light to restore HP. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
@@ -3502,7 +3502,7 @@
 		</effects>
 	</skill>
 	<skill id="568" toLevel="4" name="Attack Buster">
-		<!-- Detonates a Momentum charge to attack the enemy. Requires Level $s1 Momentum charge. Power $s2. -->
+		<!-- Detonates a Momentum charge to attack the enemy. Requires level $s1 Momentum charge. Power $s2 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3551,7 +3551,7 @@
 		</effects>
 	</skill>
 	<skill id="569" toLevel="4" name="Attack Storm">
-		<!-- Unleash a magical attack on distant enemies. Requires Level $s1 Momentum charge. Power $s2. -->
+		<!-- Unleash a magical attack on distant enemies. Requires level $s1 Momentum charge. Power $s2 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3601,7 +3601,7 @@
 		</effects>
 	</skill>
 	<skill id="570" toLevel="4" name="Attack Rage">
-		<!-- Gathers force while attacking the enemy. Can be charged up to Level $s1. Critical hit is possible. Over-hit is possible. -->
+		<!-- Gathers force while attacking the enemy. Can be charged up to Level $s1. Critical. Over-hit. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -3643,7 +3643,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="571" toLevel="4" name="Poison Dust">
-		<!-- Sprays a poisonous powder all over nearby enemies. Effect $s1. -->
+		<!-- Sprays poisonous powder all over nearby enemies. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -3744,7 +3744,7 @@
 		</effects>
 	</skill>
 	<skill id="573" toLevel="4" name="Earthquake">
-		<!-- Makes the Earth shake and stuns nearby enemies. Over-hit is possible. Power $s1. -->
+		<!-- Makes the earth shake stunning nearby enemies. Power $s1 Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3830,7 +3830,7 @@
 		</effects>
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
-		<!-- Attacks with a sharp steel blade. Over-hit is possible. Power $s1. -->
+		<!-- Attacks with a sharp steel blade. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3873,7 +3873,7 @@
 		</effects>
 	</skill>
 	<skill id="576" toLevel="4" name="Paw Strike">
-		<!-- Inflict a powerful attack with your forefeet. Over-hit is possible. Power $s1. -->
+		<!-- Inflicts a powerful attack. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3916,7 +3916,7 @@
 		</effects>
 	</skill>
 	<skill id="577" toLevel="4" name="Fire Breath">
-		<!-- Spouts out a Fire attack that strikes enemies in front of you. Over-hit is possible. Power $s1. -->
+		<!-- Spouts out a fire attack that strikes enemies at the front. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
@@ -4187,7 +4187,7 @@
 		</effects>
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
-		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
+		<!-- Attacks nearby enemies with a lethal blow making them bleed. Power $s1 Effect $s2 Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -4367,7 +4367,7 @@
 		</effects>
 	</skill>
 	<skill id="586" toLevel="2" name="Rolling Attack">
-		<!-- Quickly swings your polearm around, attacking nearby enemies. Over-hit is possible. Power $s1. -->
+		<!-- Quickly swings the polearm around, attacking nearby enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4399,7 +4399,7 @@
 		</effects>
 	</skill>
 	<skill id="587" toLevel="2" name="Earth Storm">
-		<!-- Create a vortex of Earth that physically attacks your target. Over-hit is possible. Power $s1. -->
+		<!-- Creates an earth vortex that physically attacks the target. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -4567,7 +4567,7 @@
 		</effects>
 	</skill>
 	<skill id="595" toLevel="1" name="Residence Clarity">
-		<!-- The MP Recovery Bonus of clan members in residence increases by 0.47. -->
+		<!-- Clan members' MP Recovery Rate +0.47 when in the Clan Hall. -->
 		<icon>icon.skill0375</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

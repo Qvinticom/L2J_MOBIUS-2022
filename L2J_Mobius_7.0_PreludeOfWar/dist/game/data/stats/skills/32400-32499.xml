@@ -21,7 +21,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32402" toLevel="1" name="Power Bomber">
-		<!-- Strikes the target powerfully and knocks them down temporarily. -->
+		<!-- Inflicts a powerful blow on the target and knocks it down for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -32,7 +32,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32403" toLevel="1" name="Eruption">
-		<!-- Attacks nearby enemies to stun them and remove their targeting. -->
+		<!-- Attacks nearby enemies, stuns and cancels the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -113,7 +113,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="32414" toLevel="1" name="Guitar Melody - Olympiad">
-		<!-- Buff given to all Olympiad participants. For 10 min., increases Atk. Spd. by 64%, Casting Spd. by 62%, Speed by 30, and decreases all Skill MP Consumption by 10%. -->
+		<!-- Buff given to all Olympiad participants. For 10 min., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -121,7 +121,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="32415" toLevel="1" name="Olympiad Harmony">
-		<!-- Buff given to all Olympiad participants. For 10 min., increases P. Atk. by 25%, M. Atk. by 45%, P./ M. Critical Rate by 100%, P. Critical Damage by 85%, M. Critical Damage by 10%, Atk./ Casting Spd. by 15%, Speed by 10, Attack Attribute by 100, P. Def. by 10 min.0, M. Def. by 10 min.1, Shield Defense Rate/ Shield Defense by 10 min.2, and decreases Skill Cooldown by 10 min.3, all Skill MP Consumption by 10 min.4, and chance of receiving P./ M. Critical Hit by 10 min.5. -->
+		<!-- Standard buff for all Olympiad participants. For 10 min., P. Atk. +25%, M. Atk. +45%, P./ M. Critical Rate +100%, P. Critical Damage +85%, M. Critical Damage +10%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +100, P. Def. +45%, M. Def. +10 min.0, Shield Defense/ Shield Defense Rate +10 min.1, Skill Cooldown -10 min.2, M. Skill MP Consumption -10 min.3, Received P./ M. Critical Rate -10 min.4. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -165,7 +165,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="32421" toLevel="1" name="Guitar Melody - Olympiad">
-		<!-- Buff given to all Olympiad participants. For 10 min., increases Atk. Spd. by 64%, Casting Spd. by 62%, Speed by 30, and decreases all Skill MP Consumption by 10%. -->
+		<!-- Buff given to all Olympiad participants. For 10 min., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -173,7 +173,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="32422" toLevel="1" name="Olympiad Harmony">
-		<!-- Buff given to all Olympiad participants. For 10 min., increases P. Atk. by 25%, M. Atk. by 45%, P./ M. Critical Rate by 100%, P. Critical Damage by 85%, M. Critical Damage by 10%, Atk./ Casting Spd. by 15%, Speed by 10, Attack Attribute by 100, P. Def. by 10 min.0, M. Def. by 10 min.1, Shield Defense Rate/ Shield Defense by 10 min.2, and decreases Skill Cooldown by 10 min.3, all Skill MP Consumption by 10 min.4, and chance of receiving P./ M. Critical Hit by 10 min.5. -->
+		<!-- Buff given to all Olympiad participants. For 10 min., P. Atk. +25%, M. Atk. +45%, P./M. Critical Rate +100%, P. Critical Damage +85%, M. Critical Damage +10%, Atk./Casting Spd. +15%, Attack Attributes +100, P. Def. +45%, M. Def. +10 min.0, Shield Defense Rate/Shield Defense +10 min.1, Skill Cooldown -10 min.2, all Skill MP Consumption -10 min.3, and chance of receiving P./M. Critical hit -10 min.4. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -277,7 +277,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32434" toLevel="1" name="Frintezza's Breath">
-		<!-- Instantly immobilized. -->
+		<!-- Immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10332</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -289,7 +289,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32435" toLevel="1" name="Dimensional Stun">
-		<!-- Stunned by Scarlet van Halisha's dimension travel. -->
+		<!-- Stunned by Scarlet van Halisha's dimension travel. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1482</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -300,7 +300,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32436" toLevel="2" name="Huge Icicle - Stun">
-		<!-- Sent flying after suffering great damage from the huge icicle's falling impact. -->
+		<!-- Deals damage and knocks back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>
 			<value level="1">icon.skill1399</value>
 			<value level="2">icon.skill0000</value>
@@ -319,7 +319,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32438" toLevel="1" name="Galloping Toccata">
-		<!-- Became violent after hearing Frintezza's performance. Increases Atk. Spd./ Casting Spd. by 50%, Speed by 120. -->
+		<!-- Became violent after hearing Frintezza's performance. Atk./Casting Spd. +50% and Speed +120. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -351,8 +351,8 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32442" toLevel="5" name="Gaze of Halisha">
-		<!-- Gaze of Halisha Stage 1. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases. -->
+	<skill id="32442" toLevel="5" name="Halisha's Surveillance">
+		<!-- Halisha's Surveillance Lv. 1. Increases received damage if character stay in Demon Field (proportionately to skill level). -->
 		<icon>icon.karma</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -366,7 +366,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32444" toLevel="1" name="Aggression Aura">
-		<!-- Forces nearby enemies to target you for 5 sec. -->
+		<!-- Forces nearby enemies to target you for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -409,7 +409,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32449" toLevel="1" name="Widowed Madness">
-		<!-- Inflicts Fear on enemies around Ekimus and makes them flee for 2 sec. -->
+		<!-- Inflicts Fear on enemies around Ekimus and makes them flee for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -436,7 +436,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32452" toLevel="1" name="Bloody Rain">
-		<!-- Deals magic damage to enemies around Ekimus and inflicts Bleed to deal damage over time for 10 sec. -->
+		<!-- Deals magic damage to enemies around Ekimus and inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -454,7 +454,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32454" toLevel="1" name="Stomach Cutter">
-		<!-- Slashes at nearby enemies to deal physical damage, and inflicts Bleed to deal damage over time for 5 sec. -->
+		<!-- Deals physical damage to nearby enemies inflicting Bleed for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -510,7 +510,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32461" toLevel="1" name="Screaming Hell">
-		<!-- Deals magic damage to the enemy and inflicts Fear to make them flee for 5 sec. -->
+		<!-- Deals magic damage. Inflicts Fear on the character and forces him flee for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -521,7 +521,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32462" toLevel="1" name="Void Crying">
-		<!-- Deals magic damage to the enemy and inflicts Silence to prevent them from using skills for 10 sec. -->
+		<!-- Deals magic damage to the enemy and inflicts silence to prevent them from using skills for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1376</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -558,7 +558,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32466" toLevel="1" name="Hold of Darkness">
-		<!-- Deals magic damage to the target's surrounding and binds the enemies, dealing damage over time for 10 sec. -->
+		<!-- Deals magic damage to the target and nearby enemies binding them for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -576,7 +576,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32468" toLevel="1" name="Barrier Activation">
-		<!-- Dragged toward the Powerful Device after the barrier activated. -->
+		<!-- Dragged toward the Powerful Device after the barrier activated. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10014</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -631,7 +631,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="32472" toLevel="1" name="Tabeth Poison">
-		<!-- Poisoned by spores, receives poison damage over time for 10 sec. -->
+		<!-- Poisons and deals damage over time for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -642,7 +642,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32473" toLevel="3" name="Tabeth Mass Poison">
-		<!-- Poisoned by spores, receives poison damage over time for $s1. Damage increases if attacked again with poison before the effect is removed. -->
+		<!-- Poisons and deals damage over time for $s1. Damage increases if the character is attacked again with poison and the effect hasn't been removed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -652,7 +652,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32474" toLevel="1" name="Tabeth Stun">
-		<!-- Deals physical damage to the enemy and stuns them for 3 sec. -->
+		<!-- Deals physical damage to the target and immobilizes it for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -663,7 +663,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32475" toLevel="1" name="Tabeth Fear">
-		<!-- Inflicts Fear on the enemy, making them flee without taking any actions for 5 sec. -->
+		<!-- Inflicts Fear and immobilizes the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -674,7 +674,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32476" toLevel="1" name="Tabeth Mass Airbind">
-		<!-- Bind the enemy in mid-air, dealing damage over time for 5 sec. -->
+		<!-- Inflicts Aerial Yoke on the target and deals damage over time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -804,7 +804,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32490" toLevel="1" name="Yoke of Orfen">
-		<!-- Immobilized for 5 sec. due to Orfen's attack. -->
+		<!-- Orfen's attack immobilizes for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32490</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -814,7 +814,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32491" toLevel="1" name="Orfen Blow Up">
-		<!-- Sent flying after receiving damage from Orfen's attack. -->
+		<!-- Orfen's attack stuns and knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10263</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -825,7 +825,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32492" toLevel="1" name="Orfen Fatal Stamp">
-		<!-- Movement is restricted by Orfen. -->
+		<!-- Orfen's power immobilizes. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

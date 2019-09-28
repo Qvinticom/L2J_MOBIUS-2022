@@ -128,7 +128,7 @@
 		</effects>
 	</skill>
 	<skill id="808" toLevel="1" name="Golem Punch">
-		<!-- Throws a strong punch to inflict damage and Stun. Over-hit is possible. 11205 power. -->
+		<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -559,7 +559,7 @@
 		</effects>
 	</skill>
 	<skill id="815" toLevel="43" name="Blade Hurricane">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Attacks nearby enemies with $s1 power. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0815</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="817" toLevel="43" name="Double Attack">
-		<!-- Uses two swords to inflict a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Uses two swords to inflict a mighty blow on the enemy with $s1 power. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0817</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -1297,7 +1297,7 @@
 		</effects>
 	</skill>
 	<skill id="823" toLevel="3" name="Strengthen Golem">
-		<!-- Increases the summoned golem's P. Atk. by $s2 and Atk. Spd. by $s3 for $s1. -->
+		<!-- For $s1, summoned golem's P. Atk. +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.skill0823</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1457,7 +1457,7 @@
 		</effects>
 	</skill>
 	<skill id="826" toLevel="1" name="Spike">
-		<!-- Adds Spike to the Blunt weapon to increase Attack by 5% and Stun Atk. Rate by 8% for 20 min. -->
+		<!-- Adds spike to the blunt weapon. For 20 min., P. Atk. +5%, Confusion Atk. Rate +8%. -->
 		<icon>icon.skill0826</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1730,7 +1730,7 @@
 		</effects>
 	</skill>
 	<skill id="835" toLevel="4" name="Imbue Seed of Destruction">
-		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per second. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds. -->
+		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per second. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0835</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2789,7 +2789,7 @@
 		</effects>
 	</skill>
 	<skill id="871" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 20 min. -->
+		<!-- For 20 min., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2816,7 +2816,7 @@
 		</effects>
 	</skill>
 	<skill id="872" toLevel="8" name="Archer Captain Power Shot">
-		<!-- Uses a bow to attack a distant enemy with $s1 Power added to P. Atk. Over-hit is possible. -->
+		<!-- Uses a bow to attack a distant enemy with $s1 power. Over-hit. -->
 		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -2954,7 +2954,7 @@
 		</effects>
 	</skill>
 	<skill id="875" toLevel="1" name="Empower">
-		<!-- Increases M. Atk. power by 75% for 20 min. -->
+		<!-- For 20 min., M. Atk. +75%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3035,7 +3035,7 @@
 		</effects>
 	</skill>
 	<skill id="877" toLevel="8" name="Centurion Disarm">
-		<!-- Disarms the enemy and prevents him from equipping a weapon for $s1. -->
+		<!-- Disarms the enemy and prevents them from equipping a weapon for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3132,7 +3132,7 @@
 		</effects>
 	</skill>
 	<skill id="879" toLevel="7" name="Knight Captain Curse Fear">
-		<!-- Causes your enemy to flee in fear. -->
+		<!-- Causes your enemies to flee in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3253,7 +3253,7 @@
 		</effects>
 	</skill>
 	<skill id="882" toLevel="7" name="Commander Blaze">
-		<!-- Ignites your body. Power $s1. -->
+		<!-- Ignites your body. Power $s1 -->
 		<icon>icon.skill1220</icon>
 		<castRange>750</castRange>
 		<effectPoint>-1</effectPoint>
@@ -3301,7 +3301,7 @@
 		</effects>
 	</skill>
 	<skill id="883" toLevel="7" name="Commander Seal of Binding">
-		<!-- Holds nearby enemies for $s1. -->
+		<!-- Holds nearby enemies for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1208</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3421,7 +3421,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="886" toLevel="11" name="Air Shock Bomb">
-		<!-- Deals damage and shock to the target to inflict Stun momentarily. Momentarily immobile due to the Stun effect. $s1 power. -->
+		<!-- Damages and stuns the target, momentarily preventing movement. Power $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3501,7 +3501,7 @@
 		</effects>
 	</skill>
 	<skill id="887" toLevel="11" name="Sky Clutch">
-		<!-- Inflicts damage and simultaneously holds the targeted enemy with $s1 Power. Only one root effect can be used at a time. -->
+		<!-- Inflicts damage and simultaneously holds the enemy. Power $s1 Only one root effect can be used at a time. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4072,7 +4072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="896" toLevel="6" name="Rolling Step">
+	<skill id="896" toLevel="6" name="Rolling Attack">
 		<!-- Delivers a powerful strike with $s1 Power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>40</castRange>
@@ -4194,7 +4194,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="898" toLevel="6" name="Tornado Slash">
-		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4255,7 +4255,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="899" toLevel="6" name="Cat Roar">
-		<!-- Uses the cry of danger to decrease P. Def./ M. Def./ Speed/ Atk. Spd. of nearby enemies and decreases Magic Spd. Power $s1. -->
+		<!-- Howls to decrease P./ M. Def., Speed, Atk. Spd./ Casting Spd. of nearby enemies. Power $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

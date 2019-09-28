@@ -369,7 +369,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18361" toLevel="1" name="Festival Buff - Tipsy Tipsy">
-		<!-- You've drank too much at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Atk. +10%, M. Atk. +10%, Skill Power +10%, 10%, Damage Reflection Resistance +10% for 3 h. -->
+		<!-- You've drank too much at the festival. For 3 h., Atk. Spd. -5%, Casting Spd. -5%, Speed -20, P. Atk. +10%, M. Atk. +10%, Skill Power +10%, Damage Reflection Resistance +10%. -->
 		<icon>icon.ev_festival_herong</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -421,7 +421,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18369" toLevel="1" name="Kableon's Concentration">
-		<!-- Kableon is checking your star rating. -->
+		<!-- Kableon is checking your star rating. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -442,7 +442,7 @@
 		<icon>icon.renewal_mineral_r99</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18373" toLevel="1" name="Life Stone Instilled with Giants' Power">
+	<skill id="18373" toLevel="1" name="Life Stone: Giant's Power">
 		<!-- Converts Life Stone Instilled with Giants' Power. Master Alchemy. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
@@ -530,11 +530,11 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18380" toLevel="2" name="PA - Talisman - STR">
-		<!-- STR +5 when equipped. -->
+	<skill id="18380" toLevel="2" name="Mysterious Talisman - STR">
+		<!-- When equipped, STR +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -544,11 +544,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18381" toLevel="2" name="PA - Talisman - INT">
-		<!-- INT +5 when equipped. -->
+	<skill id="18381" toLevel="2" name="Mysterious Talisman - INT">
+		<!-- When equipped, INT +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -558,11 +558,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18382" toLevel="2" name="PA - Talisman - DEX">
-		<!-- DEX +5 when equipped. -->
+	<skill id="18382" toLevel="2" name="Mysterious Talisman - DEX">
+		<!-- When equipped, DEX +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -572,11 +572,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18383" toLevel="2" name="PA - Talisman - WIT">
-		<!-- WIT +5 when equipped. -->
+	<skill id="18383" toLevel="2" name="Mysterious Talisman - WIT">
+		<!-- When equipped, WIT +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -586,11 +586,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18384" toLevel="2" name="PA - Talisman - CON">
-		<!-- CON +5 when equipped. -->
+	<skill id="18384" toLevel="2" name="Mysterious Talisman - CON">
+		<!-- When equipped, CON +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -600,11 +600,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18385" toLevel="2" name="PA - Talisman - MEN">
-		<!-- MEN +5 when equipped. -->
+	<skill id="18385" toLevel="2" name="Mysterious Talisman - MEN">
+		<!-- When equipped, MEN +5. -->
 		<icon>
-			<value level="1">Icon.etc_allstat_talisman_i00</value>
-			<value level="2">icon.npoint_talisman_stat</value>
+			<value level="1">icon.npoint_talisman_stat</value>
+			<value level="2">Icon.etc_allstat_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -707,11 +707,11 @@
 	</skill>
 	<skill id="18396" toLevel="1" name="PA Points">
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18397" toLevel="1" name="PA Points">
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18398" toLevel="1" name="Zaken's Treasure Chest">
 		<operateType>A1</operateType>

@@ -261,7 +261,7 @@
 		</effects>
 	</skill>
 	<skill id="3414" toLevel="1" name="Dynasty Leather Armor">
-		<!-- Increases P. Atk./ Max HP/ Dark Resistance, and decreases MP Consumption. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
 		<icon>icon.armor_t92_ud_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -340,7 +340,7 @@
 		</effects>
 	</skill>
 	<skill id="3417" toLevel="1" name="Equip Shield">
-		<!-- Increases Shield Defense Rate. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.shield_dynasty_shield_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -511,7 +511,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3427" toLevel="1" name="Special Ability: Infinity Rapier">
+	<skill id="3427" toLevel="1" name="Infinity Rapier Special Ability">
 		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<magicLvl>80</magicLvl>

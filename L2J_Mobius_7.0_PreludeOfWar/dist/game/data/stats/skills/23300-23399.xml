@@ -260,7 +260,7 @@
 		</effects>
 	</skill>
 	<skill id="23312" toLevel="1" name="Fall of the Dragon">
-		<!-- Gift to commemorate the great feats of the warriors who eradicated the reckless dragon. Additional XP and SP are acquired by 100% for 1 h. -->
+		<!-- Gift to commemorate the great feats of the heroes who eradicated the reckless dragon. Additional XP and SP are acquired by 100% for 1 h. -->
 		<icon>BranchSys2.icon.the_fall_of_dragon</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -288,7 +288,7 @@
 		</effects>
 	</skill>
 	<skill id="23313" toLevel="5" name="Action Prohibit Immunity">
-		<!-- Increases Resistance to action-inhibiting attacks by $s1. -->
+		<!-- Confusion/ Stupor/ Petrification Resistance +$s1. -->
 		<icon>icon.skill0386</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
@@ -316,7 +316,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23314" toLevel="5" name="Control Prohibit Immunity">
-		<!-- Increases Resistance to control-inhibiting attacks by $s1. -->
+		<!-- Obstruction/ Confusion Resistance +$s1. -->
 		<icon>icon.skill0388</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
@@ -403,7 +403,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23319" toLevel="1" name="Blood Seeker">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Inflicts Infection and decreases HP. -->
 		<icon>BranchSys2.icon.br_wp_Caladbulg_i00</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -441,7 +441,7 @@
 		</effects>
 	</skill>
 	<skill id="23320" toLevel="1" name="Greedy Throat">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Inflicts Infection and decreases HP. -->
 		<icon>BranchSys2.icon.br_wp_habus_knife_i00</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -506,7 +506,7 @@
 		</effects>
 	</skill>
 	<skill id="23322" toLevel="10" name="Demonic Desire">
-		<!-- P. Def. decreases momentarily. -->
+		<!-- Decreases P. Def. -->
 		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1016,7 +1016,7 @@
 		</conditions>
 	</skill>
 	<skill id="23347" toLevel="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
-		<!-- When Valakas' Blessing is received, for $s1 h., increases Fire P. Atk. by $s2 and Fire Resistance by $s3. Re-use delay is $s4 h. -->
+		<!-- Valakas' Blessing. For $s1 h., Fire Attack Power +$s2, Fire Resistance +$s3. Cooldown: $s4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1028,7 +1028,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23348" toLevel="1" name="Transform Elpy">
+	<skill id="23348" toLevel="1" name="Elpy Transformation">
 		<!-- Transforms into a game Master. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>

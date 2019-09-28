@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="14703" toLevel="1" name="Cycle of Blood">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -125,6 +125,7 @@
 		</effects>
 	</skill>
 	<skill id="14704" toLevel="1" name="Forced Yoke">
+		<!-- none Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>58</mpConsume>
@@ -521,7 +522,7 @@
 		</effects>
 	</skill>
 	<skill id="14740" toLevel="1" name="Olympiad - Pipe Organ Melody">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -568,8 +569,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14741" toLevel="1" name="Olympiad - Guitar Melody">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
+	<skill id="14741" toLevel="1" name="Guitar Melody - Olympiad">
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -769,7 +770,7 @@
 		</effects>
 	</skill>
 	<skill id="14745" toLevel="1" name="Warrior's Harmony - Olympiad">
-		<!-- For 30 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1301,7 +1302,7 @@
 		</effects>
 	</skill>
 	<skill id="14781" toLevel="1" name="Pipe Organ Melody - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Max HP +45%, Max MP +70%, and Max CP +45%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For 1 h., Max HP +45%, Max MP +70%, Max CP +45%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1350,7 +1351,7 @@
 		</effects>
 	</skill>
 	<skill id="14782" toLevel="1" name="Guitar Melody - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +64%, Casting Spd. +62%, and Speed +30, and decreases Skill MP Consumption 10%. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 64%, Casting Spd. by 62%, Speed by 10%, and decreases all Skill MP Consumption by 10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1554,7 +1555,7 @@
 		</effects>
 	</skill>
 	<skill id="14786" toLevel="1" name="Warrior's Harmony - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk. by 25%, P. Critical Rate by 100%, P. Critical Damage by 85%, Atk. Spd. by 10%, and Speed by 10. There is also a chance to add the Spectral Slash effect to the target. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk by 25%, P. Critical Rate by 100%, P. Critical Damage by 85%, and Atk. Spd. by 10%. There is also a chance to add the Spectral Slash effect to the target. -->
 		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1742,7 +1743,7 @@
 		</effects>
 	</skill>
 	<skill id="14789" toLevel="1" name="Resistance Debuff - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- The GM is always by your side. For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1976,7 +1977,7 @@
 		</effects>
 	</skill>
 	<skill id="14794" toLevel="1" name="Guitar Melody - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +64%, Casting Spd. +62%, and Speed +30, and decreases Skill MP Consumption 10%. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 64%, Casting Spd. by 62%, Speed by 10%, and decreases all Skill MP Consumption by 10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -2180,7 +2181,7 @@
 		</effects>
 	</skill>
 	<skill id="14798" toLevel="1" name="Warrior's Harmony - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk. by 25%, P. Critical Rate by 100%, P. Critical Damage by 85%, Atk. Spd. by 10%, and Speed by 10. There is also a chance to add the Spectral Slash effect to the target. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk by 25%, P. Critical Rate by 100%, P. Critical Damage by 85%, and Atk. Spd. by 10%. There is also a chance to add the Spectral Slash effect to the target. -->
 		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

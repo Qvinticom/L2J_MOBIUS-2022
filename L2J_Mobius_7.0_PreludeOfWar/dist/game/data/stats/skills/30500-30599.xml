@@ -145,7 +145,7 @@
 		</effects>
 	</skill>
 	<skill id="30501" toLevel="29" name="Backspin Impact">
-		<!-- Turns and deals a strong punch, creating wind. The energy of the wind hits the target, dealing $s1 damage and stunning it for $s2. Requires a fist weapon. -->
+		<!-- The energy of the wind hits the target with $s1 power and inflicts stun for $s2. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30501</icon>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="30502" toLevel="26" name="Chin Strike">
-		<!-- Knocks down target for $s1. Requires a fist weapon. -->
+		<!-- Jawbone Blow. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30502</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -548,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="30505" toLevel="12" name="Pressure Punch">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. -->
+		<!-- Attacks nearby enemies with $s1 power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30505</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -637,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="30506" toLevel="16" name="Distant Kick">
-		<!-- Attacks frontal targets with $s1 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
+		<!-- Attacks frontal targets with $s1 power and knocks them down. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -742,7 +742,7 @@
 		</effects>
 	</skill>
 	<skill id="30507" toLevel="26" name="Left Sidestep">
-		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for$s1. Requires a fist weapon. -->
+		<!-- Disables targeting and finds weakness to the enemy's left. Stuns the enemy for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30507</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -812,7 +812,7 @@
 		</effects>
 	</skill>
 	<skill id="30508" toLevel="29" name="Right Sidestep">
-		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to fist weapons by $s2 for $s1. The decrease in resistance is not canceled when striking. Requires a fist weapon. -->
+		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to fist weapons by $s2 for $s1 The decrease in resistance is not canceled when striking. Requires a fist weapon. -->
 		<icon>icon.skill30508</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -887,7 +887,7 @@
 		</effects>
 	</skill>
 	<skill id="30509" toLevel="5" name="Back Step">
-		<!-- Cancels the opponent's target and retreats backwards, increasing P. Atk. by $s1 for $s2 Requires a fist weapon. -->
+		<!-- Cancels the opponent's target and retreats backwards. For $s1, P. Atk. +$s2. Requires a fist weapon. -->
 		<icon>icon.skill30509</icon>
 		<operateType>DA3</operateType>
 		<targetType>ENEMY</targetType>
@@ -933,7 +933,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="30510" toLevel="1" name="Infighter">
-		<!-- Using Left/ Right Sidestep increases P. Critical Ability. -->
+		<!-- Using Left/Right Sidestep increases P. Critical Rate. -->
 		<icon>icon.skill30510</icon>
 		<operateType>P</operateType>
 		<magicLvl>97</magicLvl>
@@ -953,7 +953,7 @@
 		</effects>
 	</skill>
 	<skill id="30511" toLevel="7" name="Air Light">
-		<!-- For $s1, you're less bound by gravity and P. Atk. +$s2. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill30511</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1328,7 +1328,7 @@
 		</effects>
 	</skill>
 	<skill id="30518" toLevel="13" name="Reverse Weight">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+		<!-- Attacks nearby enemies with $s1 power and knocks them down. The damage is increasing with the number of affected enemies. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30518</icon>
 		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1407,7 +1407,7 @@
 		</effects>
 	</skill>
 	<skill id="30519" toLevel="1" name="Warped Space">
-		<!-- The energy of the earth is used to Hold enemies in range. Can be used when fist weapons are equipped. -->
+		<!-- Holds nearby enemies by energy of earth. Requires a fist weapon. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill30519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1445,7 +1445,7 @@
 		</effects>
 	</skill>
 	<skill id="30520" toLevel="4" name="Steel Mind">
-		<!-- Your Invincible Spirit increases Attack by $s2, P. Critical Damage by $s3, P. Skill Critical Damage by $s4, Speed by $s5, Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense success rate by $s6 for $s1. Inflicts additional damage $s7 times stronger than the general attack. HP does not decrease below $s8 and recovers by $s9 when the effect expires. Requires a fist weapon. -->
+		<!-- For $s1, P. Atk. +$s2, P. Critical Damage +$s3, P. Skill Critical Damage +$s4, Speed +$s5, Obstruction/ Danger Zone/ Confusion Resistance +$s6. Inflicts additional damage $s7 times stronger than the normal attack. HP does not decrease below $s8. Recovers $s9 HP when the effect expires. Requires a fist weapon. -->
 		<icon>icon.skill30520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1843,7 +1843,7 @@
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="30534" toLevel="1" name="Transform Puppy 1">
+	<skill id="30534" toLevel="1" name="Puppy 1 Transformation">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
@@ -1853,7 +1853,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>44</mpConsume>
 	</skill>
-	<skill id="30535" toLevel="1" name="Transform Puppy 2">
+	<skill id="30535" toLevel="1" name="Puppy 2 Transformation">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
@@ -1863,7 +1863,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>44</mpConsume>
 	</skill>
-	<skill id="30536" toLevel="1" name="Transform Puppy 3">
+	<skill id="30536" toLevel="1" name="Puppy 3 Transformation">
 		<!-- Transforms into a Test - Puppy. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
@@ -2412,7 +2412,7 @@
 		</effects>
 	</skill>
 	<skill id="30544" toLevel="2" name="Eminent Trait Resistance">
-		<!-- Hold/ Mental Resistance +$s1. -->
+		<!-- Obstruction/ Confusion Resistance +$s1. -->
 		<icon>icon.skill10005</icon>
 		<magicLvl>
 			<value level="1">76</value>
@@ -2466,7 +2466,7 @@
 		</effects>
 	</skill>
 	<skill id="30546" toLevel="13" name="Flying Knee Kick">
-		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
+		<!-- Flying Knee. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30546</icon>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>

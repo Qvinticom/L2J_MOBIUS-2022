@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39400" toLevel="1" name="Soccer Ball of Victory">
-		<!-- Acquired XP/ SP +100% for 1 h.. Cannot be stacked with the Fall of the Dragon Buff, Nevit's Hourglass, or Dandy's Home Run Ball. -->
+		<!-- Acquired XP/ SP +100% for 1 h. Cannot be stacked with Fall of the Dragon, Nevit's Hourglass, or Dandy's Home Run Ball. -->
 		<icon>icon.ev_2018_soccer_homerunball</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -10,7 +10,7 @@
 		<reuseDelay>15000</reuseDelay>
 	</skill>
 	<skill id="39401" toLevel="1" name="White Potion">
-		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Skill MP Consumption -15%. Additionally Acquired XP/ SP +30%. Cooldown 5 min. The buff remains active after subclass transition but is deleted when the character participates in the Olympiad or Ceremony of Chaos. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk./ Casting Spd. +10%, Speed +20, Attack Attribute/ Attribute Resistance +100, Skill MP Consumption -15%. Additionally acquired XP/ SP +30%. Cooldown is 5 min. The effect remains after dual class changing. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
 		<icon>icon.ev_bm_white_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -18,21 +18,21 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="39402" toLevel="1" name="+5 Shiny Elemental Shirt Box">
+	<skill id="39402" toLevel="1" name="+5 Shiny Elemental Shirt Pack">
 		<!-- Use to obtain a +5 Enchanted Shiny Einhasad T-shirt. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39403" toLevel="1" name="+5 Reflect Attack T-shirt Box">
+	<skill id="39403" toLevel="1" name="+5 Physical Reflect Shirt Pack">
 		<!-- Use to obtain a +5 Enchanted Reflect Attack T-shirt. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39404" toLevel="1" name="+5 Reflect Magic T-shirt Box">
+	<skill id="39404" toLevel="1" name="+5 Magical Reflect Shirt Pack">
 		<!-- Use to obtain a +5 Enchanted Reflect Magic T-shirt. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -68,7 +68,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39410" toLevel="3" name="Guitar Melody - Emperor's Special Cocktail">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, all Skill MP Consumption -$s5. Remains active after death and cannot be deleted forcefully. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Movement Speed +, all Skill MP Consumption -$s4. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -80,7 +80,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39412" toLevel="3" name="Resistance Debuff - Emperor's Special Cocktail">
-		<!-- For $s1, Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +$s2. Remains active after death and cannot be deleted forcefully. -->
+		<!-- For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -98,7 +98,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39415" toLevel="3" name="Marching Drum - Emperor's Special Cocktail">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, Skill Cooldown -$s6. Remains active after death and cannot be deleted forcefully. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Damage Reflection +$s4, and Skill Cooldown -$s5. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -116,7 +116,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39418" toLevel="3" name="Warrior's Harmony - Emperor's Special Cocktail">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. Also has a chance to add the Spectral Slash effect to the target. It will not be deleted or cannot be forcefully deleted upon death. -->
+		<!-- For $s1, P. Atk +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, and Atk. Spd. +$s5. Also has a chance to inflict Spectral Slash on the target with normal attacks. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.bm_special_cocktail_of_king_p</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -286,7 +286,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39429" toLevel="2" name="+1 Fight Artifact Box">
+	<skill id="39429" toLevel="2" name="+1 Attack Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -550,7 +550,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39433" toLevel="2" name="Stage 4 Soul Crystal Box">
+	<skill id="39433" toLevel="2" name="Soul Crystal Box Lv. 4">
 		<!-- Double-click to obtain a reward with a certain chance. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -563,10 +563,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39435" toLevel="1" name="Royal Black Save Card">
+	<skill id="39435" toLevel="1" name="Royal Black Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39436" toLevel="2" name="Stage 3 Soul Crystal Box">
+	<skill id="39436" toLevel="2" name="Soul Crystal Box Lv. 3">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -578,7 +578,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39438" toLevel="4" name="Fight Artifact Box">
+	<skill id="39438" toLevel="4" name="+8 Attack Artifact Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -590,13 +590,341 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39440" toLevel="1" name="Stage 5-7 Soul Crystal Box">
+	<skill id="39440" toLevel="1" name="Soul Crystal Box Lv. 5-7">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39446" toLevel="1" name="Royal Gold Save Card">
+	<skill id="39441" toLevel="1" name="Golden Sweets">
 		<operateType>A1</operateType>
+	</skill>
+	<skill id="39442" toLevel="1" name="Five-colored Sweets">
+		<!-- For 2 h., XP /SP gain +30%, XP/SP gain in Vitality state +30%, and P. Atk./M. Atk./P. Def/M. Def +15%. Cooldown is 5 min. -->
+		<icon>icon.ev_ricecake_potion</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
+	</skill>
+	<skill id="39443" toLevel="1" name="Golden Orc Potion">
+		<!-- For 30 min., XP /SP gain +30%, XP/SP gain in Vitality state +30%, and P. Atk./M. Atk./P. Def/M. Def +15%. Cooldown is 5 min. -->
+		<icon>icon.etc_potion_gold_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
+	</skill>
+	<skill id="39444" toLevel="1" name="Draco's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39445" toLevel="1" name="Hero's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39446" toLevel="1" name="Royal Gold Save Ticket">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39447" toLevel="1" name="Gran Kain's Scroll: Enchant Armor (R-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39448" toLevel="14" name="+12 Bloody Helios Shaper Capsule">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39449" toLevel="15" name="+8 Bloody Eternal Helmet Capsule">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39450" toLevel="1" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 85 Party">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39451" toLevel="1" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 90 Party">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39452" toLevel="1" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 95 Party">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39453" toLevel="1" name="Golden Pig's Entrance Pass - Emperor's Baylor">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39454" toLevel="1" name="Golden Pig's Entrance Pass - Nightmare Kamaloka">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39455" toLevel="1" name="Golden Pig's Entrance Pass - Embryo Command Post">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39456" toLevel="1" name="Golden Pig's Entrance Pass - Altar of Shilen">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39457" toLevel="1" name="Golden Pig's Entrance Pass - Fallen Emperor's Throne">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39458" toLevel="1" name="Golden Pig's Entrance Pass - Fall of Etina">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39459" toLevel="1" name="Golden Pig's Entrance Pass - Krofin's Nest">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39460" toLevel="16" name="Fireworks - Stage 1">
+		<!-- You receive a reward corresponding to the magic number when fireworks display ends. Duration $s1. Each time the firecrackers are used, the magic number increases randomly and you receive the maximum reward when the number reaches 15. The fireworks end when the number exceeds 15. -->
+		<icon>icon.ev_15th_firework</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="39461" toLevel="1" name="15th Anniversary Firecracker">
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="39462" toLevel="5" name="Fireworks - Normal Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39463" toLevel="1" name="15th Anniversary Magic Fork">
+		<operateType>A1</operateType>
+		<castRange>1500</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>6000</reuseDelay>
+	</skill>
+	<skill id="39464" toLevel="1" name="15th Anniversary Mini Cake">
+		<!-- For 30 min., XP/SP Bonus +30%, XP/SP gain in Vitality state +30%, P. Atk./M. Atk./P. Def/M. Def. +15%. -->
+		<icon>icon.ev_15th_cake</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39465" toLevel="1" name="15th Anniversary Transformation">
+		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for 60 min. <Alt + left click> to delete the buff. -->
+		<icon>icon.skill11540</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39466" toLevel="1" name="15th Anniversary Talisman">
+		<!-- Acquired XP/ SP +15%. -->
+		<icon>icon.ev_L2_soul_ore</icon>
+		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="39467" toLevel="7" name="15th Anniversary Pitapat Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39468" toLevel="2" name="Ultimate Lv. 3 Jewelry Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39469" toLevel="14" name="15th Anniversary Rare Earring Gift Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39470" toLevel="1" name="Freya's Ice Rose">
+		<!-- For 30 min., HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Atk./ Def. Attribute +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, Received Damage -30 min.0, Skill MP Consumption -30 min.1. Buff remains even after death. -->
+		<icon>icon.bm_freya_ice_rose</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39471" toLevel="1" name="Soul Crystal Box Lv. 1">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39472" toLevel="1" name="Shunaiman's Circlet Enchantment Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39473" toLevel="1" name="Shunaiman's Secret Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39474" toLevel="5" name="Freya's Summoning Stick">
+		<!-- Summons an Ice Knight, Klacias, Icy Breath or Freya. -->
+		<operateType>A1</operateType>
+		<isMagic>7</isMagic>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>25000</reuseDelay>
+	</skill>
+	<skill id="39475" toLevel="1" name="Snowman's Fortune Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39476" toLevel="1" name="Sirra's Fortune Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39477" toLevel="1" name="Freya's Fortune Stick">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39478" toLevel="1" name="Freya's Fortune Stick">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39479" toLevel="1" name="Freya's Frozen Scroll">
+		<!-- For 10 min., Vitality Consumption +100% and Acquired XP/ SP +100% while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
+		<icon>icon.freya_scroll</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>540000</reuseDelay>
+	</skill>
+	<skill id="39480" toLevel="1" name="Scroll of Escape: Tarti">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39481" toLevel="1" name="Scroll of Escape: Silvan">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39482" toLevel="1" name="Scroll of Escape: Kallesin">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39483" toLevel="1" name="Scroll of Escape: Zenath">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39484" toLevel="1" name="Scroll of Escape: Pio">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39485" toLevel="1" name="Scroll of Escape: Reclous">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+	</skill>
+	<skill id="39486" toLevel="4" name="Elite Monster Reward Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39487" toLevel="1" name="PA Event Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39488" toLevel="1" name="PA Ice Rose">
+		<!-- For 30 min., HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Atk./ Def. Attribute +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, Received Damage -30 min.0, Skill MP Consumption -30 min.1. Buff remains even after death. -->
+		<icon>icon.bm_freya_ice_rose</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39489" toLevel="1" name="PA Storm Scroll">
+		<!-- For 10 min., Vitality Consumption +150% and Acquired XP/ SP +150% while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>540000</reuseDelay>
+	</skill>
+	<skill id="39490" toLevel="3" name="PA Vitality Beer">
+		<!-- CON/ MEN/ LUC/ CHA $s2 for $s1 If additional Honey Vitality Beer is used while the Buff is still in effect, the buff will stack up to Lv. 3. Can be used wth Fish Stew. -->
+		<icon>
+			<value level="1">icon.bm_royal_honey_beer_lv1</value>
+			<value level="2">icon.bm_royal_honey_beer_lv2</value>
+			<value level="3">icon.bm_royal_honey_beer_lv3</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39491" toLevel="1" name="PA Glowing Dragon's Attribute Potion">
+		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39492" toLevel="1" name="PA Angler's Blessing (1-hour)">
+		<!-- For 1 h., Acquired XP/ SP +100% when fishing succeeds. Effect remains after death and cannot be deleted. -->
+		<icon>icon.fishing_zone_ticket</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39493" toLevel="1" name="PA Blue Potion - Fishing XP Bonus">
+		<!-- When used, increases Successful Fishing XP by 50% for 1 h. Applies to all bait. Can be stacked with Angler's Blessing. -->
+		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39494" toLevel="1" name="Dye Powder">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39495" toLevel="1" name="For reducing the Dye Recharge Gauge speed">
+		<!-- Reduces the Dye Recharge Gauge's consumption rate -->
+		<operateType>P</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="39496" toLevel="1" name="Bloody Fantastic Enchantment Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39497" toLevel="1" name="Freya's Growth Support Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39498" toLevel="1" name="Freya's Limited Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39499" toLevel="1" name="Rok's Earnest Love Letter">
+		<!-- Send a heart to increase the stack. Usable on NPC Lucy only. -->
+		<icon>icon.ev_2018_xmas_letter</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
 	</skill>
 </list>

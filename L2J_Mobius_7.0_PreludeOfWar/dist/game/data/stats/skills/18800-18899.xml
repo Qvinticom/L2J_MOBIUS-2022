@@ -6,7 +6,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18801" toLevel="2" name="Dancing Cat's Steps - Stage 1">
-		<!-- Dancing Cat's Steps celebrating racial harmony increase Max HP/ MP/ CP and P. Atk./ M. Atk./ P. Def/ M. Def/ Atk. Spd./ Casting Spd. by $s2 for $s1. Parties with new or returning warriors can also receive a Stage 2 buff with a strong effect. -->
+		<!-- Dancing Cat's Steps celebrating racial harmony increase Max HP/ MP/ CP and P. Atk./ M. Atk./ P. Def/ M. Def/ Atk. Spd./ Casting Spd. by $s2 for $s1 Parties with new or returning warriors can also receive a Stage 2 buff with a strong effect. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -65,12 +65,12 @@
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18809" toLevel="1" name="Magic Fire Festival">
+	<skill id="18809" toLevel="1" name="Magic Flame Festival">
 		<!-- 2nd Magic Fire Festival skill after a successful raid. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18810" toLevel="1" name="Magic Fire">
+	<skill id="18810" toLevel="1" name="Magic Flame">
 		<!-- Double-click to send a Magic Fire flying for a chance to get a reward. -->
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -91,7 +91,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="18813" toLevel="1" name="Master's Lucky Jewelry Box">
+	<skill id="18813" toLevel="2" name="Master's Lucky Jewelry Box">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.bm_jewelbox_master</icon>
 		<operateType>A1</operateType>
@@ -417,7 +417,7 @@
 		<icon>icon.bm_the_dualblunt_of_hero_i02</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18857" toLevel="1" name="+5 Shiny Elemental Shirt Treasure Chest">
+	<skill id="18857" toLevel="1" name="+5 Shiny Elemental Shirt Pack">
 		<!-- Double-click to obtain a Shiny Einhasad T-shirt enchanted to +$s1. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>

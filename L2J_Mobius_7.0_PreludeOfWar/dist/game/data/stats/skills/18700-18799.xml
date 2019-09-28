@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18700" toLevel="1" name="Freya's Art of Seduction - Barrier">
-		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%.\nAdditionally, Damage Received -10%, All Attributes Defense +100.\n\nBuff remains in place after death. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, Damage Received -10%, All Attributes Defense +100. Buff remains in place after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
@@ -95,7 +95,7 @@
 		</effects>
 	</skill>
 	<skill id="18701" toLevel="1" name="Freya's Art of Seduction- Exp">
-		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%.\nAdditionally, XP Gain +30%, Vitality Bonus +12%.\n\nBuff remains in place after death. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, XP Gain +30%, Vitality Bonus +12%. Buff remains in place after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
@@ -163,7 +163,7 @@
 		</effects>
 	</skill>
 	<skill id="18702" toLevel="1" name="Pa'agrio's Blessing - Might">
-		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attack Attribute +100, Skill MP Consumption -10%.\nAdditionally, Damage +10%, Skill Power +10%.\nBuff remains in place after death. -->
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attack Attribute +100, Skill MP Consumption -10%. Additionally, Damage +10%, Skill Power +10%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
@@ -257,7 +257,7 @@
 		</effects>
 	</skill>
 	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing - Exp">
-		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attack Attribute +100, Skill MP Consumption -10%.\nAdditionally, XP Gain +30%, Vitality Bonus +12%.\nBuff remains in place after death. -->
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attack Attribute +100, Skill MP Consumption -10%. Additionally, XP Gain +30%, Vitality Bonus +12%. Buff remains in place after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
@@ -364,7 +364,7 @@
 	</skill>
 	<skill id="18706" toLevel="1" name="PA Points">
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18710" toLevel="1" name="Formal Wear Appearance Stone">
 		<operateType>A1</operateType>
@@ -1223,7 +1223,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18738" toLevel="1" name="+10 Blessed Amaranthine Weapon Supply Items">
+	<skill id="18738" toLevel="1" name="+10 Amaranthine Weapon Box">
 		<!-- Use this to obtain one of the Blessed Helios Weapons enchanted by +10. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1289,11 +1289,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18739" toLevel="3" name="+8 Blessed Eternal Armor Heavy Capsule">
+	<skill id="18739" toLevel="3" name="+8 Eternal Armor Heavy Capsule">
 		<!-- Use this to obtain the Blessed Eternal Armor: Heavy Armor Set enchanted by +8. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18740" toLevel="1" name="+8 Blessed Eternal Armor Supply Items">
+	<skill id="18740" toLevel="1" name="+8 Eternal Armor Box">
 		<!-- Double-click to obtain an item. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1713,7 +1713,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18746" toLevel="1" name="Dragon's Elemental Potion">
+	<skill id="18746" toLevel="1" name="Dragon's Attribute Potion">
 		<!-- Receives a boosting effect for Attack attribute by 30 and all Defense attributes by 30 for 30 min. This buff remains effective even when you're dead. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
@@ -1722,7 +1722,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18747" toLevel="1" name="Dragon's Elemental Potion - XP">
+	<skill id="18747" toLevel="1" name="Dragon's Attribute Potion (XP)">
 		<!-- Receives a boosting effect for Attack attribute by 50, all Defense attributes by 50 and Acquired XP/ SP by 10% for 30 min. This buff remains effective even when you're dead. -->
 		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
@@ -1746,21 +1746,21 @@
 		<effectPoint>712</effectPoint>
 	</skill>
 	<skill id="18750" toLevel="4" name="Pipe Organ Melody - Wealthy Merchant Red">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage effect +$s5. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
 	<skill id="18751" toLevel="4" name="Guitar Melody - Wealthy Merchant Red">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18752" toLevel="4" name="Harp Melody - Wealthy Merchant Red">
-		<!-- For $s1, P. Accuracy +$s2, P. Evasion/ M. Evasion +$s3, and Speed +$s4. Also, Critical Damage Received -$s5. -->
+		<!-- For $s1, P. Accuracy +$s2, P./ M. Evasion +$s3, Speed +$s4, and Received Critical Damage -$s5. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1774,21 +1774,21 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18754" toLevel="1" name="Prevailing Sonata - Wealthy Merchant Red">
-		<!-- For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, absorbs 8% of the inflicted damage as HP. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18755" toLevel="1" name="Daring Sonata - Wealthy Merchant Red">
-		<!-- For 1 h., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
 	<skill id="18756" toLevel="1" name="Refreshing Sonata - Wealthy Merchant Red">
-		<!-- For 1 h., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1802,7 +1802,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18758" toLevel="1" name="Warrior's Harmony - Wealthy Merchant Red">
-		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 1 h., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1912,28 +1912,32 @@
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18773" toLevel="5" name="Drum Melody">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18774" toLevel="5" name="Pipe Organ Melody">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage effect +$s5. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18775" toLevel="5" name="Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
+		<effectPoint>687</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18776" toLevel="4" name="Harp Melody">
-		<!-- Increases P. Accuracy by $s2 and P./ M. Evasion by $s3, and Speed by $s4, and decreases Critical Damage Received by $s5 for $s1. -->
+		<!-- Increases P. Accuracy by $s2 and P./ M. Evasion by $s3, and Speed by $s4, and decreases Critical Damage Received by $s5 for $s1 -->
 		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1957,7 +1961,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18779" toLevel="2" name="Warrior's Harmony">
-		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, and Atk. Spd. +$s5. -->
 		<icon>
 			<value level="1">icon.skill11524</value>
 			<value level="2">icon.skill19501</value>
@@ -1984,7 +1988,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18782" toLevel="1" name="Marching Drum">
-		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -2005,7 +2009,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="18785" toLevel="1" name="Resistance Debuff">
-		<!-- For 1 h., Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -2041,7 +2045,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18790" toLevel="1" name="Sweet Rice Cakes">
+	<skill id="18790" toLevel="1" name="Sweet Rice Cake">
 		<!-- Vitality Recovery by 35,000 -->
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>

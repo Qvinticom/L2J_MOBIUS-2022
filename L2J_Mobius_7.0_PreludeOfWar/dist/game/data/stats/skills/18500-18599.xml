@@ -101,8 +101,8 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18507" toLevel="1" name="Perfect Charm Rune">
-		<!-- STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1. -->
+	<skill id="18507" toLevel="1" name="MOPP Ally Identification Amulet">
+		<!-- STR/ INT/ CON/ DEX/ WIT/ MEN/ LUC/ CHA +1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -138,7 +138,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18515" toLevel="3" name="Weakened Defense">
-		<!-- P./ M. Def. -10% -->
+		<!-- P./ M. Def. -10%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -540,7 +540,7 @@
 		</effects>
 	</skill>
 	<skill id="18565" toLevel="10" name="Tanzanite - Barrier">
-		<!-- Creates a barrier that absorbs $s2 damage for $s1. -->
+		<!-- Creates a barrier that absorbs $s2 damage for $s1 -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_tanzanite</value>
 			<value level="2">icon.etc_bm_jewel_tanzanite</value>
@@ -593,7 +593,7 @@
 		</effects>
 	</skill>
 	<skill id="18566" toLevel="10" name="Garnet">
-		<!-- Increases All Debuff Defense Success Rates by $s1. -->
+		<!-- Debuff Resistance +$s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
 			<value level="2">icon.etc_bm_jewel_garnet</value>
@@ -680,7 +680,7 @@
 		</effects>
 	</skill>
 	<skill id="18568" toLevel="10" name="Vital Stone">
-		<!-- Increases Bonus XP gain in Vitality state by $s1. -->
+		<!-- Vitality Bonus +$s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_vital</value>
 			<value level="2">icon.etc_bm_jewel_vital</value>
@@ -914,7 +914,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18582" toLevel="7" name="Teleport to the Town of Goddard">
+	<skill id="18582" toLevel="7" name="Scroll of Escape: Goddard">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>
@@ -1030,7 +1030,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18593" toLevel="1" name="Mentor's Harmony">
-		<!-- With your mentor's help, increases your P. Atk. by 22%, M. Atk. by 45%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20%, and all Skill MP Consumption by 15%. Buff is triggered only when your mentor is online. Effect remains for 5 min after your mentor goes offline. -->
+		<!-- With your mentor's help, increases your P. Atk. by 22%, M. Atk. by 40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. +10%, Casting Spd. by 15%, Shield Defense Rate +30%, Shield Defense +22%0, and decreases Skill Cooldown by 22%1, and all Skill MP Consumption by 22%2. Buff is triggered only when your mentor is online. Buff persists for 5 min after your mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>-1</abnormalTime>
@@ -1183,7 +1183,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="18597" toLevel="5" name="Paulina's Equipment Set (D-grade)">
+	<skill id="18597" toLevel="6" name="Paulina's Equipment Set (D-grade)">
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>

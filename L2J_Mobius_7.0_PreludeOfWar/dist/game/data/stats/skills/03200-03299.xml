@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
-		<!-- Active: Temporarily decreases the Cooldown for magic skills. -->
+		<!-- Active: Temporarily decreases M. Skill Cooldown. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -43,7 +43,7 @@
 		</effects>
 	</skill>
 	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
-		<!-- Active: Temporarily decreases the Cooldown for song/ dance skills. -->
+		<!-- Active: Temporarily decreases the cooldown for song/ dance skills. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
-		<!-- Active: Temporarily decreases the Cooldown for all skills except for those with a fixed Cooldown time. -->
+		<!-- Active: Temporarily decreases the cooldown for all skills except for those with a fixed cooldown time. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -201,7 +201,7 @@
 		</effects>
 	</skill>
 	<skill id="3205" toLevel="2" name="Item Skill: Party Return">
-		<!-- Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Teleports party members to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>icon.skill3123</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -261,7 +261,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="3207" toLevel="10" name="Item Skill: Heal">
-		<!-- Chance: Has a chance of restoring HP when attacked. -->
+		<!-- In case of success: Restores HP, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -303,7 +303,7 @@
 		</effects>
 	</skill>
 	<skill id="3208" toLevel="10" name="Item Skill: Blessed Body">
-		<!-- Chance: Has a chance of increasing Max HP for a certain amount of time when attacked. -->
+		<!-- In case of success: Increases Max HP over time, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -345,7 +345,7 @@
 		</effects>
 	</skill>
 	<skill id="3209" toLevel="10" name="Item Skill: Prayer">
-		<!-- Chance: Has a chance of increasing the effect of HP recovery magic for a certain amount of time when attacked. -->
+		<!-- In case of success: Temporarily increases received Healing, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -387,7 +387,7 @@
 		</effects>
 	</skill>
 	<skill id="3210" toLevel="10" name="Item Skill: Recharge">
-		<!-- Chance: Has a chance of restoring MP when attacked. -->
+		<!-- In case of success: Recovers MP, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -429,7 +429,7 @@
 		</effects>
 	</skill>
 	<skill id="3211" toLevel="10" name="Item Skill: Blessed Soul">
-		<!-- Chance: Increases Max MP for a certain amount of time when attacked. -->
+		<!-- In case of success: Increases Max MP over time, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -471,7 +471,7 @@
 		</effects>
 	</skill>
 	<skill id="3212" toLevel="15" name="Item Skill: Mana Gain">
-		<!-- Chance: Increases the recharge recovery rate of MP when attacked. -->
+		<!-- In case of success: Increases the MP recovery rate, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -523,7 +523,7 @@
 		</effects>
 	</skill>
 	<skill id="3213" toLevel="10" name="Item Skill: Ritual">
-		<!-- Chance: Restores CP when attacked. -->
+		<!-- In case of success: Restores CP when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -565,7 +565,7 @@
 		</effects>
 	</skill>
 	<skill id="3214" toLevel="10" name="Item Skill: Cheer">
-		<!-- Chance: Temporarily increases Max CP when attacked. -->
+		<!-- In case of success: Increases Max CP over time, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -607,7 +607,7 @@
 		</effects>
 	</skill>
 	<skill id="3215" toLevel="15" name="Item Skill: Might">
-		<!-- Chance: Temporarily increases P. Atk. when attacked. -->
+		<!-- In case of success: Temporarily increases P. Atk. when attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -659,7 +659,7 @@
 		</effects>
 	</skill>
 	<skill id="3216" toLevel="15" name="Item Skill: Empower">
-		<!-- Chance: Temporarily increases M. Atk. when attacked. -->
+		<!-- In case of success: Temporarily increases M. Atk., when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -711,7 +711,7 @@
 		</effects>
 	</skill>
 	<skill id="3217" toLevel="10" name="Item Skill: Duel Might">
-		<!-- Chance: Temporarily increases PvP P. Atk. when attacked. -->
+		<!-- In case of success: Increases P. Atk. in PvP, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -753,7 +753,7 @@
 		</effects>
 	</skill>
 	<skill id="3218" toLevel="15" name="Item Skill: Shield">
-		<!-- Chance: Temporarily increases P. Def. when attacked. -->
+		<!-- In case of success: Temporarily increases P. Def. when attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -805,7 +805,7 @@
 		</effects>
 	</skill>
 	<skill id="3219" toLevel="15" name="Item Skill: Magic Barrier">
-		<!-- Chance: Temporarily increases M. Def. when attacked. -->
+		<!-- In case of success: Temporarily increases M. Def. when the charecter is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -856,8 +856,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3220" toLevel="10" name="Item Skill: Duel Weakness">
-		<!-- Chance: Temporarily decreases the opponent's PvP P. Atk. when you're attacked. -->
+	<skill id="3220" toLevel="10" name="Item Skill: Weakness in Duel">
+		<!-- In case of success: Temporarily decreases the opponent's P. Atk. in PvP, when your character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -899,7 +899,7 @@
 		</effects>
 	</skill>
 	<skill id="3221" toLevel="15" name="Item Skill: Agility">
-		<!-- Chance: Temporarily increases Evasion when attacked. -->
+		<!-- In case of success: Temporarily increases Evasion, when the charecter is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -951,7 +951,7 @@
 		</effects>
 	</skill>
 	<skill id="3222" toLevel="15" name="Item Skill: Guidance">
-		<!-- Chance: Temporarily increases Accuracy when attacked. -->
+		<!-- In case of success: Temporarily increases P. Accuracy when attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1003,7 +1003,7 @@
 		</effects>
 	</skill>
 	<skill id="3223" toLevel="10" name="Item Skill: Focus">
-		<!-- Chance: Temporarily increases Critical Rate when attacked. -->
+		<!-- In case of success: Temporarily increases P. Critical Rate, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1045,7 +1045,7 @@
 		</effects>
 	</skill>
 	<skill id="3224" toLevel="10" name="Item Skill: Wild Magic">
-		<!-- Chance: Temporarily increases Critical Rate of magic attacks when attacked. -->
+		<!-- In case of success: Temporarily increases M. Critical Rate, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1087,7 +1087,7 @@
 		</effects>
 	</skill>
 	<skill id="3225" toLevel="15" name="Item Skill: Charm">
-		<!-- Chance: Decreases the enemy's aggression when you're attacked. -->
+		<!-- In case of success: Decreases the enemy's aggression when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1139,7 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="3226" toLevel="15" name="Item Skill: Slow">
-		<!-- Chance: Momentarily decreases the target's Speed when you're attacked. -->
+		<!-- In case of success: Temporarily decreases the target's Speed, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1191,7 +1191,7 @@
 		</effects>
 	</skill>
 	<skill id="3227" toLevel="15" name="Item Skill: Winter">
-		<!-- Chance: Momentarily decreases the target's Atk. Spd. when you're attacked. -->
+		<!-- In case of success: Temporarily decreases the target's Atk. Spd., when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1243,7 +1243,7 @@
 		</effects>
 	</skill>
 	<skill id="3228" toLevel="10" name="Item Skill: Stun">
-		<!-- Activated skill: Causes a target to enter the Stun state momentarily if successfully hit. -->
+		<!-- In case of success: Momentarily inflicts Stun on the target when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1369,7 +1369,7 @@
 		</effects>
 	</skill>
 	<skill id="3231" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Chance: Momentarily paralyzes the target when you're attacked. -->
+		<!-- In case of success: Momentarily paralyzes the target when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1411,7 +1411,7 @@
 		</effects>
 	</skill>
 	<skill id="3232" toLevel="10" name="Item Skill: Medusa">
-		<!-- Chance: Momentarily petrifies the target when you're attacked. -->
+		<!-- In case of success: Instantly petrifies the target, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1453,7 +1453,7 @@
 		</effects>
 	</skill>
 	<skill id="3233" toLevel="10" name="Item Skill: Fear">
-		<!-- Chance: Momentarily inflicts Fear on the target and causes it to flee when you're attacked. -->
+		<!-- In case of success: Instantly inflicts Fear on the target and forces it to flee, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1495,7 +1495,7 @@
 		</effects>
 	</skill>
 	<skill id="3234" toLevel="15" name="Item Skill: Poison">
-		<!-- Chance: Momentarily poisons the target when you're attacked. Effect $s1. -->
+		<!-- In case of success: Instantly poisons the target when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1547,7 +1547,7 @@
 		</effects>
 	</skill>
 	<skill id="3235" toLevel="15" name="Item Skill: Bleed">
-		<!-- Chance: Momentarily inflicts Bleed on the target and causes when you're attacked. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts Bleed on the target, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1599,7 +1599,7 @@
 		</effects>
 	</skill>
 	<skill id="3236" toLevel="10" name="Item Skill: Silence">
-		<!-- Chance: Momentarily blocks the target's magic skills when you're attacked. -->
+		<!-- In case of success: Momentarily blocks the target's magic skills when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1641,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="3237" toLevel="10" name="Item Skill: Doom">
-		<!-- Chance: Momentarily blocks all of the target's physical and magic skills when you're attacked. -->
+		<!-- In case of success: Instantly blocks the target's P./ M. Skills, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -2069,7 +2069,7 @@
 		</effects>
 	</skill>
 	<skill id="3251" toLevel="10" name="Item Skill: Weight Limit">
-		<!-- Passive: Increases weight limit by $s1 times. -->
+		<!-- Weight limit +$s1 times. -->
 		<icon>icon.skill3238</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -3005,7 +3005,7 @@
 		</effects>
 	</skill>
 	<skill id="3286" toLevel="1" name="Black Talisman - Mending">
-		<!-- Cure bleeding with the power of Talisman. -->
+		<!-- Cures bleeding with the power of Talisman. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
@@ -3152,7 +3152,7 @@
 		</effects>
 	</skill>
 	<skill id="3293" toLevel="1" name="Yellow Talisman - P. Atk.">
-		<!-- Increases P. Atk. when equipped. -->
+		<!-- Increases P. Atk. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -3204,7 +3204,7 @@
 		</effects>
 	</skill>
 	<skill id="3297" toLevel="1" name="Yellow Talisman - Accuracy">
-		<!-- Increases Accuracy when equipped. -->
+		<!-- Increases Accuracy. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>

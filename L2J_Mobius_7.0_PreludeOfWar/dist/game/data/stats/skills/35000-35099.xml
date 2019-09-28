@@ -41,7 +41,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35009" toLevel="3" name="Augment Pearl">
-		<!-- When Pearl Lv. 4+is equipped, M. Def. +$s1. -->
+		<!-- When Pearl Lv. 4 or higher is equipped, M. Def. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -126,7 +126,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35026" toLevel="3" name="Augment Vital Stone">
-		<!-- Vitality XP +$s1. -->
+		<!-- Vitality Bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -170,205 +170,205 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35032" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion - Virg. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35033" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion - Virg. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35034" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion - Capri. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35035" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion - Libb. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35036" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion - Arie. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35037" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion - Tau. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35038" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion - Leo. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35039" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion - Gemi. -->
+		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35040" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion - Scor. -->
+		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35041" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion - Aquar. -->
+		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35042" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion - Pisce. -->
+		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35043" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion - Saggit. -->
+		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35044" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion - Cance. -->
+		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35045" toLevel="11" name="Virgo Agathion Unique Ability">
+	<skill id="35045" toLevel="22" name="Virgo Agathion Unique Ability">
 		<!-- Increases P. Critical Rate with the growth of the Agathion. -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35046" toLevel="11" name="Capricorn Agathion Unique Ability">
+	<skill id="35046" toLevel="22" name="Capricorn Agathion Unique Ability">
 		<!-- Increases M. Critical Rate with the growth of the Agathion. -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35047" toLevel="11" name="Libra Agathion Unique Ability">
+	<skill id="35047" toLevel="22" name="Libra Agathion Unique Ability">
 		<!-- Increases M. Critical Damage with the growth of the Agathion. -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35048" toLevel="11" name="Aries Agathion Unique Ability">
+	<skill id="35048" toLevel="22" name="Aries Agathion Unique Ability">
 		<!-- Increases P. Skill Critical Damage with the growth of the Agathion. -->
 		<icon>icon.agathion_aries_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35049" toLevel="11" name="Taurus Agathion Unique Ability">
+	<skill id="35049" toLevel="22" name="Taurus Agathion Unique Ability">
 		<!-- Increases P. Def. with the growth of the Agathion. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35050" toLevel="11" name="Leo Agathion Unique Ability">
+	<skill id="35050" toLevel="22" name="Leo Agathion Unique Ability">
 		<!-- Increases P. Atk. with the growth of the Agathion. -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35051" toLevel="11" name="Gemini Agathion Unique Ability">
+	<skill id="35051" toLevel="22" name="Gemini Agathion Unique Ability">
 		<!-- Increases M. Def. with the growth of the Agathion. -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35052" toLevel="11" name="Scorpio Agathion Unique Ability">
+	<skill id="35052" toLevel="22" name="Scorpio Agathion Unique Ability">
 		<!-- Increases P. Critical Damage with the growth of the Agathion. -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35053" toLevel="11" name="Aquarius Agathion Unique Ability">
+	<skill id="35053" toLevel="22" name="Aquarius Agathion Unique Ability">
 		<!-- Increases M. Atk. with the growth of the Agathion. -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35054" toLevel="11" name="Pisces Agathion Unique Ability">
+	<skill id="35054" toLevel="22" name="Pisces Agathion Unique Ability">
 		<!-- Increases Casting Spd. with the growth of the Agathion. -->
 		<icon>icon.agathion_pis_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35055" toLevel="11" name="Sagittarius Agathion Unique Ability">
+	<skill id="35055" toLevel="22" name="Sagittarius Agathion Unique Ability">
 		<!-- Increases Atk. Spd. with the growth of the Agathion. -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35056" toLevel="11" name="Cancer Agathion Unique Ability">
+	<skill id="35056" toLevel="22" name="Cancer Agathion Unique Ability">
 		<!-- Increases P. Skill Critical Rate with the growth of the Agathion. -->
 		<icon>icon.agathion_can_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35057" toLevel="4" name="Virgo Agathion Special Ability">
+	<skill id="35057" toLevel="8" name="Virgo Agathion Special Ability">
 		<!-- Increases XP gain with the growth of the Agathion. -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35058" toLevel="4" name="Capricorn Agathion Special Ability">
+	<skill id="35058" toLevel="8" name="Capricorn Agathion Special Ability">
 		<!-- Increases Vitality Bonus with the growth of the Agathion. -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35059" toLevel="4" name="Libra Agathion Special Ability">
+	<skill id="35059" toLevel="8" name="Libra Agathion Special Ability">
 		<!-- Decreases Skill MP Consumption with the growth of the Agathion. -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35060" toLevel="4" name="Aries Agathion Special Ability">
+	<skill id="35060" toLevel="8" name="Aries Agathion Special Ability">
 		<!-- Increases Damage Reflection Resistance with the growth of the Agathion. -->
 		<icon>icon.agathion_aries_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35061" toLevel="4" name="Taurus Agathion Special Ability">
+	<skill id="35061" toLevel="8" name="Taurus Agathion Special Ability">
 		<!-- Increases Max HP with the growth of the Agathion. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35062" toLevel="4" name="Leo Agathion Special Ability">
+	<skill id="35062" toLevel="8" name="Leo Agathion Special Ability">
 		<!-- Increases Max MP with the growth of the Agathion. -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35063" toLevel="4" name="Gemini Agathion Special Ability">
+	<skill id="35063" toLevel="8" name="Gemini Agathion Special Ability">
 		<!-- Increases Debuff Resistance with the growth of the Agathion. -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35064" toLevel="4" name="Scorpio Agathion Special Ability">
+	<skill id="35064" toLevel="8" name="Scorpio Agathion Special Ability">
 		<!-- Increases Vampiric Rage with the growth of the Agathion. -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35065" toLevel="4" name="Aquarius Agathion Special Ability">
+	<skill id="35065" toLevel="8" name="Aquarius Agathion Special Ability">
 		<!-- Increases Max CP with the growth of the Agathion. -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35066" toLevel="4" name="Pisces Agathion Special Ability">
-		<!-- Increases Bow/ Crossbow Resistance with the growth of the Agathion. -->
+	<skill id="35066" toLevel="8" name="Pisces Agathion Special Ability">
+		<!-- Increases Bow/ Crossbow Attack Resistance with the growth of the agathion. -->
 		<icon>icon.agathion_pis_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35067" toLevel="4" name="Sagittarius Agathion Special Ability">
+	<skill id="35067" toLevel="8" name="Sagittarius Agathion Special Ability">
 		<!-- Increases Dagger Resistance with the growth of the Agathion. -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35068" toLevel="4" name="Cancer Agathion Special Ability">
+	<skill id="35068" toLevel="8" name="Cancer Agathion Special Ability">
 		<!-- Slows the Vitality consumption rate with the growth of the Agathion. -->
 		<icon>icon.agathion_can_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35069" toLevel="2" name="Expand Primary Agathion Slot">
-		<!-- Unlocks the primary Agathion slot. -->
+	<skill id="35069" toLevel="2" name="Agathion's Main Slot">
+		<!-- Activates the agathion's main slot. -->
 		<icon>
 			<value level="1">icon.agathion_base</value>
 			<value level="2">icon.lbracelet_agathion_charm</value>
@@ -380,8 +380,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35070" toLevel="4" name="Expand Secondary Agathion Slot">
-		<!-- Unlocks $s1 secondary Agathion slots. -->
+	<skill id="35070" toLevel="4" name="Agathion's Additional Slot">
+		<!-- Activates $s1 agathion's additional slot(s). -->
 		<icon>icon.agathion_base</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -396,7 +396,7 @@
 		</effects>
 	</skill>
 	<skill id="35071" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
-		<!-- Unlocks the primary Agathion slot and expands secondary Agathion slots to $s1. -->
+		<!-- Activates the main agathion slot and $s1 additional slot(s). -->
 		<icon>icon.agathion_base</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -830,7 +830,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35095" toLevel="1" name="Elysium Special Stew">
-		<!-- For 30 min., increases P. Atk./ M. Atk., Atk./ Casting Spd., Max HP/ MP by 3%, and Acquired XP/ SP by 30%. Can be stacked with Honey Vitality Beer. Will be deleted during maintenance on Wednesday, November 29th when the Red Libra Merchants leave. -->
+		<!-- For 30 min., P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +3%, and acquired XP/ SP +30%. Can be stacked with Honey Vitality Beer. -->
 		<icon>icon.red_libra_pochouse</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

@@ -81,7 +81,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16105" toLevel="6" name="Fatal Bomber">
-		<!-- Deals a powerful blow and knocks down the enemy. -->
+		<!-- Inflicts a powerful blow on the target and knocks it down for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -100,7 +100,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16106" toLevel="5" name="Chain Smash">
-		<!-- Pulls target toward you. -->
+		<!-- Pulls the target to your character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -197,7 +197,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16113" toLevel="1" name="Tragic Bleed">
-		<!-- Inflicts Bleed. 12 Power. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 12. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.m_mystery_blood</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -219,7 +219,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16115" toLevel="2" name="Chain Smash">
-		<!-- Pulls target toward you. -->
+		<!-- Pulls the target to your character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -279,7 +279,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16121" toLevel="5" name="Sleeping Cloud">
-		<!-- Inflicts Sleep on nearby enemies for $s1. -->
+		<!-- Inflicts sleep on nearby enemies for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -684,7 +684,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16148" toLevel="5" name="Fear">
-		<!-- Inflicted with Fear and moving against own will momentarily. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -702,7 +702,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16149" toLevel="5" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -719,7 +719,7 @@
 		<effectPoint>-150</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16150" toLevel="5" name="Decrease Speed">
+	<skill id="16150" toLevel="5" name="Slow">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -790,7 +790,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16153" toLevel="7" name="Power Slam">
-		<!-- Deals a powerful blow and knocks back the enemy. -->
+		<!-- Inflicts a powerful blow on the target and knocks it back for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -802,7 +802,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16154" toLevel="6" name="Mass Chain Smash">
-		<!-- Pulls target and nearby enemies toward you. -->
+		<!-- Pulls the target and nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>84</mpConsume>
@@ -822,7 +822,7 @@
 		<effectPoint>-1000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16156" toLevel="8" name="Mass Droop">
+	<skill id="16156" toLevel="8" name="Mass Slow">
 		<!-- Decreases Atk. Spd. and Speed. -->
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>
@@ -836,7 +836,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16157" toLevel="5" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -888,7 +888,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16161" toLevel="1" name="Darion's Bleed">
-		<!-- Bleed instantly cuts HP. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>91</mpConsume>
@@ -966,7 +966,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16169" toLevel="1" name="Pull">
-		<!-- Pulls target toward you. -->
+		<!-- Pulls the target to your character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>95</mpConsume>
@@ -996,7 +996,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16172" toLevel="1" name="Poisoned">
-		<!-- HP drops by 75 per second due to a poisonous fog. -->
+		<!-- Toxic Fog. HP -75 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1090,23 +1090,12 @@
 		</effects>
 	</skill>
 	<skill id="16177" toLevel="10" name="Knock Down Resistance">
-		<!-- Slightly resistant to Knock Down attack. -->
-		<icon>
-			<value level="1">icon.skill0000</value>
-			<value level="2">icon.skill0000</value>
-			<value level="3">icon.skill0000</value>
-			<value level="4">icon.skill0000</value>
-			<value level="5">icon.skill0000</value>
-			<value level="6">icon.skill10262</value>
-			<value level="7">icon.skill10262</value>
-			<value level="8">icon.skill10262</value>
-			<value level="9">icon.skill10262</value>
-			<value level="10">icon.skill10262</value>
-		</icon>
+		<!-- Slightly resistant against knockdown attacks. -->
+		<icon>icon.skill10262</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16178" toLevel="1" name="Leona's Thunder Spear">
-		<!-- Inflicts Stun by attacking the vicinity of the enemy. -->
+		<!-- Attacks nearby enemies and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10321</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

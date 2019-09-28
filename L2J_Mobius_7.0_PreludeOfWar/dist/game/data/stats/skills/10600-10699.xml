@@ -77,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="10608" toLevel="4" name="Superior Haste">
-		<!-- Physical skill cooldown +$s1 and the Bleed attack success rate +$s2. Also doubles the duration of Shadow Dash. -->
+		<!-- P. Skill Cooldown -$s1, Infection Atk. Rate +$s2. Also doubles the duration of Shadow Dash. -->
 		<icon>icon.skill10608</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -255,7 +255,7 @@
 		</effects>
 	</skill>
 	<skill id="10655" toLevel="4" name="Brutal Stab Expert">
-		<!-- P. Atk. +$s1 and Critical Damage +$s2. -->
+		<!-- P. Atk. +$s1, Critical Damage +$s2. -->
 		<icon>icon.skill10655</icon>
 		<magicLvl>
 			<value level="1">85</value>

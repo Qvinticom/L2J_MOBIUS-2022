@@ -740,7 +740,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8735" toLevel="1" name="Special Talisman (R-grade) - Increase Magic Cancel">
+	<skill id="8735" toLevel="1" name="Special Talisman (R-grade) - Interrupt Casting">
 		<!-- Decreases Magic Cancel Rate by 10% when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
@@ -779,7 +779,7 @@
 		</effects>
 	</skill>
 	<skill id="8737" toLevel="1" name="Special Talisman (R-grade) - MP Recovery">
-		<!-- Increases natural MP recovery amount by 0.66 when equipped. -->
+		<!-- MP Recovery Rate +0.66. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -792,7 +792,7 @@
 		</effects>
 	</skill>
 	<skill id="8738" toLevel="1" name="Special Talisman (R90-grade) - MP Recovery">
-		<!-- Increases natural MP recovery amount by 0.68 when equipped. -->
+		<!-- MP Recovery Rate +0.68. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -805,7 +805,7 @@
 		</effects>
 	</skill>
 	<skill id="8739" toLevel="1" name="Special Talisman (R95-grade) - MP Recovery">
-		<!-- Increases natural MP recovery amount by 0.70 when equipped. -->
+		<!-- MP Recovery Rate +0.70. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -818,7 +818,7 @@
 		</effects>
 	</skill>
 	<skill id="8740" toLevel="1" name="Special Talisman (R99-grade) - MP Recovery">
-		<!-- Increases natural MP recovery amount by 0.72 when equipped. -->
+		<!-- MP Recovery Rate +0.72. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1006,7 +1006,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8750" toLevel="1" name="Special Ability: Infinity Cutter">
+	<skill id="8750" toLevel="1" name="Infinity Cutter Special Ability">
 		<!-- Decreases the enemy's P. Def. during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1030,7 +1030,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8752" toLevel="1" name="Special Ability: Infinity Avenger">
+	<skill id="8752" toLevel="1" name="Infinity Avenger Special Ability">
 		<!-- Seduces the enemy during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1045,22 +1045,22 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8754" toLevel="1" name="Special Ability: Infinity Slasher">
+	<skill id="8754" toLevel="1" name="Infinity Slasher Special Ability">
 		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="8755" toLevel="1" name="Special Ability: Infinity Crusher">
-		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ CP, attack speed and damage during PvP while reflecting debuff inflicted to the enemy. -->
+	<skill id="8755" toLevel="1" name="Infinity Crusher Special Ability">
+		<!-- Stuns the enemy after a critical attack. Increases Max HP/ CP, Atk. Spd. and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8756" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1079,7 +1079,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8757" toLevel="1" name="Special Ability: Infinity Dual">
+	<skill id="8757" toLevel="1" name="Infinity Dual Special Ability">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, Critical Rate. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1087,7 +1087,7 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8758" toLevel="1" name="Restrain Physical Skills">
-		<!-- Momentarily blocks opponent's ability to use physical skills. -->
+		<!-- Temporarily blocks physical skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1106,7 +1106,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8759" toLevel="1" name="Special Ability: Infinity Fighter">
+	<skill id="8759" toLevel="1" name="Infinity Fighter Special Ability">
 		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ MP/ CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1114,7 +1114,7 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8760" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1133,7 +1133,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8761" toLevel="1" name="Special Ability: Infinity Dagger">
+	<skill id="8761" toLevel="1" name="Infinity Dagger Special Ability">
 		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP/ Max CP/ Atk. Spd./ MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1141,7 +1141,7 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8762" toLevel="1" name="Restrain Magic Skills">
-		<!-- Momentarily blocks magic skills. -->
+		<!-- Temporarily blocks magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1160,8 +1160,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8763" toLevel="1" name="Special Ability: Infinity Stormer">
-		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases Max HP, Max CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on the enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
+	<skill id="8763" toLevel="1" name="Infinity Stormer Special Ability">
+		<!-- After a critical attack, removes one or more of the enemy's buffs. Increases Max HP/ CP, Atk. Spd., P. Accuracy and PvP Damage. Reflects debuffs back to the enemy. Allows to attack multiple opponents. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1175,7 +1175,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8765" toLevel="1" name="Special Ability: Infinity Thrower">
+	<skill id="8765" toLevel="1" name="Infinity Thrower Special Ability">
 		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1201,7 +1201,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="8767" toLevel="1" name="Special Ability: Infinity Retributer">
+	<skill id="8767" toLevel="1" name="Infinity Retributer Special Ability">
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max HP, Max CP, M. Atk., and Critical Rate of a magic damage. Inflicts additional damage during PvP. Decreases MP Consumption and cancel rate when casting a magic. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1217,7 +1217,7 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8769" toLevel="1" name="Special Ability: Infinity Magic">
+	<skill id="8769" toLevel="1" name="Infinity Magic Special Ability">
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max MP, Max CP, Casting Spd, MP Recovery Rate, and damage inflicted during PvP. -->
 		<icon>icon.weapon_the_mace_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1233,21 +1233,21 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8771" toLevel="1" name="Special Ability: Infinity Rapier">
+	<skill id="8771" toLevel="1" name="Infinity Rapier Special Ability">
 		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="8772" toLevel="1" name="Special Ability: Infinity Sword">
+	<skill id="8772" toLevel="1" name="Infinity Sword Special Ability">
 		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="8773" toLevel="1" name="Special Ability: Infinity Shooter">
+	<skill id="8773" toLevel="1" name="Infinity Shooter Special Ability">
 		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<operateType>P</operateType>
@@ -1363,7 +1363,7 @@
 		</effects>
 	</skill>
 	<skill id="8781" toLevel="1" name="Equip Shield">
-		<!-- Shield Defense is additionally increased. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.weapon_sacon_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1376,7 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="8782" toLevel="1" name="Equip Shield">
-		<!-- Shield Defense is additionally increased. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.kratere_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1389,7 +1389,7 @@
 		</effects>
 	</skill>
 	<skill id="8783" toLevel="1" name="Equip Shield">
-		<!-- Shield Defense is additionally increased. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.beranka_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1402,7 +1402,7 @@
 		</effects>
 	</skill>
 	<skill id="8784" toLevel="1" name="Equip Shield">
-		<!-- Shield Defense is additionally increased. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.weapon_akra_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1415,7 +1415,7 @@
 		</effects>
 	</skill>
 	<skill id="8785" toLevel="1" name="Equip Shield">
-		<!-- Shield Defense is additionally increased. -->
+		<!-- Increases Shield Defense. -->
 		<icon>icon.heavengate_shield_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1428,21 +1428,21 @@
 		</effects>
 	</skill>
 	<skill id="8786" toLevel="1" name="Top-grade Royal Guard Earring - Gludio">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
+		<!-- Max CP +5%, Infection Resistance +15%, Confusion Atk. Rate +15% and Water Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8787" toLevel="1" name="Top-grade Royal Guard Earring - Dion">
-		<!-- Increases Max CP by 5%, Poison Resistance by 15%, effectiveness of hold attacks by 15% and Holy Resistance by 10. -->
+		<!-- Max CP +5%, Infection Resistance +15%, Obstruction Atk. Rate +15% and Holy Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8788" toLevel="1" name="Top-grade Royal Guard Earring - Giran">
-		<!-- Increases Max CP by 5%, Paralysis Resistance by 15%, effectiveness of bleed attacks by 15% and Wind Resistance by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Infection Atk. Rate +15% and Wind Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1456,35 +1456,35 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8790" toLevel="1" name="Top-grade Royal Guard Earring - Aden">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Confusion Atk. Rate +15% and Earth Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8791" toLevel="1" name="Top-grade Royal Guard Earring - Innadril">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Stupor Atk. Rate +15% and Water Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8792" toLevel="1" name="Top-grade Royal Guard Earring - Goddard">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
+		<!-- Max CP +5%, Stupor Resistance +15%, Confusion Atk. Rate +15% and Fire Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8793" toLevel="1" name="Top-grade Royal Guard Earring - Rune">
-		<!-- Increases Max CP by 5%, Hold Resistance by 15%, effectiveness of Poison attacks by 15% and Fire Resistance by 10. -->
+		<!-- Max CP +5%, Obstruction Resistance +15%, Infection Atk. Rate +15% and Fire Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8794" toLevel="1" name="Top-grade Royal Guard Earring - Schuttgart">
-		<!-- Increases Max CP by 5%, Mental Attack Resistance by 15%, effectiveness of hold attacks by 15% and Wind Resistance by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Obstruction Atk. Rate +15% and Wind Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1543,7 +1543,7 @@
 		</effects>
 	</skill>
 	<skill id="8799" toLevel="1" name="Top-grade Royal Guard Ring - Aden">
-		<!-- Increases Holy Resistance by 15. -->
+		<!-- Holy Resistance +15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

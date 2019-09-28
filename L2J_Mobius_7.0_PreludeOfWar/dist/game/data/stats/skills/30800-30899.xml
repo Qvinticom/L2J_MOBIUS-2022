@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30800" toLevel="1" name="Novice Cubic Healing Wave">
+		<!-- Recover HP/ MP and Remove Mesmerizing Debuff -->
+		<icon>icon.skill10073_2</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>408</effectPoint>
+	</skill>
+	<skill id="30801" toLevel="1" name="Novice Cubic Gain Soul">
+		<!-- Removes debuffs. Heals 600 HP and increases Debuff Resistance by 3% for 6 sec. -->
+		<icon>icon.skill1206</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>408</effectPoint>
+	</skill>
+	<skill id="30802" toLevel="1" name="Sword/ Blunt Weapon Mastery">
+		<!-- When a sword or blunt weapon is equipped, P. Atk. +5%+51, P. Accuracy + 4, and each normal attack increases the enmity toward you. In addition, STR increases by 1 and depending on your STR, the skill Cooldown resets or duration increases 2-fold. -->
+		<icon>icon.skill10001</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30803" toLevel="1" name="Novice Iron Aura">
+		<!-- You and your ally's P./M. Def. -7% and P./M. Critical Damage Received -5%. -->
+		<icon>icon.skill10032</icon>
+		<operateType>T</operateType>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="30804" toLevel="1" name="Novice Thunder Storm">
+		<!-- Swings a spear to attack nearby enemies with 2200 power. Inflicts stun for 9 sec. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0048</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>1080</hitTime>
+		<coolTime>720</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-167</effectPoint>
+		<mpConsume>114</mpConsume>
+	</skill>
+	<skill id="30805" toLevel="1" name="Novice Sonic Storm">
+		<!-- Attacks nearby enemies with 451 power. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. -->
+		<icon>icon.skill0007</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<hitTime>1790</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>163</mpConsume>
+	</skill>
+	<skill id="30806" toLevel="1" name="Novice Force Storm">
+		<!-- Attacks nearby enemies with 451 power. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. -->
+		<icon>icon.skill0035</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<hitTime>1790</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>163</mpConsume>
+	</skill>
+	<skill id="30807" toLevel="1" name="Novice Hands of Einhasad">
+		<!-- For 5 min., P./ M. Atk. +3%, attack range +100. -->
+		<icon>icon.skill19427</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>566</effectPoint>
+		<mpConsume>38</mpConsume>
+	</skill>
+	<skill id="30808" toLevel="1" name="Novice Shield Song">
+		<!-- For 30 min., P. Def. +3%, 6 Attributes Resistance +10, Bow/ Crossbow Resistance +5%, Debuff Resistance +5%. -->
+		<icon>icon.skill11606new</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>566</effectPoint>
+		<mpConsume>8</mpConsume>
+	</skill>
+	<skill id="30809" toLevel="1" name="Novice Sword Waltz">
+		<!-- For 30 min., P. Atk./Atk. Spd. +7% and P. Critical Rate/Speed +5. -->
+		<icon>icon.skill11605new</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>566</effectPoint>
+		<mpConsume>8</mpConsume>
+	</skill>
+	<skill id="30810" toLevel="1" name="Novice Seal of Confusion">
+		<!-- Cancels nearby enemies' targets. -->
+		<icon>icon.skill11557</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-457</effectPoint>
+		<mpConsume>107</mpConsume>
+	</skill>
+	<skill id="30811" toLevel="1" name="Novice Rampageous Beat">
+		<!-- Strikes the target with 2164 power. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<icon>icon.skill11511</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1410</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-692</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30812" toLevel="2" name="Fantasia Harmony">
+		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, P. Critical Damage +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
+		<icon>
+			<value level="1">icon.soul_spirit1</value>
+			<value level="2">icon.soul_spirit2</value>
+		</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>
+			<value level="1">140</value>
+			<value level="2">151</value>
+		</mpConsume>
+	</skill>
+	<skill id="30813" toLevel="1" name="Fantasia Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 h., party members' P. Atk. +25%, M. Atk. +45%, P. Def. +45%, M. Def. +35%, P./ M. Critical Rate +100%, P. Critical Damage +85%, M. Critical Damage +10%, Atk. Spd. +10%, Casting Spd. +1 h.0, Shield Defense/ Shield Defense Rate +1 h.1, Attribute Attack +1 h.2, Skill Cooldown -1 h.3, M. Skill MP Consumption -1 h.4, Received P./ M. Critical Rate -1 h.5. -->
+		<icon>icon.soul_spirit2</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="30814" toLevel="1" name="Fantasia Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For 1 h., party members' P. Atk. +25%, M. Atk. +45%, P. Def. +45%, M. Def. +35%, P./ M. Critical Rate +100%, P. Critical Damage +85%, M. Critical Damage +10%, Atk. Spd. +10%, Casting Spd. +1 h.0, Shield Defense/ Shield Defense Rate +1 h.1, Attribute Attack +1 h.2, Skill Cooldown -1 h.3, M. Skill MP Consumption -1 h.4, Received P./ M. Critical Rate -1 h.5. -->
+		<icon>icon.soul_spirit2</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="30815" toLevel="1" name="Fantasia Melody">
+		<!-- For 30 minutes, party member's PvP Damage +10%, Received PvP Damage -10%, Attack Attribute +10, Speed +10, HP/MP Recovery Bonus +10%. Consumes 10 Spirit Ores. -->
+		<icon>icon.partybuff_blessing_a1</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>181</mpConsume>
+	</skill>
+	<skill id="30816" toLevel="1" name="Command for Fantasy">
+		<!-- For 30 minutes, clan member's PvP Damage +10%, Received PvP Damage -10%, Attack Attribute +10, Speed +10, HP/MP Recovery Bonus + 10% Consumes 10 Spirit Ores. -->
+		<icon>icon.skill11617</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>181</mpConsume>
+	</skill>
+	<skill id="30817" toLevel="2" name="Frenzy Fantasia Harmony">
+		<!-- For $s1, clan members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Def. +$s11, Skill Cooldown -$s12, All Skills MP Consumption -$s13. -->
+		<icon>icon.skill11595</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>
+			<value level="1">140</value>
+			<value level="2">151</value>
+		</mpConsume>
+	</skill>
+	<skill id="30818" toLevel="6" name="Kaliel's Protection">
+		<!-- Creates a barrier that absorbs $s2 damage for $s1. -->
+		<icon>icon.bm_kalie_rbracelet03</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2400000</reuseDelay>
+		<effectPoint>1000</effectPoint>
+	</skill>
+	<skill id="30819" toLevel="1" name="Force Intention">
+		<!-- Detonates the Warrior's Momentum charge and for 1 minute, P. Atk. +10%, P. Critical Damage +15%. Need 10 Momentum. Consumes 5 Soulstones. -->
+		<icon>icon.energy_burst1</icon>
+		<operateType>A2</operateType>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>673</effectPoint>
+		<mpConsume>192</mpConsume>
+	</skill>
+	<skill id="30820" toLevel="1" name="Dual Class - Renewed Energy of Power">
+		<!-- P. Atk. +4%, M. Atk. +6%, P./ M. Def. +4%, Atk./ Casting Spd. +4%, P./ M. Critical Rate +40, Max HP/ MP/ CP +6%. -->
+		<icon>icon.skill0816</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30821" toLevel="1" name="Power Enhancement">
+		<operateType>P</operateType>
+	</skill>
+</list>

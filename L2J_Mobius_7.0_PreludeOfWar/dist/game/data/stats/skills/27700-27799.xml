@@ -158,7 +158,7 @@
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="27705" toLevel="6" name="Shilen's Necklace">
-		<!-- M. Def. +$s1, Dark Attribute Resistance +$s2, STR/ INT +$s3, Physical/ Mental attack success rate +$s4. Effects do not stack with additional rings. -->
+		<!-- M. Def. +$s1, Dark Resistance +$s2, STR/ INT +$s3, Obstruction/ Confusion/ Stupor/ Petrification Atk. Rate +$s4. When two rings are equipped the effect of the highest level ring is active. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -235,7 +235,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27707" toLevel="1" name="Shilen's Dignity">
-		<!-- Stuns target for 60 sec. -->
+		<!-- Stuns the target for 30 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -244,7 +244,7 @@
 		<effectPoint>-999</effectPoint>
 	</skill>
 	<skill id="27708" toLevel="6" name="Shilen's Earring">
-		<!-- M. Def. +$s1, Dark Attribute Resistance +$s2, STR/ INT +$s3, Physical/ Mental Resistance +$s4, Speed +$s5. Effects do not stack with additional rings. -->
+		<!-- M. Def. +$s1, Dark Resistance +$s2, STR/ INT +$s3, Obstruction/ Confusion/ Stupor/ Petrification Atk. Rate +$s4, Speed +$s5. When two rings are equipped the effect of the highest level ring is active. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -355,13 +355,13 @@
 		<reuseDelay>7200000</reuseDelay>
 		<effectPoint>379</effectPoint>
 	</skill>
-	<skill id="27711" toLevel="1" name="Scroll: Shilen's Ring">
+	<skill id="27711" toLevel="1" name="Scroll: Enchant Shilen's Ring">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27712" toLevel="1" name="Scroll: Shilen's Necklace">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27713" toLevel="1" name="Scroll: Shilen's Earring">
+	<skill id="27713" toLevel="1" name="Scroll: Enchant Shilen's Earring">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27714" toLevel="1" name="Shilen's Strength">
@@ -802,13 +802,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27746" toLevel="1" name="Item Skill: Unlimited Vitality Agathion">
+	<skill id="27746" toLevel="1" name="Item Skill: Agathion - Unlimited Vitality">
 		<!-- When equipped, XP +3%. -->
 		<icon>BranchSys.icon.br_aga_bonus_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27747" toLevel="1" name="2016 World Olympiad Hero">
-		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5 -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +5 -->
 		<icon>icon.accessory_ornithomimus_cap_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -883,7 +883,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27755" toLevel="1" name="Shilen's Necklace">
-		<!-- Go into Hide state when used. -->
+		<!-- Makes the character invisible. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
@@ -931,10 +931,10 @@
 	<skill id="27760" toLevel="1" name="+10 Shiny Elemental Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27761" toLevel="1" name="+10 Reflect Attack T-shirt Pack">
+	<skill id="27761" toLevel="1" name="+10 Physical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27762" toLevel="1" name="+10 Reflect Magic T-shirt Pack">
+	<skill id="27762" toLevel="1" name="+10 Magical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27763" toLevel="1" name="+10 Pa'agrio's Shirt Pack">
@@ -952,10 +952,10 @@
 	<skill id="27767" toLevel="1" name="Shiny Elemental Shirt Special Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27768" toLevel="1" name="Physical Reflect Shirt Special Pack">
+	<skill id="27768" toLevel="1" name="Special Physical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27769" toLevel="1" name="Magical Reflect Shirt Special Pack">
+	<skill id="27769" toLevel="1" name="Special Magical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27770" toLevel="1" name="Royal White Save Card (R)">
@@ -985,7 +985,7 @@
 	<skill id="27777" toLevel="1" name="Abundant Seven Signs Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27778" toLevel="1" name="Release Agathion's Seal - Babayaga">
+	<skill id="27778" toLevel="1" name="Summon Agathion - Babayaga">
 		<!-- The Agathion - Babayaga seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1400,7 +1400,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27795" toLevel="1" name="Fortune Hair Accessory Box">
+	<skill id="27795" toLevel="1" name="Hair Accessory Fortune Box">
 		<!-- Double-click to get 1 random Hair Accessory Box. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>

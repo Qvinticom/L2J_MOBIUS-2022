@@ -1547,7 +1547,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22256" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 60 min. -->
+		<!-- For 60 min., P. Atk. +15%. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1673,7 +1673,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22263" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- For 60 min., P. Def. +15%. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1763,7 +1763,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22268" toLevel="1" name="Wild Magic">
-		<!-- For 60 min., increases by 2 the damage rate of magic. -->
+		<!-- For 60 min., M. Critical Rate +2. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1836,7 +1836,7 @@
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
-	<skill id="22272" toLevel="1" name="Novice Explorer's Treasure Sack">
+	<skill id="22272" toLevel="1" name="Novice Adventurer's Treasure Sack">
 		<itemConsumeId>21747</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<blockedInOlympiad>false</blockedInOlympiad>

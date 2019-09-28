@@ -36,7 +36,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5802" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -662,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="5831" toLevel="1" name="Polearm Swing">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 9. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<affectRange>150</affectRange>
 		<effectPoint>-689</effectPoint>
@@ -688,7 +688,7 @@
 		</effects>
 	</skill>
 	<skill id="5832" toLevel="1" name="Aggression Aura">
-		<!-- Your mark is fixed. -->
+		<!-- Inflicts Aggression on the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -964,7 +964,7 @@
 		</effects>
 	</skill>
 	<skill id="5843" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1062,7 +1062,7 @@
 		</effects>
 	</skill>
 	<skill id="5846" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1182,7 +1182,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5851" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1258,7 +1258,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5855" toLevel="2" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1430,7 +1430,7 @@
 		</effects>
 	</skill>
 	<skill id="5860" toLevel="1" name="Wrath of Valakas">
-		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 sec. -->
+		<!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Body is activated, inflicting major physical damage on nearby allies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill5860</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1453,7 +1453,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5861" toLevel="1" name="Authority of Valakas">
-		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 sec. -->
+		<!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Soul is activated, inflicting major mental damage on nearby allies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill5861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1566,7 +1566,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5866" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
+		<!-- Received mental damage decreases MP and MP Recovery. The character is poisoned and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1614,7 +1614,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5867" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
+		<!-- Received mental damage decreases MP and MP Recovery. The character is poisoned and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1665,7 +1665,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5868" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
+		<!-- Received mental damage decreases MP and MP Recovery. The character is poisoned and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1716,7 +1716,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5869" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
+		<!-- Received mental damage decreases MP and MP Recovery. The character is poisoned and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1765,7 +1765,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5870" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
+		<!-- Received physical damage decreases Max HP and HP Recovery. The character is bleeding and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1812,7 +1812,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5871" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
+		<!-- Received physical damage decreases Max HP and HP Recovery. The character is bleeding and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1862,7 +1862,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5872" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
+		<!-- Received physical damage decreases Max HP and HP Recovery. The character is bleeding and gradually loses HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -2066,7 +2066,7 @@
 		</effects>
 	</skill>
 	<skill id="5879" toLevel="1" name="Cruel Expunge">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 9. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2141,7 +2141,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5882" toLevel="2" name="Weakened Pommel">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2180,7 +2180,7 @@
 		</effects>
 	</skill>
 	<skill id="5883" toLevel="1" name="Meggling Injury">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 9. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2249,7 +2249,7 @@
 		</effects>
 	</skill>
 	<skill id="5885" toLevel="1" name="Weakened Sweep">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2343,8 +2343,8 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5888" toLevel="2" name="Earth Shaker">
-		<!-- Momentarily immobile due to the Stun effect and lost the target. -->
+	<skill id="5888" toLevel="2" name="Earthquake">
+		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2382,7 +2382,7 @@
 		</effects>
 	</skill>
 	<skill id="5889" toLevel="3" name="Tainted Shackle">
-		<!-- Cannot act because the target is locked. -->
+		<!-- You are immobilized. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2413,7 +2413,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5890" toLevel="3" name="Tainted Mass Shackle">
-		<!-- Cannot move because the target is locked. -->
+		<!-- You can't move. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0402</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2459,7 +2459,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5892" toLevel="2" name="Cunning Coercion">
-		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Momentarily inflicts mental shock on the enemy. -->
+		<!-- Turns the enemy back, cancels the enemy's target and makes unwilling to attack. Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0358</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2508,7 +2508,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5894" toLevel="1" name="Mark of Despair">
-		<!-- Marked with Stigma's Despair. Significantly decreases P. Def., M. Def., evasion, and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Damage, and Critical Rate are increased. -->
+		<!-- The target gets Mark of Despair that significantly decreases P./ M. Def., HP and P. Evasion. HP Recovery is limited, but P./ M. Atk., Atk. Spd., P. Accuracy, Critical Damage and Critical Rate are increased. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2577,7 +2577,7 @@
 		</effects>
 	</skill>
 	<skill id="5895" toLevel="1" name="Mark of Cowardice">
-		<!-- Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
+		<!-- The target gets Mark of Cowardice that significantly decreases HP, P./ M. Def. and P. Evasion. HP Recovery, attack actions and skills are limited. Speed is increased. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1337</icon>
 	<!-- TODO JEY -->
 		<abnormalLvl>1</abnormalLvl>

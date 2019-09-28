@@ -274,7 +274,7 @@
 		</conditions>
 	</skill>
 	<skill id="23014" toLevel="1" name="Bamboo Panda Agathion Special Skill: Blessed Resurrection">
-		<!-- Bamboo Panda Agathion has the ability to use Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -712,7 +712,7 @@
 		</conditions>
 	</skill>
 	<skill id="23030" toLevel="1" name="White Maneki Neko Agathion Special Skill: Ability of Blessed Resurrection">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
+		<!-- Blessed Resurrection is available. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -914,7 +914,7 @@
 		</effects>
 	</skill>
 	<skill id="23038" toLevel="1" name="Pegasus Agathion Special Skill: Ability of Blessed Escape">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
+		<!-- Blessed Resurrection is available. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -1377,7 +1377,7 @@
 		</effects>
 	</skill>
 	<skill id="23062" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Resurrection">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
+		<!-- Blessed Resurrection is available. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1542,7 +1542,7 @@
 		</conditions>
 	</skill>
 	<skill id="23068" toLevel="1" name="Pomona Agathion Special Skill: Mental Shield">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 50 for 10 min. Cooldown is 1 h. -->
+		<!-- For 10 min., Obstruction/ Stupor/ Confusion Resistance +50. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -2169,7 +2169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23087" toLevel="1" name="Uthanka Agathion Cute Trick">
+	<skill id="23087" toLevel="1" name="Uthanka Agathion Skill">
 		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1201" toLevel="33" name="Dryad Root">
-		<!-- Immobilizes the enemy for $s1. -->
+		<!-- Holds the enemy for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -169,7 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="1204" toLevel="2" name="Wind Walk">
-		<!-- Increases Speed by $s2 for $s1. -->
+		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -214,7 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="1206" toLevel="19" name="Wind Shackle">
-		<!-- Decreases the enemy's Atk. Spd. by $s2 for $s1. -->
+		<!-- Enemy's Atk. Spd. -$s2 for $s1 -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -364,7 +364,7 @@
 		</effects>
 	</skill>
 	<skill id="1208" toLevel="17" name="Seal of Binding">
-		<!-- Holds nearby enemies for $s1. -->
+		<!-- Holds nearby enemies for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1208</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -469,7 +469,7 @@
 		</effects>
 	</skill>
 	<skill id="1209" toLevel="6" name="Seal of Poison">
-		<!-- Poisons nearby enemies, causing loss of $s2 HP per second for $s1. -->
+		<!-- Poisons the enemies, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1209</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -545,7 +545,7 @@
 		</effects>
 	</skill>
 	<skill id="1210" toLevel="4" name="Seal of Gloom">
-		<!-- For $s2, decreases nearby enemies' MP by $s3 with $s1 Power added to M. Atk. -->
+		<!-- For $s2, nearby enemies' MP -$s3 with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1210</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -617,7 +617,7 @@
 		</effects>
 	</skill>
 	<skill id="1213" toLevel="13" name="Seal of Mirage">
-		<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
+		<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1213</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -718,7 +718,7 @@
 		</effects>
 	</skill>
 	<skill id="1217" toLevel="33" name="Greater Heal">
-		<!-- Restores the target's HP with $s1 Power, and additionally restores $s3 HP per second for $s2. -->
+		<!-- Restores the target's HP with $s1 Power, and additionally restores $s3 HP per second for $s2 -->
 		<icon>icon.skill1217</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1179,7 +1179,7 @@
 		</effects>
 	</skill>
 	<skill id="1219" toLevel="33" name="Greater Group Heal">
-		<!-- Restores all party members' HP with $s1 Power, and additionally restores $s3 HP per second for $s2. -->
+		<!-- Restores all party members' HP with $s1 Power, and additionally restores $s3 HP per second for $s2 -->
 		<icon>icon.skill1219</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1518,7 +1518,7 @@
 		</effects>
 	</skill>
 	<skill id="1222" toLevel="15" name="Curse Chaos">
-		<!-- Decreases the enemy's Accuracy by $s2 for $s1. -->
+		<!-- Decreases the enemy's Accuracy by $s2 for $s1 -->
 		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1644,7 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="1223" toLevel="15" name="Surrender to Earth">
-		<!-- For $s1, decreases the enemy's Earth Resistance by $s2 and increases Wind Resistance by $s3. -->
+		<!-- For $s1, enemy's Earth Resistance -$s2, Wind Resistance +$s3. -->
 		<icon>icon.skill1223</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1792,7 +1792,7 @@
 		</effects>
 	</skill>
 	<skill id="1224" toLevel="17" name="Surrender to Poison">
-		<!-- Decreases the enemy's Poison Resistance by $s2 for $s1. -->
+		<!-- Enemy's Infection Resistance -$s2 for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1224</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1966,7 +1966,7 @@
 		</effects>
 	</skill>
 	<skill id="1225" toLevel="18" name="Summon Mew the Cat">
-		<!-- Summons Mew the Cat for assistance in combat. Requires $s1 Spirit Ore. -->
+		<!-- Summons Mew the Cat for assistance in combat. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1225</icon>
 		<hitTime>
 			<value level="1">15000</value>
@@ -2323,7 +2323,7 @@
 		</effects>
 	</skill>
 	<skill id="1227" toLevel="18" name="Summon Mirage the Unicorn">
-		<!-- Summons Mirage the Unicorn for assistance in combat. Requires $s1 Spirit Ore. -->
+		<!-- Summons Mirage the Unicorn, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1227</icon>
 		<hitTime>
 			<value level="1">15000</value>
@@ -2482,7 +2482,7 @@
 		</effects>
 	</skill>
 	<skill id="1228" toLevel="18" name="Summon Silhouette">
-		<!-- Summons a Silhouette for assistance in combat. Requires $s1 Spirit Ore. -->
+		<!-- Summons Silhouette, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1228</icon>
 		<hitTime>
 			<value level="1">15000</value>
@@ -2641,7 +2641,7 @@
 		</effects>
 	</skill>
 	<skill id="1229" toLevel="18" name="Chant of Life">
-		<!-- Recovers $s2 HP per second for all party members for $s1. -->
+		<!-- Recovers $s2 HP per second for all party members for $s1 -->
 		<icon>icon.skill1229</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3187,7 +3187,7 @@
 		</effects>
 	</skill>
 	<skill id="1233" toLevel="4" name="Decay">
-		<!-- Rots the enemy, causing loss of $s2 HP per second for $s1. -->
+		<!-- Rots the enemy, causing loss of $s2 HP per second for $s1 -->
 		<icon>icon.skill1233</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3592,7 +3592,7 @@
 		</effects>
 	</skill>
 	<skill id="1236" toLevel="19" name="Frost Bolt">
-		<!-- Momentarily freezes the surrounding air, inflicting Water damage with $s1 Power added to M. Atk. and decreasing the enemy's Speed by $s3 for $s2. -->
+		<!-- Momentarily freezes the surrounding air, inflicting water damage with $s1 power added to M. Atk. The enemy's Speed -$s3 for $s2 -->
 		<icon>icon.skill1236</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3728,7 +3728,7 @@
 		</effects>
 	</skill>
 	<skill id="1237" toLevel="17" name="Ice Dagger">
-		<!-- Hurls a blade of ice with $s1 Power added to M. Atk., inflicting water damage and causing loss of $s3 HP per second for $s2. -->
+		<!-- Hurls a blade of ice with $s1 Power added to M. Atk., inflicting water damage and causing loss of $s3 HP per second for $s2 -->
 		<icon>icon.skill1237</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -4119,7 +4119,7 @@
 		</effects>
 	</skill>
 	<skill id="1240" toLevel="3" name="Guidance">
-		<!-- Increases Accuracy by $s2 for $s1. -->
+		<!-- Increases Accuracy by $s2 for $s1 -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4221,7 +4221,7 @@
 		</effects>
 	</skill>
 	<skill id="1243" toLevel="6" name="Blessed Shield">
-		<!-- Increases Shield Defense by $s2 for $s1. -->
+		<!-- For $s1, Shield Defense Rate +$s2. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4290,7 +4290,7 @@
 		</effects>
 	</skill>
 	<skill id="1244" toLevel="15" name="Freezing Flame">
-		<!-- Strikes the target with a magical cold flame. For $s1, causes -$s2 HP per second on the enemy and -$s3 during PvP. -->
+		<!-- Strikes the target with a magical cold flame. For $s1, causes - $s2 HP per second on the enemy and - $s3 during PVP. Reduces resistance to One-handed Swords / Two-handed Swords / Dualswords / Blunt Weapons / Two-handed Blunt Weapons by $s4. -->
 		<icon>icon.skill1244</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -4540,7 +4540,7 @@
 		</effects>
 	</skill>
 	<skill id="1246" toLevel="12" name="Seal of Silence">
-		<!-- Blocks nearby enemies' use of magic for $s1. -->
+		<!-- Blocks nearby enemies' magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1246</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4622,7 +4622,7 @@
 		</effects>
 	</skill>
 	<skill id="1247" toLevel="14" name="Seal of Scourge">
-		<!-- Blocks nearby enemies' natural HP recovery ability by $s2 for $s1. -->
+		<!-- Blocks nearby enemies' natural HP recovery ability by $s2 for $s1 -->
 		<icon>icon.skill1247</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4714,7 +4714,7 @@
 		</effects>
 	</skill>
 	<skill id="1248" toLevel="12" name="Seal of Suspension">
-		<!-- Decreases nearby enemies' physical/ magic skill Cooldown by $s2 for $s1. -->
+		<!-- Decreases nearby enemies' physical/ magic skill Cooldown by $s2 for $s1 -->
 		<icon>icon.skill1248</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4803,7 +4803,7 @@
 		</effects>
 	</skill>
 	<skill id="1249" toLevel="3" name="Pa'agrio's Vision">
-		<!-- Increases Accuracy of nearby clan members by $s2 for $s1. -->
+		<!-- Increases Accuracy of nearby clan members by $s2 for $s1 -->
 		<icon>icon.skill1249</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4855,7 +4855,7 @@
 		</effects>
 	</skill>
 	<skill id="1250" toLevel="3" name="Pa'agrio's Protection">
-		<!-- Increases Shield Defense of nearby clan members by $s2 for $s1. Effect $s3. -->
+		<!-- Increases Shield Defense of nearby clan members by $s2 for $s1 Effect $s3. -->
 		<icon>icon.skill1250</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4907,7 +4907,7 @@
 		</effects>
 	</skill>
 	<skill id="1251" toLevel="2" name="Chant of Fury">
-		<!-- Increases Atk. Spd. of all party members by $s2 for $s1. -->
+		<!-- All party members' Atk. Spd. +$s2 for $s1 -->
 		<icon>icon.skill1251</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4952,7 +4952,7 @@
 		</effects>
 	</skill>
 	<skill id="1252" toLevel="3" name="Chant of Evasion">
-		<!-- Increases Evasion of all party members by $s2 for $s1. -->
+		<!-- Increases Evasion of all party members by $s2 for $s1 -->
 		<icon>icon.skill1252</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5118,7 +5118,7 @@
 		</effects>
 	</skill>
 	<skill id="1255" toLevel="2" name="Party Return">
-		<!-- Teleports party members to a village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Teleports party members to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>icon.skill1255</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -5155,7 +5155,7 @@
 		</effects>
 	</skill>
 	<skill id="1256" toLevel="13" name="Pa'agrio's Heart">
-		<!-- Restores a clan member's HP with $s1 Power and recovers $s3 HP per second for $s2. -->
+		<!-- Restores a clan member's HP with $s1 power and recovers $s3 HP per sec. for $s2 -->
 		<icon>icon.skill1256</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -5284,7 +5284,7 @@
 		</effects>
 	</skill>
 	<skill id="1257" toLevel="3" name="Decrease Weight">
-		<!-- Increases the weight penalty interval by $s2 for $s1. -->
+		<!-- Increases the weight penalty interval by $s2 for $s1 -->
 		<icon>icon.skill1257</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5381,7 +5381,7 @@
 		</effects>
 	</skill>
 	<skill id="1259" toLevel="4" name="Stun Resistance">
-		<!-- Increases Stun Resistance by $s2 for $s1. -->
+		<!-- Confusion Resistance +$s2 for $s1 -->
 		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5437,7 +5437,7 @@
 		</effects>
 	</skill>
 	<skill id="1260" toLevel="3" name="Pa'agrio's Tact">
-		<!-- Increases nearby clan members' Evasion by $s2 for $s1. -->
+		<!-- Nearby clan members' Evasion +$s2 for $s1 -->
 		<icon>icon.skill1260</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5489,7 +5489,7 @@
 		</effects>
 	</skill>
 	<skill id="1261" toLevel="2" name="Pa'agrio's Rage">
-		<!-- Decreases nearby clan members' P. Def. by $s2, M. Def. by $s3, and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8, and Speed by $s9 for $s1. -->
+		<!-- Decreases nearby clan members' P. Def. by $s2, M. Def. by $s3, and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8, and Speed by $s9 for $s1 -->
 		<icon>icon.skill1261</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5635,7 +5635,7 @@
 		</effects>
 	</skill>
 	<skill id="1263" toLevel="24" name="Curse Gloom">
-		<!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Decreases the enemy's M. Def. -$s3 and $s4 Attribute Resistance -$s5 for $s2. -->
+		<!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Decreases the enemy's M. Def. -$s3 and $s4 Attribute Resistance -$s5 for $s2 -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
@@ -6340,7 +6340,7 @@
 		</effects>
 	</skill>
 	<skill id="1269" toLevel="9" name="Curse Disease">
-		<!-- Decreases the power of HP recovery magic received by the enemy by $s2 for $s1. -->
+		<!-- Decreases the power of HP recovery magic received by the enemy by $s2 for $s1 -->
 		<icon>icon.skill1269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -6410,7 +6410,7 @@
 		</effects>
 	</skill>
 	<skill id="1271" toLevel="1" name="Benediction">
-		<!-- Fully restores party members' HP. Can be used when MP is under 25%. -->
+		<!-- Recovers HP of all party members. Available only when character's MP is below 25%. -->
 		<icon>icon.skill1271</icon>
 		<affectRange>2000</affectRange>
 		<effectPoint>560</effectPoint>
@@ -6439,7 +6439,7 @@
 		</effects>
 	</skill>
 	<skill id="1272" toLevel="13" name="Word of Fear">
-		<!-- Frightens nearby enemies into fleeing for $s1. -->
+		<!-- Frightens nearby enemies into fleeing for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -6526,7 +6526,7 @@
 		</effects>
 	</skill>
 	<skill id="1273" toLevel="13" name="Eva's Serenade">
-		<!-- Soothes surrounding enemies, eliminating their desire to attack. -->
+		<!-- Soothes surrounding enemies, eliminating their desire to attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1273</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -7165,7 +7165,7 @@
 		</effects>
 	</skill>
 	<skill id="1280" toLevel="9" name="Summon Aqua Cubic">
-		<!-- Summons Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Requires $s1 Spirit Ore. -->
+		<!-- Summons Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1280</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7315,7 +7315,7 @@
 		</effects>
 	</skill>
 	<skill id="1282" toLevel="2" name="Pa'agrio's Haste">
-		<!-- Increases Speed of nearby clan members by $s2 for $s1. -->
+		<!-- Nearby clan members' Speed +$s2 for $s1 -->
 		<icon>icon.skill1282</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -7950,7 +7950,7 @@
 		</effects>
 	</skill>
 	<skill id="1298" toLevel="14" name="Mass Slow">
-		<!-- Decreases Speed near the enemy by $s2 for $s1. -->
+		<!-- For $s1, nearby enemies' Speed -$s2. -->
 		<icon>icon.skill1298</icon>
 		<abnormalLvl>
 			<value level="1">3</value>

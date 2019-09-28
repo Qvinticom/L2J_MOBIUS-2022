@@ -83,7 +83,7 @@
 		</effects>
 	</skill>
 	<skill id="5004" toLevel="1" name="Dimensional Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -397,7 +397,7 @@
 		</effects>
 	</skill>
 	<skill id="5012" toLevel="1" name="Breath of Scarlet">
-		<!-- Unable to move momentarily. -->
+		<!-- Immobilizes the enemy for a moment. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -539,7 +539,7 @@
 		</effects>
 	</skill>
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
-		<!-- Unable to move momentarily. -->
+		<!-- Immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -566,7 +566,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5017" toLevel="1" name="Demon">
+	<skill id="5017" toLevel="1" name="Demons">
 		<!-- Demon Transformation -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
@@ -752,7 +752,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5023" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -876,14 +876,14 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5031" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5031" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5032" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -904,7 +904,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5035" toLevel="1" name="Raid Boss (Lv. 76)">
+	<skill id="5035" toLevel="1" name="76 Lv. Raid Boss">
 		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -3084,7 +3084,7 @@
 		</effects>
 	</skill>
 	<skill id="5083" toLevel="4" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3188,7 +3188,7 @@
 		</effects>
 	</skill>
 	<skill id="5086" toLevel="1" name="Deadly Poison">
-		<!-- HP decreases from poison momentarily. If HP falls to 0, death will ensue. -->
+		<!-- The target gradually loses HP because of poison. If HP falls to 0, the target is dead. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill5086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3292,7 +3292,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5092" toLevel="1" name="Antharas Fear">
-		<!-- Inflicted with Fear and moving against own will momentarily. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4108</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

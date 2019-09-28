@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21300" toLevel="1" name="Release Agathion's Seal - Velarin">
+	<skill id="21300" toLevel="1" name="Summon Agathion - Velarin">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -12,7 +12,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21301" toLevel="1" name="Release Agathion's Seal - Dulcinel">
+	<skill id="21301" toLevel="1" name="Summon Agathion - Dulcinel">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -24,7 +24,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21302" toLevel="1" name="Release Agathion's Seal - Chimeros">
+	<skill id="21302" toLevel="1" name="Summon Agathion - Chimeros">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21303" toLevel="1" name="Release Agathion's Seal - Niveri">
+	<skill id="21303" toLevel="1" name="Summon Agathion - Niveri">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -48,7 +48,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21304" toLevel="1" name="Release Agathion's Seal - Hamell">
+	<skill id="21304" toLevel="1" name="Summon Agathion - Hamell">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -60,7 +60,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21305" toLevel="1" name="Release Agathion's Seal - Joriya">
+	<skill id="21305" toLevel="1" name="Summon Agathion - Joriya">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -72,7 +72,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21306" toLevel="1" name="Release Agathion's Seal - Ralmak">
+	<skill id="21306" toLevel="1" name="Summon Agathion - Ralmak">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -84,7 +84,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21307" toLevel="1" name="Release Agathion's Seal - Goras">
+	<skill id="21307" toLevel="1" name="Summon Agathion - Goras">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -96,7 +96,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21308" toLevel="1" name="Release Agathion's Seal - Vensar">
+	<skill id="21308" toLevel="1" name="Summon Agathion - Vensar">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -108,7 +108,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21309" toLevel="1" name="Release Agathion's Seal - Kiela">
+	<skill id="21309" toLevel="1" name="Summon Agathion - Kiela">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -343,7 +343,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
-	<skill id="21325" toLevel="1" name="Release Agathion's Seal - Uthanka">
+	<skill id="21325" toLevel="1" name="Summon Agathion - Uthanka">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -355,7 +355,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21326" toLevel="1" name="Basic Effect: Elemental Shirt">
+	<skill id="21326" toLevel="1" name="Enchant Effect - Elemental Shirt">
 		<!-- M. Def. +8. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
 		<operateType>P</operateType>
@@ -370,7 +370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21327" toLevel="10" name="Enchant Effect: Elemental Shirt">
+	<skill id="21327" toLevel="10" name="Enchant Effect - Elemental Shirt">
 		<!-- M. Def. +$s1. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
 		<operateType>P</operateType>
@@ -643,21 +643,21 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21337" toLevel="1" name="Adenia's Duel Might">
-		<!-- Chance: For some time, increases P. Atk. In PvP when attacked. -->
+		<!-- In case of success: Increases P. Atk. in PvP when the character is attacked. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>46</magicLvl>
 	</skill>
 	<skill id="21338" toLevel="1" name="Adenia's Duel Might">
-		<!-- Passive: Increases P. Atk. in PvP when equipped. -->
+		<!-- Passive: Increases PvP Damage when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>46</magicLvl>
 	</skill>
 	<skill id="21339" toLevel="1" name="Adenia's Doom">
-		<!-- Chance: Momentarily blocks all of target's P./ M. Skills when attacked. -->
+		<!-- In case of success: Instantly blocks the target's P./ M. Skills, when the character is attacked. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -734,7 +734,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21344" toLevel="2" name="Adenia's Invincibility">
-		<!-- Active: Removes all abnormal states and grants invincibility for $s1. Cannot use when rendered immobile. Usable in the Olympiad. -->
+		<!-- Active: Removes all abnormal states and grants invincibility for $s1 Cannot use when rendered immobile. Usable in the Olympiad. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -796,7 +796,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>46</magicLvl>
 	</skill>
-	<skill id="21347" toLevel="1" name="Release Agathion's Seal - Griffin">
+	<skill id="21347" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Releases Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -861,8 +861,8 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="21352" toLevel="1" name="Release Agathion's Seal - Hussar">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21352" toLevel="1" name="Summon Agathion - Hussar">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

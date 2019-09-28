@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32700" toLevel="1" name="Aqua Prison">
-		<!-- Traps the target inside a water drop, making it immobile. -->
+		<!-- Traps the target inside a water drop, immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32644</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -79,7 +79,7 @@
 		</effects>
 	</skill>
 	<skill id="32706" toLevel="1" name="Fafurion Bite">
-		<!-- Bleeding after receiving physical damage from Fafurion's bite. -->
+		<!-- Fafurion's bite deals damage inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32706</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -107,7 +107,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32709" toLevel="1" name="Fafurion Water Spiral">
-		<!-- Pulled forcefully after receiving magic damage from Fafurion's cyclone. -->
+		<!-- Fafurion summons a water vortex dealing water damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32709</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -138,7 +138,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32712" toLevel="1" name="Fafurion Hydro Spiral">
-		<!-- Pulled forcefully after receiving magic damage from Fafurion's cyclone. -->
+		<!-- Fafurion summons a water vortex dealing water damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32709</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -148,7 +148,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32713" toLevel="1" name="Fafurion Tail Strike">
-		<!-- Suffering physical damage from Fafurion's smashing tail and being blown away. -->
+		<!-- Fafurion's smashing tail deals damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32713</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -174,7 +174,7 @@
 		</effects>
 	</skill>
 	<skill id="32714" toLevel="1" name="Fafurion Tail Strike">
-		<!-- Suffering physical damage from Fafurion's smashing tail and being blown away. -->
+		<!-- Fafurion's smashing tail deals damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32713</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -201,7 +201,7 @@
 		</effects>
 	</skill>
 	<skill id="32715" toLevel="1" name="Fafurion Water Wave">
-		<!-- Knocked back after receiving magic damage from the wave caused by the sheer force of Fafurion. -->
+		<!-- Fafurion creates a huge wave which deals magic damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32715</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -275,7 +275,7 @@
 		</effects>
 	</skill>
 	<skill id="32718" toLevel="1" name="Fafurion Power Stamp">
-		<!-- Stunned after receiving physical damage from the shock that Fafurion dealt by striking nearby enemies with its wing-like fins. -->
+		<!-- Fafurion deals physical damage to enemies and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32718</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -301,7 +301,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32721" toLevel="1" name="Fafurion Wing Strike">
-		<!-- Knocked down after receiving physical damage from the strong wind by Fafurion's flapping wings. -->
+		<!-- Fafurion attacks enemies in front with wind magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32721</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -319,7 +319,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32723" toLevel="2" name="Fafurion Tidal Wave">
-		<!-- Knocked back after receiving magic damage from the huge wave created by Fafurion's flapping wings. -->
+		<!-- Fafurion creates a huge wave which deals magic damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32722</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -392,7 +392,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32732" toLevel="1" name="Tail Strike">
-		<!-- Attacks enemies in the back with the tail, dealing damage and stunning them. -->
+		<!-- Attacks enemies in the back with the tail, dealing damage and stunning them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32713</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -492,7 +492,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32741" toLevel="1" name="Arrow Flush">
-		<!-- Fires water magic arrows at the target and nearby enemies to knock them back. -->
+		<!-- Shoot several arrows, hits the target and nearby enemies, knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11025</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -515,7 +515,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32743" toLevel="1" name="Surge Wave">
-		<!-- Summons a wave under the target and nearby enemies, imprisoning them and periodically decreasing their MP. -->
+		<!-- Attacks the target and nearby enemies decreasing their MP continuously. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5016</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -546,19 +546,19 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32748" toLevel="1" name="Sword's Melody 1">
-		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood.\nFor 2 h., XP and SP gain +5% -->
+		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood. For 2 h., XP and SP gain +5% -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="32749" toLevel="1" name="Sword's Melody 2">
-		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood.\nFor 2 h., Acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def/ M. Def/ Max HP&MP +5% -->
+		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood. For 2 h., Acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def/ M. Def/ Max HP&MP +5% -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="32750" toLevel="1" name="Sword's Melody 3">
-		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood.\nFor 2 h., Acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def/ M. Def/ Max HP&MP +10% -->
+		<!-- Boom boom boom... Rhythmical beats spread throughout the battlefield. The combat song flows through your blood. For 2 h., Acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def/ M. Def/ Max HP&MP +10% -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -569,5 +569,324 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+	</skill>
+	<skill id="32752" toLevel="1" name="Maphrian's Blessing">
+		<!-- For 4 h., Max HP/MP/CP +30%, P. Atk./M. Atk./P. Def./M. Def. +30%, Atk./Casting Spd. +10%, Speed +20, Attack/Defense Attributes +100, and Skill MP Consumption -15%. Additionally increases bonus XP/SP by 30%. Buff persists after death, but is deleted on entering the Olympiad/Ceremony of Chaos. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="32753" toLevel="1" name="Recovers 140000 Vitality">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="32754" toLevel="1" name="Seal of Lilith">
+		<!-- Marked with the Seal of Lilith after being killed by another PC. Cannot resurrect for 10 min. and PVP damage decreases by 15%. -->
+		<icon>icon.skill5873</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32757" toLevel="24" name="Sky Embroidering 15th Anniversary - Stage 1">
+		<!-- Agathion's unique gift to you in celebration of the 15th Anniversary. P. Atk. +$s1, M. Atk. +$s2, P./M. Def. +$s3, Normal Attack/M. Skill Critical Rate +$s4, P. Skill Critical Rate +$s5, Normal Attack/P. Skill/M. Skill Critical Damage +$s6, and Atk./Casting Spd. +$s7. Receives 1 15th Anniversary Firecracker after 1 hour. 23 stages in total. <Note> If you are dead at the time the reward is given, you cannot receive the Sky Embroidering 15th Anniversary Buff or 15th Anniversary Firecrackers. You cannot receive the items if there are no empty slots in your inventory. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32758" toLevel="11" name="Sky Embroidering 15th Anniversary - Stage 1">
+		<!-- Agathion's unique gift to you in celebration of the 15th Anniversary. P. Atk. +$s1, M. Atk. +$s2, P./M. Def. +$s3, Normal Attack/M. Skill Critical Rate +$s4, P. Skill Critical Rate +$s5, Normal Attack/P. Skill/M. Skill Critical Damage +$s6, and Atk./Casting Spd. +$s7. Receives 1 15th Anniversary Firecracker after 2 hours. 10 stages in total. <Note> If you are dead at the time the reward is given, you cannot receive the Sky Embroidering 15th Anniversary Buff or 15th Anniversary Firecrackers. You cannot receive the items if there are no empty slots in your inventory. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32759" toLevel="1" name="Sky Embroidering 15th Anniversary - Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="32760" toLevel="1" name="Horn Melody (15th Anniversary)">
+		<!-- For 1 h., P. Atk. +30%, M. Atk. +100%, P. Def. +35%, and M. Def. +40%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32761" toLevel="1" name="Drum Melody (15th Anniversary)">
+		<!-- For 1 h., P. Critical Rate +38%, P. Critical Damage +34%, M. Critical Rate +40, and P. Critical Damage Received -50%. A chance to increase Critical Damage when hit. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32762" toLevel="1" name="Pipe Organ Melody (15th Anniversary)">
+		<!-- For 1 h., Max HP +45%, Max MP +70%, Max CP +45%, Vampiric Rage effect +9%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32763" toLevel="1" name="Guitar Melody (15th Anniversary)">
+		<!-- For 1 h., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32764" toLevel="1" name="Elemental Resistance (15th Anniversary)">
+		<!-- For 1 h., all Defense Attributes +30. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32765" toLevel="1" name="Resistance Debuff (15th Anniversary)">
+		<!-- For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32766" toLevel="1" name="Mental Attack Resistance (15th Anniversary)">
+		<!-- For 1 h., Buff Cancellation/Debuff Resistance +30. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32767" toLevel="1" name="War Drum (15th Anniversary)">
+		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and Magic Cancellation Rate -40. Has a chance to apply 8% Vampiric Rage effect. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32768" toLevel="1" name="Marching Drum (15th Anniversary)">
+		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32769" toLevel="1" name="Soothing Drum (15th Anniversary)">
+		<!-- For 1 h., HP Recovery +75%, MP Recovery +100%, P./M. Evasion +5, and all Skill MP Consumption -22%. -->
+		<icon>icon.ev_15th_buff_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32770" toLevel="1" name="Knight's Harmony (15th Anniversary)">
+		<!-- For 1 h., P. Def +45%, M. Def +35%, P./M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate/Shield Defense +50%, and chance of receiving P./M. Critical hit -25%. -->
+		<icon>icon.ev_15th_buff_i03</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32771" toLevel="1" name="Warrior's Harmony (15th Anniversary)">
+		<!-- For 1 h., P. Atk +25%, P. Critical Rate +100%, P. Critical Damage +85%, and Atk. Spd. +10%. Has a chance to inflict Spectral Slash on the target with normal attacks. -->
+		<icon>icon.ev_15th_buff_i01</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32772" toLevel="1" name="Wizard's Harmony (15th Anniversary)">
+		<!-- For 1 h., M. Atk. +45%, M. Critical Rate +100%, M. Critical Damage +10%, Casting Spd. +15%, Attack Attributes +100, Skill Cooldown -20% and all Skill MP Consumption -15%. -->
+		<icon>icon.ev_15th_buff_i02</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32773" toLevel="5" name="Horn Melody">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<icon>icon.skill11517</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32774" toLevel="5" name="Drum Melody">
+		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received -$s5. A chance to increase Critical Damage when hit. -->
+		<icon>icon.skill11522</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32775" toLevel="5" name="Pipe Organ Melody">
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage effect +$s5. -->
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32776" toLevel="5" name="Guitar Melody">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32777" toLevel="1" name="Elemental Resistance">
+		<!-- For 4 h., all Attribute Resistance +30. -->
+		<icon>icon.skill11565</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32778" toLevel="1" name="Resistance Debuff">
+		<!-- For 4 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
+		<icon>icon.skill11567</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32779" toLevel="1" name="Mental Attack Resistance">
+		<!-- For 4 h., Resistance to buff-canceling attacks/ debuff attacks +30. -->
+		<icon>icon.skill11824</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32780" toLevel="1" name="War Drum">
+		<!-- For 4 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<icon>icon.skill19444</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32781" toLevel="1" name="Marching Drum">
+		<!-- For 4 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
+		<icon>icon.skill19445</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>696</effectPoint>
+	</skill>
+	<skill id="32782" toLevel="1" name="Soothing Drum">
+		<!-- For 4 h., HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
+		<icon>icon.skill19446</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>696</effectPoint>
+	</skill>
+	<skill id="32783" toLevel="2" name="Knight's Harmony">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def. by $s6, and decreases chance of receiving P./ M. Critical Hit by $s7. -->
+		<icon>icon.skill19500</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32784" toLevel="2" name="Warrior's Harmony">
+		<!-- For $s1, P. Atk +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, and Atk. Spd. +$s5. Has a chance to inflict Spectral Slash on the target with normal attacks. -->
+		<icon>icon.skill19501</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32785" toLevel="2" name="Wizard's Harmony">
+		<!-- For $s1, increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, Attack Attribute by $s6, and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+		<icon>icon.skill19502</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32786" toLevel="1" name="Noblesse Blessing">
+		<!-- Maintains buffs and debuffs after death for 1 h. However, the Noblesse Blessing and the Lucky Charm disappear. -->
+		<icon>icon.skill19224</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32787" toLevel="1" name="Noblesse Blessing">
+		<!-- Maintains buffs and debuffs after death for 4 h. However, the Noblesse Blessing and the Lucky Charm disappear. -->
+		<icon>icon.skill19224</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32788" toLevel="1" name="Noblesse Blessing">
+		<!-- Maintains buffs and debuffs after death for 8 h. However, the Noblesse Blessing and the Lucky Charm disappear. -->
+		<icon>icon.skill19224</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32789" toLevel="5" name="Horn Melody">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<icon>icon.skill11517</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32790" toLevel="5" name="Drum Melody">
+		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received -$s5. A chance to increase Critical Damage when hit. -->
+		<icon>icon.skill11522</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32791" toLevel="5" name="Pipe Organ Melody">
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage effect +$s5. -->
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32792" toLevel="5" name="Guitar Melody">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>712</effectPoint>
+	</skill>
+	<skill id="32793" toLevel="1" name="Elemental Resistance">
+		<!-- For 8 h., all Attribute Resistance +30. -->
+		<icon>icon.skill11565</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32794" toLevel="1" name="Resistance Debuff">
+		<!-- For 8 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
+		<icon>icon.skill11567</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32795" toLevel="1" name="Mental Attack Resistance">
+		<!-- For 8 h., Resistance to buff-canceling attacks/ debuff attacks +30. -->
+		<icon>icon.skill11824</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32796" toLevel="1" name="War Drum">
+		<!-- For 8 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<icon>icon.skill19444</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32797" toLevel="1" name="Marching Drum">
+		<!-- For 8 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
+		<icon>icon.skill19445</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>696</effectPoint>
+	</skill>
+	<skill id="32798" toLevel="1" name="Soothing Drum">
+		<!-- For 8 h., HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
+		<icon>icon.skill19446</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>696</effectPoint>
+	</skill>
+	<skill id="32799" toLevel="2" name="Knight's Harmony">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def. by $s6, and decreases chance of receiving P./ M. Critical Hit by $s7. -->
+		<icon>icon.skill19500</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
 	</skill>
 </list>

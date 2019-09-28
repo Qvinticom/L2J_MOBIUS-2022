@@ -462,7 +462,7 @@
 		</effects>
 	</skill>
 	<skill id="10807" toLevel="6" name="Gravity Trap">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-2</effectPoint>
@@ -645,7 +645,7 @@
 		</effects>
 	</skill>
 	<skill id="10811" toLevel="4" name="Superior Hawk Mastery">
-		<!-- P. Atk. +$s1 when equipped with a bow or crossbow. -->
+		<!-- P. Atk. +$s1. Requires a bow or a crossbow. -->
 		<icon>icon.skill10811</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -710,7 +710,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="10856" toLevel="4" name="Rapid Fire Position">
-		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, chance of receiving an M. Critical Hit -$s3, and P. Skill Cooldown -$s4. -->
+		<!-- For $s1, P. Atk. +$s2, Received M. Critical Rate -$s3, P. Skill Cooldown -$s4. Requires a bow or a crossbow. -->
 		<icon>icon.skill11871</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -83,7 +83,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15204" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
+		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -107,7 +107,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15205" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
+		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -378,7 +378,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15220" toLevel="1" name="Explosion">
+	<skill id="15220" toLevel="1" name="Detonate">
 		<!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -580,7 +580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15227" toLevel="1" name="Additional Hit">
+	<skill id="15227" toLevel="1" name="Heavy Hit">
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<operateType>A1</operateType>
 		<mpConsume>5</mpConsume>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15230" toLevel="1" name="Additional Hit">
+	<skill id="15230" toLevel="1" name="Heavy Hit">
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<operateType>A1</operateType>
 		<mpConsume>5</mpConsume>
@@ -854,7 +854,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15239" toLevel="1" name="Additional Hit">
+	<skill id="15239" toLevel="1" name="Heavy Hit">
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<operateType>A1</operateType>
 		<mpConsume>5</mpConsume>
@@ -954,7 +954,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15247" toLevel="1" name="Nurka Strike">
-		<!-- Inflicts damage on the target and knocks them down. -->
+		<!-- Attacks and knocks the target down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1015,7 +1015,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15250" toLevel="1" name="Nurka's Cold Shoulders">
-		<!-- Inflicts Aerial Yoke on nearby enemies. -->
+		<!-- Inflicts Aerial Yoke on nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1063,7 +1063,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15252" toLevel="1" name="With Nurka">
-		<!-- Target is pulled to Nurka. -->
+		<!-- Pulls the target to Nurka. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1243,7 +1243,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15263" toLevel="1" name="Bombing">
-		<!-- Lindvior's Wave Skill Damage -->
+		<!-- Lindvior bombards the area. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1296</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1325,7 +1325,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15270" toLevel="1" name="Lindvior's Mass Yoke">
-		<!-- Lindvior's Aerial Yoke for All Skill Area Data -->
+		<!-- Red wind thrown out by furious Lindvior deals powerful damage to the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1339,7 +1339,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15271" toLevel="1" name="Body Slam">
-		<!-- Lindvior's stun -->
+		<!-- Lindvior's stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1367,7 +1367,7 @@
 		</effects>
 	</skill>
 	<skill id="15272" toLevel="1" name="Wind Breath">
-		<!-- Lindvior's Landing Breath Skill -->
+		<!-- Lindvior's Landing Breath Skill. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1459,7 +1459,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15276" toLevel="1" name="Bleed">
-		<!-- Bleeding -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1474,7 +1474,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15277" toLevel="1" name="Knock Back">
-		<!-- Knock Back -->
+		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1488,7 +1488,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15278" toLevel="1" name="Yoke">
+	<skill id="15278" toLevel="1" name="Hold">
 		<!-- Lindvior's aerial yoke -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -1618,7 +1618,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15287" toLevel="1" name="Twister">
-		<!-- Inflicts magical damage on PCs near the target and immobilizes them. -->
+		<!-- Inflicts magical damage on the characters near the target and immobilizes them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1700,7 +1700,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15291" toLevel="1" name="Bleed">
-		<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. HP continues to decrease. -->
+		<!-- Energy is forming in Lidia's room. It doesn't affect Giselle von Hellmann and Alfred von Hellmann. Continuously decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1800,7 +1800,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15295" toLevel="1" name="Logan's Mistake">
+	<skill id="15295" toLevel="1" name="Logan's Revenge">
 		<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased. -->
 		<icon>icon.skill0168</icon>
 		<operateType>A2</operateType>
@@ -1817,7 +1817,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15296" toLevel="1" name="Logan's Mistake">
+	<skill id="15296" toLevel="1" name="Logan's Revenge">
 		<!-- Logan's mistake left in his escape. Momentarily invincible. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>

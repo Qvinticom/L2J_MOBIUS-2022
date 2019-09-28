@@ -168,8 +168,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="20007" toLevel="1" name="Block Invincibility">
-		<!-- For 2 min., HP/ MP Recovery Bonus increase, and Speed +5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
+	<skill id="20007" toLevel="1" name="Blocked Invincibility">
+		<!-- For 2 min., HP/MP Recovery increases and Speed +5. Cannot receive effect of Celestial Protection, Celestial Party Protection, Final Invincibility. -->
 		<icon>icon.skill11560</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -199,8 +199,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="20008" toLevel="1" name="Clan Advent (Event)">
-		<!-- When the clan leader logs in, clan members' P. Atk./ P. Def./ M. Def. +5%, M. Atk. +6%, HP/ MP Recovery Bonus +5, and XP gain +100%. -->
+	<skill id="20008" toLevel="1" name="Clan Advent - Event">
+		<!-- When the Clan Leader logs in, clan members' P. Atk./P. Def./M. Def. +5%, M. Atk. +6%, HP/MP Recovery Bonus +5, Aquired XP +100%. Effect is applied when the Clan Leader logs in. -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>

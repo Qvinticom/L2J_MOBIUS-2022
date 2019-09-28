@@ -159,7 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="4315" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -367,7 +367,7 @@
 		</effects>
 	</skill>
 	<skill id="4319" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -394,7 +394,7 @@
 		</effects>
 	</skill>
 	<skill id="4320" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -524,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="4323" toLevel="1" name="Adventurer's Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- For 60 min., P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -639,7 +639,7 @@
 		</effects>
 	</skill>
 	<skill id="4328" toLevel="1" name="Adventurer's Blessed Soul">
-		<!-- Increases Max MP by 35% for 60 min. -->
+		<!-- For 60 min., Max MP +35%. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1051,7 +1051,7 @@
 		</effects>
 	</skill>
 	<skill id="4346" toLevel="4" name="Mental Shield">
-		<!-- Momentarily increases Hold/ Sleep/ Fear/ Mental Attack Resistance. Effect $s1. -->
+		<!-- Temporarily increases Obstruction/ Stupor/ Confusion Resistance. Effect $s1. -->
 		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1224,7 +1224,7 @@
 		</effects>
 	</skill>
 	<skill id="4350" toLevel="4" name="Stun Resistance">
-		<!-- Increases Stun Resistance temporarily. Effect $s1 -->
+		<!-- Temporarily provides very strong Confusion Resistance. Effect $s1. -->
 		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1650,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="4360" toLevel="3" name="Death Whisper">
-		<!-- Critical Damage is increased temporarily. Effect $s1 -->
+		<!-- Temporarily increases Critical Damage. Effect $s1 -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1797,7 +1797,7 @@
 		</effects>
 	</skill>
 	<skill id="4364" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect $s1. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance. Effect $s1. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1841,7 +1841,7 @@
 		</effects>
 	</skill>
 	<skill id="4365" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily increases your Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. Effect $s1. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily increases Obstruction/ Confusion Resistance and decreases Casting Interruption Rate. Effect $s1. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1881,7 +1881,7 @@
 		</effects>
 	</skill>
 	<skill id="4366" toLevel="1" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect 1. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance. Effect 1. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2457,7 +2457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4389" toLevel="5" name="Mental Attack Resistance">
+	<skill id="4389" toLevel="5" name="Mental Resistance">
 		<!-- Provides resistance against mental attack. -->
 		<icon>icon.skill4389</icon>
 		<magicLvl>1</magicLvl>

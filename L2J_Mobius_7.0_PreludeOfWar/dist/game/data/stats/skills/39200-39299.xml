@@ -53,7 +53,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39207" toLevel="1" name="Red Libra's Fortune Scroll">
-		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ M. Atk./ P. Def./ M. Def. by 15% for 30 min. Will be deleted during maintenance on Wednesday, November 29th when the Red Libra Merchants leave. -->
+		<!-- For 30 min., XP/SP Bonus +30%, XP/SP gain in Vitality state +30%, P. Atk./M. Atk./P. Def/M. Def. +15%. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -66,36 +66,46 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39209" toLevel="1" name="Fried Fish">
-		<icon>icon.fish_stew_buff</icon>
+		<!-- Increases P. Atk. by 4% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_p_dmg</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39210" toLevel="1" name="Steamed Fish">
-		<icon>icon.fish_stew_buff</icon>
+		<!-- Increases M. Atk. by 5% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_m_dmg</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39211" toLevel="1" name="Grilled Fish">
-		<icon>icon.fish_stew_buff</icon>
+		<!-- Increases Atk. Spd./ Casting Spd. by 4%, Speed by 6 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_pm_speed</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39212" toLevel="1" name="Braised Fish">
-		<icon>icon.fish_stew_buff</icon>
+		<!-- Increases Max HP/ MP by 8% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_hp_mp</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39213" toLevel="1" name="Royal Fish Soup">
-		<icon>icon.fish_stew_buff</icon>
+		<!-- Increases P. Atk./ M. Atk., Atk./ Casting Spd., Max HP/ MP by 3% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
@@ -156,7 +166,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39221" toLevel="1" name="Legend Celebration Rune">
-		<!-- If stored in the inventory, increases Acquired Acquired XP/ SP in Vitality state by 30%, P. Def. by 567, M. Def. by 328, Speed by 1, Skill Power by 1%. -->
+		<!-- If stored in the inventory, increases Acquired Acquired XP/ SP in Vitality state by 10%, P. Def. by 567, M. Def. by 328, Speed by 1, Skill Power by 1%. -->
 		<icon>icon.rune_olympiad_legend_server</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -541,7 +551,7 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39232" toLevel="4" name="Blue Potion - Fishing XP Bonus">
-		<!-- When used, increases Successful Fishing XP by $s2 for $s1. Applies to all bait. Can be stacked with Angler's Blessing. -->
+		<!-- When used, increases Successful Fishing XP by $s2 for $s1 Applies to all bait. Can be stacked with Angler's Blessing. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -614,7 +624,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39242" toLevel="2" name="Rudolph's Red Potion">
-		<!-- When used, increases Acquired XP/ SP by $s2, Acquired XP/ SP in Vitality state by $s3, and P. Atk./ P. Def./ M. Atk./ M. Def. by $s4 for $s1. -->
+		<!-- When used, increases Acquired XP/ SP by $s2, Acquired XP/ SP in Vitality state by $s3, and P. Atk./ P. Def./ M. Atk./ M. Def. by $s4 for $s1 -->
 		<icon>
 			<value level="1">BranchIcon.etc_sign_agathion_feed_red_i00</value>
 			<value level="2">BranchIcon.etc_sign_agathion_feed_purple_i00</value>
@@ -623,7 +633,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39243" toLevel="1" name="Warrior's Rune">
+	<skill id="39243" toLevel="1" name="Hero's Rune">
 		<!-- If stored in the inventory, increases Acquired XP/ SP by 20%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -633,14 +643,14 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39245" toLevel="1" name="Shining Nevit's Gold Sandglass">
-		<!-- When used, increases Hunting Acquired XP/ SP by 100% for 30 min. Cannot stack with the Nevit's Gold Sandglass, Fall of the Dragon, or Dandy's Home Run Ball. Cannot stack with the effect of Agathion - XP Bottle. Cooldown is 5 min. -->
+	<skill id="39245" toLevel="1" name="Shining Nevit's Gold Hourglass">
+		<!-- During hunting acquired XP/ SP +100% for 30 min. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
 		<icon>icon.bm_nebit_bonus_time_up</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="39246" toLevel="2" name="Dragon Weapon Box">
+	<skill id="39246" toLevel="3" name="Dragon Weapon Box (Fragment)">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

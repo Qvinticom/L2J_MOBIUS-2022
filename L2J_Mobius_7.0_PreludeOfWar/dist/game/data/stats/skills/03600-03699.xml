@@ -164,7 +164,7 @@
 		</effects>
 	</skill>
 	<skill id="3602" toLevel="10" name="Special Ability: Guidance">
-		<!-- Increases Accuracy. Enables the character to attack multiple opponents. -->
+		<!-- Increases P. Accuracy. Allows to attack multiple opponents. -->
 		<icon>icon.skill1240</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -486,7 +486,7 @@
 		</effects>
 	</skill>
 	<skill id="3604" toLevel="1" name="Frintezza's Necklace">
-		<!-- Increases Dark Attack/ Poison/ Bleed/ Paralyze/ Stun/ Sleep Resistance, and Poison/ Bleed/ Paralyze/ Stun/ Sleep attack bonus. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
+		<!-- Increases Dark Resistance, Infection/ Confusion/ Stupor Resistance, Infection/ Confusion/ Stupor Atk. Rate. Decreases skill cooldown. Reflects a part of received damage back to the enemy. -->
 		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1537,7 +1537,7 @@
 		</effects>
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
-		<!-- Applied skill: Significantly increases Stun Resistance momentarily. -->
+		<!-- Active: Temporarily increases Confusion Resistance. -->
 		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -1558,7 +1558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3634" toLevel="1" name="Special Ability: Infinity Sword">
+	<skill id="3634" toLevel="1" name="Infinity Sword Special Ability">
 		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -1604,7 +1604,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3635" toLevel="1" name="Special Ability: Infinity Shooter">
+	<skill id="3635" toLevel="1" name="Infinity Shooter Special Ability">
 		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -1634,7 +1634,7 @@
 		</effects>
 	</skill>
 	<skill id="3636" toLevel="1" name="Dynasty Platinum Plate">
-		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. -->
+		<!-- Increases P. Def., Max HP, Received Healing, and Confusion Resistance. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1663,7 +1663,7 @@
 		</effects>
 	</skill>
 	<skill id="3637" toLevel="1" name="Dynasty Platinum Plate">
-		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance and Critical Damage. -->
+		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1720,7 +1720,7 @@
 		</effects>
 	</skill>
 	<skill id="3639" toLevel="1" name="Dynasty Platinum Plate">
-		<!-- Increases P. Atk./ Max HP/ Dark Resistance, and decreases MP Consumption. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
 		<icon>icon.armor_t91_uf_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1806,7 +1806,7 @@
 		</effects>
 	</skill>
 	<skill id="3642" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases P. Atk./ Max HP/ Dark Resistance, and decreases MP Consumption. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
 		<icon>icon.armor_t92_ud_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1923,7 +1923,7 @@
 		</effects>
 	</skill>
 	<skill id="3646" toLevel="1" name="Dynasty Silver Satin Tunic">
-		<!-- Increases Casting Spd./ Max MP/ Dark Resistance, and decreases MP Consumption/ magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Dark Resistance. Decreases MP Consumption and Casting Interruption Rate. -->
 		<icon>icon.armor_t93_ue_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2010,7 +2010,7 @@
 		</effects>
 	</skill>
 	<skill id="3649" toLevel="1" name="Beleth' Ring">
-		<!-- M. Def. +12%, Max HP +105, Max MP +21, MP Recovery +0.23, Mental Attack +10, Mental Attack Resistance +10, Dark Attack Def. +30. -->
+		<!-- M. Def. +12%, Max HP +105, Max MP +21, MP Recovery +0.23, Confusion Atk. +10, Confusion Resistance +10, Dark Resistance +30. -->
 		<icon>icon.accessary_dynasty_ring_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -2606,7 +2606,7 @@
 		</effects>
 	</skill>
 	<skill id="3681" toLevel="1" name="Zubei's Shield">
-		<!-- Increases Resistance to attack magic by 2%. -->
+		<!-- M. Damage Resistance +2%. -->
 		<icon>icon.shield_shrnoens_shield_i00</icon>
 		<magicLvl>58</magicLvl>
 		<operateType>P</operateType>
@@ -2684,7 +2684,7 @@
 		</effects>
 	</skill>
 	<skill id="3687" toLevel="1" name="Avadon Shield">
-		<!-- Increases Resistance to attack magic by 1%. -->
+		<!-- M. Damage Resistance +1%. -->
 		<icon>icon.shield_avadon_shield_i00</icon>
 		<magicLvl>58</magicLvl>
 		<operateType>P</operateType>

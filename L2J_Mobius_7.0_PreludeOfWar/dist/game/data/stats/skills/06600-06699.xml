@@ -1849,7 +1849,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6618" toLevel="7" name="Maguen Strike">
-		<!-- Speed. Is decreased by $s2 for $s1. -->
+		<!-- For $s1, Speed -$s2. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1904,7 +1904,7 @@
 		</effects>
 	</skill>
 	<skill id="6619" toLevel="7" name="Maguen Power Strike">
-		<!-- Speed. Is decreased by $s2 for $s1. -->
+		<!-- For $s1, Speed -$s2. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2053,7 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- Stunned for 20 sec. and momentarily immobile with a boosted chance by 50% for getting hit by critical damage. -->
+		<!-- Stuns the target for 20 sec. Received Critical Damage Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2097,7 +2097,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- Stunned for 9 sec. and momentarily immobile. Your chance of getting hit by Critical Damage is increased by 50%. -->
+		<!-- Stuns the target for 9 sec. Received Critical Damage Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2650,7 +2650,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6650" toLevel="1" name="Taklacan's Alienation">
+	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
 		<!-- All actions are sealed by Taklacan's special ability. Impossible to dispel. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>99</abnormalLvl>
@@ -2744,28 +2744,28 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6658" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6658" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Darnel -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6659" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6659" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Kechi -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6660" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6660" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Tears -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6661" toLevel="1" name="Raid Boss (Lv. 85)">
+	<skill id="6661" toLevel="1" name="85 Lv. Raid Boss">
 		<!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2827,14 +2827,14 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="6663" toLevel="1" name="Raid Boss (Lv. 76)">
+	<skill id="6663" toLevel="1" name="76 Lv. Raid Boss">
 		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6664" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6664" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -3145,7 +3145,7 @@
 		</effects>
 	</skill>
 	<skill id="6677" toLevel="1" name="Hold">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3428,7 +3428,7 @@
 		</effects>
 	</skill>
 	<skill id="6690" toLevel="1" name="Hold">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3631,7 +3631,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6698" toLevel="1" name="Freeze - Eternal Ice">
+	<skill id="6698" toLevel="1" name="Freeze">
 		<!-- Actions prohibited for 15 sec. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLvl>3</abnormalLvl>

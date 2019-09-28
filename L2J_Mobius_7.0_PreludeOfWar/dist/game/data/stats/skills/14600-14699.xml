@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="14603" toLevel="1" name="Cry of Destiny - Exile">
-		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. Inflicted status: Petrification. -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<trait>TURN_STONE</trait>
@@ -321,7 +321,7 @@
 		</effects>
 	</skill>
 	<skill id="14611" toLevel="1" name="Cry of Destiny - Dark Force">
-		<!-- Pushes and inflicts a magic attack. -->
+		<!-- Knocks the target back and attacks with lightning. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
@@ -477,7 +477,7 @@
 		</effects>
 	</skill>
 	<skill id="14616" toLevel="1" name="Blood Siphon">
-		<!-- Blood is being sucked. -->
+		<!-- The character's blood is drained. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -641,7 +641,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14626" toLevel="1" name="Mental Attack Resistance">
+	<skill id="14626" toLevel="1" name="Mental Resistance">
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -679,7 +679,7 @@
 		</effects>
 	</skill>
 	<skill id="14628" toLevel="1" name="Gastric Juice Eruption">
-		<!-- Speed is decreased. -->
+		<!-- Decreases Speed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1184</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -712,7 +712,7 @@
 		</effects>
 	</skill>
 	<skill id="14629" toLevel="1" name="Corpse Grinding">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -746,7 +746,7 @@
 		</effects>
 	</skill>
 	<skill id="14630" toLevel="1" name="Discard Decayed Branch">
-		<!-- Knocked back. -->
+		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -782,7 +782,7 @@
 		</effects>
 	</skill>
 	<skill id="14631" toLevel="1" name="Foul Spore">
-		<!-- Silence status. -->
+		<!-- Silence. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -830,7 +830,7 @@
 		</effects>
 	</skill>
 	<skill id="14633" toLevel="1" name="Severed Ankle">
-		<!-- Knocked back. -->
+		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0261</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -967,7 +967,7 @@
 		</effects>
 	</skill>
 	<skill id="14638" toLevel="1" name="Blade Claw">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -996,7 +996,7 @@
 		</effects>
 	</skill>
 	<skill id="14639" toLevel="1" name="Compound Poison">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1078,7 +1078,7 @@
 		</effects>
 	</skill>
 	<skill id="14642" toLevel="1" name="Sever">
-		<!-- Knocked back. -->
+		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0261</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -1151,7 +1151,7 @@
 		</effects>
 	</skill>
 	<skill id="14645" toLevel="1" name="Dark Arrow">
-		<!-- Knocked back. -->
+		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -1338,7 +1338,7 @@
 		</effects>
 	</skill>
 	<skill id="14651" toLevel="1" name="Stun">
-		<!-- Stuns the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1493,7 +1493,7 @@
 		</endEffects>
 	</skill>
 	<skill id="14657" toLevel="1" name="Lingering Lunacy">
-		<!-- Aftereffect of going insane. -->
+		<!-- Aftereffect of going insane. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1537,7 +1537,7 @@
 		</effects>
 	</skill>
 	<skill id="14659" toLevel="1" name="Stun">
-		<!-- Stuns the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1892,7 +1892,7 @@
 		</effects>
 	</skill>
 	<skill id="14674" toLevel="1" name="Cry of Destiny - Chain Strike">
-		<!-- Drags a target to the center. -->
+		<!-- Pulls a target toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1987,7 +1987,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="14677" toLevel="1" name="Cry of Destiny - Giant Punch">
-		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Requires a dual sword, two-handed sword, spear, or fist weapon. -->
+		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Requires a dual sword, two-handed sword, spear, or fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2028,7 +2028,7 @@
 		</effects>
 	</skill>
 	<skill id="14678" toLevel="1" name="Cry of Destiny - Power Bomber">
-		<!-- Powerfully strikes the target with 2000 Power added to P. Atk. to knock down for 2 sec. -->
+		<!-- Attacks to the target with 2000 power and knocks it down for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -2081,7 +2081,7 @@
 		</effects>
 	</skill>
 	<skill id="14680" toLevel="1" name="Cry of Destiny - Dark Paralysis">
-		<!-- Seals with the power of darkness. Causes the enemy's body to go completely rigid for 10 sec. and causes paralysis for 5 sec. -->
+		<!-- Seals with the power of darkness and petrifies the enemy's body for 10 sec. After that inflicts Paralysis for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10514</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -2123,7 +2123,7 @@
 		</endEffects>
 	</skill>
 	<skill id="14681" toLevel="1" name="Cry of Destiny - Throwing Sand">
-		<!-- Hurls poison sand at the target. Greatly decreases Accuracy for 5 sec. and lures to yourself. -->
+		<!-- Hurls poison sand at the target and forces it to fight by your side for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10540</icon>
 		<operateType>A2</operateType>
 		<castRange>800</castRange>
@@ -2200,7 +2200,7 @@
 		</effects>
 	</skill>
 	<skill id="14684" toLevel="1" name="Cry of Destiny - Recoil Shot">
-		<!-- Shoots an arrow with 1200 power added to P. Atk. to the target to push out the enemy. Bow/ crossbow required. Over-hit. Chance of canceling the opponent's target. -->
+		<!-- Shoots with 1200 power and knocks the enemy back. Requires a bow/ crossbow. Over-hit. Has a chance to cancel the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2267,7 +2267,7 @@
 		</effects>
 	</skill>
 	<skill id="14686" toLevel="1" name="Cry of Destiny - Elemental Crash">
-		<!-- Inflicts magic damage on the enemy with 35 power. Also decreases Speed and inflicts fear. -->
+		<!-- Strikes the enemy with 35 magic power, decreases Speed and inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11513</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2304,7 +2304,7 @@
 		</effects>
 	</skill>
 	<skill id="14687" toLevel="1" name="Cry of Destiny - Hell Binding">
-		<!-- Floats the target into the air and stops him from moving for awhile. -->
+		<!-- Floats the target into the air and immobilizes it for awhile. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2404,7 +2404,7 @@
 		</effects>
 	</skill>
 	<skill id="14690" toLevel="1" name="Cry of Destiny - Exile">
-		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. Inflicted status: Petrification. -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<trait>TURN_STONE</trait>
@@ -2580,7 +2580,7 @@
 		</effects>
 	</skill>
 	<skill id="14696" toLevel="1" name="Cry of Destiny - Dark Force">
-		<!-- Pushes and inflicts a magic attack. -->
+		<!-- Knocks the target back and attacks with lightning. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
@@ -2614,7 +2614,7 @@
 		</effects>
 	</skill>
 	<skill id="14697" toLevel="1" name="Ghost's Hell Binding">
-		<!-- Floats the target into the air and stops him from moving for awhile. -->
+		<!-- Floats the target into the air and immobilizes it for awhile. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

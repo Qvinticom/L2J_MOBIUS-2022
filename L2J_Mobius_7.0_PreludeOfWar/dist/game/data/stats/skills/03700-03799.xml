@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3700" toLevel="1" name="Doom Shield">
-		<!-- Increases Resistance to attack magic by 2%. -->
+		<!-- M. Damage Resistance +2%. -->
 		<icon>icon.shield_doom_shield_i00</icon>
 		<magicLvl>61</magicLvl>
 		<operateType>P</operateType>
@@ -13,8 +13,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3701" toLevel="1" name="Leather Armor of Doom">
-		<!-- Increases lung capacity/ P. Atk./ MP Recovery Bonus, and increases Poison Resistance. -->
+	<skill id="3701" toLevel="1" name="Doom Leather Armor">
+		<!-- Increases lung capacity, P. Atk., MP Recovery Rate and Infection Resistance. -->
 		<icon>icon.armor_t72_ul_i00</icon>
 		<magicLvl>61</magicLvl>
 		<operateType>P</operateType>
@@ -38,7 +38,7 @@
 		</effects>
 	</skill>
 	<skill id="3702" toLevel="1" name="Doom Gloves">
-		<!-- Increases lung capacity/ P. Atk./ MP Recovery Bonus, and increases Poison Resistance. -->
+		<!-- Increases lung capacity, P. Atk., MP Recovery Rate and Infection Resistance. -->
 		<icon>icon.armor_t72_g_i00</icon>
 		<magicLvl>61</magicLvl>
 		<operateType>P</operateType>
@@ -62,7 +62,7 @@
 		</effects>
 	</skill>
 	<skill id="3703" toLevel="1" name="Doom Boots">
-		<!-- Increases lung capacity/ P. Atk./ MP Recovery Bonus, and increases Poison Resistance. -->
+		<!-- Increases lung capacity, P. Atk., MP Recovery Rate and Infection Resistance. -->
 		<icon>icon.armor_t72_b_i00</icon>
 		<magicLvl>61</magicLvl>
 		<operateType>P</operateType>
@@ -86,7 +86,7 @@
 		</effects>
 	</skill>
 	<skill id="3704" toLevel="1" name="Doom Helmet">
-		<!-- Increases lung capacity/ P. Atk./ MP Recovery Bonus, and increases Poison Resistance. -->
+		<!-- Increases lung capacity, P. Atk., MP Recovery Rate and Infection Resistance. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>61</magicLvl>
 		<operateType>P</operateType>
@@ -151,7 +151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3707" toLevel="1" name="Tunic of Doom">
+	<skill id="3707" toLevel="1" name="Doom Tunic">
 		<!-- Increases Speed/ lung capacity/ MP Recovery Bonus. -->
 		<icon>icon.armor_t73_u_i00</icon>
 		<magicLvl>61</magicLvl>
@@ -172,7 +172,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3708" toLevel="1" name="Stockings of Doom">
+	<skill id="3708" toLevel="1" name="Doom Stockings">
 		<!-- Increases Speed/ lung capacity/ MP Recovery Bonus. -->
 		<icon>icon.armor_t73_l_i00</icon>
 		<magicLvl>61</magicLvl>
@@ -734,7 +734,7 @@
 		</effects>
 	</skill>
 	<skill id="3739" toLevel="1" name="Tallum Gloves">
-		<!-- Increases Poison/ Bleed Resistance, Atk. Spd., and weight limit. -->
+		<!-- Increases Infection Resistance, Atk. Spd. and weight limit. -->
 		<icon>icon.armor_t77_g_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -754,7 +754,7 @@
 		</effects>
 	</skill>
 	<skill id="3740" toLevel="1" name="Tallum Boots">
-		<!-- Increases Poison/ Bleed Resistance, Atk. Spd., and weight limit. -->
+		<!-- Increases Infection Resistance, Atk. Spd. and weight limit. -->
 		<icon>icon.armor_t77_b_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -774,7 +774,7 @@
 		</effects>
 	</skill>
 	<skill id="3741" toLevel="1" name="Tallum Plate Armor">
-		<!-- Increases Poison/ Bleed Resistance, Atk. Spd., and weight limit. -->
+		<!-- Increases Infection Resistance, Atk. Spd. and weight limit. -->
 		<icon>icon.armor_t77_ul_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -794,7 +794,7 @@
 		</effects>
 	</skill>
 	<skill id="3742" toLevel="1" name="Tallum Helmet">
-		<!-- Increases Poison/ Bleed Resistance, Atk. Spd., and weight limit. -->
+		<!-- Increases Infection Resistance, Atk. Spd. and weight limit. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -814,7 +814,7 @@
 		</effects>
 	</skill>
 	<skill id="3743" toLevel="1" name="Tallum Leather Armor">
-		<!-- Increases Poison/ Bleed Resistance, MP Recovery Rate, and Max MP. -->
+		<!-- Increases Infection Resistance, MP Recovery Rate and Max MP. -->
 		<icon>icon.armor_t78_ul_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -835,7 +835,7 @@
 		</effects>
 	</skill>
 	<skill id="3744" toLevel="1" name="Tallum Gloves">
-		<!-- Increases Poison/ Bleed Resistance, MP Recovery Rate, and Max MP. -->
+		<!-- Increases Infection Resistance, MP Recovery Rate and Max MP. -->
 		<icon>icon.armor_t78_g_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -856,7 +856,7 @@
 		</effects>
 	</skill>
 	<skill id="3745" toLevel="1" name="Tallum Boots">
-		<!-- Increases Poison/ Bleed Resistance, MP Recovery Rate, and Max MP. -->
+		<!-- Increases Infection Resistance, MP Recovery Rate and Max MP. -->
 		<icon>icon.armor_t78_b_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -877,7 +877,7 @@
 		</effects>
 	</skill>
 	<skill id="3746" toLevel="1" name="Tallum Helmet">
-		<!-- Increases Poison/ Bleed Resistance, MP Recovery Rate, and Max MP. -->
+		<!-- Increases Infection Resistance, MP Recovery Rate and Max MP. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -898,7 +898,7 @@
 		</effects>
 	</skill>
 	<skill id="3747" toLevel="1" name="Tallum Gloves">
-		<!-- Increases Poison/ Bleed Resistance and M. Def. -->
+		<!-- Increases Infection Resistance and M. Def. -->
 		<icon>icon.armor_t79_g_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -915,7 +915,7 @@
 		</effects>
 	</skill>
 	<skill id="3748" toLevel="1" name="Tallum Boots">
-		<!-- Increases Poison/ Bleed Resistance and M. Def. -->
+		<!-- Increases Infection Resistance and M. Def. -->
 		<icon>icon.armor_t79_b_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -945,7 +945,7 @@
 		</effects>
 	</skill>
 	<skill id="3750" toLevel="1" name="Tallum Stockings">
-		<!-- Increases Poison/ Bleed Resistance and M. Def. -->
+		<!-- Increases Infection Resistance and M. Def. -->
 		<icon>icon.armor_t79_l_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -962,7 +962,7 @@
 		</effects>
 	</skill>
 	<skill id="3751" toLevel="1" name="Tallum Helmet">
-		<!-- Increases Poison/ Bleed Resistance and M. Def. -->
+		<!-- Increases Infection Resistance and M. Def. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<magicLvl>64</magicLvl>
 		<operateType>P</operateType>
@@ -979,7 +979,7 @@
 		</effects>
 	</skill>
 	<skill id="3752" toLevel="1" name="Majestic Gauntlets">
-		<!-- Increases resistance, attack/ accuracy to Stun attack. -->
+		<!-- Increases Confusion Resistance, P. Atk. and P. Accuracy. -->
 		<icon>icon.armor_t83_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -999,7 +999,7 @@
 		</effects>
 	</skill>
 	<skill id="3753" toLevel="1" name="Majestic Circlet">
-		<!-- Increases resistance, attack/ accuracy to Stun attack. -->
+		<!-- Increases Confusion Resistance, P. Atk. and P. Accuracy. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1019,7 +1019,7 @@
 		</effects>
 	</skill>
 	<skill id="3754" toLevel="1" name="Majestic Plate Armor">
-		<!-- Increases resistance, attack/ accuracy to Stun attack. -->
+		<!-- Increases Confusion Resistance, P. Atk. and P. Accuracy. -->
 		<icon>icon.armor_t83_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1039,7 +1039,7 @@
 		</effects>
 	</skill>
 	<skill id="3755" toLevel="1" name="Majestic Boots">
-		<!-- Increases resistance, attack/ accuracy to Stun attack. -->
+		<!-- Increases Confusion Resistance, P. Atk. and P. Accuracy. -->
 		<icon>icon.armor_t83_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1059,7 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="3756" toLevel="1" name="Majestic Gauntlets">
-		<!-- Increases Stun Resistance, bow and crossbow attack/ Maximum MP/ weight limit. -->
+		<!-- Increases Confusion Resistance, P. Atk. of bows and crossbows, Max MP and weight limit. -->
 		<icon>icon.armor_t84_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1086,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="3757" toLevel="1" name="Majestic Leather Armor">
-		<!-- Increases Stun Resistance, bow and crossbow attack/ Maximum MP/ weight limit. -->
+		<!-- Increases Confusion Resistance, P. Atk. of bows and crossbows, Max MP and weight limit. -->
 		<icon>icon.armor_t84_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1113,7 +1113,7 @@
 		</effects>
 	</skill>
 	<skill id="3758" toLevel="1" name="Majestic Boots">
-		<!-- Increases Stun Resistance, bow and crossbow attack/ Maximum MP/ weight limit. -->
+		<!-- Increases Confusion Resistance, P. Atk. of bows and crossbows, Max MP and weight limit. -->
 		<icon>icon.armor_t84_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1140,7 +1140,7 @@
 		</effects>
 	</skill>
 	<skill id="3759" toLevel="1" name="Majestic Circlet">
-		<!-- Increases Stun Resistance, bow and crossbow attack/ Maximum MP/ weight limit. -->
+		<!-- Increases Confusion Resistance, P. Atk. of bows and crossbows, Max MP and weight limit. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1167,7 +1167,7 @@
 		</effects>
 	</skill>
 	<skill id="3760" toLevel="1" name="Majestic Gauntlets">
-		<!-- Increases Stun Resistance and Maximum MP/ MP Recovery bonus. -->
+		<!-- Increases Confusion Resistance, Max MP and MP Recovery Rate. -->
 		<icon>icon.armor_t85_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1187,7 +1187,7 @@
 		</effects>
 	</skill>
 	<skill id="3761" toLevel="1" name="Majestic Robe">
-		<!-- Increases Stun Resistance, Maximum MP/ MP Recovery bonus and Magic Casting Spd.. -->
+		<!-- Increases Confusion Resistance, Max MP, MP Recovery Rate and Casting Spd. -->
 		<icon>icon.armor_t85_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1207,7 +1207,7 @@
 		</effects>
 	</skill>
 	<skill id="3762" toLevel="1" name="Majestic Boots">
-		<!-- Increases Stun Resistance and Maximum MP/ MP Recovery bonus. -->
+		<!-- Increases Confusion Resistance, Max MP and MP Recovery Rate. -->
 		<icon>icon.armor_t85_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1227,7 +1227,7 @@
 		</effects>
 	</skill>
 	<skill id="3763" toLevel="1" name="Majestic Circlet">
-		<!-- Increases Stun Resistance and Maximum MP/ MP Recovery bonus. -->
+		<!-- Increases Confusion Resistance, Max MP and MP Recovery Rate. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1247,7 +1247,7 @@
 		</effects>
 	</skill>
 	<skill id="3764" toLevel="1" name="Armor of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and P. Atk. -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<icon>icon.armor_t80_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="3765" toLevel="1" name="Gauntlets of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and P. Atk. -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<icon>icon.armor_t80_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1281,7 +1281,7 @@
 		</effects>
 	</skill>
 	<skill id="3766" toLevel="1" name="Boots of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and P. Atk. -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<icon>icon.armor_t80_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1298,7 +1298,7 @@
 		</effects>
 	</skill>
 	<skill id="3767" toLevel="1" name="Helm of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and P. Atk. -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1315,7 +1315,7 @@
 		</effects>
 	</skill>
 	<skill id="3768" toLevel="1" name="Leather Armor of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and M. Def. Restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
+		<!-- Increases Stupor/ Obstruction Resistance and M. Def. Has a chance to recover damage inflicted on the enemy as HP. -->
 		<icon>icon.armor_t81_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1336,7 +1336,7 @@
 		</effects>
 	</skill>
 	<skill id="3769" toLevel="1" name="Gauntlets of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and M. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance and M. Def. -->
 		<icon>icon.armor_t81_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1353,7 +1353,7 @@
 		</effects>
 	</skill>
 	<skill id="3770" toLevel="1" name="Boots of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and M. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance and M. Def. -->
 		<icon>icon.armor_t81_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1370,7 +1370,7 @@
 		</effects>
 	</skill>
 	<skill id="3771" toLevel="1" name="Gauntlets of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and MP regeneration/ M. Atk. -->
+		<!-- Increases Stupor/ Obstruction Resistance, MP Recovery Rate and M. Atk. -->
 		<icon>icon.armor_t82_g_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1391,7 +1391,7 @@
 		</effects>
 	</skill>
 	<skill id="3772" toLevel="1" name="Robe of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and MP regeneration/ M. Atk. -->
+		<!-- Increases Stupor/ Obstruction Resistance, MP Recovery Rate and M. Atk. -->
 		<icon>icon.armor_t82_ul_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1412,7 +1412,7 @@
 		</effects>
 	</skill>
 	<skill id="3773" toLevel="1" name="Boots of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and MP regeneration/ M. Atk. -->
+		<!-- Increases Stupor/ Obstruction Resistance, MP Recovery Rate and M. Atk. -->
 		<icon>icon.armor_t82_b_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1542,7 +1542,7 @@
 		</effects>
 	</skill>
 	<skill id="3779" toLevel="1" name="Major Arcana Gloves">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. -->
 		<icon>icon.armor_t90_g_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1569,7 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="3780" toLevel="1" name="Major Arcana Robe">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1596,7 +1596,7 @@
 		</effects>
 	</skill>
 	<skill id="3781" toLevel="1" name="Major Arcana Boots">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. -->
 		<icon>icon.armor_t90_b_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1623,7 +1623,7 @@
 		</effects>
 	</skill>
 	<skill id="3782" toLevel="1" name="Major Arcana Circlet">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1650,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="3783" toLevel="1" name="Imperial Crusader Gaiters">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. -->
 		<icon>icon.armor_t88_l_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1671,7 +1671,7 @@
 		</effects>
 	</skill>
 	<skill id="3784" toLevel="1" name="Imperial Crusader Gauntlets">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. -->
 		<icon>icon.armor_t88_g_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1692,7 +1692,7 @@
 		</effects>
 	</skill>
 	<skill id="3785" toLevel="1" name="Imperial Crusader Boots">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. -->
 		<icon>icon.armor_t88_b_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1726,7 +1726,7 @@
 		</effects>
 	</skill>
 	<skill id="3787" toLevel="1" name="Imperial Crusader Helmet">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1747,7 +1747,7 @@
 		</effects>
 	</skill>
 	<skill id="3788" toLevel="1" name="Imperial Crusader Breastplate">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. -->
 		<icon>icon.armor_t88_u_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>

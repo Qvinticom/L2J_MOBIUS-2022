@@ -16,7 +16,7 @@
 		</effects>
 	</skill>
 	<skill id="30001" toLevel="30" name="Hydro Attack">
-		<!-- Attacks target with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<!-- Deals magic damage to the target with $s1 power. If the target is debuffed, damage dealt +$s2. Requires a sword or a blunt weapon. -->
 		<icon>icon.skill30001</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -346,7 +346,7 @@
 		</effects>
 	</skill>
 	<skill id="30004" toLevel="27" name="Hydro Strike">
-		<!-- Uses the power of storm to inflict damage with $s1 power added to M. Atk. and generates strong squall to make the target faint for $s2. -->
+		<!-- Summons the storm that deals magic damage to the target with $s1 power making them faint for $s2 Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30004</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -516,7 +516,7 @@
 		</effects>
 	</skill>
 	<skill id="30006" toLevel="13" name="Storm Rage">
-		<!-- Attacks target with $s1 Power added to M. Atk. and blows them away. $s2 more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<!-- Summons the storm that deals damage to nearby enemies with $s1 power blowing them away. If the enemy is debuffed, damage dealt +$s2. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -737,7 +737,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="30008" toLevel="5" name="Wind Blend">
-		<!-- For $s1, blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
+		<!-- Slowly becomes one with the wind for $s1 After that makes you invisible. Requires a sword or a blunt weapon. -->
 		<icon>icon.skill30008</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -1025,7 +1025,7 @@
 		</effects>
 	</skill>
 	<skill id="30012" toLevel="27" name="Air Rush">
-		<!-- Knocks down target and attacks with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
+		<!-- Deals magic damage to the target with $s1 power knocking them down. If the target is debuffed, damage dealt +$s2. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1175,7 +1175,7 @@
 		</effects>
 	</skill>
 	<skill id="30014" toLevel="17" name="Compelling Wind">
-		<!-- Sends a breeze that pushes target toward you for $s1. Requires a sword/ blunt weapon. -->
+		<!-- Sends a breeze that pushes the target towards you for $s1 Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30014</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -1239,7 +1239,7 @@
 		</effects>
 	</skill>
 	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
-		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<!-- Sends a breeze that pushes the target and nearby enemies towards you for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -1324,7 +1324,7 @@
 		</effects>
 	</skill>
 	<skill id="30017" toLevel="5" name="Squall">
-		<!-- For $s1, Received P./ M. Critical Damage -$s2. Has a chance of striking target with lightning. -->
+		<!-- For $s1, Received P./ M. Critical Damage -$s2. -->
 		<icon>icon.skill30017</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -1440,7 +1440,7 @@
 		</effects>
 	</skill>
 	<skill id="30019" toLevel="13" name="Sayha's Word">
-		<!-- Attacks target with $s1 Power added to M. Atk., and decreases their Atk./ Casting Spd. by $s3 and Speed by $s4 for $s2. Instantly brands target with Storm Sign Stage $s5. $s6 more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<!-- Attacks target with $s1 Power added to M. Atk., and decreases their Atk./Casting Spd. by $s3 and Speed by $s4 for $s2. Instantly brands target with Storm Sign Stage $s5. Has a chance to brand Sign of Storn Lv. 4, and inflicts $s6 more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30019</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1562,7 +1562,7 @@
 		</effects>
 	</skill>
 	<skill id="30020" toLevel="1" name="Sayha's Fury">
-		<!-- For 30 sec., Received P./ M. Critical Damage -50%, and Speed +70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
+		<!-- For 30 seconds, M. Critical Damage +30%, Received P./M. Critical Damage -50%, and Speed + 70. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1624,7 +1624,7 @@
 		</effects>
 	</skill>
 	<skill id="30022" toLevel="3" name="Sayha's Blessing">
-		<!-- For $s1, nearby party members' Speed +$s2, and Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression Resistance +$s3. Requires a sword or blunt weapon. -->
+		<!-- For $s1, nearby party members' Speed +$s2, Obstruction/ Danger Zone/ Confusion Resistance +$s3. Requires a sword or a blunt weapon. -->
 		<icon>icon.skill30022</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1724,7 +1724,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="30026" toLevel="4" name="Lightning Squall">
-		<!-- Attacks target with $s1 Power added to M. Atk., and decreases Speed by $s2. -->
+		<!-- Deals magic damage to the target with $s1 power. Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30026</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1753,7 +1753,7 @@
 		</effects>
 	</skill>
 	<skill id="30027" toLevel="1" name="Destructive Bolt">
-		<!-- Attacks target with 300 Power added to M. Atk. and has a 10% chance of branding target with Storm Sign Stage 4. -->
+		<!-- Deals magic damage to the target with 300 power. With a 10% chance, marks the target with the Storm Sign Lv. 4. -->
 		<icon>icon.skill30026</icon>
 		<effectRange>1400</effectRange>
 		<effectPoint>-711</effectPoint>
@@ -1775,7 +1775,7 @@
 		</effects>
 	</skill>
 	<skill id="30029" toLevel="6" name="Divine Storm">
-		<!-- Attacks nearby target with $s1 Power added to M. Atk. and locks them inside a storm for $s2. $s3 more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<!-- Attacks nearby target with $s1 Power added to M. Atk. and locks them inside a storm for $s2. $s3 more damage if target is debuffed. Requires a sword or blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.iconskill30007</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2153,7 +2153,7 @@
 		</effects>
 	</skill>
 	<skill id="30042" toLevel="13" name="Eminent Quick Recovery">
-		<!-- Max. MP +$s1, MP Recovery Bonus +$s2, and M. Skill Cooldown -$s3. -->
+		<!-- Max MP +$s1, MP Recovery Rate +$s2, M. Skill Cooldown -$s3. -->
 		<icon>
 			<value level="1">icon.skill11004</value>
 			<value level="2">icon.skill10504</value>
@@ -2338,7 +2338,7 @@
 		</effects>
 	</skill>
 	<skill id="30044" toLevel="2" name="Eminent Trait Resistance">
-		<!-- Hold/ Mental Resistance +$s1. -->
+		<!-- Obstruction/ Confusion Resistance +$s1. -->
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<effects>

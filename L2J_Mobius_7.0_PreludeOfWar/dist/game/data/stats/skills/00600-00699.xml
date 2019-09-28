@@ -87,7 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="606" toLevel="1" name="Residence Fortitude">
-		<!-- Increases Stun Resistance by 10 of each member of the clan occupying the dwelling. -->
+		<!-- Clan members' Confusion Resistance +10, if the clan owns a clan hall. -->
 		<icon>icon.skill0386</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -99,7 +99,7 @@
 		</effects>
 	</skill>
 	<skill id="607" toLevel="1" name="Residence Freedom">
-		<!-- Hold Resistance of clan members in residence increases by 10. -->
+		<!-- Clan members' Obstruction Resistance +10, if the clan owns a clan hall. -->
 		<icon>icon.skill0387</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -111,7 +111,7 @@
 		</effects>
 	</skill>
 	<skill id="608" toLevel="1" name="Residence Vigilance">
-		<!-- Sleep Resistance of clan members in residence increases by 10. -->
+		<!-- Clan members' Stupor Resistance +10, if the clan owns a clan hall. -->
 		<icon>icon.skill0388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -243,7 +243,7 @@
 		</effects>
 	</skill>
 	<skill id="614" toLevel="3" name="Earth Squad">
-		<!-- The corresponding troops' M. Def. increase by $s1. -->
+		<!-- The corresponding troops' M. Def. +$s1. -->
 		<icon>icon.skill1466</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -332,7 +332,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="617" toLevel="1" name="Transform Onyx Beast">
+	<skill id="617" toLevel="1" name="Onyx Beast Transformation">
 		<!-- Transform into an Onyx Beast. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -363,7 +363,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="618" toLevel="1" name="Transform Doom Wraith">
+	<skill id="618" toLevel="1" name="Doom Wraith Transformation">
 		<!-- Transform into a Doom Wraith. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -394,7 +394,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="619" toLevel="1" name="Dispel Transform">
+	<skill id="619" toLevel="1" name="Cancel Transformation">
 		<!-- Cancels transformation. -->
 		<icon>icon.skilltransform2</icon>
 		<effectPoint>10</effectPoint>
@@ -476,7 +476,7 @@
 		</effects>
 	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
-		<!-- Increases Evasion by $s2 and Speed by $s3 for $s1. -->
+		<!-- Increases Evasion by $s2 and Speed by $s3 for $s1 -->
 		<icon>icon.skill0622</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -615,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="627" toLevel="40" name="Soul Shock">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. and causes fear for $s2. Requires a crossbow. Over-hit is possible. Consumes $s3 Souls. -->
+		<!-- Attacks the enemy with $s1 power causing fear for $s2 Consumes $s3 Souls. Requires a crossbow. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1353,7 +1353,7 @@
 		</effects>
 	</skill>
 	<skill id="646" toLevel="1" name="Wizard Ability: Mana Gain">
-		<!-- Increases the recovery rate when MP is being recovered by recharge. -->
+		<!-- Increases MP Recovery Rate. -->
 		<icon>icon.skill0285</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1395,7 +1395,7 @@
 		</effects>
 	</skill>
 	<skill id="650" toLevel="1" name="Warrior Ability: Attribute Resistance">
-		<!-- Increases Paralyze/ Hold/ Sleep/ Stun/ Buff Cancellation Resistance. -->
+		<!-- Increases Buff Cancellation/ Obstruction/ Stupor/ Confusion Resistance. -->
 		<icon>icon.skill0287</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1521,7 +1521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="656" toLevel="3" name="Transform Divine Warrior">
+	<skill id="656" toLevel="3" name="Divine Warrior Transformation">
 		<!-- Transforms you into a Divine Warrior. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1558,7 +1558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="657" toLevel="3" name="Transform Divine Knight">
+	<skill id="657" toLevel="3" name="Divine Knight Transformation">
 		<!-- Transforms you into a Divine Knight. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1595,7 +1595,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="658" toLevel="3" name="Transform Divine Rogue">
+	<skill id="658" toLevel="3" name="Divine Rogue Transformation">
 		<!-- Transforms you into a Divine Rogue. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1632,7 +1632,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="659" toLevel="3" name="Transform Divine Wizard">
+	<skill id="659" toLevel="3" name="Divine Wizard Transformation">
 		<!-- Transforms you into a Divine Wizard. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1669,7 +1669,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="660" toLevel="3" name="Transform Divine Summoner">
+	<skill id="660" toLevel="3" name="Divine Summoner Transformation">
 		<!-- Transforms you into a Divine Summoner. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1706,7 +1706,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="661" toLevel="3" name="Transform Divine Healer">
+	<skill id="661" toLevel="3" name="Divine Healer Transformation">
 		<!-- Transforms you into a Divine Healer. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1743,7 +1743,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="662" toLevel="3" name="Transform Divine Enchanter">
+	<skill id="662" toLevel="3" name="Divine Enchanter Transformation">
 		<!-- Transforms you into a Divine Enchanter. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1780,7 +1780,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="663" toLevel="1" name="Transform Zaken">
+	<skill id="663" toLevel="1" name="Zaken Transformation">
 		<!-- Transforms you into Zaken. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1813,7 +1813,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="664" toLevel="1" name="Transform Anakim">
+	<skill id="664" toLevel="1" name="Anakim Transformation">
 		<!-- Transforms you into Anakin. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1846,7 +1846,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="665" toLevel="1" name="Transform Venom">
+	<skill id="665" toLevel="1" name="Venom Transformation">
 		<!-- Transforms you into Venom. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1879,7 +1879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="666" toLevel="1" name="Transform Gordon">
+	<skill id="666" toLevel="1" name="Gordon Transformation">
 		<!-- Transforms you into Gordon. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1912,7 +1912,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="667" toLevel="1" name="Transform Ranku">
+	<skill id="667" toLevel="1" name="Ranku Transformation">
 		<!-- Transforms you into Ranku. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1945,7 +1945,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="668" toLevel="1" name="Transform Kechi">
+	<skill id="668" toLevel="1" name="Kechi Transformation">
 		<!-- Transforms you into Kechi. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1978,7 +1978,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="669" toLevel="1" name="Transform Demon Prince">
+	<skill id="669" toLevel="1" name="Demon Prince Transformation">
 		<!-- Transforms you into a Demon Prince. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2011,7 +2011,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="670" toLevel="1" name="Transform Heretic">
+	<skill id="670" toLevel="1" name="Heretic Transformation">
 		<!-- Transforms you into a Heretic. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2044,7 +2044,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="671" toLevel="1" name="Transform Veil Master">
+	<skill id="671" toLevel="1" name="Veil Master Transformation">
 		<!-- Transforms you into a Veil Master. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2077,7 +2077,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="672" toLevel="1" name="Transform Saber Tooth Tiger">
+	<skill id="672" toLevel="1" name="Saber Tooth Tiger Transformation">
 		<!-- Transforms you into a Saber Tooth Tiger. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2110,7 +2110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="673" toLevel="1" name="Transform Oel Mahum">
+	<skill id="673" toLevel="1" name="Oel Mahum Transformation">
 		<!-- Transforms you into Oel Mahum. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2143,7 +2143,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="674" toLevel="1" name="Transform Doll Blader">
+	<skill id="674" toLevel="1" name="Doll Blader Transformation">
 		<!-- Transforms you into a Doll Blader. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2309,7 +2309,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="680" toLevel="1" name="Divine Knight Hate">
-		<!-- Provokes the enemy to attack with 6752 Power. -->
+		<!-- Provokes the enemy into attacking you. Power 6752. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2336,7 +2336,7 @@
 		</effects>
 	</skill>
 	<skill id="681" toLevel="1" name="Divine Knight Aggression Aura">
-		<!-- Provokes nearby enemies to attack by 6752 Power. -->
+		<!-- Provokes nearby enemies into attacking you. Power 6752. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2363,7 +2363,7 @@
 		</effects>
 	</skill>
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 1162 power. -->
+		<!-- Attacks and stuns the enemy with 1162 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2398,7 +2398,7 @@
 		</effects>
 	</skill>
 	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
-		<!-- Inflicts damage and shock on nearby enemies at once. Inflicts momentary Stun on nearby enemies. Ignores Shield Defense. Over-hit is possible. 775 power. -->
+		<!-- Attacks and stuns nearby enemies with 775 power. Ignores Shield Defense. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2506,7 +2506,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
-		<!-- Fires arrows canceling the target's state by dealing damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 2323 power. -->
+		<!-- Shoots arrows with 2323 power that deal damage to the enemy stunning them and making them lose their target. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2566,7 +2566,7 @@
 		</effects>
 	</skill>
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit is possible. Power 1549. Effect 3. -->
+		<!-- Strikes the enemy with 1549 power making them bleed. Effect 3. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2776,7 +2776,7 @@
 		</effects>
 	</skill>
 	<skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
-		<!-- Momentarily bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
+		<!-- Summons divine clouds making nearby enemies fall sleep. Decreases probability of additional sleep state while the effect lasts. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

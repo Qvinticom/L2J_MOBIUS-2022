@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7100" toLevel="1" name="Clan-exclusive Pet Stun">
-		<!-- Stuns the target for 3 sec. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -28,7 +28,7 @@
 		</effects>
 	</skill>
 	<skill id="7101" toLevel="1" name="Clan-exclusive Pet Aerial Thrust">
-		<!-- Lifts and holds the target in the air for 3 sec. -->
+		<!-- Lifts the target in the air immobilizing them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -113,7 +113,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="7105" toLevel="1" name="Incubation Possible">
+	<skill id="7105" toLevel="1" name="Attempt Incubation">
 		<!-- Incubation Possible -->
 		<operateType>A1</operateType>
 		<castRange>100</castRange>

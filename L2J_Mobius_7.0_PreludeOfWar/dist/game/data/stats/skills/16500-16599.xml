@@ -95,7 +95,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16519" toLevel="1" name="Slay X">
-		<!-- Inflicts great physical damage to nearby enemies and makes them bleed for 15 sec. -->
+		<!-- Inflicts great physical damage on nearby enemies and makes them bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -149,7 +149,7 @@
 		<reuseDelay>15000</reuseDelay>
 	</skill>
 	<skill id="16524" toLevel="4" name="Full Swing Crusher">
-		<!-- Inflicts great physical damage to target and decreases P./ M. Def. by $s2 for $s1. -->
+		<!-- Inflicts great physical damage to target and decreases P./ M. Def. by $s2 for $s1 -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -202,7 +202,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16530" toLevel="1" name="Adolph's Will of Steel">
-		<!-- With Aden Vanguard Captain Adolph's help, launch a strong hit to Commander Burnstein and stun him for 15 sec. Can only be used inside the Command Post. -->
+		<!-- Aden Vanguard Captain Adolph launches a strong hit to Commander Burnstein and stuns him for 15 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -232,7 +232,7 @@
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="16533" toLevel="1" name="Barton's Sonic Star">
-		<!-- Attacks nearby enemies and knocks them down. Over-hit. Critical. -->
+		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>29</mpConsume>
@@ -287,7 +287,7 @@
 		<reuseDelay>120000</reuseDelay>
 	</skill>
 	<skill id="16538" toLevel="1" name="Eliyah's Shadow Hell">
-		<!-- Shadow Hell. -->
+		<!-- Shadow Hell. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11058</icon>
 		<operateType>A1</operateType>
 		<mpConsume>267</mpConsume>
@@ -345,7 +345,7 @@
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="16545" toLevel="1" name="Geork's Hammer">
-		<!-- Geork swings his hammer, dealing physical damage to enemies around and knocking them back. -->
+		<!-- Geork swings his hammer, dealing physical damage to nearby enemies and knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -354,7 +354,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="16546" toLevel="1" name="Banished Captive">
-		<!-- Banished from battle for 60 min. by Geork. -->
+		<!-- Your character calls for Geork who will fight by your side for 60 min. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -399,7 +399,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16550" toLevel="1" name="Zellaka's Quake">
-		<!-- 2-second Knock Back effect and broad physical damage to surroundings. -->
+		<!-- Deals physical damage to nearby enemies knocking them back for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>2</abnormalTime>
@@ -450,7 +450,7 @@
 		</effects>
 	</skill>
 	<skill id="16552" toLevel="1" name="Ice Fist">
-		<!-- Deals damage and freezes the opponent. -->
+		<!-- Deals damage and freezes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11017</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -476,7 +476,7 @@
 		</effects>
 	</skill>
 	<skill id="16553" toLevel="1" name="Ice Breath">
-		<!-- Icy breath freezes opponents ahead of you. -->
+		<!-- Freezes enemies in front of you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -531,7 +531,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16556" toLevel="1" name="Kelbim Bluff">
-		<!-- Causes the opponent to show their back, and deals damage. -->
+		<!-- Turns the enemy round and deals damage. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0358</icon>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
@@ -542,7 +542,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16557" toLevel="1" name="Dancing Blade">
-		<!-- Deals powerful damage to opponents in range, and changes status to Bleed. -->
+		<!-- Deals powerful AoE damage to enemies inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -561,7 +561,7 @@
 		<reuseDelay>150000</reuseDelay>
 	</skill>
 	<skill id="16559" toLevel="1" name="Dragonclaw Shield Stun">
-		<!-- Uses a shield to shock the enemy. Inflicts Stun on the target. -->
+		<!-- Shield Bash. Stuns the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -592,7 +592,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16562" toLevel="1" name="Dragonclaw Curse Fear">
-		<!-- Instills fear in the opponent(s), causing them to flee. -->
+		<!-- Causes your enemies to flee in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
@@ -614,7 +614,7 @@
 		<reuseDelay>4000</reuseDelay>
 	</skill>
 	<skill id="16564" toLevel="1" name="Dragonclaw Soul Breaker">
-		<!-- Throws Iron Fist to attack target and inflicts Stun. -->
+		<!-- Attacks the enemy with Iron Fist stunning him. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
@@ -767,7 +767,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16577" toLevel="1" name="Dragonclaw Bluff">
-		<!-- Tricks the enemy to create advantage for you. Makes the enemy show his back, and inflicts Stun for 9 sec. -->
+		<!-- Tricks the enemy into showing his back. Stuns the target for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0358</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -796,7 +796,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16580" toLevel="1" name="Dragonclaw Aggression Aura">
-		<!-- The will of enemies in range to attack is stimulated. -->
+		<!-- Provokes the enemy into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -834,7 +834,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16584" toLevel="1" name="Mass Fear">
-		<!-- Captured by fear, one momentarily loses control over one's movements. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -866,7 +866,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="16587" toLevel="1" name="Dragonclaw Siege Punch">
-		<!-- Opponents in range are attacked and knocked back. -->
+		<!-- Inflicts a powerfull attack that knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
 		<mpConsume>100</mpConsume>
@@ -889,7 +889,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="16590" toLevel="1" name="Ancient Power Thunder">
-		<!-- Powerful ancient thunder strikes the target, causing magic damage and 5-second Paralysis. -->
+		<!-- Powerful ancient thunder strikes the target, dealing magic damage and paralysing for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -942,7 +942,7 @@
 		</effects>
 	</skill>
 	<skill id="16592" toLevel="1" name="Ancient Earthquake">
-		<!-- A powerful earthquake wave is shot toward the target and nearby enemies, causing stun for 3 sec. -->
+		<!-- Stuns the target and nearby enemies by Sonic Star for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1080,7 +1080,7 @@
 		</effects>
 	</skill>
 	<skill id="16598" toLevel="1" name="Stun Strike">
-		<!-- The target suffers severe physical damage and 3-second Paralysis. -->
+		<!-- Deals great physical damage paralysing for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0791</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
-		<!-- Momentarily immobilized. P./ M. Def. -$s1. -->
+		<!-- Immobilized midair. P./ M. Def. -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -785,7 +785,7 @@
 		</effects>
 	</skill>
 	<skill id="11323" toLevel="8" name="Feline Aggression">
-		<!-- Provokes nearby enemies. -->
+		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -819,7 +819,7 @@
 		</effects>
 	</skill>
 	<skill id="11324" toLevel="8" name="Feline Stun">
-		<!-- Temporarily Stuns nearby enemies. -->
+		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1156,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="11332" toLevel="8" name="Unicorn's Aggression">
-		<!-- Provokes nearby enemies. -->
+		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1190,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="11333" toLevel="8" name="Unicorn's Stun">
-		<!-- Temporarily Stuns nearby enemies. -->
+		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1527,7 +1527,7 @@
 		</effects>
 	</skill>
 	<skill id="11341" toLevel="8" name="Phantom Aggression">
-		<!-- Provokes nearby enemies. -->
+		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1561,7 +1561,7 @@
 		</effects>
 	</skill>
 	<skill id="11342" toLevel="8" name="Phantom Stun">
-		<!-- Temporarily Stuns nearby enemies. -->
+		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2523,7 +2523,7 @@
 		</effects>
 	</skill>
 	<skill id="11358" toLevel="4" name="Spectral Ability">
-		<!-- P. Atk. +$s1, and PvP Damage -$s2. -->
+		<!-- P. Atk. +$s1, PvP Damage -$s2. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2598,7 +2598,7 @@
 		</effects>
 	</skill>
 	<skill id="11360" toLevel="3" name="Arcane Protection">
-		<!-- For $s1, Received P./ M. Critical Rate -$s2, Pull Resistance and Knock Back/ Knock Down Resistance -$s3. Debuff Resistance +$s4, HP/ MP Recovery Bonus +$s5. -->
+		<!-- For $s1, Received P./ M. Critical Rate -$s2, Confusion Resistance -$s3, Debuff Resistance +$s4, HP/ MP Recovery Rate +$s5. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2677,7 +2677,7 @@
 		</effects>
 	</skill>
 	<skill id="11361" toLevel="3" name="Summon Moving Portal">
-		<!-- Summons an instant Moving Portal for $s1. Consumes $s2 Spirit Ore. -->
+		<!-- Summons an instant Moving Portal for $s1 Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill11361</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2737,7 +2737,7 @@
 		</effects>
 	</skill>
 	<skill id="11364" toLevel="3" name="Elemental Dash">
-		<!-- Party's Speed +$s1. -->
+		<!-- Party's Speed +$s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Guessed -->
@@ -2829,7 +2829,7 @@
 		</effects>
 	</skill>
 	<skill id="11366" toLevel="3" name="Spectral Curse">
-		<!-- Temporarily renders nearby enemies helpless. -->
+		<!-- Temporarily renders nearby enemies helpless. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
@@ -2840,7 +2840,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11367" toLevel="3" name="Arcane Protection">
-		<!-- For $s1, Received P./ M. Critical Rate -$s2, Pull Resistance and Knock Back/ Knock Down Resistance -$s3. Debuff Resistance +$s4, HP/ MP Recovery Bonus +$s5. -->
+		<!-- For $s1, Received P./ M. Critical Rate -$s2, Confusion Resistance -$s3, Debuff Resistance +$s4, HP/ MP Recovery Rate +$s5. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -2919,7 +2919,7 @@
 		</effects>
 	</skill>
 	<skill id="11368" toLevel="3" name="Arcane Protection">
-		<!-- For $s1, Debuff Resistance +$s2, Pull/ Danger Zone Resistance +$s3, Knock Back/ Knock Down Resistance +$s4, HP/ MP Recovery Bonus +$s5. Received P./ M. Critical Rate -$s6. -->
+		<!-- For $s1, Debuff Resistance +$s2, Danger Zone Resistance +$s3, Confusion Resistance +$s4, HP/ MP Recovery Rate +$s5, Received P./ M. Critical Rate -$s6. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3367,7 +3367,7 @@
 		</effects>
 	</skill>
 	<skill id="11375" toLevel="6" name="Commando Jumping Attack">
-		<!-- Jumps and hulrs attack to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
+		<!-- Jumps and hulrs attack to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2 -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3425,7 +3425,7 @@
 		</effects>
 	</skill>
 	<skill id="11376" toLevel="6" name="Commando Double Smash">
-		<!-- Inflicts damage with $s1 Power added to P. Atk. and knocks down for $s2 -->
+		<!-- Strikes the target with $s1 power knocking them down for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3511,7 +3511,7 @@
 		</effects>
 	</skill>
 	<skill id="11378" toLevel="6" name="Elemental Slam">
-		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and pushes them back. -->
+		<!-- Deals physical damage to the target and nearby enemies with $s1 power knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1171</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -3565,7 +3565,7 @@
 		</effects>
 	</skill>
 	<skill id="11379" toLevel="6" name="Lancer Rush">
-		<!-- Charges forward to inflict damage on the target with $s1 power added to P. Attack and inflicts Stun for $s2. -->
+		<!-- Deals physical damage to the target with $s1 power stunning them for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3632,7 +3632,7 @@
 		</effects>
 	</skill>
 	<skill id="11380" toLevel="6" name="Power Stump">
-		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and blows them away. -->
+		<!-- Deals physical damage to nearby enemies with $s1 power lifting them in the air. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -3726,7 +3726,7 @@
 		</effects>
 	</skill>
 	<skill id="11382" toLevel="6" name="Multiple Icicles">
-		<!-- Inflicts damage to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
+		<!-- Inflicts damage to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2 -->
 		<icon>icon.skill10103</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3784,7 +3784,7 @@
 		</effects>
 	</skill>
 	<skill id="11383" toLevel="6" name="Phantom Sword Attack">
-		<!-- Inflicts damage with $s1 Power added to P. Atk. -->
+		<!-- Deals physical damage to the target with $s1 power. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3896,7 +3896,7 @@
 		</effects>
 	</skill>
 	<skill id="11386" toLevel="6" name="Phantom Crash">
-		<!-- Inflicts damage with $s1 Power added to P. Atk. -->
+		<!-- Deals physical damage to the target with $s1 power. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3928,7 +3928,7 @@
 		</effects>
 	</skill>
 	<skill id="11387" toLevel="2" name="Arcana's Call">
-		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3, P. Accuracy +$s4, Knock Back/ Knock Down Success Rate +$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, P. Accuracy +$s4, Confusion Atk. Rate +$s5. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4008,7 +4008,7 @@
 		</effects>
 	</skill>
 	<skill id="11389" toLevel="2" name="Elemental's Call">
-		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3, Atk. Spd. +$s4, and Skill Cooldown -$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, Atk. Spd. +$s4, Skill Cooldown +$s5. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4093,7 +4093,7 @@
 		</effects>
 	</skill>
 	<skill id="11391" toLevel="2" name="Spectral's Call">
-		<!-- The power of demons is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3 and P. Critical Damage +$s4 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, P. Critical Damage +$s4. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4168,7 +4168,7 @@
 		</effects>
 	</skill>
 	<skill id="11393" toLevel="6" name="Freezing Invoke">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to M. Atk. For $s2, P./ M. Def. -$s3. Consumes $s4 Spirit Ore. -->
+		<!-- Deals magic damage to the target and nearby enemies with $s1 power. For $s2, enemies' P./ M. Def. -$s3. Consumes $s4 Spirit Ores. -->
 		<icon>icon.skill11393</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4243,7 +4243,7 @@
 		</effects>
 	</skill>
 	<skill id="11394" toLevel="6" name="Surrender to the Elemental">
-		<!-- Attacks the target with $s1 Power added to M. Atk. For $s2, all Attribute Resistance -$s3. Consumes $s4 Spirit Ore. -->
+		<!-- Deals magic damage to the target with $s1 power. For $s2, Attribute Resistance -$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill11394</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4334,7 +4334,7 @@
 		</effects>
 	</skill>
 	<skill id="11395" toLevel="6" name="Curse Exposure">
-		<!-- Attacks the target with $s1 Power added to M. Atk. For $s2, Deadly Attack Def. -$s3. Consumes $s4 Spirit Ore. -->
+		<!-- Deals magic damage to the target with $s1 power. For $s2, Vital Spot Resistance -$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill11395</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

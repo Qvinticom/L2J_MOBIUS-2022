@@ -31,7 +31,7 @@
 		</effects>
 	</skill>
 	<skill id="3502" toLevel="1" name="Mithril Breastplate Heavy Armor Set">
-		<!-- Increases Poison Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<icon>icon.armor_t19_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="3509" toLevel="1" name="Chain Mail Heavy Armor Set">
-		<!-- Increases Dagger Resistance. -->
+		<!-- Increases Dagger Attack Resistance. -->
 		<icon>icon.armor_t48_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3520" toLevel="1" name="Zubei's Leather Shirt Light Armor Set">
+	<skill id="3520" toLevel="1" name="Zubei's Light Armor Set">
 		<!-- Increases Evasion. -->
 		<icon>icon.armor_t65_u_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -390,8 +390,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3527" toLevel="1" name="Leather Armor of Doom Set">
-		<!-- Increases Poison Resistance and increases lung capacity, P. Atk., and MP Recovery Bonus. STR-1, CON-2, DEX+3 -->
+	<skill id="3527" toLevel="1" name="Doom Leather Armor Set">
+		<!-- Increases lung capacity, P. Atk., MP Recovery Rate and Infection Resistance. STR -1, CON -2, DEX +3. -->
 		<icon>icon.armor_t72_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -452,7 +452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3530" toLevel="1" name="Dark Crystal Breastplate Heavy Armor Set">
+	<skill id="3530" toLevel="1" name="Dark Crystal Heavy Armor Set">
 		<!-- Increases Paralysis Resistance and the effect of HP recovery magic to oneself. STR-2, CON+2 -->
 		<icon>icon.armor_t74_u_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -469,7 +469,7 @@
 		</effects>
 	</skill>
 	<skill id="3531" toLevel="1" name="Tallum Heavy Armor Set">
-		<!-- Increases Poison/ Bleed Resistance, Atk. Spd., and weight limit. STR+2, CON-2 -->
+		<!-- Increases Infection Resistance, Atk. Spd. and weight limit. STR +2, CON -2. -->
 		<icon>icon.armor_t77_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -509,7 +509,7 @@
 		</effects>
 	</skill>
 	<skill id="3533" toLevel="1" name="Tallum Light Armor Set">
-		<!-- Increases Poison/ Bleed Resistance, MP Recovery Rate, and Max MP. MEN+2, WIT-2 -->
+		<!-- Increases Infection Resistance, MP Recovery Rate and Max MP. MEN -2, WIT -2. -->
 		<icon>icon.armor_t78_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -530,7 +530,7 @@
 		</effects>
 	</skill>
 	<skill id="3534" toLevel="1" name="Tallum Robe Set">
-		<!-- Increases Poison/ Bleed Resistance, Casting Spd., and M. Def. INT-2, WIT+2 -->
+		<!-- Increases Infection Resistance, Casting Spd. and M. Def. INT-2, WIT +2. -->
 		<icon>icon.armor_t79_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -579,7 +579,7 @@
 		</effects>
 	</skill>
 	<skill id="3536" toLevel="1" name="Heavy Armor of Nightmare Set">
-		<!-- Increases P. Atk. and Sleep/ Hold Resistance. CON+2, DEX-2 -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. CON +2, DEX -2. -->
 		<icon>icon.armor_t80_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -595,8 +595,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3537" toLevel="1" name="Majestic Plate Heavy Armor Set">
-		<!-- Increases resistance, attack/ accuracy to Stun attack. STR+2. CON-2 -->
+	<skill id="3537" toLevel="1" name="Majestic Heavy Armor Set">
+		<!-- Increases Confusion Resistance, P. Atk. and P. Accuracy. STR +2, CON -2. -->
 		<icon>icon.armor_t83_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -616,7 +616,7 @@
 		</effects>
 	</skill>
 	<skill id="3538" toLevel="1" name="Light Armor of Nightmare Set">
-		<!-- Increases Sleep/ Hold Resistance and M. Def. Restores HP by using part of the damage inflicted upon the enemy with a certain probability. DEX+1, CON-1 -->
+		<!-- Increases Stupor/ Obstruction Resistance and M. Def. Has a chance to recover damage inflicted on the enemy as HP. DEX +1, CON -1. -->
 		<icon>icon.armor_t81_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -636,8 +636,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3539" toLevel="1" name="Majestic Leather Light Armor Set">
-		<!-- Increases Stun Resistance, bow and crossbow attack/ Maximum MP/ weight limit. DEX+1, CON-1 -->
+	<skill id="3539" toLevel="1" name="Majestic Light Armor Set">
+		<!-- Increases Confusion Resistance, P. Atk. of bows and crossbows, Max MP and weight limit. DEX +1, CON -1. -->
 		<icon>icon.armor_t84_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -664,7 +664,7 @@
 		</effects>
 	</skill>
 	<skill id="3540" toLevel="1" name="Robe of Nightmare Set">
-		<!-- Increases MP regeneration, M. Atk. and Sleep/ Hold Resistance. INT+2, WIT-2 -->
+		<!-- Increases Stupor/ Obstruction Resistance and MP Recovery Rate. INT +2, WIT -2. -->
 		<icon>icon.armor_t82_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -685,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="3541" toLevel="1" name="Majestic Robe Set">
-		<!-- Increases Stun Resistance, Maximum MP/ Casting Spd./ MP Recovery bonus. MEN+1, INT-1 -->
+		<!-- Increases Confusion Resistance, Max MP, Casting Spd. and MP Recovery Rate. MEN +1, INT -1. -->
 		<icon>icon.armor_t85_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="3552" toLevel="4" name="Special Ability: PvP Damage">
-		<!-- Inflicts additional damage during PvP. -->
+		<!-- Inflicts additional PvP damage. -->
 		<icon>icon.skill0297</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -905,7 +905,7 @@
 		</effects>
 	</skill>
 	<skill id="3553" toLevel="1" name="Imperial Crusader Heavy Armor Set">
-		<!-- Increases Sleep/ Hold Resistance, Max HP, and P. Def. STR+2, DEX-2 -->
+		<!-- Increases Stupor/ Obstruction Resistance, Max HP and P. Def. STR +2, DEX -2. -->
 		<icon>icon.armor_t88_u_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -926,7 +926,7 @@
 		</effects>
 	</skill>
 	<skill id="3554" toLevel="1" name="Equip Shield">
-		<!-- Additionally increases Poison/ Bleed Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -963,7 +963,7 @@
 		</effects>
 	</skill>
 	<skill id="3556" toLevel="1" name="Major Arcana Robe Set">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. WIT+1, INT+1, MEN-2 -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. WIT/ INT +1, MEN -2. -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -990,7 +990,7 @@
 		</effects>
 	</skill>
 	<skill id="3557" toLevel="1" name="Valakas' Necklace">
-		<!-- Increases Fire Resistance, Sleep Resistance, sleep attack bonus, Max HP/ P. Atk./ M. Atk. and magic damage Critical Rate. Decreases skill cooldown. Reflects some of the physical damage received back upon the enemy. -->
+		<!-- Increases Fire Resistance, Stupor Resistance, Stupor Atk. bonus, Max HP, P./ M. Atk. and M. Critical Rate. Decreases Skill Cooldown. Reflects a part of received damage back to the enemy. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1038,7 +1038,7 @@
 		</effects>
 	</skill>
 	<skill id="3558" toLevel="1" name="Antharas' Earring">
-		<!-- Increases Earth Attack/ Bleed/ Stun/ Mental Resistance, Bleed/ Stun/ Mental attack bonus, and the effect of HP Recovery magic and decreases MP consumption by skills. Recovers some of the damage inflicted on the enemy as your HP at a certain probability. -->
+		<!-- Increases Earth Resistance, Infection/ Confusion Resistance, Received Healing. Decreases Skill MP Consumption and has a chance to recover damage inflicted on the enemy as HP. Increases Infection/ Confusion Atk. Rate. -->
 		<icon>icon.accessory_earring_of_antaras_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1079,7 +1079,7 @@
 		</effects>
 	</skill>
 	<skill id="3559" toLevel="2" name="Zaken's Earring">
-		<!-- Increases Bleed/ Stun/ Mental Resistance, Bleed/ Stun/ Mental attack bonus, and the magic effect of HP Recovery received. Recovers some of the damage inflicted on the enemy as your HP at a certain probability. -->
+		<!-- Increases Infection/ Confusion Resistance, Received Healing. Has a chance to recover damage inflicted on the enemy as HP. Increases Infection/ Confusion Atk. Rate. -->
 		<icon>icon.accessory_earring_of_zaken_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1128,7 +1128,7 @@
 		</effects>
 	</skill>
 	<skill id="3560" toLevel="1" name="Orfen's Earring">
-		<!-- Increases healing from heal spells, Bleed Resistance, and gives a Bleed attack bonus. -->
+		<!-- Increases Healing Power and Infection Resistance/ Atk. Rate. -->
 		<icon>icon.accessory_earring_of_orfen_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1147,7 +1147,7 @@
 		</effects>
 	</skill>
 	<skill id="3561" toLevel="1" name="Baium's Ring">
-		<!-- Increases Poison/ Hold Resistance, Poison/ Hold Attack Bonus, Critical Damage, Accuracy, Atk. Spd., and Casting Spd. -->
+		<!-- Increases Infection/ Obstruction Atk. Rate and Resistance, P. Critical Damage, P. Accuracy, Atk. Spd., and Casting Spd. -->
 		<icon>icon.accessory_ring_of_baium_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1180,7 +1180,7 @@
 		</effects>
 	</skill>
 	<skill id="3562" toLevel="1" name="Queen Ant's Ring">
-		<!-- Increases Poison/ Hold Resistance, Poison/ Hold Attack Bonus, Critical Damage, and Accuracy. -->
+		<!-- Increases Infection/ Obstruction Atk. Rate and Resistance, P. Critical Damage, and P. Accuracy. -->
 		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1205,7 +1205,7 @@
 		</effects>
 	</skill>
 	<skill id="3563" toLevel="1" name="Ring of Core">
-		<!-- Increases Accuracy, Poison Resistance, and Poison attack bonus. -->
+		<!-- Increases Infection Resistance/ Atk. Rate and P. Accuracy. -->
 		<icon>icon.accessory_ring_of_core_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="3565" toLevel="10" name="Special Ability: Focus">
-		<!-- Increases Critical Rate by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Critical Rate +$s1, PvP Damage +$s2. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
 			<value level="2">icon.ensoul_big_old</value>
@@ -1560,7 +1560,7 @@
 		</effects>
 	</skill>
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1828,7 +1828,7 @@
 		</effects>
 	</skill>
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1857,7 +1857,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="3578" toLevel="1" name="Special Ability: Infinity Blade">
+	<skill id="3578" toLevel="1" name="Infinity Blade Special Ability">
 		<!-- Decreases enemy's P. Def. during critical attacks. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -1920,7 +1920,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3580" toLevel="1" name="Special Ability: Infinity Axe">
+	<skill id="3580" toLevel="1" name="Infinity Axe Special Ability">
 		<!-- Dazzles the enemy to distraction during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -1974,7 +1974,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3582" toLevel="1" name="Special Ability: Infinity Cleaver">
+	<skill id="3582" toLevel="1" name="Infinity Cleaver Special Ability">
 		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2020,8 +2020,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3583" toLevel="1" name="Special Ability: Infinity Crusher">
-		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ CP, attack speed and damage during PvP while reflecting debuff inflicted to the enemy. -->
+	<skill id="3583" toLevel="1" name="Infinity Crusher Special Ability">
+		<!-- Stuns the enemy after a critical attack. Increases Max HP/ CP, Atk. Spd. and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2063,7 +2063,7 @@
 		</effects>
 	</skill>
 	<skill id="3584" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2087,7 +2087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3585" toLevel="1" name="Special Ability: Infinity Wing">
+	<skill id="3585" toLevel="1" name="Infinity Wing Special Ability">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, Critical Rate. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2134,7 +2134,7 @@
 		</effects>
 	</skill>
 	<skill id="3586" toLevel="1" name="Restrain Physical Skills">
-		<!-- Temporarily blocks opponent's ability to use physical skills. -->
+		<!-- Temporarily blocks physical skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2156,7 +2156,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="3587" toLevel="1" name="Special Ability: Infinity Fang">
+	<skill id="3587" toLevel="1" name="Infinity Fang Special Ability">
 		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ MP/ CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2203,7 +2203,7 @@
 		</effects>
 	</skill>
 	<skill id="3588" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2227,7 +2227,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3589" toLevel="1" name="Special Ability: Infinity Stinger">
+	<skill id="3589" toLevel="1" name="Infinity Stinger Special Ability">
 		<!-- Blocks enemy's ability to use magic skills during a critical attack. Increases Max MP, Max CP, Atk. Spd., MP Recovery Rate, Critical Rate when attacking the enemy from behind. Inflicts additional damage during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2273,7 +2273,7 @@
 		</effects>
 	</skill>
 	<skill id="3590" toLevel="1" name="Restrain Magic Skills">
-		<!-- Magic skills are blocked momentarily. -->
+		<!-- Temporarily blocks magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2295,8 +2295,8 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3591" toLevel="1" name="Special Ability: Infinity Spear">
-		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases Max HP, Max CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on the enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
+	<skill id="3591" toLevel="1" name="Infinity Spear Special Ability">
+		<!-- After a critical attack, removes one or more of the enemy's buffs. Increases Max HP/ CP, Atk. Spd., P. Accuracy and PvP Damage. Reflects debuffs back to the enemy. Allows to attack multiple opponents. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2364,7 +2364,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3593" toLevel="1" name="Special Ability: Infinity Bow">
+	<skill id="3593" toLevel="1" name="Infinity Bow Special Ability">
 		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2418,7 +2418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3595" toLevel="1" name="Special Ability: Infinity Scepter">
+	<skill id="3595" toLevel="1" name="Infinity Scepter Special Ability">
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max HP, Max CP, M. Atk., and Critical Rate of a magic damage. Inflicts additional damage during PvP. Decreases MP Consumption and cancel rate when casting a magic. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -2479,7 +2479,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3597" toLevel="1" name="Special Ability: Infinity Rod">
+	<skill id="3597" toLevel="1" name="Infinity Rod Special Ability">
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max MP, Max CP, Casting Spd, MP Recovery Rate, and damage inflicted during PvP. -->
 		<icon>icon.weapon_the_mace_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>

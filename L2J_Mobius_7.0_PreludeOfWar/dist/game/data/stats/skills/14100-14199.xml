@@ -433,7 +433,7 @@
 		</effects>
 	</skill>
 	<skill id="14112" toLevel="2" name="Teredor Poison">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>77</mpConsume>
@@ -473,7 +473,7 @@
 		</endEffects>
 	</skill>
 	<skill id="14113" toLevel="1" name="Teredor Flu Infection">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>77</mpConsume>
@@ -1013,7 +1013,7 @@
 		</effects>
 	</skill>
 	<skill id="14132" toLevel="3" name="Curse Bloodstain">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -1187,7 +1187,7 @@
 		</effects>
 	</skill>
 	<skill id="14137" toLevel="3" name="Bloody Fist">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -1282,7 +1282,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14140" toLevel="3" name="Decrease Speed">
+	<skill id="14140" toLevel="3" name="Slow">
 		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -1320,7 +1320,7 @@
 		</effects>
 	</skill>
 	<skill id="14141" toLevel="3" name="Sleep">
-		<!-- Sleep status. -->
+		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -1361,7 +1361,7 @@
 		</effects>
 	</skill>
 	<skill id="14142" toLevel="3" name="Fear">
-		<!-- Fear status. -->
+		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -1603,7 +1603,7 @@
 		</effects>
 	</skill>
 	<skill id="14149" toLevel="6" name="Sound of Wind">
-		<!-- Only Power changed. Use the previous tooltip except Power description. -->
+		<!-- none Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA1</operateType>
 		<hitTime>500</hitTime>
@@ -2153,7 +2153,7 @@
 		</effects>
 	</skill>
 	<skill id="14166" toLevel="1" name="Baelz">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<fanRange>0;0;90;250</fanRange>
@@ -2798,8 +2798,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14194" toLevel="1" name="Range Stun">
-		<!-- Stun status. -->
+	<skill id="14194" toLevel="1" name="Mass Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

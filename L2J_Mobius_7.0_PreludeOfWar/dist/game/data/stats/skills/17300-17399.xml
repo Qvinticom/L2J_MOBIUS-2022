@@ -13,13 +13,13 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17302" toLevel="1" name="Spirited Bounce">
-		<!-- For 2 h., Stun/ Paralysis/ Mental/ Knock Back/ Knock Down/ Aerial Yoke attack and defense bonus +50. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<!-- For 2 h., Confusion Resistance/ Atk. Rate +50. Deleted when entering the Olympiad or Ceremony of Chaos. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17303" toLevel="1" name="Prevailing Sonata - Enhanced Cocktail">
-		<!-- For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. PA exclusive. -->
+		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. A chance to add 8% to the Vampiric Rage effect. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="17304" toLevel="1" name="Daring Sonata - Enhanced Cocktail">
-		<!-- For 1 h., increases Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. PA exclusive. -->
+		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, Skill Cooldown -10%. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="17305" toLevel="1" name="Refreshing Sonata - Enhanced Cocktail">
-		<!-- For 1 h., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. PA exclusive. -->
+		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>

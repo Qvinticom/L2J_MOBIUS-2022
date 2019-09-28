@@ -153,7 +153,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15308" toLevel="1" name="Half-Chop">
-		<!-- Inflicts a powerful P. Atk. on the target and Stuns them. -->
+		<!-- Inflicts a physical attack on the target stunning it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -196,7 +196,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15310" toLevel="1" name="Feast of Blood">
-		<!-- Attacks with Bleed Attack within a fan-shaped range around you. -->
+		<!-- Attacks all enemies in front of the character and inflicts Bleed on them. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -224,7 +224,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15311" toLevel="1" name="Irresistible Temptation">
-		<!-- Immobilizes nearby enemies for 10 sec. -->
+		<!-- Holds nearby enemies for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11538</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -290,7 +290,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15314" toLevel="1" name="Sophie's Temper">
-		<!-- Inflicts AoE mutation on nearby enemies. -->
+		<!-- Inflicts AoE mutation on nearby enemies. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<trait>CHANGEBODY</trait>
@@ -474,7 +474,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15321" toLevel="1" name="Hell Arrow">
-		<!-- Inflicts P. Atk. on the target and leaves DOT Damage. -->
+		<!-- Inflicts a physical attack on the target and deals damage over time. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -501,7 +501,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15322" toLevel="1" name="Hell Wheel">
-		<!-- Inflicts physical damage on nearby targets and knocks them back. -->
+		<!-- Inflicts a physical attack on the target and knocks it back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -524,7 +524,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15323" toLevel="1" name="Hell Defense">
-		<!-- Stunned. -->
+		<!-- Stuns the enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11057</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -744,7 +744,7 @@
 		</conditions>
 	</skill>
 	<skill id="15335" toLevel="1" name="Electric Stun">
-		<!-- Stunned for 3 sec. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -792,7 +792,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15337" toLevel="1" name="Pinch Attack">
-		<!-- Pulls the target and inflicts damage. -->
+		<!-- Inflicts a physical melee attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -818,7 +818,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15338" toLevel="1" name="Punch Stun">
-		<!-- Knocks down the target for 3 sec. to interrupt their attacks. -->
+		<!-- Counterattack and knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -892,7 +892,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15342" toLevel="1" name="Shock Smash">
-		<!-- Inflicts damage on a target and throws them off a certain distance. -->
+		<!-- Deals damage to the enemy and knocks him back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -977,7 +977,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15346" toLevel="1" name="Turn Attack">
-		<!-- Turns your whole body to inflict damage on the target and throw them off a certain distance. -->
+		<!-- Turns the enemy round, deals damage and knocks him back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -1102,7 +1102,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15353" toLevel="1" name="Bleeding Range">
-		<!-- Inflicts Bleed 10% to nearby targets. -->
+		<!-- Inflicts bleed dealing 10% damage to nearby enemies. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -1146,8 +1146,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15355" toLevel="1" name="Shackles">
-		<!-- Damages a target with Yoke. -->
+	<skill id="15355" toLevel="1" name="Yoke">
+		<!-- Yokes the target and inflicts damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1212,7 +1212,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15358" toLevel="1" name="Screw Attack">
-		<!-- Inflicts physical damage and Stuns them. -->
+		<!-- Inflicts a physical attack on the enemy and stuns him. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1237,7 +1237,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15359" toLevel="1" name="Cornering Attack">
-		<!-- Yokes a target. -->
+		<!-- Yokes the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1266,7 +1266,7 @@
 		</effects>
 	</skill>
 	<skill id="15360" toLevel="1" name="Tetanus">
-		<!-- Poisons the target. -->
+		<!-- Attacks and inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -1295,7 +1295,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15361" toLevel="1" name="Attribute Change">
-		<!-- Makes the target mutate. -->
+		<!-- Mutation. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<trait>CHANGEBODY</trait>
@@ -1369,7 +1369,7 @@
 		</effects>
 	</skill>
 	<skill id="15363" toLevel="1" name="Fear Attack">
-		<!-- Inflicts Fear and damage on target. -->
+		<!-- Deals damage and inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11055</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1394,8 +1394,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15364" toLevel="1" name="Shock Attack">
-		<!-- Paralyzed. -->
+	<skill id="15364" toLevel="1" name="Stun Attack">
+		<!-- Immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1435,7 +1435,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15366" toLevel="1" name="Cannon Fire">
-		<!-- Bleeding. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -1463,7 +1463,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15367" toLevel="1" name="Black Out">
-		<!-- Knocks down the whole group. -->
+		<!-- Inflicts mass Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1507,7 +1507,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="15369" toLevel="1" name="Massive Blow">
-		<!-- Inflicts a powerful attack and Bleed on nearby targets. -->
+		<!-- Inflicts a powerful physical attack and Bleed on nearby enemies. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>1500</castRange>
@@ -1533,7 +1533,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15370" toLevel="1" name="Body Slash">
+	<skill id="15370" toLevel="1" name="Body Slice">
 		<!-- Inflicts a powerful blow on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1551,7 +1551,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15371" toLevel="1" name="Stun Rush">
-		<!-- Rushes to the target to inflict damage. -->
+		<!-- Rush toward the target and attack it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
 		<castRange>300</castRange>
@@ -1741,7 +1741,7 @@
 		</effects>
 	</skill>
 	<skill id="15376" toLevel="2" name="Pipe Organ Melody - Clan Hall">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -1807,7 +1807,7 @@
 		</effects>
 	</skill>
 	<skill id="15377" toLevel="2" name="Guitar Melody - Clan Hall">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2058,7 +2058,7 @@
 		</effects>
 	</skill>
 	<skill id="15381" toLevel="1" name="Warrior's Harmony - Clan Hall">
-		<!-- For 30 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

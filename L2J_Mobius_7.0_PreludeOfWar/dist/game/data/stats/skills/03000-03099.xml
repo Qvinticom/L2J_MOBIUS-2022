@@ -21,7 +21,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3005" toLevel="1" name="Bleed">
-		<!-- Causes a scar that decreases HP. Effect 5. -->
+		<!-- Causes a scar that decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -370,7 +370,7 @@
 		</effects>
 	</skill>
 	<skill id="3016" toLevel="6" name="Special Ability: Critical Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -480,7 +480,7 @@
 		</effects>
 	</skill>
 	<skill id="3020" toLevel="6" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -534,7 +534,7 @@
 		</effects>
 	</skill>
 	<skill id="3021" toLevel="6" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
@@ -656,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="3024" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -1287,7 +1287,7 @@
 		</effects>
 	</skill>
 	<skill id="3040" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -1352,7 +1352,7 @@
 		</effects>
 	</skill>
 	<skill id="3041" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -2074,7 +2074,7 @@
 		</effects>
 	</skill>
 	<skill id="3050" toLevel="2" name="Special Ability: Focus">
-		<!-- Increases Critical Rate by $s1. Inflicts additional damage by $s2 during PvP. -->
+		<!-- Critical Rate +$s1, PvP Damage +$s2. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2130,7 +2130,7 @@
 		</effects>
 	</skill>
 	<skill id="3052" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2159,7 +2159,7 @@
 		</effects>
 	</skill>
 	<skill id="3053" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2192,7 +2192,7 @@
 		</effects>
 	</skill>
 	<skill id="3054" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2225,7 +2225,7 @@
 		</effects>
 	</skill>
 	<skill id="3055" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2303,7 +2303,7 @@
 		</effects>
 	</skill>
 	<skill id="3057" toLevel="4" name="Special Ability: Anger">
-		<!-- Decreases Max HP and increases P. Atk. Inflicts additional damage during PvP. -->
+		<!-- Decreases Max HP and increases P. Atk. Inflicts additional PvP damage. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2342,7 +2342,7 @@
 		</effects>
 	</skill>
 	<skill id="3058" toLevel="2" name="Special Ability: Anger">
-		<!-- Decreases Max HP and increases P. Atk. Inflicts additional damage during PvP. -->
+		<!-- Decreases Max HP and increases P. Atk. Inflicts additional PvP damage. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2423,7 +2423,7 @@
 		</effects>
 	</skill>
 	<skill id="3061" toLevel="3" name="Special Ability: Critical Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2460,7 +2460,7 @@
 		</effects>
 	</skill>
 	<skill id="3062" toLevel="2" name="Special Ability: Critical Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
@@ -2524,7 +2524,7 @@
 		</effects>
 	</skill>
 	<skill id="3064" toLevel="1" name="Special Ability: Guidance">
-		<!-- Accuracy +3.95. Damage dealt in PvP +5%. -->
+		<!-- Accuracy +3.95. PvP Damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2549,7 +2549,7 @@
 		</effects>
 	</skill>
 	<skill id="3065" toLevel="1" name="Special Ability: Guidance">
-		<!-- Accuracy +5.41. Damage dealt in PvP +5%. -->
+		<!-- Accuracy +5.41. PvP Damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2702,7 +2702,7 @@
 		</effects>
 	</skill>
 	<skill id="3070" toLevel="4" name="Special Ability: Critical Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2807,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="3073" toLevel="2" name="Special Ability: M. Atk.">
-		<!-- Increases MP Consumption and M. Atk. Inflicts additional damage during PvP. -->
+		<!-- Increases MP Consumption, M. Atk. and PvP Damage. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2843,7 +2843,7 @@
 		</effects>
 	</skill>
 	<skill id="3074" toLevel="2" name="Special Ability: Magic Silence">
-		<!-- Temporarily blocks the ability to use magic skills. -->
+		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2872,7 +2872,7 @@
 		</effects>
 	</skill>
 	<skill id="3075" toLevel="2" name="Special Ability: Magic Paralyze">
-		<!-- Body is rigid with paralysis. -->
+		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2944,7 +2944,7 @@
 		</effects>
 	</skill>
 	<skill id="3077" toLevel="6" name="Special Ability: M. Atk.">
-		<!-- Increases MP Consumption and M. Atk. -->
+		<!-- Increases M. Atk. and MP Consumption. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2976,7 +2976,7 @@
 		</effects>
 	</skill>
 	<skill id="3078" toLevel="6" name="Special Ability: Magic Silence">
-		<!-- Temporarily blocks the ability to use magic skills. -->
+		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3009,7 +3009,7 @@
 		</effects>
 	</skill>
 	<skill id="3079" toLevel="6" name="Special Ability: Magic Paralyze">
-		<!-- Body is rigid with paralysis. -->
+		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3058,7 +3058,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3080" toLevel="15" name="Item Skill: Aggression">
-		<!-- Chance: Provokes a target to attack during an normal physical attack. Power $s1. -->
+		<!-- In case of success: Provokes a target to attack during a normal physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -3110,7 +3110,7 @@
 		</effects>
 	</skill>
 	<skill id="3081" toLevel="15" name="Item Skill: Charm (Attack Active)">
-		<!-- Chance: Decreases the target's urge to attack during a normal physical attack. Power $s1. -->
+		<!-- In case of success: Decreases the target's urge to attack during a normal physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -3162,7 +3162,7 @@
 		</effects>
 	</skill>
 	<skill id="3082" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Chance: Burns up the target's MP during an normal physical attack. Power $s1. -->
+		<!-- In case of success: Burns up the target's MP during a normal physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -3205,7 +3205,7 @@
 		</effects>
 	</skill>
 	<skill id="3083" toLevel="15" name="Item Skill: Slow (Attack Active)">
-		<!-- Chance: Momentarily decreases the target's Speed during an normal physical attack. Effect $s1. -->
+		<!-- In case of success: Instantly reduces the target's Speed during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
@@ -3248,7 +3248,7 @@
 		</effects>
 	</skill>
 	<skill id="3084" toLevel="10" name="Item Skill: Winter (Attack Active)">
-		<!-- Chance: Momentarily decreases the target's Atk. Spd. during an normal physical attack. Effect $s1. -->
+		<!-- In case of success: Instantly reduces the target's Atk. Spd. during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
@@ -3286,7 +3286,7 @@
 		</effects>
 	</skill>
 	<skill id="3085" toLevel="10" name="Item Skill: Stun">
-		<!-- Activated skill: Causes a target to enter the Stun state momentarily when dealing general physical attacks. -->
+		<!-- In case of success: Instantly stuns the target during a normal physical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3325,7 +3325,7 @@
 		</effects>
 	</skill>
 	<skill id="3086" toLevel="15" name="Item Skill: Hold">
-		<!-- Chance: Momentarily inflicts Hold on the target during an normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Hold on the target during a physical attack. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3370,7 +3370,7 @@
 		</effects>
 	</skill>
 	<skill id="3087" toLevel="10" name="Item Skill: Sleep">
-		<!-- Chance: Momentarily inflicts Sleep on the target during a normal physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Stupor on the target during a normal physical attack. While the effect lasts, an additional chance to extend Stupor decreases. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3412,7 +3412,7 @@
 		</effects>
 	</skill>
 	<skill id="3088" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Chance: Momentarily paralyzes the target during an normal physical attack. -->
+		<!-- In case of success: Instantly inflicts Paralysis on the target during a normal physical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3465,7 +3465,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3089" toLevel="10" name="Item Skill: Medusa">
-		<!-- Chance: Momentarily petrifies the target during a normal physical attack. -->
+		<!-- In case of success: Instantly petrifies the target during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3503,7 +3503,7 @@
 		</effects>
 	</skill>
 	<skill id="3090" toLevel="10" name="Item Skill: Fear">
-		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a normal physical attack. -->
+		<!-- In case of success: During a normal physical attack instantly inflicts Fear on the target and forces it to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3541,7 +3541,7 @@
 		</effects>
 	</skill>
 	<skill id="3091" toLevel="15" name="Item Skill: Poison (Attack Active)">
-		<!-- Chance: Momentarily inflicts Poison on the target during a normal physical attack. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts Poison on the target during a normal physical attack. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -3619,7 +3619,7 @@
 		</effects>
 	</skill>
 	<skill id="3092" toLevel="15" name="Item Skill: Bleed (Attack Active)">
-		<!-- Chance: Momentarily inflicts Bleed on the target during a normal physical attack. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts Bleed on the target during a normal physical attack. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -3698,7 +3698,7 @@
 		</effects>
 	</skill>
 	<skill id="3093" toLevel="10" name="Item Skill: Silence">
-		<!-- Chance: Momentarily blocks the target's magic skill during a normal physical attack. -->
+		<!-- In case of success: Instantly blocks the target's magic skills during a normal physical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3735,7 +3735,7 @@
 		</effects>
 	</skill>
 	<skill id="3094" toLevel="10" name="Item Skill: Doom">
-		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a normal physical attack. -->
+		<!-- In case of success: Momentarily blocks all of the target's physical and magic skills during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3773,7 +3773,7 @@
 		</effects>
 	</skill>
 	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Chance: Burns up the target's MP during magic use. Power $s1. -->
+		<!-- In case of success: Burns up the target's MP during magic use. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
@@ -3817,7 +3817,7 @@
 		</effects>
 	</skill>
 	<skill id="3096" toLevel="15" name="Item Skill: Slow (Magic Active)">
-		<!-- Chance: Momentarily decreases the target's Speed during magic use. Effect $s1. -->
+		<!-- In case of success: Instantly decreases the target's Speed during magic use. Effect $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
@@ -3861,7 +3861,7 @@
 		</effects>
 	</skill>
 	<skill id="3097" toLevel="10" name="Item Skill: Winter (Magic Active)">
-		<!-- Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect $s1. -->
+		<!-- In case of success: Instantly decreases the target's Atk. Spd. during magic use. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
@@ -3900,7 +3900,7 @@
 		</effects>
 	</skill>
 	<skill id="3098" toLevel="10" name="Item Skill: Stun">
-		<!-- Activated skill: Causes a target to enter the Stun state momentarily when using this magic. -->
+		<!-- In case of success: Instantly stuns the target during magic use. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -3940,7 +3940,7 @@
 		</effects>
 	</skill>
 	<skill id="3099" toLevel="15" name="Item Skill: Hold">
-		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Hold on the target during magic use. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>

@@ -55,7 +55,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13109" toLevel="5" name="Special Ability: Damage Up">
-		<!-- Increases P. Atk. Enables the character to attack multiple opponents. Inflicts additional damage during PvP. -->
+		<!-- Increases P. Atk. Enables the character to attack multiple opponents. Inflicts additional damage in PvP. -->
 		<icon>icon.skill1068</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -99,7 +99,7 @@
 		</effects>
 	</skill>
 	<skill id="13110" toLevel="5" name="Special Ability: Guidance">
-		<!-- Increases Accuracy. Enables the character to attack multiple opponents. Increases damage inflicted during PvP. -->
+		<!-- Increases P. Accuracy. Allows to attack multiple opponents. Inflicts additional PvP damage. -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -137,7 +137,7 @@
 		</effects>
 	</skill>
 	<skill id="13111" toLevel="1" name="Special Ability: HP Drain">
-		<!-- Restores HP by using some of the damage inflicted upon the enemy with a certain probability. Can attack multiple enemies. Inflicts additional damage during PvP. -->
+		<!-- With a certain chance, absorbs a part of the inflicted damage as HP. Enables the character to attack multiple opponents. Inflicts additional damage in PvP. -->
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -169,7 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="13112" toLevel="1" name="Special Ability: Critical Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -222,7 +222,7 @@
 		</effects>
 	</skill>
 	<skill id="13114" toLevel="1" name="Special Ability: Magic Hold">
-		<!-- Momentarily inflicted with hold and unable to move. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -264,7 +264,7 @@
 		</effects>
 	</skill>
 	<skill id="13116" toLevel="1" name="Talisman (R-grade) - Knock Back Resistance">
-		<!-- Increases Knock Back Resistance when equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -276,7 +276,7 @@
 		</effects>
 	</skill>
 	<skill id="13117" toLevel="1" name="Talisman (R-grade) - Knock Down Resistance">
-		<!-- Increases Knock Down Resistance when equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -288,7 +288,7 @@
 		</effects>
 	</skill>
 	<skill id="13118" toLevel="1" name="Talisman (R-grade) - Binding Resistance">
-		<!-- Increases Resistance to yoke when equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -300,7 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="13119" toLevel="1" name="Talisman (R-grade) - Pulling Resistance">
-		<!-- Increases Resistance to pulling when equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="13120" toLevel="1" name="Talisman (R-grade) - Banishment Resistance">
-		<!-- Increases Resistance to banishment when equipped. -->
+		<!-- Increases Obstruction Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -324,7 +324,7 @@
 		</effects>
 	</skill>
 	<skill id="13121" toLevel="1" name="Talisman (R-grade) - Mutation Resistance">
-		<!-- Increases Resistance to change when equipped. -->
+		<!-- Increases Stupor Resistance when the talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -371,7 +371,7 @@
 		<magicLvl>55</magicLvl>
 	</skill>
 	<skill id="13127" toLevel="1" name="Special Talisman - Atk. Spd.">
-		<!-- Increases Atk. Spd. when equipped. -->
+		<!-- Increases Atk. Spd. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -384,42 +384,42 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>55</magicLvl>
 	</skill>
-	<skill id="13129" toLevel="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Defense Type)">
+	<skill id="13129" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece (Defense)">
 		<!-- CON +$s1, STR -$s2, Atk. Spd. +$s3. HP +$s4. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13130" toLevel="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Attack Type)">
+	<skill id="13130" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece (Attack)">
 		<!-- STR +$s1, CON -$s2, Atk. Spd. +$s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13131" toLevel="4" name="Set Effect - Twilight Light Armor 2 Piece (Assassin Type)">
+	<skill id="13131" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece (Assassin)">
 		<!-- DEX +$s1, STR -$s2, Atk. Spd. +$s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13132" toLevel="4" name="Set Effect - Twilight Light Armor 2 Piece (Enchant Type)">
+	<skill id="13132" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece (Enchant)">
 		<!-- STR +$s1, CON -$s2, P. Atk. +$s3. P. Atk. Spd. +$s4. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13133" toLevel="4" name="Set Effect - Twilight Robe 2 Piece (Magic Type)">
-		<!-- INT +$s1. MEN -$s2. Casting Spd. +$s3. -->
+	<skill id="13133" toLevel="4" name="Set Effect - Twilight Robe, 2-piece (Magic)">
+		<!-- INT +$s1. MEN -$s2, Casting Spd. +$s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13134" toLevel="4" name="Set Effect - Twilight Robe 2 Piece (Recovery Type)">
+	<skill id="13134" toLevel="4" name="Set Effect - Twilight Robe, 2-piece (Recovery)">
 		<!-- WIT+$s1. MEN -$s2. Casting Spd. +$s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
@@ -578,7 +578,7 @@
 		</effects>
 	</skill>
 	<skill id="13141" toLevel="1" name="Casting Spd. Talisman">
-		<!-- Increases Casting Spd. by 2 with the power of Talisman. -->
+		<!-- Casting Spd. +2%. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -650,7 +650,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13146" toLevel="1" name="Special Ability: Infinity Shaper">
+	<skill id="13146" toLevel="1" name="Infinity Shaper Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Skill Critical Damage +10%. -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -695,7 +695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13147" toLevel="1" name="Special Ability: Infinity Cutter">
+	<skill id="13147" toLevel="1" name="Infinity Cutter Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -746,7 +746,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13148" toLevel="1" name="Special Ability: Infinity Slasher">
+	<skill id="13148" toLevel="1" name="Infinity Slasher Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Critical Damage +7%. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -791,7 +791,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13149" toLevel="1" name="Special Ability: Infinity Avenger">
+	<skill id="13149" toLevel="1" name="Infinity Avenger Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -842,7 +842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13150" toLevel="1" name="Special Ability: Infinity Fighter">
+	<skill id="13150" toLevel="1" name="Infinity Fighter Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Critical Damage +7%. -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -887,7 +887,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13151" toLevel="1" name="Special Ability: Infinity Stormer">
+	<skill id="13151" toLevel="1" name="Infinity Stormer Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Critical Damage +7%. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -932,7 +932,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13152" toLevel="1" name="Special Ability: Infinity Thrower">
+	<skill id="13152" toLevel="1" name="Infinity Thrower Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Skill Critical Damage +10%. -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -977,7 +977,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13153" toLevel="1" name="Special Ability: Infinity Shooter">
+	<skill id="13153" toLevel="1" name="Infinity Shooter Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Skill Critical Damage +10%. -->
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
@@ -1022,7 +1022,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13154" toLevel="1" name="Special Ability: Infinity Buster">
+	<skill id="13154" toLevel="1" name="Infinity Buster Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Casting Spd. +15%, M. Skill Power +10%, M. Skill Critical Damage +7%. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
@@ -1067,7 +1067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13155" toLevel="1" name="Special Ability: Infinity Caster">
+	<skill id="13155" toLevel="1" name="Infinity Caster Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Casting Spd. +15%, M.Skill Power +10%, M. Skill Critical Damage +7%. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -1112,7 +1112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13156" toLevel="1" name="Special Ability: Infinity Retributer">
+	<skill id="13156" toLevel="1" name="Infinity Retributer Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Casting Spd. +15%, M. Skill Power +10%, M. Critical Damage +7%. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -1157,7 +1157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13157" toLevel="1" name="Special Ability: Infinity Dual Sword">
+	<skill id="13157" toLevel="1" name="Infinity Dual Sword Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Critical Damage +7%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -1202,7 +1202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13158" toLevel="1" name="Special Ability: Infinity Dual Dagger">
+	<skill id="13158" toLevel="1" name="Infinity Dual Dagger Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Skill Critical Damage +10%. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
@@ -1247,7 +1247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13159" toLevel="1" name="Special Ability: Infinity Dual Blunt Weapon">
+	<skill id="13159" toLevel="1" name="Infinity Dual Blunt Weapon Special Ability">
 		<!-- PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +15%, P. Skill Power +10%, P. Critical Damage +7%. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
@@ -1310,7 +1310,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13161" fromLevel="2" toLevel="2" name="Standard Magic Rune Clip Immortal Belt">
+	<skill id="13161" fromLevel="2" toLevel="2" name="Mid-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases HP regeneration when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1382,7 +1382,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13165" fromLevel="2" toLevel="2" name="Standard Magic Rune Clip Immortal Belt">
+	<skill id="13165" fromLevel="2" toLevel="2" name="Mid-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases MP regeneration when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1449,7 +1449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13169" fromLevel="2" toLevel="2" name="Standard Magic Ornament Immortal Belt">
+	<skill id="13169" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Immortal Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1505,7 +1505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13173" fromLevel="2" toLevel="2" name="Standard Magic Ornament Immortal Belt">
+	<skill id="13173" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Immortal Belt">
 		<!-- Increases skill/ magic damage during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1577,7 +1577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13177" fromLevel="2" toLevel="2" name="Standard Magic Ornament Immortal Belt">
+	<skill id="13177" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Immortal Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1658,7 +1658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13181" fromLevel="2" toLevel="2" name="Standard Magic Rune Clip Twilight Belt">
+	<skill id="13181" fromLevel="2" toLevel="2" name="Mid-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases HP regeneration when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1730,7 +1730,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13185" fromLevel="2" toLevel="2" name="Standard Magic Rune Clip Twilight Belt">
+	<skill id="13185" fromLevel="2" toLevel="2" name="Mid-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases MP regeneration when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1797,7 +1797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13189" fromLevel="2" toLevel="2" name="Standard Magic Ornament Twilight Belt">
+	<skill id="13189" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Twilight Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1853,7 +1853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13193" fromLevel="2" toLevel="2" name="Standard Magic Ornament Twilight Belt">
+	<skill id="13193" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Twilight Belt">
 		<!-- Increases skill/ magic damage during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1925,7 +1925,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13197" fromLevel="2" toLevel="2" name="Standard Magic Ornament Twilight Belt">
+	<skill id="13197" fromLevel="2" toLevel="2" name="Mid-grade Magic Ornament Twilight Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>

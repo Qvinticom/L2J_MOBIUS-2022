@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
-		<!-- For 30 min., increases selected party member's P. Atk. by 22%, M. Atk. by 40%, P./ M. Critical Rate by 100%, P. Critical Damage by 70%, and Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
+		<!-- For 30 min., the selected party member's P. Atk. +22%, M. Atk. +40%, P./ M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd./ Casting Spd. +15%, Skill Cooldown -20%, Skill MP Consumption -15%. -->
 		<icon>icon.skill19503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -81,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="19504" toLevel="1" name="Tempted">
-		<!-- Seduction by the Chaos Symphony for 3 sec. -->
+		<!-- Plays the Chaos Symphony charming the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11533</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -135,7 +135,7 @@
 		<mpConsume>140</mpConsume>
 	</skill>
 	<skill id="19510" toLevel="1" name="Debuff Endurance">
-		<!-- For 30 min., nearby clan members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- Nearby clan members' Confusion/ Stupor/ Obstruction/ Infection Resistance +50% for 30 min. -->
 		<icon>icon.skill19510</icon>
 		<operateType>A1</operateType>
 		<hitTime>700</hitTime>
@@ -155,7 +155,7 @@
 		<mpConsume>140</mpConsume>
 	</skill>
 	<skill id="19522" toLevel="13" name="Repeat Mark Somersault">
-		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
+		<!-- Strikes the target with $s1 power. For $s2, P./ M. Def. -$s3, Speed -$s4. Moves the character back for $s5. Can be used in the Triad state. -->
 		<icon>icon.skill19434</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -320,7 +320,7 @@
 		</effects>
 	</skill>
 	<skill id="19528" toLevel="9" name="Right Angle Reverse">
-		<!-- Stunned by the Right Angle Reverse for $s1. -->
+		<!-- Strikes the target stunning them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19303</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1033,7 +1033,7 @@
 		</effects>
 	</skill>
 	<skill id="19552" toLevel="11" name="Burning Chain Lash">
-		<!-- Wields the Burning Chain to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Also puts them into the Ignite state for $s2. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Wields the burning chain to draw nearby enemies to you with $s1 power. Ignites them for $s2 Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19556</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1117,7 +1117,7 @@
 		</effects>
 	</skill>
 	<skill id="19553" toLevel="7" name="Revenging Thorn">
-		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1190,7 +1190,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19554" toLevel="7" name="Revenging Black Thorn">
-		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1263,7 +1263,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19555" toLevel="7" name="Maelstrom">
-		<!-- Creates a cyclone to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Creates a cyclone that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19554</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1331,7 +1331,7 @@
 		</effects>
 	</skill>
 	<skill id="19556" toLevel="7" name="Inhale Soul">
-		<!-- Creates a pit of darkness to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Creates a pit of darkness that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19555</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1397,7 +1397,7 @@
 		</effects>
 	</skill>
 	<skill id="19557" toLevel="5" name="Inhale Soul">
-		<!-- Creates a pit of darkness to draw nearby enemies to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Creates a pit of darkness that pulls nearby enemies to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19555</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1453,7 +1453,7 @@
 		</effects>
 	</skill>
 	<skill id="19558" toLevel="7" name="Flame Feather">
-		<!-- Fires the Flame of Phoenix to attack nearby enemies with $s1 Power added to P. Atk. and provoke them into attacking you for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Fires the Flame of Phoenix to attack nearby enemies with $s1 power provoking them into attacking you for $s2 Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19552</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1529,7 +1529,7 @@
 		</effects>
 	</skill>
 	<skill id="19559" toLevel="11" name="Black Thorn Chain Strike">
-		<!-- Swings the Black Thorn Chain to attack the target and enemies on the path with $s1 Power added to P. Atk. and draw them to you. Also recovers your HP by $s2. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Swings the black thorn chain to attack the target and nearby enemies with $s1 power pulling them to you. Restores $s2 HP. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19557</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1715,7 +1715,7 @@
 		</effects>
 	</skill>
 	<skill id="19561" toLevel="11" name="Chained Death Scythe">
-		<!-- Summons a scythe to attack the target and nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Summons a scythe to attack the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19559</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1880,7 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="19565" toLevel="13" name="Shield Bash">
-		<!-- Disables standard attack skills for $s1 after hit by the shield. -->
+		<!-- Strikes the target with a shield disabling their normal attacks for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1462</icon>
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
@@ -2018,7 +2018,7 @@
 		</effects>
 	</skill>
 	<skill id="19567" toLevel="11" name="Gigantic Wave">
-		<!-- Summons a huge wave to attack the target and enemies on the path with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Summons a huge wave that attacks the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19558</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -2141,7 +2141,7 @@
 		</effects>
 	</skill>
 	<skill id="19569" toLevel="8" name="Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you and decreases their Atk. Spd. and Casting Spd. by $s1. Your P. Def. and M. Def. +$s2 and Speed +$s3. Only one Knight's Aura can be active at any time. -->
+		<!-- Provokes nearby enemies into attacking you, their Atk. Spd./ Casting Spd. +$s1. Your P./ M. Def. +$s2, Speed +$s3. Only one Knight's Aura can be active at any time. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2239,7 +2239,7 @@
 		</effects>
 	</skill>
 	<skill id="19571" toLevel="1" name="Lightning Strike">
-		<!-- Paralyzed by Vanishing Shock for 3 sec. -->
+		<!-- Paralyzes the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2282,7 +2282,7 @@
 		</effects>
 	</skill>
 	<skill id="19573" toLevel="9" name="Cubic Fire Bless">
-		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2. Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
+		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2 Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2333,7 +2333,7 @@
 		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="19575" toLevel="13" name="Vanishing Stun">
-		<!-- Silenced by Vanishing shock for $s1. -->
+		<!-- Silenced by Vanishing Stun for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10010</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

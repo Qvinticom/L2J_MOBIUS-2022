@@ -346,7 +346,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9323" toLevel="1" name="PA - Transform Rose (Male)">
+	<skill id="9323" toLevel="1" name="PA - Rose (Male) Transformation">
 		<!-- For 10 min., transform into Rose (Male) -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -368,7 +368,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9324" toLevel="1" name="PA - Transform Rose (Female)">
+	<skill id="9324" toLevel="1" name="PA - Rose (Female) Transformation">
 		<!-- For 10 min., transform into Rose (Female) -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -653,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="9335" toLevel="1" name="Guitar Melody - Enhanced Cocktail">
-		<!-- For 1 h., increases Atk. Spd. +60%, Casting Spd. +60%, Speed +10, and Skill MP Consumption -10%. PA exclusive. -->
+		<!-- For 1 h., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1663,7 +1663,7 @@
 		</conditions>
 	</skill>
 	<skill id="9377" toLevel="1" name="Wizard's Harmony - Mentor">
-		<!-- For 2 h., the selected mentee's M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +8%, P. Atk. +8%, Atk. Spd. +8%, Speed +8, M. Def. +14%, MP Recovery Bonus +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, and Skill Cooldown -20%. Buff is maintained for 5 min. when the Mentor goes offline. -->
+		<!-- For 2 h., the selected mentee's M. Atk. +40%, M. Critical Rate +100%, Atk. Spd./ Casting Spd. +8%, P. Atk. +8%, M. Def. +14%, MP Recovery Rate +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, Skill Cooldown -20%. The effect is active for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1688,7 +1688,7 @@
 		</conditions>
 	</skill>
 	<skill id="9378" toLevel="1" name="Warrior's Harmony - Mentor">
-		<!-- For 2 h., increases the selected mentee's P. Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Effect remains for 5 min. after the mentor goes offline. -->
+		<!-- For 2 hours, increases the selected mentee's P. Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, and Casting Spd. by 8%. Buff persists for 5 minutes after the mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>

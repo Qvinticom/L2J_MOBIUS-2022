@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="9201" toLevel="1" name="Elixir: Pipe Organ Melody">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -81,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="9202" toLevel="1" name="Elixir: Guitar Melody">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -227,7 +227,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9206" toLevel="1" name="Fast Run">
-		<!-- For 30 sec., Speed +95. -->
+		<!-- Speed +95 for 30 min. -->
 		<icon>icon.skill9206</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -656,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="9222" toLevel="1" name="Elixir of Blessing - Guitar Melody">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -920,7 +920,7 @@
 		</effects>
 	</skill>
 	<skill id="9229" toLevel="1" name="Lute Melody - Mentor">
-		<!-- With your Mentor's help, your Atk. Spd. +34%, Casting Spd. +31%, and 9% Vampiric Rage effect with a certain rate. Buff is triggered only when your Mentor is active. Buff is maintained for 5 min. when your Mentor goes offline. -->
+		<!-- With your Mentor's help, your Atk. Spd. +34%, Casting Spd. +31%, and 9% Vampiric Rage effect with a certain rate. Buff is triggered only when your Mentor is active. Buff is maintained for 5 minutes when your Mentor goes offline. -->
 		<icon>icon.skill11518</icon>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -1067,7 +1067,7 @@
 		</effects>
 	</skill>
 	<skill id="9232" toLevel="1" name="Harp Melody - Mentor">
-		<!-- With your Mentor's help, your P. Accuracy +5, P./ M. Evasion +5, Speed +34, Critical Damage Received -30%. Buff is triggered only when your Mentor is active. Buff is maintained for 5 min. when your Mentor goes offline. -->
+		<!-- With your Mentor's help, your P. Accuracy +5, P./M. Evasion +5, Movement Speed +34, Critical Damage Received -30%. Buff is triggered only when your Mentor is active. Buff is maintained for 5 minutes when your Mentor goes offline. -->
 		<icon>icon.skill11521</icon>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -1115,7 +1115,7 @@
 		</effects>
 	</skill>
 	<skill id="9233" toLevel="1" name="Mentor's Guidance">
-		<!-- Mentor's assistance. Acquired XP/ SP +50%. Buff remains 5 min. after mentor logs out. -->
+		<!-- Mentor's assistance. Obtained XP/SP + 50%. Buff remains 5 min. after mentor logs out. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -1262,7 +1262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9240" toLevel="2" name="XP Rune I (Lv. 1-85)">
+	<skill id="9240" toLevel="2" name="Nevit's Rune">
 		<!-- Acquired XP/ SP +$s1. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
@@ -2108,7 +2108,7 @@
 		</effects>
 	</skill>
 	<skill id="9277" toLevel="1" name="PA - Guitar Melody">
-		<!-- For 1 h., increases Atk. Spd. +60%, Casting Spd. +60%, Speed +10, and Skill MP Consumption -10%. PA exclusive. -->
+		<!-- For 1 h., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. PA only. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2218,7 +2218,7 @@
 		</effects>
 	</skill>
 	<skill id="9279" toLevel="1" name="PA Progression Support">
-		<!-- Increases the character's acquired XP and SP by 30%. Does not apply to pets and servitors. PA exclusive. -->
+		<!-- For PA. Acquired XP/ SP +30%. Not for pets or servitors. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2468,7 +2468,7 @@
 		</effects>
 	</skill>
 	<skill id="9284" toLevel="4" name="Guitar Melody - Heavenly Cocktail">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Movement Speed +, all Skill MP Consumption -$s4. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

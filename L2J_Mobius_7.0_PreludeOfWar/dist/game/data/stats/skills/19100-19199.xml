@@ -213,7 +213,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 	</skill>
 	<skill id="19110" toLevel="5" name="Clan Resilience">
-		<!-- Clan members' resistance to Knock Back/ Knock Down +$s1. Elder or above only. -->
+		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill_tough_spirit</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -236,7 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="19111" toLevel="5" name="Clan Steadfastness">
-		<!-- Clan members' resistance to Aerial Yoke +$s1. Elder or above only. -->
+		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill_heavy_heart</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -252,7 +252,7 @@
 		</effects>
 	</skill>
 	<skill id="19112" toLevel="1" name="Clan Escape">
-		<!-- Teleports nearby clan members to the town. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
+		<!-- Teleports nearby clan members to the town. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. -->
 		<icon>icon.skill_pledge_party_recall</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -279,7 +279,7 @@
 		</effects>
 	</skill>
 	<skill id="19113" toLevel="1" name="Clan Block">
-		<!-- Prevents the target from using the Scroll of Escape for 60 sec. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
+		<!-- Prevents the target from using the Scroll of Escape for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -309,7 +309,7 @@
 		</effects>
 	</skill>
 	<skill id="19114" toLevel="1" name="Clan Exclusion">
-		<!-- Prevents the target from resurrecting for 60 sec. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
+		<!-- Prevents the target from resurrecting for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -492,7 +492,7 @@
 		</effects>
 	</skill>
 	<skill id="19123" toLevel="4" name="Noble Haste">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -508,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="19124" toLevel="2" name="Noble Knight Buffs">
-		<!-- Paralysis/ Stun success rate and defense rate +$s1. -->
+		<!-- Confusion Resistance/ Atk. Rate +$s1. -->
 		<icon>icon.skill19124</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -549,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="19126" toLevel="2" name="Noble Mindset">
-		<!-- MP Recovery Bonus +$s1. -->
+		<!-- MP Recovery Rate +$s1. -->
 		<icon>icon.skill0229</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -708,7 +708,7 @@
 		</effects>
 	</skill>
 	<skill id="19132" toLevel="2" name="Noble Mind">
-		<!-- Physical Skill Cooldown -$s1. -->
+		<!-- P. Skill Cooldown -$s1. -->
 		<icon>icon.skill19132</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -763,7 +763,7 @@
 		</effects>
 	</skill>
 	<skill id="19135" toLevel="4" name="Noble Heavy Armor Attack">
-		<!-- When equipped with Heavy Armor, P. Atk. +$s1. -->
+		<!-- P. Atk. +$s1 when using heavy armor. -->
 		<icon>icon.skill19135</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -782,7 +782,7 @@
 		</effects>
 	</skill>
 	<skill id="19136" toLevel="3" name="Noble Prayer">
-		<!-- Received heal amount +$s1. -->
+		<!-- Received Healing +$s1. -->
 		<icon>icon.skill1273</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -839,7 +839,7 @@
 		</effects>
 	</skill>
 	<skill id="19140" toLevel="2" name="Noble Cost">
-		<!-- Physical Skill MP Consumption -$s1. -->
+		<!-- P. Skill MP Consumption -$s1. -->
 		<icon>icon.skill19140</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -868,7 +868,7 @@
 		</effects>
 	</skill>
 	<skill id="19142" toLevel="2" name="Noble Warrior Buffs">
-		<!-- Stun/ Restrain success rate and defense rate +$s1. -->
+		<!-- Confusion Resistance/ Atk. Rate +$s1. -->
 		<icon>icon.skill19142</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1004,7 +1004,7 @@
 		</effects>
 	</skill>
 	<skill id="19150" toLevel="4" name="Noble Light Armor Attack">
-		<!-- When equipped with Light Armor, P. Atk. +$s1. -->
+		<!-- P. Atk. +$s1 when using light armor. -->
 		<icon>icon.skill19150</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1044,7 +1044,7 @@
 		<!-- TODO: Handle this skill -->
 	</skill>
 	<skill id="19153" toLevel="1" name="Noble Critical Boost">
-		<!-- P. Critical Rate +50, M. Critical Rate +20, and Skill Master Rate +50%. -->
+		<!-- P. Critical Rate +50, M. Critical Rate +20, Skill Mastery +50%. -->
 		<icon>icon.skill19153</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1102,7 +1102,7 @@
 		</effects>
 	</skill>
 	<skill id="19156" toLevel="2" name="Noble Wizard Buffs">
-		<!-- Restrain/ Mind success rate and defense rate +$s1. -->
+		<!-- Confusion Resistance/ Atk. Rate +$s1. -->
 		<icon>icon.skill19156</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1143,7 +1143,7 @@
 		</effects>
 	</skill>
 	<skill id="19158" toLevel="2" name="Noble Blessed Soul">
-		<!-- Max MP +$s1. -->
+		<!-- Max HP +$s1. -->
 		<icon>icon.skill1048</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1206,7 +1206,7 @@
 		</effects>
 	</skill>
 	<skill id="19162" toLevel="2" name="Noble Recovery">
-		<!-- MP Recovery Bonus +$s1 while running. -->
+		<!-- MP Recovery Rate +$s1 while running. -->
 		<icon>icon.skill19162</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1309,7 +1309,7 @@
 		</effects>
 	</skill>
 	<skill id="19168" toLevel="1" name="Noble Gain">
-		<!-- MP Recovery Bonus +33 and Max MP +10%. -->
+		<!-- MP Recovery Rate +33, Max MP +10%. -->
 		<icon>icon.skill19168</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1324,7 +1324,7 @@
 		</effects>
 	</skill>
 	<skill id="19169" toLevel="1" name="Noble Advance">
-		<!-- MP Recovery Bonus +33 and magic skill Cooldown -5%. -->
+		<!-- MP Recovery Rate +33, M. Skill Cooldown -5%. -->
 		<icon>icon.skill19169</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1575,7 +1575,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19187" toLevel="1" name="Blockade">
-		<!-- For 10 sec., blocks target's P./ M. Skills. Requires Abilities. -->
+		<!-- For 10 sec., prevents the target from using P./ M. skills. Requires activated abilities. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19187</icon>
 		<operateType>A2</operateType>
 		<mpConsume>34</mpConsume>
@@ -1603,7 +1603,7 @@
 		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="19190" toLevel="1" name="Brilliant Magic">
-		<!-- Maximum MP +10%, and MP Recovery Bonus +8 when running. Requires Abilities. -->
+		<!-- Max MP +10%, MP Recovery Bonus +8 when running. Requires Abilities. -->
 		<icon>icon.skill19190</icon>
 		<operateType>P</operateType>
 	</skill>

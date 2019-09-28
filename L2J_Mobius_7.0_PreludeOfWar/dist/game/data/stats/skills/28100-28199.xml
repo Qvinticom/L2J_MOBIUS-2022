@@ -21,7 +21,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="28102" toLevel="12" name="Mass Binding Flood">
-		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Every sec. HP -$s2. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -56,7 +56,7 @@
 		<effectPoint>379</effectPoint>
 	</skill>
 	<skill id="28106" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion- Virg. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -71,7 +71,7 @@
 		</effects>
 	</skill>
 	<skill id="28107" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion- Capri. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -86,7 +86,7 @@
 		</effects>
 	</skill>
 	<skill id="28108" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion- Libb. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -101,7 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="28109" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion- Arie. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -116,7 +116,7 @@
 		</effects>
 	</skill>
 	<skill id="28110" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion- Tau. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -131,49 +131,49 @@
 		</effects>
 	</skill>
 	<skill id="28111" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion- Leo. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28112" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion- Gemi. -->
+		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28113" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion- Scor. -->
+		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28114" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion- Aquar. -->
+		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28115" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion- Pisce. -->
+		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28116" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion- Saggit. -->
+		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28117" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion- Cancer. -->
+		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28118" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion- Virg. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -188,7 +188,7 @@
 		</effects>
 	</skill>
 	<skill id="28119" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion- Capri. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -203,7 +203,7 @@
 		</effects>
 	</skill>
 	<skill id="28120" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion- Libb. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -218,7 +218,7 @@
 		</effects>
 	</skill>
 	<skill id="28121" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion- Arie. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -233,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="28122" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion- Tau. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -248,49 +248,49 @@
 		</effects>
 	</skill>
 	<skill id="28123" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion- Leo. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28124" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion- Gemi. -->
+		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28125" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion- Scor. -->
+		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28126" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion- Aquar. -->
+		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28127" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion- Pisce. -->
+		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28128" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion- Saggit. -->
+		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28129" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion- Cancer. -->
+		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28130" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion- Virg. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -305,7 +305,7 @@
 		</effects>
 	</skill>
 	<skill id="28131" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion- Capri. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -320,7 +320,7 @@
 		</effects>
 	</skill>
 	<skill id="28132" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion- Libb. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -335,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="28133" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion- Arie. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -350,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="28134" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion- Tau. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -365,43 +365,43 @@
 		</effects>
 	</skill>
 	<skill id="28135" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion- Leo. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28136" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion- Gemi. -->
+		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28137" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion- Scor. -->
+		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28138" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion- Aquar. -->
+		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28139" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion- Pisce. -->
+		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28140" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion- Saggit. -->
+		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28141" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion- Cancer. -->
+		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -535,7 +535,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28144" toLevel="4" name="Sayha's Protection">
+	<skill id="28144" toLevel="4" name="Sayha's Grace">
 		<!-- For $s1, Damage Received -$s2. -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
@@ -866,7 +866,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="28160" toLevel="1" name="Match Sisters' Gift">
+	<skill id="28160" toLevel="1" name="Match Girls' Gift">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -942,10 +942,10 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28171" toLevel="1" name="High-grade Zodiac Agathion">
-		<icon>icon.bm_dragon_present_4</icon>
 		<itemConsumeId>29152</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1014,7 +1014,7 @@
 		<operateType>A1</operateType>
 		<castRange>700</castRange>
 	</skill>
-	<skill id="28174" toLevel="1" name="Mochi">
+	<skill id="28174" toLevel="1" name="Rice Cake">
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
@@ -1056,25 +1056,25 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28183" toLevel="1" name="Summon Agathion - Mermaid">
+	<skill id="28183" toLevel="1" name="Summon Agathion Mermaid">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28184" toLevel="1" name="Scroll: Enchant Mermaid Agathion">
+	<skill id="28184" toLevel="1" name="Scroll: Enchant Agathion Mermaid">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28185" toLevel="1" name="Master's Fishing Potion">
-		<!-- Increases Acquired XP/ SP while fishing by 50% for 1 h.. Effect remains after death and cannot be forcibly removed. -->
+		<!-- For 1 h., Acquired XP/ SP +50% when fishing succeeds. Effect remains after death and cannot be forcefully deleted. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="28186" toLevel="1" name="Golden Fishing Shot">
+	<skill id="28186" toLevel="1" name="Gold Fishing Shot">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28187" toLevel="1" name="Shining Fishing Box">
@@ -1083,7 +1083,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28188" toLevel="5" name="Fishing Scroll: XP">
+	<skill id="28188" toLevel="5" name="Fishing XP Scroll">
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
@@ -1093,7 +1093,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="28190" toLevel="4" name="Blessing of Mermaid">
-		<!-- Increases fishing XP/ SP by $s2 for $s1. -->
+		<!-- For $s1, Acquired XP/SP during fishing +$s2. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1133,7 +1133,7 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="28196" toLevel="3" name="Honey Vitality Beer">
-		<!-- CON/ MEN/ LUC/ CHA $s2 for $s1. If additional Honey Vitality Beer is used while the Buff is still in effect, the buff will stack up to Lv. 3. Can be used wth Fish Stew. -->
+		<!-- CON/ MEN/ LUC/ CHA $s2 for $s1 If additional Honey Vitality Beer is used while the Buff is still in effect, the buff will stack up to Lv. 3. Can be used wth Fish Stew. -->
 		<icon>
 			<value level="1">icon.bm_royal_honey_beer_lv1</value>
 			<value level="2">icon.bm_royal_honey_beer_lv2</value>
@@ -1147,11 +1147,11 @@
 		<!-- Changes appearance to teddy bear. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28198" toLevel="1" name="Cat Plushy Appearance Stone">
+	<skill id="28198" toLevel="1" name="Cat Soft Toy Appearance Stone">
 		<!-- Changes appearance to cat plushy. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28199" toLevel="1" name="Panda Plushy Appearance Stone">
+	<skill id="28199" toLevel="1" name="Toy Panda Appearance Stone">
 		<!-- Changes appearance to panda plushy. -->
 		<operateType>A1</operateType>
 	</skill>

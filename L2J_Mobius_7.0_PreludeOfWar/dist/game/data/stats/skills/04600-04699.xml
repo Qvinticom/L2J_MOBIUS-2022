@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- State of momentarily decreased defense and immobility due to the Stun effect. Effect $s1 -->
+		<!-- Instantly decreases P. Def. ans stuns. Effect $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -534,7 +534,7 @@
 		</effects>
 	</skill>
 	<skill id="4606" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1031,7 +1031,7 @@
 		</effects>
 	</skill>
 	<skill id="4615" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1195,7 +1195,7 @@
 		</effects>
 	</skill>
 	<skill id="4620" toLevel="12" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1477,7 +1477,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4625" toLevel="12" name="Decrease Speed">
+	<skill id="4625" toLevel="12" name="Slow">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
@@ -1823,7 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="4631" toLevel="3" name="Acumen Shield Wild Magic">
-		<!-- Increases Casting Spd. By $s1, P. Def. by $s2, and critical rate of damage attack magic by $s3. -->
+		<!-- Casting Spd. +$s1, P. Def. +$s2, and critical rate of damage attack magic +$s3. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1879,7 +1879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4632" toLevel="3" name="Acumen Empower Wild Magic">
+	<skill id="4632" toLevel="3" name="Acumen+Empower+Wild Magic">
 		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1935,7 +1935,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4633" toLevel="3" name="Acumen Berserker Empower">
+	<skill id="4633" toLevel="3" name="Acumen+Berserker+Empower">
 		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, P. Def. -$s6, M. Def. -$s7, M. Evasion -$s8. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2023,7 +2023,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4634" toLevel="3" name="Acumen Empower Damage Shield">
+	<skill id="4634" toLevel="3" name="Acumen+Empower+Damage Shield">
 		<!-- Casting Spd. +$s1, M. Atk. +$s2 -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2324,7 +2324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4638" toLevel="3" name="Acumen Empower Wild Magic">
+	<skill id="4638" toLevel="3" name="Acumen+Empower+Wild Magic">
 		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2382,7 +2382,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4639" toLevel="3" name="Acumen Empower Berserker">
+	<skill id="4639" toLevel="3" name="Acumen+Empower+Berserker">
 		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5 -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2473,7 +2473,7 @@
 		</effects>
 	</skill>
 	<skill id="4640" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2877,7 +2877,7 @@
 		</effects>
 	</skill>
 	<skill id="4649" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3275,7 +3275,7 @@
 		</effects>
 	</skill>
 	<skill id="4657" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3360,7 +3360,7 @@
 		</effects>
 	</skill>
 	<skill id="4658" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3445,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="4659" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3530,7 +3530,7 @@
 		</effects>
 	</skill>
 	<skill id="4660" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3618,7 +3618,7 @@
 		</effects>
 	</skill>
 	<skill id="4661" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3706,7 +3706,7 @@
 		</effects>
 	</skill>
 	<skill id="4662" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4260,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="4670" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the short Stun. -->
+		<!-- Stun and immobilization for a short time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>

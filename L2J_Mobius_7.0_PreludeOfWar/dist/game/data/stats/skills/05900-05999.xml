@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" toLevel="1" name="Burst of Oblivion">
-		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<!-- When a blow is incurred, the character loses the target and temporarily can't use physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -42,8 +42,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5901" toLevel="2" name="Mist of Oblivion">
-		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+	<skill id="5901" toLevel="2" name="Burst of Oblivion">
+		<!-- When a blow is incurred, the character loses the target and temporarily can't use physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -177,7 +177,7 @@
 		</effects>
 	</skill>
 	<skill id="5905" toLevel="1" name="Confusing Nuph">
-		<!-- Physical and magic skills are all blocked. -->
+		<!-- Blocks physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -320,7 +320,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5912" toLevel="1" name="Pestilence Cleanse">
-		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Damage are decreased. Skill Cooldown is increased. -->
+		<!-- Decreases P./ M. Atk., Atk. Spd., P. Accuracy, Critical Rate and Critical Damage. Increases Skill Cooldown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -360,7 +360,7 @@
 		</effects>
 	</skill>
 	<skill id="5914" toLevel="1" name="Putrefaction Cleanse">
-		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
+		<!-- Decreases P./ M. Def., P. Evasion and Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1318,7 +1318,7 @@
 		</conditions>
 	</skill>
 	<skill id="5960" toLevel="1" name="Stronghold Reactivate">
-		<!-- Wrapped in flames and HP is decreased. -->
+		<!-- The character is wrapped in flames. HP is decreased. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1339,7 +1339,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5961" toLevel="1" name="Barrier Thunder Storm">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1425,6 +1425,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5967" toLevel="2" name="Aggression Aura">
+		<!-- none Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1741,7 +1742,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5980" toLevel="3" name="Seal Isolation">
+	<skill id="5980" toLevel="3" name="Release Seal">
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<effectPoint>
@@ -2150,6 +2151,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5992" toLevel="12" name="Aggression">
+		<!-- none Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2195,7 +2197,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5993" toLevel="1" name="Command of Anchor">
-		<!-- When a blow is incurred, an opponent loses their target and cannot use skills and magic. -->
+		<!-- When a blow is incurred, the character loses the target and temporarily can't use physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

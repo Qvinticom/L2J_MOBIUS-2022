@@ -11,7 +11,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32002" toLevel="1" name="Demolish Ground">
-		<!-- Inflicts great physical damage on the enemies near the target and stuns them for 5 sec. -->
+		<!-- A powerful AoE attack inflicting Stun for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -50,6 +50,7 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. and M. Def. for 7 sec. -->
 		<icon>icon.skill10318new</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>650</castRange>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -57,11 +58,12 @@
 		<!-- Deals great physical damage in the front and decreases P. Atk., M. Atk. and Speed for 10 sec. -->
 		<icon>icon.skill0492</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32007" toLevel="1" name="Flash of Darkness">
-		<!-- Deals great physical damage in the front and knocks down enemies. -->
+		<!-- Deals great physical damage to enemies in front of the character and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10267</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -98,20 +100,23 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. and M. Def. for 5 sec. -->
 		<icon>icon.skill11513</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>650</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32011" toLevel="1" name="Spinning Shadow">
-		<!-- Inflicts great physical damage on all nearby enemies and bleeds them for 15 sec. -->
+		<!-- Deals great physical damage to nearby enemies inflicting Bleed for 15 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="32012" toLevel="1" name="Destruction of Fate">
 		<!-- Inflicts great physical damage on all nearby enemies and decreases their P. Def. and M. Def. for 15 sec. -->
 		<icon>icon.skill0190</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="32013" toLevel="12" name="Call of Seven Signs">
@@ -156,14 +161,14 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32017" toLevel="2" name="Cry of Holy War">
-		<!-- Increases P. Atk. and M. Atk. for $s1. -->
+		<!-- Increases P. Atk. and M. Atk. for $s1 -->
 		<icon>icon.skill10325</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32018" toLevel="2" name="Stigma of Martyr">
-		<!-- Deals great bleeding damage for $s1. -->
+		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -178,13 +183,13 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32020" toLevel="2" name="Undead Creature">
-		<!-- Recovers your HP repeatedly for $s1. -->
+		<!-- Recovers your HP repeatedly for $s1 -->
 		<icon>icon.skill1310</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32021" toLevel="2" name="Distorted Avarice">
-		<!-- Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. significantly for $s1. -->
+		<!-- Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. significantly for $s1 -->
 		<icon>icon.skill32021</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -207,6 +212,7 @@
 		<!-- Decreases MP over $s1 and significantly slows Casting Spd. -->
 		<icon>icon.skill32024</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 		<hitTime>5000</hitTime>
 	</skill>
@@ -225,11 +231,12 @@
 		<!-- For 30 sec., Skill MP Consumption +100%. -->
 		<icon>icon.skill32027</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32028" toLevel="1" name="Cyclone of Chaos">
-		<!-- Caught in a cyclone, swirling helplessly and receiving damage. -->
+		<!-- Pulls into a vortex and deals significant damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32028</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -241,9 +248,10 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="32030" toLevel="1" name="End of Darkness">
-		<!-- Inflicts great DoT on enemies within the range for 1 min. and decreases their Speed by 50. -->
+		<!-- Inflicts great DoT on enemies within the range for 1 minute and decreases their Speed by 1 minute. -->
 		<icon>icon.skill32030</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 	</skill>
 	<skill id="32031" toLevel="2" name="Destruction's Shadow">
@@ -265,12 +273,13 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. for 10 sec. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
 		<hitTime>3000</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32033" toLevel="1" name="Shadow Sprint">
-		<!-- Dashes to the front, inflicting great damage on nearby enemies and knocking them down. -->
+		<!-- Charges, deals great physical damage to the nearby enemy and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10267</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -279,9 +288,10 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32034" toLevel="1" name="Crimson Glory">
-		<!-- Inflicts bleeding damage on all nearby enemies for 15 sec. -->
+		<!-- Inflicts Bleed on all enemies for 15 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
 	</skill>
@@ -294,9 +304,10 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32036" toLevel="1" name="Angel of Death">
-		<!-- Inflicts great magic damage on all nearby enemies and poisons them for 15 sec. -->
+		<!-- Deals great magic damage to nearby enemies poisoning them for 15 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6815</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>3000</hitTime>
 	</skill>
@@ -345,13 +356,13 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32044" toLevel="1" name="Roar">
-		<!-- Makes a loud shout, which inflicts physical damage on all nearby enemies and stuns them into Stun. -->
+		<!-- Roars loudly inflicting physical damage on nearby enemies and stunning them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0116</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32045" toLevel="1" name="Shield Slam">
-		<!-- Swings the shield to inflict physical damage on all nearby enemies and stun them into Stun. -->
+		<!-- Swings the shield to inflict physical damage on nearby enemies and stun them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -372,7 +383,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32048" toLevel="1" name="Fire at Will">
-		<!-- Fires a cannon at the enemy to knock it down. -->
+		<!-- Fires a cannon at the enemy to knock him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32048</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -394,7 +405,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32051" toLevel="1" name="Anchor Slash">
-		<!-- Uses an anchor to inflict physical damage on nearby enemies and stun them. -->
+		<!-- Swings an anchor to inflict physical damage on nearby enemies and stun them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32051</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -403,7 +414,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32052" toLevel="1" name="Anchor Smash">
-		<!-- Swings an anchor to inflict physical damage on nearby enemies and knock them away. -->
+		<!-- Swings an anchor to inflict significant physical damage on nearby enemies and knock them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -411,7 +422,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32053" toLevel="1" name="Anchor Drop">
-		<!-- Binds nearby enemies with the power of an anchor. -->
+		<!-- The enemy can't move because of the anchor. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0402</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -420,7 +431,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32054" toLevel="1" name="Heavy Slash">
-		<!-- Wields a sword to inflict physical damage on the enemy and cause bleeding damage. -->
+		<!-- Deals physical damage to the enemy and inflicts Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -435,7 +446,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32056" toLevel="1" name="Fear Curse">
-		<!-- Blows a horn to put all nearby enemies into fear. -->
+		<!-- Blows a horn to put nearby enemies into fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -456,7 +467,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32059" toLevel="1" name="Power Lariat">
-		<!-- Inflicts physical damage on all nearby enemies and paralyzes them. -->
+		<!-- Deals physical damage to nearby enemies paralyzing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -470,7 +481,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32061" toLevel="1" name="Tauti Push">
-		<!-- Tauti knocks down all nearby enemies and decreases their P. Def. -->
+		<!-- Decreases P. Def. of nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -480,7 +491,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32062" toLevel="1" name="Tauti Whirlwind">
-		<!-- Tauti inflicts physical damage on all nearby enemies and knocks them away. -->
+		<!-- Throws nearby enemies in the air dealing them physical damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -489,7 +500,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32063" toLevel="1" name="Tauti Typhoon">
-		<!-- Tauti inflicts physical damage on ranged enemies and knocks them away. -->
+		<!-- Throws distant enemies in the air dealing them physical damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -498,7 +509,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32064" toLevel="1" name="Tauti Shock Wave">
-		<!-- Tauti smashes an axe to inflict physical damage and stun enemies. -->
+		<!-- Tauti smashes an axe to inflict physical damage and stun enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -507,7 +518,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32065" toLevel="1" name="Tauti Rush">
-		<!-- Tauti lunges at a target, inflicting physical damage and knocking them down. -->
+		<!-- Charges into the enemy, deals physical damage and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -517,7 +528,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32066" toLevel="1" name="Tauti Ultimate Chain Strike">
-		<!-- Tauti draws scattered enemies to himself. -->
+		<!-- Pulls nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -526,7 +537,7 @@
 		<effectPoint>-2093</effectPoint>
 	</skill>
 	<skill id="32067" toLevel="1" name="Tauti Ultra Whirlwind">
-		<!-- Tauti inflicts fixed damage on nearby enemies and knocks them away. -->
+		<!-- Tauti throws nearby enemies up and deals them fixed damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -535,7 +546,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32068" toLevel="1" name="Tauti Ultra Typhoon">
-		<!-- Tauti inflicts fixed damage on ranged enemies and knocks them away. -->
+		<!-- Tauti throws distant enemies up and deals them fixed damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -566,7 +577,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32072" toLevel="1" name="Crescent Slash">
-		<!-- Wields two swords to cause physical damage and put into Bleed. -->
+		<!-- Swings a two-handed sword to deal physical damage to the enemy and inflict Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -582,7 +593,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32074" toLevel="1" name="Hundred Slash">
-		<!-- Slashes one enemy continuously to deal physical damage and cause bleed. -->
+		<!-- Slashes the enemy continuously inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -598,7 +609,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32076" toLevel="1" name="Typhoon Slash">
-		<!-- Cuts down enemies with the swords floating around you to deal physical damage and bleed them. -->
+		<!-- Swings a long sword to cut the distant enemy and inflict Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -606,7 +617,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32077" toLevel="1" name="Rage of Pirate King">
-		<!-- Expresses the king's rage, which knocks down all nearby enemies. -->
+		<!-- Expresses the king's rage, which knocks down all nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -627,7 +638,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32080" toLevel="1" name="Paralysis Attack">
-		<!-- Throws a spear to cause physical damage and paralyze. -->
+		<!-- Throws a spear to deal physical damage to the target paralyzing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -636,7 +647,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32081" toLevel="1" name="Hold Strike">
-		<!-- Deals physical damage and prohibits any action. -->
+		<!-- Deals physical damage and prohibits any action. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0402</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -660,7 +671,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32084" toLevel="2" name="Mass Fear">
-		<!-- Puts all enemies in a wide area into Fear. -->
+		<!-- Inflicts Fear on distant and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -728,7 +739,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32093" toLevel="1" name="Thunder Storm">
-		<!-- Inflicts physical damage on all nearby enemies and put them into Stun. -->
+		<!-- Deals physical damage to nearby enemies stunning them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -756,7 +767,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32097" toLevel="1" name="Mass Hold">
-		<!-- Restrains all nearby enemies in place. -->
+		<!-- Holds all nearby enemies in place. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0402</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -773,7 +784,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32099" toLevel="1" name="Hundred Slash">
-		<!-- Wields a sword to inflict physical damage on enemies and disable their skills. -->
+		<!-- Deals physical damage to the enemy and blocks all skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

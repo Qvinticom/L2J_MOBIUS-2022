@@ -573,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="9525" toLevel="1" name="Draco's Warrior Hat - Blessed Resurrection">
-		<!-- Can use Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.etc_ev_draco_hair_acc</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -596,7 +596,7 @@
 		</effects>
 	</skill>
 	<skill id="9526" toLevel="1" name="Draco's Wizard Hat - Blessed Resurrection">
-		<!-- Can use Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.etc_ev_draco_hair_acc</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -619,7 +619,7 @@
 		</effects>
 	</skill>
 	<skill id="9527" toLevel="1" name="Verdof's Vitality Replenishing Herb">
-		<!-- Vitality is replenished when XP is gained. -->
+		<!-- Recovers Vitality upon acquiring XP. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -650,7 +650,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9529" toLevel="1" name="XP Rune II (Lv. 1-95) 100%">
+	<skill id="9529" toLevel="1" name="Nevit's Rune (Dragon Rising)">
 		<!-- Acquired XP/ SP +100%. Lv. 95 or below. -->
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
@@ -672,14 +672,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9530" toLevel="1" name="Jang Heejin Agathion's Effect">
+	<skill id="9530" toLevel="1" name="Hye-jin Jang Agathion's Effect">
 		<!-- CON +3, MEN +3, Weight Gauge +10000, Max HP/ MP/ CP +300, M. Def. +5%, and Max HP +5%. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="9531" toLevel="1" name="Jang Heejin Agathion's Blessed Escape">
+	<skill id="9531" toLevel="1" name="Hye-jin Jang Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
@@ -1002,7 +1002,7 @@
 		</effects>
 	</skill>
 	<skill id="9547" toLevel="1" name="Ceremony of Chaos - Pipe Organ Melody">
-		<!-- For 7 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- For 7 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1048,7 +1048,7 @@
 		</effects>
 	</skill>
 	<skill id="9548" toLevel="1" name="Ceremony of Chaos - Guitar Melody">
-		<!-- For 7 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
+		<!-- For 7 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1240,7 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="9552" toLevel="1" name="Warrior's Harmony - Ceremony of Chaos">
-		<!-- For 7 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 7 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1601,7 +1601,7 @@
 		</effects>
 	</skill>
 	<skill id="9569" toLevel="1" name="Heavenly P. Atk. Cookie">
-		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 1 h., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -2213,7 +2213,7 @@
 		</conditions>
 	</skill>
 	<skill id="9594" toLevel="1" name="Mysterious Incantation">
-		<!-- Pulls selected target toward you. -->
+		<!-- Pulls the target to your character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>

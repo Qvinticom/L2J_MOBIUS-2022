@@ -1064,7 +1064,7 @@
 		</effects>
 	</skill>
 	<skill id="2168" toLevel="6" name="Lucky Charm">
-		<!-- Blessing which grants an exemption from the death penalty if you're killed by Boss/ Raid Monsters. Effect 1. -->
+		<!-- Blessing which grants an exemption from the death penalty if you're killed by Boss/ Raid Monster. Effect $s1 -->
 		<icon>icon.etc_orcish_talisman_i00</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1126,7 +1126,7 @@
 		</effects>
 	</skill>
 	<skill id="2169" toLevel="2" name="Magic Haste Potion">
-		<!-- Increases Casting Spd. Effect 2. -->
+		<!-- Increases Casting Spd. Effect $s1. -->
 		<icon>
 			<value level="1">icon.etc_potion_of_acumen2_i00</value>
 			<value level="2">icon.etc_potion_of_acumen3_i00</value>

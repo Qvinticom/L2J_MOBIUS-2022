@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15600" toLevel="1" name="Lindvior's Attack">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -23,7 +23,7 @@
 		</effects>
 	</skill>
 	<skill id="15601" toLevel="1" name="Lindvior's Attack">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -49,7 +49,7 @@
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="15604" toLevel="1" name="Disrupt Recharge">
-		<!-- Disrupts recharge. -->
+		<!-- Hard to restore Vitality. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
@@ -87,7 +87,7 @@
 		</conditions>
 	</skill>
 	<skill id="15607" toLevel="1" name="Depleted">
-		<!-- Energy depleted. -->
+		<!-- Vitality exhaustion. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -98,7 +98,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15608" toLevel="7" name="Power Strike">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -123,7 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="15609" toLevel="7" name="Decrease P. Def.">
-		<!-- P. Def. -$s1. -->
+		<!-- Decreases P. Def. by $s1. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -183,7 +183,7 @@
 		</effects>
 	</skill>
 	<skill id="15612" toLevel="7" name="Thunder Storm">
-		<!-- Stuns for $s1. -->
+		<!-- Inflicts Stun for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -212,7 +212,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15615" toLevel="7" name="Increase P. Atk.">
+	<skill id="15615" toLevel="7" name="Increases P. Atk.">
 		<!-- P. Atk./ M. Atk. +$s1. -->
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -221,7 +221,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15616" toLevel="7" name="Aggression">
-		<!-- Provokes target into attacking you. -->
+		<!-- Provokes the target into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -231,7 +231,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15617" toLevel="7" name="Power Smash">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -250,7 +250,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15619" toLevel="7" name="Knock Back">
-		<!-- Pushes back target. -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -260,7 +260,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15620" toLevel="7" name="Power Shot">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -269,7 +269,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15621" toLevel="7" name="Stun Shot">
-		<!-- Attacks and Stuns target for $s1. -->
+		<!-- Attacks and stuns the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0056</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -310,7 +310,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15625" toLevel="7" name="Raid Chain Strike">
-		<!-- Pulls a single enemy toward you. -->
+		<!-- Pulls a target toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -343,7 +343,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15630" toLevel="1" name="Stun Trap">
-		<!-- Immobilizes target and nearby enemies. -->
+		<!-- Immobilizes the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>800</castRange>
@@ -353,7 +353,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15631" toLevel="1" name="Lindvior's Roar">
-		<!-- Pushed back and rendered unconscious due to Lindvior's roar. -->
+		<!-- Lindvior's Roar forces the enemy's soul to abandon the body. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -407,7 +407,7 @@
 		</effects>
 	</skill>
 	<skill id="15639" toLevel="1" name="Mysterious Fear">
-		<!-- In Fear. -->
+		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -549,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="15644" toLevel="4" name="Pipe Organ Melody - Adventurer">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -613,7 +613,7 @@
 		</effects>
 	</skill>
 	<skill id="15645" toLevel="4" name="Guitar Melody - Adventurer">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -857,7 +857,7 @@
 		</effects>
 	</skill>
 	<skill id="15649" toLevel="1" name="Warrior's Harmony - Adventurer">
-		<!-- For 60 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 60 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -990,7 +990,7 @@
 		</effects>
 	</skill>
 	<skill id="15651" toLevel="1" name="Prevailing Sonata - Adventurer">
-		<!-- For 60 min., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<!-- For 60 minutes, Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, absorbs 8% of the inflicted damage as HP. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1043,7 +1043,7 @@
 		</effects>
 	</skill>
 	<skill id="15652" toLevel="1" name="Daring Sonata - Adventurer">
-		<!-- For 60 min., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 60 minutes, Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1098,7 +1098,7 @@
 		</effects>
 	</skill>
 	<skill id="15653" toLevel="1" name="Refreshing Sonata - Adventurer">
-		<!-- For 60 min., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 60 minutes, HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1174,7 +1174,7 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15656" toLevel="1" name="Power Strike">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -1209,7 +1209,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15660" toLevel="1" name="Thunder Storm">
-		<!-- Stuns for 2 sec. -->
+		<!-- Stuns the target for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1218,7 +1218,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15661" toLevel="1" name="Dark Buster">
-		<!-- Attacks frontal enemies with the power of darkness. -->
+		<!-- Attacks enemies at the front with the power of darkness. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
 		<castRange>1200</castRange>
@@ -1251,7 +1251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15663" toLevel="1" name="Increase P. Atk.">
+	<skill id="15663" toLevel="1" name="Increases P. Atk.">
 		<!-- P. Atk. and M. Atk. +10%. -->
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1260,7 +1260,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15664" toLevel="1" name="Push Up">
-		<!-- Floats the target into the air and stops him from moving for awhile. -->
+		<!-- Floats the target into the air and immobilizes it for awhile. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>

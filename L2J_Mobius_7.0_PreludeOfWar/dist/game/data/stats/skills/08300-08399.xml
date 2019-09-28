@@ -13,7 +13,7 @@
 		</effects>
 	</skill>
 	<skill id="8301" toLevel="1" name="Vesper Heavy Armor Set - PvP">
-		<!-- Increases P. Atk./ P. Def. by 5.57%, Max HP by 531, and Sleep/ Hold Resistance by 70%. Decreases damage received during PvP and enemy's speed. -->
+		<!-- P. Atk./P. Def. +5.57%, Max HP +531, Obstruction/ Stupor Resistance +70%. Decreases received PvP damage, also has a chance to decrease enemy's Speed, Atk. Spd. and Casting Spd. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -64,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="8302" toLevel="1" name="Vesper Noble Heavy Armor Set - PvP">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and M. Def. by 1%. Decreases damage received during PvP and decreases all Speeds of the attacker by a certain rate when attacked. Can equip a cloak. -->
+		<!-- P. Atk./P. Def. +5.57%, Max HP +540, Obstruction/ Stupor Resistance +70%, P. Accuracy +4, Speed +5, M. Damage Resistance +1%. Decreases received PvP damage, also has a chance to decrease enemy's Speed, Atk. Spd. and Casting Spd. Activates the cloak slot. -->
 		<icon>icon.armor_t94_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -236,7 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="8305" toLevel="1" name="Vesper Robe Set - PvP">
-		<!-- Increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5% and Stun Resistance by 50%. Decreases magic canceling damage by 30. Decreases damage received during PvP, as well as enemies' critical hit rate and Critical Damage. -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50%. Casting Interruption Rate -30. Decreases received PvP damage, also has a chance to decrease the opponent's Critical Rate and Critical Damage. -->
 		<icon>icon.armor_t96_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -291,7 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="8306" toLevel="1" name="Vesper Noble Robe Set - PvP">
-		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancelling damage by 30 and MP Consumption for magic skills by 3%. Decreases damage received during PvP, Critical Rate received when attack at a fixed rate, and the damage incurred on a critical attack. Can equip a cloak. -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50% and Speed +7. Casting Interruption Rate -30, M. Skill MP Consumption -3%. Decreases received PvP damage, also has a chance to decrease the opponent's Critical Rate and Critical Damage. Activates the cloak slot. -->
 		<icon>icon.armor_t96_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -493,7 +493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8314" toLevel="1" name="Release Agathion's Seal - Neolithica">
+	<skill id="8314" toLevel="1" name="Summon Agathion - Neolithica">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -766,7 +766,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8324" toLevel="1" name="Warrior's Shirt">
+	<skill id="8324" toLevel="1" name="Hero's Shirt">
 		<!-- Increases Max CP. -->
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -821,7 +821,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8328" toLevel="1" name="Release Agathion's Seal - Oink oink">
+	<skill id="8328" toLevel="1" name="Summon Agathion - Oink oink">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -862,7 +862,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8330" toLevel="1" name="Release Agathion's Seal - Dawn">
+	<skill id="8330" toLevel="1" name="Summon Agathion - Dawn">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1345,7 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="8348" toLevel="2" name="Resistance Earring - Gludio">
-		<!-- Increases Bleed Resistance by $s1, Stun attack bonus by $s2, and Water Attribute Defense by $s3. -->
+		<!-- Infection Resistance +$s1, Confusion Atk. Rate +$s2, Water Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1370,7 +1370,7 @@
 		</effects>
 	</skill>
 	<skill id="8349" toLevel="2" name="Resistance Earring - Dion">
-		<!-- Increases Poison Resistance by $s1, effectiveness of Hold attacks by $s2 and Holy Resistance by $s3. -->
+		<!-- Infection Resistance +$s1, Obstruction Atk. Rate +$s2, Holy Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1395,7 +1395,7 @@
 		</effects>
 	</skill>
 	<skill id="8350" toLevel="2" name="Resistance Earring - Giran">
-		<!-- Increases Paralysis Resistance by $s1, effectiveness of Bleed attacks by $s2 and Wind Resistance by $s3. -->
+		<!-- Confusion Resistance +$s1, Infection Atk. Rate +$s2, Wind Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1445,7 +1445,7 @@
 		</effects>
 	</skill>
 	<skill id="8352" toLevel="2" name="Resistance Earring - Aden">
-		<!-- Increases Stun Resistance by $s1, Mental attack bonus by $s2 and Earth Attribute Resistance by $s3. -->
+		<!-- Confusion Resistance +$s1, Earth Resistance +$s2. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1470,7 +1470,7 @@
 		</effects>
 	</skill>
 	<skill id="8353" toLevel="2" name="Resistance Earring - Innadril">
-		<!-- Increases Stun Resistance by $s1, Sleep attack bonus by $s2, and Water Attribute Resistance by $s3. -->
+		<!-- Confusion Resistance +$s1, Stupor Atk. Rate +$s2, Water Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1495,7 +1495,7 @@
 		</effects>
 	</skill>
 	<skill id="8354" toLevel="2" name="Resistance Earring - Goddard">
-		<!-- Increases Sleep Resistance by $s1, Stun attack bonus by $s2, and Fire Attribute Resistance by $s3. -->
+		<!-- Stupor Resistance +$s1, Confusion Atk. Rate +$s2, Fire Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1520,7 +1520,7 @@
 		</effects>
 	</skill>
 	<skill id="8355" toLevel="2" name="Resistance Earring - Rune">
-		<!-- Increases Hold Resistance by $s1, effectiveness of Poison attacks by $s2 and Fire Resistance by $s3. -->
+		<!-- Obstruction Resistance +$s1, Infection Atk. Rate +$s2, Fire Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1545,7 +1545,7 @@
 		</effects>
 	</skill>
 	<skill id="8356" toLevel="2" name="Resistance Earring - Schuttgart">
-		<!-- Increases mental Attack Resistance by $s1, effectiveness of Hold attacks by $s2 and Wind Resistance by $s3. -->
+		<!-- Confusion Resistance +$s1, Obstruction Atk. Rate +$s2, Wind Resistance +$s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1599,7 +1599,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8358" toLevel="1" name="Release Agathion's Seal - Towbat">
+	<skill id="8358" toLevel="1" name="Summon Agathion - Towbat">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1655,7 +1655,7 @@
 		</effects>
 	</skill>
 	<skill id="8361" toLevel="1" name="6th Anniversary Party Earring">
-		<!-- Recovers Stun/ Mental Resistance by 20%, Stun/ Mental attack bonus by 20%, and 4% of damage inflicted on the enemy as your HP at a certain probability. -->
+		<!-- Confusion Resistance/ Atk. Rate +20%. Has a certain chance to recover damage inflicted on the enemy as HP. -->
 		<icon>icon.event_six_party_earing_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1725,28 +1725,28 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="8365" toLevel="1" name="Dynasty Tunic">
-		<!-- Increases Casting Spd./ Max MP/ Dark Resistance, and decreases MP Consumption/ magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Dark Resistance. Decreases MP Consumption and Casting Interruption Rate. -->
 		<icon>icon.armor_t93_ue_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8366" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases P. Atk./ Max HP/ Critical Rate/ Dark Resistance/ Critical Damage. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8367" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases P. Atk./ Max HP/ Dark Resistance, and decreases MP Consumption. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
 		<icon>icon.armor_t91_uf_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8368" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases Casting Spd./ Max MP/ Dark Resistance, and decreases MP Consumption/ magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Dark Resistance. Decreases MP Consumption and Casting Interruption Rate. -->
 		<icon>icon.armor_t93_ue_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2277,7 +2277,7 @@
 		</effects>
 	</skill>
 	<skill id="8397" toLevel="1" name="Moirai Heavy Armor Set">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def. by 2%, Stun Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. STR+2. CON-2 -->
+		<!-- P. Atk. +4.26%, Atk. Spd. +4%, M. Damage Resistance +2%, Confusion Resistance +50% and Fire/ Water/ Wind/ Earth Resistance +3. Activates the cloak slot. STR +2, CON -2. -->
 		<icon>icon.armor_t100_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -2325,7 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="8398" toLevel="1" name="Moirai Light Armor Set">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. DEX+2, CON-2 -->
+		<!-- P. Atk. +4.26%, Atk. Spd. +4%, Speed +3%, hold resistance +50%, fire/ water/ wind/ earth resistance +3. DEX +2, CON -2. Activates the cloak slot. -->
 		<icon>icon.armor_t101_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -2373,7 +2373,7 @@
 		</effects>
 	</skill>
 	<skill id="8399" toLevel="1" name="Moirai Robe Set">
-		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 5. Cloak equip possible. WIT+2, MEN-2 -->
+		<!-- M. Atk. +8.11%, Casting Spd. +15%, paralysis resistance +50%, fire/ water/ wind/ earth resistance +5. WIT +2, MEN -2. Activates the cloak slot. -->
 		<icon>icon.armor_t102_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>

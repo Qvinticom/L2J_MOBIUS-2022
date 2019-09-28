@@ -2700,7 +2700,7 @@
 		<reuseDelay>180000</reuseDelay>
 	</skill>
 	<skill id="27549" toLevel="10" name="Tanzanite - Barrier">
-		<!-- Creates a barrier that absorbs $s2 damage for $s1. -->
+		<!-- Creates a barrier that absorbs $s2 damage for $s1 -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_tanzanite</value>
 			<value level="2">icon.etc_bm_jewel_tanzanite</value>
@@ -2752,7 +2752,7 @@
 		</effects>
 	</skill>
 	<skill id="27550" toLevel="10" name="Vital Stone">
-		<!-- Increases Bonus XP gain in Vitality state by $s1. -->
+		<!-- Vitality Bonus +$s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_vital</value>
 			<value level="2">icon.etc_bm_jewel_vital</value>
@@ -4008,7 +4008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27584" toLevel="1" name="Novice Adventurer's Shirt Effect">
+	<skill id="27584" toLevel="1" name="Novice Adventurer's Shirt">
 		<!-- CON +2. -->
 		<icon>icon.etc_shirts_c_i02</icon>
 		<operateType>P</operateType>
@@ -4019,7 +4019,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27585" toLevel="1" name="Adventurer's Shirt Effect">
+	<skill id="27585" toLevel="1" name="Adventurer's Shirt">
 		<!-- INT +2, STR +2, Speed +7 -->
 		<icon>BranchIcon.icon.shirt_of_explorer_i00</icon>
 		<operateType>P</operateType>
@@ -4268,13 +4268,13 @@
 	<skill id="27591" toLevel="1" name="+8 Shiny Elemental Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27592" toLevel="1" name="+8 Reflect Attack T-shirt Pack">
+	<skill id="27592" toLevel="1" name="+8 Physical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27593" toLevel="1" name="+8 Reflect Magic T-shirt Pack">
+	<skill id="27593" toLevel="1" name="+8 Magical Reflect Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27594" toLevel="1" name="+7 Bloody Amaranthine Pack">
+	<skill id="27594" toLevel="1" name="+7 Bloody Helios Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27595" toLevel="1" name="Lv. 4 Jewel Bundle">

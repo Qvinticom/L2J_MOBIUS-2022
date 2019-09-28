@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="1636" toLevel="1" name="(Petrify)">
-		<!-- Petrify -->
+		<!-- Petrification. Inflicted status: Petrification. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -311,7 +311,7 @@
 		</effects>
 	</skill>
 	<skill id="1637" toLevel="1" name="Stun">
-		<!-- Inflicts stun on the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -339,7 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="1638" toLevel="1" name="Stun">
-		<!-- Inflicts stun on the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -368,7 +368,7 @@
 		</effects>
 	</skill>
 	<skill id="1639" toLevel="1" name="Stun">
-		<!-- Inflicts stun on the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -395,7 +395,7 @@
 		</effects>
 	</skill>
 	<skill id="1640" toLevel="1" name="Hold">
-		<!-- Inflicts Hold on the enemy for 15 sec. -->
+		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -424,7 +424,7 @@
 		</effects>
 	</skill>
 	<skill id="1641" toLevel="1" name="Hold">
-		<!-- Inflicts Hold on the enemy for 15 sec. -->
+		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -454,7 +454,7 @@
 		</effects>
 	</skill>
 	<skill id="1642" toLevel="1" name="Hold">
-		<!-- Inflicts Hold on the enemy for 15 sec. -->
+		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -482,7 +482,7 @@
 		</effects>
 	</skill>
 	<skill id="1643" toLevel="1" name="Paralysis">
-		<!-- Causes the enemy's body to go completely rigid for 15 sec. and causes paralysis for 10 sec. -->
+		<!-- Gradually freezes the enemy's body for 15 sec. When it's frozen, inflicts Paralysis for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -993,7 +993,7 @@
 		</effects>
 	</skill>
 	<skill id="1666" toLevel="1" name="Cancellation">
-		<!-- Cancels multiple enemy buffs. -->
+		<!-- Cancels one or several of the target's buffs. -->
 		<icon>icon.skill1056</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
@@ -1060,7 +1060,7 @@
 		</effects>
 	</skill>
 	<skill id="1669" toLevel="1" name="Sleep">
-		<!-- Sleep -->
+		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1669</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1088,7 +1088,7 @@
 		</effects>
 	</skill>
 	<skill id="1670" toLevel="1" name="Silence">
-		<!-- No magic use -->
+		<!-- Blocks magic use. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1670</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1113,7 +1113,7 @@
 		</effects>
 	</skill>
 	<skill id="1671" toLevel="1" name="Disarm">
-		<!-- Disarms equipment. -->
+		<!-- Disarms. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill01671</icon>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
@@ -1159,7 +1159,7 @@
 		</effects>
 	</skill>
 	<skill id="1673" toLevel="1" name="Death">
-		<!-- 1 HP after 15 sec. -->
+		<!-- After 15 sec. the enemy has 1 HP. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1673</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1242,7 +1242,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1676" toLevel="1" name="Crazy After-effect">
-		<!-- Aftereffect of going insane. -->
+		<!-- Aftereffect of going insane. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1377,7 +1377,7 @@
 		</effects>
 	</skill>
 	<skill id="1682" toLevel="1" name="Aggression">
-		<!-- Look at me -->
+		<!-- Hostile stare full of rage! Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1764,6 +1764,7 @@
 		</effects>
 	</skill>
 	<skill id="1699" toLevel="1" name="Blink">
+		<!-- Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1448</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>

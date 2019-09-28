@@ -456,7 +456,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="26120" toLevel="12" name="Scale of Life">
-		<!-- Equalizes entire party's HP and restores $s2 HP/ second for $s1. -->
+		<!-- Equalizes entire party's HP and restores $s2 HP/ second for $s1 -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_sep_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -591,7 +591,7 @@
 		</effects>
 	</skill>
 	<skill id="26123" toLevel="12" name="Nemean Lion's Defense">
-		<!-- Invincible for $s1. -->
+		<!-- Invincible for $s1 -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -730,7 +730,7 @@
 		</effects>
 	</skill>
 	<skill id="26126" toLevel="12" name="Mass Binding Flood">
-		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Every sec. HP -$s2. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -883,7 +883,7 @@
 	<skill id="26132" toLevel="1" name="Lucky Day Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26133" toLevel="1" name="Blessed Amaranthine Pack">
+	<skill id="26133" toLevel="1" name="Blessed Helios Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26134" toLevel="1" name="Blessed Eternal Pack">
@@ -905,7 +905,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26140" toLevel="1" name="Agathion - Virgo Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24153</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -943,7 +942,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26143" toLevel="1" name="Agathion - Capricorn Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24156</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -981,7 +979,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26146" toLevel="1" name="Agathion - Libra Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24159</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1019,7 +1016,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26149" toLevel="1" name="Agathion - Aries Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24162</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1057,7 +1053,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26152" toLevel="1" name="Agathion - Taurus Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24165</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1095,7 +1090,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26155" toLevel="1" name="Agathion - Leo Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24168</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1133,7 +1127,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26158" toLevel="1" name="Agathion - Gemini Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24171</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1171,7 +1164,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26161" toLevel="1" name="Agathion - Scorpio Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24174</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1209,7 +1201,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26164" toLevel="1" name="Agathion - Aquarius Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24177</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1247,7 +1238,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26167" toLevel="1" name="Agathion - Pisces Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24180</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1285,7 +1275,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26170" toLevel="1" name="Agathion - Sagittarius Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24183</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1323,7 +1312,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26173" toLevel="1" name="Agathion - Cancer Pack (High-grade)">
-		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>24186</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1357,8 +1345,8 @@
 	<skill id="26174" toLevel="1" name="Easter Egg">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26175" toLevel="1" name="Agathion - Virgo">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26175" toLevel="1" name="Summon Agathion - Virgo">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1374,8 +1362,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26176" toLevel="1" name="Agathion - Capricorn">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26176" toLevel="1" name="Summon Agathion - Capricorn">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1391,8 +1379,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26177" toLevel="1" name="Agathion - Libra">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26177" toLevel="1" name="Summon Agathion - Libra">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1408,8 +1396,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26178" toLevel="1" name="Agathion - Aries">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26178" toLevel="1" name="Summon Agathion - Aries">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1425,8 +1413,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26179" toLevel="1" name="Agathion - Taurus">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26179" toLevel="1" name="Summon Agathion - Taurus">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1442,8 +1430,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26180" toLevel="1" name="Agathion - Leo">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26180" toLevel="1" name="Summon Agathion - Leo">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1459,8 +1447,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26181" toLevel="1" name="Agathion - Gemini">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26181" toLevel="1" name="Summon Agathion - Gemini">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1476,8 +1464,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26182" toLevel="1" name="Agathion - Scorpio">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26182" toLevel="1" name="Summon Agathion - Scorpio">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1493,8 +1481,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26183" toLevel="1" name="Agathion - Aquarius">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26183" toLevel="1" name="Summon Agathion - Aquarius">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1510,8 +1498,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26184" toLevel="1" name="Agathion - Pisces">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26184" toLevel="1" name="Summon Agathion - Pisces">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1527,8 +1515,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26185" toLevel="1" name="Agathion - Sagittarius">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26185" toLevel="1" name="Summon Agathion - Sagittarius">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1544,8 +1532,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26186" toLevel="1" name="Agathion - Cancer">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26186" toLevel="1" name="Summon Agathion - Cancer">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1561,8 +1549,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26187" toLevel="1" name="Agathion - Virgo">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26187" toLevel="1" name="Summon Agathion - Virgo">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1578,8 +1566,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26188" toLevel="1" name="Agathion - Capricorn">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26188" toLevel="1" name="Summon Agathion - Capricorn">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1595,8 +1583,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26189" toLevel="1" name="Agathion - Libra">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26189" toLevel="1" name="Summon Agathion - Libra">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1612,8 +1600,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26190" toLevel="1" name="Agathion - Aries">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26190" toLevel="1" name="Summon Agathion - Aries">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1629,8 +1617,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26191" toLevel="1" name="Agathion - Taurus">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26191" toLevel="1" name="Summon Agathion - Taurus">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1646,8 +1634,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26192" toLevel="1" name="Agathion - Leo">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26192" toLevel="1" name="Summon Agathion - Leo">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1663,8 +1651,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26193" toLevel="1" name="Agathion - Gemini">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26193" toLevel="1" name="Summon Agathion - Gemini">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1680,8 +1668,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26194" toLevel="1" name="Agathion - Scorpio">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26194" toLevel="1" name="Summon Agathion - Scorpio">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1697,8 +1685,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26195" toLevel="1" name="Agathion - Aquarius">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26195" toLevel="1" name="Summon Agathion - Aquarius">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1714,8 +1702,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26196" toLevel="1" name="Agathion - Pisces">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26196" toLevel="1" name="Summon Agathion - Pisces">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1731,8 +1719,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26197" toLevel="1" name="Agathion - Sagittarius">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26197" toLevel="1" name="Summon Agathion - Sagittarius">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1748,8 +1736,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26198" toLevel="1" name="Agathion - Cancer">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26198" toLevel="1" name="Summon Agathion - Cancer">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1765,8 +1753,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26199" toLevel="1" name="Agathion - Virgo">
-		<!-- Release Agathion's Seal. -->
+	<skill id="26199" toLevel="1" name="Summon Agathion - Virgo">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

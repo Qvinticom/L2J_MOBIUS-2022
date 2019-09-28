@@ -195,7 +195,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15410" toLevel="1" name="Full Attack">
-		<!-- Pulls in PCs within range and inflicts damage. -->
+		<!-- Pulls all nearby characters and attacks them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -410,7 +410,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="15427" toLevel="1" name="Bleed">
-		<!-- AoE Bleeding. -->
+		<!-- Inflicts AoE Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -420,7 +420,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15428" toLevel="1" name="Knock Back">
-		<!-- AoE Knock Back. -->
+		<!-- Mass Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -429,7 +429,7 @@
 		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15429" toLevel="1" name="Yoke">
+	<skill id="15429" toLevel="1" name="Hold">
 		<!-- Lindvior's AoE Aerial Yoke. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -496,7 +496,7 @@
 		</effects>
 	</skill>
 	<skill id="15433" toLevel="1" name="Surrender to Dark">
-		<!-- State of momentarily decreased Dark Resistance and increased Holy Resistance. -->
+		<!-- Dark Resistance has been momentarily decreased, while Holy Resistance has been increased. -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -609,7 +609,7 @@
 		</effects>
 	</skill>
 	<skill id="15438" toLevel="1" name="Hold">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -695,7 +695,7 @@
 		</effects>
 	</skill>
 	<skill id="15442" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -751,7 +751,7 @@
 		</effects>
 	</skill>
 	<skill id="15444" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="15447" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -895,7 +895,7 @@
 		</effects>
 	</skill>
 	<skill id="15450" toLevel="1" name="Weakness">
-		<!-- P. Atk. decreases momentarily. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -924,7 +924,7 @@
 		</effects>
 	</skill>
 	<skill id="15451" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -953,7 +953,7 @@
 		</effects>
 	</skill>
 	<skill id="15452" toLevel="1" name="Decrease P. Atk.">
-		<!-- P. Atk. decreases momentarily. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill1164</icon>
 		<operateType>A2</operateType>
 		<mpConsume>112</mpConsume>
@@ -1020,7 +1020,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15455" toLevel="1" name="Sensitive Skin">
+	<skill id="15455" toLevel="1" name="Thin Skin">
 		<!-- Received damage increases due to skin sensitivity. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1048,7 +1048,7 @@
 		</effects>
 	</skill>
 	<skill id="15457" toLevel="2" name="Triol's Reign">
-		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
+		<!-- Blood is drained by Triol, one of the $s1 Demons of Hell. Inflicted status: Infection (Bleed/ Poison) Demons of Hell, decreasing the character's HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1119,7 +1119,7 @@
 		</effects>
 	</skill>
 	<skill id="15460" toLevel="1" name="Poison">
-		<!-- HP decreases from poison momentarily. -->
+		<!-- Instantly decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1555,7 +1555,7 @@
 		</effects>
 	</skill>
 	<skill id="15478" toLevel="1" name="Spread Disease">
-		<!-- HP decreases from disease momentarily. -->
+		<!-- Instantly decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1611,7 +1611,7 @@
 		</effects>
 	</skill>
 	<skill id="15480" toLevel="1" name="Shoot Poison">
-		<!-- HP decreased due to poison. -->
+		<!-- Decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1698,7 +1698,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15486" toLevel="1" name="Straight Blow">
-		<!-- Bleed on a single enemy. -->
+		<!-- Attacks a single target inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1753,7 +1753,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15492" toLevel="1" name="Immediate Response">
-		<!-- Poison on a single enemy. -->
+		<!-- Attacks a single target poisoning it. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1764,7 +1764,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15493" toLevel="1" name="Forward March">
+	<skill id="15493" toLevel="1" name="Charge">
 		<!-- Rush toward enemy. -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1800,7 +1800,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15497" toLevel="1" name="Summon Royal Guard">
+	<skill id="15497" toLevel="1" name="Summons Royal Guard Member.">
 		<!-- Summons Royal Guard Member. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>

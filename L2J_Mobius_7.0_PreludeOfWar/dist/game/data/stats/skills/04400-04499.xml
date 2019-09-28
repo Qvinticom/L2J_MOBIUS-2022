@@ -154,7 +154,7 @@
 		</effects>
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
-		<!-- Critical Damage is increased temporarily. Effect $s1 -->
+		<!-- Temporarily increases Critical Damage. Effect $s1 -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="4406" toLevel="3" name="Agility">
-		<!-- Momentarily increases evasion. Effect $s1. -->
+		<!-- Momentarily increases Evasion. Effect $s1 -->
 		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1584,8 +1584,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4423" toLevel="5" name="Holy">
-		<!-- Inflicts attack boosted with the energy of Holy. Resistant to Holy attack. -->
+	<skill id="4423" toLevel="5" name="Holy Attacks">
+		<!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1626,7 +1626,7 @@
 		</effects>
 	</skill>
 	<skill id="4425" toLevel="5" name="Blunt Weapon Resistance">
-		<!-- Resistant to Blunts. -->
+		<!-- Resistant to blunts. -->
 		<icon>icon.skill4425</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1763,7 +1763,7 @@
 		</effects>
 	</skill>
 	<skill id="4433" toLevel="5" name="High Holy Attribute Resistance">
-		<!-- Highly resistant to Holy attack. -->
+		<!-- Very resistant to Holy. -->
 		<icon>icon.skill4433</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1945,7 +1945,7 @@
 		</effects>
 	</skill>
 	<skill id="4443" toLevel="5" name="Greater Blunt Weapon Resistance">
-		<!-- Very resistant to Blunts. -->
+		<!-- Very resistant to blunts. -->
 		<icon>icon.skill4443</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1988,7 +1988,7 @@
 		</effects>
 	</skill>
 	<skill id="4445" toLevel="5" name="Greater Spear Resistance">
-		<!-- Very resistant to Spears. -->
+		<!-- Very resistant to spears. -->
 		<icon>icon.skill4445</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2520,7 +2520,7 @@
 		</effects>
 	</skill>
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
-		<!-- State of momentarily decreased Dark Resistance and increased Holy Resistance. Effect $s1 -->
+		<!-- Dark Attack Resistance decreases and Holy Attack Resistance increases momentarily. Effect $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2579,7 +2579,7 @@
 		</effects>
 	</skill>
 	<skill id="4467" toLevel="3" name="Surrender to Holy">
-		<!-- State of momentarily decreased Holy Resistance and increased Dark Resistance. Effect $s1 -->
+		<!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. Effect $s1 -->
 		<icon>icon.skill4275_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2856,7 +2856,7 @@
 		</effects>
 	</skill>
 	<skill id="4473" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3229,7 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3530,7 +3530,7 @@
 		</effects>
 	</skill>
 	<skill id="4488" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3717,7 +3717,7 @@
 		</effects>
 	</skill>
 	<skill id="4491" toLevel="12" name="Holy Weapon">
-		<!-- State of dealing Holy attack. -->
+		<!-- Makes Holy attacks. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3999,7 +3999,7 @@
 		</effects>
 	</skill>
 	<skill id="4496" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

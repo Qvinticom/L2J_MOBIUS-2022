@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="8504" toLevel="1" name="Pink Talisman - Stun Resistance">
-		<!-- Increases Stun Resistance when Talisman is equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_event_i01</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -65,7 +65,7 @@
 		</effects>
 	</skill>
 	<skill id="8505" toLevel="1" name="Pink Talisman - Sleep Resistance">
-		<!-- Increases Sleep Resistance when equipped. -->
+		<!-- Increases Stupor Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_event_i01</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -188,7 +188,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="8512" toLevel="1" name="Olympic Athlete's Tenacity">
-		<!-- Use to obtain a 3-day/ 7-day/ 10-day/ 30-day/ unlimited National Warrior's Accessory Set. Using the skill consumes 10 Marks of Cheers, and the skill may be canceled when attacked. -->
+		<!-- Use to obtain a 3-day/ 7-day/ 10-day/ 30-day/ unlimited National Hero's Accessory Set. Using the skill consumes 10 Marks of Cheers, and the skill may be canceled when attacked. -->
 		<icon>BranchSys2.icon.br_spirit_of_brave_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -282,7 +282,7 @@
 		</effects>
 	</skill>
 	<skill id="8514" toLevel="1" name="Olympic Athlete's Energy of Victory">
-		<!-- When used, you can obtain at random one XP Buff 50% 1 (4-h.) and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
+		<!-- You have a chance to obtain a Nevit's Hourglass (1-4 hours) along with a Nevit's Voice. When skills are used, 10 Mark of Cheers are consumed. Can be cancelled when your charater is attacked. -->
 		<icon>BranchSys2.icon.br_obsession_of_winning_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -329,7 +329,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8515" toLevel="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
+	<skill id="8515" toLevel="1" name="Summon Agathion - Ball Trapping Gnosian">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -347,7 +347,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8516" toLevel="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
+	<skill id="8516" toLevel="1" name="Summon Agathion - Ball Trapping Orodriel">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -365,7 +365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8517" toLevel="1" name="Release Agathion's Seal - Penalty Kick">
+	<skill id="8517" toLevel="1" name="Summon Agathion - Penalty Kick">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -462,7 +462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8523" toLevel="1" name="Release Agathion's Seal - Guardian of Dawn Kallesin">
+	<skill id="8523" toLevel="1" name="Summon Agathion - Guardian of Dawn Kallesin">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -534,8 +534,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8528" toLevel="1" name="Release Agathion's Seal">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="8528" toLevel="1" name="Summon Agathion">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -547,7 +547,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8529" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15 and Poison Resistance by 10%. -->
+		<!-- Max MP +15, Infection Resistance +10%. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -563,7 +563,7 @@
 		</effects>
 	</skill>
 	<skill id="8530" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, and poison attack rate by 10%. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -582,7 +582,7 @@
 		</effects>
 	</skill>
 	<skill id="8531" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, and Hold Resistance by 10%. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance +10%. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -602,7 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="8532" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, and hold attack rate by 10%. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance/ Atk. Rate +10%. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -623,7 +623,7 @@
 		</effects>
 	</skill>
 	<skill id="8533" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, and accuracy. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance/ Atk. Rate +10%. Increases P. Accuracy. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -648,7 +648,7 @@
 		</effects>
 	</skill>
 	<skill id="8534" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, and Atk. Spd. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance/ Atk. Rate +10%. Increases P. Accuracy and Atk. Spd. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -677,7 +677,7 @@
 		</effects>
 	</skill>
 	<skill id="8535" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, Atk. Spd., and Casting Spd. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance/ Atk. Rate +10%. Increases P. Accuracy and Atk./ Casting Spd. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -710,7 +710,7 @@
 		</effects>
 	</skill>
 	<skill id="8536" toLevel="1" name="Ring of Insolence">
-		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, Atk. Spd., Casting Spd., and critical damage. -->
+		<!-- Max MP +15, Infection Resistance/ Atk. Rate +10%, Obstruction Resistance/ Atk. Rate +10%. Increases P. Accuracy, Atk./ Casting Spd. and P. Critical Damage. -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1121,7 +1121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8547" toLevel="1" name="Song of Champion">
+	<skill id="8547" toLevel="1" name="Champion Song">
 		<!-- For 2 min., decreases all party members' physical/ sing/ dance skill use MP Consumption by 20% and physical/ sing/ dance skill reuse time by 10%. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0364</icon>
 		<operateType>A2</operateType>
@@ -1261,7 +1261,7 @@
 		</effects>
 	</skill>
 	<skill id="8550" toLevel="1" name="Dance of Medusa">
-		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for 30 sec. Requires a dual sword. -->
+		<!-- Dance to summon the illusion of Medusa that petrifies nearby enemies for 30 sec. Requires a dual sword. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
 		<operateType>A2</operateType>
 		<mpConsume>53</mpConsume>
@@ -1392,7 +1392,7 @@
 		</effects>
 	</skill>
 	<skill id="8552" toLevel="1" name="Onslaught of Pa'agrio">
-		<!-- Attacks near the enemy with 4563 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
+		<!-- Deals burning damage with 4563 power. For 15 sec., the enemy loses 92 HP per second. Requires a blunt weapon. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0949</icon>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
@@ -1835,7 +1835,7 @@
 		</effects>
 	</skill>
 	<skill id="8564" toLevel="1" name="Rush Impact">
-		<!-- Charges forward to attack the enemies in front with 4040 power added to P. Attack and inflicts Stun for 9 sec. The power of the ring made it easier to use. -->
+		<!-- Charges forward to attack the enemies in front with 4040 power and inflicts Stun for 9 sec. The power of the ring made it easier to use. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1879,7 +1879,7 @@
 		</effects>
 	</skill>
 	<skill id="8565" toLevel="1" name="Dread Pool">
-		<!-- Fear spreads around the area. Decreases nearby enemies' Speed by 33%. Inflicts fear and causes them to flee for 8 sec. -->
+		<!-- Fear is spreading around the area. Nearby enemies' Speed -33%. Inflicts Fear and causes them to flee for 8 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0774</icon>
 		<operateType>A2</operateType>
 		<mpConsume>87</mpConsume>
@@ -2108,7 +2108,7 @@
 		</effects>
 	</skill>
 	<skill id="8572" toLevel="1" name="Armor Crush">
-		<!-- Attacks the enemy with 3295 Power added to P. Atk. For 9 sec., inflicts Stun and decreases P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit and Critical are possible. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with 3295 power and inflicts Stun for 9 sec. P./ M. Def. +30%. Requires a sword, blunt weapon, two-handed sword, or a two-handed blunt weapon. Over-hit. Critical. Ignores Shield Defense. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0362</icon>
 		<operateType>A2</operateType>
 		<hpConsume>338</hpConsume>

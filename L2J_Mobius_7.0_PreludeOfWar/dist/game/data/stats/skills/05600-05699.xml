@@ -156,7 +156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5602" toLevel="1" name="Transform Sacrifice">
+	<skill id="5602" toLevel="1" name="Sacrifice Transformation">
 		<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
@@ -212,8 +212,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5604" toLevel="1" name="Sword/ Blunt Weapon Mastery">
-		<!-- A state in which MP consumption of skills is greatly decreased, and the success rate of stun attack is increased. -->
+	<skill id="5604" toLevel="1" name="Sword/Blunt Weapon Mastery">
+		<!-- Skill MP consumption is greatly decreased, and Confusion Atk. Rate is increased. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -762,7 +762,7 @@
 		</effects>
 	</skill>
 	<skill id="5628" toLevel="1" name="Adventurer's Shield">
-		<!-- For 60 min. P. Def. increases by 15% -->
+		<!-- For 60 min., P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -877,7 +877,7 @@
 		</effects>
 	</skill>
 	<skill id="5633" toLevel="1" name="Adventurer's Blessed Soul">
-		<!-- For 60 min., Max HP is increased by 35%. -->
+		<!-- For 60 min., Max MP +35%. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -969,7 +969,7 @@
 		</effects>
 	</skill>
 	<skill id="5637" toLevel="1" name="Adventurer's Magic Barrier">
-		<!-- Increases M. Def. by 30% for 60 min. -->
+		<!-- For 20 min., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1724,7 +1724,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5655" toLevel="1" name="Transform Gatekeeper">
+	<skill id="5655" toLevel="1" name="Gatekeeper Transformation">
 		<!-- Transforms into a gatekeeper. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2229,7 +2229,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5657" toLevel="85" name="Gatekeeper Prominence">
-		<!-- Compresses air until it bursts into flames. Power $s1. -->
+		<!-- Condenses air to burst flames. Power $s1 -->
 		<icon>icon.skill1230</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -2687,7 +2687,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5658" toLevel="85" name="Gatekeeper Flame Strike">
-		<!-- Hurls a destructive long-range fireball at multiple enemies. Power $s1. -->
+		<!-- Hurls a fireball that causes a burning trail. Power $s1 -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3389,7 +3389,7 @@
 		</effects>
 	</skill>
 	<skill id="5665" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3417,7 +3417,7 @@
 		</effects>
 	</skill>
 	<skill id="5666" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3445,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="5667" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3473,7 +3473,7 @@
 		</effects>
 	</skill>
 	<skill id="5668" toLevel="1" name="Poison">
-		<!-- HP decreases from Poison momentarily. Effect 8. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect 8. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3504,7 +3504,7 @@
 		</effects>
 	</skill>
 	<skill id="5669" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3532,7 +3532,7 @@
 		</effects>
 	</skill>
 	<skill id="5670" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3560,7 +3560,7 @@
 		</effects>
 	</skill>
 	<skill id="5671" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3588,7 +3588,7 @@
 		</effects>
 	</skill>
 	<skill id="5672" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3616,6 +3616,7 @@
 		</effects>
 	</skill>
 	<skill id="5673" toLevel="1" name="Evasion Counter">
+		<!-- For 9 sec. gives a chance to reflect the enemy's attack inflicting Faint. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0818</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4236,7 +4237,7 @@
 		</effects>
 	</skill>
 	<skill id="5697" toLevel="4" name="Seal">
-		<!-- Unable to use physical/ magic skills momentarily. -->
+		<!-- Temporarily blocks all physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0835</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

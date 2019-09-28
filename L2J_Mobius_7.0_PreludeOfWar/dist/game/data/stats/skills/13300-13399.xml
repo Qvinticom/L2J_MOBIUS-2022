@@ -219,7 +219,7 @@
 		</effects>
 	</skill>
 	<skill id="13311" fromLevel="3" toLevel="3" name="Light Armor Top Special Ability">
-		<!-- P. Evasion +2, Speed +3, and P. Debuff Resistance +5. The chance of receiving P. Critical Attack -3.4%. -->
+		<!-- P. Evasion +2, Speed +3, P. Debuff Resistance +5, and received P. Critical Rate -3.4%. -->
 		<icon>icon.armor_t502_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -245,7 +245,7 @@
 		</effects>
 	</skill>
 	<skill id="13312" fromLevel="3" toLevel="3" name="Robe Upper Special Ability">
-		<!-- M. Evasion +3, and M. Debuff Resistance +9. Received P. Critical Damage -2.1%, and the chance of receiving P. Critical Attack -1.7%. -->
+		<!-- M. Evasion +3, M. Debuff Resistance +9. Received P. Critical Damage -2.1% and received P. Critical Rate -1.7%. -->
 		<icon>icon.armor_t503_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -271,7 +271,7 @@
 		</effects>
 	</skill>
 	<skill id="13313" toLevel="1" name="Blessed Antharas' Earring">
-		<!-- P. Defense/ M. Def. +15%, CON/ MEN+3, Earth/ Holy Defense +30, Bleed attack and defense success rate +50%, Stun/ Mental attack and defense success rate +40%, Healing received +10%, MP consumption by skills -5%, Vampiric Rage +4% -->
+		<!-- P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Resistance +30, Infection Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Received Healing +10%, MP Consumption -5% and Vampiric Rage +4%. -->
 		<icon>icon.accessory_earring_of_antaras_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -332,7 +332,7 @@
 		</effects>
 	</skill>
 	<skill id="13314" toLevel="1" name="Blessed Antharas' Earring">
-		<!-- Using it instantly cancels the Stun effect and activates Stun Resistance for 5 sec. -->
+		<!-- Removes Stun, also grants Confusion Resistance for 5 sec. -->
 		<icon>icon.accessory_earring_of_antaras_i00</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -356,7 +356,7 @@
 		</effects>
 	</skill>
 	<skill id="13315" toLevel="1" name="Blessed Valakas' Necklace">
-		<!-- Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT +3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflectionion 5% -->
+		<!-- Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Resistance/ Atk. Rate +50%, P. Skill Power +5%, Skill Cooldown -10% and Damage Reflectionion 5%. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -418,7 +418,7 @@
 		</effects>
 	</skill>
 	<skill id="13316" toLevel="1" name="Blessed Valakas' Necklace">
-		<!-- Immediately cancels out Hold effect when used; gives 5-second Hold Resistance. -->
+		<!-- Removes Hold, also grants Obstruction Resistance for 5 sec. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
@@ -442,7 +442,7 @@
 		</effects>
 	</skill>
 	<skill id="13317" toLevel="1" name="Earth Wyrm Heart Ring">
-		<!-- Increases Wind/ Water Resistance, Physical/ Mental/ Poison Resistance, Knock Back/ Knock Down/ Pulling/ Danger Zone Resistance, Poison Attack Bonus, Critical Damage, Accuracy/ Atk. Spd./ Casting Spd./ MP Recovery Speed. -->
+		<!-- Increases P./ M. Debuff Resistance, P. Atk. Rate, Confusion/ Infection Atk. Rate, Confusion/ Danger Zone Resistance, P. Critical Damage, P. Accuracy, Atk./ Casting Spd. and HP Recovery Rate. -->
 		<icon>icon.ring_earthworm_heart</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -575,7 +575,7 @@
 		</effects>
 	</skill>
 	<skill id="13321" toLevel="1" name="Istina's Earring">
-		<!-- Wind Resistance +30, Stun Resistance +30%, Stun Atk. Rate +30%, and additional 5% vampiric rage with a certain probability. -->
+		<!-- Wind Resistance +30, Confusion Resistance/ Atk. Rate +30%. With a certain chance, Vampiric Rage effect +5%. -->
 		<icon>icon.istina_earring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -714,7 +714,7 @@
 		</effects>
 	</skill>
 	<skill id="13326" toLevel="1" name="Octavis' Earring">
-		<!-- Earth Resistance +30, Hold/ Sleep Resistance +40%, hold/ sleep attack bonus +40%. -->
+		<!-- Earth Resistance +30, Obstruction Resistance/ Atk. Rate +40%, Stupor Resistance/ Atk. Rate +40%. -->
 		<icon>icon.octavis_earring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -766,7 +766,7 @@
 		</effects>
 	</skill>
 	<skill id="13328" toLevel="1" name="Octavis' Belt">
-		<!-- MP Recovery Rate +2.3 and weight limit +13000. -->
+		<!-- MP Recovery Rate +2.3, Weight Limit +13,000. -->
 		<icon>icon.octavis_belt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1385,8 +1385,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13345" toLevel="1" name="Release Agathion's Seal - Tersi's Light">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="13345" toLevel="1" name="Summon Agathion - Tersi's Light">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1912,7 +1912,7 @@
 		</effects>
 	</skill>
 	<skill id="13373" toLevel="1" name="Squash Necklace">
-		<!-- Increases Sleep/ Paralyze/ Stun/ Poison/ Bleed Resistance by 20%, Sleep/ Paralyze/ Stun/ Poison/ Bleed attack rate by 20%, and decreases skill cooldown and MP consumption by skills by 5%, each. -->
+		<!-- 20%, Stupor Resistance/ Atk. Rate +20%, Confusion Resistance/ Atk. Rate +20%, Stupor Resistance/ Atk. Rate +20%. Skill Cooldown and Skill MP Consumption -5%. -->
 		<icon>icon.accessory_necklace_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1958,7 +1958,7 @@
 		</effects>
 	</skill>
 	<skill id="13374" toLevel="1" name="Circlet of Earthquake">
-		<!-- Increases Earth resistance by 60. -->
+		<!-- Earth Resistance +60. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1970,8 +1970,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13375" toLevel="1" name="Release Agathion's Seal - XP Bottle">
-		<!-- Removes the seal on an Agathion - XP Bottle. Consumes 10 MP upon use. Can be used by main classes Lv. 85 or above. -->
+	<skill id="13375" toLevel="1" name="Summon Agathion - XP Bottle">
+		<!-- Summons Agathion - XP Bottle. Consumes 10 MP upon use. Can be used by main classes Lv. 85 or above. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -2078,8 +2078,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13380" toLevel="1" name="Seal Agathion - XP Bottle">
-		<!-- Seals the Agathion - XP Bottle. Decreases remaining magic by 5 upon skill use. -->
+	<skill id="13380" toLevel="1" name="Summon Agathion - XP Bottle">
+		<!-- Summons Agathion - XP Bottle. Consumes 5 magic points. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>

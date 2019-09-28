@@ -655,7 +655,7 @@
 		</effects>
 	</skill>
 	<skill id="23513" toLevel="1" name="Zombified">
-		<!-- Bitten by a zombie. Speed is decreasing, and the infection is spreading. Will turn into a zombie if not cured with Nevit's Touch within 1 min. -->
+		<!-- Bitten by a zombie. Speed is decreased, and the infection is spreading. Will turn into a zombie if not cured with Nevit's Touch within 1 min. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -984,7 +984,7 @@
 		</effects>
 	</skill>
 	<skill id="23525" toLevel="1" name="Zombified">
-		<!-- Bitten by a zombie. Speed is decreasing, and the infection is spreading. Will suffer side effects if not cured with Nevit's Touch within 1 min. -->
+		<!-- Bitten by a zombie. Speed is decreased, and the infection is spreading. Will suffer side effects if not cured with Nevit's Touch within 1 min. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1020,7 +1020,7 @@
 		</effects>
 	</skill>
 	<skill id="23526" toLevel="1" name="Zombification Side Effects">
-		<!-- Exhausted by the infection. Nevit's Touch or Zombie Plague will not work while in this state. -->
+		<!-- Exhausted by the infection. Vitality is decreased. Can't be cured by Nevit's Touch. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1828,7 +1828,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23556" toLevel="1" name="Piercing Attack">
-		<!-- Pierces the enemy and inflicts Bleed. -->
+		<!-- Pierces the enemy and inflicts Infection. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -1941,7 +1941,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23561" toLevel="1" name="Massive Blow">
-		<!-- Inflicts physical damage and Bleed on nearby enemies. -->
+		<!-- Deals damage to the target and inflicts Infection. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>1500</castRange>
@@ -2208,7 +2208,7 @@
 		<castRange>600</castRange>
 	</skill>
 	<skill id="23584" toLevel="1" name="Bloody Strike">
-		<!-- Strikes a single arget and inflicts Bleed. -->
+		<!-- Strikes the terget and inflicts Infection. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>

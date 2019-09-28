@@ -1207,7 +1207,7 @@
 		</effects>
 	</skill>
 	<skill id="18637" toLevel="1" name="Duo Vital Compression Stone">
-		<!-- When used, bonus Acquired XP in Vitality Status is boosted by 20%. Cannot be used together with Dandy's Home Run Ball/ Fall of the Dragon Buff/ Nevit's Hourglass. -->
+		<!-- Acquired XP +20%. Cannot be used together with Dandy's Home Run Ball, Dandy's Golden Ball or Nevit's Hourglass. -->
 		<icon>icon.etc_capture_stone_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1227,7 +1227,7 @@
 		<!-- 200 PA Points obtained -->
 		<icon>icon.etc_ticket_i00</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18639" toLevel="3" name="Scroll of Experience - Lv1">
 		<!-- Use to obtain XP (TBD) -->
@@ -1244,10 +1244,10 @@
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18641" toLevel="1" name="Balthus Knights Supply Box">
+	<skill id="18641" toLevel="1" name="Freya's Lucky Pouch">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18642" toLevel="15" name="Insanity Talisman/ Longing Talisman/ Energy of Longing Supply Box">
+	<skill id="18642" toLevel="16" name="Insanity/Longing Talisman/Hellfire Energy Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1312,7 +1312,7 @@
 		</effects>
 	</skill>
 	<skill id="18648" toLevel="1" name="Freya's Rune">
-		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1 and Mental/ Paralysis Resistance +10% when in your inventory. -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1, Confusion Resistance +10%. -->
 		<icon>icon.bm_freya_rune</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1367,9 +1367,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18651" toLevel="1" name="+7 T-shirt Box (Shining/ Attack/ Magic)">
+	<skill id="18651" toLevel="11" name="+7 T-shirt Box (Shining/ Attack/ Magic)">
 		<!-- Double-click to obtain one of Shiny Elemental enchanted by +7/ Reflect Attack/ Reflect Magic Shirt. -->
-		<icon>icon.event_six_party_box_i00</icon>
 		<itemConsumeId>47761</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1661,7 +1660,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18695" toLevel="1" name="Potion of Protection: Pull">
-		<!-- Use this to increase the defense rate against Pull by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i03</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>47657</itemConsumeId>
@@ -1729,12 +1728,12 @@
 		</effects>
 	</skill>
 	<skill id="18697" toLevel="1" name="Potion of Protection: Seduction">
-		<!-- Use this to increase the defense rate against Seduction by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="18698" toLevel="1" name="Potion of Protection: Bluff">
-		<!-- Use this to increase the defense rate against Bluff by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Obstruction Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i09</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>47660</itemConsumeId>
@@ -1768,7 +1767,7 @@
 		</effects>
 	</skill>
 	<skill id="18699" toLevel="1" name="Potion of Protection: Faint">
-		<!-- Use this to increase the defense rate against Faint by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i08</icon>
 		<operateType>A2</operateType>
 	</skill>

@@ -9,7 +9,7 @@
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23601" toLevel="1" name="P. Atk. Decrease">
+	<skill id="23601" toLevel="1" name="Decrease P. Atk.">
 		<!-- P. Atk. -50%. -->
 		<icon>icon.skill0115</icon>
 		<operateType>A2</operateType>
@@ -123,7 +123,7 @@
 		<effectPoint>500</effectPoint>
 	</skill>
 	<skill id="23613" toLevel="3" name="Crackling Timber">
-		<!-- Crackling fire burns the enemy for $s1. If stacked to Lv. $s2 or above, an explosion adds more damage after the duration is up. -->
+		<!-- Crackling fire burns the enemy for $s1 If stacked to Lv. $s2 or above, an explosion adds more damage after the duration is up. -->
 		<icon>icon.skill1101</icon>
 		<operateType>A2</operateType>
 		<mpConsume>48</mpConsume>
@@ -170,7 +170,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23619" toLevel="3" name="Silence Bomb">
-		<!-- Katura's darkness seeps in to inflict Silence and magic damage for $s1. If stacked to Lv. $s2 or above, Soul Burn adds more damage after the duration is up. -->
+		<!-- Katura's darkness seeps in to inflict Silence and magic damage for $s1 If stacked to Lv. $s2 or above, Soul Burn adds more damage after the duration is up. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -200,7 +200,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23622" toLevel="3" name="Quaking Earth">
-		<!-- The wrath of the earth inflicts Stun for $s1. If stacked to Lv. $s2 or above, a sweeping quake adds more damage after the duration is up. -->
+		<!-- The wrath of the earth inflicts Stun for $s1 If stacked to Lv. $s2 or above, a sweeping quake adds more damage after the duration is up. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -303,13 +303,15 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23635" toLevel="1" name="Dimensional Backpedal">
-		<!-- After failing to retreat, Kamaloka's boss will remain alive for at least $s1., with HP that doesn't drop past $s2. -->
+		<!-- After failing to retreat, Kamaloka's boss will remain alive for at least 11 sec., with HP that doesn't drop past 1. -->
 		<icon>icon.skill23635</icon>
 		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23636" toLevel="1" name="Stun Crush">
-		<!-- Attacks nearby enemies and stuns them for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -321,7 +323,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23637" toLevel="1" name="Dark Provoke">
-		<!-- Provokes selected target and makes them re-target to you, and reduces their P. Atk. and Atk. Spd by 35% for 15 sec. -->
+		<!-- Provokes the selected target to attack you. P. Atk. and Atk. Spd -35% for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11868</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -333,7 +335,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23638" toLevel="1" name="Bloody Strike">
-		<!-- Inflicts great damage to a single target and makes them bleed for 10 sec. -->
+		<!-- Deals great damage to a single target making them bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1539</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -345,7 +347,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23639" toLevel="1" name="Rush Assault">
-		<!-- Rush towards a single target and knocks them back. -->
+		<!-- Charges toward the target and knocks it back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0230</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -376,7 +378,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="23642" toLevel="1" name="Crack of Air">
-		<!-- Pull those within range of the target and reduces Speed and Atk. Spd. by 50% for 10 sec. -->
+		<!-- Pulls all enemies near the target to itself. Speed and Atk. Spd. -50% for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4454</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -388,7 +390,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23643" toLevel="1" name="Vampiric Force">
-		<!-- Inflicts HP Drain to those within range of the target and inflicts Vampiric Rage for 10 sec. -->
+		<!-- Drains HP of all nearby enemies and grants the character Vampiric Rage for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1507</icon>
 		<operateType>A1</operateType>
 		<mpConsume>11</mpConsume>
@@ -411,7 +413,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23645" toLevel="1" name="Curse of Silence">
-		<!-- Attacks surrounding enemies with 550 Power added to M. Atk. and blocks P./ M. Skills for 10 sec. -->
+		<!-- Deals AoE damage nearby enemies. Power 550. Blocks physical and magic skills for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill6320</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -432,7 +434,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="23647" toLevel="1" name="Absolute Black">
-		<!-- Attacks nearby enemies and stuns them for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1399</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -490,7 +492,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23652" toLevel="1" name="Rage of Embryo">
-		<!-- Inflicts great magic damage to a single target and paralyzes them for 5 sec. -->
+		<!-- Deals great magic damage paralysing the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0116</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -516,7 +518,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23654" toLevel="1" name="Earth Breaker">
-		<!-- Inflicts great damage to a single target and knocks back by 100 grids. -->
+		<!-- Deals great damage to the target knocking it back by 100 grids. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0107</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -528,7 +530,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23655" toLevel="1" name="Gravity Slam">
-		<!-- Inflicts great damage to enemies within range and stuns them for 5 sec. -->
+		<!-- Deals great AoE damage to enemies stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1558</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -568,7 +570,7 @@
 		<effectPoint>-115</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23659" toLevel="2" name="Wind Fatal Strike">
+	<skill id="23659" toLevel="2" name="Fatal Wind Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -641,7 +643,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23667" toLevel="1" name="Mass Air Binding">
-		<!-- Thrusts nearby enemies into the air and immobilizes them for 10 sec. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -654,7 +656,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23668" toLevel="2" name="Mass Power Slam">
-		<!-- Deals a powerful blow and knocks back the enemy. -->
+		<!-- Inflicts a powerful blow on the target and knocks it back for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -675,7 +677,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23670" toLevel="1" name="Holy Defense Down">
-		<!-- Reduces resistance to Holy attack. -->
+		<!-- Resistance to Holy Attacks decreases. -->
 		<icon>icon.skill4275_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -702,7 +704,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23673" toLevel="1" name="Isabella Mass Fear">
-		<!-- Inflicted with Isabella Mass Fear and moves against own will momentarily. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -714,7 +716,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23674" toLevel="1" name="Isabella Bleeding Range">
-		<!-- Inflicted with Isabella Bleeding Range and receives damage with bleeding. -->
+		<!-- You've got into the area of Isabella Bleeding Range and receive bleeding damage. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -726,7 +728,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23675" toLevel="1" name="Isabella Mass Fear">
-		<!-- Inflicted with Isabella Mass Fear and moves against own will momentarily. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -735,7 +737,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23676" toLevel="1" name="Isabella Bleeding Range">
-		<!-- Inflicted with Isabella Bleeding Range and receives damage with bleeding. -->
+		<!-- You've got into the area of Isabella Bleeding Range and receive bleeding damage. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -802,7 +804,7 @@
 		</effects>
 	</skill>
 	<skill id="23683" toLevel="1" name="Dark Cloud">
-		<!-- Inflicts great magic damage to enemies within range. -->
+		<!-- Deals great AoE damage to enemies and inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -830,7 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="23684" toLevel="1" name="Dancing Blade">
-		<!-- Inflicts great damage to enemies within range and makes them bleed for 10 sec. -->
+		<!-- Inflicts Fear on enemies in the selected area for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -858,7 +860,7 @@
 		</effects>
 	</skill>
 	<skill id="23685" toLevel="1" name="Exploration Fear">
-		<!-- Inflicts Fear to enemies within range for 10 sec. -->
+		<!-- Knocks the enemy down in selected area for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -946,7 +948,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23694" toLevel="1" name="Water Drop Shackle">
-		<!-- Inflicts Aerial Yoke to enemies within range for 5 sec. -->
+		<!-- Deals great damage in the selected area and knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -957,7 +959,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23695" toLevel="1" name="Tornado Shackle">
-		<!-- Inflicts great damage to enemies within range and blows them away. -->
+		<!-- Deals great damage to the target stunning it for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill23695</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -969,7 +971,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23696" toLevel="1" name="Stun Crash">
-		<!-- Inflicts great damage to a single target and stuns them for 5 sec. -->
+		<!-- Pulls enemies in the selected area and stuns them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -980,7 +982,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23697" toLevel="1" name="Chain Snake">
-		<!-- Pulls in enemies within range and stuns them for 10 sec. -->
+		<!-- Deals great damage to the target inflicting Silence for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19187</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -993,7 +995,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23698" toLevel="1" name="Curse of Silence">
-		<!-- Inflicts great damage to a single target and silences them for 5 sec. -->
+		<!-- Deals great AoE damage to enemies knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>

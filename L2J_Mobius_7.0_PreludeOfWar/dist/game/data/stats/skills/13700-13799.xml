@@ -119,7 +119,7 @@
 		</effects>
 	</skill>
 	<skill id="13702" toLevel="12" name="Item Skill: Invincibility">
-		<!-- Becomes invincible for $s1. -->
+		<!-- Becomes invincible for $s1 -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -525,7 +525,7 @@
 		</effects>
 	</skill>
 	<skill id="13708" toLevel="12" name="Item Skill: Aerial Yoke">
-		<!-- For $s1, inflicts Aerial Yoke on target and nearby enemies. -->
+		<!-- For $s1, inflicts Aerial Yoke on the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
@@ -605,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="13709" toLevel="12" name="Item Skill: Fear">
-		<!-- For $s1, inflicts Fear on target and nearby enemies. -->
+		<!-- For $s1, inflicts Fear on the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
@@ -674,7 +674,7 @@
 		</effects>
 	</skill>
 	<skill id="13710" toLevel="12" name="Item Skill: Hold">
-		<!-- For $s1, inflicts Hold on target and nearby enemies. -->
+		<!-- For $s1, inflicts Hold on the target and nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -744,7 +744,7 @@
 		</effects>
 	</skill>
 	<skill id="13711" toLevel="12" name="Item Skill: Knock Down">
-		<!-- For $s1, inflicts Knock Down on target and nearby enemies. -->
+		<!-- For $s1, inflicts Knockdown on the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -824,7 +824,7 @@
 		</effects>
 	</skill>
 	<skill id="13712" toLevel="12" name="Item Skill: Paralyze">
-		<!-- For $s1, inflicts Paralysis on target and nearby enemies. -->
+		<!-- For $s1, inflicts Paralysis on the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -894,7 +894,7 @@
 		</effects>
 	</skill>
 	<skill id="13713" toLevel="12" name="Item Skill: Silence">
-		<!-- For $s1, inflicts Silence on target and nearby enemies. -->
+		<!-- For $s1, inflicts Silence on the target and nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -961,7 +961,7 @@
 		</effects>
 	</skill>
 	<skill id="13714" toLevel="12" name="Item Skill: Sleep">
-		<!-- For $s1, inflicts Sleep on target and nearby enemies. -->
+		<!-- For $s1, inflicts Sleep on target and nearby enemies. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1101,7 +1101,7 @@
 		</effects>
 	</skill>
 	<skill id="13716" toLevel="12" name="Item Skill: Stun">
-		<!-- For $s1, inflicts Stun on target and nearby enemies. -->
+		<!-- For $s1, inflicts Stun on the target and nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1203,7 +1203,7 @@
 		</effects>
 	</skill>
 	<skill id="13718" toLevel="12" name="Item Skill: Aerial Yoke">
-		<!-- For $s1, inflicts Aerial Yoke on target. -->
+		<!-- Inflicts Aerial Yoke for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1279,7 +1279,7 @@
 		</effects>
 	</skill>
 	<skill id="13719" toLevel="12" name="Item Skill: Fear">
-		<!-- For $s1, inflicts Fear on target. -->
+		<!-- Inflicts Fear on the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1344,7 +1344,7 @@
 		</effects>
 	</skill>
 	<skill id="13720" toLevel="12" name="Item Skill: Silence">
-		<!-- For $s1, inflicts Silence on target. -->
+		<!-- Inflicts Silence for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1408,7 +1408,7 @@
 		</effects>
 	</skill>
 	<skill id="13721" toLevel="12" name="Item Skill: Sleep">
-		<!-- For $s1, inflicts Sleep on target. -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1541,7 +1541,7 @@
 		</effects>
 	</skill>
 	<skill id="13723" toLevel="12" name="Item Skill: Stun">
-		<!-- For $s1, inflicts Stun on target. -->
+		<!-- Inflicts Stun for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1607,7 +1607,7 @@
 		</effects>
 	</skill>
 	<skill id="13724" toLevel="12" name="Item Skill: Hold">
-		<!-- For $s1, inflicts Hold on target. -->
+		<!-- Inflicts Hold for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1674,7 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="13725" toLevel="12" name="Item Skill: Knock Down">
-		<!-- For $s1, inflicts Knock Down on target. -->
+		<!-- Inflicts Knockdown for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -1751,7 +1751,7 @@
 		</effects>
 	</skill>
 	<skill id="13726" toLevel="12" name="Item Skill: Paralyze">
-		<!-- For $s1, inflicts Paralysis on target. -->
+		<!-- Inflicts Paralysis for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
@@ -2773,7 +2773,7 @@
 		</effects>
 	</skill>
 	<skill id="13754" toLevel="6" name="Item Skill: Aerial Yoke, Petrification Resistance">
-		<!-- Increases Aerial Yoke, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2798,7 +2798,7 @@
 		</effects>
 	</skill>
 	<skill id="13755" toLevel="6" name="Item Skill: Pull, Petrification Resistance">
-		<!-- Increases Pull, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2823,7 +2823,7 @@
 		</effects>
 	</skill>
 	<skill id="13756" toLevel="6" name="Item Skill: Knock Back/ Knock Down, Petrification Resistance">
-		<!-- Increases Knock Back/ Knock Down, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2856,7 +2856,7 @@
 		</effects>
 	</skill>
 	<skill id="13757" toLevel="6" name="Item Skill: Poison, Petrification Resistance">
-		<!-- Increases Poison, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Infection Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2975,7 +2975,7 @@
 		</effects>
 	</skill>
 	<skill id="13761" toLevel="6" name="Item Skill: Paralysis, Petrification Resistance">
-		<!-- Increases Paralysis, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3120,7 +3120,7 @@
 		</effects>
 	</skill>
 	<skill id="13765" toLevel="6" name="Item Skill: Stun, Petrifaction Resistance">
-		<!-- Equipping this increases Stun Resistance and Petrifaction Resistance by $s1. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3145,7 +3145,7 @@
 		</effects>
 	</skill>
 	<skill id="13766" toLevel="6" name="Item Skill: Sleep, Petrification Resistance">
-		<!-- Increases Sleep, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Stupor Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3170,7 +3170,7 @@
 		</effects>
 	</skill>
 	<skill id="13767" toLevel="6" name="Item Skill: Mental Attack, Petrification Resistance">
-		<!-- Increases Mental Attack, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Confusion Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3195,7 +3195,7 @@
 		</effects>
 	</skill>
 	<skill id="13768" toLevel="6" name="Item Skill: Bleed, Petrification Resistance">
-		<!-- Increases Bleed, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Infection Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3220,7 +3220,7 @@
 		</effects>
 	</skill>
 	<skill id="13769" toLevel="6" name="Item Skill: Hold, Petrification Resistance">
-		<!-- Increases Hold, Petrification Resistance by $s1 when equipped. -->
+		<!-- Petrification/ Obstruction Resistance +$s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>

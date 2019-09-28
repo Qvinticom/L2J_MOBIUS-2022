@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6900" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6900" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- In order to gather monsters that would protect its territory, Antharas created countless sacrifice victims. The Bleeding Fly was enchanted by the stench of corpses and came up above ground. This nobility of purgatory, who feeds on the blood of hatred and fear, called itself the Gatekeeper of Antharas, and it took its place on one side of the Valley where there is an endless stream of reckless challengers. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6901" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6901" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- A Drake warrior that was once called the right wing of Antharas in battle. During the war against the gods, it lost two of its wings to injury and fell into a deep part of Purgatory. However, it was recently awakened by Antharas' call. It hold a deep grudge against the gods, especially Einhasad, and it believes that only the darkness of Shilen can bring rest to the world. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6902" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6902" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- It was once the subordinate of the Dark Dragon Skelus. It was one of the nobility of Purgatory who resided deep inside. But it came above ground at Antharas' calling. It protects the Antharas' Nest, and it also informs Skelus about the area's developments. When it was in Purgatory, it was called "Hell's Corpse Detonator" because of its sinister pleasure in making its comrades explode. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6903" toLevel="1" name="Raid Boss (Lv. 84)">
-		<!-- A monsters summoned from Purgatory by the demon Maluk in exchange for one finger. As part of their agreement, Maluk presented an endless supply of hunting prey. The Spike Slasher accepted the proposal and came above ground with its subordinates in tow from Purgatory. -->
+	<skill id="6903" toLevel="1" name="84 Lv. Raid Boss">
+		<!-- A monster summoned from Purgatory by the demon Maluk in exchange for one finger. As part of their agreement, Maluk presented an endless supply of hunting prey. The Spike Slasher accepted the proposal and came above ground with its subordinates in tow from Purgatory. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6904" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6904" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- The monster was created by the demon Maluk by joining a high-Lv. demon with a dragon. It possesses the advantages of both demons and dragons. Maluk offered this exceptional creature to Antharas. Antharas fed its blood to the Muscle Bomber and appointed it as the Valley's Watcher. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6905" toLevel="1" name="Raid Boss (Lv. 85)">
+	<skill id="6905" toLevel="1" name="85 Lv. Raid Boss">
 		<!-- They say that this monster was created through the fusion of a Human hero's body, who opened the Gate of Purgatory, and the spitefulness of countless monsters. However, this rumor is not confirmed. In any case, it has come above ground at Shilen's command, and it watches over the dragon's dungeon as an aide of Antharas. It possess exceptional abilities, and it is uniquely rational and cold-hearted. As such, it supposedly gives good assistance to the tyrant Antharas. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -49,7 +49,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6907" toLevel="1" name="Raid Boss (Lv. 85)">
+	<skill id="6907" toLevel="1" name="85 Lv. Raid Boss">
 		<!-- A Knight of Purgatory who has long assisted Antharas, together with the Black Dagger Wing. During the war against the gods, it broke both arms and fell into a deep slumber within Purgatory. It recently awakened at Antharas' call. When the Dragon Beast appeared above ground, Antharas sliced off his own flesh in order to create its two arms. Then, he made it guard the dragon's dungeon. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -110,7 +110,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6911" toLevel="1" name="Greeting">
+	<skill id="6911" toLevel="1" name="Cheer">
 		<!-- Shows the game master's greeting. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A1</operateType>
@@ -176,7 +176,7 @@
 		</effects>
 	</skill>
 	<skill id="6914" toLevel="10" name="Haste">
-		<!-- Atk Spd increased by $s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -191,7 +191,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6915" toLevel="10" name="Acumen">
-		<!-- Casting Spd. is increased by $s1. -->
+		<!-- Casting Spd. +$s1. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -333,7 +333,7 @@
 		</effects>
 	</skill>
 	<skill id="6922" toLevel="3" name="Adventurer's Might">
-		<!-- P. Atk. +$s1. -->
+		<!-- P. Atk. +$s1 -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -433,7 +433,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="6930" toLevel="2" name="Adventurer's Haste">
-		<!-- Atk. Spd. +$s1. -->
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -469,7 +469,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="6933" toLevel="2" name="Adventurer's Berserker Spirit">
-		<!-- P. Def. -$s1, M. Def. -$s2, Evasion -$s3, and P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
+		<!-- P. Def. -$s1, M. Def. -$s2, Evasion -$s3, P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -492,7 +492,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="6935" toLevel="2" name="Adventurer's Wind Walk">
-		<!-- Speed +20. -->
+		<!-- Speed +$s1. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>

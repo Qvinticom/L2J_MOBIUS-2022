@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="9705" toLevel="1" name="Kaliel's Wish">
-		<!-- Participating in the Kaliel's Blessing event. Buff is deleted when sub/ dual class is changed. -->
+		<!-- Obtained by participating in the Kaliel's Blessing event. The effect is removed after dual class changing. -->
 		<icon>icon.etc_blessed_kalie_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2044,7 +2044,7 @@
 		</effects>
 	</skill>
 	<skill id="9761" toLevel="1" name="Guitar Melody (Battleground)">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, Speed +15, and Skill MP Consumption -10%. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, Movement Speed +, all Skill MP Consumption -10%. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2194,7 +2194,7 @@
 		</effects>
 	</skill>
 	<skill id="9765" toLevel="1" name="Battleground Scroll: Sleep">
-		<!-- Sleeps target for 10 sec. -->
+		<!-- Inflicts Sleep on the target for 10 sec. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>36313</itemConsumeId>
@@ -2537,7 +2537,7 @@
 		</effects>
 	</skill>
 	<skill id="9775" toLevel="1" name="Birthday Vitality Potion">
-		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Buff is deleted when subclass is changed. Cooldown is 60 min. Buff remains even after death. -->
+		<!-- For 1 h., XP gained through the hunting is replenishing Vitality. The buff is removed after dual class changing. Cooldown is 60 min. The effect remains after death. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2580,7 +2580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9777" toLevel="1" name="Pa'agrio's Warm Breeze (1-h.)">
+	<skill id="9777" toLevel="1" name="Pa'agrio's Warm Breeze (1-hour)">
 		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>BranchSys2.Icon.pi_wind_of_paagrio</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2660,8 +2660,8 @@
 		<!-- Mysterious box. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9782" toLevel="1" name="Release Agathion's Seal - Jr. Cocoring">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9782" toLevel="1" name="Summon Agathion - Jr. Cocoring">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>

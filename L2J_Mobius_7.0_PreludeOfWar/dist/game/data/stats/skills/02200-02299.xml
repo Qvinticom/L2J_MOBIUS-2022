@@ -1921,7 +1921,7 @@
 		</effects>
 	</skill>
 	<skill id="2234" toLevel="1" name="Soul Breaking Arrow">
-		<!-- Momentarily immobile due to the short Stun. -->
+		<!-- Stun and immobilization for a short time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.etc_destory_soul_arrow_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>

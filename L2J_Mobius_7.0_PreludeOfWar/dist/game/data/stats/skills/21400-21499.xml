@@ -218,7 +218,7 @@
 	<skill id="21408" toLevel="1" name="Mysterious Dye Cancellation">
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="21409" toLevel="1" name="Release Agathion's Seal - Three-headed Dragon">
+	<skill id="21409" toLevel="1" name="Summon Agathion - Three-headed Dragon">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -824,7 +824,7 @@
 		</effects>
 	</skill>
 	<skill id="21452" toLevel="1" name="Visual Enchant Stone">
-		<!-- MP Recovery Bonus +3. -->
+		<!-- MP Recovery Rate +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -836,7 +836,7 @@
 		</effects>
 	</skill>
 	<skill id="21453" toLevel="1" name="Visual Enchant Stone">
-		<!-- MP Recovery Bonus +4. -->
+		<!-- MP Recovery Rate +4%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -848,7 +848,7 @@
 		</effects>
 	</skill>
 	<skill id="21454" toLevel="1" name="Visual Enchant Stone">
-		<!-- MP Recovery Bonus +8. -->
+		<!-- MP Recovery Rate +8%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -998,7 +998,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21476" toLevel="1" name="Cloak of the Chosen">
-		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +3. Received damage during PvP -15%, Weight Limit +25600, Inventory Slots +36. -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +3, received PvP damage -15%, weight limit +25,600 and inventory slots +36. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1109,7 +1109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21478" toLevel="1" name="Release Agathion's Seal - Griffin">
+	<skill id="21478" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>

@@ -269,7 +269,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19208" toLevel="7" name="Seal of Suspension">
+	<skill id="19208" toLevel="9" name="Seal of Suspension">
 		<!-- For $s1, Physical and Magic skill cooldown of the target and nearby enemies +$s2. Consumes 5 Spirit Ore. -->
 		<icon>
 			<value level="1">icon.skill11558</value>
@@ -279,6 +279,8 @@
 			<value level="5">icon.skill19208</value>
 			<value level="6">icon.skill19208</value>
 			<value level="7">icon.skill19208</value>
+			<value level="8">icon.skill19208</value>
+			<value level="9">icon.skill19208</value>
 		</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -297,6 +299,8 @@
 			<value level="5">-285</value>
 			<value level="6">-285</value>
 			<value level="7">-285</value>
+			<value level="8">-285</value>
+			<value level="9">-285</value>
 		</effectPoint>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
@@ -316,19 +320,19 @@
 			<effect name="BlockSkill">
 				<magicTypes>3</magicTypes>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="7" fromSubLevel="1001" toSubLevel="1020">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
@@ -471,7 +475,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>117</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -497,7 +501,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>117</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -523,7 +527,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>117</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -549,7 +553,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>117</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -575,7 +579,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>128</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -601,7 +605,7 @@
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>128</mpConsume>
 		<hitTime>3000</hitTime>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -924,7 +928,7 @@
 		</effects>
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
-		<!-- Blends into the wind for $s1. Increases Speed by $s2. Canceled when using standard attacks or attack skills. -->
+		<!-- Blends into the wind for $s1 Increases Speed by $s2. Canceled when using standard attacks or attack skills. -->
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -996,7 +1000,7 @@
 		</effects>
 	</skill>
 	<skill id="19230" toLevel="30" name="MP Recovery">
-		<!-- MP Recovery Bonus +$s2 for $s1. -->
+		<!-- MP Recovery Bonus +$s2 for $s1 -->
 		<icon>icon.skill1047</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1127,7 +1131,7 @@
 		</effects>
 	</skill>
 	<skill id="19235" toLevel="3" name="Guardian Body">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +$s1. -->
 		<icon>icon.skill1045</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1278,7 +1282,7 @@
 		</effects>
 	</skill>
 	<skill id="19240" toLevel="2" name="Guardian Resist">
-		<!-- Debuff Resistance +$s1 -->
+		<!-- Debuff Resistance +$s1. -->
 		<icon>icon.skill1354</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1292,7 +1296,7 @@
 		</effects>
 	</skill>
 	<skill id="19241" toLevel="4" name="Guardian Life">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +$s1. -->
 		<icon>icon.skill1229</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1308,7 +1312,7 @@
 		</effects>
 	</skill>
 	<skill id="19242" toLevel="1" name="Guardian Block">
-		<!-- Shield Defense +100% -->
+		<!-- Shield Defense +100%. -->
 		<icon>icon.skill1304</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1449,7 +1453,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19248" toLevel="2" name="Guardian Blessing">
+	<skill id="19248" toLevel="2" name="Guardian's Blessing">
 		<!-- Acquired XP/ SP +$s1 -->
 		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
@@ -1641,7 +1645,7 @@
 		</effects>
 	</skill>
 	<skill id="19259" toLevel="3" name="Berserker Focus">
-		<!-- P. Critical Rate +$s1 -->
+		<!-- P. Critical Rate +$s1. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1957,7 +1961,7 @@
 		</effects>
 	</skill>
 	<skill id="19276" toLevel="3" name="Wizard's Wild Magic">
-		<!-- M. Critical Rate +$s1 -->
+		<!-- M. Critical Rate +$s1. -->
 		<icon>icon.skill1303</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2108,7 +2112,7 @@
 		</effects>
 	</skill>
 	<skill id="19282" toLevel="2" name="Wizard's Protection">
-		<!-- Mental, Stun, and Aerial Yoke Atk. Rate +$s1 -->
+		<!-- Confusion Atk. Rate +$s1. -->
 		<icon>icon.skill0046</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2262,7 +2266,7 @@
 		</effects>
 	</skill>
 	<skill id="19291" toLevel="1" name="Subclass Certification - Attack">
-		<!-- Increases P. Atk. by 4%, M. Atk. by 6%. -->
+		<!-- P. Atk. +4%, M. Atk. +6%. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2351,7 +2355,7 @@
 		</effects>
 	</skill>
 	<skill id="19296" toLevel="10" name="Counter Flip">
-		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->
+		<!-- Knocks down the attacking opponent for $s1 and teleports you behind their back. After that the Counter Flip effect is cancelled. Requires a dagger or a dual dagger. -->
 		<icon>icon.skill19296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2432,7 +2436,7 @@
 		</effects>
 	</skill>
 	<skill id="19297" toLevel="10" name="Counter Flip">
-		<!-- Countering has knocked you down for $s1. -->
+		<!-- Counters the enemy's attack knocking them down for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2492,7 +2496,7 @@
 		</effects>
 	</skill>
 	<skill id="19298" toLevel="10" name="Flash Dagger">
-		<!-- Blinds enemies in front of you for $s1 and cancels their ability to pick a target. Requires dagger/ dual dagger. -->
+		<!-- Blinds enemies in front of you making them unable to choose a target for $s1 Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19298</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

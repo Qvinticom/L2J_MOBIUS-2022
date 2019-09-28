@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Combat Frenzy">
-		<!-- For 5 min., clan members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and Magic Cancel Rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, clan members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and Magic Cancel Rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11600_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -60,7 +60,7 @@
 		</effects>
 	</skill>
 	<skill id="11601" toLevel="1" name="Marching Frenzy">
-		<!-- For 5 min., clan members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, nearby clan members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, Skill Cooldown -10%. -->
 		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -117,7 +117,7 @@
 		</effects>
 	</skill>
 	<skill id="11602" toLevel="1" name="Relax Frenzy">
-		<!-- For 5 min., clan members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 5 minutes, nearby clan members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -187,8 +187,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11603" toLevel="7" name="Seal of Extortion">
-		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
+	<skill id="11603" toLevel="9" name="Seal of Extortion">
+		<!-- For $s1, Received Healing of the target and nearby enemies -$s2. -->
 		<icon>
 			<value level="1">icon.skill11559</value>
 			<value level="2">icon.skill11559</value>
@@ -197,6 +197,8 @@
 			<value level="5">icon.skill1509</value>
 			<value level="6">icon.skill1509</value>
 			<value level="7">icon.skill1509</value>
+			<value level="8">icon.skill1509</value>
+			<value level="9">icon.skill1509</value>
 		</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
@@ -231,6 +233,8 @@
 			<value level="5">-679</value>
 			<value level="6">-679</value>
 			<value level="7">-679</value>
+			<value level="8">-679</value>
+			<value level="9">-679</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -243,6 +247,8 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
+					<value level="8">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -255,6 +261,8 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
+					<value level="8">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -267,6 +275,8 @@
 					<value level="5">-80</value>
 					<value level="6">-90</value>
 					<value level="7">-100</value>
+					<value level="8">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">-100</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -320,7 +330,7 @@
 		</effects>
 	</skill>
 	<skill id="11605" toLevel="1" name="Shield Song">
-		<!-- For 30 min., P. Def. +5%, 6 Attribute Def. +20, Bow/ Crossbow Resistance +10%, and Debuff Resistance +10%. -->
+		<!-- For 30 minutes, P. Def. +10%, 6 Attributes Resistance +30, Bow/ Crossbow Resistance +10%, Debuff Resistance +10%. -->
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -358,7 +368,7 @@
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Sword Waltz">
-		<!-- For 30 min., your P. Atk. and Atk. Spd. +15% and P. Critical Rate/ Speed +10. A chance to apply the Spectral Slash effect on the target when a basic attack is made. -->
+		<!-- For 30 minutes, your P. Atk. +20%, Atk. Spd. +15% and P. Critical Rate/Movement Speed +10. A chance to apply the Spectral Slash effect on the target when a basic attack is made. -->
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -396,7 +406,7 @@
 		</effects>
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
-		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -455,7 +465,7 @@
 		</effects>
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
-		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -516,7 +526,7 @@
 		</effects>
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
-		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -582,7 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
-		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -641,7 +651,7 @@
 		</effects>
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
-		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -702,7 +712,7 @@
 		</effects>
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
-		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -811,7 +821,7 @@
 		</effects>
 	</skill>
 	<skill id="11614" toLevel="4" name="Battle Rhapsody Dance">
-		<!-- For $s1, increases your P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. +$s2. -->
+		<!-- For $s1, P./ M. Atk./ Atk. Spd./ Casting Spd. +$s2. -->
 		<icon>icon.skill11614</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>

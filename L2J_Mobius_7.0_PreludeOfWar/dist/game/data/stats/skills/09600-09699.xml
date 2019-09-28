@@ -250,7 +250,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9612" toLevel="1" name="Clan Association - Guitar Melody">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. Buff remains even after death. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. But the buff is not deleted upon death. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1159,7 +1159,7 @@
 		</conditions>
 	</skill>
 	<skill id="9660" toLevel="1" name="Heavenly P. Atk. Cookie (Event)">
-		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 1 h., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1549,7 +1549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9675" toLevel="1" name="Double Crystal Enhancement Reward: Amaranthine Box">
+	<skill id="9675" toLevel="1" name="Double Crystal Enhancement Reward: Helios Box">
 		<itemConsumeId>36143</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1590,7 +1590,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9676" toLevel="1" name="Double Crystal Enhancement Reward: Amaranthine Box">
+	<skill id="9676" toLevel="1" name="Double Crystal Enhancement Reward: Helios Box">
 		<itemConsumeId>36144</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1616,7 +1616,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9677" toLevel="1" name="Double Crystal Enhancement Reward: Amaranthine Box">
+	<skill id="9677" toLevel="1" name="Double Crystal Enhancement Reward: Helios Box">
 		<itemConsumeId>36145</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1642,7 +1642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9678" toLevel="1" name="Bloody Amaranthine Weapon Pack">
+	<skill id="9678" toLevel="1" name="Bloody Helios Weapon Pack">
 		<itemConsumeId>36146</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1692,7 +1692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9679" toLevel="1" name="Dark Amaranthine Weapon Pack">
+	<skill id="9679" toLevel="1" name="Dark Helios Weapon Pack">
 		<itemConsumeId>36147</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>

@@ -14,7 +14,7 @@
 		</effects>
 	</skill>
 	<skill id="19301" toLevel="11" name="Istina Acid Swarm">
-		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
+		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1 Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
 		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<operateType>A1</operateType>
@@ -111,7 +111,7 @@
 		</effects>
 	</skill>
 	<skill id="19302" toLevel="11" name="Thrown Acid Swarm">
-		<!-- Damaged by acid. P./ M. Def. -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, cannot use magic skills, and HP -$s3 per second. -->
+		<!-- Creates a poisonous area. Enemies' P./ M. Def. -$s1, Atk. Spd./ Speed/ Shield Defense -$s2, HP -$s3 per sec. Prevents the enemies from using M. skills. Inflicted status: Danger Zone. -->
 		<icon>icon.skill19301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -199,7 +199,7 @@
 		</effects>
 	</skill>
 	<skill id="19303" toLevel="9" name="Right Angle Reverse">
-		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
+		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2 Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -328,7 +328,7 @@
 		</effects>
 	</skill>
 	<skill id="19305" toLevel="9" name="Shadow Reverse">
-		<!-- Attempts Deadly Attack on the target with $s1 power added to P. Attack and moves backward. Additionally, decreases Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack on the target with $s1 power added to P. Attack and moves backward. Additionally, decreases Accuracy by $s3 for $s2 Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19305</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -440,7 +440,7 @@
 		</effects>
 	</skill>
 	<skill id="19307" toLevel="2" name="Lucky Coin: Attack">
-		<!-- Maphr's Blessing increases Attack by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1. -->
+		<!-- Maphr's Blessing increases Attack by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1 -->
 		<icon>icon.skill19307</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -551,7 +551,7 @@
 		</effects>
 	</skill>
 	<skill id="19311" toLevel="5" name="Dwarven Flare Bluff">
-		<!-- Fires Special Flare to inflict Bluff on enemies in front for $s1. Requires dagger/ dual dagger. Consumes $s2 Soulstones. -->
+		<!-- Fires a special flare charge that confuses enemies at the front for $s1 Requires a dagger or a dual dagger. Consumes $s2 Soulstones. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -782,7 +782,7 @@
 		</effects>
 	</skill>
 	<skill id="19315" toLevel="4" name="Mana Burst">
-		<!-- Increases M. Atk. by $s2 for $s1. Able to cast Quadruple Elemental Blaster if reached level 4. -->
+		<!-- Increases M. Atk. by $s2 for $s1 Able to cast Quadruple Elemental Blaster if reached level 4. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="12800" toLevel="1" name="Abelius' Power">
+	<skill id="12800" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32264</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -25,7 +25,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12801" toLevel="1" name="Sapyros' Power">
+	<skill id="12801" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32265</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -50,7 +50,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12802" toLevel="1" name="Ashagen's Power">
+	<skill id="12802" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32266</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -75,7 +75,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12803" toLevel="1" name="Cranigg's Power">
+	<skill id="12803" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32267</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -100,7 +100,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12804" toLevel="1" name="Soltkreig's Power">
+	<skill id="12804" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32268</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -125,7 +125,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12805" toLevel="1" name="Naviarope's Power">
+	<skill id="12805" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32269</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -150,7 +150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12806" toLevel="1" name="Leister's Power">
+	<skill id="12806" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32270</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -175,7 +175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12807" toLevel="1" name="Lakcis' Power">
+	<skill id="12807" toLevel="1" name="Box for the Awakened">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>32271</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -3035,7 +3035,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12871" toLevel="1" name="Destruction Scroll: Enchant Weapon (R-grade)">
+	<skill id="12871" toLevel="1" name="Hero's Treasure Chest">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3337,8 +3337,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12889" toLevel="1" name="Romantic Chapeau - P. Critical Rate">
-		<!-- P. Critical Rate +50. -->
+	<skill id="12889" toLevel="1" name="Romantic Chapeau - Critical Rate">
+		<!-- Critical Rate +50. -->
 		<icon>icon.accessory_romantic_chaperon_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3351,7 +3351,7 @@
 		</effects>
 	</skill>
 	<skill id="12890" toLevel="1" name="Romantic Chapeau - Critical Damage">
-		<!-- P. Critical damage +90 and M. Critical damage +68. -->
+		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
 		<icon>icon.accessory_romantic_chaperon_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3393,8 +3393,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12893" toLevel="1" name="Angel Circlet - P. Evasion">
-		<!-- P. Evasion +5. -->
+	<skill id="12893" toLevel="1" name="Angel Circlet - Evasion">
+		<!-- Evasion +5. -->
 		<icon>icon.Accessary_angel_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3432,7 +3432,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12896" toLevel="1" name="Demon Circlet - P. Accuracy">
+	<skill id="12896" toLevel="1" name="Demon Circlet - Accuracy">
 		<!-- P. Accuracy +5. -->
 		<icon>icon.Accessary_demon_circlet_i00</icon>
 		<operateType>P</operateType>

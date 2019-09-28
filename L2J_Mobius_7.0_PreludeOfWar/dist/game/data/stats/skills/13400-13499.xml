@@ -431,7 +431,7 @@
 		</effects>
 	</skill>
 	<skill id="13418" toLevel="1" name="Stormer Sealed with Heroes' Power">
-		<!-- Max HP +25%, P. Atk. +503, Atk. Spd. +15%. Can attack multiple enemies. -->
+		<!-- Max HP +25%, P. Atk. +503, Atk. Spd. +15%. Enables the character to attack multiple opponents. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -832,7 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="13432" toLevel="1" name="Stormer Imbued with Heroes' Power">
-		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, and PvP Damage +15%. Can attack multiple enemies. -->
+		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, and PvP Damage +15%. Enables the character to attack multiple opponents. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1208,7 +1208,7 @@
 		</effects>
 	</skill>
 	<skill id="13441" toLevel="1" name="Queen Ant's Soul Ring">
-		<!-- P./ M. Accuracy +4, P./ M. Critical Rate +20%, P./ M. Critical Damage +15%, Stun/ Poison/ Bleed and Defense success rate +25% -->
+		<!-- P./ M. Accuracy +4, P./ M. Critical Rate +20, P./ M. Critical Damage +15%, Infection Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%. -->
 		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1251,7 +1251,7 @@
 		</effects>
 	</skill>
 	<skill id="13442" toLevel="1" name="Orfen's Soul Earring">
-		<!-- Sleep/ Paralysis/ Mental Resistance +25%, Sleep/ Paralysis/ Mental Atk. Rate +25%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. -->
+		<!-- Stupor Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%, Received Healing +10%, MP Consumption -5%, Vampiric Rage +4%. -->
 		<icon>icon.accessory_earring_of_orfen_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1288,7 +1288,7 @@
 		</effects>
 	</skill>
 	<skill id="13443" toLevel="1" name="Lilith' Soul Necklace">
-		<!-- M. Critical Rate +20, Paralysis/ Mental Attack Resistance +20%, Mental/ Paralysis Attack Rate +20%. -->
+		<!-- M. Critical Rate +20, Confusion Resistance/ Atk. Rate +20%. -->
 		<icon>icon.accessary_blessed_lilith</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1513,7 +1513,7 @@
 		</effects>
 	</skill>
 	<skill id="13462" toLevel="1" name="Resistance Earring A">
-		<!-- Increases Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 8. -->
+		<!-- Infection Resistance +15%, Confusion Atk. Rate +15% and Water Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1530,7 +1530,7 @@
 		</effects>
 	</skill>
 	<skill id="13463" toLevel="1" name="Resistance Earring B">
-		<!-- Poison Resistance and Hold Bonus +15%, and Holy Resistance +8. -->
+		<!-- Infection Resistance +15%, Obstruction Atk. Rate +15% and Holy Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1547,7 +1547,7 @@
 		</effects>
 	</skill>
 	<skill id="13464" toLevel="1" name="Resistance Earring C">
-		<!-- Paralysis Resistance and Bleed Bonus +15%, and Wind Resistance +8. -->
+		<!-- Confusion Resistance +15%, Infection Atk. Rate +15% and Wind Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1581,7 +1581,7 @@
 		</effects>
 	</skill>
 	<skill id="13466" toLevel="1" name="Resistance Earring E">
-		<!-- Increases Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Resistance by 8. -->
+		<!-- Confusion Resistance/ Atk. Rate +15% and Earth Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1598,7 +1598,7 @@
 		</effects>
 	</skill>
 	<skill id="13467" toLevel="1" name="Resistance Earring F">
-		<!-- Increases Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Resistance by 8. -->
+		<!-- Confusion Resistance +15%, Stupor Atk. Rate +15% and Water Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1615,7 +1615,7 @@
 		</effects>
 	</skill>
 	<skill id="13468" toLevel="1" name="Resistance Earring G">
-		<!-- Increases Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Resistance by 8. -->
+		<!-- Stupor Resistance +15%, Confusion Atk. Rate +15% and Fire Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1632,7 +1632,7 @@
 		</effects>
 	</skill>
 	<skill id="13469" toLevel="1" name="Resistance Earring H">
-		<!-- Hold Resistance and Poison Bonus +15%, and Fire Resistance +8. -->
+		<!-- Obstruction Resistance +15%, Infection Atk. Rate +15% and Fire Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1649,7 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="13470" toLevel="1" name="Resistance Earring I">
-		<!-- Mental Attack Resistance and Hold Bonus +15%, and Wind Resistance +8. -->
+		<!-- Confusion Resistance +15%, Obstruction Atk. Rate +15% and Wind Resistance +8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1666,7 +1666,7 @@
 		</effects>
 	</skill>
 	<skill id="13471" toLevel="1" name="Resistance Earring A (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
+		<!-- Max CP +5%, Infection Resistance +15%, Confusion Atk. Rate +15% and Water Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1687,7 +1687,7 @@
 		</effects>
 	</skill>
 	<skill id="13472" toLevel="1" name="Resistance Earring B (Top-grade)">
-		<!-- Max CP +5%, Poison Resistance and Hold Bonus +15%, and Holy Resistance +10. -->
+		<!-- Max CP +5%, Infection Resistance +15%, Obstruction Atk. Rate +15% and Holy Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1708,7 +1708,7 @@
 		</effects>
 	</skill>
 	<skill id="13473" toLevel="1" name="Resistance Earring C (Top-grade)">
-		<!-- Max CP +5%, Paralysis Resistance and Bleed Bonus +15%, and Wind Resistance +10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Infection Atk. Rate +15% and Wind Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1750,7 +1750,7 @@
 		</effects>
 	</skill>
 	<skill id="13475" toLevel="1" name="Resistance Earring E (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Confusion Atk. Rate +15% and Earth Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1771,7 +1771,7 @@
 		</effects>
 	</skill>
 	<skill id="13476" toLevel="1" name="Resistance Earring F (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Stupor Atk. Rate +15% and Water Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1792,7 +1792,7 @@
 		</effects>
 	</skill>
 	<skill id="13477" toLevel="1" name="Resistance Earring G (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
+		<!-- Max CP +5%, Stupor Resistance +15%, Confusion Atk. Rate +15% and Fire Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1813,7 +1813,7 @@
 		</effects>
 	</skill>
 	<skill id="13478" toLevel="1" name="Resistance Earring H (Top-grade)">
-		<!-- Max CP +5%, Hold Resistance and Poison Bonus +15%, and Fire Resistance +10. -->
+		<!-- Max CP +5%, Obstruction Resistance +15%, Infection Atk. Rate +15% and Fire Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1834,7 +1834,7 @@
 		</effects>
 	</skill>
 	<skill id="13479" toLevel="1" name="Resistance Earring I (Top-grade)">
-		<!-- Max CP +5%, Mental Attack Resistance and Hold Bonus +15%, and Wind Resistance +10. -->
+		<!-- Max CP +5%, Confusion Resistance +15%, Obstruction Atk. Rate +15% and Wind Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1855,7 +1855,7 @@
 		</effects>
 	</skill>
 	<skill id="13480" fromLevel="2" toLevel="2" name="Royal Guard Earring A">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
+		<!-- Max CP +5%, Bleed Resistance +15%, Stun Atk. Rate +15%, Water Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1981,7 +1981,7 @@
 		</effects>
 	</skill>
 	<skill id="13486" fromLevel="2" toLevel="2" name="Royal Guard Earring G">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
+		<!-- Max CP +5%, Sleep Resistance +15%, Stun Atk. Rate +15%, Fire Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2097,7 +2097,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13492" toLevel="1" name="Flutter's Magic Pin Leather Belt (Low-grade)">
+	<skill id="13492" toLevel="1" name="Flutter's Low-grade Magic Pin Leather Belt">
 		<!-- Weight Limit +5000. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>

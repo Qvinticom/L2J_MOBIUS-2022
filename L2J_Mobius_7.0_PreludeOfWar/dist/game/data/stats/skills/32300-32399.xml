@@ -33,6 +33,7 @@
 	</skill>
 	<skill id="32303" toLevel="1" name="Atelia Cannon">
 		<!-- Deals powerful magic damage to targets within range and decreases their P. Atk. and M. Atk. by 30%. -->
+		<icon>icon.skill1434</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
@@ -42,7 +43,7 @@
 		<effectPoint>-52</effectPoint>
 	</skill>
 	<skill id="32304" toLevel="1" name="Overcharge Blast">
-		<!-- Deals powerful magic damage to targets within range and paralyzes them for 5 sec. -->
+		<!-- For 5 sec. deals great magic damage to enemies next to the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -118,7 +119,7 @@
 		<effectPoint>-125</effectPoint>
 	</skill>
 	<skill id="32312" toLevel="1" name="Horseshoe Trampling">
-		<!-- Uses a holy beast's front legs to knock down enemies in front. -->
+		<!-- Attacks enemies in front of you with hoofs knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16869</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -152,7 +153,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32316" toLevel="1" name="Flash of Darkness">
-		<!-- Deals powerful physical damage to enemies in front within range and knocks them down. -->
+		<!-- Deals great physical damage to enemies in front of the character and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10267</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -243,7 +244,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32323" toLevel="1" name="Flash of Darkness">
-		<!-- Deals powerful physical damage to the target enemy's surroundings and knocks them down. -->
+		<!-- Deals great physical damage to enemies and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -268,7 +269,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32326" toLevel="1" name="Crimson Glory">
-		<!-- Inflicts Bleed damage on all nearby enemies for 10 sec. -->
+		<!-- Inflicts Bleed on all enemies for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -304,7 +305,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32330" toLevel="2" name="Revelation of Etina">
-		<!-- Increases P. Atk./ M. Atk./ Speed for $s1. -->
+		<!-- Increases P. Atk./ M. Atk./ Speed for $s1 -->
 		<icon>icon.skill11506</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -323,7 +324,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32332" toLevel="2" name="Cry of the Crusade">
-		<!-- Increases P. Atk./ M. Atk. for $s1. -->
+		<!-- Increases P. Atk./ M. Atk. for $s1 -->
 		<icon>icon.skill10325</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -332,7 +333,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32333" toLevel="1" name="Stigma of Martyrdom">
-		<!-- Inflicts powerful Bleed damage for 15 sec. -->
+		<!-- Inflicts Bleed for 15 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -343,7 +344,7 @@
 		<effectPoint>-500</effectPoint>
 	</skill>
 	<skill id="32334" toLevel="2" name="Undead Creature">
-		<!-- Recovers HP over time for $s1. -->
+		<!-- Recovers HP over time for $s1 -->
 		<icon>icon.skill1310</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -351,7 +352,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32335" toLevel="2" name="Etina's Divine Retribution">
-		<!-- Grants an effect that reflects $s2 of all received damage back to the enemy for $s1. -->
+		<!-- Grants an effect that reflects $s2 of all received damage back to the enemy for $s1 -->
 		<icon>icon.skill0086</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -388,7 +389,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32339" toLevel="2" name="Cyclone of Chaos">
-		<!-- Swept up in a Cyclone of Chaos, receiving damage. -->
+		<!-- Pulls into a vortex and deals significant damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32028</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -398,9 +399,10 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32340" toLevel="2" name="Calamity Explosion">
-		<!-- Inflicts Bleed damage on nearby enemies. -->
+		<!-- Inflicts Bleed on nearby enemies. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -467,7 +469,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32348" toLevel="1" name="Atelia Chain Throw">
-		<!-- Pulled in by a monster. -->
+		<!-- Pulls the target toward a monster. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -477,7 +479,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32349" toLevel="1" name="Atelia Root">
-		<!-- Immobilized by Dark Atelia Energy. -->
+		<!-- Immobilized by Dark Atelia Energy. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -525,7 +527,7 @@
 		<effectPoint>-52</effectPoint>
 	</skill>
 	<skill id="32354" toLevel="1" name="Helios's Throne of Agony">
-		<!-- Shoots Arrows of Light at nearby enemies, dealing magic damage and knocking them down. -->
+		<!-- Shoots Arrows of Light at nearby enemies, dealing magic damage and knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -563,7 +565,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="32357" toLevel="1" name="Helios Plasma Pressure">
-		<!-- Deals physical damage to the target and surrounding enemies and paralyzes them. -->
+		<!-- Deals physical damage to the target and nearby enemies paralyzing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1172</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -598,7 +600,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="32360" toLevel="1" name="Enuma Elish - Red Lightning Spear">
-		<!-- Helios throws a spear of red lightning to deal powerful damage to the target and surrounding enemies and knock them down. -->
+		<!-- Throws a spear of Helios' red lightning to deal powerful damage to the target and nearby enemies and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16617</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -660,7 +662,7 @@
 		<mpConsume>12</mpConsume>
 	</skill>
 	<skill id="32366" toLevel="1" name="Helios's Lightning of Anger">
-		<!-- Strikes the target and surrounding enemies with lightning, dealing magic damage and paralyzing them. Also decreases their P. Def. and M. Def. -->
+		<!-- Strikes the target and nearby enemies with lightning, dealing magic damage and paralysing them. Also decreases their P./ M. Def. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10094</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -701,7 +703,7 @@
 		<effectPoint>-52</effectPoint>
 	</skill>
 	<skill id="32370" toLevel="1" name="Leopold Plasma Bomb">
-		<!-- Deals magic damage to the target and surrounding enemies, and additionally deals damage over time. -->
+		<!-- Deals magic damage to the target and nearby enemies, and additionally deals damage over time. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -748,7 +750,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="32374" toLevel="1" name="Leopold Harpoon">
-		<!-- Launches a powerful harpoon of lightning at the target, dealing magic damage and paralyzing them. -->
+		<!-- A powerful lightning harpoon is flung to the target, dealing magic damage and paralysing the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10321</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -770,7 +772,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="32376" toLevel="1" name="Origin Spinning Slasher">
-		<!-- Brandishes a spear of lightning to damage the target and surrounding enemies and inflict Bleed on them. -->
+		<!-- Brandishes a spear of lightning to damage the target and nearby enemies inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -794,7 +796,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="32378" toLevel="1" name="Kentnis Pyle">
-		<!-- Presentation skill -->
+		<!-- Presentation Skill -->
 		<icon>icon.skill1434</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -878,7 +880,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32388" toLevel="1" name="Demonic Bleed">
-		<!-- Inflicts powerful Bleed damage on the enemy for 10 sec. -->
+		<!-- Inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -888,7 +890,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32389" toLevel="1" name="Demonic Poison">
-		<!-- Inflicts powerful Poison damage on the enemy for 10 sec. -->
+		<!-- Inflicts Poison for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -899,7 +901,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32390" toLevel="1" name="Demonic Mass Poison">
-		<!-- Inflicts powerful Poison damage on nearby enemies for 10 sec. -->
+		<!-- Inflicts Poison for 10 sec. in the area. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -935,7 +937,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32394" toLevel="1" name="Mass Howling">
-		<!-- Attacks nearby enemies and knocks them back. -->
+		<!-- Attacks nearby enemies and knocks them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -965,7 +967,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32397" toLevel="1" name="Mass Bluff">
-		<!-- Surprises the target and makes them turn around temporarily. -->
+		<!-- Surprises the target and makes it turn around. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0358</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

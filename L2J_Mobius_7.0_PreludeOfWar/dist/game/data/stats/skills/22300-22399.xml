@@ -512,7 +512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22318" fromLevel="5" toLevel="5" name="5th Place Treasure sack">
+	<skill id="22318" fromLevel="5" toLevel="5" name="5th Place Treasure Sack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -614,7 +614,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22322" toLevel="1" name="Magic Barrier">
-		<!-- Increases M. Def. by 30% for 60 min. -->
+		<!-- For 20 min., M. Def. +30%. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -646,7 +646,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22324" toLevel="1" name="Blessed Soul">
-		<!-- Increases Max MP by 35% for 60 min. -->
+		<!-- For 60 min., Max MP +35%. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -902,7 +902,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22340" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 60 min. -->
+		<!-- For 60 min., P. Atk. +15%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -953,7 +953,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22343" toLevel="1" name="Vampiric Rage">
-		<!-- Absorbs 9% of the physical damage inflicted on the enemy as HP with a certain probability for 60 min. -->
+		<!-- For 60 min., with a certain chance, absorbs 9% of the inflicted melee damage as HP. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1021,7 +1021,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22347" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- For 60 min., P. Def. +15%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1106,7 +1106,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22352" toLevel="1" name="Wild Magic">
-		<!-- Increases the chance of prominent magic damage by 2 for 60 min. -->
+		<!-- For 60 min., M. Critical Rate +2. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1294,7 +1294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22355" toLevel="1" name="Soul Crystal - Step 17 Box">
+	<skill id="22355" toLevel="1" name="Soul Crystal Box Lv. 17">
 		<itemConsumeId>22206</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -1321,7 +1321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22356" toLevel="1" name="Soul Crystal - Step 18 Box">
+	<skill id="22356" toLevel="1" name="Soul Crystal Box Lv. 18">
 		<itemConsumeId>22207</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<blockedInOlympiad>false</blockedInOlympiad>

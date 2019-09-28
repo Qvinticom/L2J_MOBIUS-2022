@@ -426,7 +426,7 @@
 		</effects>
 	</skill>
 	<skill id="10310" toLevel="1" name="Primal Rage">
-		<!-- For 10 min., P. Atk. +15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<!-- P. Atk. +15% for 10 min. Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. -->
 		<icon>icon.skill10310</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -537,7 +537,7 @@
 		</effects>
 	</skill>
 	<skill id="10313" toLevel="4" name="Infinite Rush">
-		<!-- Charges forward to inflict Stun to the enemies in the front for $s1. Requires sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. -->
+		<!-- Charges forward to nearby enemies stunning them for $s1 Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10313</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -594,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="10314" toLevel="4" name="Disarmament">
-		<!-- Disarms enemies for $s1. and decreases their P. Atk./ M. Atk. by $s2. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<!-- Disarms the target for $s1, their P./ M. Atk. -$s2. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -693,7 +693,7 @@
 		</effects>
 	</skill>
 	<skill id="10317" toLevel="4" name="Thunder Slasher">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10317new</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -921,7 +921,7 @@
 		</effects>
 	</skill>
 	<skill id="10321" toLevel="9" name="Thunder Spear">
-		<!-- Throws a spear to inflict damage on the target and nearby enemies with $s1 Power added to P. Atk. Stun is inflicted for $s2. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
+		<!-- Throws a spear striking the target and nearby enemies with $s1 power and stunning them for $s2 Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10321</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1280,7 +1280,7 @@
 		</effects>
 	</skill>
 	<skill id="10328" toLevel="3" name="Soul Berserker">
-		<!-- When equipped with a sword or blunt weapon, P. Atk. +$s1, P. Critical Damage +$s2, and P. Skill MP Consumption +$s3. -->
+		<!-- P. Atk. +$s1, P. Critical Damage +$s2, P. Skill MP Consumption +$s3. Requires a sword or a blunt weapon. -->
 		<icon>icon.skill10328</icon>
 		<magicLvl>
 			<value level="1">97</value>
@@ -1357,7 +1357,7 @@
 		</effects>
 	</skill>
 	<skill id="10330" toLevel="9" name="Power Hammer Crush">
-		<!-- Attacks target with $s1 Power added to P. Atk. while ignoring $s2 of their P. Def. Stuns for $s3. Requires a blunt weapon. Over-hit. Critical. -->
+		<!-- Attacks the target with $s1 power ignoring $s2 of their P. Def. Stuns for $s3 Requires a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10330</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1696,7 +1696,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10337" toLevel="3" name="Infinity Rush">
-		<!-- P. Atk. +$s1 and P. Critical Damage +$s2. -->
+		<!-- P. Atk. +$s1, Critical Damage +$s2. -->
 		<icon>icon.skill10336</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
@@ -1725,7 +1725,7 @@
 		</effects>
 	</skill>
 	<skill id="10339" toLevel="1" name="Winged Spear - Stun">
-		<!-- Stuns target for 3 sec. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10333</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

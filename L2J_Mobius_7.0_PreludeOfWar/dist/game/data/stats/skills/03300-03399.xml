@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="3302" toLevel="1" name="Yellow Talisman - Casting Spd.">
-		<!-- Increases Casting Spd. when equipped. -->
+		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -40,7 +40,7 @@
 		</effects>
 	</skill>
 	<skill id="3303" toLevel="1" name="White Talisman - Bleed Resistance">
-		<!-- Increases Bleed Resistance when equipped. -->
+		<!-- Increases Infection Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -52,7 +52,7 @@
 		</effects>
 	</skill>
 	<skill id="3304" toLevel="1" name="White Talisman - Sleep Resistance">
-		<!-- Increases Sleep Resistance when equipped. -->
+		<!-- Increases Stupor Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -64,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="3305" toLevel="1" name="White Talisman - Stun Resistance">
-		<!-- Increases Stun Resistance when Talisman is equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -76,7 +76,7 @@
 		</effects>
 	</skill>
 	<skill id="3306" toLevel="1" name="White Talisman - Bravery">
-		<!-- Increases mental Attack Resistance when equipped. -->
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3335" toLevel="1" name="Transform Yeti">
+	<skill id="3335" toLevel="1" name="Yeti Transformation">
 		<!-- Transforms into Yeti. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -597,7 +597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3336" toLevel="1" name="Transform Buffalo">
+	<skill id="3336" toLevel="1" name="Buffalo Transformation">
 		<!-- Transform into a Yeti. There is no effect from the Mysterious Potion while in Yeti form. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -628,7 +628,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3337" toLevel="1" name="Transform Cutie Pig">
+	<skill id="3337" toLevel="1" name="Cutie Pig Transformation">
 		<!-- Transforms into cute pig. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -718,7 +718,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3348" toLevel="1" name="Dynasty Breastplate">
-		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. -->
+		<!-- Increases P. Def., Max HP, Received Healing, and Confusion Resistance. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -747,7 +747,7 @@
 		</effects>
 	</skill>
 	<skill id="3349" toLevel="1" name="Dynasty Breastplate">
-		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance and Critical Damage. -->
+		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -777,7 +777,7 @@
 		</effects>
 	</skill>
 	<skill id="3350" toLevel="1" name="Dynasty Breastplate">
-		<!-- Increases P. Atk./ Max HP/ Dark Resistance, and decreases MP Consumption. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
 		<icon>icon.armor_t91_uf_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -920,7 +920,7 @@
 		</effects>
 	</skill>
 	<skill id="3355" toLevel="1" name="Dynasty Tunic">
-		<!-- Increases Casting Spd./ Max MP/ Dark Resistance, and decreases MP Consumption/ magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Dark Resistance. Decreases MP Consumption and Casting Interruption Rate. -->
 		<icon>icon.armor_t93_ue_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1035,7 +1035,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3359" toLevel="1" name="Transform Native">
+	<skill id="3359" toLevel="1" name="Native Transformation">
 		<!-- Transforms into a Native. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>

@@ -91,7 +91,7 @@
 		</effects>
 	</skill>
 	<skill id="1401" toLevel="11" name="Major Heal">
-		<!-- Restores the target's HP by $s1 Power. Consumes $s2 Spirit Ore. -->
+		<!-- Restores the target's HP by $s1 Power. Consumes $s2 Spirit Ore(s). -->
 		<icon>icon.skill1401</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -175,7 +175,7 @@
 		</effects>
 	</skill>
 	<skill id="1402" toLevel="5" name="Major Group Heal">
-		<!-- Restores all party members' HP by $s1 Power. Consumes $s2 Spirit Ore. -->
+		<!-- Restores all party members' HP by $s1 Power. Consumes $s2 Spirit Ore(s). -->
 		<icon>icon.skill1402</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>
@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1403" toLevel="1" name="Summon Friend">
+	<skill id="1403" toLevel="1" name="Summon Your Spouse">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
 		<effectPoint>467</effectPoint>
@@ -281,7 +281,7 @@
 		</effects>
 	</skill>
 	<skill id="1405" toLevel="6" name="Divine Inspiration">
-		<!-- Increases the number of buffs an individual can receive by $s1. -->
+		<!-- Number of buffs an individual can receive +$s1. -->
 		<icon>icon.skill1405</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1248,7 +1248,7 @@
 		</effects>
 	</skill>
 	<skill id="1430" toLevel="5" name="Invocation">
-		<!-- Decreases P. Def. by $s2 and recovers $s3 MP every second for $s1. The status is canceled when damage is incurred. -->
+		<!-- P. Def. -$s2. Recovers $s3 MP every sec. for $s1 The status is canceled when damage is incurred. -->
 		<icon>icon.skill1430</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1372,7 +1372,7 @@
 		</effects>
 	</skill>
 	<skill id="1432" toLevel="2" name="Increase Power">
-		<!-- Increases P. Atk. by $s2 for $s1. -->
+		<!-- P. Atk. +$s2 for $s1 -->
 		<icon>icon.skill1432</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1858,7 +1858,7 @@
 		</effects>
 	</skill>
 	<skill id="1437" toLevel="26" name="Dark Flame">
-		<!-- Inflicts dark damage on the enemies in front with $s1 Power added to M. Atk. For $s2, decreases Speed by $s3. Increases Power upon the consumption of up to $s4 souls. -->
+		<!-- Inflicts dark damage on the enemies at the front with $s1 power added to M. Atk. for $s2 Speed -$s3. Increases Power upon the consumption of up to $s4 souls. -->
 		<icon>icon.skill1437</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2167,7 +2167,7 @@
 		</effects>
 	</skill>
 	<skill id="1440" toLevel="5" name="Steal Divinity">
-		<!-- Steals up to $s1 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
+		<!-- Steals up to $s1 of the enemy's buffs. Can't be used on monsters. -->
 		<icon>icon.skill1440</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -2223,7 +2223,7 @@
 		</effects>
 	</skill>
 	<skill id="1441" toLevel="3" name="Soul to Empower">
-		<!-- Increases M. Atk. by $s2 for $s1. -->
+		<!-- M. Atk. +$s2 for $s1. -->
 		<icon>icon.skill1441</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2272,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="1442" toLevel="3" name="Darkness Protection">
-		<!-- Increases the target's Dark Attack Resistance by $s2 for $s1 -->
+		<!-- Target's Dark Attack Resistance +$s2 for $s1 -->
 		<icon>icon.skill1442</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2394,7 +2394,7 @@
 		</effects>
 	</skill>
 	<skill id="1445" toLevel="18" name="Surrender to Dark">
-		<!-- For $s1, decreases the enemy's Dark Attack Resistance by $s2 and increases Holy Attack Resistance by $s3. -->
+		<!-- For $s1, the enemy's Dark Attack Resistance -$s2 and Holy Attack Resistance +$s3. -->
 		<icon>icon.skill1445</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -2601,7 +2601,7 @@
 		</effects>
 	</skill>
 	<skill id="1446" toLevel="11" name="Shadow Bind">
-		<!-- Catches the enemy's shadow and inflicts hold for $s1. -->
+		<!-- Catches the enemy's shadow and inflicts hold for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1446</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2657,7 +2657,7 @@
 		</effects>
 	</skill>
 	<skill id="1447" toLevel="9" name="Voice Bind">
-		<!-- Seals the enemy's voice, blocking their ability to cast magic for $s1. -->
+		<!-- Blocks enemy's magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1447</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2706,7 +2706,7 @@
 		</effects>
 	</skill>
 	<skill id="1448" toLevel="1" name="Blink">
-		<!-- Attacks the enemies near you with 1 power added to P. Attack. Inflicts Stun for 2 sec. and teleports to the back. Soul consumption boosts the power. Up to 5 souls can be consumed. -->
+		<!-- Attacks the enemies near you with 1 power added to P. Attack. Inflicts Stun for 2 sec. and teleports to the back. Soul consumption boosts the power. Consumes up to 5 souls. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1448</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -3018,7 +3018,7 @@
 		</effects>
 	</skill>
 	<skill id="1457" toLevel="2" name="Empowering Echo">
-		<!-- For $s1, increases your magic MP Consumption +$s2 and M. Atk. +$s3. -->
+		<!-- For $s1, MP Consumption +$s2, M. Atk. +$s3. -->
 		<icon>icon.skill1457</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3194,7 +3194,7 @@
 		</effects>
 	</skill>
 	<skill id="1462" toLevel="10" name="Seal of Blockade">
-		<!-- During PvP, restrains the standard attacks of the enemy and nearby targets for $s1. -->
+		<!-- During PvP, restrains the standard attacks of the enemy and nearby targets for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1462</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3486,7 +3486,7 @@
 		</effects>
 	</skill>
 	<skill id="1471" toLevel="2" name="Death Beam">
-		<!-- Attacks enemies in front of you. Power $s1. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill1471</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -3736,7 +3736,7 @@
 		</effects>
 	</skill>
 	<skill id="1478" toLevel="2" name="Protection Instinct">
-		<!-- Stirs up the defense instinct to increase P. Def. by $s2 and M. Def. by $s3 for $s1. -->
+		<!-- Stirs up the defense instinct. P. Def. +$s2, M. Def. +$s3 for $s1 -->
 		<icon>icon.skill1478</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3786,7 +3786,7 @@
 		</effects>
 	</skill>
 	<skill id="1479" toLevel="3" name="Magic Impulse">
-		<!-- Stirs up the magic urge to increase M. Atk. by $s2, Casting Spd. by $s3, and the chance of prominent magic damage by $s4 for $s1. -->
+		<!-- Stirs up the magic urge to increase M. Atk. by $s2, Casting Spd. by $s3, and the chance of prominent magic damage by $s4 for $s1 -->
 		<icon>icon.skill1479</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3880,7 +3880,7 @@
 		</effects>
 	</skill>
 	<skill id="1481" toLevel="7" name="Oblivion">
-		<!-- For $s1, inflicts the curse of forgetfulness on the enemy and makes him forget the target at a certain rate when damage is received. -->
+		<!-- For $s1, inflicts the curse of forgetfulness on the enemy and makes him forget the target at a certain rate when damage is received. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3951,7 +3951,7 @@
 		</effects>
 	</skill>
 	<skill id="1482" toLevel="4" name="Weak Constitution">
-		<!-- For $s1, inflicts the curse of weakness on the enemy and makes him faint at a certain rate when damage is received. -->
+		<!-- For $s1, inflicts the curse of weakness on the enemy and makes him faint at a certain rate when damage is received. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1482</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4010,7 +4010,7 @@
 		</effects>
 	</skill>
 	<skill id="1483" toLevel="7" name="Thin Skin">
-		<!-- For $s1, inflicts a curse that weakens the enemy's skin and causes injuries to appear when damage is received. -->
+		<!-- For $s1, inflicts a curse that weakens the enemy's skin and causes injuries to appear when damage is received. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1483</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4081,7 +4081,7 @@
 		</effects>
 	</skill>
 	<skill id="1484" toLevel="4" name="Enervation">
-		<!-- For $s1, makes the enemy lose his ambition, and decreases Atk. Spd./ Speed/ Casting Spd. at a certain rate when damage is received. -->
+		<!-- For $s1, makes the enemy lose his ambition, and decreases Speed/ Atk. Spd./ Casting Spd. at a certain rate when damage is received. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1484</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4194,7 +4194,7 @@
 		</effects>
 	</skill>
 	<skill id="1486" toLevel="4" name="Mental Impoverish">
-		<!-- For $s1, causes mental impoverishment on the enemy and causes MP to disappear at a certain rate when damage is received. -->
+		<!-- For $s1, causes mental impoverishment on the enemy and causes MP to disappear at a certain rate when damage is received. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1486</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4247,7 +4247,7 @@
 		</effects>
 	</skill>
 	<skill id="1487" toLevel="8" name="Restoration">
-		<!-- Restores $s2 HP per second for $s1. -->
+		<!-- Restores $s2 HP per sec. for $s1 -->
 		<icon>icon.skill1487</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -4548,7 +4548,7 @@
 		</effects>
 	</skill>
 	<skill id="1495" toLevel="1" name="Vampiric Mist">
-		<!-- Scatters a fog of death to inflict dark damage on nearby enemies with 117 Power added to M. Atk. Absorbs 20% of the damage as HP. For 10 sec., decreases Speed/ P. Atk./ Atk. Spd. by 50% and Accuracy by 12. -->
+		<!-- Summons deadly fog that deals dark damage to nearby enemies with 117 power. Absorbs 20% of the inflicted damage as HP. For 10 sec., enemies' Speed/ P. Atk./ Atk. Spd. -50%, P. Accuracy -12. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1495</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

@@ -186,7 +186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11805" toLevel="1" name="Not in Use">
+	<skill id="11805" toLevel="1" name="Not in use.">
 		<icon>icon.skill1460</icon>
 		<!-- Custom Skill: Used for skill Vanguard of Baylor (19449) -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -429,7 +429,7 @@
 		</effects>
 	</skill>
 	<skill id="11814" toLevel="13" name="Dark Force">
-		<!-- Inflicts damage on target with $s1 Power added to M. Atk. Has a chance of pushing back target. -->
+		<!-- Deals magic damage to the target with $s1 power knocking them back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11814</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -748,7 +748,7 @@
 		</effects>
 	</skill>
 	<skill id="11819" toLevel="1" name="Party Return">
-		<!-- Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Teleports party members to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>icon.skill11819</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -868,7 +868,7 @@
 		</effects>
 	</skill>
 	<skill id="11822" toLevel="1" name="Force of Saha">
-		<!-- For 30 min., party members' Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply the Vampiric Rage effect for 9%. -->
+		<!-- For 30 min., party members' Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11822</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -909,7 +909,7 @@
 		</effects>
 	</skill>
 	<skill id="11823" toLevel="1" name="Speed of Saha">
-		<!-- For 30 min., party members' Atk. Spd. +60%, Casting Spd. +60%, and Speed +10, and Skill MP Consumption -10%. -->
+		<!-- For 30 min., all party members' Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11823</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1123,7 +1123,7 @@
 		</effects>
 	</skill>
 	<skill id="11830" toLevel="1" name="Blessing of Saha">
-		<!-- For 30 min., party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- Confusion/ Stupor/ Obstruction/ Infection Resistance +50% for 30 min. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1203,7 +1203,7 @@
 		</effects>
 	</skill>
 	<skill id="11831" toLevel="13" name="Erase Impact">
-		<!-- Banishes the enemy's servitor into another dimension. -->
+		<!-- Banishes the enemy's servitor to another dimension. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1395</icon>
 		<affectRange>100</affectRange>
 		<effectPoint>-655</effectPoint>
@@ -1255,7 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="11832" toLevel="9" name="Mass Fatal Sleep">
-		<!-- Casts Sleep on nearby enemies for $s1. -->
+		<!-- Inflicts sleep on nearby enemies for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1659,7 +1659,7 @@
 		</effects>
 	</skill>
 	<skill id="11853" toLevel="4" name="Superior Quick Recovery">
-		<!-- Magic skill Cooldown -$s1. -->
+		<!-- M. Skill Cooldown -$s1. -->
 		<icon>icon.skill0228</icon>
 		<operateType>P</operateType>
 		<magicLvl>

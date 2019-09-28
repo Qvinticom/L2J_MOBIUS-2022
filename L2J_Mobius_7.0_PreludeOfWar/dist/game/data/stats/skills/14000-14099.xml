@@ -191,7 +191,7 @@
 		</effects>
 	</skill>
 	<skill id="14006" toLevel="3" name="Shield Stun">
-		<!-- Stun status. -->
+		<!-- You are stunned. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="14011" toLevel="3" name="Electric Staff">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1265</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -602,7 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="14017" toLevel="1" name="Thunder Storm">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>86</mpConsume>
@@ -686,7 +686,7 @@
 		</effects>
 	</skill>
 	<skill id="14020" toLevel="1" name="Ice Wall">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1184</icon>
 		<operateType>A2</operateType>
 		<mpConsume>79</mpConsume>
@@ -786,7 +786,7 @@
 		</effects>
 	</skill>
 	<skill id="14023" toLevel="1" name="Hero's Teleport">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>A2</operateType>
 		<mpConsume>20</mpConsume>
@@ -822,7 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="14024" toLevel="1" name="Ancient Hero's Roar">
-		<!-- Affected by the ancient hero's roar and inflicted with fear. -->
+		<!-- Inflicts Fear on the enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0320</icon>
 		<operateType>A2</operateType>
 		<mpConsume>87</mpConsume>
@@ -1027,7 +1027,7 @@
 		</effects>
 	</skill>
 	<skill id="14032" toLevel="1" name="Red Net">
-		<!-- Stun status. -->
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill14032</icon>
 		<operateType>A2</operateType>
 		<mpConsume>85</mpConsume>
@@ -1201,7 +1201,7 @@
 		</effects>
 	</skill>
 	<skill id="14039" toLevel="1" name="Curse Shock">
-		<!-- Causes a shock wave and prevents nearby enemies from moving. -->
+		<!-- Nearby enemies are immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>86</mpConsume>
@@ -1553,7 +1553,7 @@
 		</effects>
 	</skill>
 	<skill id="14047" toLevel="6" name="Fairy Curse Poison">
-		<!-- Poison status. -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1983,7 +1983,7 @@
 		</effects>
 	</skill>
 	<skill id="14060" toLevel="2" name="Hold">
-		<!-- Hold status. -->
+		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2058,7 +2058,7 @@
 		</effects>
 	</skill>
 	<skill id="14062" toLevel="2" name="Sleep">
-		<!-- Sleep status. -->
+		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2164,7 +2164,7 @@
 		</effects>
 	</skill>
 	<skill id="14066" toLevel="11" name="Blind Light">
-		<!-- No effect. -->
+		<!-- No effect. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2227,7 +2227,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14067" toLevel="11" name="Blind Light">
-		<!-- No effect. -->
+		<!-- No effect. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -2331,7 +2331,7 @@
 		</effects>
 	</skill>
 	<skill id="14069" toLevel="6" name="Garden Dark Magic">
-		<!-- Atk. Spd./ Casting Spd./ Speed are decreased. -->
+		<!-- Decreases Speed, Atk. Spd. and Casting Spd. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2403,7 +2403,7 @@
 		</effects>
 	</skill>
 	<skill id="14070" toLevel="6" name="Branch Straightening">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2588,7 +2588,7 @@
 		</effects>
 	</skill>
 	<skill id="14074" toLevel="1" name="Garden Destroyer Slash">
-		<!-- Stun status. -->
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>84</mpConsume>
@@ -2721,7 +2721,7 @@
 		</effects>
 	</skill>
 	<skill id="14078" toLevel="6" name="Pirate Gardener Shock">
-		<!-- Stun status. -->
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -2948,7 +2948,7 @@
 		</effects>
 	</skill>
 	<skill id="14084" toLevel="6" name="Garden Range Bleed">
-		<!-- Bleed status. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -3179,7 +3179,7 @@
 		</effects>
 	</skill>
 	<skill id="14090" toLevel="6" name="Apherus Paralysis">
-		<!-- Paralysis status. -->
+		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill014090</icon>
 		<operateType>A2</operateType>
 		<mpConsume>64</mpConsume>
@@ -3233,7 +3233,7 @@
 		</effects>
 	</skill>
 	<skill id="14091" toLevel="6" name="Rose Poison">
-		<!-- Poisoned by a rose. P. Def. and Stun Resistance are decreased. -->
+		<!-- Decreases P. Def. and Confusion Resistance. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
@@ -3282,7 +3282,7 @@
 		</effects>
 	</skill>
 	<skill id="14092" toLevel="6" name="Entangle">
-		<!-- Plants envelope the body to decrease physical Atk. Spd. and Hold Resistance. -->
+		<!-- Decreases Atk. Spd. and Obstruction Resistance. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<mpConsume>

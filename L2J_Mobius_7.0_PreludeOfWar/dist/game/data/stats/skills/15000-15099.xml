@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15000" toLevel="1" name="Transformed">
-		<!-- Is cursed to be a pig for 10 sec. -->
+		<!-- Turns into a cursed pig for 10 sec. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -39,6 +39,7 @@
 		</effects>
 	</skill>
 	<skill id="15001" toLevel="1" name="Cancel Transformation">
+		<!-- Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
@@ -176,7 +177,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15006" toLevel="1" name="Transform Bard - Bard">
+	<skill id="15006" toLevel="1" name="Bard - Bard Transformation">
 		<!-- Bard's transformed state. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -317,7 +318,7 @@
 		</effects>
 	</skill>
 	<skill id="15010" toLevel="1" name="Dimensional Poison Zone">
-		<!-- Poisoned with dimension poison through the Kartia Dimensional Watcher. HP is continuously decreased until the Kartia Dimensional Watcher is defeated. -->
+		<!-- Poisoned by the Kartia Dimensional Watcher. The character's HP is continuously decreased until the Kartia Dimensional Watcher is defeated. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill5086</icon>
 		<operateType>A2</operateType>
 		<abnormalType>POISON</abnormalType>
@@ -523,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="15016" toLevel="1" name="Powerful Bash">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<!-- Armor is destroyed. P./ M. Def. -10% and additional P./ M. Def. -500. P. Evasion -4. The effect stacks as you receive continuous attacks. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -579,7 +580,7 @@
 		</effects>
 	</skill>
 	<skill id="15017" toLevel="1" name="Stone Throw">
-		<!-- Throw a stone and inflict poison. -->
+		<!-- Throw a stone and inflict poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -628,7 +629,7 @@
 		</effects>
 	</skill>
 	<skill id="15019" toLevel="1" name="Goods Throw">
-		<!-- Throw an item and inflict bleeding. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -659,7 +660,7 @@
 		</effects>
 	</skill>
 	<skill id="15020" toLevel="1" name="Spanner Throw">
-		<!-- Spanner throw. When hit with the hard part, it causes the mind to go blank. -->
+		<!-- When successfully hit with the hard part, it causes the mind to go blank. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -689,7 +690,7 @@
 		</effects>
 	</skill>
 	<skill id="15021" toLevel="1" name="Battle Hammer Throw">
-		<!-- Battle hammer throw. When hit with the head, it causes the mind to go blank. -->
+		<!-- When hit with the hard part, it causes the mind to go blank. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -719,7 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="15022" toLevel="1" name="Battle Axe Throw">
-		<!-- Battle axe throw. When hit with the edge, it causes bleeding. -->
+		<!-- When successfully hit with the edge, it causes bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -750,7 +751,7 @@
 		</effects>
 	</skill>
 	<skill id="15023" toLevel="1" name="Javelin Throw">
-		<!-- Javelin throw. When hit, it has a chance of causing bleeding. -->
+		<!-- Has a certain chance to inflict bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -1035,7 +1036,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="15033" toLevel="1" name="Aggression Chain Strike - NPC">
-		<!-- Turns an enemy's target to yourself and pulls it toward you. -->
+		<!-- Turns the target round and pulls it toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -1064,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="15034" toLevel="1" name="Aggression Chain Strike - NPC">
-		<!-- Turns an enemy's target to yourself and pulls it toward you. -->
+		<!-- Turns the target round and pulls it toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -1093,7 +1094,7 @@
 		</effects>
 	</skill>
 	<skill id="15035" toLevel="1" name="Shield Strike - NPC">
-		<!-- Targets the enemy and uses the shield on enemies nearby to bring them down. -->
+		<!-- Turns the target round and pulls it toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1165,7 +1166,7 @@
 		</effects>
 	</skill>
 	<skill id="15037" toLevel="1" name="Leg Strike">
-		<!-- Strikes the legs of nearby enemies to inflict damage and bring them down. -->
+		<!-- Knocks nearby enemies down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>60</castRange>
@@ -1207,7 +1208,7 @@
 		</effects>
 	</skill>
 	<skill id="15038" toLevel="1" name="Stab">
-		<!-- Stabs an enemy powerfully with both arms. Momentarily inflicts paralysis and strong bleeding. -->
+		<!-- Instantly inflicts Paralysis and Bleed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>80</castRange>
@@ -1239,7 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="15039" toLevel="1" name="Flame Blow">
-		<!-- Uses an axe to throw flames at the enemies at the front and to bring them down. Low chance of inflicting fear. -->
+		<!-- Attacks enemies with blazing flames and has a low chance to inflict Fear. Requires an axe. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -1288,7 +1289,7 @@
 		</effects>
 	</skill>
 	<skill id="15040" toLevel="1" name="Fire Magic">
-		<!-- Targets an enemy and inflicts damage on nearby enemies with fire magic. chance of inflicting fear. -->
+		<!-- Deals damage to the target and nearby enemies. Has a certain chance to inflict Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -1337,7 +1338,7 @@
 		</effects>
 	</skill>
 	<skill id="15041" toLevel="1" name="Fire Magic">
-		<!-- Targets an enemy and inflicts damage on nearby enemies with fire magic. chance of inflicting fear. -->
+		<!-- Deals damage to the target and nearby enemies. Has a certain chance to inflict Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -1386,7 +1387,7 @@
 		</effects>
 	</skill>
 	<skill id="15042" toLevel="1" name="Tauti Push">
-		<!-- Becomes knocked down from a punch and P. Def. is decreased by 20%. -->
+		<!-- P. Atk. -20%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -1430,7 +1431,7 @@
 		</effects>
 	</skill>
 	<skill id="15043" toLevel="1" name="Tauti Push">
-		<!-- Becomes knocked down from a punch and P. Def. is decreased by 30%. -->
+		<!-- P. Atk. -30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -1532,7 +1533,7 @@
 		</effects>
 	</skill>
 	<skill id="15046" toLevel="1" name="Tauti Shock Wave">
-		<!-- Instantly immobilized from stun. -->
+		<!-- The character is stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1563,7 +1564,7 @@
 		</effects>
 	</skill>
 	<skill id="15047" toLevel="1" name="Tauti Rush">
-		<!-- Tauti runs to the front and causes knock down with damage. -->
+		<!-- Deals damage to the enemy in front of the character and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>DA2</operateType>
 		<castRange>900</castRange>
@@ -1603,7 +1604,7 @@
 		</effects>
 	</skill>
 	<skill id="15048" toLevel="1" name="Tauti Leap Attack">
-		<!-- Grab Tauti and throw him up. Use jumping damage to inflict great damage. -->
+		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1635,7 +1636,7 @@
 		</effects>
 	</skill>
 	<skill id="15049" toLevel="1" name="Tauti Axe Throw (up/ chain)">
-		<!-- Grab Tauti and throw him up. Use jumping damage to inflict great damage. Use as a chain to cause damage in multiple places. -->
+		<!-- Deals great damage to the enemy standing behind and all enemies standing in a way of the throwing axe. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1667,7 +1668,7 @@
 		</effects>
 	</skill>
 	<skill id="15050" toLevel="1" name="Tauti Shout">
-		<!-- Mind is blank from the roar. -->
+		<!-- Stuns the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1813,7 +1814,7 @@
 		</conditions>
 	</skill>
 	<skill id="15055" toLevel="1" name="Attempt Execution">
-		<!-- Inflicted with bleeding through execution. -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1907,7 +1908,7 @@
 		</effects>
 	</skill>
 	<skill id="15059" toLevel="1" name="Spill Your Blood">
-		<!-- Inflicts damage on the target and enemies near the target. Causes bleeding. -->
+		<!-- Deals damage to the target and nearby enemies. Inflicts Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1938,7 +1939,7 @@
 		</effects>
 	</skill>
 	<skill id="15060" toLevel="1" name="Eat Poison">
-		<!-- Inflicts damage on the target and enemies near the target. Causes poison. -->
+		<!-- Deals damage to the target and nearby enemies. Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2101,7 +2102,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15067" toLevel="1" name="Attack Cancel Spell">
-		<!-- P. Atk. and M. Atk. are greatly decreased. -->
+		<!-- Decreases the enemy's P./ M. Atk. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2159,7 +2160,7 @@
 		</effects>
 	</skill>
 	<skill id="15069" toLevel="1" name="Limb Yoke">
-		<!-- Knocked back. -->
+		<!-- Demoralization. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2200,7 +2201,7 @@
 		</effects>
 	</skill>
 	<skill id="15070" toLevel="1" name="Restrain Legs">
-		<!-- Legs are sealed and knocked back. -->
+		<!-- Knockdown. Temporarily immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -2258,7 +2259,7 @@
 		</effects>
 	</skill>
 	<skill id="15072" toLevel="1" name="Poison Arrow">
-		<!-- Poisoned with a poison arrow. -->
+		<!-- Poisons the enemy. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -2292,7 +2293,7 @@
 		</effects>
 	</skill>
 	<skill id="15073" toLevel="1" name="Change All">
-		<!-- Changed status. -->
+		<!-- Mutation. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -2343,7 +2344,7 @@
 		</effects>
 	</skill>
 	<skill id="15074" toLevel="1" name="Shaman's Nightmare">
-		<!-- Inflicts 1000 damage on one enemy every second for 5 sec. -->
+		<!-- Inflicts 1000 damage on one enemy every second for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -2372,7 +2373,7 @@
 		</effects>
 	</skill>
 	<skill id="15075" toLevel="1" name="Half Death">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<!-- Armor is destroyed. P./ M. Def. -10% and additional P./ M. Def. -500. P. Evasion -4. The effect stacks as you receive continuous attacks. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -2446,7 +2447,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15077" toLevel="1" name="Mighty Rush">
-		<!-- Rushes in with all your strength for knock back. -->
+		<!-- Knocks the enemy back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0495</icon>
 		<operateType>DA2</operateType>
 		<castRange>1000</castRange>
@@ -2519,7 +2520,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15081" toLevel="1" name="Lightning Strike">
-		<!-- Knocked back from a lightning strike. -->
+		<!-- Knocks the enemy back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2577,7 +2578,7 @@
 		</conditions>
 	</skill>
 	<skill id="15084" toLevel="1" name="Poison Arrow">
-		<!-- Chance of inflicting powerful damage on all party members along with poison damage. -->
+		<!-- Has a certain chance to inflict powerful damage on the enemy and poison him. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2613,7 +2614,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15086" toLevel="1" name="Luminosity">
-		<!-- Knocked down. -->
+		<!-- Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2658,7 +2659,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15088" toLevel="1" name="Near Death">
-		<!-- Inflicts a forceful attack that drives the target and enemies near the party to the point of death. -->
+		<!-- Inflicts a powerful attack on the target and nearby enemies if their HP is near to the point of death. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
@@ -2706,7 +2707,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15091" toLevel="1" name="Destroy Physical Shields">
-		<!-- Faints and is knocked down. -->
+		<!-- Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -2727,7 +2728,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15092" toLevel="1" name="Magic Shield Destroy">
-		<!-- Faints and is knocked down. -->
+		<!-- Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -2748,7 +2749,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15093" toLevel="1" name="Knock Down">
-		<!-- Becomes knocked down by the shock that occurs when the shield is destroyed. -->
+		<!-- Destroys the shield and knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11510</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -2839,7 +2840,7 @@
 		</effects>
 	</skill>
 	<skill id="15096" toLevel="1" name="Clan Curse">
-		<!-- Domain where the clan flag's curse applies. -->
+		<!-- Domain where the clan flag's curse applies. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill15096</icon>
 		<operateType>A5</operateType> <!-- Hide system messages -->
 		<abnormalType>FLAG_DEBUF</abnormalType>

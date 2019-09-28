@@ -72,7 +72,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22004" toLevel="1" name="Vitality Ginseng">
-		<!-- Recovers energy upon acquiring XP. -->
+		<!-- Recovers Vitality upon acquiring XP. -->
 		<icon>BranchSys.icon.etc_ginseng_recovery_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
@@ -1790,7 +1790,7 @@
 		</effects>
 	</skill>
 	<skill id="22058" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 1 h. -->
+		<!-- For 1 h., P. Atk. +15%. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1813,7 +1813,7 @@
 		</effects>
 	</skill>
 	<skill id="22059" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 1 h. -->
+		<!-- For 1 h., P. Def. +15%. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1882,7 +1882,7 @@
 		</effects>
 	</skill>
 	<skill id="22062" toLevel="1" name="Empower">
-		<!-- Increases M. Atk. by 75% for 1 h. -->
+		<!-- For 1 h., M. Atk. +75%. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2025,7 +2025,7 @@
 		</effects>
 	</skill>
 	<skill id="22067" toLevel="1" name="Magic Barrier">
-		<!-- Increases M. Def. by 30% for 1 h. -->
+		<!-- For 1 h., M. Def. +30%. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2105,7 +2105,7 @@
 		</effects>
 	</skill>
 	<skill id="22070" toLevel="1" name="Wild Magic">
-		<!-- For 1 h., increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 h., M. Critical Rate +2. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2424,7 +2424,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22084" toLevel="1" name="Mental Shield">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 40 for 1 h. -->
+		<!-- Obstruction/ Stupor/ Confusion Resistance +40 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2451,7 +2451,7 @@
 		</effects>
 	</skill>
 	<skill id="22085" toLevel="1" name="Focus">
-		<!-- Increases Critical Rate by 30 for 1 h. -->
+		<!-- For 1 h., Critical Rate +30. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

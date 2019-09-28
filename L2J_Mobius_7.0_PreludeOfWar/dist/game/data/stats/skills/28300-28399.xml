@@ -79,7 +79,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28315" toLevel="2" name="Santa Girl's Gift">
-		<!-- Gift buff that Santa Girl gives. Rewards Santa Girl's Gift Pouch when the buff disappears. XP/ SP +$s1, Acquired XP/ SP during Vitality +$s2, P. Atk./ M. Atk./ P./ M. Def. +$s3. \n<Note> You cannot obtain the item if you are dead or your inventory is full when you receive it. -->
+		<!-- Gift buff that Santa Girl gives. Rewards Santa Girl's Gift Pouch when the buff disappears. XP/ SP +$s1, Acquired XP/ SP during Vitality +$s2, P. Atk./ M. Atk./ P./ M. Def. +$s3. <Note> You cannot obtain the item if you are dead or your inventory is full when you receive it. -->
 		<icon>BranchSys.Icon.Br_santa_gift_click_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -100,7 +100,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="28319" toLevel="1" name="Red's Elysium Blessing">
-		<!-- For 4 h.., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Damage +10%, P./ M. Skill Power +10%, XP/ SP +50%, Acquired XP/ SP during Vitality +4 h.0, Damage Received -4 h.1, Skill MP Consumption -4 h.2. The buff remains after death. -->
+		<!-- For 4 h., Max HP/ MP/ CP +30%, P./ M. Atk. +30%, P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +50%, Vitality Bonus +4 h.0, Received Damage -4 h.1, Skill MP Consumption -4 h.2. The effect remains after death. -->
 		<icon>icon.ev_libra_red_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -119,7 +119,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28322" toLevel="1" name="Sibi's Suspicious Supply Items">
+	<skill id="28322" toLevel="1" name="Sibi's Suspicious Supplies">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -461,5 +461,93 @@
 		<passiveConditions>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+	</skill>
+	<skill id="28354" toLevel="1" name="Angel Cat's Blessing">
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
+		<icon>icon.skilltransform4</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28355" toLevel="1" name="Passion Treasure Chest">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28356" toLevel="1" name="Special Golden Magic Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28358" toLevel="1" name="+3 Dragon Earring Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28359" toLevel="1" name="+3 Dragon Ring Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28360" toLevel="1" name="+3 Dragon Necklace Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28361" toLevel="1" name="Archaeologist's Box">
+		<!-- Double-click to obtain an item. -->
+		<icon>icon.bm_strongbox</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28362" toLevel="1" name="Shining Gold Bar Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28363" toLevel="1" name="Holiday Lucky Scroll">
+		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%. -->
+		<icon>icon.etc_charm_of_luck_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="28364" toLevel="1" name="15th Anniversary Pitapat Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28365" toLevel="1" name="15th Anniversary Attendance Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28366" toLevel="1" name="15th Anniversary Rare Earring Gift Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28367" toLevel="1" name="15th Anniversary Rare Ring Gift Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28368" toLevel="1" name="15th Anniversary Rare Necklace Gift Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28369" toLevel="1" name="Blazing Sun Chest">
+		<!-- Double-click to obtain an item. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28370" toLevel="1" name="Hardin's Miracle Sack">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 	</skill>
 </list>

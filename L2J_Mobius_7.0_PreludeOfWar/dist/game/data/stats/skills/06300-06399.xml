@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="6301" toLevel="3" name="Cold Mana Fragment">
-		<!-- Recovers MP by $s1 per second. -->
+		<!-- Each second MP +$s1. -->
 		<icon>icon.skill6301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -116,7 +116,7 @@
 		</effects>
 	</skill>
 	<skill id="6304" toLevel="1" name="Stun">
-		<!-- Stunned for 2 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -169,7 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
-		<!-- Causes profuse bleeding for 10 sec., causing 139 HP damage per second. -->
+		<!-- Inflicts Bleed, for 10 sec. the enemy's HP -139 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -835,7 +835,7 @@
 		</effects>
 	</skill>
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per second. -->
+		<!-- Inflicts Bleed, for 3 sec. the enemy's HP -200 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -871,7 +871,7 @@
 		</effects>
 	</skill>
 	<skill id="6334" toLevel="1" name="Stun">
-		<!-- Stunned for 4 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 4 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -988,7 +988,7 @@
 		</effects>
 	</skill>
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per second. -->
+		<!-- Inflicts Bleed, for 3 sec. the enemy's HP -200 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1026,7 +1026,7 @@
 		</effects>
 	</skill>
 	<skill id="6340" toLevel="1" name="Stun">
-		<!-- Stunned for 4 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 4 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -1106,7 +1106,7 @@
 		</effects>
 	</skill>
 	<skill id="6343" toLevel="2" name="Maguen Plasma - Power">
-		<!-- The Wild Maguen blesses you with a buff that slightly increases your M. Atk. and P. Atk. for $s1. -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your M. Atk. and P. Atk. for $s1 -->
 		<icon>
 			<value level="1">icon.skill6343_1</value>
 			<value level="2">icon.skill6343_2</value>
@@ -1148,7 +1148,7 @@
 		</effects>
 	</skill>
 	<skill id="6365" toLevel="2" name="Maguen Plasma - Speed">
-		<!-- The Wild Maguen blesses you with a buff that slightly increases your Speed, Atk. Spd. and Casting Spd. For $s1. -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your Speed, Atk. Spd. and Casting Spd. for $s1 -->
 		<icon>
 			<value level="1">icon.skill6365_1</value>
 			<value level="2">icon.skill6365_2</value>
@@ -1197,7 +1197,7 @@
 		</effects>
 	</skill>
 	<skill id="6366" toLevel="2" name="Maguen Plasma - Critical">
-		<!-- The Wild Maguen blesses you with a buff that slightly increases your Critical Rate and Critical Damage for $s1. -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your Critical Rate and Critical Damage for $s1 -->
 		<icon>
 			<value level="1">icon.skill6366_1</value>
 			<value level="2">icon.skill6366_2</value>
@@ -1486,7 +1486,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6377" toLevel="10" name="Speed Up">
-		<!-- Increases Atk. Spd. by $s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1538,7 +1538,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6379" toLevel="1" name="Critical Hit">
-		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 sec. -->
+		<!-- Inflicts Bleed, for 15 sec. the enemy's HP -93 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1567,7 +1567,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6380" toLevel="1" name="Bistakon Roar">
-		<!-- Blocks all the enemy's physical/ magic skills for 20 sec. -->
+		<!-- Blocks physical and magic skills for 20 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1597,7 +1597,7 @@
 		</effects>
 	</skill>
 	<skill id="6381" toLevel="2" name="Bistakon Soul Beam">
-		<!-- Blocks all the enemy's physical and magical skills for $s1. -->
+		<!-- Prevents the enemy from using physical/ magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1631,7 +1631,7 @@
 		</effects>
 	</skill>
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
-		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 sec. -->
+		<!-- Inflicts Bleed, for 15 sec. the enemy's HP -93 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1665,7 +1665,7 @@
 		</effects>
 	</skill>
 	<skill id="6383" toLevel="1" name="Bistakon Deadly Roar">
-		<!-- Blocks all the enemy's physical/ magic skills for 20 sec. -->
+		<!-- Blocks physical and magic skills for 20 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1717,7 +1717,7 @@
 		</effects>
 	</skill>
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
-		<!-- Profuse bleeding causes you to lose 95 HP per second for 15 sec. -->
+		<!-- Inflicts Bleed, for 15 sec. the enemy's HP -95 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1752,7 +1752,7 @@
 		</effects>
 	</skill>
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
-		<!-- Stunned for 3 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1891,7 +1891,7 @@
 		</effects>
 	</skill>
 	<skill id="6391" toLevel="1" name="Kokracon Sonic Slash">
-		<!-- Stunned for 5 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2002,7 +2002,7 @@
 		</effects>
 	</skill>
 	<skill id="6395" toLevel="1" name="Kokracon Dreadful Clow">
-		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 sec. -->
+		<!-- Inflicts Bleed, for 15 sec. the enemy's HP -93 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2035,7 +2035,7 @@
 		</effects>
 	</skill>
 	<skill id="6396" toLevel="1" name="Kokracon Panic">
-		<!-- Frightens the enemy and causes him to flee for 6 sec. -->
+		<!-- Inflicts Fear and forces the enemy to flee for 6 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>6</abnormalTime>
@@ -2065,7 +2065,7 @@
 		</effects>
 	</skill>
 	<skill id="6397" toLevel="1" name="Kokracon Staggering Blow">
-		<!-- Stunned for 3 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2098,7 +2098,7 @@
 		</effects>
 	</skill>
 	<skill id="6398" toLevel="1" name="Kokracon Sonic Shout">
-		<!-- Frightens the enemy and causes him to flee for 3 sec. -->
+		<!-- Inflicts Fear and forces the enemy to flee for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

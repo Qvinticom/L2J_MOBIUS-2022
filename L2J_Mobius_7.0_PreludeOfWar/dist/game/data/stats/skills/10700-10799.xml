@@ -181,7 +181,7 @@
 		</effects>
 	</skill>
 	<skill id="10703" toLevel="5" name="Armor Breaker">
-		<!-- In PvP, removes the target's armor for $s1. In PvE, decreases the target's P. Def. by $s2 for $s1. Requires a dagger or dual dagger to be equipped. Consumes $s3 Soulstones. -->
+		<!-- In PvP, removes the target's armor for $s1 In PvE, decreases the target's P. Def. by $s2 for $s1 Requires a dagger or dual dagger to be equipped. Consumes $s3 Soulstones. -->
 		<icon>icon.skill10703</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -229,7 +229,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="10704" toLevel="5" name="Grim Reaper Possession">
-		<!-- Raids the target in the distance of $s1 to inflict short Stun and increase your critical damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->
+		<!-- Attacks the target in the distance of $s1 stunning it for a short time. Your Critical Damage +$s3 for $s2 Requires a dagger or a dual dagger. Consumes $s4 Soulstones. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10704</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -373,7 +373,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10748" toLevel="1" name="Rogue - Individual">
-		<!-- Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill. -->
+		<!-- Pierces through the target to inflict a fatal blow. Power 8875. Half-kill. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1543</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -725,7 +725,7 @@
 		</effects>
 	</skill>
 	<skill id="10755" toLevel="10" name="Superior Mental Attack Resistance">
-		<!-- Resistance +$s1 to Hold/ Sleep/ Paralysis/ Mental Attacks/ Poison/ Bleed/ Stun. STR +$s2. In addition, has a $s3 chance of reflecting P./ M. abnormal states back to the attacker. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +$s1, STR +$s2. Also has a $s3 chance to reflect P./ M. Debuffs. -->
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -914,7 +914,7 @@
 		</effects>
 	</skill>
 	<skill id="10757" toLevel="4" name="Dead Eye Stance">
-		<!-- For $s1, P. Atk. +$s2, and skill power +$s3 when equipped with a bow or crossbow. -->
+		<!-- For $s1, P. Atk. +$s2, Skill Power +$s3. Requires a bow or a crossbow. -->
 		<icon>icon.skill10757</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -988,7 +988,7 @@
 		</effects>
 	</skill>
 	<skill id="10758" toLevel="4" name="Rapid Fire Stance">
-		<!-- For $s1, P. Atk. +$s2 and P. Skill Cooldown -$s3 when a bow or crossbow is equipped. -->
+		<!-- For $s1, P. Atk. +$s2, P. Skill Cooldown -$s3. Requires a bow or a crossbow. -->
 		<icon>icon.skill10758</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1231,7 +1231,7 @@
 		</effects>
 	</skill>
 	<skill id="10761" toLevel="13" name="Bow Strike">
-		<!-- Knocks back frontal enemies. Attacks target with $s1 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target with $s1 power knocking them back. Requires a bow or a crossbow. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10761</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1545,7 +1545,7 @@
 		</effects>
 	</skill>
 	<skill id="10764" toLevel="1" name="Knock Back">
-		<!-- Knock Back -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1571,7 +1571,7 @@
 		</effects>
 	</skill>
 	<skill id="10765" toLevel="1" name="Knock Back">
-		<!-- Knock Back -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1640,7 +1640,7 @@
 		</effects>
 	</skill>
 	<skill id="10768" toLevel="1" name="Blink">
-		<!-- Evasion -->
+		<!-- Increases Evasion. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10768</icon>
 		<affectRange>150</affectRange>
 		<coolTime>200</coolTime>
@@ -1676,7 +1676,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10769" toLevel="11" name="Impact Shot">
-		<!-- Fires an arrow at the enemy with $s1 Power added to P. Atk. Stuns the enemy for $s2. Requires a bow or crossbow to be equipped. Over-hit. -->
+		<!-- Fires an arrow at the enemy with $s1 power stunning them for $s2 Requires a bow or a crossbow. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10769</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1776,7 +1776,7 @@
 		</effects>
 	</skill>
 	<skill id="10770" toLevel="13" name="Recoil Shot">
-		<!-- Shoots an arrow with $s1 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. -->
+		<!-- Fires an arrow with $s1 power knocking the target back. Chance of cancelling the enemy's target. Requires a bow or a crossbow. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10770</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -2089,8 +2089,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10773" toLevel="1" name="Not in Use">
-		<!-- Not in Use -->
+	<skill id="10773" toLevel="1" name="Not in use.">
+		<!-- Not in use. -->
 		<icon>icon.skill0773</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
@@ -2320,7 +2320,7 @@
 		</effects>
 	</skill>
 	<skill id="10777" toLevel="6" name="Lure Shot">
-		<!-- Draws in the enemy's attention. Requires a bow or crossbow to be equipped. -->
+		<!-- Draws enemy's attention to you. Requires a bow or a crossbow. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10777</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2450,7 +2450,7 @@
 		</effects>
 	</skill>
 	<skill id="10780" toLevel="11" name="Slow Shot">
-		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, Speed -$s3. Requires a bow or crossbow to be equipped. -->
+		<!-- Attacks target with $s1 power added to P. Atk. For $s2 Speed -$s3. Requires a bow/ crossbow. -->
 		<icon>icon.skill10780</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3178,7 +3178,7 @@
 		</effects>
 	</skill>
 	<skill id="10796" toLevel="1" name="Hawk Gust">
-		<!-- Pushes the enemies around the master. -->
+		<!-- Knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>5</abnormalType>
@@ -3280,7 +3280,7 @@
 		</effects>
 	</skill>
 	<skill id="10798" toLevel="8" name="Thunder Sharp Claw">
-		<!-- Attacks the enemy with sharp talon to inflict bleed. -->
+		<!-- Attacks the enemy with sharp claws making them bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

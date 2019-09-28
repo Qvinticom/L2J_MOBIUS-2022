@@ -132,7 +132,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5706" toLevel="1" name="Poison">
-		<!-- HP decreases from Poison momentarily. The body is paralyzed after a set amount of time. Effect 7. -->
+		<!-- Instantly decreases HP. After a certain period of time the body is paralyzed. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -159,7 +159,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5707" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -391,7 +391,7 @@
 		</effects>
 	</skill>
 	<skill id="5716" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1021,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="5733" toLevel="6" name="Fear of Steward">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1133,7 +1133,7 @@
 		</effects>
 	</skill>
 	<skill id="5735" toLevel="6" name="Curse of Steward">
-		<!-- Momentarily inflicts Sleep on the target. Decrease probability of additional sleep state while effects last. -->
+		<!-- Instantly inflicts Sleep on the target. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1615,7 +1615,7 @@
 		</effects>
 	</skill>
 	<skill id="5747" toLevel="12" name="Spin Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. $s1 power. -->
+		<!-- Instantly stuns the enemy. Power $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1701,7 +1701,7 @@
 		</effects>
 	</skill>
 	<skill id="5748" toLevel="12" name="Meteor Shower">
-		<!-- Drops meteors to attack surrounding enemies. Power $s1. -->
+		<!-- Drops meteors to attack surrounding enemies. Power $s1 -->
 		<icon>icon.skill1467</icon>
 		<affectLimit>5-12</affectLimit>
 		<coolTime>720</coolTime>
@@ -1847,8 +1847,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5750" toLevel="12" name="Flash">
-		<!-- Inflicts a swift magic attack upon contacted enemies nearby. Power $s1. -->
+	<skill id="5750" toLevel="12" name="Blaze">
+		<!-- Inflicts a swift magic attack upon enemies nearby. Power $s1 -->
 		<icon>icon.skill1417</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2307,7 +2307,7 @@
 		</conditions>
 	</skill>
 	<skill id="5764" toLevel="1" name="Terror of the Pumpkin Ghost">
-		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
+		<!-- Curse of the Pumpkin Ghost causes spontaneous movement. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2896,7 +2896,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5795" toLevel="1" name="Poison">
-		<!-- Poisons the target, causing them to lose 66 HP every second for 30 sec. -->
+		<!-- For 30 sec., HP -66 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2987,7 +2987,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5799" toLevel="1" name="Bleed">
-		<!-- Causes the target to bleed and lose 78 HP every second for 20 sec. -->
+		<!-- For 20 sec., HP -78 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11746" toLevel="3" name="Superior Inquisition">
-		<!-- Damage inflicted on monsters +$s1, and M. Skill MP Consumption +$s2. -->
+		<!-- Damage inflicted on monsters +$s1, M. Skill MP Consumption +$s2. -->
 		<icon>icon.skill1520</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -346,7 +346,7 @@
 		</effects>
 	</skill>
 	<skill id="11754" toLevel="5" name="Fairy of Life">
-		<!-- Summons a fairy that follows and periodically heals the selected party member for $s1. Has a chance of recovering HP when attacked. -->
+		<!-- Summons a fairy that follows and periodically heals the selected party member for $s1 Has a chance of recovering HP when attacked. -->
 		<icon>icon.skill11754</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="11765" toLevel="9" name="Crystal Regeneration">
-		<!-- Crystallize yourself and become immune to damage and debuffs for $s1. Recover $s2 HP and $s3 MP every second. -->
+		<!-- Crystallize yourself and become immune to damage and debuffs for $s1 Recover $s2 HP and $s3 MP every second. -->
 		<icon>icon.skill11765</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalTime>
@@ -1368,7 +1368,7 @@
 		</effects>
 	</skill>
 	<skill id="11766" toLevel="13" name="Dark Blast">
-		<!-- Attacks target with $s1 Power added to M. Atk. -->
+		<!-- Deals magic damage to the target with $s1 power. -->
 		<icon>icon.skill11766</icon>
 		<effectPoint>
 			<value level="1">-867</value>
@@ -1420,7 +1420,7 @@
 		<castRange>900</castRange>
 		<hitTime>2280</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="13">5</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
@@ -1463,7 +1463,7 @@
 		</effects>
 	</skill>
 	<skill id="11767" toLevel="13" name="Mass Dark Veil">
-		<!-- Inflicts damage on target and nearby enemies with $s1 Power added to M. Atk. and decreases aggression toward yourself. -->
+		<!-- Attacks the target and nearby enemies with $s1 M. power. Decreases their aggression towards you. -->
 		<icon>icon.skill11767</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
@@ -1517,7 +1517,7 @@
 		<castRange>900</castRange>
 		<hitTime>3780</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>6700</reuseDelay>
+		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="13">5</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
@@ -1834,7 +1834,7 @@
 		</effects>
 	</skill>
 	<skill id="11772" toLevel="9" name="Giant's Favor">
-		<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by $s2 for $s1. -->
+		<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by $s2 for $s1 -->
 		<icon>icon.skill11772</icon>
 		<abnormalTime>30</abnormalTime>
 		<abnormalTime>
@@ -1979,7 +1979,7 @@
 		</effects>
 	</skill>
 	<skill id="11774" toLevel="4" name="Summon Tree of Life">
-		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for $s1. Can also cast a debuff canceling blessing. -->
+		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for $s1 Can also cast a debuff canceling blessing. -->
 		<icon>icon.skill11774</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -2092,7 +2092,7 @@
 		</effects>
 	</skill>
 	<skill id="11777" toLevel="10" name="Mark of Lumi">
-		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by $s2, and consumes $s3 HP every second for $s1. -->
+		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by $s2, and consumes $s3 HP every second for $s1 -->
 		<icon>icon.skill11777</icon>
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
@@ -2212,7 +2212,7 @@
 		</effects>
 	</skill>
 	<skill id="11778" toLevel="11" name="Fatal Sleep">
-		<!-- For $s1, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by $s2. -->
+		<!-- Inflicts sleep on the target for $s1 After that, Atk. Spd./ Casting Spd./ Speed -$s2. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11778</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2297,7 +2297,7 @@
 		</endEffects>
 	</skill>
 	<skill id="11779" toLevel="8" name="Yoked status">
-		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by $s1. -->
+		<!-- Speed/ Atk. Spd./ Casting Spd. -$s1. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1394</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -2964,7 +2964,7 @@
 		</effects>
 	</skill>
 	<skill id="11792" toLevel="10" name="Superior Mental Attack Resistance">
-		<!-- Resistance +$s1 to Hold/ Sleep/ Paralysis/ Mental Attacks/ Poison/ Bleed/ Stun. INT +$s2. In addition, has a $s3 chance of reflecting P./ M. abnormal states back to the attacker. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +$s1, INT +$s2. Also has a $s3 chance to reflect P./ M. Debuffs. -->
 		<icon>icon.skill10005</icon>
 		<magicLvl>
 			<value level="1">85</value>

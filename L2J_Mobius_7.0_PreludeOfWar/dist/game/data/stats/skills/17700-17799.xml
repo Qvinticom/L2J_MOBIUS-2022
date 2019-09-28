@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" toLevel="10" name="Topaz - Spiritshot">
-		<!-- Disrupts the target's skill casting. When used during PvP, inflicts fixed damage of $s1 and ignores CP. -->
+		<!-- Prevents the target from using skills. Ignores the target's CP and inflicts $s1 damage in PvP. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
 			<value level="2">icon.etc_bm_jewel_topaz_i00</value>

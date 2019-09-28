@@ -1465,7 +1465,7 @@
 		<itemConsumeId>14559</itemConsumeId> <!-- PC Points -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<staticReuse>true</staticReuse>
@@ -2733,7 +2733,7 @@
 		</effects>
 	</skill>
 	<skill id="2873" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 60 min. -->
+		<!-- For 60 min., P. Atk. +15%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2866,7 +2866,7 @@
 		</effects>
 	</skill>
 	<skill id="2878" toLevel="1" name="Empower">
-		<!-- Increases M. Atk. by 75% for 60 min. -->
+		<!-- For 60 min., M. Atk. +75%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3046,7 +3046,7 @@
 		</conditions>
 	</skill>
 	<skill id="2885" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- For 60 min., P. Def. +15%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3109,7 +3109,7 @@
 		</effects>
 	</skill>
 	<skill id="2888" toLevel="1" name="Guidance">
-		<!-- Increases Accuracy by 4 for 60 min. -->
+		<!-- For 60 min., Accuracy +2. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3162,7 +3162,7 @@
 		</effects>
 	</skill>
 	<skill id="2890" toLevel="1" name="Wild Magic">
-		<!-- For 60 min., increases the chance of causing a prominent magic damage by 2. -->
+		<!-- For 60 min., M. Critical Rate +2. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3183,7 +3183,7 @@
 		</effects>
 	</skill>
 	<skill id="2891" toLevel="6" name="Concentration">
-		<!-- For 60 min., decreases magic cancel damage by 53. -->
+		<!-- Decreases magic cancel damage by 53 for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

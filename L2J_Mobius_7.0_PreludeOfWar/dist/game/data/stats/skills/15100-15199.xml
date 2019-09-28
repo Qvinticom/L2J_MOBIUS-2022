@@ -82,7 +82,7 @@
 		</effects>
 	</skill>
 	<skill id="15104" toLevel="1" name="Dimensional Trap">
-		<!-- Immobilizes the enemy for 15 sec. -->
+		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11561</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -199,7 +199,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15109" toLevel="1" name="Ruler's Blessing">
-		<!-- Increases Sleep, Bleed, Stun, Poison, and Hold attack bonus by 30. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Atk. Rate +30. -->
 		<icon>icon.skill0335</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -248,7 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="15111" toLevel="1" name="Mace of Punishment">
-		<!-- Inflicts damage and hurls one person for a certain distance. -->
+		<!-- Deals damage to the target and knocks it down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -329,7 +329,7 @@
 		</effects>
 	</skill>
 	<skill id="15113" toLevel="1" name="Imposing Axe">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<!-- Armor is destroyed. P./ M. Def. -10% and additional P./ M. Def. -500. P. Evasion -4. The effect stacks as you receive continuous attacks. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -457,7 +457,7 @@
 		</effects>
 	</skill>
 	<skill id="15116" toLevel="1" name="Dreaming Romantic Pig">
-		<!-- For 15 sec., change one party member's silhouette into that of a pig. -->
+		<!-- Changes a silhouette of one party member into that of a pig. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -520,7 +520,7 @@
 		</effects>
 	</skill>
 	<skill id="15118" toLevel="1" name="Induce Mental Illness">
-		<!-- Stuns all party members for 5 sec. -->
+		<!-- Stuns all members of the enemy's party for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -625,7 +625,7 @@
 		</effects>
 	</skill>
 	<skill id="15122" toLevel="1" name="Vernier Calipers Hurl">
-		<!-- Hurls the opponent with a Vernier Calipers in your hands. -->
+		<!-- Hurls the opponent with a Vernier Calipers in your hands. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -765,7 +765,7 @@
 		</effects>
 	</skill>
 	<skill id="15125" toLevel="1" name="Tauti Final Attack">
-		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
+		<!-- Helps to summon strength and deliver the final attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>83</mpConsume>
@@ -810,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="15126" toLevel="1" name="Tauti Final Attack">
-		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
+		<!-- Helps to summon strength and deliver the final attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>83</mpConsume>
@@ -1277,7 +1277,7 @@
 		</effects>
 	</skill>
 	<skill id="15147" toLevel="1" name="Overheat">
-		<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
+		<!-- The machine is overheated. Inflicts DoT on the enemy. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1492</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1311,7 +1311,7 @@
 		</effects>
 	</skill>
 	<skill id="15148" toLevel="1" name="Coolant Leak">
-		<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
+		<!-- The machine is overheated. Speed is decreased. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0102</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1459,7 +1459,7 @@
 		</effects>
 	</skill>
 	<skill id="15153" toLevel="1" name="Attention to Draco Incubation">
-		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1477,7 +1477,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15154" toLevel="1" name="Attention to Draco Incubation">
-		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1496,7 +1496,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="15155" toLevel="1" name="Petrify">
+	<skill id="15155" toLevel="1" name="Petrifies the target.">
 		<!-- Petrify status. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
@@ -1660,7 +1660,7 @@
 		</effects>
 	</skill>
 	<skill id="15165" toLevel="1" name="Tauti Shock Wave">
-		<!-- Cannot move due to shock. -->
+		<!-- The character is stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1691,7 +1691,7 @@
 		</effects>
 	</skill>
 	<skill id="15166" toLevel="1" name="Tauti Rush">
-		<!-- Throws forward toward the target who is holding Tauti to inflict damage and to knock down. -->
+		<!-- Deals damage to the enemy and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>DA2</operateType>
 		<castRange>900</castRange>
@@ -1734,7 +1734,7 @@
 		</effects>
 	</skill>
 	<skill id="15167" toLevel="1" name="Tauti Leap Attack">
-		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
+		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1763,7 +1763,7 @@
 		</effects>
 	</skill>
 	<skill id="15168" toLevel="1" name="Tauti Ultimate Chain Strike">
-		<!-- Pulls in all the PC's who are near Tauti. -->
+		<!-- Pulls nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<mpConsume>123</mpConsume>
@@ -1793,7 +1793,7 @@
 		</effects>
 	</skill>
 	<skill id="15169" toLevel="1" name="Tauti Great Shout">
-		<!-- HP is cut down from the roar. HP is decreased by the energy of fire in the roar. -->
+		<!-- HP is decreased by the energy of fire in the roar. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -2100,7 +2100,7 @@
 		</effects>
 	</skill>
 	<skill id="15182" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2123,7 +2123,7 @@
 		</effects>
 	</skill>
 	<skill id="15183" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2146,7 +2146,7 @@
 		</effects>
 	</skill>
 	<skill id="15184" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2169,7 +2169,7 @@
 		</effects>
 	</skill>
 	<skill id="15185" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2204,7 +2204,7 @@
 		</effects>
 	</skill>
 	<skill id="15186" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2239,7 +2239,7 @@
 		</effects>
 	</skill>
 	<skill id="15187" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2415,7 +2415,7 @@
 		</effects>
 	</skill>
 	<skill id="15194" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2460,7 +2460,7 @@
 		</effects>
 	</skill>
 	<skill id="15195" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -296 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2505,7 +2505,7 @@
 		</effects>
 	</skill>
 	<skill id="15196" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -313 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>

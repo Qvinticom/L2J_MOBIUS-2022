@@ -32,7 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="10001" toLevel="10" name="Superior Sword/ Blunt Weapon Mastery">
-		<!-- PvE Damage +$s1. P. Atk. $s2, additional P. Atk. +$s3 when a Sword or Blunt weapon is equipped. P. Accuracy +$s4. Increases aggression toward yourself on standard attack. STR +$s5. There is a chance the skill cooldown will reset or the duration will become $s6 depending on your STR. -->
+		<!-- PvE Damage +$s1. P. Atk. $s2, additional P. Atk. +$s3 when a Sword or Blunt weapon is equipped. P. Accuracy +$s4. Increases aggression toward yourself on standard attack. STR +$s5. There is a chance the skill cooldown will reset or the duration will become $s6 times shorter depending on your STR. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -284,7 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="10005" toLevel="10" name="Superior Mental Attack Resistance">
-		<!-- Resistance +$s1 to Hold/ Sleep/ Paralysis/ Mental Attacks/ Poison/ Bleed/ Stun. STR +$s2. In addition, has a $s3 chance of reflecting P./ M. abnormal states back to the attacker. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +$s1, STR +$s2. Also has a $s3 chance to reflect P./ M. Debuffs. -->
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -463,7 +463,7 @@
 		</effects>
 	</skill>
 	<skill id="10008" toLevel="13" name="Shield Charge">
-		<!-- Uses a shield to rush target with $s1 Power added, reducing their Speed by $s3 for $s2. Can be used while a shield is equipped. -->
+		<!-- Rushes to the target striking them with the shield with $s1. Their Speed -$s3 for $s2 Requires a shield. -->
 		<icon>icon.skill10008</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="13">90</value>
@@ -567,7 +567,7 @@
 		</effects>
 	</skill>
 	<skill id="10009" toLevel="13" name="Shield Bash">
-		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. In PvP, Restrains standard attacks. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. In PVP, Restrains normal attacks. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10011</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -675,7 +675,7 @@
 		</effects>
 	</skill>
 	<skill id="10010" toLevel="13" name="Vanishing Stun">
-		<!-- Attacks target with $s1 Power added to P. Atk, and Atk. Spd./ Casting Spd. -$s2 for $s3 Has a chance to Silence target. If in a Two-Hand Stance, Decreases P. Def. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target with $s1 power. Their Atk. Spd./Casting Spd. -$s2 for $s3 Chance to silence the target. If in the Two-Hand Stance, decreases target's P. Def. Requires a sword or blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10010</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -780,7 +780,7 @@
 		</effects>
 	</skill>
 	<skill id="10011" toLevel="10" name="Shield Impact">
-		<!-- With the wave of the shield, attacks enemies in front with $s1 Power added to P. Atk., pushes them away a short distance, and releases the target with a certain probability. Requires a shield to be equipped. -->
+		<!-- Attacks enemies at the front with $s1 power and pushes them away for a short distance. Chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -864,7 +864,7 @@
 		</effects>
 	</skill>
 	<skill id="10012" toLevel="12" name="Shield Wave">
-		<!-- Attacks the targets near you with $s1 power added to P. Atk. and inflicts Stun for $s2 Grants Wave Barrier effect for $s3. Requires a shield. -->
+		<!-- Attacks nearby enemies with $s1 power and inflicts stun on them for $s2 Activates the Wave Barrier effect for $s3 Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3584</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1051,7 +1051,7 @@
 		</effects>
 	</skill>
 	<skill id="10014" toLevel="13" name="Chain Gust">
-		<!-- Swings the chain to attack nearby enemies with $s1 Power added to P. Atk. and holds them for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Swings the chain to attack nearby enemies with $s1 power. Holds them for $s2 Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10014</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1150,7 +1150,7 @@
 		</effects>
 	</skill>
 	<skill id="10015" toLevel="11" name="Chain Strike">
-		<!-- Swings a chain to draw the target to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Swings a chain to pull the target to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1216,7 +1216,7 @@
 		</effects>
 	</skill>
 	<skill id="10016" toLevel="9" name="Chain Hydra">
-		<!-- Pulls target and nearby enemies to make them attack you.Requires a shield. -->
+		<!-- Pulls the target to you and provokes nearby enemies to attack you. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1476,7 +1476,7 @@
 		</effects>
 	</skill>
 	<skill id="10019" toLevel="7" name="Protection of Faith">
-		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def. and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->
+		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 depending on your P. Def. Speed +$s3. Makes you immune to obstruction and confusion. The effect cannot be stacked with the same effect or Nine Aegis. When it is over, the Limit of Sigel effect is applied. Requires a shield. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
@@ -1578,7 +1578,7 @@
 		</endEffects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
-		<!-- For $s1, activates the Shield Block buff. Increases M. Def. by $s2 and decreases chance of receiving M. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
+		<!-- For $s1, activates the Shield Block buff. M. Def. +$s2, Received M. Critical Rate -$s3. The effect is canceled when using Shield Charge, Shield Bash, or Shield Boomerang. Requires a shield. -->
 		<icon>icon.skill10020_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1641,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="10021" toLevel="7" name="Raise Shield">
-		<!-- For $s1, activates the Shield Block buff. Increases P. Def. by $s2 and decreases chance of receiving P. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
+		<!-- For $s1, activates the Shield Block buff. P. Def. +$s2, Received P. Critical Rate -$s3. The effect is canceled when using Shield Charge, Shield Bash, or Shield Boomerang. Requires a shield. -->
 		<icon>icon.skill10021_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1976,7 +1976,7 @@
 		</effects>
 	</skill>
 	<skill id="10026" toLevel="11" name="Shield Boomerang">
-		<!-- Throws the shield at the target to attack it with $s1 Power added to P. Atk. and provoke it into attacking you for $s2. In PvP, it also decreases Speed by $s3. Requires a shield to be equipped. -->
+		<!-- Throws the shield at the target to attack it with $s1 power and provoke it into attacking you for $s2 Target's Speed in PvP -$s3. Requires a shield. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2027,6 +2027,9 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2085,7 +2088,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10027" toLevel="10" name="Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2207,7 +2210,7 @@
 		</effects>
 	</skill>
 	<skill id="10029" toLevel="1" name="Provoke Aura">
-		<!-- You have been spotted. -->
+		<!-- Draws enemies' attention to you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -2476,7 +2479,7 @@
 		</effects>
 	</skill>
 	<skill id="10036" toLevel="1" name="Recovery Aura">
-		<!-- Increases Heal received by 15% and Stun/ Knock Back/ Knock Down/ Hold Resistance by 25%. Additionally increases a party member's Heal received by 10% and Stun/ Knock Back/ Knock Down/ Hold Resistance by 20%. Knight's Aura effect cannot be overlapped with other aura effects. -->
+		<!-- Received Healing +15%, Confusion/ Obstruction Resistance +25%. For party members Received Healing +10%, Confusion/ Obstruction Resistance +20%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10036</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2504,7 +2507,7 @@
 		</effects>
 	</skill>
 	<skill id="10037" toLevel="1" name="Recovery Aura">
-		<!-- Increases Heal received by 10% and Stun/ Knock Back/ Knock Down/ Hold Resistance by 20%. -->
+		<!-- Received Healing +10%, Obstruction/ Confusion Resistance +20%. -->
 		<icon>icon.skill10036</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -2536,7 +2539,7 @@
 		</effects>
 	</skill>
 	<skill id="10038" toLevel="1" name="Spirit Aura">
-		<!-- Heal amount +15%, Mental/ Paralysis/ Aerial Yoke Resistance +25%. Additionally, party members' heal amount +10%, Mental/ Paralysis/ Aerial Yoke +20%. Only one Knight's Aura can be active at any time. -->
+		<!-- Received Healing +15%, Confusion Resistance +25%. For party members Received Healing +10%, Confusion Resistance +20%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10038</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2563,7 +2566,7 @@
 		</effects>
 	</skill>
 	<skill id="10039" toLevel="1" name="Spirit Aura">
-		<!-- Heal amount +10%, Mental/ Paralysis/ Aerial Yoke Resistance +20%. -->
+		<!-- Received Healing +10%, Confusion Resistance +20%. -->
 		<icon>icon.skill10038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -2672,7 +2675,7 @@
 		</effects>
 	</skill>
 	<skill id="10042" toLevel="9" name="Summon Phoenix Cubic">
-		<!-- Summons the Phoenix Cubic, which recovers your HP by $s2 every $s1, releases debuffs, and increase debuff resistance by $s3. It also prevents death in critical condition once for $s4. -->
+		<!-- Summons the Phoenix Cubic, which recovers your HP by $s2 every $s1, releases debuffs, and increase debuff resistance by $s3. It also prevents death in critical condition once for $s4 -->
 		<icon>icon.skill19565</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3299,7 +3302,7 @@
 		</effects>
 	</skill>
 	<skill id="10051" toLevel="6" name="Lion Roar">
-		<!-- Attack the nearby enemies and block the physical skills. -->
+		<!-- Attacks nearby enemies and blocks all physical skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -3398,7 +3401,7 @@
 		</effects>
 	</skill>
 	<skill id="10053" toLevel="6" name="Lion Dash">
-		<!-- Charges toward the enemy to inflict damage and inflict Stun. -->
+		<!-- Attacks and stuns the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -4259,7 +4262,7 @@
 		</effects>
 	</skill>
 	<skill id="10071" toLevel="10" name="Eva's Presence">
-		<!-- Own P./ M. Def. +$s1; when attacked, $s2 chance of increasing all party members' P./ M. Def. +$s4 for $s3. -->
+		<!-- Own P./ M. Def. +$s1; when attacked, $s2 chance of increasing all party members' P./ M. Def. +$s4 for $s3 -->
 		<icon>icon.skill10071</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4732,7 +4735,7 @@
 		</effects>
 	</skill>
 	<skill id="10080" toLevel="9" name="Summon Hex Cubic">
-		<!-- Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. by $s2 every $s1. -->
+		<!-- Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. by $s2 every $s1 -->
 		<icon>icon.skill10080</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4774,7 +4777,7 @@
 		</effects>
 	</skill>
 	<skill id="10081" toLevel="4" name="Lightning Root">
-		<!-- With lightning, inflicts non-attribute damage on target with $s1 Power added to M. Atk. Instantly becomes stunned for $s2. Requires a shield. -->
+		<!-- Strikes the enemy with a lightning bolt with $s1 power. Paralyzes for $s2 Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5102,7 +5105,7 @@
 		</effects>
 	</skill>
 	<skill id="10087" toLevel="7" name="Blood Panther Roar">
-		<!-- Inflicts $s1 damage onto nearby enemies, and blocks the enemy's physical skills for $s2 -->
+		<!-- Attacks nearby enemies with $s1 power and blocks all physical skills for $s2 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5162,7 +5165,7 @@
 		</effects>
 	</skill>
 	<skill id="10088" toLevel="7" name="Blood Panther Rush">
-		<!-- Charges toward the enemy to inflict damage by $s1 and inflict Stun for $s2. -->
+		<!-- Attacks the enemy with $s1 power and stuns them for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5248,7 +5251,7 @@
 		</effects>
 	</skill>
 	<skill id="10090" toLevel="4" name="Provoking Shackle">
-		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
+		<!-- Provokes nearby enemies and inflicts hold on them for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10090new</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5525,7 +5528,7 @@
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="9" name="Mass Lightning Strike">
-		<!-- Strikes the Lightning of Darkness on the target and nearby enemies with $s1 Power added to P. Atk. and paralyzes them for $s2. Consumes $s3 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Summons the dark lightning that strikes the target and nearby enemies with $s1 power paralyzing them for $s2 Consumes $s3 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10094_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5661,7 +5664,7 @@
 		</effects>
 	</skill>
 	<skill id="10097" toLevel="8" name="Phoenix Glide">
-		<!-- Sends the Phoenix to attack the target and nearby enemies with $s1 Power added to P. Atk. and provokes them into attacking you for $s2. Decreases standard attack ranges of Bow and Crossbow by $s3. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Sends the Phoenix to attack the target and nearby enemies with $s1 power provoking them into attacking you for $s2 Enemies' Bow/ Crossbow attack range -$s3. Consumes $s4 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10097_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>

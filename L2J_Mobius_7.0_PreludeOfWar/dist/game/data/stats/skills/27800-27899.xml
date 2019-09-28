@@ -150,7 +150,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27829" toLevel="3" name="Vital Stone Augment">
-		<!-- Vitality Bonus XP +$s1. -->
+		<!-- Vitality Bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -420,13 +420,13 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27859" toLevel="1" name="High-Grade Sibi's Disguised Clothing">
+	<skill id="27859" toLevel="1" name="Balthus Knights' Top-grade Mark">
 		<!-- Grants you a disguise for 2 h. You'll have a chance to receive special supplies. Acquired XP/ SP +50%. -->
 		<icon>icon.ev_balthus_token</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="27860" toLevel="1" name="Royal White Save Ticket (R99)-Armor">
+	<skill id="27860" toLevel="1" name="Royal White Save Ticket (R99-grade) - Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27861" toLevel="1" name="Embryo Reward Box">
@@ -492,7 +492,7 @@
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27872" toLevel="20" name="Elmoreden Cloak Enchant Effect">
+	<skill id="27872" toLevel="20" name="Enchantment Effect: Elmoreden Cloak">
 		<!-- PvP Attack Damage $s1. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -830,7 +830,7 @@
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27874" toLevel="20" name="Aden Cloak Enchant Effect">
+	<skill id="27874" toLevel="20" name="Enchantment Effect: Aden Cloak">
 		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -995,7 +995,7 @@
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27876" toLevel="20" name="Elmore Cloak Enchant Effect">
+	<skill id="27876" toLevel="20" name="Enchantment Effect: Elmore Cloak">
 		<!-- Physical PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -1185,7 +1185,7 @@
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27878" toLevel="20" name="Ferios Cloak Enchant Effect">
+	<skill id="27878" toLevel="20" name="Enchantment Effect: Ferios Cloak">
 		<!-- All Attribute Resistance +$s1. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -1488,7 +1488,7 @@
 		<effectPoint>867</effectPoint>
 	</skill>
 	<skill id="27880" toLevel="1" name="Blessing of Elmoreden">
-		<!-- Makes you invincible for 10 sec and increases Speed by 100. -->
+		<!-- Makes you invincible for 10 sec. and increases Speed by 100. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1627,7 +1627,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="27885" toLevel="1" name="Blessing of Ferios">
-		<!-- Makes you invincible for 20 sec. -->
+		<!-- Makes you invincible for 20 sec -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1662,7 +1662,7 @@
 		</effects>
 	</skill>
 	<skill id="27886" toLevel="4" name="Elmoreden Spirit Shot">
-		<!-- Ignores CP in PvP, and deals $s1 fixed damage. -->
+		<!-- Ignores the target's CP and inflicts $s1 damage in PvP. -->
 		<icon>icon.skill0049</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>
@@ -1960,7 +1960,7 @@
 		</effects>
 	</skill>
 	<skill id="27894" toLevel="8" name="Recovery of Elmoreden">
-		<!-- Recovers CP by $s1. -->
+		<!-- CP +$s1. -->
 		<icon>icon.skill0049</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>1</abnormalLvl>

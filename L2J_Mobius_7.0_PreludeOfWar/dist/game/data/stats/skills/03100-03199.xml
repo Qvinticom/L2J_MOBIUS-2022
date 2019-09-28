@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3100" toLevel="10" name="Item Skill: Sleep">
-		<!-- Chance: Momentarily inflicts Sleep on the target during magic use. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Sleep on the target during magic use. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -44,7 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="3101" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Chance: Momentarily paralyzes the target during magic use. -->
+		<!-- In case of success: Instantly inflicts Paralysis on the target during magic use. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -98,7 +98,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3102" toLevel="10" name="Item Skill: Medusa">
-		<!-- Chance: Momentarily petrifies the target during magic use. -->
+		<!-- In case of success: Instantly Petrifies the target when using magic. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -137,7 +137,7 @@
 		</effects>
 	</skill>
 	<skill id="3103" toLevel="10" name="Item Skill: Fear">
-		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during magic use. -->
+		<!-- In case of success: During magic use instantly inflicts Fear on the target and forces it to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -176,7 +176,7 @@
 		</effects>
 	</skill>
 	<skill id="3104" toLevel="15" name="Item Skill: Poison (Magic Active)">
-		<!-- Chance: Momentarily inflicts Poison on the target during magic use. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts Poison on the target during magic use. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -255,7 +255,7 @@
 		</effects>
 	</skill>
 	<skill id="3105" toLevel="15" name="Item Skill: Bleed (Magic Active)">
-		<!-- Chance: Momentarily inflicts Bleed on the target during magic use. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts Bleed on the target during magic use. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -335,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="3106" toLevel="10" name="Item Skill: Silence">
-		<!-- Chance: Momentarily blocks the target's magic skill during magic use. -->
+		<!-- In case of success: Instantly blocks the target's magic skills during magic use. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -373,7 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="3107" toLevel="10" name="Item Skill: Doom">
-		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during magic use. -->
+		<!-- In case of success: Momentarily blocks all of the target's physical and magic skills during magic use. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -412,7 +412,7 @@
 		</effects>
 	</skill>
 	<skill id="3108" toLevel="15" name="Item Skill: Aggression Up">
-		<!-- Chance: Increases the target's urge to attack during a critical attack. Power $s1. -->
+		<!-- In case of success: Increases the target's urge to attack during a critical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -448,7 +448,7 @@
 		</effects>
 	</skill>
 	<skill id="3109" toLevel="15" name="Item Skill: Aggression Down">
-		<!-- Chance: Decreases the target's urge to attack during a critical attack. Power $s1. -->
+		<!-- In case of success: Decreases the target's urge to attack during a critical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -500,7 +500,7 @@
 		</effects>
 	</skill>
 	<skill id="3110" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Chance: Burns up the target's MP during a critical attack. Power $s1. -->
+		<!-- In case of success: Burns up the target's MP during a critical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -543,7 +543,7 @@
 		</effects>
 	</skill>
 	<skill id="3111" toLevel="15" name="Item Skill: Slow (Critical)">
-		<!-- Chance: Momentarily decreases the target's Speed during a critical attack. Effect $s1. -->
+		<!-- In case of success: Instantly decreases the target's Speed after a critical attack. Effect $s1 -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -586,7 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="3112" toLevel="15" name="Item Skill: Winter (Critical)">
-		<!-- Chance: Momentarily decreases the target's Atk. Spd. during a critical attack. Effect $s1. -->
+		<!-- In case of success: Instantly decreases the target's Atk. Spd. after a critical attack. Effect $s1 -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -629,7 +629,7 @@
 		</effects>
 	</skill>
 	<skill id="3113" toLevel="10" name="Item Skill: Stun">
-		<!-- Activated skill: Causes a target to enter the Stun state momentarily if critically hit. -->
+		<!-- In case of success: Instantly stuns the target during a critical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -668,7 +668,7 @@
 		</effects>
 	</skill>
 	<skill id="3114" toLevel="15" name="Item Skill: Hold">
-		<!-- Chance: Momentarily inflicts Hold on the target during a critical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Hold on the target during a critical attack. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -713,7 +713,7 @@
 		</effects>
 	</skill>
 	<skill id="3115" toLevel="10" name="Item Skill: Sleep">
-		<!-- Chance: Momentarily inflicts Sleep on the target during a critical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- In case of success: Instantly inflicts Sleep on the target during a critical attack. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -755,7 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="3116" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Chance: Momentarily paralyzes the target during a critical attack. -->
+		<!-- In case of success: Instantly inflicts Paralysis on the target during a critical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -808,7 +808,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3117" toLevel="10" name="Item Skill: Medusa">
-		<!-- Chance: Momentarily petrifies the target during a critical attack. -->
+		<!-- In case of success: Instantly petrifies the target during a critical attack. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -846,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="3118" toLevel="10" name="Item Skill: Fear">
-		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a critical attack. -->
+		<!-- In case of success: During a critical attack instantly inflicts Fear on the target and forces it to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -884,7 +884,7 @@
 		</effects>
 	</skill>
 	<skill id="3119" toLevel="15" name="Item Skill: Poison (Critical)">
-		<!-- Chance: Momentarily inflicts Poison on the target during a critical attack. Effect $s1. -->
+		<!-- In case of success: Instantly poisons the target after a critical attack. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -962,7 +962,7 @@
 		</effects>
 	</skill>
 	<skill id="3120" toLevel="15" name="Item Skill: Bleed (Critical)">
-		<!-- Chance: Momentarily inflicts Bleed on the target during a critical attack. Effect $s1. -->
+		<!-- In case of success: Instantly inflicts bleed on the target after a critical attack. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1041,7 +1041,7 @@
 		</effects>
 	</skill>
 	<skill id="3121" toLevel="10" name="Item Skill: Silence">
-		<!-- Chance: Momentarily blocks the target's magic skill during a critical attack. -->
+		<!-- In case of success: Instantly blocks the target's magic skills during a critical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1078,7 +1078,7 @@
 		</effects>
 	</skill>
 	<skill id="3122" toLevel="10" name="Item Skill: Doom">
-		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a critical attack. -->
+		<!-- In case of success: Instantly blocks all of the target's physical and magic skills during a critical attack. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1116,7 +1116,7 @@
 		</effects>
 	</skill>
 	<skill id="3123" toLevel="10" name="Item Skill: Heal">
-		<!-- Active: Instantly recovers your HP. Power $s1. -->
+		<!-- Active: Instantly recovers your HP. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<effectPoint>
 			<value level="1">440</value>
@@ -1422,7 +1422,7 @@
 		</effects>
 	</skill>
 	<skill id="3127" toLevel="10" name="Item Skill: Recharge">
-		<!-- Active: Regenerates MP. Power $s1. -->
+		<!-- Active: Restores MP. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1684,7 +1684,7 @@
 		</effects>
 	</skill>
 	<skill id="3130" toLevel="10" name="Item Skill: Ritual">
-		<!-- Active: Regenerates CP. Power $s1. -->
+		<!-- Active: Restores CP. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<effectPoint>
 			<value level="1">440</value>
@@ -1760,7 +1760,7 @@
 		</effects>
 	</skill>
 	<skill id="3131" toLevel="10" name="Item Skill: Cheer">
-		<!-- Active: Increases Max CP by $s1 temporarily. -->
+		<!-- Active: Max CP +$s1 temporarily. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2332,8 +2332,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3137" toLevel="10" name="Item Skill: Duel Weakness">
-		<!-- Active: Decreases the opponent's PvP P. Atk. temporarily. -->
+	<skill id="3137" toLevel="10" name="Item Skill: Weakness in Duel">
+		<!-- Active: Temporarily decreases enemy's PvP Damage. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3229,7 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="3149" toLevel="15" name="Item Skill: Aggression">
-		<!-- Active: Increases the target's urge to attack. Power $s1. -->
+		<!-- Active: Increases the target's urge to attack. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
@@ -3299,7 +3299,7 @@
 		</effects>
 	</skill>
 	<skill id="3150" toLevel="15" name="Item Skill: Charm (Active)">
-		<!-- Active: Decreases the target's urge to attack. Power $s1. -->
+		<!-- Active: Decreases the target's urge to attack. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -3498,7 +3498,7 @@
 		</effects>
 	</skill>
 	<skill id="3153" toLevel="10" name="Item Skill: Vampiric Touch">
-		<!-- Active: Absorbs HP. Power $s1. -->
+		<!-- Active: Absorbs HP. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -3579,7 +3579,7 @@
 		</effects>
 	</skill>
 	<skill id="3154" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Active: Burns up the enemy's MP. Power $s1. -->
+		<!-- Active: Burns up the enemy's MP. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4188,7 +4188,7 @@
 		</effects>
 	</skill>
 	<skill id="3165" toLevel="10" name="Item Skill: Prominence">
-		<!-- Active: Detonates a fireball by compressing the air around the caster. Power $s1. -->
+		<!-- Active: Detonates a fireball by compressing the air around the caster. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4268,7 +4268,7 @@
 		</effects>
 	</skill>
 	<skill id="3167" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Active: Unleashes a spray of highly pressurized water. Power $s1. -->
+		<!-- Active: Unleashes a spray of highly pressurized water. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4348,7 +4348,7 @@
 		</effects>
 	</skill>
 	<skill id="3168" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Active: Creates a whirlwind of destruction. Power $s1. -->
+		<!-- Active: Creates a whirlwind of destruction. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4428,7 +4428,7 @@
 		</effects>
 	</skill>
 	<skill id="3169" toLevel="10" name="Item Skill: Stone">
-		<!-- Active: Attacks the target with a stone boulder. Power $s1. -->
+		<!-- Active: Attacks the target with a stone boulder. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4508,7 +4508,7 @@
 		</effects>
 	</skill>
 	<skill id="3170" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Active: Unleashes a holy attack. Power $s1. -->
+		<!-- Active: Unleashes a holy attack. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4588,7 +4588,7 @@
 		</effects>
 	</skill>
 	<skill id="3171" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Active: Unleashes a dark attack. Power $s1. -->
+		<!-- Active: Unleashes a dark attack. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4668,7 +4668,7 @@
 		</effects>
 	</skill>
 	<skill id="3172" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Active: Unleashes an elemental attack. Power $s1. -->
+		<!-- Active: Unleashes a non-elemental attack with $s1 power. -->
 		<icon>icon.skill3123</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4746,7 +4746,7 @@
 		</effects>
 	</skill>
 	<skill id="3173" toLevel="10" name="Item Skill: Prominence">
-		<!-- Active: Unleashes a fire attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes a fire attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4829,7 +4829,7 @@
 		</effects>
 	</skill>
 	<skill id="3174" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Active: Unleashes a water attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes a water attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4912,7 +4912,7 @@
 		</effects>
 	</skill>
 	<skill id="3175" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Active: Unleashes a wind attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes a wind attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4995,7 +4995,7 @@
 		</effects>
 	</skill>
 	<skill id="3176" toLevel="10" name="Item Skill: Stone">
-		<!-- Active: Attacks the enemies near a target with a stone boulder. Power $s1. -->
+		<!-- Active: Attacks the enemies near a target with a stone boulder. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5078,7 +5078,7 @@
 		</effects>
 	</skill>
 	<skill id="3177" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Active: Unleashes a holy attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes a holy attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5161,7 +5161,7 @@
 		</effects>
 	</skill>
 	<skill id="3178" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Active: Unleashes a dark attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes a dark attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5244,7 +5244,7 @@
 		</effects>
 	</skill>
 	<skill id="3179" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Active: Unleashes an elemental attack against the enemies near a target. Power $s1. -->
+		<!-- Active: Unleashes an elemental attack against the enemies near a target. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5325,7 +5325,7 @@
 		</effects>
 	</skill>
 	<skill id="3180" toLevel="10" name="Item Skill: Prominence">
-		<!-- Active: Unleashes a flaming attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes a flaming attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5406,7 +5406,7 @@
 		</effects>
 	</skill>
 	<skill id="3181" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Active: Unleashes a water attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes a water attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5487,7 +5487,7 @@
 		</effects>
 	</skill>
 	<skill id="3182" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Active: Unleashes a wind attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes a wind attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5568,7 +5568,7 @@
 		</effects>
 	</skill>
 	<skill id="3183" toLevel="10" name="Item Skill: Stone">
-		<!-- Active: Unleashes an earth attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes an earth attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5649,7 +5649,7 @@
 		</effects>
 	</skill>
 	<skill id="3184" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Active: Unleashes a holy attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes a holy attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5730,7 +5730,7 @@
 		</effects>
 	</skill>
 	<skill id="3185" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Active: Unleashes a dark attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes a dark attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -5811,7 +5811,7 @@
 		</effects>
 	</skill>
 	<skill id="3186" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Active: Unleashes an elemental attack against nearby enemies. Power $s1. -->
+		<!-- Active: Unleashes an elemental attack against nearby enemies. Power $s1 -->
 		<icon>icon.skill3123</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -6080,7 +6080,7 @@
 		</effects>
 	</skill>
 	<skill id="3189" toLevel="10" name="Item Skill: Stun">
-		<!-- Applied skill: Inflicts Stun on the target momentarily. -->
+		<!-- Active: Stuns the target for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -6155,7 +6155,7 @@
 		</effects>
 	</skill>
 	<skill id="3190" toLevel="10" name="Item Skill: Hold">
-		<!-- Active: Momentarily inflicts Hold on the target. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- Active: Inflicts Hold on the target for a time. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -6232,7 +6232,7 @@
 		</effects>
 	</skill>
 	<skill id="3191" toLevel="10" name="Item Skill: Sleep">
-		<!-- Active: Momentarily puts a target into sleep. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- Active: Instantly inflicts Sleep on the target. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -6312,7 +6312,7 @@
 		</effects>
 	</skill>
 	<skill id="3192" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Active: Momentarily paralyzes the target. -->
+		<!-- Active: Temporarily paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -6477,7 +6477,7 @@
 		</effects>
 	</skill>
 	<skill id="3194" toLevel="10" name="Item Skill: Fear">
-		<!-- Active: Momentarily inflicts Fear on the target and causes him to flee. -->
+		<!-- Active: Instantly inflicts Fear on the target and forces it to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -6552,7 +6552,7 @@
 		</effects>
 	</skill>
 	<skill id="3195" toLevel="15" name="Item Skill: Poison (Active)">
-		<!-- Active: Momentarily poisons a target. Effect $s1. -->
+		<!-- Active: Inflicts Poison on the target for a time. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -6682,7 +6682,7 @@
 		</effects>
 	</skill>
 	<skill id="3196" toLevel="15" name="Item Skill: Bleed (Active)">
-		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1. -->
+		<!-- Active: Inflicts Bleed on the target for a time. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -6812,7 +6812,7 @@
 		</effects>
 	</skill>
 	<skill id="3197" toLevel="10" name="Item Skill: Silence">
-		<!-- Active: Momentarily blocks the target's magic skills. -->
+		<!-- Active: Temporarily blocks the target's magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -6961,7 +6961,7 @@
 		</effects>
 	</skill>
 	<skill id="3199" toLevel="3" name="Item Skill: Skill Refresh">
-		<!-- Active: Temporarily decreases the Cooldown for physical skills. -->
+		<!-- Active: Temporarily decreases P. Skill Cooldown. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>

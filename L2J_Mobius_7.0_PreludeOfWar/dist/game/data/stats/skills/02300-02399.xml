@@ -2829,7 +2829,7 @@
 		</effects>
 	</skill>
 	<skill id="2396" toLevel="1" name="Mental Potion">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance. Effect 1. -->
+		<!-- Increases Obstruction/ Stupor/ Confusion Resistance. Effect 1. -->
 		<icon>icon.etc_lesser_potion_yellow_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2888,7 +2888,7 @@
 		</effects>
 	</skill>
 	<skill id="2399" toLevel="1" name="Capture Rope">
-		<!-- Momentarily puts the enemy into hold. Targets will not receive any additional hold attack while the effect lasts. -->
+		<!-- Hold the target in place for a short time. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.etc_braided_hemp_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>

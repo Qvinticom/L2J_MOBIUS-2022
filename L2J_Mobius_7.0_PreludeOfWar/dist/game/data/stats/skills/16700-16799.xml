@@ -22,7 +22,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16702" toLevel="1" name="Royal Shout">
-		<!-- A loud shout is made, stunning nearby enemies -->
+		<!-- A loud shout stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1399</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -42,7 +42,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16704" toLevel="1" name="Mimillion Flame">
-		<!-- A ball of fire is thrown at the target, dealing magic damage and knocking back the target. -->
+		<!-- Throws a fireball at the target, dealing magic damage and knocking the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1181</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -66,7 +66,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16706" toLevel="1" name="Mimillus Thunder">
-		<!-- Lightning is thrown at the target, dealing magic damage and paralyzing the target. -->
+		<!-- Throws a lightning bolt at the target, dealing magic damage and paralysing the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -132,7 +132,7 @@
 		</effects>
 	</skill>
 	<skill id="16708" toLevel="2" name="Guitar Melody - Residence">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -186,7 +186,7 @@
 		</effectPoint>
 	</skill>
 	<skill id="16712" toLevel="2" name="Pipe Organ Melody - Residence">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -198,7 +198,7 @@
 		</effectPoint>
 	</skill>
 	<skill id="16713" toLevel="1" name="Prevailing Sonata - Residence">
-		<!-- For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -207,7 +207,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="16714" toLevel="1" name="Daring Sonata - Residence">
-		<!-- For 1 h., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -216,7 +216,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="16715" toLevel="1" name="Refreshing Sonata - Residence">
-		<!-- For 1 h., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -235,7 +235,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16717" toLevel="1" name="Warrior's Harmony - Residence">
-		<!-- For 1 h., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 1 h., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -265,7 +265,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="16720" toLevel="1" name="Resistance Debuff - Residence">
-		<!-- For 1 h., Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50%. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -422,7 +422,7 @@
 		</effects>
 	</skill>
 	<skill id="16729" toLevel="1" name="Side Megabomber">
-		<!-- The opponents in range are knocked down for 10 sec. -->
+		<!-- Knocks the enemy down in selected area for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
@@ -700,7 +700,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16747" toLevel="1" name="Ring of the Beginning">
-		<!-- Max MP +42, P./ M. Atk. +3%, P./ M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +15%, Additional Damage to the Giants +5% -->
+		<!-- Max MP +42, P./ M. Atk. +3%, P./ M. Critical Damage +15%, Confusion Resistance/ Atk. Rate +15%, additional damage to the Giants +5%. -->
 		<icon>icon.accessory_ring_of_helios_Black</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
 	<operateType>P</operateType>
@@ -738,7 +738,7 @@
 		</effects>
 	</skill>
 	<skill id="16748" toLevel="2" name="Ring of Authority">
-		<!-- Max MP +43, P. Atk. +4%, P. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Damage to the Giants +5% -->
+		<!-- Max MP +43, P. Atk. +4%, P. Critical Damage +15%, Confusion Resistance/ Atk. Rate +25%, additional damage to the Giants +5%. -->
 		<icon>
 			<value level="1">icon.accessory_ring_of_helios_red</value>
 			<value level="2">icon.accessory_ring_of_helios_enchant_red</value>
@@ -823,7 +823,7 @@
 		</effects>
 	</skill>
 	<skill id="16749" toLevel="2" name="Ring of the Truth">
-		<!-- Max MP +43, M. Atk. +4%, Magical Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Damage to the Giants +5% -->
+		<!-- Max MP +43, M. Atk. +4%, M. Critical Damage +15%, Confusion Resistance/ Atk. Rate +25%, additional damage to the Giants +5%. -->
 		<icon>
 			<value level="1">icon.accessory_ring_of_helios</value>
 			<value level="2">icon.accessory_ring_of_helios_enchant</value>
@@ -994,7 +994,7 @@
 		</effects>
 	</skill>
 	<skill id="16755" toLevel="1" name="Activate.Paralysis">
-		<!-- Body is paralyzed and begins to stiffen. -->
+		<!-- You are paralyzed and temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1023,7 +1023,7 @@
 		</effects>
 	</skill>
 	<skill id="16756" toLevel="1" name="Activate.Knock Down">
-		<!-- Knocked down to the ground. -->
+		<!-- You are knockbacked. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1232,7 +1232,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16774" toLevel="1" name="Stun Shot">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1250,7 +1250,7 @@
 		<effectPoint>-350</effectPoint>
 	</skill>
 	<skill id="16776" toLevel="1" name="Sleep">
-		<!-- Sleep has set in, and made movement temporarily impossible. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1261,7 +1261,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16777" toLevel="1" name="Reprieve">
-		<!-- There has been a stay..of the execution... For 7 min... -->
+		<!-- There has been a stay..of the execution... for 7 min.. -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1329,7 +1329,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16782" toLevel="1" name="Violent Charge">
-		<!-- Makkum suddenly charges toward the target to inflict 10% power added to P. Attack and inflicts Stun for 3 sec. -->
+		<!-- Makkum suddenly charges toward the target to deal 10% damage and inflict Stun for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10318</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1416,7 +1416,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16789" toLevel="5" name="Standby State">
-		<!-- Standby for $s1. -->
+		<!-- Standby for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1425,7 +1425,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16790" toLevel="1" name="Stun Crush">
-		<!-- Attacks the nearby enemies to inflict Stun for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1436,7 +1436,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16791" toLevel="1" name="Bloody Strike">
-		<!-- Inflicts severe damage on a single target and Bleed effect for 10 sec. -->
+		<!-- Deals great damage to a single target making them bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1447,7 +1447,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16792" toLevel="1" name="Rush Assault">
-		<!-- Charges toward a single target and knocks it back by a short distance. -->
+		<!-- Charges toward the target and knocks it back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0230</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1467,7 +1467,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="16794" toLevel="1" name="Crack of Air">
-		<!-- Pulls every target in the specified range toward you. -->
+		<!-- Pulls all enemies near the target to itself. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1498,7 +1498,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16797" toLevel="1" name="Curse of Silence">
-		<!-- Attacks the vicinity of the target and blocks P./ M. Skills for 10 sec. -->
+		<!-- Attacks enemies near the character and blocks physical and magic skills for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1509,7 +1509,7 @@
 		<isDebuff>3</isDebuff>
 	</skill>
 	<skill id="16798" toLevel="1" name="Absolute Black">
-		<!-- Attacks the nearby enemies to inflict Stun for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1519,7 +1519,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16799" toLevel="1" name="Curse of Blaze">
-		<!-- Inflicts severe magical damage on a single target and Burn damage for 10 sec. -->
+		<!-- Deals great magic damage and burns the enemy for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>

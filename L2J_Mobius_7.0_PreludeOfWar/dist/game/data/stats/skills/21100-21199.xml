@@ -62,7 +62,7 @@
 		</effects>
 	</skill>
 	<skill id="21102" toLevel="1" name="Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 h. -->
+		<!-- Blessed Resurrection is available. Cooldown: 12 h. -->
 		<icon>BranchSys.icon.br_sexypanda_cap_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -144,7 +144,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21105" toLevel="1" name="Release Agathion's Seal - Lucky Girl">
+	<skill id="21105" toLevel="1" name="Summon Agathion - Lucky Girl">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -161,7 +161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21106" toLevel="1" name="Release Agathion's Seal - Lucky Boy">
+	<skill id="21106" toLevel="1" name="Summon Agathion - Lucky Boy">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -178,7 +178,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21107" toLevel="1" name="Release Agathion's Seal - Dancing Lucky Kid">
+	<skill id="21107" toLevel="1" name="Summon Agathion - Dancing Lucky Kid">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -195,7 +195,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21108" toLevel="1" name="Release Agathion's Seal - Monkey King">
+	<skill id="21108" toLevel="1" name="Summon Agathion - Monkey King">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -212,7 +212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21109" toLevel="1" name="Release Agathion's Seal - Uthanka">
+	<skill id="21109" toLevel="1" name="Summon Agathion - Uthanka">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -229,7 +229,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21110" toLevel="1" name="Release Agathion's Seal - Bonus B">
+	<skill id="21110" toLevel="1" name="Summon Agathion - Bonus B">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1112,7 +1112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21133" toLevel="1" name="Release Agathion's Seal - Zombie">
+	<skill id="21133" toLevel="1" name="Summon Agathion - Zombie">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1129,7 +1129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21134" toLevel="1" name="Release Agathion's Seal - Bluebird">
+	<skill id="21134" toLevel="1" name="Summon Agathion - Bluebird">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1146,7 +1146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21135" toLevel="1" name="Release Agathion's Seal - Hatbird">
+	<skill id="21135" toLevel="1" name="Summon Agathion - Hatbird">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1445,7 +1445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21142" toLevel="1" name="Release Agathion's Seal - Guangong">
+	<skill id="21142" toLevel="1" name="Summon Agathion - Guangong">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1462,7 +1462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21143" toLevel="1" name="Release Agathion's Seal - Gwanseum Nyang Nyang">
+	<skill id="21143" toLevel="1" name="Summon Agathion - Gwanseum Nyang Nyang">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1479,7 +1479,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21144" toLevel="1" name="Release Agathion's Seal - Blue Opera">
+	<skill id="21144" toLevel="1" name="Summon Agathion - Blue Opera">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1496,7 +1496,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21145" toLevel="1" name="Release Agathion's Seal - Blue Opera">
+	<skill id="21145" toLevel="1" name="Summon Agathion - Blue Opera">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1513,7 +1513,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21146" toLevel="1" name="Release Agathion's Seal - Red Opera">
+	<skill id="21146" toLevel="1" name="Summon Agathion - Red Opera">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1530,7 +1530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21147" toLevel="1" name="Release Agathion's Seal - Opera">
+	<skill id="21147" toLevel="1" name="Summon Agathion - Opera">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1547,7 +1547,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21148" toLevel="1" name="Release Agathion's Seal - Miss Chipao">
+	<skill id="21148" toLevel="1" name="Summon Agathion - Miss Chipao">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1564,7 +1564,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21149" toLevel="1" name="Release Agathion's Seal - Nepal Snow">
+	<skill id="21149" toLevel="1" name="Summon Agathion - Nepal Snow">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1581,7 +1581,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21150" toLevel="1" name="Release Agathion's Seal - Round Ball Snow">
+	<skill id="21150" toLevel="1" name="Summon Agathion - Round Ball Snow">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1598,7 +1598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21151" toLevel="1" name="Release Agathion's Seal - Ladder Snow">
+	<skill id="21151" toLevel="1" name="Summon Agathion - Ladder Snow">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1760,7 +1760,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21157" toLevel="1" name="Release Agathion's Seal - Iken">
+	<skill id="21157" toLevel="1" name="Summon Agathion - Iken">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1777,7 +1777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21158" toLevel="1" name="Release Agathion's Seal - Lanya">
+	<skill id="21158" toLevel="1" name="Summon Agathion - Lanya">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1794,7 +1794,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21159" toLevel="1" name="Release Agathion's Seal - Gnosian">
+	<skill id="21159" toLevel="1" name="Summon Agathion - Gnosian">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1811,7 +1811,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21160" toLevel="1" name="Release Agathion's Seal - Orodriel">
+	<skill id="21160" toLevel="1" name="Summon Agathion - Orodriel">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1828,7 +1828,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21161" toLevel="1" name="Release Agathion's Seal - Lakinos">
+	<skill id="21161" toLevel="1" name="Summon Agathion - Lakinos">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1845,7 +1845,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21162" toLevel="1" name="Release Agathion's Seal - Mortia">
+	<skill id="21162" toLevel="1" name="Summon Agathion - Mortia">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1862,7 +1862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21163" toLevel="1" name="Release Agathion's Seal - Heintz">
+	<skill id="21163" toLevel="1" name="Summon Agathion - Heintz">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1879,7 +1879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21164" toLevel="1" name="Release Agathion's Seal - Meruril">
+	<skill id="21164" toLevel="1" name="Summon Agathion - Meruril">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1896,7 +1896,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21165" toLevel="1" name="Release Agathion's Seal - Taman Zu Rapatui">
+	<skill id="21165" toLevel="1" name="Summon Agathion - Taman Zu Rapatui">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1913,7 +1913,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21166" toLevel="1" name="Release Agathion's Seal - Kaurin">
+	<skill id="21166" toLevel="1" name="Summon Agathion - Kaurin">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1930,7 +1930,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21167" toLevel="1" name="Release Agathion's Seal - Ahertbein">
+	<skill id="21167" toLevel="1" name="Summon Agathion - Ahertbein">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1947,7 +1947,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21168" toLevel="1" name="Release Agathion's Seal - Naonin">
+	<skill id="21168" toLevel="1" name="Summon Agathion - Naonin">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2258,7 +2258,7 @@
 		</conditions>
 	</skill>
 	<skill id="21182" toLevel="1" name="Blessing of Resistance - Hold">
-		<!-- Increases Hold Resistance by 40%. Continuously consumes energy. -->
+		<!-- Obstruction Resistance +40%. Continuously consumes Vitality. -->
 		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2300,7 +2300,7 @@
 		</effects>
 	</skill>
 	<skill id="21184" toLevel="1" name="Blessing of Resistance - Sleep">
-		<!-- Increases Sleep Resistance by 40%. Continuously consumes energy. -->
+		<!-- Stupor Resistance +40%. Continuously consumes Vitality. -->
 		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2337,7 +2337,7 @@
 		</conditions>
 	</skill>
 	<skill id="21186" toLevel="1" name="Blessing of Resistance - Bleed">
-		<!-- Increases Bleed Resistance by 40%. Continuously consumes energy. -->
+		<!-- Infection Resistance +40%. Continuously consumes Vitality. -->
 		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2358,7 +2358,7 @@
 		</effects>
 	</skill>
 	<skill id="21187" toLevel="1" name="Blessing of Resistance - Stun">
-		<!-- Increases Stun Resistance by 40%. Continuously consumes energy. -->
+		<!-- Confusion Resistance +40%. Continuously consumes Vitality. -->
 		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2395,7 +2395,7 @@
 		</conditions>
 	</skill>
 	<skill id="21189" toLevel="1" name="Recovery Ability: MP">
-		<!-- Increases MP Recovery Bonus by 20%. Continuously consumes energy. -->
+		<!-- MP Recovery Rate +20%. Continuously consumes energy. -->
 		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2437,7 +2437,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="21191" toLevel="1" name="Release Agathion's Seal - Phoenix">
+	<skill id="21191" toLevel="1" name="Summon Agathion - Phoenix">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2505,7 +2505,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21194" toLevel="1" name="Release Agathion's Seal - Babayaga">
+	<skill id="21194" toLevel="1" name="Summon Agathion - Babayaga">
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>

@@ -145,7 +145,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9920" toLevel="3" name="Mentor's Encouragement: Acumen">
-		<!-- Casting Spd. +$s1. Buff remains for $s2 after the mentor has logged out. -->
+		<!-- Casting Spd. +$s1. The effect remains for $s2 after the mentor has logged out. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -170,7 +170,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9922" toLevel="2" name="Mentor's Encouragement: Berserker Spirit">
-		<!-- P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, and Casting Spd. +$s7. P. Def. -$s1, M. Def. -$s2, and P. Evasion -$s3. Buff remains for $s9 after the mentor has logged out. -->
+		<!-- P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, and Casting Spd. +$s7. P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3. The effect remains for $s9 after the mentor has logged out. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="9927" toLevel="1" name="Mentor's Encouragement: Prophecy of Wind">
-		<!-- For 2 h., selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
+		<!-- For 2 hours, selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -675,7 +675,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9961" toLevel="1" name="Pipe Organ Melody (9th Anniversary)">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -683,7 +683,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9962" toLevel="1" name="Guitar Melody (9th Anniversary)">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and Speed +10 and Skill MP Consumption -10%. -->
+		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -699,7 +699,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9964" toLevel="1" name="Warrior's Harmony (9th Anniversary)">
-		<!-- For 30 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1198,7 +1198,7 @@
 		</effects>
 	</skill>
 	<skill id="9988" toLevel="1" name="Elixir of Aggression">
-		<!-- For 30 min., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<itemConsumeId>37102</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>

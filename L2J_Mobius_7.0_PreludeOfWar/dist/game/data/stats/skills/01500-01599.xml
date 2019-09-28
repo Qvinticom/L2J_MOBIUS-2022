@@ -297,7 +297,7 @@
 		</effects>
 	</skill>
 	<skill id="1508" toLevel="1" name="Thorn Root">
-		<!-- Holds nearby enemies for 10 sec. and makes them consume 90 HP and 30 MP every second. -->
+		<!-- Holds nearby enemies for 10 sec. making them lose 90 HP and 30 MP per sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1508</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -338,7 +338,7 @@
 		</effects>
 	</skill>
 	<skill id="1509" toLevel="9" name="Seal of Limit">
-		<!-- Reduces Heal received by the target and nearby enemies by $s2 for $s1. For PvPs near the Dominant Flag, limits the maximum HP/ MP/ CP Recovery to $s3. -->
+		<!-- Reduces Heal received by the target and nearby enemies by $s2 for $s1 For PvPs near the Dominant Flag, limits the maximum HP/ MP/ CP Recovery to $s3. -->
 		<icon>icon.skill1509</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -483,7 +483,7 @@
 		</effects>
 	</skill>
 	<skill id="1511" toLevel="8" name="Curse of Life Flow">
-		<!-- For $s1, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. -->
+		<!-- For $s1, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1511</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -656,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="1514" toLevel="7" name="Soul Barrier">
-		<!-- Spreads the soul's defensive barrier to increase your Bow Resistance +$s2, Crossbow Resistance +$s3, and M. Def. +$s4 for $s1. -->
+		<!-- Spreads the soul's defensive barrier. Bow Resistance +$s2, Crossbow Resistance +$s3, M. Def. +$s4 for $s1 -->
 		<icon>icon.skill1514</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1014,7 +1014,7 @@
 		</effects>
 	</skill>
 	<skill id="1523" toLevel="42" name="Divine Punishment">
-		<!-- Calls down the gods' retribution to inflict damage on the enemy using $s1 Power added to M. Atk. -->
+		<!-- Calls down the gods' retribution to inflict damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1523</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -1339,7 +1339,7 @@
 		</effects>
 	</skill>
 	<skill id="1524" toLevel="42" name="Surrender to Holy">
-		<!-- For $s1, decreases the enemy's Holy Attack Resistance by $s2 and M. Def. by $s3, and increases Dark Attack Resistance by $s4. -->
+		<!-- For $s1, the enemy's Holy Attack Resistance -$s2 and M. Def. -$s3, and Dark Attack Resistance +$s4. -->
 		<icon>icon.skill1524</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1797,7 +1797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1526" toLevel="3" name="Steal Mana">
+	<skill id="1526" toLevel="3" name="Mana Drain">
 		<!-- Has a chance to recover MP when striking. -->
 		<icon>icon.skill1526</icon>
 		<magicLvl>
@@ -1832,7 +1832,7 @@
 		</effects>
 	</skill>
 	<skill id="1527" toLevel="3" name="Expert Casting">
-		<!-- M. Skill Cooldown -$s2. Additionally, Casting Spd. +$s1 when equipped with light armor. -->
+		<!-- M. Skill Cooldown -$s2. Additionally, Casting Spd. +$s1 when using light armor. -->
 		<icon>icon.skill1527</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -1861,7 +1861,7 @@
 		</effects>
 	</skill>
 	<skill id="1528" toLevel="42" name="Divine Flash">
-		<!-- Detonates holy energy to inflict damage on nearby enemies with $s1 Power added to M. Atk. -->
+		<!-- Spreads divine energy to damage nearby enemies with $s1 Power. -->
 		<icon>icon.skill1528</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2189,7 +2189,7 @@
 		</effects>
 	</skill>
 	<skill id="1529" toLevel="7" name="Soul Web">
-		<!-- Spreads a soul net to decrease Speed near the enemy by $s2 for $s1. -->
+		<!-- Spreads a soul net. Nearby enemies' Speed -$s2 for $s1 -->
 		<icon>icon.skill1529</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2817,7 +2817,7 @@
 		</effects>
 	</skill>
 	<skill id="1541" toLevel="1" name="Curse of Desparion">
-		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. -->
+		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1541</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2917,7 +2917,7 @@
 		</effects>
 	</skill>
 	<skill id="1544" toLevel="7" name="Death Beam">
-		<!-- Attacks enemies in front of you. Power $s1. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill1471</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -2989,7 +2989,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="1546" toLevel="1" name="Strider Fear">
-		<!-- Frightens the enemy into fleeing for 10 sec. -->
+		<!-- Frightens the enemy into fleeing for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3110,7 +3110,7 @@
 		</effects>
 	</skill>
 	<skill id="1548" toLevel="3" name="Earth Resistance">
-		<!-- Increases Earth Resistance by $s2 for $s1. -->
+		<!-- Earth Resistance +$s2 for $s1 -->
 		<icon>icon.skill1548</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3364,7 +3364,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="1556" toLevel="1" name="Arcane Shield">
-		<!-- For 10 sec., materializes a Mana Armor that reduces damage received by 70% and blocks the rest by consuming MP. The skill effect is removed when MP reaches 0. -->
+		<!-- For 10 sec., Received Damage -70%, blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. -->
 		<icon>icon.skill1556</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3665,7 +3665,7 @@
 		</effects>
 	</skill>
 	<skill id="1561" toLevel="5" name="Battle Cry">
-		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2. -->
+		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2 -->
 		<icon>icon.skill1561</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3719,7 +3719,7 @@
 		</effects>
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Berserker">
-		<!-- Decreases all party members' P. Def. by $s2, M. Def. by $s4 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8, and Speed by $s9 for $s1. -->
+		<!-- Decreases all party members' P. Def. by $s2, M. Def. by $s4 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8, and Speed by $s9 for $s1 -->
 		<icon>icon.skill1562</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3813,7 +3813,7 @@
 		</effects>
 	</skill>
 	<skill id="1563" toLevel="2" name="Pa'agrio's Fury">
-		<!-- Increases party or clan members' Atk. Spd. by $s2 for $s1. -->
+		<!-- Increases party or clan members' Atk. Spd. by $s2 for $s1 -->
 		<icon>icon.skill1563</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3879,7 +3879,7 @@
 		</effects>
 	</skill>
 	<skill id="1565" toLevel="6" name="Mana Pump">
-		<!-- Increases Max MP by $s1. -->
+		<!-- Max MP +$s1. -->
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -4095,7 +4095,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1573" toLevel="6" name="Sub - P. Atk./ M. Atk. Increase">
+	<skill id="1573" toLevel="6" name="Sub - P. Atk./M. Atk. Increase">
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
@@ -4158,7 +4158,7 @@
 		</effects>
 	</skill>
 	<skill id="1575" toLevel="3" name="Sub - Atk. Spd./ Casting Spd. Increase">
-		<!-- Atk. Spd. and Casting Spd. +$s1. -->
+		<!-- Atk. Spd./ Casting Spd. +$s1. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4233,7 +4233,7 @@
 		</effects>
 	</skill>
 	<skill id="1578" toLevel="3" name="Sub - Physical Attribute Resistance Increase">
-		<!-- Increases resistance to physical attributes by $s1. -->
+		<!-- Resistance to physical attributes +$s1. -->
 		<icon>icon.skill4084</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4250,7 +4250,7 @@
 		</effects>
 	</skill>
 	<skill id="1579" toLevel="3" name="Sub - Mental Attribute Resistance Increase">
-		<!-- Increases Mental Attack Resistance by $s1. -->
+		<!-- Mental Resistance +$s1. -->
 		<icon>icon.skill4116</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4267,7 +4267,7 @@
 		</effects>
 	</skill>
 	<skill id="1580" toLevel="3" name="Sub - Physical Ability Increase">
-		<!-- Max CP +$s1, Max HP +$s2, and Max MP +$s3. -->
+		<!-- Max CP +$s1, Max HP +$s2, Max MP +$s3. -->
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

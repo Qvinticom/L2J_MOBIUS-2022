@@ -6,7 +6,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16901" toLevel="3" name="Martyrdom - Passion">
-		<!-- This is the best means to activate faith about Etis van Etina, which inflicts significant damage on the enemies while inflicting Stun. -->
+		<!-- Deals significant damage using a weapon created by Etis van Etina's followers, also stuns the enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1246</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -32,7 +32,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="16904" toLevel="3" name="Martyrdom - Dedication">
-		<!-- The best means to activate faith in Etis van Etina. It inflicts enormous damage on the enemies and blows them away. -->
+		<!-- Deals significant damage using a weapon created by Etis van Etina's followers, also knocks the enemies down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1246</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -41,7 +41,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="16905" toLevel="3" name="Martyrdom - Wish">
-		<!-- This is the best means to activate faith about Etis van Etina, which inflicts significant damage on the enemies while inflicting Silence. -->
+		<!-- Deals significant damage using a weapon created by Etis van Etina's followers, also inflicts Silence. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1246</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -65,7 +65,7 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="16908" toLevel="1" name="Hellmann Cursed Pierce">
+	<skill id="16908" toLevel="1" name="Hellmann Spike Thrust">
 		<!-- Physical Single Target Attack -->
 		<icon>icon.skill0921</icon>
 		<operateType>A1</operateType>
@@ -75,7 +75,7 @@
 		<effectPoint>-337</effectPoint>
 	</skill>
 	<skill id="16909" toLevel="1" name="Hellmann Stun Blast">
-		<!-- Inflicts Stun for 10 sec. Decreases Defense by 20%. -->
+		<!-- Stuns the target for 10 sec. P. Def. -20%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -85,7 +85,7 @@
 		<effectPoint>-183</effectPoint>
 	</skill>
 	<skill id="16910" toLevel="1" name="Robust Chain Strike">
-		<!-- Pulls a target toward you. -->
+		<!-- Pulls the target to your character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -104,7 +104,7 @@
 		<effectPoint>-6887</effectPoint>
 	</skill>
 	<skill id="16912" toLevel="1" name="Robust Challenge for Fate">
-		<!-- Pulls the target of enemies in front. -->
+		<!-- Provokes the enemy in front into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -185,7 +185,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16921" toLevel="1" name="Robust Plague">
-		<!-- Causes the Poison state on the enemies for 10 sec. to drain HP by 300 each second. -->
+		<!-- Poisons the enemy for 10 sec. The enemy's HP -300 per second. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0103</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -195,7 +195,7 @@
 		<effectPoint>-438</effectPoint>
 	</skill>
 	<skill id="16922" toLevel="1" name="Mighty Rush Impact">
-		<!-- Charges forward and attack the enemies in front and inflicts Stun for 5 sec. -->
+		<!-- Rushes to the enemies in front stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -230,7 +230,7 @@
 		<effectPoint>-96</effectPoint>
 	</skill>
 	<skill id="16926" toLevel="1" name="Atelia Fear Blast">
-		<!-- Self Point Blank Fear -->
+		<!-- Inflicts Fear and Bleed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -330,7 +330,7 @@
 		<effectPoint>-114</effectPoint>
 	</skill>
 	<skill id="16937" toLevel="1" name="Kain Rush Impact">
-		<!-- Rush Attack -->
+		<!-- A rush attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -359,7 +359,7 @@
 		<effectPoint>-114</effectPoint>
 	</skill>
 	<skill id="16940" toLevel="1" name="Atelia Bomber Effect">
-		<!-- Inflicts powerful attack and Knock Down on the enemies near you. -->
+		<!-- Attacks nearby enemies and knocks them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -407,7 +407,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16947" toLevel="1" name="Dark Energy">
-		<!-- Presentation skill -->
+		<!-- Presentation Skill -->
 		<icon>icon.skill11030</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -423,7 +423,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16949" toLevel="1" name="Stun">
-		<!-- Inflicts stun on the enemy for 7 sec. -->
+		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -496,7 +496,7 @@
 		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="16958" toLevel="1" name="Blink">
-		<!-- Evasion -->
+		<!-- Increases Evasion. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10768</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -653,7 +653,7 @@
 		<effectPoint>-2</effectPoint>
 	</skill>
 	<skill id="16976" toLevel="1" name="Darken Fear">
-		<!-- Fear. -->
+		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0763</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -710,7 +710,7 @@
 		<effectPoint>-2</effectPoint>
 	</skill>
 	<skill id="16982" toLevel="1" name="Devil Horns of Shield">
-		<!-- Stun State -->
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -799,8 +799,8 @@
 		<hitTime>5000</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="16994" toLevel="1" name="Angry Magic Woodpile">
-		<!-- The Magic Woodpile is angry! -->
+	<skill id="16994" toLevel="1" name="Lighting up Magical Flame">
+		<!-- Lights up a Bundle of Magical Firewood. -->
 		<icon>icon.skill0094</icon>
 		<operateType>A1</operateType>
 		<isMagic>6</isMagic>
@@ -808,7 +808,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="16995" toLevel="1" name="Paralysis">
-		<!-- You are paralyzed because you couldn't soothe the Magic Woodpile's anger. -->
+		<!-- Paralyzes the character, preventing them from putting out a burning Bundle of Magical Firewood. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -816,18 +816,18 @@
 		<castRange>700</castRange>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="16996" toLevel="1" name="Furious Magic Woodpile">
-		<!-- The Magic Woodpile is furious. -->
+	<skill id="16996" toLevel="1" name="Blowing up Magical Flame">
+		<!-- Makes the Bundle of Magical Firewood burn brighter. -->
 		<icon>icon.skill0094</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="16997" toLevel="1" name="Jumping Magic Woodpile">
+	<skill id="16997" toLevel="1" name="Magical Firewood Jump">
 		<!-- The Magic Woodpile is bouncing. -->
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 	</skill>
-	<skill id="16998" toLevel="1" name="Angry Magic Woodpile">
-		<!-- The Large Magic Woodpile is angry! -->
+	<skill id="16998" toLevel="1" name="Lighting up Magical Flame">
+		<!-- Lights up a Big Bundle of Magical Firewood. -->
 		<icon>icon.skill0094</icon>
 		<operateType>A1</operateType>
 		<isMagic>6</isMagic>

@@ -548,7 +548,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="23421" toLevel="2" name="Recharge of Borna">
-		<!-- Instantly restores MP of self and surrounding party members based on Lv., up to a max of $s1. Also restores $s3 MP a sec. for $s2. -->
+		<!-- Instantly restores MP of self and surrounding party members based on Lv., up to a max of $s1. Also restores $s3 MP a sec. for $s2 -->
 		<icon>icon.skill11761</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1199,7 +1199,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23446" toLevel="1" name="Steregos' Authority">
-		<!-- For 10 sec., inflicts Bleed on target and decreases 110HP a sec., and Spd. by 20%. -->
+		<!-- For 10 sec., inflicts Infection, HP -110 per second, Speed -20%. -->
 		<icon>BranchSys3.Icon.g_dainsleif_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1690,7 +1690,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23463" toLevel="1" name="(Recoil Shot)">
-		<!-- Inflicts 28242 physical damage with an arrow to Knock Back enemy. Requires bow/ crossbow. Over-hit. Critical. Has a chance of canceling enemy's target. -->
+		<!-- Fires an arrow with 28,242 power knocking the target back. Chance of cancelling the enemy's target. Requires a bow or a crossbow. Critical. Over-hit. -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<mpConsume>102</mpConsume>
@@ -1733,7 +1733,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 	</skill>
 	<skill id="23465" toLevel="1" name="(Impact Shot)">
-		<!-- Inflicts 13124 physical damage with an arrow to Stun enemy for 9 sec. Requires bow/ crossbow. Over-hit. Has a chance of canceling enemy's target. -->
+		<!-- Strikes the target with an arrow with 13,124 power stunning them for 9 sec. Requires a bow or a crossbow. Has a chance of canceling enemy's target. Over-hit. -->
 		<icon>icon.skill10769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>98</mpConsume>
@@ -1776,7 +1776,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 	</skill>
 	<skill id="23467" toLevel="2" name="(Blood Stab)">
-		<!-- Inflicts $s1 physical damage on enemy's vital spot from behind, inflicting Bleed. Over-hit. Critical. Half-kill. Requires dagger/ dual dagger. -->
+		<!-- Strikes the enemy to a vital spot with $s1 power inflicting Infection. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill10508</icon>
 		<operateType>A2</operateType>
 		<mpConsume>59</mpConsume>
@@ -1840,7 +1840,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 	</skill>
 	<skill id="23470" toLevel="3" name="(Death Howl)">
-		<!-- Inflicts $s1 physical damage to Knock Back nearby enemies. Over-hit. -->
+		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit. -->
 		<icon>icon.skill11032</icon>
 		<operateType>A2</operateType>
 		<mpConsume>204</mpConsume>

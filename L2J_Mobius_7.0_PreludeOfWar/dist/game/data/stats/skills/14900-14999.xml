@@ -108,7 +108,7 @@
 		</effects>
 	</skill>
 	<skill id="14905" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's level. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="14906" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 174 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 174 power depending on the target's level. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -168,7 +168,7 @@
 		</effects>
 	</skill>
 	<skill id="14907" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 183 power depending on the target's Lv.. Also, for 10 sec., recovers 13 MP per second. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 183 power depending on the target's level. Also, for 10 sec., recovers 13 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -843,7 +843,7 @@
 		</effects>
 	</skill>
 	<skill id="14936" toLevel="1" name="Stun">
-		<!-- Causes the Stun state on a target. -->
+		<!-- Stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -872,7 +872,7 @@
 		</effects>
 	</skill>
 	<skill id="14937" toLevel="1" name="Stun">
-		<!-- Causes the Stun state on a target. -->
+		<!-- Stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -901,7 +901,7 @@
 		</effects>
 	</skill>
 	<skill id="14938" toLevel="1" name="Stun">
-		<!-- Causes the Stun state on a target. -->
+		<!-- Stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1035,7 +1035,7 @@
 		</effects>
 	</skill>
 	<skill id="14944" toLevel="1" name="Dimensional Pierce">
-		<!-- Receives damage and incurs bleeding. -->
+		<!-- Deals damage and inflicts Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1070,7 +1070,7 @@
 		</effects>
 	</skill>
 	<skill id="14945" toLevel="1" name="Dimensional Shock Wave">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1200,7 +1200,7 @@
 		</effects>
 	</skill>
 	<skill id="14948" toLevel="1" name="Zellaka's Roar">
-		<!-- Afflicted with Fear and moving against own will. -->
+		<!-- Inflicts Fear and forces to move against own will. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<hitTime>2500</hitTime>
@@ -1376,7 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="14957" toLevel="1" name="Phantom Bleed Strike">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1490,7 +1490,7 @@
 		</effects>
 	</skill>
 	<skill id="14962" toLevel="1" name="Apparition Bleed Strike">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1539,7 +1539,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14964" toLevel="1" name="Rush">
-		<!-- Charges toward the enemy to inflict Stun for 1 second. -->
+		<!-- Rushes to the enemy stunning him for 1 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
 		<castRange>600</castRange>
@@ -1800,7 +1800,7 @@
 		</effects>
 	</skill>
 	<skill id="14975" toLevel="1" name="Mysterious Combat Buff">
-		<!-- For 5 min., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1847,7 +1847,7 @@
 		</effects>
 	</skill>
 	<skill id="14976" toLevel="1" name="Mysterious Speed Buff">
-		<!-- For 5 min., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1912,7 +1912,7 @@
 		</effects>
 	</skill>
 	<skill id="14977" toLevel="1" name="Mysterious Focus Buff">
-		<!-- For 5 min., HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 5 minutes, HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1998,7 +1998,7 @@
 		</effects>
 	</skill>
 	<skill id="14978" toLevel="1" name="Fear">
-		<!-- Momentarily inflicted with fear and changed to another life form that moves regardless of your own volition. -->
+		<!-- Inficts Fear, changes the enemy's appearance and forces to move regardless of own will. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2246,7 +2246,7 @@
 		</effects>
 	</skill>
 	<skill id="14988" toLevel="1" name="Prisoner's Yoke">
-		<!-- Cannot move. -->
+		<!-- Immobilization. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -2413,7 +2413,7 @@
 		</effects>
 	</skill>
 	<skill id="14994" toLevel="1" name="Marching Drum - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 40%, Casting Spd. by 30%, Damage Reflection by 10%, and decreases Skill Cooldown by 10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2593,7 +2593,7 @@
 		</effects>
 	</skill>
 	<skill id="14997" toLevel="1" name="Marching Drum - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 40%, Casting Spd. by 30%, Damage Reflection by 10%, and decreases Skill Cooldown by 10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>

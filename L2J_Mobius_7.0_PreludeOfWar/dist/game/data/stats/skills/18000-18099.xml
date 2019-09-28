@@ -156,7 +156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18008" toLevel="1" name="Scroll of Escape: The Cemetery">
+	<skill id="18008" toLevel="1" name="Scroll of Escape: Cemetery">
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -237,7 +237,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="18016" toLevel="1" name="Wondrous Love">
-		<!-- Feel the power of love! For 30 sec., Speed +300, Atk. Spd. +1500, Casting Spd. +1999, Debuff Resistance +50, and P./ M. Critical Rate +50. -->
+		<!-- Feel the power of love! For 30 sec., Atk. Spd. +1500, Casting Spd. +1999, Speed +300, Debuff Resistance +50, and P./ M. Critical Rate +50. -->
 		<icon>icon.love_potion_blessed</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
@@ -423,7 +423,32 @@
 	</skill>
 	<skill id="18024" toLevel="24" name="Venir's Talisman">
 		<!-- MEN +$s1. -->
-		<icon>BranchIcon.Icon.etc_allstat_talisman_i02</icon>
+		<icon>
+			<value level="1">icon.etc_all_stat_talisman_i00</value>
+			<value level="2">icon.etc_all_stat_talisman_i00</value>
+			<value level="3">icon.etc_all_stat_talisman_i00</value>
+			<value level="4">icon.etc_all_stat_talisman_i00</value>
+			<value level="5">icon.etc_all_stat_talisman_i00</value>
+			<value level="6">icon.etc_all_stat_talisman_i00</value>
+			<value level="7">icon.etc_all_stat_talisman_i00</value>
+			<value level="8">icon.etc_all_stat_talisman_i00</value>
+			<value level="9">icon.etc_all_stat_talisman_i01</value>
+			<value level="10">icon.etc_all_stat_talisman_i01</value>
+			<value level="11">icon.etc_all_stat_talisman_i01</value>
+			<value level="12">icon.etc_all_stat_talisman_i01</value>
+			<value level="13">icon.etc_all_stat_talisman_i01</value>
+			<value level="14">icon.etc_all_stat_talisman_i01</value>
+			<value level="15">icon.etc_all_stat_talisman_i01</value>
+			<value level="16">icon.etc_all_stat_talisman_i01</value>
+			<value level="17">icon.etc_all_stat_talisman_i02</value>
+			<value level="18">icon.etc_all_stat_talisman_i02</value>
+			<value level="19">icon.etc_all_stat_talisman_i02</value>
+			<value level="20">icon.etc_all_stat_talisman_i02</value>
+			<value level="21">icon.etc_all_stat_talisman_i02</value>
+			<value level="22">icon.etc_all_stat_talisman_i02</value>
+			<value level="23">icon.etc_all_stat_talisman_i02</value>
+			<value level="24">icon.etc_all_stat_talisman_i02</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
@@ -809,7 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="18056" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 5 talismans. -->
+		<!-- Can equip 5 Talismans. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>

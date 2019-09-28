@@ -50,7 +50,7 @@
 		</effects>
 	</skill>
 	<skill id="6402" toLevel="5" name="Torumba Poison Strike">
-		<!-- You are afflicted with acute poisoning. You will lose $s2 HP every second for $s1. -->
+		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -287,7 +287,7 @@
 		</effects>
 	</skill>
 	<skill id="6410" toLevel="1" name="Reptilikon Rush">
-		<!-- Stunned for 5 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -499,7 +499,7 @@
 		</effects>
 	</skill>
 	<skill id="6418" toLevel="1" name="Reptilikon Fury Poison Bomb">
-		<!-- Decreases 69 HP and 4 MP per second for 20 sec. -->
+		<!-- For 20 sec., HP -69, MP -4 per sec. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -605,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
-		<!-- Stunned for 3 sec. and momentarily immobile. -->
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -712,7 +712,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="6428" toLevel="1" name="Restore HP">
-		<!-- Recovers HP by 90%. -->
+		<!-- Recovers HP by 90%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -747,7 +747,7 @@
 		</effects>
 	</skill>
 	<skill id="6429" toLevel="1" name="Cozy Mucus">
-		<!-- Bow/ Crossbow P. Atk. increase by 15% and HP recovers. -->
+		<!-- Bow/Crossbow P. Atk. increase by 15%. -->
 		<icon>icon.skill6429</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -974,7 +974,7 @@
 		</effects>
 	</skill>
 	<skill id="6436" toLevel="1" name="Curse of the Dark Abyss">
-		<!-- Decreases Max HP by 5% per second, and increases Bow/ Crossbow Critical Rate by 90%, and Critical Damage by 50%. -->
+		<!-- HP decreases over time, Bow/Crossbow Critical Rate +90%, and Critical Damage +50%. -->
 		<icon>icon.skill6435</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1014,7 +1014,7 @@
 		</effects>
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
-		<!-- Decreases $s1 HP by cold. -->
+		<!-- HP -$s1 per sec. because of cold. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1183</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1051,7 +1051,7 @@
 		</effects>
 	</skill>
 	<skill id="6438" toLevel="1" name="Penalty Area">
-		<!-- Decreases 1000 HP. -->
+		<!-- HP -1000 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1072,6 +1072,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6439" toLevel="1" name="Energy of Wisdom">
+		<!-- none Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1105,6 +1106,7 @@
 		</effects>
 	</skill>
 	<skill id="6440" toLevel="1" name="Energy of Strength">
+		<!-- none Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1138,6 +1140,7 @@
 		</effects>
 	</skill>
 	<skill id="6441" toLevel="1" name="Energy of Agility">
+		<!-- none Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1171,7 +1174,7 @@
 		</effects>
 	</skill>
 	<skill id="6442" toLevel="1" name="Energy of Wisdom">
-		<!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
+		<!-- Your character can inflict major magic damage on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1196,7 +1199,7 @@
 		</effects>
 	</skill>
 	<skill id="6443" toLevel="1" name="Energy of Strength">
-		<!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
+		<!-- Your character can inflict major physical melee damage on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1225,7 +1228,7 @@
 		</effects>
 	</skill>
 	<skill id="6444" toLevel="1" name="Energy of Agility">
-		<!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
+		<!-- Your character can inflict major physical damage by ranged attack on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>

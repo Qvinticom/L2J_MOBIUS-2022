@@ -104,7 +104,7 @@
 		</effects>
 	</skill>
 	<skill id="303" toLevel="4" name="Soul of Sagittarius">
-		<!-- Increases Max MP by $s2 for $s1. -->
+		<!-- Max MP +$s2 for $s1 -->
 		<icon>icon.skill0303</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -687,7 +687,7 @@
 		</effects>
 	</skill>
 	<skill id="315" toLevel="16" name="Crush of Doom">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Attacks the target with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0315</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -1303,7 +1303,7 @@
 		</effects>
 	</skill>
 	<skill id="328" toLevel="1" name="Wisdom">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 20. -->
+		<!-- Obstruction/ Stupor/ Confusion Resistance +20. -->
 		<icon>icon.skill0328</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1317,7 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="329" toLevel="1" name="Health">
-		<!-- Increases Poison/ Bleed Resistance by 20. -->
+		<!-- Infection Resistance +20. -->
 		<icon>icon.skill0329</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1353,8 +1353,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="332" toLevel="1" name="Extra Inventory">
-		<!-- Increases inventory slots by 1. -->
+	<skill id="332" toLevel="1" name="Expand Inventory">
+		<!-- Inventory Slots +6. -->
 		<icon>icon.skill0332</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1404,7 +1404,7 @@
 		</effects>
 	</skill>
 	<skill id="335" toLevel="1" name="Fortitude">
-		<!-- Increases Stun/ Paralyze Resistance by 30. MP drains constantly depending on the level. -->
+		<!-- Confusion Resistance +30. MP Consumption depends on your level. -->
 		<icon>icon.skill0335</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -2023,7 +2023,7 @@
 		</effects>
 	</skill>
 	<skill id="348" toLevel="1" name="Spoil Crush">
-		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
+		<!-- Causes a change inside the monster while attacking it. Allows use of the Sweeper skill. Requires a sword or a blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
@@ -2172,7 +2172,7 @@
 		</effects>
 	</skill>
 	<skill id="352" toLevel="1" name="Shield Bash">
-		<!-- Uses a shield to shock the enemy. Inflicts Stun on the target for 2 sec. Requires a shield. Cancels target. -->
+		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for 2 sec. Cancels enemy's target. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0352</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -2208,7 +2208,7 @@
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
-		<!-- Attacks the enemy with shield, blocking the enemy's physical skills for 1 min. Requires a shield. Target cancel is possible. -->
+		<!-- Attacks the enemy with the shield, preventing them from using physical skills for 1 min. Cancels enemy's target. Requires a shield. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0353</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2411,7 +2411,7 @@
 		</effects>
 	</skill>
 	<skill id="358" toLevel="1" name="Bluff">
-		<!-- Tricks the enemy to create an advantage for you. Makes the enemy show his back, inflicts Stun for 9 sec., and removes its desire for attack. Requires a dagger. Cancels target. -->
+		<!-- Tricks the enemy into showing his back, stunning them for 9 sec. and making them unwilling to attack you. Cancels enemy's target. Requires a dagger. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0358</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2506,7 +2506,7 @@
 		</effects>
 	</skill>
 	<skill id="361" toLevel="1" name="Stun Blast">
-		<!-- Creates a powerful shock wave to inflict damage on the target and nearby enemies with 2486 power added to P. Atk. Inflicts Stun for 9 sec. and decreases P. Def. by 30% and M. Def. by 30%. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
+		<!-- Creates a powerful shockwave that deals damage to the target and nearby enemies with 2486 power. Stuns enemies for 9 sec., their P. Def. -30%, M. Def. -30%. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0361</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2563,7 +2563,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="1" name="Armor Crush">
-		<!-- Attacks the enemy with 3077 Power added to P. Atk. Inflicts Stun and decreases enemy's P. Def. by 30% and M. Def. by 30% for 9 sec. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit and Critical are possible. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with 3077 power, stunning them for 9 sec., their P. Def. -30%, M. Def. -30%. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0362</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2724,7 +2724,7 @@
 		</effects>
 	</skill>
 	<skill id="366" toLevel="1" name="Dance of Shadows">
-		<!-- For 2 min., decreases all party members' Speed by 50% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- For 2 min., party members' Speed -50%, they are protected from monsters' preemptive attacks. The effect disappears if any party member launches an attack. Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires a dual sword. -->
 		<icon>icon.skill0366</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2797,7 +2797,7 @@
 		</effects>
 	</skill>
 	<skill id="367" toLevel="13" name="Dance of Medusa">
-		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dual sword. -->
+		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 Requires a dual sword. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3096,7 +3096,7 @@
 		</effects>
 	</skill>
 	<skill id="377" toLevel="5" name="Clan Shield">
-		<!-- Increases clan members' P. Def. by $s1. It only affects those who are of a Knight rank or higher. -->
+		<!-- Clan members' P. Def. +$s1. Affects only those who are of a Knight rank or higher. -->
 		<icon>icon.skill0377</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3287,7 +3287,7 @@
 		</effects>
 	</skill>
 	<skill id="386" toLevel="5" name="Clan Stun Resistance">
-		<!-- Increases clan members' Stun Resistance by $s1. Applicable from Sage or higher class. -->
+		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill0386</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3305,7 +3305,7 @@
 		</effects>
 	</skill>
 	<skill id="387" toLevel="5" name="Clan Hold Resistance">
-		<!-- Increases clan members' Hold Resistance by $s1. It only affects those who are of a Elder rank or higher. -->
+		<!-- Clan members' Obstruction Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill0387</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3323,7 +3323,7 @@
 		</effects>
 	</skill>
 	<skill id="388" toLevel="5" name="Clan Sleep Resistance">
-		<!-- Increases clan members' Sleep Resistance by $s1. It only affects those who are of a Knight rank or higher. -->
+		<!-- Clan members' Stupor Resistance +$s1. Affects characters of Knight rank or higher. -->
 		<icon>icon.skill0388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3466,7 +3466,7 @@
 		</effects>
 	</skill>
 	<skill id="396" toLevel="1" name="Heroic Berserker">
-		<!-- For 1 min., Atk. Spd. and Casting Spd. +30%, Speed +60, P. Critical Damage and P./ M. Skill Critical Damage +30%, Skill Cooldown -15%. Grants complete debuff immunity. Consumes 80 Soulstones. Cannot be stacked with other Hero Debuffs. Cannot be used in the Olympiad. -->
+		<!-- P. Atk./M. Atk./P. Def./M. Def. +50%, P./M. Skill Critical Damage +30%, Speed +50, Skill Cooldown -15%, and become immune to debuffs for 1 min. Hero's Enchant effects do not stack. Consumes 120 Spirit Ore. Cannot be used in the Olympiad. -->
 		<icon>icon.skill0396</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3479,7 +3479,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

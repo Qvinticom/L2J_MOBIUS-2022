@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32500" toLevel="1" name="Fore Out Scale">
-		<!-- Due to the effects of the scattering scales, receives magic damage, and also inflicted with Fear and movement is restricted for 3 sec. -->
+		<!-- Deals magic damage, inflicts Fear and immobilizes the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -52,7 +52,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32505" toLevel="1" name="Tabeth Body Attack">
-		<!-- Deals physical damage to the target and stuns them. -->
+		<!-- Deals physical damage, stuns and immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -111,7 +111,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32510" toLevel="4" name="Stun Shot">
-		<!-- Shoots an arrow at the enemy to deal physical damage and stun them for $s1. -->
+		<!-- Shoots arrows, deals physical damage and stuns for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -122,7 +122,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32511" toLevel="4" name="Death Bomber">
-		<!-- Strikes the enemy powerfully to deal physical damage and knock them down for $s1. -->
+		<!-- Inflicts a powerful physical attack and Knockdown for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -133,7 +133,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32512" toLevel="4" name="Aggression">
-		<!-- Provokes an enemy, forcing them to attack you for $s1. -->
+		<!-- Provokes the enemy to change the target and attack the character for $s1. power into attacking you.Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -144,7 +144,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32513" toLevel="4" name="Blood Blow">
-		<!-- Attacks the enemy's vital spot to deal physical damage and inflict Bleed for $s1. -->
+		<!-- Attacks the enemy's vital spot dealing physical damage and inflicting Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10508</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -155,7 +155,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32514" toLevel="4" name="Death Rage">
-		<!-- Unleashes deathly energy at the enemy, dealing physical damage and decreasing their P. Def. by $s2 for $s1. -->
+		<!-- Unleashes deathly energy at the enemy, dealing physical damage and decreasing their P. Def. by $s2 for $s1 -->
 		<icon>icon.skill0939</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -197,7 +197,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32518" toLevel="3" name="Death Bluff">
-		<!-- Inflicts Bluff on the enemy, making them turn around for $s1. -->
+		<!-- Inflicts Fear on the target and makes it turn around for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -261,7 +261,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32525" toLevel="3" name="Death Howl">
-		<!-- Deals magic damage to nearby enemies and knocks them down for $s1. -->
+		<!-- Deals magic damage to nearby enemies and knocks them down for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -279,7 +279,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="32527" toLevel="1" name="Rift of Power">
-		<!-- A rift forms in Orfen's power, decreasing her P. Atk./ M. Atk./ Speed by 33%. -->
+		<!-- A rift formed by the Orfen's power. Atk. Spd./ Casting Spd./ Speed -33%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32527</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -294,7 +294,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32529" toLevel="1" name="Tabeth Mass Slam">
-		<!-- Deals physical damage to nearby enemies and knocks them down for 5 sec. -->
+		<!-- Deals physical damage to nearby enemies and knocks them down for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -304,7 +304,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32530" toLevel="10" name="Red Nosed Rudolph - Stage 1">
-		<!-- You can receive items after $s1. A total of $s2 stages. Increases all basic stats by $s3, and decreases Vitality consumption speed by $s4.\n<Warning> If you are dead at the time the items are given, you can't receive Red Nosed Rudolph Buff or the items. You also can't receive the items if there is no room in your inventory. -->
+		<!-- You can receive items after $s1. A total of $s2 stages. Increases all basic stats by $s3, and decreases Vitality consumption speed by $s4. <Warning> If you are dead at the time the items are given, you can't receive Red Nosed Rudolph Buff or the items. You also can't receive the items if there is no room in your inventory. -->
 		<icon>icon.rudolph_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -326,7 +326,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32533" toLevel="24" name="Super Lucky Dog - Stage 1">
-		<!-- Golden Dog's golden energy decreases your Vitality consumption speed by $s1. You can receive items after $s2. A total of $s3 stages.\n<Warning> If you are dead at the time the items are given, you can't receive Super Lucky Dog Buff or the items. You also can't receive the items if there is no room in your inventory. -->
+		<!-- Golden Dog's golden energy decreases your Vitality consumption speed by $s1. You can receive items after $s2. A total of $s3 stages. <Warning> If you are dead at the time the items are given, you can't receive Super Lucky Dog Buff or the items. You also can't receive the items if there is no room in your inventory. -->
 		<icon>icon.christmas_card_box2</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -361,7 +361,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32538" toLevel="1" name="Lilith Unholy Vengeance">
-		<!-- The Power of Darkness locks skills for 5 sec. -->
+		<!-- Power of Darkness for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -400,7 +400,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32543" toLevel="1" name="Unholy Tera Shout">
-		<!-- Makes a loud noise, stunning nearby enemies for 5 sec. -->
+		<!-- A loud shout affects nearby enemies and inflicts Stun for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -417,7 +417,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32545" toLevel="1" name="Unholy Tera Fear">
-		<!-- Induces Fear in nearby enemies, making them flee for 10 sec. -->
+		<!-- Inflicts Fear on nearby enemies, making them flee for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -442,7 +442,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32548" toLevel="1" name="Unholy Magic Hold">
-		<!-- Casts Hold on nearby enemies for 10 sec. -->
+		<!-- Inflicts Hold on nearby enemies for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -459,7 +459,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32550" toLevel="1" name="Darkness Aggression">
-		<!-- Forces the enemy to target you. -->
+		<!-- Forces the enemy to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -469,7 +469,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32551" toLevel="1" name="Darkness Aggression Aura">
-		<!-- Forces enemies to target you. -->
+		<!-- Forces the enemies to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -488,7 +488,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32553" toLevel="1" name="Darkness Shout">
-		<!-- Makes a loud noise, stunning nearby enemies for 5 sec. -->
+		<!-- A loud shout affects nearby enemies and inflicts Stun for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -528,7 +528,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32558" toLevel="2" name="Darkness Fear">
-		<!-- Puts nearby enemies into Fear for $s1. -->
+		<!-- Inflicts Fear on nearby enemies for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -560,7 +560,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32562" toLevel="1" name="Darkness Stomach Cutter">
-		<!-- Cuts bellies of nearby enemies, making them bleed. -->
+		<!-- Cuts the enemy's belly making them bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -576,7 +576,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32564" toLevel="1" name="Hold of Darkness">
-		<!-- Casts Hold on nearby enemies for 5 sec. -->
+		<!-- Inflicts Hold on nearby enemies for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -607,7 +607,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32568" toLevel="1" name="Anakim Holy Vengeance">
-		<!-- Anakim's lightning strike paralyzes the enemy for 2 sec. -->
+		<!-- Anakim attacks with the power of light and inflicts Paralysis for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -630,7 +630,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32571" toLevel="1" name="Holy Aggression">
-		<!-- Forces the enemy to target you. -->
+		<!-- Forces the enemy to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -647,7 +647,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32573" toLevel="1" name="Holly Aggression Aura">
-		<!-- Forces nearby enemies to target you. -->
+		<!-- Forces the enemies to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -664,7 +664,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32575" toLevel="1" name="Holy Lightning">
-		<!-- Inflicts great damage on nearby enemies and stuns the target. -->
+		<!-- Stuns the target and deals great damage to nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -706,7 +706,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32580" toLevel="1" name="Light Aggression">
-		<!-- Forces the enemy to target you. -->
+		<!-- Forces the enemy to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -716,7 +716,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32581" toLevel="1" name="Light Aggression Aura">
-		<!-- Forces enemies to target you. -->
+		<!-- Forces the enemies to attack themselves. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -732,7 +732,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32583" toLevel="1" name="Light High Frequency Shout">
-		<!-- Shouts at a high pitch, inflicting physical damage on nearby enemies and dazing them. -->
+		<!-- A loud high-pitched sound deals damage to nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -794,7 +794,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32591" toLevel="2" name="Light Force Explosion">
-		<!-- Inflicts damage on nearby enemies and stuns the target. -->
+		<!-- Stuns the target and deals great damage to nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -811,7 +811,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32593" toLevel="1" name="Light Double Punch">
-		<!-- Cuts bellies of nearby enemies, making them bleed. -->
+		<!-- Cuts the enemy's belly making them bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -834,7 +834,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32596" toLevel="1" name="Light Electronic Shock">
-		<!-- Cuts bellies of nearby enemies, making them bleed. -->
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -843,7 +843,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32597" toLevel="1" name="Light Paralyze Field">
-		<!-- Inflicts damage on nearby enemies with magic force, paralyzing them. -->
+		<!-- Inflicts Paralysis on nearby enemies and deals magic damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

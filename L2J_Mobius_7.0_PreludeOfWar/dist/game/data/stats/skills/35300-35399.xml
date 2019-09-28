@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35300" toLevel="1" name="Special Ability Krishna Fighter">
+	<skill id="35300" toLevel="1" name="Krishna Fighter Special Ability">
 		<!-- P. Atk. +2%, Normal Attack Critical Damage +2%. -->
 		<icon>icon.weapon_r110_fist_i00</icon>
 		<operateType>P</operateType>
@@ -17,8 +17,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35301" toLevel="1" name="Special Ability Krishna Stormer">
-		<!-- P. Atk. +2% and enables the character to attack multiple opponents. -->
+	<skill id="35301" toLevel="1" name="Krishna Stormer Special Ability">
+		<!-- P. Atk. +2%. Enables the character to attack multiple opponents. -->
 		<icon>icon.weapon_r110_spear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -37,7 +37,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35302" toLevel="1" name="Special Ability Krishna Dual Sword">
+	<skill id="35302" toLevel="1" name="Krishna Dual Sword Special Ability">
 		<!-- P. Atk. +2%, P. Skill Power +2% -->
 		<icon>icon.weapon_r110_dual_sword_i00</icon>
 		<operateType>P</operateType>
@@ -54,7 +54,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35303" toLevel="1" name="Special Ability Krishna Dual Blunt">
+	<skill id="35303" toLevel="1" name="Krishna Dual Blunt Special Ability">
 		<!-- P. Atk. +2%, Max HP +4%. -->
 		<icon>icon.weapon_r110_dual_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -71,8 +71,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35304" toLevel="1" name="Special Ability Krishna Dual Dagger">
-		<!-- P. Atk. +2% with a chance to drain 2% HP. -->
+	<skill id="35304" toLevel="1" name="Krishna Dual Dagger Special Ability">
+		<!-- P. Atk. +2%, with a certain chance, absorbs 2% of the inflicted damage as HP. -->
 		<icon>icon.weapon_r110_dual_dagger_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -88,7 +88,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35305" toLevel="1" name="Special Ability Krishna Thrower">
+	<skill id="35305" toLevel="1" name="Krishna Thrower Special Ability">
 		<!-- P. Atk. +2%, Atk. Spd. +2%. -->
 		<icon>icon.weapon_r110_bow_i00</icon>
 		<operateType>P</operateType>
@@ -105,7 +105,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35306" toLevel="1" name="Special Ability Krishna Shooter">
+	<skill id="35306" toLevel="1" name="Krishna Shooter Special Ability">
 		<!-- P. Atk. +2%, P. Skill Power +2% -->
 		<icon>icon.weapon_r110_crossbow_i00</icon>
 		<operateType>P</operateType>
@@ -122,7 +122,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35307" toLevel="1" name="Special Ability Krishna Buster">
+	<skill id="35307" toLevel="1" name="Krishna Buster Special Ability">
 		<!-- M. Accuracy +4, M. Skill Power +2%. -->
 		<icon>icon.weapon_r110_onehand_magic_sword_i00</icon>
 		<operateType>P</operateType>
@@ -139,7 +139,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35308" toLevel="1" name="Special Ability Krishna Caster">
+	<skill id="35308" toLevel="1" name="Krishna Caster Special Ability">
 		<!-- M. Accuracy +4, Casting Spd. +2%. -->
 		<icon>icon.weapon_r110_onehand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -156,7 +156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35309" toLevel="1" name="Special Ability Krishna Retributer">
+	<skill id="35309" toLevel="1" name="Krishna Retributer Special Ability">
 		<!-- M. Atk. +3%, M. Skill Critical Damage +2% -->
 		<icon>icon.weapon_r110_twohand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -709,7 +709,7 @@
 		</effects>
 	</skill>
 	<skill id="35336" toLevel="5" name="Super Advanced Augment: Bow/ Crossbow Resistance">
-		<!-- Bow/ Crossbow Weapon Resistance +$s1. -->
+		<!-- Bow/ Crossbow Attack Resistance +$s1. -->
 		<icon>icon.renewal_mineral_r110</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -734,7 +734,7 @@
 		</effects>
 	</skill>
 	<skill id="35337" toLevel="5" name="Super Advanced Augment: Dagger/ Dual Dagger Resistance">
-		<!-- Dagger/ Dual Dagger Resistance +$s1. -->
+		<!-- Dagger/ Dual Dagger Attack Resistance +$s1. -->
 		<icon>icon.renewal_mineral_r110</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -759,7 +759,7 @@
 		</effects>
 	</skill>
 	<skill id="35338" toLevel="5" name="Super Advanced Augment: Sword/ Dual Sword Resistance">
-		<!-- One-handed Sword/ Two-Handed Sword/ Dual sword Resistance +$s1. -->
+		<!-- One-handed/ two-handed sword/ dual sword attack resistance +$s1. -->
 		<icon>icon.renewal_mineral_r110</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -803,7 +803,7 @@
 		</effects>
 	</skill>
 	<skill id="35340" toLevel="5" name="Super Advanced Augment: Increase Heal Received">
-		<!-- Heal Received +$s1. -->
+		<!-- Received Healing +$s1. -->
 		<icon>icon.renewal_mineral_r110</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -896,7 +896,7 @@
 		</effects>
 	</skill>
 	<skill id="35344" toLevel="2" name="Super Advanced Augment: M. Skill Power">
-		<!-- Magic Skill Power +$s1. -->
+		<!-- M. Skill Power +$s1. -->
 		<icon>icon.renewal_mineral_r110</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2236,20 +2236,27 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35361" toLevel="1" name="Bloody Magic Ring (Critical)">
-		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +15%, P. Skill/ M. Skill Critical Rate +20. -->
+		<!-- Normal Attack/P. Skill/M. Skill Critical Damage +15%, P./M. Skill Critical Rate +20. -->
 		<icon>icon.r991_ring_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35362" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="35363" toLevel="1" name="Anakim's Protection Rune">
-		<operateType>A1</operateType>
+		<!-- When in inventory, Received PvP Damage -90%. -->
+		<icon>icon.bm_freya_dark_rune</icon>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35364" toLevel="11" name="Artifact - P. Critical Damage">
 		<!-- Enchanting increases Normal Attack Critical Damage -->
+		<icon>icon.artifact_d_crt_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
@@ -2272,6 +2279,7 @@
 	</skill>
 	<skill id="35365" toLevel="11" name="Artifact - P. Skill Critical Damage">
 		<!-- When enchanting, increases P. Skill Critical Damage. -->
+		<icon>icon.artifact_d_skill_crt_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
@@ -2294,6 +2302,7 @@
 	</skill>
 	<skill id="35366" toLevel="11" name="Artifact - M. Skill Critical Damage">
 		<!-- Enchanting increases M. Skill Critical Damage -->
+		<icon>icon.artifact_d_spell_crt_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
@@ -2315,15 +2324,23 @@
 		</effects>
 	</skill>
 	<skill id="35367" toLevel="11" name="Artifact - Attribute Attack Power">
+		<!-- Enchanting increases Attack Attributes -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35368" toLevel="11" name="Artifact - P. Skill Power">
+		<!-- Enchanting increases P. Skill Power -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35369" toLevel="11" name="Artifact - M. Skill Power">
+		<!-- Enchanting increases M. Skill Power -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35370" toLevel="11" name="Artifact - Bow Resistance">
+		<!-- When enchanted, increases resistance to bow/ crossbow attacks. -->
+		<icon>icon.artifact_c_resist_bow</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
@@ -2358,6 +2375,7 @@
 	</skill>
 	<skill id="35371" toLevel="11" name="Artifact - Dagger Resistance">
 		<!-- Enchanting increases Dagger/Dual Dagger Resistance -->
+		<icon>icon.artifact_c_resist_dagger</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
@@ -2394,6 +2412,7 @@
 	</skill>
 	<skill id="35372" toLevel="11" name="Artifact - Sword Resistance">
 		<!-- Increases one-handed/ two-handed/ dual/ magic sword resistance when enchanted. -->
+		<icon>icon.artifact_c_resist_sword</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
@@ -2429,16 +2448,23 @@
 		</effects>
 	</skill>
 	<skill id="35373" toLevel="11" name="Artifact - Attribute Resistance">
+		<!-- Enchanting increases all Defense Attributes -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35374" toLevel="11" name="Artifact - Received Damage When Immobilized">
+		<!-- Enchanting increases Received Damage Reduction When Immobilized -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35375" toLevel="11" name="Artifact - Debuff Resistance">
+		<!-- Enchanting increases Debuff Resistance -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35376" toLevel="11" name="Artifact - Vitality Bonus">
 		<!-- Enchanting increases Vitality bonus -->
+		<icon>icon.artifact_b_vital_bonus</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityExpRate">
@@ -2461,6 +2487,7 @@
 	</skill>
 	<skill id="35377" toLevel="11" name="Artifact - Vitality Consumption">
 		<!-- Enchanting reduces Vitality Consumption Rate -->
+		<icon>icon.artifact_b_vital_sub</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityPointsRate">
@@ -2483,6 +2510,7 @@
 	</skill>
 	<skill id="35378" toLevel="11" name="Artifact - MP Consumption">
 		<!-- Enchanting reduces Skill MP Consumption -->
+		<icon>icon.artifact_b_skill_mp_cost</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
@@ -2522,16 +2550,23 @@
 		</effects>
 	</skill>
 	<skill id="35379" toLevel="11" name="Artifact - Skill Cooldown">
+		<!-- Enchanting reduces Skill Cooldown -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35380" toLevel="11" name="Artifact - Recovery Potions' Effect">
+		<!-- Increases Recovery Potions' Effect when upgraded. -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35381" toLevel="11" name="Artifact - Fixed Damage Resistance">
+		<!-- Fixed Damage Resistance increased when upgraded. -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35382" toLevel="11" name="Artifact - P. Def.">
 		<!-- P. Def. increased when upgraded. -->
+		<icon>icon.artifact_a_phy_def</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -2554,6 +2589,7 @@
 	</skill>
 	<skill id="35383" toLevel="11" name="Artifact - M. Def.">
 		<!-- M. Def. increased when upgraded. -->
+		<icon>icon.artifact_a_mag_def</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
@@ -2576,6 +2612,7 @@
 	</skill>
 	<skill id="35384" toLevel="11" name="Artifact - P. Critical Damage">
 		<!-- Enchanting increases Normal Attack Critical Damage -->
+		<icon>icon.artifact_a_crt_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
@@ -2598,6 +2635,7 @@
 	</skill>
 	<skill id="35385" toLevel="11" name="Artifact - P. Skill Critical Damage">
 		<!-- When enchanting, increases P. Skill Critical Damage. -->
+		<icon>icon.artifact_a_crt_skill_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
@@ -2620,6 +2658,7 @@
 	</skill>
 	<skill id="35386" toLevel="11" name="Artifact - M. Skill Critical Damage">
 		<!-- Enchanting increases M. Skill Critical Damage -->
+		<icon>icon.artifact_a_crt_mag_dmg</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
@@ -2642,6 +2681,7 @@
 	</skill>
 	<skill id="35387" toLevel="11" name="Artifact - Atk. Spd.">
 		<!-- Enchanting increases Atk. Spd. -->
+		<icon>icon.artifact_a_pa_speed</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -2663,7 +2703,8 @@
 		</effects>
 	</skill>
 	<skill id="35388" toLevel="11" name="Artifact - Casting Spd.">
-		<!-- Casting Spd. increased when upgraded -->
+		<!-- Casting Spd. increased when upgraded. -->
+		<icon>icon.artifact_a_ma_speed</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -2685,36 +2726,58 @@
 		</effects>
 	</skill>
 	<skill id="35389" toLevel="11" name="Artifact - Speed">
+		<!-- Speed increased when upgraded. -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35390" toLevel="11" name="Artifact - Acquired XP/ SP">
+		<!-- Enchanting increases XP/SP Gain -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35391" toLevel="11" name="Artifact - Vitality Bonus">
+		<!-- Enchanting increases Vitality bonus -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35392" toLevel="11" name="Artifact - Vitality Consumption">
+		<!-- Enchanting reduces Vitality Consumption Rate -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35393" toLevel="11" name="Artifact - Debuff Resistance">
+		<!-- Enchanting increases Debuff Resistance -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35394" toLevel="11" name="Artifact - Received Healing">
+		<!-- Received Healing increased when upgraded. -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35395" toLevel="11" name="Artifact - MP Consumption">
+		<!-- Enchanting reduces Skill MP Consumption -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35396" toLevel="11" name="Artifact - Fishing XP">
+		<!-- Enchanting increases Successful Fishing XP bonus -->
+		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35397" toLevel="10" name="Talisman of Protection">
-		<operateType>A1</operateType>
+		<!-- P. Def. +$s1, M. Def. +$s2, and all Defense Attributes +$s3. -->
+		<icon>icon.bm_defend_talisman</icon>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35398" toLevel="1" name="Soul of Sword - Zariche">
-		<operateType>A1</operateType>
+		<!-- Demonic Sword Zariche's soul has possessed you. PvP Damage +100%, PvP Def. +90%, Max HP/MP/CP +150000, P. Atk. +45717, M. Atk. +26586, Atk./Casting Spd. +1500, Normal Atk./M. Critical Rate +500, Speed +300, and Received Heal -90% -->
+		<icon>icon.die_effect_zariche1</icon>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35399" toLevel="1" name="Soul of Sword - Akamanah">
-		<operateType>A1</operateType>
+		<!-- Blood Sword Akamanah's soul has possessed you. PvP Damage +100%, PvP Def. +90%, Max HP/MP/CP +150000, P. Atk. +45717, M. Atk. +26586, Atk./Casting Spd. +1500, Normal Atk./M. Critical Rate +500, Speed +300, and Received Heal -90% -->
+		<icon>icon.die_effect_aka_manaf1</icon>
+		<operateType>P</operateType>
 	</skill>
 </list>

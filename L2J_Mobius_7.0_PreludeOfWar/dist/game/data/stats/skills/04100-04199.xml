@@ -437,7 +437,7 @@
 		</effects>
 	</skill>
 	<skill id="4109" toLevel="1" name="Curse of Antharas">
-		<!-- You have been touched by the curse of Antharas, which has temporarily decreased all your combat stats. -->
+		<!-- Puts the curse of Antharas. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -639,7 +639,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
-		<!-- Increases M. Def. -->
+		<!-- M. Damage Resistance. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -663,7 +663,7 @@
 		</effects>
 	</skill>
 	<skill id="4117" toLevel="12" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -731,7 +731,7 @@
 		</effects>
 	</skill>
 	<skill id="4118" toLevel="12" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -847,7 +847,7 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1124,7 +1124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4127" toLevel="1" name="Baium Attack">
+	<skill id="4127" toLevel="1" name="Baium's Blow">
 		<affectRange>200</affectRange>
 		<castRange>100</castRange>
 		<coolTime>1000</coolTime>
@@ -1143,7 +1143,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4128" toLevel="1" name="Wind Of Force">
+	<skill id="4128" toLevel="1" name="Baium's Burst">
 		<affectRange>600</affectRange>
 		<coolTime>1700</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1160,7 +1160,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4129" toLevel="1" name="Earthquake">
+	<skill id="4129" toLevel="1" name="Baium's Earthquake">
 		<affectRange>250</affectRange>
 		<coolTime>2500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1177,7 +1177,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4130" toLevel="1" name="Lightning">
+	<skill id="4130" toLevel="1" name="Baium's Lightning">
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<coolTime>4000</coolTime>
@@ -1197,8 +1197,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4131" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move temporarily. -->
+	<skill id="4131" toLevel="1" name="Baium's Paralysis">
+		<!-- You are paralyzed and temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1913,7 +1913,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1979,7 +1979,7 @@
 		</effects>
 	</skill>
 	<skill id="4149" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2854,7 +2854,7 @@
 		</effects>
 	</skill>
 	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- Body is rigid with paralysis. -->
+		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2992,7 +2992,7 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3121,7 +3121,7 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3319,7 +3319,7 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3737,7 +3737,7 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3878,7 +3878,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- HP decreases from poison momentarily. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4115,7 +4115,7 @@
 		</effects>
 	</skill>
 	<skill id="4185" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4182,7 +4182,7 @@
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4324,7 +4324,7 @@
 		</effects>
 	</skill>
 	<skill id="4188" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4405,7 +4405,7 @@
 		</effects>
 	</skill>
 	<skill id="4189" toLevel="12" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4666,7 +4666,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4193" toLevel="12" name="Life Drain">
+	<skill id="4193" toLevel="12" name="Drain Energy">
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4909,7 +4909,7 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4975,7 +4975,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

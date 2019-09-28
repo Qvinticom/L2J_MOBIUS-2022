@@ -17,14 +17,13 @@
 		<effectPoint>-1</effectPoint>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="30602" toLevel="1" name="Eviscerator Aura">
-		<!-- Casts Eviscerator Force on entire party, which increases P. Skill Critical Rate +1%. -->
+	<skill id="30602" toLevel="1" name="Eviscerator Force">
+		<!-- P. Skill Critical Rate +1%. -->
 		<icon>icon.icon_lender</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
 		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
@@ -63,14 +62,13 @@
 		<icon>icon.icon_lender</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="30605" toLevel="1" name="Sayha's Seer Aura">
-		<!-- Casts Sayha's Seer Force on entire party, which increases M. Critical Rate +1%. -->
+	<skill id="30605" toLevel="1" name="Sayha's Seer Force">
+		<!-- M. Skill Critical Rate +1%. -->
 		<icon>icon.icon_Er_wizard</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
 		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
@@ -136,5 +134,1023 @@
 				<KNOCKDOWN>50</KNOCKDOWN>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="30609" toLevel="1" name="Bloody Coin Boost">
+		<!-- Increases the Bloody Coin gain. -->
+		<icon>icon.skill0430</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30610" toLevel="1" name="Sharpen Edge of Storm">
+		<!-- Brandishes a spear in a wide circle to expand the strike range to all directions for 30 min. Requires a spear. Removing the spear also cancels Sharpen Edge of Storm. -->
+		<icon>icon.skill30610</icon>
+		<operateType>A2</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>673</effectPoint>
+		<mpConsume>32</mpConsume>
+	</skill>
+	<skill id="30611" toLevel="1" name="Edge of Storm">
+		<!-- Brandishes a spear in a wide circle to expand the strike range to all directions for 1 min. Requires a spear. Removing the spear also cancels Edge of Storm. -->
+		<icon>icon.skill30610</icon>
+		<operateType>A2</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>673</effectPoint>
+		<mpConsume>32</mpConsume>
+	</skill>
+	<skill id="30612" toLevel="1" name="Cancel Edge of Storm">
+		<!-- Removing the spear also cancels Edge of Storm. -->
+		<icon>icon.skill30610</icon>
+		<operateType>A1</operateType>
+		<effectPoint>2</effectPoint>
+	</skill>
+	<skill id="30613" toLevel="1" name="Newbie's Rising Smash">
+		<!-- Attacks nearby targets with 2062 Power added to P. Atk. and Received Healing -45% for 5 sec. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<icon>icon.skill10013</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
+		<mpConsume>12</mpConsume>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>2062</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30614" toLevel="1" name="Novice Chain Gust">
+		<!-- Swings the chain to attack nearby enemies with 2860 power. Holds them for 5 sec. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<icon>icon.skill10014</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
+		<mpConsume>15</mpConsume>
+	</skill>
+	<skill id="30615" toLevel="1" name="Novice Armor Destruction">
+		<!-- Inflicts 2231 physical damage on target, decreases their P. Def., and absorbs their Momentum. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
+		<icon>icon.skill10258</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1090</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30616" toLevel="1" name="Novice Mega Strike">
+		<!-- Strikes the target with 3978 power. Consumes up to 3 Momentum to increase the damage (maximum to 15%). Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
+		<icon>icon.skill10260</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1490</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30617" toLevel="1" name="Novice Heart Breaker">
+		<!-- Stabs the target's heart with 5122 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Speed by 20, Evasion by 2, Critical Damage from the flanks and rear by 15%. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
+		<icon>icon.skill10509</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1030</hitTime>
+		<coolTime>700</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>6</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>5122</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30618" toLevel="1" name="Novice Blood Stab">
+		<!-- Strikes the enemy from the back with 7776 power. Inflicts bleed dealing 35 damage per sec. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
+		<icon>icon.skill10508</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>830</hitTime>
+		<coolTime>700</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30619" toLevel="1" name="Novice Quick Shot">
+		<!-- Attacks target with 4436 Power added to P. Atk. Disregards 15% of the target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill10762</icon>
+		<operateType>A1</operateType>
+		<castRange>1100</castRange>
+		<hitTime>1800</hitTime>
+		<coolTime>250</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-689</effectPoint>
+		<mpConsume>7</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>4436</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30620" toLevel="1" name="Novice Pinpoint Shot">
+		<!-- Aims for target's weak points to attack with 6492 Power added to P. Atk. Disregards 15% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. -->
+		<icon>icon.skill10763</icon>
+		<operateType>A1</operateType>
+		<castRange>1100</castRange>
+		<hitTime>2200</hitTime>
+		<coolTime>850</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-689</effectPoint>
+		<mpConsume>11</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>6492</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30621" toLevel="1" name="Novice Elemental Crash">
+		<!-- Strikes the target with a non-attribute magic attack with 31 Power. Over-hit. -->
+		<icon>icon.skill11018</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>1100</castRange>
+		<hitTime>2780</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2400</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30622" toLevel="1" name="Novice Elemental Spike">
+		<!-- Strikes the target with a non-attribute magic attack with 26 Power. Over-hit. -->
+		<icon>icon.skill11011</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>1100</castRange>
+		<hitTime>2280</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30623" toLevel="1" name="Novice Radiant Crash">
+		<!-- Strikes the target with 2921 power, their P./ M. Def. -20% for 20 sec. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<icon>icon.skill11514</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>100</castRange>
+		<hitTime>910</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>4</mpConsume>
+	</skill>
+	<skill id="30624" toLevel="1" name="Novice Resolving Bash">
+		<!-- Strikes the target with 2921 power, their P./ M. Atk. -20% for 20 sec. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<icon>icon.skill11509</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>100</castRange>
+		<hitTime>1010</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30625" toLevel="1" name="Novice Invoke">
+		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 29 power. -->
+		<icon>icon.skill11263</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>2560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<mpConsume>22</mpConsume>
+	</skill>
+	<skill id="30626" toLevel="1" name="Novice Mark of Fire">
+		<!-- Carves a burning mark on the target dealing magic damage with 33 power. Speed -150. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill11298</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>3360</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-500</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30627" toLevel="1" name="Novice Dark Blast">
+		<!-- Deals magic damage to the target with 30 power. -->
+		<icon>icon.skill11766</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>2280</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-867</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30628" toLevel="1" name="Novice Dark Veil">
+		<!-- Attacks the target and nearby enemies with 23 M. power. Decreases their aggression towards you. -->
+		<icon>icon.skill11767</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>3780</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-1733</effectPoint>
+		<mpConsume>41</mpConsume>
+	</skill>
+	<skill id="30629" toLevel="1" name="Heavy Armor Mastery">
+		<!-- When heavy armor is equipped, Max HP +100, P. Def. +25, P. Critical Damage Received -10%. Additionally, STR +1. -->
+		<icon>icon.skill10253</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30630" toLevel="1" name="Light Armor Mastery">
+		<!-- Max HP +80, P. Def. +17, Atk. Spd. +5%, P. Accuracy +1, P. Evasion +3, Speed +5. Chance of receiving a critical attack -15% when equipped with Light Armor. STR +1. -->
+		<icon>icon.skill10254</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30631" toLevel="1" name="Robe Mastery">
+		<!-- Max HP +50, P. Def. +12, and M. Def. +5% when equipped with a Robe. -->
+		<icon>icon.skill11252</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30632" toLevel="1" name="Weapon Mastery">
+		<!-- P. Atk. +10%, additional P. Atk. +13, Atk. Spd +8%, P. Accuracy +2 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +1. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->
+		<icon>icon.skill10251</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30633" toLevel="1" name="Dual Weapon Mastery">
+		<!-- P. Atk. +10%, additional P. Atk. +13, Atk. Spd. +8%, and P. Accuracy +2 when using a dual sword, dual blunt, or fist weapon. STR +1. -->
+		<icon>icon.skill10252</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30634" toLevel="1" name="Dagger Mastery">
+		<!-- When equipped with a dagger, P. Atk. +8% and +8, Atk. Spd. +8%, P. Accuracy +4, and Vital Spot Attack Rate +2%. Additionally, STR +1. Depending on STR, skill cooldown can be reset or skill duration can be increased by 2 times. -->
+		<icon>icon.skill10501</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30635" toLevel="1" name="Dual Dagger Mastery">
+		<!-- When equipped with a dual dagger, P. Atk. +8% and +10, Atk. Spd. +8%, P. Accuracy +4, and Vital Spot Attack Rate +2%. Additionally, STR +1. -->
+		<icon>icon.skill10502</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30636" toLevel="1" name="Bow/Crossbow Mastery">
+		<!-- P. Atk. +5%, additional P. Atk. +12, Atk. Spd. +5%, P. Accuracy +4 when using a bow or crossbow. STR +1. Depending on your STR, the Cooldown resets or the abnormal status duration increases 2 times. -->
+		<icon>icon.skill10751</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30637" toLevel="1" name="Weapon Mastery">
+		<!-- M. Atk. +5%, additional M. Atk. +57, Casting Spd. +7%. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<icon>icon.skill11251</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30638" toLevel="1" name="Magic Weapon Mastery">
+		<!-- M. Atk. +8%, Additional M. Atk. +35, M. Critical Rate +3%. INT +1. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<icon>icon.skill11251</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="30639" toLevel="1" name="Novice Chain Strike">
+		<!-- Swings a chain to pull the target to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill10015</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-5000</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30640" toLevel="1" name="Novice Iron Aura">
+		<!-- P./ M. Def. +7% and P. Critical Damage/ M. Critical Damage Received -5%. Only one Knight's Aura can be active at any time. -->
+		<icon>icon.skill10032</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
+	</skill>
+	<skill id="30641" toLevel="1" name="Novice Power Bomber">
+		<!-- Strikes the target with 4096 power, knocking them down for 3 sec. Consumes up to 3 Momentum to increase the damage (maximum to 15%). Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill10262</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1690</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<mpConsume>8</mpConsume>
+	</skill>
+	<skill id="30642" toLevel="1" name="Novice Feral Ogre Cry">
+		<!-- Shouts loudly to invoke the power of the Ogre. For 5 min., increases your P. Atk., P. Def. and M. Def. by 15% and P. Critical Damage and Max HP by 5%. -->
+		<icon>icon.skill10292</icon>
+		<operateType>A2</operateType>
+		<hitTime>2000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>707</effectPoint>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30643" toLevel="1" name="Novice Chain Blow">
+		<!-- Strikes the enemy with 5452 power. If the target is bleeding, Skill Power +20% dealing additional damage. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. -->
+		<icon>icon.skill10510</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1130</hitTime>
+		<coolTime>700</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<mpConsume>7</mpConsume>
+	</skill>
+	<skill id="30644" toLevel="1" name="Novice Angel of Death">
+		<!-- For 30 sec., Deadly Attack Success Rate +20%, P. Skill Power +5%, P. Accuracy +4, P. Evasion +20, and defends against debuff attacks 2 times. Can be used when Dagger/ Dual Dagger is equipped. -->
+		<icon>icon.skill10531</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>700</effectPoint>
+		<mpConsume>4</mpConsume>
+	</skill>
+	<skill id="30645" toLevel="1" name="Novice Multiple Arrow">
+		<!-- Attacks frontal enemies with 4678 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill10771</icon>
+		<operateType>A1</operateType>
+		<castRange>1100</castRange>
+		<hitTime>2900</hitTime>
+		<coolTime>350</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-689</effectPoint>
+		<mpConsume>12</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>4678</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30646" toLevel="1" name="Novice Rapid Fire Stance">
+		<!-- For 30 min., P. Atk. +5%, P. Skill Cooldown -2%. Requires a bow or a crossbow. -->
+		<icon>icon.skill10758</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="30647" toLevel="1" name="Novice Mass Ruin">
+		<!-- Attacks the target and nearby enemies with 25 Power added to M. Atk. P./ M. Skill Power -7%, P./ M. Def. -15% and Speed -10% for 20 sec. -->
+		<icon>icon.skill11048</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>3500</hitTime>
+		<coolTime>580</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>20</mpConsume>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30648" toLevel="1" name="Novice Essence of Mana">
+		<!-- M. Atk. +15%, P. Def. +15% and M. Critical Rate +15%. -->
+		<icon>icon.skill11034</icon>
+		<operateType>T</operateType>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30649" toLevel="1" name="Novice Horn Melody">
+		<!-- For 30 min., party members' P. Atk. +7%, M. Atk. +44%, P. Def. +15%, M. Def. +20%. -->
+		<icon>icon.skill11517</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30650" toLevel="1" name="Novice Drum Melody">
+		<!-- For 30 min., increases party members' P. Critical Rate by 15%, P. Critical Power by 15%, M. Critical Rate by 20, and decreases Received P. Critical Damage by 25%. Also has a chance to increase Critical Damage when hit. -->
+		<icon>icon.skill11522</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30651" toLevel="1" name="Novice Pipe Organ Melody">
+		<!-- For 30 min., party members' Max HP +18%, Max MP +31%, Max CP +18%, and Vampiric Rage +4% is applied at a certain chance. -->
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30652" toLevel="1" name="Novice Guitar Melody">
+		<!-- For 30 min., all party members' Atk. Spd. +30%, Casting Spd. +30%, and all Skill MP Consumption -5%. -->
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30653" toLevel="1" name="Novice Knight's Harmony">
+		<!-- For 30 min., increases selected party member's P. Def. by 20%, M. Def. by 7%, P./ M. Critical Rate by 50%, P. Critical Damage by 18%, Shield Defense Rate by 15%, and Shield Defense by 25%. -->
+		<icon>icon.skill11523</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30654" toLevel="1" name="Novice Warrior's Harmony">
+		<!-- For 30 min., a selected party member's P. Atk. +11%, P. Critical Rate +50%, P. Critical Damage +35%, and Atk. Spd. +5%. -->
+		<icon>icon.skill11524</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30655" toLevel="1" name="Novice Wizard's Harmony">
+		<!-- For 30 min., selected party member's M. Atk. +20%, M. Critical Rate +50%, Casting Spd. +7%, Skill Cooldown -10%, and Skill MP Consumption -7%. -->
+		<icon>icon.skill11525</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30656" toLevel="1" name="Novice Mark of Weakness">
+		<!-- Deals magic damage to the target with 17 power for 10 sec. Additionally decreases target's P./ M. Def. -->
+		<icon>icon.skill11259</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30657" toLevel="1" name="Novice Blessing of the Giants">
+		<!-- For 30 min., increases the servitor's Max MP by 10%, HP Recovery Bonus by 10%, M. Critical Rate by 10, Critical Damage during a standard attack by 10%, P. Atk. by 5%, P. Def. by 10%, Atk. Spd. by 10%, M. Atk. by 10%, M. Def. by 30 min.0, Casting Spd. by 30 min.1, and Debuff Resistance by 30 min.2. Decreases received Critical Damage by 30 min.3 and Speed by 30 min.4. -->
+		<icon>icon.skill11297</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<hitTime>3800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<mpConsume>7</mpConsume>
+	</skill>
+	<skill id="30658" toLevel="1" name="Novice Radiant Heal">
+		<!-- Attacks target with 297 Power added to M. Atk. If HP is full, CP is restored. -->
+		<icon>icon.skill11755</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>4500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>867</effectPoint>
+		<mpConsume>13</mpConsume>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>297</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30659" toLevel="1" name="Novice Dark Force">
+		<!-- Deals magic damage to the target with 24 power knocking them back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill11814</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>400</castRange>
+		<hitTime>2780</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-867</effectPoint>
+		<mpConsume>8</mpConsume>
+	</skill>
+	<skill id="30660" toLevel="1" name="Novice Sonic Flash">
+		<!-- Launches a wave of sword energy to inflict 3469 damage added to P. Atk., increasing the damage as Momentum is consumed. Can consume up to 3. Requires a dual sword, sword, or blunt. Over-hit. Critical. -->
+		<icon>icon.skill10318new</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-183</effectPoint>
+		<mpConsume>9</mpConsume>
+	</skill>
+	<skill id="30661" toLevel="1" name="Novice Thunder Spear">
+		<!-- Throws a spear striking the target and nearby enemies with 4507 power and stunning them for 9 sec. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skll10321</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-507</effectPoint>
+		<mpConsume>12</mpConsume>
+	</skill>
+	<skill id="30662" toLevel="1" name="Novice Summon Phoenix Cubic">
+		<!-- Summons the Phoenix Cubic, which recovers your HP by 1000 every 15 sec., releases debuffs, and increase debuff resistance by 30%. It also prevents death in critical condition once for 30 min. -->
+		<icon>icon.skill19565</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30663" toLevel="2" name="Novice Summon Blood Panther">
+		<!-- Summons a Blood Panther to fight with you. -->
+		<icon>icon.skill11853</icon>
+		<operateType>A1</operateType>
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<mpConsume>15</mpConsume>
+	</skill>
+	<skill id="30664" toLevel="1" name="Novice Reverse Mana">
+		<!-- Attempts Deadly Attack with 7368 power added to P. Attack and recovers your MP by 1%. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19299</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2030</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>9</mpConsume>
+	</skill>
+	<skill id="30665" toLevel="1" name="Novice Sniping">
+		<!-- For 30 min. when a bow or crossbow is equipped, P. Atk. +3%, Atk. Spd. +3%, and P. Def./ M. Def. +3%. -->
+		<icon>icon.skill11870</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30666" toLevel="1" name="Novice Volcanic Destruction">
+		<!-- Inflicts M. Atk. of 86 power added with Fire damage on the target and the enemies in the route and decreases M. Def. by 10% for 10 sec. Additionally, inflicts Ignite effect. Over-hit is possible. -->
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>6080</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>12</mpConsume>
+	</skill>
+	<skill id="30667" toLevel="1" name="Novice Lockshard Destruction">
+		<!-- Inflicts earth damage on the target with 86 Power added to M. Atk. M. Def. -10% and all Attribute Resistances -10 for 10 sec. -->
+		<icon>icon.skill11027</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>6080</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-328</effectPoint>
+		<mpConsume>7</mpConsume>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>86</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30668" toLevel="2" name="Novice Summon Feline Queen">
+		<!-- Summons a Feline Queen. -->
+		<icon>icon.skill11846</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<mpConsume>35</mpConsume>
+	</skill>
+	<skill id="30669" toLevel="1" name="Novice Divine Prayer">
+		<!-- For 30 min., party members' HP heal amount +3%. -->
+		<icon>icon.skill11859</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>611</effectPoint>
+		<mpConsume>17</mpConsume>
+	</skill>
+	<skill id="30670" toLevel="1" name="Novice Prevailing Sonata">
+		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, and magic cancel rate -20. A chance to apply 4% Vampiric Rage effect. -->
+		<icon>icon.skill11529</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30671" toLevel="1" name="Novice Daring Sonata">
+		<!-- For 5 min., party members' Atk. Spd. +10%, Casting Spd. +10%, Damage Reflection +5%, Skill Cooldown -5%. -->
+		<icon>icon.skill11530</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30672" toLevel="1" name="Novice Refreshing Sonata">
+		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
+		<icon>icon.skill11532</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30673" toLevel="1" name="Novice Summon Othellot Cubic">
+		<!-- Summons the Othellot Cubic, which recovers the summoner's HP by 2% and MP by 2% every 10 sec. and removes debuffs. -->
+		<icon>icon.skill10073_2</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30674" toLevel="1" name="Novice War Song">
+		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, and magic cancel rate -20. A chance to apply 4% Vampiric Rage effect. -->
+		<icon>icon.skill11607</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30675" toLevel="1" name="Novice Marching Song">
+		<!-- For 5 min., party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, Skill Cooldown -5%. -->
+		<icon>icon.skill11608</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30676" toLevel="1" name="Novice Soothing Song">
+		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
+		<icon>icon.skill11609</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30677" toLevel="1" name="Novice Right Angle Reverse">
+		<!-- Moves to the right side of the target to attempt the Deadly Attack with 7106 Power added to P. Atk. and stun the target for 3 sec. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
+		<icon>icon.skill19303</icon>
+		<operateType>A1</operateType>
+		<castRange>80</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>8</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>7106</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30678" toLevel="1" name="Novice Rapid Fire">
+		<!-- For 30 min., P. Atk. +3%, Received M. Critical Rate -3%, P. Skill Cooldown -3%. Requires a bow or a crossbow. -->
+		<icon>icon.skill11871</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30679" toLevel="1" name="Novice Icicle Destruction">
+		<!-- Deals M. Atk. of 86 power added with Water damage on the target. Decreases M. Def. by 10% and Atk.Spd./ Speed by 20% for 10 sec. Over-hit is possible. -->
+		<icon>icon.skill11025</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>6080</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>12</mpConsume>
+	</skill>
+	<skill id="30680" toLevel="2" name="Novice Summon Seraphim the Unicorn">
+		<!-- Summons Seraphim the Unicorn. -->
+		<icon>icon.skill11849</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<mpConsume>35</mpConsume>
+	</skill>
+	<skill id="30681" toLevel="1" name="Novice Mass Mana Gain">
+		<!-- For 30 min., party members' MP heal amount +11. -->
+		<icon>icon.skill11852new</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>17</mpConsume>
+	</skill>
+	<skill id="30682" toLevel="1" name="Novice Summon Death Cubic">
+		<!-- Summons the Death Cubic, which recovers the summoner's HP by 600 every 13 sec., removes debuffs and increases Debuff Resistance by 3%. In addition, Shillien Shadow is activated on the summoner if he defeats the enemy. -->
+		<icon>icon.skill10079_2</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2200</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<mpConsume>3</mpConsume>
+	</skill>
+	<skill id="30683" toLevel="1" name="Novice War Dance">
+		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, and magic cancel rate -20. A chance to apply 4% Vampiric Rage effect. -->
+		<icon>icon.skill11610</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30684" toLevel="1" name="Novice Marching Dance">
+		<!-- For 5 min., party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, Skill Cooldown -5%. -->
+		<icon>icon.skill11611</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30685" toLevel="1" name="Novice Soothing Dance">
+		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
+		<icon>icon.skill11612</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30686" toLevel="1" name="Novice Shadow Reverse">
+		<!-- Attempts Deadly Attack on the target with 7632 power added to P. Attack and moves backward. Additionally, decreases Accuracy by 3 for 3 sec. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19305</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>120</castRange>
+		<hitTime>2030</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>8000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>9</mpConsume>
+	</skill>
+	<skill id="30687" toLevel="1" name="Novice Hawk Eye">
+		<!-- For 30 min. when a bow or crossbow is equipped, P. Atk. +3%, Skill Power +3%, and received M. Critical Damage -3%. -->
+		<icon>icon.skill11872</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30688" toLevel="1" name="Novice Updraft Destruction">
+		<!-- Deals M. Atk. of 86 power added with Wind damage on the target and the enemies near it. Decreases M. Def. by 10% for 10 sec. Over-hit is possible. -->
+		<icon>icon.skill11017</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>6080</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>12</mpConsume>
+	</skill>
+	<skill id="30689" toLevel="2" name="Novice Summon Soulless">
+		<!-- Summons Soulless. -->
+		<icon>icon.skill11852</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<mpConsume>35</mpConsume>
+	</skill>
+	<skill id="30690" toLevel="1" name="Novice Mental Recharge">
+		<!-- Restores a selected party member's MP by 50%. -->
+		<icon>icon.skill11856</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>5500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>1811</effectPoint>
+		<mpConsume>6</mpConsume>
+	</skill>
+	<skill id="30691" toLevel="1" name="Novice Frenzy">
+		<!-- For 60 sec., P. Atk. +5%, Atk. Spd. +5%, P. Critical Rate +5, P. Critical Damage +5%, and Spd. +5. Additionally Accuracy +4 and P. Atk. +5% when using a two-handed sword, two-handed blunt, or spear. Available when HP is 30% or below. -->
+		<icon>icon.skill0176</icon>
+		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>303</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="30692" toLevel="1" name="Novice Raging Force">
+		<!-- Attacks the enemy with a devastating burst of wind and gathers Momentum while cutting their defenses. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
+		<icon>icon.skill0346</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>-340</effectPoint>
+		<mpConsume>5</mpConsume>
+	</skill>
+	<skill id="30693" toLevel="1" name="Novice War Drum">
+		<!-- For 150 sec., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, and magic cancel rate -20. A chance to apply 4% Vampiric Rage effect. -->
+		<icon>icon.skill19444</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30694" toLevel="1" name="Novice Marching Drum">
+		<!-- For 150 sec., all party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, and Skill Cooldown -5%. -->
+		<icon>icon.skill19445</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30695" toLevel="1" name="Novice Soothing Drum">
+		<!-- For 150 sec., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
+		<icon>icon.skill19446</icon>
+		<operateType>A2</operateType>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<mpConsume>13</mpConsume>
+	</skill>
+	<skill id="30696" toLevel="1" name="Novice Reverse Plunder">
+		<!-- Attempts Deadly Attack and item looting with 7368 power added to P. Attack. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19309</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2030</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>9</mpConsume>
+	</skill>
+	<skill id="30697" toLevel="1" name="Novice Power Hammer Crush">
+		<!-- Attacks the target with 3601 power ignoring 15% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill10330</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-183</effectPoint>
+		<mpConsume>9</mpConsume>
+	</skill>
+	<skill id="30698" toLevel="1" name="Novice Rush Impact">
+		<!-- Rushes forward to attack enemies at the front with 808 power. Inflicts stun for 5 sec. Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0793</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-669</effectPoint>
+		<mpConsume>8</mpConsume>
+	</skill>
+	<skill id="30699" toLevel="1" name="Novice Void Destruction">
+		<!-- Deals M. Atk. of 86 power added with Dark damage on the target. Additionally, decreases M. Def. by 10% and increases M. Critical Rate Received by 25% for 10 sec. Over-hit is possible. -->
+		<icon>icon.skill19316</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>6080</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>6700</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<mpConsume>12</mpConsume>
 	</skill>
 </list>

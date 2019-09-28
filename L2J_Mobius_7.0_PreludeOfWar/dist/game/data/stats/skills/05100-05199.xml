@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="5112" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -415,7 +415,7 @@
 		</effects>
 	</skill>
 	<skill id="5114" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -525,7 +525,7 @@
 		</effects>
 	</skill>
 	<skill id="5116" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -564,7 +564,7 @@
 		</effects>
 	</skill>
 	<skill id="5117" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -643,7 +643,7 @@
 		</effects>
 	</skill>
 	<skill id="5120" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1059,6 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="5137" toLevel="1" name="Grip of the Cat">
+		<!-- none Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1090,6 +1091,7 @@
 		</effects>
 	</skill>
 	<skill id="5138" toLevel="1" name="Whiplash">
+		<!-- none Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1371,7 +1373,7 @@
 		</effects>
 	</skill>
 	<skill id="5147" toLevel="10" name="Blessed Body">
-		<!-- Active: Increases the maximum HP temporarily. -->
+		<!-- When active: Temporarily increases Max HP. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1416,7 +1418,7 @@
 		</effects>
 	</skill>
 	<skill id="5148" toLevel="10" name="Prayer">
-		<!-- Active: Increases the effect of HP recovery magic temporarily. -->
+		<!-- When active: Temporarily increases Healing Power. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1461,7 +1463,7 @@
 		</effects>
 	</skill>
 	<skill id="5149" toLevel="10" name="Recharge">
-		<!-- Active: Restores MP. Power $s1. -->
+		<!-- When active: Restores MP. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1501,7 +1503,7 @@
 		</effects>
 	</skill>
 	<skill id="5150" toLevel="10" name="Blessed Soul">
-		<!-- Active: Increases the maximum MP by $s1 temporarily. -->
+		<!-- When active: Temporarily Max MP +$s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1546,7 +1548,7 @@
 		</effects>
 	</skill>
 	<skill id="5151" toLevel="15" name="Mana Gain">
-		<!-- Active: Increases MP recovery recharge rate. -->
+		<!-- When active: Increases MP Recovery Rate. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1585,7 +1587,7 @@
 		</effects>
 	</skill>
 	<skill id="5152" toLevel="10" name="Ritual">
-		<!-- Active: Restores CP. Power $s1. -->
+		<!-- When active: Restores CP. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1626,7 +1628,7 @@
 		</effects>
 	</skill>
 	<skill id="5153" toLevel="10" name="Cheer">
-		<!-- Active: Increases maximum CP by $s1 temporarily. -->
+		<!-- When active: Temporarily Max CP +$s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1671,7 +1673,7 @@
 		</effects>
 	</skill>
 	<skill id="5154" toLevel="15" name="Might">
-		<!-- Active: Increases P. Atk. temporarily. -->
+		<!-- When active: Temporarily increases P. Atk. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1726,7 +1728,7 @@
 		</effects>
 	</skill>
 	<skill id="5156" toLevel="15" name="Empower">
-		<!-- Active: Increases M. Atk. temporarily. -->
+		<!-- When active: Temporarily increases M. Atk. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1781,7 +1783,7 @@
 		</effects>
 	</skill>
 	<skill id="5157" toLevel="10" name="Duel Might">
-		<!-- Active: Increases PvP P. Atk. temporarily. -->
+		<!-- When active: Temporarily increases PvP Damage. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1819,7 +1821,7 @@
 		</effects>
 	</skill>
 	<skill id="5158" toLevel="15" name="Shield">
-		<!-- Active: Increases P. Def. temporarily. -->
+		<!-- When active: Temporarily increases P. Def. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1874,7 +1876,7 @@
 		</effects>
 	</skill>
 	<skill id="5159" toLevel="15" name="Magic Barrier">
-		<!-- Active: Increases M. Def. temporarily. -->
+		<!-- When active: Temporarily increases M. Def. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1929,7 +1931,7 @@
 		</effects>
 	</skill>
 	<skill id="5160" toLevel="10" name="Duel Weakness">
-		<!-- Active: Decreases your opponent's PvP P. Atk. temporarily. -->
+		<!-- When active: Temporarily decreases your opponent's PvP Damage. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1972,7 +1974,7 @@
 		</effects>
 	</skill>
 	<skill id="5161" toLevel="15" name="Agility">
-		<!-- Active: Increases Evasion temporarily. -->
+		<!-- When active: Temporarily increases Evasion. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2027,7 +2029,7 @@
 		</effects>
 	</skill>
 	<skill id="5162" toLevel="15" name="Guidance">
-		<!-- Active: Increases Accuracy temporarily. -->
+		<!-- When active: Temporarily increases Accuracy. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2082,7 +2084,7 @@
 		</effects>
 	</skill>
 	<skill id="5163" toLevel="10" name="Focus">
-		<!-- Active: Increases critical attack rate temporarily. -->
+		<!-- When active: Temporarily increases Critical Rate. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2127,7 +2129,7 @@
 		</effects>
 	</skill>
 	<skill id="5164" toLevel="10" name="Wild Magic">
-		<!-- Active: Increases critical attack rate of magic attacks temporarily. -->
+		<!-- When active: Temporarily increases M. Critical Rate. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2172,7 +2174,7 @@
 		</effects>
 	</skill>
 	<skill id="5165" toLevel="15" name="Charm">
-		<!-- Active: Decreases the target's urge to attack. Power $s1. -->
+		<!-- In case of success: Decreases the target's urge to attack. Power $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -2224,8 +2226,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5166" toLevel="15" name="Decrease Speed">
-		<!-- Active: Momentarily decreases the target's Speed. Effect $s1. -->
+	<skill id="5166" toLevel="15" name="Slow">
+		<!-- When active: Temporarily decreases the target's Speed. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2269,7 +2271,7 @@
 		</effects>
 	</skill>
 	<skill id="5167" toLevel="15" name="Winter">
-		<!-- Active: Momentarily decreases the target's Atk. Spd. Effect $s1. -->
+		<!-- When active: Temporarily decreases the target's Atk. Spd. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2313,7 +2315,7 @@
 		</effects>
 	</skill>
 	<skill id="5168" toLevel="10" name="Stun">
-		<!-- Activated skill: Causes a target to enter the Stun state momentarily. -->
+		<!-- In case of success: Instantly stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2353,7 +2355,7 @@
 		</effects>
 	</skill>
 	<skill id="5169" toLevel="10" name="Hold">
-		<!-- Active: Momentarily inflicts Hold on the target. Chance to further be inflicted with Hold greatly decreases while effect lasts. -->
+		<!-- In case of success: Temporarily inflicts Hold on the target. While the effect lasts, an additional chance to extend Hold decreases. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2394,7 +2396,7 @@
 		</effects>
 	</skill>
 	<skill id="5170" toLevel="10" name="Sleep">
-		<!-- Active: Momentarily inflicts Sleep on the target. Chance to further be inflicted with Sleep greatly decreases while effect lasts. -->
+		<!-- In case of success: Instantly inflicts Sleep on the target. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2436,8 +2438,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5171" toLevel="10" name="Paralyze">
-		<!-- Active: Momentarily paralyzes the target. -->
+	<skill id="5171" toLevel="10" name="Paralysis">
+		<!-- In case of success: Temporarily immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2477,7 +2479,7 @@
 		</effects>
 	</skill>
 	<skill id="5172" toLevel="10" name="Medusa">
-		<!-- Active: Momentarily petrifies the target. -->
+		<!-- When active: Temporarily petrifies the target. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2516,7 +2518,7 @@
 		</effects>
 	</skill>
 	<skill id="5173" toLevel="10" name="Fear">
-		<!-- Active: Momentarily inflicts Fear on the target, causing it to flee. -->
+		<!-- In case of success: Inflicts Fear on the target and forces it to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2556,7 +2558,7 @@
 		</effects>
 	</skill>
 	<skill id="5174" toLevel="15" name="Poison">
-		<!-- Active: Momentarily poisons the target. Effect $s1. -->
+		<!-- In case of success: Temporarily poisons the target. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2635,7 +2637,7 @@
 		</effects>
 	</skill>
 	<skill id="5175" toLevel="15" name="Bleed">
-		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1. -->
+		<!-- In case of success: Inflicts bleed on the target. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2715,7 +2717,7 @@
 		</effects>
 	</skill>
 	<skill id="5176" toLevel="10" name="Silence">
-		<!-- Active: Momentarily blocks the target's magic skills. -->
+		<!-- In case of success: Temporarily blocks the target's magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2753,7 +2755,7 @@
 		</effects>
 	</skill>
 	<skill id="5177" toLevel="10" name="Doom">
-		<!-- Active: Momentarily blocks the target's physical/ magic skills. -->
+		<!-- In case of success: Temporarily blocks the target's physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2812,21 +2814,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5179" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5179" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5180" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5180" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shilen and the ancient Elrokian warriors. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5181" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5181" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2834,7 +2836,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5182" toLevel="1" name="Blessing of Protection">
-		<!-- Keeps you safe from an attack by a chaotic character who is more than 10 Lv.s apart from you. -->
+		<!-- Keeps you safe from attacks of chaotic characters who are stronger than you by 10 levels or more. -->
 		<icon>icon.skill0194</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
@@ -2856,7 +2858,7 @@
 		</effects>
 	</skill>
 	<skill id="5183" toLevel="1" name="Dimensional Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>

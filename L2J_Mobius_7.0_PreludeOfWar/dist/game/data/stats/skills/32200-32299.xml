@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32200" toLevel="1" name="Hypnotic Mazurka">
-		<!-- Instantly immobilizes the target by making it dance involuntarily. -->
+		<!-- Forces the target to dance against own will. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5008_psycho</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -20,7 +20,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32202" toLevel="1" name="Dragon's Curse">
-		<!-- Punishes those who enter the Dragon's Curse zone. Decreases their HP and Speed by 90% over time. -->
+		<!-- Punishes those who enter the Dragon's Curse zone. Their HP is decreased and Speed -90%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4683</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -45,7 +45,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32205" toLevel="1" name="Deadly Shock">
-		<!-- Inflicts great physical damage on the target and stuns it for 3 sec. -->
+		<!-- Deals great physical damage and stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0029</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -83,7 +83,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32209" toLevel="1" name="Rage Slasher">
-		<!-- Inflicts great magic damage on the target and nearby enemies and bleeds them for 10 sec. -->
+		<!-- Deals great magic damage to the target and nearby enemies and inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1511</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -94,7 +94,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32210" toLevel="1" name="Chaotic Swing">
-		<!-- Inflicts great physical damage on the target and nearby enemies and knocks them down for 3 sec. -->
+		<!-- Deals great physical damage to the target and nearby enemies knocking them down for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -104,7 +104,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32211" toLevel="1" name="Seal of Soul">
-		<!-- Throws the target into the Dimensional Prison and expels it for 5 sec. -->
+		<!-- Imprisons the character in the dimentional jail and inflicts Exile for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11273</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -123,7 +123,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32213" toLevel="1" name="Chaotic Buster">
-		<!-- Inflicts great magic damage on the target and nearby enemies and bleeds them for 10 sec. -->
+		<!-- Deals great magic damage to the target and nearby enemies and inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0035</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -134,7 +134,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32214" toLevel="1" name="Cannonball of Despair">
-		<!-- Attacks with the Cannonball of Despair, causing Stun for 10 sec. -->
+		<!-- Stuns the character for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.big_gun_shot_i00</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -172,7 +172,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32219" toLevel="1" name="Darkest Wave">
-		<!-- Knocks back the target and nearby enemies. -->
+		<!-- Knocks the target and nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1625</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -182,7 +182,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32220" toLevel="1" name="Darkest Reep">
-		<!-- Knocks back the target and nearby enemies. -->
+		<!-- Knocks the target and nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5016</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -192,7 +192,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32221" toLevel="1" name="Spezion's Nightmare">
-		<!-- Deals serious Poison damage over time. -->
+		<!-- Deals poison damage over time. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0444</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -223,7 +223,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32224" toLevel="1" name="Trick of Lithra">
-		<!-- Lithra's trick immobilizes you and limits your actions. -->
+		<!-- Lithra's curse immobilizes your character. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -288,7 +288,7 @@
 		<effectPoint>-114</effectPoint>
 	</skill>
 	<skill id="32231" toLevel="1" name="Blossom Poison">
-		<!-- Receives damage for 10 sec. over time as poisoned by Treant Blossom. -->
+		<!-- Deals damage over time for 10 sec.10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -336,7 +336,7 @@
 		<effectPoint>-372</effectPoint>
 	</skill>
 	<skill id="32236" toLevel="1" name="Rampike Wave">
-		<!-- Blown away and damaged by Rampike's attack. -->
+		<!-- Deals damage, knocks back and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -424,7 +424,7 @@
 		<effectPoint>-190</effectPoint>
 	</skill>
 	<skill id="32246" toLevel="1" name="Butterfly Powder">
-		<!-- Forced to move as drawn by Lithra Butterfly's Magic Powder. -->
+		<!-- Pulls the character and forces to move against own will. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32101</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -498,7 +498,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32254" toLevel="1" name="Lithra Leash Net">
-		<!-- Attacks nearby enemies and puts them into Immobile and Action Prohibit states. -->
+		<!-- Attacks nearby enemies and immobilizes them. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -527,7 +527,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="32257" toLevel="1" name="Lithra's Trick Bloom">
-		<!-- Lithra's trick immobilizes you and limits your actions. -->
+		<!-- Lithra's curse immobilizes your character. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -576,7 +576,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32264" toLevel="1" name="Red's Elysium Blessing">
-		<!-- For 4 h., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk./ Casting Spd. +10%, Speed +20, Attack/ Defense Attribute +100, and Skill MP Consumption -15%. Additionally increases Acquired XP/ SP by 30%. Effect remains after death, but is deleted on entering the Olympiad/ Ceremony of Chaos. Will be deleted during maintenance on November 7, 2018. -->
+		<!-- For 8 hours, Max HP/MP/CP +30%, P. Atk./M. Atk./P. Def./M. Def. +30%, Atk./Casting Spd. +10%, Speed +20, Attack/Defense Attributes +100, Damage +10%, P./M. Skill Power 10%, XP/SP Gain +30%, Received Damage -8 hours0, and Skill MP Consumption -8 hours1. Additionally increases bonus XP/SP by 10%. Buff persists after death, but is deleted on entering the Olympiad/Ceremony of Chaos. -->
 		<icon>icon.ev_libra_red_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -589,7 +589,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32266" toLevel="24" name="Green's Elysium Vital Research - Stage 1">
-		<!-- Volunteered for Green's research. Gathering Mother Nature's energy recovers some Vitality after $s1 h. $s2 stages in total. Will be deleted during maintenance on November 7, 2018. -->
+		<!-- Volunteered for Green's research. Gathering Mother Nature's energy recovers some Vitality after $s1 h. $s2 stages in total. -->
 		<icon>icon.ev_libra_green_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -597,7 +597,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32267" toLevel="1" name="Blue's Raid Blessing">
-		<!-- Temporary Raid Herald Blue's blessing increases raid points you gain by 100% for 30 min. Will be deleted during maintenance on Wednesday, July 5th when the Red Libra Merchants leave. -->
+		<!-- Temporary Raid Herald Blue's blessing increases raid points you gain by 100% for 30 min. -->
 		<icon>icon.ev_libra_blue_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -606,14 +606,14 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="32268" toLevel="1" name="Ancient Dragon's Blessing">
-		<!-- Ancient Dragon's Blessing increases XP and SP by 100% for 1 h.. It can be stacked with the Fall of the Dragon debuff. It is deleted during the regular maintenance on June 14 (Wed) when Draco leaves. -->
+		<!-- Ancient Dragon's Blessing increases XP and SP by 100% for 1 h. It can be stacked with the Fall of the Dragon debuff. It is deleted during the regular maintenance on June 14 (Wed) when Draco leaves. -->
 		<icon>icon.skill6319</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<castRange>1200</castRange>
 	</skill>
 	<skill id="32269" toLevel="1" name="Blue's Elysium Faststride">
-		<!-- Learning Faststride from Temporary Raid Herald Blue increases your Speed by 200 for 5 min. Will be deleted during maintenance on Wednesday, July 5th when the Red Libra Merchants leave. -->
+		<!-- Learning Faststride from Temporary Raid Herald Blue increases your Speed by 200 for 5 min. -->
 		<icon>icon.ev_libra_blue_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -631,7 +631,7 @@
 		<effectPoint>2</effectPoint>
 		<mpConsume>10</mpConsume>
 	</skill>
-	<skill id="32271" toLevel="1" name="Cursed Pierce">
+	<skill id="32271" toLevel="1" name="Spike Thrust">
 		<!-- Single Target Powerful Attack -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -647,7 +647,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32273" toLevel="1" name="Gust of Giant's Fury">
-		<!-- Knocked down by Leona's rage attack. -->
+		<!-- A powerful attack knocks the character down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -657,7 +657,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32274" toLevel="1" name="Rush Impact">
-		<!-- Rushes toward enemies in front to attack and stuns them for 3 sec. -->
+		<!-- Rushes to the enemies in front attacking and stunning them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10267</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -810,7 +810,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32287" toLevel="1" name="Hyper Hammer Shot">
-		<!-- Stunned by Paragon. -->
+		<!-- Paragon stuns the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -820,7 +820,7 @@
 		<effectPoint>-183</effectPoint>
 	</skill>
 	<skill id="32288" toLevel="1" name="Hammer Earthquake">
-		<!-- Knocked down by Paragon. -->
+		<!-- Paragon knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -868,7 +868,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32293" toLevel="1" name="Stun Crush">
-		<!-- Attacks nearby enemies and stuns them for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -917,7 +917,7 @@
 		<effectPoint>-669</effectPoint>
 	</skill>
 	<skill id="32298" toLevel="1" name="Crack of Air">
-		<!-- Pulls all targets within range to your location. -->
+		<!-- Pulls all enemies near the target to itself. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -927,7 +927,7 @@
 		<effectPoint>-2140</effectPoint>
 	</skill>
 	<skill id="32299" toLevel="1" name="Shield Slam">
-		<!-- Swings a shield to deal damage and stun the target. -->
+		<!-- Swings a shield dealing damage and stunning the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10011</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

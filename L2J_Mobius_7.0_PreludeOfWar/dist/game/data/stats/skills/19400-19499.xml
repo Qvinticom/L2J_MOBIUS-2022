@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
-		<!-- Decreases Dark Attribute Resistance by $s2 for $s1. -->
+		<!-- Decreases Dark Attribute Resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="19408" toLevel="2" name="Embody Mana Armor">
-		<!-- Embodies a Mana Armor that reflects $s1 of the damage received, reduces damage received by $s2, and blocks the rest by consuming MP. MP is consumed by $s3 every second and this skill effect is removed if MP reaches $s4. -->
+		<!-- Creates mana armor that reflects $s1 of the received damage. Received damage -$s2, blocks the rest by consuming MP. MP is consumed by $s3 per sec. The effect is cancelled if MP drops to $s4. -->
 		<icon>icon.skill11065</icon>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<operateType>T</operateType>
@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
-		<!-- Elemental Buster inflicts Knock Back. -->
+		<!-- Summons elemental power to knock the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -338,7 +338,7 @@
 		</effects>
 	</skill>
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
-		<!-- Elemental Crash inflicts Hold for 3 sec. -->
+		<!-- Summons elemental power to hold the target in place for 3 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -361,7 +361,7 @@
 		</effects>
 	</skill>
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
-		<!-- Elemental Crash inflicts Stun for 2 sec. -->
+		<!-- Summons elemental power to stun the target for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11018</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -386,7 +386,7 @@
 		</effects>
 	</skill>
 	<skill id="19413" toLevel="9" name="Elemental Burst: Water">
-		<!-- Elemental Burst inflicts Frozen for $s1. -->
+		<!-- Summons elemental power to freeze the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -416,7 +416,7 @@
 		</effects>
 	</skill>
 	<skill id="19414" toLevel="9" name="Elemental Burst: Wind">
-		<!-- Elemental Burst inflicts Knock Back. -->
+		<!-- Summons elemental power to knock the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -452,7 +452,7 @@
 		</effects>
 	</skill>
 	<skill id="19415" toLevel="9" name="Elemental Burst: Earth">
-		<!-- Elemental Burst inflicts Hold for $s1. -->
+		<!-- Summons elemental power to hold the target in place for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -483,7 +483,7 @@
 		</effects>
 	</skill>
 	<skill id="19416" toLevel="9" name="Elemental Burst: Holy">
-		<!-- Elemental Burst inflicts Stun for $s1. -->
+		<!-- Summons elemental power to stun the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -516,7 +516,7 @@
 		</effects>
 	</skill>
 	<skill id="19417" toLevel="9" name="Elemental Burst: Water">
-		<!-- Elemental Burst inflicts Frozen for $s1. -->
+		<!-- Summons elemental power to freeze the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -549,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="19418" toLevel="9" name="Elemental Burst: Wind">
-		<!-- Elemental Burst cancels target and inflicts Faint for $s1 -->
+		<!-- Summons elemental power to cancel the enemy's target and make them faint for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -582,7 +582,7 @@
 		</effects>
 	</skill>
 	<skill id="19419" toLevel="9" name="Elemental Burst: Earth">
-		<!-- Elemental Burst inflicts Knock Down for $s1. -->
+		<!-- Summons elemental power to knock down the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -611,7 +611,7 @@
 		</effects>
 	</skill>
 	<skill id="19420" toLevel="6" name="Quadruple Elemental Blast">
-		<!-- Receives damage over time for $s1 by a powerful magic with $s2 Power added to M. Atk. and becomes Knocked Down. -->
+		<!-- Knocks the target down and deals continuous magic damage to them with $s2 power for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -772,7 +772,7 @@
 		</effects>
 	</skill>
 	<skill id="19426" toLevel="13" name="Shadow Blade">
-		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P./ M. Def. by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Strikes the target with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11510</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -884,7 +884,7 @@
 		</effects>
 	</skill>
 	<skill id="19427" toLevel="9" name="Hands of Einhasad">
-		<!-- For $s1, P. Atk./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
+		<!-- For $s1, P./ M. Atk. +$s2, attack range +$s3. Normal attacks deal additional holy damage with $s4 power. -->
 		<icon>icon.skill19427</icon>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>566</effectPoint>
@@ -1208,8 +1208,8 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="19432" toLevel="1" name="Swift Praise">
-		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. 1.5 times for 4 sec. Cooldown 8 sec. -->
+	<skill id="19432" toLevel="2" name="Swift Praise">
+		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. $s2 times for $s1 Cooldown $s3. -->
 		<icon>icon.skill19432</icon>
 		<operateType>A2</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1246,7 +1246,7 @@
 		</effects>
 	</skill>
 	<skill id="19433" toLevel="13" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P./ M. Def. by $s3 for $s2 Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<!-- Attacks the target and nearby enemies with $s1 power. For $s2, their Atk. Spd./ Casting Spd./ P. Def./ M. Def. -$s3, Skill Cooldown +$s4. Applies the Swift Praise effect. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19433</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1269,10 +1269,10 @@
 			<value fromLevel="1" toLevel="13">99</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<castRange>100</castRange>
-		<coolTime>300</coolTime>
+		<castRange>80</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1305,22 +1305,8 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-			<value level="3">-700</value>
-			<value level="4">-705</value>
-			<value level="5">-709</value>
-			<value level="6">-712</value>
-			<value level="7">-712</value>
-			<value level="8">-712</value>
-			<value level="9">-712</value>
-			<value level="10">-712</value>
-			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
-		</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-707</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -1393,7 +1379,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19434" toLevel="13" name="Repeat Mark Somersault">
-		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<!-- Strikes the target with $s1 power. For $s2, their P./ M. Def. -$s3, Speed +$s4. Moves the character back for $s5. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19434</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1413,10 +1399,10 @@
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
-		<castRange>100</castRange>
-		<coolTime>300</coolTime>
+		<castRange>200</castRange>
+		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>700</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1449,22 +1435,8 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>
-			<value level="1">-687</value>
-			<value level="2">-694</value>
-			<value level="3">-700</value>
-			<value level="4">-705</value>
-			<value level="5">-709</value>
-			<value level="6">-712</value>
-			<value level="7">-712</value>
-			<value level="8">-712</value>
-			<value level="9">-712</value>
-			<value level="10">-712</value>
-			<value level="11">-712</value>
-			<value level="12">-712</value>
-			<value level="13">-712</value>
-		</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -1536,7 +1508,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19435" toLevel="5" name="Spectral Slash">
-		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2. -->
+		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2 -->
 		<icon>icon.skill19435</icon>
 		<operateType>A1</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1594,7 +1566,7 @@
 		</effects>
 	</skill>
 	<skill id="19436" toLevel="13" name="Dancing Phantom Blade">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./ M. Atk./ P. Def./ M. Def./ Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 3 or higher can remove these debuffs. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./M. Atk./P. Def./M. Def./Movement Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 2 or higher can remove these debuffs. Requires a sword, blunt weapon, dualsword or dual blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19436</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1721,7 +1693,7 @@
 		</effects>
 	</skill>
 	<skill id="19437" toLevel="1" name="Vanguard of Baylor">
-		<!-- Summons the Dominant Flag. If used near the Dominant Flag, it applies the effects of Melody, Harmony, Drum, Ditty and Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4 or higher). Also makes the caster immune to Pull. Consumes 5 Spirit Ore. -->
+		<!-- Summons the Dominant Flag. If used near the Dominant Flag, applies the effects of Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4+). Makes you immune to pulling. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19437</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1733</effectPoint>
@@ -1951,7 +1923,7 @@
 		</conditions>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
-		<!-- For 150 sec., party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1998,7 +1970,7 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
-		<!-- For 150 sec., party members' Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -2049,7 +2021,7 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
-		<!-- For 150 sec., party members' HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
+		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -2132,7 +2104,7 @@
 		</effects>
 	</skill>
 	<skill id="19448" toLevel="13" name="Rampageous Beat">
-		<!-- Attacks the target with $s1 Power added to P. Atk. and resets the durations of nearby allies' War/ Marching/ Relax buffs with a certain probability. Requires a sword, blunt weapon, dual sword, or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Strikes the target with $s1 power. With a certain chance, resets the duration of War/ Marching/ Relax buffs for nearby allies. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11511</icon>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -2233,7 +2205,7 @@
 		</effects>
 	</skill>
 	<skill id="19449" toLevel="1" name="Vanguard of Baylor">
-		<!-- Recovers 5% CP and enhanced Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills and Seal Mesmerizing skills (Lv. 4 or higher). Immune to Pull. -->
+		<!-- Recovers 5% CP. Enhances Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills and Seal Mesmerizing skills (Lv. 4+). Makes you immune to pulling. -->
 		<icon>icon.skill19437</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>

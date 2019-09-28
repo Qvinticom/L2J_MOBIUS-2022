@@ -37,7 +37,7 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="23706" toLevel="4" name="Dark Fire">
-		<!-- Deals great magic damage to a single target and decreases P./ M. Atk. by $s2 for $s1. -->
+		<!-- Deals great magic damage to a single target and decreases P./ M. Atk. by $s2 for $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -49,7 +49,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23707" toLevel="4" name="Chaos Fire">
-		<!-- Deals great magic damage to a single target and decreases P./ M. Def. by $s2 for $s1. -->
+		<!-- Deals great magic damage to a single target and decreases P./ M. Def. by $s2 for $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -61,7 +61,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23708" toLevel="4" name="Dark Breaker">
-		<!-- Deals great damage to a single target and decreases P./ M. Atk. by $s2 for $s1. -->
+		<!-- Deals great damage to a single target and decreases P./ M. Atk. by $s2 for $s1 -->
 		<icon>icon.skill1443</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -74,7 +74,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23709" toLevel="4" name="Chaos Breaker">
-		<!-- Deals great damage to a single target and decreases P./ M. Def. by $s2 for $s1. -->
+		<!-- Deals great damage to a single target and decreases P./ M. Def. by $s2 for $s1 -->
 		<icon>icon.skill1443</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -103,7 +103,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="23714" toLevel="1" name="Water Drop Shackle - Silence">
-		<!-- Blocks all physical/ magic skills for 10 sec. -->
+		<!-- Blocks physical and magic skills for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -147,7 +147,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23719" toLevel="1" name="Rose Scent Spray">
-		<!-- Seduces enemies, pulling them closer. -->
+		<!-- Charms the target forcing it to approach the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.etc_red_rose_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -220,7 +220,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="23728" toLevel="1" name="Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -230,7 +230,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23729" toLevel="1" name="Mass Lightning Strike">
-		<!-- Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 11997 Power. Paralyzes for 5 sec. Consumes 1 Soulstone. -->
+		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts Paralysis for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10094</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -253,7 +253,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23731" toLevel="1" name="Chain Hydra">
-		<!-- Pulls target and nearby enemies to make them attack you. -->
+		<!-- Pulls the target and nearby enemies to you and provokes them to attack you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -265,7 +265,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23732" toLevel="1" name="Shield Wave">
-		<!-- Attacks the targets near you and inflicts Stun for 9 sec. -->
+		<!-- Attacks nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -289,7 +289,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23734" toLevel="1" name="Lightning Disarm">
-		<!-- Disarms nearby enemies for 5 sec. Lowers P. Atk. and M. Atk. by 10%. -->
+		<!-- Disarms nearby enemies for 5 sec., their P./ M. Atk. -10%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10273</icon>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
@@ -301,7 +301,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23735" toLevel="1" name="Sonic Star">
-		<!-- Attacks and knocks down nearby enemies at the speed of light. Over-hit. Critical. -->
+		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -333,7 +333,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="23738" toLevel="1" name="Power Bluff">
-		<!-- Makes your enemy show its back and inflicts Bluff for 3 sec. -->
+		<!-- Makes your enemy show his back and inflicts Bluff for 3 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -365,7 +365,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="23741" toLevel="1" name="Razor Rain">
-		<!-- Calls down a rain of blades to attack nearby enemies and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. -->
+		<!-- Calls down a rain of blades to attack nearby enemies and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10513</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -386,7 +386,7 @@
 		</conditions>
 	</skill>
 	<skill id="23742" toLevel="1" name="Mass Trick">
-		<!-- Cancels target of frontal enemies. Eliminates their aggression and prevent them from targeting anything for 3 sec. -->
+		<!-- Cancels the target of nearby enemies, decreases their aggression and prevent them from targeting for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10527</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -421,7 +421,7 @@
 		<reuseDelay>7000</reuseDelay>
 	</skill>
 	<skill id="23745" toLevel="1" name="Impact Shot">
-		<!-- Fires an arrow at the enemy. Stuns the enemy for 5 sec. Over-hit. -->
+		<!-- Shoots an arrow which stuns the enemy for 5 sec. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -488,7 +488,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23750" toLevel="1" name="Mass Hell Binding">
-		<!-- Immobilizes target and nearby enemies midair for 9 sec. and inflicts 100 damage per second. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for 9 sec. Also deals 100 damage per sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
@@ -499,7 +499,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23751" toLevel="1" name="Mass Death Fear">
-		<!-- For 10 sec., inflicts Fear on target and nearby enemies and decreases Speed by 55%. -->
+		<!-- Inflicts Fear on the target and nearby enemies for 10 sec. Speed -55%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -512,7 +512,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23752" toLevel="1" name="Magical Charge">
-		<!-- Attacks nearby enemies inflicting Stun and canceling their targets. Teleports you to the front. -->
+		<!-- Attacks nearby enemies stunning and knocking them down. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11094</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -558,7 +558,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23756" toLevel="1" name="Assault Rush">
-		<!-- Charges toward the enemy to inflict Stun for 1 sec. -->
+		<!-- Rushes to the enemy stunning him for 1 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11508</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -595,7 +595,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23759" toLevel="1" name="Mass Exile">
-		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose 282 HP/ second. -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -692,7 +692,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23767" toLevel="1" name="Dark Force">
-		<!-- Inflicts damage on target and has a chance of pushing back target. -->
+		<!-- Attacks the target and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11814</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>

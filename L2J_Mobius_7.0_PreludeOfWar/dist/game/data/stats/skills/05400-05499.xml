@@ -14,7 +14,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5401" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -364,7 +364,7 @@
 		</effects>
 	</skill>
 	<skill id="5423" toLevel="12" name="Poison">
-		<!-- HP decreases from poison momentarily. -->
+		<!-- Gradually decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -424,7 +424,7 @@
 		</effects>
 	</skill>
 	<skill id="5424" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -627,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5431" toLevel="1" name="Decrease Speed">
+	<skill id="5431" toLevel="1" name="Slow">
 		<!-- Atk. Spd. and Casting Spd. decreases temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1009,7 +1009,7 @@
 		</effects>
 	</skill>
 	<skill id="5444" toLevel="2" name="Maul">
-		<!-- Attacks with fore-claws to create wound. Power $s1. Effect $s2. -->
+		<!-- Attacks with fore-claws to inflict a wound. Power $s1. Effect $s2. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1161,7 +1161,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5447" toLevel="7" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0523</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1457,7 +1457,7 @@
 		</conditions>
 	</skill>
 	<skill id="5459" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move temporarily. -->
+		<!-- You are paralyzed and temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1477,7 +1477,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5460" toLevel="1" name="Fear">
-		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1698,63 +1698,63 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5470" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5470" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This cruel, soulless woman handled much of Beleth' dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5471" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="5471" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5472" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5472" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5473" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5473" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5474" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5474" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5475" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5475" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- This high-Lv. Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5476" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5476" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth' invasion of the mainland. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5477" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5477" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Beleth' right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5478" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5478" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2067,7 +2067,7 @@
 		</effects>
 	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. Effect 10. -->
+		<!-- Your character is temporarily losing HP because of bleeding. Power 10. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

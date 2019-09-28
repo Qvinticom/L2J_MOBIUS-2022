@@ -1195,7 +1195,7 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18139" toLevel="1" name="Freya's Mind">
-		<!-- Mental Attack Resistance +10%, Paralysis Resistance +10%, and Water Resistance +10. -->
+		<!-- Confusion Resistance +10%, Water Resistance +10. -->
 		<icon>icon.freya_power_i01</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1294,7 +1294,7 @@
 		</effects>
 	</skill>
 	<skill id="18156" toLevel="1" name="Potion of Protection: Stun">
-		<!-- Use this to increase the defense rate against Stun by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40253</itemConsumeId>
@@ -1328,7 +1328,7 @@
 		</effects>
 	</skill>
 	<skill id="18157" toLevel="1" name="Potion of Protection: Hold">
-		<!-- Use this to increase the defense rate against Hold by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Obstruction Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40254</itemConsumeId>
@@ -1362,7 +1362,7 @@
 		</effects>
 	</skill>
 	<skill id="18158" toLevel="1" name="Potion of Protection: Bleed">
-		<!-- Use this to increase the defense rate against Bleed by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Infection Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40255</itemConsumeId>
@@ -1396,7 +1396,7 @@
 		</effects>
 	</skill>
 	<skill id="18159" toLevel="1" name="Potion of Protection: Paralyze">
-		<!-- Use this to increase the defense rate against Paralyze by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40256</itemConsumeId>
@@ -1430,7 +1430,7 @@
 		</effects>
 	</skill>
 	<skill id="18160" toLevel="1" name="Potion of Protection: Mental">
-		<!-- Use this to increase the defense rate against Mental by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40257</itemConsumeId>
@@ -1464,7 +1464,7 @@
 		</effects>
 	</skill>
 	<skill id="18161" toLevel="1" name="Potion of Protection: Sleep">
-		<!-- Use this to increase the defense rate against Sleep by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Stupor Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40258</itemConsumeId>
@@ -1498,7 +1498,7 @@
 		</effects>
 	</skill>
 	<skill id="18162" toLevel="1" name="Potion of Protection: Poison">
-		<!-- Use this to increase the defense rate against Poison by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Infection Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40259</itemConsumeId>
@@ -1532,7 +1532,7 @@
 		</effects>
 	</skill>
 	<skill id="18163" toLevel="1" name="Potion of Protection: Knock Back/ Knock Down">
-		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40260</itemConsumeId>
@@ -1567,7 +1567,7 @@
 		</effects>
 	</skill>
 	<skill id="18164" toLevel="1" name="Potion of Protection: Aerial Yoke">
-		<!-- Use this to increase the defense rate against Aerial Yoke by 5%. It also decreases damage received by 3% during PvP. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>40261</itemConsumeId>
@@ -1754,7 +1754,7 @@
 		</effects>
 	</skill>
 	<skill id="18173" toLevel="1" name="Joon's Resurrection">
-		<!-- Can use Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
@@ -1808,13 +1808,13 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="18176" toLevel="1" name="Presentation skill">
+	<skill id="18176" toLevel="1" name="Presentation Skill">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18177" toLevel="1" name="Presentation skill">
+	<skill id="18177" toLevel="1" name="Presentation Skill">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18178" toLevel="1" name="Presentation skill">
+	<skill id="18178" toLevel="1" name="Presentation Skill">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18179" toLevel="1" name="Buff Promotion Box">
@@ -1923,7 +1923,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18195" toLevel="1" name="Knock Back">
-		<!-- Knocks back the target. -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.invasion_gun</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

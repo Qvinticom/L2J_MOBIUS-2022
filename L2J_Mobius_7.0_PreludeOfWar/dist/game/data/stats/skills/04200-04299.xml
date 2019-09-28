@@ -79,7 +79,7 @@
 		</effects>
 	</skill>
 	<skill id="4201" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -146,7 +146,7 @@
 		</effects>
 	</skill>
 	<skill id="4202" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -288,7 +288,7 @@
 		</effects>
 	</skill>
 	<skill id="4204" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -369,7 +369,7 @@
 		</effects>
 	</skill>
 	<skill id="4205" toLevel="12" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -570,7 +570,7 @@
 		</effects>
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -791,7 +791,7 @@
 		</effects>
 	</skill>
 	<skill id="4211" toLevel="12" name="Might">
-		<!-- P. Atk. is increased by $s1. -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -842,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="4212" toLevel="12" name="Shield">
-		<!-- P. Def. +$s1. -->
+		<!-- P. Def. +$s1 -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -893,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="4213" toLevel="12" name="Haste">
-		<!-- Atk. Spd. is increased by $s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -994,7 +994,7 @@
 		</effects>
 	</skill>
 	<skill id="4215" toLevel="1" name="Raid Curse">
-		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1071,7 +1071,7 @@
 		</effects>
 	</skill>
 	<skill id="4219" toLevel="1" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1166,7 +1166,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4225" toLevel="5" name="Stun Attack Resistance">
+	<skill id="4225" toLevel="5" name="Stun Resistance">
 		<!-- Slightly resistant to Sleep. -->
 		<icon>icon.skill4225</icon>
 		<magicLvl>1</magicLvl>
@@ -1526,7 +1526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4235" toLevel="1" name="Devastated Return">
+	<skill id="4235" toLevel="1" name="">
 		<hitTime>15000</hitTime>
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>
@@ -2492,7 +2492,7 @@
 		</effects>
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
-		<!-- Noxious fumes gradually decrease your HP. Effect $s1. -->
+		<!-- A deadly toxin gradually reducing HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2881,7 +2881,7 @@
 		</effects>
 	</skill>
 	<skill id="4267" toLevel="1" name="Grade Penalty">
-		<!-- A penalty applied when the grade of equipment one is wearing is not appropriate for one's Lv.. -->
+		<!-- The grade of your equipment is not appropriate for your level. -->
 		<icon>icon.skill4267</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

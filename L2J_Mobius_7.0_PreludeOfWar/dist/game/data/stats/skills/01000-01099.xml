@@ -128,7 +128,7 @@
 		</effects>
 	</skill>
 	<skill id="1002" toLevel="3" name="Chant of Flame">
-		<!-- Increases all party members' Casting Spd. by $s2 for $s1. -->
+		<!-- All party members' Casting Spd. +$s2 for $s1 -->
 		<icon>icon.skill1002</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -179,7 +179,7 @@
 		</effects>
 	</skill>
 	<skill id="1003" toLevel="3" name="Pa'agrio's Gift">
-		<!-- Increases nearby clan members' P. Atk. by $s2 for $s1 -->
+		<!-- Nearby clan members' P. Atk. +$s2 for $s1 -->
 		<icon>icon.skill1003</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -231,7 +231,7 @@
 		</effects>
 	</skill>
 	<skill id="1004" toLevel="3" name="Pa'agrio's Wisdom">
-		<!-- Increases nearby clan members' Casting Spd. by $s2 for $s1. -->
+		<!-- Nearby clan members' Casting Spd. +$s2 for $s1 -->
 		<icon>icon.skill1004</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -283,7 +283,7 @@
 		</effects>
 	</skill>
 	<skill id="1005" toLevel="3" name="Pa'agrio's Blessing">
-		<!-- Increases nearby clan members' P. Def. by $s2 for $s1. -->
+		<!-- Nearby clan members' P. Def. +$s2 for $s1 -->
 		<icon>icon.skill1005</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -335,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="1006" toLevel="3" name="Chant of Fire">
-		<!-- Increases all party members' M. Def. by $s2 for $s1. -->
+		<!-- All party members' M. Def. +$s2 for $s1 -->
 		<icon>icon.skill1006</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -386,7 +386,7 @@
 		</effects>
 	</skill>
 	<skill id="1007" toLevel="3" name="Chant of Battle">
-		<!-- Increases all party members' P. Atk. by $s2 for $s1. -->
+		<!-- All party members' P. Atk. +$s2 for $s1 -->
 		<icon>icon.skill1007</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -437,7 +437,7 @@
 		</effects>
 	</skill>
 	<skill id="1008" toLevel="3" name="Pa'agrio's Glory">
-		<!-- Increases nearby clan members' M. Def. by $s2 for $s1. -->
+		<!-- Nearby clan members' M. Def. +$s2 for $s1 -->
 		<icon>icon.skill1008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -489,7 +489,7 @@
 		</effects>
 	</skill>
 	<skill id="1009" toLevel="3" name="Chant of Shielding">
-		<!-- Increases all party members' P. Def. by $s2 for $s1. -->
+		<!-- All party members' P. Def. +$s2 for $s1 -->
 		<icon>icon.skill1009</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -539,8 +539,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1010" toLevel="3" name="Soul Shield">
-		<!-- Increases P. Def. by $s2 for $s1. -->
+	<skill id="1010" toLevel="3" name="Spirit Shield">
+		<!-- P. Def. +$s2 for $s1 -->
 		<icon>icon.skill1010</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -731,7 +731,7 @@
 		</effects>
 	</skill>
 	<skill id="1013" toLevel="32" name="Recharge">
-		<!-- Recovers MP with up to $s1 Power, depending on the target's level. Cannot be used by classes that have Recharge skill. -->
+		<!-- Recovers up to $s1 MP, depending on the target's level. Cannot be used on classes that have Recharge skill. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1644,7 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="1032" toLevel="3" name="Invigor">
-		<!-- Increases Bleed Resistance by $s2 for $s1. -->
+		<!-- Infection Resistance +$s2 for $s1 -->
 		<icon>icon.skill1032</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1689,7 +1689,7 @@
 		</effects>
 	</skill>
 	<skill id="1033" toLevel="3" name="Poison Resistance">
-		<!-- Increases Poison Resistance by $s2 for $s1. -->
+		<!-- Infection Resistance +$s2 for $s1 -->
 		<icon>icon.skill1033</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1739,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="1034" toLevel="13" name="Repose">
-		<!-- Diminishes undead monster's will to attack. -->
+		<!-- Diminishes undead monster's will to attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1034</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -1804,7 +1804,7 @@
 		</effects>
 	</skill>
 	<skill id="1035" toLevel="4" name="Mental Shield">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by $s2 for $s1. -->
+		<!-- Confusion/ Stupor/ Obstruction Resistance +$s2 for $s1 -->
 		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1872,7 +1872,7 @@
 		</effects>
 	</skill>
 	<skill id="1036" toLevel="2" name="Magic Barrier">
-		<!-- Increases M. Def. by $s2 for $s1. -->
+		<!-- For $s1, M. Def. +$s2. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1917,7 +1917,7 @@
 		</effects>
 	</skill>
 	<skill id="1040" toLevel="3" name="Shield">
-		<!-- Increases P. Def. by $s2 for $s1. -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1968,7 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="1042" toLevel="12" name="Hold Undead">
-		<!-- Paralyzes an undead monster for $s1. -->
+		<!-- Paralyzes an undead monster for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2087,7 +2087,7 @@
 		</effects>
 	</skill>
 	<skill id="1044" toLevel="3" name="Regeneration">
-		<!-- Increases HP Regeneration by $s2 for $s1. -->
+		<!-- For $s1, HP Recovery Bonus +$s2. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2138,7 +2138,7 @@
 		</effects>
 	</skill>
 	<skill id="1045" toLevel="6" name="Blessed Body">
-		<!-- Increases Max HP by $s2 for $s1. -->
+		<!-- For $s1, Max HP +$s2. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2208,7 +2208,7 @@
 		</effects>
 	</skill>
 	<skill id="1047" toLevel="4" name="Mana Regeneration">
-		<!-- Increases MP Recovery Bonus by $s2 for $s1. Consumes $s3 Spirit Ore. -->
+		<!-- Increases MP Recovery Bonus by $s2 for $s1 Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill1047</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2270,7 +2270,7 @@
 		</effects>
 	</skill>
 	<skill id="1048" toLevel="6" name="Blessed Soul">
-		<!-- Increases Max MP by $s2 for $s1. -->
+		<!-- Increases Max MP by $s2 for $s1 -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2339,7 +2339,7 @@
 		</effects>
 	</skill>
 	<skill id="1049" toLevel="14" name="Requiem">
-		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for $s1. -->
+		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1049</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2412,7 +2412,7 @@
 		</effects>
 	</skill>
 	<skill id="1050" toLevel="2" name="Return">
-		<!-- Teleports caster to the nearest village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Teleports to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>Icon.skill1050</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
@@ -2523,7 +2523,7 @@
 		</effects>
 	</skill>
 	<skill id="1059" toLevel="3" name="Empower">
-		<!-- Increases M. Atk. by $s2 for $s1. -->
+		<!-- M. Atk. +$s2 for $s1 -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2574,7 +2574,7 @@
 		</effects>
 	</skill>
 	<skill id="1062" toLevel="2" name="Berserker Spirit">
-		<!-- Decreases a party member's P. Def. by $s2, M. Def. by $s3 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by %s7, Casting Spd. by $s8 and Speed by $s9 for $s1. -->
+		<!-- Decreases a party member's P. Def. by $s2, M. Def. by $s3 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8 and Speed by $s9 for $s1 -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2673,7 +2673,7 @@
 		</effects>
 	</skill>
 	<skill id="1064" toLevel="14" name="Silence">
-		<!-- Blocks the enemy's use of magic for $s1. -->
+		<!-- Prevents the target from using magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2762,7 +2762,7 @@
 		</effects>
 	</skill>
 	<skill id="1068" toLevel="3" name="Might">
-		<!-- Increases P. Atk. by $s2 for $s1. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2813,7 +2813,7 @@
 		</effects>
 	</skill>
 	<skill id="1069" toLevel="42" name="Sleep">
-		<!-- Causes the enemy to sleep for $s1. -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3020,7 +3020,7 @@
 		</effects>
 	</skill>
 	<skill id="1071" toLevel="14" name="Surrender to Water">
-		<!-- For $s1, decreases the enemy's Water Resistance by $s2 and increases Fire Resistance by $s3. -->
+		<!-- For $s1, enemy's Water Resistance -$s2 and Fire Resistance +$s3. -->
 		<icon>icon.skill1071</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3116,7 +3116,7 @@
 		</effects>
 	</skill>
 	<skill id="1072" toLevel="5" name="Sleeping Cloud">
-		<!-- Casts Sleep on nearby enemies for $s1. -->
+		<!-- Inflicts sleep on nearby enemies for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3178,7 +3178,7 @@
 		</effects>
 	</skill>
 	<skill id="1073" toLevel="2" name="Eva's Kiss">
-		<!-- Increases lung capacity by $s2 for $s1. -->
+		<!-- Increases lung capacity by $s2 for $s1 -->
 		<icon>icon.skill1073</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3219,7 +3219,7 @@
 		</effects>
 	</skill>
 	<skill id="1074" toLevel="14" name="Surrender to Wind">
-		<!-- For $s1, decreases the enemy's Wind Resistance by $s2 and increases Earth Resistance by $s3. -->
+		<!-- For $s1, enemy's Wind Resistance -$s2 and Earth Resistance +$s3. -->
 		<icon>icon.skill1074</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3315,7 +3315,7 @@
 		</effects>
 	</skill>
 	<skill id="1075" toLevel="15" name="Peace">
-		<!-- Puts target's mind at peace, decreasing their aggression. -->
+		<!-- Makes the target less aggressive, decreasing their will to attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1075</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -3368,7 +3368,7 @@
 		</effects>
 	</skill>
 	<skill id="1077" toLevel="3" name="Focus">
-		<!-- Increases Critical Rate by $s2 for $s1. -->
+		<!-- Increases Critical Rate by $s2 for $s1 -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3419,7 +3419,7 @@
 		</effects>
 	</skill>
 	<skill id="1078" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel damage by $s2 for $s1. -->
+		<!-- Decreases magic cancel damage by $s2 for $s1 -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3488,7 +3488,7 @@
 		</effects>
 	</skill>
 	<skill id="1083" toLevel="17" name="Surrender to Fire">
-		<!-- For $s1, decreases the target's Fire Resistance by $s2 and increases Water Resistance by $s3. -->
+		<!-- For $s1, target's Fire Resistance -$s2 and Water Resistance +$s3. -->
 		<icon>icon.skill1083</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -3650,7 +3650,7 @@
 		</effects>
 	</skill>
 	<skill id="1085" toLevel="3" name="Acumen">
-		<!-- Increases Casting Spd. by $s2 for $s1. -->
+		<!-- Casting Spd. +$s2 for $s1 -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3701,7 +3701,7 @@
 		</effects>
 	</skill>
 	<skill id="1086" toLevel="2" name="Haste">
-		<!-- Increases Atk. Spd. by $s2 for $s1. -->
+		<!-- For $s1, Atk. Spd. +$s2. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3746,7 +3746,7 @@
 		</effects>
 	</skill>
 	<skill id="1087" toLevel="3" name="Agility">
-		<!-- Increases Evasion by $s2 for $s1. -->
+		<!-- Increases Evasion by $s2 for $s1 -->
 		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3796,7 +3796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1090" toLevel="6" name="Life Drain">
+	<skill id="1090" toLevel="6" name="Drain Energy">
 		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. and re-absorbs $s2 of the damage as HP. -->
 		<icon>icon.skill1090</icon>
 		<castRange>600</castRange>
@@ -3855,7 +3855,7 @@
 		</effects>
 	</skill>
 	<skill id="1092" toLevel="19" name="Fear">
-		<!-- Frightens the enemy into fleeing for $s1. -->
+		<!-- Frightens the enemy into fleeing for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3965,7 +3965,7 @@
 		</effects>
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
-		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
+		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1095</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4034,7 +4034,7 @@
 		</effects>
 	</skill>
 	<skill id="1096" toLevel="16" name="Seal of Chaos">
-		<!-- Decreases Accuracy of nearby enemies by $s2 for $s1. -->
+		<!-- Nearby enemies' P. Accuracy -$s2 for $s1 -->
 		<icon>icon.skill1096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4167,7 +4167,7 @@
 		</effects>
 	</skill>
 	<skill id="1097" toLevel="20" name="Dreaming Spirit">
-		<!-- Causes the enemy to sleep for $s1. -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1097</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4286,7 +4286,7 @@
 		</effects>
 	</skill>
 	<skill id="1099" toLevel="15" name="Seal of Slow">
-		<!-- Decreases nearby enemies' Speed by $s2 for $s1. -->
+		<!-- Nearby enemies' Speed -$s2 for $s1 -->
 		<icon>icon.skill1099</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

@@ -54,7 +54,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="702" toLevel="1" name="Divine Healer Clans">
+	<skill id="702" toLevel="1" name="Divine Healer Cleanse">
 		<!-- Cancel all the debuffs of the target. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
@@ -423,7 +423,7 @@
 		</effects>
 	</skill>
 	<skill id="708" toLevel="1" name="Divine Enchanter Mass Binding">
-		<!-- Momentarily apply Hold to surrounding enemies. Additional Hold is not available while effects last. -->
+		<!-- Momentarily apply Hold to surrounding enemies. Additional Hold is not available while effects last. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -768,7 +768,7 @@
 		</effects>
 	</skill>
 	<skill id="716" toLevel="4" name="Zaken Hold">
-		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
+		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -810,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="717" toLevel="4" name="Zaken Concentrated Attack">
-		<!-- Focuses on one specific place and attacks. Over-hit is possible. Power $s1. -->
+		<!-- Focuses on one specific place and attacks with $s1 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>50</castRange>
 		<coolTime>900</coolTime>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="718" toLevel="4" name="Zaken Dancing Sword">
-		<!-- Uses Dancing Swords to attack all at once. Over-hit is possible. Power $s1. -->
+		<!-- Uses dancing swords to attack all at once. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>100</affectRange>
 		<coolTime>1500</coolTime>
@@ -921,7 +921,7 @@
 		</effects>
 	</skill>
 	<skill id="720" toLevel="2" name="Anakim Holy Light Burst">
-		<!-- Strong pound attack. Over-hit is possible. Power $s1. -->
+		<!-- Concentrates to deal heavy damage. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -958,7 +958,7 @@
 		</effects>
 	</skill>
 	<skill id="721" toLevel="2" name="Anakim Energy Attack">
-		<!-- Concentrates energy and Fires it. Power $s1. -->
+		<!-- Concentrates energy and fires it. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
@@ -995,7 +995,7 @@
 		</effects>
 	</skill>
 	<skill id="722" toLevel="2" name="Anakim Divine Beam">
-		<!-- Launch beam. Power $s1. -->
+		<!-- Deals damage with a beam of light. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
@@ -1032,7 +1032,7 @@
 		</effects>
 	</skill>
 	<skill id="723" toLevel="1" name="Anakim Sunshine">
-		<!-- Instantly recover the party member's HP. Power 1340. -->
+		<!-- Instantly recovers a party member's HP. Power 1340. -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>789</effectPoint>
@@ -1054,7 +1054,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="724" toLevel="1" name="Anakim Clans">
+	<skill id="724" toLevel="1" name="Anakim Cleanse">
 		<!-- Cancel all of your debuffs. -->
 		<icon>icon.skill_transform_etc</icon>
 		<effectPoint>659</effectPoint>
@@ -1077,7 +1077,7 @@
 		</effects>
 	</skill>
 	<skill id="725" toLevel="2" name="Venom Power Smash">
-		<!-- Unleashes a powerful strike. Over-hit is possible. Power $s1. -->
+		<!-- Unleashes a powerful strike. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1105,7 +1105,7 @@
 		</effects>
 	</skill>
 	<skill id="726" toLevel="2" name="Venom Sonic Storm">
-		<!-- Attack the surrounding area by detonating the Momentum. Power $s1. -->
+		<!-- Attacks the surrounding area by detonating the Momentum. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="732" toLevel="1" name="Ranku Stun Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 1 power. -->
+		<!-- Attacks and stuns the enemy with 1 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1369,7 +1369,7 @@
 		</effects>
 	</skill>
 	<skill id="736" toLevel="1" name="Devil Seed">
-		<!-- Momentarily decreases HP. Serious damage will be caused by the fully grown seed if not canceled. -->
+		<!-- HP decreases momentarily. Critical Damage will be inflicted by the full grown seed if it is not removed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1441,7 +1441,7 @@
 		</effects>
 	</skill>
 	<skill id="738" toLevel="3" name="Heretic Heal">
-		<!-- Instantly recovers the target's HP. Power $s1. -->
+		<!-- Instantly recovers the target's HP. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>575</effectPoint>
@@ -1560,7 +1560,7 @@
 		</effects>
 	</skill>
 	<skill id="741" toLevel="3" name="Heretic Heal Side Effect">
-		<!-- Cause side effects of the heal. Momentarily make the enemy addicted. Effect $s1. -->
+		<!-- Cause side effects of the heal. Momentarily make the enemy addicted. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1609,7 +1609,7 @@
 		</effects>
 	</skill>
 	<skill id="742" toLevel="3" name="Veil Master Bursting Flame">
-		<!-- Attack the enemy by unleashing dark flames. Power $s1. -->
+		<!-- Attacks the enemy by unleashing dark flames. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>-92</effectPoint>
@@ -1650,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="743" toLevel="3" name="Veil Master Dark Explosion">
-		<!-- Detonate the soul to attack surrounding enemies. Power $s1. -->
+		<!-- Detonates the soul to attack surrounding enemies. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1697,7 +1697,7 @@
 		</effects>
 	</skill>
 	<skill id="744" toLevel="3" name="Veil Master Dark Flare">
-		<!-- Attack a large number of enemies by creating huge explosion. Power $s1. -->
+		<!-- Attacks a large number of enemies by creating huge explosion. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1779,7 +1779,7 @@
 		</effects>
 	</skill>
 	<skill id="746" toLevel="3" name="Saber Tooth Tiger Bite">
-		<!-- Bites ferociously. Over-hit is possible. Power $s1. -->
+		<!-- Bites ferociously. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1814,7 +1814,7 @@
 		</effects>
 	</skill>
 	<skill id="747" toLevel="3" name="Saber Tooth Tiger Fear">
-		<!-- Inflicts damage on surrounding enemies and causes them to flee. Over-hit is possible. Power $s1. -->
+		<!-- Attacks nearby enemies with $s1 power causing them to flee. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1888,7 +1888,7 @@
 		</effects>
 	</skill>
 	<skill id="749" toLevel="3" name="Oel Mahum Stun Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. $s1 power. -->
+		<!-- Attacks and stuns the enemy. Power $s1. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1971,7 +1971,7 @@
 		</effects>
 	</skill>
 	<skill id="751" toLevel="3" name="Oel Mahum Arm Flourish">
-		<!-- Flourish weapons to attack surrounding enemy. Over-hit is possible. Power $s1. -->
+		<!-- Flourishes weapons to attack surrounding enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -2014,7 +2014,7 @@
 		</effects>
 	</skill>
 	<skill id="752" toLevel="3" name="Doll Blader Sting">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
+		<!-- Strikes the enemy making them bleed. Power $s1 Effect $s2 Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2067,7 +2067,7 @@
 		</effects>
 	</skill>
 	<skill id="753" toLevel="3" name="Doll Blader Throwing Knife">
-		<!-- Throw a dagger to attack enemy in the distance. Over-hit is possible. Power $s1. -->
+		<!-- Throws a dagger to attack an enemy in the distance. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -2434,7 +2434,7 @@
 		</effects>
 	</skill>
 	<skill id="763" toLevel="1" name="Hell Scream">
-		<!-- Roars with the voice of hell. For 8 sec., decreases the nearby enemies' P. Def. by 30%, M. Def. by 30%, Speed by 30%. Inflicts fear and causes them to flee. -->
+		<!-- Roars with the voice of hell. For 8 sec., nearby enemies' P. Def. -30%, M. Def. -30%, Speed -30%. Inflicts fear and causes them to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0763</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -2807,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="774" toLevel="1" name="Dread Pool">
-		<!-- Fear spreads around the area. Decreases nearby enemies' Speed by 33%, P. Def. by 33%, and Evasion by 10. Inflicts fear and causes them to flee for 8 sec. -->
+		<!-- Fear spreads around the area. Nearby enemies' Speed -33%, P. Def. -33%, and P. Evasion -10. Inflicts fear and causes them to flee for 8 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0774</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -3461,8 +3461,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="791" toLevel="10" name="Lightning Shock">
-		<!-- Sends an electric current to attack nearby enemies with $s1 Power added to M. Atk. Paralyzes for $s2. Decreases received HP Recovery Rate -$s3. Over-hit. -->
+	<skill id="791" toLevel="10" name="Lightning">
+		<!-- Sends an electric current to attack nearby enemies with $s1 power. Paralyzes them for $s2 Enemies' Received Healing -$s3. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0791</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3597,7 +3597,7 @@
 		</effects>
 	</skill>
 	<skill id="793" toLevel="10" name="Rush Impact">
-		<!-- Charges forward to attack the enemies in front with $s1 power added to P. Attack and inflicts Stun for $s2. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. -->
+		<!-- Rushes forward to attack enemies at the front with $s1 power. Inflicts stun for $s2 Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3711,7 +3711,7 @@
 		</effects>
 	</skill>
 	<skill id="794" toLevel="1" name="Mass Disarm">
-		<!-- Disarms nearby enemies for 5 sec. -->
+		<!-- Disarms nearby enemies for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0794</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3818,7 +3818,7 @@
 		</effects>
 	</skill>
 	<skill id="798" toLevel="1" name="Divine Warrior Crippling Attack">
-		<!-- Poisons the enemy with an unexpected poison attack. Power 1689. Effect 3. -->
+		<!-- Poisons the enemy with an unexpected poison attack. Power 1689. Effect 3. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

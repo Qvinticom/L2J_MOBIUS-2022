@@ -390,7 +390,7 @@
 		</effects>
 	</skill>
 	<skill id="11508" toLevel="11" name="Trace of Twin Edges">
-		<!-- Rushes toward the enemy to inflict Stun for $s1 Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. -->
+		<!-- Rushes to the enemy attacking them and stunning for $s1 Requires a sword, a blunt weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -479,7 +479,7 @@
 		</effects>
 	</skill>
 	<skill id="11509" toLevel="13" name="Radiant Crash">
-		<!-- Attacks the target with $s1 Power added to P. Atk., P./ M. Def. -$s3 for $s2 Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Strikes the target with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -612,7 +612,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11510" toLevel="13" name="Resolving Bash">
-		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Strikes the target with $s1 power, their P./ M. Atk. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -745,7 +745,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11511" toLevel="13" name="Phantom Slasher">
-		<!-- Attacks the target with $s1 Power added to P. Atk., P. Atk./ M. Atk./ P. Def./ M. Def. -$s3 for $s2 The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. to reduce its P. Atk./M. Atk./P. Def./M. Def. by $s3 for $s2. The target can remove these debuffs if it has Spectral Slash Stage 1 or higher. Requires a sword, blunt weapon, dualsword or dual blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11511_2</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -884,7 +884,7 @@
 		</effects>
 	</skill>
 	<skill id="11513" toLevel="13" name="Radiant Crash">
-		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, target's P./ M. Def. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target and nearby enemies with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1010,7 +1010,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11514" toLevel="13" name="Resolving Bash">
-		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target and nearby enemies with $s1 power, their P./ M. Atk. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1132,7 +1132,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11515" toLevel="5" name="Confusion Bomber">
-		<!-- Curses target with darkness. For $s1, decreases Speed and Atk. Spd. by $s2. After $s3, detonates target to inflict damage nearby. Requires a sword, dual sword or dual blunt to be equipped. -->
+		<!-- Summons dark powers to curse the target. For $s1, their Speed/ Atk. Spd. -$s2. After $s3, detonates the target inflicting damage to nearby enemies. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11515</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1475,7 +1475,7 @@
 		</effects>
 	</skill>
 	<skill id="11519" toLevel="5" name="Pipe Organ Melody">
-		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply the Vampiric Rage effect for $s5. -->
+		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1580,7 +1580,7 @@
 		</effects>
 	</skill>
 	<skill id="11520" toLevel="5" name="Guitar Melody">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For $s1, all party members' Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1883,7 +1883,7 @@
 		</effects>
 	</skill>
 	<skill id="11523" toLevel="2" name="Knight's Harmony">
-		<!-- For $s1, increases selected party member's P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For $s1, the selected party member's P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, Shield Defense +$s7. -->
 		<icon>
 			<value level="1">icon.skill11523</value>
 			<value level="2">icon.skill19500</value>
@@ -1985,7 +1985,7 @@
 		</effects>
 	</skill>
 	<skill id="11524" toLevel="2" name="Warrior's Harmony">
-		<!-- For $s1, increases selected party member's P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
+		<!-- For $s1, a selected party member's P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, and Atk. Spd. +$s5. -->
 		<icon>
 			<value level="1">icon.skill11524</value>
 			<value level="2">icon.skill19501</value>
@@ -2257,7 +2257,7 @@
 		</effects>
 	</skill>
 	<skill id="11529" toLevel="1" name="Prevailing Sonata">
-		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2312,7 +2312,7 @@
 		</effects>
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
-		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2377,7 +2377,7 @@
 		</effects>
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
-		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2636,7 +2636,7 @@
 		</effects>
 	</skill>
 	<skill id="11537" toLevel="12" name="Transform">
-		<!-- Transforms target into a harmless creature and decrease its Speed by $s2 for $s1. The effect is canceled if the transformed target is attacked. -->
+		<!-- Transforms the target into a harmless creature making them unable to attack. Their Speed -$s2 for $s1 The effect is cancelled if the transformed target is attacked. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2747,7 +2747,7 @@
 		</effects>
 	</skill>
 	<skill id="11538" toLevel="9" name="Mass Giant Root">
-		<!-- Inflicts Hold on nearby enemies for $s1. -->
+		<!-- Holds nearby enemies for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11538</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2827,7 +2827,7 @@
 		</effects>
 	</skill>
 	<skill id="11539" toLevel="13" name="Petrify">
-		<!-- Petrifies target for $s1. -->
+		<!-- Petrifies the target for $s1 Inflicted status: Petrification. -->
 		<icon>icon.skill11539</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2914,7 +2914,7 @@
 		</effects>
 	</skill>
 	<skill id="11540" toLevel="9" name="Quick Escape">
-		<!-- Transforms yourself into a cute pig for $s1. P. Def. and M. Def. +$s2, and Speed +$s3. -->
+		<!-- Transforms yourself into a cute pig for $s1 P. Def. and M. Def. +$s2, and Speed +$s3. -->
 		<icon>icon.skill11540</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3336,7 +3336,7 @@
 		</effects>
 	</skill>
 	<skill id="11546" toLevel="6" name="Chaos Symphony">
-		<!-- Attacks enemies near the target with $s1 Power added to P. Atk., for $s2 P./ M. Def. -$s3 and P. Critical Damage and P./ M. Skill Critical Rate -$s4. Puts them in Seduction for $s5 when the effect ends. Over-hit. Critical. Critical. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. -->
+		<!-- Attacks the target and nearby enemies with $s1 power. For $s2, P./ M. Def. -$s3, P. Skill/ P./ M. Critical Rate -$s4. After the effect is over, charms the enemies for $s5 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11533</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
@@ -3452,7 +3452,7 @@
 		</effects>
 	</skill>
 	<skill id="11548" toLevel="1" name="Superior Quick Recovery">
-		<!-- Cooldown for magic skills -25%. STR +2. -->
+		<!-- M. Skill Cooldown -25%. STR +2. -->
 		<icon>icon.skill11004</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -3508,7 +3508,7 @@
 		</effects>
 	</skill>
 	<skill id="11551" toLevel="1" name="Superior Mental Attack Resistance">
-		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. STR +2. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +30%. STR +2. -->
 		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
@@ -3567,7 +3567,7 @@
 		</effects>
 	</skill>
 	<skill id="11553" toLevel="1" name="Superior Focus Mind">
-		<!-- MP Recovery Bonus +8.4. STR +2. -->
+		<!-- MP Recovery Rate +8.4. STR +2. -->
 		<icon>icon.skill11187</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
@@ -3615,6 +3615,7 @@
 		</effects>
 	</skill>
 	<skill id="11556" toLevel="1" name="Cancel Transform">
+		<!-- none Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -3631,7 +3632,7 @@
 		</effects>
 	</skill>
 	<skill id="11557" toLevel="9" name="Seal of Extortion">
-		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
+		<!-- For $s1, Received Healing of the target and nearby enemies -$s2. -->
 		<icon>icon.skill11559</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3727,7 +3728,7 @@
 		</effects>
 	</skill>
 	<skill id="11560" toLevel="2" name="Celestial Aegis">
-		<!-- Makes all party members invincible for $s1. Effect is removed upon attack. -->
+		<!-- Makes all party members invincible for $s1 Effect is removed upon attack. -->
 		<icon>icon.skill11560</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3853,7 +3854,7 @@
 		</effects>
 	</skill>
 	<skill id="11561" toLevel="9" name="Giant Root">
-		<!-- Immobilizes the enemy for $s1. -->
+		<!-- Holds the enemy for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11561</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3929,7 +3930,7 @@
 		</effects>
 	</skill>
 	<skill id="11562" toLevel="1" name="Devil's Movement">
-		<!-- Prevents all party members from being attacked preemptively by monsters for 2 min. But if any party member initiates an attack, the effect will be canceled. -->
+		<!-- For 5 min., party members are protected from monsters' preemptive attacks. The effect disappears if any party member launches an attack. -->
 		<icon>icon.skill11562</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
@@ -4089,7 +4090,7 @@
 		</effects>
 	</skill>
 	<skill id="11566" toLevel="1" name="Resistance Debuff">
-		<!-- For 30 min., party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
+		<!-- Confusion/ Stupor/ Obstruction/ Infection Resistance +50% for 30 min. -->
 		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -4274,7 +4275,7 @@
 		</effects>
 	</skill>
 	<skill id="11580" toLevel="9" name="Mass Transform">
-		<!-- For $s1, mutates enemies to reduce their Speed by $s2 and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+		<!-- Transforms the target and nearby enemies into harmless creatures making them unable to attack. Their Speed -$s2 for $s1 The effect is cancelled if the transformed enemy is attacked. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11580</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4438,7 +4439,7 @@
 		</effects>
 	</skill>
 	<skill id="11582" toLevel="4" name="Mass Song of Silence">
-		<!-- Plays the Song of Silence. For $s1, enemies' P. Skills and M. Skills are locked. -->
+		<!-- Sings the Song of Silence preventing enemies from using physical and magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11839</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -4511,7 +4512,7 @@
 		</effects>
 	</skill>
 	<skill id="11584" toLevel="4" name="Mass Medusa's Dance">
-		<!-- Performs that evokes the mirage of a Medusa. For $s1, Petrifies nearby enemies. -->
+		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 Inflicted status: Petrification. -->
 		<icon>icon.skill11840</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4619,7 +4620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11587" toLevel="7" name="Seal of Confusion">
+	<skill id="11587" toLevel="9" name="Seal of Confusion">
 		<!-- Cancels nearby enemies' targets. -->
 		<icon>
 			<value level="1">icon.skill11557</value>
@@ -4629,6 +4630,8 @@
 			<value level="5">icon.skill11587</value>
 			<value level="6">icon.skill11587</value>
 			<value level="7">icon.skill11587</value>
+			<value level="8">icon.skill11587</value>
+			<value level="9">icon.skill11587</value>
 		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4648,6 +4651,8 @@
 			<value level="5">358</value>
 			<value level="6">384</value>
 			<value level="7">410</value>
+			<value level="8">410</value>
+			<value level="9">410</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
@@ -4661,6 +4666,8 @@
 			<value level="5">-673</value>
 			<value level="6">-673</value>
 			<value level="7">-673</value>
+			<value level="8">-673</value>
+			<value level="9">-673</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4978,7 +4985,7 @@
 		</effects>
 	</skill>
 	<skill id="11592" toLevel="5" name="Guitar Frenzy">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. -->
+		<!-- For $s1, nearby clan members' Atk. Spd. +$s2, Casting Spd. +$s3, Skill MP Consumption -$s4. -->
 		<icon>icon.skill11592</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5176,7 +5183,7 @@
 		</effects>
 	</skill>
 	<skill id="11594" toLevel="4" name="Lute Frenzy">
-		<!-- For $s1, clan members' Atk. Spd. +$s2 and Casting Spd. +$s3. Has a chance of applying $s4 Vampiric Rage effect. -->
+		<!-- For $s1, clan members' Atk. Spd. +$s2, Casting Spd. +$s3. Has a chance of applying $s4 Vampiric Rage effect. -->
 		<icon>icon.skill11594</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5307,7 +5314,7 @@
 		</effects>
 	</skill>
 	<skill id="11596" toLevel="1" name="Warrior's Frenzied Harmony">
-		<!-- For 30 min., increases selected clan member's P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
+		<!-- For 30 min., a selected clan member's P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
 		<icon>icon.skill11595</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5458,7 +5465,7 @@
 		</effects>
 	</skill>
 	<skill id="11598" toLevel="1" name="Greater Freezing Flame">
-		<!-- A powerful cold flame. For 10 sec., decreases enemy's HP by 326. -->
+		<!-- A powerful cold flame. for 10 sec., decreases enemy's HP by 326. -->
 		<icon>icon.skill11598</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>

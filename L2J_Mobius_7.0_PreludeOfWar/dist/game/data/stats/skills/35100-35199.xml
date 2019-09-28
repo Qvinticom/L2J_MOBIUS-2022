@@ -140,7 +140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35105" toLevel="5" name="Warrior's Circlet Enchant Effect">
+	<skill id="35105" toLevel="5" name="Enchant Effect - Warrior's Circlet">
 		<!-- STR +$s1. -->
 		<icon>icon.bm_pattack_circlet_01</icon>
 		<operateType>P</operateType>
@@ -176,7 +176,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35106" toLevel="5" name="Noble Warrior's Circlet Enchant Effect">
+	<skill id="35106" toLevel="5" name="Enchant Effect - Noble Warrior's Circlet">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.bm_pattack_circlet_02</icon>
 		<operateType>P</operateType>
@@ -221,8 +221,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35107" toLevel="5" name="Radiant Warrior's Circlet Enchant Effect">
-		<!-- P. Critical Damage and P. Skill Critical Damage +$s1. -->
+	<skill id="35107" toLevel="5" name="Enchant Effect - Radiant Warrior's Circlet">
+		<!-- P. Critical Damage and P. Skill Critical Damage + $s1. -->
 		<icon>icon.bm_pattack_circlet_03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -338,7 +338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35109" toLevel="5" name="Wizard's Circlet Enchant Effect">
+	<skill id="35109" toLevel="5" name="Enchant Effect - Wizard's Circlet">
 		<!-- INT +$s1. -->
 		<icon>icon.bm_mattack_circlet_01</icon>
 		<operateType>P</operateType>
@@ -374,7 +374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35110" toLevel="5" name="Noble Wizard's Circlet Enchant Effect">
+	<skill id="35110" toLevel="5" name="Enchant Effect - Noble Wizard's Circlet">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.bm_mattack_circlet_02</icon>
 		<operateType>P</operateType>
@@ -419,7 +419,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35111" toLevel="5" name="Radiant Wizard's Circlet Enchant Effect">
+	<skill id="35111" toLevel="5" name="Enchant Effect - Radiant Wizard's Circlet">
 		<!-- M. Critical Damage +$s1. -->
 		<icon>icon.bm_mattack_circlet_03</icon>
 		<operateType>P</operateType>
@@ -617,7 +617,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35113" toLevel="5" name="Knight's Circlet Enchant Effect">
+	<skill id="35113" toLevel="5" name="Enchant Effect - Knight's Circlet">
 		<!-- CON/ MEN +$s1. -->
 		<icon>icon.bm_defense_circlet_01</icon>
 		<operateType>P</operateType> 
@@ -694,7 +694,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35114" toLevel="5" name="Noble Knight's Circlet Enchant Effect">
+	<skill id="35114" toLevel="5" name="Enchant Effect - Noble Knight's Circlet">
 		<!-- P./ M. Def. +$s1. -->
 		<icon>icon.bm_defense_circlet_02</icon>
 		<operateType>P</operateType>
@@ -749,7 +749,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35115" toLevel="5" name="Radiant Knight's Circlet Enchant Effect">
+	<skill id="35115" toLevel="5" name="Enchant Effect - Radiant Knight's Circlet">
 		<!-- Received Critical Damage -$s1. -->
 		<icon>icon.bm_defense_circlet_03</icon>
 		<operateType>P</operateType> 
@@ -1244,14 +1244,14 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="35146" toLevel="1" name="Holiday Lucky Scroll">
-		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%. -->
+	<skill id="35146" toLevel="1" name="Lucky Charisma Scroll">
+		<!-- For 30 min., acquired XP/ SP +30%, Vitality Bonus +30%, CHA +5. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="35147" toLevel="4" name="+7 Zodiac Agathion Charm Box">
+	<skill id="35147" toLevel="4" name="+8 Zodiac Agathion Charm Box">
 		<!-- Use to obtain one Zodiac Agathion Charms enchanted to +7. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -1325,23 +1325,23 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35155" toLevel="5" name="Clan Cloak - War Stage 1 Enchantment Effect">
+	<skill id="35155" toLevel="5" name="Enchant Effect - Clan Cloak - War Lv. 1">
 		<!-- MEN $s1. -->
 		<icon>icon.alliance_cloak_pvp01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35156" toLevel="5" name="Clan Cloak - War Stage 2 Enchantment Effect">
+	<skill id="35156" toLevel="5" name="Enchant Effect - Clan Cloak - War Lv. 2">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, resistance to all debuffs +$s9 -->
 		<icon>icon.alliance_cloak_pvp02</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35157" toLevel="5" name="Clan Cloak - War Stage 3 Enchantment Effect">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, resistance to all debuffs +$s9, Recovery Potion/ Miracle Cure effect +$s10 -->
+	<skill id="35157" toLevel="5" name="Enchant Effect - Clan Cloak - War Lv. 3">
+		<!-- STR +$s1, DEX +$s2, CON +$s3, INT +$s4, WIT +$s5, MEN +$s6, LUC +$s7, CHA +$s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10. -->
 		<icon>icon.alliance_cloak_pvp03</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35158" toLevel="5" name="Clan Cloak - War Stage 4 Enchantment Effect">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, resistance to all debuffs +$s9, Recovery Potion/ Miracle Cure effect +$s10, PvP Damage Received -$s11 -->
+	<skill id="35158" toLevel="5" name="Enchant Effect - Clan Cloak - War Lv. 4">
+		<!-- STR +$s1, DEX +$s2, CON +$s3, INT +$s4, WIT +$s5, MEN +$s6, LUC +$s7, CHA +$s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10, Received PvP Damage -$s11. -->
 		<icon>icon.alliance_cloak_pvp04</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1355,27 +1355,27 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35160" toLevel="5" name="Clan Cloak - Combat Stage 1 Enchantment Effect">
+	<skill id="35160" toLevel="5" name="Enchant Effect - Clan Cloak - Combat Lv. 1">
 		<!-- MEN $s1. -->
 		<icon>icon.alliance_cloak_pve01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35161" toLevel="5" name="Clan Cloak - Combat Stage 2 Enchantment Effect">
+	<skill id="35161" toLevel="5" name="Enchant Effect - Clan Cloak - Combat Lv. 2">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Acquired XP/ SP +$s9 in Vitality state -->
 		<icon>icon.alliance_cloak_pve02</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35162" toLevel="5" name="Clan Cloak - Combat Stage 3 Enchantment Effect">
+	<skill id="35162" toLevel="5" name="Enchant Effect - Clan Cloak - Combat Lv. 3">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Acquired XP/ SP +$s9 in Vitality state, Max HP +$s10 -->
 		<icon>icon.alliance_cloak_pve03</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35163" toLevel="5" name="Clan Cloak - Combat Stage 4 Enchantment Effect">
+	<skill id="35163" toLevel="5" name="Enchant Effect - Clan Cloak - Combat Lv. 4">
 		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Acquired XP/ SP +$s9 in Vitality state, Max HP +$s10, PvE Damage Received -$s11. -->
 		<icon>icon.alliance_cloak_pve04</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35164" toLevel="5" name="+12 Bloody Amaranthine Weapon Capsule">
+	<skill id="35164" toLevel="5" name="+12 Bloody Helios Weapon Capsule">
 		<!-- Use to obtain 14 Bloody Helios Weapon enchanted to +12. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -1479,7 +1479,7 @@
 		</effects>
 	</skill>
 	<skill id="35174" toLevel="1" name="Fortress Talisman - Atk. Spd.">
-		<!-- Equipping this Talisman increases Atk. Spd. by 5%. -->
+		<!-- Atk. Spd. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1491,7 +1491,7 @@
 		</effects>
 	</skill>
 	<skill id="35175" toLevel="1" name="Fortress Talisman - Casting Spd.">
-		<!-- Equipping this Talisman increases Casting Spd. by 5%. -->
+		<!-- Casting Spd. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1573,7 +1573,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35182" toLevel="1" name="Dragon Shirt">
+	<skill id="35182" toLevel="1" name="Dragon Skin Shirt">
 		<!-- Acquired XP/ SP +3%, P. Def./ M. Def. +5%, Speed +7, Received P./ M. Critical Damage -5%. -->
 		<icon>icon.bm_dragon_shirt</icon>
 		<magicLvl>85</magicLvl>
@@ -2254,47 +2254,47 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35191" toLevel="1" name="Special Ability Legend Infinity Shaper">
+	<skill id="35191" toLevel="1" name="Legend Infinity Shaper Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35192" toLevel="1" name="Special Ability Legend Infinity Cutter">
+	<skill id="35192" toLevel="1" name="Legend Infinity Cutter Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35193" toLevel="1" name="Special Ability Legend Infinity Slasher">
+	<skill id="35193" toLevel="1" name="Legend Infinity Slasher Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35194" toLevel="1" name="Special Ability Legend Infinity Avenger">
+	<skill id="35194" toLevel="1" name="Legend Infinity Avenger Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35195" toLevel="1" name="Special Ability Legend Infinity Fighter">
+	<skill id="35195" toLevel="1" name="Legend Infinity Fighter Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35196" toLevel="1" name="Special Ability Legend Infinity Stormer">
+	<skill id="35196" toLevel="1" name="Legend Infinity Stormer Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35197" toLevel="1" name="Special Ability Legend Infinity Thrower">
+	<skill id="35197" toLevel="1" name="Legend Infinity Thrower Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35198" toLevel="1" name="Special Ability Legend Infinity Shooter">
+	<skill id="35198" toLevel="1" name="Legend Infinity Shooter Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35199" toLevel="1" name="Special Ability Legend Infinity Buster">
+	<skill id="35199" toLevel="1" name="Legend Infinity Buster Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>

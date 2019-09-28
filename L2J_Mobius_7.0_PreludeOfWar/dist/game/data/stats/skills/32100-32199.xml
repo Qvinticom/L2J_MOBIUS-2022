@@ -9,7 +9,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32101" toLevel="2" name="Art of Merciless Seduction">
-		<!-- Significantly decreases the movement speed of all enemies in a wide area and pulls them toward you. -->
+		<!-- Decreases Speed of all distant enemies and pulls them to you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32101</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -32,7 +32,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32104" toLevel="1" name="Aggression">
-		<!-- Provokes the enemy into attacking you and fixes its target. -->
+		<!-- Provokes the enemy into attacking you as if the enemy is targeting you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -41,7 +41,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32105" toLevel="1" name="Shock Wave">
-		<!-- Wields a shield to inflict physical damage on all nearby enemies and knock them down. -->
+		<!-- Swings a shield to inflict physical damage on nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -93,7 +93,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32112" toLevel="1" name="Life Drain">
+	<skill id="32112" toLevel="1" name="Drain Energy">
 		<!-- Attacks the enemy with magic to deal damage and a certain portion of the damage is restored to you. -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -102,7 +102,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32113" toLevel="1" name="Savior's Blessing">
-		<!-- A gift commemorating the great feat of defeating Etis van Etina and Kain van Halter. It increases XP and SP by 100% for 1 h.. -->
+		<!-- A reward to honor the achievements of heroes who vanquished Etis van Etina. For 1 h., XP/SP gain +100%. -->
 		<icon>BranchSys2.icon.the_fall_of_dragon</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -117,14 +117,14 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32115" toLevel="1" name="Cyclone of Chaos">
-		<!-- Draws enemies within the range to you for 1 min to deal physical DoT. -->
+		<!-- For 1 min., pulls enemies to you and deals them physical damage over time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32028</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>3000</castRange>
 	</skill>
 	<skill id="32116" toLevel="1" name="End of Darkness">
-		<!-- Inflicts great DoT on enemies within the range for 1 min and decreases their Speed by 50%. -->
+		<!-- For 1 min., deals damage over time to the enemy in the area of action. Speed -50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32030</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -190,7 +190,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32127" toLevel="1" name="Power Hitter">
-		<!-- Being blown away by a strong attack. -->
+		<!-- Throws up and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1432</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -200,7 +200,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="32128" toLevel="1" name="Double Lariat">
-		<!-- Knocked down by a strong attack. -->
+		<!-- Knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -216,7 +216,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="32130" toLevel="1" name="Member of the Balthus Knights">
+	<skill id="32130" toLevel="1" name="Balthus Knights' Mark">
 		<!-- Receiving HP/ MP recovery bonus and movement speed bonus as a member of the Balthus Knights. -->
 		<icon>icon.balthus_buff</icon>
 		<operateType>A1</operateType>
@@ -233,7 +233,7 @@
 		<effectPoint>-692</effectPoint>
 	</skill>
 	<skill id="32132" toLevel="1" name="Tarti Air Rush">
-		<!-- Flies toward the target, dealing damage and knocking it down. -->
+		<!-- Charges to the enemy, attacks and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30012</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -245,7 +245,7 @@
 		<effectPoint>-696</effectPoint>
 	</skill>
 	<skill id="32133" toLevel="1" name="Herphah Power Bomber">
-		<!-- Hits the target strongly, dealing damage and knocking it down. -->
+		<!-- Hits the target strongly, dealing damage and knocking it down.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -266,7 +266,7 @@
 		<effectPoint>-709</effectPoint>
 	</skill>
 	<skill id="32135" toLevel="1" name="Stig Chain Hydra">
-		<!-- Draws the target and nearby enemies to you to make them attack you. -->
+		<!-- Attacks the target and nearby enemies provoking them to attack you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -287,7 +287,7 @@
 		<effectPoint>-1378</effectPoint>
 	</skill>
 	<skill id="32137" toLevel="1" name="Balthus Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking the caster. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -308,7 +308,7 @@
 		</conditions>
 	</skill>
 	<skill id="32139" toLevel="1" name="Balthus Sonic Star">
-		<!-- Inflicts damage on nearby enemies and knocks them down. -->
+		<!-- Deals physical damage to nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -385,7 +385,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32147" toLevel="1" name="Balthus Arcana's Call">
-		<!-- Uses the power of nature to increase P. Atk./ P. Def/ M. Atk./ M. Def. by 20% for 30 sec. Also increases the Servitor's P. Atk. by 20% and P. Accuracy by 23, and Knock Back and Knock Down Rates by 60%. The Servitor becomes immune to debuff. -->
+		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +20% for 30 sec. Additionally, servitor's P. Atk. +20%, P. Accuracy +23, Confusion Atk. Rate +60%. The servitor becomes immune to debuffs. -->
 		<icon>icon.skill11387</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -477,7 +477,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32156" toLevel="1" name="Balthus Steel Mind">
-		<!-- With indomitable willpower, for 30 sec. increases P. Atk. by15%, P. Critical Damage +10%, P. Skill Critical Damage +10%, Speed +50, and Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense rates +90%. For standard attacks, deals additional damage as much as 5 times of P. Atk., HP does not decrease below 1, and recovers HP 30% until the effect ends. -->
+		<!-- For 30 sec., P. Atk. +15%, P. Critical Damage +10%, P. Skill Critical Damage +10%, Speed +50, Knockback/ Knockdown/ Pull/ Danger Zone/ Aerial Yoke/ Aggression Resistance +90%. Inflicts additional damage 5 times stronger than the normal attack. HP does not decrease below 1. Recovers 30% HP when the effect expires. -->
 		<icon>icon.skill30520</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -494,7 +494,7 @@
 		<effectPoint>-692</effectPoint>
 	</skill>
 	<skill id="32158" toLevel="2" name="Balthus Sayha's Word">
-		<!-- Uses Sayha's power to deal magic damage and decrease Physical/ Magic Atk. Spd. by $s2 and Speed by $s3 for $s1. -->
+		<!-- Uses Sayha's power to deal magic damage and decrease Physical/ Magic Atk. Spd. by $s2 and Speed by $s3 for $s1 -->
 		<icon>icon.skill30019</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -505,7 +505,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="32159" toLevel="2" name="Balthus Divine Storm">
-		<!-- Calls in the storm of Sayha the God of Wind, which strikes nearby enemies with lightning to inflict magic damage and confines them within the storm for $s1. -->
+		<!-- Deals magic damage to nearby enemies and locks them inside a storm for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.iconskill30007</icon>
 		<operateType>A1</operateType>
 		<isMagic>7</isMagic>
@@ -541,7 +541,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32163" toLevel="1" name="Curse of Antharas">
-		<!-- The Curse of Antharas decreases Speed/ Atk. Spd./ Casting Spd. by 15%. -->
+		<!-- The Curse of Antharas decreases Speed/ Atk. Spd./ Casting Spd. by 15%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4109</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -551,7 +551,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32164" toLevel="1" name="Antharas Stun">
-		<!-- Attacks nearby enemies physically and stuns them for 5 sec. -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -634,7 +634,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="32174" toLevel="1" name="Pa'agrio's Blessing Might- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attack Attribute +1 h.0, and Skill MP Consumption -1 h.1. Additionally, Damage Dealt +1 h.2 and Skill Power +1 h.3. Buffs are retained even after death. -->
+		<!-- The GM is always by your side. For 1 h., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attack Attribute +1 h.0, and Skill MP Consumption -1 h.1. Additionally, damage +1 h.2 and Skill Power +1 h.3. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -668,7 +668,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32178" toLevel="1" name="Pa'agrio's Blessing Might- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attack Attribute +1 h.0, and Skill MP Consumption -1 h.1. Additionally, Damage Dealt +1 h.2 and Skill Power +1 h.3. Buffs are retained even after death. -->
+		<!-- The GM is always by your side. For 1 h., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attack Attribute +1 h.0, and Skill MP Consumption -1 h.1. Additionally, damage +1 h.2 and Skill Power +1 h.3. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -702,7 +702,7 @@
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="32182" toLevel="1" name="AoE Magic Attack">
-		<!-- Inflicts magic damage on nearby enemies and knocks them down. -->
+		<!-- Deals magic damage to the target and nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -760,7 +760,7 @@
 		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="32189" toLevel="1" name="Aggression Resistance">
-		<!-- Ignores Aggression effects. -->
+		<!-- Ignores obstruction effects. -->
 		<icon>icon.skill0015</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -774,7 +774,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32191" toLevel="1" name="Yoke of Scarlet">
-		<!-- Instantly immobilized. -->
+		<!-- Immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5016</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -794,7 +794,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32193" toLevel="1" name="Frintezza Demon Energy Bomb">
-		<!-- Stunned after a powerful attack. -->
+		<!-- Stuns with a powerful attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -804,7 +804,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32194" toLevel="1" name="Frintezza Demon Energy Bomb">
-		<!-- Stumbled after a powerful attack from enraged Scarlett. -->
+		<!-- Explosive energy of furious Frintezza knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

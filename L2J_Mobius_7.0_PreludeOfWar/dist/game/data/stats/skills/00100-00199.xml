@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Stun Attack">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit is possible. -->
+		<!-- Attacks the enemy with $s1 power, inflicting stun for $s2 Requires a blunt weapon. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -107,7 +107,7 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="40" name="Stun Shot">
-		<!-- Fires arrows with $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Requires a bow weapon. Over-hit is possible. Cancels target. -->
+		<!-- Fires arrows with $s1 power. Inflicts stun on the enemy for $s2 Requires a bow. Cancels enemy's target. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -315,7 +315,7 @@
 		</effects>
 	</skill>
 	<skill id="102" toLevel="16" name="Entangle">
-		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
+		<!-- Enemy's Speed -$s2 for $s1 -->
 		<icon>icon.skill0102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -447,7 +447,7 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="4" name="Corpse Plague">
-		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every second. -->
+		<!-- Causes a poison cloud to pour out from a corpse. Inflicts poison on enemies near the corpse for $s1, causing them to lose $s2 HP per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0103</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -533,7 +533,7 @@
 		</effects>
 	</skill>
 	<skill id="105" toLevel="24" name="Freezing Strike">
-		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<!-- Momentarily freezes the surrounding air, inflicting water damage on the enemy with $s1 power. Their Speed -$s3 for $s2 -->
 		<icon>icon.skill0105</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -693,7 +693,7 @@
 		</effects>
 	</skill>
 	<skill id="106" toLevel="14" name="Veil">
-		<!-- Creates an illusion of nearby monsters for $s1. -->
+		<!-- Blurs enemy's vision, preventing them from making you a target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -747,7 +747,7 @@
 		</effects>
 	</skill>
 	<skill id="107" toLevel="9" name="Holy Aura">
-		<!-- Holds nearby undead monsters for $s1. -->
+		<!-- Holds nearby undead monsters for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -856,7 +856,7 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
-		<!-- For $s1., increases P. Def. by $s2, M. Def. by $s3, and Buff-canceling Attack Resistance by $s4, and restricts movement. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -956,7 +956,7 @@
 		</effects>
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
-		<!-- Increases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1. -->
+		<!-- Increases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1 -->
 		<icon>icon.skill0112</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1009,7 +1009,7 @@
 		</effects>
 	</skill>
 	<skill id="113" toLevel="2" name="Long Shot">
-		<!-- Increases the bow's range by $s1. -->
+		<!-- Bow's range +$s1. -->
 		<icon>icon.skill0113</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1031,7 +1031,7 @@
 		</effects>
 	</skill>
 	<skill id="115" toLevel="17" name="Power Break">
-		<!-- Decreases the enemy's P. Atk. by $s2 for $s1. -->
+		<!-- Enemy's P. Atk. -$s2 for $s1 -->
 		<icon>icon.skill0115</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1169,7 +1169,7 @@
 		</effects>
 	</skill>
 	<skill id="116" toLevel="14" name="Howl">
-		<!-- Decreases nearby enemies' P. Atk. by $s2 for $s1. -->
+		<!-- Nearby enemies' P. Atk. -$s2 for $s1 -->
 		<icon>icon.skill0116</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1261,7 +1261,7 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
-		<!-- Attacks the enemy with $s1 power added to P. Attack and inflicts Stun for $s2. Requires a fist weapon. Over-hit is possible. -->
+		<!-- Attacks the enemy with $s1 power. Inflicts stun for $s2 Requires a fist weapon. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0120</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1367,7 +1367,7 @@
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
-		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2. -->
+		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2 -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1426,7 +1426,7 @@
 		</effects>
 	</skill>
 	<skill id="122" toLevel="15" name="Hex">
-		<!-- Decreases the enemy's P. Def. by $s2 for $s1. -->
+		<!-- Enemy's P. Def. -$s2 for $s1 -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1503,7 +1503,7 @@
 		</effects>
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
-		<!-- Increases M. Def. by $s2 for $s1. -->
+		<!-- Increases M. Def. by $s2 for $s1 -->
 		<icon>icon.skill0123</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1552,7 +1552,7 @@
 		</effects>
 	</skill>
 	<skill id="127" toLevel="14" name="Hamstring">
-		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
+		<!-- Enemy's Speed -$s2 for $s1 -->
 		<icon>icon.skill0127</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1641,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="129" toLevel="5" name="Poison">
-		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
+		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1710,7 +1710,7 @@
 		</effects>
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
-		<!-- Decreases Speed by $s2 and increases Atk. Spd. by $s3 for $s1. -->
+		<!-- Decreases Speed by $s2 and increases Atk. Spd. by $s3 for $s1 -->
 		<icon>icon.skill0130</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1753,7 +1753,7 @@
 		</effects>
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
-		<!-- Decreases P. Def. by $s2 and increases Accuracy by $s3 for $s1. -->
+		<!-- Decreases P. Def. by $s2 and increases Accuracy by $s3 for $s1 -->
 		<icon>icon.skill0131</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1801,7 +1801,7 @@
 		</effects>
 	</skill>
 	<skill id="134" toLevel="1" name="Toughness">
-		<!-- Increases Sleep/ Hold/ Poison Resistance by 20. -->
+		<!-- Stupor/ Obstruction/ Infection Resistance +20. -->
 		<icon>icon.skill0134</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1994,7 +1994,7 @@
 		</effects>
 	</skill>
 	<skill id="142" toLevel="5" name="Armor Mastery">
-		<!-- Increases P. Def. by $s1 and MP Recovery Bonus by $s2. -->
+		<!-- P. Def. +$s1, MP Recovery Rate +$s2. -->
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2301,7 +2301,7 @@
 		</effects>
 	</skill>
 	<skill id="147" toLevel="51" name="Magic Resistance">
-		<!-- Increases M. Def. by $s1. -->
+		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2541,7 +2541,7 @@
 		</effects>
 	</skill>
 	<skill id="153" toLevel="4" name="Shield Mastery">
-		<!-- Increases Shield Defense by $s1 and Defense Rate by $s2. -->
+		<!-- Shield Defense +$s1, Shield Defense Rate +$s2. -->
 		<icon>icon.skill0153</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2610,7 +2610,7 @@
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
-		<!-- Decreases cooldown for magic by $s1. -->
+		<!-- M. Skill Cooldown -$s1. -->
 		<icon>icon.skill0164</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2645,7 +2645,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="168" toLevel="3" name="Boost Atk. Spd.">
-		<!-- Increases Atk. Spd. by $s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill0168</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2666,7 +2666,7 @@
 		</effects>
 	</skill>
 	<skill id="169" toLevel="2" name="Quick Step">
-		<!-- Increases Speed by $s1. -->
+		<!-- Speed +$s1. -->
 		<icon>icon.skill0169</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -2778,7 +2778,7 @@
 		</effects>
 	</skill>
 	<skill id="173" toLevel="2" name="Acrobatics">
-		<!-- Increases the maximum height user can fall without taking damage by $s1. -->
+		<!-- Maximum height user can fall without taking damage +$s1. -->
 		<icon>icon.skill0173</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3229,7 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="191" toLevel="6" name="Focus Mind">
-		<!-- Increases MP Recovery Bonus by $s1. -->
+		<!-- MP Recovery Rate +$s1. -->
 		<icon>icon.skill0191</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -3295,7 +3295,7 @@
 		</effects>
 	</skill>
 	<skill id="195" toLevel="2" name="Boost Breath">
-		<!-- Increases lung capacity by $s1. -->
+		<!-- Lung capacity +$s1. -->
 		<icon>icon.skill0195</icon>
 		<magicLvl>
 			<value level="1">20</value>

@@ -40,16 +40,16 @@
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="17107" toLevel="1" name="Snowman's Gift">
-		<!-- Snowman's gift. Cannot receive again until it's expired. -->
+	<skill id="17107" toLevel="1" name="Snowman's Buff">
+		<!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
 		<icon>icon.weapon_snowman_stick_i00</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-2</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="17108" toLevel="1" name="Snowman's Buff">
-		<!-- Vitality is replenished in peace zones. -->
+	<skill id="17108" toLevel="1" name="Christmas Blessing">
+		<!-- Restores energy when in a peaceful zone. -->
 		<icon>icon.weapon_snowman_stick_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -167,13 +167,13 @@
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="17123" toLevel="1" name="Snake's Blessing Effect">
+	<skill id="17123" toLevel="1" name="Snake's Blessing Premium Effect">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17124" toLevel="24" name="Snake's Blessing - Stage 1">
-		<!-- Obtain a Seven Deadly Sins card. You can obtain a card in $s1 h. There are $s2 stages, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. <Note:> If you're dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
+	<skill id="17124" toLevel="24" name="Snake's Blessing Lv. 1">
+		<!-- Have a happy $s1. You can obtain a card in $s2 hour. There are $s4 stages, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. <Note:> If your character is dead while the item is given, you cannot acquire the cards or level up the Snake's Blessing. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -361,7 +361,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 min., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. x 2. Effect disappears upon logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing,. For 5 min., P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. increases by 50%. Effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -400,7 +400,7 @@
 		</effects>
 	</skill>
 	<skill id="17155" toLevel="1" name="Coco's Magic">
-		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
+		<!-- Equipped weapon changes shape for 5 min. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -432,7 +432,7 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- A deliciously dark flavor surrounds you.\nFor 2 h., STR +2, INT +2, and Attribute Resistance +20. -->
+		<!-- A deliciously dark flavor surrounds you. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -486,7 +486,7 @@
 		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- An exhilarating thrill of sweet energy.\nFor 2 h., STR +2, INT +2, DEX +2, and WIT +2. -->
+		<!-- An exhilarating thrill of sweet energy. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -524,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- Activating shield of self-built perfection.\nFor 2 h., STR +2, INT +2, CON +2, and MEN +2. -->
+		<!-- Activating shield of self-built perfection. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -562,7 +562,7 @@
 		</effects>
 	</skill>
 	<skill id="17159" toLevel="1" name="Transformation Skill">
-		<!-- For 60 min., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
+		<!-- For 1 h., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -740,7 +740,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17172" toLevel="1" name="Guitar Melody- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +63%, Casting Spd. +61%, and Speed +25, and decreases Skill MP Consumption by 10%. -->
+		<!-- The GM is always by your side. For 1 h., Atk. Spd. +63%, Casting Spd. +61%, Speed +25, Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -761,21 +761,21 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17175" toLevel="1" name="GM's Blessing - Prevailing Sonata">
-		<!-- The GM is always by your side. For 1 h., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17176" toLevel="1" name="Daring Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
+		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 40%, Casting Spd. by 30%, Damage Reflection by 10%, and decreases Skill Cooldown by 10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17177" toLevel="1" name="Refreshing Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
+		<!-- The GM is always by your side. For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./M. Evasion +5, and M. Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1064,7 +1064,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="17195" toLevel="1" name="Potion of Protection: Stun (Low-grade)">
-		<!-- Use this to increase the defense rate against Stun by 5%. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37792</itemConsumeId>
@@ -1086,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="17196" toLevel="1" name="Potion of Protection: Hold (Low-grade)">
-		<!-- Use this to increase the defense rate against Hold by 5%. Unavailable to use in Olympiad. -->
+		<!-- Obstruction Resistance +5%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37793</itemConsumeId>
@@ -1108,7 +1108,7 @@
 		</effects>
 	</skill>
 	<skill id="17197" toLevel="1" name="Potion of Protection: Bleed (Low-grade)">
-		<!-- Use this to increase the defense rate against Bleed by 5%. Unavailable to use in Olympiad. -->
+		<!-- Infection Resistance +5%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37794</itemConsumeId>
@@ -1130,7 +1130,7 @@
 		</effects>
 	</skill>
 	<skill id="17198" toLevel="1" name="Potion of Protection: Paralyze (Low-grade)">
-		<!-- Use this to increase the defense rate against Paralyze by 5%. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37795</itemConsumeId>
@@ -1152,7 +1152,7 @@
 		</effects>
 	</skill>
 	<skill id="17199" toLevel="1" name="Potion of Protection: Mental (Low-grade)">
-		<!-- Use this to increase the defense rate against Mental by 5%. Unavailable to use in Olympiad. -->
+		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37796</itemConsumeId>

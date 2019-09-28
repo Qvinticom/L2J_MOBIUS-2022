@@ -680,7 +680,7 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>6000</reuseDelay>
 	</skill>
-	<skill id="18450" toLevel="6" name="Check Giveaway Number">
+	<skill id="18450" toLevel="6" name="Confirm Number">
 		<!-- Shows number $s1. -->
 		<operateType>A1</operateType>
 		<mpConsume>75</mpConsume>
@@ -759,7 +759,7 @@
 		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Eternal Enhancement Stone. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18458" toLevel="2" name="L2 Market +8 Amaranthine Weapon Pack">
+	<skill id="18458" toLevel="2" name="L2 Market +8 Helios Weapon Pack">
 		<!-- 1st place prize for the L2 Market giveaway. Get a +8 Helios weapon. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -812,7 +812,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18471" toLevel="1" name="Dandy's Golden Ball">
-		<!-- For 1 h., Acquired XP/ SP +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
+		<!-- For 1 h., acquired XP/ SP +100%, recovers Vitality to the maximum. Changes the appearance of your armor into that of an NC Dinos Uniform. Cannot be stacked with the Fall of the Dragon or Nevit's Hourglass. -->
 		<icon>BranchIcon.icon.g_ev_goldenball</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>

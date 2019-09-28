@@ -11,7 +11,7 @@
 		<effectPoint>-3900</effectPoint>
 	</skill>
 	<skill id="32601" toLevel="1" name="Death Howl">
-		<!-- Deals magic damage to nearby enemies and knocks them down. -->
+		<!-- Deals magic damage to nearby enemies and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -70,7 +70,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32607" toLevel="1" name="Piercing Attack">
-		<!-- Strikes a target hard and knocks it down. -->
+		<!-- Inflicts a powerful attack on the target and knocks it down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -81,7 +81,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32608" toLevel="1" name="Stun Shot">
-		<!-- Shoots an arrow at the enemy to stun it. -->
+		<!-- Shoots arrows, dealing physical damage and stunning. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -120,7 +120,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32612" toLevel="1" name="Mass Fear">
-		<!-- Causes nearby enemies to flee in fear. -->
+		<!-- Causes enemies to flee in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -148,7 +148,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32615" toLevel="1" name="Steel Bomber">
-		<!-- Strikes a target hard and hurls it away. -->
+		<!-- Inflicts a powerful attack on the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -186,7 +186,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32619" toLevel="1" name="Shield Stun">
-		<!-- Attacks with a shield, stunning the target. -->
+		<!-- A shield bash that stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -197,7 +197,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32620" toLevel="1" name="Aggression Aura">
-		<!-- Provokes the target to attack you. -->
+		<!-- Provokes the selected target into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -207,7 +207,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32621" toLevel="1" name="Chain Strike">
-		<!-- Swings a chain to pull the target to you. -->
+		<!-- Pulls the target to the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -273,16 +273,21 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32629" toLevel="3" name="Queen Krosha Stamp">
-		<!-- Strikes down at the ground, dealing damage and knocking down the target. -->
+		<!-- Deals AoE damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill10262</value>
 			<value level="3">icon.skill10262</value>
 		</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32630" toLevel="2" name="Queen Krosha Howling">
-		<!-- Makes a loud noise, dealing damage to nearby targets and stunning them. -->
+		<!-- Deals damage to nearby enemies and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>
 			<value level="1">icon.skill_crofin_stun</value>
 			<value level="2">icon.skill0516</value>
@@ -296,7 +301,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32631" toLevel="2" name="Queen Krosha Fatal Stamp">
-		<!-- Strikes down at the ground, blowing away nearby target. -->
+		<!-- Earthquake deals damage to nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -312,6 +317,11 @@
 			<value level="2">icon.skill32632</value>
 		</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32633" toLevel="2" name="Queen Krosha Rage">
 		<!-- Amplifies the Rage against the target, sharply increasing your physical and magic attack speeds, P. Atk, and M. Atk. -->
@@ -327,7 +337,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32634" toLevel="3" name="Queen Krosha Electric Beam">
-		<!-- Emits a strong beam, dealing great damage to the target and stunning it. -->
+		<!-- Emits a strong beam, dealing great damage to the target and stunning it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_crofin_stun</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -347,7 +357,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32636" toLevel="1" name="Krofin Stamp">
-		<!-- Strikes the target, making it immobile. -->
+		<!-- Inflicts a powerful attack on the target and decreases Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -396,7 +406,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32641" toLevel="1" name="Krofin Curse Clear">
-		<!-- Krofins' curse removes the target's equipment. -->
+		<!-- Krofins' curse removes the target's equipment. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -416,7 +426,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32643" toLevel="1" name="Krofin Stamp Square">
-		<!-- Energy of Water knocks down the target and prevents it from taking action. -->
+		<!-- Energy of water knocks enemies down preventing them from taking action. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -426,7 +436,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32644" toLevel="1" name="Krofin Floating Body">
-		<!-- Energy of Water makes the target airborne and immobilizes it for a period. -->
+		<!-- Energy of water attacks the target and immobilizes it for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32644</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -471,7 +481,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32649" toLevel="1" name="Krofin Water Curse Red">
-		<!-- Decreases the target's HP by casting the Krofin's curse. -->
+		<!-- Krofin's curse decreases the target's HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6815</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -495,7 +505,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32652" toLevel="1" name="Krofin Water Bomber">
-		<!-- Hurls away the target by surrounding it with Energy of Water. -->
+		<!-- Attacks with energy of water and blows the target up. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -505,7 +515,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32653" toLevel="1" name="Queen Krosha Stun">
-		<!-- Summons Queen Krosha. She stuns the target and hurls it away. -->
+		<!-- Queen Krosha stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -534,7 +544,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="32657" toLevel="4" name="Orc's Passion - Stage 1">
-		<!-- A buff that Orc secretly granted, asking you to find him a partner despite claiming to be proud of being alone. It increases Vitality by $s1 and gives an item after $s2.\n<Note> If you are dead at the time the item is given, you cannot receive the buff and the item. You also can't receive the item if your inventory is full. -->
+		<!-- A buff that Orc secretly granted, asking you to find him a partner despite claiming to be proud of being alone. It increases Vitality by $s1 and gives an item after $s2. <Note> If you are dead at the time the item is given, you cannot receive the buff and the item. You also can't receive the item if your inventory is full. -->
 		<icon>icon.love_mark</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -561,7 +571,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32661" toLevel="10" name="VICTORY - Stage 1">
-		<!-- Lineage II cheers for Korea.\nVitality +$s1, XP and SP bonus +$s2, and an item reward after 1 h. Stages 1 to 9.\n<Note> If you are dead at the time the item is given, you can't receive the Victory buff and the item. You cannot obtain the item if your inventory is full. -->
+		<!-- Lineage II cheers for Korea. Vitality +$s1, XP and SP bonus +$s2, and an item reward after 1 h. Stages 1 to 9. <Note> If you are dead at the time the item is given, you can't receive the Victory buff and the item. You cannot obtain the item if your inventory is full. -->
 		<icon>icon.skill32661</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -575,7 +585,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32663" toLevel="10" name="KOREA - Stage 1">
-		<!-- Lineage II cheers for Korea.\nVitality +$s1, XP and SP bonus +$s2, and an item reward after 1 h. Stages 1 to 9.\n<Note> If you are dead at the time the item is given, you can't receive the Korea buff and the item. You cannot obtain the item if your inventory is full. -->
+		<!-- Lineage II cheers for Korea. Vitality +$s1, XP and SP bonus +$s2, and an item reward after 1 h. Stages 1 to 9. <Note> If you are dead at the time the item is given, you can't receive the Korea buff and the item. You cannot obtain the item if your inventory is full. -->
 		<icon>icon.skill32663</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -598,7 +608,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="32667" toLevel="1" name="Water Curse Clear">
-		<!-- Casts a curse to remove weapons from the target. -->
+		<!-- Attacks with a cursed weapon. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -609,7 +619,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32668" toLevel="1" name="Water Floating Body">
-		<!-- Energy of Water makes the target airborne and immobilizes it. -->
+		<!-- Energy of water attacks the target and immobilizes it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32644</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -644,7 +654,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32671" toLevel="1" name="Krofin Stun Slasher">
-		<!-- Attacks enemies in front, hurling them away and stunning them. -->
+		<!-- Attacks enemies in front of the character and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -655,7 +665,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32672" toLevel="1" name="Krofin Stamp Square">
-		<!-- Energy of Water deals great damage to the target, knocking it down and prevents it from taking action. -->
+		<!-- Energy of water deals great damage to the target and immobilizes it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -712,7 +722,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32680" toLevel="1" name="Dragon Mass Chain">
-		<!-- Pulls nearby enemies toward you. -->
+		<!-- Pulls nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -722,7 +732,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="32681" toLevel="1" name="Dragons Power Slam">
-		<!-- Hurls away nearby enemies. -->
+		<!-- Knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -832,7 +842,7 @@
 		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="32692" toLevel="1" name="Rising Wave">
-		<!-- Summons a huge wave to attack the target and enemies in its path and pull them to you. -->
+		<!-- Summons a huge wave to attack enemies and pull them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill19558</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -863,7 +873,7 @@
 		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="32695" toLevel="1" name="Power Bomber">
-		<!-- Strikes a target hard and knocks it down. -->
+		<!-- Inflicts a powerful attack on the target and knocks it down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -893,7 +903,7 @@
 		<effectPoint>-1000</effectPoint>
 	</skill>
 	<skill id="32698" toLevel="1" name="Tidal Wave">
-		<!-- Summons a huge wave to attack the target and enemies in its path and push them away. -->
+		<!-- Summons a huge wave to attack enemies and knocks them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1295</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

@@ -232,7 +232,7 @@
 		</effects>
 	</skill>
 	<skill id="10102" toLevel="8" name="Shadow Hunt">
-		<!-- Summons the Blood Panther to attack the target and enemies on the path with $s1 power and decrease their Speed by $s3 and Pull Resistance by $s4 for $s2. Uses $s5 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Summons the Blood Panther to attack the target and enemies at the front with $s1 power. Enemies' Speed -$s3, Confusion Resistance -$s4 for $s2 Consumes $s5 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill10102</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -297,7 +297,7 @@
 		</effects>
 	</skill>
 	<skill id="10103" toLevel="8" name="Reversal Stream">
-		<!-- Creates a torrent to attack the target and enemies on the path with $s1 Power added to P and pull them up a short distance. Also reduces their Speed by $s3 for $s2. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Creates a torrent to attack the target and enemies at the front with $s1 power. Pulls them to you for a short distance. Enemies' Speed -$s3 for $s2 Consumes $s4 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill10103_2</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

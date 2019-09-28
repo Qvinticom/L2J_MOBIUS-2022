@@ -64,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="16603" toLevel="1" name="Poison Wave">
-		<!-- A venom of darkness is used on the target and nearby enemies, poisoning them for 15 sec. -->
+		<!-- A venom of darkness is used on the target and nearby enemies, poisoning them for 15 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
@@ -149,7 +149,7 @@
 		</effects>
 	</skill>
 	<skill id="16606" toLevel="1" name="Energy Tremble">
-		<!-- Causes sever physical damage to the target and nearby enemies, with 2-second Knock Back. -->
+		<!-- Deals great physical damage to the target and nearby enemies knocking them back for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -197,7 +197,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16609" toLevel="1" name="Helios' Plasma">
-		<!-- Electric particles are shot toward the target, causing magic damage and paralyzing the target. -->
+		<!-- Deals electric damage to the target paralysing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1265</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="16611" toLevel="1" name="Helios' Throne of Agony">
-		<!-- Arrows of Light are shot at nearby enemies, dealing magic damage and causing knock down. -->
+		<!-- Shoots Arrows of Light at nearby enemies, dealing magic damage and knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1275</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -348,7 +348,7 @@
 		</effects>
 	</skill>
 	<skill id="16614" toLevel="1" name="Helios Plasma Pressure">
-		<!-- Deals physical damage to, and paralyzes the target and nearby enemies. -->
+		<!-- Deals physical damage to the target and nearby enemies paralyzing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -430,7 +430,7 @@
 		</effects>
 	</skill>
 	<skill id="16617" toLevel="1" name="Enuma Elish - Red Lightning Spear">
-		<!-- Helios throws the Red Lightning Spear, dealing great damage to the target and nearby enemies, and knocking them down. -->
+		<!-- Throws a spear of Helios' red lightning to deal powerful damage to the target and nearby enemies and knocks them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16617</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
@@ -576,7 +576,7 @@
 		</effects>
 	</skill>
 	<skill id="16623" toLevel="1" name="Helios' Lightning of Anger">
-		<!-- Lightning strikes the target and nearby enemies, dealing magic damage and paralyzing them. Also decreases P. Def. and Magic Resistance. -->
+		<!-- Strikes the target and nearby enemies with lightning, dealing magic damage and paralysing them. Also decreases their P./ M. Def. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10094</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -775,7 +775,7 @@
 		</effects>
 	</skill>
 	<skill id="16630" toLevel="1" name="Leopold Plasma Bomb">
-		<!-- Magic damage is dealt to the target and nearby enemies, and additional damage is dealt at intervals. -->
+		<!-- Deals magic damage to the target and nearby enemies, and additionally deals damage over time. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -878,7 +878,7 @@
 		</effects>
 	</skill>
 	<skill id="16634" toLevel="1" name="Leopold Harpoon">
-		<!-- A powerful lightning harpoon is flung to the target, dealing magic damage and paralyzing the target. -->
+		<!-- A powerful lightning harpoon is flung to the target, dealing magic damage and paralysing the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10321</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -925,7 +925,7 @@
 		</effects>
 	</skill>
 	<skill id="16636" toLevel="1" name="Origin Spinning Slasher">
-		<!-- A spear of light is wielded, dealing damage to the target and nearby enemies, and causing Bleed. -->
+		<!-- Brandishes a spear of lightning to damage the target and nearby enemies inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -1130,7 +1130,7 @@
 		</effects>
 	</skill>
 	<skill id="16645" toLevel="1" name="Ride the Lightning Mega Burst">
-		<!-- Damage by the electric field has caused paralysis and made movement impossible temporarily. -->
+		<!-- Deals great electric damage and inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1301,7 +1301,7 @@
 		</effects>
 	</skill>
 	<skill id="16654" toLevel="1" name="Delta Stun Shot">
-		<!-- Momentarily immobile due to the Stun effect caused by strong damage. -->
+		<!-- Deals great damage stunning the target. Stunned enemy is temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1380,7 +1380,7 @@
 		</effects>
 	</skill>
 	<skill id="16658" toLevel="1" name="Royal Chain Strike">
-		<!-- Enemies lying ahead are drawn in around oneself. -->
+		<!-- Pulls nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1441,7 +1441,7 @@
 		</effects>
 	</skill>
 	<skill id="16661" toLevel="1" name="Royal Stun Shot">
-		<!-- Momentarily immobile due to the Stun effect caused by powerful arrows. -->
+		<!-- Shoots arrows stunning the target. Stunned enemy is temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1680,7 +1680,7 @@
 		</effects>
 	</skill>
 	<skill id="16673" toLevel="1" name="Royal Super Lightning Field">
-		<!-- Powerful magic damage has caused paralysis, and made movement temporarily impossible. -->
+		<!-- Deals great magic damage and inflicts Paralysis. The enemy is temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1738,7 +1738,7 @@
 		</effects>
 	</skill>
 	<skill id="16676" toLevel="1" name="Hyper Taunt">
-		<!-- Momentarily immobile due to the Stun effect caused by a powerfully spirited yell. -->
+		<!-- Temporarily immobilizes and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1376</icon>
 		<operateType>A2</operateType>
 		<abnormalType>STUN</abnormalType>
@@ -1877,7 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="16683" toLevel="1" name="Stun Shot">
-		<!-- Momentarily immobile due to the Stun effect caused by strong damage. -->
+		<!-- Deals great damage stunning the target. Stunned enemy is temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1983,7 +1983,7 @@
 		</effects>
 	</skill>
 	<skill id="16688" toLevel="1" name="Emperor Helios' Command">
-		<!-- All personnel in the zone pass out in front of Helios, and are stunned. -->
+		<!-- All allies in the area faint in front of Helios and become stunned. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<abnormalType>STUN</abnormalType>
@@ -2137,7 +2137,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16694" toLevel="1" name="Leopold Stance Switch">
+	<skill id="16694" toLevel="1" name="Leopold Transformation">
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>1000</hitTime>

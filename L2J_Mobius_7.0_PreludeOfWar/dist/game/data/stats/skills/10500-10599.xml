@@ -101,7 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="10502" toLevel="10" name="Superior Dual Dagger Mastery">
-		<!-- When equipped with a dual dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. -->
+		<!-- STR +$s6. When a dual dagger is equipped, P. Atk. +$s1 and additionally +$s2, P. Accuracy +$s4, Vital Spot Attack Rate +$s5. -->
 		<icon>icon.skill10502</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -356,7 +356,7 @@
 		</effects>
 	</skill>
 	<skill id="10506" toLevel="1" name="Superior Spirit Mastery">
-		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. STR +2. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +30%. STR +2. -->
 		<icon>icon.skill10506</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -398,7 +398,7 @@
 		</effects>
 	</skill>
 	<skill id="10508" toLevel="13" name="Blood Stab">
-		<!-- Targets the enemy's back to attack its vital spot with $s1 Power added to P. Atk. Additionally inflicts Bleed on the enemy, dealing $s2 damage per second. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
+		<!-- Strikes the enemy from the back with $s1 power. Inflicts bleed dealing $s2 damage per sec. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10508</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1006,7 +1006,7 @@
 		</effects>
 	</skill>
 	<skill id="10513" toLevel="12" name="Barrage of Nails">
-		<!-- Attacks the enemies near you with $s1 power added to P. Attack. Additionally, decreases their speed by $s3 and makes them unable to hide for $s2. Requires dagger/ dual dagger. -->
+		<!-- Attacks nearby enemies with $s1 power making them unable to hide for $s2 Their Speed -$s3. Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1118,7 +1118,7 @@
 		</effects>
 	</skill>
 	<skill id="10514" toLevel="10" name="Paralyzing Shadow">
-		<!-- Seals the target's shadow and makes its body gradually hardened for $s1. Becomes paralyzed for $s2 when completely hardened. -->
+		<!-- Seals the target's shadow making their body gradually stiffen for $s1 After that inflicts paralysis for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10514</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1215,8 +1215,8 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10515" toLevel="6" name="Paralyzed">
-		<!-- Your body is paralyzed. -->
+	<skill id="10515" toLevel="6" name="Paralysis">
+		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1260,7 +1260,7 @@
 		</effects>
 	</skill>
 	<skill id="10516" toLevel="11" name="Shadow Chase">
-		<!-- Teleports to the back of the target and cancels the target and inflicts Stun for $s1. -->
+		<!-- Moves behind the enemy canceling their target and stunning them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10516</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1538,19 +1538,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>
-			<value level="1">-711</value>
-			<value level="2">-711</value>
-			<value level="3">-711</value>
-			<value level="4">-711</value>
-			<value level="5">-711</value>
-			<value level="6">-711</value>
-			<value level="7">-711</value>
-			<value level="8">-711</value>
-			<value level="9">-711</value>
-			<value level="10">0</value>
-			<value level="11">0</value>
-		</effectPoint>
+		<effectPoint>-711</effectPoint>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1587,7 +1575,7 @@
 		</effects>
 	</skill>
 	<skill id="10523" toLevel="11" name="Thrown Poison Swarm">
-		<!-- Poisoned. P. Atk. -$s1, P. Def./ M. Def. -$s2, Speed -$s3, Shield Def. -$s4, cannot use magic skills, and HP -$s5 every second. -->
+		<!-- Shrouds the enemy with a poisonous cloud. Their P. Atk. -$s1, P./ M. Def. -$s2, Speed -$s3, Shield Defense -$s4. Prevents them from using magic skills. Their HP -$s5 per sec. Inflicted status: Danger Zone. -->
 		<icon>icon.skill1167</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1874,7 +1862,7 @@
 		</effects>
 	</skill>
 	<skill id="10526" toLevel="9" name="Mischief">
-		<!-- Inflicts confusion on target to stop him from attacking target with the highest hostility. Speed -$s1. -->
+		<!-- Confuses the enemy preventing them from attacking the target with the highest hostility. Speed -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10526</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2019,7 +2007,7 @@
 		</effects>
 	</skill>
 	<skill id="10529" toLevel="6" name="Shadow Flash">
-		<!-- Teleports to the back of the target to increase the damage from P. Critical Attack by $s2 for $s1 and prevents it from recovering HP by over $s3. Additionally, the target is unable to hide and this state cannot be canceled. -->
+		<!-- Moves behind the target. Their Received P. Critical Damage +$s2 for $s1. Prevents them from recovering more than $s3 HP. Makes the target unable to hide. The effect cannot be canceled. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10529</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2299,7 +2287,7 @@
 		</effects>
 	</skill>
 	<skill id="10535" toLevel="4" name="Scorpion Poison">
-		<!-- Injects a poison that decreases an enemy's Speed during a standard attack and disables magic skills. Increases poison and bleed attack success rate. -->
+		<!-- Injects a poison that decreases enemy's Speed during a standard attack and disables magic skills. Increases Infection Atk. Rate. -->
 		<icon>icon.skill10535</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2347,7 +2335,7 @@
 		</effects>
 	</skill>
 	<skill id="10537" toLevel="2" name="Block Magic">
-		<!-- Poisoned. Speed is decreased and M. Skills are disabled momentarily. -->
+		<!-- Poisons the enemy decreasing their Speed and preventing them from using magic skills for a time period. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2436,7 +2424,7 @@
 		</effects>
 	</skill>
 	<skill id="10539" toLevel="13" name="Throw Dagger">
-		<!-- Throws a dagger at the enemy with $s1 Power added to P. Atk. for 1$s2, Speed -$s3. Requires a dagger/ dual dagger to be equipped. Over-hit. -->
+		<!-- Throws a dagger at the enemy with $s1 power added to P. Atk. For $s2 Speed -$s3. Requires a dagger/ dual dagger. Over-hit. -->
 		<icon>icon.skill10539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2794,7 +2782,7 @@
 		</effects>
 	</skill>
 	<skill id="10545" toLevel="4" name="Crippling Poison">
-		<!-- Causes the body to gradually become rigid for $s1. Once fully rigid, paralysis lasts for $s2. -->
+		<!-- Gradually makes the enemy's body frozen for $s1 After that inflicts paralysis for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2855,7 +2843,7 @@
 		</endEffects>
 	</skill>
 	<skill id="10546" toLevel="9" name="Jawbone Blow">
-		<!-- Delivers a powerful blow to Knock Down target for $s1. Requires a dagger or dual dagger to be equipped. -->
+		<!-- Strikes the enemy with a powerful blow knocking them down for $s1 Requires a dagger or a dual dagger. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2937,7 +2925,7 @@
 		</effects>
 	</skill>
 	<skill id="10547" toLevel="1" name="Shadow Attack">
-		<!-- Not in use. -->
+		<!-- Not in use. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0263</icon>
 		<operateType>A2</operateType>
 		<mpConsume>114</mpConsume>
@@ -3018,7 +3006,7 @@
 		</effects>
 	</skill>
 	<skill id="10549" toLevel="8" name="Kick">
-		<!-- Powerfully Knock Back target with a kick. -->
+		<!-- Kicks the target knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3096,7 +3084,7 @@
 		</effects>
 	</skill>
 	<skill id="10550" toLevel="9" name="Illusion Step">
-		<!-- Inflicts a powerful vital spot attack and decreases speed by $s2 for $s1. -->
+		<!-- Strikes the enemy to a vital spot. Their Speed -$s2 for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10550</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -3167,7 +3155,7 @@
 		</effects>
 	</skill>
 	<skill id="10551" toLevel="9" name="Illusion Trick">
-		<!-- Cancels the enemy's target and stops him from targeting for $s1. -->
+		<!-- Cancels the enemy's target and stops them from choosing a new one for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10551</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -3358,7 +3346,7 @@
 		</effects>
 	</skill>
 	<skill id="10554" toLevel="9" name="Flash Bluff">
-		<!-- Startles a target to cause Bluff which makes it turn backward for $s1. Requires dagger/ dual dagger. -->
+		<!-- Startles the target making them turn backwards and confusing for $s1 Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10554</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3415,7 +3403,7 @@
 		</effects>
 	</skill>
 	<skill id="10555" toLevel="1" name="Impaired">
-		<!-- Cannot move for 5 sec. -->
+		<!-- Holds the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3580,7 +3568,7 @@
 		</effects>
 	</skill>
 	<skill id="10559" toLevel="1" name="Elusive Mirage">
-		<!-- Cannot target for 2 sec. -->
+		<!-- Cancels enemy's target preventing them from choosing a new one for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -3646,7 +3634,7 @@
 		</effects>
 	</skill>
 	<skill id="10561" toLevel="4" name="Superior Fitness">
-		<!-- Increases Maximum HP/ CP by $s1, HP Recovery by $s2, and Poison/ Bleed Defense Success Rate by $s3. -->
+		<!-- Max HP/ CP +$s1, HP Recovery Rate +$s2, Infection Resistance +$s3. -->
 		<icon>icon.skill11864</icon>
 		<magicLvl>
 			<value level="1">85</value>

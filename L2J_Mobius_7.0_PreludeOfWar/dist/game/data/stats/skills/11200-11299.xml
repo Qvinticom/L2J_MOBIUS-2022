@@ -21,7 +21,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11224" toLevel="4" name="Gloomy Soul">
-		<!-- Instantly paralyzes nearby enemies for $s1 and decreases their heal amount by $s2. -->
+		<!-- Instantly paralyzes nearby enemies for $s1, their Received Healing -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11868</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -62,7 +62,7 @@
 		</effects>
 	</skill>
 	<skill id="11225" toLevel="9" name="Physical Soul Barrier">
-		<!-- For $s1, own P. Def. +$s2, Bow/ Crossbow Resistance +$s3, and Critical Damage Received -$s4. -->
+		<!-- For $s1, P. Def. +$s2, Bow/ Crossbow Resistance +$s3, Received Critical Damage -$s4. -->
 		<icon>icon.skill11869</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -182,7 +182,7 @@
 		</effects>
 	</skill>
 	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
-		<!-- Pulls nearby enemies to the center. -->
+		<!-- Pulls nearby enemies to the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1469</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -211,7 +211,7 @@
 		</effects>
 	</skill>
 	<skill id="11245" toLevel="1" name="Sampling">
-		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<!-- Damage over time, Speed is decreased. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -616,7 +616,7 @@
 		</effects>
 	</skill>
 	<skill id="11255" toLevel="1" name="Superior Spirit Mastery">
-		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. INT +2. -->
+		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +30%. INT +2. -->
 		<icon>icon.skill11255</icon>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -795,7 +795,7 @@
 		</effects>
 	</skill>
 	<skill id="11259" toLevel="13" name="Mark of Weakness">
-		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, decrease target's P. Def./ M. Def. -->
+		<!-- Deals magic damage to the target with $s2 power for $s1 Additionally decreases target's P./ M. Def. -->
 		<icon>icon.skill11259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -909,7 +909,7 @@
 		</effects>
 	</skill>
 	<skill id="11260" toLevel="10" name="Mark of Void">
-		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, recover HP/ MP. -->
+		<!-- Deals magic damage to the target with $s2 power for $s1 Additionally recovers your HP/ MP. -->
 		<icon>icon.skill11260</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1384,7 +1384,7 @@
 		</effects>
 	</skill>
 	<skill id="11266" toLevel="6" name="Summon Death Gate">
-		<!-- Creates a Danger Zone for $s1. The summoned Danger Zone continuously inflicts damage and Hold on nearby enemies. -->
+		<!-- Creates a Danger Zone for $s1 The summoned Danger Zone continuously inflicts damage and Hold on nearby enemies. -->
 		<icon>icon.skill11266</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1509,7 +1509,7 @@
 		</effects>
 	</skill>
 	<skill id="11268" toLevel="11" name="Summon Avenging Cubic">
-		<!-- Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
+		<!-- Summons an Avenging cubic that cancels your debuffs. Additionally, cancels buffs of your target and inflicts hold on them. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11268</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1860,7 +1860,7 @@
 		</effects>
 	</skill>
 	<skill id="11273" toLevel="10" name="Exile">
-		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible against attacks, skills, and debuffs. Decreases HP by $s1 per second. -->
+		<!-- Banishes the target to another dimension. The exiled target becomes incapacitated and invincible against attacks, skills, and debuffs. The target's HP -$s1 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11273</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2114,7 +2114,7 @@
 		</effects>
 	</skill>
 	<skill id="11276" toLevel="8" name="Dimensional Binding">
-		<!-- Binds target midair in another dimension. P./ M. Def. -$s1. -->
+		<!-- Sends the target to another dimension making them unable to move. P./ M. Def. -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11276</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="8">100</value>
@@ -2256,7 +2256,7 @@
 		</effects>
 	</skill>
 	<skill id="11278" toLevel="9" name="Bear Claw">
-		<!-- Provokes the enemy and inflicts damage. -->
+		<!-- Damages and provokes the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2338,7 +2338,7 @@
 		</effects>
 	</skill>
 	<skill id="11279" toLevel="9" name="Bear Tumbling">
-		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
+		<!-- Strikes the ground to hold nearby enemies in place for a time period. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2718,7 +2718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11285" toLevel="4" name="Naviarope Power">
+	<skill id="11285" toLevel="4" name="Naviarope's Power">
 		<!-- Uses the authority of Naviarope to inflict powerful damage on nearby targets. -->
 		<icon>icon.skill0121</icon>
 		<affectRange>200</affectRange>
@@ -2923,7 +2923,7 @@
 		</effects>
 	</skill>
 	<skill id="11289" toLevel="6" name="Gate Root">
-		<!-- Temporarily stops nearby enemies from moving. -->
+		<!-- Holds nearby enemies in place for a time period. Inflicted status: Danger Zone. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3082,7 +3082,7 @@
 		</effects>
 	</skill>
 	<skill id="11294" toLevel="11" name="Cubic Root">
-		<!-- Temporarily stops the enemy from moving. -->
+		<!-- Holds the enemy in place for a moment. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -3171,7 +3171,7 @@
 		</effects>
 	</skill>
 	<skill id="11296" toLevel="11" name="Mass Exile">
-		<!-- Banishes enemies near target into another dimension. The exiled enemies become incapacitated and invincible against attacks, skills, and debuffs. Decreases HP by $s1 per second. -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -$s1 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3364,7 +3364,7 @@
 		</effects>
 	</skill>
 	<skill id="11298" toLevel="13" name="Mark of Fire">
-		<!-- Instills enemies with fear, carves a burning mark on target to inflict damage with $s1 Power added to M. Atk. and Speed -$s2. -->
+		<!-- Carves a burning mark on the target dealing magic damage with $s1 power. Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11298</icon>
 		<operateType>A1</operateType>
 		<mpConsume>

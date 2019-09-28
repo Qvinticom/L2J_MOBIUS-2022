@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
@@ -281,7 +281,7 @@
 		</effects>
 	</skill>
 	<skill id="6716" toLevel="1" name="Might of Elcadia">
-		<!-- Increases P. Atk. by 15% for 10 min. -->
+		<!-- For 10 min., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -617,7 +617,7 @@
 		</effects>
 	</skill>
 	<skill id="6728" toLevel="1" name="Recharge of Elcadia">
-		<!-- Recovers MP up to 136 power depending on the target's Lv.. -->
+		<!-- Recovers MP up to 136 power depending on the target's level. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>655</effectPoint>
@@ -637,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="6729" toLevel="1" name="Holy Attack Resistance of Elcadia">
-		<!-- Increases Holy Attack Resistance by 30 for 10 min. -->
+		<!-- For 10 min., Holy Resistance +30. -->
 		<icon>icon.skill1392</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -744,7 +744,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6734" toLevel="1" name="Energy of Destruction">
-		<!-- For 5 sec., inflicted with poison with 800 HP decrease per second. -->
+		<!-- The character is poisoned, for 5 sec. the enemy's HP -800 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -765,7 +765,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6735" toLevel="1" name="Petrify">
+	<skill id="6735" toLevel="1" name="Petrifies the target.">
 		<!-- Petrified and unable to move temporarily. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -895,7 +895,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- Dark attribute is weakened; inflicted with bleed and 200 HP is decreased every second. -->
+		<!-- Dark Resistance is decreased. HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1026,7 +1026,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Stun Attack">
-		<!-- Inflicts Stun for 5 sec. -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1166,7 +1166,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- Inflicted with bleed and 200 HP decreases every second. -->
+		<!-- HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1238,7 +1238,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6757" toLevel="1" name="Decrease Speed">
+	<skill id="6757" toLevel="1" name="Slow">
 		<!-- Decreases the enemy's Speed by 30% for 15 sec. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -1495,7 +1495,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6768" toLevel="1" name="Stun Attack">
-		<!-- Inflicts Stun for 5 sec. -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1661,7 +1661,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- Inflicts Stun for 10 sec. -->
+		<!-- Stuns the target for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1719,7 +1719,7 @@
 		</effects>
 	</skill>
 	<skill id="6776" toLevel="1" name="Paralysis">
-		<!-- Causes the enemy's body to go completely rigid for 10 sec. and causes paralysis for 10 sec. -->
+		<!-- Gradually freezes the enemy's body for 10 sec. When it's frozen, inflicts Paralysis for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1765,7 +1765,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- For 20 sec., slows down Speed and inflicts bleed so that 200 HP is decreased every second. Inflicted with paralysis for 10 sec. -->
+		<!-- The enemy slows down for 20 sec., HP -200 every sec. because of bleeding, after that the enemy is paralyzed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1825,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- Body is rigid and paralyzed. -->
+		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->

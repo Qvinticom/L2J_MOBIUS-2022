@@ -224,8 +224,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9407" toLevel="1" name="Release Agathion's Seal - Jang Heejin">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9407" toLevel="1" name="Summon Agathion - Hye-jin Jang">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -236,8 +236,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9408" toLevel="1" name="Release Agathion's Seal - Jang Hyuk">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9408" toLevel="1" name="Summon Agathion - Jang Hyuk">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -248,8 +248,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9409" toLevel="1" name="Release Agathion's Seal - Kim Sooro">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9409" toLevel="1" name="Summon Agathion - Kim Sooro">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -260,8 +260,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9410" toLevel="1" name="Release Agathion's Seal - Park Jaebum">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9410" toLevel="1" name="Summon Agathion - Park Jaebum">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -272,8 +272,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9411" toLevel="1" name="Release Agathion's Seal - Kim Shinyoung">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9411" toLevel="1" name="Summon Agathion - Kim Shinyoung">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -284,7 +284,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9412" toLevel="1" name="Agathion Cute Trick - Jang Heejin">
+	<skill id="9412" toLevel="1" name="Agathion Cute Trick - Hye-jin Jang">
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -1490,7 +1490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9448" toLevel="1" name="Scroll of Escape: Isle of Prayer">
+	<skill id="9448" toLevel="1" name="Scroll of Escape: Chromatic Highlands">
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<hitTime>1000</hitTime>
@@ -1569,7 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
-		<!-- Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). -->
+		<!-- Stuns nearby enemies and removes their targeting, also teleports the character forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.wizard_danger_warppow</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1694,7 +1694,7 @@
 		</effects>
 	</skill>
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
-		<!-- For 5 sec., cannot use P. Atk./ M. Atk. Consumes 30 Gemstones (B-grade). -->
+		<!-- P./ M. Atk can't be used for 5 sec. Consumes 30 Gemstones (B-grade). Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.song_of_silence</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1787,7 +1787,7 @@
 		</effects>
 	</skill>
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
-		<!-- Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies for 3 sec. -->
+		<!-- P. Atk. on nearby enemies and Knockdown for 3 sec. Power 27,552. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1833,7 +1833,7 @@
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
-		<!-- Relies on Tauti's Authority to attack nearby enemies with 42645 power added to P. Attack, inflicting Knock Down. Consumes 4 Spirit Ore. -->
+		<!-- Using Tauti's Wrath attacks nearby enemies with 42645 power and inflicts Knock Down. Consumes 4 Spirit Ore. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2595,8 +2595,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9472" toLevel="1" name="Release Agathion's Seal - Flame Spirit">
-		<!-- Releases Agathion's seal. -->
+	<skill id="9472" toLevel="1" name="Summon Agathion - Flame Spirit">
+		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4079,7 +4079,7 @@
 		</effects>
 	</skill>
 	<skill id="9478" toLevel="1" name="Chat Prohibition Active">
-		<!-- Blocks chat for a certain time. -->
+		<!-- Blocks chat for a certain time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.shutup</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

@@ -549,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="22119" toLevel="1" name="Love for All Seasons">
-		<!-- For 1 h., increases M. Atk. by 75% and the occurrence rate of damage that is caused by magic damage by 2. -->
+		<!-- For 1 h., M. Atk. +75%, M. Critical Rate +2. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_a_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1244,7 +1244,7 @@
 		</effects>
 	</skill>
 	<skill id="22142" toLevel="1" name="Female Aniruddha's Shield">
-		<!-- Increases P. Def. by 15% for 1 h. -->
+		<!-- For 1 h., P. Def. +15%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1313,7 +1313,7 @@
 		</effects>
 	</skill>
 	<skill id="22145" toLevel="1" name="Love for All Seasons Empower">
-		<!-- Increases M. Atk. by 75% for 1 h. -->
+		<!-- For 1 h., M. Atk. +75%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_a_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1452,7 +1452,7 @@
 		</effects>
 	</skill>
 	<skill id="22150" toLevel="1" name="Female Aniruddha's Magic Barrier">
-		<!-- Increases M. Def. by 30% for 1 h. -->
+		<!-- For 1 h., M. Def. +30%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1623,7 +1623,7 @@
 		</effects>
 	</skill>
 	<skill id="22157" toLevel="1" name="Kung Hei Fat Choy Might">
-		<!-- Increases P. Atk. by 15% for 1 h. -->
+		<!-- For 1 h., P. Atk. +15%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_d_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1646,7 +1646,7 @@
 		</effects>
 	</skill>
 	<skill id="22158" toLevel="10" name="Rose Petal">
-		<!-- Increases HP/ MP Regeneration by $s2 for $s1. When the herb effect reaches Lv. $s3, the rose spirit consumes a Rose Petal effect and replenishes some Vitality. -->
+		<!-- Increases HP/ MP Regeneration by $s2 for $s1 When the herb effect reaches Lv. $s3, the rose spirit consumes a Rose Petal effect and replenishes some Vitality. -->
 		<icon>
 			<value level="1">BranchSys2.icon.Br_herb_rose_red_i00</value>
 			<value level="2">BranchSys2.icon.Br_herb_rose_red_i01</value>

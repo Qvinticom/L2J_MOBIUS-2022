@@ -36,7 +36,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15505" toLevel="1" name="Vitality Replenishing Aura">
-		<!-- Vitality is replenished when XP is gained. -->
+		<!-- Recovers Vitality upon acquiring XP. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -192,7 +192,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15522" toLevel="1" name="Dark Poison">
-		<!-- Damages enemy with dark poison and drains HP gradually. -->
+		<!-- Damages the enemy with dark poison decreasing HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -270,7 +270,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15530" toLevel="1" name="Slumber">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -282,7 +282,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15531" toLevel="1" name="Hold">
-		<!-- Afflicted with Hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -303,7 +303,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15533" toLevel="1" name="Spiteful Grudge">
-		<!-- Damages enemy with poison and drains HP gradually. -->
+		<!-- Poisons the enemy, slowly draining his HP Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -452,7 +452,7 @@
 		<hitTime>100</hitTime>
 	</skill>
 	<skill id="15543" toLevel="1" name="Poison Fog">
-		<!-- Throws poison dust on enemy, draining their HP. -->
+		<!-- Throws poison dust on the enemy, slowly draining his HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -556,7 +556,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15553" toLevel="1" name="Chain Hit">
-		<!-- Pulls a single enemy toward you. -->
+		<!-- Pulls a target toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -587,7 +587,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15556" toLevel="1" name="Provoke">
-		<!-- Provokes target into attacking you by forcefully changing their target. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -597,7 +597,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15557" toLevel="1" name="Crossbow Attack">
+	<skill id="15557" toLevel="1" name="Crane Strike">
 		<!-- Decreases target's Atk. Spd. by 10%. -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
@@ -621,7 +621,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15559" toLevel="1" name="Poison Attack">
-		<!-- Powerful attack on the whole party and poison damage. -->
+		<!-- Attacks all enemies poisoning them. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -644,7 +644,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15561" toLevel="1" name="Connected Drain">
-		<!-- Bleeding for 5 sec. -->
+		<!-- Inflicts Bleed and decreases HP for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -714,7 +714,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15568" toLevel="1" name="Forward March">
+	<skill id="15568" toLevel="1" name="Charge">
 		<!-- Powerful rush attack on enemy. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -724,7 +724,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15569" toLevel="1" name="Chaotic Reign">
-		<!-- Pulls nearby monsters. -->
+		<!-- Pulls nearby monsters. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1469</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -754,7 +754,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="15572" toLevel="1" name="Krogel's Haste">
-		<!-- Atk. Spd. +15%. -->
+		<!-- Casting Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -762,7 +762,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15573" toLevel="1" name="Master Siege Punch">
-		<!-- Powerful attack and Knock Back on nearby enemies. -->
+		<!-- Inflicts a powerfull attack that knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
 		<mpConsume>100</mpConsume>
@@ -784,7 +784,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="15575" toLevel="1" name="Dedicated Blow">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
@@ -794,7 +794,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15576" toLevel="1" name="Dedicated Shot">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<castRange>250</castRange>
@@ -927,7 +927,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15589" toLevel="1" name="Painful Blow">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
@@ -937,7 +937,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15590" toLevel="1" name="Fear of Lindvior">
-		<!-- Afflicted with Fear and moving against own will. -->
+		<!-- Inflicts Fear and forces to move against own will. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill4108</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1012,7 +1012,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15595" toLevel="1" name="Lindvior's Fall">
-		<!-- P. Atk. On nearby enemies. -->
+		<!-- Inflicts a physical attack on nearby characters. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0036</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>

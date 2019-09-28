@@ -1106,7 +1106,7 @@
 		</effects>
 	</skill>
 	<skill id="11115" toLevel="9" name="Elemental Burst">
-		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleports to a single target, cancels target's targeting, and resets Teleport cooldown. -->
+		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleports to a single target, Cancels target's targeting. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11115</reuseDelayGroup>
@@ -1202,7 +1202,7 @@
 		</effects>
 	</skill>
 	<skill id="11116" toLevel="9" name="Elemental Burst: Fire">
-		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire -Ranged Ignite, Dark -Teleports to a single target, Cancels target's targeting, and resets Teleport cooldown. -->
+		<!-- Detonates Destruction on the inflicted target, dealing damage with $s1 M. Atk. power. By attribute, Fire - AoE Ignite, Dark - teleports a single target and cancels its targeting. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
@@ -1294,7 +1294,7 @@
 		</effects>
 	</skill>
 	<skill id="11117" toLevel="9" name="Elemental Burst: Dark">
-		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire -Ranged Ignite, Dark -Teleports to a single target, Cancels target's targeting, and resets Teleport cooldown. -->
+		<!-- Detonates Destruction on the inflicted target, dealing damage with $s1 M. Atk. power. By attribute, Fire - AoE Ignite, Dark - teleports a single target and cancels its targeting, while resetting your Teleport cooldown. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>DARK</attributeType>
@@ -2307,7 +2307,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11132" toLevel="3" name="Lightning Shield">
-		<!-- Spreads lightning's defensive barrier for $s1. Paralyzes the target that attacked you. -->
+		<!-- Spreads lightning's defensive barrier for $s1 Paralyzes the target that attacked you. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2346,7 +2346,7 @@
 		</effects>
 	</skill>
 	<skill id="11133" toLevel="3" name="Lightning Shield: Paralyze">
-		<!-- Momentarily stiffened. -->
+		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2375,7 +2375,7 @@
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
-		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ore. -->
+		<!-- Drops meteors to attack surrounding enemies dealing great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11134</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
@@ -2386,7 +2386,7 @@
 		<effectPoint>-676</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>15000</hitTime>
+		<hitTime>12000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2395,7 +2395,7 @@
 		<mpInitialConsume>52</mpInitialConsume>
 		<mpPerChanneling>80</mpPerChanneling>
 		<operateType>CA1</operateType>
-		<reuseDelay>1800000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>4</hitCancelTime>
@@ -2717,7 +2717,7 @@
 		</effects>
 	</skill>
 	<skill id="11142" toLevel="3" name="Damaged Area">
-		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<!-- Damage over time, Speed is decreased. -->
 		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2756,7 +2756,7 @@
 		</effects>
 	</skill>
 	<skill id="11143" toLevel="3" name="Damaged Area">
-		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<!-- Damage over time, Speed is decreased. -->
 		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3141,7 +3141,7 @@
 		</effects>
 	</skill>
 	<skill id="11153" toLevel="1" name="Chain Blaze">
-		<!-- Attacks the target and nearby enemies with 349 Power added to M. Atk. The damage increases incrementally. Consumes 2 Spirit Ore. -->
+		<!-- Deals magic damage to the target and nearby enemies with 349 power. The amount of damage dealt depends on the skill's level. Consumes 2 Spirit Ores. -->
 		<icon>icon.skill11153</icon>
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -3300,7 +3300,7 @@
 		</effects>
 	</skill>
 	<skill id="11177" toLevel="7" name="Aqua Crash">
-		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2 When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3 Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<allStanceSkillId>11189</allStanceSkillId> <!-- Double Casting skill Id -->
@@ -3365,7 +3365,7 @@
 		</effects>
 	</skill>
 	<skill id="11179" toLevel="1" name="Yoke Status">
-		<!-- Momentarily immobilized midair. -->
+		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3407,7 +3407,7 @@
 		</effects>
 	</skill>
 	<skill id="11180" toLevel="1" name="Yoke Status">
-		<!-- Momentarily immobilized midair. -->
+		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3449,7 +3449,7 @@
 		</effects>
 	</skill>
 	<skill id="11181" toLevel="1" name="Yoke Status">
-		<!-- Momentarily immobilized midair. -->
+		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3491,7 +3491,7 @@
 		</effects>
 	</skill>
 	<skill id="11182" toLevel="4" name="Yoke Status">
-		<!-- Momentarily immobilized midair. -->
+		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3623,7 +3623,7 @@
 		</effects>
 	</skill>
 	<skill id="11186" toLevel="10" name="Superior Fast MP Recovery">
-		<!-- MP Recovery Bonus +$s1. INT +$s2. -->
+		<!-- MP Recovery Rate +$s1. INT +$s2. -->
 		<icon>icon.skill0229</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3662,7 +3662,7 @@
 		</effects>
 	</skill>
 	<skill id="11187" toLevel="10" name="Superior Clear Mind">
-		<!-- MP Recovery Bonus +$s1 while walking and +$s2 while standing. INT +$s3. -->
+		<!-- MP Recovery Rate +$s1 while walking, +$s2 while standing. INT +$s3. -->
 		<icon>icon.skill11187</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3769,7 +3769,7 @@
 		</effects>
 	</skill>
 	<skill id="11189" toLevel="7" name="Aqua Crash">
-		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2 When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3 Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -3862,7 +3862,7 @@
 		</effects>
 	</skill>
 	<skill id="11196" toLevel="1" name="Freeze">
-		<!-- Frozen. -->
+		<!-- Freezes the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

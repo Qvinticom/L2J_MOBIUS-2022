@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16400" toLevel="1" name="Ferin's Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. -->
+		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's level. Also, for 10 sec., recovers 12 MP per second. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -21,7 +21,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16402" toLevel="2" name="Dimensional Horror">
-		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
+		<!-- Inflicts Fear on nearby enemies for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -61,7 +61,7 @@
 		<isMagic>6</isMagic>
 	</skill>
 	<skill id="16406" toLevel="2" name="Dimensional Fear">
-		<!-- Inflicts Fear on target for 5 sec. -->
+		<!-- Attacks the target by Judgment of Death. The effect lasts for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -84,7 +84,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16408" toLevel="4" name="Trap Fear">
-		<!-- Moving against your will due to Fear. -->
+		<!-- The enemy moves against own will. The character becomes temporarily uncontrolled. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -92,7 +92,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16409" toLevel="4" name="Trap Hold">
-		<!-- Immobilized. -->
+		<!-- Immobilizes the enemy for a moment. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -125,7 +125,7 @@
 		</effects>
 	</skill>
 	<skill id="16410" toLevel="4" name="Trap Aerial Yoke">
-		<!-- Immobilized. -->
+		<!-- The character can't move in the air. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -163,7 +163,7 @@
 		</effects>
 	</skill>
 	<skill id="16411" toLevel="4" name="Trap Stun">
-		<!-- Immobilized. -->
+		<!-- Immobilizes the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -193,7 +193,7 @@
 		</effects>
 	</skill>
 	<skill id="16412" toLevel="4" name="Trap Petrify">
-		<!-- Immobilized. -->
+		<!-- Immobilizes the enemy. Inflicted status: Petrification. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -210,7 +210,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16413" toLevel="4" name="Trap Poison">
-		<!-- Poisons the target, causing them to lose $s2 HP every $s1. -->
+		<!-- Inflicts Poison. HP -$s2 every $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -260,7 +260,7 @@
 			</effect>
 	</skill>
 	<skill id="16415" toLevel="6" name="Dimensional Dark Forces">
-		<!-- P. Atk. -$s1, M. Atk. -$s2, and P. Critical Rate -$s3, M. Critical Rate -$s4. -->
+		<!-- P. Atk -$s1, M. Atk. -$s2, P. Critical Rate -$s3, M. Critical Rate -$s4. -->
 		<icon>icon.skill1298</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -744,14 +744,14 @@
 		<castRange>400</castRange>
 	</skill>
 	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 - Adventurer">
-		<!-- For 1 h., Max HP +39%, Max MP +64%, and Max CP +39%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- For 1 h., Max HP +39%, Max MP +64%, Max CP +39%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
 	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 - Adventurer">
-		<!-- For 1 h., Atk. Spd. +61%, Casting Spd. +60%, and Speed +15 and Skill MP Consumption -10%. -->
+		<!-- For 1 h., Atk. Spd. +61%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
@@ -795,7 +795,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16447" toLevel="1" name="Mass Poison">
-		<!-- Poisoned. HP momentarily decreases. Power 14. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect 14. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -806,7 +806,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16448" toLevel="1" name="Mass Airbind">
-		<!-- Throws nearby enemies into the air and binds them for 10 sec. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -817,7 +817,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16449" toLevel="1" name="Mass Hold">
-		<!-- Casts Hold on target and nearby enemies for 10 sec. -->
+		<!-- Inflicts Hold on the target and nearby enemies for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10090new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -828,7 +828,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16450" toLevel="1" name="Mass Fear">
-		<!-- Moving against your will due to Fear. -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -838,8 +838,8 @@
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16451" toLevel="1" name="Wide Stun">
-		<!-- Attacks nearby enemies and stuns and cancels target for 10 sec. -->
+	<skill id="16451" toLevel="1" name="Mass Stun">
+		<!-- Attacks nearby enemies, stunning them and canceling their targets for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -869,7 +869,7 @@
 		</effects>
 	</skill>
 	<skill id="16454" toLevel="1" name="Spinning Slasher">
-		<!-- Pushes back enemies nearby and cancels target. -->
+		<!-- Attacks the target and knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -878,7 +878,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16455" toLevel="1" name="Spinning Power Slasher">
-		<!-- Pushes back enemies nearby, cancels target and decreases speed. -->
+		<!-- Attacks the target and knocks nearby enemies back decreasing their Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -886,7 +886,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16456" toLevel="1" name="Decrease Speed">
+	<skill id="16456" toLevel="1" name="Slow">
 		<!-- Speed decreases momentarily. Effect 1. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -898,7 +898,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16457" toLevel="1" name="Mass Knock Down">
-		<!-- Deal powerful attack and knock down enemies nearby. Cancels target. -->
+		<!-- Attacks and knocks nearby enemies down cancelling their target and decreasing Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -908,7 +908,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16458" toLevel="1" name="Mass Power Knock Down">
-		<!-- Deal powerful attack and knock down enemies nearby. Cancels target and decreases speed. -->
+		<!-- Attacks and knocks nearby enemies down cancelling their targets and decreasing Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -926,7 +926,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16460" toLevel="1" name="Maliss Bloody Mark">
-		<!-- Leaves Blood Seal to enemies in range for 20 sec., making them bleed. -->
+		<!-- Marks enemies with Blood Seal, making them bleed for 20 sec. AoE. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -937,7 +937,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16461" toLevel="1" name="Isadora Chaos Mark">
-		<!-- Leaves Dark Seal to enemies in range for 20 sec., decreasing their defense. -->
+		<!-- Marks enemies with Dark Seal, decreasing their P. Def. for 20 sec. AoE. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1013,7 +1013,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16469" toLevel="1" name="Poison Arrow">
-		<!-- Chance of inflicting powerful damage on all party members along with poison damage. -->
+		<!-- Has a certain chance to inflict powerful damage on the enemy and poison him. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1032,7 +1032,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="16471" toLevel="1" name="Mighty Rush">
-		<!-- Rushes in with all your strength for knock back. -->
+		<!-- Knocks the enemy back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0495</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
@@ -1201,7 +1201,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16489" toLevel="1" name="Luminosity">
-		<!-- Knocked down. -->
+		<!-- Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>

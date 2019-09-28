@@ -2221,7 +2221,7 @@
 		</effects>
 	</skill>
 	<skill id="13958" toLevel="10" name="Activate.Hold">
-		<!-- Hold has made movement temporarily impossible. Ignores debuff immunity. -->
+		<!-- Inflicts Obstruction on the target. Ignores immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2330,8 +2330,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13963" toLevel="1" name="Warrior's Earring">
-		<!-- Maximum MP +49, Maximum CP +10%, Defense/ Magical Resistance +3%, Stun/ Mental attack and defense success rate +30%, Vampiric Rage +4% -->
+	<skill id="13963" toLevel="1" name="Hero's Earring">
+		<!-- Max MP +49, Max CP +10%, P./ M. Def. +3%, Confusion Resistance/ Atk. Rate +30%, Vampiric Rage +4%. -->
 		<icon>icon.accessory_earring_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2487,7 +2487,7 @@
 		</effects>
 	</skill>
 	<skill id="13972" toLevel="4" name="Sayha's Benefaction">
-		<!-- Decreases damage received by $s2 for $s1. -->
+		<!-- Decreases damage received by $s2 for $s1 -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
 			<value level="2">icon.sayhas_talisman_g_Lv2</value>
@@ -2532,7 +2532,7 @@
 		</effects>
 	</skill>
 	<skill id="13973" toLevel="4" name="Sayha's Encouragement">
-		<!-- Increases PVE damage by $s2 for $s1. -->
+		<!-- Increases PVE damage by $s2 for $s1 -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
@@ -2586,7 +2586,7 @@
 		</effects>
 	</skill>
 	<skill id="13974" toLevel="4" name="Sayha's Anger">
-		<!-- PvP Damage +$s2 for $s1. -->
+		<!-- PvP Damage +$s2 for $s1 -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>

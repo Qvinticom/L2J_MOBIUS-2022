@@ -1205,7 +1205,7 @@
 		</effects>
 	</skill>
 	<skill id="27357" toLevel="12" name="Mass Binding Flood">
-		<!-- Immobilizes target and nearby enemies midair for 9 sec. and inflicts 100 damage per second. -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for 9 sec. Every sec. HP -100. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -1438,7 +1438,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27367" toLevel="1" name="Minion Eye's Blessed Resurrection">
-		<!-- Can use Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -1464,7 +1464,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27371" toLevel="1" name="Transformation Skill">
-		<!-- For 60 min., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
+		<!-- For 60 min., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1490,7 +1490,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27374" toLevel="1" name="Transformation Skill">
-		<!-- For 60 min., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
+		<!-- For 60 min., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>

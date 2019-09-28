@@ -48,7 +48,7 @@
 		</effects>
 	</skill>
 	<skill id="8201" toLevel="1" name="Major Arcana Robe Set - PvP">
-		<!-- Decreases a chance of getting your magic canceled and increases Stun Resistance, M. Atk./ Speed/ Weight Limit. Decreases damage received during PvP and a chance of getting hit by Critical and Critical Damage at a certain probability if hit. WIT+1, INT+1, MEN-2 -->
+		<!-- Decreases Magic Cancel Rate. Increases Confusion Resistance, M. Atk., Speed and weight limit. Decreases received PvP damage, also has a chance to decrease the opponent's Critical Rate and Critical Damage when your character is attacked. WIT +1, INT +1, MEN -2. -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -147,7 +147,7 @@
 		</effects>
 	</skill>
 	<skill id="8203" toLevel="1" name="Dynasty Breastplate - PvP">
-		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
+		<!-- Increases P. Def., Max HP, Received Healing, and Confusion Resistance. Decreases Received PvP damage. With a certain chance, decreases enemy's Speed, Atk. Spd., and Casting Spd. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="8219" toLevel="1" name="Dynasty Platinum Plate - PvP">
-		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
+		<!-- Increases P. Def., Max HP, Received Healing, and Confusion Resistance. Decreases Received PvP damage. With a certain chance, decreases enemy's Speed, Atk. Spd., and Casting Spd. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1741,7 +1741,7 @@
 		</effects>
 	</skill>
 	<skill id="8235" toLevel="1" name="Helm of Nightmare">
-		<!-- Increases Sleep/ Hold Resistance and M. Def. -->
+		<!-- Increases Stupor/ Obstruction Resistance and M. Def. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1758,7 +1758,7 @@
 		</effects>
 	</skill>
 	<skill id="8236" toLevel="1" name="Helm of Nightmare">
-		<!-- Increases MP regeneration/ M. Atk. And Sleep/ Hold Resistance. -->
+		<!-- Increases Stupor/ Obstruction Resistance, MP Recovery Rate and M. Atk. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLvl>67</magicLvl>
 		<operateType>P</operateType>
@@ -1860,7 +1860,7 @@
 		</effects>
 	</skill>
 	<skill id="8240" toLevel="3" name="Obliteration Storm">
-		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
+		<!-- A powerful long-range attack. Requires a critical hit of Lv. $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.weapon_long_spear_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1982,7 +1982,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8244" toLevel="1" name="Transform Gatekeeper">
+	<skill id="8244" toLevel="1" name="Gatekeeper Transformation">
 		<!-- Transforms target into a Gatekeeper. Allows Vitality to be restored when XP is acquired. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2148,7 +2148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8251" toLevel="1" name="Collection Agathion Release Seal">
+	<skill id="8251" toLevel="1" name="Summon Agathion - Collection">
 		<!-- Removes the seal on a Collection Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2388,7 +2388,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8263" toLevel="1" name="Transform Snow Kung">
+	<skill id="8263" toLevel="1" name="Snow Kung Transformation">
 		<!-- Transforms user into a Snow Kung. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2416,7 +2416,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8264" toLevel="1" name="Transform Scarecrow Jack">
+	<skill id="8264" toLevel="1" name="Scarecrow Jack Transformation">
 		<!-- Transforms user into Scarecrow Jack. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2444,7 +2444,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8265" toLevel="1" name="Transform Tin Golem">
+	<skill id="8265" toLevel="1" name="Tin Golem Transformation">
 		<!-- Transforms user into a Tin Golem. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2544,7 +2544,7 @@
 		</effects>
 	</skill>
 	<skill id="8276" toLevel="1" name="Shield Branding">
-		<!-- Works wonders on the Tumor of Death and some of the monsters inside the Seed of Infinity. Momentarily immobile due to the Stun effect and lost the target. -->
+		<!-- Works wonderful on the Tumor of Death and some of the monsters inside the Seed of Infinity. Stuns, immobilizes the enemy and cancels the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2584,7 +2584,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8277" toLevel="1" name="Transform Native">
+	<skill id="8277" toLevel="1" name="Native Transformation">
 		<!-- Transforms into a Native. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2611,7 +2611,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8278" toLevel="1" name="Transform Guard of Down">
+	<skill id="8278" toLevel="1" name="Guard of Dawn Transformation">
 		<!-- Transforms into a Guard of the Dawn. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2683,7 +2683,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8283" toLevel="1" name="Vesper Heavy Armor Set">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 531, and Sleep/ Hold Resistance by 70%. STR+2, DEX-2 -->
+		<!-- P. Atk./ P. Def. +5.57%, Max HP +531, Stupor/ Obstruction Resistance +70%, STR +2, DEX -2. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2711,7 +2711,7 @@
 		</effects>
 	</skill>
 	<skill id="8284" toLevel="1" name="Vesper Noble Heavy Armor Set">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and Magic Damage Resistance by 1%. Cloak equip possible. STR+2, DEX-2 -->
+		<!-- P. Atk./ P. Def. +5.57%, Max HP +540, Stupor/ Obstruction Resistance +70%, P. Accuracy +4, Speed +5 and M. Damage Resistance +1%. Activates the cloak slot. STR +2, DEX -2. -->
 		<icon>icon.armor_t94_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2780,7 +2780,7 @@
 		</effects>
 	</skill>
 	<skill id="8286" toLevel="1" name="Vesper Noble Light Armor Set">
-		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5%, Max MP by 354, Evasion by 3, Critical Damage by 172, and Paralysis Resistance by 50%. Can equip a cloak. STR+1, CON-2, DEX+1 -->
+		<!-- P. Atk. +5.57%, Atk. Spd./ MP recovery rate +5%, Max MP +354, Evasion +3, Critical Damage +172, paralysis resistance +50%. STR +1, CON -2, DEX +1. Activates the cloak slot. -->
 		<icon>icon.armor_t95_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2823,7 +2823,7 @@
 		</effects>
 	</skill>
 	<skill id="8287" toLevel="1" name="Vesper Robe Set">
-		<!-- Equipping this increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5% and Stun Resistance by 50%, and decreases damage to cancel the magic by 30. INT+1, MEN-2, WIT+1 -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50%. Casting Interruption Rate -30. INT +1, MEN -2, WIT +1. -->
 		<icon>icon.armor_t96_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2855,7 +2855,7 @@
 		</effects>
 	</skill>
 	<skill id="8288" toLevel="1" name="Vesper Noble Robe Set">
-		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancelling damage by 30 and MP Consumption for magic skills by 3%. Can equip a cloak. INT+1, MEN-2, WIT+1 -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50% and Speed +7. Casting Interruption Rate -30. M. Skill MP Consumption -3%. Activates the cloak slot. INT +1, MEN -2, WIT +1. -->
 		<icon>icon.armor_t96_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2982,7 +2982,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8292" toLevel="1" name="Olympiad Warrior's Ring">
+	<skill id="8292" toLevel="1" name="Olympiad Hero's Ring">
 		<!-- Increases Hold Resistance by 30%, Hold Attack Bonus by 30%, Critical Damage by 15%, and Accuracy by 2. -->
 		<icon>icon.accessory_tateossian_ring_i00</icon>
 		<magicLvl>75</magicLvl>
@@ -3007,8 +3007,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8293" toLevel="1" name="Olympiad Warrior's Earring">
-		<!-- Recovers Stun/ Mental Resistance by 20%, Stun/ Mental attack bonus by 20%, and 4% of damage inflicted on the enemy as your HP at a certain probability. -->
+	<skill id="8293" toLevel="1" name="Olympiad Hero's Earring">
+		<!-- Confusion Resistance/ Atk. Rate +20%. Has a certain chance to recover damage inflicted on the enemy as HP. -->
 		<icon>icon.accessory_tateossian_earring_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -3028,8 +3028,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8294" toLevel="1" name="Olympiad Warrior's Necklace">
-		<!-- Increases Paralyze/ Stun/ Sleep Resistance by 15%, Paralyze/ Stun/ Sleep attack bonus by 15% and decreases Skill Cooldown by 5%. Reflects 4% of damage received back to the enemy. -->
+	<skill id="8294" toLevel="1" name="Olympiad Hero's Necklace">
+		<!-- Increases Confusion Resistance/ Atk. Rate +15%, Stupor Resistance/ Atk. Rate +15%. Skill Cooldown -5%. Reflects 4% of received damage back to the enemy. -->
 		<icon>icon.accessory_tateossian_necklace_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -3064,7 +3064,7 @@
 		</effects>
 	</skill>
 	<skill id="8295" toLevel="1" name="Special Ability: Focus">
-		<!-- Increases Critical Rate by 109.2. Inflicts additional damage by 5% during PvP. -->
+		<!-- Critical Rate +109.2, PvP Damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>

@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35200" toLevel="1" name="Special Ability Legend Infinity Caster">
+	<skill id="35200" toLevel="1" name="Legend Infinity Caster Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35201" toLevel="1" name="Special Ability Legend Infinity Retributer">
+	<skill id="35201" toLevel="1" name="Legend Infinity Retributer Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35202" toLevel="1" name="Special Ability Legend Infinity Dual Sword">
+	<skill id="35202" toLevel="1" name="Legend Infinity Dual Sword Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35203" toLevel="1" name="Special Ability Legend Infinity Dual Dagger">
+	<skill id="35203" toLevel="1" name="Legend Infinity Dual Dagger Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35204" toLevel="1" name="Special Ability Legend Infinity Dual Blunt Weapon">
+	<skill id="35204" toLevel="1" name="Legend Infinity Dual Blunt Weapon Special Ability">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
@@ -36,7 +36,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35206" toLevel="11" name="Savior's Mask Enchant Effects">
+	<skill id="35206" toLevel="11" name="Enchantment Effect: Savior's Mask">
 		<!-- Enchanting a hair accessory increases its Debuff Resistance and an adds extra option depending on the equipped Knight's/ Warrior's/ Wizard's Circlet. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
 		<operateType>P</operateType>
@@ -146,8 +146,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35210" toLevel="1" name="Warrior's Ring">
-		<!-- Increases Max CP by 10%, P. Critical Damage and P./ M. Skill Critical Damage by 15%, Atk./ Casting Spd. by 5%, Stun/ Paralysis/ Knock Back/ Knock Down Attack and Defense Success by 15%. -->
+	<skill id="35210" toLevel="1" name="Hero's Ring">
+		<!-- Max CP +10%, P. Critical Damage and P./ M. Skill Critical Damage +15%, Atk./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +15%. -->
 		<icon>icon.accessory_ring_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -480,7 +480,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35217" toLevel="11" name="Fallen Angel's Ring">
-		<!-- Increases Knock Back/ Knock Down/ Pull/ Faint Resistance by $s1. -->
+		<!-- Confusion Resistance +$s1. -->
 		<icon>icon.bm_ring_of_fallen_angel</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -733,7 +733,7 @@
 		</effects>
 	</skill>
 	<skill id="35229" toLevel="1" name="Artifact Set Effect Lv. 3">
-		<!-- Damage +6%, Received Damage -7%, all basic stats +1. -->
+		<!-- Damage +6%, Received Damage -7%, All Basic Stats ++1 -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -998,7 +998,7 @@
 		</effects>
 	</skill>
 	<skill id="35238" toLevel="11" name="Artifact - XP">
-		<!-- Enchantment increases XP and SP Bonus. -->
+		<!-- Acquired XP/ SP increased when upgraded. -->
 		<icon>icon.artifact_d_exp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1022,7 +1022,7 @@
 		</effects>
 	</skill>
 	<skill id="35239" toLevel="11" name="Artifact - Vampiric Rage">
-		<!-- Vampiric Rage increased when upgraded. -->
+		<!-- Vampiric Rage effect increased when upgraded. -->
 		<icon>icon.artifact_d_vampiric_rage</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1196,7 +1196,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35246" toLevel="11" name="Artifact - Normal Attack Critical Rate">
+	<skill id="35246" toLevel="11" name="Artifact - P. Critical Rate">
 		<!-- Enchantment increases Normal Attack Critical Rate. -->
 		<icon>icon.artifact_a_crt_per</icon>
 		<operateType>P</operateType>
@@ -1247,7 +1247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35248" toLevel="11" name="Artifact - M. Skill Critical Rate">
+	<skill id="35248" toLevel="11" name="Artifact - M. Critical Rate">
 		<!-- M. Skill Critical Rate increased when upgraded. -->
 		<icon>icon.artifact_a_crt_mag_per</icon>
 		<operateType>P</operateType>
@@ -1273,8 +1273,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35249" toLevel="11" name="Artifact - Potion/ Elixir Effect Bonus">
-		<!-- Potion/ Elixir Effect Bonus increased when upgraded. -->
+	<skill id="35249" toLevel="11" name="Artifact - Recovery Potions' Effect">
+		<!-- Increases Recovery Potions' Effect when upgraded. -->
 		<icon>icon.artifact_a_hp_special</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1355,7 +1355,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35252" toLevel="1" name="Artifact - Atk. Attribute">
+	<skill id="35252" toLevel="1" name="Artifact - Attribute Attack Power">
 		<!-- Atk. Attribute +30. -->
 		<icon>icon.artifact_a_attribute_att_up</icon>
 		<operateType>P</operateType>
@@ -1502,17 +1502,17 @@
 		<icon>icon.skill0531</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35263" toLevel="1" name="Set Effect - Paulina's Eternal Heavy Armor, 5-Piece">
+	<skill id="35263" toLevel="1" name="Set Effect - Paulina's Eternal Heavy Armor, 5-piece">
 		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, P. Def. +7%, M. Def. +7%. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35264" toLevel="1" name="Set Effect - Paulina's Eternal Light Armor, 5-Piece">
+	<skill id="35264" toLevel="1" name="Set Effect - Paulina's Eternal Light Armor, 5-piece">
 		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, Attribute Resistance +30, Speed +14. -->
 		<icon>icon.m_class_light</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35265" toLevel="1" name="Set Effect - Paulina's Eternal Robe Armor, 5-Piece">
+	<skill id="35265" toLevel="1" name="Set Effect - Paulina's Eternal Robe, 5-piece">
 		<!-- INT +3, CON +2, M. Atk. +7%, Skill Power +7%, Max HP/ MP +10%, Skill MP Consumption -7%. -->
 		<icon>icon.m_class_robe</icon>
 		<operateType>P</operateType>
@@ -1616,7 +1616,7 @@
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35277" toLevel="1" name="Krishna Shaper Enchantment Effect">
+	<skill id="35277" toLevel="1" name="Enchantment Effect: Krishna Shaper">
 		<!-- P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
 		<operateType>P</operateType>
@@ -1641,7 +1641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35278" toLevel="1" name="Krishna Dicing Death Enchantment Effect">
+	<skill id="35278" toLevel="1" name="Enchantment Effect: Krishna Cutter">
 		<!-- P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -1658,7 +1658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35279" toLevel="1" name="Krishna Slasher Enchantment Effect">
+	<skill id="35279" toLevel="1" name="Enchantment Effect: Krishna Slasher">
 		<!-- P. Skill Critical Damage +3%, P. Atk. +3%. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -1675,7 +1675,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35280" toLevel="1" name="Krishna Avenger Enchantment Effect">
+	<skill id="35280" toLevel="1" name="Enchantment Effect: Krishna Avenger">
 		<!-- P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -1700,7 +1700,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35281" toLevel="1" name="Krishna Fighter Enchantment Effect">
+	<skill id="35281" toLevel="1" name="Enchantment Effect: Krishna Fighter">
 		<!-- Normal Attack Critical Damage +3% and additional damage +50. -->
 		<icon>icon.weapon_r110_fist_i00</icon>
 		<operateType>P</operateType>
@@ -1737,7 +1737,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35282" toLevel="1" name="Krishna Stormer Enchantment Effect">
+	<skill id="35282" toLevel="1" name="Enchantment Effect: Krishna Stormer">
 		<!-- Increases Normal Attack Critical Damage by 3% and has a chance to stun enemies near the target for 3 sec. on a standard attack. -->
 		<icon>icon.weapon_r110_spear_i00</icon>
 		<operateType>P</operateType>
@@ -1750,7 +1750,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35283" toLevel="1" name="Krishna Thrower Enchantment Effect">
+	<skill id="35283" toLevel="1" name="Enchantment Effect: Krishna Thrower">
 		<!-- P. Skill Critical Damage +3%, Normal Critical Damage +3%. -->
 		<icon>icon.weapon_r110_bow_i00</icon>
 		<operateType>P</operateType>
@@ -1767,7 +1767,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35284" toLevel="1" name="Krishna Shooter Enchantment Effect">
+	<skill id="35284" toLevel="1" name="Enchantment Effect: Krishna Shooter">
 		<!-- P. Skill Critical Damage +3%, P. Skill Power +3%. -->
 		<icon>icon.weapon_r110_crossbow_i00</icon>
 		<operateType>P</operateType>
@@ -1784,7 +1784,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35285" toLevel="1" name="Krishna Buster Enchantment Effect">
+	<skill id="35285" toLevel="1" name="Enchantment Effect: Krishna Buster">
 		<!-- M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<icon>icon.weapon_r110_onehand_magic_sword_i00</icon>
 		<operateType>P</operateType>
@@ -1801,7 +1801,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35286" toLevel="1" name="Krishna Caster Enchantment Effect">
+	<skill id="35286" toLevel="1" name="Enchantment Effect: Krishna Caster">
 		<!-- M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<icon>icon.weapon_r110_onehand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -1826,7 +1826,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35287" toLevel="1" name="Krishna Retributer Enchantment Effect">
+	<skill id="35287" toLevel="1" name="Enchantment Effect: Krishna Retributer">
 		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<icon>icon.weapon_r110_twohand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -1859,7 +1859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35288" toLevel="1" name="Krishna Dual Sword Enchantment Effect">
+	<skill id="35288" toLevel="1" name="Enchantment Effect: Krishna Dual Sword">
 		<!-- P. Skill Critical Damage +3%, P. Skill Power +3%. -->
 		<icon>icon.weapon_r110_dual_sword_i00</icon>
 		<operateType>P</operateType>
@@ -1876,7 +1876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35289" toLevel="1" name="Krishna Dual Dagger Enchantment Effect">
+	<skill id="35289" toLevel="1" name="Enchantment Effect: Krishna Dual Dagger">
 		<!-- P. Skill Critical Damage +3%, Normal Attack Critical Damage +3%. -->
 		<icon>icon.weapon_r110_dual_dagger_i00</icon>
 		<operateType>P</operateType>
@@ -1893,7 +1893,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35290" toLevel="1" name="Krishna Dual Blunt Enchantment Effect">
+	<skill id="35290" toLevel="1" name="Enchantment Effect: Krishna Dual Blunt Weapon">
 		<!-- P. Skill Critical Damage +3%, Skill Cooldown -3%. -->
 		<icon>icon.weapon_r110_dual_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -2032,7 +2032,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35292" toLevel="4" name="Set Effect - Leviathan Light Armor, 2-Piece">
+	<skill id="35292" toLevel="4" name="Set Effect - Leviathan Light Armor, 2-piece">
 		<!-- STR +$s1, DEX $s2. -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -2172,7 +2172,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35293" toLevel="4" name="Set Effect - Leviathan Robe Armor, 2-piece">
+	<skill id="35293" toLevel="4" name="Set Effect - Leviathan Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t903_u_i00</icon>
 		<operateType>P</operateType>
@@ -2286,7 +2286,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35294" toLevel="1" name="Leviathan Shield Enchantment Effect">
+	<skill id="35294" toLevel="1" name="Enchantment Effect: Leviathan Shield">
 		<!-- Atk. Spd. +5%, P. Skill Power +2%, M. Skill Power -10%. -->
 		<icon>icon.weapon_r110_shield</icon>
 		<operateType>P</operateType>
@@ -2305,7 +2305,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35295" toLevel="1" name="Leviathan Sigil Enchantment Effect">
+	<skill id="35295" toLevel="1" name="Enchantment Effect: Leviathan Sigil">
 		<!-- Casting Spd. +5%, M. Skill Power +2%, P. Skill Power -10%. -->
 		<icon>icon.weapon_r110_sigil</icon>
 		<operateType>P</operateType>
@@ -2324,7 +2324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35296" toLevel="1" name="Special Ability Krishna Dicing Death">
+	<skill id="35296" toLevel="1" name="Krishna Cutter Special Ability">
 		<!-- P. Accuracy +4, Normal Attack Critical Rate +30. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -2341,7 +2341,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35297" toLevel="1" name="Special Ability Krishna Slasher">
+	<skill id="35297" toLevel="1" name="Krishna Slasher Special Ability">
 		<!-- P. Atk. +5%. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -2354,7 +2354,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35298" toLevel="1" name="Special Ability Krishna Avenger">
+	<skill id="35298" toLevel="1" name="Krishna Avenger Special Ability">
 		<!-- P. Accuracy +4, P./ M. Skill Power +2%. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -2375,7 +2375,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35299" toLevel="1" name="Special Ability Krishna Shaper">
+	<skill id="35299" toLevel="1" name="Krishna Shaper Special Ability">
 		<!-- P. Accuracy +4, P. Skill Critical Damage +2%. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
 		<operateType>P</operateType>

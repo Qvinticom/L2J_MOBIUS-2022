@@ -1631,8 +1631,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23174" toLevel="1" name="Soul Stealth">
-		<!-- Revives from death with completely recovered status. Buff/ de-buff doesn't disappear at death but is maintained. But Noblesse Blessing and Amulet of Luck disappear. Cooldown is 12 h. -->
+	<skill id="23174" toLevel="1" name="Life Hazard">
+		<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>

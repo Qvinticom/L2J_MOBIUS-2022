@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19001" toLevel="1" name="Test Bleed">
-		<!-- Race confirm -->
+		<!-- Race confirm. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0010509</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -26,7 +26,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="19002" toLevel="1" name="Anchor">
-		<!-- Action prevent item skill confirm -->
+		<!-- Test of the items and skills that prevent movement. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10510</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="19005" toLevel="5" name="Clan Muzzle Control">
-		<!-- Increases clan members' Paralysis Resistance by $s1. Applies after the elder stage. -->
+		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill19005</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -156,7 +156,7 @@
 		</effects>
 	</skill>
 	<skill id="19006" toLevel="5" name="Clan Mental Control">
-		<!-- Increases clan members' Mental Attack Resistance by $s1. Applies after the elder stage. -->
+		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
 		<icon>icon.skill19006</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -238,9 +238,25 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- Clan members' P. Atk. +5%, M. Atk. +6%, P./ M. Def. +5%, and HP/ MP Recovery bonus +5. This effect is activated only when the clan leader and/ or an elite clan member's online. -->
-		<icon>icon.skill19009</icon>
+	<skill id="19009" toLevel="15" name="Clan Advent">
+		<!-- Clan members' XP/SP gain +$s1 and Vitality +$s2. The buff applies when the Clan Leader and/or marquis are online. The higher the clan level, the greater the Clan Advent buff. -->
+		<icon>
+			<value level="1">icon.skill19009_1</value>
+			<value level="2">icon.skill19009_2</value>
+			<value level="3">icon.skill19009_3</value>
+			<value level="4">icon.skill19009_4</value>
+			<value level="5">icon.skill19009_5</value>
+			<value level="6">icon.skill19009_6</value>
+			<value level="7">icon.skill19009_7</value>
+			<value level="8">icon.skill19009_8</value>
+			<value level="9">icon.skill19009_9</value>
+			<value level="10">icon.skill19009_10</value>
+			<value level="11">icon.skill19009_11</value>
+			<value level="12">icon.skill19009_12</value>
+			<value level="13">icon.skill19009_13</value>
+			<value level="14">icon.skill19009_14</value>
+			<value level="15">icon.skill19009_15</value>
+		</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalType>CLAN_ADVENT</abnormalType>
@@ -507,7 +523,7 @@
 		</effects>
 	</skill>
 	<skill id="19017" toLevel="1" name="Clan Prison">
-		<!-- For 60 sec., Speed of nearby enemies -23% and stops them from escaping. Consumes 30 Spirit Ore. Consumes 3000 Individual Fame. Applies after the duke stage. -->
+		<!-- For 60 sec., nearby enemies' Speed -23%. Prevents enemies from using escape skills. Consumes 30 Spirit Ores. Consumes 3000 Individual Fame. Available only to clan members of the Duke rank and higher. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19017</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -785,7 +801,7 @@
 		</conditions>
 	</skill>
 	<skill id="19028" toLevel="2" name="Revolution Spirit">
-		<!-- Increases Max CP by $s2, P. Def. by $s3, and M. Def. by $s4 for $s1. Can only be used in a castle siege area by characters between Lv. $s5 -$s6. Soulshots and Spiritshots are not consumed. -->
+		<!-- Increases Max CP by $s2, P. Def. by $s3, and M. Def. by $s4 for $s1 Can only be used in a castle siege area by characters between Lv. $s5 -$s6. Soulshots and Spiritshots are not consumed. -->
 		<icon>BranchSys2.icon.skill20006</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1628,7 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="19091" toLevel="1" name="Increase Item Drop Rate">
-		<!-- Increases Item Drop Rate upon PK. -->
+		<!-- Increases the PK item drop rate. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1652,7 +1668,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="19092" toLevel="2" name="Chat Prohibited">
-		<!-- Chatting is restricted. -->
+		<!-- Restricts from chatting. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>
 			<value level="1">icon.skill1170</value>
 			<value level="2">icon.skill10313</value>
@@ -1766,7 +1782,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="19098" toLevel="1" name="Bleed Target">
-		<!-- Consumes 100 HP per second for 15 sec. -->
+		<!-- For 15 sec., HP -100 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1788,7 +1804,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="19099" toLevel="1" name="GM's Authority">
-		<!-- Inflicts petrification on target for 60 min. -->
+		<!-- Petrifies the target for 60 min. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

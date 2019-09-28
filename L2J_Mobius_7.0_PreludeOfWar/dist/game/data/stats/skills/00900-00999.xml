@@ -184,7 +184,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="903" toLevel="6" name="Stratum Explosion">
-		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -245,7 +245,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="904" toLevel="6" name="Corpse Burst">
-		<!-- Causes a nearby corpse to burst open, poisoning enemies with $s1 Power. Effect $s2. -->
+		<!-- Causes a nearby corpse to burst open, poisoning enemies. Power $s2 Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -528,7 +528,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="908" toLevel="6" name="Spin Slash">
-		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -589,7 +589,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="909" toLevel="6" name="Ice Fog">
-		<!-- Inflicts continuous damage on nearby enemies with $s1 Power, decreasing their Speed, Atk. Spd. and Casting Spd. -->
+		<!-- Inflicts continuous damage on nearby enemies, decreasing their Speed, Atk. Spd. and Casting Spd. Power $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -680,7 +680,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="910" toLevel="6" name="Water Jet">
-		<!-- Strikes enemies with $s2 Power in a mighty rush of Water. Effect $s1. -->
+		<!-- Strikes enemies with a mighty rush of water. Power $s2 Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -753,7 +753,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="911" toLevel="11" name="Energy Burst">
-		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
+		<!-- Attacks enemies in front of you. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -848,7 +848,7 @@
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
-		<!-- Increases Magic Attack Resistance by 100% for 20 min. -->
+		<!-- For 20 min., M. Def. +100%. -->
 		<icon>icon.skill0913</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1272,7 +1272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="921" toLevel="1" name="Cursed Pierce">
+	<skill id="921" toLevel="1" name="Spike Thrust">
 		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit is possible. Ignores Shield Defense. Critical is possible. -->
 		<icon>icon.skill0921</icon>
 		<castRange>80</castRange>
@@ -2906,7 +2906,7 @@
 		</effects>
 	</skill>
 	<skill id="949" toLevel="1" name="Onslaught of Pa'agrio">
-		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
+		<!-- Attacks near the enemy with 4312 power, causes burns for 15 sec., and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0949</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2953,7 +2953,7 @@
 		</effects>
 	</skill>
 	<skill id="950" toLevel="7" name="Nail Attack">
-		<!-- A demonic clawed combo attack. Power $s1. -->
+		<!-- A demonic clawed combo attack. Power $s1 -->
 		<icon>icon.skill0539</icon>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -2998,7 +2998,7 @@
 		</effects>
 	</skill>
 	<skill id="951" toLevel="7" name="Wing Assault">
-		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1. -->
+		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1 -->
 		<icon>icon.skill0540</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3120,7 +3120,7 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Over-hit and Critical are possible. -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Over-hit and Critical are possible. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill00954</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3427,7 +3427,7 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit is possible. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 power. Requires a dual sword. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill958</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -3930,7 +3930,7 @@
 		</effects>
 	</skill>
 	<skill id="973" toLevel="8" name="Stun Attack">
-		<!-- Attack targets with Power $s1 added to P. Atk. Stuns the enemy for $s2. -->
+		<!-- Attacks the enemy with $s1 power, inflicting stun for $s2 Requires a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4000,7 +4000,7 @@
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
-		<!-- Fires arrows of $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Cancels target. -->
+		<!-- Shoots an arrow with $s1 power. Causes shock for $s2 Chance of canceling the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4189,7 +4189,7 @@
 		</effects>
 	</skill>
 	<skill id="977" toLevel="6" name="Ice Bolt">
-		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power added to M. Atk., and decreasing their Speed by $s3 for $s2. -->
+		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power added to M. Atk., and decreasing their Speed by $s3 for $s2 -->
 		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4260,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="978" toLevel="7" name="Shoulder Charge">
-		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Over-hit is possible. -->
+		<!-- Rushes in to attack the enemy stunning them for $s1 Consumes up to $s2 souls to increase power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4324,7 +4324,7 @@
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
-		<!-- Provokes the selected target with $s1 Power into attacking you. -->
+		<!-- Provokes the selected target with $s1 power into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -4363,7 +4363,7 @@
 		</effects>
 	</skill>
 	<skill id="980" toLevel="6" name="Aggression Aura">
-		<!-- Provokes nearby enemies with $s1 Power into attacking you. -->
+		<!-- Provokes nearby enemies into attacking you with $s1 power. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -4410,7 +4410,7 @@
 		</effects>
 	</skill>
 	<skill id="981" toLevel="6" name="Sleep">
-		<!-- Causes the enemy to sleep for $s1. -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4466,7 +4466,7 @@
 		</effects>
 	</skill>
 	<skill id="982" toLevel="3" name="Combat Aura">
-		<!-- Increases party member's P. Atk. by $s2 and Atk. Spd. by $s3 for $s1. -->
+		<!-- Increases party member's P. Atk. by $s2 and Atk. Spd. by $s3 for $s1 -->
 		<icon>icon.skill0982</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4669,7 +4669,7 @@
 		</effects>
 	</skill>
 	<skill id="985" toLevel="1" name="Challenge for Fate">
-		<!-- Challenges and provokes nearby enemies. Increases your P. Def. and M. Def. for 15 sec. -->
+		<!-- Challenges and provokes nearby enemies. Increases your P. Def. and M. Def. for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0985</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5003,7 +5003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="991" toLevel="1" name="Throwing Dagger">
+	<skill id="991" toLevel="1" name="Throw Dagger">
 		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and decreases Speed by 80% for 10 sec. Requires a dagger to be equipped. -->
 		<icon>icon.skill0991</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -5237,7 +5237,7 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- Charges forward to attack the enemies in front with 4224 power added to P. Attack and inflicts Stun for 9 sec. Unavailable to use when a bow/ crossbow is equipped. -->
+		<!-- Charges forward to attack the enemies in front with 4224 power and inflicts Stun for 9 sec. Cannot be used with bows/ crossbows. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5292,7 +5292,7 @@
 		</effects>
 	</skill>
 	<skill id="996" toLevel="1" name="Disarm">
-		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 sec. -->
+		<!-- Disarms the enemy for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5332,7 +5332,7 @@
 		</effects>
 	</skill>
 	<skill id="997" toLevel="25" name="Crushing Strike">
-		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit is possible. -->
+		<!-- Impacts the enemy with $s1 power added to P. Atk. The target's P./ M. Def. -$s3 for $s2 Requires a sword or blunt weapon. Over-hit. -->
 		<icon>icon.skill0997</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>

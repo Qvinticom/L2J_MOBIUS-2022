@@ -269,7 +269,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6117" toLevel="3" name="Choice - Scissors">
-		<!-- You have selected Scissors. You cannot move for $s1. -->
+		<!-- You have selected Scissors. You cannot move for $s1 -->
 		<icon>
 			<value level="1">icon.xmas_gawi_i00</value>
 			<value level="2">icon.xmas_bawi_i00</value>
@@ -439,7 +439,7 @@
 		</conditions>
 	</skill>
 	<skill id="6125" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -463,7 +463,7 @@
 		</effects>
 	</skill>
 	<skill id="6126" toLevel="1" name="Paralysis">
-		<!-- Paralyzed and unable to move momentarily. -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -505,7 +505,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6129" toLevel="1" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -530,7 +530,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6130" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
+		<!-- Curse of giant mutated animal: Stuns and paralyses the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -650,7 +650,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6135" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
+		<!-- Curse of giant mutated animal: Stuns and paralyses the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -785,7 +785,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6142" toLevel="3" name="Tar Trap">
-		<!-- You are covered in hot and sticky tar. Your Speed is decreased by $s2 for $s1. P. Def. and evasion are decreased by $s3. -->
+		<!-- You are covered in hot and sticky tar. Your Speed -$s2 for $s1 P. Def. and P. Evasion -$s3. -->
 		<icon>icon.skill0770</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -930,7 +930,7 @@
 		</effects>
 	</skill>
 	<skill id="6148" toLevel="1" name="Altar's Curse">
-		<!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
+		<!-- You can't fight in this condition. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1122,7 +1122,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6154" toLevel="4" name="Kasha's Despair">
-		<!-- Kasha's Despair. Critical rate increases. -->
+		<!-- Increases Critical Rate. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
@@ -1159,7 +1159,7 @@
 		</effects>
 	</skill>
 	<skill id="6155" toLevel="4" name="Kasha's Despair">
-		<!-- Kasha's Despair. Critical rate increases and P. Def. decreases. -->
+		<!-- Increases Critical Rate and decreases defence. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
@@ -1184,7 +1184,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6166" toLevel="1" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1212,7 +1212,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6167" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1262,7 +1262,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6168" toLevel="12" name="Stun">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>

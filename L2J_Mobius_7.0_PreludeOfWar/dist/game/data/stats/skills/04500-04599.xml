@@ -108,7 +108,7 @@
 		<affectScope>NONE</affectScope>
 	</skill>
 	<skill id="4515" toLevel="2" name="Raid Curse">
-		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2405,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="4579" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2585,7 +2585,7 @@
 		</effects>
 	</skill>
 	<skill id="4581" toLevel="12" name="Hold">
-		<!-- Inflicted with hold and unable to move momentarily. -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2638,7 +2638,7 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
-		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2801,7 +2801,7 @@
 		</effects>
 	</skill>
 	<skill id="4584" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- State of momentarily decreased defense and immobility due to the Stun effect. Effect $s1 -->
+		<!-- Instantly decreases P. Def. ans stuns. Effect $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -2900,7 +2900,7 @@
 		</effects>
 	</skill>
 	<skill id="4585" toLevel="3" name="Berserker Spirit">
-		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
+		<!-- P. Def. -$s1, M. Def. -$s2, -Evasion -$s3. -P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3747,7 +3747,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4595" toLevel="3" name="Acumen Shield">
+	<skill id="4595" toLevel="3" name="Acumen + Shield">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3801,7 +3801,7 @@
 		</effects>
 	</skill>
 	<skill id="4596" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3885,7 +3885,7 @@
 		</effects>
 	</skill>
 	<skill id="4597" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3969,7 +3969,7 @@
 		</effects>
 	</skill>
 	<skill id="4598" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

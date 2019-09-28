@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="32800" toLevel="2" name="Warrior's Harmony">
+		<!-- For $s1, P. Atk +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, and Atk. Spd. +$s5. Has a chance to inflict Spectral Slash on the target with normal attacks. -->
+		<icon>icon.skill19501</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32801" toLevel="2" name="Wizard's Harmony">
+		<!-- For $s1, increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, Attack Attribute by $s6, and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+		<icon>icon.skill19502</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32802" toLevel="1" name="Lizard Blow">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32803" toLevel="1" name="Resistance Explosion">
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32804" toLevel="1" name="Lizard Stun Shot">
+		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32805" toLevel="1" name="Lizard Double Shot">
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32806" toLevel="1" name="Magician's Perversity">
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-684</effectPoint>
+		<mpConsume>82</mpConsume>
+	</skill>
+	<skill id="32807" toLevel="1" name="Demotivation Hex">
+		<!-- P. Def. decreases by 90% for 10 sec. -->
+		<icon>icon.skill0122</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="32808" toLevel="1" name="Priest's Ire">
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>800</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32809" toLevel="1" name="Curse of the Plains">
+		<!-- M. Atk. +20%, M. Critical Rate +30%, M. Critical Damage +50%, and Bow/Crossbow's Critical Rate +75% and Critical Damage +40%. -->
+		<icon>icon.skill6435</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32810" toLevel="3" name="Energy of Power">
+		<!-- Temporarily increases P. Atk. by $s1 when bow/crossbow is equipped. -->
+		<icon>icon.etc_herb_red_i00</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="32811" toLevel="1" name="Salmon Porridge Attack">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32812" toLevel="2" name="Electric Bolt">
+		<!-- Inflicts Bleed, for 3 sec. the enemy's HP -200 per sec. Inflicted status: Infection (Bleed, Poison). -->
+		<icon>
+			<value level="1">icon.skill0096</value>
+			<value level="2">icon.skill0100</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-574</value>
+			<value level="2">-100</value>
+		</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32813" toLevel="1" name="Electric Rain">
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>110</mpConsume>
+	</skill>
+	<skill id="32814" toLevel="1" name="Red Slash">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-574</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32815" toLevel="1" name="Divine Hammer Attack">
+		<!-- Inflicts Bleed, for 3 sec. the enemy's HP -200 per sec. Inflicted status: Infection (Bleed, Poison). -->
+		<icon>icon.skill0096</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32816" toLevel="1" name="Divine Hammer Shock">
+		<!-- Stuns the target for 4 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>121</mpConsume>
+	</skill>
+	<skill id="32817" toLevel="1" name="Flame Pillar">
+		<!-- A pillar of fire rushes from beneath your target's feet for damage. -->
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>10</mpConsume>
+	</skill>
+	<skill id="32818" toLevel="1" name="Rush Raid">
+		<!-- Powerful rush attack on enemy. -->
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>10</mpConsume>
+	</skill>
+	<skill id="32819" toLevel="1" name="Purifying Prayer">
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>1000</castRange>
+		<hitTime>2500</hitTime>
+	</skill>
+	<skill id="32820" toLevel="1" name="Purifying Hand">
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>1000</castRange>
+		<hitTime>2500</hitTime>
+	</skill>
+	<skill id="32821" toLevel="1" name="Storm Armor">
+		<!-- Due to Storm Isle, Maximum Damage is 1000. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32822" toLevel="1" name="Energy Ball">
+		<!-- A normal attack of a humanoid monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32823" toLevel="1" name="Howl">
+		<!-- A normal attack of a harpy monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32824" toLevel="1" name="Magical Attack">
+		<!-- A powerful attack of a humanoid monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32825" toLevel="1" name="Wind Attack">
+		<!-- A powerful attack of a harpy monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32826" toLevel="1" name="Power Wing Attack">
+		<!-- Melee Warrior-type Succubus Monsters' Powerful Single Target Physical Weapon Attack Skill -->
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32827" toLevel="1" name="Critical Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32828" toLevel="1" name="Rapid Throw">
+		<!-- Ranged Throw-type Monsters' Powerful Single Target Physical Attack Skill -->
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32829" toLevel="1" name="All Skill Master">
+		<!-- P./M. Skill Cooldown -10%. -->
+		<icon>icon.skill32724</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32830" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32831" toLevel="1" name="Silencing Strike">
+		<!-- Strikes nearby enemies with an AoE attack, inflicting Silence for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32832" toLevel="1" name="Petrified">
+		<!-- The petrification is applied and removed from the Treasure Chest and the Priest of Purification according to the status of the Cursed Weapon's owner. The petrification is removed in the following cases: 1. The Cursed Weapon's owner is in a peaceful zone for more than 10 min. 2. The Cursed Weapon's owner is offline for more than 30 min. 3. Monday-Thursday 11:30-11:59 p.m. -->
+		<icon>icon.skill4111</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32833" toLevel="1" name="Received Heal Reduction">
+		<!-- HP recovery effect does not apply. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32834" toLevel="1" name="Kindhearted Lucy's Affection">
+		<!-- You can feel Kindhearted Lucy's affection. For 6 h., XP/SP Bonus +15%, XP/SP gain in Vitality state +15%, M. Atk. +6200, and M. Def. +6700. -->
+		<icon>icon.ev_2018_xmas_heart</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32835" toLevel="1" name="Caring Rok's Earnestness">
+		<!-- You can feel Caring Rok's earnestness. For 6 h., XP/SP Bonus +15%, XP/SP gain in Vitality state +15%, P. Atk. +6200, and P. Def. +6700. -->
+		<icon>icon.ev_2018_xmas_hand</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32836" toLevel="1" name="Kindhearted Lucy's Christmas Rudolph">
+		<!-- Lucy says, Merry Christmas~! Your appearance changes to Rudolph for 2 hours. -->
+		<icon>icon.rudolph_buff</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32837" toLevel="5" name="Lucky Pig's Luck - Stage 1">
+		<!-- Lucky energy for you for the year of the Golden Pig. STR/DEX/CON/INT/WIT/MEN +$s1 Obtain a special reward after 1 hour. Total of 4 stages. <Caution> If you are dead at the time the item is given, you cannot receive Lucky Pig's Lucky Buff and reward. You cannot receive the item if you don't have space in the inventory. -->
+		<icon>icon.etc_pig_adena_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32838" toLevel="1" name="Lucky Pig's Luck - Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="32839" toLevel="1" name="Lucky Pig's Luck - Top Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="32840" toLevel="1" name="Fantasia Harmony - Adventurer">
+		<!-- For 60 minutes, P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +60 minutes0, Shield Def. +60 minutes1, Skill Cooldown -60 minutes2, All Skills MP Consumption -60 minutes3. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32841" toLevel="1" name="Fantasia Harmony - PC Cafe">
+		<!-- For 1 h., P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +1 h.0, Shield Def. +1 h.1, Skill Cooldown -1 h.2, All Skills MP Consumption -1 h.3. PC Cafe only. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32842" toLevel="1" name="Fantasia Harmony - Olympiad">
+		<!-- For 30 minutes, P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +30 minutes0, Shield Def. +30 minutes1, Skill Cooldown -30 minutes2, All Skills MP Consumption -30 minutes3. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32843" toLevel="1" name="Fantasia Harmony - Clan Hall">
+		<!-- For 30 minutes, P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +30 minutes0, Shield Def. +30 minutes1, Skill Cooldown -30 minutes2, All Skills MP Consumption -30 minutes3. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32844" toLevel="1" name="Fantasia Harmony - Residence">
+		<!-- For 1 h., P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +1 h.0, Shield Def. +1 h.1, Skill Cooldown -1 h.2, All Skills MP Consumption -1 h.3. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32845" toLevel="2" name="Fantasia Harmony">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Def. +$s11, Skill Cooldown -$s12, All Skills MP Consumption -$s13. -->
+		<icon>
+			<value level="1">icon.soul_spirit1</value>
+			<value level="2">icon.soul_spirit2</value>
+		</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32846" toLevel="1" name="Fantasia Harmony - 15th Anniversary Gift">
+		<!-- For 1 h. P. Atk. +25%, M. Atk. +45%, P. Def. +45%, M. Def. +35%, P./M. Critical Rate +100%, P. Critical Damage +85%, M. Critical Damage +10%, Atk. Spd. +10%, Casting Spd. +1 h.0, Shield Defense Rate/Defense +1 h.1, Attack Attribute +1 h.2, Skill Cooldown -1 h.3, All Skills MP Consumption -1 h.4., P./M. Critical Hit Rate -1 h.5. -->
+		<icon>icon.ev_15th_buff_i03</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32847" toLevel="2" name="Fantasia Harmony">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, M. Critical Damage +$s8, Atk. Spd. +$s9, Casting Spd. +$s10, Shield Defense Rate/Defense +$s11, Attack Attribute +$s12, Skill Cooldown -$s13, All Skills MP Consumption -$s14., P./M. Critical Hit Rate -$s15. -->
+		<icon>icon.soul_spirit2</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32848" toLevel="2" name="Fantasia Harmony">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, M. Critical Damage +$s8, Atk. Spd. +$s9, Casting Spd. +$s10, Shield Defense Rate/Defense +$s11, Attack Attribute +$s12, Skill Cooldown -$s13, All Skills MP Consumption -$s14., P./M. Critical Hit Rate -$s15. -->
+		<icon>icon.soul_spirit2</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+	</skill>
+	<skill id="32849" toLevel="1" name="Critical Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32850" toLevel="1" name="Rapid Throw">
+		<!-- Ranged Throw-type Monsters' Powerful Single Target Physical Attack Skill -->
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32851" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32852" toLevel="1" name="Critical Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32853" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32854" toLevel="1" name="Energy Burst">
+		<!-- A normal attack of a humanoid monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32855" toLevel="1" name="Magical Attack">
+		<!-- A powerful attack of a humanoid monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32856" toLevel="25" name="Golden Pig's Energy - Stage 1">
+		<!-- Golden Pig's energy for the new year. Everything will work out. For 1 hour, XP/SP +$s1, XP/SP Gain while in Vitality Mode +$s2. A certain amount of Vitality is recovered after 1 hour, and you can obtain Golden Pig's Lucky Coin. Total of 24 stages. <Caution> If you are dead at the time the item is given, you cannot receive Golden Pig's Energy Buff and Golden Pig's Lucky Coin. You cannot receive the item if you don't have space in the inventory. -->
+		<icon>icon.golden_pig_buff</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32857" toLevel="1" name="Golden Pig's Energy - Reward">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="32858" toLevel="1" name="Unholy Strike">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32859" toLevel="1" name="Critical Hit">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32860" toLevel="1" name="Energy Burst">
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32861" toLevel="1" name="Rapid Throw">
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32862" toLevel="1" name="Critical Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32863" toLevel="1" name="Rapid Throw">
+		<!-- Ranged Throw-type Monsters' Powerful Single Target Physical Attack Skill -->
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32864" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32865" toLevel="1" name="Energy Burst">
+		<!-- A normal attack of a monster that uses long-range magic attacks. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32866" toLevel="1" name="Magical Attack">
+		<!-- Ranged Magic-type Monsters' Powerful Single Target Physical Attack Skill -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32867" toLevel="1" name="Furious Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32868" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32869" toLevel="1" name="Wild Strike">
+		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32870" toLevel="1" name="Stunning Strike">
+		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill0347</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<castRange>80</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32871" toLevel="1" name="Critical Strike">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32872" toLevel="1" name="Energy Burst">
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32873" toLevel="1" name="Vitality King Golden Pig">
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32874" toLevel="1" name="Server Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 Normal Attack / M. Critical Rate Limit +50, Speed Limit +20 Max HP Limit +30000, Max HP +15000 -->
+		<icon>icon.server_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32875" toLevel="1" name="Server Level Ranking 2nd Class">
+		<!-- Benefits for ranks 11-50 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 Normal Attack / M. Critical Rate Limit +50, Speed Limit +20 -->
+		<icon>icon.server_ranking_2</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32876" toLevel="1" name="Server Level Ranking 3rd Class">
+		<!-- Benefits for ranks 51-100 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 -->
+		<icon>icon.server_ranking_3</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32877" toLevel="1" name="Human Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Humans. P. Atk. / M. Atk. / P. Def. / M. Def. / Max HP / Max MP +1% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32878" toLevel="1" name="Elf Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Elves. Speed while not in combat +8, Damage received -1% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32879" toLevel="1" name="Dark Elf Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Dark Elves. CHA +1, STR/DEX/CON/INT/WIT/MEN +2 at night -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32880" toLevel="1" name="Orc Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Orcs. P. Atk. / Max HP +2% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32881" toLevel="1" name="Dwarf Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Dwarves. Weapon/Armor Enchant Rate +1%, Max HP / P. Def. / M. Def. +2% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32882" toLevel="1" name="Kamael Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Kamaels. PvP Damage +2% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32883" toLevel="1" name="Ertheia Level Ranking 1st Class">
+		<!-- Benefits for ranks 1-10 amongst Ertheias. P./M. Skill Power +1%, Skill Cooldown - 1% -->
+		<icon>icon.race_ranking_1</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+	</skill>
+	<skill id="32884" toLevel="1" name="Server Ranking Benefit 1">
+		<!-- All Stats +1, Recovery Potion / Elixir Effect +500 -->
+		<icon>icon.UI_server_ranking_1</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32885" toLevel="1" name="Server Ranking Benefit 2">
+		<!-- Normal Attack/M. Critical Rate Limit +50, Speed Limit +20 -->
+		<icon>icon.UI_server_ranking_2</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32886" toLevel="1" name="Server Ranking Benefit 3">
+		<!-- Max HP Limit +30000, Max HP +15000 -->
+		<icon>icon.UI_server_ranking_3</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32887" toLevel="1" name="Race Ranking Benefit">
+		<!-- Humans: P. Atk. / M. Atk. / P. Def. / M. Def. / Max HP / Max MP +1% Elves: Speed when not in combat +8, Damage received -1% Dark Elves: CHA +1, STR/DEX/CON/INT/WIT/MEN +2 at night Orcs: P. Atk. / Max HP +2% Dwarves: Weapon/Armor Enchant Rate +1%, Max HP / P. Def. / M. Def. +2% Kamaels: PvP Damage +2% Ertheias: P./M. Skill Power +1%, Skill Cooldown - 1% -->
+		<icon>icon.UI_race_ranking_1</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="32888" toLevel="1" name="Caring Rok's Coldness">
+		<!-- For 6 h., Vitality Bonus +30%, P. Def. +6500, M. Def. +6500, Attribute Resistance +15. -->
+		<icon>icon.love_mark_blue</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32889" toLevel="1" name="Caring Rok's Passion">
+		<!-- For 6 h., Vitality Bonus +30%, P. Atk. +5%, M. Atk. +5%, Attack Attribute +5. -->
+		<icon>icon.love_mark</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="32890" toLevel="1" name="Infinity Fist">
+		<icon>icon.skill0210</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32891" toLevel="1" name="Spear Slash">
+		<icon>icon.skill0320</icon>
+		<operateType>A1</operateType>
+		<castRange>80</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32892" toLevel="1" name="Slashing Blade">
+		<icon>icon.skill0496</icon>
+		<operateType>A1</operateType>
+		<castRange>80</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32893" toLevel="1" name="Aqua Spike">
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>600</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32894" toLevel="1" name="Bite Attack">
+		<icon>icon.skill0325</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="32895" toLevel="1" name="Fatal Strike">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>50</mpConsume>
+	</skill>
+	<skill id="32896" toLevel="1" name="Fatal Strike">
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="32897" toLevel="1" name="Fatal Slasher">
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="32898" toLevel="1" name="Mass Bleed">
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 11.. Inflicted status: Infection (Bleed, Poison). -->
+		<icon>icon.skill0096</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+	<skill id="32899" toLevel="1" name="Mass Stun">
+		<!-- Attacks nearby enemies and stuns them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill10265</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<mpConsume>1</mpConsume>
+	</skill>
+</list>

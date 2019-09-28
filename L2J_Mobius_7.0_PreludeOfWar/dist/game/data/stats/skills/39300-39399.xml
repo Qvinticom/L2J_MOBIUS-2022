@@ -215,7 +215,7 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39344" toLevel="1" name="Red Libra Specialty - Fishing XP Bonus">
-		<!-- When used, increases Successful Fishing XP by 50% for 1 h.. Applies to all bait. Can be stacked with Angler's Blessing. Will be deleted during maintenance on Wednesday, November 29th when the Red Libra Merchants leave. -->
+		<!-- When used, increases Successful Fishing XP by 50% for 1 h. Applies to all bait. Can be stacked with Angler's Blessing. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -232,8 +232,8 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39347" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
-		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. Will be during maintenance on January 3rd, 2018. -->
+	<skill id="39347" toLevel="1" name="Glowing Dragon's Attribute Potion (XP)">
+		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -242,19 +242,19 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39348" toLevel="1" name="Angler's Blessing (1-h.)">
-		<!-- Increases Acquired XP/ SP on successful fishing by 100% for 1 h.. Effect remains after death and cannot be forcibly removed. Will be deleted during maintenance on January 3rd, 2018. -->
+		<!-- Increases Acquired XP/ SP on successful fishing by 100% for 1 h. Effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="39349" toLevel="2" name="Scroll: Enchant Freya Staff">
+	<skill id="39349" toLevel="2" name="Scroll: Enchant Freya's Staff">
 		<!-- An enchant scroll for Freya Staff. Failure to enchant destroys the weapon. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39350" toLevel="3" name="Freya's Ice Rose">
-		<!-- Increases Max HP/ MP/ CP by $s2, P. Atk./ M. Atk./ P. Def./ M. Def. by $s3, Atk. Spd./ Casting Spd. by $s4, Speed by $s5, Attack Attribute/ Attribute Resistance by $s6, Damage by $s7, P./ M. Skill Power by $s8, Acquired XP/ SP by $s9, and decreases Damage Received by $s10 and Skill MP Consumption by $s11 for $s1. Buffs persist after death. -->
+		<!-- Increases Max HP/ MP/ CP by $s2, P. Atk./ M. Atk./ P. Def./ M. Def. by $s3, Atk. Spd./ Casting Spd. by $s4, Speed by $s5, Attack Attribute/ Attribute Resistance by $s6, Damage by $s7, P./ M. Skill Power by $s8, Acquired XP/ SP by $s9, and decreases Damage Received by $s10 and Skill MP Consumption by $s11 for $s1 Buffs persist after death. -->
 		<icon>icon.bm_freya_ice_rose</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -289,7 +289,7 @@
 		<effectPoint>1</effectPoint>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
-	<skill id="39356" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
+	<skill id="39356" toLevel="1" name="Glowing Dragon's Attribute Potion (XP)">
 		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
 		<operateType>A1</operateType>
@@ -390,7 +390,7 @@
 		<reuseDelay>540000</reuseDelay>
 	</skill>
 	<skill id="39371" toLevel="2" name="Raging Billow Scroll">
-		<!-- Increases Attack Attribute by $s2, all Attribute Resistance by $s3, and Acquired XP/ SP by $s4 for $s1. Buffs persist after death. -->
+		<!-- Increases Attack Attribute by $s2, all Attribute Resistance by $s3, and Acquired XP/ SP by $s4 for $s1 Buffs persist after death. -->
 		<icon>icon.etc_blesscharm_slay_val_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -398,9 +398,9 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39372" toLevel="1" name="Expertise Rune ALL">
-		<!-- When stored in the inventory, it enables you to equip with all grade items without any penalty. -->
-		<icon>icon.ev_charge_run</icon>
+	<skill id="39372" toLevel="1" name="Growth Rune">
+		<!-- When stored in the inventory, Hunting XP/SP +30%. -->
+		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39373" toLevel="1" name="Special Growth Rune">
@@ -408,8 +408,8 @@
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39374" toLevel="2" name="Transformation Skill">
-		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for $s1.\n<Alt +left click> to delete the buff. -->
+	<skill id="39374" toLevel="1" name="Transformation Skill">
+		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for 60 min. <Alt +left click> to delete the buff. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -515,7 +515,7 @@
 	<skill id="39389" toLevel="1" name="Entrance Pass: Krofin's Nest">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39390" toLevel="1" name="+8 Angel's Necklace Box">
+	<skill id="39390" toLevel="2" name="+8 Angel's Necklace Box">
 		<!-- Use it to obtain 1 +8 enchanted Angel's Necklace. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -545,7 +545,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39391" toLevel="1" name="+8 Angel's Earring Box">
+	<skill id="39391" toLevel="2" name="+8 Angel's Earring Box">
 		<!-- Use it to obtain 1 +8 enchanted Angel's Earring. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -575,7 +575,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39392" toLevel="1" name="Stage 5 Soul Crystal Box">
+	<skill id="39392" toLevel="1" name="Soul Crystal Box Lv. 5">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -615,15 +615,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39396" toLevel="1" name="Scroll of Escape - Atelia Refinery">
+	<skill id="39396" toLevel="1" name="Scroll of Escape: Atelia Refinery">
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39397" toLevel="6" name="+5 Radiant Warrior's Circlet Box">
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>400</hitTime>
+		<hitTime>500</hitTime>
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
 			<effect name="RestorationRandom" level="1">

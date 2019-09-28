@@ -17,7 +17,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16802" toLevel="1" name="Rage of Embryo">
-		<!-- Inflicts severe magical damage on a single target and Paralyze damage for 5 sec. -->
+		<!-- Deals great magic damage paralysing the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1160</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -92,7 +92,7 @@
 		<effectPoint>-867</effectPoint>
 	</skill>
 	<skill id="16809" toLevel="1" name="Wild Slash">
-		<!-- Inflicts severe physical damage on a single target and Bleed effect. -->
+		<!-- Deals great physical damage inflicting Bleed on the target. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -103,7 +103,7 @@
 		<effectPoint>-354</effectPoint>
 	</skill>
 	<skill id="16810" toLevel="1" name="Shield Throwing">
-		<!-- Inflicts severe physical damage on the target in the specified range and Stun effect for 5 sec. -->
+		<!-- Deals great physical damage to nearby enemies stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -147,7 +147,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16814" toLevel="1" name="Empower Rush">
-		<!-- Pounces at a single target to inflict physical damage and Knock Back effect. -->
+		<!-- Rushes at the target, deals physical damage and knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0230</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -168,7 +168,7 @@
 		<effectPoint>-867</effectPoint>
 	</skill>
 	<skill id="16816" toLevel="1" name="Destiny Waits">
-		<!-- Inflicts severe magical damage on the target in the specified range and Paralyze effect for 5 sec. -->
+		<!-- Deals great magic damage to nearby enemies paralysing them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -180,6 +180,7 @@
 	</skill>
 	<skill id="16817" toLevel="1" name="Atelia Cannon">
 		<!-- Inflicts severe magical damage on the target in the specified range and decreases Attack and Magical Attach by 30%. -->
+		<icon>icon.skill1434</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
@@ -189,7 +190,8 @@
 		<effectPoint>-52</effectPoint>
 	</skill>
 	<skill id="16818" toLevel="1" name="Overcharge Blast">
-		<!-- Inflicts severe magical damage on the target in the specified range and Paralyze effect for 5 sec. -->
+		<!-- Deals great magic damage to nearby enemies paralysing them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
@@ -257,7 +259,7 @@
 		<effectPoint>-104</effectPoint>
 	</skill>
 	<skill id="16825" toLevel="1" name="Blood Stab">
-		<!-- Attacks the weak spot to inflict additional Bleed effect. -->
+		<!-- Attacks vital spots inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10508</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -289,7 +291,7 @@
 		<effectPoint>-867</effectPoint>
 	</skill>
 	<skill id="16828" toLevel="1" name="Explosion of Despair">
-		<!-- Inflicts severe physical damage on the target in the specified range and Stun effect for 5 sec. -->
+		<!-- Deals great physical damage to nearby enemies stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -336,7 +338,7 @@
 		<effectPoint>707</effectPoint>
 	</skill>
 	<skill id="16833" toLevel="1" name="Thunder Spear">
-		<!-- Attacks the enemy and its vicinity to inflict Stun for 9 sec. -->
+		<!-- Attacks the target and nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skll10321</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -346,7 +348,7 @@
 		<effectPoint>-507</effectPoint>
 	</skill>
 	<skill id="16834" toLevel="1" name="Winged Spear">
-		<!-- Increases Attack by 30% for 60 sec. Additionally, the general attack range is extended by 80 and the Stun state is inflicted at a 10% chance if hit. -->
+		<!-- P. Atk. +30% for 60 sec. In addition, normal attack range +80 and there is a 10% chance to Stun the target with each hit. -->
 		<icon>icon.skill10333</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -377,7 +379,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="16837" toLevel="1" name="Mass Death Fear">
-		<!-- Causes the Fear state on the target and its nearby enemies and decreases speed by 25% for 10 sec. -->
+		<!-- Inflicts Fear on the target and nearby enemies for 10 sec. Speed -25%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -401,7 +403,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="16839" toLevel="1" name="Superior Aggression Aura">
-		<!-- Provokes the targets near you and makes them attack you. -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -411,7 +413,7 @@
 		<effectPoint>-10330</effectPoint>
 	</skill>
 	<skill id="16840" toLevel="1" name="Shield Wave">
-		<!-- Attacks the targets near you and inflicts Stun for 9 sec. -->
+		<!-- Attacks nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -431,7 +433,7 @@
 		<effectPoint>689</effectPoint>
 	</skill>
 	<skill id="16842" toLevel="1" name="Gravity Shock">
-		<!-- Attacks the enemies near you. The impact flings the damaged target over to the direction of the caster. -->
+		<!-- Attacks nearby enemies dealing damage and pulling them toward the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30505</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -526,7 +528,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="16845" toLevel="1" name="Power Bomber">
-		<!-- Attacks the target and the enemies near it, and inflicts Knock Down for 3 sec. -->
+		<!-- Attacks the target and nearby enemies knocking the target down for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -598,7 +600,7 @@
 		<effectPoint>-712</effectPoint>
 	</skill>
 	<skill id="16852" toLevel="1" name="Death Mass Unleash Hell">
-		<!-- Inflicts magical damage on the target and the enemies near it, and inflicts Burn damage while slowing Speed by 60. -->
+		<!-- Deals magic damage to the target and nearby enemies burning them. Speed -60. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill11067</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -620,7 +622,7 @@
 		<effectPoint>1734</effectPoint>
 	</skill>
 	<skill id="16854" toLevel="1" name="Mass Fatal Slip">
-		<!-- Causes Sleep on nearby enemies for 30 sec. -->
+		<!-- Inflicts Sleep on nearby enemies for 30 sec. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11778</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -639,7 +641,7 @@
 		<effectPoint>1760</effectPoint>
 	</skill>
 	<skill id="16856" toLevel="1" name="Hyper Hammer Shot">
-		<!-- Inflicts damage on the target and Stun for an extended period of time. -->
+		<!-- Deals damage to the target stunning it for a long while. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -649,7 +651,7 @@
 		<effectPoint>-183</effectPoint>
 	</skill>
 	<skill id="16857" toLevel="1" name="Hammer Splash">
-		<!-- Inflicts damage and short Stun on everyone near you. -->
+		<!-- Stuns nearby enemies for a while. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -658,7 +660,7 @@
 		<effectPoint>-1378</effectPoint>
 	</skill>
 	<skill id="16858" toLevel="1" name="Aggression Aura">
-		<!-- Pulls every target of the enemies near you toward yourself. -->
+		<!-- Bluffs nearby enemies to attack you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -667,7 +669,7 @@
 		<effectPoint>-10330</effectPoint>
 	</skill>
 	<skill id="16859" toLevel="1" name="Hammer Earthquake">
-		<!-- Inflicts damage and Knock Down on the enemies near you. -->
+		<!-- Attacks nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -693,7 +695,7 @@
 		<effectPoint>-96</effectPoint>
 	</skill>
 	<skill id="16862" toLevel="1" name="Shield Slam">
-		<!-- Wields your shield to inflict damage and Stun. -->
+		<!-- Swings a shield dealing damage and stunning the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10011</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -703,7 +705,7 @@
 		<effectPoint>-1378</effectPoint>
 	</skill>
 	<skill id="16863" toLevel="1" name="Hatable Shout">
-		<!-- Makes yourself the target of the enemies near you. -->
+		<!-- Bluffs nearby enemies to attack you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -750,7 +752,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16868" toLevel="1" name="Horizon Bash">
-		<!-- Wields the shield horizontally to inflict damage and Bleed on enemies in front. -->
+		<!-- Brandishes a spear horizontally to deal damage to enemies and inflict Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10340</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -760,7 +762,7 @@
 		<effectPoint>-125</effectPoint>
 	</skill>
 	<skill id="16869" toLevel="1" name="Horseshoe Tramping">
-		<!-- Uses the front feet of the holy beast to kick and know down enemies in front. -->
+		<!-- Attacks enemies in front of you with hoofs knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16869</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -770,7 +772,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16870" toLevel="1" name="Gigantic Horse Kick">
-		<!-- Uses the hind feet of the holy beast to kick away the enemies in the back. -->
+		<!-- Attacks enemies in front of you with hoofs knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16870</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -843,7 +845,7 @@
 		<effectPoint>-709</effectPoint>
 	</skill>
 	<skill id="16877" toLevel="1" name="Bloody Rush">
-		<!-- Charges toward the distant enemy who attacks you to inflict damage. -->
+		<!-- Charges toward the distant enemy and inflicts damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -862,7 +864,7 @@
 		<effectPoint>-700</effectPoint>
 	</skill>
 	<skill id="16879" toLevel="1" name="Bleed Strike">
-		<!-- Attacks the enemy to inflict damage and Bleed effect. -->
+		<!-- Deals damage and inflicts Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -872,7 +874,7 @@
 		<effectPoint>-111</effectPoint>
 	</skill>
 	<skill id="16880" toLevel="1" name="Decapitation">
-		<!-- Beheads the enemies to inflict damage and Massive Bleed. -->
+		<!-- Deals great damage inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -882,7 +884,7 @@
 		<effectPoint>-111</effectPoint>
 	</skill>
 	<skill id="16881" toLevel="1" name="Power Strike">
-		<!-- Takes away the target of the enemy while attacking. -->
+		<!-- Takes away the enemy's target while attacking. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10330</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -981,7 +983,7 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="16892" toLevel="1" name="Curse of Etina">
-		<!-- The one who was selected by Etis van Etina, the ringleader of the Embryo, is under this curse, which decreases P./ M. Atk. by 30% each for 30 min. Cannot cancel debuff. -->
+		<!-- The one who was selected by Etis van Etina, the ringleader of the Embryo, is under this curse, which decreases P./ M. Atk. by 30% for 30 min. Cannot be removed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1389</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1002,7 +1004,7 @@
 		<effectPoint>-96</effectPoint>
 	</skill>
 	<skill id="16895" toLevel="1" name="Overpower Defense Cannon">
-		<!-- Inflicts severe physical damage on the target in the specified range and Stun effect for 5 sec. -->
+		<!-- Deals great physical damage to nearby enemies stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill30003</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
