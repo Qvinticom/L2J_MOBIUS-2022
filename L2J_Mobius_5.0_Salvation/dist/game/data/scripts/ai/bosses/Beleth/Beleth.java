@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -466,6 +467,7 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN_REAL":
 			{
 				_beleth = addSpawn(REAL_BELETH, new Location(16323, 213170, -9357, 49152));
+				GrandBossManager.getInstance().addBoss((GrandBossInstance) _beleth);
 				break;
 			}
 			case "SPAWN26":
