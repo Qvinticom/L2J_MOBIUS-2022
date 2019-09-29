@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24200" level="97" type="Monster" name="Silence Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="32381" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="25595490" sp="22957" />
@@ -19,6 +23,7 @@
 			<height normal="40" />
 		</collision>
 		<skillList>
+			<skill id="32381" level="1" /> <!-- Demonic Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -44,6 +49,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24201" level="97" type="Monster" name="Silence Slave">
+		<parameters>
+			<skill name="Skill01_ID" id="32391" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="25595490" sp="22957" />
@@ -62,6 +71,7 @@
 			<height normal="32" />
 		</collision>
 		<skillList>
+			<skill id="32391" level="1" /> <!-- Demonic Savage -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -87,6 +97,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24202" level="97" type="Monster" name="Silence Claw">
+		<parameters>
+			<skill name="Skill01_ID" id="32383" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="25595490" sp="22957" />
@@ -105,6 +119,7 @@
 			<height normal="39.5" />
 		</collision>
 		<skillList>
+			<skill id="32383" level="1" /> <!-- Demonic Spike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
@@ -129,6 +144,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24203" level="97" type="Monster" name="Silence Witch">
+		<parameters>
+			<skill name="Skill01_ID" id="32383" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="25595490" sp="22957" />
@@ -147,6 +166,7 @@
 			<height normal="49" />
 		</collision>
 		<skillList>
+			<skill id="32383" level="1" /> <!-- Demonic Spike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
@@ -170,6 +190,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24204" level="97" type="Monster" name="Silence Hannibal" title="Watcher">
+		<parameters>
+			<skill name="Skill01_ID" id="32381" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="26905600" sp="24181" />
@@ -188,6 +212,7 @@
 			<height normal="44" />
 		</collision>
 		<skillList>
+			<skill id="32381" level="1" /> <!-- Demonic Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
@@ -256,6 +281,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24206" level="97" type="Monster" name="Silence Phantom" title="Watcher">
+		<parameters>
+			<skill name="Skill01_ID" id="32384" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="26905600" sp="24181" />
@@ -274,6 +303,7 @@
 			<height normal="52" />
 		</collision>
 		<skillList>
+			<skill id="32384" level="1" /> <!-- Demonic Hydro Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -786,6 +816,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24227" level="106" type="Monster" name="Keros">
+		<parameters>
+			<skill name="Skill01_ID" id="32475" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1338151420" sp="1202252" />
@@ -809,6 +843,7 @@
 			<height normal="32" />
 		</collision>
 		<skillList>
+			<skill id="32475" level="1" /> <!-- Tabeth Fear -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -833,6 +868,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24228" level="106" type="Monster" name="Falena">
+		<parameters>
+			<skill name="Skill01_ID" id="32473" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1338151420" sp="1202252" />
@@ -856,6 +895,7 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32473" level="1" /> <!-- Tabeth Mass Poison -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -881,6 +921,12 @@
 		</dropLists>
 	</npc>
 	<npc id="24229" level="107" type="Monster" name="Atrofa">
+		<parameters>
+			<skill name="Skill01_ID" id="32505" level="1" />
+			<skill name="Skill02_ID" id="32529" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1541367421" sp="1385329" />
@@ -904,6 +950,8 @@
 			<height normal="41.8" />
 		</collision>
 		<skillList>
+			<skill id="32505" level="1" /> <!-- Tabeth Body Attack -->
+			<skill id="32529" level="1" /> <!-- Tabeth Mass Slam -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -928,11 +976,16 @@
 		</dropLists>
 	</npc>
 	<npc id="24230" level="107" type="Monster" name="Nuba">
-		<race>BEAST</race>
-		<sex>MALE</sex>
 		<parameters>
 			<skill name="Skill01_ID" id="32469" level="1" />
+			<skill name="Skill02_ID" id="32471" level="1" />
+			<skill name="Skill03_ID" id="32477" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
 		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
 		<acquire exp="1541367421" sp="1385329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1573898.855535" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
@@ -955,6 +1008,8 @@
 		</collision>
 		<skillList>
 			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
+			<skill id="32471" level="1" /> <!-- Tabeth Slasher -->
+			<skill id="32477" level="1" /> <!-- Tabeth Savage -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1030,6 +1085,12 @@
 		</dropLists>
 	</npc>
 	<npc id="24232" level="108" type="Monster" name="Arima" title="Orfen's Handmaiden">
+		<parameters>
+			<skill name="Skill01_ID" id="32478" level="1" />
+			<skill name="Skill02_ID" id="32479" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="5254515360" sp="4723920" />
@@ -1053,6 +1114,8 @@
 			<height normal="22.5" />
 		</collision>
 		<skillList>
+			<skill id="32478" level="1" /> <!-- Scale Strike -->
+			<skill id="32479" level="1" /> <!-- Scale Slasher -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->

@@ -262,6 +262,14 @@
 		</dropLists>
 	</npc>
 	<npc id="23505" level="101" type="Monster" name="Fortress Raider">
+		<parameters>
+			<skill name="Skill01_ID" id="23638" level="1" />
+			<skill name="Skill02_ID" id="23639" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17421" />
@@ -279,6 +287,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -311,6 +322,14 @@
 		</dropLists>
 	</npc>
 	<npc id="23506" level="101" type="Monster" name="Fortress Guardian Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="23636" level="1" />
+			<skill name="Skill02_ID" id="23637" level="1" />
+			<skill name="Skill03_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -328,6 +347,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -364,6 +386,14 @@
 	</npc>
 	<npc id="23507" level="101" type="Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23640" level="1" />
+			<skill name="Skill02_ID" id="23641" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17329" />
 		<acquire exp="247302434" sp="247374" />
@@ -380,6 +410,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -413,6 +446,12 @@
 	</npc>
 	<npc id="23508" level="101" type="Monster" name="Atelia Elite Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23642" level="1" />
+			<skill name="Skill02_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="311374507" sp="311436" />
@@ -429,6 +468,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -465,6 +506,14 @@
 	</npc>
 	<npc id="23509" level="102" type="Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23646" level="1" />
+			<skill name="Skill03_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17391" />
 		<sex>MALE</sex>
@@ -482,6 +531,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23706" level="4" /> <!-- Dark Fire -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -516,6 +568,16 @@
 	</npc>
 	<npc id="23510" level="102" type="Monster" name="Atelia Flame Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23649" level="1" />
+			<skill name="Skill03_ID" id="23650" level="1" />
+			<skill name="Skill04_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+			<param name="Skill04_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17425" />
 		<sex>MALE</sex>
@@ -533,6 +595,10 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23649" level="1" /> <!-- Curse of Blaze -->
+			<skill id="23650" level="1" /> <!-- Meteor Hurricane -->
+			<skill id="23706" level="4" /> <!-- Dark Fire -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -991,6 +1057,14 @@
 	</npc>
 	<npc id="23539" level="104" type="Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23654" level="1" />
+			<skill name="Skill02_ID" id="23655" level="1" />
+			<skill name="Skill03_ID" id="23680" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1003,6 +1077,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23654" level="1" /> <!-- Earth Breaker -->
+			<skill id="23655" level="1" /> <!-- Gravity Slam -->
+			<skill id="23680" level="1" /> <!-- Kelbim's Blessing -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1298,6 +1375,12 @@
 	</npc>
 	<npc id="23547" level="103" type="Monster" name="Fury Sylph Purka">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23667" level="1" />
+			<skill name="Skill02_ID" id="23658" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="740762816" sp="740826" />
@@ -1314,6 +1397,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23667" level="1" /> <!-- Mass Air Binding -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1699,6 +1784,12 @@
 	</npc>
 	<npc id="23556" level="103" type="Monster" name="Fury Sylph Purka" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23667" level="1" />
+			<skill name="Skill02_ID" id="23658" level="2" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="740762816" sp="740826" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1714,6 +1805,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23667" level="1" /> <!-- Mass Air Binding -->
+			<skill id="23658" level="2" /> <!-- Earth Aura Spike -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -2090,6 +2183,12 @@
 	</npc>
 	<npc id="23568" level="102" type="Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2106,6 +2205,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
+			<skill id="23716" level="2" /> <!-- Power Smash -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2131,6 +2232,12 @@
 	</npc>
 	<npc id="23569" level="102" type="Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2147,6 +2254,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
+			<skill id="23716" level="2" /> <!-- Power Smash -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2171,6 +2280,14 @@
 	</npc>
 	<npc id="23570" level="102" type="Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<skill name="Skill03_ID" id="23721" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2187,6 +2304,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
+			<skill id="23716" level="2" /> <!-- Power Smash -->
+			<skill id="23721" level="1" /> <!-- Tulip Scent Spray -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2208,8 +2328,16 @@
 			</lucky>
 		</dropLists>
 	</npc>
-		<npc id="23571" level="102" type="Monster" name="Nymph Tulip">
+	<npc id="23571" level="102" type="Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<skill name="Skill03_ID" id="23721" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2226,6 +2354,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
+			<skill id="23716" level="2" /> <!-- Power Smash -->
+			<skill id="23721" level="1" /> <!-- Tulip Scent Spray -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2250,6 +2381,10 @@
 	</npc>
 	<npc id="23572" level="102" type="Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2266,6 +2401,7 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2289,6 +2425,10 @@
 	</npc>
 	<npc id="23573" level="102" type="Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2305,6 +2445,7 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -2497,6 +2638,12 @@
 	</npc>
 	<npc id="23578" level="103" type="Monster" name="Nymph Guardian" title="Guardian of the Flower">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23723" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<acquire exp="206128838" sp="185445" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2513,6 +2660,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23715" level="2" /> <!-- Power Strike -->
+			<skill id="23723" level="1" /> <!-- Guardian Knock Down -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -2986,6 +3135,14 @@
 		</skillList>
 	</npc>
 	<npc id="23595" level="101" type="Monster" name="Fortress Raider">
+		<parameters>
+			<skill name="Skill01_ID" id="23638" level="1" />
+			<skill name="Skill02_ID" id="23639" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17421" />
@@ -3003,6 +3160,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -3019,6 +3179,14 @@
 		</collision>
 	</npc>
 	<npc id="23596" level="102" type="Monster" name="Fortress Guardian Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="23636" level="1" />
+			<skill name="Skill02_ID" id="23637" level="1" />
+			<skill name="Skill03_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -3036,6 +3204,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -3053,6 +3224,14 @@
 	</npc>
 	<npc id="23597" level="101" type="Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23640" level="1" />
+			<skill name="Skill02_ID" id="23641" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17329" />
 		<acquire exp="102491487" sp="205040" />
@@ -3069,6 +3248,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -3086,6 +3268,12 @@
 	</npc>
 	<npc id="23598" level="102" type="Monster" name="Atelia Elite Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23642" level="1" />
+			<skill name="Skill02_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="888259707" sp="1776587" />
@@ -3102,6 +3290,8 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -3119,6 +3309,14 @@
 	</npc>
 	<npc id="23599" level="102" type="Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23646" level="1" />
+			<skill name="Skill03_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="17391" />
 		<sex>MALE</sex>
@@ -3136,6 +3334,9 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23706" level="4" /> <!-- Dark Fire -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->

@@ -528,7 +528,7 @@
 	<skill id="32354" toLevel="1" name="Helios's Throne of Agony">
 		<!-- Shoots Arrows of Light at nearby enemies, dealing magic damage and knocking them down. -->
 		<icon>icon.skill1275</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
@@ -540,7 +540,7 @@
 	<skill id="32355" toLevel="1" name="Emperor Helios's Authority">
 		<!-- Throws bombs of light at the target and enemies around them, dealing magic damage and decreasing their P. Atk. and M. Atk. by 30%, and P. Def. and M. Def. by 50%. -->
 		<icon>icon.skill16612</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>2500</castRange>
@@ -553,7 +553,7 @@
 	<skill id="32356" toLevel="1" name="Audience with Emperor Helios">
 		<!-- Decreased Speed. -->
 		<icon>icon.skill16612</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>2500</castRange>
@@ -566,7 +566,7 @@
 	<skill id="32357" toLevel="1" name="Helios Plasma Pressure">
 		<!-- Deals physical damage to the target and surrounding enemies and paralyzes them. -->
 		<icon>icon.skill1172</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
 		<hitTime>2000</hitTime>
@@ -588,7 +588,7 @@
 	<skill id="32359" toLevel="1" name="Helios's Overawing Gaze">
 		<!-- Awed by Helios and frozen like a statue. -->
 		<icon>icon.skill16614</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
@@ -601,7 +601,7 @@
 	<skill id="32360" toLevel="1" name="Enuma Elish - Red Lightning Spear">
 		<!-- Helios throws a spear of red lightning to deal powerful damage to the target and surrounding enemies and knock them down. -->
 		<icon>icon.skill16617</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>3500</castRange>
@@ -612,7 +612,7 @@
 	<skill id="32361" toLevel="1" name="Enuma Elish - Blue Lightning Spear">
 		<!-- Helios throws a spear of blue lightning to deal powerful damage to the target and surrounding enemies and drain their MP. -->
 		<icon>icon.skill16618</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>3500</castRange>
@@ -623,7 +623,7 @@
 	<skill id="32362" toLevel="1" name="Stigma of Deterioration">
 		<!-- Unable to resurrect after dying, and suffers damage over time. -->
 		<icon>icon.skill1181</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>3500</castRange>
@@ -632,7 +632,7 @@
 	<skill id="32363" toLevel="1" name="Stigma of Lightning">
 		<!-- Unable to resurrect after dying, and P. Def. and M. Def decreases. -->
 		<icon>icon.skill0048</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>3500</castRange>
@@ -663,7 +663,7 @@
 	<skill id="32366" toLevel="1" name="Helios's Lightning of Anger">
 		<!-- Strikes the target and surrounding enemies with lightning, dealing magic damage and paralyzing them. Also decreases their P. Def. and M. Def. -->
 		<icon>icon.skll10094</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>2500</castRange>
@@ -674,7 +674,7 @@
 	<skill id="32367" toLevel="1" name="Shield of Light - Pranarach (100%)">
 		<!-- Summons the Shield of Light Pranarach, which prevents receiving more than 100 damage. -->
 		<icon>icon.skill16624</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
@@ -704,7 +704,7 @@
 	<skill id="32370" toLevel="1" name="Leopold Plasma Bomb">
 		<!-- Deals magic damage to the target and surrounding enemies, and additionally deals damage over time. -->
 		<icon>icon.skill1064</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>3500</castRange>
@@ -738,7 +738,7 @@
 	<skill id="32373" toLevel="1" name="Leopold Spray Shot">
 		<!-- Deals magic damage to the target and surrounding enemies and decreases their Speed. -->
 		<icon>icon.skill0507</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
@@ -751,7 +751,7 @@
 	<skill id="32374" toLevel="1" name="Leopold Harpoon">
 		<!-- Launches a powerful harpoon of lightning at the target, dealing magic damage and paralyzing them. -->
 		<icon>icon.skll10321</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
@@ -773,7 +773,7 @@
 	<skill id="32376" toLevel="1" name="Origin Spinning Slasher">
 		<!-- Brandishes a spear of lightning to damage the target and surrounding enemies and inflict Bleed on them. -->
 		<icon>icon.skill0922</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
 		<hitTime>2500</hitTime>
@@ -785,7 +785,7 @@
 	<skill id="32377" toLevel="1" name="Origin Lightning Harpoon">
 		<!-- Throws a harpoon lightning at the target, dealing powerful physical damage and decreasing their P. Def. and M. Def. -->
 		<icon>icon.skill0279</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
 		<hitTime>3000</hitTime>
@@ -802,7 +802,7 @@
 		<castRange>3000</castRange>
 		<hitTime>15000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>2</effectPoint>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32379" toLevel="1" name="Force of Giant's Fury">
 		<!-- Presentation skill -->
@@ -827,7 +827,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -848,7 +848,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -869,7 +869,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -891,7 +891,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>25500</power> <!-- Fix:  Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -912,7 +912,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>25500</power> <!-- Fix:  Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -932,7 +932,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>25500</power> <!-- Fix:  Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -952,7 +952,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -974,7 +974,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>25500</power> <!-- Fix:  Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>

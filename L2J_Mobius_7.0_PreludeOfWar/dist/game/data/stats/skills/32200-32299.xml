@@ -214,13 +214,33 @@
 	<skill id="32223" toLevel="1" name="Curse of Lithra">
 		<!-- Lithra's curse transforms you into a rabbit and limits your actions. -->
 		<icon>icon.skill1092</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>105</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>105</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32224" toLevel="1" name="Trick of Lithra">
 		<!-- Lithra's curse immobilizes your character. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -250,7 +270,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -273,7 +293,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -295,7 +315,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -318,7 +338,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -341,11 +361,11 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 			<effect name="MagicalAttack">
-				<power>25500</power> <!-- Fix: Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -367,7 +387,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -419,7 +439,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -460,7 +480,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>

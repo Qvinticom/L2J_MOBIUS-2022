@@ -279,6 +279,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24308" level="110" type="Monster" name="Water Drake" title="Fafurion's Henchman">
+		<parameters>
+			<skill name="Skill01_ID" id="32666" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="3680457000" sp="3303300" />
@@ -297,6 +301,7 @@
 			<height normal="80.5" />
 		</collision>
 		<skillList>
+			<skill id="32666" level="1" /> <!-- Water Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
@@ -326,6 +331,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24309" level="107" type="Monster" name="Krophy">
+		<parameters>
+			<skill name="Skill01_ID" id="32676" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="222117927" sp="199899" />
@@ -349,6 +358,7 @@
 			<height normal="43.8" />
 		</collision>
 		<skillList>
+			<skill id="32676" level="1" /> <!-- Spiz Strike -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -415,6 +425,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24311" level="106" type="Monster" name="Kropiora">
+		<parameters>
+			<skill name="Skill01_ID" id="32676" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="192829535" sp="173483" />
@@ -438,6 +452,7 @@
 			<height normal="20" />
 		</collision>
 		<skillList>
+			<skill id="32676" level="1" /> <!-- Spiz Strike -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -1053,6 +1068,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24325" level="112" type="Monster" name="Temple Wizard">
+		<parameters>
+			<skill name="Skill01_ID" id="32697" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -1076,6 +1095,7 @@
 			<height normal="36.95" />
 		</collision>
 		<skillList>
+			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1099,6 +1119,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24326" level="114" type="Monster" name="Temple Guardian Wizard">
+		<parameters>
+			<skill name="Skill01_ID" id="32697" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3434335956" sp="3080052" />
@@ -1122,6 +1146,7 @@
 			<height normal="36.95" />
 		</collision>
 		<skillList>
+			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1145,6 +1170,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24327" level="112" type="Monster" name="Temple Priest">
+		<parameters>
+			<skill name="Skill01_ID" id="32697" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -1168,6 +1197,7 @@
 			<height normal="36.95" />
 		</collision>
 		<skillList>
+			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1237,6 +1267,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24329" level="111" type="Monster" name="Starving Water Dragon">
+		<parameters>
+			<skill name="Skill01_ID" id="32704" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="2446272945" sp="2193138" />
@@ -1260,6 +1294,7 @@
 			<height normal="25" />
 		</collision>
 		<skillList>
+			<skill id="32704" level="1" /> <!-- Bite Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="14819" level="1" /> <!-- Instant Kill Attack Resistance -->

@@ -611,12 +611,11 @@
 		<magicLvl>1</magicLvl>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -726,7 +725,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>10000</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -930,13 +929,12 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effectRange>400</effectRange>
-		<basicProperty>NONE</basicProperty>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<basicProperty>MAGIC</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>
@@ -966,13 +964,12 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effectRange>400</effectRange>
-		<basicProperty>NONE</basicProperty>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<basicProperty>MAGIC</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>35500</power> <!-- Fix: Retail Missed -->
+				<power>2000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>

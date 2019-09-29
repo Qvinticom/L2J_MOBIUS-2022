@@ -1157,6 +1157,12 @@
 		</collision>
 	</npc>
 	<npc id="24139" level="104" type="Monster" name="Reep Child">
+		<parameters>
+			<skill name="Skill01_ID" id="32225" level="1" />
+			<skill name="Skill02_ID" id="32226" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="174905536" sp="151424" />
@@ -1175,6 +1181,8 @@
 			<height normal="42" />
 		</collision>
 		<skillList>
+			<skill id="32225" level="1" /> <!-- Fatal Reep -->
+			<skill id="32226" level="1" /> <!-- Reep Blast -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1199,6 +1207,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24140" level="104" type="Monster" name="Needle Child">
+		<parameters>
+			<skill name="Skill01_ID" id="32227" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="174905536" sp="151424" />
@@ -1217,6 +1229,7 @@
 			<height normal="43" />
 		</collision>
 		<skillList>
+			<skill id="32227" level="1" /> <!-- Fatal Needle -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1241,6 +1254,12 @@
 		</dropLists>
 	</npc>
 	<npc id="24141" level="105" type="Monster" name="Blossom Child">
+		<parameters>
+			<skill name="Skill01_ID" id="32229" level="1" />
+			<skill name="Skill02_ID" id="32223" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="500" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="213951150" sp="187425" />
@@ -1259,6 +1278,8 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32229" level="1" /> <!-- Blossom Spike -->
+			<skill id="32223" level="1" /> <!-- Curse of Lithra -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1284,6 +1305,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24142" level="105" type="Monster" name="Teasle Child">
+		<parameters>
+			<skill name="Skill01_ID" id="32232" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="213951150" sp="187425" />
@@ -1302,6 +1327,7 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32232" level="1" /> <!-- Fatal Teasle -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1372,7 +1398,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet -->
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet - Light Armor -->
 				<item id="57" min="5951" max="13886" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
@@ -1415,7 +1441,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light Armor -->
 				<item id="57" min="5951" max="13886" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
@@ -1457,7 +1483,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17440" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Boots -->
+				<item id="17440" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Boots - Light Armor -->
 				<item id="57" min="6078" max="14172" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
@@ -1500,7 +1526,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light Armor -->
 				<item id="57" min="6078" max="14172" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
@@ -1540,7 +1566,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves -->
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light Armor -->
 				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
 				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
