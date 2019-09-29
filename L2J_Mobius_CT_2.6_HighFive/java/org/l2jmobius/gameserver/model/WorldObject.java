@@ -539,9 +539,13 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return _worldRegion;
 	}
 	
-	public void setWorldRegion(WorldRegion value)
+	public void setWorldRegion(WorldRegion region)
 	{
-		_worldRegion = value;
+		if ((region == null) && (_worldRegion != null))
+		{
+			_worldRegion.removeVisibleObject(this);
+		}
+		_worldRegion = region;
 	}
 	
 	/**

@@ -2469,15 +2469,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set world region to null.
 		setWorldRegion(null);
 		
-		// Reset initial monster position.
-		if (isMonster() && (((Npc) this).getSpawn() != null))
-		{
-			ThreadPool.schedule(() ->
-			{
-				setXYZ(0, 0, -10000);
-			}, 5000);
-		}
-		
 		return true;
 	}
 	

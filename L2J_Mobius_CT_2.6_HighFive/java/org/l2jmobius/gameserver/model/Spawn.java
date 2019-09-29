@@ -100,7 +100,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	 */
 	public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
-		super(0, 0, 0);
+		super(0, 0, -10000);
 		// Set the _template of the Spawn
 		_template = template;
 		
@@ -355,7 +355,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	{
 		int newlocx = 0;
 		int newlocy = 0;
-		int newlocz = 0;
+		int newlocz = -10000;
 		
 		// If Locx and Locy are not defined, the NpcInstance must be spawned in an area defined by location or spawn territory
 		// New method
