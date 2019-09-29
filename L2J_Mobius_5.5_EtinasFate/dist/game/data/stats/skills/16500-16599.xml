@@ -1123,8 +1123,8 @@
 		<affectScope>FAN_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+			<effect name="PhysicalAttack"> <!-- TODO -->
+				<power>100000</power>
 			</effect>
 		</effects>
 	</skill>

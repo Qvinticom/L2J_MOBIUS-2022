@@ -819,6 +819,19 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32381" toLevel="1" name="Demonic Strike">
 		<!-- Melee Warrior-type Monsters' Powerful Single Target Physical Attack Skill -->
@@ -827,6 +840,19 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32382" toLevel="1" name="Demonic Shot">
 		<!-- Ranged Archer-type Monsters' Powerful Single Target Physical Attack Skill -->
@@ -835,6 +861,19 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32383" toLevel="1" name="Demonic Spike">
 		<!-- Ranged Wizard-type Monsters' Powerful Single Target Magic Attack Skill (Non-Attribute) -->
@@ -844,6 +883,18 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32384" toLevel="1" name="Demonic Hydro Attack">
 		<!-- Melee Wizard-Type Monsters' Powerful Single Target Magic Attack Skill (Non-Attribute) -->
@@ -853,6 +904,18 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32385" toLevel="1" name="Demonic Buster">
 		<!-- Wizard-type Monsters' Close Range AoE Magic Attack Skill (Non-Attribute) -->
@@ -861,6 +924,18 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32386" toLevel="1" name="Demonic Burst Shot">
 		<!-- Ranged Archer-type Monsters' Ranged AoE Physical Attack Skill -->
@@ -869,6 +944,19 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32387" toLevel="1" name="Demonic Blast">
 		<!-- Ranged Wizard-type Monsters' Ranged AoE Magic Attack Skill (Non-Attribute) -->
@@ -878,44 +966,140 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32388" toLevel="1" name="Demonic Bleed">
 		<!-- Inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>BLEED</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>2000</power> <!-- Fix: Retail Missed -->
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32389" toLevel="1" name="Demonic Poison">
 		<!-- Inflicts Poison for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>2000</power> <!-- Fix: Retail Missed -->
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32390" toLevel="1" name="Demonic Mass Poison">
 		<!-- Inflicts Poison for 10 sec. in the area. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>2000</power> <!-- Fix: Retail Missed -->
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32391" toLevel="1" name="Demonic Savage">
 		<!-- For 60 sec., increases P. Atk. by 10%, M. Atk. by 20%, Atk. Spd. by 10%, Casting Spd. by 10%. -->
 		<icon>icon.skill1914</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>RACE_ORC1</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32392" toLevel="1" name="Fire Spike">
 		<operateType>A1</operateType>

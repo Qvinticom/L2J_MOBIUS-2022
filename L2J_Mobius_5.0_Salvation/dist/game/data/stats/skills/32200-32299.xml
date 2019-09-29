@@ -1,5 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="32200" toLevel="1" name="Hypnotic Mazurka">
+		<icon>icon.skill5008_psycho</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isDebuff>true</isDebuff>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="32201" toLevel="1" name="Intrusion Alert">
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
 	<skill id="32202" toLevel="1" name="Dragon's Curse">
 		<!-- Punishes those who enter the Dragon's Curse zone. Decreases their HP and Speed by 90% over time. -->
 		<icon>icon.skill4683</icon>
@@ -222,6 +239,19 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32226" toLevel="1" name="Reep Blast">
 		<!-- Physical attack on enemies near the target. -->
@@ -231,6 +261,20 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-114</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32227" toLevel="1" name="Fatal Needle">
 		<!-- Attack on a single physical target. -->
@@ -240,6 +284,19 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32228" toLevel="1" name="Needle Blast">
 		<!-- Physical attack on enemies near the target. -->
@@ -249,6 +306,20 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-114</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32229" toLevel="1" name="Blossom Spike">
 		<!-- Physical and magic attacks on the target. -->
@@ -258,6 +329,23 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+			<effect name="MagicalAttack">
+				<power>25500</power> <!-- Fix:  Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32230" toLevel="1" name="Blossom Blast">
 		<!-- Physical attack on enemies near the target. -->
@@ -267,17 +355,50 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-114</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32231" toLevel="1" name="Blossom Poison">
 		<!-- Receives damage for 10 seconds over time as poisoned by Treant Blossom. -->
 		<icon>icon.skill4036</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>2000</power> <!-- Fix:  Retail Missed -->
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32232" toLevel="1" name="Fatal Teasle">
 		<!-- Attack on a single physical target. -->
@@ -287,6 +408,19 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32233" toLevel="1" name="Teasle Howling">
 		<!-- AoE attack within a 160-degree radius in front. -->
@@ -315,6 +449,19 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix:  Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32236" toLevel="1" name="Rampike Wave">
 		<!-- Blown away and damaged by Rampike's attack. -->
@@ -560,19 +707,31 @@
 		<!-- For $s1, Max HP/ MP/ CP +$s2, P. Atk./ M. Atk./ P. Def./ M. Def. +$s3, Atk./ Casting Spd. +$s4, Speed +$s5, Attack/ Defense Attribute +$s6, and Skill MP Consumption -$s7. Additionally increases Acquired XP/ SP by $s8. Effect remains after death, but is deleted on entering the Olympiad/ Ceremony of Chaos. Will be deleted during maintenance on November 7, 2018. -->
 		<icon>icon.ev_libra_red_buff1</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32265" toLevel="1" name="Elysium Vital Research Vitality Recovery">
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32266" toLevel="24" name="Green's Elysium Vital Research - Stage 1">
 		<!-- Volunteered for Green's research. Gathering Mother Nature's energy recovers some Vitality after $s1 h. $s2 stages in total. Will be deleted during maintenance on November 7, 2018. -->
 		<icon>icon.ev_libra_green_buff1</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32267" toLevel="1" name="Blue's Raid Blessing">
 		<!-- Temporary Raid Herald Blue's blessing increases raid points you gain by $s2 for $s1. Will be deleted during maintenance on Wednesday, July 5th when the Red Libra Merchants leave. -->
 		<icon>icon.ev_libra_blue_buff1</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="32268" toLevel="1" name="Ancient Dragon's Blessing">
 		<!-- Ancient Dragon's Blessing increases XP and SP by 100% for 1 hour. It can be stacked with the Fall of the Dragon debuff. It is deleted during the regular maintenance on June 14 (Wed) when Draco leaves. -->

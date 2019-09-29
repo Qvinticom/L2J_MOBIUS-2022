@@ -988,11 +988,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1124,8 +1124,8 @@
 		<affectScope>FAN_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+			<effect name="PhysicalAttack"> <!-- TODO -->
+				<power>100000</power>
 			</effect>
 		</effects>
 	</skill>

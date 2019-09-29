@@ -117,6 +117,25 @@
 		</castRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
+		<coolTime>720</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-111</effectPoint>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">10000</value> <!-- Fix: Retail Missed -->
+					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23716" toLevel="2" name="Power Smash">
 		<operateType>A1</operateType>
@@ -126,6 +145,26 @@
 		</castRange>
 		<effectPoint>-2</effectPoint>
 		<hitTime>1500</hitTime>
+		<castRange>300</castRange>
+		<coolTime>720</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-111</effectPoint>
+		<isDebuff>true</isDebuff>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">10000</value> <!-- Fix: Retail Missed -->
+					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23717" toLevel="5" name="Pollen Spray">
 		<!-- Leaves a mark to the killer when dying.. -->
@@ -175,6 +214,26 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
+		<affectLimit>5-10</affectLimit>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime> <!-- Fix: Retail Missed -->
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>1100</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<fanRange>0;0;600;600</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
 	</skill>
 	<skill id="23722" toLevel="1" name="Cosmos Scent Spray">
 		<!-- Binds enemies and immobilizes them. -->
@@ -193,6 +252,35 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1</effectPoint>
+		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<affectLimit>5-10</affectLimit>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<coolTime>200</coolTime>
+		<effectRange>800</effectRange>
+		<fanRange>0;0;600;60</fanRange>
+		<magicLvl>1</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="KnockBack">
+				<speed>200</speed>
+				<distance>100</distance>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>40</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23724" toLevel="1" name="Nymph's Fury">
 		<operateType>A1</operateType>

@@ -280,6 +280,11 @@
 			<value level="3">icon.skill10262</value>
 		</icon>
 		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32630" toLevel="2" name="Queen Krosha Howling">
 		<!-- Makes a loud noise, dealing damage to nearby targets and stunning them. -->
@@ -312,6 +317,11 @@
 			<value level="2">icon.skill32632</value>
 		</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32633" toLevel="2" name="Queen Krosha Rage">
 		<!-- Amplifies the Rage against the target, sharply increasing your physical and magic attack speeds, P. Atk, and M. Atk. -->
@@ -596,6 +606,19 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-115</effectPoint>
 		<mpConsume>1</mpConsume>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32667" toLevel="1" name="Water Curse Clear">
 		<!-- Casts a curse to remove weapons from the target. -->
@@ -695,6 +718,18 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32677" toLevel="1" name="Servitor Attack Weakness">
 		<!-- Weak against Servitor attacks. -->
@@ -891,6 +926,19 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32698" toLevel="1" name="Tidal Wave">
 		<!-- Summons a huge wave to attack the target and enemies in its path and push them away. -->
@@ -914,5 +962,18 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<affectRange>300</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>35500</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 </list>
