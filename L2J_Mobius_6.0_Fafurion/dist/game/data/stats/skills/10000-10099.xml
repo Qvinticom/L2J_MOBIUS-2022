@@ -763,11 +763,11 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PAtk">
+			<effect name="PhysicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
+			<effect name="MagicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1156,7 +1156,7 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">190</value>
+			<value fromLevel="1" toLevel="11">90</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2027,6 +2027,9 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />

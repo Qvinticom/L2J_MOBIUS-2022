@@ -485,6 +485,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SHIELD_ATTACK</abnormalType>
 		<operateType>DA2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<mpConsume>
 			<value level="1">53</value>
 			<value level="2">54</value>
@@ -516,7 +517,6 @@
 			<value level="10">103</value>
 			<value level="11">105</value>
 		</magicLvl>
-		<reuseDelay>10000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -568,6 +568,7 @@
 			<value fromLevel="1" toLevel="11">100</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
+		<trait>SHOCK</trait>
 		<effectRange>400</effectRange>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -605,7 +606,6 @@
 		<effectPoint>-5000</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -647,9 +647,6 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -832,6 +829,9 @@
 				<speed>700</speed>
 				<distance>50</distance>
 				<knockDown>false</knockDown>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -1947,6 +1947,9 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -4825,9 +4828,9 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
 		</magicLvl>
 		<effects>
 			<effect name="HealPercent">
@@ -4836,10 +4839,11 @@
 					<value level="2">5</value>
 					<value level="3">6</value>
 					<value level="4">7</value>
-					<value level="5">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8</value>
+					<value level="6">9</value>
+					<value level="7">10</value>
 				</power>
+				<mode>PER</mode>
 			</effect>
 			<effect name="ManaHealPercent">
 				<power>
@@ -4847,10 +4851,11 @@
 					<value level="2">6</value>
 					<value level="3">7</value>
 					<value level="4">8</value>
-					<value level="5">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">9</value>
+					<value level="6">10</value>
+					<value level="7">10</value>
 				</power>
+				<mode>PER</mode>
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>

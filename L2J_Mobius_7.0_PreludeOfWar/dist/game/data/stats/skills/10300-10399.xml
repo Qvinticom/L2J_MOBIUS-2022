@@ -1363,7 +1363,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>60</activateRate> <!-- Guessed -->
 		<activateRate>
 			<value fromLevel="1" toLevel="9">60</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
@@ -1429,6 +1428,9 @@
 					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

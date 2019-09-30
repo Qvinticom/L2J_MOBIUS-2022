@@ -192,6 +192,11 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>SWORD</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -265,6 +270,11 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+					<item>DUALBLUNT</item>
+					<item>DUAL</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -596,7 +606,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>20</chance>
+				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
@@ -716,7 +726,6 @@
 					<value level="11">22603</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -920,17 +929,11 @@
 			<effect name="KnockBack">
 				<distance>250</distance>
 				<speed>600</speed>
-				<knockDown>true</knockDown>
+				<knockDown>false</knockDown>
 			</effect>
-			<effect name="DefenceTrait">
-				<AIRBIND>100</AIRBIND>
-				<KNOCKBACK>100</KNOCKBACK>
-				<SLEEP>100</SLEEP>
-				<KNOCKDOWN>100</KNOCKDOWN>
-				<SHOCK>100</SHOCK>
-				<HOLD>100</HOLD>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="BlockActions" />
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
 					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
@@ -1571,8 +1574,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>200</amount>
-				<mode>DIFF</mode>
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -2098,7 +2101,6 @@
 		<effectPoint>707</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2284,7 +2286,7 @@
 			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>
-		<isMagic>4</isMagic> <!-- Item Skill -->
+		<isMagic>2</isMagic> <!-- Item Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -2292,7 +2294,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<castRange>400</castRange>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">

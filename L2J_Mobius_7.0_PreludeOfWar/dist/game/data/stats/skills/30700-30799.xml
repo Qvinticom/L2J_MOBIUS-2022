@@ -517,7 +517,7 @@
 		</effects>
 	</skill>
 	<skill id="30763" toLevel="2" name="Unicorn's Touch">
-		<!-- Inflicts damage on a single target with $s1 added to P. Atk. -->
+		<!-- Inflicts damage on a single target with 2101 added to P. Atk. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -529,9 +529,17 @@
 			<value level="1">4</value>
 			<value level="2">5</value>
 		</mpConsume>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">2101</value>
+					<value level="2">2151</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30764" toLevel="2" name="Unicorn's Power">
-		<!-- Inflicts damage on nearby enemies with $s1 Power added to P. Atk. -->
+		<!-- Inflicts damage on nearby enemies with 2311 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>

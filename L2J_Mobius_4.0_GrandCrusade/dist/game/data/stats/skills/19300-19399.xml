@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19300" toLevel="1" name="Reverse Mana Drain">
 		<icon>icon.skill19299</icon>
-		<effectPoint>-709</effectPoint>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effectPoint>-709</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="ManaHealPercent">

@@ -16,7 +16,6 @@
 	<skill id="19301" toLevel="11" name="Istina Acid Swarm">
 		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
-		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<mpConsume>107</mpConsume>
@@ -215,7 +214,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>120</activateRate>
+		<activateRate>80</activateRate>
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -286,6 +285,9 @@
 			<effect name="Heal">
 				<power>-70</power>
 				<ticks>5</ticks>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

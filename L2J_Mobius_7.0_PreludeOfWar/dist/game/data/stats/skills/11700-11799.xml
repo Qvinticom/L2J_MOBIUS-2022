@@ -148,7 +148,6 @@
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="StatBonusSkillCritical">
 				<stat>INT</stat>
@@ -1558,8 +1557,8 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
 				</power>
 			</effect>
-			<effect name="AddHate">
-				<power>1240</power>
+			<effect name="DeleteHateOfMe">
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>

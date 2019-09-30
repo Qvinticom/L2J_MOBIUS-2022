@@ -3326,6 +3326,10 @@
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
+			<effect name="Speed">
+				<amount>-150</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11299" toLevel="2" name="Servitor Balance Life">

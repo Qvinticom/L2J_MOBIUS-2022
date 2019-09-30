@@ -869,7 +869,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">120</value>
+			<value fromLevel="1" toLevel="11">90</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>40</castRange>
@@ -961,7 +961,9 @@
 				<speed>600</speed>
 				<knockDown>false</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="5" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>

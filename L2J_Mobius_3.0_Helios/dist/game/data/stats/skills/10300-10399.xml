@@ -181,7 +181,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DUAL</item>
-					<item> DUALBLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -340,15 +340,15 @@
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-15</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
@@ -356,11 +356,11 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -368,11 +368,11 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
@@ -1359,6 +1359,9 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
