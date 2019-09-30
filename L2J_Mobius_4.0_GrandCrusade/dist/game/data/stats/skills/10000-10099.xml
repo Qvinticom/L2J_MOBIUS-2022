@@ -49,7 +49,7 @@
 			<value level="10">110</value>
 		</magicLvl>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="StatBonusSkillCritical">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -68,7 +68,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="HateAttack">
