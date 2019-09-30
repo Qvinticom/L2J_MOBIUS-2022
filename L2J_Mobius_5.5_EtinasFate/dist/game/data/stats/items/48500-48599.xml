@@ -538,7 +538,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -550,6 +551,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35191" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -564,6 +569,7 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -576,6 +582,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35192" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -589,8 +599,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -602,6 +612,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35193" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -615,7 +629,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -629,7 +644,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="35194" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
@@ -644,8 +659,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -657,6 +672,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="35195" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -671,8 +690,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -684,6 +703,11 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="35196" level="1" /> <!-- Special Ability Legend Weapon -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -698,8 +722,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -712,6 +736,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="35197" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4225</stat>
 			<stat type="mAtk">935</stat>
@@ -727,6 +755,7 @@
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -737,6 +766,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1350" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35198" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3804</stat>
 			<stat type="mAtk">1247</stat>
@@ -751,7 +784,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -764,6 +798,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35199" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -776,7 +814,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -789,6 +828,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35200" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1371</stat>
@@ -803,8 +846,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -817,6 +860,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35201" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2090</stat>
 			<stat type="mAtk">935</stat>
@@ -831,8 +878,8 @@
 		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -844,6 +891,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35202" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -858,6 +909,7 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -867,6 +919,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="35203" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -882,6 +938,7 @@
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -891,6 +948,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35204" level="1" /> <!-- Special Ability Legend Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>

@@ -4,26 +4,346 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, and all Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35201" toLevel="1" name="Special Ability Legend Infinity Retributer">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, and all Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35202" toLevel="1" name="Special Ability Legend Infinity Dual Sword">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, and all Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35203" toLevel="1" name="Special Ability Legend Infinity Dual Dagger">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, and all Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35204" toLevel="1" name="Special Ability Legend Infinity Dual Blunt Weapon">
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, and all Skill Cooldown -5%. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35205" toLevel="1" name="Savior's Mask Basic Effect">
 		<!-- Increases M. Def. by 5%. -->

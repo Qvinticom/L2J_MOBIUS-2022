@@ -578,6 +578,7 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -589,6 +590,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18829" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">526</stat>
 			<stat type="mAtk">262</stat>
@@ -602,6 +607,7 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -613,6 +619,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18830" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">262</stat>
@@ -626,8 +636,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -638,6 +648,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18831" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">732</stat>
 			<stat type="mAtk">262</stat>
@@ -651,6 +665,7 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -662,6 +677,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="18832" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">262</stat>
@@ -676,8 +695,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -688,6 +707,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="18833" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">732</stat>
 			<stat type="mAtk">262</stat>
@@ -702,8 +725,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -716,6 +739,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="18834" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
@@ -732,8 +756,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -744,6 +768,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="18835" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1185</stat>
 			<stat type="mAtk">262</stat>
@@ -758,8 +786,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -770,6 +798,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18836" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1067</stat>
 			<stat type="mAtk">262</stat>
@@ -784,6 +816,7 @@
 		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -795,6 +828,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18837" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">481</stat>
 			<stat type="mAtk">350</stat>
@@ -808,6 +845,7 @@
 		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -819,6 +857,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18838" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">481</stat>
 			<stat type="mAtk">350</stat>
@@ -833,8 +875,8 @@
 		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -845,6 +887,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18839" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">586</stat>
 			<stat type="mAtk">385</stat>
@@ -859,8 +905,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -871,6 +917,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18840" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">732</stat>
 			<stat type="mAtk">262</stat>
@@ -884,8 +934,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -896,6 +946,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="18841" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">526</stat>
 			<stat type="mAtk">262</stat>
@@ -910,8 +964,8 @@
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -922,6 +976,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="18842" level="1" /> <!-- Special Ability The Challenger's Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">732</stat>
 			<stat type="mAtk">262</stat>
@@ -936,6 +994,7 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -947,6 +1006,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18843" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">610</stat>
 			<stat type="mAtk">303</stat>
@@ -960,6 +1024,7 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -971,6 +1036,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18844" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -984,8 +1054,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -996,6 +1066,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18845" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -1009,6 +1084,7 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1020,6 +1096,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18846" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -1034,8 +1115,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1046,6 +1127,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18847" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -1060,8 +1146,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -1074,6 +1160,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18848" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
@@ -1090,8 +1178,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1102,6 +1190,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18849" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1374</stat>
 			<stat type="mAtk">303</stat>
@@ -1116,8 +1209,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1128,6 +1221,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18850" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1237</stat>
 			<stat type="mAtk">303</stat>
@@ -1142,6 +1240,7 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1153,6 +1252,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18851" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">558</stat>
 			<stat type="mAtk">405</stat>
@@ -1166,6 +1270,7 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1177,6 +1282,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18852" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">558</stat>
 			<stat type="mAtk">405</stat>
@@ -1191,8 +1301,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -1203,6 +1313,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18853" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">679</stat>
 			<stat type="mAtk">445</stat>
@@ -1217,8 +1332,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1229,6 +1344,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18854" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -1242,8 +1362,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1254,6 +1374,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18855" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -1268,8 +1393,8 @@
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -1280,6 +1405,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+			<skill id="18856" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
