@@ -9595,7 +9595,7 @@ public class PlayerInstance extends Playable
 		_lastLoc.setXYZ(0, 0, 0);
 	}
 	
-	public void enterOlympiadObserverMode(Location loc, int id)
+	public void enterOlympiadObserverMode(Location loc, int id, int instanceId)
 	{
 		if (hasSummon())
 		{
@@ -9634,7 +9634,7 @@ public class PlayerInstance extends Playable
 		setTarget(null);
 		setIsInvul(true);
 		setInvisible(true);
-		teleToLocation(loc, false);
+		teleToLocation(loc, instanceId, 0);
 		sendPacket(new ExOlympiadMode(3));
 		
 		broadcastUserInfo();

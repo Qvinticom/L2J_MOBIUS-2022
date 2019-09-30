@@ -49,7 +49,7 @@ public abstract class ZoneType extends ListenersContainer
 	protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
-	private boolean _checkAffected = false;
+	protected boolean _checkAffected = false;
 	private String _name = null;
 	private int _minLvl;
 	private int _maxLvl;
@@ -196,7 +196,7 @@ public abstract class ZoneType extends ListenersContainer
 	 * @param creature the player to verify.
 	 * @return {@code true} if the given character is affected by this zone, {@code false} otherwise.
 	 */
-	private boolean isAffected(Creature creature)
+	protected boolean isAffected(Creature creature)
 	{
 		// Check instance
 		if (_instanceTemplateId > 0)

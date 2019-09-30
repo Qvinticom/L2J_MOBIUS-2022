@@ -57,6 +57,8 @@ public class OlympiadStadiumZone extends ZoneRespawn
 			settings = new Settings();
 		}
 		setSettings(settings);
+		
+		_checkAffected = true;
 	}
 	
 	public class Settings extends AbstractZoneSettings
@@ -144,7 +146,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
 		for (PlayerInstance target : getPlayersInside())
 		{
-			if ((target != null) && (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())))
+			if ((target != null) && (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())) && (target.getInstanceId() == player.getInstanceId()))
 			{
 				target.sendPacket(packet);
 			}
@@ -153,13 +155,41 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	public void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
-		for (Creature creature : getCharactersInside())
+		for (PlayerInstance creature : getPlayersInside())
 		{
-			if ((creature != null) && creature.isPlayer() && creature.getActingPlayer().inObserverMode())
+			if ((creature != null) && creature.inObserverMode() && (creature.getInstanceId() == getInstanceId()))
 			{
 				creature.sendPacket(packet);
 			}
 		}
+	}
+	
+	@Override
+	public void broadcastPacket(IClientOutgoingPacket packet)
+	{
+		for (PlayerInstance creature : getPlayersInside())
+		{
+			if ((creature != null) && (creature.getInstanceId() == getInstanceId()))
+			{
+				creature.sendPacket(packet);
+			}
+		}
+	}
+	
+	@Override
+	protected boolean isAffected(Creature creature)
+	{
+		if (super.isAffected(creature))
+		{
+			if (creature.getInstanceId() != getInstanceId())
+			{
+				return false;
+			}
+			
+			return true;
+		}
+		
+		return false;
 	}
 	
 	@Override
@@ -227,6 +257,10 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)
+			{
+				continue;
+			}
+			if (creature.getInstanceId() != getInstanceId())
 			{
 				continue;
 			}
