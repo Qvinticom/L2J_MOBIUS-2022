@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="118" parentClassId="57">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Health" skillId="329" skillLvl="1" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Wisdom" skillId="328" skillLvl="1" getLevel="76" levelUpSp="2000" />
-		
-		<skill skillName="Riposte Stance" skillId="340" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Skill Mastery" skillId="330" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Armor Crush" skillId="362" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		
-		<skill skillName="Earthquake" skillId="347" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Master of Combat" skillId="430" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Parry Stance" skillId="339" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		
-		<skill skillName="Symbol of Honor" skillId="457" skillLvl="1" getLevel="80" levelUpSp="6000" />
-		
-		<skill skillName="Fighter's Will" skillId="758" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Archer's Will" skillId="759" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Expose Vulnerability" skillId="767" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		
-		<skill skillName="Protection of Alignment" skillId="757" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Protection of Rune" skillId="755" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Protection of Elemental" skillId="756" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="10" getLevel="82" levelUpSp="8000" />
-		
-		<skill skillName="Golem Armor" skillId="778" skillLvl="1" getLevel="83" levelUpSp="9000" />
-		<skill skillName="Rush Impact" skillId="995" skillLvl="1" getLevel="83" levelUpSp="9000" />
+		<skill skillName="Novice Hurricane Rush" skillId="30738" skillLvl="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Rain of Fire" skillId="30736" skillLvl="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Feral Ogre Cry" skillId="30642" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Mega Strike" skillId="30616" skillLvl="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Power Bomber" skillId="30641" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Power Hammer Crush" skillId="30697" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Armor Destruction" skillId="30615" skillLvl="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Intermediate Two-handed Weapon Mastery" skillId="30704" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Two-handed Weapon Mastery" skillId="30704" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Polearm Mastery" skillId="30703" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Polearm Mastery" skillId="30703" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Blunt Weapon Mastery" skillId="30707" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Blunt Weapon Mastery" skillId="30707" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30702" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30702" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Force Mastery" skillId="30710" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Force Mastery" skillId="30710" skillLvl="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30708" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30708" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Shield Mastery" skillId="30727" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Shield Mastery" skillId="30727" skillLvl="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Hurricane Storm" skillId="30737" skillLvl="1" getLevel="76" levelUpSp="100" />
 	</skillTree>
 </list>

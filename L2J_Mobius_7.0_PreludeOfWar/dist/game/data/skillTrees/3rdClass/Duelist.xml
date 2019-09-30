@@ -1,54 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="88" parentClassId="2">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Sonic Storm" skillId="7" skillLvl="29" getLevel="76" levelUpSp="1800" />
-		<skill skillName="Health" skillId="329" skillLvl="1" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Wisdom" skillId="328" skillLvl="1" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="23" getLevel="76" levelUpSp="1800" />
-		
-		<skill skillName="Riposte Stance" skillId="340" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Skill Mastery" skillId="330" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Eye of Hunter" skillId="359" skillLvl="1" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Sonic Storm" skillId="7" skillLvl="30" getLevel="77" levelUpSp="3000" />
-		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="24" getLevel="77" levelUpSp="3000" />
-		
-		<skill skillName="Eye of Slayer" skillId="360" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Sonic Rage" skillId="345" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Master of Combat" skillId="430" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="4000" />
-		
-		<skill skillName="Sonic Mastery" skillId="992" skillLvl="8" getLevel="79" levelUpSp="5000" />
-		<skill skillName="Sonic Rage" skillId="345" skillLvl="2" getLevel="79" levelUpSp="5000" />
-		<skill skillName="Sonic Barrier" skillId="442" skillLvl="1" getLevel="79" levelUpSp="5000" />
-		<skill skillName="Sonic Storm" skillId="7" skillLvl="31" getLevel="79" levelUpSp="5000" />
-		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="25" getLevel="79" levelUpSp="5000" />
-		<skill skillName="Sonic Focus" skillId="8" skillLvl="8" getLevel="79" levelUpSp="5000" />
-		
-		<skill skillName="Weapon Blockade" skillId="775" skillLvl="1" getLevel="80" levelUpSp="6000" />
-		<skill skillName="Master of Combat" skillId="430" skillLvl="2" getLevel="80" levelUpSp="6000" />
-		<skill skillName="Symbol of Energy" skillId="458" skillLvl="1" getLevel="80" levelUpSp="6000" />
-		
-		<skill skillName="Fighter's Will" skillId="758" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Archer's Will" skillId="759" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Sonic Rage" skillId="345" skillLvl="3" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Sonic Storm" skillId="7" skillLvl="32" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Expose Vulnerability" skillId="767" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="81" levelUpSp="6500" />
-		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="26" getLevel="81" levelUpSp="6500" />
-		
-		<skill skillName="Protection of Alignment" skillId="757" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Protection of Rune" skillId="755" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Protection of Elemental" skillId="756" skillLvl="1" getLevel="82" levelUpSp="8000" />
-		<skill skillName="Master of Combat" skillId="430" skillLvl="3" getLevel="82" levelUpSp="8000" />
-		
-		<skill skillName="Sonic Rage" skillId="345" skillLvl="4" getLevel="83" levelUpSp="9000" />
-		<skill skillName="Sonic Storm" skillId="7" skillLvl="33" getLevel="83" levelUpSp="9000" />
-		<skill skillName="Maximum Sonic Focus" skillId="919" skillLvl="1" getLevel="83" levelUpSp="9000" />
-		<skill skillName="Rush Impact" skillId="995" skillLvl="1" getLevel="83" levelUpSp="9000" />
-		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="27" getLevel="83" levelUpSp="9000" />
-		
-		<skill skillName="Master of Combat" skillId="430" skillLvl="4" getLevel="84" levelUpSp="9500" />
+		<skill skillName="Novice Hurricane Rush" skillId="30738" skillLvl="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Rain of Fire" skillId="30736" skillLvl="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Feral Ogre Cry" skillId="30642" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Sonic Flash" skillId="30660" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Sonic Storm" skillId="30805" skillLvl="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Mega Strike" skillId="30616" skillLvl="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Power Bomber" skillId="30641" skillLvl="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Armor Destruction" skillId="30615" skillLvl="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30702" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30702" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Force Mastery" skillId="30710" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Force Mastery" skillId="30710" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30708" skillLvl="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30708" skillLvl="2" getLevel="76" levelUpSp="100">
+		</skill>
 	</skillTree>
 </list>
