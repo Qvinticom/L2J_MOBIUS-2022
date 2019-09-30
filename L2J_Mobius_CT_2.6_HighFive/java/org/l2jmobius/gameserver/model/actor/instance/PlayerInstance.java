@@ -9174,20 +9174,19 @@ public class PlayerInstance extends Playable
 		{
 			case NONE: // None
 			{
-				setIsFlying(false);
-				break;
-			}
-			case STRIDER: // Strider
-			{
-				if (_noble)
+				if (isFlying())
 				{
-					addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
+					removeSkill(CommonSkill.WYVERN_BREATH.getSkill().getId(), false);
+					setIsFlying(false);
+					sendSkillList();
 				}
 				break;
 			}
 			case WYVERN: // Wyvern
 			{
 				setIsFlying(true);
+				addSkill(CommonSkill.WYVERN_BREATH.getSkill(), false);
+				sendSkillList();
 				break;
 			}
 		}
