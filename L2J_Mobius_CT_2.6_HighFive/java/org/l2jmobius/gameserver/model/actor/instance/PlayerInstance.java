@@ -8553,6 +8553,12 @@ public class PlayerInstance extends Playable
 			setQueuedSkill(null, false, false);
 		}
 		
+		if (!checkUseMagicConditions(skill, forceUse, dontMove))
+		{
+			setIsCastingNow(false);
+			return false;
+		}
+		
 		// Check if the target is correct and Notify the AI with AI_INTENTION_CAST and target
 		WorldObject target = null;
 		switch (skill.getTargetType())
