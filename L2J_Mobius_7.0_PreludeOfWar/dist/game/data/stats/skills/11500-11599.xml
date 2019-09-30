@@ -1269,11 +1269,11 @@
 		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">1800</value>
@@ -1368,11 +1368,11 @@
 		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>
@@ -1478,11 +1478,11 @@
 		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>
@@ -1583,11 +1583,11 @@
 		<!-- For $s1, all party members' Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
@@ -1889,8 +1889,8 @@
 			<value level="2">icon.skill19500</value>
 		</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
@@ -1991,8 +1991,8 @@
 			<value level="2">icon.skill19501</value>
 		</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
@@ -2062,8 +2062,8 @@
 			<value level="2">icon.skill19502</value>
 		</icon>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
@@ -2260,7 +2260,7 @@
 		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2315,7 +2315,7 @@
 		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2380,7 +2380,7 @@
 		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
