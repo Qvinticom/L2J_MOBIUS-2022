@@ -1842,6 +1842,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
 			// to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
 			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
+			broadcastPacket(new MagicSkillLaunched(this, skill.getDisplayId(), skill.getDisplayLevel(), targets));
 		}
 		
 		// Send a system message to the player.
@@ -5379,11 +5380,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// now cancels both, simultaneous and normal
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
-		}
-		
-		if (!skill.isToggle())
-		{
-			broadcastPacket(new MagicSkillLaunched(this, skill.getDisplayId(), skill.getDisplayLevel(), targets));
 		}
 		
 		mut.setPhase(2);
