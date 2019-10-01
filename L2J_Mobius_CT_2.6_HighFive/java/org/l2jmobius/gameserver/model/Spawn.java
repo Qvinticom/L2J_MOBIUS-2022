@@ -429,23 +429,6 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			npc.setHeading(getHeading());
 		}
 		
-		if (npc.isAttackable())
-		{
-			((Attackable) npc).setChampion(false);
-		}
-		
-		if (Config.CHAMPION_ENABLE)
-		{
-			// Set champion on next spawn
-			if (npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
-			{
-				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
-				{
-					((Attackable) npc).setChampion(true);
-				}
-			}
-		}
-		
 		// Reset summoner
 		npc.setSummoner(null);
 		// Reset summoned list
@@ -473,6 +456,23 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		if (npc.isMonster() && NpcData.getMasterMonsterIDs().contains(npc.getId()))
 		{
 			((MonsterInstance) npc).getMinionList().spawnMinions(npc.getTemplate().getParameters().getMinionList("Privates"));
+		}
+		
+		if (npc.isAttackable())
+		{
+			((Attackable) npc).setChampion(false);
+		}
+		
+		if (Config.CHAMPION_ENABLE)
+		{
+			// Set champion on next spawn
+			if (npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			{
+				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
+				{
+					((Attackable) npc).setChampion(true);
+				}
+			}
 		}
 		
 		return npc;

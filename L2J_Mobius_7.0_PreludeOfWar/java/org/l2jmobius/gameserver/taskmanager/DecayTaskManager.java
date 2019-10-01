@@ -45,7 +45,6 @@ public class DecayTaskManager
 					final Creature creature = entry.getKey();
 					DECAY_SCHEDULES.remove(creature);
 					creature.onDecay();
-					creature.setXYZ(0, 0, -10000);
 				}
 			}
 		}, 0, 1000);
