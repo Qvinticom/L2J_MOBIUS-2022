@@ -1081,7 +1081,7 @@
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1094,7 +1094,7 @@
 		<set name="price" val="115200" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1107,7 +1107,7 @@
 		<set name="price" val="576000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1120,7 +1120,7 @@
 		<set name="price" val="2880000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>

@@ -935,7 +935,7 @@
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="60" />
 		</cond>
 		<skills>
@@ -959,7 +959,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="60" />
 		</cond>
 		<skills>

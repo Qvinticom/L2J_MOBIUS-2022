@@ -89,7 +89,7 @@
 		<set name="price" val="41400" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="84" />
 		</cond>
 	</item>

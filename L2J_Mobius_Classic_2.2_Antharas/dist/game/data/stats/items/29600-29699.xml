@@ -60,7 +60,7 @@
 			<item id="29603" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 3 -->
 			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="10" />
 		</cond>
 	</item>
@@ -82,7 +82,7 @@
 			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="20" />
 		</cond>
 	</item>
@@ -104,7 +104,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29605" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 5 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="25" />
 		</cond>
 	</item>
@@ -126,7 +126,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29606" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 6 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="30" />
 		</cond>
 	</item>
@@ -148,7 +148,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29607" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 7 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="35" />
 		</cond>
 	</item>
@@ -167,7 +167,7 @@
 		<capsuled_items>
 			<item id="29609" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (C-grade) -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>
 	</item>
@@ -867,7 +867,7 @@
 			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
 			<item id="29636" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 3 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="10" />
 		</cond>
 	</item>
@@ -889,7 +889,7 @@
 			<item id="29637" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 4 -->
 			<item id="29527" min="1" max="1" chance="100" /> <!-- Saber*Elven Sword - 30-day -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="20" />
 		</cond>
 	</item>
@@ -910,7 +910,7 @@
 			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
 			<item id="29638" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 5 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="25" />
 		</cond>
 	</item>
@@ -931,7 +931,7 @@
 			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
 			<item id="29639" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 6 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="30" />
 		</cond>
 	</item>
@@ -953,7 +953,7 @@
 			<item id="29640" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 7 -->
 			<item id="29649" min="20" max="20" chance="100" /> <!-- XP/SP Scroll - Medium -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="35" />
 		</cond>
 	</item>
@@ -972,7 +972,7 @@
 		<capsuled_items>
 			<item id="49573" min="1" max="1" chance="100" /> <!-- Samurai Black Long Sword - 30-day -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>
 	</item>
@@ -1266,7 +1266,7 @@
 			<item id="70102" min="30" max="30" chance="100" /> <!-- Adventurer? Potion - Atk. Spd. -->
 			<item id="29657" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 2 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="24" />
 		</cond>
 	</item>
@@ -1286,7 +1286,7 @@
 			<item id="29643" min="1" max="1" chance="100" /> <!-- Mysterious Soulshot (D-grade) - Not in Use -->
 			<item id="29608" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (D-grade) -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="25" />
 		</cond>
 	</item>
@@ -1306,7 +1306,7 @@
 			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
 			<item id="29659" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 4 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="28" />
 		</cond>
 	</item>
@@ -1328,7 +1328,7 @@
 			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29660" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 5 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="30" />
 		</cond>
 	</item>
@@ -1351,7 +1351,7 @@
 			<item id="736" min="30" max="30" chance="100" /> <!-- Scroll of Escape -->
 			<item id="29661" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 6 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="32" />
 		</cond>
 	</item>
@@ -1374,7 +1374,7 @@
 			<item id="29651" min="50" max="50" chance="100" /> <!-- Healing Potion - Event -->
 			<item id="29662" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 7 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="35" />
 		</cond>
 	</item>
@@ -1396,7 +1396,7 @@
 			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29662" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 7 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="38" />
 		</cond>
 	</item>
@@ -1418,7 +1418,7 @@
 			<item id="29609" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (C-grade) -->
 			<item id="29664" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 9 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>
 	</item>
@@ -1440,7 +1440,7 @@
 			<item id="29693" min="1" max="1" chance="100" /> <!-- Chronicle Chest -->
 			<item id="29665" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 10 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="42" />
 		</cond>
 	</item>
@@ -1462,7 +1462,7 @@
 			<item id="29026" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29666" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 11 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="45" />
 		</cond>
 	</item>
@@ -1481,7 +1481,7 @@
 		<capsuled_items>
 			<item id="29667" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 30-day -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="49" />
 		</cond>
 	</item>

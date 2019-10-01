@@ -566,7 +566,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>
 	</item>
@@ -579,7 +579,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>
 	</item>

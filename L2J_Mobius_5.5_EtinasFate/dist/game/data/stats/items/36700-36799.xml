@@ -474,7 +474,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="85" />
 		</cond>
 	</item>

@@ -174,7 +174,7 @@
 			<item id="29512" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 3 -->
 			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="10" />
 		</cond>
 	</item>
@@ -196,7 +196,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29513" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 4 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="20" />
 		</cond>
 	</item>
@@ -218,7 +218,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29514" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 5 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="25" />
 		</cond>
 	</item>
@@ -240,7 +240,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29515" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 6 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="30" />
 		</cond>
 	</item>
@@ -262,7 +262,7 @@
 			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29516" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 7 -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="35" />
 		</cond>
 	</item>
@@ -281,7 +281,7 @@
 		<capsuled_items>
 			<item id="49573" min="1" max="1" chance="100" /> <!-- Samurai Black Long Sword - 30-day -->
 		</capsuled_items>
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>
 	</item>

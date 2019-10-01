@@ -400,7 +400,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<and>
 				<player level="99" />
 				<player subclass="false" />
@@ -423,7 +423,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<and>
 				<player level="99" />
 				<player subclass="false" />
@@ -446,7 +446,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<and>
 				<player level="99" />
 				<player subclass="false" />
@@ -469,7 +469,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<and>
 				<player level="99" />
 				<player subclass="false" />
@@ -492,7 +492,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<and>
 				<player level="99" />
 				<player subclass="false" />

@@ -999,7 +999,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1011,7 +1011,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="115200" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1023,7 +1023,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1152000" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>
@@ -1035,7 +1035,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5760000" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="80" />
 		</cond>
 	</item>

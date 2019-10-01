@@ -16,7 +16,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="100" />
 		</cond>
 		<skills>
@@ -31,7 +31,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="105" />
 		</cond>
 		<skills>
@@ -46,7 +46,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="113">
+		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>
 		<skills>
