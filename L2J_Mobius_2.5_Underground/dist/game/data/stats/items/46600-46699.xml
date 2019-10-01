@@ -293,6 +293,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="46626" name="Growth Accelerator Feed" additionalName="Mystic Tavern - Kelbim" type="EtcItem">
 		<!-- Feed for military dogs to accelerate growth. -->

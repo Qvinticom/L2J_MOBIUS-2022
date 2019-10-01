@@ -235,6 +235,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="46709" name="Pa'agrio's Blessing" type="EtcItem">
 		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/ M. Def 10%, Accuracy 4, Magic Accuracy by 4, Speed 10, Attack/ casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->

@@ -334,6 +334,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="48032" name="Sayha Talisman Stage 8 Treasure Chest" type="EtcItem">
 		<!-- Use to obtain a Sayha Talisman Stage 8. The Sayha Talisman Stage 8 obtained can only be shared within the account through a Dimensional Merchant, and cannot be exchanged. -->

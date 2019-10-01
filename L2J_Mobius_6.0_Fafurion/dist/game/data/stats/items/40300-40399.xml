@@ -43,6 +43,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="40304" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (Epic) dungeon. Usable once a day outside instances while on a cooldown. -->
@@ -56,6 +58,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="40305" name="Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Gives Expertise R99 Skill while in possession. -->

@@ -303,6 +303,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="45429" name="Orichalcum Bolt" additionalName="Event" type="EtcItem">
 		<!-- Used for R-grade crossbows. -->
@@ -317,6 +318,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="BOLT" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="45430" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (Epic) dungeon. Can only be used once a day outside of the instance zone. -->
@@ -326,6 +328,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="45431" name="Entrance Pass: Baylor" type="EtcItem">
 		<!-- Double-click to reset cooldown to Baylor's dungeon. Can only be used once a day outside of the instance zone. -->
@@ -335,6 +340,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="45432" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" type="EtcItem">
 		<!-- Double-click to reset cooldown to Kartia's Labyrinth. Can only be used once a day outside of the instance zone. -->
@@ -344,6 +352,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="45433" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of an NC Dinos Hat (30-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -359,6 +370,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="45434" name="NC Dinos Hat Appearance Stone Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing an NC Dinos Hat Appearance Stone (30-day). -->
@@ -371,6 +383,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="45435" name="NC Dinos Uniform Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of an NC Dinos Uniform. 30-day. Tops and one-pieces only. -->
@@ -386,6 +399,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="45436" name="NC Dinos Uniform Appearance Stone Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing an NC Dinos Uniform Appearance Stone (30-day). -->
@@ -398,6 +412,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="45437" name="Baium's Ring" additionalName="30-day" type="Armor">
 		<!-- MP + 21, Poison Resistance + 40%, Poison Atk. Rate + 40%, Hold Resistance + 30%, Hold Atk. Rate + 30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. Equipping two gives the effect of one. 30-day. -->
@@ -417,6 +432,7 @@
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
 	<item id="45438" name="Baium's Ring Pack (30-day)" type="EtcItem">
@@ -430,6 +446,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="45439" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
