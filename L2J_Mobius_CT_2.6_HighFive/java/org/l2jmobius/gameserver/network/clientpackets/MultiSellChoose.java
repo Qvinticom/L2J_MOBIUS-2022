@@ -103,7 +103,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_amount < 1) || (_amount > 5000))
+		if ((_amount < 1) || (_amount > 10000))
 		{
 			player.setMultiSell(null);
 			return;
