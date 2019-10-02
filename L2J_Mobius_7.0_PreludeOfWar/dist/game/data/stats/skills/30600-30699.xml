@@ -24,6 +24,7 @@
 		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
@@ -225,7 +226,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>90</activateRate>
 		<activateRate>80</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2302,7 +2302,7 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- TODO: Find proper skillId for 1% MP -->
-				<skillId>19300</skillId> <!-- Reverse Mana Drain gives 3%-->
+				<skillId>30767</skillId> <!-- Novice Mana Drain -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -3301,7 +3301,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>6</mpConsume>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
 		<magicLvl>40</magicLvl>
