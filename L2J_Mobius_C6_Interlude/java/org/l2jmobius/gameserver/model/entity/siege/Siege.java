@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -310,6 +311,11 @@ public class Siege
 		if (_isInProgress)
 		{
 			announceToPlayer("The siege of " + getCastle().getName() + " has finished!", false);
+			final PlaySound sound = new PlaySound("systemmsg_e.18");
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			{
+				player.sendPacket(sound);
+			}
 			
 			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has finished! " + fmt.format(new Date(System.currentTimeMillis())));
 			
@@ -614,6 +620,11 @@ public class Siege
 			ThreadPool.schedule(new ScheduleEndSiegeTask(getCastle()), 1000);
 			
 			announceToPlayer("The siege of " + getCastle().getName() + " has started!", false);
+			final PlaySound sound = new PlaySound("systemmsg_e.17");
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			{
+				player.sendPacket(sound);
+			}
 			
 			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has started! " + fmt.format(new Date(System.currentTimeMillis())));
 		}

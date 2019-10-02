@@ -63,6 +63,7 @@ import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -252,6 +253,7 @@ public class Siege implements Siegable
 			SystemMessage sm = new SystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
 			sm.addCastleId(_castle.getResidenceId());
 			Broadcast.toAllOnlinePlayers(sm);
+			Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_eu.18"));
 			
 			if (_castle.getOwnerId() > 0)
 			{
@@ -531,6 +533,7 @@ public class Siege implements Siegable
 			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED);
 			sm.addCastleId(_castle.getResidenceId());
 			Broadcast.toAllOnlinePlayers(sm);
+			Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_eu.17"));
 			
 			// Notify to scripts.
 			EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
