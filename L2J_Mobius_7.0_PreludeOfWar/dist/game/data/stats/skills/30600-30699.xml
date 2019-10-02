@@ -70,6 +70,7 @@
 		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
@@ -381,6 +382,9 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>5122</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>300</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">
 				<fullLethal>0</fullLethal>
@@ -2914,6 +2918,9 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>7106</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>300</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">
 				<fullLethal>0</fullLethal>
