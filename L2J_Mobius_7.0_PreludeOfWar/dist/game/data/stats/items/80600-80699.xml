@@ -1,5 +1,489 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80600" name="15th Anniversary Cube" type="EtcItem">
+		<!-- A cube prepared by Bright Snow for the 15th Anniversary. Can be used by Lv. 85 or higher. -->
+		<set name="icon" val="icon.ev_15th_cube" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80601" name="15th Anniversary Talisman" type="Armor">
+		<!-- A talisman for commemorating the 15th Anniversary. When used. increases XP/SP gained from hunting by 15%. Also allows you to transform. -->
+		<set name="icon" val="icon.ev_L2_soul_ore" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80602" name="15th Anniversary Mini Cake" type="EtcItem">
+		<!-- When used. XP/SP gain +30%. XP/SP gain in Vitality state +30%. and P. Atk./P. Def./M. Atk./M. Def. +15% for 30 min. Cooldown 5 min. -->
+		<set name="icon" val="icon.ev_15th_cake" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80603" name="15th Anniversary Magic Fork" type="EtcItem">
+		<!-- A fork used during the 15 Anniversary raid. Cake Party. When used on a �Delicious 15th Anniversary Cake'. you eat 1-6 cake pieces. Each cake piece eaten recovers a small amount of Vitality. -->
+		<set name="icon" val="icon.ev_15th_foke" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80604" name="15th Anniversary Firecracker" type="EtcItem">
+		<!-- A firecracker item for the 15th Anniversary. Using it starts a fireworks display that lasts 10 seconds. The fireworks generates a magic number between 1 and 6. and using the item again during the fireworks adds further 1-6 to the first magic number generated. You receive �15th Anniversary Coins' when the display ends. You receive the maximum reward when the magic number reaches 15. and the fireworks end when the number exceeds 15. -->
+		<set name="icon" val="icon.ev_15th_firework" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80605" name="14th Anniversary Gift Box" type="EtcItem">
+		<!-- A gift box prepared by Bright Snow for the 15th Anniversary. Use it to obtain gifts including a Dandy's Home Run Ball. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80606" name="14th Anniversary Gift Box" type="EtcItem">
+		<!-- A gift box prepared by Bright Snow for the 15th Anniversary. Use it to obtain gifts including a Dandy's Home Run Ball. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80607" name="15th Anniversary Attendance Box" type="EtcItem">
+		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80608" name="15th Anniversary Attendance Box" type="EtcItem">
+		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80609" name="15th Anniversary Firecracker Box" type="EtcItem">
+		<!-- Use it to receive 1 or 2 15th Anniversary Firecrackers. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80610" name="Ultimate Lv. 3 Jewelry Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 3 jewel. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80611" name="Ultimate Lv. 3 Jewelry Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one level 1 Gem. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80612" name="Freya's Ice Rose" additionalName="Event" type="EtcItem">
+		<!-- When used. Max HP/MP/CP +30%. P. Atk./M. Atk./P. Def./M. Def. +30%. Atk. Spd./Casting Spd. +10%. Speed +20. Attack/Defense Attributes +100. Damage +10%. P./M. Skill Power +10%. XP/SP +30%. Damage Received -10%, and Skill MP Consumption -15% for 30 minutes. Buffs persist after death. Cooldown 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.bm_freya_ice_rose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80613" name="15th Anniversary Rare Earring Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake and rescuing Clumsy Snow. Double-click to obtain a Lindvior's Earring. Ramona's Fancy Earring. Helios's Majestic Earring. or Orfen's Soul Earring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80614" name="15th Anniversary Rare Ring Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Ring of Creation. Tauti's Ring. Earth Wyrm Heart Ring. Baium's Soul Ring. Forgotten Ring of the Core. Mimir's Worn Ring or Queen Ant's Soul Ring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80615" name="15th Anniversary Rare Necklace Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Harnak's Deformed Necklace or Frintezza's Soul Necklace. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80616" name="15th Anniversary Soul Crystal Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Kain van Halter. Mermoden. Leona. Pantheon or Lionel Stage 8 Soul Crystal. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80617" name="15th Anniversary +7 Guard Agathion Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +7 Guard Agathion Charm. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80618" name="15th Anniversary Lv. 5 Gem Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Lv. 5 Gem. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80619" name="15th Anniversary Dark/Bloody Weapon Enhancement Stone Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Dark/Bloody Weapon Enhancement Stone. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80620" name="15th Anniversary Talisman Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Talisman - Seven Signs. Seven Signs' Energy. Sealed Talisman - Golden Bough. Sealed Talisman - Longing or Energy of Longing. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80621" name="15th Anniversary Rare Accessory Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Lindvior's Earring. Blessed Valakas' Necklace. Blessed Antharas' Earring. Tauti's Ring. Frintezza's Necklace. Earth Wyrm Heart Ring. Ring of Creation. Baium's Soul Ring. Harnak's Deformed Necklace. Orfen's Soul Earring or Queen Ant's Soul Ring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80622" name="15th Anniversary Soul Crystal Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Kain van Halter. Mermoden. Leona. Pantheon or Lionel Stage 7 Soul Crystal. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80623" name="15th Anniversary +3 Guard Agathion Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +3 Guard Agathion Charm. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80624" name="15th Anniversary Gift Seed Bracelet Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Super Advanced Seed Bracelet - Stage 1 or Top-grade Seed Bracelet - Stage 1. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80625" name="15th Anniversary Talisman Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Sealed Talisman - Golden Bough. Sealed Talisman - Longing or Energy of Longing. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80626" name="15th Anniversary +5 Zodiac Agathion Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +5 Zodiac Agathion Charm. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80627" name="Soul Crystal Box Lv. 1" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Kain van Halter, Mermoden, Leona, Pantheon, or Lionel Soul Crystal Lv. 1. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80628" name="Angler's Fishing Rod - Stage 5" additionalName="7 days" type="Weapon">
+		<!-- Fishing Time Reduction: 30s A rod made for Fishing Guild Leader Santiago. It has the name of the legendary Angler written on it. Fishing Shot: 1 -->
+		<set name="icon" val="icon.fishing_rod05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80629" name="Shunaiman's Circlet Enchantment Box" type="EtcItem">
+		<!-- Use it to obtain 1-3 Blessed Circlet Enchant Scrolls. -->
+		<set name="icon" val="icon.bm_aden_renewal_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80630" name="Shunaiman's Secret Box" type="EtcItem">
+		<!-- Double-click to obtain one of the special items. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80631" name="Freya's Fortune Stick" type="EtcItem">
+		<!-- Double-click to obtain 2 Freya's Wind Scrolls and 2 Freya's Ice Roses. with a chance of additionally obtaining a Freya's Summoning Stick and Freya's Fortune Box. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80632" name="Snowman's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain an item picked randomly from a variety of items. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80633" name="Sirra's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain an item picked randomly from a variety of items. including rare accessories. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80634" name="Freya's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain an item picked randomly from rare items. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80635" name="Freya's Summoning Stick" type="EtcItem">
+		<!-- Double-click to summon Ice Knight. Klacias. Icy Breath or Freya. Can be used by Lv. 105 or higher. and characters below Lv. 105 cannot gain any XP. -->
+		<set name="icon" val="icon.bm_freya_summon_stick" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80636" name="Artifact Crystal" type="EtcItem">
+		<!-- Artifact crafting material. Take them to Alexandria at the Town of Giran Luxury Shop to craft artifacts. -->
+		<set name="icon" val="icon.bm_artifact_stone" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80637" name="Talisman of Protection Stage 1" type="Armor">
+		<!-- When equipped. P. Def. +220. M. Def. +146. all Attribute Defenses +10. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80638" name="Talisman of Protection Stage 2" type="Armor">
+		<!-- When equipped. P. Def. +440. M. Def. +286. all Attribute Defenses +20. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80639" name="Talisman of Protection Stage 3" type="Armor">
+		<!-- When equipped. P. Def. +890. M. Def. +578. all Attribute Defenses +30. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80640" name="Talisman of Protection Stage 4" type="Armor">
+		<!-- When equipped. P. Def. +1340. M. Def. +872. all Attribute Defenses +40. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80641" name="Talisman of Protection Stage 5" type="Armor">
+		<!-- When equipped. P. Def. +1790. M. Def. +1164. all Attribute Defenses +70. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80642" name="Talisman of Protection Stage 6" type="Armor">
+		<!-- When equipped. P. Def. +2240. M. Def. +1456. all Attribute Defenses +80. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80643" name="Talisman of Protection Stage 7" type="Armor">
+		<!-- When equipped. P. Def. +2690. M. Def. +1748. all Attribute Defenses +90. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80644" name="Talisman of Protection Stage 8" type="Armor">
+		<!-- When equipped. P. Def. +3140. M. Def. +2042. all Attribute Defenses +100. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80645" name="Talisman of Protection Stage 9" type="Armor">
+		<!-- When equipped. P. Def. +3590. M. Def. +2334. all Attribute Defenses +120. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80646" name="Talisman of Protection Stage 10" type="Armor">
+		<!-- When equipped. P. Def. +4040. M. Def. +2626. all Attribute Defenses +150. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
+		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="80647" name="Artifact - Normal Attack Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -79,5 +563,544 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80663" name="Dragon Claw Box (Advanced)" type="EtcItem">
+		<!-- Use it to obtain an Advanced Antharas. Valakas. Lindvior or Fafurion weapon. -->
+		<set name="icon" val="BranchSys2.G-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80664" name="Great Etina Temple Key" type="EtcItem">
+		<!-- A key needed to open the gate blocking the Great Etina Temple's entrance. The alliance channel with this key can enter the Great Etina Temple through Leona Blackbird. -->
+		<set name="icon" val="icon.key_of_etina_temple_01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80665" name="Abyssal Invitation" type="EtcItem">
+		<!-- An invitation obtained after defeating the Tanta Lizardmen Guard. Take it to Batracos and you can enter an area where Tanta Seer Uguros lurks. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80666" name="Fried Fish" additionalName="P. Atk." type="EtcItem">
+		<!-- When used. P. Atk. +4% for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
+		<set name="icon" val="icon.fishing_buff_p_dmg" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80667" name="Steamed Fish" additionalName="M. Atk." type="EtcItem">
+		<!-- When used. M. Atk. +5% for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
+		<set name="icon" val="icon.fishing_buff_m_dmg" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80668" name="Grilled Fish" additionalName="Combat Speed" type="EtcItem">
+		<!-- When used. Atk./Casting Spd. +4%. Speed +6 for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
+		<set name="icon" val="icon.fishing_buff_pm_speed" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80669" name="Braised Fish" additionalName="Max HP/ MP" type="EtcItem">
+		<!-- When used. Max HP/MP +8% for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
+		<set name="icon" val="icon.fishing_buff_hp_mp" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80670" name="Royal Fish Soup" additionalName="Combat Prowess" type="EtcItem">
+		<!-- When used. P./M. Atk. +3%. Atk./Casting Spd. +3%. and Max HP/MP +3% for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80671" name="Secret Material" type="EtcItem">
+		<!-- Secret material needed to make Special Antidote. Gather and take them to Guard Kallesin at the entrance of the Ruins of Agony. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80672" name="Breath of Death" type="EtcItem">
+		<!-- The source of the energy that reanimates dead beings. Gather and take them to Tarti in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_ashes_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80673" name="Corrupted Energy" type="EtcItem">
+		<!-- It is what turned the relatively gentle Growlers into violent beasts. You can feel the miasma of the corrupted Wind Spirit Realm. Gather and take them to Researcher Pio. -->
+		<set name="icon" val="icon.etc_crystal_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80674" name="Embedded Shard" type="EtcItem">
+		<!-- Shards embedded in Leaf and Arbor's bodies. There are lingering traces of Dark Arts. It might be the reason why Leaf and Arbor have been unintelligible. Gather and take them to Researcher Pio. -->
+		<set name="icon" val="icon.etc_piece_holy_light" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80675" name="Orc Empowering Potion" type="EtcItem">
+		<!-- A potion that made the Turek Orcs become powerful. This could be the cause behind the Turek Orcs. hitherto one of the lesser orc tribes. suddenly becoming so strong. Gather and take them to Reclous the Hermit. -->
+		<set name="icon" val="icon.etc_ev_draco_purple_bottle" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80676" name="Ketra Order" type="EtcItem">
+		<!-- An order sent secretly to the Ketra Orcs. It may be why some of the Ketra Orcs have come to the Orc Barracks. Gather and take them to Reclous the Hermit. -->
+		<set name="icon" val="icon.etc_ketra_badge_captn_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80677" name="Scroll of Escape: Tarti" type="EtcItem">
+		<!-- Teleports you to Tarti. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80678" name="Scroll of Escape: Silvan" type="EtcItem">
+		<!-- Teleports you to Silvan. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80679" name="Scroll of Escape: Kallesin" type="EtcItem">
+		<!-- Teleports you to Kallesin. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80680" name="Scroll of Escape: Zenath" type="EtcItem">
+		<!-- Teleports you to Zenath. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80681" name="Scroll of Escape: Pio" type="EtcItem">
+		<!-- Teleports you to Pio. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80682" name="Scroll of Escape: Reclous" type="EtcItem">
+		<!-- Teleports you to Reclous. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80683" name="Sword Breaker" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_sword_breaker_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1110" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">27</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80684" name="Falchion" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_falchion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80685" name="Zweihander" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_zweihander_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">38</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80686" name="Mage Staff" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">30</stat>
+			<stat type="mAtk">31</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80687" name="Compound Bow" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_composition_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1880" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80688" name="Viper Fang" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_vipers_canine_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">38</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80689" name="Flanged Mace" additionalName="For Apprentice Adventurer" type="Weapon">
+		<set name="icon" val="icon.weapon_buzdygan_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80690" name="Durable Leather Helmet" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="640" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">26</stat>
+		</stats>
+	</item>
+	<item id="80691" name="Bronze Breastplate" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t34_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="8920" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">68</stat>
+		</stats>
+	</item>
+	<item id="80692" name="Bronze Gaiters" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t34_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="3960" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">43</stat>
+		</stats>
+	</item>
+	<item id="80693" name="Bracer" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t30_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">17</stat>
+		</stats>
+	</item>
+	<item id="80694" name="Boots" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t30_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1310" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">17</stat>
+		</stats>
+	</item>
+	<item id="80695" name="Leather Helmet" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">23</stat>
+		</stats>
+	</item>
+	<item id="80696" name="Tunic of Devotion" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t55_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2090" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">30</stat>
+			<stat type="maxMp">67</stat>
+		</stats>
+	</item>
+	<item id="80697" name="Stockings of Devotion" additionalName="For Apprentice Adventurer" type="Armor">
+		<set name="icon" val="icon.armor_t55_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1040" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">19</stat>
+			<stat type="maxMp">42</stat>
+		</stats>
+	</item>
+	<item id="80698" name="Blood-thirsty Zariche Shaper" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_shaper_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1039</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80699" name="Blood-thirsty Zariche Cutter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_cutter_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
 	</item>
 </list>

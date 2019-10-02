@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80900" name="Blood-stained Akamanah Dual Blunt" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80901" name="Zariche's Blood" type="EtcItem">
+		<!-- Material for making a Blood-stained Zariche weapon. -->
+		<set name="icon" val="icon.zariche_blood" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80902" name="Akamanah's Blood" type="EtcItem">
+		<!-- Material for making a Blood-stained Akamanah weapon. -->
+		<set name="icon" val="icon.aka_manaf_blood" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80903" name="Zariche's Sealed Box" type="EtcItem">
+		<!-- Box of darkness in which the madness of the Demonic Sword Zariche is sealed. Double-click to obtain a Blood-thirsty Zariche weapon or Zariche's Blood. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80904" name="Akamanah's Sealed Box" type="EtcItem">
+		<!-- Box of darkness in which the madness of the Blood Sword Akamanah is sealed. Double-click to obtain a Blood-thirsty Akamanah weapon or Akamanah's Blood. -->
+		<set name="icon" val="icon.aka_manaf_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80905" name="Storm Isle Time Recharge Stone" type="EtcItem">
+		<!-- Use to add 60 minutes to use the timed hunting zone Storm Isle. -->
+		<set name="icon" val="icon.timezone_refill_1" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80906" name="Primeval Isle Time Recharge Stone" type="EtcItem">
+		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
+		<set name="icon" val="icon.timezone_refill_2" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80907" name="PC Cafe Summoning Stick" type="EtcItem">
+		<!-- Double-click to summon either Pa'agrio Orc or Pa'agrio Orc Hero. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80908" name="Lv. 95 Achievement Reward Box" type="EtcItem">
+		<!-- A box to congratulate you for reaching Lv. 95. Obtain Talismans, bracelets, and consumables. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80909" name="Lv. 99 Achievement Reward Box" type="EtcItem">
+		<!-- A box to congratulate you for reaching Lv. 99. Obtain Brooches, gems, and consumables. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80910" name="Lv. 100 Achievement Reward Box" type="EtcItem">
+		<!-- A box to congratulate you for reaching Lv. 100. Obtain Belts and consumables. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80911" name="+5 Circlet of Authority Box" type="EtcItem">
+		<!-- Obtain a +5 Circlet of Authority. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80912" name="+5 Circlet of Foresight Box" type="EtcItem">
+		<!-- Obtain a +5 Circlet of Foresight. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80913" name="+5 Circlet of Grace Box" type="EtcItem">
+		<!-- Obtain a +5 Circlet of Grace. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80914" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Ivory Tower Crater. Double-click to use the item and accept the request. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80915" name="Red Libra Request - Breka's Stronghold" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Breka's Stronghold. Double-click to use the item and accept the request. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80916" name="Red Libra Request - Isle of Prayer" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Isle of Prayer. Double-click to use the item and accept the request. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80917" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Ivory Tower Crater. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80918" name="Red Libra Request - Breka's Stronghold" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Breka's Stronghold. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80919" name="Red Libra Request - Isle of Prayer" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Isle of Prayer. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80920" name="Emperor's Vitality Tonic" additionalName="Event" type="EtcItem">
+		<!-- Water of Vitality containing the strength of the lord. Recovers 1 of the 4 Vitality slots. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
+		<set name="icon" val="icon.etc_recall_potion3" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80921" name="Lindvior's Treasure Chest" type="EtcItem">
+		<!-- Precious treasure chest obtained after the campaign against Lindvior. Double-click to get one rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80922" name="Caring Rok's Icy Candy" type="EtcItem">
+		<!-- When used. Max HP/MP/CP +30%. P. Atk./M. Atk./P. Def./M. Def. +30%. Atk. Spd./Casting Spd. +10%. Speed +20. Attack/Defense Attributes +100. Damage +10%. P./M. Skill Power +10%. XP/SP +30%. Damage Received -10%, and Skill MP Consumption -15% for 30 minutes. Buffs persist after death. Cooldown 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80923" name="Caring Rok's Candy Full of Passion" type="EtcItem">
+		<!-- A candy emanating Caring Rok's passion. Endows with passion and vitality. Recovers 1 of 4 vitality bars. Cannot be used in the Olympiad. No usage limit. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80924" name="Spellbook: Renewed Energy of Power" type="EtcItem">
+		<!-- Allows to learn the dual class skill Renewed Energy of Power Only for main class of level 85 or higher. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80925" name="Potion of Protection: Confusion" type="EtcItem">
+		<!-- When used, Confusion Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80926" name="Potion of Protection: Infection" type="EtcItem">
+		<!-- When used, Infection Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80927" name="Potion of Protection: Obstruction" type="EtcItem">
+		<!-- When used, Obstruction Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80928" name="Potion of Protection: Stupor" type="EtcItem">
+		<!-- When used, Stupor Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80929" name="Mysterious Soulshot Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- You can acquire 50,000 Mysterious Soulshot (R-grade). -->
+		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80930" name="Mysterious Blessed Spiritshot Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- You can acquire 20,000 Mysterious Blessed Spiritshot (R-grade). -->
+		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80931" name="Cube of Enhanced Zodiac Agathion" type="EtcItem">
+		<!-- A cube containing one of the Enhanced Zodiac Agathion Charms, imbued with power of stars. -->
+		<set name="icon" val="icon.star_agathion_cube_2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80932" name="Enhanced Zodiac Agathion Book of Growth" type="EtcItem">
+		<!-- Increases the agathion's M. Def. The maximum enchant level is +10. When enchanted +1 or higher, gradually increases the agathion's unique abilities. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80933" name="Box of Enhanced Zodiac Agathion Book of Growth" additionalName="Event" type="EtcItem">
+		<!-- A gift from Festival Fairy's fortune draw. Double-click to obtain 4 Enhanced Zodiac Agathion Books of Growth. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80934" name="Festival Fairy's Crystal Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 3-500 crystals (R-grade). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80935" name="Small Good Luck Festival Fairy�s Coin Box" additionalName="Not in Use" type="EtcItem">
+		<!-- Double-click to obtain 15 Festival Fairy's Lucky Coins. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80936" name="Greater Virgo Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Virgo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_virgo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80937" name="Greater Capricorn Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Capricorn Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_capr_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80938" name="Greater Libra Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Libra Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_lib_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80939" name="Greater Aries Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Aries Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_aries_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80940" name="Greater Taurus Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Taurus Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_tau_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80941" name="Greater Leo Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Leo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_leo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80942" name="Greater Gemini Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Gemini Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_gem_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80943" name="Greater Scorpio Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Scorpio Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_sco_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80944" name="Greater Aquarius Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Aquarius Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_aqu_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80945" name="Greater Pisces Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Pisces Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_pis_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80946" name="Greater Sagittarius Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Sagittarius Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_sag_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80947" name="Greater Cancer Agathion Charm" type="Armor">
+		<!-- A charm that activates the power of the Greater Cancer Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
+		<set name="icon" val="icon.agathion_can_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="80948" name="Antharas Treasure Chest" type="EtcItem">
+		<!-- Precious treasure chest obtained after the campaign against Antharas. Double-click to get one rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80949" name="Only for monsters (Lord Ishka)" type="Weapon">
+		<!-- For monsters, not in use -->
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+</list>

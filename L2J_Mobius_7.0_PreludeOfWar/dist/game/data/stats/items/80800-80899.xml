@@ -1,5 +1,375 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80800" name="Ruler's Authority" additionalName="30 days" type="Armor">
+		<!-- Max HP/ MP/ CP +1000, Weight Limit +25,600, Damage +8%, Received Damage -9%, Damage Reflection Resistance +5%, Inventory Slots +36 and all Attribute Resistance +15. Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.belt_rulers_authority" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="80801" name="Golden Pig's Lucky Coin" type="EtcItem">
+		<!-- Coin with the luck of the 2019 Golden Pig. Exchange for various items through Chorong in each village. -->
+		<set name="icon" val="icon.etc_pig_adena_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80802" name="Lucky Pouch" type="EtcItem">
+		<!-- Lucky pouch from Lucky Pig to celebrate the year of the Golden Pig. Double-click to obtain Lucky Pig Honey Buff Scroll and the event reward. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80803" name="Golden Lucky Pouch" type="EtcItem">
+		<!-- Golden Lucky Pouch from Lucky Pig to celebrate the year of the Golden Pig. Double-click to obtain Lucky Pig Honey Buff Scroll and additional event rewards such as the Lucky Pig Special Vitality Tonic. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80804" name="Lucky Pig Honey Buff Scroll" type="EtcItem">
+		<!-- When used, XP/SP Gain +30%, XP/SP Gain while in Vitality Mode +30%, P./M. Atk. +7000, P./M. Def. +6000, Max HP +1700, Max MP +775, Max CP +1180, Speed +15 for 30 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80805" name="Lucky Pig Vitality Tonic" type="EtcItem">
+		<!-- Vitality Tonic prepared by Lucky Pig to celebrate the year of the Golden Pig. 1 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80806" name="Lucky Pig Special Vitality Tonic" type="EtcItem">
+		<!-- Special Vitality Tonic prepared by Lucky Pig to celebrate the year of the Golden Pig. All bars on the vitality gauge are replenished. Cannot be used in the Olympiad. The 5 uses per week limit does not apply -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80807" name="Gran Kain's Cube" type="EtcItem">
+		<!-- Obtain Gran Kain's support items. Obtain Gran Kain's Cube Special Support Items when using it the 1st and 10th time. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_2019_cube_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80808" name="Gran Kain's Greater Cube" type="EtcItem">
+		<!-- Obtain Gran Kain's Greater support items. Receive 1 Royal Black Save Ticket on the 1st use, and 1 Royal Gold Save Ticket on the 10th use. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_2019_cube_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80809" name="Gran Kain's Top-grade Cube" type="EtcItem">
+		<!-- Obtain Gran Kain's Top-grade support items. Receive 1 Gran Kain's Scroll: Enchant Armor (R-grade) on the 1st use, and 1 Gran Kain's Scroll: Enchant Weapon (R-grade) on the 10th use. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_2019_cube_lv3" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80810" name="Gran Kain's Cube Special Supply" type="EtcItem">
+		<!-- Obtain Freya's Ice Roses x6, Shiny Dragon's Attribute Potion x6, Honey Vitality Beer x18, Fallen Angel's Ring Box x2. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80811" name="Gran Kain's Supply Items" type="EtcItem">
+		<!-- Obtain Freya's Ice Roses x6, Shiny Dragon's Attribute Potion x6, Honey Vitality Beer x18. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80812" name="Gran Kain's Greater Supply Items" type="EtcItem">
+		<!-- Obtain Freya's Ice Roses x12, Shiny Dragon's Attribute Potion x12, Honey Vitality Beer x36, Fallen Angel's Ring Box x2. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80813" name="Gran Kain's Top-grade Supply Items" type="EtcItem">
+		<!-- Obtain Freya's Ice Roses x24, Shiny Dragon's Attribute Potion x24, Honey Vitality Beer x72, Forgotten Spellbook Chapter 1 x1. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80814" name="Gran Kain's Cube Box" type="EtcItem">
+		<!-- Obtain Gran Kain's Cube. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80815" name="Heavenly Fantasia Cookie" type="EtcItem">
+		<!-- Dimensional Item For 1 hour, P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +30%, Shield Defense +50%, and Skill Cooldown -20%, All Skill MP Consumption -15%. Cooldown 60 minutes. Buff remains even after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_sonata_cookie" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80816" name="GM's Buff Scroll" type="EtcItem">
+		<!-- When used, can receive the effects of 4 types of level 4 melodies, including Fantasia Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
+		<set name="icon" val="icon.buff_scroll_gm_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80817" name="Emperor's Special Cocktail" type="EtcItem">
+		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 60 min. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80818" name="Emperor's Special Cocktail" additionalName="4-hour" type="EtcItem">
+		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 4 hours. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80819" name="Emperor's Special Cocktail" additionalName="8-hour" type="EtcItem">
+		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 8 hours. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80820" name="PA Emperor's Special Cocktail" type="EtcItem">
+		<!-- PC-exclusive Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 60 min. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80821" name="Ceremony of Chaos" type="EtcItem">
+		<!-- Item that can be used only at the Ceremony of Chaos Arena. For 7 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Fantasia Harmony Lv. 1. -->
+		<set name="icon" val="icon.etc_super_potion_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80822" name="Elixir of Harmony" type="EtcItem">
+		<!-- For 30 minutes, provides the effect of Fantasia Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
+		<set name="icon" val="icon.etc_super_potion_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80823" name="Proof of Resistance" type="EtcItem">
+		<!-- Defeat the monsters as requested by Head Priest of the Earth Daichir in the Town of Schuttgart. Gather the items as evidence and take them to Head Priest of the Earth Daichir in the Town of Schuttgart. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80824" name="Proof of Preparation" type="EtcItem">
+		<!-- Defeat the monsters as requested by Merlot in the Hunter's Village. Gather the items as evidence and take them to Merlot in the Hunter's Village. -->
+		<set name="icon" val="icon.low_energy_condense_i05" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80825" name="Proof of Settlement" type="EtcItem">
+		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Captain Kurtiz in the Town of Aden to receive the certificate for finishing the mission. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80826" name="Proof of Reputation" type="EtcItem">
+		<!-- Defeat the monsters as requested by High Priest Sylvain in the Einhasad Temple in the Town of Dion. Gather the items as evidence and take them to High Priest Sylvain in the Einhasad Temple in the Town of Dion. -->
+		<set name="icon" val="icon.etc_badge_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80827" name="Proof of Pride" type="EtcItem">
+		<!-- Defeat the monsters as requested by Cardinal Seresin in the Oren Castle. Gather the items as evidence and take them to Cardinal Seresin in the Oren Castle. -->
+		<set name="icon" val="icon.etc_badge_gold_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80828" name="Sylvain's Certificate" type="EtcItem">
+		<!-- The certificate received for completing High Priest Sylvain's mission. Take this to Lionel Hunter in Heine and get a new Exalted Power. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80829" name="Seresin's Certificate" type="EtcItem">
+		<!-- The certificate received for completing Cardinal Seresin's mission. Take this to Lionel Hunter in Heine and get a new Exalted Power. -->
+		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80830" name="Nevit's Treasure Chest" type="EtcItem">
+		<!-- Double-click the box to obtain one rare item at random. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80831" name="Nevit's Growth Support Box" type="EtcItem">
+		<!-- Double-click the box to obtain either a Shining Nevit's Gold Hourglass, Freya's Ice Rose or one of various items at random. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80832" name="Emperor's Special Cocktail" additionalName="Event" type="EtcItem">
+		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Elemental Resistance, Fantasia Melody, Attribute Resistance, and Mental Attack Resistance effects for 60 min. Note! The Emperor's Special Cocktail applies the duration of the last used item. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80833" name="Golden Pig's Medium Vitality Tonic" type="EtcItem">
+		<!-- Medium Vitality Tonic prepared to celebrate the year of the Golden Pig. 2 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80834" name="Jackpot Wish Lucky Pouch" type="EtcItem">
+		<!-- Lucky Pouch prepared to celebrate the year of the Golden Pig. Double-click to obtain Lindvior's Earring / Blessed Valakas' Necklace / Blessed Antharas' Earring or various consumables. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="80835" name="Kaliel's Bracelet" type="Armor">
 		<!-- Kaliel's Bracelet\nActivates 5 talisman slots when equipped\n\n<Upgrade Condition>\nCan be upgraded to Kaliel's Greater Bracelet when enchanted to +5. -->
 		<set name="default_action" val="EQUIP" />
@@ -56,5 +426,1122 @@
 		<skills>
 			<skill id="39527" level="1" /> <!-- Enchant Scroll: Blessed Bracelet -->
 		</skills>
+	</item>
+	<item id="80839" name="Crystal of Dawn" type="EtcItem">
+		<!-- A crystal infused with spirits that shines faintly. The crystal's special power can be used to upgrade an accessory. -->
+		<set name="icon" val="icon.accessary_upgrade_crystal" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80840" name="PC Cafe New Year Event Box" type="EtcItem">
+		<!-- A box that can be purchased between 1/30 - 2/20 with PC Points. Use to obtain an Appearance Stone Box, Silenite, or consumables. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80841" name="Appearance Stone Box" type="EtcItem">
+		<!-- Use to obtain 1 of the following: Dark/White Assassin Suit Appearance Stone, Vampiric Style Appearance Stone, Formal Wear Appearance Stone. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80842" name="Honey Dark Beer" type="EtcItem">
+		<!-- All basic stats +3, XP/SP Gain in Vitality mode +30% for 30 minutes. Buff persists through death. Cooldown is 5 minutes. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80843" name="Shiny Gold Bar Box" type="EtcItem">
+		<!-- Box containing shiny gold bars. Use to have a chance to obtain 1-15000 Shiny Gold Bars. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80844" name="Lucy's Valentine's Chocolate Box" type="EtcItem">
+		<!-- Chocolate box from Lucy. It contains chocolates and something else for Rok. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80845" name="Lucy's Valentine's Chocolate Box" type="EtcItem">
+		<!-- Chocolate box from Lucy. It contains chocolates and a letter for Rok. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80846" name="Lucy's Opened Letter" type="EtcItem">
+		<!-- Letter from Lucy to Rok It was opened, but it is still legible, so you can probably give it to Rok.. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80847" name="Lucy's Return Present" type="EtcItem">
+		<!-- Present from Lucy for helping her. Use to obtain 120 Golden Pig Lucky Coins. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80848" name="Shining Nevit's Treasure Chest" type="EtcItem">
+		<!-- Double-click the box to obtain one rare item at random. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80849" name="PC Cafe Event Staff" type="Weapon">
+		<!-- PC Cafe Enchant Challenge Weapon. A reward will be given to the participant that enchants it to the highest level. Will be retrieved once the event is over. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80850" name="PC Cafe Event Enchant Scroll" type="EtcItem">
+		<!-- Enchant scroll that can only be used on the PC Cafe Enchant Challenge Weapon. Cannot use items that increase enchant rate. Will be retrieved once the event is over. -->
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80851" name="+10 Agathion Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one +10 Enchanted Agathion Charm. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80852" name="PA Shining Nevit's Gold Hourglass" type="EtcItem">
+		<!-- When used, increases Hunting XP/SP gain by 100% for 30 min. Cannot stack with the Fall of the Dragon or Dandy's Home Run Ball. Cannot stack with the effect of Agathion - XP Bottle. Cooldown is 5 min. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80853" name="Undead Blood" type="EtcItem">
+		<!-- Item obtained as proof of having defeated the monsters in Altar of Evil at the request of Grocer Vollodos. Collect these and take them to Herphah in the Town of Aden. -->
+		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80854" name="Vampire's Ichor" type="EtcItem">
+		<!-- Item obtained as proof of having defeated the monsters in Bloody Swampland at the request of Black Wizard Lapathia. Take it to Dual Class Master Joachim in the Town of Aden. -->
+		<set name="icon" val="icon.item_canuse28" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80855" name="Energy of Mysterious Power" type="EtcItem">
+		<!-- Mysterious energy found from a vampire's fluids. An unknown power can be felt. -->
+		<set name="icon" val="icon.etc_ertheia_astatine" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80856" name="Hot Energy" type="EtcItem">
+		<!-- Item obtained as proof of having defeated the monsters in Blazing Swamp at the request of Harp Zu Hestui. Take it to Dual Class Master Joachim in the Town of Aden. -->
+		<set name="icon" val="icon.etc_torch_on_i09" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80857" name="Scroll of Escape: Herphah" type="EtcItem">
+		<!-- Teleports you to where Herphah is. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80858" name="Scroll of Escape: Joachim" type="EtcItem">
+		<!-- Teleports you to where Joachim is. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80859" name="Blood-thirsty Akamanah Shaper" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_shaper_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1039</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80860" name="Blood-thirsty Akamanah Cutter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_cutter_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80861" name="Blood-thirsty Akamanah Slasher" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_slasher_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80862" name="Blood-thirsty Akamanah Avenger" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_onehand_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80863" name="Blood-thirsty Akamanah Fighter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_fist_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80864" name="Blood-thirsty Akamanah Stormer" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_spear_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80865" name="Blood-thirsty Akamanah Thrower" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_bow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2339</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80866" name="Blood-thirsty Akamanah Shooter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_crossbow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2106</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80867" name="Blood-thirsty Akamanah Buster" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80868" name="Blood-thirsty Akamanah Caster" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80869" name="Blood-thirsty Akamanah Retributer" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1157</stat>
+			<stat type="mAtk">759</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80870" name="Blood-thirsty Akamanah Dualsword" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_dual_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80871" name="Blood-thirsty Akamanah Dual Dagger" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_dual_dagger_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80872" name="Blood-thirsty Akamanah Dual Blunt" type="Weapon">
+		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.aka_manaf_dual_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80873" name="Blood-stained Zariche Shaper" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_shaper_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2177</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80874" name="Blood-stained Zariche Cutter" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_cutter_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80875" name="Blood-stained Zariche Slasher" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_slasher_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80876" name="Blood-stained Zariche Avenger" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_onehand_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80877" name="Blood-stained Zariche Fighter" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_fist_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80878" name="Blood-stained Zariche Stormer" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_spear_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80879" name="Blood-stained Zariche Thrower" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_bow_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4898</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80880" name="Blood-stained Zariche Shooter" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_crossbow_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4411</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80881" name="Blood-stained Zariche Buster" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_onehane_magic_sword_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80882" name="Blood-stained Zariche Caster" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_onehand_magic_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80883" name="Blood-stained Zariche Retributer" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_twohand_magic_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2423</stat>
+			<stat type="mAtk">1590</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80884" name="Blood-stained Zariche Dualsword" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_dual_sword_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80885" name="Blood-stained Zariche Dual Dagger" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_dual_dagger_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80886" name="Blood-stained Zariche Dual Blunt" type="Weapon">
+		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.zariche_dual_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80887" name="Blood-stained Akamanah Shaper" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_shaper_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2177</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80888" name="Blood-stained Akamanah Cutter" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_cutter_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80889" name="Blood-stained Akamanah Slasher" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_slasher_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80890" name="Blood-stained Akamanah Avenger" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_onehand_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80891" name="Blood-stained Akamanah Fighter" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_fist_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80892" name="Blood-stained Akamanah Stormer" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_spear_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80893" name="Blood-stained Akamanah Thrower" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_bow_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4898</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80894" name="Blood-stained Akamanah Shooter" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_crossbow_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4411</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80895" name="Blood-stained Akamanah Buster" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80896" name="Blood-stained Akamanah Caster" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80897" name="Blood-stained Akamanah Retributer" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2423</stat>
+			<stat type="mAtk">1590</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80898" name="Blood-stained Akamanah Dualsword" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_dual_sword_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80899" name="Blood-stained Akamanah Dual Dagger" type="Weapon">
+		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.aka_manaf_dual_dagger_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
 	</item>
 </list>

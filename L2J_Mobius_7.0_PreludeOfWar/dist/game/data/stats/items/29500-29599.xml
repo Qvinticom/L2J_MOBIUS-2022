@@ -122,9 +122,262 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="29512" name="Angel Cat's Blessing" type="EtcItem">
+		<!-- For 60 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Letter Collector's Gift. -->
+		<set name="icon" val="BranchSys3.g_blessing_of_angel_cat_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29513" name="Passion Treasure Chest" type="EtcItem">
+		<!-- Treasure Chest with Pomona's gift. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="29514" name="Festival Ticket" type="EtcItem">
 		<!-- Ticket to participate in the Festival. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29515" name="Golden Mermaid Bait Coupon" type="EtcItem">
+		<!-- Exchange for 1 Golden Bait that you want through NPC Peeves. -->
+		<set name="icon" val="icon.etc_bm_lure_special_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29516" name="Golden Mermaid Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29517" name="Golden Mermaid Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29518" name="Golden Mermaid Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29519" name="Golden Mermaid Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29520" name="Special Golded Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Sayha's Talisman Lv.8 Pack, Radiant Circlet Upgrade Stone, Radiant Rind Upgrade Stone, T-shirt Chest (Sparkle/ Attack/ Magic) +7, Red Starlight Jar, Dark/Bloody Weapon Enhancement Stone, Royal Purple/ Royal Red/ Royal White Save Card (R99-grade), High-grade/ Mid/ Low Zodiac Agathion Box, Destruction Scroll: Enchant Elemental Shirt, Stabilized/ Ancient Zodiac Agathion Charm Book of Growth, Soul Crystal Box Lv.5-7, Dark/ Bloody Armor Enhancement Stone, Royal Purple/ Royal Red/ Royal White Save Card (R95-grade), Ultimate Fortune Jewelry Box, Elcyum, Tempest Stone, Shining Nevit's Gold Hourglass, Blessed Scroll: Enchant Weapon (R-grade), Gale Scroll, Giant's Scroll: Enchant Weapon (R-grade), Energy of Destruction Pack (20 pcs.), Elcyum Crystal, Gemstone (R-grade) (7 pcs.). -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29521" name="Golden Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain 3 Heine Fishing Coins and for a chance to obtain a Special Golden Treasure Chest. -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hr" type="EtcItem">
+		<!-- Have it in your inventory to have Item Drop Rate +300% when hunting. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29523" name="Maphr's Rune 300% Pack (1-hr)" type="EtcItem">
+		<!-- Pack containing a Maphr's Rune 300% (1-hr). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29524" name="+3 Dragon Earring Box" type="EtcItem">
+		<!-- Double-click to obtain Dragon Earring enchanted to +3. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29525" name="+3 Dragon Ring Box" type="EtcItem">
+		<!-- Double-click to obtain a +3 enchanted Dragon Ring. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29526" name="+3 Dragon Necklace Box" type="EtcItem">
+		<!-- Double-click to obtain a +3 enchanted Dragon Necklace. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29527" name="Golden Mermaid Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29528" name="Archaeologist's Box" type="EtcItem">
+		<!-- A suspicious vault secretly being traded in Mystic Tavern. Obtain a rare item. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29529" name="Shining Gold Bar Box" type="EtcItem">
+		<!-- Contains Shining Gold Bars. Has a chance to obtain 3 - 1000 Gold Bars at random. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29530" name="Lucky Growth Scroll" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. and P./ M. Def. +30%. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29531" name="15th Anniversary Pitapat Box" type="EtcItem">
+		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29532" name="15th Anniversary Attendance Box" type="EtcItem">
+		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29533" name="15th Anniversary Rare Earring Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake. Double-click to obtain one of the following items at random: a Dragon Earring, Lindvior's Earring, Ramona's Fancy Earring, Helios's Majestic Earring or Orfen's Soul Earring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29534" name="15th Anniversary Rare Ring Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake. Double-click to obtain one of the following items at random: a Dragon Ring, Ring of Creation, Tauti's Ring, Earth Wyrm Heart Ring, Baium's Soul Ring, Forgotten Ring of the Core, Mimir's Soul Ring or Queen Ant's Soul Ring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29535" name="15th Anniversary Rare Necklace Gift Box" type="EtcItem">
+		<!-- A reward earned for eating a 15th Anniversary Cake. Double-click to obtain one of the following items at random: a Dragon Necklace, Blessed Valakas' Necklace, Harnak's Transformed Necklace or Frintezza's Soul Necklace. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29536" name="Blazing Sun Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Ring of the Truth-Seeker, Ruler's Ring of Authority, +10 Fallen Angel's Ring Box, +5 Dragon Rind Leather Shirt Box, Sayha's Talisman Pack Lv. 8, Talisman - Seven Signs, Radiant Circlet Upgrade Stone, Sayha's Talisman Pack Lv. 7, Radiant Rind Upgrade Stone, +8 Shiny Elemental Shirt Pack, +8 Physical Reflect Shirt Pack, +8 Magical Reflect Shirt Pack, Noble Circlet Upgrade Stone, Noble Leather Upgrade Stone, Sayha's Energy/ Blessing, Destruction Scroll: Enchant Elemental Shirt, Venir's Talisman Lv. 11, Giant's Energy 100-unit Pack, Giant's Energy 20-unit Pack, Angel's Necklace/ Earring, Superior Giant's Codex - Mastery Chapter 1, Blessed Scroll: Enchant Elemental Shirt x3, Circlet Spirit Stone, Shirt Pack, Forgotten Spellbook Chapter 1, Rune Stone x2, Superior Giant's Codex - Chapter 1, Superior Giant's Codex - Mastery, Sayha's Talisman Pack, Energy of Destruction 20-unit Pack, Freya's Dark/ Bloody Rune Pack (2-hour), Elcyum Crystal. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29537" name="Hardin's Miracle Sack" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29540" name="Mammon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_2018_special_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

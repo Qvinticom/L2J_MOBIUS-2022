@@ -1,0 +1,1605 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80700" name="Blood-thirsty Zariche Slasher" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_slasher_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80701" name="Blood-thirsty Zariche Avenger" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_onehand_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80702" name="Blood-thirsty Zariche Fighter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_fist_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80703" name="Blood-thirsty Zariche Stormer" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_spear_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80704" name="Blood-thirsty Zariche Thrower" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_bow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2339</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80705" name="Blood-thirsty Zariche Shooter" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_crossbow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2106</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80706" name="Blood-thirsty Zariche Buster" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_onehane_magic_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80707" name="Blood-thirsty Zariche Caster" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_onehand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80708" name="Blood-thirsty Zariche Retributer" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_twohand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1157</stat>
+			<stat type="mAtk">759</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80709" name="Blood-thirsty Zariche Dualsword" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_dual_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80710" name="Blood-thirsty Zariche Dual Dagger" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_dual_dagger_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80711" name="Blood-thirsty Zariche Dual Blunt Weapon" type="Weapon">
+		<!-- Weapon born from Demonic Sword Zariche. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<set name="icon" val="icon.zariche_dual_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80712" name="Vitality Maintaining Rune" additionalName="Event" type="EtcItem">
+		<!-- Vitality is maintained when you have it in your inventory. 30-day. -->
+		<set name="icon" val="icon.ev_L2_soul_ore" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80713" name="Zariche Shaper" type="Weapon">
+		<!-- Warrior dagger for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80714" name="Zariche Cutter" type="Weapon">
+		<!-- Warrior one-handed sword for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80715" name="Zariche Slasher" type="Weapon">
+		<!-- Warrior two-handed sword for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80716" name="Zariche Avenger" type="Weapon">
+		<!-- One-handed blunt weapon for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80717" name="Zariche Fighter" type="Weapon">
+		<!-- Two-handed combat weapon for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80718" name="Zariche Stormer" type="Weapon">
+		<!-- Spear for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80719" name="Zariche Thrower" type="Weapon">
+		<!-- Bow for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80720" name="Zariche Shooter" type="Weapon">
+		<!-- Crossbow for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80721" name="Zariche Buster" type="Weapon">
+		<!-- Magical one-handed sword for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80722" name="Zariche Caster" type="Weapon">
+		<!-- Magical one-handed blunt weapon for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80723" name="Zariche Retributer" type="Weapon">
+		<!-- Magical two-handed blunt weapon for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80724" name="Zariche Dualsword" type="Weapon">
+		<!-- Dualsword for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80725" name="Zariche Dual Dagger" type="Weapon">
+		<!-- Dual dagger for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80726" name="Zariche Dual Blunt Weapon" type="Weapon">
+		<!-- Dual blunt weapon for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80727" name="Zariche Shield" type="Armor">
+		<!-- Shield for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">546</stat>
+		</stats>
+	</item>
+	<item id="80728" name="Zariche Sigil" type="Armor">
+		<!-- Sigil for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80729" name="Akamanah Shaper" type="Weapon">
+		<!-- Warrior dagger for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80730" name="Akamanah Cutter" type="Weapon">
+		<!-- Warrior one-handed sword for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80731" name="Akamanah Slasher" type="Weapon">
+		<!-- Warrior two-handed sword for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80732" name="Akamanah Avenger" type="Weapon">
+		<!-- One-handed blunt weapon for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80733" name="Akamanah Fighter" type="Weapon">
+		<!-- Two-handed combat weapon for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80734" name="Akamanah Stormer" type="Weapon">
+		<!-- Spear for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80735" name="Akamanah Thrower" type="Weapon">
+		<!-- Bow for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80736" name="Akamanah Shooter" type="Weapon">
+		<!-- Crossbow for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80737" name="Akamanah Buster" type="Weapon">
+		<!-- Magical one-handed sword for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80738" name="Akamanah Caster" type="Weapon">
+		<!-- Magical one-handed blunt weapon for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80739" name="Akamanah Retributer" type="Weapon">
+		<!-- Magical two-handed blunt weapon for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80740" name="Akamanah Dualsword" type="Weapon">
+		<!-- Dualsword for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80741" name="Akamanah Dual Dagger" type="Weapon">
+		<!-- Dual dagger for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80742" name="Akamanah Dual Blunt Weapon" type="Weapon">
+		<!-- Dual blunt weapon for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80743" name="Akamanah Shield" type="Armor">
+		<!-- Shield for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">546</stat>
+		</stats>
+	</item>
+	<item id="80744" name="Akamanah Sigil" type="Armor">
+		<!-- Sigil for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80745" name="PA Ice Rose" type="EtcItem">
+		<!-- PA-only item When used. Max HP/MP/CP +30%. P. Atk./M. Atk./P. Def./M. Def. +30%. Atk./Casting Spd. +10%. Speed +20. Attack/Defense Attributes +100. Damage +10%. P./M. Skill Power +10%. XP/SP +30%. Damage Received -10%. and Skill MP Consumption -15% for 30 min. Buffs persist after death. Cooldown 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.bm_freya_ice_rose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80746" name="PA Storm Scroll" type="EtcItem">
+		<!-- PA-only item When hunting monsters. Vitality consumption +150% and XP/SP gain +150%. Buff persist after death. Duration 10 min. Cooldown 9 min. Can only be used when at least 1 Vitality slot is filled. -->
+		<set name="icon" val="icon.bm_freya_storm_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80747" name="PA Honey Dark Beer" type="EtcItem">
+		<!-- PC cafe-only item When used, All Stats +3, XPSP/ Gain in Vitality mode +30%. Remains even at death. Cooldown 5 minutes. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80748" name="PA Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
+		<!-- PA-only item When used. increases Attack Attributes by 70. all Defense Attributes by 70. and XP/SP gain by 30% for 30 min. Buffs persist after death. Cooldown 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_dragon_posion_special" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80749" name="PA Artifact - P. Atk. (Balance)" type="Armor">
+		<!-- PA-only item 2-hour item An artifact that increases P. Atk. Equipping it in the artifact balance slot increases P. Atk. by 4%. Cannot be enchanted. -->
+		<set name="icon" val="icon.artifact_a_pa" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80750" name="PA Artifact - M. Atk. (Balance)" type="Armor">
+		<!-- PA-only item 2-hour item An artifact that increases M. Atk. Equipping it in the artifact balance slot increases M. Atk. by 4%. Cannot be enchanted. -->
+		<set name="icon" val="icon.artifact_a_ma" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80751" name="PA Artifact - P. Def. (Balance)" type="Armor">
+		<!-- PA-only item 2-hour item An artifact that increases P. Def. Equipping it in the artifact balance slot increases P. Def. by 5%. Cannot be enchanted. -->
+		<set name="icon" val="icon.artifact_a_phy_def" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80752" name="PA Artifact - M. Def. (Balance)" type="Armor">
+		<!-- PA-only item 2-hour item An artifact that increases M. Def. Equipping it in the artifact balance slot increases M. Def. by 5%. Cannot be enchanted. -->
+		<set name="icon" val="icon.artifact_a_mag_def" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80753" name="PA Emperor's Special Cocktail" additionalName="P. Atk." type="EtcItem">
+		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Warrior's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80754" name="PA Emperor's Special Cocktail" additionalName="M. Atk." type="EtcItem">
+		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Wizard's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80755" name="PA Emperor's Special Cocktail" additionalName="P. Def." type="EtcItem">
+		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Knight's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80756" name="PA +7 Shiny Elemental Shirt" type="Armor">
+		<!-- PA-only item 2-hour item A shining magic T-shirt imbued with Einhasad's Energy. <Item Skill> M. Def. +15. Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water/Fire/Wind/Earth/Holy/Dark Attack Resistance +24. STR +3. DEX +3. CON +3. INT +3. WIT +3. MEN +3 <Active Skill> Einhasad's Wrath/Einsahad's Protection Cannot be enchanted. -->
+		<set name="icon" val="icon.ainhasard_shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="80757" name="+7 Physical Reflect Shirt - PA" type="Armor">
+		<!-- PA-only item 2-hour item A magic T-shirt specialized for physical defense. <Item Skill> M. Def. +15. Speed +7. Max HP +536. Max MP +536. Water/Fire/Wind/Earth/Holy/Dark Attack Resistance +24. STR +3. DEX +3. CON +3. INT +3. WIT +3. MEN +3 P. Def. +8%. P. Critical Damage Received -12%. 7% chance to reflect status effects inflicted by physical skills received. Cannot be enchanted. -->
+		<set name="icon" val="icon.reflect_attack_shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="80758" name="+7 Magical Reflect Shirt - PA" type="Armor">
+		<!-- PA-only item 2-hour item A magic T-shirt specialized for magic defense. <Item Skill> M. Def. +15. Speed +7. Max HP +536. Max MP +536. Water/Fire/Wind/Earth/Holy/Dark Attack Resistance +24. STR +3. DEX +3. CON +3. INT +3. WIT +3. MEN +3 M. Def. +8%. M. Critical Damage Received -12%. 7% chance to reflect status effects inflicted by physical skills received. Cannot be enchanted. -->
+		<set name="icon" val="icon.reflect_magic_shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="80759" name="PA Angler's Blessing" type="EtcItem">
+		<!-- PA-only item. When used. Successful Fishing XP +100% for 1 hour. Applies to all baits. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80760" name="PA Blue Potion - Fishing XP Bonus" type="EtcItem">
+		<!-- PA-only item. When used. Successful Fishing XP +50% for 1 hour. Applies to all baits. Can be stacked with Angler's Blessing. -->
+		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80761" name="PA Bait" additionalName="105" type="EtcItem">
+		<!-- PA-only item. Available from Lv. 105. Fishing time: 105 sec Standby time: 15 sec Special fishing bait. Fishing with this bait has a low chance of catching a Purple Box. Can be used from places other than PAs. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80762" name="Dye Powder" type="EtcItem">
+		<!-- Powder that replenish the Dye Engraving Gauge. Restores 25% of the full gauge. -->
+		<set name="icon" val="icon.dye_charge_meal" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="7500000" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80763" name="Elite Monster Reward Box" type="EtcItem">
+		<!-- Box that can be obtained by defeating elite monsters. Use it to obtain various items including Dark Armor Enhancement Stones and Bloody Armor Enhancement Stones. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80764" name="+6 Angel's Necklace Box" additionalName="Event" type="EtcItem">
+		<!-- A gift from Festival Fairy's fortune draw. Double-click to obtain +6 Angel's Necklace. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80765" name="+6 Angel's Earring Box" additionalName="Event" type="EtcItem">
+		<!-- A gift from Festival Fairy's fortune draw. Double-click to obtain +6 Angel's Earring. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80766" name="Festival Fairy's Lucky Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a rare item such as a rare accessory at random. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80767" name="Zariche Suit" type="Armor">
+		<!-- Armor for Zariche appearance modification -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="80768" name="Akamanah Suit" type="Armor">
+		<!-- Armor for Akamanah appearance modification -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="80769" name="Forgotten Spellbook Chapter 3 x2 Pack" type="EtcItem">
+		<!-- Use it to obtain 2 Forgotten Spellbook Chapter 3. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80770" name="Brilliant Scroll: Enchant Elemental Shirt x2 Pack" type="EtcItem">
+		<!-- Use it to obtain 2 Brilliant Scroll: Enchant Elemental Shirt. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80771" name="PA Event Box" type="EtcItem">
+		<!-- Box received when logging in from a PA. Use it to obtain various items including Dark Armor Enhancement Stones and Bloody Armor Enhancement Stones. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80772" name="Test - Dye Consumption Rate Reduction" type="EtcItem">
+		<!-- Test - Dye Consumption Rate Reduction -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80773" name="Precious Tanta Relic Box" type="EtcItem">
+		<!-- Relic box received from Batracos after defeating Tanta Lizardmen Seer Uguros. Double-click to obtain the item. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80774" name="Tanta Relic Box" type="EtcItem">
+		<!-- Relic box received from Batracos after defeating Tanta Lizardmen Seer Uguros. Double-click to obtain the item. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80775" name="Sel Mahum Relic Box" type="EtcItem">
+		<!-- Relic box received after defeating Sel Mahum Chief Keltron. Double-click to obtain the item. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80776" name="Noble Warrior's Circlet" type="Armor">
+		<!-- A circlet of noble authority. <Upgrade Requirement> Can be upgraded to a Radiant Circlet of Authority (Cannot be exchanged/traded) once it is enchanted to +5. Can be augmented. -->
+		<set name="icon" val="icon.bm_pattack_circlet_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80777" name="Noble Wizard's Circlet" type="Armor">
+		<!-- A circlet of noble foresight. <Upgrade Requirement> Can be upgraded to a Radiant Circlet of Foresight (Cannot be exchanged/traded) once it is enchanted to +5. Can be augmented. -->
+		<set name="icon" val="icon.bm_mattack_circlet_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80778" name="Noble Knight's Circlet" type="Armor">
+		<!-- A circlet of noble grace. <Upgrade Requirement> Can be upgraded to a Radiant Circlet of Grace (Cannot be exchanged/traded) once it is enchanted to +5. Can be augmented. -->
+		<set name="icon" val="icon.bm_defense_circlet_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80779" name="Bloody Fantastic Enchantment Box" type="EtcItem">
+		<!-- Double-click to randomly obtain an enchantment item. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80780" name="Lv. 4 Gem Bundle" type="EtcItem">
+		<!-- Double-click to obtain one of the following Lv. 4 jewels: Ruby, Sapphire, Diamond, Pearl, Opal, Emerald, Red Cat's Eye. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80781" name="Freya's Limited Box" type="EtcItem">
+		<!-- Double-click to obtain a rare item and a Freya's Growth Support Box. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80782" name="+5 Noble Circlet Box" type="EtcItem">
+		<!-- Use to obtain all +5 Noble circlets (Authority. Foresight. Grace). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80783" name="Freya's Growth Support Box" type="EtcItem">
+		<!-- Double-click to randomly obtain a consumable item. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80784" name="Red Libra Request - Plains of the Lizardmen" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Plains of the Lizardmen. Start the mission by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80785" name="Red Libra Request - Sel Mahum Training Grounds" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Sel Mahum Training Grounds. Start the mission by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80786" name="Red Libra Request - Alligator Island" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters on Alligator Island. Start the mission by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80787" name="Red Libra Request - Tanor Canyon" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in Tanor Canyon. Start the mission by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80788" name="Red Libra Request - Plains of the Lizardmen" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Plains of the Lizardmen. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80789" name="Red Libra Request - Sel Mahum Training Grounds" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Sel Mahum Training Grounds. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80790" name="Red Libra Request - Alligator Island" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters on Alligator Island. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80791" name="Red Libra Request - Tanor Canyon" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eradicate monsters in Tanor Canyon. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80792" name="Rok's Earnest Love Letter" type="EtcItem">
+		<!-- A love letter filled with Rok's earnest love toward Lucy Use it 10 times at Lucy might get you the Fondest Heart. -->
+		<set name="icon" val="icon.ev_2018_xmas_letter" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80793" name="Fondest Heart" type="EtcItem">
+		<!-- Item acquired after using love letters to send hearts of love to Lucy 10 times. Take it to Lucky once a day to be rewarded with a Box Filled with Lucy's Kindness. -->
+		<set name="icon" val="icon.love_mark" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80794" name="Box Filled with Lucy's Kindness" type="EtcItem">
+		<!-- Double-click to obtain Shining Dragon Attribute Tonic. Freya's Wind Scroll. and Freya's Ice Rose. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80795" name="For NPC - Santa Hat" type="Armor">
+		<!-- For NPC - Santa Hat -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80796" name="Elysium Support Box" type="EtcItem">
+		<!-- Double-click to obtain randomly obtain a Talisman of Wind. a dye or a Gran Kain scroll. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80797" name="Shining Nevit's Gold Hourglass" additionalName="Event" type="EtcItem">
+		<!-- When used. increases XP/SP gained from hunting by 100% for 30 min. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball. Does not stack with the effect of Agathion - XP Bottle. Cooldown 5 min. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80798" name="Special Orc Chest" type="EtcItem">
+		<!-- A shining golden chest. Double-click to obtain one of the items that the Aspiring Orc Ruler of Aden has prepared for a special person. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80799" name="Paulina's Equipment Set (R-grade)" additionalName="Subclass change" type="EtcItem">
+		<!-- Use to obtain a Paulina's Equipment Set (R-grade) that matches your class. Usable by Lv. 40 and higher characters only. -->
+		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

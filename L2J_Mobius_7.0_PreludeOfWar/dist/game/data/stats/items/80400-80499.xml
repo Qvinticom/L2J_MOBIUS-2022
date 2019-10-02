@@ -819,4 +819,365 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="80471" name="Master's Lucky Jewelry Box Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Ruby, Sapphire, Topaz, Opal, Diamond, Emerald, Tanzanite, Red Cat's Eye, Blue Cat's Eye, Obsidian, Jewelry Box Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80472" name="Greater Topaz Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Disrupts the target's skill casting. When used on a PC. inflicts damage with 13275 Power and ignores CP. Low chance of killing the enemy instantly. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80473" name="Greater Ruby Lv. 1" additionalName="Event" type="Armor">
+		<!-- Soulshot/ Beast Soulshot damage +20%, P. Atk. +9%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80474" name="Greater Sapphire Lv. 1" additionalName="Event" type="Armor">
+		<!-- When equipped. increases Spiritshot and Blessed Spiritshot's damage by 20% and M. Atk. by 13%. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80475" name="Greater Obsidian Lv. 1" additionalName="30 days" type="Armor">
+		<!-- When equipped. decreases PVP Damage Received by 15% and cancels the attacker's targeting when hit. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80476" name="Greater Opal Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Attack Attribute +120, all Attribute Resistance +70. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80477" name="Greater Emerald Lv. 1" additionalName="30 days" type="Armor">
+		<!-- All basic stats +3, Skill Master Rate +30%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80478" name="Greater Aquamarine Lv. 1" additionalName="30 days" type="Armor">
+		<!-- With a 15% chance recovers 136 MP when using skills, Skill Cooldown -5%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80479" name="Greater Diamond Lv. 1" additionalName="30 days" type="Armor">
+		<!-- P. Def. +1986, received P. Critical Damage -5%, P. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80480" name="Greater Pearl Lv. 1" additionalName="30 days" type="Armor">
+		<!-- M. Def. +1150, received M. Critical Damage -5%, M. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80481" name="Greater Vital Stone Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Vitality Bonus +30%, Vitality Consumption Rate +15%, acquired XP +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80482" name="Greater Garnet Lv. 1" additionalName="30 days" type="Armor">
+		<!-- When equipped. increases All Debuff Defense Success Rates by 30% and removes Stun/Silence if damaged by a PC. When used. removes your debuffs. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80483" name="Greater Tanzanite Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Creates a barrier that absorbs 50,000 damage for 15 sec. Instantly restores 15% HP. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80484" name="Greater Red Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Increases P. Critical Damage by 12%. P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80485" name="Greater Blue Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
+		<!-- Increases Magic Critical Damage by 12%. M. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80486" name="Mysterious Talisman - STR" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. STR +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80487" name="Mysterious Talisman - INT" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. INT +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80488" name="Mysterious Talisman - DEX" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. DEX +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80489" name="Mysterious Talisman - WIT" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. WIT +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80490" name="Mysterious Talisman - CON" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. CON +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80491" name="Mysterious Talisman - MEN" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. MEN +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80492" name="Mysterious Talisman - Attack Attribute" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. Attack Attributes +50. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80493" name="Mysterious Talisman - Attribute Resistance" additionalName="Event" type="Armor">
+		<!-- When the talisman is equipped. Attribute Defense +50. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80494" name="Gem Exchange Ticket" additionalName="Event" type="EtcItem">
+		<!-- Exchange it through Festival Fairy for a Gem Lv. 1. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80495" name="Talisman Exchange Ticket" additionalName="Event" type="EtcItem">
+		<!-- Exchange it through Festival Fairy for a talisman. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80496" name="Golden Sweets" additionalName="Event" type="EtcItem">
+		<!-- A sweet rice cake received from Festival Fairy. When used, recovers HP. Cooldown is 0.5 sec. -->
+		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80497" name="Five-colored Sweets" additionalName="Event" type="EtcItem">
+		<!-- A sweet rice cake received from Festival Fairy. For 2 hours, acquired XP/ SP +30%, acquired XP/ SP in Vitality state +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. Cooldown is 5 min. -->
+		<set name="icon" val="icon.ev_ricecake_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80498" name="Golden Orc Potion" additionalName="Event" type="EtcItem">
+		<!-- When used. XP/SP gain +30%. XP/SP gain in Vitality state +30%. and P. Atk./P. Def./M. Atk./M. Def. +15% for 30 min. Cooldown 5 min. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80499" name="Festival Fairy's New Year Gift Bundle" additionalName="Event" type="EtcItem">
+		<!-- A gift bundle prepared by Chorong. Use it to obtain 10 Golden Sweets. 20 Five-colored Sweets. and 1 Chorong's Talisman Exchange Ticket. -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>
