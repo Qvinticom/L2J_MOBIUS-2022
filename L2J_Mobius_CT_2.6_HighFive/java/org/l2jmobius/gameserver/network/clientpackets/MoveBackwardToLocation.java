@@ -22,19 +22,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
-import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMoveRequest;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.CastleZone;
-import org.l2jmobius.gameserver.model.zone.type.FortZone;
-import org.l2jmobius.gameserver.model.zone.type.HqZone;
-import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -107,75 +99,75 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		}
 		
 		// Prevent player force moving in or out siege area.
-		final int teleMode = player.getTeleMode();
-		if (!player.isFlying() && (teleMode == 0))
-		{
-			final boolean siegable = player.isInsideZone(ZoneId.CASTLE) || player.isInsideZone(ZoneId.FORT);
-			boolean waterContact = player.isInsideZone(ZoneId.WATER);
-			if (siegable && !waterContact) // Need to know if player is over water only when siegable.
-			{
-				for (ZoneType zone : ZoneManager.getInstance().getZones(_originX, _originY))
-				{
-					if ((zone instanceof WaterZone) && ((zone.getZone().getHighZ() + player.getCollisionHeight()) > _originZ))
-					{
-						waterContact = true;
-						break;
-					}
-				}
-			}
-			if (player.isInsideZone(ZoneId.HQ) || (siegable && waterContact))
-			{
-				boolean limited = false;
-				boolean water = false;
-				for (ZoneType zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
-				{
-					if ((zone instanceof CastleZone) || (zone instanceof FortZone))
-					{
-						if (Util.calculateDistance(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, false, false) > 1000)
-						{
-							player.stopMove(player.getLastServerPosition());
-							player.sendPacket(ActionFailed.STATIC_PACKET);
-							return;
-						}
-						limited = true;
-					}
-					if (zone instanceof WaterZone)
-					{
-						water = true;
-					}
-				}
-				if (limited && !water && !GeoEngine.getInstance().canSeeTarget(player, new Location(_targetX, _targetY, _targetZ)))
-				{
-					player.stopMove(player.getLastServerPosition());
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-			else if (siegable)
-			{
-				for (ZoneType zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
-				{
-					if ((zone instanceof WaterZone) || (zone instanceof HqZone))
-					{
-						if ((Math.abs(_targetZ - _originZ) > 250) || !GeoEngine.getInstance().canSeeTarget(player, new Location(_targetX, _targetY, _targetZ)))
-						{
-							player.stopMove(player.getLastServerPosition());
-							player.sendPacket(ActionFailed.STATIC_PACKET);
-							return;
-						}
-					}
-					else if ((zone instanceof CastleZone) || (zone instanceof FortZone))
-					{
-						if (((Math.abs(_targetZ - _originZ) < 100) || (Util.calculateDistance(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, false, false) > 2000)) && !GeoEngine.getInstance().canMoveToTarget(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, player.getInstanceId()))
-						{
-							player.stopMove(player.getLastServerPosition());
-							player.sendPacket(ActionFailed.STATIC_PACKET);
-							return;
-						}
-					}
-				}
-			}
-		}
+		// final int teleMode = player.getTeleMode();
+		// if (!player.isFlying() && (teleMode == 0))
+		// {
+		// final boolean siegable = player.isInsideZone(ZoneId.CASTLE) || player.isInsideZone(ZoneId.FORT);
+		// boolean waterContact = player.isInsideZone(ZoneId.WATER);
+		// if (siegable && !waterContact) // Need to know if player is over water only when siegable.
+		// {
+		// for (ZoneType zone : ZoneManager.getInstance().getZones(_originX, _originY))
+		// {
+		// if ((zone instanceof WaterZone) && ((zone.getZone().getHighZ() + player.getCollisionHeight()) > _originZ))
+		// {
+		// waterContact = true;
+		// break;
+		// }
+		// }
+		// }
+		// if (player.isInsideZone(ZoneId.HQ) || (siegable && waterContact))
+		// {
+		// boolean limited = false;
+		// boolean water = false;
+		// for (ZoneType zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
+		// {
+		// if ((zone instanceof CastleZone) || (zone instanceof FortZone))
+		// {
+		// if (Util.calculateDistance(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, false, false) > 1000)
+		// {
+		// player.stopMove(player.getLastServerPosition());
+		// player.sendPacket(ActionFailed.STATIC_PACKET);
+		// return;
+		// }
+		// limited = true;
+		// }
+		// if (zone instanceof WaterZone)
+		// {
+		// water = true;
+		// }
+		// }
+		// if (limited && !water && !GeoEngine.getInstance().canSeeTarget(player, new Location(_targetX, _targetY, _targetZ)))
+		// {
+		// player.stopMove(player.getLastServerPosition());
+		// player.sendPacket(ActionFailed.STATIC_PACKET);
+		// return;
+		// }
+		// }
+		// else if (siegable)
+		// {
+		// for (ZoneType zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
+		// {
+		// if ((zone instanceof WaterZone) || (zone instanceof HqZone))
+		// {
+		// if ((Math.abs(_targetZ - _originZ) > 250) || !GeoEngine.getInstance().canSeeTarget(player, new Location(_targetX, _targetY, _targetZ)))
+		// {
+		// player.stopMove(player.getLastServerPosition());
+		// player.sendPacket(ActionFailed.STATIC_PACKET);
+		// return;
+		// }
+		// }
+		// else if ((zone instanceof CastleZone) || (zone instanceof FortZone))
+		// {
+		// if (((Math.abs(_targetZ - _originZ) < 100) || (Util.calculateDistance(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, false, false) > 2000)) && !GeoEngine.getInstance().canMoveToTarget(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, player.getInstanceId()))
+		// {
+		// player.stopMove(player.getLastServerPosition());
+		// player.sendPacket(ActionFailed.STATIC_PACKET);
+		// return;
+		// }
+		// }
+		// }
+		// }
+		// }
 		
 		// Correcting targetZ from floor level to head level (?)
 		// Client is giving floor level as targetZ but that floor level doesn't
@@ -213,6 +205,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			}
 		}
 		
+		final int teleMode = player.getTeleMode();
 		if (teleMode > 0)
 		{
 			if (teleMode == 1)
