@@ -477,6 +477,13 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11509" toLevel="13" name="Radiant Crash">
 		<!-- Strikes the target with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
@@ -882,6 +889,13 @@
 				</skillLevel>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11513" toLevel="13" name="Radiant Crash">
 		<!-- Attacks the target and nearby enemies with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
@@ -2052,6 +2066,21 @@
 			<effect name="CriticalRate">
 				<amount>100</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">99</value>
+				</chance>
+				<isCritical>false</isCritical>
+				<targetType>TARGET</targetType>
+				<minDamage>1</minDamage>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>7009</skillId> <!-- Test skill calls Spectral Slash -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -4555,6 +4584,27 @@
 		<icon>icon.skill11585</icon>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>11508</castSkillId><!-- Trace of Twin Edges -->
+				<skillId>19435</skillId> <!-- Spectral Slash -->
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>19426</castSkillId><!-- Shadow Blade -->
+				<skillId>19435</skillId> <!-- Spectral Slash -->
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>11510</castSkillId><!-- Resolving Bash -->
+				<skillId>19435</skillId> <!-- Spectral Slash -->
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
+			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">5</value>

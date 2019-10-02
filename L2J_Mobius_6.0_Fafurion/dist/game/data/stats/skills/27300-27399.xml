@@ -854,6 +854,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
@@ -886,6 +887,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -928,6 +930,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -974,6 +977,7 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">225000</value>
 			<value level="2">210000</value>
@@ -1069,6 +1073,7 @@
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1119,6 +1124,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">13500000</value>
 			<value level="2">12600000</value>
@@ -1169,6 +1175,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1229,6 +1236,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1245,8 +1253,6 @@
 		</reuseDelay>
 		<conditions>
 			<condition name="OpNeedAgathion" />
-		</conditions>
-		<conditions>
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
@@ -1295,6 +1301,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1331,6 +1338,7 @@
 		<targetType>OTHERS</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">6750000</value>
 			<value level="2">6300000</value>
@@ -1373,6 +1381,7 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">4500000</value>
 			<value level="2">4200000</value>

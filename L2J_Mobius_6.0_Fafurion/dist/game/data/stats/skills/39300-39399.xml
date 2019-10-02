@@ -621,9 +621,11 @@
 	</skill>
 	<skill id="39397" toLevel="6" name="+5 Radiant Warrior's Circlet Box">
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>400</hitTime>
+		<hitTime>500</hitTime>
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
 			<effect name="RestorationRandom" level="1">

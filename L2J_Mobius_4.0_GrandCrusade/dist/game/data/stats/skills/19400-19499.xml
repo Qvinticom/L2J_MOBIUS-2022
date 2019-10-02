@@ -45,6 +45,7 @@
 			<value level="3">10</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -307,7 +308,7 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
 		<trait>KNOCKDOWN</trait> <!-- Guessed -->
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -381,7 +382,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>20</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -405,10 +406,11 @@
 	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
 		<trait>KNOCKBACK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
@@ -429,8 +431,9 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="KnockBack">
+				<distance>250</distance>
 				<speed>600</speed>
-				<distance>100</distance>
+				<knockDown>false</knockDown>
 			</effect>
 		</effects>
 	</skill>
@@ -466,7 +469,7 @@
 	<skill id="19416" toLevel="7" name="Elemental Burst: Holy">
 		<!-- Elemental Burst inflicts Stun for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -498,10 +501,10 @@
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>18</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -516,7 +519,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>200</affectRange>
+		<affectRange>60</affectRange>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -531,7 +534,8 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
+		<trait>SHOCK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>

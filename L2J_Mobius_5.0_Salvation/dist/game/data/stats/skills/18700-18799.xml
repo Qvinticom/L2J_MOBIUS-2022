@@ -487,15 +487,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">9</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
 		<!-- Spiritshot damage +$s1. -->
@@ -516,15 +507,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="MAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">13</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
 		<!-- Cancels enemy's target on you. -->
@@ -568,8 +550,6 @@
 		<!-- Cancel all debuffs. -->
 		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
 		<abnormalTime>7</abnormalTime>
 		<chance>100</chance>
 		<reuseDelay>30000</reuseDelay>
@@ -1873,24 +1853,28 @@
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18773" toLevel="5" name="Drum Melody">
 		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and P. Critical Damage Received +$s5. A chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18774" toLevel="5" name="Pipe Organ Melody">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
+		<effectPoint>712</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18775" toLevel="5" name="Guitar Melody">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
+		<effectPoint>687</effectPoint>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="18776" toLevel="4" name="Harp Melody">

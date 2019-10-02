@@ -7,6 +7,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>13500000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28101" toLevel="12" name="Scorpion's Mass Exile">
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose $s1 HP/ second. -->
@@ -19,6 +20,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>-687</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28102" toLevel="12" name="Mass Binding Flood">
 		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
@@ -29,6 +31,7 @@
 		<hitTime>10000</hitTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>-707</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28103" toLevel="12" name="Slippery Scale">
 		<!-- For $s1, defends against debuffs $s2 times. -->
@@ -37,6 +40,7 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>2</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28104" toLevel="12" name="Archer's Call">
 		<!-- Summons all party members to you. -->
@@ -46,6 +50,7 @@
 		<hitTime>15000</hitTime>
 		<reuseDelay>6750000</reuseDelay>
 		<effectPoint>467</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28105" toLevel="12" name="Exoskeletal Shield">
 		<!-- Reflects $s1 of received damage. -->
@@ -54,6 +59,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>4500000</reuseDelay>
 		<effectPoint>379</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28106" toLevel="1" name="Summon Virgo Agathion">
 		<!-- Summons the Virgo Agathion. -->
@@ -941,6 +947,7 @@
 		<itemConsumeId>29152</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>

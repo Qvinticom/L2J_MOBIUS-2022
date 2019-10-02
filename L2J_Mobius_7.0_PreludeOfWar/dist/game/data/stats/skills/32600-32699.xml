@@ -99,6 +99,21 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<effectRange>1400</effectRange>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackRange">
+				<power>100000</power>
+				<shieldDefPercent>40</shieldDefPercent>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32610" toLevel="1" name="Earth Crash">
 		<icon>icon.skill11018</icon>
@@ -793,6 +808,42 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<mpConsume>191</mpConsume>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<trait>KNOCKDOWN</trait>
+		<affectRange>125</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+			</effect>
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>false</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<SLEEP>100</SLEEP>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32685" toLevel="1" name="Infinity Fist">
 		<!-- Swings both arms quickly to deal multiple strikes. -->
@@ -803,6 +854,20 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>400</effectRange>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32686" toLevel="1" name="Dragon Cry">
 		<!-- Shouts out to use the Dragon's Authority. Increases nearby allies' Atk. Spd./ Casting Spd. by 30% for 1 min. -->
@@ -812,6 +877,31 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<mpConsume>8</mpConsume>		
+		<castRange>700</castRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1200</effectRange>
+		<magicLvl>91</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<affectRange>900</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32687" toLevel="1" name="Lethal Arrow">
 		<!-- Attacks enemies at distance. -->
@@ -822,6 +912,23 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<mpConsume>1767</mpConsume>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32688" toLevel="1" name="Arrow Rain">
 		<!-- Attacks the target and nearby enemies with a rain of arrows and decreases their Speed for 10 sec. -->
@@ -833,6 +940,33 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectRange>900</effectRange>
+		<magicLvl>83</magicLvl>
+		<mpConsume>160</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>23299</skillId> <!-- Arrow Rain -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32689" toLevel="1" name="Infinity Arrow">
 		<!-- Focuses on a target at the front and inflicts a long range attack. -->
@@ -843,17 +977,62 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<fenRange>0,0,900,90</fenRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>175</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<effectRange>1500</effectRange>
+		<reuseDelay>30000</reuseDelay>
+		<fanRange>0;0;900;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32690" toLevel="1" name="Rush">
 		<!-- Charges at the enemy and inflicts physical damage. -->
 		<icon>icon.skill0484</icon>
-		<operateType>A1</operateType>
+		<operateType>DA1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>400</castRange>
 		<hitTime>300</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<activateRate>60</activateRate>
+		<affectLimit>5-12-1</affectLimit>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-681</effectPoint>
+		<effectRange>800</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>82</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<magicCriticalRate>5</magicCriticalRate>
+		<fanRange>0;0;600;60</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32691" toLevel="1" name="Aqua Storm">
 		<!-- Attacks and stuns nearby enemies. -->
@@ -864,6 +1043,34 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32692" toLevel="1" name="Rising Wave">
 		<!-- Summons a huge wave to attack enemies and pull them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -875,6 +1082,37 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>45000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>60</activateRate>
+		<nextAction>ATTACK</nextAction>
+		<affectRange>600</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>600</effectRange>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>45000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;600;180</fanRange>
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<lvlBonusRate>1</lvlBonusRate>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<chance>15</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32693" toLevel="1" name="Spear Slash">
 		<!-- Attacks nearby enemies -->
@@ -884,6 +1122,21 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>11000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32694" toLevel="1" name="Power Crush">
 		<!-- Attacks nearby enemies and decreases their Speed. -->
@@ -895,6 +1148,30 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ALL_SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<criticalChance>10</criticalChance>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32695" toLevel="1" name="Power Bomber">
 		<!-- Inflicts a powerful attack on the target and knocks it down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -906,6 +1183,42 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<mpConsume>191</mpConsume>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<trait>KNOCKDOWN</trait>
+		<affectRange>125</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+			</effect>
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<SLEEP>100</SLEEP>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32696" toLevel="1" name="Slashing Blade">
 		<!-- Attacks nearby enemies -->
@@ -915,6 +1228,22 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<coolTime>733</coolTime>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>11000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1000000</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32697" toLevel="1" name="Aqua Spike">
 		<!-- Unleashes water magic at the enemy to inflict damage. -->
@@ -949,6 +1278,36 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>45000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>100</activateRate>
+		<nextAction>ATTACK</nextAction>
+		<affectRange>600</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>600</effectRange>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;600;180</fanRange>
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<lvlBonusRate>1</lvlBonusRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>20000</power>
+			</effect>
+			<effect name="PullBack">
+				<speed>90</speed>
+				<delay>600</delay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32699" toLevel="1" name="Aqua Crash">
 		<!-- Attacks the enemy with powerful water magic. -->

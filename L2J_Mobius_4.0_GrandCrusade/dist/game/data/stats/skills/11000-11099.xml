@@ -3755,7 +3755,6 @@
 			<value level="5">105</value>
 		</magicLvl>
 		<isMagic>1</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -4737,7 +4736,7 @@
 			<value fromLevel="1" toLevel="4">100</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicLvl>

@@ -28,6 +28,13 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="HitNumber">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35302" toLevel="1" name="Special Ability Krishna Dual Sword">

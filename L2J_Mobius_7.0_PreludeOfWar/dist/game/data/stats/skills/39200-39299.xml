@@ -118,6 +118,16 @@
 		</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
+		<abnormalTime>60</abnormalTime>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39215" toLevel="2" name="Steamed Fish">
 		<!-- Increases M. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
@@ -127,6 +137,15 @@
 		</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39216" toLevel="2" name="Grilled Fish">
 		<!-- Increases Atk. Spd./ Casting Spd. by $s1, Speed by $s2 for 10 min. Can be stacked with Honey Vitality Beer. -->

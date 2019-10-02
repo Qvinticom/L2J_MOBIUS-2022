@@ -255,9 +255,23 @@
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<magicLvl>85</magicLvl>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19404</skillId> <!-- Fire Attribute -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11008" toLevel="1" name="Water Stance">
 		<!-- Bestows the property of Water to magic spells cast. -->
@@ -265,10 +279,25 @@
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19404</skillId> <!-- Fire Attribute -->
+				<skillLevel>2</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11009" toLevel="1" name="Wind Stance">
 		<!-- Bestows the property of Wind to magic spells cast. -->
@@ -276,10 +305,24 @@
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19404</skillId> <!-- Fire Attribute -->
+				<skillLevel>3</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11010" toLevel="1" name="Earth Stance">
 		<!-- Bestows the property of Earth to magic spells cast. -->
@@ -287,10 +330,24 @@
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<operateType>TG</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>796</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19404</skillId> <!-- Fire Attribute -->
+				<skillLevel>4</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11011" toLevel="11" name="Elemental Spike">
 		<!-- Inflicts a magic attack imbued with elemental properties on target with $s2 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->

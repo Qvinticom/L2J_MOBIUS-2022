@@ -11,6 +11,28 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
+		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>400</effectRange>
+		<magicLvl>87</magicLvl>
+		<reuseDelayGroup>11050</reuseDelayGroup>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="DamOverTime">
+				<canKill>true</canKill>
+				<power>500</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32701" toLevel="1" name="Surrender to Water">
 		<!-- Decrease the enemy's Water Attack Resistance. -->
@@ -23,6 +45,31 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ARMOR_WATER</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>1400</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<mpInitialConsume>80</mpInitialConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-150</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32702" toLevel="1" name="Mass Surrender to Water">
 		<!-- Decrease the enemies' Water Attack Resistance. -->
@@ -35,6 +82,33 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ARMOR_WATER</abnormalType>
+		<activateRate>40</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>1400</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>150</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-150</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32703" toLevel="1" name="Aqua Heal">
 		<!-- Recovers the target's HP. -->
@@ -46,6 +120,19 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<effectPoint>575</effectPoint>
+		<effectRange>1100</effectRange>
+		<magicLvl>100</magicLvl>
+		<mpConsume>48</mpConsume>
+		<mpInitialConsume>12</mpInitialConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>PARTY_PLEDGE</affectScope>
+		<effects>
+			<effect name="Heal">
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32704" toLevel="1" name="Bite Attack">
 		<!-- Bites the enemy. -->
@@ -99,6 +186,31 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>100</magicLvl>
+		<mpConsume>80</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>BLEED</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100000</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="DamOverTime">
+				<power>50000</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32707" toLevel="1" name="Fafurion Water Blast">
 		<!-- Water Blast Presentation -->
@@ -158,6 +270,30 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>15-25</affectLimit>
+		<affectRange>1500</affectRange>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<channelingStart>1</channelingStart>
+		<channelingTickInterval>2</channelingTickInterval>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicLvl>80</magicLvl>
+		<mpConsume>36</mpConsume>
+		<mpInitialConsume>36</mpInitialConsume>
+		<mpPerChanneling>80</mpPerChanneling>
+		<operateType>CA1</operateType>
+		<reuseDelay>20000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>4</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<targetType>GROUND</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<channelingEffects>
+			<effect name="MagicalAttack">
+				<power>500</power>
+			</effect>
+		</channelingEffects>
 	</skill>
 	<skill id="32713" toLevel="1" name="Fafurion Tail Strike">
 		<!-- Fafurion's smashing tail deals damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -221,6 +357,28 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<reuseDelay>30000</reuseDelay>
+		<affectLimit>20-20</affectLimit>
+		<castRange>800</castRange>
+		<affectRange>1500</affectRange>
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>10000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+				<knockDown>false</knockDown>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32716" toLevel="3" name="Fafurion Breath">
 		<!-- Fafurion inflicts physical damage to enemies in front of it. -->
@@ -294,6 +452,25 @@
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<reuseDelay>60000</reuseDelay>
+		<magicLvl>110</magicLvl>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32719" toLevel="1" name="Fafurion Summon Water Orb">
 		<!-- Water Orb Summoning Presentation -->
@@ -320,6 +497,30 @@
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<reuseDelay>60000</reuseDelay>
+		<magicLvl>110</magicLvl>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32722" toLevel="1" name="Fafurion Tidal Wave">
 		<!-- Tidal Wave Presentation -->

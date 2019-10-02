@@ -774,7 +774,7 @@
 	<skill id="19426" toLevel="13" name="Shadow Blade">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P./ M. Def. by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11510</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -882,6 +882,13 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19427" toLevel="9" name="Hands of Einhasad">
 		<!-- For $s1, P. Atk./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
@@ -1901,20 +1908,19 @@
 		<icon>icon.skill11761</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<abnormalType>MP_RECOVER</abnormalType>
 		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">100</value>
-			<value level="3">150</value>
-			<value level="4">200</value>
-			<value level="5">250</value>
-			<value level="6">300</value>
-			<value level="7">350</value>
-			<value level="8">375</value>
-			<value level="9">400</value>
+			<value level="1">38</value>
+			<value level="2">39</value>
+			<value level="3">41</value>
+			<value level="4">43</value>
+			<value level="5">45</value>
+			<value level="6">47</value>
+			<value level="7">49</value>
+			<value level="8">51</value>
+			<value level="9">53</value>
 		</mpConsume>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
 		<hitTime>2000</hitTime>
@@ -1922,14 +1928,6 @@
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>15000</reuseDelay>
-		<effects>
-			<effect name="ManaHealPercent">
-				<power>5</power>
-			</effect>
-			<effect name="DispelBySlotMyself">
-				<dispel>TRIAD</dispel>
-			</effect>
-		</effects>
 		<effectPoint>
 			<value level="1">1798</value>
 			<value level="2">1811</value>
@@ -1949,12 +1947,31 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ManaHealByLevel">
+				<power>
+					<value level="1">700</value>
+					<value level="2">715</value>
+					<value level="3">725</value>
+					<value level="4">740</value>
+					<value level="5">755</value>
+					<value level="6">768</value>
+					<value level="7">786</value>
+					<value level="8">806</value>
+					<value level="9">826</value>
+				</power>
+			</effect>
+			<effect name="DispelBySlotMyself">
+				<dispel>TRIAD</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
 		<!-- For 150 sec., party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
+		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2002,6 +2019,7 @@
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
+		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2053,6 +2071,7 @@
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
+		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2117,9 +2136,10 @@
 		<specialLevel>-1</specialLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<affectRange>2000</affectRange>
-		<isMagic>1</isMagic>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
 				<amount>15</amount>

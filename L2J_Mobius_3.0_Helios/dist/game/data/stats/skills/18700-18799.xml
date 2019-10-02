@@ -7,6 +7,7 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -100,6 +101,7 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -446,15 +448,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">9</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
 		<!-- Spiritshot damage + $s1. -->
@@ -475,15 +468,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="MAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">13</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
 		<!-- Cancels enemy's target on you. -->
@@ -527,8 +511,6 @@
 		<!-- Cancel all debuffs. -->
 		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
 		<abnormalTime>7</abnormalTime>
 		<chance>100</chance>
 		<reuseDelay>30000</reuseDelay>

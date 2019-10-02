@@ -59,20 +59,14 @@
 		<chance>100</chance>
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<targetConditions>
-			<condition name="OpTargetPc" />
-		</targetConditions>
 		<effects>
-			<effect name="CallSkill">
-				<skillId>7002</skillId> <!-- Dispel Debuff -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>15207</skillId> <!-- Debuff Immunity -->
-				<skillLevel>1</skillLevel>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>20</max>
 			</effect>
 		</effects>
 	</skill>

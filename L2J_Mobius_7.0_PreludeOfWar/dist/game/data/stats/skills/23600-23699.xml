@@ -1508,6 +1508,25 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>2</effectPoint>
 		<reuseDelay>10000</reuseDelay>
+		<hitTime>1500</hitTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
+		<hitCancelTime>0.2</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
+		<effects>
+			<effect name="PAtk">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23690" toLevel="1" name="Kelbim Physical Protection">
 		<!-- Increases P. Def. -->
@@ -1603,6 +1622,27 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>60</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<lvlBonusRate>30</lvlBonusRate>
+		<mpConsume>10</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalAttack">
+				<power>50000</power>
+				<criticalChance>10</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23699" toLevel="1" name="Storm Rage">
 		<!-- Infllicts great damage to enemies within range and blows them away. -->

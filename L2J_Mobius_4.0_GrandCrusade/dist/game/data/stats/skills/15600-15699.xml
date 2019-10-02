@@ -402,6 +402,10 @@
 		<!-- Very strong against Wind, and vulnerable to Earth. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="15639" toLevel="1" name="Mysterious Fear">
 		<!-- In Fear. -->

@@ -512,6 +512,7 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>1811</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28083" toLevel="12" name="Skipping Kid">
 		<!-- Teleports 600 grids forward. -->
@@ -521,6 +522,7 @@
 		<coolTime>400</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>2</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28084" toLevel="12" name="Scale of Life">
 		<!-- Equalizes entire party's HP and restores $s2 HP/ second for $s1. -->
@@ -531,6 +533,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>1844</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28085" toLevel="12" name="Rocky Camouflage">
 		<!-- For $s1, transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
@@ -541,6 +544,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>225000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28086" toLevel="12" name="Battle Rhapsody">
 		<!-- For $s1, P./ M. Atk., and Atk./ Casting Spd. x $s2. -->
@@ -561,6 +565,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>867</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28088" toLevel="12" name="Bountiful Resurrection">
 		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
@@ -569,6 +574,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>13500000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28089" toLevel="12" name="Scorpion's Mass Exile">
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose $s1 HP/ second. -->
@@ -581,6 +587,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>-687</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28090" toLevel="12" name="Mass Binding Flood">
 		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
@@ -591,6 +598,7 @@
 		<hitTime>10000</hitTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>-707</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28091" toLevel="12" name="Slippery Scale">
 		<!-- For $s1, defends against debuffs $s2 times. -->
@@ -599,6 +607,7 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>2</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28092" toLevel="12" name="Archer's Call">
 		<!-- Summons all party members to you. -->
@@ -608,6 +617,7 @@
 		<hitTime>15000</hitTime>
 		<reuseDelay>6750000</reuseDelay>
 		<effectPoint>467</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28093" toLevel="12" name="Exoskeletal Shield">
 		<!-- Reflects $s1 of received damage. -->
@@ -616,6 +626,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>4500000</reuseDelay>
 		<effectPoint>379</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28094" toLevel="12" name="Healing Light">
 		<!-- Restores all party members' HP/ MP/ CP and has a chance of dispelling their debuffs. -->
@@ -625,6 +636,7 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>1811</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28095" toLevel="12" name="Skipping Kid">
 		<!-- Teleports 600 grids forward. -->
@@ -634,6 +646,7 @@
 		<coolTime>400</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>2</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28096" toLevel="12" name="Scale of Life">
 		<!-- Equalizes entire party's HP and restores $s2 HP/ second for $s1. -->
@@ -644,6 +657,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>118000</reuseDelay>
 		<effectPoint>1844</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28097" toLevel="12" name="Rocky Camouflage">
 		<!-- For $s1, transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
@@ -654,6 +668,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>225000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 	<skill id="28098" toLevel="12" name="Battle Rhapsody">
 		<!-- For $s1, P./ M. Atk., and Atk./ Casting Spd. x $s2. -->
@@ -674,5 +689,6 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>867</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
 </list>

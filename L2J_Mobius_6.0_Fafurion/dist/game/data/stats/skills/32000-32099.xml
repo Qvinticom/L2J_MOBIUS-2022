@@ -50,6 +50,7 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. and M. Def. for 7 sec. -->
 		<icon>icon.skill10318new</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>650</castRange>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -57,6 +58,7 @@
 		<!-- Deals great physical damage in the front and decreases P. Atk., M. Atk. and Speed for 10 sec. -->
 		<icon>icon.skill0492</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
@@ -98,6 +100,7 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. and M. Def. for 5 sec. -->
 		<icon>icon.skill11513</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>650</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -106,12 +109,14 @@
 		<!-- Inflicts great physical damage on all nearby enemies and bleeds them for 15 sec. -->
 		<icon>icon.skill6816</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="32012" toLevel="1" name="Destruction of Fate">
 		<!-- Inflicts great physical damage on all nearby enemies and decreases their P. Def. and M. Def. for 15 sec. -->
 		<icon>icon.skill0190</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="32013" toLevel="12" name="Call of Seven Signs">
@@ -207,6 +212,7 @@
 		<!-- Decreases MP over $s1 and significantly slows Casting Spd. -->
 		<icon>icon.skill32024</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 		<hitTime>5000</hitTime>
 	</skill>
@@ -225,6 +231,7 @@
 		<!-- For 30 sec., Skill MP Consumption +100%. -->
 		<icon>icon.skill32027</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 		<hitTime>5000</hitTime>
 	</skill>
@@ -244,6 +251,7 @@
 		<!-- Inflicts great DoT on enemies within the range for 1 min. and decreases their Speed by 50. -->
 		<icon>icon.skill32030</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>3000</castRange>
 	</skill>
 	<skill id="32031" toLevel="2" name="Destruction's Shadow">
@@ -265,6 +273,7 @@
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def. for 10 sec. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
 		<hitTime>3000</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -282,6 +291,7 @@
 		<!-- Inflicts bleeding damage on all nearby enemies for 15 sec. -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
 	</skill>
@@ -297,6 +307,7 @@
 		<!-- Inflicts great magic damage on all nearby enemies and poisons them for 15 sec. -->
 		<icon>icon.skill6815</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>3000</hitTime>
 	</skill>

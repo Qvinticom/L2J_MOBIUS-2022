@@ -504,6 +504,16 @@
 				</skillSubLevel>
 				<ticks>7</ticks>
 			</effect>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<skillId>10071</skillId> <!-- Eva's Presence -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>

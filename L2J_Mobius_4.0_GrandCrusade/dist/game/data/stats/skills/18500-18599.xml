@@ -605,11 +605,9 @@
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>100</minDamage>
+				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/Silence -->
 				<skillLevel>1</skillLevel>

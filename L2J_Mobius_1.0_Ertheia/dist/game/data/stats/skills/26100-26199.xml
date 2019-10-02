@@ -53,7 +53,6 @@
 	</skill>
 	<skill id="26108" toLevel="1" name="Returning Hero's Wondrous Cubic">
 		<operateType>A1</operateType>
-		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="26109" toLevel="1" name="Extra Pass: Epic Kamaloka">
 		<operateType>A1</operateType>
@@ -437,7 +436,7 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
-		<effectPoint>-687</effectPoint>
+		<effectPoint>100</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
@@ -484,6 +483,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -531,6 +534,10 @@
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -571,14 +578,16 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
-		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>4000</hitTime>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -626,6 +635,10 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -683,7 +696,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<conditions>
+			<condition name="OpNeedAgathion" />
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
@@ -739,6 +754,15 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="AbnormalShield">
+				<times>5</times>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26128" toLevel="12" name="Archer's Call">
 		<!-- Summons all party members to you. -->
@@ -761,6 +785,19 @@
 		</reuseDelay>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="26129" toLevel="12" name="Exoskeletal Shield">
 		<!-- Reflects 20% of received damage. -->
@@ -782,6 +819,15 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26130" toLevel="1" name="Dark Assassin's Move">
 		<!-- Goes into Hide state for 10 seconds. -->

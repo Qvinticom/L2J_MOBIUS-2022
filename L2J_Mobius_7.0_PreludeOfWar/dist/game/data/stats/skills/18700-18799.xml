@@ -518,15 +518,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">9</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
 		<!-- Spiritshot Damage +$s1. -->
@@ -558,15 +549,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="MAtk">
-				<amount>
-					<value fromLevel="1" toLevel="5">0</value>
-					<value fromLevel="6" toLevel="6">13</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
 		<!-- Cancels enemy's target on you. -->

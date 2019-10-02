@@ -401,6 +401,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="Hp">
 				<amount>100</amount>
@@ -447,6 +448,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<selfEffects>
 			<effect name="Blink">
 				<!-- Teleport to Front -->
@@ -486,6 +488,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
@@ -529,6 +532,7 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
@@ -571,6 +575,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -618,6 +625,10 @@
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -664,6 +675,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -711,6 +726,10 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -768,7 +787,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<conditions>
+			<condition name="OpNeedAgathion" />
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
@@ -824,6 +845,15 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="AbnormalShield">
+				<times>5</times>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26128" toLevel="12" name="Archer's Call">
 		<!-- Summons all party members to you. -->
@@ -846,6 +876,19 @@
 		</reuseDelay>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="26129" toLevel="12" name="Exoskeletal Shield">
 		<!-- Reflects $s1 of received damage. -->
@@ -867,6 +910,15 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26130" toLevel="1" name="Dark Assassin's Move">
 		<!-- Goes into Hide state for 10 seconds. -->
