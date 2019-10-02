@@ -230,7 +230,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					
 					// announce the success
 					final int minEnchantAnnounce = item.isArmor() ? 6 : 7;
-					final int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
+					final int maxEnchantAnnounce = item.isArmor() ? 0 : 30;
 					if ((item.getEnchantLevel() >= minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
@@ -238,7 +238,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						player.broadcastPacket(sm);
-						player.broadcastPacket(new ExItemAnnounce(item));
+						player.broadcastPacket(new ExItemAnnounce(item, player));
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)
