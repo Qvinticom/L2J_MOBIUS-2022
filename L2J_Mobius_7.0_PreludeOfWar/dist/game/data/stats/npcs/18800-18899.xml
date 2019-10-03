@@ -253,61 +253,6 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="18805" level="83" type="Monster" name="Waste Landfill Machine">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>FEMALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="19" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="18806" level="83" type="Monster" name="Purifying Magic Circle">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3834.70137" hpRegen="8.5" mp="1794.743" mpRegen="3" />
-			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="16" />
-			<height normal="31" />
-		</collision>
-	</npc>
 	<npc id="18807" level="81" type="Monster" name="Frightened Ragna Orc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>

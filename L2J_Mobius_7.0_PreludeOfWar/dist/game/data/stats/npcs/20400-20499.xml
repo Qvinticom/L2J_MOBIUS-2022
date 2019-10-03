@@ -2066,64 +2066,6 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20492" level="21" type="Monster" name="Kirunak's Escort">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="110" />
-			<param name="MoveAroundSocial1" value="110" />
-			<param name="MoveAroundSocial2" value="110" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<equipment rhand="68" /> <!-- Falchion -->
-		<acquire exp="1146" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="364.037955" hpRegen="3.5" mp="206.805" mpRegen="1.5" />
-			<attack physical="47.91924" magical="32.72263" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="89.73059" magical="65.66095" />
-			<speed>
-				<walk ground="60" />
-				<run ground="140" />
-			</speed>
-			<hitTime>300</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>KIRUNAK</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="11" grown="13" />
-			<height normal="27" grown="34" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="36516" min="1" max="1" chance="7.529" /> <!-- Worn Leather -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="5.25" /> <!-- Thread -->
-			</spoil>
-		</dropLists>
-	</npc>
 	<npc id="20494" level="31" type="Monster" name="Turek War Hound">
 		<!-- Confirmed CT2.5 -->
 		<parameters>

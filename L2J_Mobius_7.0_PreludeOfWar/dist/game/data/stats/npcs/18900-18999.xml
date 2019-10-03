@@ -1474,40 +1474,6 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18936" level="1" type="Npc">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
 	<npc id="18937" level="1" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
