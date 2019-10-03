@@ -636,7 +636,6 @@
 					<value level="1">6</value>
 					<value level="2">8</value>
 				</amount>
-				<mode>PER</mode>
 				<armorType>
 					<item>HEAVY</item>
 				</armorType>
@@ -1825,7 +1824,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="MagicalAttackWeaponBonus">
+			<effect name="MagicalAttack">
 				<power>2311</power>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
@@ -2943,6 +2942,13 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-709</effectPoint>
+		<effectRange>1000</effectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">161</value>
 			<value level="2">163</value>
@@ -2959,7 +2965,7 @@
 			<value level="13">228</value>
 		</mpConsume>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="EnergyAttack">
 				<power>
 					<value level="1">15024</value>
 					<value level="2">15542</value>
@@ -3004,6 +3010,26 @@
 			<value level="12">222</value>
 			<value level="13">228</value>
 		</mpConsume>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effectRange>1000</effectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>ANCIENTSWORD</item>
+					<item>DUAL</item>
+					<item>POLE</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DUALFIST</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -3029,12 +3055,26 @@
 	<skill id="30770" toLevel="9" name="Thunder Storm">
 		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>1080</hitTime>
 		<coolTime>720</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-167</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>5</lvlBonusRate> <!-- Guessing -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">122</value>
 			<value level="2">124</value>
@@ -3046,6 +3086,38 @@
 			<value level="8">149</value>
 			<value level="9">153</value>
 		</mpConsume>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">26003</value>
+					<value level="2">30494</value>
+					<value level="3">35883</value>
+					<value level="4">37680</value>
+					<value level="5">39349</value>
+					<value level="6">40997</value>
+					<value level="7">42645</value>
+					<value level="8">42645</value>
+					<value level="9">42645</value>
+					<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</power>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">15</value>
+					<value fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30771" toLevel="4" name="Rage">
 		<!-- For $s1, P. Atk. +$s2. Additionally P. Atk. +$s3 when a two-handed sword/ blunt weapon, or spear is equipped. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
