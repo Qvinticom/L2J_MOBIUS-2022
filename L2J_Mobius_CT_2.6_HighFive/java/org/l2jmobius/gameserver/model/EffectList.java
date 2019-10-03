@@ -1149,7 +1149,7 @@ public class EffectList
 		}
 		
 		// Remove the effect from creature effects.
-		stopAndRemove(removed, info, getEffectList(info.getSkill()));
+		stopAndRemove(true, removed, info, getEffectList(info.getSkill()));
 		// Update effect flags and icons.
 		updateEffectList(true);
 	}
