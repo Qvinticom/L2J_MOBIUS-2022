@@ -488,25 +488,22 @@ public class Fafurion extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		if (npc.getId() == _fafurion.getId())
+		for (PlayerInstance player : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 		{
-			for (PlayerInstance player : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
-			{
-				player.sendPacket(new ExShowScreenMessage(NpcStringId.HONORED_WARRIORS_HAVE_DEFEATED_THE_WATER_DRAGON_FAFURION, ExShowScreenMessage.TOP_CENTER, 10000, true));
-			}
-			
-			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
-			final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(FAFURION_GRANDBOSS_ID, info);
-			startQuestTimer("unlock_fafurion", respawnTime, null, null);
-			if (_stage < 7)
-			{
-				_stage++;
-			}
-			GlobalVariablesManager.getInstance().set("Fafurion_Stage", _stage);
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.HONORED_WARRIORS_HAVE_DEFEATED_THE_WATER_DRAGON_FAFURION, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
+		
+		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
+		final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().setStatsSet(FAFURION_GRANDBOSS_ID, info);
+		startQuestTimer("unlock_fafurion", respawnTime, null, null);
+		if (_stage < 7)
+		{
+			_stage++;
+		}
+		GlobalVariablesManager.getInstance().set("Fafurion_Stage", _stage);
 		
 		return super.onKill(npc, killer, isSummon);
 	}
