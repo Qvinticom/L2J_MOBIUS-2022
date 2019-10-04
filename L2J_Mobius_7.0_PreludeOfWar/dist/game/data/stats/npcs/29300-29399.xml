@@ -3357,119 +3357,182 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29368" level="85" type="Npc" name="Emerald Dragon" title="Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29368" level="115" type="Monster" name="Emerald Dragon" title="Servant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="84542140" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="63" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29369" level="85" type="Npc" name="Blue Water Dragon" title="Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29369" level="115" type="Monster" name="Blue Water Dragon" title="Servant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="84542140" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="63" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29370" level="85" type="Npc" name="Fafurion Defender">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29370" level="115" type="Monster" name="Fafurion Defender">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="169084280" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="85" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="63" />
 			<height normal="107" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29371" level="85" type="Npc" name="Elite Legionary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29371" level="115" type="Monster" name="Elite Legionary">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8454214" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="62" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29372" level="85" type="Npc" name="Elite Gladiator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29372" level="115" type="Monster" name="Elite Gladiator">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8454214" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="62" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29373" level="85" type="Npc" name="Elite Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29373" level="115" type="Monster" name="Elite Wizard">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7303072" hpRegen="10.5" mp="30835" mpRegen="3.6" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29374" level="116" type="RaidBoss" name="Cyrax" title="Fafurion's High Priest">
 		<race>DRAGON</race>
@@ -3508,8 +3571,12 @@
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="239135357.24486" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
-			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -3534,8 +3601,12 @@
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="39855892.979295" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
-			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BOW" range="1100" distance="80" width="120" />
 			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="75" />
 				<run ground="180" />
@@ -3561,6 +3632,10 @@
 			<vitals hp="59783839.153485" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
 			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="75" />
 				<run ground="180" />
@@ -3584,8 +3659,12 @@
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="59783839.153485" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
-			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="8761" magical="5090" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
