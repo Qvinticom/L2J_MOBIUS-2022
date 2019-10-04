@@ -328,4 +328,10 @@
 		<node X="-98296" Y="-262136" />
 		<node X="-65544" Y="-229384" />
 	</zone>
+	
+	<zone name="Etina" id="85001" type="NoRestartZone" shape="Cylinder" minZ="1000" maxZ="5000" rad="12000">
+		<stat name="restartTime" val="1800" />
+		<stat name="restartAllowedTime" val="600" />
+		<node X="-245772" Y="187679" />
+	</zone>
 </list>
