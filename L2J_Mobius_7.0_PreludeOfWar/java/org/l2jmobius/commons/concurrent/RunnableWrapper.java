@@ -16,17 +16,13 @@
  */
 package org.l2jmobius.commons.concurrent;
 
-import java.util.logging.Logger;
-
-import org.l2jmobius.Config;
+import java.lang.Thread.UncaughtExceptionHandler;
 
 /**
  * @author Mobius
  */
 public class RunnableWrapper implements Runnable
 {
-	private static final Logger LOGGER = Logger.getLogger(RunnableWrapper.class.getName());
-	
 	private final Runnable _runnable;
 	
 	public RunnableWrapper(Runnable runnable)
@@ -41,9 +37,14 @@ public class RunnableWrapper implements Runnable
 		{
 			_runnable.run();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
-			LOGGER.warning(e.getMessage() + Config.EOL + e.getStackTrace());
+			final Thread t = Thread.currentThread();
+			final UncaughtExceptionHandler h = t.getUncaughtExceptionHandler();
+			if (h != null)
+			{
+				h.uncaughtException(t, e);
+			}
 		}
 	}
 }
