@@ -461,30 +461,76 @@
 	<skill id="16731" toLevel="1" name="Leaking Magic - Attack">
 		<!-- The physical attack and magic attack of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1059</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
 		<targetType>SELF</targetType>
-		<effectPoint>100</effectPoint>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16732" toLevel="1" name="Leaking Magic - Defense">
 		<!-- The physical defense and magic defense of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1478</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
 		<targetType>SELF</targetType>
-		<effectPoint>100</effectPoint>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16733" toLevel="1" name="Leaking Magic - HP">
 		<!-- The HP regen of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1044</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
 		<targetType>SELF</targetType>
-		<effectPoint>100</effectPoint>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16734" toLevel="1" name="Leaking Magic - Eradication">
 		<!-- The Queen and her minions continuously receive massive damage fur to the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1108</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
-		<isDebuff>1</isDebuff>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetPc" /> <!-- TODO -->
+			<condition name="OpResurrection" /> <!-- TODO -->
+		</conditions>
+		<effects>
+			<effect name="BlockResurrection" /> <!-- TODO -->
+		</effects>
 	</skill>
 	<skill id="16735" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
 		<!-- Damage received from Demons -$s1. -->

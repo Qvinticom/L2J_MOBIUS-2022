@@ -18,9 +18,11 @@ package ai.bosses.Ramona;
 
 import java.util.ArrayList;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -32,8 +34,10 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.zone.type.EffectZone;
 import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import ai.AbstractNpcAI;
 
@@ -44,9 +48,16 @@ import ai.AbstractNpcAI;
  */
 public class Ramona extends AbstractNpcAI
 {
+	// Status
+	private static enum Status
+	{
+		ALIVE,
+		IN_FIGHT,
+		DEAD
+	}
+	
 	// NPC
-	private static final int ROOM_CONTROL = 19642;
-	private static final int INVISIBLE = 19643;
+	private static final int MP_CONTROL = 19642;
 	private static final int RAMONA = 19648;
 	private static final int RAMONA_1 = 26141;
 	private static final int RAMONA_2 = 26142;
@@ -58,58 +69,48 @@ public class Ramona extends AbstractNpcAI
 		26146, // Shooter of the Queen
 		26147 // Wizard of the Queen
 	};
-	// skill
-	private static final Skill HYPER_MEGA_PLASMA_SHOT = SkillData.getInstance().getSkill(16641, 1);
-	private static final Skill HYPER_MEGA_PLASMA_BRUST = SkillData.getInstance().getSkill(16642, 1);
-	private static final Skill HIPER_MEGA_TELEKINESS = SkillData.getInstance().getSkill(16643, 1);
-	private static final Skill RIDE_THE_LIGHTING = SkillData.getInstance().getSkill(16644, 1);
-	private static final Skill RIDE_THE_LIGHTING_MEGA_BRUST = SkillData.getInstance().getSkill(16645, 1);
-	private static final Skill ULTRA_MEGA_TELEKINESS = SkillData.getInstance().getSkill(16647, 1);
-	private static final Skill[] RAMONA1_SKILLS =
-	{
-		HYPER_MEGA_PLASMA_BRUST,
-		HYPER_MEGA_PLASMA_SHOT,
-		RIDE_THE_LIGHTING
-	};
-	private static final Skill[] RAMONA2_SKILLS =
-	{
-		HYPER_MEGA_PLASMA_BRUST,
-		HYPER_MEGA_PLASMA_SHOT,
-		RIDE_THE_LIGHTING,
-		RIDE_THE_LIGHTING_MEGA_BRUST
-	};
-	private static final Skill[] RAMONA3_SKILLS =
-	{
-		HYPER_MEGA_PLASMA_BRUST,
-		HYPER_MEGA_PLASMA_SHOT,
-		RIDE_THE_LIGHTING,
-		RIDE_THE_LIGHTING_MEGA_BRUST,
-		HIPER_MEGA_TELEKINESS,
-		ULTRA_MEGA_TELEKINESS
-	};
+	// Trigers
+	private static final int FIRST_GENERATOR = 22230702;
+	private static final int SECOND_GENERATOR = 22230704;
+	private static final int THRID_GENERATOR = 22230706;
+	private static final int FOURTH_GENERATOR = 22230708;
 	// Locations
-	private static final Location RAMONA_SPAWN_LOC_1 = new Location(86338, 172099, -10602, 16383);
-	private static final Location RAMONA_SPAWN_LOC_2 = new Location(86327, 169759, -10465, 16383);
+	private static final Location DEFAULT_LOC = new Location(86338, 172099, -10602, 16383);
+	private static final Location RAMONA_SPAWN_LOC = new Location(86327, 169759, -10465, 16383);
 	// Other
 	private static final int ROOM_CONTROL_DOOR = 22230711;
 	private static final NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, NoSummonFriendZone.class);
-	private static final int MIN_PLAYER_COUNT = 14;
+	private static final EffectZone ZONE_ATTACK = ZoneManager.getInstance().getZoneById(200109, EffectZone.class);
+	private static final EffectZone ZONE_DEFENCE = ZoneManager.getInstance().getZoneById(200110, EffectZone.class);
+	private static final EffectZone ZONE_HP = ZoneManager.getInstance().getZoneById(200111, EffectZone.class);
+	private static final EffectZone ZONE_ERADICATION = ZoneManager.getInstance().getZoneById(200112, EffectZone.class);
 	// Vars
-	private static DoorInstance _door;
+	private static final String RAMONA_RESPAWN_VAR = "RamonaRespawn";
+	private static Status _boss = Status.ALIVE;
 	private static ArrayList<Npc> _minions = new ArrayList<>();
-	private static int _bossStage;
 	private static long _lastAction;
-	private static Npc _invisible;
 	private static Npc _ramona1;
 	private static Npc _ramona2;
 	private static Npc _ramona3;
 	
 	private Ramona()
 	{
-		addStartNpc(ROOM_CONTROL);
-		addKillId(ROOM_CONTROL, RAMONA_3);
-		addSeeCreatureId(INVISIBLE);
-		addAttackId(RAMONA_1, RAMONA_2, RAMONA_3);
+		addStartNpc(MP_CONTROL);
+		addKillId(MP_CONTROL, RAMONA_3);
+		addSeeCreatureId(MP_CONTROL);
+		addAttackId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
+		addSpawnId(RAMONA_1, RAMONA_2, RAMONA_3);
+		
+		final long temp = GlobalVariablesManager.getInstance().getLong(RAMONA_RESPAWN_VAR, 0) - System.currentTimeMillis();
+		if (temp > 0)
+		{
+			_boss = Status.DEAD;
+			startQuestTimer("RAMONA_UNLOCK", temp, null, null);
+		}
+		else
+		{
+			addSpawn(MP_CONTROL, RAMONA_SPAWN_LOC, false, 0, false);
+		}
 	}
 	
 	@Override
@@ -117,16 +118,25 @@ public class Ramona extends AbstractNpcAI
 	{
 		switch (event)
 		{
+			case "RAMONA_UNLOCK":
+			{
+				_boss = Status.ALIVE;
+				addSpawn(MP_CONTROL, RAMONA_SPAWN_LOC, false, 0, false);
+				break;
+			}
 			case "SPAWN_MS":
 			{
-				addSpawn(ROOM_CONTROL, RAMONA_SPAWN_LOC_1, false, 600000, false);
-				addSpawn(RAMONA, RAMONA_SPAWN_LOC_2, false, 600000, false);
-				_lastAction = System.currentTimeMillis();
+				if (ZONE.getCharactersInside().size() >= Config.RAMONA_MIN_PLAYER)
+				{
+					npc.setIsInvul(false);
+					cancelQuestTimers("SPAWN_MS");
+					startQuestTimer("CHECK_ACTIVITY_TASK", 5000, null, null);
+					_lastAction = System.currentTimeMillis();
+				}
 				break;
 			}
 			case "SPAWN_RAMONA_1":
 			{
-				_bossStage = 1;
 				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 3000, ramona ->
 				{
 					if (ramona.getId() == RAMONA)
@@ -134,91 +144,53 @@ public class Ramona extends AbstractNpcAI
 						ramona.deleteMe();
 					}
 				});
-				_ramona1 = addSpawn(RAMONA_1, RAMONA_SPAWN_LOC_1, false, 1200000, true);
-				startQuestTimer("CHECK_ACTIVITY_TASK", 60000, null, null, true);
-				startQuestTimer("RAMONA1_SKILL", 6000, _ramona1, null);
+				_ramona1 = addSpawn(RAMONA_1, RAMONA_SPAWN_LOC, false, 1200000, true);
+				startQuestTimer("GENERATOR_1", getRandom(300000, 600000), null, null);
+				startQuestTimer("GENERATOR_2", getRandom(900000, 1200000), null, null);
+				startQuestTimer("GENERATOR_3", getRandom(1500000, 1800000), null, null);
+				startQuestTimer("GENERATOR_4", getRandom(2100000, 2400000), null, null);
+				_lastAction = System.currentTimeMillis();
 				break;
 			}
-			case "RAMONA1_SKILL":
+			case "GENERATOR_1":
 			{
-				if ((_bossStage == 1) && _ramona1.isInCombat())
-				{
-					Skill randomAttackSkill = RAMONA1_SKILLS[Rnd.get(RAMONA1_SKILLS.length)];
-					if (getRandom(100) > 20)
-					{
-						_ramona1.doCast(randomAttackSkill);
-					}
-				}
+				ZONE.broadcastPacket(new OnEventTrigger(FIRST_GENERATOR, true));
+				ZONE_ATTACK.setEnabled(true);
 				break;
 			}
-			case "SPAWN_RAMONA_MINIONS":
+			case "GENERATOR_2":
 			{
-				_bossStage = 2;
-				for (int i = 0; i < 7; i++)
-				{
-					final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-					minion.setRunning();
-					((Attackable) minion).setIsRaidMinion(true);
-					addAttackPlayerDesire(minion, player);
-					_minions.add(minion);
-				}
-				startQuestTimer("RAMONA2_SKILL", 6000, _ramona2, null);
+				ZONE.broadcastPacket(new OnEventTrigger(SECOND_GENERATOR, true));
+				ZONE_DEFENCE.setEnabled(true);
 				break;
 			}
-			case "RAMONA2_SKILL":
+			case "GENERATOR_3":
 			{
-				if ((_bossStage == 2) && _ramona2.isInCombat())
-				{
-					Skill randomAttackSkill = RAMONA2_SKILLS[Rnd.get(RAMONA2_SKILLS.length)];
-					if (getRandom(100) > 20)
-					{
-						_ramona2.doCast(randomAttackSkill);
-					}
-				}
+				ZONE.broadcastPacket(new OnEventTrigger(THRID_GENERATOR, true));
+				ZONE_HP.setEnabled(true);
 				break;
 			}
-			case "SPAWN_RAMONA_MINIONS_1":
+			case "GENERATOR_4":
 			{
-				_bossStage = 3;
-				for (int i = 0; i < 7; i++)
-				{
-					final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-					minion.setRunning();
-					((Attackable) minion).setIsRaidMinion(true);
-					addAttackPlayerDesire(minion, player);
-					_minions.add(minion);
-				}
-				startQuestTimer("RAMONA3_SKILL", 6000, _ramona3, null);
-				break;
-			}
-			case "RAMONA3_SKILL":
-			{
-				if ((_bossStage == 3) && _ramona3.isInCombat())
-				{
-					Skill randomAttackSkill = RAMONA3_SKILLS[Rnd.get(RAMONA3_SKILLS.length)];
-					if (getRandom(100) > 20)
-					{
-						_ramona3.doCast(randomAttackSkill);
-					}
-				}
+				ZONE.broadcastPacket(new OnEventTrigger(FOURTH_GENERATOR, true));
+				ZONE_ERADICATION.setEnabled(true);
 				break;
 			}
 			case "CHECK_ACTIVITY_TASK":
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					// GrandBossManager.getInstance().setBossStatus(RAMONA, ALIVE);
-					for (Creature creature : ZONE.getCharactersInside())
+					for (Creature charInside : ZONE.getCharactersInside())
 					{
-						if (creature != null)
+						if (charInside != null)
 						{
-							if (creature.isNpc())
+							if (charInside.isNpc())
 							{
-								creature.deleteMe();
+								charInside.deleteMe();
 							}
-							else if (creature.isPlayer())
+							else if (charInside.isPlayer())
 							{
-								creature.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(creature, TeleportWhereType.TOWN));
+								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
 							}
 						}
 					}
@@ -226,22 +198,12 @@ public class Ramona extends AbstractNpcAI
 				}
 				else
 				{
-					startQuestTimer("CHECK_ACTIVITY_TASK", 60000, null, null);
-				}
-				break;
-			}
-			case "CANCEL_TIMERS":
-			{
-				QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
-				if (activityTimer != null)
-				{
-					activityTimer.cancel();
+					startQuestTimer("CHECK_ACTIVITY_TASK", 30000, null, null);
 				}
 				break;
 			}
 			case "END_RAMONA":
 			{
-				_bossStage = 0;
 				ZONE.oustAllPlayers();
 				if (_ramona1 != null)
 				{
@@ -266,9 +228,29 @@ public class Ramona extends AbstractNpcAI
 						minion.deleteMe();
 					}
 				}
+				if ((_boss == Status.ALIVE) || (_boss == Status.IN_FIGHT))
+				{
+					addSpawn(MP_CONTROL, RAMONA_SPAWN_LOC, false, 0, false);
+				}
+				QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
+				if (activityTimer != null)
+				{
+					activityTimer.cancel();
+				}
+				for (int i = FIRST_GENERATOR; i <= FOURTH_GENERATOR; i++)
+				{
+					ZONE.broadcastPacket(new OnEventTrigger(i, false));
+				}
+				ZONE_ATTACK.setEnabled(false);
+				ZONE_DEFENCE.setEnabled(false);
+				ZONE_HP.setEnabled(false);
+				ZONE_ERADICATION.setEnabled(false);
+				cancelQuestTimers("GENERATOR_1");
+				cancelQuestTimers("GENERATOR_2");
+				cancelQuestTimers("GENERATOR_3");
+				cancelQuestTimers("GENERATOR_4");
+				addSpawn(RAMONA, DEFAULT_LOC, false, 0, false);
 				_minions.clear();
-				_invisible.setScriptValue(0);
-				_door.setTargetable(true);
 				break;
 			}
 		}
@@ -278,38 +260,61 @@ public class Ramona extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		double currentHp = (npc.getCurrentHp() / npc.getMaxHp()) * 100;
 		switch (npc.getId())
 		{
+			case MP_CONTROL:
+			{
+				if (ZONE.getCharactersInside().size() < Config.RAMONA_MIN_PLAYER)
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHAT_S_UP_WITH_YOUR_EYES_YOU_NEED_MORE_ENERGY);
+				}
+				break;
+			}
 			case RAMONA_1:
 			{
-				_lastAction = System.currentTimeMillis();
-				if (currentHp < 75)
+				if (npc.getCurrentHpPercent() < 75)
 				{
 					playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_A);
-					_ramona2 = addSpawn(RAMONA_2, RAMONA_SPAWN_LOC_1, false, 1200000, false);
+					_ramona2 = addSpawn(RAMONA_2, RAMONA_SPAWN_LOC, false, 1200000, false);
 					_ramona2.setCurrentHp(_ramona1.getCurrentHp());
 					_ramona1.deleteMe();
-					startQuestTimer("SPAWN_RAMONA_MINIONS", 6000, _ramona2, null);
+					for (int i = 0; i < 7; i++)
+					{
+						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
+						minion.isRunning();
+						((Attackable) minion).setIsRaidMinion(true);
+						addAttackPlayerDesire(minion, attacker);
+						_minions.add(minion);
+					}
 				}
 				break;
 			}
 			case RAMONA_2:
 			{
-				_lastAction = System.currentTimeMillis();
-				if (currentHp < 50)
+				if (npc.getCurrentHpPercent() < 50)
 				{
 					playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_B);
-					_ramona3 = addSpawn(RAMONA_3, RAMONA_SPAWN_LOC_1, false, 1200000, false);
+					_ramona3 = addSpawn(RAMONA_3, RAMONA_SPAWN_LOC, false, 1200000, false);
 					_ramona3.setCurrentHp(_ramona2.getCurrentHp());
 					_ramona2.deleteMe();
-					startQuestTimer("SPAWN_RAMONA_MINIONS_1", 6000, _ramona3, null);
+					for (int i = 0; i < 7; i++)
+					{
+						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
+						minion.isRunning();
+						((Attackable) minion).setIsRaidMinion(true);
+						addAttackPlayerDesire(minion, attacker);
+						_minions.add(minion);
+					}
 				}
 				break;
 			}
 			case RAMONA_3:
 			{
-				_lastAction = System.currentTimeMillis();
+				if ((npc.getCurrentHpPercent() < 25) && npc.isScriptValue(2))
+				{
+					_lastAction = System.currentTimeMillis();
+					npc.setScriptValue(1);
+				}
 				break;
 			}
 		}
@@ -321,24 +326,25 @@ public class Ramona extends AbstractNpcAI
 	{
 		switch (npc.getId())
 		{
-			case ROOM_CONTROL:
+			case MP_CONTROL:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, DoorInstance.class, 8000, Door ->
+				World.getInstance().forEachVisibleObjectInRange(npc, DoorInstance.class, 8000, door ->
 				{
-					if (Door.getId() == ROOM_CONTROL_DOOR)
+					if (door.getId() == ROOM_CONTROL_DOOR)
 					{
-						Door.closeMe();
-						Door.setTargetable(false);
-						_door = Door;
+						door.closeMe();
 					}
 				});
-				startQuestTimer("SPAWN_RAMONA_1", 5000, npc, null);
+				startQuestTimer("SPAWN_RAMONA_1", 10000, npc, null);
 				break;
 			}
 			case RAMONA_3:
 			{
-				notifyEvent("CANCEL_TIMERS", null, null);
-				startQuestTimer("END_RAMONA", 300000, null, null);
+				_boss = Status.DEAD;
+				long respawnTime = (Config.RAMONA_SPAWN_INTERVAL + getRandom(-Config.RAMONA_SPAWN_RANDOM, Config.RAMONA_SPAWN_RANDOM)) * 3600000;
+				GlobalVariablesManager.getInstance().set(RAMONA_RESPAWN_VAR, System.currentTimeMillis() + respawnTime);
+				startQuestTimer("RAMONA_UNLOCK", respawnTime, null, null);
+				startQuestTimer("END_RAMONA", 90000, null, null);
 				break;
 			}
 		}
@@ -348,13 +354,33 @@ public class Ramona extends AbstractNpcAI
 	@Override
 	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (creature.isPlayer() && npc.isScriptValue(0) && (ZONE.getCharactersInside().size() >= MIN_PLAYER_COUNT))
+		npc.setIsInvul(true);
+		if (creature.isPlayer())
 		{
-			startQuestTimer("SPAWN_MS", 10000, npc, null);
-			npc.setScriptValue(1);
-			_invisible = npc;
+			startQuestTimer("SPAWN_MS", 10000, npc, null, true);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
+	}
+	
+	@Override
+	public String onSpawn(Npc npc)
+	{
+		switch (npc.getId())
+		{
+			case RAMONA_1:
+			{
+				_boss = Status.IN_FIGHT;
+				_lastAction = System.currentTimeMillis();
+				break;
+			}
+			case RAMONA_2:
+			case RAMONA_3:
+			{
+				_lastAction = System.currentTimeMillis();
+				break;
+			}
+		}
+		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)

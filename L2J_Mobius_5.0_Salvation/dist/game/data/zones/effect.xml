@@ -2261,4 +2261,44 @@
 		<node X="-14188" Y="254493" />
 		<node X="-14650" Y="254393" />
 	</zone>
+	<!-- Ramona -->
+	<zone name="ramona_magic_attack" id="200109" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="-10150" rad="4000" >
+		<stat name="targetClass" val="Npc" />
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="showDangerIcon" val="false"/>
+		<stat name="initialDelay" val="3000" />
+		<!-- <stat name="unitTick" val="20" /> -->
+		<stat name="skillIdLvl" val="16731-1;" /> <!-- Leaking Magic - Attack -->
+		<node X="78023" Y="172262" />
+	</zone>
+	<zone name="ramona_magic_defence" id="200110" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="-10150" rad="4000" >
+		<stat name="targetClass" val="Npc" />
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="showDangerIcon" val="false"/>
+		<stat name="initialDelay" val="3000" />
+		<!-- <stat name="unitTick" val="20" /> -->
+		<stat name="skillIdLvl" val="16732-1;" /> <!-- Leaking Magic - Defense -->
+		<node X="78023" Y="172262" />
+	</zone>
+	<zone name="ramona_magic_hp" id="200111" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="-10150" rad="4000" >
+		<stat name="targetClass" val="Npc" />
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="showDangerIcon" val="false"/>
+		<stat name="initialDelay" val="3000" />
+		<!-- <stat name="unitTick" val="20" /> -->
+		<stat name="skillIdLvl" val="16733-1;" /> <!-- Leaking Magic - HP -->
+		<node X="78023" Y="172262" />
+	</zone>
+	<zone name="ramona_magic_hp" id="200112" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="-10150" rad="4000" >
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="showDangerIcon" val="true"/>
+		<stat name="initialDelay" val="3000" />
+		<!-- <stat name="unitTick" val="20" /> -->
+		<stat name="skillIdLvl" val="16734-1;" /> <!-- eaking Magic - Eradication -->
+		<node X="78023" Y="172262" />
+	</zone>
 </list>

@@ -2497,7 +2497,15 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="26141" level="104" type="RaidBoss" name="Ramona" title="Queen">
+	<npc id="26141" level="104" type="Monster" name="Ramona" title="Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16641" level="1" />
+			<skill name="Skill02_ID" id="16642" level="1" />
+			<skill name="Skill03_ID" id="16644" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="Skill03_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2506,8 +2514,8 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
-			<defence physical="3851.85185185185" magical="2236.55913978495" />
+			<attack physical="295358.4152" magical="211816.358" critical="4.75" accuracy="4.75" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<attribute>
 				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
 				<attack type="EARTH" value="450" />
@@ -2518,6 +2526,9 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1"/> <!-- Earth Attack -->
 			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="16642" level="1"/> <!-- Hyper Mega Plasma Burst -->
+			<skill id="16641" level="1"/> <!-- Hyper Mega Plasma Shot -->
+			<skill id="16644" level="1"/> <!-- Ride the Lightning -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2529,8 +2540,17 @@
 			<height normal="87" />
 		</collision>
 	</npc>
-	<npc id="26142" level="104" type="RaidBoss" name="Ramona" title="Queen">
-		<!-- Source: www.l2wiki.com -->
+	<npc id="26142" level="104" type="Monster" name="Ramona" title="Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16641" level="1" />
+			<skill name="Skill02_ID" id="16642" level="1" />
+			<skill name="Skill03_ID" id="16644" level="1" />
+			<skill name="Skill04_ID" id="16645" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="Skill03_Probablity" value="500" />
+			<param name="Skill04_Probablity" value="300" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2539,14 +2559,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
-			<defence physical="3851.85185185185" magical="2236.55913978495" />
+			<attack physical="295358.4152" magical="211816.358" critical="4.75" accuracy="4.75" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="34243.68753" magical="16714.49407" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="450" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1"/> <!-- Earth Attack -->
 			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="16642" level="1"/> <!-- Hyper Mega Plasma Burst -->
+			<skill id="16641" level="1"/> <!-- Hyper Mega Plasma Shot -->
+			<skill id="16644" level="1"/> <!-- Ride the Lightning -->
+			<skill id="16645" level="1"/> <!-- Ride the Lightning Mega Burst -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2559,20 +2587,34 @@
 		</collision>
 	</npc>
 	<npc id="26143" level="104" type="RaidBoss" name="Ramona" title="Queen">
-		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<skill name="Skill01_ID" id="16641" level="1" />
+			<skill name="Skill02_ID" id="16642" level="1" />
+			<skill name="Skill03_ID" id="16644" level="1" />
+			<skill name="Skill04_ID" id="16645" level="1" />
+			<skill name="Skill04_ID" id="16646" level="1" />
+			<skill name="Skill04_ID" id="16647" level="1" />
+			<param name="Skill01_Probablity" value="300" />
+			<param name="Skill02_Probablity" value="300" />
+			<param name="Skill03_Probablity" value="300" />
+			<param name="Skill04_Probablity" value="300" />
+			<param name="Skill05_Probablity" value="500" />
+			<param name="Skill06_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="576969277248" sp="1153938597" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="27188512" hpRegen="1824.56140350877" mp="50920" mpRegen="1925.92592592593" />
+			<vitals hp="40842816.910005" hpRegen="436.263366" mp="83501.371" mpRegen="3.3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
-			<defence physical="3851.85185185185" magical="2236.55913978495" />
+			<attack physical="295358.4152" magical="211816.358" critical="4.75" accuracy="4.75" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300"/>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="450" />
 			</attribute>
 		</stats>
 		<skillList>
@@ -2580,12 +2622,23 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1"/> <!-- Earth Attack -->
 			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16642" level="1"/> <!-- Hyper Mega Plasma Burst -->
+			<skill id="16641" level="1"/> <!-- Hyper Mega Plasma Shot -->
+			<skill id="16644" level="1"/> <!-- Ride the Lightning -->
+			<skill id="16645" level="1"/> <!-- Ride the Lightning Mega Burst -->
+			<skill id="16646" level="1"/> <!-- Hyper Mega Telekinesis -->
+			<skill id="16647" level="1"/> <!-- Ultra Mega Telekinesis -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
 				<clan>RAMONA</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="40" />
+			<height normal="82" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="47244" min="1" max="1" chance="50.91" /> <!-- Ramona's Fancy Earring -->
@@ -2671,12 +2724,14 @@
 				<item id="40198" min="1" max="1" chance="2.568" /> <!-- Disassembly Recipe Pouch: Armor -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="82" />
-		</collision>
 	</npc>
 	<npc id="26144" level="104" type="Monster" name="Dancer of the Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16681" level="1" />
+			<skill name="Skill02_ID" id="16677" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2699,6 +2754,8 @@
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16681" level="1" /> <!-- For the Queen -->
+			<skill id="16677" level="1" /> <!-- Hyper Power -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2711,6 +2768,12 @@
 		</collision>
 	</npc>
 	<npc id="26145" level="104" type="Monster" name="Commander of the Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16682" level="1" />
+			<skill name="Skill02_ID" id="16680" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2733,6 +2796,8 @@
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16682" level="1" /> <!-- Doom Hammer -->
+			<skill id="16680" level="1" /> <!-- Commander Aggression Aura -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2745,6 +2810,12 @@
 		</collision>
 	</npc>
 	<npc id="26146" level="104" type="Monster" name="Shooter of the Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16683" level="1" />
+			<skill name="Skill02_ID" id="16684" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2767,6 +2838,8 @@
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16683" level="1" /> <!-- Stun Shot -->
+			<skill id="16684" level="1" /> <!-- Multi Shot -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2779,6 +2852,12 @@
 		</collision>
 	</npc>
 	<npc id="26147" level="104" type="Monster" name="Wizard of the Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="16685" level="1" />
+			<skill name="Skill02_ID" id="16686" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2801,6 +2880,8 @@
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16685" level="1" /> <!-- Ultra Plasma Ball -->
+			<skill id="16686" level="1" /> <!-- Ultra Plasma Wave -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2840,8 +2921,12 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
-			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attack physical="256235.619047619" magical="43275.46218487395" critical="4.75" accuracy="4.75" attackSpeed="398" range="40" />
+			<defence physical="19070.81481481481" magical="11075.05376344086" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="450" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->

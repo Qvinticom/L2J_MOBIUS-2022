@@ -899,6 +899,11 @@ public class Config
 	public static int HELIOS_MIN_PLAYER;
 	public static int HELIOS_MIN_PLAYER_LVL;
 	
+	// Ramona
+	public static int RAMONA_SPAWN_INTERVAL;
+	public static int RAMONA_SPAWN_RANDOM;
+	public static int RAMONA_MIN_PLAYER;
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
@@ -2459,6 +2464,10 @@ public class Config
 			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
 			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
 			HELIOS_MIN_PLAYER_LVL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
+			
+			RAMONA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfRamonaSpawn", 72);
+			RAMONA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfRamonaSpawn", 48);
+			RAMONA_MIN_PLAYER = GrandBossSettings.getInt("RamonaMinPlayers", 7);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

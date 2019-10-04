@@ -897,6 +897,11 @@ public class Config
 	public static int HELIOS_MIN_PLAYER;
 	public static int HELIOS_MIN_PLAYER_LVL;
 	
+	// Ramona
+	public static int RAMONA_SPAWN_INTERVAL;
+	public static int RAMONA_SPAWN_RANDOM;
+	public static int RAMONA_MIN_PLAYER;
+	
 	// Fafurion
 	public static int FAFURION_WAIT_TIME;
 	public static int FAFURION_SPAWN_INTERVAL;
@@ -2485,6 +2490,10 @@ public class Config
 			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
 			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
 			HELIOS_MIN_PLAYER_LVL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
+			
+			RAMONA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfRamonaSpawn", 72);
+			RAMONA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfRamonaSpawn", 48);
+			RAMONA_MIN_PLAYER = GrandBossSettings.getInt("RamonaMinPlayers", 7);
 			
 			FAFURION_WAIT_TIME = GrandBossSettings.getInt("FafurionWaitTime", 10);
 			FAFURION_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFafurionSpawn", 264);
