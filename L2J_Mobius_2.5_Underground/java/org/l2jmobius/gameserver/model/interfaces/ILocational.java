@@ -70,6 +70,11 @@ public interface ILocational
 	 */
 	default boolean isInFrontOf(ILocational target)
 	{
+		if (target == null)
+		{
+			return false;
+		}
+		
 		return Position.FRONT == Position.getPosition(this, target);
 	}
 	
@@ -79,6 +84,11 @@ public interface ILocational
 	 */
 	default boolean isOnSideOf(ILocational target)
 	{
+		if (target == null)
+		{
+			return false;
+		}
+		
 		return Position.SIDE == Position.getPosition(this, target);
 	}
 	
@@ -88,6 +98,11 @@ public interface ILocational
 	 */
 	default boolean isBehind(ILocational target)
 	{
+		if (target == null)
+		{
+			return false;
+		}
+		
 		return Position.BACK == Position.getPosition(this, target);
 	}
 }
