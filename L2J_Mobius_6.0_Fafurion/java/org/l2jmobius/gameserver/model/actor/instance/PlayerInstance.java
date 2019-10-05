@@ -7244,115 +7244,119 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE);
-			PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE))
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete all current stored effects for char to avoid dupe
-			delete.setInt(1, getObjectId());
-			delete.setInt(2, _classIndex);
-			delete.execute();
+			try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE))
+			{
+				delete.setInt(1, getObjectId());
+				delete.setInt(2, _classIndex);
+				delete.execute();
+			}
 			
 			int buff_index = 0;
 			final List<Long> storedSkills = new ArrayList<>();
 			
 			// Store all effect data along with calulated remaining
 			// reuse delays for matching skills. 'restore_type'= 0.
-			if (storeEffects)
+			try (PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE))
 			{
-				for (BuffInfo info : getEffectList().getEffects())
+				if (storeEffects)
 				{
-					if (info == null)
+					for (BuffInfo info : getEffectList().getEffects())
 					{
-						continue;
-					}
-					
-					final Skill skill = info.getSkill();
-					
-					// Do not store those effects.
-					if (skill.isDeleteAbnormalOnLeave())
-					{
-						continue;
-					}
-					
-					// Do not save heals.
-					if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS)
-					{
-						continue;
-					}
-					
-					// Toggles are skipped, unless they are necessary to be always on.
-					if ((skill.isToggle() && !skill.isNecessaryToggle()))
-					{
-						continue;
-					}
-					
-					if (skill.isMentoring())
-					{
-						continue;
-					}
-					
-					// Dances and songs are not kept in retail.
-					if (skill.isDance() && !Config.ALT_STORE_DANCES)
-					{
-						continue;
-					}
-					
-					if (storedSkills.contains(skill.getReuseHashCode()))
-					{
-						continue;
-					}
-					
-					storedSkills.add(skill.getReuseHashCode());
-					
-					statement.setInt(1, getObjectId());
-					statement.setInt(2, skill.getId());
-					statement.setInt(3, skill.getLevel());
-					statement.setInt(4, skill.getSubLevel());
-					statement.setInt(5, info.getTime());
-					
-					final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
-					statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
-					statement.setDouble(7, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
-					
-					statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
-					statement.setInt(9, _classIndex);
-					statement.setInt(10, ++buff_index);
-					statement.addBatch();
-				}
-				statement.executeBatch();
-			}
-			
-			// Skills under reuse.
-			final Map<Long, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
-			if (reuseTimeStamps != null)
-			{
-				for (Entry<Long, TimeStamp> ts : reuseTimeStamps.entrySet())
-				{
-					final long hash = ts.getKey();
-					if (storedSkills.contains(hash))
-					{
-						continue;
-					}
-					
-					final TimeStamp t = ts.getValue();
-					if ((t != null) && t.hasNotPassed())
-					{
-						storedSkills.add(hash);
+						if (info == null)
+						{
+							continue;
+						}
+						
+						final Skill skill = info.getSkill();
+						
+						// Do not store those effects.
+						if (skill.isDeleteAbnormalOnLeave())
+						{
+							continue;
+						}
+						
+						// Do not save heals.
+						if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS)
+						{
+							continue;
+						}
+						
+						// Toggles are skipped, unless they are necessary to be always on.
+						if ((skill.isToggle() && !skill.isNecessaryToggle()))
+						{
+							continue;
+						}
+						
+						if (skill.isMentoring())
+						{
+							continue;
+						}
+						
+						// Dances and songs are not kept in retail.
+						if (skill.isDance() && !Config.ALT_STORE_DANCES)
+						{
+							continue;
+						}
+						
+						if (storedSkills.contains(skill.getReuseHashCode()))
+						{
+							continue;
+						}
+						
+						storedSkills.add(skill.getReuseHashCode());
 						
 						statement.setInt(1, getObjectId());
-						statement.setInt(2, t.getSkillId());
-						statement.setInt(3, t.getSkillLvl());
-						statement.setInt(4, t.getSkillSubLvl());
-						statement.setInt(5, -1);
-						statement.setLong(6, t.getReuse());
-						statement.setDouble(7, t.getStamp());
-						statement.setInt(8, 1); // Restore type 1, skill reuse.
+						statement.setInt(2, skill.getId());
+						statement.setInt(3, skill.getLevel());
+						statement.setInt(4, skill.getSubLevel());
+						statement.setInt(5, info.getTime());
+						
+						final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
+						statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
+						statement.setDouble(7, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
+						
+						statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
 						statement.setInt(9, _classIndex);
 						statement.setInt(10, ++buff_index);
 						statement.addBatch();
 					}
 				}
+				
+				// Skills under reuse.
+				final Map<Long, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
+				if (reuseTimeStamps != null)
+				{
+					for (Entry<Long, TimeStamp> ts : reuseTimeStamps.entrySet())
+					{
+						final long hash = ts.getKey();
+						if (storedSkills.contains(hash))
+						{
+							continue;
+						}
+						
+						final TimeStamp t = ts.getValue();
+						if ((t != null) && t.hasNotPassed())
+						{
+							storedSkills.add(hash);
+							
+							statement.setInt(1, getObjectId());
+							statement.setInt(2, t.getSkillId());
+							statement.setInt(3, t.getSkillLvl());
+							statement.setInt(4, t.getSkillSubLvl());
+							statement.setInt(5, -1);
+							statement.setLong(6, t.getReuse());
+							statement.setDouble(7, t.getStamp());
+							statement.setInt(8, 1); // Restore type 1, skill reuse.
+							statement.setInt(9, _classIndex);
+							statement.setInt(10, ++buff_index);
+							statement.addBatch();
+						}
+					}
+				}
+				
 				statement.executeBatch();
 			}
 		}
