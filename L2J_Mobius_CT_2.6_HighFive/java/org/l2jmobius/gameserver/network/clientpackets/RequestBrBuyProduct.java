@@ -111,7 +111,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		}
 		
 		// Buy Item
-		player.getInventory().addItem("Buy Product" + _productId, product.getItemId(), product.getItemCount() * _count, player, null);
+		player.addItem("PrimeShop: " + _productId, product.getItemId(), product.getItemCount() * _count, player, true);
 		
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
