@@ -21,10 +21,10 @@ CREATE TABLE `tvt` (
   `minPlayers` int(4) NOT NULL DEFAULT '0',
   `maxPlayers` int(4) NOT NULL DEFAULT '0',
   `delayForNextEvent` BIGINT NOT NULL DEFAULT '0'
-) DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- ---------------------
 -- Records for table tvt
 -- ---------------------
-
 INSERT INTO `tvt` values 
 ('TVT', 'A PvP Event', 'Giran', 1, 81, 70010, 82688, 148677, -3469, 0, 8752, 1, 2, 5, 5, 2, 50, 300000);

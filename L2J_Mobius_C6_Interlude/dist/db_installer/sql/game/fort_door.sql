@@ -20,7 +20,7 @@ CREATE TABLE fort_door (
   mDef INT NOT NULL default 0,
   PRIMARY KEY(id),
   KEY id (fortId)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `fort_door` VALUES 
 (101,18220001,'Gate_of_fort',-50796,155913,-2102,0,0,0,0,0,0,67884,644,518),

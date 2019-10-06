@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS `itemsonground` (
   `drop_time` decimal(20,0) default NULL,
   `equipable` int(1) default '0',
   PRIMARY KEY  (`object_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

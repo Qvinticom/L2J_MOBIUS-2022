@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `mods_wedding` (
   PRIMARY KEY (`id`),
   KEY `player1Id` (`player1Id`),
   KEY `player2Id` (`player2Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

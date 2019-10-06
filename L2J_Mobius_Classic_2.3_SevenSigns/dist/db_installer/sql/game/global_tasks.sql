@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `global_tasks` (
   `param2` varchar(100) NOT NULL DEFAULT '',
   `param3` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

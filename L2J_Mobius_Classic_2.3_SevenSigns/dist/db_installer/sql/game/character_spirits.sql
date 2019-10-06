@@ -13,5 +13,4 @@ CREATE TABLE `character_spirits`
     `in_use`             BOOLEAN      NOT NULL DEFAULT FALSE,
     PRIMARY KEY (`charId`, `type`),
     FOREIGN KEY FK_CHARACTER_SPIRITS (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

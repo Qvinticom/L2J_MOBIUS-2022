@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `currentHp` decimal(8,0) DEFAULT NULL,
   `currentMp` decimal(8,0) DEFAULT NULL,
   PRIMARY KEY (`boss_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`respawn_delay`,`respawn_random`,`currentHp`,`currentMp`) VALUES
 (25001,-54416,146480,-2887,0,86400,43200,95986,514), -- Greyclaw Kutus (23)

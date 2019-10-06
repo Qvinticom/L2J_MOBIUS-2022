@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `sendBySystem` tinyint(1) NOT NULL DEFAULT 0,
   `isReturned` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`messageId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

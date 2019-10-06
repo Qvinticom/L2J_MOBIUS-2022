@@ -39,5 +39,4 @@ CREATE TABLE IF NOT EXISTS `npc_to_pc_polymorph` (
   `max_rnd_enchant` int(7) NOT NULL default '0',
   KEY `spawn` (`spawn`),
   KEY `template` (`template`)
-) DEFAULT CHARSET=utf8;
-
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `restore` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`item_obj_id`),
   KEY `ownerId` (`ownerId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

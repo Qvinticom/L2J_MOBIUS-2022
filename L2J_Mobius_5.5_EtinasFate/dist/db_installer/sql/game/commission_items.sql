@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `commission_items` (
 	`start_time` TIMESTAMP NOT NULL,
 	`duration_in_days` TINYINT NOT NULL,
 	PRIMARY KEY (`commission_id`)
-) ENGINE=InnoDB;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_skills` (
   `skill_level` INT(3) NOT NULL DEFAULT 1,
   `class_index` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`,`skill_id`,`class_index`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

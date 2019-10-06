@@ -7,7 +7,4 @@ CREATE TABLE IF NOT EXISTS `bbs_favorites` (
 	`favAddDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (`favId`),
 	UNIQUE INDEX `favId_playerId` (`favId`, `playerId`)
-)
-COMMENT='This table saves the Favorite links for the CB.'
-COLLATE='utf8_unicode_ci'
-ENGINE=InnoDB;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

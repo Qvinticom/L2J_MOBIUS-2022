@@ -87,4 +87,4 @@ CREATE TABLE IF NOT EXISTS characters (
   aio_end decimal(20,0) NOT NULL DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
-) ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `residence_functions` (
   `expiration`  bigint NOT NULL ,
   `residenceId`  int NOT NULL ,
   PRIMARY KEY (`id`, `level`, `residenceId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

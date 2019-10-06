@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `item_variables` (
   `var` varchar(255) NOT NULL,
   `val` text NOT NULL,
   KEY `charId` (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

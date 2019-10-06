@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `siegable_hall_flagwar_attackers_members` (
   KEY `hall_id` (`hall_id`),
   KEY `clan_id` (`clan_id`),
   KEY `object_id` (`object_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `heroes` (
   `claimed` ENUM('true','false') NOT NULL DEFAULT 'false',
   `message` varchar(300) NOT NULL DEFAULT '',
   PRIMARY KEY (`charId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

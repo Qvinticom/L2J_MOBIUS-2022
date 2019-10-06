@@ -6,7 +6,7 @@ CREATE TABLE `random_spawn_loc` (
   `z` mediumint(6) NOT NULL,
   `heading` mediumint(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`groupId`,`x`,`y`,`z`,`heading`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT INTO `random_spawn_loc` VALUES
 -- Merchant of Mammon

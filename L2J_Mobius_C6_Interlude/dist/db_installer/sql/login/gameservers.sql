@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `gameservers` (
   `hexid` varchar(50) NOT NULL default '',
   `host` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`server_id`)
-) ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of gameservers

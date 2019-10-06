@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   `paidUntil` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY `id` (`id`),
   KEY `ownerId` (`ownerId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

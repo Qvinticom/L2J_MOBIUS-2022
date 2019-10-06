@@ -14,5 +14,4 @@ CREATE TABLE IF NOT EXISTS games (
   enddate decimal(20,0) NOT NULL default 0,
   finished INT NOT NULL default 0,
   PRIMARY KEY (`id`,`idnr`)
-);
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `character_friends` (
   `friend_id` INT UNSIGNED NOT NULL DEFAULT 0,
   `relation` INT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`char_id`,`friend_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   `paid` int( 1 ) NOT NULL DEFAULT '0',
   PRIMARY KEY `id` (`id`),
   KEY `ownerId` (`ownerId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT IGNORE INTO `clanhall` VALUES
 ('22','Moonstone Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),

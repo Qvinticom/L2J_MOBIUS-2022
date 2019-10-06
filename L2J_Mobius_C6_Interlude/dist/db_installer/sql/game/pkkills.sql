@@ -6,8 +6,4 @@ CREATE TABLE IF NOT EXISTS `pkkills` (
   `killedId` varchar(45) NOT NULL,
   `kills` decimal(11,0) NOT NULL,
   PRIMARY KEY  (`killerId` ,`killedId` )
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-
-
-		
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -14,7 +14,7 @@ CREATE TABLE `enchant_skill_trees` (
   `success_rate79` int(3) NOT NULL DEFAULT '0',
   `success_rate80` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`skill_id`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `enchant_skill_trees` VALUES ('1', '101', 'Triple Slash', '37', '+1 Power', '306000', '3060000', '37', '82', '92', '97', '97', '97');
 INSERT INTO `enchant_skill_trees` VALUES ('1', '102', 'Triple Slash', '37', '+2 Power', '315000', '3150000', '101', '80', '90', '95', '95', '95');

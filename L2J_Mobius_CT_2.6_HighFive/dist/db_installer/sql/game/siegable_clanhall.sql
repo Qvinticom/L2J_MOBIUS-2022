@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `siegable_clanhall` (
   `schedule_config` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`clanHallId`),
   KEY `ownerId` (`ownerId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT IGNORE INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
 (21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '14;0;0;12;00'),

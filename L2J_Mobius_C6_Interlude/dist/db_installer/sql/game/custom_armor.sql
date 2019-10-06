@@ -21,4 +21,4 @@ CREATE TABLE `custom_armor` (
   `item_skill_id` decimal(11,0) NOT NULL default '0',
   `item_skill_lvl` decimal(11,0) NOT NULL default '0',
   PRIMARY KEY  (`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

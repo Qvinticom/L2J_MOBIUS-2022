@@ -15,7 +15,8 @@ CREATE TABLE `fish` (
   `wait_time` INT(5) NOT NULL default '0',
   `combat_time` INT(5) NOT NULL default '0',
   PRIMARY KEY  (`id`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
 -- 
 --  Records for table fish
 -- 

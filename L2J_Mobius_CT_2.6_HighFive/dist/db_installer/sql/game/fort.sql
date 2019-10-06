@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `fort` (
   `supplyLvL` int(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `owner` (`owner`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT IGNORE INTO `fort` VALUES
 (101,'Shanty',0,0,0,0,0,0,0),

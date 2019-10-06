@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `ticketBuyCount` smallint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT IGNORE INTO `castle` VALUES
 (1,'Gludio','NEUTRAL',0,0,'true',0,'false',0),

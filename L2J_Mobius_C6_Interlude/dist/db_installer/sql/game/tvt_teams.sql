@@ -10,11 +10,11 @@ CREATE TABLE `tvt_teams` (
   `teamZ` int(11) NOT NULL DEFAULT '0',
   `teamColor` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`teamId`)
-) DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- ---------------------------
 -- Records for table tvt_teams
 -- ---------------------------
-
 INSERT INTO `tvt_teams` VALUES 
 ('0', 'Blue', '148179', '45841', '-3413', '16711680'),
 ('1', 'Red', '150787', '45822', '-3413', '255'),

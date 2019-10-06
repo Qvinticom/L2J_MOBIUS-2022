@@ -5,7 +5,7 @@ CREATE TABLE `zone_vertices` (
   `x` int(11) NOT NULL,
   `y` int(11) NOT NULL,
   PRIMARY KEY (`id`,`order`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT INTO `zone_vertices` (`id`,`order`,`x`,`y`) VALUES 
 (11000,0,-117072,-252544),

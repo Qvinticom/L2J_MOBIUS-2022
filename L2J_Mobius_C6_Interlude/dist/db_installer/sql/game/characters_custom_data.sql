@@ -10,4 +10,4 @@ CREATE TABLE `characters_custom_data` (
   `donator` decimal(1,0) NOT NULL default '0',
   `hero_end_date` BIGINT NOT NULL default '0',
   PRIMARY KEY  (`obj_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

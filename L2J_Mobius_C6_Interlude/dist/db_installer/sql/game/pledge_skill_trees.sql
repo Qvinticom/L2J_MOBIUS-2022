@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `pledge_skill_trees` (
   `Description` varchar(255) default NULL,
   `repCost` int(11) default NULL,
   `itemId` int(11) default NULL
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records 

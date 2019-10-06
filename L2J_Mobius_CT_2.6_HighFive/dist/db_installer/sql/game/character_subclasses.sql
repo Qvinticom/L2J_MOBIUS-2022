@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
   `level` int(2) NOT NULL DEFAULT 40,
   `class_index` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`,`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

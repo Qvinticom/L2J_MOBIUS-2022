@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `clan_wars` (
   `wantspeace1` decimal(1,0) NOT NULL DEFAULT '0',
   `wantspeace2` decimal(1,0) NOT NULL DEFAULT '0',
   PRIMARY KEY (`clan1`,`clan2`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS character_recipebook (
   id decimal(11) NOT NULL default 0,
   type INT NOT NULL default 0,
   PRIMARY KEY  (id,char_id)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

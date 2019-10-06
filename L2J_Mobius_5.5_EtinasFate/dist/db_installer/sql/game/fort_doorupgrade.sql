@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `fort_doorupgrade` (
   `pDef` int(11) NOT NULL DEFAULT '0',
   `mDef` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`doorId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

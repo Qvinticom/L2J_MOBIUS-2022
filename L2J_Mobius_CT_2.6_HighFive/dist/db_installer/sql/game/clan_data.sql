@@ -22,4 +22,4 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
   KEY `ally_id` (`ally_id`),
   KEY `leader_id` (`leader_id`),
   KEY `auction_bid_at` (`auction_bid_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

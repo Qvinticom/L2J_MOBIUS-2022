@@ -41,8 +41,4 @@ CREATE TABLE `custom_weapon` (
   `onCrit_skill_lvl` decimal(11,0) NOT NULL default '0',
   `onCrit_skill_chance` decimal(11,0) NOT NULL default '0',
   PRIMARY KEY  (`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- 
--- Dumping data for table `weapon`
--- 
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

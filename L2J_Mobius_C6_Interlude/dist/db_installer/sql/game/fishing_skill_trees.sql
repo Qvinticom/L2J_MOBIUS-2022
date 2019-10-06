@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `cost` int(10) NOT NULL default '0',
   `isfordwarf` int(1) NOT NULL default '0',
   PRIMARY KEY  (`skill_id`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
 --
 --  Records for table fishing_skill_trees
 --

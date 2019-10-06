@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS castle_doorupgrade (
   pDef INT NOT NULL default 0,
   mDef INT NOT NULL default 0,
   PRIMARY KEY  (doorId )
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

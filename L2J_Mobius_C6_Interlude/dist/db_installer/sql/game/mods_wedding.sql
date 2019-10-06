@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS `mods_wedding` (
   `weddingDate` decimal(20,0) default '0',
   `coupleType` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

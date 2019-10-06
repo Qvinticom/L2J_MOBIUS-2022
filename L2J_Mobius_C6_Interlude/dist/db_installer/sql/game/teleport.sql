@@ -11,7 +11,7 @@ CREATE TABLE teleport (
   price decimal(6,0) default NULL,
   fornoble int(1) NOT NULL default '0',
   PRIMARY KEY  (id)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- 
 -- Dumping data for table `teleport`

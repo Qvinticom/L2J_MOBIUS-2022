@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_recipebook` (
   `classIndex` TINYINT NOT NULL DEFAULT 0,
   `type` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`,`charId`,`classIndex`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

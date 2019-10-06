@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS `clanhall_siege` (
   `name` varchar(40) NOT NULL,
   `siege_data` decimal(20,0) NOT NULL,
   PRIMARY KEY (`id`)
-) DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- ----------------------------
 -- Records 
 -- ----------------------------

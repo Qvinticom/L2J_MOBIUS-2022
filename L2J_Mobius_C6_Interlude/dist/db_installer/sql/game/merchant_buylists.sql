@@ -12,7 +12,7 @@ CREATE TABLE merchant_buylists (
   time INT NOT NULL DEFAULT '0',
   savetimer DECIMAL(20,0) NOT NULL DEFAULT '0',
   PRIMARY KEY  (shop_id,`order`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `merchant_buylists`

@@ -1,7 +1,6 @@
 -- 
 -- Table structure for table `char_templates`
 -- 
-
 DROP TABLE IF EXISTS `char_templates`;
 CREATE TABLE `char_templates` (
   `ClassId` int(11) NOT NULL default '0',
@@ -42,7 +41,7 @@ CREATE TABLE `char_templates` (
   `items4` int(4) NOT NULL default '0',
   `items5` int(10) NOT NULL default '0',
   PRIMARY KEY  (`ClassId`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- 
 -- Dumping data for table `char_templates`

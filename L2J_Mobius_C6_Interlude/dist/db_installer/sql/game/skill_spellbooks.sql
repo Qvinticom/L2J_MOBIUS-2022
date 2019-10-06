@@ -6,7 +6,7 @@ CREATE TABLE `skill_spellbooks` (
   `skill_id` int(11) NOT NULL default '-1',
   `item_id` int(11) NOT NULL default '-1',
   KEY `skill_id` (`skill_id`,`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `skill_spellbooks`

@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS castle_siege_guards (
   isHired INT NOT NULL default 1,
   PRIMARY KEY  (id),
   KEY id (castleId)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- Gludio Castle
 REPLACE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 

@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS `items` (
   KEY `item_id` (`item_id`),
   KEY `loc` (`loc`),
   KEY `time_of_use` (`time_of_use`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

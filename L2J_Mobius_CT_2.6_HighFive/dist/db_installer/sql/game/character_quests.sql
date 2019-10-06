@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_quests` (
   `value` VARCHAR(255) ,
   `class_index` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`charId`,`name`,`var`,`class_index`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

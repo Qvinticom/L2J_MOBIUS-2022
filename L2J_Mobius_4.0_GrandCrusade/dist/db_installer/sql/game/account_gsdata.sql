@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `account_gsdata` (
   `var`  VARCHAR(255) NOT NULL DEFAULT '',
   `value` text NOT NULL,
   PRIMARY KEY (`account_name`,`var`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

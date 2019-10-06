@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `castle_doorupgrade` (
   `ratio` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `castleId` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`doorId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

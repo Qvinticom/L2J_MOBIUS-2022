@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `fort_siege_guards` (
   `isHired` INT NOT NULL default 1,
   PRIMARY KEY (`id`),
   KEY `id` (`fortId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT INTO `fort_siege_guards` VALUES
 

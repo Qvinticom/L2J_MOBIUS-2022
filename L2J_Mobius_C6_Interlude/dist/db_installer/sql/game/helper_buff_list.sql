@@ -11,7 +11,7 @@ CREATE TABLE `helper_buff_list` (
 `upper_level` int(10) unsigned NOT NULL default '0',
 `is_magic_class` varchar(5) default NULL,
 PRIMARY KEY  (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 #----------------------------
 # Records for table helper_buff_list

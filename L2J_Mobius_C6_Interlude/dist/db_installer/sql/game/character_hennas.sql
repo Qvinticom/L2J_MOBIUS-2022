@@ -4,5 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_hennas` (
   `slot` INT NOT NULL DEFAULT 0,
   `class_index` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`char_obj_id`,`slot`,`class_index`)
-);
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

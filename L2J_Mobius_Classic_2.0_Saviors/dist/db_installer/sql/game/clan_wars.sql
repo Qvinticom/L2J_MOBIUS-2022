@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `clan_wars` (
   `endTime` bigint(13) NOT NULL DEFAULT 0,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   PRIMARY KEY (`clan1`,`clan2`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

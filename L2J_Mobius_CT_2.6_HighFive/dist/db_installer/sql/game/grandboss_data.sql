@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `grandboss_data` (
   `currentMP` decimal(30,15) NOT NULL,
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`boss_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`currentHP`,`currentMP`) VALUES
 (29001, -21610, 181594, -5734, 0, 229898.48, 667.776), -- Queen Ant (40)

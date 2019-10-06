@@ -46,7 +46,7 @@ CREATE TABLE `custom_npc`(
   `absorb_level` decimal(2,0) default 0,
   `absorb_type` enum('FULL_PARTY','LAST_HIT','PARTY_ONE_RANDOM') DEFAULT 'LAST_HIT' NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT ignore INTO custom_npc values
 ('31288', '31228', 'Roy the Cat', '1', 'Class Master', '1', 'Monster.cat_the_cat', '9.00', '16.00', '70', 'male', 'ClassMaster', '40', '3862', '1493', '11.85', '2.78', '40', '43', '30', '21', '20', '10', '490', '10', '1335', '470', '780', '382', '278', '0', '333', '0', '0', '0', '88', '132', null, '0', '0', '0', 'LAST_HIT'),

@@ -16,7 +16,7 @@ CREATE TABLE `lvlupgain` (
   `defaultmpmod` decimal(4,2) NOT NULL default '0.00',
   `class_lvl` int(3) NOT NULL default '0',
   PRIMARY KEY  (`classid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- 
 -- Dumping data for table `lvlupgain`

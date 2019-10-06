@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `clan_privs` (
   `party` INT NOT NULL DEFAULT 0,
   `privs` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`clan_id`,`rank`,`party`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

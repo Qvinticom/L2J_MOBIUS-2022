@@ -60,4 +60,4 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `char_name` (`char_name`),
   KEY `clanid` (`clanid`),
   KEY `online` (`online`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -25,7 +25,7 @@ CREATE TABLE `dm` (
   `playerY` int(11) NOT NULL default '0',
   `playerZ` int(11) NOT NULL default '0',
   		`delayForNextEvent` BIGINT NOT NULL DEFAULT '0'
-) DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `dm` values 
 ('DM', 'A PvP Event', 'Giran', 1, 81, 70014, 82580, 148552, -3468, 1, 8752, 1, 2, 5, 2, 50, 2552550, 116615, 76200, -2729, 300000);

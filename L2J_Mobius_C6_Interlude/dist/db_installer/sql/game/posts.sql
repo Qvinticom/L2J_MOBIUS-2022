@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_topic_id` int(8) NOT NULL default '0',
   `post_forum_id` int(8) NOT NULL default '0',
   `post_txt` text NOT NULL
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

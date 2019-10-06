@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_nobles_eom` (
   `competitions_lost` smallint(3) unsigned NOT NULL DEFAULT 0,
   `competitions_drawn` smallint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

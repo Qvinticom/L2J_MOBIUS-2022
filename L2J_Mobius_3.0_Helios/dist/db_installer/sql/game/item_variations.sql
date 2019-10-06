@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `item_variations` (
   `option1` INT(11) NOT NULL,
   `option2` INT(11) NOT NULL,
   PRIMARY KEY (`itemId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

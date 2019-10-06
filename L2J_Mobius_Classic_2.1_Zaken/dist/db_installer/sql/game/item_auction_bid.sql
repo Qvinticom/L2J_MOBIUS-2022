@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `item_auction_bid` (
   `playerObjId` int(11) NOT NULL,
   `playerBid` bigint(20) NOT NULL,
   PRIMARY KEY (`auctionId`,`playerObjId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

@@ -9,7 +9,7 @@ CREATE TABLE `fort` (
   `siegeHourOfDay` int(11) NOT NULL default '20',
   `owner` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records 

@@ -2,7 +2,6 @@
 -- Table structure for raidboss_spawnlist
 -- ---------------------------
 DROP TABLE IF EXISTS raidboss_spawnlist;
-
 CREATE TABLE raidboss_spawnlist (
   boss_id INT NOT NULL default 0,
   amount INT NOT NULL default 0,
@@ -16,8 +15,7 @@ CREATE TABLE raidboss_spawnlist (
   currentHp decimal(8,0) default NULL,
   currentMp decimal(8,0) default NULL,
   PRIMARY KEY  (boss_id,loc_x,loc_y,loc_z)
-);
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT INTO `raidboss_spawnlist` VALUES 
 (25001,1,-54416,146480,-2887,0,43200,129600,0,95986,545), -- Greyclaw Kutus (23)

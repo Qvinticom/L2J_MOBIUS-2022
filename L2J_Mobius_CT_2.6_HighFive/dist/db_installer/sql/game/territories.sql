@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `territories` (
   `fortId` INT NOT NULL DEFAULT 0,
   `ownedWardIds` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`territoryId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT IGNORE INTO `territories` VALUES
 (81,1,101,'81;'),

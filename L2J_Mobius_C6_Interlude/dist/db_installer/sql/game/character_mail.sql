@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `character_mail` (
   `sentDate` timestamp NULL default NULL,
   `unread` smallint(1) default 1,
   PRIMARY KEY  (`letterId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS `games` (
   `enddate` bigint(13) unsigned NOT NULL DEFAULT '0',
   `finished` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`,`idnr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

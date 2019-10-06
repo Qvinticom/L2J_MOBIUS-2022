@@ -7,4 +7,4 @@ CREATE TABLE `fortsiege_clans` (
 `type` int(1) default NULL,
 `fort_owner` int(1) default NULL,
 PRIMARY KEY  (`clan_id`,`fort_id`)
-) ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

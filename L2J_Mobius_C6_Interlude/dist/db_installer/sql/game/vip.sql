@@ -7,7 +7,7 @@ CREATE TABLE `VIPinfo` (
   `starty` int(11) NOT NULL,
   `startz` int(11) NOT NULL,
   PRIMARY KEY  (`teamID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- 
 -- Dumping data for table `VIPinfo`

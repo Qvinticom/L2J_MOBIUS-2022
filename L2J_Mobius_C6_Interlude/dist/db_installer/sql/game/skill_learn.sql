@@ -6,7 +6,7 @@ CREATE TABLE skill_learn (
   npc_id int(11) NOT NULL default '0',
   class_id int(11) NOT NULL default '0',
   PRIMARY KEY  (npc_id,class_id)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `skill_learn`

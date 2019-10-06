@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `siege_clans` (
    `type` int(1) DEFAULT NULL,
    `castle_owner` int(1) DEFAULT NULL,
    PRIMARY KEY (`clan_id`,`castle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

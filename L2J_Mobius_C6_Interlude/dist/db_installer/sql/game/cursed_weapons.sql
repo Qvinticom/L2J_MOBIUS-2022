@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `cursed_weapons` (
   `nbKills` INT DEFAULT 0,
   `endTime` DECIMAL(20,0) DEFAULT 0,
   PRIMARY KEY (`itemId`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

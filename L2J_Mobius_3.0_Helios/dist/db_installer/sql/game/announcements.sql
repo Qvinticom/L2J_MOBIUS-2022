@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   `author` text NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO announcements (`type`, `author`, `content`) VALUES 
 (0, 'L2jMobius', 'Thanks for using L2jMobius!'),

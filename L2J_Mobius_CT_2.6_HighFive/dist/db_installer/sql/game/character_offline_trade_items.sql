@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_offline_trade_items` (
   `price` bigint(20) unsigned NOT NULL DEFAULT '0',
   KEY `charId` (`charId`),
   KEY `item` (`item`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

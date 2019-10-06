@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `castle_manor_production` (
  `price` INT(11) UNSIGNED NOT NULL DEFAULT '0',
  `next_period` TINYINT(1) UNSIGNED NOT NULL DEFAULT '1',
  PRIMARY KEY (`castle_id`, `seed_id`, `next_period`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

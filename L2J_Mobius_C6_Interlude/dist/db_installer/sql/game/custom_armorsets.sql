@@ -15,5 +15,4 @@ CREATE TABLE custom_armorsets (
  shield_skill_id decimal(11,0) NOT NULL default '0',
  enchant6skill decimal(11,0) NOT NULL default '0',
  PRIMARY KEY (id,chest)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

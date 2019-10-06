@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
   `class_index` int(1) NOT NULL DEFAULT 0,
   `dual_class` BOOLEAN NOT NULL DEFAULT FALSE,
   PRIMARY KEY (`charId`,`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

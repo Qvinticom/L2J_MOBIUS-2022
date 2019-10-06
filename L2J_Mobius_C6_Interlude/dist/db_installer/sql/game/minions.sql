@@ -9,7 +9,7 @@ CREATE TABLE `minions` (
   `amount_min` int(4) NOT NULL default '0',
   `amount_max` int(4) NOT NULL default '0',
   PRIMARY KEY  (`boss_id`,`minion_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `minions`

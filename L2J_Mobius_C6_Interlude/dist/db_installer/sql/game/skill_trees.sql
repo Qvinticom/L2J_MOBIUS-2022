@@ -7,7 +7,7 @@ CREATE TABLE skill_trees (
   sp int(10) unsigned NOT NULL default '0',
   min_level int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (class_id,skill_id,level)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `skill_trees`

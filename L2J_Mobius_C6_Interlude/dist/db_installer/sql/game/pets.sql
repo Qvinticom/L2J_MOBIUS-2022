@@ -1,8 +1,6 @@
 -- ---------------------------
 -- Table structure for pets
 -- ---------------------------
-
-
 CREATE TABLE IF NOT EXISTS pets (
   item_obj_id decimal(11) NOT NULL default 0,
   name varchar(16) ,
@@ -15,4 +13,4 @@ CREATE TABLE IF NOT EXISTS pets (
   pkkills decimal(11) ,
   fed decimal(11) ,
   PRIMARY KEY  (item_obj_id)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

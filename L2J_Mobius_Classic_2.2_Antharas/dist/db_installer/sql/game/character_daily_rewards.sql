@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `character_daily_rewards` (
   `progress`  int UNSIGNED NOT NULL DEFAULT 0 ,
   `lastCompleted`  bigint UNSIGNED NOT NULL ,
   PRIMARY KEY (`charId`, `rewardId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

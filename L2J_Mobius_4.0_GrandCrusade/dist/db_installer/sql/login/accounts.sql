@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `hop3` char(15) DEFAULT NULL,
   `hop4` char(15) DEFAULT NULL,
   PRIMARY KEY (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

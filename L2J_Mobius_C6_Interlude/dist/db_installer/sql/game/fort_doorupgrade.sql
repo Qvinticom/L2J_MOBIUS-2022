@@ -8,5 +8,4 @@ CREATE TABLE `fort_doorupgrade` (
   `pDef` int(11) NOT NULL default '0',
   `mDef` int(11) NOT NULL default '0',
   PRIMARY KEY  (`doorId`)
-);
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
