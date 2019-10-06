@@ -16,6 +16,7 @@
  */
 package handlers.itemhandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.RecipeList;
@@ -36,6 +37,12 @@ public class Recipes implements IItemHandler
 		if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
+			return false;
+		}
+		
+		if (!Config.IS_CRAFTING_ENABLED)
+		{
+			playable.sendMessage("Crafting is disabled, you cannot register this recipe.");
 			return false;
 		}
 		

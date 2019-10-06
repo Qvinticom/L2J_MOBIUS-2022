@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.RecipeList;
@@ -46,12 +47,18 @@ public class Recipes implements IItemHandler
 		{
 			return;
 		}
-		PlayerInstance player = (PlayerInstance) playable;
-		RecipeList rp = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
+		
+		final PlayerInstance player = (PlayerInstance) playable;
+		if (!Config.IS_CRAFTING_ENABLED)
+		{
+			player.sendMessage("Crafting is disabled, you cannot register this recipe.");
+			return;
+		}
+		
+		final RecipeList rp = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
 		if (player.hasRecipeList(rp.getId()))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED));
 		}
 		else if (rp.isDwarvenRecipe())
 		{
@@ -60,8 +67,7 @@ public class Recipes implements IItemHandler
 				if (rp.getLevel() > player.getDwarvenCraft())
 				{
 					// can't add recipe, becouse create item level too low
-					SystemMessage sm = new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-					player.sendPacket(sm);
+					player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 				}
 				else if (player.getDwarvenRecipeBook().length >= player.GetDwarfRecipeLimit())
 				{
@@ -81,8 +87,7 @@ public class Recipes implements IItemHandler
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT));
 			}
 		}
 		else if (player.hasCommonCraft())
@@ -90,8 +95,7 @@ public class Recipes implements IItemHandler
 			if (rp.getLevel() > player.getCommonCraft())
 			{
 				// can't add recipe, becouse create item level too low
-				SystemMessage sm = new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 			}
 			else if (player.getCommonRecipeBook().length >= player.GetCommonRecipeLimit())
 			{
@@ -111,8 +115,7 @@ public class Recipes implements IItemHandler
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT));
 		}
 	}
 	
