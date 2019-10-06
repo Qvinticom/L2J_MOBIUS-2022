@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -1169,8 +1170,14 @@ public class RequestActionUse implements IClientIncomingPacket
 				return;
 			}
 		}
-		final Skill skill = summon.getTemplate().getParameters().getSkillHolder(skillName).getSkill();
 		
+		final SkillHolder skillHolder = summon.getTemplate().getParameters().getSkillHolder(skillName);
+		if (skillHolder == null)
+		{
+			return;
+		}
+		
+		final Skill skill = skillHolder.getSkill();
 		if (skill != null)
 		{
 			summon.setTarget(target);
