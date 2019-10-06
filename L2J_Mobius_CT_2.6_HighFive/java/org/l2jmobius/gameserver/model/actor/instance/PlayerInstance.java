@@ -132,6 +132,7 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.PremiumItem;
 import org.l2jmobius.gameserver.model.Radar;
 import org.l2jmobius.gameserver.model.RecipeList;
+import org.l2jmobius.gameserver.model.RelationCache;
 import org.l2jmobius.gameserver.model.Request;
 import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
@@ -4141,15 +4142,16 @@ public class PlayerInstance extends Playable
 			if (mov instanceof CharInfo)
 			{
 				final int relation = getRelation(player);
-				Integer oldrelation = getKnownRelations().get(player.getObjectId());
-				if ((oldrelation != null) && (oldrelation != relation))
+				final boolean isAutoAttackable = isAutoAttackable(player);
+				final RelationCache cache = getKnownRelations().get(player.getObjectId());
+				if ((cache == null) || (cache.getRelation() != relation) || (cache.isAutoAttackable() != isAutoAttackable))
 				{
-					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable(player)));
+					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable));
 					if (hasSummon())
 					{
-						player.sendPacket(new RelationChanged(_summon, relation, isAutoAttackable(player)));
-						// getKnownRelations().put(player.getObjectId(), relation);
+						player.sendPacket(new RelationChanged(_summon, relation, isAutoAttackable));
 					}
+					getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 				}
 			}
 		});
@@ -4174,15 +4176,16 @@ public class PlayerInstance extends Playable
 			if (mov instanceof CharInfo)
 			{
 				final int relation = getRelation(player);
-				final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-				if ((oldrelation != null) && (oldrelation != relation))
+				final boolean isAutoAttackable = isAutoAttackable(player);
+				final RelationCache cache = getKnownRelations().get(player.getObjectId());
+				if ((cache == null) || (cache.getRelation() != relation) || (cache.isAutoAttackable() != isAutoAttackable))
 				{
-					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable(player)));
+					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable));
 					if (hasSummon())
 					{
-						player.sendPacket(new RelationChanged(_summon, relation, isAutoAttackable(player)));
+						player.sendPacket(new RelationChanged(_summon, relation, isAutoAttackable));
 					}
-					getKnownRelations().put(player.getObjectId(), relation);
+					getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 				}
 			}
 		});
@@ -13198,26 +13201,33 @@ public class PlayerInstance extends Playable
 			
 			player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS)));
 			player.sendPacket(new ExBrExtraUserInfo(this));
+			
 			final int relation1 = getRelation(player);
 			final int relation2 = player.getRelation(this);
-			Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation1))
+			final boolean isAutoAttackable1 = isAutoAttackable(player);
+			final boolean isAutoAttackable2 = player.isAutoAttackable(this);
+			RelationCache cache = getKnownRelations().get(player.getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation1) || (cache.isAutoAttackable() != isAutoAttackable1))
 			{
-				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(player)));
+				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable1));
 				if (hasSummon())
 				{
-					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable(player)));
+					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable1));
 				}
+				getKnownRelations().put(player.getObjectId(), new RelationCache(relation1, isAutoAttackable1));
 			}
-			oldrelation = player.getKnownRelations().get(getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation2))
+			
+			cache = player.getKnownRelations().get(getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation2) || (cache.isAutoAttackable() != isAutoAttackable2))
 			{
-				sendPacket(new RelationChanged(player, relation2, player.isAutoAttackable(this)));
+				sendPacket(new RelationChanged(player, relation2, isAutoAttackable2));
 				if (player.hasSummon())
 				{
-					sendPacket(new RelationChanged(player.getSummon(), relation2, player.isAutoAttackable(this)));
+					sendPacket(new RelationChanged(player.getSummon(), relation2, isAutoAttackable2));
 				}
+				player.getKnownRelations().put(getObjectId(), new RelationCache(relation2, isAutoAttackable2));
 			}
+			
 			player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
 		}
 		else if (isInAirShip())
@@ -13225,51 +13235,64 @@ public class PlayerInstance extends Playable
 			setXYZ(getAirShip().getLocation());
 			player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS)));
 			player.sendPacket(new ExBrExtraUserInfo(this));
+			
 			final int relation1 = getRelation(player);
 			final int relation2 = player.getRelation(this);
-			Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation1))
+			final boolean isAutoAttackable1 = isAutoAttackable(player);
+			final boolean isAutoAttackable2 = player.isAutoAttackable(this);
+			RelationCache cache = getKnownRelations().get(player.getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation1) || (cache.isAutoAttackable() != isAutoAttackable1))
 			{
-				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(player)));
+				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable1));
 				if (hasSummon())
 				{
-					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable(player)));
+					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable1));
 				}
+				getKnownRelations().put(player.getObjectId(), new RelationCache(relation1, isAutoAttackable1));
 			}
-			oldrelation = player.getKnownRelations().get(getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation2))
+			
+			cache = player.getKnownRelations().get(getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation2) || (cache.isAutoAttackable() != isAutoAttackable2))
 			{
-				sendPacket(new RelationChanged(player, relation2, player.isAutoAttackable(this)));
+				sendPacket(new RelationChanged(player, relation2, isAutoAttackable2));
 				if (player.hasSummon())
 				{
-					sendPacket(new RelationChanged(player.getSummon(), relation2, player.isAutoAttackable(this)));
+					sendPacket(new RelationChanged(player.getSummon(), relation2, isAutoAttackable2));
 				}
+				player.getKnownRelations().put(getObjectId(), new RelationCache(relation2, isAutoAttackable2));
 			}
+			
 			player.sendPacket(new ExGetOnAirShip(this, getAirShip()));
 		}
 		else
 		{
 			player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS)));
 			player.sendPacket(new ExBrExtraUserInfo(this));
+			
 			final int relation1 = getRelation(player);
 			final int relation2 = player.getRelation(this);
-			Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation1))
+			final boolean isAutoAttackable1 = isAutoAttackable(player);
+			final boolean isAutoAttackable2 = player.isAutoAttackable(this);
+			RelationCache cache = getKnownRelations().get(player.getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation1) || (cache.isAutoAttackable() != isAutoAttackable1))
 			{
-				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(player)));
+				player.sendPacket(new RelationChanged(this, relation1, isAutoAttackable1));
 				if (hasSummon())
 				{
-					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable(player)));
+					player.sendPacket(new RelationChanged(_summon, relation1, isAutoAttackable1));
 				}
+				getKnownRelations().put(player.getObjectId(), new RelationCache(relation1, isAutoAttackable1));
 			}
-			oldrelation = player.getKnownRelations().get(getObjectId());
-			if ((oldrelation != null) && (oldrelation != relation2))
+			
+			cache = player.getKnownRelations().get(getObjectId());
+			if ((cache == null) || (cache.getRelation() != relation2) || (cache.isAutoAttackable() != isAutoAttackable2))
 			{
-				sendPacket(new RelationChanged(player, relation2, player.isAutoAttackable(this)));
+				sendPacket(new RelationChanged(player, relation2, isAutoAttackable2));
 				if (player.hasSummon())
 				{
-					sendPacket(new RelationChanged(player.getSummon(), relation2, player.isAutoAttackable(this)));
+					sendPacket(new RelationChanged(player.getSummon(), relation2, isAutoAttackable2));
 				}
+				player.getKnownRelations().put(getObjectId(), new RelationCache(relation2, isAutoAttackable2));
 			}
 		}
 		

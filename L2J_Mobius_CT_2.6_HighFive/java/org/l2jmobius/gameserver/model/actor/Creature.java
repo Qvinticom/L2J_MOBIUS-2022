@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
+import org.l2jmobius.gameserver.model.RelationCache;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.TimeStamp;
@@ -277,7 +278,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	protected Future<?> _skillCast;
 	protected Future<?> _skillCast2;
 	
-	private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
+	private final Map<Integer, RelationCache> _knownRelations = new ConcurrentHashMap<>();
 	
 	/** A list containing the dropped items of this fake player. */
 	private final List<ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
@@ -6736,7 +6737,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return 0;
 	}
 	
-	public Map<Integer, Integer> getKnownRelations()
+	public Map<Integer, RelationCache> getKnownRelations()
 	{
 		return _knownRelations;
 	}

@@ -105,6 +105,17 @@ public class PlayerAI extends PlayableAI
 		super.onEvtReadyToAct();
 	}
 	
+	@Override
+	protected void onEvtForgetObject(WorldObject object)
+	{
+		if (object.isPlayer())
+		{
+			getActor().getKnownRelations().remove(object.getObjectId());
+		}
+		
+		super.onEvtForgetObject(object);
+	}
+	
 	/**
 	 * Launch actions corresponding to the Event Cancel.<br>
 	 * <B><U> Actions</U> :</B>
