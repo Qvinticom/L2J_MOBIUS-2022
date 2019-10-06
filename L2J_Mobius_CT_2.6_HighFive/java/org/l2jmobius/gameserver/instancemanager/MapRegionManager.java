@@ -370,6 +370,11 @@ public class MapRegionManager implements IXmlReader
 					{
 						return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getChaoticSpawnLoc();
 					}
+					// Opposing race check.
+					if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
+					{
+						return _regions.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
+					}
 					return getMapRegion(creature).getChaoticSpawnLoc();
 				}
 				catch (Exception e)
@@ -430,6 +435,11 @@ public class MapRegionManager implements IXmlReader
 			if (zone != null)
 			{
 				return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getSpawnLoc();
+			}
+			// Opposing race check.
+			if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
+			{
+				return _regions.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
 			}
 			return getMapRegion(creature).getSpawnLoc();
 		}
