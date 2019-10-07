@@ -63,16 +63,18 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		final boolean mustPay = player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL;
-		final int price = teleport.getPrice();
-		if (mustPay && (price > 0))
+		if (player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL)
 		{
-			if (player.getAdena() < price)
+			final int price = teleport.getPrice();
+			if (price > 0)
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-				return;
+				if (player.getAdena() < price)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					return;
+				}
+				player.reduceAdena("Teleport", price, player, true);
 			}
-			player.reduceAdena("Teleport", price, player, true);
 		}
 		
 		player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
