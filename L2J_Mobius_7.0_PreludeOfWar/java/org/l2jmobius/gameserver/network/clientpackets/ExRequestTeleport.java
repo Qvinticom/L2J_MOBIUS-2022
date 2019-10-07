@@ -16,24 +16,27 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.TeleportListData;
+import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * @author NviX
+ * @author NviX, Mobius
  */
 public class ExRequestTeleport implements IClientIncomingPacket
 {
-	private int _locId;
+	private int _teleportId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_locId = packet.readD();
+		_teleportId = packet.readD();
 		return true;
 	}
 	
@@ -46,29 +49,32 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		boolean success = false;
-		
-		for (TeleportListHolder teleport : TeleportListData.getInstance().getTeleports())
+		final TeleportListHolder teleport = TeleportListData.getInstance().getTeleport(_teleportId);
+		if (teleport == null)
 		{
-			if (teleport.getLocId() == _locId)
-			{
-				if (player.getAdena() < teleport.getPrice())
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					return;
-				}
-				
-				player.reduceAdena("teleport", teleport.getPrice(), player, true);
-				player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
-				success = true;
-				break;
-			}
-		}
-		
-		if (!success)
-		{
-			LOGGER.info("No registered teleport location for id: " + _locId);
+			LOGGER.info("No registered teleport location for id: " + _teleportId);
 			return;
 		}
+		
+		final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
+		if ((castle != null) && castle.getSiege().isInProgress())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+			return;
+		}
+		
+		final boolean mustPay = player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL;
+		final int price = teleport.getPrice();
+		if (mustPay && (price > 0))
+		{
+			if (player.getAdena() < price)
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				return;
+			}
+			player.reduceAdena("Teleport", price, player, true);
+		}
+		
+		player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
 	}
 }

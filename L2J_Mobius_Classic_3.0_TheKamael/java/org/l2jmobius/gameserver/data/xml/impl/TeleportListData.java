@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -28,12 +28,12 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 
 /**
- * @author NviX
+ * @author NviX, Mobius
  */
 public class TeleportListData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(TeleportListData.class.getName());
-	private final List<TeleportListHolder> _teleports = new ArrayList<>();
+	private final Map<Integer, TeleportListHolder> _teleports = new HashMap<>();
 	private int _teleportsCount = 0;
 	
 	protected TeleportListData()
@@ -61,13 +61,13 @@ public class TeleportListData implements IXmlReader
 			final int y = set.getInt("y");
 			final int z = set.getInt("z");
 			final int tpPrice = set.getInt("price");
-			_teleports.add(new TeleportListHolder(tpId, x, y, z, tpPrice));
+			_teleports.put(tpId, new TeleportListHolder(tpId, x, y, z, tpPrice));
 		}));
 	}
 	
-	public List<TeleportListHolder> getTeleports()
+	public TeleportListHolder getTeleport(int teleportId)
 	{
-		return _teleports;
+		return _teleports.get(teleportId);
 	}
 	
 	public int getTeleportsCount()
