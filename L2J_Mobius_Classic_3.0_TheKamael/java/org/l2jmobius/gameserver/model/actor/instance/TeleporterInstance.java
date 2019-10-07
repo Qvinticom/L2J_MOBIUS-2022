@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.TeleporterQuestRecommendationHolder;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.teleporter.TeleportHolder;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowTeleportUi;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -84,6 +85,11 @@ public class TeleporterInstance extends Npc
 					return;
 				}
 				holder.showTeleportList(player, this);
+				break;
+			}
+			case "showTeleportList":
+			{
+				player.sendPacket(ExShowTeleportUi.STATIC_PACKET);
 				break;
 			}
 			case "showTeleportsHunting":
