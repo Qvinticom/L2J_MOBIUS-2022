@@ -229,9 +229,8 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					}
 					
 					// announce the success
-					final int minEnchantAnnounce = item.isArmor() ? 6 : 7;
-					final int maxEnchantAnnounce = item.isArmor() ? 0 : 30;
-					if ((item.getEnchantLevel() >= minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
+					if ((item.getEnchantLevel() >= (item.isArmor() ? Config.MIN_ARMOR_ENCHANT_ANNOUNCE : Config.MIN_WEAPON_ENCHANT_ANNOUNCE)) //
+						&& (item.getEnchantLevel() <= (item.isArmor() ? Config.MAX_ARMOR_ENCHANT_ANNOUNCE : Config.MAX_WEAPON_ENCHANT_ANNOUNCE)))
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
 						sm.addString(player.getName());
