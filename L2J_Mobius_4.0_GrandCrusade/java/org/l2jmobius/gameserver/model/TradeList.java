@@ -184,9 +184,8 @@ public class TradeList
 		}
 		
 		final WorldObject o = World.getInstance().findObject(objectId);
-		if (!o.isItem())
+		if (!(o instanceof ItemInstance))
 		{
-			LOGGER.warning(_owner.getName() + ": Trying to add something other than an item!");
 			return null;
 		}
 		
