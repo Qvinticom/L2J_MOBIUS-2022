@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 public class HellboundSpawns implements IXmlReader
 {
 	private final List<Spawn> _spawns = new ArrayList<>();
-	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();
+	private final Map<Spawn, int[]> _spawnLevels = new HashMap<>();
 	
 	public HellboundSpawns()
 	{
@@ -92,6 +92,10 @@ public class HellboundSpawns implements IXmlReader
 			int maxLevel = 100;
 			for (Node element = npc.getFirstChild(); element != null; element = element.getNextSibling())
 			{
+				if (element.getNodeType() != Node.ELEMENT_NODE)
+				{
+					continue;
+				}
 				final NamedNodeMap attrs = element.getAttributes();
 				minLevel = 1;
 				maxLevel = 100;
@@ -127,7 +131,7 @@ public class HellboundSpawns implements IXmlReader
 				}
 				spawn.setLocation(loc);
 				spawn.setRespawnDelay(delay, randomInterval);
-				_spawnLevels.put(npcId, new int[]
+				_spawnLevels.put(spawn, new int[]
 				{
 					minLevel,
 					maxLevel
@@ -153,22 +157,22 @@ public class HellboundSpawns implements IXmlReader
 	
 	/**
 	 * Gets the spawn minimum level.
-	 * @param npcId the NPC ID
+	 * @param spawn the NPC Spawn
 	 * @return the spawn minimum level
 	 */
-	public int getSpawnMinLevel(int npcId)
+	public int getSpawnMinLevel(Spawn spawn)
 	{
-		return _spawnLevels.containsKey(npcId) ? _spawnLevels.get(npcId)[0] : 1;
+		return _spawnLevels.containsKey(spawn) ? _spawnLevels.get(spawn)[0] : 1;
 	}
 	
 	/**
 	 * Gets the spawn maximum level.
-	 * @param npcId the NPC ID
+	 * @param spawn the NPC Spawn
 	 * @return the spawn maximum level
 	 */
-	public int getSpawnMaxLevel(int npcId)
+	public int getSpawnMaxLevel(Spawn spawn)
 	{
-		return _spawnLevels.containsKey(npcId) ? _spawnLevels.get(npcId)[1] : 1;
+		return _spawnLevels.containsKey(spawn) ? _spawnLevels.get(spawn)[1] : 1;
 	}
 	
 	public static HellboundSpawns getInstance()

@@ -102,7 +102,7 @@ public class HellboundEngine extends AbstractNpcAI
 		for (Spawn spawn : hellboundSpawns.getSpawns())
 		{
 			final Npc npc = spawn.getLastSpawn();
-			if ((getLevel() < hellboundSpawns.getSpawnMinLevel(spawn.getId())) || (getLevel() > hellboundSpawns.getSpawnMaxLevel(spawn.getId())))
+			if ((getLevel() < hellboundSpawns.getSpawnMinLevel(spawn)) || (getLevel() > hellboundSpawns.getSpawnMaxLevel(spawn)))
 			{
 				spawn.stopRespawn();
 				
