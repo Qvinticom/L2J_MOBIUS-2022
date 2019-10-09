@@ -77,6 +77,8 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			}
 		}
 		
+		player.abortCast();
+		player.stopMove(null);
 		player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
 	}
 }
