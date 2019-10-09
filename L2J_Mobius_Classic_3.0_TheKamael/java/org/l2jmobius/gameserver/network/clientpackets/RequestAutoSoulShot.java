@@ -156,7 +156,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
 					final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
 					final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
-					if ((player.getActiveWeaponItem() == player.getFistsWeaponItem()) || (item.getItem().getCrystalType() != player.getActiveWeaponItem().getCrystalTypePlus()))
+					if (player.getActiveWeaponItem() == player.getFistsWeaponItem())
 					{
 						client.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 						return;
