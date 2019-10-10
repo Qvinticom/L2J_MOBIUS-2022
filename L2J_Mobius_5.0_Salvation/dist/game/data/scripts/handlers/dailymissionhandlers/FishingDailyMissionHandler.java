@@ -33,11 +33,15 @@ import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.Fishi
 public class FishingDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _amount;
+	private final int _minLevel;
+	private final int _maxLevel;
 	
 	public FishingDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
+		_minLevel = holder.getParams().getInt("minLevel", 0);
+		_maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
 	}
 	
 	@Override
@@ -75,6 +79,11 @@ public class FishingDailyMissionHandler extends AbstractDailyMissionHandler
 	private void onPlayerFishing(OnPlayerFishing event)
 	{
 		final PlayerInstance player = event.getPlayer();
+		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
+		{
+			return;
+		}
+		
 		if (event.getReason() == FishingEndReason.WIN)
 		{
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);

@@ -32,11 +32,13 @@ import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 public class OlympiadDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _amount;
+	private final boolean _winOnly;
 	
 	public OlympiadDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
+		_winOnly = holder.getParams().getBoolean("winOnly", false);
 	}
 	
 	@Override
@@ -86,7 +88,7 @@ public class OlympiadDailyMissionHandler extends AbstractDailyMissionHandler
 			}
 		}
 		
-		if (event.getLoser() != null)
+		if (!_winOnly && (event.getLoser() != null))
 		{
 			final DailyMissionPlayerEntry loseEntry = getPlayerEntry(event.getLoser().getObjectId(), true);
 			if (loseEntry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)

@@ -18,7 +18,7 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute type="xs:int" name="id" />
-				<xs:attribute type="xs:byte" name="count" />
+				<xs:attribute type="xs:int" name="count" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

@@ -34,9 +34,14 @@ import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
  */
 public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 {
+	private final int _minLevel;
+	private final int _maxLevel;
+	
 	public SiegeDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
+		_minLevel = holder.getParams().getInt("minLevel", 0);
+		_maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
 	}
 	
 	@Override
@@ -75,6 +80,11 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 		{
 			clan.getOnlineMembers(0).forEach(player ->
 			{
+				if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
+				{
+					return;
+				}
+				
 				final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
 				entry.setStatus(DailyMissionStatus.AVAILABLE);
 				storePlayerEntry(entry);
