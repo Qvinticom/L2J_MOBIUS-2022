@@ -136,5 +136,6 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpTargetMyPledgeAcademy", OpTargetMyPledgeAcademySkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpCheckFlag", OpCheckFlagSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("NotFeared", NotFearedSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpNotInCeremonyOfChaos", OpNotInCeremonyOfChaosSkillCondition::new);
 	}
 }
