@@ -23,7 +23,6 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -162,12 +161,11 @@ public class Mail extends ItemContainer
 	@Override
 	public void deleteMe()
 	{
-		_items.forEach(i ->
+		_items.forEach(item ->
 		{
-			i.updateDatabase(true);
-			i.deleteMe();
-			World.getInstance().removeObject(i);
-			IdFactory.getInstance().releaseId(i.getObjectId());
+			item.updateDatabase(true);
+			item.deleteMe();
+			World.getInstance().removeObject(item);
 		});
 		_items.clear();
 	}

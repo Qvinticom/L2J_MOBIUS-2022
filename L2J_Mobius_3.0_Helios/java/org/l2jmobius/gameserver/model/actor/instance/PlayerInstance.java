@@ -5805,7 +5805,6 @@ public class PlayerInstance extends Playable
 		
 		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
-			IdFactory.getInstance().releaseId(getObjectId());
 			Disconnection.of(this).storeMe().deleteMe();
 		}
 	}
@@ -7604,7 +7603,6 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS))
 		{
-			con.setAutoCommit(false);
 			for (Skill addSkill : newSkills)
 			{
 				ps.setInt(1, getObjectId());
@@ -7615,7 +7613,6 @@ public class PlayerInstance extends Playable
 				ps.addBatch();
 			}
 			ps.executeBatch();
-			con.commit();
 		}
 		catch (SQLException e)
 		{

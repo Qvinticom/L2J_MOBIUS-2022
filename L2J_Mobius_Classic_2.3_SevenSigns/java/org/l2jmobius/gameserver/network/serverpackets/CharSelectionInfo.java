@@ -29,7 +29,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.World;
@@ -305,7 +304,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 						final PlayerInstance player = World.getInstance().getPlayer(charInfopackage.getObjectId());
 						if (player != null)
 						{
-							IdFactory.getInstance().releaseId(player.getObjectId());
 							Disconnection.of(player).storeMe().deleteMe();
 						}
 					}
