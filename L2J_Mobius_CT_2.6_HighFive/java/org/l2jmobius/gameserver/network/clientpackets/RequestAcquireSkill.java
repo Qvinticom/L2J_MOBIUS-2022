@@ -119,7 +119,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		{
 			if (prevSkillLevel == _level)
 			{
-				LOGGER.warning("Player " + player.getName() + " is trying to learn a skill that already knows, Id: " + _id + " level: " + _level + "!");
 				return;
 			}
 			else if (prevSkillLevel != (_level - 1))

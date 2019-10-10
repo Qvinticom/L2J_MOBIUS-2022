@@ -108,7 +108,6 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			bypassOriginId = player.validateHtmlAction(_command);
 			if (bypassOriginId == -1)
 			{
-				LOGGER.warning("Player " + player.getName() + " sent non cached bypass: '" + _command + "'");
 				return;
 			}
 			

@@ -741,7 +741,6 @@ public class Attackable extends Npc
 		final AggroInfo ai = _aggroList.get(target);
 		if (ai == null)
 		{
-			LOGGER.info("Target " + target + " not present in aggro list of " + this);
 			return;
 		}
 		

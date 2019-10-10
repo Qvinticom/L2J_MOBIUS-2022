@@ -501,7 +501,6 @@ public class VillageMasterInstance extends NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass"))
 					{
-						LOGGER.warning(VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -569,7 +568,6 @@ public class VillageMasterInstance extends NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
 					{
-						LOGGER.warning(VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -660,7 +658,6 @@ public class VillageMasterInstance extends NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
 					{
-						LOGGER.warning(VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					

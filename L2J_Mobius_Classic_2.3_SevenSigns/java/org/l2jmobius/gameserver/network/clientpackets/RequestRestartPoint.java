@@ -92,7 +92,6 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		}
 		else if (!player.isDead())
 		{
-			LOGGER.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
 		}
 		

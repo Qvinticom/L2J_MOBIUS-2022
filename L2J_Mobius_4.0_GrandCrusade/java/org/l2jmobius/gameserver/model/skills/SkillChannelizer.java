@@ -231,7 +231,7 @@ public class SkillChannelizer implements Runnable
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Error while channelizing skill: " + skill + " channelizer: " + _channelizer + " channelized: " + channelized, e);
+			LOGGER.log(Level.WARNING, "Error while channelizing skill: " + skill + " channelizer: " + _channelizer + " channelized: " + channelized + "; ", e);
 		}
 	}
 }

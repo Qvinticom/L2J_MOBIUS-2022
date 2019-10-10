@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.skills;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -226,7 +227,7 @@ public class SkillChannelizer implements Runnable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while channelizing skill: " + _skill + " channelizer: " + _channelizer + " channelized: " + _channelized + "; " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error while channelizing skill: " + _skill + " channelizer: " + _channelizer + " channelized: " + _channelized + "; ", e);
 		}
 	}
 }
