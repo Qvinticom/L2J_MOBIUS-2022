@@ -471,14 +471,39 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME), // 228
 	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME), // 228
+	UNK_16C(0x16C, null, ConnectionState.IN_GAME), // 228
+	UNK_16D(0x16D, null, ConnectionState.IN_GAME), // 228
+	UNK_16E(0x16E, null, ConnectionState.IN_GAME), // 228
+	UNK_16F(0x16F, null, ConnectionState.IN_GAME), // 228
+	UNK_170(0x170, null, ConnectionState.IN_GAME), // 228
+	EX_REQUEST_AUTO_SUPPLY_SETTING(0x171, null, ConnectionState.IN_GAME), // 228
+	UNK_172(0x172, null, ConnectionState.IN_GAME), // 228
+	UNK_173(0x173, null, ConnectionState.IN_GAME), // 228
+	UNK_174(0x174, null, ConnectionState.IN_GAME), // 228
+	UNK_175(0x175, null, ConnectionState.IN_GAME), // 228
+	UNK_176(0x176, null, ConnectionState.IN_GAME), // 228
 	EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME), // 228
+	UNK_178(0x178, null, ConnectionState.IN_GAME), // 228
+	UNK_179(0x179, null, ConnectionState.IN_GAME), // 228
+	UNK_17A(0x17A, null, ConnectionState.IN_GAME), // 228
+	UNK_17B(0x17B, null, ConnectionState.IN_GAME), // 228
+	UNK_17C(0x17C, null, ConnectionState.IN_GAME), // 228
+	UNK_17D(0x17D, null, ConnectionState.IN_GAME), // 228
+	UNK_17E(0x17E, null, ConnectionState.IN_GAME), // 228
 	EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME), // 228
 	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME), // 228
 	EX_RANKING_CHAR_INFO(0x181, ExRankCharInfo::new, ConnectionState.IN_GAME), // 228
 	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME), // 228
 	EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME), // 228
+	UNK_184(0x184, null, ConnectionState.IN_GAME), // 228
+	UNK_185(0x185, null, ConnectionState.IN_GAME), // 228
 	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186, null, ConnectionState.IN_GAME), // 228
+	UNK_187(0x187, null, ConnectionState.IN_GAME), // 228
+	UNK_188(0x188, null, ConnectionState.IN_GAME), // 228
+	UNK_189(0x189, null, ConnectionState.IN_GAME), // 228
+	UNK_18A(0x18A, null, ConnectionState.IN_GAME), // 228
 	EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME), // 228
+	UNK_18C(0x18C, null, ConnectionState.IN_GAME), // 228
 	EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME); // 228
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
