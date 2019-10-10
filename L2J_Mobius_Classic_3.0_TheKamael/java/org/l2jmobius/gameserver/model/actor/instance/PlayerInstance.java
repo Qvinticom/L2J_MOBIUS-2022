@@ -14073,6 +14073,7 @@ public class PlayerInstance extends Playable
 				}
 				// Check if monster is reachable.
 				if (nearby.isAutoAttackable(this) //
+					&& GeoEngine.getInstance().canSeeTarget(this, nearby)//
 					&& GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), nearby.getX(), nearby.getY(), nearby.getZ(), getInstanceWorld()))
 				{
 					final double monsterDistance = calculateDistance2D(nearby);
