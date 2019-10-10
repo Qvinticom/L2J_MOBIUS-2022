@@ -826,6 +826,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power> <!-- Fix: Retail Missed -->
@@ -847,6 +848,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power> <!-- Fix: Retail Missed -->
@@ -868,6 +870,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power> <!-- Fix: Retail Missed -->
@@ -885,11 +888,10 @@
 		<effectPoint>-100</effectPoint>
 		<affectRange>200</affectRange>
 		<effectRange>1000</effectRange>
-		<magicLvl>1</magicLvl>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>2000</power> <!-- Fix: Retail Missed -->
@@ -921,16 +923,16 @@
 		<!-- Wizard-type Monsters' Close Range AoE Magic Attack Skill (Non-Attribute) -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>-1</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<affectRange>200</affectRange>
 		<effectRange>1000</effectRange>
-		<magicLvl>1</magicLvl>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>2000</power> <!-- Fix: Retail Missed -->
@@ -951,6 +953,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power> <!-- Fix: Retail Missed -->
@@ -968,11 +971,10 @@
 		<effectPoint>-100</effectPoint>
 		<affectRange>200</affectRange>
 		<effectRange>1000</effectRange>
-		<magicLvl>1</magicLvl>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>2000</power> <!-- Fix: Retail Missed -->
@@ -1082,6 +1084,7 @@
 		<magicLvl>1</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>

@@ -46,6 +46,10 @@
 		</collision>
 	</npc>
 	<npc id="23501" level="99" type="Monster" name="Flame Rael">
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="5" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="11807558" sp="11859" />
@@ -64,6 +68,7 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="18217" level="5" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->

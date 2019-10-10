@@ -5972,7 +5972,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23292" level="98" type="Monster" name="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15485" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3480201" sp="3073" />
@@ -5990,6 +5993,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15485" level="1" />
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -6080,7 +6084,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23294" level="98" type="Monster" name="Chief Magician">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15487" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3480201" sp="3073" />
@@ -6098,6 +6105,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15487" level="1" />
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -6134,7 +6142,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23295" level="98" type="Monster" name="Operations Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15488" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4634986" sp="4129" />
@@ -6152,6 +6163,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15488" level="1" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -6303,7 +6315,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23298" level="98" type="Monster" name="Royal Quartermaster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15491" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3481834" sp="3073" />
@@ -6321,6 +6336,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15491" level="1" />
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -6358,7 +6374,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23299" level="99" type="Monster" name="Operations Chief of the 7th Division">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15492" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8278218" sp="7448" />
@@ -6376,6 +6395,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15492" level="1" />
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->

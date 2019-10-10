@@ -1649,6 +1649,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15484" toLevel="1" name="Lightning">
 		<!-- M. Atk. On a single enemy. -->
@@ -1659,6 +1668,16 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>2000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15485" toLevel="1" name="Eliminate">
 		<!-- P. Atk. On a single enemy. -->
@@ -1668,6 +1687,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15486" toLevel="1" name="Straight Blow">
 		<!-- Bleed on a single enemy. -->
@@ -1680,6 +1708,22 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>1000</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15487" toLevel="1" name="Disarray">
 		<!-- P. Atk. On a single enemy. -->
@@ -1689,6 +1733,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15488" toLevel="1" name="Penetrate">
 		<!-- P. Atk. On a single enemy. -->
@@ -1698,6 +1751,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15489" toLevel="1" name="Vivacity">
 		<!-- Increases P. Def. for 5 sec. -->
@@ -1707,13 +1769,36 @@
 		<hitTime>750</hitTime>
 		<effectPoint>100</effectPoint>
 		<coolTime>500</coolTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15490" toLevel="1" name="Rush">
 		<!-- Rush toward enemy. -->
-		<operateType>A1</operateType>
+		<operateType>DA1</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>-100</effectPoint>
 		<castRange>600</castRange>
+		<effectRange>600</effectRange>
+		<hitTime>800</hitTime>
+		<nextAction>ATTACK</nextAction>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="15491" toLevel="1" name="Deadly Weapon">
 		<!-- P. Atk. On a single enemy. -->
@@ -1723,6 +1808,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15492" toLevel="1" name="Immediate Response">
 		<!-- Poison on a single enemy. -->
@@ -1735,13 +1829,39 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>1000</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15493" toLevel="1" name="Forward March">
 		<!-- Rush toward enemy. -->
-		<operateType>A2</operateType>
+		<operateType>DA1</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>-100</effectPoint>
 		<castRange>600</castRange>
+		<effectRange>600</effectRange>
+		<hitTime>800</hitTime>
+		<nextAction>ATTACK</nextAction>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="15494" toLevel="1" name="Strategic Response">
 		<!-- Increases Atk. Spd. for 5 sec. -->
@@ -1752,6 +1872,19 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15495" toLevel="1" name="Ingenious Response">
 		<!-- Increases P. Def. for 5 sec. -->
@@ -1761,6 +1894,19 @@
 		<hitTime>750</hitTime>
 		<effectPoint>100</effectPoint>
 		<coolTime>500</coolTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15496" toLevel="1" name="Travis' Authority">
 		<!-- AoE M. Atk. On target's area. -->

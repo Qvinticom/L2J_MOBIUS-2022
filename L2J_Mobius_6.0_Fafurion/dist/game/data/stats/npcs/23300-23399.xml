@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23300" level="98" type="Monster" name="Commander of Operations">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15494" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8111250" sp="7299" />
@@ -19,6 +22,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15494" level="1" />
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->

@@ -441,6 +441,25 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-1</effectPoint>
+		<effectRange>1200</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>50000</power>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16951" toLevel="1" name="Quick Throw">
 		<!-- Your Attack Speed has increased by 200%. -->
@@ -794,6 +813,7 @@
 		<!-- You politely offer greetings to Frederick the Destroyer. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
+		<isMagic>6</isMagic>
 		<isDebuff>true</isDebuff>
 		<hitTime>5000</hitTime>
 		<effectPoint>-100</effectPoint>

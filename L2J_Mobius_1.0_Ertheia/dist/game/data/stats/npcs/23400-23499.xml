@@ -3765,6 +3765,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23490" level="98" type="Monster" name="Lava Drake">
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12447936" sp="12485" />
@@ -3782,6 +3786,7 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="18217" level="1" />
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -3853,7 +3858,10 @@
 		</collision>
 	</npc>
 	<npc id="23492" level="78" type="Monster" name="Lava Stone Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="87285" sp="20" />
@@ -3872,6 +3880,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="18217" level="1" />
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->

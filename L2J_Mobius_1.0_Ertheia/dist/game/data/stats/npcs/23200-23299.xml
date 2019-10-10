@@ -6371,7 +6371,10 @@
 		</collision>
 	</npc>
 	<npc id="23292" level="98" type="Monster" name="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15485" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2351539" sp="2401" />
@@ -6389,6 +6392,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15485" level="1" />
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -6479,7 +6483,10 @@
 		</collision>
 	</npc>
 	<npc id="23294" level="98" type="Monster" name="Chief Magician">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15487" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2351539" sp="2401" />
@@ -6497,6 +6504,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15487" level="1" />
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -6538,7 +6546,10 @@
 		</collision>
 	</npc>
 	<npc id="23295" level="98" type="Monster" name="Operations Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15488" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3131768" sp="3169" />
@@ -6556,6 +6567,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15488" level="1" />
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -6722,7 +6734,10 @@
 		</collision>
 	</npc>
 	<npc id="23298" level="98" type="Monster" name="Royal Quartermaster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15491" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2352595" sp="2401" />
@@ -6740,6 +6755,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15491" level="1" />
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -6782,7 +6798,10 @@
 		</collision>
 	</npc>
 	<npc id="23299" level="99" type="Monster" name="Operations Chief of the 7th Division">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="15492" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="5593430" sp="5684" />
@@ -6800,6 +6819,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="15492" level="1" />
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->

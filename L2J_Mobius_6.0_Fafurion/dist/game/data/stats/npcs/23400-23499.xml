@@ -3374,7 +3374,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23487" level="98" type="Monster" name="Magma Ailith">
+	<npc id="23487" level="99" type="Monster" name="Magma Ailith">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20387947" sp="18343" />
@@ -3540,7 +3540,11 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23490" level="98" type="Monster" name="Lava Drake">
+	<npc id="23490" level="99" type="Monster" name="Lava Drake">
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />
@@ -3558,6 +3562,7 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="18217" level="1" />
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -3591,7 +3596,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23491" level="98" type="Monster" name="Lava Wendigo">
+	<npc id="23491" level="99" type="Monster" name="Lava Wendigo">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />
@@ -3642,59 +3647,49 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23492" level="78" type="Monster" name="Lava Stone Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23492" level="99" type="Monster" name="Lava Stone Golem">
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="87285" sp="20" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
-				<walk ground="13" />
-				<run ground="30" />
+				<walk ground="50" />
+				<run ground="70" />
 			</speed>
-			<attack physical="45027.610073614" magical="7933.4485848194" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.49473544358" magical="297.50874247089" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="26" />
+			<height normal="31" />
+		</collision>
 		<skillList>
+			<skill id="18217" level="1" />
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
-		<collision>
-			<radius normal="38" />
-			<height normal="45" />
-		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="137" max="320" chance="70" /> <!-- Adena -->
-				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
-				<item id="3957" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="1.015" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="35346" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.493" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36523" min="1" max="1" chance="3.251" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23493" level="98" type="Monster" name="Lava Leviah">
+	<npc id="23493" level="99" type="Monster" name="Lava Leviah">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />

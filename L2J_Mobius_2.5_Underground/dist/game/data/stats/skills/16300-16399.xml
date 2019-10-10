@@ -213,15 +213,40 @@
 	<skill id="16334" toLevel="3" name="Disarm">
 		<!-- Disarmed. -->
 		<icon>icon.skill0485</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>DISARM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
-		<mpConsume>13</mpConsume>
+		<mpConsume>38</mpConsume>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalTime>5</abnormalTime>
 		<isDebuff>true</isDebuff>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Disarm">
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16335" toLevel="1" name="Fear">
 		<!-- Moving against your will due to Fear. -->
@@ -400,6 +425,17 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16355" toLevel="1" name="Sacred Blow Down">
 		<icon>icon.skill10281</icon>
@@ -410,6 +446,29 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectRange>900</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<trait>PULL</trait>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="Bluff">
+				<chance>100</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="GetAgro" />
+		</effects>
 	</skill>
 	<skill id="16356" toLevel="1" name="Sacred Sphere">
 		<operateType>A1</operateType>
@@ -419,6 +478,16 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1000</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16357" toLevel="2" name="Dimensional Barrier">
 		<!-- Monster's P./M. Atk. and P./M. Def. increase. -->
@@ -564,6 +633,7 @@
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Down. -->
 		<icon>icon.skill0260</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -574,6 +644,7 @@
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Hold for 5 sec. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -584,6 +655,7 @@
 		<!-- Attacks target with 100% of P. Atk. power and pulls target toward self. -->
 		<icon>icon.skill0403</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -594,6 +666,7 @@
 		<!-- Attacks nearby enemies with 100% of P. Atk. power and inflicts Stun for 5 sec. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
@@ -602,6 +675,7 @@
 	<skill id="16379" toLevel="1" name="Dimensional Remedy">
 		<!-- Recover 40% of Max HP. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
@@ -610,6 +684,7 @@
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Back. -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -620,12 +695,14 @@
 		<!-- Allied monsters nearby have P./M. Def. + 100%. -->
 		<icon>icon.skill1503</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16382" toLevel="1" name="Dimensional Death Ring">
 		<!-- Attacks target's nearby enemies with 250 Power added to M. Atk. Damage increases as number of enemies affected increases. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -636,6 +713,7 @@
 		<!-- Attacks target's nearby enemies with 250 Power added to M. Atk. and block their P./M. Skills for 5 sec. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -647,6 +725,7 @@
 		<!-- Inflict Bleed on target's nearby enemies and cause them to lose 1,000 HP/second. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -656,6 +735,7 @@
 	<skill id="16385" toLevel="1" name="Dimesional Devil">
 		<!-- Attacks target's nearby enemies with 300% of P. Atk. power. Damage decreases as number of enemies affected increases. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -665,6 +745,7 @@
 		<!-- Attacks enemies to the front with 200% of P. Atk. power and inflicts Knock Down. -->
 		<icon>icon.skill0777</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>

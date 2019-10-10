@@ -425,6 +425,17 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16355" toLevel="1" name="Sacred Blow Down">
 		<icon>icon.skill10281</icon>
@@ -435,6 +446,29 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectRange>900</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<trait>PULL</trait>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="Bluff">
+				<chance>100</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="GetAgro" />
+		</effects>
 	</skill>
 	<skill id="16356" toLevel="1" name="Sacred Sphere">
 		<operateType>A1</operateType>
@@ -444,6 +478,16 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1000</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16357" toLevel="3" name="Dimensional Barrier">
 		<!-- Monster's P./ M. Atk. and P./ M. Def. increase. -->

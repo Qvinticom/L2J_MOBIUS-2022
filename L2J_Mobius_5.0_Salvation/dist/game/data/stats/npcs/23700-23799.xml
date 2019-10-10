@@ -564,7 +564,7 @@
 			<height normal="34.7" />
 		</collision>
 	</npc>
-	<npc id="23723" level="100" type="Npc" name="Frost Ursus">
+	<npc id="23723" level="100" type="Monster" name="Frost Ursus">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2046,6 +2046,12 @@
 		</dropLists>
 	</npc>
 	<npc id="23755" level="101" type="Monster" name="Wandering Dead of the Dimension">
+		<parameters>
+			<skill name="Skill01_ID" id="16103" level="6" />
+			<skill name="Skill02_ID" id="16106" level="5" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2062,6 +2068,8 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16103" level="6" /> <!-- Death Lift -->
+			<skill id="16106" level="5" /> <!-- Chain Smash -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -2074,6 +2082,12 @@
 		</dropLists>
 	</npc>
 	<npc id="23757" level="101" type="Monster" name="Lost Soul of the Dimension">
+		<parameters>
+			<skill name="Skill01_ID" id="16207" level="4" />
+			<skill name="Skill02_ID" id="16213" level="4" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2090,6 +2104,8 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16207" level="4" /> <!-- Dark Spike -->
+			<skill id="16213" level="4" /> <!-- Dark Buster -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -2102,6 +2118,12 @@
 		</dropLists>
 	</npc>
 	<npc id="23759" level="101" type="Monster" name="Roaming Vengeance of the Dimension">
+		<parameters>
+			<skill name="Skill01_ID" id="16205" level="6" />
+			<skill name="Skill02_ID" id="16775" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="27926665" sp="27950" />
 		<equipment rhand="10128" />
@@ -2113,12 +2135,15 @@
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
+			<hitTime>800</hitTime>
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16205" level="6" /> <!-- Burst Shot -->
+			<skill id="16775" level="1" /> <!-- Power Shot -->
 		</skillList>
 		<collision>
 			<radius normal="15" />

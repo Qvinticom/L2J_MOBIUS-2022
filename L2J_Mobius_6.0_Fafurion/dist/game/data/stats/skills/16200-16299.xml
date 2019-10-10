@@ -52,6 +52,17 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>1000</coolTime>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16206" toLevel="4" name="Holy Spike">
 		<operateType>A1</operateType>
@@ -80,6 +91,18 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>2000</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16208" toLevel="4" name="Fire Spike">
 		<operateType>A1</operateType>
@@ -157,6 +180,19 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<reuseDelay>10000</reuseDelay>
+		<attributeType>DARK</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>2000</power> <!-- Fix: Retail Missed -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16214" toLevel="4" name="Fire Buster">
 		<operateType>A1</operateType>

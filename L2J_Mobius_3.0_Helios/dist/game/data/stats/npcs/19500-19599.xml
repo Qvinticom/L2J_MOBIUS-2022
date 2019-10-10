@@ -1265,7 +1265,10 @@
 		</collision>
 	</npc>
 	<npc id="19568" level="85" type="Monster" name="Sacred Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="16356" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1279,6 +1282,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="16356" level="1" /> <!-- Sacred Sphere -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<collision>
@@ -1287,7 +1291,10 @@
 		</collision>
 	</npc>
 	<npc id="19569" level="85" type="Monster" name="Sacred Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="16354" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1301,6 +1308,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="16354" level="1" /> <!-- Sacred Assault -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<collision>
@@ -1309,7 +1317,12 @@
 		</collision>
 	</npc>
 	<npc id="19570" level="85" type="Monster" name="Sacred Slayer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="16354" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<skill name="Sacred_Blow_Down" id="16355" level="1" />
+			<param name="Sacred_Blow_Down_Probablity" value="2000" />
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1323,6 +1336,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="16354" level="1" /> <!-- Sacred Assault -->
+			<skill id="16355" level="1" /> <!-- Sacred Blow Down -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<collision>

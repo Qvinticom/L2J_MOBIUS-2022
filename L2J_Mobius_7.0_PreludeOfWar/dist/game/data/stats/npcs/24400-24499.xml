@@ -1,300 +1,455 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24400" level="85" type="Npc" name="Fussy Arbor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24400" level="61" type="Monster" name="Fussy Arbor">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="8149" sp="8" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2088.959565" hpRegen="7.5" mp="1137.833" mpRegen="2.7" />
+			<attack physical="501.08068" magical="342.17315" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.49346" magical="184.76376" />
 			<speed>
 				<walk ground="12" />
 				<run ground="30" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24401" level="85" type="Npc" name="Tiny Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24401" level="68" type="Monster" name="Tiny Windima">
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<acquire exp="15676" sp="15" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2444.16471" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="60" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22.4" />
 			<height normal="21.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="55" max="129" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24402" level="85" type="Npc" name="Giant Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24402" level="68" type="Monster" name="Giant Windima">
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<acquire exp="15676" sp="15" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2444.16471" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="60" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="55" max="129" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24403" level="85" type="Npc" name="Turek War Hound">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24403" level="76" type="Monster" name="Turek War Hound">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="19581" sp="18" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2757.729465" hpRegen="8.5" mp="1555.498" mpRegen="3" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="24" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19.5" />
 			<height normal="17.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="71" max="165" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24404" level="85" type="Npc" name="Turek Orc Footman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24404" level="76" type="Monster" name="Turek Orc Footman">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="2" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="19581" sp="18" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2757.729465" hpRegen="8.5" mp="1555.498" mpRegen="3" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>300</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="21" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="71" max="165" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24405" level="85" type="Npc" name="Turek Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24405" level="78" type="Monster" name="Turek Orc Archer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="14" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="29082" sp="27" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2974.13331" hpRegen="8.5" mp="1622.811" mpRegen="3" />
+			<attack physical="890.50086" magical="608.0966579" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="75" max="174" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24406" level="85" type="Npc" name="Turek Orc Skirmisher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24406" level="78" type="Monster" name="Turek Orc Skirmisher">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="121" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="29082" sp="27" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2974.13331" hpRegen="8.5" mp="1622.811" mpRegen="3" />
+			<attack physical="890.50086" magical="608.0966579" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>300</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="75" max="174" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24407" level="85" type="Npc" name="Turek Orc Prefect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24407" level="80" type="Monster" name="Turek Orc Prefect">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="127" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="21440" sp="20" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3290.221725" hpRegen="8.5" mp="1690.935" mpRegen="3" />
+			<attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>300</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24408" level="85" type="Npc" name="Turek Orc Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24408" level="80" type="Monster" name="Turek Orc Priest">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="7" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="21440" sp="20" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3290.221725" hpRegen="8.5" mp="1690.935" mpRegen="3" />
+			<attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24409" level="85" type="Npc" name="Ketra Orc Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24409" level="82" type="Monster" name="Ketra Orc Raider">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="79" lhand="6919" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="22526" sp="21" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3642.90321" hpRegen="8.5" mp="1760.681" mpRegen="3" />
+			<attack physical="1055.28566" magical="720.6233026" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4032" level="12" /> <!-- Power Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24410" level="85" type="Npc" name="Ketra Orc Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24410" level="82" type="Monster" name="Ketra Orc Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="79" lhand="6919" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="22526" sp="21" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3642.90321" hpRegen="8.5" mp="1760.681" mpRegen="3" />
+			<attack physical="1055.28566" magical="720.6233026" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4032" level="12" /> <!-- Power Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24411" level="85" type="Npc" name="Ketra Orc Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24411" level="83" type="Monster" name="Ketra Orc Scout">
+		<parameters>
+			<skill name="Skill01_ID" id="4040" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="288" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="25008" sp="23" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4039.11783" hpRegen="8.5" mp="1830.427" mpRegen="3" />
+			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4040" level="12" /> <!-- Power Shot -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24412" level="85" type="Npc" name="Ketra Orc Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24412" level="83" type="Monster" name="Ketra Orc Priest">
+		<parameters>
+			<skill name="Skill01_ID" id="4561" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="92" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="25008" sp="23" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4039.11783" hpRegen="8.5" mp="1830.427" mpRegen="3" />
+			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
 			<speed>
 				<walk ground="10" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4561" level="12" /> <!-- Fire Burn -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24413" level="85" type="Npc" name="Ketra Orc Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24413" level="84" type="Monster" name="Ketra Orc Officer">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="80" lhand="6919" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="28577" sp="26" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4032" level="12" /> <!-- Power Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="87" max="204" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24414" level="85" type="Npc" name="Ketra Orc Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24414" level="84" type="Monster" name="Ketra Orc Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="12" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="6719" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="28577" sp="26" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="24" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="38.5" />
 		</collision>
+		<skillList>
+			<skill id="4032" level="12" /> <!-- Power Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="87" max="204" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24415" level="85" type="Npc" name="Breka Orc Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -414,985 +569,1741 @@
 			<height normal="36.5" />
 		</collision>
 	</npc>
-	<npc id="24421" level="85" type="Npc" name="Stone Gargoyle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24421" level="105" type="Monster" name="Stone Gargoyle">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1087406775" sp="978579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="157384.27041" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5201" magical="3020" />
 			<speed>
 				<walk ground="140" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2829" max="6596" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24422" level="85" type="Npc" name="Stone Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24422" level="105" type="Monster" name="Stone Golem">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1087406775" sp="978579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="157384.27041" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5201" magical="3020" />
 			<speed>
 				<walk ground="23" />
 				<run ground="23" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2829" max="6596" chance="70" /> <!-- Adena -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24423" level="85" type="Npc" name="Monster Eye">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24423" level="105" type="Monster" name="Monster Eye">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1087406775" sp="978579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="157384.27041" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5201" magical="3020" />
 			<speed>
 				<walk ground="90" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2829" max="6596" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+				<item id="35346" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24424" level="85" type="Npc" name="Gargoyle Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24424" level="106" type="Monster" name="Gargoyle Hunter">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1123970788" sp="1011465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174870.71055" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="100" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2976" max="6951" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24425" level="85" type="Npc" name="Steel Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24425" level="106" type="Monster" name="Steel Golem">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1123970788" sp="1011465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174870.71055" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="20" />
 				<run ground="20" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2976" max="6951" chance="70" /> <!-- Adena -->
+				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24426" level="85" type="Npc" name="Stone Cube" title="Lord of Ivory Tower Crater">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24426" level="106" type="Monster" name="Stone Cube" title="Lord of Ivory Tower Crater">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="7867795516" sp="7080928" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="874354.183665" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="27" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="1" max="1" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24427" level="85" type="Npc" name="Fury Tier Nero">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24427" level="110" type="Monster" name="Fury Tier Nero">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1663786300" sp="1497375" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="28" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24428" level="85" type="Npc" name="Fury Sylph Melan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24428" level="110" type="Monster" name="Fury Sylph Melan">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1663786300" sp="1497375" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24429" level="85" type="Npc" name="Fury Sylph Album">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24429" level="110" type="Monster" name="Fury Sylph Album">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1663786300" sp="1497375" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24430" level="85" type="Npc" name="Fury Harpy Schvar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24430" level="110" type="Monster" name="Fury Harpy Schvar">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1663786300" sp="1497375" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24431" level="85" type="Npc" name="Fury Harpe">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24431" level="110" type="Monster" name="Fury Harpe">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1663786300" sp="1497375" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="43" />
 			<height normal="43" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24432" level="85" type="Npc" name="Fury Harpy Queen" title="Goddess of Storm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24432" level="110" type="Monster" name="Fury Harpy Queen" title="Goddess of Storm">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="3327584700" sp="2994750" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="734458.877055" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="24000" max="32000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24436" level="85" type="Npc" name="Deinonychus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24436" level="110" type="Monster" name="Deinonychus">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="24" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.3" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24437" level="85" type="Npc" name="Ornithomimus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24437" level="110" type="Monster" name="Ornithomimus">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="37.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24438" level="85" type="Npc" name="Velociraptor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24438" level="110" type="Monster" name="Velociraptor">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="33" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24439" level="85" type="Npc" name="Pachycephalosaurus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24439" level="110" type="Monster" name="Pachycephalosaurus">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="33" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24440" level="85" type="Npc" name="Pterosaur">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24440" level="110" type="Monster" name="Pterosaur">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="54" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="43.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24441" level="85" type="Npc" name="Tyrannosaurus" title="Primeval Tyrant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24441" level="110" type="Monster" name="Tyrannosaurus" title="Primeval Tyrant">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2559682400" sp="2303598" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="734458.877055" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="105" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="70" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4315" max="10063" chance="70" /> <!-- Adena -->
+				<item id="48211" min="1" max="1" chance="0.075" /> <!-- Blessed Circlet Enchant Scroll -->
+				<item id="48498" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
+				<item id="80838" min="1" max="1" chance="0.075" /> <!-- Enchant Scroll: Blessed Bracelet -->
+				<item id="48212" min="1" max="1" chance="0.0009" /> <!-- Noble Circlet Upgrade Stone -->
+				<item id="48213" min="1" max="1" chance="0.0009" /> <!-- Radiant Circlet Upgrade Stone -->
+				<item id="80839" min="1" max="1" chance="0.0009" /> <!-- Crystal of Dawn -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24445" level="85" type="Npc" name="Lizardman Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24445" level="111" type="Monster" name="Lizardman Rogue">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1321464213" sp="1189223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="264405.12003" hpRegen="9.5" mp="3501.087" mpRegen="3.3" />
+			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7337" magical="4262" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4185" max="9768" chance="70" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
+			</drop>
+			<spoil>
+				<item id="36529" min="1" max="1" chance="8.705" /> <!-- Quality Fiber -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24446" level="85" type="Npc" name="Island Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24446" level="111" type="Monster" name="Island Guardian">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1321464213" sp="1189223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="264405.12003" hpRegen="9.5" mp="3501.087" mpRegen="3.3" />
+			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7337" magical="4262" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="16" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4185" max="9768" chance="70" /> <!-- Adena -->
+				<item id="35330" min="1" max="1" chance="0.075" /> <!-- Helios Avenger Fragment -->
+				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="2.592" /> <!-- Durable Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24447" level="85" type="Npc" name="Niasis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="9638" lhand="9638" />
+	<npc id="24447" level="111" type="Monster" name="Niasis">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<equipment lhand="9638" rhand="9638" />
+		<acquire exp="1321464213" sp="1189223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="264405.12003" hpRegen="9.5" mp="3501.087" mpRegen="3.3" />
+			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="7337" magical="4262" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4185" max="9768" chance="70" /> <!-- Adena -->
+				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36524" min="1" max="1" chance="3.036" /> <!-- Orichalcum -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24448" level="85" type="Npc" name="Lizardman Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24448" level="111" type="Monster" name="Lizardman Archer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1321464213" sp="1189223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="264405.12003" hpRegen="9.5" mp="3501.087" mpRegen="3.3" />
+			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="7337" magical="4262" />
 			<speed>
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4185" max="9768" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="1.39" /> <!-- Orichalcum Wire -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24449" level="85" type="Npc" name="Lizardman Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24449" level="112" type="Monster" name="Lizardman Warrior">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="58" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4391" max="10237" chance="70" /> <!-- Adena -->
+				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24450" level="85" type="Npc" name="Lizardmen Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24450" level="112" type="Monster" name="Lizardmen Wizard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="90" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="53.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet -->
+				<item id="57" min="4391" max="10237" chance="70" /> <!-- Adena -->
+				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24451" level="85" type="Npc" name="Lizardmen Defender" title="Lord of Isle of Prayer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24451" level="112" type="Monster" name="Lizardmen Defender" title="Lord of Isle of Prayer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="9549471232" sp="8594522" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1427785.250685" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="58" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="42" />
 			<height normal="57.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="2" max="2" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24452" level="85" type="Npc" name="Doom Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24452" level="89" type="Monster" name="Doom Soldier">
+		<parameters>
+			<skill name="Skill01_ID" id="32858" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="54813320" sp="49269" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14397.4803" hpRegen="8.5" mp="2467.062" mpRegen="3" />
+			<attack physical="4186.372041" magical="748.3800155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="431.2573861" magical="238.0852676" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="41" />
 		</collision>
+		<skillList>
+			<skill id="32858" level="1" /> <!-- Unholy Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="458" max="1067" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.03" /> <!-- Eternal Boot Ingredient -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35466" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36518" min="1" max="1" chance="4.741" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24453" level="85" type="Npc" name="Doom Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24453" level="89" type="Monster" name="Doom Servant">
+		<parameters>
+			<skill name="Skill01_ID" id="32858" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="54813320" sp="49269" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14397.4803" hpRegen="8.5" mp="2467.062" mpRegen="3" />
+			<attack physical="4186.372041" magical="748.3800155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="431.2573861" magical="238.0852676" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="41" />
 		</collision>
+		<skillList>
+			<skill id="32858" level="1" /> <!-- Unholy Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="458" max="1067" chance="70" /> <!-- Adena -->
+				<item id="35343" min="1" max="1" chance="0.03" /> <!-- Eternal Shield Ingredient -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35467" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shield (60%) -->
+			</drop>
+			<spoil>
+				<item id="36518" min="1" max="1" chance="4.696" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24454" level="85" type="Npc" name="Doom Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24454" level="89" type="Monster" name="Doom Berserker">
+		<parameters>
+			<skill name="Skill01_ID" id="32858" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="54813320" sp="49269" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14397.4803" hpRegen="8.5" mp="2467.062" mpRegen="3" />
+			<attack physical="4186.372041" magical="748.3800155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="431.2573861" magical="238.0852676" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33" />
 			<height normal="51" />
 		</collision>
+		<skillList>
+			<skill id="32858" level="1" /> <!-- Unholy Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="458" max="1067" chance="70" /> <!-- Adena -->
+				<item id="35332" min="1" max="1" chance="0.03" /> <!-- Helios Stormer Fragment -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
+			</drop>
+			<spoil>
+				<item id="36538" min="1" max="1" chance="1.206" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24455" level="85" type="Npc" name="Doom Seer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24455" level="89" type="Monster" name="Doom Seer">
+		<parameters>
+			<skill name="Skill01_ID" id="32858" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="54813320" sp="49269" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14397.4803" hpRegen="8.5" mp="2467.062" mpRegen="3" />
+			<attack physical="4186.372041" magical="748.3800155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="431.2573861" magical="238.0852676" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="51" />
 		</collision>
+		<skillList>
+			<skill id="32858" level="1" /> <!-- Unholy Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="458" max="1067" chance="70" /> <!-- Adena -->
+				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Helios Slasher Fragment -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
+			</drop>
+			<spoil>
+				<item id="36538" min="1" max="1" chance="1.127" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24457" level="85" type="Npc" name="Marsh Vampire Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24457" level="97" type="Monster" name="Marsh Vampire Rogue">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="111045018" sp="99924" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37635.34158" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28.5" />
 		</collision>
+		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="673" max="1572" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35466" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36518" min="1" max="1" chance="6.894" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24458" level="85" type="Npc" name="Marsh Vampire Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24458" level="97" type="Monster" name="Marsh Vampire Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="111045018" sp="99924" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37635.34158" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="37" />
 		</collision>
+		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="673" max="1572" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35467" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shield (60%) -->
+			</drop>
+			<spoil>
+				<item id="36518" min="1" max="1" chance="6.929" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24459" level="85" type="Npc" name="Marsh Vampire Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24459" level="97" type="Monster" name="Marsh Vampire Wizard">
+		<parameters>
+			<skill name="Skill01_ID" id="32860" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="111045018" sp="99924" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37635.34158" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="32" />
 		</collision>
+		<skillList>
+			<skill id="32860" level="1" /> <!-- Energy Burst  -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="673" max="1572" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="2.258" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+			</spoil>
+		</dropLists>
+		<ai type="MAGE" />
 	</npc>
-	<npc id="24460" level="85" type="Npc" name="Marsh Vampire Shooter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24460" level="97" type="Monster" name="Marsh Vampire Shooter">
+		<parameters>
+			<skill name="Skill01_ID" id="32861" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<equipment rhand="47898" />
+		<acquire exp="111045018" sp="99924" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37635.34158" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
 		</collision>
+		<skillList>
+			<skill id="32861" level="1" /> <!-- Rapid Throw  -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="673" max="1572" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="35341" min="1" max="1" chance="0.075" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="2.362" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24461" level="85" type="Npc" name="Forest Ghost">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24461" level="109" type="Monster" name="Forest Ghost">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="1239342753" sp="1115389" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="227331.923715" hpRegen="9.5" mp="3402.956" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="21" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3461" max="8077" chance="70" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36529" min="1" max="1" chance="7.171" /> <!-- Quality Fiber -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24462" level="85" type="Npc" name="Bewildered Expedition Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24462" level="109" type="Monster" name="Bewildered Expedition Member">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1239342753" sp="1115389" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="227331.923715" hpRegen="9.5" mp="3402.956" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="28" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="33.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3461" max="8077" chance="70" /> <!-- Adena -->
+				<item id="35330" min="1" max="1" chance="0.075" /> <!-- Helios Avenger Fragment -->
+				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="2.156" /> <!-- Durable Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24463" level="85" type="Npc" name="Bewildered Patrol">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24463" level="109" type="Monster" name="Bewildered Patrol">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="15302" />
+		<acquire exp="1239342753" sp="1115389" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="227331.923715" hpRegen="9.5" mp="3402.956" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="31.45" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3461" max="8077" chance="70" /> <!-- Adena -->
+				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36524" min="1" max="1" chance="2.55" /> <!-- Orichalcum -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24464" level="85" type="Npc" name="Bewildered Dwarf Adventurer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24464" level="110" type="Monster" name="Bewildered Dwarf Adventurer">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="35" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3992" max="9310" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="1.294" /> <!-- Orichalcum Wire -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24465" level="85" type="Npc" name="Forest Evil Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24465" level="110" type="Monster" name="Forest Evil Spirit">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1279841200" sp="1151799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="244819.625685" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="52" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet -->
+				<item id="57" min="3992" max="9310" chance="70" /> <!-- Adena -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24466" level="85" type="Npc" name="Demonic Mirror" title="Emperor of the Forest of Mirrors">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24466" level="110" type="Monster" name="Demonic Mirror" title="Emperor of the Forest of Mirrors">
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<acquire exp="8958888400" sp="8062956" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1224098.128425" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="39" />
 			<height normal="79.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="2" max="2" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24470" level="85" type="Npc" name="Kamael Traitor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24470" level="112" type="Monster" name="Kamael Traitor">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="15304" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24471" level="85" type="Npc" name="Kamael Renegade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24471" level="112" type="Monster" name="Kamael Renegade">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="15304" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24472" level="85" type="Npc" name="Trained Monkey">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24472" level="112" type="Monster" name="Trained Monkey">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="38559" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24473" level="85" type="Npc" name="Dwarf Grave Robber">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="15304" />
+	<npc id="24473" level="112" type="Monster" name="Dwarf Grave Robber">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24474" level="85" type="Npc" name="Muertos Outlaw">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24474" level="112" type="Monster" name="Muertos Outlaw">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="10128" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="24.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24475" level="85" type="Npc" name="Orc Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24475" level="112" type="Monster" name="Orc Raider">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="38426" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="285557.17632" hpRegen="9.5" mp="3551.369" mpRegen="3.3" />
+			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="DAGGER" range="600" distance="80" width="120" />
+			<defence physical="7693" magical="4469" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>300</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="5599" level="12" /> <!-- Stun Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="100000" max="120000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24480" level="85" type="Npc" name="Dragon Legionary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24480" level="119" type="Monster" name="Dragon Legionnaire">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="13979" lhand="13980" />
+		<acquire exp="4493214495" sp="4043816" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="56" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="42" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="80289" min="1" max="1" chance="2.009" /> <!-- Leviathan Helmet Material -->
+				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
+				<item id="80261" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="11.35" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24481" level="85" type="Npc" name="Dragon Peltast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24481" level="119" type="Monster" name="Dragon Peltast">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="13843" />
+		<acquire exp="4493214495" sp="4043816" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="DAGGER" range="600" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="89" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>300</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="80290" min="1" max="1" chance="0.75" /> <!-- Leviathan Breastplate Material -->
+				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="80262" min="1" max="1" chance="0.0075" /> <!-- Recipe: Leviathan Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="2.764" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24482" level="85" type="Npc" name="Dragon Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24482" level="119" type="Monster" name="Dragon Officer">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="4493214495" sp="4043816" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="92" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="39.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="80291" min="1" max="1" chance="1.202" /> <!-- Leviathan Gaiter Material -->
+				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="80263" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Gaiters (60%) -->
+			</drop>
+			<spoil>
+				<item id="36519" min="1" max="1" chance="71.18" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24483" level="85" type="Npc" name="Dragon Centurion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24483" level="120" type="Monster" name="Dragon Centurion">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="13978" />
+		<acquire exp="4633012800" sp="4169664" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80292" min="1" max="1" chance="3.09" /> <!-- Leviathan Gauntlet Material -->
+				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
+				<item id="80264" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Gauntlets (60%) -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="17.79" /> <!-- Quality Leather Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24484" level="85" type="Npc" name="Dragon Elite Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24484" level="120" type="Monster" name="Dragon Elite Guard">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="4633012800" sp="4169664" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80293" min="1" max="1" chance="3.078" /> <!-- Leviathan Boots Material -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="80265" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36529" min="1" max="1" chance="80.87" /> <!-- Quality Fiber -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24485" level="85" type="Npc" name="Behemoth Dragon" title="Emperor of the Dragon Valley">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24485" level="120" type="Monster" name="Behemoth Dragon" title="Emperor of the Dragon Valley">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="32431118400" sp="29187936" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3964047.77781" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="4" max="4" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

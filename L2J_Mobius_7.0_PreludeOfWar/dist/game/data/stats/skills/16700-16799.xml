@@ -1289,11 +1289,21 @@
 	</skill>
 	<skill id="16775" toLevel="1" name="Power Shot">
 		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-350</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16776" toLevel="1" name="Sleep">
 		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->

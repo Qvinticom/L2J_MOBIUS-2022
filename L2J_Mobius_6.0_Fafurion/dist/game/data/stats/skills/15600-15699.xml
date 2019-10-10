@@ -267,6 +267,24 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-167</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">34070</value>
+					<value level="2">47031</value>
+					<value level="3">48135</value>
+					<value level="4">48433</value>
+					<value level="5">48691</value>
+					<value level="6">48886</value>
+					<value level="7">49012</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15621" toLevel="7" name="Stun Shot">
 		<!-- Attacks and Stuns target for $s1. -->
@@ -1170,6 +1188,15 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15657" toLevel="1" name="Decrease P. Def.">
 		<!-- P. Def. -30%. -->
