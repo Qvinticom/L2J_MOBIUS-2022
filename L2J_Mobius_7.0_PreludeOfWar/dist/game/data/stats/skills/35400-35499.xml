@@ -42,27 +42,133 @@
 	</skill>
 	<skill id="35404" toLevel="1" name="Prison of Souls - Zariche">
 		<!-- Demonic Sword Zariche's strike has temporarily sealed your body. You are immobilized. Failing to destroy the Prison of Souls (Limit Barrier) within 2 min. will return you to the nearest village. The barrier is removed after receiving 540 hits. Others can't damage it. -->
+		<!-- FIX: THIS SKILL NEEDS MORE WORK -->
 		<icon>icon.death_prison1</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>	<!-- FIX: NOT RETAIL -->
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<trait>HOLD</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35405" toLevel="1" name="Prison of Souls - Akamanah">
 		<!-- Blood Sword Akamanah's strike has temporarily sealed your body. You are immobilized. Failing to destroy the Prison of Souls (Limit Barrier) within 2 min. will return you to the nearest village. The barrier is removed after receiving 540 hits. Others can't damage it. -->
+		<!-- FIX: THIS SKILL NEEDS MORE WORK -->
 		<icon>icon.death_prison1</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>	<!-- FIX: NOT RETAIL -->
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<trait>HOLD</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35406" toLevel="1" name="Soul of Sword - Zariche">
 		<!-- Possessed by the sword's soul. Movement is restricted and does not suffer any damage. -->
+		<!-- FIX: SOME PARAMETERS ARE NOT CORRECT -->
 		<icon>icon.weapon_unique_zariche_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35407" toLevel="1" name="Soul of Sword - Akamanah">
 		<!-- Possessed by the sword's soul. Movement is restricted and does not suffer any damage. -->
+		<!-- FIX: SOME PARAMETERS ARE NOT CORRECT -->
 		<icon>icon.weapon_aka_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35408" toLevel="1" name="Dye Special Effect - No. 1 Slot">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. -->

@@ -4,12 +4,22 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>

@@ -147,38 +147,217 @@
 		<!-- PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate + 30%, P. Skill Critical Damage +30%. -->
 		<icon>icon.zariche_cutter_2</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35530" toLevel="1" name="Blood-stained Zariche - Wizard">
 		<!-- PvP Damage +30%, Max HP/MP/CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate + 30%, M. Skill Critical Damage +30%. -->
 		<icon>icon.zariche_twohand_magic_blunt_2</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35531" toLevel="1" name="Blood-stained Akamanah - Warrior">
 		<!-- PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate + 30%, P. Skill Critical Damage +30%. -->
 		<icon>icon.aka_manaf_cutter_2</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35532" toLevel="1" name="Blood-stained Akamanah - Wizard">
 		<!-- PvP Damage +30%, Max HP/MP/CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate + 30%, M. Skill Critical Damage +30%. -->
 		<icon>icon.aka_manaf_twohand_magic_blunt_2</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35533" toLevel="1" name="Soul's Insanity - Zariche">
 		<!-- For 30 seconds, received damage is limited to 666. Cannot be used in the Olympiad/Ceremony of Chaos. -->
 		<icon>icon.madness_zariche1</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="GetDamageLimit">
+				<amount>666</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35534" toLevel="1" name="Soul's Confinement - Zariche">
 		<!-- Immobilizes the target and surrounding enemies for 60 seconds. Cannot be used in the Olympiad/Ceremony of Chaos. Can only be used against a PC. -->
 		<icon>icon.imprison_zariche1</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<coolTime>300</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<trait>HOLD</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35535" toLevel="1" name="Soul's Release - Zariche">
 		<!-- Releases Soul Confinement, Prison of Souls skills in the surrounding area. Cannot be used in the Olympiad/Ceremony of Chaos. -->
@@ -187,23 +366,73 @@
 		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>600</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35534;35537;35404;35405</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35536" toLevel="1" name="Soul's Insanity - Akamanah">
 		<!-- For 30 seconds, received damage is limited to 666. Cannot be used in the Olympiad/Ceremony of Chaos. -->
 		<icon>icon.madness_aka_manaf1</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="GetDamageLimit">
+				<amount>666</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35537" toLevel="1" name="Soul's Confinement - Akamanah">
 		<!-- Immobilizes the target and surrounding enemies for 60 seconds. Cannot be used in the Olympiad/Ceremony of Chaos. Can only be used against a PC. -->
 		<icon>icon.imprison_aka_manaf1</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<coolTime>300</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<trait>HOLD</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35538" toLevel="1" name="Soul's Release - Akamanah">
 		<!-- Releases Soul Confinement, Prison of Souls skills in the surrounding area. Cannot be used in the Olympiad/Ceremony of Chaos. -->
@@ -212,6 +441,21 @@
 		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
+		<activateRate>200</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>600</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpNotInCeremonyOfChaos" />
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35534;35537;35404;35405</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35539" toLevel="1" name="Summon Enhanced Virgo Agathion">
 		<!-- Summons Enhanced Virgo Agathion. -->

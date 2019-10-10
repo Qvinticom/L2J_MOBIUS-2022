@@ -168,6 +168,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -190,6 +191,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -217,6 +219,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -245,6 +248,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -495,6 +499,7 @@
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -505,6 +510,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">629</stat>
 			<stat type="mAtk">313</stat>
@@ -520,6 +526,7 @@
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -530,6 +537,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -555,6 +563,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -569,6 +578,7 @@
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -579,9 +589,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -607,6 +615,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="damage_range" val="0;0;32;120" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -634,6 +643,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -660,6 +672,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
 		<stats>
 			<stat type="pAtk">1415</stat>
 			<stat type="mAtk">313</stat>
@@ -684,6 +697,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1274</stat>
 			<stat type="mAtk">313</stat>
@@ -699,6 +713,7 @@
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -710,6 +725,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -723,6 +739,7 @@
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -734,6 +751,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -761,6 +779,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">700</stat>
 			<stat type="mAtk">459</stat>
@@ -787,6 +806,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -810,6 +830,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -834,6 +855,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>

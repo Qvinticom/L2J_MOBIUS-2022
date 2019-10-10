@@ -655,7 +655,8 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_shaper_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -663,6 +664,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -678,6 +680,7 @@
 		<set name="icon" val="icon.aka_manaf_cutter_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -685,6 +688,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -698,7 +702,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_slasher_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -707,6 +711,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -720,7 +725,8 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_onehand_blunt_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -728,9 +734,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
-		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -744,7 +748,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_fist_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -753,6 +757,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -767,7 +772,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_spear_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -776,6 +781,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -790,7 +799,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_bow_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -799,6 +808,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -813,12 +823,16 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_crossbow_1" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">2106</stat>
 			<stat type="mAtk">517</stat>
@@ -833,7 +847,8 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -841,6 +856,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -853,7 +869,8 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -861,6 +878,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -875,7 +893,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -884,6 +902,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -898,7 +917,7 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_dual_sword_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -907,6 +926,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -920,12 +940,16 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_dual_dagger_1" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -940,12 +964,16 @@
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
 		<set name="icon" val="icon.aka_manaf_dual_blunt_1" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -960,7 +988,8 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_shaper_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -968,6 +997,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -983,6 +1019,7 @@
 		<set name="icon" val="icon.zariche_cutter_2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -990,6 +1027,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1003,7 +1047,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_slasher_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1012,6 +1056,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1025,7 +1076,8 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_onehand_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -1033,8 +1085,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
@@ -1049,7 +1105,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_fist_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1058,6 +1114,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1072,7 +1135,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_spear_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1081,6 +1144,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1095,7 +1166,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_bow_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1104,6 +1175,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4898</stat>
 			<stat type="mAtk">1084</stat>
@@ -1118,12 +1196,22 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_crossbow_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4411</stat>
 			<stat type="mAtk">1084</stat>
@@ -1138,7 +1226,8 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_onehane_magic_sword_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1146,6 +1235,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -1158,7 +1254,8 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_onehand_magic_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -1166,6 +1263,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -1179,7 +1283,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_twohand_magic_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1188,6 +1292,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2423</stat>
 			<stat type="mAtk">1590</stat>
@@ -1202,7 +1313,7 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_dual_sword_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1211,6 +1322,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1224,12 +1342,22 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_dual_dagger_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1244,12 +1372,22 @@
 		<!-- A Zariche weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.zariche_dual_blunt_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35529" level="1" /> <!-- Blood-stained Zariche - Warrior -->
+			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
+			<skill id="35534" level="1" /> <!-- Soul's Confinement - Zariche -->
+			<skill id="35535" level="1" /> <!-- Soul's Release - Zariche -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1264,7 +1402,8 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_shaper_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1272,6 +1411,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -1287,6 +1433,7 @@
 		<set name="icon" val="icon.aka_manaf_cutter_2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1294,6 +1441,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1307,7 +1461,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_slasher_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1316,6 +1470,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1329,7 +1490,8 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_onehand_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -1337,8 +1499,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
@@ -1353,7 +1519,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_fist_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1362,6 +1528,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1376,7 +1549,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_spear_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1385,6 +1558,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1399,7 +1580,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_bow_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1408,6 +1589,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4898</stat>
 			<stat type="mAtk">1084</stat>
@@ -1422,12 +1610,22 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_crossbow_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4411</stat>
 			<stat type="mAtk">1084</stat>
@@ -1442,7 +1640,8 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -1450,6 +1649,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -1462,7 +1668,8 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -1470,6 +1677,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -1483,7 +1697,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1492,6 +1706,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2423</stat>
 			<stat type="mAtk">1590</stat>
@@ -1506,7 +1727,7 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_dual_sword_2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1515,6 +1736,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1528,12 +1756,22 @@
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/MP/CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Use Active Skills Soul's Insanity, Soul's Confinement, Soul's Release. Max HP can increase up to 150,000. Enchantment, Augment, Crystallization, Appearance Modification, Attribute Assignment not allowed. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_dual_dagger_2" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
