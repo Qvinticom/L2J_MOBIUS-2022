@@ -138,38 +138,39 @@ public class SchemeBufferTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete all entries from database.
-			PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);
-			st.execute();
-			st.close();
-			
-			st = con.prepareStatement(INSERT_SCHEME);
+			try (PreparedStatement st = con.prepareStatement(DELETE_SCHEMES))
+			{
+				st.execute();
+			}
 			
 			// Save _schemesTable content.
-			for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
+			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
 			{
-				for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
+				for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
 				{
-					// Build a String composed of skill ids seperated by a ",".
-					final StringBuilder sb = new StringBuilder();
-					for (int skillId : scheme.getValue())
+					for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
 					{
-						sb.append(skillId + ",");
+						// Build a String composed of skill ids seperated by a ",".
+						final StringBuilder sb = new StringBuilder();
+						for (int skillId : scheme.getValue())
+						{
+							sb.append(skillId + ",");
+						}
+						
+						// Delete the last "," : must be called only if there is something to delete !
+						if (sb.length() > 0)
+						{
+							sb.setLength(sb.length() - 1);
+						}
+						
+						st.setInt(1, player.getKey());
+						st.setString(2, scheme.getKey());
+						st.setString(3, sb.toString());
+						st.addBatch();
 					}
-					
-					// Delete the last "," : must be called only if there is something to delete !
-					if (sb.length() > 0)
-					{
-						sb.setLength(sb.length() - 1);
-					}
-					
-					st.setInt(1, player.getKey());
-					st.setString(2, scheme.getKey());
-					st.setString(3, sb.toString());
-					st.addBatch();
 				}
+				st.executeBatch();
 			}
-			st.executeBatch();
-			st.close();
 		}
 		catch (Exception e)
 		{

@@ -38,15 +38,14 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.holders.BuffSkillHolder;
 
 /**
  * This class loads available skills and stores players' buff schemes into _schemesTable.
  */
-public class BufferTable
+public class SchemeBufferTable
 {
-	private static final Logger LOGGER = Logger.getLogger(BufferTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SchemeBufferTable.class.getName());
 	
 	private static final String LOAD_SCHEMES = "SELECT * FROM buffer_schemes";
 	private static final String DELETE_SCHEMES = "TRUNCATE TABLE buffer_schemes";
@@ -55,7 +54,7 @@ public class BufferTable
 	private final Map<Integer, HashMap<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
 	private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 	
-	public BufferTable()
+	public SchemeBufferTable()
 	{
 		int count = 0;
 		
@@ -93,7 +92,7 @@ public class BufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Failed to load buff schemes : " + e);
+			LOGGER.warning("SchemeBufferTable: Failed to load buff schemes : " + e);
 		}
 		
 		try
@@ -129,9 +128,9 @@ public class BufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Failed to load buff info : " + e);
+			LOGGER.warning("SchemeBufferTable: Failed to load buff info : " + e);
 		}
-		LOGGER.info("BufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
+		LOGGER.info("SchemeBufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
 	}
 	
 	public void saveSchemes()
@@ -139,42 +138,43 @@ public class BufferTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete all entries from database.
-			PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);
-			st.execute();
-			st.close();
-			
-			st = con.prepareStatement(INSERT_SCHEME);
+			try (PreparedStatement st = con.prepareStatement(DELETE_SCHEMES))
+			{
+				st.execute();
+			}
 			
 			// Save _schemesTable content.
-			for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
+			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
 			{
-				for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
+				for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
 				{
-					// Build a String composed of skill ids seperated by a ",".
-					final StringBuilder sb = new StringBuilder();
-					for (int skillId : scheme.getValue())
+					for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
 					{
-						StringUtil.append(sb, skillId, ",");
+						// Build a String composed of skill ids seperated by a ",".
+						final StringBuilder sb = new StringBuilder();
+						for (int skillId : scheme.getValue())
+						{
+							sb.append(skillId + ",");
+						}
+						
+						// Delete the last "," : must be called only if there is something to delete !
+						if (sb.length() > 0)
+						{
+							sb.setLength(sb.length() - 1);
+						}
+						
+						st.setInt(1, player.getKey());
+						st.setString(2, scheme.getKey());
+						st.setString(3, sb.toString());
+						st.addBatch();
 					}
-					
-					// Delete the last "," : must be called only if there is something to delete !
-					if (sb.length() > 0)
-					{
-						sb.setLength(sb.length() - 1);
-					}
-					
-					st.setInt(1, player.getKey());
-					st.setString(2, scheme.getKey());
-					st.setString(3, sb.toString());
-					st.addBatch();
 				}
+				st.executeBatch();
 			}
-			st.executeBatch();
-			st.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Error while saving schemes : " + e);
+			LOGGER.warning("BufferTableScheme: Error while saving schemes : " + e);
 		}
 	}
 	
@@ -182,7 +182,7 @@ public class BufferTable
 	{
 		if (!_schemesTable.containsKey(playerId))
 		{
-			_schemesTable.put(playerId, new HashMap<String, ArrayList<Integer>>());
+			_schemesTable.put(playerId, new HashMap<>());
 		}
 		else if (_schemesTable.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES)
 		{
@@ -278,13 +278,13 @@ public class BufferTable
 		return _availableBuffs.get(skillId);
 	}
 	
-	public static BufferTable getInstance()
+	public static SchemeBufferTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final BufferTable INSTANCE = new BufferTable();
+		protected static final SchemeBufferTable INSTANCE = new SchemeBufferTable();
 	}
 }
