@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.BufferTable;
+import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.instancemanager.AutoSaveManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -459,7 +459,7 @@ public class Shutdown extends Thread
 		LOGGER.info("Fishing Championship data has been saved!!");
 		
 		// Schemes save.
-		BufferTable.getInstance().saveSchemes();
+		SchemeBufferTable.getInstance().saveSchemes();
 		LOGGER.info("BufferTable data has been saved!!");
 		
 		// Save all global (non-player specific) Quest data that needs to persist after reboot

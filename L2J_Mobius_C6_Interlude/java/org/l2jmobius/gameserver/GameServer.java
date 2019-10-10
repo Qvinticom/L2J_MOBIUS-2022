@@ -41,7 +41,7 @@ import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2jmobius.gameserver.datatables.BufferTable;
+import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
@@ -257,7 +257,7 @@ public class GameServer
 		}
 		
 		Util.printSection("Npc");
-		BufferTable.getInstance();
+		SchemeBufferTable.getInstance();
 		NpcWalkerRoutesTable.getInstance().load();
 		if (!NpcTable.getInstance().isInitialized())
 		{

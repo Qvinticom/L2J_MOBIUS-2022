@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.util.Util;
 
 public class SchemeBufferInstance extends Npc
 {
@@ -45,7 +46,10 @@ public class SchemeBufferInstance extends Npc
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
+		// Simple hack to use createscheme bypass with a space.
+		command = command.replace("createscheme ", "createscheme;");
+		
+		StringTokenizer st = new StringTokenizer(command, ";");
 		String currentCommand = st.nextToken();
 		
 		if (currentCommand.startsWith("menu"))
@@ -172,10 +176,16 @@ public class SchemeBufferInstance extends Npc
 		{
 			try
 			{
-				final String schemeName = st.nextToken();
+				final String schemeName = st.nextToken().trim();
 				if (schemeName.length() > 14)
 				{
-					player.sendMessage("Scheme's name must contain up to 14 chars. Spaces are trimmed.");
+					player.sendMessage("Scheme's name must contain up to 14 chars.");
+					return;
+				}
+				// Simple hack to use spaces, dots, commas, exclamations or question marks.
+				if (!Util.isAlphaNumeric(schemeName.replace(" ", "").replace(".", "").replace(",", "").replace("!", "").replace("?", "")))
+				{
+					player.sendMessage("Please use plain alphanumeric characters.");
 					return;
 				}
 				
@@ -200,7 +210,7 @@ public class SchemeBufferInstance extends Npc
 			}
 			catch (Exception e)
 			{
-				player.sendMessage("Scheme's name must contain up to 14 chars. Spaces are trimmed.");
+				player.sendMessage("Scheme's name must contain up to 14 chars.");
 			}
 		}
 		else if (currentCommand.startsWith("deletescheme"))
@@ -258,10 +268,10 @@ public class SchemeBufferInstance extends Npc
 			{
 				final int cost = getFee(scheme.getValue());
 				sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
-				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs " + scheme.getKey() + " " + cost + "\">Use on Me</a>&nbsp;|&nbsp;");
-				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs " + scheme.getKey() + " " + cost + " pet\">Use on Pet</a>&nbsp;|&nbsp;");
-				sb.append("<a action=\"bypass -h npc_%objectId%_editschemes Buffs " + scheme.getKey() + " 1\">Edit</a>&nbsp;|&nbsp;");
-				sb.append("<a action=\"bypass -h npc_%objectId%_deletescheme " + scheme.getKey() + "\">Delete</a><br>");
+				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + "\">Use on Me</a>&nbsp;|&nbsp;");
+				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + ";pet\">Use on Pet</a>&nbsp;|&nbsp;");
+				sb.append("<a action=\"bypass -h npc_%objectId%_editschemes;Buffs;" + scheme.getKey() + ";1\">Edit</a>&nbsp;|&nbsp;");
+				sb.append("<a action=\"bypass -h npc_%objectId%_deletescheme;" + scheme.getKey() + "\">Delete</a><br>");
 			}
 		}
 		
@@ -331,11 +341,11 @@ public class SchemeBufferInstance extends Npc
 			final Skill skill = SkillData.getInstance().getSkill(skillId, 1);
 			if (schemeSkills.contains(skillId))
 			{
-				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
+				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect;" + groupType + ";" + schemeName + ";" + skillId + ";" + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
 			}
 			else
 			{
-				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
+				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect;" + groupType + ";" + schemeName + ";" + skillId + ";" + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
 			}
 			
 			sb.append("</tr></table><img src=\"L2UI.SquareGray\" width=277 height=1>");
@@ -347,7 +357,7 @@ public class SchemeBufferInstance extends Npc
 		
 		if (page > 1)
 		{
-			sb.append("<td align=left width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes " + groupType + " " + schemeName + " " + (page - 1) + "\">Previous</a></td>");
+			sb.append("<td align=left width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page - 1) + "\">Previous</a></td>");
 		}
 		else
 		{
@@ -358,7 +368,7 @@ public class SchemeBufferInstance extends Npc
 		
 		if (page < max)
 		{
-			sb.append("<td align=right width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes " + groupType + " " + schemeName + " " + (page + 1) + "\">Next</a></td>");
+			sb.append("<td align=right width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page + 1) + "\">Next</a></td>");
 		}
 		else
 		{
@@ -394,7 +404,7 @@ public class SchemeBufferInstance extends Npc
 			}
 			else
 			{
-				sb.append("<td width=65><a action=\"bypass -h npc_%objectId%_editschemes " + type + " " + schemeName + " 1\">" + type + "</a></td>");
+				sb.append("<td width=65><a action=\"bypass -h npc_%objectId%_editschemes;" + type + ";" + schemeName + ";1\">" + type + "</a></td>");
 			}
 			
 			count++;

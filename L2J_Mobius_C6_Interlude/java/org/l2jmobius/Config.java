@@ -90,10 +90,10 @@ public class Config
 	// custom
 	private static final String AWAY_CONFIG_FILE = "./config/custom/Away.ini";
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
-	private static final String BUFFER_CONFIG_FILE = "./config/custom/Buffer.ini";
 	private static final String EVENT_CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
+	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
@@ -2109,18 +2109,18 @@ public class Config
 	{
 		try
 		{
-			final Properties BufferSettings = new Properties();
-			final InputStream is = new FileInputStream(new File(BUFFER_CONFIG_FILE));
-			BufferSettings.load(is);
+			final Properties ShemeBufferSettings = new Properties();
+			final InputStream is = new FileInputStream(new File(SCHEME_BUFFER_CONFIG_FILE));
+			ShemeBufferSettings.load(is);
 			is.close();
 			
-			BUFFER_MAX_SCHEMES = Integer.parseInt(BufferSettings.getProperty("BufferMaxSchemesPerChar", "4"));
-			BUFFER_STATIC_BUFF_COST = Integer.parseInt(BufferSettings.getProperty("BufferStaticCostPerBuff", "-1"));
+			BUFFER_MAX_SCHEMES = Integer.parseInt(ShemeBufferSettings.getProperty("BufferMaxSchemesPerChar", "4"));
+			BUFFER_STATIC_BUFF_COST = Integer.parseInt(ShemeBufferSettings.getProperty("BufferStaticCostPerBuff", "-1"));
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			throw new Error("Failed to Load " + BUFFER_CONFIG_FILE + " File.");
+			throw new Error("Failed to Load " + SCHEME_BUFFER_CONFIG_FILE + " File.");
 		}
 	}
 	
