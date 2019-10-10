@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2jmobius.gameserver.enums.CharacterDeleteFailType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CommissionManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
@@ -68,8 +67,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
-	private final int _objectId;
-	
 	// Info
 	private InetAddress _addr;
 	private Channel _channel;
@@ -96,13 +93,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	
 	public GameClient()
 	{
-		_objectId = IdFactory.getInstance().getNextId();
 		_crypt = new Crypt(this);
-	}
-	
-	public int getObjectId()
-	{
-		return _objectId;
 	}
 	
 	@Override
@@ -126,7 +117,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		
 		if ((_player == null) || !_player.isInOfflineMode())
 		{
-			IdFactory.getInstance().releaseId(getObjectId());
 			Disconnection.of(this).onDisconnection();
 		}
 	}
