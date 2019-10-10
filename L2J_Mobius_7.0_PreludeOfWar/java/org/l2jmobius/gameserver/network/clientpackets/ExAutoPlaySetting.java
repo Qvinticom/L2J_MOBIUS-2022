@@ -60,7 +60,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		
 		if (_active)
 		{
-			player.startAutoPlayTask(_longRange, _respectfulHunting);
+			player.startAutoPlayTask(_pickUp, _longRange, _respectfulHunting);
 		}
 		else
 		{

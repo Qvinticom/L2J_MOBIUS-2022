@@ -14065,7 +14065,7 @@ public class PlayerInstance extends Playable
 		_autoPlayTask = null;
 	}
 	
-	public void startAutoPlayTask(boolean longRange, boolean respectfulHunting)
+	public void startAutoPlayTask(boolean pickup, boolean longRange, boolean respectfulHunting)
 	{
 		if (_autoPlayTask != null)
 		{
@@ -14074,26 +14074,59 @@ public class PlayerInstance extends Playable
 		
 		_autoPlayTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
+			// Skip thinking.
 			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
 			{
 				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
 				return;
 			}
 			
+			// Pickup.
+			if (pickup)
+			{
+				for (ItemInstance droppedItem : World.getInstance().getVisibleObjectsInRange(this, ItemInstance.class, 200))
+				{
+					// Check if item is reachable.
+					if ((droppedItem == null) //
+						|| (!droppedItem.isSpawned()) //
+						|| !GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), droppedItem.getX(), droppedItem.getY(), droppedItem.getZ(), getInstanceWorld()))
+					{
+						continue;
+					}
+					
+					// Move to item.
+					if (calculateDistance2D(droppedItem) > 50)
+					{
+						moveToLocation(droppedItem.getX(), droppedItem.getY(), droppedItem.getZ(), 0);
+						return;
+					}
+					
+					// Try to pick it up.
+					if (!droppedItem.isProtected() || (droppedItem.getOwnerId() == getObjectId()))
+					{
+						doPickupItem(droppedItem);
+						return; // Avoid pickup being skipped.
+					}
+				}
+			}
+			
+			// Find target.
 			MonsterInstance monster = null;
 			double closestDistance = Double.MAX_VALUE;
-			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, longRange ? 600 : 1400))
+			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, longRange ? 1400 : 600))
 			{
+				// Skip unavailable monsters.
 				if ((nearby == null) || nearby.isAlikeDead())
 				{
 					continue;
 				}
+				// Check monster target.
 				if (respectfulHunting && (nearby.getTarget() != null) && (nearby.getTarget() != this))
 				{
 					continue;
 				}
+				// Check if monster is reachable.
 				if (nearby.isAutoAttackable(this) //
-					&& GeoEngine.getInstance().canSeeTarget(this, nearby)//
 					&& GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), nearby.getX(), nearby.getY(), nearby.getZ(), getInstanceWorld()))
 				{
 					final double monsterDistance = calculateDistance2D(nearby);
@@ -14105,11 +14138,12 @@ public class PlayerInstance extends Playable
 				}
 			}
 			
+			// New target was assigned.
 			if (monster != null)
 			{
 				setTarget(monster);
 				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
 			}
-		}, 0, 2000);
+		}, 0, 1000);
 	}
 }
