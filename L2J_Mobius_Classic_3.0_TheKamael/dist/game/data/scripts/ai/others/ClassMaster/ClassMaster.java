@@ -33,12 +33,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
@@ -391,14 +388,14 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-					{
-						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-						for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-						{
-							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-						}
-					}
+					// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+					// {
+					// SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+					// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+					// {
+					// player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+					// }
+					// }
 					if (Config.AUTO_LEARN_SKILLS)
 					{
 						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
@@ -419,14 +416,14 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			case "learnskills":
 			{
 				// Retail class master only lets you learn all third class skills.
-				if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper001_failed.html";
-				}
-				else
-				{
-					player.giveAvailableSkills(true, true);
-				}
+				// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+				// {
+				// htmltext = "test_server_helper001_failed.html";
+				// }
+				// else
+				// {
+				player.giveAvailableSkills(true, true);
+				// }
 				break;
 			}
 			case "clanlevelup":
@@ -522,14 +519,9 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper026i.html";
 						break;
 					}
-					case MALE_SOLDIER:
+					case KAMAEL_SOLDIER:
 					{
 						htmltext = "test_server_helper026j.html";
-						break;
-					}
-					case FEMALE_SOLDIER:
-					{
-						htmltext = "test_server_helper026k.html";
 						break;
 					}
 				}
@@ -698,26 +690,10 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper020a.html";
 						break;
 					}
-					case MALE_SOLDIER:
+					case KAMAEL_SOLDIER:
 					case TROOPER:
 					{
 						htmltext = "test_server_helper020c.html";
-						break;
-					}
-					case FEMALE_SOLDIER:
-					case WARDER:
-					{
-						htmltext = "test_server_helper020d.html";
-						break;
-					}
-					case ERTHEIA_FIGHTER:
-					{
-						htmltext = "test_server_helper020e.html";
-						break;
-					}
-					case ERTHEIA_WIZARD:
-					{
-						htmltext = "test_server_helper020f.html";
 						break;
 					}
 				}
@@ -744,16 +720,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	
 	private boolean changeToNextClass(PlayerInstance player)
 	{
-		ClassId newClass = null;
-		if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
-		{
-			newClass = ClassId.FEOH_SOUL_HOUND; // Fix for Female Soulhounds
-		}
-		else
-		{
-			newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
-		}
-		
+		final ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
 		if (newClass == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": No new classId found for player " + player);
@@ -822,14 +789,14 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-			{
-				SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-				for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-				{
-					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-				}
-			}
+			// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+			// {
+			// SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+			// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+			// {
+			// player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+			// }
+			// }
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);

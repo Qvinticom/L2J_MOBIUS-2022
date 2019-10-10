@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.base;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.Race;
@@ -103,37 +105,6 @@ public enum ClassId implements IIdentifiable
 	ARTISAN(56, false, Race.DWARF, DWARVEN_FIGHTER),
 	WARSMITH(57, false, Race.DWARF, ARTISAN),
 	
-	DUMMY_ENTRY_1(58, false, null, null),
-	DUMMY_ENTRY_2(59, false, null, null),
-	DUMMY_ENTRY_3(60, false, null, null),
-	DUMMY_ENTRY_4(61, false, null, null),
-	DUMMY_ENTRY_5(62, false, null, null),
-	DUMMY_ENTRY_6(63, false, null, null),
-	DUMMY_ENTRY_7(64, false, null, null),
-	DUMMY_ENTRY_8(65, false, null, null),
-	DUMMY_ENTRY_9(66, false, null, null),
-	DUMMY_ENTRY_10(67, false, null, null),
-	DUMMY_ENTRY_11(68, false, null, null),
-	DUMMY_ENTRY_12(69, false, null, null),
-	DUMMY_ENTRY_13(70, false, null, null),
-	DUMMY_ENTRY_14(71, false, null, null),
-	DUMMY_ENTRY_15(72, false, null, null),
-	DUMMY_ENTRY_16(73, false, null, null),
-	DUMMY_ENTRY_17(74, false, null, null),
-	DUMMY_ENTRY_18(75, false, null, null),
-	DUMMY_ENTRY_19(76, false, null, null),
-	DUMMY_ENTRY_20(77, false, null, null),
-	DUMMY_ENTRY_21(78, false, null, null),
-	DUMMY_ENTRY_22(79, false, null, null),
-	DUMMY_ENTRY_23(80, false, null, null),
-	DUMMY_ENTRY_24(81, false, null, null),
-	DUMMY_ENTRY_25(82, false, null, null),
-	DUMMY_ENTRY_26(83, false, null, null),
-	DUMMY_ENTRY_27(84, false, null, null),
-	DUMMY_ENTRY_28(85, false, null, null),
-	DUMMY_ENTRY_29(86, false, null, null),
-	DUMMY_ENTRY_30(87, false, null, null),
-	
 	DUELIST(88, false, Race.HUMAN, GLADIATOR),
 	DREADNOUGHT(89, false, Race.HUMAN, WARLORD),
 	PHOENIX_KNIGHT(90, false, Race.HUMAN, PALADIN),
@@ -169,12 +140,7 @@ public enum ClassId implements IIdentifiable
 	
 	FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
 	MAESTRO(118, false, Race.DWARF, WARSMITH),
-	
-	DUMMY_ENTRY_31(119, false, null, null),
-	DUMMY_ENTRY_32(120, false, null, null),
-	DUMMY_ENTRY_33(121, false, null, null),
-	DUMMY_ENTRY_34(122, false, null, null),
-	
+
 	MALE_SOLDIER(123, false, Race.KAMAEL, null),
 	FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
 	TROOPER(125, false, Race.KAMAEL, MALE_SOLDIER),
@@ -189,10 +155,7 @@ public enum ClassId implements IIdentifiable
 	TRICKSTER(134, false, Race.KAMAEL, ARBALESTER),
 	INSPECTOR(135, false, Race.KAMAEL, WARDER),
 	JUDICATOR(136, false, Race.KAMAEL, INSPECTOR),
-	
-	DUMMY_ENTRY_35(137, false, null, null),
-	DUMMY_ENTRY_36(138, false, null, null),
-	
+
 	SIGEL_KNIGHT(139, false, null, null),
 	TYRR_WARRIOR(140, false, null, null),
 	OTHELL_ROGUE(141, false, null, null),
@@ -201,9 +164,7 @@ public enum ClassId implements IIdentifiable
 	ISS_ENCHANTER(144, false, null, null),
 	WYNN_SUMMONER(145, false, null, null),
 	AEORE_HEALER(146, false, null, null),
-	
-	DUMMY_ENTRY_37(147, false, null, null),
-	
+
 	SIGEL_PHOENIX_KNIGHT(148, false, Race.HUMAN, PHOENIX_KNIGHT),
 	SIGEL_HELL_KNIGHT(149, false, Race.HUMAN, HELL_KNIGHT),
 	SIGEL_EVA_TEMPLAR(150, false, Race.ELF, EVA_TEMPLAR),
@@ -268,6 +229,20 @@ public enum ClassId implements IIdentifiable
 	
 	/** List of available Class for next transfer **/
 	private final Set<ClassId> _nextClassIds = new HashSet<>(1);
+	
+	private static Map<Integer, ClassId> _classIdMap = new HashMap<>(ClassId.values().length);
+	static
+	{
+		for (ClassId classId : ClassId.values())
+		{
+			_classIdMap.put(classId.getId(), classId);
+		}
+	}
+	
+	public static ClassId getClassId(int cId)
+	{
+		return _classIdMap.get(cId);
+	}
 	
 	/**
 	 * Class constructor.
@@ -363,7 +338,6 @@ public enum ClassId implements IIdentifiable
 		}
 		
 		return _parent.childOf(cid);
-		
 	}
 	
 	/**
@@ -411,18 +385,6 @@ public enum ClassId implements IIdentifiable
 	public Set<ClassId> getNextClassIds()
 	{
 		return _nextClassIds;
-	}
-	
-	public static ClassId getClassId(int cId)
-	{
-		try
-		{
-			return ClassId.values()[cId];
-		}
-		catch (Exception e)
-		{
-			return null;
-		}
 	}
 	
 	private final void addNextClassId(ClassId cId)

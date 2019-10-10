@@ -820,13 +820,13 @@ public class VillageMasterInstance extends NpcInstance
 			return false;
 		}
 		
-		final ClassId cid = ClassId.values()[classId];
+		final ClassId cid = ClassId.getClassId(classId);
 		SubClass sub;
 		ClassId subClassId;
 		for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 		{
 			sub = subList.next();
-			subClassId = ClassId.values()[sub.getClassId()];
+			subClassId = ClassId.getClassId(sub.getClassId());
 			
 			if (subClassId.equalsOrChildOf(cid))
 			{

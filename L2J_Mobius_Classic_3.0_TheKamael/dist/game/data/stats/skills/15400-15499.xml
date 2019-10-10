@@ -203,14 +203,14 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 96)">
+	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Giant golem created by Dr. Chaos to excavate the Nornil Ruins. This Detector Golem is equipped with attack functions as well, and is a complete collection of all of Dr. Chaos' technological wonders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 96)">
+	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Leader of the Spiculas that activated the Intruder Elimination Project under Mother Nornil's orders. This prototype Spicula is emotionless and almost machine-like. It is currently creating mutations in various machines by spreading the Laido Virus. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -428,7 +428,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15434" toLevel="1" name="Drain HP">
+	<skill id="15434" toLevel="1" name="Drain Energy">
 		<operateType>A1</operateType>
 		<mpConsume>73</mpConsume>
 		<castRange>600</castRange>
@@ -535,7 +535,7 @@
 			<effect name="BlockMove" />
 		</effects>
 	</skill>
-	<skill id="15439" toLevel="1" name="Drain HP">
+	<skill id="15439" toLevel="1" name="Drain Energy">
 		<operateType>A1</operateType>
 		<mpConsume>109</mpConsume>
 		<castRange>600</castRange>
@@ -594,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="15442" toLevel="1" name="Bleed">
-		<!-- Causes target to bleed severely, momentarily reducing HP. -->
+		<!-- HP decreases from bleeding. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -626,7 +626,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15443" toLevel="1" name="Drain HP">
+	<skill id="15443" toLevel="1" name="Drain Energy">
 		<operateType>A1</operateType>
 		<mpConsume>102</mpConsume>
 		<castRange>400</castRange>
@@ -650,7 +650,7 @@
 		</effects>
 	</skill>
 	<skill id="15444" toLevel="1" name="Bleed">
-		<!-- Causes target to bleed severely, momentarily reducing HP. -->
+		<!-- HP decreases from bleeding. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -701,7 +701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15446" toLevel="1" name="Drain HP">
+	<skill id="15446" toLevel="1" name="Drain Energy">
 		<operateType>A1</operateType>
 		<mpConsume>282</mpConsume>
 		<castRange>500</castRange>
@@ -726,7 +726,7 @@
 		</effects>
 	</skill>
 	<skill id="15447" toLevel="1" name="Bleed">
-		<!-- Causes target to bleed severely, momentarily reducing HP. -->
+		<!-- HP decreases from bleeding. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -823,7 +823,7 @@
 		</effects>
 	</skill>
 	<skill id="15451" toLevel="1" name="Bleed">
-		<!-- Causes target to bleed severely, momentarily reducing HP. -->
+		<!-- HP decreases from bleeding. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -898,7 +898,7 @@
 		</effects>
 	</skill>
 	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
-		<!-- For 2 h., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, and acquired XP/ SP +30%. -->
+		<!-- For 2 hr., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, and acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1048,7 +1048,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15461" toLevel="1" name="Drain HP">
+	<skill id="15461" toLevel="1" name="Drain Energy">
 		<operateType>A1</operateType>
 		<mpConsume>52</mpConsume>
 		<castRange>600</castRange>
@@ -1410,7 +1410,7 @@
 		</effects>
 	</skill>
 	<skill id="15479" toLevel="1" name="Vomit Mucus">
-		<!-- Decreases enemy's P. Accuracy. -->
+		<!-- P. Accuracy decreased due to mucus. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1463,7 +1463,7 @@
 		</effects>
 	</skill>
 	<skill id="15481" toLevel="1" name="Shoot Spider Web">
-		<!-- Target's Speed -10%. -->
+		<!-- The web decreases Speed by 10%. -->
 		<icon>icon.skill0102</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1632,7 +1632,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15498" toLevel="1" name="Dragon Defender">
-		<!-- For 2 h., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
+		<!-- For 2 hr., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
 		<icon>icon.skill4689</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>

@@ -162,7 +162,7 @@ public class SkillTreesData implements IXmlReader
 						if (attr != null)
 						{
 							cId = Integer.parseInt(attr.getNodeValue());
-							classId = ClassId.values()[cId];
+							classId = ClassId.getClassId(cId);
 						}
 						else
 						{
@@ -175,7 +175,7 @@ public class SkillTreesData implements IXmlReader
 							final int parentClassId = Integer.parseInt(attr.getNodeValue());
 							if ((cId > -1) && (cId != parentClassId) && (parentClassId > -1) && !_parentClassMap.containsKey(classId))
 							{
-								_parentClassMap.put(classId, ClassId.values()[parentClassId]);
+								_parentClassMap.put(classId, ClassId.getClassId(parentClassId));
 							}
 						}
 						

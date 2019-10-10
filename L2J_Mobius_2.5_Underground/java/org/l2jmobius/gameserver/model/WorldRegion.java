@@ -252,6 +252,17 @@ public class WorldRegion
 	public void setSurroundingRegions(WorldRegion[] regions)
 	{
 		_surroundingRegions = regions;
+		
+		// Make sure that this region is always the first region to improve bulk operations when this region should be updated first.
+		for (int i = 0; i < _surroundingRegions.length; i++)
+		{
+			if (_surroundingRegions[i] == this)
+			{
+				final WorldRegion first = _surroundingRegions[0];
+				_surroundingRegions[0] = this;
+				_surroundingRegions[i] = first;
+			}
+		}
 	}
 	
 	public WorldRegion[] getSurroundingRegions()

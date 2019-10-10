@@ -22,15 +22,23 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
+import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
+import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
 import ai.AbstractNpcAI;
 
 /**
  * Dimensional Merchant AI.
- * @author St3eT
+ * @author St3eT, Mobius
  */
 public class DimensionalMerchant extends AbstractNpcAI
 {
@@ -43,9 +51,10 @@ public class DimensionalMerchant extends AbstractNpcAI
 	private static final int SUP_MINION_COUPON_EV = 14074; // Superior Minion Coupon (Event) - 5-hour
 	private static final int ENH_MINION_COUPON = 20914; // Enhanced Rose Spirit Coupon (5-hour)
 	private static final int ENH_MINION_COUPON_EV = 22240; // Enhanced Rose Spirit Coupon (5-hour) - Event
-	// Misc
+	// Others
+	private static final String COMMAND_BYPASS = "Quest DimensionalMerchant ";
 	private static final HashMap<String, Integer> MINION_EXCHANGE = new HashMap<>();
-	
+	static
 	{
 		// Normal
 		MINION_EXCHANGE.put("whiteWeasel", 13017); // White Weasel Minion Necklace
@@ -76,7 +85,6 @@ public class DimensionalMerchant extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "32478.html":
@@ -144,6 +152,43 @@ public class DimensionalMerchant extends AbstractNpcAI
 				htmltext = giveMinion(player, event, ENH_MINION_COUPON, ENH_MINION_COUPON_EV);
 				break;
 			}
+			case "package_deposit":
+			{
+				if (player.getAccountChars().size() < 1)
+				{
+					player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
+				}
+				else
+				{
+					player.sendPacket(new PackageToList(player.getAccountChars()));
+				}
+				break;
+			}
+			case "package_withdraw":
+			{
+				final PlayerFreight freight = player.getFreight();
+				if (freight != null)
+				{
+					if (freight.getSize() > 0)
+					{
+						player.setActiveWarehouse(freight);
+						for (ItemInstance i : player.getActiveWarehouse().getItems())
+						{
+							if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
+							{
+								player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
+							}
+						}
+						player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
+						player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
+					}
+					else
+					{
+						player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+					}
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -164,6 +209,17 @@ public class DimensionalMerchant extends AbstractNpcAI
 			return "32478-08.html";
 		}
 		return "32478-07.html";
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerBypass(OnPlayerBypass event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (event.getCommand().startsWith(COMMAND_BYPASS))
+		{
+			notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);
+		}
 	}
 	
 	public static void main(String[] args)

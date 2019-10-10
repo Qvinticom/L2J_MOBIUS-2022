@@ -21,7 +21,6 @@ import java.util.Set;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -61,10 +60,10 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-		{
-			return;
-		}
+		// if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		// {
+		// return;
+		// }
 		
 		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
 		if ((skill == null) || (skill.getId() != _skillId))

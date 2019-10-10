@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosState;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
@@ -307,11 +306,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 			sm = SystemMessageId.YOU_CANNOT_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_AS_A_FLYING_TRANSFORMED_OBJECT;
 			canRegister = false;
 		}
-		else if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-		{
-			sm = SystemMessageId.ONLY_CHARACTERS_WHO_HAVE_COMPLETED_THE_3RD_CLASS_TRANSFER_MAY_PARTICIPATE;
-			canRegister = false;
-		}
+		// else if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		// {
+		// sm = SystemMessageId.ONLY_CHARACTERS_WHO_HAVE_COMPLETED_THE_3RD_CLASS_TRANSFER_MAY_PARTICIPATE;
+		// canRegister = false;
+		// }
 		else if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() != 0))
 		{
 			sm = SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY;

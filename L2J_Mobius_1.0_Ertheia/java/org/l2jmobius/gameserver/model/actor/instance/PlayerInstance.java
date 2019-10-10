@@ -1244,7 +1244,7 @@ public class PlayerInstance extends Playable
 	
 	public void setBaseClass(ClassId classId)
 	{
-		_baseClass = classId.ordinal();
+		_baseClass = classId.getId();
 	}
 	
 	public boolean isInStoreMode()

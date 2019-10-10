@@ -55,7 +55,7 @@ public class PlayerTemplate extends CreatureTemplate
 	public PlayerTemplate(StatsSet set)
 	{
 		super(set);
-		classId = ClassId.values()[set.getInt("classId")];
+		classId = ClassId.getClassId(set.getInt("classId"));
 		race = Race.values()[set.getInt("raceId")];
 		className = set.getString("className");
 		_currentCollisionRadius = set.getInt("collision_radius");

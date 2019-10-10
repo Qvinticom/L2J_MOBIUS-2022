@@ -1,24 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21913" level="85" type="L2Npc" name="Lilith" title="Apostle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
 	<npc id="21900" level="79" type="Monster" name="Ancient Holy Ground's Deadman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
@@ -690,7 +671,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21914" level="85" type="L2Npc" name="Lilith' Escort">
+	<npc id="21913" level="85" type="Npc" name="Lilith" title="Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -709,7 +690,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21915" level="85" type="L2Npc" name="Anakim" title="Fallen Angel">
+	<npc id="21914" level="85" type="Npc" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -728,7 +709,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21916" level="85" type="L2Npc" name="Anakim's Royal Guard">
+	<npc id="21915" level="85" type="Npc" name="Anakim" title="Fallen Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -747,7 +728,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21917" level="85" type="L2Npc" name="Lilith" title="Apostle">
+	<npc id="21916" level="85" type="Npc" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -766,7 +747,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21918" level="85" type="L2Npc" name="Lilith' Escort">
+	<npc id="21917" level="85" type="Npc" name="Lilith" title="Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -785,7 +766,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21919" level="85" type="L2Npc" name="Anakim" title="Fallen Angel">
+	<npc id="21918" level="85" type="Npc" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -804,7 +785,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21920" level="85" type="L2Npc" name="Anakim's Royal Guard">
+	<npc id="21919" level="85" type="Npc" name="Anakim" title="Fallen Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -823,7 +804,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21921" level="85" type="L2Npc" name="Ignis" title="Apostle of Fire">
+	<npc id="21920" level="85" type="Npc" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -842,7 +823,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21922" level="85" type="L2Npc" name="Nebula" title="Apostle of Water">
+	<npc id="21921" level="85" type="Npc" name="Ignis" title="Apostle of Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -861,7 +842,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21923" level="85" type="L2Npc" name="Water Slime">
+	<npc id="21922" level="85" type="Npc" name="Nebula" title="Apostle of Water">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -880,7 +861,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21924" level="85" type="L2Npc" name="Petram" title="Apostle of Earth">
+	<npc id="21923" level="85" type="Npc" name="Water Slime">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -899,7 +880,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21925" level="85" type="L2Npc" name="Petram Piece">
+	<npc id="21924" level="85" type="Npc" name="Petram" title="Apostle of Earth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -918,7 +899,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21926" level="85" type="L2Npc" name="Petram Fragment">
+	<npc id="21925" level="85" type="Npc" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -937,7 +918,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21927" level="85" type="L2Npc" name="Procella" title="Apostle of Wind">
+	<npc id="21926" level="85" type="Npc" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -956,7 +937,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21928" level="85" type="L2Npc" name="Procella's Guardian">
+	<npc id="21927" level="85" type="Npc" name="Procella" title="Apostle of Wind">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -975,7 +956,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21929" level="85" type="L2Npc" name="Procella's Escort">
+	<npc id="21928" level="85" type="Npc" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -994,7 +975,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21930" level="85" type="L2Npc" name="Ignis" title="Apostle of Fire">
+	<npc id="21929" level="85" type="Npc" name="Procella's Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1013,7 +994,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21931" level="85" type="L2Npc" name="Nebula" title="Apostle of Water">
+	<npc id="21930" level="85" type="Npc" name="Ignis" title="Apostle of Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1032,7 +1013,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21932" level="85" type="L2Npc" name="Water Slime">
+	<npc id="21931" level="85" type="Npc" name="Nebula" title="Apostle of Water">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1051,7 +1032,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21933" level="85" type="L2Npc" name="Petram" title="Apostle of Earth">
+	<npc id="21932" level="85" type="Npc" name="Water Slime">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1070,7 +1051,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21934" level="85" type="L2Npc" name="Petram Piece">
+	<npc id="21933" level="85" type="Npc" name="Petram" title="Apostle of Earth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1089,7 +1070,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21935" level="85" type="L2Npc" name="Petram Fragment">
+	<npc id="21934" level="85" type="Npc" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1108,7 +1089,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21936" level="85" type="L2Npc" name="Procella" title="Apostle of Wind">
+	<npc id="21935" level="85" type="Npc" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1127,7 +1108,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21937" level="85" type="L2Npc" name="Procella's Guardian">
+	<npc id="21936" level="85" type="Npc" name="Procella" title="Apostle of Wind">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1146,7 +1127,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21938" level="85" type="L2Npc" name="Procella's Escort">
+	<npc id="21937" level="85" type="Npc" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1165,7 +1146,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21939" level="85" type="L2Npc" name="Pirate Janitor">
+	<npc id="21938" level="85" type="Npc" name="Procella's Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1184,7 +1165,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21940" level="85" type="L2Npc" name="Pirate Trooper">
+	<npc id="21939" level="85" type="Npc" name="Pirate Janitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1203,7 +1184,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21941" level="85" type="L2Npc" name="Pirate Shaman">
+	<npc id="21940" level="85" type="Npc" name="Pirate Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1222,7 +1203,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21942" level="85" type="L2Npc" name="Pirate Shield-Bearer">
+	<npc id="21941" level="85" type="Npc" name="Pirate Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1241,7 +1222,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21943" level="85" type="L2Npc" name="Ryurik" title="Ancient Pirate">
+	<npc id="21942" level="85" type="Npc" name="Pirate Shield-Bearer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1260,7 +1241,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21944" level="85" type="L2Npc" name="Eric" title="Ancient Pirate">
+	<npc id="21943" level="85" type="Npc" name="Ryurik" title="Ancient Pirate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1279,7 +1260,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21945" level="85" type="L2Npc" name="Leif" title="Ancient Pirate">
+	<npc id="21944" level="85" type="Npc" name="Eric" title="Ancient Pirate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1298,7 +1279,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21946" level="85" type="L2Npc" name="Gunhilde" title="Ancient Pirate">
+	<npc id="21945" level="85" type="Npc" name="Leif" title="Ancient Pirate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1317,7 +1298,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21947" level="85" type="L2Npc" name="Horunk">
+	<npc id="21946" level="85" type="Npc" name="Gunhilde" title="Ancient Pirate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1336,7 +1317,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21948" level="85" type="L2Npc" name="Skaltero">
+	<npc id="21947" level="85" type="Npc" name="Horunk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1355,7 +1336,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21949" level="85" type="L2Npc" name="Fongot">
+	<npc id="21948" level="85" type="Npc" name="Skaltero">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1374,7 +1355,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21950" level="85" type="L2Npc" name="Soniken">
+	<npc id="21949" level="85" type="Npc" name="Fongot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1393,7 +1374,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21951" level="85" type="L2Npc" name="Kellow">
+	<npc id="21950" level="85" type="Npc" name="Soniken">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1412,7 +1393,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21952" level="85" type="L2Npc" name="Kenmer">
+	<npc id="21951" level="85" type="Npc" name="Kellow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1431,7 +1412,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21953" level="85" type="L2Npc" name="Crokin Soldier">
+	<npc id="21952" level="85" type="Npc" name="Kenmer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1450,7 +1431,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21954" level="85" type="L2Npc" name="Crokin Warrior">
+	<npc id="21953" level="85" type="Npc" name="Crokin Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1469,7 +1450,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21955" level="85" type="L2Npc" name="Crokin Mage">
+	<npc id="21954" level="85" type="Npc" name="Crokin Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1488,7 +1469,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21956" level="85" type="L2Npc" name="Crokin Captain">
+	<npc id="21955" level="85" type="Npc" name="Crokin Mage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1507,7 +1488,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21957" level="85" type="L2Npc" name="Crokin Commander">
+	<npc id="21956" level="85" type="Npc" name="Crokin Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1526,7 +1507,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21958" level="85" type="L2Npc" name="Crokin Shaman">
+	<npc id="21957" level="85" type="Npc" name="Crokin Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1545,7 +1526,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21959" level="85" type="L2Npc" name="Cave Banshee">
+	<npc id="21958" level="85" type="Npc" name="Crokin Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1564,7 +1545,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21960" level="85" type="L2Npc" name="Lord Ishka" title="Apostle of the Valley">
+	<npc id="21959" level="85" type="Npc" name="Cave Banshee">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1583,7 +1564,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21961" level="85" type="L2Npc" name="Pachycephalosaurus">
+	<npc id="21960" level="85" type="Npc" name="Lord Ishka" title="Apostle of the Valley">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1602,7 +1583,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21962" level="85" type="L2Npc" name="Wild Strider">
+	<npc id="21961" level="85" type="Npc" name="Pachycephalosaurus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1621,7 +1602,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21963" level="85" type="L2Npc" name="Elroki">
+	<npc id="21962" level="85" type="Npc" name="Wild Strider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1640,7 +1621,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21964" level="85" type="L2Npc" name="Pachycephalosaurus" title="Possessed Berserker">
+	<npc id="21963" level="85" type="Npc" name="Elroki">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1659,7 +1640,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21966" level="85" type="L2Npc" name="Ornithomimus">
+	<npc id="21964" level="85" type="Npc" name="Pachycephalosaurus" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1678,7 +1659,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21967" level="85" type="L2Npc" name="Deinonychus">
+	<npc id="21966" level="85" type="Npc" name="Ornithomimus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1697,7 +1678,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21968" level="85" type="L2Npc" name="Ornithomimus" title="Possessed Berserker">
+	<npc id="21967" level="85" type="Npc" name="Deinonychus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1716,7 +1697,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21969" level="85" type="L2Npc" name="Deinonychus">
+	<npc id="21968" level="85" type="Npc" name="Ornithomimus" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1735,7 +1716,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21970" level="85" type="L2Npc" name="Velociraptor">
+	<npc id="21969" level="85" type="Npc" name="Deinonychus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1754,7 +1735,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21971" level="85" type="L2Npc" name="Velociraptor" title="Possessed Berserker">
+	<npc id="21970" level="85" type="Npc" name="Velociraptor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1773,7 +1754,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21972" level="85" type="L2Npc" name="Pterosaur">
+	<npc id="21971" level="85" type="Npc" name="Velociraptor" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1792,7 +1773,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21973" level="85" type="L2Npc" name="Ornithomimus">
+	<npc id="21972" level="85" type="Npc" name="Pterosaur">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1811,7 +1792,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21974" level="85" type="L2Npc" name="Ornithomimus" title="Possessed Berserker">
+	<npc id="21973" level="85" type="Npc" name="Ornithomimus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1830,7 +1811,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21975" level="85" type="L2Npc" name="Deinonychus">
+	<npc id="21974" level="85" type="Npc" name="Ornithomimus" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1849,7 +1830,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21976" level="85" type="L2Npc" name="Deinonychus" title="Possessed Berserker">
+	<npc id="21975" level="85" type="Npc" name="Deinonychus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1868,7 +1849,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21977" level="85" type="L2Npc" name="Tyrannosaurus">
+	<npc id="21976" level="85" type="Npc" name="Deinonychus" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1887,7 +1868,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21978" level="85" type="L2Npc" name="Tyrannosaurus" title="Possessed Berserker">
+	<npc id="21977" level="85" type="Npc" name="Tyrannosaurus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1906,7 +1887,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21979" level="85" type="L2Npc" name="Velociraptor">
+	<npc id="21978" level="85" type="Npc" name="Tyrannosaurus" title="Possessed Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1925,7 +1906,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21980" level="85" type="L2Npc" name="Deinonychus">
+	<npc id="21979" level="85" type="Npc" name="Velociraptor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1944,7 +1925,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21981" level="85" type="L2Npc" name="Grey Keltir">
+	<npc id="21980" level="85" type="Npc" name="Deinonychus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1963,69 +1944,190 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21982" level="85" type="L2Npc" name="Elder Grey Keltir">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21981" level="1" type="Monster" name="Grey Keltir">
+		<parameters>
+			<param name="MoveAroundSocial" value="45" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="30" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="65" hpRegen="2" mp="49" mpRegen="0.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="9.32203" magical="6.36574" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="46.15385" magical="33.77338" />
+			<hitTime>370</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" />
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="18" min="1" max="1" chance="8.527" /> <!-- Leather Shield -->
+				<item id="41" min="1" max="1" chance="3.962" /> <!-- Cloth Cap -->
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="1" chance="1.885" /> <!-- Charcoal -->
+				<item id="1788" min="1" max="1" chance="1.414" /> <!-- Recipe: Bow -->
+			</drop>
+			<spoil>
+				<item id="35" min="1" max="1" chance="16.9" /> <!-- Cloth Shoes -->
+				<item id="1787" min="1" max="1" chance="2.334" /> <!-- Recipe: Willow Staff -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21983" level="85" type="L2Npc" name="Black Wolf">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21982" level="3" type="Monster" name="Elder Grey Keltir">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="90" />
+		</parameters>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="89" sp="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="95" hpRegen="2" mp="67" mpRegen="0.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="10.24492" magical="6.99595" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="47.91652" magical="35.06323" />
+			<hitTime>370</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="35" min="1" max="1" chance="3.848" /> <!-- Cloth Shoes -->
+				<item id="36" min="1" max="1" chance="3.104" /> <!-- Leather Sandals -->
+				<item id="48" min="1" max="1" chance="2.582" /> <!-- Short Gloves -->
+				<item id="1121" min="1" max="1" chance="1.896" /> <!-- Apprentice's Shoes -->
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="6.908" /> <!-- Healing Potion -->
+				<item id="1868" min="1" max="1" chance="6.199" /> <!-- Thread -->
+			</drop>
+			<spoil>
+				<item id="1121" min="13" max="13" chance="73.09" /> <!-- Apprentice's Shoes -->
+				<item id="1867" min="1" max="1" chance="6.784" /> <!-- Animal Skin -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21984" level="85" type="L2Npc" name="Elder Black Wolf">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21983" level="4" type="Monster" name="Black Wolf">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="177" sp="6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="112" hpRegen="2" mp="76" mpRegen="0.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="11.24892" magical="7.68155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="49.73343" magical="36.39277" />
+			<hitTime>390</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="1" min="1" max="1" chance="4.965" /> <!-- Short Sword -->
+				<item id="57" min="8" max="20" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="5.36" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="3.567" /> <!-- Animal Skin -->
+				<item id="1871" min="1" max="1" chance="2.728" /> <!-- Charcoal -->
+				<item id="1786" min="1" max="1" chance="2.098" /> <!-- Recipe: Broadsword (100 %) -->
+			</drop>
+			<spoil>
+				<item id="1867" min="12" max="12" chance="11.18" /> <!-- Animal Skin -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21985" level="85" type="L2Npc" name="Mountain Werewolf">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="21984" level="5" type="Monster" name="Elder Black Wolf">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="147" sp="5" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="133" hpRegen="2" mp="85" mpRegen="0.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="17.9195676" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="45.88342149" magical="40.62635" />
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="4" min="1" max="1" chance="3.102" /> <!-- Club -->
+				<item id="7" min="1" max="1" chance="3.102" /> <!-- Apprentice's Rod -->
+				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="8.634" /> <!-- Thread -->
+				<item id="1871" min="1" max="1" chance="4.243" /> <!-- Charcoal -->
+				<item id="1787" min="1" max="1" chance="3.429" /> <!-- Recipe: Willow Staff -->
+			</drop>
+			<spoil>
+				<item id="1864" min="1" max="1" chance="20.02" /> <!-- Stem -->
+				<item id="1788" min="1" max="1" chance="8.35" /> <!-- Recipe: Bow -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21985" level="16" type="Monster" name="Mountain Werewolf">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="472" sp="15" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="439" hpRegen="2.5" mp="193" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -2033,18 +2135,45 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
+				<item id="31" min="1" max="1" chance="0.3" /> <!-- Bone Gaiters -->
+				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
+				<item id="412" min="1" max="1" chance="0.3" /> <!-- Cotton Pants -->
+				<item id="57" min="32" max="61" chance="75" /> <!-- Adena -->
+				<item id="1864" min="1" max="1" chance="4.422" /> <!-- Stem -->
+				<item id="1868" min="1" max="1" chance="4.234" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="2.823" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="2.023" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="2.01" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="1" chance="1.585" /> <!-- Suede -->
+				<item id="1817" min="1" max="1" chance="0.3" /> <!-- Redipe Cord -->
+			</drop>
+			<spoil>
+				<item id="1872" min="1" max="2" chance="41.32" /> <!-- Animal Bone -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21986" level="85" type="L2Npc" name="Mountain Fungus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21986" level="15" type="Monster" name="Mountain Fungus">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="441" sp="14" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="411" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -2052,18 +2181,46 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- plants -->
+			<skill id="4410" level="12" />
+			<skill id="4411" level="12" />
+			<skill id="4412" level="10" />
+			<skill id="4413" level="10" />
+			<skill id="4279" level="1" />
+			<skill id="4277" level="5" />
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="29" min="1" max="1" chance="3.680" /> <!-- Leather pants -->
+				<item id="22" min="1" max="1" chance="2.332" /> <!-- Leather Shirt -->
+				<item id="57" min="25" max="61" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="8.634" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="5.443" /> <!-- Animal Skin -->
+				<item id="1871" min="1" max="1" chance="4.129" /> <!-- Charcoal -->
+			</drop>
+			<spoil>
+				<item id="1864" min="1" max="1" chance="50.32" /> <!-- Stem -->
+				<item id="1866" min="1" max="1" chance="15.85" /> <!-- Suede -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21987" level="85" type="L2Npc" name="Muertos Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21987" level="17" type="Monster" name="Muertos Fighter">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="500" sp="15" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="471" hpRegen="2.5" mp="205" mpRegen="2.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -2071,18 +2228,41 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="176" min="1" max="1" chance="0.04" /> <!-- Bone Breastplate -->
+				<item id="2501" min="1" max="1" chance="0.04" /> <!-- Bone Breastplate -->
+				<item id="57" min="33" max="78" chance="75" /> <!-- Adena -->
+				<item id="1865" min="1" max="1" chance="4.022" /> <!-- Varnish -->
+				<item id="1873" min="1" max="1" chance="1.622" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="0.3" /> <!-- Mithril Ore -->
+				<item id="2140" min="1" max="1" chance="0.3" /> <!-- Recipe: High-grade Suede -->
+			</drop>
+			<spoil>
+				<item id="1869" min="1" max="1" chance="33.023" /> <!-- Iron Ore -->
+				<item id="2013" min="1" max="2" chance="0.75" /> <!-- Forest Bow Shaft -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21988" level="85" type="L2Npc" name="Muertos Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21988" level="18" type="Monster" name="Muertos Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="529" sp="16" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="502" hpRegen="2.5" mp="214" mpRegen="1.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -2090,13 +2270,29 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="1104" min="1" max="1" chance="0.75" /> <!-- Stocking of Devotion -->
+				<item id="1101" min="1" max="1" chance="0.4" /> <!-- Tunic of Devotion -->
+				<item id="57" min="34" max="81" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="12.022" /> <!-- HP Replenshing Potion -->
+				<item id="1866" min="1" max="1" chance="3.722" /> <!-- Suede -->
+				<item id="2144" min="1" max="1" chance="1.03" /> <!-- Recipe: Synthetic Braid -->
+			</drop>
+			<spoil>
+				<item id="1866" min="1" max="2" chance="22.722" /> <!-- Suede -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21989" level="85" type="L2Npc" name="Ghost of the Tower">
+	<npc id="21989" level="85" type="Npc" name="Ghost of the Tower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2115,7 +2311,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21990" level="85" type="L2Npc" name="Tower Watchman">
+	<npc id="21990" level="85" type="Npc" name="Tower Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2134,7 +2330,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21991" level="85" type="L2Npc" name="Ghastly Warrior">
+	<npc id="21991" level="85" type="Npc" name="Ghastly Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2153,7 +2349,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21992" level="85" type="L2Npc" name="Archer of Despair">
+	<npc id="21992" level="85" type="Npc" name="Archer of Despair">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2172,7 +2368,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21993" level="85" type="L2Npc" name="Judge of Despair">
+	<npc id="21993" level="85" type="Npc" name="Judge of Despair">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2191,7 +2387,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21994" level="85" type="L2Npc" name="Crendion">
+	<npc id="21994" level="85" type="Npc" name="Crendion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2210,7 +2406,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21995" level="85" type="L2Npc" name="Swordsman of Ordeal">
+	<npc id="21995" level="85" type="Npc" name="Swordsman of Ordeal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2229,7 +2425,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21996" level="85" type="L2Npc" name="Hound of Destruction">
+	<npc id="21996" level="85" type="Npc" name="Hound of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2248,7 +2444,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21997" level="85" type="L2Npc" name="Royal Guard of Insolence">
+	<npc id="21997" level="85" type="Npc" name="Royal Guard of Insolence">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2267,7 +2463,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21998" level="85" type="L2Npc" name="Archer of Insolence">
+	<npc id="21998" level="85" type="Npc" name="Archer of Insolence">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2286,7 +2482,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21999" level="85" type="L2Npc" name="Haughty Judge">
+	<npc id="21999" level="85" type="Npc" name="Haughty Judge">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

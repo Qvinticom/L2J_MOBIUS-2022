@@ -33,7 +33,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:nonNegativeInteger">
 												<xs:minInclusive value="0" />
-												<xs:maxInclusive value="3" />
+												<xs:maxInclusive value="20" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -44,7 +44,7 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="189" />
+									<xs:maxInclusive value="255" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

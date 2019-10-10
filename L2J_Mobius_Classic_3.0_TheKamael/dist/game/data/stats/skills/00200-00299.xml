@@ -3082,7 +3082,7 @@
 			<value level="5">76</value>
 			<value level="6">80</value>
 			<value level="7">84</value>
-			<value level="8">85</value>
+			<value level="8">95</value>
 			<value level="9">95</value>
 			<value level="10">99</value>
 		</magicLvl>
@@ -4733,7 +4733,7 @@
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0260</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>50</activateRate>
@@ -4895,7 +4895,10 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
+					<item>SWORD</item>
 					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUAL</item>
 				</weaponType>
 			</condition>
 		</conditions>

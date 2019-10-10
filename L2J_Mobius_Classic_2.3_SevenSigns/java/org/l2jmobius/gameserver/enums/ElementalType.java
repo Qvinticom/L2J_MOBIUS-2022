@@ -39,12 +39,22 @@ public enum ElementalType
 		return values()[elementId];
 	}
 	
-	public ElementalType getDominating()
+	public boolean isSuperior(ElementalType targetType)
 	{
-		return dominating(this);
+		return this == superior(targetType);
 	}
 	
-	public ElementalType dominating(ElementalType elementalType)
+	public boolean isInferior(ElementalType targetType)
+	{
+		return targetType == superior(this);
+	}
+	
+	public ElementalType getSuperior()
+	{
+		return superior(this);
+	}
+	
+	public static ElementalType superior(ElementalType elementalType)
 	{
 		switch (elementalType)
 		{
@@ -69,6 +79,7 @@ public enum ElementalType
 				return NONE;
 			}
 		}
+		
 	}
 	
 	public Stats getAttackStat()

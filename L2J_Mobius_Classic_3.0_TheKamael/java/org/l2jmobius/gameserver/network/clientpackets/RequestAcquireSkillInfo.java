@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -144,21 +143,17 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case REVELATION:
 			{
-				if ((player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-				{
-					return;
-				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
-				break;
+				/*
+				 * if ((player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) { return; } client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				 */
+				return;
 			}
 			case REVELATION_DUALCLASS:
 			{
-				if (!player.isSubClassActive() || !player.isDualClassActive())
-				{
-					return;
-				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
-				break;
+				/*
+				 * if (!player.isSubClassActive() || !player.isDualClassActive()) { return; } client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				 */
+				return;
 			}
 		}
 	}

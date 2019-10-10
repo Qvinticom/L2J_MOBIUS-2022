@@ -243,8 +243,8 @@ public class FolkInstance extends NpcInstance
 				
 				if (id.length() != 0)
 				{
-					player.setSkillLearningClassId(ClassId.values()[Integer.parseInt(id)]);
-					showSkillList(player, ClassId.values()[Integer.parseInt(id)]);
+					player.setSkillLearningClassId(ClassId.getClassId(Integer.parseInt(id)));
+					showSkillList(player, ClassId.getClassId(Integer.parseInt(id)));
 				}
 				else
 				{

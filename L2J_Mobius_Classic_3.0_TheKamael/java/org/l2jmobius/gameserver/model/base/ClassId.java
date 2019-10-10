@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.base;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.Race;
@@ -103,37 +105,6 @@ public enum ClassId implements IIdentifiable
 	ARTISAN(56, false, Race.DWARF, DWARVEN_FIGHTER),
 	WARSMITH(57, false, Race.DWARF, ARTISAN),
 	
-	DUMMY_ENTRY_1(58, false, null, null),
-	DUMMY_ENTRY_2(59, false, null, null),
-	DUMMY_ENTRY_3(60, false, null, null),
-	DUMMY_ENTRY_4(61, false, null, null),
-	DUMMY_ENTRY_5(62, false, null, null),
-	DUMMY_ENTRY_6(63, false, null, null),
-	DUMMY_ENTRY_7(64, false, null, null),
-	DUMMY_ENTRY_8(65, false, null, null),
-	DUMMY_ENTRY_9(66, false, null, null),
-	DUMMY_ENTRY_10(67, false, null, null),
-	DUMMY_ENTRY_11(68, false, null, null),
-	DUMMY_ENTRY_12(69, false, null, null),
-	DUMMY_ENTRY_13(70, false, null, null),
-	DUMMY_ENTRY_14(71, false, null, null),
-	DUMMY_ENTRY_15(72, false, null, null),
-	DUMMY_ENTRY_16(73, false, null, null),
-	DUMMY_ENTRY_17(74, false, null, null),
-	DUMMY_ENTRY_18(75, false, null, null),
-	DUMMY_ENTRY_19(76, false, null, null),
-	DUMMY_ENTRY_20(77, false, null, null),
-	DUMMY_ENTRY_21(78, false, null, null),
-	DUMMY_ENTRY_22(79, false, null, null),
-	DUMMY_ENTRY_23(80, false, null, null),
-	DUMMY_ENTRY_24(81, false, null, null),
-	DUMMY_ENTRY_25(82, false, null, null),
-	DUMMY_ENTRY_26(83, false, null, null),
-	DUMMY_ENTRY_27(84, false, null, null),
-	DUMMY_ENTRY_28(85, false, null, null),
-	DUMMY_ENTRY_29(86, false, null, null),
-	DUMMY_ENTRY_30(87, false, null, null),
-	
 	DUELIST(88, false, Race.HUMAN, GLADIATOR),
 	DREADNOUGHT(89, false, Race.HUMAN, WARLORD),
 	PHOENIX_KNIGHT(90, false, Race.HUMAN, PALADIN),
@@ -170,103 +141,19 @@ public enum ClassId implements IIdentifiable
 	FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
 	MAESTRO(118, false, Race.DWARF, WARSMITH),
 	
-	DUMMY_ENTRY_31(119, false, null, null),
-	DUMMY_ENTRY_32(120, false, null, null),
-	DUMMY_ENTRY_33(121, false, null, null),
-	DUMMY_ENTRY_34(122, false, null, null),
-	
-	MALE_SOLDIER(123, false, Race.KAMAEL, null),
-	FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
-	TROOPER_OLD(125, false, Race.KAMAEL, MALE_SOLDIER),
-	WARDER(126, false, Race.KAMAEL, FEMALE_SOLDIER),
-	BERSERKER_OLD(127, false, Race.KAMAEL, TROOPER_OLD),
-	MALE_SOULBREAKER(128, false, Race.KAMAEL, TROOPER_OLD),
-	FEMALE_SOULBREAKER(129, false, Race.KAMAEL, WARDER),
-	ARBALESTER(130, false, Race.KAMAEL, WARDER),
-	DOOMBRINGER_OLD(131, false, Race.KAMAEL, BERSERKER_OLD),
-	MALE_SOUL_HOUND(132, false, Race.KAMAEL, MALE_SOULBREAKER),
-	FEMALE_SOUL_HOUND(133, false, Race.KAMAEL, FEMALE_SOULBREAKER),
-	TRICKSTER_OLD(134, false, Race.KAMAEL, ARBALESTER),
-	INSPECTOR(135, false, Race.KAMAEL, WARDER),
-	JUDICATOR(136, false, Race.KAMAEL, INSPECTOR),
-	
-	DUMMY_ENTRY_35(137, false, null, null),
-	DUMMY_ENTRY_36(138, false, null, null),
-	
-	SIGEL_KNIGHT(139, false, null, null),
-	TYRR_WARRIOR(140, false, null, null),
-	OTHELL_ROGUE(141, false, null, null),
-	YUL_ARCHER(142, false, null, null),
-	FEOH_WIZARD(143, false, null, null),
-	ISS_ENCHANTER(144, false, null, null),
-	WYNN_SUMMONER(145, false, null, null),
-	AEORE_HEALER(146, false, null, null),
-	
-	DUMMY_ENTRY_37(147, false, null, null),
-	
-	SIGEL_PHOENIX_KNIGHT(148, false, Race.HUMAN, PHOENIX_KNIGHT),
-	SIGEL_HELL_KNIGHT(149, false, Race.HUMAN, HELL_KNIGHT),
-	SIGEL_EVA_TEMPLAR(150, false, Race.ELF, EVA_TEMPLAR),
-	SIGEL_SHILLIEN_TEMPLAR(151, false, Race.DARK_ELF, SHILLIEN_TEMPLAR),
-	TYRR_DUELIST(152, false, Race.HUMAN, DUELIST),
-	TYRR_DREADNOUGHT(153, false, Race.HUMAN, DREADNOUGHT),
-	TYRR_TITAN(154, false, Race.ORC, TITAN),
-	TYRR_GRAND_KHAVATARI(155, false, Race.ORC, GRAND_KHAVATARI),
-	TYRR_MAESTRO(156, false, Race.DWARF, MAESTRO),
-	TYRR_DOOMBRINGER(157, false, Race.KAMAEL, DOOMBRINGER_OLD),
-	OTHELL_ADVENTURER(158, false, Race.HUMAN, ADVENTURER),
-	OTHELL_WIND_RIDER(159, false, Race.ELF, WIND_RIDER),
-	OTHELL_GHOST_HUNTER(160, false, Race.DARK_ELF, GHOST_HUNTER),
-	OTHELL_FORTUNE_SEEKER(161, false, Race.DWARF, FORTUNE_SEEKER),
-	YUL_SAGITTARIUS(162, false, Race.HUMAN, SAGITTARIUS),
-	YUL_MOONLIGHT_SENTINEL(163, false, Race.ELF, MOONLIGHT_SENTINEL),
-	YUL_GHOST_SENTINEL(164, false, Race.DARK_ELF, GHOST_SENTINEL),
-	YUL_TRICKSTER(165, false, Race.KAMAEL, TRICKSTER_OLD),
-	FEOH_ARCHMAGE(166, true, Race.HUMAN, ARCHMAGE),
-	FEOH_SOULTAKER(167, true, Race.HUMAN, SOULTAKER),
-	FEOH_MYSTIC_MUSE(168, true, Race.ELF, MYSTIC_MUSE),
-	FEOH_STORM_SCREAMER(169, true, Race.DARK_ELF, STORM_SCREAMER),
-	FEOH_SOUL_HOUND(170, true, Race.KAMAEL, MALE_SOUL_HOUND), // fix me ?
-	ISS_HIEROPHANT(171, true, Race.HUMAN, HIEROPHANT),
-	ISS_SWORD_MUSE(172, false, Race.ELF, SWORD_MUSE),
-	ISS_SPECTRAL_DANCER(173, false, Race.DARK_ELF, SPECTRAL_DANCER),
-	ISS_DOMINATOR(174, true, Race.ORC, DOMINATOR),
-	ISS_DOOMCRYER(175, true, Race.ORC, DOOMCRYER),
-	WYNN_ARCANA_LORD(176, true, true, Race.HUMAN, ARCANA_LORD),
-	WYNN_ELEMENTAL_MASTER(177, true, true, Race.ELF, ELEMENTAL_MASTER),
-	WYNN_SPECTRAL_MASTER(178, true, true, Race.DARK_ELF, SPECTRAL_MASTER),
-	AEORE_CARDINAL(179, true, Race.HUMAN, CARDINAL),
-	AEORE_EVA_SAINT(180, true, Race.ELF, EVA_SAINT),
-	AEORE_SHILLIEN_SAINT(181, true, Race.DARK_ELF, SHILLIEN_SAINT),
-	
-	ERTHEIA_FIGHTER(182, false, Race.ERTHEIA, null),
-	ERTHEIA_WIZARD(183, true, Race.ERTHEIA, null),
-	
-	MARAUDER(184, false, Race.ERTHEIA, ERTHEIA_FIGHTER),
-	CLOUD_BREAKER(185, true, Race.ERTHEIA, ERTHEIA_WIZARD),
-	
-	RIPPER(186, false, Race.ERTHEIA, MARAUDER),
-	STRATOMANCER(187, true, Race.ERTHEIA, CLOUD_BREAKER),
-	
-	EVISCERATOR(188, false, Race.ERTHEIA, RIPPER),
-	SAYHA_SEER(189, true, Race.ERTHEIA, STRATOMANCER),
-	
-	DUMMY_ENTRY_38(190, false, null, null),
-	DUMMY_ENTRY_39(191, false, null, null),
-	
 	KAMAEL_SOLDIER(192, false, Race.KAMAEL, null),
 	
-	TROOPER(193, false, Race.KAMAEL, KAMAEL_SOLDIER), // Proper Id?
-	SOUL_FINDER(194, false, Race.KAMAEL, KAMAEL_SOLDIER), // Proper Id?
-	WARDEN(195, false, Race.KAMAEL, KAMAEL_SOLDIER), // Proper Id?
+	TROOPER(125, false, Race.KAMAEL, KAMAEL_SOLDIER),
+	SOUL_FINDER(193, false, Race.KAMAEL, KAMAEL_SOLDIER),
+	WARDEN(126, false, Race.KAMAEL, KAMAEL_SOLDIER),
 	
-	BERSERKER(196, false, Race.KAMAEL, TROOPER), // Proper Id?
-	SOUL_BREAKER(197, false, Race.KAMAEL, SOUL_FINDER), // Proper Id?
-	SOUL_RANGER(198, false, Race.KAMAEL, WARDEN), // Proper Id?
+	BERSERKER(127, false, Race.KAMAEL, TROOPER),
+	SOUL_BREAKER(194, false, Race.KAMAEL, SOUL_FINDER),
+	ARBALESTER(130, false, Race.KAMAEL, WARDEN),
 	
-	DOOMBRINGER(199, false, Race.KAMAEL, BERSERKER), // Proper Id?
-	SOUL_HOUND(200, false, Race.KAMAEL, SOUL_BREAKER), // Proper Id?
-	TRICKSTER(201, false, Race.KAMAEL, SOUL_RANGER); // Proper Id?
+	DOOMBRINGER(131, false, Race.KAMAEL, BERSERKER),
+	SOUL_HOUND(195, false, Race.KAMAEL, SOUL_BREAKER),
+	TRICKSTER(134, false, Race.KAMAEL, ARBALESTER);
 	
 	/** The Identifier of the Class */
 	private final int _id;
@@ -285,6 +172,20 @@ public enum ClassId implements IIdentifiable
 	
 	/** List of available Class for next transfer **/
 	private final Set<ClassId> _nextClassIds = new HashSet<>(1);
+	
+	private static Map<Integer, ClassId> _classIdMap = new HashMap<>(ClassId.values().length);
+	static
+	{
+		for (ClassId classId : ClassId.values())
+		{
+			_classIdMap.put(classId.getId(), classId);
+		}
+	}
+	
+	public static ClassId getClassId(int cId)
+	{
+		return _classIdMap.get(cId);
+	}
 	
 	/**
 	 * Class constructor.
@@ -380,7 +281,6 @@ public enum ClassId implements IIdentifiable
 		}
 		
 		return _parent.childOf(cid);
-		
 	}
 	
 	/**
@@ -428,18 +328,6 @@ public enum ClassId implements IIdentifiable
 	public Set<ClassId> getNextClassIds()
 	{
 		return _nextClassIds;
-	}
-	
-	public static ClassId getClassId(int cId)
-	{
-		try
-		{
-			return ClassId.values()[cId];
-		}
-		catch (Exception e)
-		{
-			return null;
-		}
 	}
 	
 	private final void addNextClassId(ClassId cId)

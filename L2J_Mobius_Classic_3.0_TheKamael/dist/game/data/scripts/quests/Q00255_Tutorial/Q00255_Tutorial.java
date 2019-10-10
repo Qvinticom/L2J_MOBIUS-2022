@@ -25,21 +25,17 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.QuestSoundHtmlHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -65,7 +61,7 @@ public class Q00255_Tutorial extends Quest
 		NEWBIE_HELPERS.add(30131); // dark elf
 		NEWBIE_HELPERS.add(30575); // orc
 		NEWBIE_HELPERS.add(30530); // dwarf
-		NEWBIE_HELPERS.add(30530); // kamael // FIXME:
+		NEWBIE_HELPERS.add(34108); // kamael
 	}
 	private static final List<Integer> SUPERVISORS = new ArrayList<>();
 	static
@@ -76,7 +72,7 @@ public class Q00255_Tutorial extends Quest
 		SUPERVISORS.add(30129); // dark elf
 		SUPERVISORS.add(30573); // orc
 		SUPERVISORS.add(30528); // dwarf
-		SUPERVISORS.add(30528); // kamael // FIXME:
+		SUPERVISORS.add(34109); // kamael
 	}
 	// Monsters
 	private static final int[] GREMLINS =
@@ -86,8 +82,10 @@ public class Q00255_Tutorial extends Quest
 	};
 	// Items
 	private static final int BLUE_GEM = 6353;
-	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
-	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
+	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(91927, 200);
+	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(91928, 100);
+	private static final ItemHolder SCROLL_OF_ESCAPE = new ItemHolder(10650, 5);
+	private static final ItemHolder WIND_WALK_POTION = new ItemHolder(49036, 5);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	static
@@ -115,23 +113,23 @@ public class Q00255_Tutorial extends Quest
 		HELPER_LOCATION.put(44, new Location(-56736, -113680, -672));
 		HELPER_LOCATION.put(49, new Location(-56736, -113680, -672));
 		HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
-		HELPER_LOCATION.put(192, new Location(-125872, 38016, 1251));
+		HELPER_LOCATION.put(192, new Location(-124731, 38070, 1208));
 	}
 	private static final Map<Integer, Location> COMPLETE_LOCATION = new HashMap<>();
 	static
 	{
-		COMPLETE_LOCATION.put(0, new Location(-84081, 243227, -3723));
-		COMPLETE_LOCATION.put(10, new Location(-84081, 243227, -3723));
-		COMPLETE_LOCATION.put(18, new Location(45475, 48359, -3060));
-		COMPLETE_LOCATION.put(25, new Location(45475, 48359, -3060));
-		COMPLETE_LOCATION.put(31, new Location(12111, 16686, -4582));
-		COMPLETE_LOCATION.put(38, new Location(12111, 16686, -4582));
-		COMPLETE_LOCATION.put(44, new Location(-45032, -113598, -192));
-		COMPLETE_LOCATION.put(49, new Location(-45032, -113598, -192));
-		COMPLETE_LOCATION.put(53, new Location(115632, -177996, -905));
-		COMPLETE_LOCATION.put(192, new Location(-125872, 38016, 1251)); // FIXME: PROPER LOCATION!
+		COMPLETE_LOCATION.put(0, new Location(-84046, 243283, -3728, 18316));
+		COMPLETE_LOCATION.put(10, new Location(-84046, 243283, -3728, 18316));
+		COMPLETE_LOCATION.put(18, new Location(45479, 48318, -3056, 55707));
+		COMPLETE_LOCATION.put(25, new Location(45479, 48318, -3056, 55707));
+		COMPLETE_LOCATION.put(31, new Location(12161, 16674, -4584, 60030));
+		COMPLETE_LOCATION.put(38, new Location(12161, 16674, -4584, 60030));
+		COMPLETE_LOCATION.put(44, new Location(-45113, -113598, -192, 45809));
+		COMPLETE_LOCATION.put(49, new Location(-45113, -113598, -192, 45809));
+		COMPLETE_LOCATION.put(53, new Location(115575, -178014, -904, 9808));
+		COMPLETE_LOCATION.put(192, new Location(-118073, 45131, 368, 43039));
 	}
-	private static final String TUTORIAL_BUYPASS = "Quest Q00255_Tutorial ";
+	private static final String TUTORIAL_BYPASS = "Quest Q00255_Tutorial ";
 	private static final int QUESTION_MARK_ID_1 = 1;
 	private static final int QUESTION_MARK_ID_2 = 5;
 	private static final int QUESTION_MARK_ID_3 = 28;
@@ -165,6 +163,7 @@ public class Q00255_Tutorial extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
+					showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
 					playTutorialVoice(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getSound());
 					showTutorialHtml(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getHtml());
 				}
@@ -204,8 +203,10 @@ public class Q00255_Tutorial extends Quest
 						giveItems(player, SOULSHOT_REWARD);
 						playTutorialVoice(player, "tutorial_voice_026");
 					}
-					htmltext = (npc != null ? npc.getId() : player.getTarget().getId()) + "-3.html";
+					// TODO: Check retail for html bellow.
+					// htmltext = (npc != null ? npc.getId() : player.getTarget().getId()) + "-3.html";
 					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
+					player.teleToLocation(COMPLETE_LOCATION.get(player.getClassId().getId()));
 				}
 				break;
 			}
@@ -268,6 +269,8 @@ public class Q00255_Tutorial extends Quest
 						player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 						qs.setMemoState(4);
 						takeItems(player, BLUE_GEM, -1);
+						giveItems(player, SCROLL_OF_ESCAPE);
+						giveItems(player, WIND_WALK_POTION);
 						if (player.isMageClass() && (player.getRace() != Race.ORC))
 						{
 							giveItems(player, SPIRITSHOT_REWARD);
@@ -317,39 +320,15 @@ public class Q00255_Tutorial extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30))
+		if ((qs != null) && (qs.getMemoState() < 3) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 50))
 		{
-			// check for too many gems on ground
-			int counter = 0;
-			for (ItemInstance item : World.getInstance().getVisibleObjectsInRange(killer, ItemInstance.class, 1500))
-			{
-				if (item.getId() == BLUE_GEM)
-				{
-					counter++;
-				}
-			}
-			if (counter < 10) // do not drop if more than 10
-			{
-				npc.dropItem(killer, BLUE_GEM, 1);
-			}
+			giveItems(killer, BLUE_GEM, 1);
+			qs.setMemoState(3);
+			playSound(killer, "ItemSound.quest_tutorial");
+			playTutorialVoice(killer, "tutorial_voice_013");
+			killer.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2, 0));
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@RegisterEvent(EventType.ON_PLAYER_ITEM_PICKUP)
-	@RegisterType(ListenerRegisterType.ITEM)
-	@Id(BLUE_GEM)
-	public void OnPlayerItemPickup(OnPlayerItemPickup event)
-	{
-		final PlayerInstance player = event.getPlayer();
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.getMemoState() < 3))
-		{
-			qs.setMemoState(3);
-			playSound(player, "ItemSound.quest_tutorial");
-			playTutorialVoice(player, "tutorial_voice_013");
-			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2, 0));
-		}
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_PRESS_TUTORIAL_MARK)
@@ -369,6 +348,7 @@ public class Q00255_Tutorial extends Quest
 						final int classId = event.getPlayer().getClassId().getId();
 						addRadar(event.getPlayer(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
 						showTutorialHtml(event.getPlayer(), "tutorial_04.html");
+						playTutorialVoice(event.getPlayer(), "tutorial_voice_007");
 					}
 					break;
 				}
@@ -401,9 +381,9 @@ public class Q00255_Tutorial extends Quest
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		if (event.getCommand().startsWith(TUTORIAL_BUYPASS))
+		if (event.getCommand().startsWith(TUTORIAL_BYPASS))
 		{
-			notifyEvent(event.getCommand().replace(TUTORIAL_BUYPASS, ""), null, player);
+			notifyEvent(event.getCommand().replace(TUTORIAL_BYPASS, ""), null, player);
 		}
 	}
 	
@@ -422,7 +402,7 @@ public class Q00255_Tutorial extends Quest
 			return;
 		}
 		
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		if ((qs != null) && (qs.getMemoState() < 4) && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
 		{
 			startQuestTimer("start_newbie_tutorial", 5000, null, player);

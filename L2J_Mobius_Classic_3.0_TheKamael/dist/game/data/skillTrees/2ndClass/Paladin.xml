@@ -27,6 +27,9 @@
 		<skill skillName="Divine Blessing" skillId="262" skillLvl="1" getLevel="40" levelUpSp="62000" />
 		<skill skillName="Divine Blessing" skillId="262" skillLvl="2" getLevel="40" levelUpSp="62000" />
 		<skill skillName="Divine Blessing" skillId="262" skillLvl="3" getLevel="40" levelUpSp="62000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Aggression" skillId="28" skillLvl="16" getLevel="41" levelUpSp="73000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="4" getLevel="41" levelUpSp="73000" />
@@ -153,7 +156,7 @@
 		<skill skillName="Sanctuary" skillId="97" skillLvl="1" getLevel="52" levelUpSp="220000" />
 		<skill skillName="Divine Blessing" skillId="262" skillLvl="15" getLevel="52" levelUpSp="220000" />
 		<skill skillName="Holy Strike" skillId="49" skillLvl="6" getLevel="52" levelUpSp="220000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="220000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="220000" >
 			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
 		</skill>
 		
@@ -261,7 +264,7 @@
 		<skill skillName="Shield Stun" skillId="92" skillLvl="39" getLevel="61" levelUpSp="610000" />
 		<skill skillName="Divine Blessing" skillId="262" skillLvl="24" getLevel="61" levelUpSp="610000" />
 		<skill skillName="Holy Strike" skillId="49" skillLvl="13" getLevel="61" levelUpSp="610000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="610000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="610000" >
 			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
 		</skill>
 		

@@ -81,7 +81,6 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.ElementalType;
@@ -279,6 +278,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
+import org.l2jmobius.gameserver.network.serverpackets.ExAutoPlayDoMacro;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
@@ -851,6 +851,8 @@ public class PlayerInstance extends Playable
 	private ElementalSpirit[] _spirits;
 	private ElementalType _activeElementalSpiritType;
 	
+	private ScheduledFuture<?> _autoPlayTask = null;
+	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
 	private List<SellBuffHolder> _sellingBuffs = null;
@@ -1228,7 +1230,7 @@ public class PlayerInstance extends Playable
 	
 	public void setBaseClass(ClassId classId)
 	{
-		_baseClass = classId.ordinal();
+		_baseClass = classId.getId();
 	}
 	
 	public boolean isInStoreMode()
@@ -7999,7 +8001,8 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean hasBasicPropertyResist()
 	{
-		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
+		// return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
+		return false;
 	}
 	
 	private void startAutoSaveTask()
@@ -14000,5 +14003,62 @@ public class PlayerInstance extends Playable
 	public boolean isInBattle()
 	{
 		return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
+	}
+	
+	public void stopAutoPlayTask()
+	{
+		if ((_autoPlayTask != null) && !_autoPlayTask.isCancelled() && !_autoPlayTask.isDone())
+		{
+			_autoPlayTask.cancel(true);
+		}
+		_autoPlayTask = null;
+	}
+	
+	public void startAutoPlayTask(boolean longRange, boolean respectfulHunting)
+	{
+		if (_autoPlayTask != null)
+		{
+			return;
+		}
+		
+		_autoPlayTask = ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
+			{
+				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
+				return;
+			}
+			
+			MonsterInstance monster = null;
+			double closestDistance = Double.MAX_VALUE;
+			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, longRange ? 600 : 1400))
+			{
+				if ((nearby == null) || nearby.isAlikeDead())
+				{
+					continue;
+				}
+				if (respectfulHunting && (nearby.getTarget() != null) && (nearby.getTarget() != this))
+				{
+					continue;
+				}
+				if (nearby.isAutoAttackable(this) //
+					&& GeoEngine.getInstance().canSeeTarget(this, nearby)//
+					&& GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), nearby.getX(), nearby.getY(), nearby.getZ(), getInstanceWorld()))
+				{
+					final double monsterDistance = calculateDistance2D(nearby);
+					if (monsterDistance < closestDistance)
+					{
+						monster = nearby;
+						closestDistance = monsterDistance;
+					}
+				}
+			}
+			
+			if (monster != null)
+			{
+				setTarget(monster);
+				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
+			}
+		}, 0, 2000);
 	}
 }

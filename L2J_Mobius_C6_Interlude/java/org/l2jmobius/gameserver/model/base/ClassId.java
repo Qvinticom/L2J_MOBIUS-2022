@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.base;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.Race;
@@ -102,37 +104,6 @@ public enum ClassId
 	ARTISAN(56, false, Race.DWARF, DWARVEN_FIGHTER),
 	WARSMITH(57, false, Race.DWARF, ARTISAN),
 	
-	DUMMY_ENTRY_1(58, false, null, null),
-	DUMMY_ENTRY_2(59, false, null, null),
-	DUMMY_ENTRY_3(60, false, null, null),
-	DUMMY_ENTRY_4(61, false, null, null),
-	DUMMY_ENTRY_5(62, false, null, null),
-	DUMMY_ENTRY_6(63, false, null, null),
-	DUMMY_ENTRY_7(64, false, null, null),
-	DUMMY_ENTRY_8(65, false, null, null),
-	DUMMY_ENTRY_9(66, false, null, null),
-	DUMMY_ENTRY_10(67, false, null, null),
-	DUMMY_ENTRY_11(68, false, null, null),
-	DUMMY_ENTRY_12(69, false, null, null),
-	DUMMY_ENTRY_13(70, false, null, null),
-	DUMMY_ENTRY_14(71, false, null, null),
-	DUMMY_ENTRY_15(72, false, null, null),
-	DUMMY_ENTRY_16(73, false, null, null),
-	DUMMY_ENTRY_17(74, false, null, null),
-	DUMMY_ENTRY_18(75, false, null, null),
-	DUMMY_ENTRY_19(76, false, null, null),
-	DUMMY_ENTRY_20(77, false, null, null),
-	DUMMY_ENTRY_21(78, false, null, null),
-	DUMMY_ENTRY_22(79, false, null, null),
-	DUMMY_ENTRY_23(80, false, null, null),
-	DUMMY_ENTRY_24(81, false, null, null),
-	DUMMY_ENTRY_25(82, false, null, null),
-	DUMMY_ENTRY_26(83, false, null, null),
-	DUMMY_ENTRY_27(84, false, null, null),
-	DUMMY_ENTRY_28(85, false, null, null),
-	DUMMY_ENTRY_29(86, false, null, null),
-	DUMMY_ENTRY_30(87, false, null, null),
-	
 	DUELIST(88, false, Race.HUMAN, GLADIATOR),
 	DREADNOUGHT(89, false, Race.HUMAN, WARLORD),
 	PHOENIX_KNIGHT(90, false, Race.HUMAN, PALADIN),
@@ -186,6 +157,20 @@ public enum ClassId
 	
 	/** List of available Class for next transfer **/
 	private final Set<ClassId> _nextClassIds = new HashSet<>(1);
+	
+	private static Map<Integer, ClassId> _classIdMap = new HashMap<>(ClassId.values().length);
+	static
+	{
+		for (ClassId classId : ClassId.values())
+		{
+			_classIdMap.put(classId.getId(), classId);
+		}
+	}
+	
+	public static ClassId getClassId(int cId)
+	{
+		return _classIdMap.get(cId);
+	}
 	
 	/**
 	 * Class constructor.
@@ -327,18 +312,6 @@ public enum ClassId
 	public Set<ClassId> getNextClassIds()
 	{
 		return _nextClassIds;
-	}
-	
-	public static ClassId getClassId(int cId)
-	{
-		try
-		{
-			return ClassId.values()[cId];
-		}
-		catch (Exception e)
-		{
-			return null;
-		}
 	}
 	
 	private final void addNextClassId(ClassId cId)

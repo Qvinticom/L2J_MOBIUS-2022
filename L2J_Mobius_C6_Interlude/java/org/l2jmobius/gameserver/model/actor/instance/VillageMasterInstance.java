@@ -989,7 +989,7 @@ public class VillageMasterInstance extends FolkInstance
 					int subClassId = prevSubClass.getClassId();
 					if (subClassId >= 88)
 					{
-						subClassId = ClassId.values()[subClassId].getParent().getId();
+						subClassId = ClassId.getClassId(subClassId).getParent().getId();
 					}
 					
 					if ((availSub.ordinal() == subClassId) || (availSub.ordinal() == player.getBaseClass()))

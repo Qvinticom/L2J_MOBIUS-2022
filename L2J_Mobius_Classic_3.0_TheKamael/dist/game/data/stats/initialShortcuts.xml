@@ -6,6 +6,7 @@
 			<slot slotId="0" shortcutType="ACTION" shortcutId="2" /> <!-- Attack -->
 			<slot slotId="3" shortcutType="ACTION" shortcutId="5" /> <!-- Pick Up -->
 			<slot slotId="4" shortcutType="ACTION" shortcutId="4" /> <!-- Next Target -->
+			<slot slotId="5" shortcutType="ACTION" shortcutId="93" />
 			<slot slotId="10" shortcutType="ACTION" shortcutId="0" /> <!-- Sit/Stand -->
 		</page>
 		<!-- Custom example. -->
@@ -38,6 +39,12 @@
 	<shortcuts classId="49">
 		<page pageId="0">
 			<slot slotId="1" shortcutType="SKILL" shortcutId="1001" shortcutLevel="1" /> <!-- Soul Cry -->
+		</page>
+	</shortcuts>
+	<!-- Kamael -->
+	<shortcuts classId="192">
+		<page pageId="20">
+			<slot slotId="0" shortcutType="SKILL" shortcutId="911" shortcutLevel="1" />
 		</page>
 	</shortcuts>
 	<!-- Macro presets -->

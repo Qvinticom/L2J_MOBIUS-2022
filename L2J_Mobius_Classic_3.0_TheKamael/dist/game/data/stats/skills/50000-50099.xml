@@ -397,26 +397,39 @@
 	<skill id="50046" toLevel="4" name="Wind Ability - Lv. 1 Atk.">
 		<!-- P. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50047" toLevel="4" name="Wind Ability - Lv. 1 Def.">
 		<!-- P./ M. Def. +50%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50048" toLevel="4" name="Wind Ability - Lv. 1 Magic">
 		<!-- M. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50049" toLevel="2" name="Fire Breath">
 		<!-- Attacks enemies in front of the boss with 220 Power added to M. Atk. -->
@@ -868,6 +881,50 @@
 			<value level="5">95</value>
 			<value level="6">95</value>
 		</mpConsume>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</SLEEP>
+				<HOLD>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</HOLD>
+				<SHOCK>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</SHOCK>
+				<PARALYZE>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</PARALYZE>
+				<DERANGEMENT>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</DERANGEMENT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50095" toLevel="5" name="Frintezza Heal Music">
 		<!-- Music to soothe the soul. -->

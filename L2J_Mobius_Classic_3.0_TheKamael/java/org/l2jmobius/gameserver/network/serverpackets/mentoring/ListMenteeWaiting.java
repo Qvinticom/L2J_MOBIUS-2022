@@ -20,8 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -38,13 +36,13 @@ public class ListMenteeWaiting implements IClientOutgoingPacket
 	public ListMenteeWaiting(int page, int minLevel, int maxLevel)
 	{
 		_page = page;
-		for (PlayerInstance player : World.getInstance().getPlayers())
-		{
-			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-			{
-				_possibleCandiates.add(player);
-			}
-		}
+		// for (PlayerInstance player : World.getInstance().getPlayers())
+		// {
+		// if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		// {
+		// _possibleCandiates.add(player);
+		// }
+		// }
 	}
 	
 	@Override

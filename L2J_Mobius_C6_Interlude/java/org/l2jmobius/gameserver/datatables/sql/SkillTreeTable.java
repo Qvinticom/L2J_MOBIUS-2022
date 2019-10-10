@@ -76,7 +76,7 @@ public class SkillTreeTable
 				
 				if (parentClassId != -1)
 				{
-					final Map<Integer, SkillLearn> parentMap = getSkillTrees().get(ClassId.values()[parentClassId]);
+					final Map<Integer, SkillLearn> parentMap = getSkillTrees().get(ClassId.getClassId(parentClassId));
 					map.putAll(parentMap);
 				}
 				
@@ -99,7 +99,7 @@ public class SkillTreeTable
 					map.put(SkillTable.getSkillHashCode(id, lvl), skillLearn);
 				}
 				
-				getSkillTrees().put(ClassId.values()[classId], map);
+				getSkillTrees().put(ClassId.getClassId(classId), map);
 				skilltree.close();
 				statement2.close();
 				

@@ -1003,7 +1003,7 @@
 		<race name="ELF" point="Quarry" />
 		<race name="KAMAEL" point="Quarry" />
 	</zone>
-	<zone name="spirit_cave_16_19" type="RespawnZone" shape="NPoly" minZ="-552" maxZ="5448">
+	<zone name="cave_of_souls_16_19" type="RespawnZone" shape="NPoly" minZ="-552" maxZ="5448">
 		<node X="-126634" Y="36733" />
 		<node X="-114999" Y="36218" />
 		<node X="-115417" Y="39345" />
@@ -1011,12 +1011,12 @@
 		<node X="-123839" Y="47818" />
 		<node X="-126097" Y="46563" />
 		<node X="-127017" Y="43453" />
-		<race name="HUMAN" point="spirit_cave" />
-		<race name="DARK_ELF" point="spirit_cave" />
-		<race name="ORC" point="spirit_cave" />
-		<race name="DWARF" point="spirit_cave" />
-		<race name="ELF" point="spirit_cave" />
-		<race name="KAMAEL" point="spirit_cave" />
+		<race name="HUMAN" point="cave_of_souls" />
+		<race name="DARK_ELF" point="cave_of_souls" />
+		<race name="ORC" point="cave_of_souls" />
+		<race name="DWARF" point="cave_of_souls" />
+		<race name="ELF" point="cave_of_souls" />
+		<race name="KAMAEL" point="cave_of_souls" />
 	</zone>
 	<zone name="godard_town_23_17_1" type="RespawnZone" shape="NPoly" minZ="-6540" maxZ="3460">
 		<node X="97820" Y="-33007" />

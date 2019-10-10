@@ -126,7 +126,7 @@ public class Q00255_Tutorial extends Quest
 		COMPLETE_LOCATION.put(49, new Location(-45032, -113598, -192));
 		COMPLETE_LOCATION.put(53, new Location(115632, -177996, -905));
 	}
-	private static final String TUTORIAL_BUYPASS = "Quest Q00255_Tutorial ";
+	private static final String TUTORIAL_BYPASS = "Quest Q00255_Tutorial ";
 	private static final int QUESTION_MARK_ID_1 = 1;
 	private static final int QUESTION_MARK_ID_2 = 5;
 	private static final int QUESTION_MARK_ID_3 = 28;
@@ -396,9 +396,9 @@ public class Q00255_Tutorial extends Quest
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		if (event.getCommand().startsWith(TUTORIAL_BUYPASS))
+		if (event.getCommand().startsWith(TUTORIAL_BYPASS))
 		{
-			notifyEvent(event.getCommand().replace(TUTORIAL_BUYPASS, ""), null, player);
+			notifyEvent(event.getCommand().replace(TUTORIAL_BYPASS, ""), null, player);
 		}
 	}
 	

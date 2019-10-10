@@ -45,7 +45,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	private static final int ENH_MINION_COUPON_EV = 22240; // Enhanced Rose Spirit Coupon (5-hour) - Event
 	// Misc
 	private static final HashMap<String, Integer> MINION_EXCHANGE = new HashMap<>();
-	
+	static
 	{
 		// Normal
 		MINION_EXCHANGE.put("whiteWeasel", 13017); // White Weasel Minion Necklace

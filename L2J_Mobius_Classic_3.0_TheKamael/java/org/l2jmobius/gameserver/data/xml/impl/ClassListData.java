@@ -74,6 +74,10 @@ public class ClassListData implements IXmlReader
 					{
 						attr = attrs.getNamedItem("classId");
 						classId = ClassId.getClassId(parseInteger(attr));
+						if (classId == null)
+						{
+							System.out.println(parseInteger(attr));
+						}
 						attr = attrs.getNamedItem("name");
 						className = attr.getNodeValue();
 						attr = attrs.getNamedItem("parentClassId");

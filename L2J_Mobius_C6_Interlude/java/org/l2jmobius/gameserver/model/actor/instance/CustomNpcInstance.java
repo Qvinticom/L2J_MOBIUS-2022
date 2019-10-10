@@ -390,7 +390,7 @@ public class CustomNpcInstance
 	{
 		while (true)
 		{
-			_classId = ClassId.values()[Rnd.get(ClassId.values().length)];
+			_classId = ClassId.getClassId(Rnd.get(ClassId.values().length));
 			if (_classId == null)
 			{
 				continue;

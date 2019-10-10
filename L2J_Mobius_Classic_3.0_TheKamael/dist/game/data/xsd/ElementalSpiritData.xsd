@@ -14,7 +14,7 @@
 											<xs:attribute type="xs:short" name="def" use="required"/>
 											<xs:attribute type="xs:byte" name="critRate" use="required"/>
 											<xs:attribute type="xs:byte" name="critDam" use="required"/>
-											<xs:attribute type="xs:int" name="maxExp" use="required"/>
+											<xs:attribute type="xs:long" name="maxExp" use="required"/>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>

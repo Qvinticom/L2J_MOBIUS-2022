@@ -24,7 +24,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.SkillEnchantType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -82,10 +81,10 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-		{
-			return;
-		}
+		// if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		// {
+		// return;
+		// }
 		
 		if (!player.isAllowedToEnchantSkills())
 		{

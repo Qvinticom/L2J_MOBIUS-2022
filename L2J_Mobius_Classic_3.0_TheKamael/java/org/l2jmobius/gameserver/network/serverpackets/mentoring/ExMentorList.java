@@ -21,7 +21,6 @@ import java.util.Collection;
 import java.util.Collections;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -48,11 +47,11 @@ public class ExMentorList implements IClientOutgoingPacket
 			_type = 0x02;
 			_mentees = Arrays.asList(MentorManager.getInstance().getMentor(player.getObjectId()));
 		}
-		else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
-		{
-			_mentees = Collections.emptyList();
-			_type = 0x01;
-		}
+		// else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
+		// {
+		// _mentees = Collections.emptyList();
+		// _type = 0x01;
+		// }
 		else
 		{
 			_mentees = Collections.emptyList();

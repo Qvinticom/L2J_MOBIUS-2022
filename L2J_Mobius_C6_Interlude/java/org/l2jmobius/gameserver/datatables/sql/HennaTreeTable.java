@@ -87,7 +87,7 @@ public class HennaTreeTable
 					
 					list.add(temp);
 				}
-				_hennaTrees.put(ClassId.values()[classId], list);
+				_hennaTrees.put(ClassId.getClassId(classId), list);
 				
 				hennatree.close();
 				statement2.close();

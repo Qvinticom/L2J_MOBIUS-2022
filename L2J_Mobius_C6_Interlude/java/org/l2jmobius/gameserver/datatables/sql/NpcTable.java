@@ -220,7 +220,7 @@ public class NpcTable
 			while (learndata.next())
 			{
 				final int npcId = learndata.getInt("npc_id");
-				final int classId = learndata.getInt("class_id");
+				final int cId = learndata.getInt("class_id");
 				
 				final NpcTemplate npc = getTemplate(npcId);
 				if (npc == null)
@@ -229,13 +229,14 @@ public class NpcTable
 					continue;
 				}
 				
-				if (classId >= ClassId.values().length)
+				final ClassId classId = ClassId.getClassId(cId);
+				if (classId == null)
 				{
-					LOGGER.warning("NPCTable: Error defining learning data for NPC " + npcId + ": specified classId " + classId + " is higher then max one " + (ClassId.values().length - 1) + " specified into ClassID Enum --> check your Database to be complient with it");
+					LOGGER.warning("NPCTable: Error defining learning data for NPC " + npcId + ": specified classId " + classId + " is not specified into ClassID Enum --> check your Database to be complient with it.");
 					continue;
 				}
 				
-				npc.addTeachInfo(ClassId.values()[classId]);
+				npc.addTeachInfo(classId);
 			}
 			
 			learndata.close();

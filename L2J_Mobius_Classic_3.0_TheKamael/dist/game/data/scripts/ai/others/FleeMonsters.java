@@ -37,7 +37,6 @@ public class FleeMonsters extends AbstractNpcAI
 	private static final int[] MOBS =
 	{
 		20002, // Rabbit
-		22228, // Grey Elpy
 		20432, // Elpy
 	};
 	// Misc

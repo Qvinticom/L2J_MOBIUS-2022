@@ -40,7 +40,6 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -194,7 +193,7 @@ public class SkillTreesData implements IXmlReader
 						if (attr != null)
 						{
 							cId = Integer.parseInt(attr.getNodeValue());
-							classId = ClassId.values()[cId];
+							classId = ClassId.getClassId(cId);
 						}
 						else
 						{
@@ -219,7 +218,7 @@ public class SkillTreesData implements IXmlReader
 							parentClassId = Integer.parseInt(attr.getNodeValue());
 							if ((cId > -1) && (cId != parentClassId) && (parentClassId > -1) && !_parentClassMap.containsKey(classId))
 							{
-								_parentClassMap.put(classId, ClassId.values()[parentClassId]);
+								_parentClassMap.put(classId, ClassId.getClassId(parentClassId));
 							}
 						}
 						
@@ -662,7 +661,7 @@ public class SkillTreesData implements IXmlReader
 			return result;
 		}
 		
-		final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
+		final boolean isAwaken = /* player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && */ ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
 		
 		for (Entry<Long, SkillLearn> entry : skills.entrySet())
 		{
@@ -775,19 +774,19 @@ public class SkillTreesData implements IXmlReader
 		}
 		
 		final Race race = player.getRace();
-		final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP);
+		// final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 		
 		// Race skills
-		if (isAwaken)
-		{
-			for (SkillLearn skill : getRaceSkillTree(race))
-			{
-				if (player.getKnownSkill(skill.getSkillId()) == null)
-				{
-					result.add(skill);
-				}
-			}
-		}
+		// if (isAwaken)
+		// {
+		// for (SkillLearn skill : getRaceSkillTree(race))
+		// {
+		// if (player.getKnownSkill(skill.getSkillId()) == null)
+		// {
+		// result.add(skill);
+		// }
+		// }
+		// }
 		
 		for (SkillLearn skill : skills.values())
 		{
@@ -796,8 +795,8 @@ public class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
-			final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
+			// final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
+			// final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
 			
 			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()))
 			{
@@ -809,7 +808,8 @@ public class SkillTreesData implements IXmlReader
 						result.add(skill);
 					}
 				}
-				else if (!isAwaken || isCurrentClassSkillNoParent(player.getClassId(), hashCode) || isAwakenSaveSkill(player.getClassId(), skill.getSkillId()))
+				// else if (!isAwaken || isCurrentClassSkillNoParent(player.getClassId(), hashCode) || isAwakenSaveSkill(player.getClassId(), skill.getSkillId()))
+				else
 				{
 					result.add(skill);
 				}

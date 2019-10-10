@@ -1378,7 +1378,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setBaseClass(ClassId classId)
 	{
-		_baseClass = classId.ordinal();
+		_baseClass = classId.getId();
 	}
 	
 	/**
@@ -13259,7 +13259,7 @@ public class PlayerInstance extends Playable
 			// Commit after database INSERT incase exception is thrown.
 			getSubClasses().put(newClass.getClassIndex(), newClass);
 			
-			ClassId subTemplate = ClassId.values()[classId];
+			ClassId subTemplate = ClassId.getClassId(classId);
 			Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(subTemplate);
 			
 			if (skillTree == null)

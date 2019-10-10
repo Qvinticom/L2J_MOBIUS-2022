@@ -277,6 +277,7 @@ import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
+import org.l2jmobius.gameserver.network.serverpackets.ExAutoPlayDoMacro;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
@@ -857,6 +858,8 @@ public class PlayerInstance extends Playable
 	
 	private final Set<Integer> _whisperers = ConcurrentHashMap.newKeySet();
 	
+	private ScheduledFuture<?> _autoPlayTask = null;
+	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
 	private List<SellBuffHolder> _sellingBuffs = null;
@@ -1251,7 +1254,7 @@ public class PlayerInstance extends Playable
 	
 	public void setBaseClass(ClassId classId)
 	{
-		_baseClass = classId.ordinal();
+		_baseClass = classId.getId();
 	}
 	
 	public boolean isInStoreMode()
@@ -14051,5 +14054,62 @@ public class PlayerInstance extends Playable
 			getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
 			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
+	}
+	
+	public void stopAutoPlayTask()
+	{
+		if ((_autoPlayTask != null) && !_autoPlayTask.isCancelled() && !_autoPlayTask.isDone())
+		{
+			_autoPlayTask.cancel(true);
+		}
+		_autoPlayTask = null;
+	}
+	
+	public void startAutoPlayTask(boolean longRange, boolean respectfulHunting)
+	{
+		if (_autoPlayTask != null)
+		{
+			return;
+		}
+		
+		_autoPlayTask = ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
+			{
+				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
+				return;
+			}
+			
+			MonsterInstance monster = null;
+			double closestDistance = Double.MAX_VALUE;
+			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, longRange ? 600 : 1400))
+			{
+				if ((nearby == null) || nearby.isAlikeDead())
+				{
+					continue;
+				}
+				if (respectfulHunting && (nearby.getTarget() != null) && (nearby.getTarget() != this))
+				{
+					continue;
+				}
+				if (nearby.isAutoAttackable(this) //
+					&& GeoEngine.getInstance().canSeeTarget(this, nearby)//
+					&& GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), nearby.getX(), nearby.getY(), nearby.getZ(), getInstanceWorld()))
+				{
+					final double monsterDistance = calculateDistance2D(nearby);
+					if (monsterDistance < closestDistance)
+					{
+						monster = nearby;
+						closestDistance = monsterDistance;
+					}
+				}
+			}
+			
+			if (monster != null)
+			{
+				setTarget(monster);
+				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
+			}
+		}, 0, 2000);
 	}
 }

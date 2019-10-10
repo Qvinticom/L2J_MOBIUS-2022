@@ -102,8 +102,11 @@ import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProduct
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.ExRankCharInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.ExRankingCharRankers;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
+import org.l2jmobius.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -463,19 +466,19 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME), // 152
 	EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME), // 152
 	EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
-	EX_OPEN_HTML(0x164, null, ConnectionState.IN_GAME), // 228
+	EX_OPEN_HTML(0x164, ExOpenDimensionalHtml::new, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_CLASS_CHANGE(0x165, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME), // 228
 	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME), // 228
-	REQUEST_AUTO_USE_POTION(0x171, null, ConnectionState.IN_GAME), // 228
-	REQUEST_AUTO_USE(0x177, null, ConnectionState.IN_GAME), // 228
-	EX_TIME_RESTRICT_FIELD_LIST(0x17F, null, ConnectionState.IN_GAME), // 228
+	EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME), // 228
+	EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME), // 228
 	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME), // 228
-	EX_RANKING_CHAR_INFO(0x181, null, ConnectionState.IN_GAME), // 228
+	EX_RANKING_CHAR_INFO(0x181, ExRankCharInfo::new, ConnectionState.IN_GAME), // 228
 	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME), // 228
-	EX_RANKING_CHAR_RANKERS(0x183, null, ConnectionState.IN_GAME), // 228
+	EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME), // 228
 	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186, null, ConnectionState.IN_GAME), // 228
+	EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME), // 228
 	EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME); // 228
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
