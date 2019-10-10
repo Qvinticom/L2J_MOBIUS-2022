@@ -79,8 +79,9 @@
 			<item id="71438" count="5" />
 		</items>
 	</reward>
+	<!-- TODO: Weekly fishing handler
 	<reward id="1015" reward_id="115" name="Fishing" requiredCompletion="100" isOneTime="false">
-		<!-- Weekly quest. A reward is given for 100 successful catches. -->
+		Weekly quest. A reward is given for 100 successful catches.
 		<handler name="fishing">
 			<param name="minLevel">76</param>
 			<param name="maxLevel">99</param>
@@ -89,6 +90,7 @@
 			<item id="90139" count="360" />
 		</items>
 	</reward>
+	-->
 	<reward id="1017" reward_id="117" name="In-game Weekend" requiredCompletion="1" isOneTime="false">
 		<!-- Weekly quest. A reward is given for playing the game on Saturday or Sunday. -->
 		<handler name="loginweekend" />

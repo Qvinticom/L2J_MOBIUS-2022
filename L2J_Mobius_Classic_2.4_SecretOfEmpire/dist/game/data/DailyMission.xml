@@ -2101,8 +2101,9 @@
 			<item id="70767" count="1" />
 		</items>
 	</reward>
+	<!-- TODO: Weekly monster handler
 	<reward id="261" reward_id="103" name="Weekly Hunting (Lv. 20 or lower)" requiredCompletion="100">
-		<!-- Receive it when you kill any 100 monsters. Monsters that are level 6 or lower than the character are not counted. -->
+		Receive it when you kill any 100 monsters. Monsters that are level 6 or lower than the character are not counted.
 		<handler name="monster">
 			<param name="minLevel">1</param>
 			<param name="maxLevel">20</param>
@@ -2112,7 +2113,7 @@
 		</items>
 	</reward>
 	<reward id="262" reward_id="104" name="Weekly Hunting (Lv. 21-40)" requiredCompletion="150">
-		<!-- Receive it when you kill any 150 monsters. Monsters that are level 6 or lower than the character are not counted. -->
+		Receive it when you kill any 150 monsters. Monsters that are level 6 or lower than the character are not counted.
 		<handler name="monster">
 			<param name="minLevel">21</param>
 			<param name="maxLevel">40</param>
@@ -2121,7 +2122,6 @@
 			<item id="29648" count="1" />
 		</items>
 	</reward>
-	<!-- TODO: Weekly monster handler
 	<reward id="263" reward_id="105" name="Weekly Hunting (Lv. 41-50)" requiredCompletion="200">
 		Receive it when you kill any 200 monsters. Monsters that are level 6 or lower than the character are not counted.
 		<handler name="monster">
