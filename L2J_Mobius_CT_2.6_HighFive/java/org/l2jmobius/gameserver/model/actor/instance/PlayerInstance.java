@@ -8661,7 +8661,6 @@ public class PlayerInstance extends Playable
 		
 		if ((sklTargetType == TargetType.GROUND) && (_currentSkillWorldPosition == null))
 		{
-			LOGGER.info("WorldPosition is null for skill: " + skill.getName() + ", player: " + getName() + ".");
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
