@@ -687,10 +687,10 @@
 					<value level="4">9</value>
 					<value level="5">15</value>
 					<value level="6">15</value>
-					<value level="7">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">15</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
 				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
@@ -708,10 +708,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
-					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">-5</value>
+					<value level="8">-5</value>
+					<value level="9">-5</value>
+					<value level="10">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -724,10 +724,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
-					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">-5</value>
+					<value level="8">-5</value>
+					<value level="9">-5</value>
+					<value level="10">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -740,13 +740,43 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">-5</value>
-					<value level="7">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">-5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">-5</value>
+					<value level="8">-5</value>
+					<value level="9">-5</value>
+					<value level="10">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">3</value>
+					<value level="9">5</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">3</value>
+					<value level="9">5</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -827,10 +857,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -842,10 +872,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -857,10 +887,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -872,10 +902,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -887,10 +917,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -902,10 +932,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -917,10 +947,10 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">3</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>LUC</stat>
 			</effect>
@@ -932,12 +962,27 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
-					<value level="7">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">3</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>CHA</stat>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">30</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

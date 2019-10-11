@@ -560,10 +560,10 @@
 			<value level="4">10</value>
 			<value level="5">15</value>
 			<value level="6">15</value>
-			<value level="7">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">15</value>
+			<value level="8">15</value>
+			<value level="9">15</value>
+			<value level="10">15</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>1000</effectPoint>
@@ -581,10 +581,10 @@
 					<value level="4">30000</value>
 					<value level="5">50000</value>
 					<value level="6">50000</value>
-					<value level="7">50000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">50000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">50000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">50000</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">55000</value>
+					<value level="8">60000</value>
+					<value level="9">65000</value>
+					<value level="10">70000</value>
 				</damage>
 			</effect>
 			<effect name="HealPercent" fromLevel="6" toLevel="10">
@@ -616,12 +616,26 @@
 					<value level="4">20</value>
 					<value level="5">30</value>
 					<value level="6">30</value>
-					<value level="7">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">30</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">30</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">3</value>
+					<value level="8">6</value>
+					<value level="9">9</value>
+					<value level="10">15</value>
+				</amount>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="10">
 				<!-- Greater Garnet - Cancel Stun -->
@@ -701,10 +715,10 @@
 					<value level="4">20</value>
 					<value level="5">30</value>
 					<value level="6">30</value>
-					<value level="7">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">40</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -716,10 +730,10 @@
 					<value level="4">-7</value>
 					<value level="5">-15</value>
 					<value level="6">-15</value>
-					<value level="7">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">-15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">-16</value>
+					<value level="8">-17</value>
+					<value level="9">-18</value>
+					<value level="10">-20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -731,10 +745,10 @@
 					<value level="4">0</value>
 					<value level="5">0</value>
 					<value level="6">10</value>
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">10</value>
+					<value level="8">10</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
 				</amount>
 			</effect>
 		</effects>

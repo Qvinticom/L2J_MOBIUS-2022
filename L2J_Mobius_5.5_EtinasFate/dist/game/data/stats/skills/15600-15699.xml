@@ -661,8 +661,8 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="2">61</value>
-					<value level="3">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="3">62</value>
+					<value level="4">63</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -670,19 +670,10 @@
 				<amount>
 					<value level="1">60</value>
 					<value level="2">60</value>
-					<value level="3">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="3">61</value>
+					<value level="4">61</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-10</amount>

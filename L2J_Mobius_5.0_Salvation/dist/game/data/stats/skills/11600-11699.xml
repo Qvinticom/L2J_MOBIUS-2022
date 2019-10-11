@@ -231,39 +231,51 @@
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">-80</value>
+					<value level="2">-80</value>
+					<value level="3">-85</value>
+					<value level="4">-85</value>
+					<value level="5">-85</value>
+					<value level="6">-90</value>
+					<value level="7">-90</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="LimitHp">
 				<amount>
-					<value level="1">-40</value>
-					<value level="2">-50</value>
-					<value level="3">-60</value>
-					<value level="4">-70</value>
-					<value level="5">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-40</value>
+					<value level="5">-40</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="LimitMp">
 				<amount>
-					<value level="1">-40</value>
-					<value level="2">-50</value>
-					<value level="3">-60</value>
-					<value level="4">-70</value>
-					<value level="5">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-40</value>
+					<value level="5">-40</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="LimitCp">
 				<amount>
-					<value level="1">-40</value>
-					<value level="2">-50</value>
-					<value level="3">-60</value>
-					<value level="4">-70</value>
-					<value level="5">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">-70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-40</value>
+					<value level="5">-40</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

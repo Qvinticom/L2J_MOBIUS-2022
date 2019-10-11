@@ -4746,7 +4746,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -4764,6 +4764,7 @@
 			<value level="2">151</value>
 			<value level="3">170</value>
 			<value level="4">181</value>
+			<value level="5">181</value>
 		</mpConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4780,14 +4781,14 @@
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
-			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">40</value>
 		</mpInitialConsume>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">105</value>
 		</magicLvl>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -4835,7 +4836,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>
@@ -4853,13 +4854,14 @@
 			<value level="2">151</value>
 			<value level="3">170</value>
 			<value level="4">181</value>
+			<value level="5">181</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">28</value>
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
-			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">40</value>
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4868,7 +4870,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">105</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>
@@ -4904,7 +4906,7 @@
 					<value level="2">31</value>
 					<value level="3">32</value>
 					<value level="4">33</value>
-					<value level="5">33</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">34</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4914,7 +4916,7 @@
 					<value level="2">32</value>
 					<value level="3">34</value>
 					<value level="4">36</value>
-					<value level="5">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">38</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4936,7 +4938,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>
@@ -4954,13 +4956,14 @@
 			<value level="2">151</value>
 			<value level="3">170</value>
 			<value level="4">181</value>
+			<value level="5">181</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">28</value>
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
-			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">40</value>
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -4969,7 +4972,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">105</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>
@@ -4993,7 +4996,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
-					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">45</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5003,7 +5006,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
-					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">70</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5017,7 +5020,7 @@
 					<value level="2">39</value>
 					<value level="3">41</value>
 					<value level="4">43</value>
-					<value level="5">43</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">45</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5035,7 +5038,7 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
@@ -5053,13 +5056,14 @@
 			<value level="2">151</value>
 			<value level="3">170</value>
 			<value level="4">181</value>
+			<value level="5">181</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">28</value>
 			<value level="2">31</value>
 			<value level="3">34</value>
 			<value level="4">37</value>
-			<value level="5">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">40</value>
 		</mpInitialConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
@@ -5068,7 +5072,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">105</value>
 		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
@@ -5086,7 +5090,7 @@
 					<value level="2">61</value>
 					<value level="3">62</value>
 					<value level="4">63</value>
-					<value level="5">63</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">64</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5096,19 +5100,9 @@
 					<value level="2">60</value>
 					<value level="3">61</value>
 					<value level="4">61</value>
-					<value level="5">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">62</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">25</value>
-					<value level="5">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
