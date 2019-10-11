@@ -145,15 +145,15 @@ public enum ClassId implements IIdentifiable
 	
 	TROOPER(125, false, Race.KAMAEL, KAMAEL_SOLDIER),
 	SOUL_FINDER(193, false, Race.KAMAEL, KAMAEL_SOLDIER),
-	WARDEN(126, false, Race.KAMAEL, KAMAEL_SOLDIER),
+	WARDER(126, false, Race.KAMAEL, KAMAEL_SOLDIER),
 	
 	BERSERKER(127, false, Race.KAMAEL, TROOPER),
 	SOUL_BREAKER(194, false, Race.KAMAEL, SOUL_FINDER),
-	ARBALESTER(130, false, Race.KAMAEL, WARDEN),
+	SOUL_RANGER(130, false, Race.KAMAEL, WARDER),
 	
 	DOOMBRINGER(131, false, Race.KAMAEL, BERSERKER),
 	SOUL_HOUND(195, false, Race.KAMAEL, SOUL_BREAKER),
-	TRICKSTER(134, false, Race.KAMAEL, ARBALESTER);
+	TRICKSTER(134, false, Race.KAMAEL, SOUL_RANGER);
 	
 	/** The Identifier of the Class */
 	private final int _id;
