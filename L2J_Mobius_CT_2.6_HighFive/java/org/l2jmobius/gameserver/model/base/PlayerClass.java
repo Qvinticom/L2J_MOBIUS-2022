@@ -232,7 +232,7 @@ public enum PlayerClass
 		subclassSetMap.put(Spellhowler, subclasseSet5);
 	}
 	
-	PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
+	private PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
 	{
 		_race = race;
 		_level = pLevel;
@@ -286,11 +286,11 @@ public enum PlayerClass
 				{
 					if (player.getAppearance().isFemale())
 					{
-						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
+						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
 					}
 					else
 					{
-						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
+						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
 					}
 				}
 				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))

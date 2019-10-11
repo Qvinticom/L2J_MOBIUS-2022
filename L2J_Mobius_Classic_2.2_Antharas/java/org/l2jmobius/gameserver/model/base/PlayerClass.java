@@ -315,11 +315,15 @@ public enum PlayerClass
 				switch (player.getRace())
 				{
 					case ELF:
+					{
 						subclasses.removeAll(getSet(Race.DARK_ELF, THIRD));
 						break;
+					}
 					case DARK_ELF:
+					{
 						subclasses.removeAll(getSet(Race.ELF, THIRD));
 						break;
+					}
 				}
 				
 				subclasses.removeAll(getSet(Race.KAMAEL, THIRD));
@@ -343,11 +347,11 @@ public enum PlayerClass
 				{
 					if (player.getAppearance().isFemale())
 					{
-						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
+						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
 					}
 					else
 					{
-						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
+						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
 					}
 				}
 				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
