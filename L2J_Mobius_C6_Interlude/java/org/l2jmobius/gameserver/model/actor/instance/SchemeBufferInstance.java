@@ -164,8 +164,8 @@ public class SchemeBufferInstance extends FolkInstance
 					player.sendMessage("Scheme's name must contain up to 14 chars.");
 					return;
 				}
-				// Simple hack to use spaces, dots, commas, exclamations or question marks.
-				if (!Util.isAlphaNumeric(schemeName.replace(" ", "").replace(".", "").replace(",", "").replace("!", "").replace("?", "")))
+				// Simple hack to use spaces, dots, commas, minus, plus, exclamations or question marks.
+				if (!Util.isAlphaNumeric(schemeName.replace(" ", "").replace(".", "").replace(",", "").replace("-", "").replace("+", "").replace("!", "").replace("?", "")))
 				{
 					player.sendMessage("Please use plain alphanumeric characters.");
 					return;
