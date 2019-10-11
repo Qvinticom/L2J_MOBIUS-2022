@@ -93,9 +93,9 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				}
 				sm.addInt(targetItem.getEnchantLevel());
 				sm.addItemName(targetItem);
+				sm.addElemental(realElement);
 				if (targetItem.isArmor())
 				{
-					sm.addElemental(realElement);
 					sm.addElemental(Elementals.getOppositeElement(realElement));
 				}
 			}
@@ -110,9 +110,9 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					sm = new SystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_BEEN_REMOVED);
 				}
 				sm.addItemName(targetItem);
+				sm.addElemental(realElement);
 				if (targetItem.isArmor())
 				{
-					sm.addElemental(realElement);
 					sm.addElemental(Elementals.getOppositeElement(realElement));
 				}
 			}
