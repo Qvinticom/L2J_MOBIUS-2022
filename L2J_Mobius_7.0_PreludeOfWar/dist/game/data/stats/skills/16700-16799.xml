@@ -359,7 +359,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>
+					<value level="1">529</value>
+					<value level="2">541</value>
+					<value level="3">553</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -383,7 +388,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>
+					<value level="1">529</value>
+					<value level="2">541</value>
+					<value level="3">553</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1300,7 +1310,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>

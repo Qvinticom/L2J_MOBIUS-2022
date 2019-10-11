@@ -59,7 +59,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -77,6 +77,24 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16207" toLevel="4" name="Dark Spike">
 		<operateType>A1</operateType>
@@ -100,7 +118,13 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -117,6 +141,24 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16209" toLevel="4" name="Water Spike">
 		<operateType>A1</operateType>
@@ -131,6 +173,24 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16210" toLevel="6" name="Wind Spike">
 		<operateType>A1</operateType>
@@ -147,6 +207,24 @@
 			<value level="6">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16211" toLevel="5" name="Earth Spike">
 		<operateType>A1</operateType>
@@ -162,6 +240,24 @@
 			<value level="5">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16212" toLevel="4" name="Holy Buster">
 		<operateType>A1</operateType>
@@ -171,6 +267,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16213" toLevel="4" name="Dark Buster">
 		<operateType>A1</operateType>
@@ -182,7 +296,6 @@
 		<isMagic>1</isMagic>
 		<affectRange>200</affectRange>
 		<effectRange>1000</effectRange>
-		<reuseDelay>10000</reuseDelay>
 		<attributeType>DARK</attributeType>
 		<attributeValue>300</attributeValue>
 		<targetType>ENEMY</targetType>
@@ -190,7 +303,13 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -202,6 +321,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16215" toLevel="4" name="Water Buster">
 		<operateType>A1</operateType>
@@ -211,6 +348,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16216" toLevel="6" name="Wind Buster">
 		<operateType>A1</operateType>
@@ -220,6 +375,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16217" toLevel="5" name="Earth Buster">
 		<operateType>A1</operateType>
@@ -229,6 +402,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16218" toLevel="4" name="Holy Blast">
 		<operateType>A1</operateType>

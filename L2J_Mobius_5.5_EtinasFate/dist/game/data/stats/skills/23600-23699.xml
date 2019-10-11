@@ -326,7 +326,7 @@
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>300</effectRange>
 		<magicLvl>1</magicLvl>
@@ -337,7 +337,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>38940</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -395,7 +395,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -406,7 +406,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>38940</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 			<effect name="DamOverTime">
@@ -429,7 +429,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>600</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>200</coolTime>
@@ -470,7 +470,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
 				<percentage>40</percentage>
 			</effect>
 		</effects>
@@ -520,7 +520,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicLvl>1</magicLvl>
@@ -571,7 +571,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
 				<percentage>40</percentage>
 			</effect>
 		</effects>
@@ -677,7 +677,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
@@ -732,7 +732,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
@@ -746,9 +746,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
-				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="DamOverTime">
 				<power>2000</power> <!-- Fix: Retail Missed -->
@@ -776,9 +775,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
-				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -803,7 +801,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
 				<percentage>40</percentage>
 			</effect>
 		</effects>
@@ -825,7 +823,7 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<affectRange>300</affectRange>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -919,7 +917,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>38940</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -961,9 +959,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">1000</value> <!-- Fix: Retail Missed -->
-					<value level="2">2000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -989,9 +988,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">1000</value> <!-- Fix: Retail Missed -->
-					<value level="2">2000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1015,8 +1015,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">36746</value> <!-- Fix: Retail Missed -->
+					<value level="2">38940</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1042,8 +1042,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">36746</value> <!-- Fix: Retail Missed -->
+					<value level="2">38940</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1069,8 +1069,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">36746</value> <!-- Fix: Retail Missed -->
+					<value level="2">38940</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1096,8 +1096,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">36746</value> <!-- Fix: Retail Missed -->
+					<value level="2">38940</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1125,9 +1125,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1153,9 +1154,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1181,9 +1183,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1209,9 +1212,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">10000</value> <!-- Fix: Retail Missed -->
-					<value level="2">20000</value> <!-- Fix: Retail Missed -->
+					<value level="1">541</value> <!-- Fix: Retail Missed -->
+					<value level="2">553</value> <!-- Fix: Retail Missed -->
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1232,7 +1236,7 @@
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<trait>AIRBIND</trait>
 		<fanRange>0;0;600;60</fanRange>
@@ -1428,7 +1432,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>38940</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1482,7 +1487,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>38940</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 			<effect name="DamOverTime">
 				<power>512</power>
@@ -1671,8 +1677,8 @@
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalAttack">
-				<power>10000</power>
-				<criticalChance>10</criticalChance>
+				<power>38940</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>

@@ -46,6 +46,12 @@
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty>
@@ -57,10 +63,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">500</value> <!-- Fix: Retail Missed -->
-					<value level="2">1000</value> <!-- Fix: Retail Missed -->
-					<value level="3">1500</value> <!-- Fix: Retail Missed -->
-					<value level="4">2000</value> <!-- Fix: Retail Missed -->
+					<value level="1">506</value> <!-- Fix: Retail Missed -->
+					<value level="2">518</value> <!-- Fix: Retail Missed -->
+					<value level="3">529</value> <!-- Fix: Retail Missed -->
+					<value level="4">553</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -93,6 +99,12 @@
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty>
@@ -104,10 +116,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">500</value> <!-- Fix: Retail Missed -->
-					<value level="2">1000</value> <!-- Fix: Retail Missed -->
-					<value level="3">1500</value> <!-- Fix: Retail Missed -->
-					<value level="4">2000</value> <!-- Fix: Retail Missed -->
+					<value level="1">506</value> <!-- Fix: Retail Missed -->
+					<value level="2">518</value> <!-- Fix: Retail Missed -->
+					<value level="3">529</value> <!-- Fix: Retail Missed -->
+					<value level="4">553</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -141,6 +153,12 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -152,10 +170,10 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">2500</value> <!-- Fix: Retail Missed -->
-					<value level="2">5000</value> <!-- Fix: Retail Missed -->
-					<value level="3">7500</value> <!-- Fix: Retail Missed -->
-					<value level="4">10000</value> <!-- Fix: Retail Missed -->
+					<value level="1">26082</value> <!-- Fix: Retail Missed -->
+					<value level="2">27458</value> <!-- Fix: Retail Missed -->
+					<value level="3">28833</value> <!-- Fix: Retail Missed -->
+					<value level="4">31628</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -189,6 +207,12 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -200,10 +224,10 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">2500</value> <!-- Fix: Retail Missed -->
-					<value level="2">5000</value> <!-- Fix: Retail Missed -->
-					<value level="3">7500</value> <!-- Fix: Retail Missed -->
-					<value level="4">10000</value> <!-- Fix: Retail Missed -->
+					<value level="1">26082</value> <!-- Fix: Retail Missed -->
+					<value level="2">27458</value> <!-- Fix: Retail Missed -->
+					<value level="3">28833</value> <!-- Fix: Retail Missed -->
+					<value level="4">31628</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -271,8 +295,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">7500</value> <!-- Fix: Retail Missed -->
-					<value level="2">10000</value> <!-- Fix: Retail Missed -->
+					<value level="1">28833</value> <!-- Fix: Retail Missed -->
+					<value level="2">31628</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -300,8 +324,8 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">1000</value> <!-- Fix: Retail Missed -->
-					<value level="2">2000</value> <!-- Fix: Retail Missed -->
+					<value level="1">518</value> <!-- Fix: Retail Missed -->
+					<value level="2">529</value> <!-- Fix: Retail Missed -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -361,7 +385,7 @@
 		<abnormalTime>10</abnormalTime> <!-- Fix: Retail Missed -->
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectRange>1100</effectRange>
 		<magicLvl>1</magicLvl>
@@ -400,7 +424,7 @@
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>600</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>800</effectRange>

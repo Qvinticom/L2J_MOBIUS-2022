@@ -829,7 +829,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -851,7 +851,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -873,7 +873,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -894,7 +894,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -915,7 +916,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -935,7 +937,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -956,7 +959,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>28833</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -977,7 +980,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>553</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -995,7 +999,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -1025,7 +1029,7 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -1054,7 +1058,7 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>

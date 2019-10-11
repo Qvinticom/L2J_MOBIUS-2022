@@ -1683,7 +1683,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power>
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1703,7 +1704,7 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1721,7 +1722,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power>
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1767,7 +1769,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power>
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1785,7 +1788,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power>
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1842,7 +1846,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power>
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>

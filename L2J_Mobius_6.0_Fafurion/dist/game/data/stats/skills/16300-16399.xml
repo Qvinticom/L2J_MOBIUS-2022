@@ -435,7 +435,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
+				<power>19893</power> <!-- Fix: Retail Missed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -488,7 +488,8 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1000</power> <!-- Fix: Retail Missed -->
+				<power>431</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>

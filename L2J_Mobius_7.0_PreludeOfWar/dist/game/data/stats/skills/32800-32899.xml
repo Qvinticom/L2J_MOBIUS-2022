@@ -249,8 +249,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -428,8 +429,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -463,8 +465,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -494,7 +497,8 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -532,8 +536,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -548,8 +553,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -569,7 +575,8 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -585,8 +592,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -602,8 +610,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -619,8 +628,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -639,7 +649,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<trait>SHOCK</trait>
@@ -648,8 +658,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>60</chance>
@@ -675,7 +686,8 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -693,7 +705,8 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -710,8 +723,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -731,7 +745,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<trait>SHOCK</trait>
@@ -761,8 +775,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -782,7 +797,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<activateRate>200</activateRate>
+		<activateRate>80</activateRate>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<trait>SHOCK</trait>
@@ -791,8 +806,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>60</chance>
@@ -813,8 +829,9 @@
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>10000</power>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>23332</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -833,7 +850,8 @@
 		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>553</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
