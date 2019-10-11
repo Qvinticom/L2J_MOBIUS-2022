@@ -192,7 +192,7 @@
 	</npc>
 	<npc id="34110" level="85" type="Npc" name="Newbie Guide">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -209,10 +209,10 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34111" level="85" type="Npc" name="Reahen" title="Trader">
+	<npc id="34111" level="85" type="Merchant" name="Reahen" title="Trader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -247,10 +247,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34113" level="85" type="Npc" name="Maddy" title="Marksman">
+	<npc id="34113" level="85" type="Guard" name="Maddy" title="Marksman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -266,10 +267,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34114" level="85" type="Npc" name="Bixon" title="Marksman">
+	<npc id="34114" level="85" type="Guard" name="Bixon" title="Marksman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -285,10 +287,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34115" level="85" type="Npc" name="Carver" title="Marksman">
+	<npc id="34115" level="85" type="Guard" name="Carver" title="Marksman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -304,10 +307,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34116" level="85" type="Npc" name="Putin" title="Marksman">
+	<npc id="34116" level="85" type="Guard" name="Putin" title="Marksman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -323,9 +327,9 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34117" level="85" type="Npc" name="Draphier" title="Warehouse Keeper">
+	<npc id="34117" level="85" type="Warehouse" name="Draphier" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
