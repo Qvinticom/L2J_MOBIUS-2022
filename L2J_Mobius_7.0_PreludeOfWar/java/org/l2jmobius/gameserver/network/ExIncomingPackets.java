@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.network.clientpackets.awakening.RequestCallToCha
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
+import org.l2jmobius.gameserver.network.clientpackets.classchange.ExRequestClassChange;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyItem;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionCancel;
@@ -467,7 +468,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME), // 152
 	EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
 	EX_OPEN_HTML(0x164, ExOpenDimensionalHtml::new, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_CLASS_CHANGE(0x165, null, ConnectionState.IN_GAME), // 228
+	EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME), // 228
 	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME), // 228
 	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME), // 228
