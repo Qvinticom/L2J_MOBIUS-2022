@@ -49,22 +49,24 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			return;
 		}
 		
-		boolean properId = false;
+		// Check if class id is valid.
+		boolean canChange = false;
 		for (ClassId cId : player.getClassId().getNextClassIds())
 		{
 			if (cId.getId() == _classId)
 			{
-				properId = true;
+				canChange = true;
 				break;
 			}
 		}
-		if (!properId)
+		if (!canChange)
 		{
 			LOGGER.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + "!");
 			return;
 		}
 		
-		boolean canChange = false;
+		// Check for player proper class group and level.
+		canChange = false;
 		final int playerLevel = player.getLevel();
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (playerLevel >= 18))
 		{
@@ -79,6 +81,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			canChange = CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, _classId);
 		}
 		
+		// Change class.
 		if (canChange)
 		{
 			player.setClassId(_classId);
