@@ -203,7 +203,7 @@ public class Q00255_Tutorial extends Quest
 						giveItems(player, SOULSHOT_REWARD);
 						playTutorialVoice(player, "tutorial_voice_026");
 					}
-					// TODO: Check retail for html bellow.
+					// There is no html window.
 					// htmltext = (npc != null ? npc.getId() : player.getTarget().getId()) + "-3.html";
 					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
 					player.teleToLocation(COMPLETE_LOCATION.get(player.getClassId().getId()));
