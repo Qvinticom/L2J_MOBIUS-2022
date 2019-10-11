@@ -21,8 +21,6 @@ import java.util.LinkedList;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public class PreparedListContainer extends ListContainer
@@ -63,23 +61,18 @@ public class PreparedListContainer extends ListContainer
 			}
 			
 			_entries = new LinkedList<>();
-			for (ItemInstance item : items)
+			
+			for (Entry entry : template.getEntries())
 			{
-				// only do the match up on equippable items that are not currently equipped
-				// so for each appropriate item, produce a set of entries for the multisell list.
-				if (!item.isEquipped() && ((item.getItem() instanceof Armor) || (item.getItem() instanceof Weapon)))
+				if (!entry.getIngredients().isEmpty())
 				{
-					// loop through the entries to see which ones we wish to include
-					for (Entry ent : template.getEntries())
+					int ingredientId = entry.getIngredients().get(0).getItemId();
+					for (ItemInstance item : items)
 					{
-						// check ingredients of this entry to see if it's an entry we'd like to include.
-						for (Ingredient ing : ent.getIngredients())
+						if (!item.isEquipped() && (item.getId() == ingredientId))
 						{
-							if (item.getId() == ing.getItemId())
-							{
-								_entries.add(new PreparedEntry(ent, item, getApplyTaxes(), getMaintainEnchantment(), taxRate));
-								break; // next entry
-							}
+							_entries.add(new PreparedEntry(entry, item, getApplyTaxes(), getMaintainEnchantment(), taxRate));
+							break;
 						}
 					}
 				}
