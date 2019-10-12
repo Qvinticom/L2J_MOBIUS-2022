@@ -79,8 +79,7 @@
 			<removeSkill id="1556" /> <!-- Arcane Shield -->
 			<removeSkill id="1262" /> <!-- Transfer Pain -->
 		</skill>
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="1" getLevel="85" levelUpSp="8000" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="2" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1157" /> <!-- Body To Mind -->
 			<removeSkill id="502" /> <!-- Life to Soul -->
@@ -227,7 +226,7 @@
 		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Burst Casting" skillId="11068" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="3" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Death Lord" skillId="11030" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Mass Ruin" skillId="11048" skillLvl="3" getLevel="90" levelUpSp="370000" />
@@ -282,8 +281,8 @@
 		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Burst Casting" skillId="11068" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="4" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="5" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="4" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Ruin" skillId="11047" skillLvl="5" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Death Lord" skillId="11030" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -367,10 +366,10 @@
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Embody Mana Armor" skillId="19408" skillLvl="2" getLevel="101" levelUpSp="211440000" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="6" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Soul Bomber" skillId="11138" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Ruin" skillId="11047" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="5" getLevel="101" levelUpSp="211440000" />
@@ -400,7 +399,7 @@
 		
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="6" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="7" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Ruin" skillId="11047" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="6" getLevel="103" levelUpSp="608946501" />
@@ -429,7 +428,7 @@
 		
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Ruin" skillId="11047" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
@@ -449,11 +448,18 @@
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Ruin" skillId="11047" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Mass Ruin" skillId="11048" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
@@ -470,11 +476,18 @@
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="5" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Elemental Burst" skillId="11115" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Ruin" skillId="11047" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Lightning Shock" skillId="791" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Lightning" skillId="30787" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Mass Ruin" skillId="11048" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
@@ -491,6 +504,13 @@
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="6" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="0" />

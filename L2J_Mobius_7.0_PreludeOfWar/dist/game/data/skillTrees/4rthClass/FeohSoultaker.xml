@@ -137,15 +137,9 @@
 			<removeSkill id="1381" /> <!-- Mass Curse Fear -->
 		</skill>
 		<skill skillName="Summon Blue Phantom" skillId="8604" skillLvl="1" getLevel="85" autoGet="true" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="1" getLevel="85" levelUpSp="30">
+		<skill skillName="Transfer Pain" skillId="30791" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="11065" /> <!-- Arcane Barrier -->
 		</skill>
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="2" getLevel="85" levelUpSp="67" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="3" getLevel="85" levelUpSp="105" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="4" getLevel="85" levelUpSp="121" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="5" getLevel="85" levelUpSp="711" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="6" getLevel="85" levelUpSp="5000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="7" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1295" /> <!-- Aqua Splash -->
 			<removeSkill id="1171" /> <!-- Blazing Circle -->
@@ -156,30 +150,12 @@
 			<removeSkill id="1448" /> <!-- Blink -->
 			<removeSkill id="1164" /> <!-- Curse Weakness -->
 		</skill>
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="1" getLevel="85" levelUpSp="37">
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="11065" /> <!-- Arcane Barrier -->
 		</skill>
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="2" getLevel="85" levelUpSp="96" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="3" getLevel="85" levelUpSp="151" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="4" getLevel="85" levelUpSp="210" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="5" getLevel="85" levelUpSp="478" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="6" getLevel="85" levelUpSp="748" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="7" getLevel="85" levelUpSp="1000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="8" getLevel="85" levelUpSp="2000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="9" getLevel="85" levelUpSp="5000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="10" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="1" getLevel="85" levelUpSp="105">
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="11065" /> <!-- Arcane Barrier -->
 		</skill>
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="2" getLevel="85" levelUpSp="151" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="3" getLevel="85" levelUpSp="210" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="4" getLevel="85" levelUpSp="478" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="5" getLevel="85" levelUpSp="711" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="6" getLevel="85" levelUpSp="748" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="7" getLevel="85" levelUpSp="1000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="8" getLevel="85" levelUpSp="2000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="9" getLevel="85" levelUpSp="5000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="10" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Devil's Sway" skillId="11095" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1475" /> <!-- Erase Mark -->
 			<removeSkill id="1156" /> <!-- Forget -->
@@ -263,11 +239,11 @@
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Death Lord" skillId="11030" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Mass Ruin" skillId="11048" skillLvl="3" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="8" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Transfer Pain" skillId="30791" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="3" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="3" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="11" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="11" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Elemental Crash" skillId="11017" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="4" getLevel="90" levelUpSp="370000" />
@@ -322,10 +298,10 @@
 		<skill skillName="Mass Hell Binding" skillId="11052" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Air Rider" skillId="11062" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="9" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Transfer Pain" skillId="30791" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Elemental Final Storm" skillId="11040" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="12" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="12" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Arcane Comet Strike" skillId="11066" skillLvl="1" getLevel="95" levelUpSp="1000000">
@@ -376,15 +352,15 @@
 		<skill skillName="Mass Ruin" skillId="11048" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Air Rider" skillId="11062" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="10" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Transfer Pain" skillId="30791" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Elemental Final Storm" skillId="11040" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="6" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="13" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Discarded Wizard's Soul" skillId="19405" skillLvl="1" getLevel="99" levelUpSp="5000000">
 			<removeSkill id="11065" /> <!-- Arcane Barrier -->
 		</skill>
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="13" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="1" getLevel="99" levelUpSp="5000000">
 			<removeSkill id="1292" /> <!-- Elemental Assault -->
@@ -413,9 +389,9 @@
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="7" getLevel="101" levelUpSp="211440000" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="14" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Discarded Wizard's Soul" skillId="19405" skillLvl="2" getLevel="101" levelUpSp="211440000" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="14" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="8" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Ignore Divinity" skillId="11049" skillLvl="3" getLevel="101" levelUpSp="211440000" />
@@ -423,7 +399,7 @@
 		<skill skillName="Arcane Comet Strike" skillId="11066" skillLvl="2" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shadow Snare" skillId="11058" skillLvl="4" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Black Pool" skillId="11135" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="2" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="9" getLevel="101" levelUpSp="211440000" />
@@ -447,9 +423,9 @@
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="8" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="15" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Discarded Wizard's Soul" skillId="19405" skillLvl="3" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="15" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="9" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Ignore Divinity" skillId="11049" skillLvl="4" getLevel="103" levelUpSp="608946501" />
@@ -477,9 +453,9 @@
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="16" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Discarded Wizard's Soul" skillId="19405" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="16" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Ignore Divinity" skillId="11049" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
@@ -490,6 +466,13 @@
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Elemental Burst" skillId="11121" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Ultimate Body To Mind" skillId="11064" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
@@ -500,9 +483,9 @@
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="17" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Summon Discarded Wizard's Soul" skillId="19405" skillLvl="5" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="17" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Ignore Divinity" skillId="11049" skillLvl="6" getLevel="107" levelUpSp="2525422932" />
@@ -511,6 +494,13 @@
 		<skill skillName="Shadow Snare" skillId="11058" skillLvl="7" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="5" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Elemental Burst" skillId="11121" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
@@ -522,9 +512,9 @@
 		<skill skillName="Mass Death Fear" skillId="11056" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Magical Charge" skillId="11094" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Magical Evasion" skillId="11057" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Summon Reanimated Man" skillId="1129" skillLvl="18" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Summon Reanimated Man" skillId="30790" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Summon Discarded Wizard's Soul" skillId="19405" skillLvl="6" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Summon Cursed Man" skillId="1334" skillLvl="18" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Summon Cursed Man" skillId="30792" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Death Fear" skillId="11055" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Ignore Divinity" skillId="11049" skillLvl="7" getLevel="109" levelUpSp="7273218046" />
@@ -534,6 +524,13 @@
 		<skill skillName="Quadruple Elemental Blast" skillId="11067" skillLvl="6" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		
+		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Fast MP Recovery" skillId="11186" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Robe Mastery" skillId="11002" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior MP Boost" skillId="11185" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="0" />

@@ -205,10 +205,7 @@
 			<removeSkill id="266" /> <!-- Song of Water -->
 			<removeSkill id="268" /> <!-- Song of Wind -->
 		</skill>
-		<skill skillName="Song of Silence" skillId="437" skillLvl="1" getLevel="85" levelUpSp="5000" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="2" getLevel="85" levelUpSp="6500" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="3" getLevel="85" levelUpSp="9000" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="4" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Shield Song" skillId="11605" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -333,15 +330,18 @@
 			<removeSkill id="1099" /> <!-- Seal of Slow -->
 			<removeSkill id="505" /> <!-- Shining Edge -->
 		</skill>
+
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Transform" skillId="11537" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="2" getLevel="86" levelUpSp="50000" />
+
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="2" getLevel="87" levelUpSp="60000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="2" getLevel="87" levelUpSp="60000" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="2" getLevel="87" levelUpSp="60000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="1" getLevel="87" levelUpSp="60000" />
+
 		<skill skillName="Transform" skillId="11537" skillLvl="3" getLevel="88" levelUpSp="80000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="3" getLevel="88" levelUpSp="80000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="3" getLevel="88" levelUpSp="80000" />
@@ -352,6 +352,7 @@
 			<removeSkill id="1411" /> <!-- Mystic Immunity -->
 		</skill>
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="3" getLevel="89" levelUpSp="100000" />
+
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Grand Melody of Spirit" skillId="11583" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="2" getLevel="90" levelUpSp="370000" />
@@ -371,7 +372,7 @@
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Song of Protection" skillId="11613" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="5" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Guitar Melody" skillId="11520" skillLvl="2" getLevel="90" levelUpSp="370000" />
@@ -379,22 +380,27 @@
 		<skill skillName="Horn Melody" skillId="11517" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="4" getLevel="90" levelUpSp="370000" />
+
 		<skill skillName="Transform" skillId="11537" skillLvl="4" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="4" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="4" getLevel="91" levelUpSp="400000" />
+
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="4" getLevel="92" levelUpSp="420000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="5" getLevel="92" levelUpSp="420000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="5" getLevel="92" levelUpSp="420000" />
 		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="5" getLevel="92" levelUpSp="420000" />
+
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="4" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="5" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="1" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="5" getLevel="93" levelUpSp="440000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="3" getLevel="93" levelUpSp="440000" />
+
 		<skill skillName="Transform" skillId="11537" skillLvl="5" getLevel="94" levelUpSp="480000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="6" getLevel="94" levelUpSp="480000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="6" getLevel="94" levelUpSp="480000" />
 		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="6" getLevel="94" levelUpSp="480000" />
+
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Grand Melody of Spirit" skillId="11583" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -416,25 +422,28 @@
 			<removeSkill id="1462" /> <!-- Seal of Blockade -->
 		</skill>
 		<skill skillName="Song of Protection" skillId="11613" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="6" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Guitar Melody" skillId="11520" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Pipe Organ Melody" skillId="11519" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Horn Melody" skillId="11517" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="6" getLevel="95" levelUpSp="1000000" />
+
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="5" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="7" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="7" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="2" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="4" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="7" getLevel="96" levelUpSp="4970000" />
+
 		<skill skillName="Transform" skillId="11537" skillLvl="6" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="7" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Blood Requiem" skillId="11533" skillLvl="1" getLevel="97" levelUpSp="4980000">
 			<removeSkill id="1477" /> <!-- Vampiric Impulse -->
 		</skill>
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="7" getLevel="97" levelUpSp="4980000" />
+
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="6" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="8" getLevel="98" levelUpSp="4990000" />
@@ -471,7 +480,7 @@
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Celestial Aegis" skillId="11560" skillLvl="2" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Song of Protection" skillId="11613" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="7" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Guitar Melody" skillId="11520" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Pipe Organ Melody" skillId="11519" skillLvl="4" getLevel="99" levelUpSp="5000000" />
@@ -483,6 +492,7 @@
 		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="1" getLevel="99" levelUpSp="5000000">
 			<removeSkill id="1509" /> <!-- Seal of Limit -->
 		</skill>
+
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="5" getLevel="100" levelUpSp="88099899" />
@@ -505,14 +515,14 @@
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Song of Thief" skillId="19228" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Song of Archery" skillId="19205" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
-		<skill skillName="Song of Silence" skillId="437" skillLvl="8" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Song of Assault" skillId="19231" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="9" getLevel="101" levelUpSp="211440000" />
@@ -545,7 +555,7 @@
 		<skill skillName="Melody of Refection" skillId="19443" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="6" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="9" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Ensemble Melody" skillId="19421" skillLvl="1" getLevel="103" levelUpSp="608946501">
 			<item id="39738" count="4" /> <!-- Rune Stone -->
@@ -575,8 +585,7 @@
 		<skill skillName="Melody of Refection" skillId="19443" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Guitar Melody" skillId="11520" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Pipe Organ Melody" skillId="11519" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
@@ -589,6 +598,16 @@
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="11526" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Giant Root" skillId="11561" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
@@ -597,13 +616,24 @@
 		<skill skillName="Melody of Refection" skillId="19443" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="7" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="5" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Repeat Mark Somersault" skillId="19522" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="11526" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Giant Root" skillId="11561" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
@@ -612,14 +642,24 @@
 		<skill skillName="Melody of Refection" skillId="19443" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Radiant Crash" skillId="11509" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Song of Silence" skillId="437" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Song of Silence" skillId="30783" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Disperse" skillId="11543" skillLvl="8" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Resolving Bash" skillId="11510" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="6" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Repeat Mark Somersault" skillId="19522" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Repeat Mark Somersault" skillId="19434" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Alluring Conduct" skillId="19433" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="11526" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="0" />

@@ -333,13 +333,16 @@
 		<skill skillName="Lightning Disarm" skillId="10273" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Last Attack" skillId="10300" skillLvl="3" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="1" getLevel="99" levelUpSp="5000000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Summon Wild Hog Cannon" skillId="19089" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Armor Destruction" skillId="10258" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Edge of Storm" skillId="30611" skillLvl="1" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		
 		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Superior Light Armor Mastery" skillId="10254" skillLvl="5" getLevel="100" levelUpSp="88099899" />
@@ -362,9 +365,7 @@
 		<skill skillName="Power Bomber" skillId="10262" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Last Attack" skillId="10300" skillLvl="4" getLevel="101" levelUpSp="211440000" />
-		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="2" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
+		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="2" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Armor Destruction" skillId="10258" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="2" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="9" getLevel="101" levelUpSp="211440000" />
@@ -388,9 +389,7 @@
 		<skill skillName="Power Bomber" skillId="10262" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Last Attack" skillId="10300" skillLvl="5" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="3" getLevel="103" levelUpSp="608946501">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
+		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="3" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Armor Destruction" skillId="10258" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="3" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="10" getLevel="103" levelUpSp="608946501" />
@@ -414,15 +413,20 @@
 		<skill skillName="Power Bomber" skillId="10262" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Last Attack" skillId="10300" skillLvl="6" getLevel="105" levelUpSp="1753765925" />
-		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="4" getLevel="105" levelUpSp="1753765925">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
+		<skill skillName="Summon Burning Mechanic Golem" skillId="10341" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Armor Destruction" skillId="10258" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10254" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Weapon Mastery" skillId="10251" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="10252" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Momentum Mastery" skillId="10255" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10253" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Resistance" skillId="10286" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
 		<skill skillName="Create Item" skillId="172" skillLvl="15" getLevel="106" levelUpSp="2104519110" />
 
 		<skill skillName="Jump Attack" skillId="10269" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
@@ -439,6 +443,14 @@
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 
+		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10254" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Weapon Mastery" skillId="10251" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="10252" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Momentum Mastery" skillId="10255" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10253" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Resistance" skillId="10286" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+
 		<skill skillName="Jump Attack" skillId="10269" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Eruption" skillId="10265" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
@@ -453,6 +465,14 @@
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		
+		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10254" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Weapon Mastery" skillId="10251" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="10252" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Momentum Mastery" skillId="10255" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10253" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Resistance" skillId="10286" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="0" />

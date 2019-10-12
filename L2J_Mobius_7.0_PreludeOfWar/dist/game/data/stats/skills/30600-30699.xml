@@ -151,6 +151,30 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>32</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POLEARM_ATTACK</abnormalType>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30611" toLevel="1" name="Edge of Storm">
 		<!-- Brandishes a spear in a wide circle to expand the strike range to all directions for 1 min. Requires a spear. Removing the spear also cancels Edge of Storm. -->
@@ -161,6 +185,30 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>32</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>POLEARM_ATTACK</abnormalType>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30612" toLevel="1" name="Cancel Edge of Storm">
 		<!-- Removing the spear also cancels Edge of Storm. -->

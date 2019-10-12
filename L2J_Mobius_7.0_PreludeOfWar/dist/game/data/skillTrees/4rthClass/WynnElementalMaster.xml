@@ -330,7 +330,7 @@
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Elemental's Call" skillId="11389" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Exile" skillId="11273" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Mark of Fire" skillId="11298" skillLvl="9" getLevel="101" levelUpSp="211440000" />
@@ -364,7 +364,7 @@
 		
 		<skill skillName="Elemental Rage" skillId="11353" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="3" getLevel="103" levelUpSp="608946501">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Exile" skillId="11273" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Mark of Fire" skillId="11298" skillLvl="10" getLevel="103" levelUpSp="608946501" />
@@ -394,7 +394,7 @@
 		
 		<skill skillName="Elemental Rage" skillId="11353" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="4" getLevel="105" levelUpSp="1753765925">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Exile" skillId="11273" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Mark of Fire" skillId="11298" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
@@ -415,10 +415,17 @@
 		<skill skillName="Greater Servitor Death Whisper" skillId="11348" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Light Armor Mastery" skillId="11295" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Magic Mastery" skillId="11253" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Robe Mastery" skillId="11252" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Weapon Mastery" skillId="11251" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Resistance" skillId="11287" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
 		<skill skillName="Summon Unicorn Lancer" skillId="11371" skillLvl="7" getLevel="106" levelUpSp="2104519110" />
 		<skill skillName="Summon Unicorn Cherub" skillId="11372" skillLvl="7" getLevel="106" levelUpSp="2104519110" />
 
-		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="5" getLevel="107" levelUpSp="1753765925" />
+		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="5" getLevel="107" levelUpSp="1753765925">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Elemental Rage" skillId="11353" skillLvl="8" getLevel="107" levelUpSp="1753765925" />
 		<skill skillName="Exile" skillId="11273" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Mark of Fire" skillId="11298" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
@@ -437,10 +444,17 @@
 		<skill skillName="Mark Retriever" skillId="11271" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Invoke" skillId="11263" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
 
+		<skill skillName="Superior Light Armor Mastery" skillId="11295" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Magic Mastery" skillId="11253" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Robe Mastery" skillId="11252" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Weapon Mastery" skillId="11251" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Resistance" skillId="11287" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 		<skill skillName="Summon Unicorn Lancer" skillId="11371" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 		<skill skillName="Summon Unicorn Cherub" skillId="11372" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 
-		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="6" getLevel="109" levelUpSp="1753765925" />
+		<skill skillName="Freezing Invoke" skillId="11393" skillLvl="6" getLevel="109" levelUpSp="1753765925">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Elemental Rage" skillId="11353" skillLvl="9" getLevel="109" levelUpSp="1753765925" />
 		<skill skillName="Exile" skillId="11273" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Mark of Fire" skillId="11298" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
@@ -459,10 +473,18 @@
 		<skill skillName="Mark Retriever" skillId="11271" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Invoke" skillId="11263" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Mass Servitor Heal" skillId="11269" skillLvl="8" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Greater Servitor Death Whisper" skillId="11348" skillLvl="8" getLevel="109" levelUpSp="7273218046" />
 
+		<skill skillName="Superior Light Armor Mastery" skillId="11295" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Magic Mastery" skillId="11253" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Robe Mastery" skillId="11252" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Weapon Mastery" skillId="11251" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Resistance" skillId="11287" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Summon Unicorn Lancer" skillId="11371" skillLvl="11" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Summon Unicorn Cherub" skillId="11372" skillLvl="11" getLevel="110" levelUpSp="17455723311" />
-		<skill skillName="Summon Elemental's Call" skillId="11389" skillLvl="2" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Summon Elemental's Call" skillId="11389" skillLvl="2" getLevel="110" levelUpSp="17455723311">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />

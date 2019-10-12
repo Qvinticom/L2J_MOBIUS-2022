@@ -228,16 +228,12 @@
 		<skill skillName="Gigantic Wave" skillId="19567" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Protection of Faith" skillId="10019" skillLvl="2" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="5" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Reversal Stream" skillId="10103" skillLvl="1" getLevel="97" levelUpSp="4980000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
-		
+		<skill skillName="Reversal Stream" skillId="10103" skillLvl="1" getLevel="97" levelUpSp="4980000" />
+
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="2" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Reversal Stream" skillId="10103" skillLvl="2" getLevel="98" levelUpSp="4990000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
+		<skill skillName="Reversal Stream" skillId="10103" skillLvl="2" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		
@@ -282,7 +278,7 @@
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		
 		<skill skillName="Guardian Aura" skillId="10106" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="8" getLevel="101" levelUpSp="211440000" />
@@ -293,7 +289,7 @@
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="9" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="3" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="4" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Summon Othellot Cubic" skillId="10073" skillLvl="5" getLevel="101" levelUpSp="211440000" />
@@ -323,7 +319,7 @@
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="10" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="4" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="5" getLevel="103" levelUpSp="608946501">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Summon Othellot Cubic" skillId="10073" skillLvl="6" getLevel="103" levelUpSp="608946501" />
@@ -352,7 +348,7 @@
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Reversal Stream" skillId="10103" skillLvl="6" getLevel="105" levelUpSp="1753765925">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Summon Othellot Cubic" skillId="10073" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
@@ -361,7 +357,21 @@
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Magic Resistance" skillId="10004" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Magic Resistance" skillId="10004" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Rising Smash" skillId="10013" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
@@ -371,7 +381,9 @@
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="6" getLevel="107" levelUpSp="2525422932" />
-		<skill skillName="Reversal Stream" skillId="10103" skillLvl="7" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Reversal Stream" skillId="10103" skillLvl="7" getLevel="107" levelUpSp="2525422932">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Summon Othellot Cubic" skillId="10073" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
@@ -379,6 +391,13 @@
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
+
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Magic Resistance" skillId="10004" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
@@ -389,7 +408,9 @@
 		<skill skillName="Shield Impact" skillId="10011" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Maelstrom" skillId="19555" skillLvl="7" getLevel="109" levelUpSp="7273218046" />
-		<skill skillName="Reversal Stream" skillId="10103" skillLvl="8" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Reversal Stream" skillId="10103" skillLvl="8" getLevel="109" levelUpSp="7273218046">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Summon Spirit Hawk Cubic" skillId="10092" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Summon Othellot Cubic" skillId="10073" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
@@ -398,6 +419,12 @@
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 
+		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Magic Resistance" skillId="10004" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Protection of Faith" skillId="10019" skillLvl="7" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Guardian's Frenzy" skillId="10100" skillLvl="5" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="9" getLevel="110" levelUpSp="17455723311" />

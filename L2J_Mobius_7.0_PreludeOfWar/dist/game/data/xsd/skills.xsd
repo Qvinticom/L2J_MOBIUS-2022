@@ -2542,6 +2542,9 @@
 											<xs:element maxOccurs="unbounded" name="effect">
 												<xs:complexType>
 													<xs:sequence minOccurs="0">
+														<xs:element minOccurs="0" name="SWORD" type="xs:byte" />
+														<xs:element minOccurs="0" name="BLUNT" type="xs:byte" />
+														<xs:element minOccurs="0" name="DUAL" type="xs:byte" />
 														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="fullLethal" type="xs:unsignedByte" />
@@ -2680,6 +2683,9 @@
 															<xs:element name="allowNormalAttack" type="xs:boolean" />
 															<xs:element name="targetType" type="xs:string" />
 															<xs:element name="affectScope" type="xs:string" />
+															<xs:element name="SWORD" type="xs:byte" />
+															<xs:element name="BLUNT" type="xs:byte" />
+															<xs:element name="DUAL" type="xs:byte" />
 														</xs:choice>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />

@@ -78,8 +78,7 @@
 			<removeSkill id="106" /> <!-- Veil -->
 		</skill>
 		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="1" getLevel="85" levelUpSp="5000" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="2" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Critical Wound" skillId="30786" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Blood Stab" skillId="10508" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="30" /> <!-- Backstab -->
 			<removeSkill id="321" /> <!-- Blinding Blow -->
@@ -181,7 +180,7 @@
 			<removeSkill id="260" /> <!-- Hammer Crush -->
 		</skill>
 		<skill skillName="Reverse Plunder" skillId="19309" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="3" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Critical Wound" skillId="30786" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Blood Stab" skillId="10508" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Final Ultimate Evasion" skillId="10520" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Throw Dagger" skillId="10539" skillLvl="4" getLevel="90" levelUpSp="370000" />
@@ -235,7 +234,7 @@
 		<skill skillName="Reverse Plunder" skillId="19309" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Barrage of Nails" skillId="10513" skillLvl="5" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Counter Stance" skillId="10524" skillLvl="2" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="4" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Critical Wound" skillId="30786" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Final Ultimate Evasion" skillId="10520" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Shadow Dash" skillId="10525" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -281,7 +280,7 @@
 		<skill skillName="Reverse Plunder" skillId="19309" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Barrage of Nails" skillId="10513" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Counter Stance" skillId="10524" skillLvl="3" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="5" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Critical Wound" skillId="30786" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Final Ultimate Evasion" skillId="10520" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Shadow Chase" skillId="10516" skillLvl="6" getLevel="99" levelUpSp="5000000" />
@@ -313,7 +312,7 @@
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="1" getLevel="101" levelUpSp="211440000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Paralyzing Shadow" skillId="10514" skillLvl="6" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Shadow Chase" skillId="10516" skillLvl="7" getLevel="101" levelUpSp="211440000" />
@@ -343,7 +342,7 @@
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="2" getLevel="103" levelUpSp="608946501">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Paralyzing Shadow" skillId="10514" skillLvl="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Shadow Chase" skillId="10516" skillLvl="8" getLevel="103" levelUpSp="608946501" />
@@ -373,7 +372,7 @@
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="3" getLevel="105" levelUpSp="1753765925">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 		<skill skillName="Paralyzing Shadow" skillId="10514" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Shadow Chase" skillId="10516" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
@@ -386,6 +385,13 @@
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
 		
 		<!-- Fafurion Updates -->
+		<skill skillName="Superior Dagger Mastery" skillId="10501" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Critical Mastery" skillId="10505" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10503" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Dual Dagger Mastery" skillId="10502" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Movement" skillId="10504" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+		<skill skillName="Superior Resistance" skillId="10552" skillLvl="8" getLevel="106" levelUpSp="2104519110" />
+
 		<skill skillName="Wild Plunder" skillId="10700" skillLvl="8" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Clone Attack" skillId="10532" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Reverse Plunder" skillId="19309" skillLvl="8" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
@@ -396,9 +402,11 @@
 		<skill skillName="Throw Dagger" skillId="10539" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="8" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="9" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
-		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="4" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
+		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="4" getLevel="107" levelUpSp="2525422932"> <!-- Update GRAND CRUSADE -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Paralyzing Shadow" skillId="10514" skillLvl="9" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
-		<skill skillName="Shadow Chase" skillId="10516" skillLvl="10" getLevel="109" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
+		<skill skillName="Shadow Chase" skillId="10516" skillLvl="10" getLevel="107" levelUpSp="2525422932" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Heart Breaker" skillId="10509" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Shadow Dash" skillId="10525" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Shadow Flash" skillId="10529" skillLvl="5" getLevel="107" levelUpSp="2525422932" />
@@ -406,6 +414,13 @@
 		<skill skillName="Chain Blow" skillId="10510" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Poison Swarm" skillId="10522" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
+
+		<skill skillName="Superior Dagger Mastery" skillId="10501" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Critical Mastery" skillId="10505" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10503" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Dual Dagger Mastery" skillId="10502" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Movement" skillId="10504" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
+		<skill skillName="Superior Resistance" skillId="10552" skillLvl="9" getLevel="108" levelUpSp="6061015038" />
 
 		<skill skillName="Wild Plunder" skillId="10700" skillLvl="9" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Clone Attack" skillId="10532" skillLvl="9" getLevel="109" levelUpSp="7273218046" />
@@ -417,7 +432,9 @@
 		<skill skillName="Throw Dagger" skillId="10539" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Flash Bluff" skillId="10554" skillLvl="9" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="10" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
-		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="5" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
+		<skill skillName="Dwarven Flare Bluff" skillId="19311" skillLvl="5" getLevel="109" levelUpSp="7273218046"> <!-- Update GRAND CRUSADE -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Paralyzing Shadow" skillId="10514" skillLvl="10" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Shadow Chase" skillId="10516" skillLvl="11" getLevel="109" levelUpSp="7273218046" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Heart Breaker" skillId="10509" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
@@ -428,6 +445,13 @@
 		<skill skillName="Poison Swarm" skillId="10522" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
 		
+		<skill skillName="Superior Dagger Mastery" skillId="10501" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Critical Mastery" skillId="10505" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10503" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Dual Dagger Mastery" skillId="10502" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Movement" skillId="10504" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Superior Resistance" skillId="10552" skillLvl="10" getLevel="110" levelUpSp="17455723311" />
+
 		<!-- Dual Maximum HP -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="0" />
