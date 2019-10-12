@@ -64,7 +64,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 		}
 		if (!canChange)
 		{
-			LOGGER.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + ".");
+			LOGGER.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + "!");
 			return;
 		}
 		
