@@ -91,7 +91,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			packet.writeD(0); // race
 			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
 			packet.writeD(0);
-			packet.writeC(m.getOnlineStatus());
+			packet.writeC(0);
 		}
 		return true;
 	}

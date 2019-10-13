@@ -90,9 +90,6 @@ import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMa
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasterySet;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillActivate;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillInfo;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRGamePoint;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresentBuyProduct;
@@ -395,9 +392,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_TODO_LIST_HTML(0x11F, null, ConnectionState.IN_GAME),
 	REQUEST_ONE_DAY_REWARD_RECEIVE(0x120, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET(0x121, null, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_OPEN(0x122, RequestPledgeBonusOpen::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x123, RequestPledgeBonusRewardList::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD(0x124, RequestPledgeBonusReward::new, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_OPEN(0x122, null, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x123, null, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_REWARD(0x124, null, ConnectionState.IN_GAME),
 	REQUEST_SSO_AUTHN_TOKEN(0x125, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET_LOGIN(0x126, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_MEMO_INFO(0x127, null, ConnectionState.IN_GAME),

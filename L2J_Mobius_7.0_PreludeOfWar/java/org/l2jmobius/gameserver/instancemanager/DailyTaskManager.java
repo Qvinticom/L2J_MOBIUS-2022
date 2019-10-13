@@ -62,7 +62,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	@ScheduleTarget
 	private void onReset()
 	{
-		resetClanBonus();
 		resetExtendDrop();
 		resetDailyMissionRewards();
 		resetDailySkills();
@@ -139,12 +138,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
 		}
 		LOGGER.info("Vitality resetted");
-	}
-	
-	private void resetClanBonus()
-	{
-		ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
-		LOGGER.info("Daily clan bonus has been resetted.");
 	}
 	
 	private void resetExtendDrop()

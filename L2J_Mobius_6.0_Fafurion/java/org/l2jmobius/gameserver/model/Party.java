@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
-import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -887,16 +886,6 @@ public class Party extends AbstractPlayerGroup
 				exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
 				if (exp > 0)
 				{
-					final Clan clan = member.getClan();
-					if (clan != null)
-					{
-						double finalExp = exp;
-						if (target.useVitalityRate())
-						{
-							finalExp *= member.getStat().getExpBonusMultiplier();
-						}
-						clan.addHuntingPoints(member, target, finalExp);
-					}
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
 					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
 				}

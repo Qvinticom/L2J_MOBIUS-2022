@@ -545,8 +545,6 @@ public class PlayerInstance extends Playable
 	/** Recommendation Two Hours bonus **/
 	protected boolean _recoTwoHoursGiven = false;
 	
-	private ScheduledFuture<?> _onlineTimeUpdateTask;
-	
 	private final PlayerInventory _inventory = new PlayerInventory(this);
 	private final PlayerFreight _freight = new PlayerFreight(this);
 	private PlayerWarehouse _warehouse;
@@ -5344,7 +5342,6 @@ public class PlayerInstance extends Playable
 		stopChargeTask();
 		stopFameTask();
 		stopRecoGiveTask();
-		stopOnlineTimeUpdateTask();
 	}
 	
 	@Override
@@ -6724,7 +6721,6 @@ public class PlayerInstance extends Playable
 			
 			player.loadRecommendations();
 			player.startRecoGiveTask();
-			player.startOnlineTimeUpdateTask();
 			
 			player.setOnlineStatus(true, false);
 			
@@ -13796,33 +13792,6 @@ public class PlayerInstance extends Playable
 			return MoveType.SITTING;
 		}
 		return super.getMoveType();
-	}
-	
-	private void startOnlineTimeUpdateTask()
-	{
-		if (_onlineTimeUpdateTask != null)
-		{
-			stopOnlineTimeUpdateTask();
-		}
-		
-		_onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
-	}
-	
-	private void updateOnlineTime()
-	{
-		if (_clan != null)
-		{
-			_clan.addMemberOnlineTime(this);
-		}
-	}
-	
-	private void stopOnlineTimeUpdateTask()
-	{
-		if (_onlineTimeUpdateTask != null)
-		{
-			_onlineTimeUpdateTask.cancel(true);
-			_onlineTimeUpdateTask = null;
-		}
 	}
 	
 	public GroupType getGroupType()

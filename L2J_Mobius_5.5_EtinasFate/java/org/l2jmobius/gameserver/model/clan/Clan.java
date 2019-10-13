@@ -45,14 +45,12 @@ import org.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanJoin;
@@ -82,7 +80,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeShowInfoUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -152,9 +149,6 @@ public class Clan implements IIdentifiable, INamable
 	private final AtomicInteger _siegeKills = new AtomicInteger();
 	private final AtomicInteger _siegeDeaths = new AtomicInteger();
 	
-	private ClanRewardBonus _lastMembersOnlineBonus = null;
-	private ClanRewardBonus _lastHuntingBonus = null;
-	
 	private final Collection<ScheduledFuture<?>> masterySkillTasks = ConcurrentHashMap.newKeySet();
 	
 	private volatile ClanVariables _vars;
@@ -169,18 +163,6 @@ public class Clan implements IIdentifiable, INamable
 		initializePrivs();
 		restore();
 		_warehouse.restore();
-		
-		final ClanRewardBonus availableOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(this);
-		if ((_lastMembersOnlineBonus == null) && (availableOnlineBonus != null))
-		{
-			_lastMembersOnlineBonus = availableOnlineBonus;
-		}
-		
-		final ClanRewardBonus availableHuntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
-		if ((_lastHuntingBonus == null) && (availableHuntingBonus != null))
-		{
-			_lastHuntingBonus = availableHuntingBonus;
-		}
 		
 		final int masteryTime19538 = getMasterySkillRemainingTime(19538);
 		if (masteryTime19538 > 0)
@@ -2723,112 +2705,6 @@ public class Clan implements IIdentifiable, INamable
 	public ClanWar getWarWith(int clanId)
 	{
 		return _atWarWith.get(clanId);
-	}
-	
-	public synchronized void addMemberOnlineTime(PlayerInstance player)
-	{
-		final ClanMember clanMember = getClanMember(player.getObjectId());
-		if (clanMember != null)
-		{
-			clanMember.setOnlineTime(clanMember.getOnlineTime() + (60 * 1000));
-			if (clanMember.getOnlineTime() == (30 * 60 * 1000))
-			{
-				broadcastToOnlineMembers(new PledgeShowMemberListUpdate(clanMember));
-			}
-		}
-		
-		final ClanRewardBonus availableBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(this);
-		if (availableBonus != null)
-		{
-			if (_lastMembersOnlineBonus == null)
-			{
-				_lastMembersOnlineBonus = availableBonus;
-				broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-			}
-			else if (_lastMembersOnlineBonus.getLevel() < availableBonus.getLevel())
-			{
-				_lastMembersOnlineBonus = availableBonus;
-				broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-			}
-		}
-		
-		final int currentMaxOnline = (int) _members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
-		if (getMaxOnlineMembers() < currentMaxOnline)
-		{
-			getVariables().set("MAX_ONLINE_MEMBERS", currentMaxOnline);
-		}
-	}
-	
-	/**
-	 * @param player
-	 * @param target
-	 * @param value
-	 */
-	public synchronized void addHuntingPoints(PlayerInstance player, Npc target, double value)
-	{
-		// TODO: Figure out the retail formula
-		final int points = (int) value / 29600;
-		if (points > 0)
-		{
-			getVariables().set("HUNTING_POINTS", getHuntingPoints() + points);
-			final ClanRewardBonus availableBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
-			if (availableBonus != null)
-			{
-				if (_lastHuntingBonus == null)
-				{
-					_lastHuntingBonus = availableBonus;
-					broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-				}
-				else if (_lastHuntingBonus.getLevel() < availableBonus.getLevel())
-				{
-					_lastHuntingBonus = availableBonus;
-					broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-				}
-			}
-		}
-	}
-	
-	public int getMaxOnlineMembers()
-	{
-		return getVariables().getInt("MAX_ONLINE_MEMBERS", 0);
-	}
-	
-	public int getHuntingPoints()
-	{
-		return getVariables().getInt("HUNTING_POINTS", 0);
-	}
-	
-	public int getPreviousMaxOnlinePlayers()
-	{
-		return getVariables().getInt("PREVIOUS_MAX_ONLINE_PLAYERS", 0);
-	}
-	
-	public int getPreviousHuntingPoints()
-	{
-		return getVariables().getInt("PREVIOUS_HUNTING_POINTS", 0);
-	}
-	
-	public boolean canClaimBonusReward(PlayerInstance player, ClanRewardType type)
-	{
-		final ClanMember clanMember = getClanMember(player.getObjectId());
-		return (clanMember != null) && (type.getAvailableBonus(this) != null) && !clanMember.isRewardClaimed(type);
-	}
-	
-	public void resetClanBonus()
-	{
-		// Save current state
-		getVariables().set("PREVIOUS_MAX_ONLINE_PLAYERS", getMaxOnlineMembers());
-		getVariables().set("PREVIOUS_HUNTING_POINTS", getHuntingPoints());
-		
-		// Reset
-		_members.values().forEach(ClanMember::resetBonus);
-		getVariables().remove("HUNTING_POINTS");
-		
-		// force store
-		getVariables().storeMe();
-		
-		// Send Packet
-		broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC_PACKET);
 	}
 	
 	public void addMastery(int id)

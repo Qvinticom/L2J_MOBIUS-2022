@@ -31,7 +31,6 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 	private final int _level;
 	private final int _classId;
 	private final int _objectId;
-	private final int _onlineStatus;
 	
 	public PledgeShowMemberListUpdate(PlayerInstance player)
 	{
@@ -45,7 +44,6 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		_classId = member.getClassId();
 		_objectId = member.isOnline() ? member.getObjectId() : 0;
 		_pledgeType = member.getPledgeType();
-		_onlineStatus = member.getOnlineStatus();
 	}
 	
 	@Override
@@ -61,7 +59,7 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		packet.writeD(_objectId);
 		packet.writeD(_pledgeType);
 		packet.writeD(0); // _hasSponsor
-		packet.writeC(_onlineStatus);
+		packet.writeC(0);
 		return true;
 	}
 }

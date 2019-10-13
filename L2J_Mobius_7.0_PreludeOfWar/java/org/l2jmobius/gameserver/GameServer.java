@@ -51,7 +51,6 @@ import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
-import org.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanShopData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
@@ -243,7 +242,6 @@ public class GameServer
 		SecondaryAuthData.getInstance();
 		CombinationItemsData.getInstance();
 		SayuneData.getInstance();
-		ClanRewardData.getInstance();
 		DailyMissionHandler.getInstance().executeScript();
 		DailyMissionData.getInstance();
 		

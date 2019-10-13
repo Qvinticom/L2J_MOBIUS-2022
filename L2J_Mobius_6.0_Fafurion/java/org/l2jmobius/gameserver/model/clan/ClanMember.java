@@ -23,12 +23,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * This class holds the clan members data.
@@ -50,7 +47,6 @@ public class ClanMember
 	private int _pledgeType;
 	private int _apprentice;
 	private int _sponsor;
-	private long _onlineTime;
 	
 	/**
 	 * Used to restore a clan member from the database.
@@ -816,49 +812,5 @@ public class ClanMember
 		{
 			LOGGER.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
 		}
-	}
-	
-	public long getOnlineTime()
-	{
-		return _onlineTime;
-	}
-	
-	public void setOnlineTime(long onlineTime)
-	{
-		_onlineTime = onlineTime;
-	}
-	
-	public void resetBonus()
-	{
-		_onlineTime = 0;
-		final PlayerVariables vars = getVariables();
-		vars.set("CLAIMED_CLAN_REWARDS", 0);
-		vars.storeMe();
-	}
-	
-	public int getOnlineStatus()
-	{
-		return !isOnline() ? 0 : _onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
-	}
-	
-	public boolean isRewardClaimed(ClanRewardType type)
-	{
-		final PlayerVariables vars = getVariables();
-		final int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
-		return (claimedRewards & type.getMask()) == type.getMask();
-	}
-	
-	public void setRewardClaimed(ClanRewardType type)
-	{
-		final PlayerVariables vars = getVariables();
-		int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
-		claimedRewards |= type.getMask();
-		vars.set("CLAIMED_CLAN_REWARDS", claimedRewards);
-		vars.storeMe();
-	}
-	
-	private PlayerVariables getVariables()
-	{
-		return _player != null ? _player.getVariables() : new PlayerVariables(_objectId);
 	}
 }
