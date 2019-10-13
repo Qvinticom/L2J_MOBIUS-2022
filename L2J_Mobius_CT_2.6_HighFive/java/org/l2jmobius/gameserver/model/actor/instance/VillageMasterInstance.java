@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -299,6 +300,12 @@ public class VillageMasterInstance extends NpcInstance
 				player.sendPacket(SystemMessageId.SUBCLASSES_MAY_NOT_BE_CREATED_OR_CHANGED_WHILE_A_SKILL_IS_IN_USE);
 				return;
 			}
+			
+			if (OlympiadManager.getInstance().isRegisteredInComp(player))
+			{
+				OlympiadManager.getInstance().unRegisterNoble(player);
+			}
+			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			// Subclasses may not be changed while a transformated state.
 			if (player.getTransformation() != null)

@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -64,6 +65,11 @@ public class ClassChange extends AbstractEffect
 				{
 					player.sendMessage("You cannot switch your class right now!");
 					return;
+				}
+				
+				if (OlympiadManager.getInstance().isRegisteredInComp(player))
+				{
+					OlympiadManager.getInstance().unRegisterNoble(player);
 				}
 				
 				final Skill identifyCrisis = SkillData.getInstance().getSkill(IDENTITY_CRISIS_SKILL_ID, 1);
