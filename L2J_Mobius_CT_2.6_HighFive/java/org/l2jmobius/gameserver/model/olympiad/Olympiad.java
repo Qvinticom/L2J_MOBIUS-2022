@@ -1166,7 +1166,7 @@ public class Olympiad extends ListenersContainer
 		return names;
 	}
 	
-	public int getNoblessePasses(int objectId)
+	private int getNoblessePasses(int objectId)
 	{
 		if ((_period != 1) || NOBLES_RANK.isEmpty())
 		{
