@@ -77,20 +77,6 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		// Hack check. Doesn't apply to all Skill Types
-		final int prevSkillLevel = player.getSkillLevel(_id);
-		if ((prevSkillLevel > 0) && !((_skillType == AcquireSkillType.TRANSFER) || (_skillType == AcquireSkillType.SUBPLEDGE)))
-		{
-			if (prevSkillLevel == _level)
-			{
-				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + player.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
-			}
-			else if (prevSkillLevel != (_level - 1))
-			{
-				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + player.getName() + " is requesting info for skill Id: " + _id + " level " + _level + " without knowing it's previous level!");
-			}
-		}
-		
 		final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, player);
 		if (s == null)
 		{
