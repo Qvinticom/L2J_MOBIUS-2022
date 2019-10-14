@@ -293,6 +293,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ResistSkill", ResistSkill::new);
 		EffectHandler.getInstance().registerHandler("Restoration", Restoration::new);
 		EffectHandler.getInstance().registerHandler("RestorationRandom", RestorationRandom::new);
+		EffectHandler.getInstance().registerHandler("RestoreSymbolSeal", RestoreSymbolSeal::new);
 		EffectHandler.getInstance().registerHandler("Resurrection", Resurrection::new);
 		EffectHandler.getInstance().registerHandler("ResurrectionSpecial", ResurrectionSpecial::new);
 		EffectHandler.getInstance().registerHandler("Reuse", Reuse::new);

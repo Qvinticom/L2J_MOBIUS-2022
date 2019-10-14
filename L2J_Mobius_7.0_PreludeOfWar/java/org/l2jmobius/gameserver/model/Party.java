@@ -888,6 +888,14 @@ public class Party extends AbstractPlayerGroup
 				{
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
 					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
+					if (member.getSymbolSealPoints() > 0)
+					{
+						member.setSymbolSealPoints(member.getSymbolSealPoints() - Config.CONSUME_SYMBOL_SEAL_POINTS);
+						if (member.getSymbolSealPoints() == 0)
+						{
+							member.removeSymbolSealSkills();
+						}
+					}
 				}
 			}
 			else

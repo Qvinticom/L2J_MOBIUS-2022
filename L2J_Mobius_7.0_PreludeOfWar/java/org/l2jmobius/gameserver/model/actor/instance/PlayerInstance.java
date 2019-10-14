@@ -76,6 +76,7 @@ import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SymbolSealData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
@@ -598,6 +599,8 @@ public class PlayerInstance extends Playable
 	private final Henna[] _henna = new Henna[4];
 	private final Map<BaseStats, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
 	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(4);
+	
+	private static final String SYMBOL_POINTS_VAR = "SYMBOL_POINTS";
 	
 	/** The Pet of the PlayerInstance */
 	private PetInstance _pet = null;
@@ -6733,9 +6736,63 @@ public class PlayerInstance extends Playable
 		return player;
 	}
 	
-	/**
-	 * @return
-	 */
+	public void setSymbolSealPoints(int value)
+	{
+		getVariables().set(SYMBOL_POINTS_VAR, Math.min(value, Config.MAX_SYMBOL_SEAL_POINTS));
+	}
+	
+	public int getSymbolSealPoints()
+	{
+		return getVariables().getInt(SYMBOL_POINTS_VAR, 0);
+	}
+	
+	public void removeSymbolSealSkills()
+	{
+		final int classId = getClassId().getId();
+		if (((classId >= 148) && (classId <= 181)) || (classId == 188) || (classId == 189))
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				removeSkill(SymbolSealData.getInstance().getSkill(classId, i));
+			}
+		}
+	}
+	
+	public void updateSymbolSealSkills()
+	{
+		final int classId = getClassId().getId();
+		if (((classId >= 148) && (classId <= 181)) || (classId == 188) || (classId == 189))
+		{
+			removeSymbolSealSkills();
+			if (getSymbolSealPoints() > 0)
+			{
+				int usedSlots = 0;
+				switch (getHennaEmptySlots())
+				{
+					case 0:
+					{
+						usedSlots = 3;
+						break;
+					}
+					case 1:
+					{
+						usedSlots = 2;
+						break;
+					}
+					case 2:
+					{
+						usedSlots = 1;
+						break;
+					}
+				}
+				for (int i = 0; i < usedSlots; i++)
+				{
+					addSkill(SymbolSealData.getInstance().getSkill(classId, i));
+				}
+			}
+		}
+	}
+	
 	public Forum getMail()
 	{
 		if (_forumMail == null)
@@ -6752,17 +6809,11 @@ public class PlayerInstance extends Playable
 		return _forumMail;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMail(Forum forum)
 	{
 		_forumMail = forum;
 	}
 	
-	/**
-	 * @return
-	 */
 	public Forum getMemo()
 	{
 		if (_forumMemo == null)
@@ -6779,9 +6830,6 @@ public class PlayerInstance extends Playable
 		return _forumMemo;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMemo(Forum forum)
 	{
 		_forumMemo = forum;

@@ -989,7 +989,19 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39494" toLevel="1" name="Dye Powder">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestoreSymbolSeal">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39495" toLevel="1" name="For reducing the Dye Recharge Gauge speed">
 		<!-- Reduces the Dye Recharge Gauge's consumption rate -->

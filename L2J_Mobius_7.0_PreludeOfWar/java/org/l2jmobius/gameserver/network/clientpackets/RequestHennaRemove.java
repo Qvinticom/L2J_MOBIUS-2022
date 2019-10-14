@@ -62,6 +62,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 				if (player.getAdena() >= henna.getCancelFee())
 				{
 					player.removeHenna(i);
+					player.updateSymbolSealSkills();
 				}
 				else
 				{

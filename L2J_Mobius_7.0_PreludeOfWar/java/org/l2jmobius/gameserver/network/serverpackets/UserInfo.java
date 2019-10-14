@@ -324,8 +324,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getFame());
 			packet.writeD(_player.getRaidbossPoints());
 			packet.writeC(0x00); // 196
-			packet.writeC(0x00); // 196
-			packet.writeC(0x00); // 196
+			packet.writeH(_player.getSymbolSealPoints()); // Henna Seal Engraving Gauge
 			packet.writeC(0x00); // 196
 		}
 		

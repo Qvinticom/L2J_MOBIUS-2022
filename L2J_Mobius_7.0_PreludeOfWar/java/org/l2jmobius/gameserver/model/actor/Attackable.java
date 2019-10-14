@@ -507,6 +507,14 @@ public class Attackable extends Npc
 								{
 									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
 									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+									if (attacker.getSymbolSealPoints() > 0)
+									{
+										attacker.setSymbolSealPoints(attacker.getSymbolSealPoints() - Config.CONSUME_SYMBOL_SEAL_POINTS);
+										if (attacker.getSymbolSealPoints() == 0)
+										{
+											attacker.removeSymbolSealSkills();
+										}
+									}
 								}
 							}
 						}

@@ -108,6 +108,7 @@ import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSiegeSide;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSouls;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerState;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSubclass;
+import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSymbolSealPoints;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerTransformationId;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerVehicleMounted;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerWeight;
@@ -893,6 +894,12 @@ public abstract class DocumentBase
 				{
 					final int count = Integer.decode(getValue(a.getNodeValue(), null));
 					cond = joinAnd(cond, new ConditionMinimumVitalityPoints(count));
+					break;
+				}
+				case "symbolsealpoints":
+				{
+					final int points = Integer.decode(getValue(a.getNodeValue(), template));
+					cond = joinAnd(cond, new ConditionPlayerSymbolSealPoints(points));
 					break;
 				}
 			}

@@ -785,6 +785,8 @@ public class Config
 	public static int PVP_PVP_TIME;
 	public static int MAX_REPUTATION;
 	public static int REPUTATION_INCREASE;
+	public static int MAX_SYMBOL_SEAL_POINTS;
+	public static int CONSUME_SYMBOL_SEAL_POINTS;
 	
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
@@ -1762,6 +1764,8 @@ public class Config
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
 			RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
+			MAX_SYMBOL_SEAL_POINTS = Character.getInt("MaxSymbolSealPoints", 7800);
+			CONSUME_SYMBOL_SEAL_POINTS = Character.getInt("ConsumeSymbolSealPoints", 1);
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
 			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);

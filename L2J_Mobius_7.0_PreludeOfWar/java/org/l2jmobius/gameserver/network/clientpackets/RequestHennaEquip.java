@@ -98,6 +98,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			iu.addModifiedItem(player.getInventory().getAdenaInstance());
 			player.sendInventoryUpdate(iu);
 			player.sendPacket(new HennaEquipList(player));
+			player.updateSymbolSealSkills();
 			player.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
 		}
 		else

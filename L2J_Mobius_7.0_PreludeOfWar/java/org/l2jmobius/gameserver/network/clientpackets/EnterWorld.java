@@ -612,6 +612,8 @@ public class EnterWorld implements IClientIncomingPacket
 			OfflineTradersTable.onTransaction(player, true, false);
 		}
 		
+		player.updateSymbolSealSkills();
+		
 		player.broadcastUserInfo();
 		
 		if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType()))

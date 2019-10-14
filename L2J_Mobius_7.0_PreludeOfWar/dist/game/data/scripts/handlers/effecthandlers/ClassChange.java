@@ -84,6 +84,7 @@ public class ClassChange extends AbstractEffect
 				msg.addClassId(player.getClassId().getId());
 				player.sendPacket(msg);
 				
+				player.updateSymbolSealSkills();
 				player.broadcastUserInfo();
 				player.sendPacket(new AcquireSkillList(player));
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
