@@ -5371,8 +5371,8 @@ public class SystemMessageId
 	@ClientString(id = 1775, message = "Clan member $c1 was an active member of the highest-ranked party in the Festival of Darkness. $s2 points have been added to your clan's reputation score.")
 	public static SystemMessageId CLAN_MEMBER_C1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE;
 	
-	@ClientString(id = 1776, message = "Clan member $c1 was named a hero. $2s points have been added to your clan's reputation score.")
-	public static SystemMessageId CLAN_MEMBER_C1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE;
+	@ClientString(id = 1776, message = "Clan member $c1 was named a hero. $s2 points have been added to your clan's reputation score.")
+	public static SystemMessageId CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE;
 	
 	@ClientString(id = 1777, message = "You have successfully completed a clan quest. $s1 points have been added to your clan's reputation score.")
 	public static SystemMessageId YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE;
