@@ -695,7 +695,24 @@ public class Olympiad extends ListenersContainer
 	private long setNewCompBegin()
 	{
 		_compStart = Calendar.getInstance();
-		final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+		
+		int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
+		_compStart.set(Calendar.MINUTE, COMP_MIN);
+		
+		// Today's competitions ended, start checking from next day.
+		if (currentDay == _compStart.get(Calendar.DAY_OF_WEEK))
+		{
+			if (currentDay == Calendar.SATURDAY)
+			{
+				currentDay = Calendar.SUNDAY;
+			}
+			else
+			{
+				currentDay++;
+			}
+		}
+		
 		boolean dayFound = false;
 		int dayCounter = 0;
 		for (int i = currentDay; i < 8; i++)
@@ -722,8 +739,6 @@ public class Olympiad extends ListenersContainer
 		{
 			_compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
 		}
-		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
-		_compStart.set(Calendar.MINUTE, COMP_MIN);
 		_compStart.add(Calendar.HOUR_OF_DAY, 24);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
 		
