@@ -30,17 +30,13 @@ import org.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExHeroList;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -234,14 +230,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						if (passes > 0)
 						{
 							player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_PASSES_VAR);
-							final ItemInstance item = player.getInventory().addItem("Olympiad", GATE_PASS, passes * Config.ALT_OLY_GP_PER_POINT, player, target);
-							final InventoryUpdate iu = new InventoryUpdate();
-							iu.addModifiedItem(item);
-							player.sendPacket(iu);
-							final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-							sm.addLong(passes);
-							sm.addItemName(item);
-							player.sendPacket(sm);
+							player.addItem("Olympiad", GATE_PASS, passes * Config.ALT_OLY_GP_PER_POINT, player, true);
 						}
 						break;
 					}
