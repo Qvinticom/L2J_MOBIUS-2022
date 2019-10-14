@@ -20,12 +20,9 @@
 	<skill id="30602" toLevel="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate +1%. -->
 		<icon>icon.icon_lender</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<skillId>30603</skillId> <!-- Eviscerator Force -->
@@ -66,12 +63,9 @@
 	<skill id="30605" toLevel="1" name="Sayha's Seer Force">
 		<!-- M. Skill Critical Rate +1%. -->
 		<icon>icon.icon_Er_wizard</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<skillId>30606</skillId> <!-- Sayha's Seer Force -->

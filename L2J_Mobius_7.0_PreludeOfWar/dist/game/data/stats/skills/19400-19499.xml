@@ -851,19 +851,19 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">14608</value>
-					<value level="2">15776</value>
-					<value level="3">16944</value>
-					<value level="4">18112</value>
-					<value level="5">19280</value>
-					<value level="6">20448</value>
-					<value level="7">21616</value>
-					<value level="8">22784</value>
-					<value level="9">28162</value>
-					<value level="10">29386</value>
-					<value level="11">30610</value>
-					<value level="12">31907</value>
-					<value level="13">33204</value>
+					<value level="1">15338</value>
+					<value level="2">16564</value>
+					<value level="3">17791</value>
+					<value level="4">19017</value>
+					<value level="5">20244</value>
+					<value level="6">21470</value>
+					<value level="7">22696</value>
+					<value level="8">23923</value>
+					<value level="9">29570</value>
+					<value level="10">30855</value>
+					<value level="11">32140</value>
+					<value level="12">33502</value>
+					<value level="13">34864</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
@@ -931,15 +931,15 @@
 		<effects>
 			<effect name="MAtk">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">9</value>
-					<value level="5">10</value>
-					<value level="6">11</value>
-					<value level="7">13</value>
-					<value level="8">15</value>
-					<value level="9">17</value>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">17</value>
+					<value level="5">18</value>
+					<value level="6">19</value>
+					<value level="7">21</value>
+					<value level="8">23</value>
+					<value level="9">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1235,19 +1235,31 @@
 		<reuseDelay>8000</reuseDelay>
 		<effects>
 			<effect name="PAtk">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1270,7 +1282,7 @@
 			<value level="12">12</value>
 			<value level="13">13</value>
 		</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
+		<abnormalTime>12</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="13">99</value>
@@ -1296,19 +1308,19 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">51</value>
-			<value level="3">53</value>
-			<value level="4">55</value>
-			<value level="5">57</value>
-			<value level="6">59</value>
-			<value level="7">60</value>
-			<value level="8">62</value>
-			<value level="9">64</value>
-			<value level="10">66</value>
-			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
+			<value level="1">146</value>
+			<value level="2">150</value>
+			<value level="3">156</value>
+			<value level="4">160</value>
+			<value level="5">166</value>
+			<value level="6">172</value>
+			<value level="7">176</value>
+			<value level="8">182</value>
+			<value level="9">188</value>
+			<value level="10">194</value>
+			<value level="11">200</value>
+			<value level="12">206</value>
+			<value level="13">212</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
@@ -1328,23 +1340,29 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>TRIAD</type>
+				<level>3</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">14608</value>
-					<value level="2">15776</value>
-					<value level="3">16944</value>
-					<value level="4">18112</value>
-					<value level="5">19280</value>
-					<value level="6">20448</value>
-					<value level="7">21616</value>
-					<value level="8">22784</value>
-					<value level="9">28162</value>
-					<value level="10">29386</value>
-					<value level="11">30610</value>
-					<value level="12">31907</value>
-					<value level="13">33204</value>
+					<value level="1">24336</value>
+					<value level="2">25310</value>
+					<value level="3">27256</value>
+					<value level="4">29203</value>
+					<value level="5">31150</value>
+					<value level="6">33097</value>
+					<value level="7">35043</value>
+					<value level="8">36990</value>
+					<value level="9">39910</value>
+					<value level="10">41857</value>
+					<value level="11">43803</value>
+					<value level="12">45867</value>
+					<value level="13">47930</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
@@ -1373,12 +1391,18 @@
 		</effects>
 		<selfEffects>
 			<effect name="Reuse">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
-				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="DispelBySlotMyself">
 				<dispel>TRIAD</dispel>
@@ -1403,9 +1427,7 @@
 			<value level="12">12</value>
 			<value level="13">13</value>
 		</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>100</activateRate>
 		<castRange>200</castRange>
 		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
@@ -1426,22 +1448,21 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">51</value>
-			<value level="3">53</value>
-			<value level="4">55</value>
-			<value level="5">57</value>
-			<value level="6">59</value>
-			<value level="7">60</value>
-			<value level="8">62</value>
-			<value level="9">64</value>
-			<value level="10">66</value>
-			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
+			<value level="1">130</value>
+			<value level="2">132</value>
+			<value level="3">136</value>
+			<value level="4">142</value>
+			<value level="5">146</value>
+			<value level="6">150</value>
+			<value level="7">156</value>
+			<value level="8">160</value>
+			<value level="9">164</value>
+			<value level="10">168</value>
+			<value level="11">172</value>
+			<value level="12">176</value>
+			<value level="13">180</value>
 		</mpConsume>
-		<operateType>A2</operateType>
-		<nextAction>ATTACK</nextAction>
+		<operateType>DA3</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -1449,6 +1470,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1457,6 +1479,16 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
+			</condition>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>400</range>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>TRIAD</type>
+				<level>3</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
@@ -1483,28 +1515,8 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 		<selfEffects>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
 				<skillLevel>1</skillLevel>
@@ -1513,6 +1525,46 @@
 				<dispel>TRIAD</dispel>
 			</effect>
 		</selfEffects>
+		<pveEffects>
+			<effect name="CallSkill">
+				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
+			</effect>
+		</pveEffects>
+		<pvpEffects>
+			<effect name="CallSkill">
+				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
+			</effect>
+		</pvpEffects>
 	</skill>
 	<skill id="19435" toLevel="5" name="Spectral Slash">
 		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2 -->
@@ -1655,19 +1707,19 @@
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">27268</value>
-					<value level="2">28358</value>
-					<value level="3">30538</value>
-					<value level="4">32718</value>
-					<value level="5">34898</value>
-					<value level="6">37078</value>
-					<value level="7">39258</value>
-					<value level="8">41438</value>
-					<value level="9">44708</value>
-					<value level="10">46888</value>
-					<value level="11">49068</value>
-					<value level="12">51379</value>
-					<value level="13">53690</value>
+					<value level="1">28631</value>
+					<value level="2">29775</value>
+					<value level="3">32064</value>
+					<value level="4">34353</value>
+					<value level="5">36642</value>
+					<value level="6">38931</value>
+					<value level="7">41220</value>
+					<value level="8">43509</value>
+					<value level="9">46943</value>
+					<value level="10">49232</value>
+					<value level="11">51521</value>
+					<value level="12">53947</value>
+					<value level="13">56374</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
@@ -2157,11 +2209,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>15</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>15</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2248,19 +2300,19 @@
 			</effect>
 			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">21642</value>
-					<value level="2">22507</value>
-					<value level="3">24237</value>
-					<value level="4">25967</value>
-					<value level="5">27697</value>
-					<value level="6">29427</value>
-					<value level="7">31157</value>
-					<value level="8">32887</value>
-					<value level="9">40673</value>
-					<value level="10">42657</value>
-					<value level="11">44641</value>
-					<value level="12">46744</value>
-					<value level="13">48847</value>
+					<value level="1">22724</value>
+					<value level="2">23632</value>
+					<value level="3">25448</value>
+					<value level="4">27265</value>
+					<value level="5">29081</value>
+					<value level="6">30898</value>
+					<value level="7">32714</value>
+					<value level="8">34531</value>
+					<value level="9">42706</value>
+					<value level="10">44789</value>
+					<value level="11">46873</value>
+					<value level="12">49081</value>
+					<value level="13">51289</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>

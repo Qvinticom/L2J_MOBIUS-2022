@@ -1861,19 +1861,19 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="8" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1969,19 +1969,19 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="3" toLevel="8" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
+					<value fromLevel="3" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2116,21 +2116,21 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
-			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="9">6</value>
+			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">188</value>
-					<value level="2">202</value>
-					<value level="3">215</value>
-					<value level="4">227</value>
-					<value level="5">242</value>
-					<value level="6">248</value>
-					<value level="7">254</value>
-					<value level="8">266</value>
-					<value level="9">278</value>
+					<value level="1">244</value>
+					<value level="2">262</value>
+					<value level="3">279</value>
+					<value level="4">295</value>
+					<value level="5">314</value>
+					<value level="6">322</value>
+					<value level="7">330</value>
+					<value level="8">345</value>
+					<value level="9">361</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1005">{base + (base / 100 * (1 + 0.4 * (subIndex - 1)))}</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1006" toSubLevel="1006">{base + (base / 100 * (2 + 0.8 * (subIndex - 5)))}</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1007" toSubLevel="1007">{base + (base / 100 * (3 + 0.3 * (subIndex - 6)))}</value>
@@ -2292,33 +2292,35 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
-			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="9">6</value>
+			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">188</value>
-					<value level="2">202</value>
-					<value level="3">215</value>
-					<value level="4">227</value>
-					<value level="5">242</value>
-					<value level="6">248</value>
-					<value level="7">254</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1005">{base + (base / 100 * (1 + 0.4 * (subIndex - 1)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1006" toSubLevel="1006">{base + (base / 100 * (2 + 0.8 * (subIndex - 5)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1007" toSubLevel="1007">{base + (base / 100 * (3 + 0.3 * (subIndex - 6)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1008" toSubLevel="1008">{base + (base / 100 * (3 + 0.3 * (subIndex - 7)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1009" toSubLevel="1011">{base + (base / 100 * (4 + 0.4 * (subIndex - 8)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1012" toSubLevel="1012">{base + (base / 100 * (5 + 0.1 * (subIndex - 11)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1013" toSubLevel="1013">{base + (base / 100 * (5 + 0.5 * (subIndex - 12)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1014" toSubLevel="1014">{base + (base / 100 * (5 + 0.9 * (subIndex - 13)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1015" toSubLevel="1015">{base + (base / 100 * (6 + 0.2 * (subIndex - 14)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1016" toSubLevel="1016">{base + (base / 100 * (6 + 0.6 * (subIndex - 15)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1017" toSubLevel="1017">{base + (base / 100 * (7 + 0.2 * (subIndex - 16)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + (base / 100 * (7 + 0.4 * (subIndex - 17)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + (base / 100 * (7 + 0.7 * (subIndex - 18)))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
+					<value level="1">244</value>
+					<value level="2">262</value>
+					<value level="3">279</value>
+					<value level="4">295</value>
+					<value level="5">314</value>
+					<value level="6">322</value>
+					<value level="7">330</value>
+					<value level="8">345</value>
+					<value level="9">361</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1005">{base + (base / 100 * (1 + 0.4 * (subIndex - 1)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1006" toSubLevel="1006">{base + (base / 100 * (2 + 0.8 * (subIndex - 5)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1007" toSubLevel="1007">{base + (base / 100 * (3 + 0.3 * (subIndex - 6)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1008" toSubLevel="1008">{base + (base / 100 * (3 + 0.3 * (subIndex - 7)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1009" toSubLevel="1011">{base + (base / 100 * (4 + 0.4 * (subIndex - 8)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1012" toSubLevel="1012">{base + (base / 100 * (5 + 0.1 * (subIndex - 11)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1013" toSubLevel="1013">{base + (base / 100 * (5 + 0.5 * (subIndex - 12)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1014" toSubLevel="1014">{base + (base / 100 * (5 + 0.9 * (subIndex - 13)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1015" toSubLevel="1015">{base + (base / 100 * (6 + 0.2 * (subIndex - 14)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1016" toSubLevel="1016">{base + (base / 100 * (6 + 0.6 * (subIndex - 15)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1017" toSubLevel="1017">{base + (base / 100 * (7 + 0.2 * (subIndex - 16)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1018" toSubLevel="1018">{base + (base / 100 * (7 + 0.4 * (subIndex - 17)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1019" toSubLevel="1019">{base + (base / 100 * (7 + 0.7 * (subIndex - 18)))}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
 				</power>
 			</effect>
 		</effects>
@@ -2432,15 +2434,15 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">188</value>
-					<value level="2">202</value>
-					<value level="3">215</value>
-					<value level="4">227</value>
-					<value level="5">242</value>
-					<value level="6">248</value>
-					<value level="7">254</value>
-					<value level="8">266</value>
-					<value level="9">278</value>
+					<value level="1">244</value>
+					<value level="2">262</value>
+					<value level="3">279</value>
+					<value level="4">295</value>
+					<value level="5">314</value>
+					<value level="6">322</value>
+					<value level="7">330</value>
+					<value level="8">345</value>
+					<value level="9">361</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1005">{base + (base / 100 * (1 + 0.4 * (subIndex - 1)))}</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1006" toSubLevel="1006">{base + (base / 100 * (2 + 0.8 * (subIndex - 5)))}</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="1007" toSubLevel="1007">{base + (base / 100 * (3 + 0.3 * (subIndex - 6)))}</value>
@@ -4284,12 +4286,12 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">249</value>
-					<value level="2">256</value>
-					<value level="3">264</value>
-					<value level="4">272</value>
-					<value level="5">284</value>
-					<value level="6">296</value>
+					<value level="1">323</value>
+					<value level="2">332</value>
+					<value level="3">343</value>
+					<value level="4">353</value>
+					<value level="5">369</value>
+					<value level="6">384</value>
 					<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 			</effect>
@@ -4375,12 +4377,12 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">249</value>
-					<value level="2">256</value>
-					<value level="3">264</value>
-					<value level="4">272</value>
-					<value level="5">284</value>
-					<value level="6">296</value>
+					<value level="1">323</value>
+					<value level="2">332</value>
+					<value level="3">343</value>
+					<value level="4">353</value>
+					<value level="5">369</value>
+					<value level="6">384</value>
 					<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 			</effect>

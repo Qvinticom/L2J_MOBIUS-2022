@@ -680,12 +680,9 @@
 	<skill id="1927" toLevel="1" name="Sigel Aura">
 		<!-- Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
 		<icon>icon.icon_sigel</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
-		<toggleGroupId>0</toggleGroupId>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Sigel Force -->
@@ -730,15 +727,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1929" toLevel="1" name="Tyrr Aura">
+	<skill id="1929" toLevel="1" name="Tyrr Force">
 		<!-- Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
 		<icon>icon.icon_tir</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
-		<toggleGroupId>0</toggleGroupId>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Tyrr Force -->
@@ -774,15 +768,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1931" toLevel="1" name="Othell Aura">
+	<skill id="1931" toLevel="1" name="Othell Force">
 		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
 		<icon>icon.icon_othel</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
-		<operateType>AU</operateType>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Othell Force -->
@@ -818,15 +809,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1933" toLevel="1" name="Yul Aura">
+	<skill id="1933" toLevel="1" name="Yul Force">
 		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
 		<icon>icon.icon_yr</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Yul Force -->
@@ -862,15 +850,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1935" toLevel="1" name="Feoh Aura">
+	<skill id="1935" toLevel="1" name="Feoh Force">
 		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
 		<icon>icon.icon_feoh</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
-		<operateType>AU</operateType>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Feoh Force -->
@@ -906,15 +891,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1937" toLevel="1" name="Wynn Aura">
+	<skill id="1937" toLevel="1" name="Wynn Force">
 		<!-- Casts Wynn Force on entire party, which decreases P./ M. Skill MP Consumption by 3%. -->
 		<icon>icon.icon_wynn</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Wynn Force -->
@@ -956,15 +938,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1939" toLevel="1" name="Aeore Aura">
+	<skill id="1939" toLevel="1" name="Aeore Force">
 		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
 		<icon>icon.icon_eolh</icon>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>0</toggleGroupId>
 		<magicLvl>85</magicLvl>
-		<operateType>AU</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>3</isMagic>
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Aeore Force -->

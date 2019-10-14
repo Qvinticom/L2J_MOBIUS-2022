@@ -9,7 +9,7 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 		</magicLvl>
-		<operateType>T</operateType>
+		<operateType>AU</operateType>
 		<isMagic>6</isMagic>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
@@ -17,35 +17,37 @@
 		<effectPoint>2</effectPoint>
 		<mpConsume>20</mpConsume>
 		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
-			<effect name="PveMagicalSkillDamageBonus">
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
 				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
+					<value level="1">100</value>
+					<value level="2">130</value>
+					<value level="3">150</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -517,16 +519,24 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<isCritical>false</isCritical>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
-				<skillId>10284</skillId> <!-- Lightning Force -->
-				<skillLevel>1</skillLevel>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+					<value level="6">30</value>
+					<value level="7">30</value>
+					<value level="8">32</value>
+					<value level="9">33</value>
+					<value level="10">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2195,7 +2205,7 @@
 	</skill>
 	<skill id="10280" toLevel="1" name="Momentum Charge">
 		<!-- Continuously consumes HP to produce Momentum. -->
-		<icon>icon.skill10283</icon>
+		<icon>icon.skill10280</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
@@ -2311,7 +2321,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="FocusMomentum">
-				<maxCharges>15</maxCharges>
+				<maxCharges>10</maxCharges>
 			</effect>
 		</effects>
 	</skill>

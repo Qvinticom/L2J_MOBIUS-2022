@@ -499,6 +499,7 @@
 		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalVisualEffect>STORM_SIGN2</abnormalVisualEffect>
 		<operateType>A2</operateType>
+		<activateRate>10</activateRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -787,20 +788,20 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
-					<value level="4">40</value>
-					<value level="5">50</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+					<value level="5">100</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
-					<value level="4">40</value>
-					<value level="5">50</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+					<value level="5">100</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1298,6 +1299,11 @@
 				<AIRBIND>90</AIRBIND>
 				<AGGRESSION>90</AGGRESSION>
 			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<DAGGER>10</DAGGER>
+				<BOW>10</BOW>
+				<DUALDAGGER>10</DUALDAGGER>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>30</amount>
 				<mode>PER</mode>
@@ -1359,6 +1365,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="MAtk" fromLevel="3" toLevel="5">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceMagicCriticalDamage">
 				<amount>
 					<value level="1">-15</value>
@@ -1370,7 +1380,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<chance>50</chance> <!-- Unconfirmed -->
+				<chance>30</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
 				<skillId>30026</skillId> <!-- Lightning Squall -->
@@ -1387,7 +1397,7 @@
 				<rate>100</rate>
 				<max>99</max>
 			</effect>
-			<effect name="Speed" fromLevel="2" toLevel="7">
+			<effect name="Speed" fromLevel="2" toLevel="5">
 				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1512,8 +1522,12 @@
 		</conditions>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>30002</skillId> <!-- Storm Sign -->
+				<skillId>30002</skillId> <!-- Storm Sign Lv.3 -->
 				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>30005</skillId> <!-- Storm Sign Lv.4 -->
+				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
 				<power>
@@ -1590,16 +1604,13 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceMagicCriticalDamage">
 				<amount>-50</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="TriggerSkillByDamage">
-				<chance>50</chance> <!-- Unconfirmed -->
-				<targetType>ENEMY</targetType>
-				<affectScope>SINGLE</affectScope>
-				<skillId>30027</skillId> <!-- Destructive Bolt -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="Speed">
 				<amount>70</amount>

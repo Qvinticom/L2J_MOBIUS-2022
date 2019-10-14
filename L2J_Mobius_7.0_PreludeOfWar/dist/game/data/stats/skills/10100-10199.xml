@@ -278,14 +278,14 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">33505</value>
-					<value level="2">34353</value>
-					<value level="3">35201</value>
-					<value level="4">36897</value>
-					<value level="5">38593</value>
-					<value level="6">40289</value>
-					<value level="7">42087</value>
-					<value level="8">43885</value>
+					<value level="1">46907</value>
+					<value level="2">48094</value>
+					<value level="3">49281</value>
+					<value level="4">51655</value>
+					<value level="5">54030</value>
+					<value level="6">56404</value>
+					<value level="7">58921</value>
+					<value level="8">61439</value>
 					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
@@ -356,14 +356,14 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">18151</value>
-					<value level="2">18641</value>
-					<value level="3">19131</value>
-					<value level="4">20111</value>
-					<value level="5">21091</value>
-					<value level="6">22071</value>
-					<value level="7">23110</value>
-					<value level="8">24149</value>
+					<value level="1">25411</value>
+					<value level="2">26097</value>
+					<value level="3">26783</value>
+					<value level="4">28155</value>
+					<value level="5">29527</value>
+					<value level="6">30899</value>
+					<value level="7">32354</value>
+					<value level="8">33808</value>
 					<value fromLevel="3" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 			</effect>
