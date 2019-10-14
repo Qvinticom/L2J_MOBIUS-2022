@@ -247,7 +247,7 @@ public class Say2 implements IClientIncomingPacket
 			}
 			final int id = Integer.parseInt(result.toString());
 			final WorldObject item = World.getInstance().findObject(id);
-			if (item.isItem())
+			if (item instanceof ItemInstance)
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
 				{
@@ -258,7 +258,6 @@ public class Say2 implements IClientIncomingPacket
 			}
 			else
 			{
-				LOGGER.info(owner.getClient() + " trying publish object which is not item! Object:" + item);
 				return false;
 			}
 			pos1 = _text.indexOf(8, pos) + 1;
