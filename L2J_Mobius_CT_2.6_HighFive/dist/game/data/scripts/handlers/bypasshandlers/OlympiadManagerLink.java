@@ -234,7 +234,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						if (passes > 0)
 						{
 							player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_PASSES_VAR);
-							final ItemInstance item = player.getInventory().addItem("Olympiad", GATE_PASS, passes, player, target);
+							final ItemInstance item = player.getInventory().addItem("Olympiad", GATE_PASS, passes * Config.ALT_OLY_GP_PER_POINT, player, target);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(item);
 							player.sendPacket(iu);
