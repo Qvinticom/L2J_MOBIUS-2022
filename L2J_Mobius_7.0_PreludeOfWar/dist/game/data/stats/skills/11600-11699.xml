@@ -3,7 +3,7 @@
 	<skill id="11600" toLevel="1" name="Combat Frenzy">
 		<!-- For 5 minutes, clan members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and Magic Cancel Rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11600_2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -21,10 +21,6 @@
 		<effectPoint>687</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 		<effects>
-			<effect name="MaxHp">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
 				<rate>100</rate>
@@ -32,29 +28,24 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
+			<effect name="MaxHp">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>20</amount>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>33</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>53</amount>
+				<amount>-40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="VampiricAttack">
-				<amount>9</amount>
+				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
 		</effects>
@@ -63,7 +54,7 @@
 		<!-- For 5 minutes, nearby clan members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, Skill Cooldown -10%. -->
 		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -87,32 +78,26 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>11</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-4</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>16</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>8</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DamageShield">
 				<amount>10</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -120,7 +105,7 @@
 		<!-- For 5 minutes, nearby clan members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -144,46 +129,31 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>3</amount>
+				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Accuracy">
-				<amount>4</amount>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HpRegen">
-				<amount>20</amount>
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>10</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>10</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -443,7 +413,7 @@
 		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -460,10 +430,6 @@
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
 		<effects>
-			<effect name="MaxHp">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
 				<rate>100</rate>
@@ -471,29 +437,24 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
+			<effect name="MaxHp">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>20</amount>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>33</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>-53</amount>
+				<amount>-40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="VampiricAttack">
-				<amount>9</amount>
+				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
 		</effects>
@@ -502,7 +463,7 @@
 		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -526,21 +487,12 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DamageShield">
@@ -562,7 +514,7 @@
 		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -599,16 +551,16 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>50</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
@@ -618,7 +570,7 @@
 		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -635,10 +587,6 @@
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
 		<effects>
-			<effect name="MaxHp">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
 				<rate>100</rate>
@@ -646,29 +594,24 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
+			<effect name="MaxHp">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>20</amount>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>33</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>-53</amount>
+				<amount>-40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="VampiricAttack">
-				<amount>9</amount>
+				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
 		</effects>
@@ -677,7 +620,7 @@
 		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -701,21 +644,12 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DamageShield">
@@ -737,7 +671,7 @@
 		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -774,16 +708,16 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>50</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>

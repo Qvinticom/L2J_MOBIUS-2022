@@ -1194,11 +1194,11 @@
 					<value level="4">-120</value>
 					<value level="5">-120</value>
 					<value level="6">-120</value>
-					<value level="7">-120</value>
-					<value level="8">-120</value>
-					<value level="9">-120</value>
-					<value level="10">-120</value>
-					<value level="11">-120</value>
+					<value level="7">-140</value>
+					<value level="8">-140</value>
+					<value level="9">-140</value>
+					<value level="10">-140</value>
+					<value level="11">-140</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2037,7 +2037,10 @@
 		<!-- For 5 minutes, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
-		<abnormalTime>150</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
+		</abnormalTime>
 		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2075,7 +2078,6 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="VampiricAttack">
-				<!-- Custom chance -->
 				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
@@ -2085,7 +2087,10 @@
 		<!-- For 5 minutes, all party members' Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
-		<abnormalTime>150</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
+		</abnormalTime>
 		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2114,10 +2119,6 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="DamageShield">
 				<amount>10</amount>
 			</effect>
@@ -2137,7 +2138,10 @@
 		<!-- For 5 minutes, party members' HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
-		<abnormalTime>150</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
+		</abnormalTime>
 		<abnormalLvl>2</abnormalLvl>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2158,14 +2162,6 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="HpRegen">
-				<amount>75</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>100</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>5</amount>
 				<mode>DIFF</mode>
@@ -2173,6 +2169,14 @@
 			<effect name="MagicalEvasion">
 				<amount>5</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-22</amount>

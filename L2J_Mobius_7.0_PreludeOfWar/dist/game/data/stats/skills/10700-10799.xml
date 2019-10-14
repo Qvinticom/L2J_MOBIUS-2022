@@ -633,7 +633,7 @@
 		</effects>
 	</skill>
 	<skill id="10753" toLevel="1" name="Superior Hawkeye Mastery">
-		<!-- When using a bow/ crossbow, increases range by 500 and Max MP by 25%, and decreases MP consumption upon skill use by 30%. -->
+		<!-- Bow/ crossbow range +300, Max MP +25%, Skill MP Consumption -30%. -->
 		<icon>icon.skill0113</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -649,7 +649,7 @@
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackRange">
-				<amount>500</amount>
+				<amount>300</amount>
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>BOW</item>

@@ -337,9 +337,9 @@
 		</skill>
 		<skill skillName="Weight Increase" skillId="1572" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Inventory Increase" skillId="1571" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Fantasia Harmony" skillId="30812" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		
 		<skill skillName="Transform" skillId="11537" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Shadow Blade" skillId="19426" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Phantom Slasher" skillId="11511" skillLvl="2" getLevel="86" levelUpSp="50000" />
@@ -496,6 +496,9 @@
 		<skill skillName="Trace of Twin Edges" skillId="11508" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Dance of Medusa" skillId="30780" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Battle Rhapsody Dance" skillId="11614" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Fantasia Melody" skillId="30815" skillLvl="1" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="5" getLevel="100" levelUpSp="88099899" />
@@ -564,6 +567,9 @@
 		<skill skillName="Trace of Twin Edges" skillId="11508" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Dance of Medusa" skillId="30780" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Dancing Phantom Blade" skillId="19436" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Fantasia Harmony" skillId="30812" skillLvl="2" getLevel="103" levelUpSp="608946501">
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
