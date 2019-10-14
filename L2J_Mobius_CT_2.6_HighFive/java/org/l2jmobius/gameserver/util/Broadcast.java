@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.RelationCache;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
