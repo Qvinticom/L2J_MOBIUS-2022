@@ -3,15 +3,13 @@
 	<npcs>
 		<npc>30834</npc> <!-- Cema -->
 	</npcs>
-	<item id="91927" /> <!-- Soulshot -->
-	<item id="91928" /> <!-- Spiritshot -->
-	<item id="91929" /> <!-- Blessed Soulshot -->
-	<item id="91930" /> <!-- Blessed Spiritshot -->
+	<item id="91927" price="30" /> <!-- Soulshot -->
+	<item id="91928" price="45" /> <!-- Spiritshot -->
+	<item id="91929" price="75" /> <!-- Blessed Soulshot -->
+	<item id="91930" price="112" /> <!-- Blessed Spiritshot -->
 	<item id="17" price="3" /> <!-- Wooden Arrow -->
 	<item id="1341" price="4" /> <!-- Bone Arrow -->
 	<item id="1342" price="7" /> <!-- Steel Arrow -->
-	<item id="1060" price="135" /> <!-- Healing Potion -->
-	<item id="1061" price="495" /> <!-- Major Healing Potion -->
 	<item id="1831" price="112" /> <!-- Antidote -->
 	<item id="1832" price="270" /> <!-- Greater Antidote -->
 	<item id="1833" price="112" /> <!-- Bandage -->
@@ -19,10 +17,9 @@
 	<item id="734" price="1800" /> <!-- Wind Walk Potion -->
 	<item id="735" price="3600" /> <!-- Haste Potion -->
 	<item id="6035" price="3600" /> <!-- Magic Haste Potion -->
-	<item id="6037" price="150" /> <!-- Cancel Sleep Scroll -->
+	<item id="6037" price="150" /> <!-- Scroll: Cancel Sleep -->
 	<item id="736" price="600" /> <!-- Scroll of Escape -->
 	<item id="737" price="3000" /> <!-- Scroll of Resurrection -->
 	<item id="5589" price="150" /> <!-- Momentum Stone -->
-	<item id="1661" price="1500" /> <!-- Thief Key -->
 	<item id="2508" price="360" /> <!-- Cursed Bone -->
 </list>
