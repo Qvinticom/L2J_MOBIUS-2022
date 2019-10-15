@@ -675,7 +675,7 @@ public class UseItem extends GameClientPacket
 			{
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
-				// Send a Server->Client packet ItemList to this NcINstance to update left hand equipement
+				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
 				final ItemList il = new ItemList(player, false);
 				sendPacket(il);
 				return;

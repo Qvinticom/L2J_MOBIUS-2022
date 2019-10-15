@@ -8230,7 +8230,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the NcINstance then return True.<BR>
+	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.<BR>
 	 * <BR>
 	 * @return true, if successful
 	 */
@@ -8250,7 +8250,7 @@ public class PlayerInstance extends Playable
 				// Equip arrows needed in left hand
 				getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, _arrowItem);
 				
-				// Send a Server->Client packet ItemList to this NcINstance to update left hand equipement
+				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
 				final ItemList il = new ItemList(this, false);
 				sendPacket(il);
 			}
@@ -14160,7 +14160,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean updatePosition(int gameTicks)
 	{
-		// Disables custom movement for NCInstance when Old Synchronization is selected
+		// Disables custom movement for PlayerInstance when Old Synchronization is selected
 		if (Config.COORD_SYNCHRONIZE == -1)
 		{
 			return super.updatePosition(gameTicks);

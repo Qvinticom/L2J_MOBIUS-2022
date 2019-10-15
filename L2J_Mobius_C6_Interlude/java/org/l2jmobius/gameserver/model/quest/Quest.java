@@ -1075,7 +1075,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add quests to the NCInstance of the player.<BR>
+	 * Add quests to the PlayerInstance of the player.<BR>
 	 * <BR>
 	 * <U><I>Action : </U></I><BR>
 	 * Add state of quests, drops and variables for quests in the HashMap _quest of PlayerInstance

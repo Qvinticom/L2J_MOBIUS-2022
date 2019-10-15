@@ -5851,7 +5851,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the NcINstance then return True.
+	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.
 	 * @param type
 	 */
 	@Override

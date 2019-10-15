@@ -456,7 +456,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * This will untransform a player if they are an instance of Ncinstance and if they are transformed.
+	 * This will untransform a player if they are an instance of PlayerInstance and if they are transformed.
 	 */
 	public void untransform()
 	{

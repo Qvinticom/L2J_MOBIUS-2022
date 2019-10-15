@@ -985,7 +985,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Check for a bow
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.BOW))
 		{
-			// Equip arrows needed in left hand and send a Server->Client packet ItemList to the NcINstance then return True
+			// Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True
 			if (!checkAndEquipArrows())
 			{
 				// Cancel the action because the PlayerInstance have no arrow
