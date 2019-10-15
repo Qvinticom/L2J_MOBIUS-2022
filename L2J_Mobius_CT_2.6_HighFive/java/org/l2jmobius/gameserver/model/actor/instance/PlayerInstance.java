@@ -2213,7 +2213,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Fame of this NcInstane
+	 * Set the Fame of this PlayerInstane
 	 * @param fame
 	 */
 	public void setFame(int fame)
@@ -6115,7 +6115,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the NcINstance then return True.
+	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.
 	 */
 	@Override
 	protected boolean checkAndEquipArrows()
@@ -6130,7 +6130,7 @@ public class PlayerInstance extends Playable
 				// Equip arrows needed in left hand
 				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, _arrowItem);
 				
-				// Send a Server->Client packet ItemList to this NcINstance to update left hand equipement
+				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
 				sendPacket(new ItemList(this, false));
 			}
 		}
@@ -6143,7 +6143,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Equip bolts needed in left hand and send a Server->Client packet ItemList to the NcINstance then return True.
+	 * Equip bolts needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.
 	 */
 	@Override
 	protected boolean checkAndEquipBolts()
@@ -6158,7 +6158,7 @@ public class PlayerInstance extends Playable
 				// Equip arrows needed in left hand
 				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, _boltItem);
 				
-				// Send a Server->Client packet ItemList to this NcINstance to update left hand equipement
+				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
 				sendPacket(new ItemList(this, false));
 			}
 		}
